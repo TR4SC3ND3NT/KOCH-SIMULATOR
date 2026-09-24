@@ -399,35 +399,51 @@
    "name": "WestShed",
    "edge": 7,
    "u0": 1.0,
-   "u1": 14.2,
+   "u1": 12.0,
    "depth": 7.0,
    "z_high": 0.8,
    "z_low": -0.1,
    "wall_h_from_ground": true,
-   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed."
+   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected)."
   },
   {
    "type": "stair_box",
    "name": "BasementEntry",
    "edge": 7,
-   "u0": 14.2,
-   "u1": 17.2,
+   "u0": 12.0,
+   "u1": 14.2,
    "depth": 3.5,
    "z_top": 0.9,
    "canopy": {
     "u0": 14.2,
-    "u1": 18.4,
-    "depth": 3.5,
+    "u1": 17.4,
+    "depth": 1.7,
     "z": 0.92
    },
-   "evidence": "070629483: brick box ~3 m wide, ~3.5 m deep, top just under the F1 sills; thin flat canopy at the box top on posts, over the ramp down to the basement door"
+   "evidence": "video 070629483 f_3.4/f_4.2: brick box with the sign 'Dance Hall' (basement), front corner at u≈12.1 after perspective correction (box front is 3.5 m in front of the wall: projection factor 1.57); flat corrugated canopy on one post over the stair south of the box",
+   "confidence": "medium"
+  },
+  {
+   "type": "stair_well",
+   "name": "BasementStair",
+   "edge": 7,
+   "u_top": 17.0,
+   "u_bottom": 14.2,
+   "w0": 0.15,
+   "w1": 1.45,
+   "z_bottom": -3.3,
+   "riser_h": 0.165,
+   "wall_t": 0.2,
+   "rail_h": 1.0,
+   "evidence": "070629483 f_4.2: stair descends north along the west wall under the canopy toward the box (railing top slopes down to the box); wrought-iron railing on the outer side; depth to the basement floor assumed −3.30",
+   "confidence": "low"
   }
  ],
  "basement": {
   "floor_z": -3.3,
   "slab_t": 0.25,
   "status": "probable",
-  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL.",
+  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483).",
   "pending": [
    "entry stair/ramp geometry and door position (west side)",
    "basement windows behind the light wells",

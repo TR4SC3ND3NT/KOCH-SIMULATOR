@@ -407,6 +407,8 @@ class Building:
                 self.obj(f"Stairs_E{a['edge']}_{a['u0']:.0f}", bm, COL["granite"], a.get("evidence"), cf)
             elif t == "gallery":
                 self.build_gallery(a, e, fr)
+            elif t == "stair_well":
+                self.build_stair_well(a, e, fr)
             elif t == "porch":
                 self.build_porch(a, e, fr)
             elif t == "canopy":
@@ -476,6 +478,35 @@ class Building:
             bm = bmesh.new()
             box(bm, fr, u0, u1, 0.0, dep, e["zg"] - BURY_M, a["floor_z"])
             self.obj(f"GalleryDeck_{tag}", bm, COL["granite"], ev, cf)
+
+    def build_stair_well(self, a, e, fr):
+        """Sunken stair along the wall (u_top at grade -> u_bottom at z_bottom), outer retaining wall + railing.
+        The terrain heightfield still covers it until the phase-4 terrain carve."""
+        ut, ub, w0, w1, zb = a["u_top"], a["u_bottom"], a["w0"], a["w1"], a["z_bottom"]
+        zg = e["zg"]
+        n = max(2, round((zg - zb) / a.get("riser_h", 0.165)))
+        rh = (zg - zb) / n
+        sgn = 1.0 if ut > ub else -1.0
+        tread = abs(ut - ub) / n
+        prof = [(ub, zb - 0.2), (ub, zb)]
+        for k in range(1, n):
+            u = ub + sgn * tread * k
+            prof += [(u, zb + rh * (k - 1)), (u, zb + rh * k)]
+        prof += [(ut, zb + rh * (n - 1)), (ut, zb - 0.2)]
+        if sgn < 0:
+            prof = prof[::-1]
+        bm = bmesh.new()
+        _prism_along_w(bm, fr, prof, w0, w1)
+        self.obj(a["name"], bm, COL["granite"], a.get("evidence"), a.get("confidence"))
+        bm = bmesh.new()
+        wt = a.get("wall_t", 0.2)
+        lo, hi = min(ut, ub), max(ut, ub)
+        box(bm, fr, lo, hi, w1, w1 + wt, zb - 0.2, zg + 0.1)
+        self.obj(a["name"] + "_Wall", bm, COL["wall"], a.get("evidence"), a.get("confidence"))
+        bm = bmesh.new()
+        railing(bm, [fr @ Vector((lo, w1 + wt / 2, zg + 0.1)), fr @ Vector((hi, w1 + wt / 2, zg + 0.1))],
+                height=a.get("rail_h", 1.0) - 0.1, spacing=1.2, mid_rails=2)
+        self.obj(a["name"] + "_Rail", bm, COL["metal"], a.get("evidence"), a.get("confidence"))
 
     def build_porch(self, a, e, fr):
         """Entrance pavilion: gable roof with its ridge perpendicular to the wall, on piers, with a pediment."""
