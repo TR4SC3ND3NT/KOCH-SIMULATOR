@@ -407,5 +407,11 @@
    "confidence": "medium"
   }
  ],
- "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4)."
+ "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4).",
+ "storey_note": "storey 3.06 m (range 3.0-3.35): facade/storey ratio 6.30-6.40 in two independent rects (pano 2020 exact focal; 2026 video frame, window pitch/storey 0.903 vs 0.904) over the 19.55 m Google wall; door openings suggest the upper end (entrance 0.63 storey = 1.93 m at 3.06). Needs one tape/laser height (sill or floor-to-floor) to lock.",
+ "pending": [
+  "south and east facades (no photos)",
+  "roof pitch and the real hip/valley layout (ridge at y 9.8, east 7 m own ridge)",
+  "north face above the strip"
+ ]
 }

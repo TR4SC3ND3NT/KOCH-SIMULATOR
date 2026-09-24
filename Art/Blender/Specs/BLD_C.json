@@ -17,7 +17,7 @@
    0.9992,
    -0.03985
   ],
-  "status": "walls centred in the OSM/Bing roof outline (0.62 m end overhang, 0.88 m side)"
+  "status": "walls centred in the OSM/Bing roof outline (0.62 m end overhang, 0.88 m side); Google z20 shows the C roof 2.3-3.6 m further north: explained by Google's roof lean (measured +4.0 m N / +7.0 m E at C roof height vs near-nadir Bing), so the Bing-based placement is kept"
  },
  "plinth_m": 1.05,
  "wall_thk": 0.45,
@@ -66,7 +66,9 @@
  "eave_z": 13.9,
  "plinth": {
   "z_top": -0.05,
-  "proj": 0.03
+  "proj": 0.03,
+  "evidence": "plinth height = 7 granite risers x 0.15 m at the entrance (061428331, 061431726) -> FFL 1.05 m above the plaza; brick-tile band visible in 061621646/061624280. (Photo 061638726 shows Block A's north wall, not C.)",
+  "confidence": "medium"
  },
  "pilasters": [
   {
