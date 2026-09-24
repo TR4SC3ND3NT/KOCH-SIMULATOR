@@ -58,3 +58,9 @@ __pycache__/
 
 # Blender autosave backups
 *.blend[0-9]
+
+# Stray capture frames/renders in the repo root (captures contain people)
+/*.jpg
+/*.jpeg
+/*.png
+/*.mp4

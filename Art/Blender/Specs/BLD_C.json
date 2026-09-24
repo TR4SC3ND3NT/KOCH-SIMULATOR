@@ -1,0 +1,438 @@
+{
+ "id": "BLD_C",
+ "note": "Block C facade spec (phase 2). Local frame: x along the south facade from the SW corner of the west wing (wall face), y north, z above FFL (ground floor finished level). Metres. Measured by single-view metrology (Scripts/Geo/facade_rectify.py) on photos 061428331/061621646/061624280 and video 070629483; storey height 3.30 m fixed by the facade length (8.88 storeys = 29.4 m vs roof 30.6 m, Bing/OSM) and checked by sills (+0.88), tower landing windows (+8.2/+11.4) and cornice (+13.4).",
+ "replaces": [
+  "GB_BLD_C",
+  "GB_BLD_C_Roof",
+  "GB_BLD_C_Annex"
+ ],
+ "scale": 1.0,
+ "scale_note": "All spec metres were measured with a 3.30 m storey (facade length from the satellite outline; paver lattice and Bing eave length agree within 3.1-3.57 / 3.2-3.4 m). Interior evidence (corridor ceiling 3.1-3.2 m from a 2.10 m door frame, map owner) points to 3.45-3.5 m. After the riser count set scale = storey/3.30 (3.50 -> 1.0606); the builder scales every metric value about the ring centroid, so the block stays centred on the satellite outline.",
+ "anchor": {
+  "world_xy": [
+   173.264,
+   -3.64
+  ],
+  "x_dir": [
+   0.9992,
+   -0.03985
+  ],
+  "status": "walls centred in the OSM/Bing roof outline (0.62 m end overhang, 0.88 m side)"
+ },
+ "plinth_m": 1.05,
+ "wall_thk": 0.45,
+ "storey_m": 3.3,
+ "storeys": 4,
+ "ring": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   12.8,
+   0.0
+  ],
+  [
+   12.8,
+   1.9
+  ],
+  [
+   16.6,
+   1.9
+  ],
+  [
+   16.6,
+   1.3
+  ],
+  [
+   29.4,
+   1.3
+  ],
+  [
+   29.4,
+   17.2
+  ],
+  [
+   0.0,
+   17.2
+  ]
+ ],
+ "ring_notes": "west wing front y=0 projects 1.3 m before the east wing (two photos + SfM: 1.33 m); stair tower recessed 0.6 m behind the east wing (SfM -0.52 m, visible return in 061621646). North wall position from the west facade width (5.22 storeys).",
+ "cornice": {
+  "z0": 13.4,
+  "z1": 13.9,
+  "proj": 0.12
+ },
+ "eave_z": 13.9,
+ "plinth": {
+  "z_top": -0.05,
+  "proj": 0.03
+ },
+ "pilasters": [
+  {
+   "edge": 0,
+   "u0": 0.0,
+   "u1": 1.1,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "SW corner maroon pilaster, 061624280 rect"
+  },
+  {
+   "edge": 5,
+   "u0": 11.78,
+   "u1": 12.8,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "SE corner maroon pilaster, 061621646 rect"
+  },
+  {
+   "edge": 7,
+   "u0": 16.0,
+   "u1": 17.2,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "double maroon strip at the SW corner of the west facade (070629483 rect: 1.2-1.3 m)"
+  }
+ ],
+ "window_types": {
+  "W": {
+   "w": 1.85,
+   "h": 1.4,
+   "mullions": [
+    0.34,
+    0.67
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0.2,
+    0.2,
+    0.18,
+    0.26
+   ],
+   "surround_proj": 0.04,
+   "evidence": "east/west wing windows: opening 1.85 x 1.35-1.40, maroon surround 2.28 x 1.82 (rect 061621646, 087.9 px/m)"
+  },
+  "T": {
+   "w": 1.0,
+   "h": 1.4,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "stair-tower landing windows 1.0 x 1.4 at +4.2/+7.5/+10.7 (behind the sign box at +4.2)"
+  }
+ },
+ "rows": {
+  "F1": 1.05,
+  "F2": 4.35,
+  "F3": 7.65,
+  "F4": 10.95
+ },
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south_west_wing",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.52,
+      8.13,
+      10.69
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "evidence": "3 columns mirrored from the east wing; centres 3.52/8.13/10.69 from the SW corner (rect 061624280: 2.37-4.67, 7.01-9.26, 9.57-11.80)"
+  },
+  {
+   "edge": 1,
+   "name": "west_wing_return",
+   "windows": []
+  },
+  {
+   "edge": 2,
+   "name": "south_tower",
+   "windows": [
+    {
+     "type": "T",
+     "u": [
+      0.92,
+      2.86
+     ],
+     "sills": [
+      4.2,
+      7.5,
+      10.75
+     ]
+    }
+   ],
+   "entrance": {
+    "u0": 0.25,
+    "u1": 3.55,
+    "z1": 2.8,
+    "evidence": "glass vestibule front with transom, 061621646 rect"
+   },
+   "evidence": "maroon stair tower, 2 landing windows per half-level"
+  },
+  {
+   "edge": 3,
+   "name": "east_wing_return",
+   "windows": []
+  },
+  {
+   "edge": 4,
+   "name": "south_east_wing",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.02,
+      4.61,
+      9.3
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "evidence": "rect 061621646: surrounds 0.88-3.15, 3.49-5.73, 8.16-10.43 from the tower edge"
+  },
+  {
+   "edge": 5,
+   "name": "east",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.2,
+      6.6,
+      9.0,
+      13.0
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "status": "assumed: mirror of the west facade (no photo of the east facade)"
+  },
+  {
+   "edge": 6,
+   "name": "north",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.52,
+      8.13,
+      10.69,
+      18.71,
+      21.3,
+      25.9
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "status": "assumed: same columns as the south facade (no photo of the north facade)"
+  },
+  {
+   "edge": 7,
+   "name": "west",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.1,
+      9.5,
+      13.6
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      7.2
+     ],
+     "rows": [
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "evidence": "rect of video 070629483 f_3.4 (solved focal 13.5 mm-eq, 54.2 px/m from the 3.3 m storey): width 17.0 m; from the NW corner 3.1, 7.2 (F3-F4 only, blank wall on F1-F2), 9.5, 13.6; SW double maroon strip 15.7-16.9"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "overhang": 0.55,
+  "pitch": 25,
+  "dormers": [
+   {
+    "edge": 0,
+    "u": [
+     3.52,
+     8.13,
+     10.69
+    ]
+   },
+   {
+    "edge": 4,
+    "u": [
+     2.02,
+     4.61,
+     9.3
+    ]
+   },
+   {
+    "edge": 6,
+    "u": [
+     3.52,
+     8.13,
+     10.69,
+     18.71,
+     21.3,
+     25.9
+    ]
+   }
+  ],
+  "dormer": {
+   "w": 1.3,
+   "h": 1.5,
+   "inset": 1.3
+  },
+  "evidence": "ground photos 061621646/061624280 show only sky above the cornice from ~11 m -> low-pitch hip (~25 deg), not a mansard; pointed dormers on both long slopes (render 2025, Esri 2020); room C501 = attic level",
+  "status": "probable (pitch estimated)"
+ },
+ "attachments": [
+  {
+   "type": "stairs",
+   "edge": 2,
+   "u0": -0.35,
+   "u1": 4.15,
+   "risers": 7,
+   "riser_h": 0.15,
+   "tread": 0.33,
+   "landing": 1.8,
+   "evidence": "7 granite risers ~0.15 (061428331, 061431726); width 4.5 m after depth correction (factor 0.705)"
+  },
+  {
+   "type": "canopy",
+   "edge": 2,
+   "u0": -0.53,
+   "u1": 4.33,
+   "depth": 2.2,
+   "z0": 3.45,
+   "z1": 3.75,
+   "sign": {
+    "z1": 5.24,
+    "t": 0.35
+   },
+   "evidence": "rect 061621646, depth-corrected with the recovered camera (off-plane factor 0.853): soffit 3.45, sign box to 5.24, width 4.85; sloped terracotta soffit; sign content -> KOCH branding in UE"
+  },
+  {
+   "type": "ramp",
+   "edge": 4,
+   "u0": 0.4,
+   "u1": 6.5,
+   "w0": 1.3,
+   "w1": 2.5,
+   "z_high": -0.02,
+   "z_low": -1.05,
+   "rails": true,
+   "evidence": "steel-railed ramp along the east wing from the landing to the plaza; 6.1 m after depth correction (factor 0.825), 061621646"
+  },
+  {
+   "type": "lightwell",
+   "edge": 0,
+   "u0": 0.3,
+   "u1": 12.5,
+   "depth": 1.2,
+   "z_wall": -0.3,
+   "z_edge": -0.85,
+   "evidence": "sloped red metal covers over basement light wells along the south facade"
+  },
+  {
+   "type": "lightwell",
+   "edge": 4,
+   "u0": 0.3,
+   "u1": 12.5,
+   "depth": 1.2,
+   "z_wall": -0.3,
+   "z_edge": -0.85
+  },
+  {
+   "type": "shed",
+   "name": "WestShed",
+   "edge": 7,
+   "u0": 1.0,
+   "u1": 14.2,
+   "depth": 7.0,
+   "z_high": 0.8,
+   "z_low": -0.1,
+   "wall_h_from_ground": true,
+   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed."
+  },
+  {
+   "type": "stair_box",
+   "name": "BasementEntry",
+   "edge": 7,
+   "u0": 14.2,
+   "u1": 17.2,
+   "depth": 3.5,
+   "z_top": 0.9,
+   "canopy": {
+    "u0": 14.2,
+    "u1": 18.4,
+    "depth": 3.5,
+    "z": 0.92
+   },
+   "evidence": "070629483: brick box ~3 m wide, ~3.5 m deep, top just under the F1 sills; thin flat canopy at the box top on posts, over the ramp down to the basement door"
+  }
+ ],
+ "basement": {
+  "floor_z": -3.3,
+  "slab_t": 0.25,
+  "status": "probable",
+  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL.",
+  "pending": [
+   "entry stair/ramp geometry and door position (west side)",
+   "basement windows behind the light wells",
+   "room layout"
+  ],
+  "later": "gameplay: 2 playable pianos in the basement (R3/R4, not now)"
+ }
+}
