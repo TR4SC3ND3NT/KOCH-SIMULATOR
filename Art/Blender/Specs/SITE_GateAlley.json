@@ -1,0 +1,64 @@
+{
+ "id": "SITE_GateAlley",
+ "collection": "03_Site",
+ "note": "Alley from the gate north to the square between Blocks B and A_S (hero route after the checkpoint). World XY; z relative to local ground.",
+ "elements": [
+  {
+   "type": "wall",
+   "name": "AlleyParapet_W",
+   "line": [
+    [
+     151.1,
+     -94.6
+    ],
+    [
+     153.13,
+     -53.0
+    ]
+   ],
+   "height": 0.48,
+   "thk": 0.22,
+   "material": "stone",
+   "evidence": "Google z20 (15 px/m crop): tree/hedge strip x≈149.7-152.3 along B's east wall, light paved alley x≈152.3-158 between B and A_S, from the gate (y≈-96) to the square (y≈-52); lines kept parallel to the campus grid; video 065934318 + 070021774 (walk north from the turnstile): low concrete curb and a clipped hedge at hip/waist height of passers-by (~0.95 m), trees behind it; clover pavers near the gate, herringbone further north; video 065934318 t=5 s: it is the same fluted precast parapet as on the street (~0.5 m, stepped), with a lamp post and an ornamental bin in front",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "AlleyHedge_W",
+   "line": [
+    [
+     150.65,
+     -94.6
+    ],
+    [
+     152.68,
+     -53.0
+    ]
+   ],
+   "width": 0.7,
+   "height": 0.95,
+   "top": "flat",
+   "evidence": "Google z20 (15 px/m crop): tree/hedge strip x≈149.7-152.3 along B's east wall, light paved alley x≈152.3-158 between B and A_S, from the gate (y≈-96) to the square (y≈-52); lines kept parallel to the campus grid; video 065934318 + 070021774 (walk north from the turnstile): low concrete curb and a clipped hedge at hip/waist height of passers-by (~0.95 m), trees behind it; clover pavers near the gate, herringbone further north; side (B vs A_S) ambiguous: ROUTE says the red-framed building is on the right while walking north, the frames show hedge + building on the left; placed on the B side where Google shows the tree strip",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "Alley_Paving",
+   "line": [
+    [
+     153.891,
+     -95.8
+    ],
+    [
+     156.126,
+     -50.0
+    ]
+   ],
+   "width": 5.6,
+   "thk": 0.08,
+   "surface": "clover_paver_267x218 (S) / herringbone_200x100 (N)",
+   "evidence": "Google z20 (15 px/m crop): tree/hedge strip x≈149.7-152.3 along B's east wall, light paved alley x≈152.3-158 between B and A_S, from the gate (y≈-96) to the square (y≈-52); lines kept parallel to the campus grid",
+   "confidence": "medium"
+  }
+ ]
+}
