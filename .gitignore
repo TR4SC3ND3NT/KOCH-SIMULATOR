@@ -1,0 +1,57 @@
+# Unreal generated
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Build/*
+!Build/*/
+Build/*/**
+!Build/*/PakBlacklist*.txt
+!Build/**/*.ico
+*_BuiltData.uasset
+
+# IDE / generated project files
+.vs/
+.idea/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.xcodeproj
+*.xcworkspace
+*.code-workspace
+.vscode/
+.vsconfig
+
+# Compiled artefacts
+*.obj
+*.o
+*.pch
+*.gch
+*.lib
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.pdb
+
+# Claude Code personal files
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Raw site captures (contain people) — never commit
+capture/
+raw/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+.venv/
+__pycache__/

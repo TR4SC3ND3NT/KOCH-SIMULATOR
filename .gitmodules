@@ -1,0 +1,11 @@
+[submodule "Plugins/VibeUE"]
+	path = Plugins/VibeUE
+	url = https://github.com/kevinpbuckley/VibeUE.git
+[submodule "Plugins/UEGitPlugin"]
+	path = Plugins/UEGitPlugin
+	url = https://github.com/ProjectBorealis/UEGitPlugin.git
+	branch = dev
+[submodule "Plugins/Inkpot"]
+	path = Plugins/Inkpot
+	url = https://github.com/The-Chinese-Room/Inkpot.git
+	branch = release

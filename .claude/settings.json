@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(**/docs/lore/canon/**)",
+      "Edit(**/*.uasset)",
+      "Edit(**/*.umap)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git lfs unlock --force *)"
+    ],
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git lfs locks *)"
+    ]
+  },
+  "enabledPlugins": {
+    "unreal-engine-skills-for-claude-code@claude-plugins-official": true
+  }
+}
