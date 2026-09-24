@@ -1,0 +1,444 @@
+{
+ "id": "SITE_StreetFront",
+ "collection": "05_Street",
+ "note": "North sidewalk of the main street along Block B, walked in video 065653194 (the hero's approach to the gate). World XY; z relative to local ground.",
+ "elements": [
+  {
+   "type": "wall",
+   "name": "Parapet_Front",
+   "line": [
+    [
+     92.5,
+     -97.432
+    ],
+    [
+     135.8,
+     -99.715
+    ]
+   ],
+   "height": 0.48,
+   "thk": 0.22,
+   "material": "stone",
+   "evidence": "parapet line = OSM campus boundary (way/341105734); the gate booth's measured south face (-100.23 at x=157) lies on the same line; video 065653194 t=6/10/42 s: parapet top 0.45-0.52 m and hedge top ~1.05 m above the sidewalk, from horizon geometry (eye height 1.45 m assumed; horizon placed 60 px above the distant Block B plinth); precast concrete segments with vertical fluting, stepped at joints",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Parapet_Return",
+   "line": [
+    [
+     135.8,
+     -99.715
+    ],
+    [
+     135.8,
+     -96.1
+    ]
+   ],
+   "height": 0.48,
+   "thk": 0.22,
+   "material": "stone",
+   "evidence": "assumed return from the frontage parapet to the gate-forecourt fence (Fence_West west end 135.8/-96.0)",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Front",
+   "line": [
+    [
+     93.029,
+     -96.909
+    ],
+    [
+     135.329,
+     -99.139
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "video 065653194 t=6/10/42 s: parapet top 0.45-0.52 m and hedge top ~1.05 m above the sidewalk, from horizon geometry (eye height 1.45 m assumed; horizon placed 60 px above the distant Block B plinth); precast concrete segments with vertical fluting, stepped at joints; loose (not formally clipped) shrub hedge planted right behind the parapet",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "Sidewalk_Front",
+   "line": [
+    [
+     92.402,
+     -99.289
+    ],
+    [
+     150.302,
+     -102.342
+    ]
+   ],
+   "width": 3.5,
+   "thk": 0.08,
+   "surface": "clover_paver_267x218",
+   "evidence": "Google z20: perpendicular parked cars' noses at y≈-103.4 (x 137-150) -> 3.5 m from the parapet; video 065653194: clover pavers with a red-paver band",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_00",
+   "line": [
+    [
+     98.91,
+     -101.375
+    ],
+    [
+     100.71,
+     -101.47
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_01",
+   "line": [
+    [
+     101.51,
+     -101.512
+    ],
+    [
+     103.31,
+     -101.607
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_02",
+   "line": [
+    [
+     104.11,
+     -101.649
+    ],
+    [
+     105.91,
+     -101.744
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_03",
+   "line": [
+    [
+     106.71,
+     -101.786
+    ],
+    [
+     108.51,
+     -101.881
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_04",
+   "line": [
+    [
+     109.31,
+     -101.923
+    ],
+    [
+     111.11,
+     -102.018
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_05",
+   "line": [
+    [
+     111.91,
+     -102.06
+    ],
+    [
+     113.71,
+     -102.155
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_06",
+   "line": [
+    [
+     114.51,
+     -102.197
+    ],
+    [
+     116.31,
+     -102.292
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_07",
+   "line": [
+    [
+     117.11,
+     -102.334
+    ],
+    [
+     118.91,
+     -102.429
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_08",
+   "line": [
+    [
+     119.71,
+     -102.471
+    ],
+    [
+     121.51,
+     -102.566
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_09",
+   "line": [
+    [
+     122.31,
+     -102.608
+    ],
+    [
+     124.11,
+     -102.703
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_10",
+   "line": [
+    [
+     124.91,
+     -102.745
+    ],
+    [
+     126.71,
+     -102.84
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_11",
+   "line": [
+    [
+     127.51,
+     -102.883
+    ],
+    [
+     129.31,
+     -102.977
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_12",
+   "line": [
+    [
+     130.11,
+     -103.02
+    ],
+    [
+     131.91,
+     -103.115
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_13",
+   "line": [
+    [
+     132.71,
+     -103.157
+    ],
+    [
+     134.51,
+     -103.252
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_14",
+   "line": [
+    [
+     135.31,
+     -103.294
+    ],
+    [
+     137.11,
+     -103.389
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_15",
+   "line": [
+    [
+     137.91,
+     -103.431
+    ],
+    [
+     139.71,
+     -103.526
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_16",
+   "line": [
+    [
+     140.51,
+     -103.568
+    ],
+    [
+     142.31,
+     -103.663
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_17",
+   "line": [
+    [
+     143.11,
+     -103.705
+    ],
+    [
+     144.91,
+     -103.8
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_18",
+   "line": [
+    [
+     145.71,
+     -103.842
+    ],
+    [
+     147.51,
+     -103.937
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "confidence": "low"
+  }
+ ]
+}
