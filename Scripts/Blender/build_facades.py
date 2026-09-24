@@ -407,6 +407,9 @@ class Building:
                 self.obj(f"Stairs_E{a['edge']}_{a['u0']:.0f}", bm, COL["granite"], a.get("evidence"), cf)
             elif t == "gallery":
                 self.build_gallery(a, e, fr)
+            elif t == "wall_sign":  # lettering/logo panel on the wall face (content = KOCH branding later)
+                box(bm, fr, a["u0"], a["u1"], 0.0, a.get("t", 0.08), a["z0"], a["z1"])
+                self.obj(f"Sign_{a.get('name', a['u0'])}", bm, COL["sign"], a.get("evidence"), cf)
             elif t == "stair_well":
                 self.build_stair_well(a, e, fr)
             elif t == "porch":

@@ -366,6 +366,16 @@ class Site:
         box(bm, m, -el["w"] / 2, el["w"] / 2, -el.get("t", 0.1) / 2, el.get("t", 0.1) / 2, z, z + el["h"])
         self.emit(el, bm, (0.20, 0.25, 0.45, 1), (P.x, P.y, z))
 
+    def b_path(self, el):
+        """Paved path strip: thin slab following the ground (surface texture comes later in UE)."""
+        bm = bmesh.new()
+        w, t = el.get("width", 1.5), el.get("thk", 0.08)
+        # top 2 cm above the terrain so it reads over the heightfield; slab reaches t below it
+        sweep_profile(bm, el["line"], [(w / 2, 0.02 - t), (w / 2, 0.02), (-w / 2, 0.02), (-w / 2, 0.02 - t)],
+                      self.gz, el.get("closed", False))
+        p = el["line"][0]
+        self.emit(el, bm, COL["stone"], (p[0], p[1], self.gz(*p)))
+
     def b_zebra(self, el):
         A, B = Vector(el["line"][0]), Vector(el["line"][-1])
         L = (B - A).length
