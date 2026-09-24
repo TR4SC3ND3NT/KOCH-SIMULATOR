@@ -26,7 +26,7 @@ POST_M = 0.25          # canopy/gazebo post section
 
 GROUP_COLLECTION = {
     "A": "BLD_A", "B": "BLD_B", "C": "BLD_C", "D": "BLD_D", "Hall": "BLD_Gallery",
-    "E": "BLD_Other", "W1": "BLD_Other", "Pavilion": "BLD_Other", "Canteen": "BLD_Other",
+    "E": "BLD_Other", "Other": "BLD_Other", "W1": "BLD_Other", "Pavilion": "BLD_Other", "Canteen": "BLD_Other",
     "Gate": "SITE_Checkpoint", "Garden": "GRD_Gazebos", "Sport": "SITE_Sport", "Context": "CTX_Buildings",
 }
 EXTRA_COLLECTIONS = {"SITE_Sport": "03_Site", "CTX_Buildings": "08_Context"}
@@ -142,6 +142,18 @@ def build_reference():
     return ob
 
 
+def hide_replaced():
+    """Phase-1 massing that a phase-2/site spec replaces stays in the file but hidden (Specs/*.json 'replaces')."""
+    specs = os.path.join(REPO, "Art", "Blender", "Specs")
+    for fn in sorted(os.listdir(specs)) if os.path.isdir(specs) else []:
+        if fn.endswith(".json"):
+            for name in json.load(open(os.path.join(specs, fn), encoding="utf-8")).get("replaces", []):
+                ob = bpy.data.objects.get(name)
+                if ob:
+                    ob.hide_set(True)
+                    ob.hide_render = True
+
+
 def main():
     ter_spec = load("terrain.json")
     items = load("footprints.json")["items"]
@@ -158,6 +170,7 @@ def main():
         except Exception as ex:  # keep building the rest; report the bad item
             print("FAILED", it["id"], repr(ex))
     build_reference()
+    hide_replaced()
     sc = bpy.context.scene
     sc["koch_origin_lat"], sc["koch_origin_lon"] = 42.8566, 74.6790
     sc["koch_z_datum_asl"] = ter_spec["frame"]["z_datum_asl"]

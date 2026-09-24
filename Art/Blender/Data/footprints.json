@@ -454,7 +454,7 @@
     "2GIS: university building, 4 ground floors, at its grey extension",
     "pano2020 c_intro1: 3-storey grey block with external fire stair"
    ],
-   "notes": "Outside the OSM campus polygon; campus membership to confirm.",
+   "notes": "Outside the OSM campus polygon; campus membership to confirm. Map owner: most likely block E (separate building behind the sports hall, ~3 storeys); to confirm.",
    "id": "BLD_W1",
    "ring": [
     [
@@ -491,7 +491,7 @@
     "Bing/Esri: light-grey flat roof west and south of W1",
     "2GIS: 4 ground floors here"
    ],
-   "notes": "",
+   "notes": "Map owner: most likely block E (separate building behind the sports hall, ~3 storeys); to confirm.",
    "id": "BLD_W1_Ext",
    "ring": [
     [
@@ -611,7 +611,7 @@
    ]
   },
   {
-   "group": "E",
+   "group": "Other",
    "kind": "building",
    "osm": null,
    "storeys": 4,
@@ -627,8 +627,8 @@
     "Sentinel-2 2026-08-27: built-up, bright roofs",
     "strategic plan 2021-26: \"block E, 20000 m2\" to be commissioned"
    ],
-   "notes": "Outside the OSM campus polygon; ownership, storeys and final footprint unknown.",
-   "id": "BLD_E",
+   "notes": "NOT block E (map owner, 2026-09-24). Ex-ruin south of D, built up by 2026 (Sentinel-2); ownership, storeys and footprint unknown.",
+   "id": "BLD_SouthComplex",
    "ring": [
     [
      -98.91,

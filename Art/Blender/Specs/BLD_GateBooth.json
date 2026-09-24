@@ -9,8 +9,8 @@
  "note": "Gate checkpoint booth under the east end of the gate canopy (the canopy is the roof: walls stop at its soffit, no own roof). Local x along the south face (street side) from the SW corner, y north. Metres. Scale: beige stone-look facade tiles in running bond, 2:1 module, course 0.160 m (PVC door opening = 13.1 courses ~ 2.10 m); red brick-look plinth band = 7 courses. Branding (brass plaque on the south face) -> KOCH in UE.",
  "anchor": {
   "world_xy": [
-   157.753,
-   -100.051
+   157.703,
+   -100.046
   ],
   "x_dir": [
    0.99872,
