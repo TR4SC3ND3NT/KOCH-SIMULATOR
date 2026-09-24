@@ -1,0 +1,242 @@
+{
+ "id": "BLD_GateBooth",
+ "collection": "SITE_Checkpoint",
+ "replaces": [
+  "GB_BLD_GateBooth"
+ ],
+ "scale": 1.0,
+ "status": "measured (single-view metrology + tile-course count), position +-1.5 m along the street",
+ "note": "Gate checkpoint booth under the east end of the gate canopy (the canopy is the roof: walls stop at its soffit, no own roof). Local x along the south face (street side) from the SW corner, y north. Metres. Scale: beige stone-look facade tiles in running bond, 2:1 module, course 0.160 m (PVC door opening = 13.1 courses ~ 2.10 m); red brick-look plinth band = 7 courses. Branding (brass plaque on the south face) -> KOCH in UE.",
+ "anchor": {
+  "world_xy": [
+   157.753,
+   -100.051
+  ],
+  "x_dir": [
+   0.99872,
+   -0.05059
+  ],
+  "status": "SW corner = canopy west end + 8.93 m along the gate line, 2.70 m south of it"
+ },
+ "plinth_m": 0.1,
+ "wall_thk": 0.3,
+ "storey_m": 3.3,
+ "storeys": 1,
+ "eave_z": 3.3,
+ "ring": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   3.42,
+   0.0
+  ],
+  [
+   3.42,
+   2.7
+  ],
+  [
+   0.0,
+   2.7
+  ]
+ ],
+ "ring_notes": "south face 21.35 +- 0.3 courses = 3.42 m (rect 065910461 f0.5: 21.5; f9.3+f1.5: 12.8+8.4); west/north depth 2.70 m = 0.79 x width (3-VP ground-plane reconstruction of 061913764 f4.5, bottom corners; +-0.25 m).",
+ "plinth": {
+  "z_top": 1.02,
+  "proj": 0.01,
+  "evidence": "red brick-look tile band, 7 courses = 1.12 m above ground (all faces)",
+  "confidence": "high"
+ },
+ "cornice": {
+  "z0": 3.28,
+  "z1": 3.3,
+  "proj": 0.0
+ },
+ "window_types": {
+  "W": {
+   "w": 1.12,
+   "h": 1.4,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.33
+   ],
+   "reveal": 0.1,
+   "surround": [
+    0,
+    0,
+    0.06,
+    0
+   ],
+   "surround_proj": 0.06,
+   "evidence": "white PVC, 2 casements over a fixed lower pane; rect 065910461 f9.3 (35.7 px/course): 7.1 x 8.6 courses, sill top 4.9 courses above ground; tiled sill projects ~6 cm",
+   "confidence": "medium"
+  },
+  "WN": {
+   "w": 1.1,
+   "h": 1.4,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.33
+   ],
+   "reveal": 0.1,
+   "surround": [
+    0,
+    0,
+    0.06,
+    0
+   ],
+   "surround_proj": 0.06,
+   "evidence": "north face window (2022 pano intro.jpg, same type as the south window)",
+   "confidence": "medium"
+  },
+  "WW": {
+   "w": 1.04,
+   "h": 1.3,
+   "mullions": [
+    0.55
+   ],
+   "transoms": [],
+   "reveal": 0.1,
+   "surround": [
+    0,
+    0,
+    0.06,
+    0
+   ],
+   "surround_proj": 0.06,
+   "evidence": "west service window (guard hatch, notice taped inside) facing the turnstile lane; position from the 3-VP line mapping of 061913764 f4.5",
+   "confidence": "low"
+  },
+  "DW": {
+   "w": 0.76,
+   "h": 1.27,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.62
+   ],
+   "reveal": 0.08,
+   "surround": [
+    0,
+    0,
+    0.06,
+    0
+   ],
+   "surround_proj": 0.06,
+   "evidence": "window half of the door+window PVC unit (rect 065934318 f1: 4.7 x 7.9 courses, sill 5.2 courses)",
+   "confidence": "medium"
+  },
+  "D": {
+   "w": 0.8,
+   "h": 2.08,
+   "mullions": [],
+   "transoms": [
+    0.62
+   ],
+   "reveal": 0.08,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "white PVC door (glazed upper 2/3, solid lower), opens outward; opening 13.1 courses high",
+   "confidence": "medium"
+  }
+ },
+ "rows": {},
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south_street",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      1.52
+     ],
+     "sills": [
+      0.68
+     ]
+    }
+   ],
+   "evidence": "rect 065910461 f0.5 (whole face) + f9.3 (SW corner): window 0.96-2.08 m from the SW corner; brass plaque 0.70 x 0.47 at u 0.2-0.9, z 2.33-2.80 above ground (SITE_Gate sign element)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 1,
+   "name": "east_path",
+   "windows": [
+    {
+     "type": "DW",
+     "u": [
+      1.6
+     ],
+     "sills": [
+      0.73
+     ]
+    },
+    {
+     "type": "D",
+     "u": [
+      0.8
+     ],
+     "sills": [
+      0.02
+     ]
+    }
+   ],
+   "evidence": "door+window unit 1.55 m wide (rect 065934318 f1); face = east (no door on the north face in pano 2022, the door faces the path east of the booth). Position along the face not measured (+-0.5 m).",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north_campus",
+   "windows": [
+    {
+     "type": "WN",
+     "u": [
+      1.7
+     ],
+     "sills": [
+      0.68
+     ]
+    }
+   ],
+   "evidence": "pano tour360_aiu_2022/intro.jpg: one window 1.19-2.30 m from the NE corner + card reader; u measured from the NE corner",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "name": "west_lane",
+   "windows": [
+    {
+     "type": "WW",
+     "u": [
+      1.23
+     ],
+     "sills": [
+      0.68
+     ]
+    }
+   ],
+   "evidence": "west face toward the turnstile lane; black steel bag rest under the window; tripod turnstile at the NW corner",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "flat",
+  "parapet_h": 0.0,
+  "parapet_t": 0.0,
+  "evidence": "no own roof: walls run up to the timber soffit of the gate canopy (SITE_Gate Canopy)",
+  "confidence": "high"
+ },
+ "attachments": []
+}

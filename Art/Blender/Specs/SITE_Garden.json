@@ -1,0 +1,1740 @@
+{
+ "id": "SITE_Garden",
+ "collection": "04_Garden",
+ "replaces": [
+  "GB_GRD_Gazebo_1",
+  "GB_GRD_Gazebo_1_Roof",
+  "GB_GRD_Gazebo_2",
+  "GB_GRD_Gazebo_2_Roof"
+ ],
+ "note": "Formal garden between Hall (N), Block B (S) and Block A (E). Garden frame: origin M=(131.07,-28.03) = midpoint of the gazebo centres, u along the campus grid (0.99881,-0.04885), v grid-north. Paths are 1.2 m (3 x 0.40 m diamond concrete tiles) with scalloped concrete edging and ~1.05 m clipped hedges both sides; 'path' elements are paving data (builder skips them; terrain = paving). The garden floor is ~1 m below the Block-B side (boulder retaining wall along the south); the smooth terrain model does not carry that step.",
+ "elements": [
+  {
+   "type": "gazebo",
+   "name": "Gazebo_1",
+   "center": [
+    116.95,
+    -26.55
+   ],
+   "sides": 8,
+   "across_flats": 7.8,
+   "rot_deg": 19.7,
+   "post_w": 0.36,
+   "post_h": 2.55,
+   "parapet_h": 0.95,
+   "parapet_t": 0.25,
+   "open_sides": [
+    4,
+    5
+   ],
+   "opening_clear_w": 1.15,
+   "stub_len": 0.8,
+   "floor_h": 0.03,
+   "roof_pitch": 25,
+   "overhang": 0.731,
+   "roof_across_flats": 9.15,
+   "fascia_h": 0.25,
+   "roof_type": "pyramid",
+   "center_column": {
+    "d": 0.2,
+    "material": "dark brown painted steel/timber"
+   },
+   "notes": "across_flats = post-centre octagon (builder convention). Eave (fascia bottom) = 2.77 m; apex ~5.0 m at 25 deg. Pier/parapet: red brick-effect tile (2026; plain maroon paint in 2020), white render posts with dark-brown capital band ~0.12 m.",
+   "evidence": "Octagon (8 posts, 8 sides) with pyramid shingle roof. Plan size: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px); post-centre size from the 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h), inner corner radius 2.60 h, fitted centre coincides with the central column (0.1 h); camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m diamond tiles) and roof size -> post-centre AF 7.7-7.9. Front frame 081924271 t7: side c-c 743 px vs 0.95 m brick-tile stub 225 px -> 3.1-3.2 m side = AF 7.5-7.7. Heights (pano, h=1.55): parapet top 0.61 h = 0.95 m (stub: 6.6 courses of 0.125 m brick tiles + cap), post top 1.665 h = 2.58 m. Openings: 2 adjacent sides (SSE, SSW) each with ~0.8 m parapet stubs either side of a ~1.1-1.2 m clear gap (pano pz_180, frames 081924271 t7-t10); all other 6 sides parapet + continuous wooden bench. Paved apron ~1.3 m wide between parapet and edging/hedge (pano, 081924271 t12). Floor flush with paths (same diamond tiles, no step). Roof: brown asphalt shingles, white fascia with dark triangular tabs, sloped slatted soffit, dark-brown round central column d=0.20 m from floor to soffit (pano: 8.1 deg at 0.9 h). Centre: Google z20 roof (116.95,-26.75) minus north lean 0.18 m/m (Google B roof edge 1.3-1.7 m N of the Bing footprint) averaged with Bing 2021 (116.6,-26.6), then both gazebos snapped symmetric on the -2.8 deg campus grid (moves each <=0.35 m). Orientation from the 2020 pano: C block (4 fl.) at pano yaw 54-59 = bearing 58-63 from here -> pano yaw offset +4 deg -> a post (vertex) points grid-N, openings face bearings 160/205; confirmed by the SSE path on Google z20 (bearing 161.6, radial) and the N path at x=117.4 hitting the N vertex.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_1_Bench_S0",
+   "pos": [
+    118.474,
+    -23.327
+   ],
+   "dir_deg": 244.7,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_1_Bench_S1",
+   "pos": [
+    115.748,
+    -23.194
+   ],
+   "dir_deg": 289.7,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_1_Bench_S2",
+   "pos": [
+    113.727,
+    -25.026
+   ],
+   "dir_deg": 334.7,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_1_Bench_S3",
+   "pos": [
+    113.594,
+    -27.752
+   ],
+   "dir_deg": 19.7,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_1_Bench_S6",
+   "pos": [
+    120.173,
+    -28.074
+   ],
+   "dir_deg": 154.7,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_1_Bench_S7",
+   "pos": [
+    120.306,
+    -25.348
+   ],
+   "dir_deg": 199.7,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "gazebo",
+   "name": "Gazebo_2",
+   "center": [
+    144.898,
+    -28.318
+   ],
+   "sides": 8,
+   "across_flats": 7.8,
+   "rot_deg": 26.4,
+   "post_w": 0.36,
+   "post_h": 2.55,
+   "parapet_h": 0.95,
+   "parapet_t": 0.25,
+   "open_sides": [
+    4,
+    5
+   ],
+   "opening_clear_w": 1.15,
+   "stub_len": 0.8,
+   "floor_h": 0.03,
+   "roof_pitch": 25,
+   "overhang": 0.731,
+   "roof_across_flats": 9.15,
+   "fascia_h": 0.25,
+   "roof_type": "pyramid",
+   "center_column": {
+    "d": 0.2,
+    "material": "dark brown painted steel/timber"
+   },
+   "notes": "across_flats = post-centre octagon (builder convention). Eave (fascia bottom) = 2.77 m; apex ~5.0 m at 25 deg. Pier/parapet: red brick-effect tile (2026; plain maroon paint in 2020), white render posts with dark-brown capital band ~0.12 m.",
+   "evidence": "Octagon (8 posts, 8 sides) with pyramid shingle roof. Plan size: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px); post-centre size from the 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h), inner corner radius 2.60 h, fitted centre coincides with the central column (0.1 h); camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m diamond tiles) and roof size -> post-centre AF 7.7-7.9. Front frame 081924271 t7: side c-c 743 px vs 0.95 m brick-tile stub 225 px -> 3.1-3.2 m side = AF 7.5-7.7. Heights (pano, h=1.55): parapet top 0.61 h = 0.95 m (stub: 6.6 courses of 0.125 m brick tiles + cap), post top 1.665 h = 2.58 m. Openings: 2 adjacent sides (SSE, SSW) each with ~0.8 m parapet stubs either side of a ~1.1-1.2 m clear gap (pano pz_180, frames 081924271 t7-t10); all other 6 sides parapet + continuous wooden bench. Paved apron ~1.3 m wide between parapet and edging/hedge (pano, 081924271 t12). Floor flush with paths (same diamond tiles, no step). Roof: brown asphalt shingles, white fascia with dark triangular tabs, sloped slatted soffit, dark-brown round central column d=0.20 m from floor to soffit (pano: 8.1 deg at 0.9 h). Centre: Google z20 roof (145.2,-28.8, NE half hidden by trees) lean-corrected + Bing (145.0,-28.9), snapped symmetric to Gazebo_1. Same design as Gazebo_1 (2026 videos 081918134/081924271 walk in through its SSE opening from the SE landing). Rotation +6.7 deg vs Gazebo_1 inferred from its two radial paths on Google z20 (SSE 152.2, SSW ~199.6 vs 160.3/205.3) -> confidence low on rot_deg.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_2_Bench_S0",
+   "pos": [
+    146.035,
+    -24.939
+   ],
+   "dir_deg": 251.4,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_2_Bench_S1",
+   "pos": [
+    143.313,
+    -25.125
+   ],
+   "dir_deg": 296.4,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_2_Bench_S2",
+   "pos": [
+    141.519,
+    -27.181
+   ],
+   "dir_deg": 341.4,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_2_Bench_S3",
+   "pos": [
+    141.705,
+    -29.903
+   ],
+   "dir_deg": 26.4,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_2_Bench_S6",
+   "pos": [
+    148.277,
+    -29.455
+   ],
+   "dir_deg": 161.4,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Gazebo_2_Bench_S7",
+   "pos": [
+    148.091,
+    -26.733
+   ],
+   "dir_deg": 206.4,
+   "length": 2.9,
+   "depth": 0.42,
+   "seat_h": 0.45,
+   "back_h": 0.9,
+   "evidence": "2020 pano gazebo.jpg + 2026 frames 081924271 t9-t17/082013462: continuous timber bench along the inside of all closed sides, seat ~0.45 m, back board on the parapet; seat depth 0.42 est.",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "G1_N",
+   "line": [
+    [
+     117.256,
+     -20.307
+    ],
+    [
+     117.73,
+     -10.619
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "Google z20: straight light strip x=117.3-117.4, y -21.5..-9.8, on the grid-N axis through the Gazebo_1 N vertex; 2020 pano yaw ~0: topiary arch at its far end.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_N_L",
+   "line": [
+    [
+     116.207,
+     -20.256
+    ],
+    [
+     116.681,
+     -10.568
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20: straight light strip x=117.3-117.4, y -21.5..-9.8, on the grid-N axis through the Gazebo_1 N vertex; 2020 pano yaw ~0: topiary arch at its far end.",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_N_L",
+   "line": [
+    [
+     116.607,
+     -20.275
+    ],
+    [
+     117.08,
+     -10.588
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20: straight light strip x=117.3-117.4, y -21.5..-9.8, on the grid-N axis through the Gazebo_1 N vertex; 2020 pano yaw ~0: topiary arch at its far end.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_N_R",
+   "line": [
+    [
+     118.305,
+     -20.358
+    ],
+    [
+     118.778,
+     -10.671
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20: straight light strip x=117.3-117.4, y -21.5..-9.8, on the grid-N axis through the Gazebo_1 N vertex; 2020 pano yaw ~0: topiary arch at its far end.",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_N_R",
+   "line": [
+    [
+     117.905,
+     -20.339
+    ],
+    [
+     118.379,
+     -10.651
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20: straight light strip x=117.3-117.4, y -21.5..-9.8, on the grid-N axis through the Gazebo_1 N vertex; 2020 pano yaw ~0: topiary arch at its far end.",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "G1_SSE",
+   "line": [
+    [
+     118.897,
+     -31.987
+    ],
+    [
+     123.463,
+     -44.74
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "Google z20 light strip (119.3,-31.5)->(121.3,-37.5), bearing 161.6, radial from Gazebo_1; 2020 pano: from the SSE opening a straight hedged path to a topiary arch with steps up behind it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_SSE_L",
+   "line": [
+    [
+     119.886,
+     -31.633
+    ],
+    [
+     124.452,
+     -44.386
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20 light strip (119.3,-31.5)->(121.3,-37.5), bearing 161.6, radial from Gazebo_1; 2020 pano: from the SSE opening a straight hedged path to a topiary arch with steps up behind it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_SSE_L",
+   "line": [
+    [
+     119.509,
+     -31.768
+    ],
+    [
+     124.075,
+     -44.521
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20 light strip (119.3,-31.5)->(121.3,-37.5), bearing 161.6, radial from Gazebo_1; 2020 pano: from the SSE opening a straight hedged path to a topiary arch with steps up behind it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_SSE_R",
+   "line": [
+    [
+     117.909,
+     -32.341
+    ],
+    [
+     122.475,
+     -45.094
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20 light strip (119.3,-31.5)->(121.3,-37.5), bearing 161.6, radial from Gazebo_1; 2020 pano: from the SSE opening a straight hedged path to a topiary arch with steps up behind it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_SSE_R",
+   "line": [
+    [
+     118.285,
+     -32.206
+    ],
+    [
+     122.851,
+     -44.959
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20 light strip (119.3,-31.5)->(121.3,-37.5), bearing 161.6, radial from Gazebo_1; 2020 pano: from the SSE opening a straight hedged path to a topiary arch with steps up behind it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "G1_SSE_Stub",
+   "line": [
+    [
+     118.307,
+     -30.34
+    ],
+    [
+     118.897,
+     -31.987
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "opening -> apron",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "G1_SSW",
+   "line": [
+    [
+     114.482,
+     -31.771
+    ],
+    [
+     108.694,
+     -44.018
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "2020 pano pz_180/-135: from the SSW opening a straight hedged path to the south boulder retaining wall with benches on top; not visible on orthos (canopy).",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_SSW_L",
+   "line": [
+    [
+     115.432,
+     -32.22
+    ],
+    [
+     109.643,
+     -44.467
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. 2020 pano pz_180/-135: from the SSW opening a straight hedged path to the south boulder retaining wall with benches on top; not visible on orthos (canopy).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_SSW_L",
+   "line": [
+    [
+     115.07,
+     -32.049
+    ],
+    [
+     109.281,
+     -44.296
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). 2020 pano pz_180/-135: from the SSW opening a straight hedged path to the south boulder retaining wall with benches on top; not visible on orthos (canopy).",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_SSW_R",
+   "line": [
+    [
+     113.533,
+     -31.323
+    ],
+    [
+     107.744,
+     -43.569
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. 2020 pano pz_180/-135: from the SSW opening a straight hedged path to the south boulder retaining wall with benches on top; not visible on orthos (canopy).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_SSW_R",
+   "line": [
+    [
+     113.895,
+     -31.494
+    ],
+    [
+     108.106,
+     -43.74
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). 2020 pano pz_180/-135: from the SSW opening a straight hedged path to the south boulder retaining wall with benches on top; not visible on orthos (canopy).",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "G2_N",
+   "line": [
+    [
+     144.472,
+     -22.081
+    ],
+    [
+     143.778,
+     -11.893
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "Mirror of G1_N (2025 event render shows an N path from both gazebos); hidden by canopy on all orthos.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_N_L",
+   "line": [
+    [
+     143.425,
+     -22.153
+    ],
+    [
+     142.73,
+     -11.965
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Mirror of G1_N (2025 event render shows an N path from both gazebos); hidden by canopy on all orthos.",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_N_L",
+   "line": [
+    [
+     143.824,
+     -22.126
+    ],
+    [
+     143.129,
+     -11.938
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Mirror of G1_N (2025 event render shows an N path from both gazebos); hidden by canopy on all orthos.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_N_R",
+   "line": [
+    [
+     145.52,
+     -22.01
+    ],
+    [
+     144.825,
+     -11.822
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Mirror of G1_N (2025 event render shows an N path from both gazebos); hidden by canopy on all orthos.",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_N_R",
+   "line": [
+    [
+     145.121,
+     -22.037
+    ],
+    [
+     144.426,
+     -11.849
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Mirror of G1_N (2025 event render shows an N path from both gazebos); hidden by canopy on all orthos.",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "G2_SSE",
+   "line": [
+    [
+     147.365,
+     -33.549
+    ],
+    [
+     154.254,
+     -46.246
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "Google z20 light strip (147.3,-33.5)->(152.3,-43.0), bearing 152.2, radial from Gazebo_2; walked in 2026 (081918134 from the topiary arch at its south end, 081924271 into the SSE opening; Hall pink facade behind).",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_SSE_L",
+   "line": [
+    [
+     148.288,
+     -33.048
+    ],
+    [
+     155.177,
+     -45.745
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20 light strip (147.3,-33.5)->(152.3,-43.0), bearing 152.2, radial from Gazebo_2; walked in 2026 (081918134 from the topiary arch at its south end, 081924271 into the SSE opening; Hall pink facade behind).",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_SSE_L",
+   "line": [
+    [
+     147.937,
+     -33.239
+    ],
+    [
+     154.825,
+     -45.936
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20 light strip (147.3,-33.5)->(152.3,-43.0), bearing 152.2, radial from Gazebo_2; walked in 2026 (081918134 from the topiary arch at its south end, 081924271 into the SSE opening; Hall pink facade behind).",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_SSE_R",
+   "line": [
+    [
+     146.443,
+     -34.05
+    ],
+    [
+     153.331,
+     -46.747
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20 light strip (147.3,-33.5)->(152.3,-43.0), bearing 152.2, radial from Gazebo_2; walked in 2026 (081918134 from the topiary arch at its south end, 081924271 into the SSE opening; Hall pink facade behind).",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_SSE_R",
+   "line": [
+    [
+     146.794,
+     -33.859
+    ],
+    [
+     153.682,
+     -46.556
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20 light strip (147.3,-33.5)->(152.3,-43.0), bearing 152.2, radial from Gazebo_2; walked in 2026 (081918134 from the topiary arch at its south end, 081924271 into the SSE opening; Hall pink facade behind).",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "G2_SSW",
+   "line": [
+    [
+     143.056,
+     -33.791
+    ],
+    [
+     139.113,
+     -45.506
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "Google z20 faint strip (140.8,-39.2)->(138.8,-44.8) bearing ~200; 081924271 t15-t17: from the second opening a straight hedged path ending at steps.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_SSW_L",
+   "line": [
+    [
+     144.051,
+     -34.126
+    ],
+    [
+     140.108,
+     -45.841
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20 faint strip (140.8,-39.2)->(138.8,-44.8) bearing ~200; 081924271 t15-t17: from the second opening a straight hedged path ending at steps.",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_SSW_L",
+   "line": [
+    [
+     143.672,
+     -33.998
+    ],
+    [
+     139.729,
+     -45.713
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20 faint strip (140.8,-39.2)->(138.8,-44.8) bearing ~200; 081924271 t15-t17: from the second opening a straight hedged path ending at steps.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_SSW_R",
+   "line": [
+    [
+     142.06,
+     -33.456
+    ],
+    [
+     138.118,
+     -45.171
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Clipped privet-type hedge lining the path both sides (frames 081918134, 081924271 t1-t7, 081958653 t2-t4): ~1.0-1.1 m tall, ~0.7 m thick, on scalloped edging. Google z20 faint strip (140.8,-39.2)->(138.8,-44.8) bearing ~200; 081924271 t15-t17: from the second opening a straight hedged path ending at steps.",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_SSW_R",
+   "line": [
+    [
+     142.439,
+     -33.584
+    ],
+    [
+     138.497,
+     -45.298
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped precast concrete edging (rounded-top blocks ~0.2 m high, ~0.1 m thick, ~0.2 m pitch) along every garden path (081856511, 081924271, 081958653). Google z20 faint strip (140.8,-39.2)->(138.8,-44.8) bearing ~200; 081924271 t15-t17: from the second opening a straight hedged path ending at steps.",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "Centre_NS",
+   "line": [
+    [
+     131.713,
+     -11.303
+    ],
+    [
+     130.062,
+     -45.063
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "2025 event render (plans/aiufest2025_3D_render): central N-S path between the two gazebo quarters; Google z20 bright patch at (129-131,-27..-31). Width 1.2 assumed.",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "G1_E_Link",
+   "line": [
+    [
+     123.194,
+     -26.856
+    ],
+    [
+     130.325,
+     -27.405
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "2025 event render: E-W path from each gazebo to the central path.",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "G2_W_Link",
+   "line": [
+    [
+     138.654,
+     -28.012
+    ],
+    [
+     131.523,
+     -27.463
+    ]
+   ],
+   "width": 1.2,
+   "surface": "diamond_tile_0.4",
+   "evidence": "2025 event render: E-W path from each gazebo to the central path.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_Ring_0",
+   "line": [
+    [
+     116.13,
+     -20.71
+    ],
+    [
+     112.752,
+     -21.92
+    ],
+    [
+     110.707,
+     -26.245
+    ],
+    [
+     112.32,
+     -30.749
+    ],
+    [
+     113.509,
+     -31.311
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_Ring_1",
+   "line": [
+    [
+     115.456,
+     -32.231
+    ],
+    [
+     116.645,
+     -32.794
+    ],
+    [
+     117.884,
+     -32.35
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_Ring_2",
+   "line": [
+    [
+     119.911,
+     -31.624
+    ],
+    [
+     121.149,
+     -31.181
+    ],
+    [
+     122.683,
+     -27.937
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_Ring_3",
+   "line": [
+    [
+     122.791,
+     -25.73
+    ],
+    [
+     121.581,
+     -22.352
+    ],
+    [
+     118.337,
+     -20.818
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_Ring_0",
+   "line": [
+    [
+     116.553,
+     -20.983
+    ],
+    [
+     113.043,
+     -22.24
+    ],
+    [
+     111.14,
+     -26.266
+    ],
+    [
+     112.641,
+     -30.458
+    ],
+    [
+     114.05,
+     -31.124
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_Ring_1",
+   "line": [
+    [
+     115.257,
+     -31.695
+    ],
+    [
+     116.666,
+     -32.361
+    ],
+    [
+     118.134,
+     -31.836
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_Ring_2",
+   "line": [
+    [
+     119.391,
+     -31.386
+    ],
+    [
+     120.858,
+     -30.86
+    ],
+    [
+     122.452,
+     -27.489
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_Ring_3",
+   "line": [
+    [
+     122.517,
+     -26.153
+    ],
+    [
+     121.26,
+     -22.642
+    ],
+    [
+     117.889,
+     -21.049
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_0",
+   "line": [
+    [
+     143.401,
+     -22.613
+    ],
+    [
+     140.187,
+     -24.209
+    ],
+    [
+     139.252,
+     -26.986
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_1",
+   "line": [
+    [
+     138.847,
+     -29.118
+    ],
+    [
+     140.788,
+     -33.028
+    ],
+    [
+     142.035,
+     -33.448
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_2",
+   "line": [
+    [
+     144.076,
+     -34.134
+    ],
+    [
+     145.323,
+     -34.554
+    ],
+    [
+     146.501,
+     -33.969
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_3",
+   "line": [
+    [
+     148.429,
+     -33.012
+    ],
+    [
+     149.608,
+     -32.427
+    ],
+    [
+     151.134,
+     -27.893
+    ],
+    [
+     149.007,
+     -23.607
+    ],
+    [
+     145.606,
+     -22.463
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge ring around the paved gazebo apron (2020 pano: tiles run ~1.3 m past the parapet to scalloped edging + hedge; 2026 081924271 t12-t15 same). Octagonal, parallel to the gazebo; gaps at the radial paths.",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_0",
+   "line": [
+    [
+     143.854,
+     -22.835
+    ],
+    [
+     140.513,
+     -24.493
+    ],
+    [
+     139.537,
+     -27.395
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_1",
+   "line": [
+    [
+     139.093,
+     -28.713
+    ],
+    [
+     141.073,
+     -32.702
+    ],
+    [
+     142.55,
+     -33.199
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_2",
+   "line": [
+    [
+     143.816,
+     -33.625
+    ],
+    [
+     145.293,
+     -34.122
+    ],
+    [
+     146.689,
+     -33.429
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_3",
+   "line": [
+    [
+     147.886,
+     -32.835
+    ],
+    [
+     149.282,
+     -32.142
+    ],
+    [
+     150.702,
+     -27.922
+    ],
+    [
+     148.722,
+     -23.934
+    ],
+    [
+     145.188,
+     -22.744
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "evidence": "Scalloped edging at the apron edge (2020 pano pz_135/pz_180).",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_North_0",
+   "line": [
+    [
+     101.666,
+     -9.483
+    ],
+    [
+     117.147,
+     -10.24
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "North garden edge: Google z20 canopy/hedge edge y=-9.3 at x 117 (-10.9 at x 150, -2.8 deg grid), outside it the herringbone walkway. Gaps at the N paths (arches) and the central path.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_North_1",
+   "line": [
+    [
+     118.346,
+     -10.299
+    ],
+    [
+     131.131,
+     -10.924
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "North garden edge: Google z20 canopy/hedge edge y=-9.3 at x 117 (-10.9 at x 150, -2.8 deg grid), outside it the herringbone walkway. Gaps at the N paths (arches) and the central path.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_North_2",
+   "line": [
+    [
+     132.329,
+     -10.983
+    ],
+    [
+     143.178,
+     -11.514
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "North garden edge: Google z20 canopy/hedge edge y=-9.3 at x 117 (-10.9 at x 150, -2.8 deg grid), outside it the herringbone walkway. Gaps at the N paths (arches) and the central path.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_North_3",
+   "line": [
+    [
+     144.377,
+     -11.572
+    ],
+    [
+     158.698,
+     -12.273
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "North garden edge: Google z20 canopy/hedge edge y=-9.3 at x 117 (-10.9 at x 150, -2.8 deg grid), outside it the herringbone walkway. Gaps at the N paths (arches) and the central path.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_South_0",
+   "line": [
+    [
+     100.015,
+     -43.243
+    ],
+    [
+     108.256,
+     -43.646
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_South_1",
+   "line": [
+    [
+     109.455,
+     -43.705
+    ],
+    [
+     122.736,
+     -44.354
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_South_2",
+   "line": [
+    [
+     123.935,
+     -44.413
+    ],
+    [
+     129.48,
+     -44.684
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_South_3",
+   "line": [
+    [
+     130.678,
+     -44.743
+    ],
+    [
+     138.63,
+     -45.132
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_South_4",
+   "line": [
+    [
+     139.828,
+     -45.19
+    ],
+    [
+     153.459,
+     -45.857
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_East",
+   "line": [
+    [
+     157.169,
+     -43.535
+    ],
+    [
+     158.698,
+     -12.273
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "East garden edge x=158.0 at y -27 (Google z20 canopy edge), herringbone walkway outside with a lawn strip + scalloped edging, thujas and ball lamps (081856511).",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_West",
+   "line": [
+    [
+     100.015,
+     -43.243
+    ],
+    [
+     101.666,
+     -9.483
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "West garden edge x=100.3 (Google z20 canopy edge, walkway + campus fence beyond).",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "RetainingWall_South",
+   "line": [
+    [
+     99.391,
+     -45.765
+    ],
+    [
+     152.427,
+     -48.359
+    ]
+   ],
+   "height": 0.95,
+   "thk": 0.5,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "boulder_retaining",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = walk south edge, Google z20 y=-46.3 at x 115 (+-0.8). Builder z follows smooth terrain, so the level step is not modelled.",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "PergolaWalk_South",
+   "line": [
+    [
+     99.967,
+     -44.217
+    ],
+    [
+     152.504,
+     -46.786
+    ]
+   ],
+   "width": 1.95,
+   "surface": "diamond_tile_0.4",
+   "pergola": {
+    "hoop_spacing": 2.0,
+    "hoop_h": 2.7,
+    "pipe_d": 0.06,
+    "color": "maroon",
+    "vines": true
+   },
+   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner.",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_0",
+   "pos": [
+    147.962,
+    -47.54
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_1",
+   "pos": [
+    143.468,
+    -47.32
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_2",
+   "pos": [
+    138.973,
+    -47.101
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_3",
+   "pos": [
+    134.478,
+    -46.881
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_G1_SSE",
+   "center": [
+    123.336,
+    -44.384
+   ],
+   "dir_deg": -70.3,
+   "span": 1.3,
+   "height": 2.1,
+   "depth": 0.8,
+   "thk": 0.75,
+   "evidence": "2020 pano pz_135: topiary arch at the south end of the SSE path, steps rising behind it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_G2_SSE",
+   "center": [
+    154.058,
+    -45.886
+   ],
+   "dir_deg": -61.52,
+   "span": 1.3,
+   "height": 2.1,
+   "depth": 0.8,
+   "thk": 0.75,
+   "evidence": "081918134: topiary arch standing on the herringbone SE landing at the head of the G2 SSE path. Span = path 1.2 m (3 tiles, legs are the path hedges), clear height ~2.1 m, crown ~0.8 m thick, total ~3.0 m.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_G1_N",
+   "center": [
+    117.747,
+    -10.27
+   ],
+   "dir_deg": 87.2,
+   "span": 1.3,
+   "height": 2.1,
+   "depth": 0.8,
+   "thk": 0.75,
+   "evidence": "2020 pano (yaw -2..+5, bearing ~2-9): topiary arch at the north end of the G1 N path, bench beside it.",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_G2_N",
+   "center": [
+    143.754,
+    -11.542
+   ],
+   "dir_deg": 93.9,
+   "span": 1.3,
+   "height": 2.1,
+   "depth": 0.8,
+   "thk": 0.75,
+   "evidence": "Symmetry with Arch_G1_N (2020 pano shows 4+ topiary arches around the garden).",
+   "confidence": "low"
+  },
+  {
+   "type": "steps",
+   "name": "Steps_G1_SSE",
+   "pos": [
+    124.175,
+    -46.727
+   ],
+   "dir_deg": -92.8,
+   "width": 1.4,
+   "risers": 6,
+   "riser_h": 0.16,
+   "tread": 0.32,
+   "top_landing": 0.6,
+   "evidence": "2020 pano pz_135/pz_180: pinkish stone steps rising south behind the SSE arch through the boulder wall; 6 x 0.16 = wall height ~0.95 m (count not visible -> assumed).",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "Lamp_G2_Apron",
+   "pos": [
+    138.842,
+    -29.824
+   ],
+   "height": 3.2,
+   "head": "ball",
+   "evidence": "081946180 t6-t9: black cast pole on a tapered black pedestal (~0.3 m sq on a 0.45 m concrete pad) at a path junction by a gazebo corner; white globe. Position approximate (west side of the G2 apron).",
+   "confidence": "low"
+  }
+ ]
+}
