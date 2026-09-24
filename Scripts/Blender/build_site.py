@@ -490,15 +490,19 @@ def main():
     ids = [s for s in os.environ.get("KOCH_SITE", "").split(",") if s]
     ter = Terrain(load("terrain.json"))
     for sid in ids:
-        spec = json.load(open(os.path.join(SPECS, sid + ".json"), encoding="utf-8"))
-        site = Site(spec, ter)
-        clear(site.gen)
-        for name in spec.get("replaces", []):
-            ob = bpy.data.objects.get(name)
-            if ob:
-                ob.hide_set(True)
-                ob.hide_render = True
-        n = site.build()
+        try:  # one broken or half-written spec must not stop the others
+            spec = json.load(open(os.path.join(SPECS, sid + ".json"), encoding="utf-8"))
+            site = Site(spec, ter)
+            clear(site.gen)
+            for name in spec.get("replaces", []):
+                ob = bpy.data.objects.get(name)
+                if ob:
+                    ob.hide_set(True)
+                    ob.hide_render = True
+            n = site.build()
+        except Exception as ex:
+            print(f"{sid}: FAILED {ex!r}")
+            continue
         print(f"{sid}: {n} elements built")
     if bpy.app.background:
         bpy.ops.wm.save_mainfile(compress=True)

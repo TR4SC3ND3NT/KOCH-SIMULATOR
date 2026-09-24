@@ -2,7 +2,7 @@
  "id": "BLD_B",
  "collection": "BLD_B",
  "status": "probable",
- "note": "Block B facade spec (phase 2). 2-storey front block just inside the main gate; the long south facade faces the street and carries the institution lettering + round logo (bay A, next to the SE corner); entrance porch (flat canopy on 2 brick-tile piers) at the south end of the east facade. NOT the building with the covered gallery on red posts + second lettering band: that is the west side of Block A north (BLD_A_N lower strip), proven by pano intro2 hotspot 'Library' (A), render 2025 (lettering on A_N west wall) and the orthos (gallery roof strip X 157-161 along A_N; only a shrub strip along B east). Metric source: 2020 360 pano tour360 intro.jpg (exact equirect intrinsics; level assumed) reprojected onto the south wall plane (Scripts: agent scratch pelev.py): facade azimuth from 4 equal pilaster bays (tan-spacing equal to 0.5 % at psi = -9.0 deg), scale from the wall length 48.28 m (OSM roof 49.28 - 2 x 0.5 overhang) -> camera 7.69 m from the wall, 1.05 m above grade (intro2 pano gives the same 1.1-1.2 m rig height). 2026 4K frames (082606037, 070309303, 061757320) for the current paint scheme and topology.",
+ "note": "Block B (phase 2): 2-storey front block just inside the main gate. The long south facade faces the street and carries the institution lettering + round logo (bay A at the SE corner); entrance porch (flat canopy on 2 brick-tile piers) at the south end of the east facade. B has NO covered gallery: the gallery on red posts with the second blue lettering band is the west side of Block A north (BLD_A_N lower strip) - pano intro2 hotspot 'Library' (A) points at it, render 2025 puts that lettering on A_N, orthos show the gallery roof strip at X 157-161 along A_N and only shrubs along B east; video 070309303 t27-37 looks north along A_N, not along B. Metric source: 2020 360 pano tour360 intro.jpg (exact equirect intrinsics, level assumed) resampled onto the south wall plane (agent scratch pelev.py): facade azimuth from 4 equal pilaster bays (tan spacing equal within 0.5 % at psi -9.0 deg), scale from the wall length 48.28 (OSM roof 49.28 - 2 x 0.5) -> camera 7.69 m from the wall and 1.05 m above grade (intro2 gives the same rig height 1.1-1.2 m). Checks: person 1.72-1.75 m at the wall gives plinth 0.81 vs 0.83 from the pano scale; intro2 SE-corner pilaster lands at L = 24.9 vs 24.46. 2026 4K video frames used only for topology/proportions (EIS intrinsics unreliable).",
  "replaces": [
   "GB_BLD_B",
   "GB_BLD_B_Roof"
@@ -19,10 +19,10 @@
   ],
   "status": "walls = OSM/Google roof outline inset by the 0.5 m overhang"
  },
- "plinth_m": 0.0,
- "plinth_note": "porch floor is flush with the paving (070309303 t1.6); FFL ~0.15 above the SE grade. The terrain model puts the SW corner 0.20 m above the SE one, so FFL = highest model ground + 0.0.",
+ "plinth_m": -0.05,
+ "plinth_note": "porch floor flush with the paving (070309303 t1.6): FFL ~0.15 above the SE grade; the terrain model puts the SW corner 0.20 above the SE, so FFL = highest model ground - 0.05 (= SE grade + 0.15). Ground rises ~0.2-0.3 westward along the street facade (pano plinth base).",
  "wall_thk": 0.51,
- "storey_m": 3.7,
+ "storey_m": 3.85,
  "storeys": 2,
  "ring": [
   [
@@ -42,19 +42,19 @@
    24.46
   ]
  ],
- "ring_notes": "rectangle 48.28 x 24.46 (walls). Checks: 4 bays x 11.82 + 1.0 pilaster = 48.28 (pano); Esri east wall base X 148.0 at Y -70 vs ring 147.8; Bing ground registration is (-1.2, -0.5) m off Google/OSM (phase corr. on the pitches and the street), so Bing roof edges were not used directly.",
+ "ring_notes": "rectangle 48.28 x 24.46 (walls). Checks: 4 x 11.82 bays + 1.0 pilaster = 48.28 (pano); Esri east wall base X 148.0 at Y -70 vs ring 147.8. Bing ground registration is (-1.2, -0.5) m off Google/OSM (phase correlation on the pitches and on the street), so Bing edges were not used directly.",
  "cornice": {
-  "z0": 8.35,
-  "z1": 8.55,
+  "z0": 7.8,
+  "z1": 8.0,
   "proj": 0.02
  },
- "eave_z": 8.55,
- "eave_note": "wall top (frieze meets the soffit) +8.55; fascia bottom ~+8.1-8.3 (sloped soffit). Pano elA: upper frieze +6.3..+8.55 above the upper windows (terracotta/beige bands in 2020, all beige in 2026).",
+ "eave_z": 8.0,
+ "eave_note": "pano intro column profiles through bay A (camera-relative, d 7.69): paving -0.95, plinth top -0.16, ground window -0.14..+1.41, upper terracotta band +3.47..+5.43 with the upper window +3.72..+5.15, beige frieze up to the soffit junction +7.07 (= wall top 8.0 above FFL); dark fascia+soffit band projects to +7.1..+7.85 -> fascia ~0.25 high, boxed horizontal soffit, overhang 0.5-0.55 (SE roof-corner bearing -31.4 deg vs -31.65 predicted for 0.5). Plain frieze 6.1-8.0 above the upper windows (terracotta/beige bands in 2020, all beige in 2026).",
  "plinth": {
-  "z_top": 0.8,
+  "z_top": 0.78,
   "proj": 0.03
  },
- "plinth_note2": "red brick-look tile plinth up to the ground-floor sills (2020 + 2026); ~0.95 m above grade at bay A",
+ "plinth_note2": "red brick-look tile plinth, top = ground-floor sills: 0.79 above grade (pano) / 0.81 (2026 person anchor)",
  "pilasters": [
   {
    "edge": 0,
@@ -62,7 +62,7 @@
    "u1": 1.0,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55
+   "z1": 8.0
   },
   {
    "edge": 0,
@@ -70,7 +70,7 @@
    "u1": 12.82,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55
+   "z1": 8.0
   },
   {
    "edge": 0,
@@ -78,7 +78,7 @@
    "u1": 24.64,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55
+   "z1": 8.0
   },
   {
    "edge": 0,
@@ -86,7 +86,7 @@
    "u1": 36.46,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55
+   "z1": 8.0
   },
   {
    "edge": 0,
@@ -94,7 +94,7 @@
    "u1": 48.28,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55
+   "z1": 8.0
   },
   {
    "edge": 1,
@@ -102,8 +102,8 @@
    "u1": 1.0,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55,
-   "evidence": "maroon SE corner pilaster on the east face (070309303 t1.6)"
+   "z1": 8.0,
+   "evidence": "maroon SE corner pilaster on the east face (070309303 t1.6, 061757320 t34)"
   },
   {
    "edge": 1,
@@ -111,8 +111,8 @@
    "u1": 24.46,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55,
-   "evidence": "assumed (NE corner)"
+   "z1": 8.0,
+   "evidence": "maroon NE corner strip (061757320 t7)"
   },
   {
    "edge": 2,
@@ -120,7 +120,7 @@
    "u1": 1.0,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55,
+   "z1": 8.0,
    "evidence": "assumed"
   },
   {
@@ -129,7 +129,7 @@
    "u1": 48.28,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55,
+   "z1": 8.0,
    "evidence": "assumed"
   },
   {
@@ -138,7 +138,7 @@
    "u1": 1.0,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55,
+   "z1": 8.0,
    "evidence": "assumed"
   },
   {
@@ -147,14 +147,54 @@
    "u1": 24.46,
    "proj": 0.14,
    "z0": -0.3,
-   "z1": 8.55,
-   "evidence": "SW corner pilaster (pano, far end)"
+   "z1": 8.0,
+   "evidence": "maroon SW corner pilaster (082606037 t0.1, pano far end)"
   }
  ],
- "pilaster_note": "south: 5 pilasters 1.0 m wide (corner + 3 intermediate), centres 0.5/12.32/24.14/35.96/47.78; projection 0.14 from the apparent side-face width (0.3 m at 16 m, pano). Maroon in 2020, painted beige like the wall in 2026 (only the SE corner pilaster stays maroon).",
+ "pilaster_note": "street facade: 5 pilasters 1.0 m wide (2 corners + 3 intermediate), centres 0.5/12.32/24.14/35.96/47.78; projection 0.14 from the apparent side-face width (0.3 m at 16 m, pano). All maroon in 2020; in 2026 the intermediate ones are painted wall-beige, the corner ones stay maroon.",
  "window_types": {
-  "W": {
-   "w": 1.75,
+  "WG": {
+   "w": 1.9,
+   "h": 1.55,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "regular bays, ground: 4 per bay, pano east edges (offsets 0.85/3.1/6.05/9.1, identical in bays B-D); width 1.9-1.95 from the frontal east-facade pano view"
+  },
+  "WGB": {
+   "w": 1.9,
+   "h": 1.55,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0.45,
+    0.45,
+    0.35,
+    0.45
+   ],
+   "surround_proj": 0.2,
+   "evidence": "2026 maroon box frame ~0.2 deep"
+  },
+  "WU": {
+   "w": 1.9,
    "h": 1.45,
    "mullions": [
     0.33,
@@ -171,10 +211,10 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "regular bays: 4 per bay, pitch 2.6-3.1, pano east edges + 2026 rect proportions; 3-light PVC with top lights"
+   "evidence": "regular bays, upper"
   },
-  "WA": {
-   "w": 2.05,
+  "WUB": {
+   "w": 1.9,
    "h": 1.45,
    "mullions": [
     0.33,
@@ -185,75 +225,15 @@
    ],
    "reveal": 0.15,
    "surround": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "surround_proj": 0.0,
-   "evidence": "lettering bay A: wider openings 1.9-2.3 (pano elA) / 1.55-1.9 (2026 rect)"
-  },
-  "WB": {
-   "w": 1.75,
-   "h": 1.45,
-   "mullions": [
-    0.33,
-    0.67
-   ],
-   "transoms": [
-    0.3
-   ],
-   "reveal": 0.15,
-   "surround": [
-    0.5,
-    0.5,
-    0.3,
-    0.5
+    0.45,
+    0.45,
+    0.35,
+    0.45
    ],
    "surround_proj": 0.2,
-   "evidence": "2026 maroon box surround ~0.2 deep (082606037 rect): box ~2.7 x 2.3 around a 1.75 x 1.45 window"
+   "evidence": "2026 maroon box frame ~0.2 deep (082606037)"
   },
-  "WAB": {
-   "w": 2.05,
-   "h": 1.45,
-   "mullions": [
-    0.33,
-    0.67
-   ],
-   "transoms": [
-    0.3
-   ],
-   "reveal": 0.15,
-   "surround": [
-    0.35,
-    0.35,
-    0.3,
-    0.5
-   ],
-   "surround_proj": 0.2,
-   "evidence": "as WB, bay A"
-  },
-  "WAP": {
-   "w": 2.05,
-   "h": 1.45,
-   "mullions": [
-    0.33,
-    0.67
-   ],
-   "transoms": [
-    0.3
-   ],
-   "reveal": 0.15,
-   "surround": [
-    0.7,
-    1.9,
-    0.0,
-    0.35
-   ],
-   "surround_proj": 0.05,
-   "evidence": "2026: flat maroon panel around the east ground window of bay A, extending ~1.9 m east (082606037 rect)"
-  },
-  "WBIG": {
+  "WAG": {
    "w": 2.05,
    "h": 1.55,
    "mullions": [
@@ -271,69 +251,137 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "east facade near the NE corner: one wide 3-light window per floor (pano intro2)"
+   "evidence": "bay A: wider openings 1.9-2.3 (pano elA)"
+  },
+  "WAP": {
+   "w": 2.05,
+   "h": 1.55,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0.7,
+    1.9,
+    0.0,
+    0.35
+   ],
+   "surround_proj": 0.05,
+   "evidence": "2026 flat maroon panel around bay A east ground window, running ~1.9 m east"
+  },
+  "WAU": {
+   "w": 2.05,
+   "h": 1.45,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "bay A upper"
+  },
+  "WAUB": {
+   "w": 2.05,
+   "h": 1.45,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0.35,
+    0.45,
+    0.35,
+    0.45
+   ],
+   "surround_proj": 0.2,
+   "evidence": "bay A upper west window, 2026 box"
   }
  },
  "rows": {
   "G": 0.8,
-  "U": 4.55
+  "U": 4.65
  },
- "rows_note": "above FFL. Ground sill 0.8-0.9 (2020 pano 0.9, 2026 frames 0.7), head ~2.25; upper sill 4.55, head 6.0; 2nd floor ~3.7 (sill - 0.85). Tall frieze above the upper windows (6.3-8.55).",
+ "rows_note": "above FFL (~grade at bay A). Ground 0.80-2.35, upper 4.65-6.10; 2nd floor ~3.85 (upper sill - 0.8, ground head 2.35 + ceiling/slab); upper storey 3.85-8.0 incl. the roof bearing zone.",
  "facades": [
   {
    "edge": 0,
    "name": "south_street",
    "windows": [
     {
-     "type": "W",
+     "type": "WG",
      "u": [
-      34.56,
-      31.94,
-      29.01,
-      25.94,
-      22.74,
-      20.12,
-      17.19,
-      14.12,
-      10.92,
-      8.3,
-      5.37,
-      2.3
+      2.22,
+      8.17,
+      10.87,
+      14.04,
+      22.69,
+      25.86,
+      28.91,
+      31.81,
+      34.51
      ],
      "rows": [
       "G"
      ]
     },
     {
-     "type": "W",
+     "type": "WGB",
      "u": [
-      2.3,
-      5.37,
-      8.3,
-      10.92,
-      14.12,
-      17.19,
-      20.12,
-      22.74,
-      25.94,
-      34.56
+      5.27,
+      17.09,
+      19.99
+     ],
+     "rows": [
+      "G"
+     ]
+    },
+    {
+     "type": "WU",
+     "u": [
+      2.22,
+      10.87,
+      14.04,
+      19.99,
+      22.69,
+      25.86,
+      34.51
      ],
      "rows": [
       "U"
      ]
     },
     {
-     "type": "WB",
+     "type": "WUB",
      "u": [
-      29.01,
-      31.94
+      5.27,
+      8.17,
+      17.09,
+      28.91,
+      31.81
      ],
      "rows": [
       "U"
      ]
     },
     {
-     "type": "WA",
+     "type": "WAG",
      "u": [
       37.67
      ],
@@ -351,7 +399,7 @@
      ]
     },
     {
-     "type": "WAB",
+     "type": "WAUB",
      "u": [
       37.67
      ],
@@ -360,7 +408,7 @@
      ]
     },
     {
-     "type": "WA",
+     "type": "WAU",
      "u": [
       40.61
      ],
@@ -369,94 +417,132 @@
      ]
     }
    ],
-   "evidence": "pano intro 2020 metric elevation (psi -9, d 7.69): pilasters at 4 equal bays; window east edges (exact under reveal occlusion) at offsets 0.85/3.1/6.05/9.1 west of each bay's east pilaster, identical in bays B, C, D; bay A (SE) has 2 windows per floor at 7.67/10.61 from the SE corner and the lettering/logo on the blank east part. 2026 082606037 rect confirms topology and adds the maroon boxes (unknown for bays C, D).",
-   "confidence": "medium (bays/pilasters high; individual window widths +-0.25)"
+   "evidence": "pano intro 2020 metric elevation: 4 equal bays; window east edges (exact under reveal occlusion) at the same offsets in bays B, C, D; bay A has 2 windows per floor at 7.67/10.61 from the SE corner and a blank east part with the lettering (upper) / a maroon panel (ground, 2026). Box pattern from 2026 082606037 t0.1 (bays C/D at a grazing angle).",
+   "confidence": "medium (bays/pilasters high; window widths +-0.25; bay C/D box columns low)"
   },
   {
    "edge": 1,
    "name": "east_entrance",
    "windows": [
     {
-     "type": "WB",
+     "type": "WUB",
      "u": [
-      3.2
+      5.9,
+      8.55
      ],
      "rows": [
       "U"
      ]
     },
     {
-     "type": "W",
+     "type": "WU",
      "u": [
-      5.85,
-      8.45,
-      11.15,
-      13.75,
-      16.35
+      11.5,
+      14.1,
+      16.4
      ],
      "rows": [
       "U"
      ]
     },
     {
-     "type": "W",
+     "type": "WG",
      "u": [
-      5.85,
-      8.45,
-      11.15,
-      13.75,
-      16.35
+      5.9,
+      8.55,
+      11.5,
+      14.1
      ],
      "rows": [
       "G"
      ]
     },
     {
-     "type": "WBIG",
+     "type": "WGB",
      "u": [
-      21.15
+      16.4
      ],
      "rows": [
-      "G",
+      "G"
+     ]
+    },
+    {
+     "type": "WG",
+     "u": [
+      21.0
+     ],
+     "rows": [
+      "G"
+     ]
+    },
+    {
+     "type": "WU",
+     "u": [
+      21.0
+     ],
+     "rows": [
       "U"
      ]
     }
    ],
    "entrance": {
-    "u0": 1.35,
-    "u1": 3.45,
+    "u0": 1.5,
+    "u1": 3.4,
     "z1": 2.6,
-    "evidence": "glazed vestibule door between the SE corner pilaster and the first porch pier (070309303 t1.6, pano intro)"
+    "evidence": "glazed vestibule door between the SE corner pilaster and the first pier (070309303 t1.6; 061757320 t34 rect 1.8-3.35)"
    },
-   "evidence": "pano intro2 2020 elevation (psi -89.4, d 6.45 from matching the south facade heights): upper windows at 2.6-2.7 pitch u 5.85-16.35, blank pier 17.3-20.1, wide window 21.15 at both floors; u 3.2 window above the porch has a maroon box in 2026 (070309303 t1.6, t24).",
-   "confidence": "medium-low (positions +-0.4; the two panos disagree on the pitch: 2.65 vs 3.2)"
+   "evidence": "pano intro2 2020 elevation (eave fit psi -89.4; d 6.45 from matching the street-facade heights; the SE-corner pilaster then falls at 24.9 vs 24.46): window north edges exact under reveal occlusion (camera at the NE corner); widths 1.9-1.95 where seen frontally; columns 5.9/8.55/11.5/14.1/16.4, blank pier 17.4-20, one more column at 21.0 near the NE corner; blank wall with an AC unit above the porch (u 1-5). 2026 061757320 t34 rect: double maroon box around the upper pair 5.9/8.55, box around the ground window 16.4; ground windows under the upper ones.",
+   "confidence": "medium-low (positions +-0.4)"
   },
   {
    "edge": 2,
    "name": "north_garden",
    "windows": [
     {
-     "type": "W",
+     "type": "WG",
      "u": [
-      1.9,
-      4.52,
-      7.45,
-      10.52,
-      13.72,
-      16.34,
-      19.27,
-      22.34,
-      25.54,
-      28.16,
-      31.09,
-      34.16,
-      37.36,
-      39.98,
-      42.91,
-      45.98
+      1.95,
+      4.65,
+      7.55,
+      10.6,
+      13.77,
+      16.47,
+      19.37,
+      22.42,
+      25.59,
+      28.29,
+      31.19,
+      34.24,
+      37.41,
+      40.11,
+      43.01,
+      46.06
      ],
      "rows": [
-      "G",
+      "G"
+     ]
+    },
+    {
+     "type": "WU",
+     "u": [
+      1.95,
+      4.65,
+      7.55,
+      10.6,
+      13.77,
+      16.47,
+      19.37,
+      22.42,
+      25.59,
+      28.29,
+      31.19,
+      34.24,
+      37.41,
+      40.11,
+      43.01,
+      46.06
+     ],
+     "rows": [
       "U"
      ]
     }
@@ -469,26 +555,46 @@
    "name": "west_fence",
    "windows": [
     {
-     "type": "W",
+     "type": "WG",
      "u": [
-      8.11,
-      10.71,
-      13.31,
-      16.01,
-      18.61
+      8.06,
+      10.36,
+      12.96,
+      15.91,
+      18.56
      ],
      "rows": [
-      "G",
+      "G"
+     ]
+    },
+    {
+     "type": "WU",
+     "u": [
+      8.06,
+      10.36,
+      12.96,
+      15.91,
+      18.56
+     ],
+     "rows": [
       "U"
      ]
     },
     {
-     "type": "WBIG",
+     "type": "WG",
      "u": [
-      3.31
+      3.46
      ],
      "rows": [
-      "G",
+      "G"
+     ]
+    },
+    {
+     "type": "WU",
+     "u": [
+      3.46
+     ],
+     "rows": [
       "U"
      ]
     }
@@ -499,13 +605,13 @@
  ],
  "roof": {
   "type": "hip",
-  "pitch": 22,
+  "pitch": 19,
   "overhang": 0.5,
-  "pitch_ends": 36,
+  "pitch_ends": 30,
   "ridge_len": 35.5,
-  "note": "orthos (Google z20, Bing, Esri) show a hip roof with a long E-W ridge (~35.5 m: X 106-142.5 Google, 34.5-36.5 others) -> end hips run ~6.9 m vs 12.7 m on the long sides, i.e. steeper ends (~36 deg if the long slopes are 22). The builder uses one pitch; pitch_ends/ridge_len are for a later builder update. Side pitch from the Esri lean difference ridge vs eave (~20 +-9 deg) and the 2025 render: low confidence. Roof box/hatch on the north slope at X 135.5-137.5, Y -60..-66 (Google shadow); red profiled sheet.",
-  "evidence": "Google z20 / Bing z19 / Esri z19 crops (agent scratch g_B/b_B/e_B.jpg), render 2025",
-  "confidence": "medium (type, ridge), low (pitch)"
+  "note": "orthos (Google z20, Bing, Esri) show a hip roof with a long E-W ridge (~35.5 m: X 106-142.5 in Google, 34.5-36.5 in the others; render 2025 ridge ~0.78 of the length) -> end hips run ~6.9 m vs 12.7 m on the long sides, i.e. steeper ends (~30 deg). Long-slope pitch from the 2025 render (steep oblique, elevation 73 deg from facade height 19.5 px vs roof depth 188 px): south/north slope projections 103/85 px -> rise 4.0 m -> 17.5 deg; Esri lean ridge vs eave ~20 +-9 -> 19 used (ridge ~4.4 above the eave, ~12.4 above FFL). Slopes are hidden above the eave from the ground photos. The builder uses one pitch; pitch_ends/ridge_len are for a later builder update. Roof hatch/box on the north slope at X 135.5-137.5, Y -60..-66 (Google shadow); red profiled sheet.",
+  "evidence": "Google z20 / Bing z19 / Esri z19 crops, render 2025",
+  "confidence": "medium (type, ridge line), low-medium (pitch 19 +-4)"
  },
  "attachments": [
   {
@@ -527,7 +633,7 @@
    "roof_fall": 0.0,
    "beam_h": 0.0,
    "roof_overhang": 0.1,
-   "evidence": "flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the east wall).",
+   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).",
    "confidence": "medium-low"
   },
   {
@@ -538,20 +644,20 @@
    "depth": 1.0,
    "z_wall": 0.5,
    "z_edge": -0.6,
-   "evidence": "sloped maroon sheet covers over basement light wells along the north 2/3 of the east facade (pano intro2 2020)",
-   "confidence": "medium (2020); not checked in 2026 (topiary there now)"
+   "evidence": "sloped maroon sheet covers over basement light wells, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36)",
+   "confidence": "medium"
   },
   {
    "type": "wall_sign",
    "name": "LetteringLogo",
    "edge": 0,
-   "u0": 42.2,
-   "u1": 47.0,
-   "z0": 4.2,
-   "z1": 7.9,
+   "u0": 42.3,
+   "u1": 46.7,
+   "z0": 3.1,
+   "z1": 7.5,
    "t": 0.08,
-   "content": "TODO_LORE: KOCH lettering (3 lines, 2 languages) + round logo; real text must not be used",
-   "evidence": "bay A upper zone: 2020 terracotta panel + logo (pano elA); 2026 two 3-line blocks + logo (082606037)",
+   "content": "TODO_LORE: KOCH lettering (2 blocks of 3 lines) + round logo; the real text must not be used",
+   "evidence": "bay A blank east part: 2026 3-line block (top ~7.5), round logo, 3-line block (bottom ~3.1) (082606037 t1.0 rect, interpolated between eave/sill/head lines); 2020 terracotta panel 4.4-6.4 + logo above (pano)",
    "confidence": "medium"
   }
  ],
@@ -559,10 +665,10 @@
   "floor_z": -3.0,
   "slab_t": 0.25,
   "status": "probable",
-  "evidence": "light-well covers along the east facade (pano intro2); no basement door seen"
+  "evidence": "light-well covers along the east facade; no basement door seen"
  },
  "open_items": [
-  "window widths per bay and the maroon-box pattern on bays C/D (2026)",
+  "exact window widths per bay; 2026 box pattern on bays C/D",
   "north and west facades (not photographed)",
   "roof pitches (long sides vs ends)",
   "porch piers exact u and canopy depth",

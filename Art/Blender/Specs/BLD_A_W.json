@@ -1,0 +1,367 @@
+{
+ "id": "BLD_A_W",
+ "collection": "BLD_A",
+ "replaces": [
+  "GB_BLD_A_N",
+  "GB_BLD_A_N_Roof",
+  "GB_BLD_A_S",
+  "GB_BLD_A_S_Roof"
+ ],
+ "scale": 1.0,
+ "status": "probable",
+ "note": "Block A lower west strip (phase 2): 2 storeys, 5.87 m to the eave; ground floor behind a covered gallery (red posts, pink corrugated roof), upper wall almost blank (one small window, AC units, big blue lettering band in 2026) -> likely the double-height hall/library the map owner describes. Leans on the A_N west wall (shared x=10.9) and meets A_S (shared y=22.75).",
+ "anchor": {
+  "world_xy": [
+   158.84,
+   -92.76
+  ],
+  "x_dir": [
+   0.999,
+   -0.049
+  ],
+  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly)"
+ },
+ "plinth_m": 0.698,
+ "wall_thk": 0.4,
+ "storey_m": 2.95,
+ "storeys": 2,
+ "eave_z": 5.87,
+ "ring": [
+  [
+   2.2,
+   22.75
+  ],
+  [
+   10.9,
+   22.75
+  ],
+  [
+   10.9,
+   76.25
+  ],
+  [
+   2.2,
+   76.25
+  ]
+ ],
+ "ring_notes": "Google z20 strip roof x 1.55..2.03 (west eave) to the main wall; north eave y 76.7. West wall 0.9 m behind the A_S west face (070309303 f17-f20). Open question: Google shows a 3 m dark band between A_S and the strip roof (y 23.2-26.2) that a shadow alone does not explain (low roof section or light well at the south end?).",
+ "cornice": {
+  "z0": 5.62,
+  "z1": 5.87,
+  "proj": 0.03
+ },
+ "plinth": {
+  "z_top": 0.45,
+  "proj": 0.03
+ },
+ "pilasters": [
+  {
+   "edge": 3,
+   "u0": 50.87,
+   "u1": 51.27,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 47.33,
+   "u1": 47.73,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 41.43,
+   "u1": 41.83,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 35.53,
+   "u1": 35.93,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 29.63,
+   "u1": 30.03,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 23.73,
+   "u1": 24.13,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 17.83,
+   "u1": 18.23,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 11.93,
+   "u1": 12.33,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 6.03,
+   "u1": 6.43,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 0.13,
+   "u1": 0.53,
+   "proj": 0.05,
+   "z0": 0.0,
+   "z1": 2.55,
+   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "confidence": "medium"
+  }
+ ],
+ "window_types": {
+  "G": {
+   "w": 1.8,
+   "h": 1.3,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.7
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "ground-floor windows behind the gallery: 1.74-1.95 x 1.30 m, sill 0.87, head 2.17 (rect of pano intro2 yaw 80, f=780.9 px, scale from the 2.17 m double door; eave then 5.87 m = independent check of 5.7-5.9 from the A_S rects)",
+   "confidence": "medium"
+  },
+  "GN": {
+   "w": 0.82,
+   "h": 1.3,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "narrow windows at the south end (pano intro2 rect)",
+   "confidence": "medium"
+  },
+  "D": {
+   "w": 1.2,
+   "h": 2.17,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "glazed double door at the south end (pano intro2 rect: 55 x 100 px); 2026: single door under a small awning next to the A_S pilaster (070309303 f17/f19)",
+   "confidence": "medium"
+  },
+  "UW": {
+   "w": 1.3,
+   "h": 0.52,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.1,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "single small window high in the blank upper wall (pano intro2 rect x 533-593 px)",
+   "confidence": "medium"
+  }
+ },
+ "rows": {
+  "G1": 0.87
+ },
+ "facades": [
+  {
+   "edge": 3,
+   "name": "west_gallery",
+   "windows": [
+    {
+     "type": "G",
+     "u": [
+      44.82,
+      38.2,
+      33.3,
+      27.7,
+      23.6
+     ],
+     "rows": [
+      "G1"
+     ]
+    },
+    {
+     "type": "G",
+     "u": [
+      18.1,
+      12.2,
+      6.3,
+      1.6
+     ],
+     "rows": [
+      "G1"
+     ],
+     "status": "assumed: north part hidden behind a tree in the 2020 pano"
+    },
+    {
+     "type": "GN",
+     "u": [
+      52.22,
+      48.7
+     ],
+     "rows": [
+      "G1"
+     ]
+    },
+    {
+     "type": "D",
+     "u": [
+      50.45
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "UW",
+     "u": [
+      31.75
+     ],
+     "sills": [
+      3.3
+     ]
+    }
+   ],
+   "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige",
+   "confidence": "medium"
+  },
+  {
+   "edge": 2,
+   "name": "north_end",
+   "windows": [],
+   "status": "not photographed",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "name": "south_shared",
+   "windows": []
+  },
+  {
+   "edge": 1,
+   "name": "east_shared",
+   "windows": []
+  }
+ ],
+ "roof": {
+  "type": "shed",
+  "pitch": 10,
+  "high_edge": 1,
+  "overhang": 0.45,
+  "evidence": "Google z20: separate lower roof x 1.8..9.4 under a 1.0 m shadow of the A_N west wall (gallery shadows give 0.53 m per m of height -> ~1.8 m step at the main wall); eave line straight and level in the rect; roof surface not visible from the ground -> low mono-pitch rising to the main wall; pitch estimated.",
+  "confidence": "low"
+ },
+ "attachments": [
+  {
+   "type": "gallery",
+   "edge": 3,
+   "u0": 0.3,
+   "u1": 53.3,
+   "depth": 2.5,
+   "posts_u": [
+    51.07,
+    47.53,
+    41.63,
+    35.73,
+    29.83,
+    23.93,
+    18.03,
+    12.13,
+    6.23,
+    0.33,
+    0.6
+   ],
+   "post_w": 0.16,
+   "post_d": 0.16,
+   "z_underside": 2.55,
+   "roof_type": "shed",
+   "roof_thk": 0.06,
+   "roof_fall": 0.35,
+   "beam_h": 0.35,
+   "roof_overhang": 0.15,
+   "evidence": "pano intro2 rect + 070309303 f17-f36: pink corrugated mono-pitch roof (2.9 m at the wall, 2.55 at the front), deep fascia beam 2.2-2.55, thin red steel posts on the bay rhythm (5.9 m; post positions assumed aligned with the wall columns); depth from Google (gallery roof + shadow x -0.3..1.9)",
+   "confidence": "medium"
+  },
+  {
+   "type": "canopy",
+   "edge": 3,
+   "u0": 49.6,
+   "u1": 51.9,
+   "depth": 1.1,
+   "z0": 2.45,
+   "z1": 2.55,
+   "evidence": "2026: small corrugated awning over the south-end door (070309303 f17/f19), under the gallery line",
+   "confidence": "low"
+  }
+ ],
+ "sign_notes": "2026 big blue letter band on the upper west wall at z ~4.3-4.9, from ~4 to ~16 m north of the A_S corner (KOCH slogan later, R4). Sunken basement stair (stone steps + steel grating stair with railings) beside the path near the south end (070309303 f28-f34; Google light strip x -3..-0.5, y 16-30) -> site spec later."
+}

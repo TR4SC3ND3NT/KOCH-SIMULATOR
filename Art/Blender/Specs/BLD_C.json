@@ -304,28 +304,38 @@
    {
     "edge": 0,
     "u": [
-     3.52,
-     8.13,
-     10.69
+     5.2,
+     8.4,
+     12.2
+    ]
+   },
+   {
+    "edge": 2,
+    "u": [
+     3.1
     ]
    },
    {
     "edge": 4,
     "u": [
-     2.02,
-     4.61,
-     9.3
+     3.6
     ]
    },
    {
     "edge": 6,
     "u": [
-     3.52,
-     8.13,
-     10.69,
-     18.71,
-     21.3,
-     25.9
+     9.5,
+     13.5,
+     17.0,
+     20.5,
+     23.8
+    ]
+   },
+   {
+    "edge": 5,
+    "u": [
+     6.3,
+     11.8
     ]
    }
   ],
@@ -334,8 +344,9 @@
    "h": 1.5,
    "inset": 1.3
   },
-  "evidence": "ground photos 061621646/061624280 show only sky above the cornice from ~11 m -> low-pitch hip (~25 deg), not a mansard; pointed dormers on both long slopes (render 2025, Esri 2020); room C501 = attic level",
-  "status": "probable (pitch estimated)"
+  "evidence": "Google z20 (0.1 m/px): 5 pointed dormers on the south slope, 5 (6?) on the north slope, 2 on the east hip; positions corrected for Google roof lean measured by phase correlation vs near-nadir Bing (ground +1.5/+0.25 m, C roof ~19 m: +7.0/+4.0 m -> 0.29 m/m E, 0.20 m/m N); pitch ~25 deg (only sky above the cornice from the plaza)",
+  "status": "probable (pitch estimated)",
+  "confidence": "low"
  },
  "attachments": [
   {

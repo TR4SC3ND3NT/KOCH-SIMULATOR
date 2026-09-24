@@ -1,0 +1,130 @@
+{
+ "id": "BLD_A_E",
+ "collection": "BLD_A",
+ "replaces": [
+  "GB_BLD_A_N",
+  "GB_BLD_A_N_Roof",
+  "GB_BLD_A_S",
+  "GB_BLD_A_S_Roof"
+ ],
+ "scale": 1.0,
+ "status": "uncertain",
+ "note": "Low annex in the corner between A_N (west, shared x=35.2) and A_S (south, shared y=22.75), projecting 3 m east of the A_S east facade. Seen only from above.",
+ "anchor": {
+  "world_xy": [
+   158.84,
+   -92.76
+  ],
+  "x_dir": [
+   0.999,
+   -0.049
+  ],
+  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly)"
+ },
+ "plinth_m": 0.806,
+ "wall_thk": 0.4,
+ "storey_m": 3.6,
+ "storeys": 1,
+ "eave_z": 3.6,
+ "ring": [
+  [
+   35.2,
+   22.75
+  ],
+  [
+   41.2,
+   22.75
+  ],
+  [
+   41.2,
+   35.6
+  ],
+  [
+   35.2,
+   35.6
+  ]
+ ],
+ "ring_notes": "Google z20 red roof x 35.6..41.6, y ~23..36; A_S shadow on it 2.5 m wide (height step ~5-6 m -> 1 storey); Bing shows it too",
+ "cornice": {
+  "z0": 3.4,
+  "z1": 3.6,
+  "proj": 0.03
+ },
+ "plinth": {
+  "z_top": 0.5,
+  "proj": 0.03
+ },
+ "pilasters": [],
+ "window_types": {
+  "W": {
+   "w": 1.97,
+   "h": 1.47,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.68
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "A_S west 3rd-floor windows 86 x 64 px in the rectified pano (0.02289 m/px): 1.97 x 1.47 m; 3 lights + top transom (082337 f0.5, pano intro)",
+   "confidence": "medium"
+  }
+ },
+ "rows": {
+  "F1": 0.92
+ },
+ "facades": [
+  {
+   "edge": 1,
+   "name": "east",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.2,
+      6.4,
+      9.6
+     ],
+     "rows": [
+      "F1"
+     ]
+    }
+   ],
+   "status": "assumed",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.0
+     ],
+     "rows": [
+      "F1"
+     ]
+    }
+   ],
+   "status": "assumed",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "pitch": 15,
+  "overhang": 0.4,
+  "evidence": "Google z20 (plan only)",
+  "confidence": "low"
+ },
+ "attachments": []
+}

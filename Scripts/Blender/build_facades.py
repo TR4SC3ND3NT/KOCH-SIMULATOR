@@ -602,15 +602,19 @@ def main():
     ids = [s for s in os.environ.get("KOCH_SPECS", "BLD_C").split(",") if s]
     ter = Terrain(load("terrain.json"))
     for bid in ids:
-        spec = json.load(open(os.path.join(SPECS, bid + ".json"), encoding="utf-8"))
-        b = Building(spec, ter)
-        clear(b.gen)
-        for name in spec.get("replaces", []):  # phase-1 massing stays in the file, hidden
-            ob = bpy.data.objects.get(name)
-            if ob:
-                ob.hide_set(True)
-                ob.hide_render = True
-        b.build()
+        try:  # one broken or half-written spec must not stop the others
+            spec = json.load(open(os.path.join(SPECS, bid + ".json"), encoding="utf-8"))
+            b = Building(spec, ter)
+            clear(b.gen)
+            for name in spec.get("replaces", []):  # phase-1 massing stays in the file, hidden
+                ob = bpy.data.objects.get(name)
+                if ob:
+                    ob.hide_set(True)
+                    ob.hide_render = True
+            b.build()
+        except Exception as ex:
+            print(f"{bid}: FAILED {ex!r}")
+            continue
         n = sum(1 for o in bpy.data.objects if o.get("koch_gen") == b.gen)
         print(f"{bid}: {n} objects, FFL z={b.ffl:.2f} (ASL {b.ffl + 800:.2f})")
     if bpy.app.background:

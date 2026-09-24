@@ -1,0 +1,399 @@
+{
+ "id": "BLD_A_S",
+ "collection": "BLD_A",
+ "replaces": [
+  "GB_BLD_A_N",
+  "GB_BLD_A_N_Roof",
+  "GB_BLD_A_S",
+  "GB_BLD_A_S_Roof"
+ ],
+ "scale": 1.0,
+ "status": "probable",
+ "note": "Block A south part (phase 2): 3-storey E-W block; its west facade faces the entrance square with the gable entrance pavilion. Local frame shared by all BLD_A_* parts: x along the south facade (east), y north, z above FFL. Plan from Google z20 roof edges (scale checked on the tennis court: service lines 12.67 vs 12.80 m, baselines 23.3 vs 23.77 m) minus a 0.45 m overhang; heights from the single-view rectification of the 2020 pano intro.jpg (exact focal) scaled by the 19.55 m wall, cross-checked on the 2026 video frame 082337 f0.5 (window pitch 0.89 vs 0.90 storey).",
+ "anchor": {
+  "world_xy": [
+   158.84,
+   -92.76
+  ],
+  "x_dir": [
+   0.999,
+   -0.049
+  ],
+  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly)"
+ },
+ "plinth_m": 0.15,
+ "plinth_note": "common FFL for all A parts = highest terrain-model ground under A_S + 0.15 (entrance paving ~0.15 below FFL, 082337 f0.5 rect)",
+ "wall_thk": 0.45,
+ "storey_m": 3.06,
+ "storeys": 3,
+ "eave_z": 9.93,
+ "ring": [
+  [
+   1.28,
+   3.2
+  ],
+  [
+   38.2,
+   3.2
+  ],
+  [
+   38.2,
+   22.75
+  ],
+  [
+   1.28,
+   22.75
+  ]
+ ],
+ "ring_notes": "Google z20 roof: x 0.83..38.65, y 2.75..23.2 (edge profiles, crisp straight eaves); OSM y 0..22.2 is 2 m off in y. NW corner pilaster of A_S projects 0.9 m west of the strip A_W (070309303 f17-f20).",
+ "cornice": {
+  "z0": 9.6,
+  "z1": 9.93,
+  "proj": 0.04
+ },
+ "plinth": {
+  "z_top": 0.75,
+  "proj": 0.03
+ },
+ "pilasters": [
+  {
+   "edge": 3,
+   "u0": 0.0,
+   "u1": 1.88,
+   "proj": 0.06,
+   "z0": 0.75,
+   "z1": 9.6,
+   "evidence": "NW corner maroon pilaster 82 px in the pano rect (1.88 m); 2026 frame 1.6-1.7 m",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 18.25,
+   "u1": 19.55,
+   "proj": 0.06,
+   "z0": 0.75,
+   "z1": 9.6,
+   "evidence": "SW corner pilaster 57 px (1.30 m), carries the block plate",
+   "confidence": "medium"
+  },
+  {
+   "edge": 0,
+   "u0": 0.0,
+   "u1": 1.3,
+   "proj": 0.06,
+   "z0": 0.75,
+   "z1": 9.6,
+   "evidence": "SW pilaster return on the south face (pano intro, oblique)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 35.62,
+   "u1": 36.92,
+   "proj": 0.06,
+   "z0": 0.75,
+   "z1": 9.6,
+   "status": "assumed: mirror of SW corner"
+  },
+  {
+   "edge": 1,
+   "u0": 0.0,
+   "u1": 1.3,
+   "proj": 0.06,
+   "z0": 0.75,
+   "z1": 9.6,
+   "status": "assumed: mirror of SW corner"
+  },
+  {
+   "edge": 3,
+   "u0": 13.1,
+   "u1": 13.55,
+   "proj": 0.12,
+   "z0": 0.0,
+   "z1": 3.25,
+   "evidence": "red-brick pilaster left of the entrance, carries the pavilion (082337 f0.5 rect, 0.47 m)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 15.25,
+   "u1": 15.7,
+   "proj": 0.12,
+   "z0": 0.0,
+   "z1": 3.25,
+   "evidence": "red-brick pilaster right of the entrance (pano intro, 082337 f0.5)",
+   "confidence": "medium"
+  }
+ ],
+ "window_types": {
+  "W": {
+   "w": 1.97,
+   "h": 1.47,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.68
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "A_S west 3rd-floor windows 86 x 64 px in the rectified pano (0.02289 m/px): 1.97 x 1.47 m; 3 lights + top transom (082337 f0.5, pano intro)",
+   "confidence": "medium"
+  },
+  "WF": {
+   "w": 1.97,
+   "h": 1.47,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.68
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0.45,
+    0.45,
+    0.3,
+    0.4
+   ],
+   "surround_proj": 0.06,
+   "evidence": "2026 maroon box frames round selected windows (082337 f0.5 rect: bands 0.4-0.6 m, top 0.43, bottom 0.3); frames of neighbouring windows touch = 'double frames'",
+   "confidence": "medium"
+  },
+  "S": {
+   "w": 1.6,
+   "h": 0.57,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "small high windows (WC/stair) at the SW end of the A_S west facade, heads aligned with the main windows (pano rect 70 x 25 px)",
+   "confidence": "medium"
+  },
+  "SF": {
+   "w": 1.6,
+   "h": 0.57,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0.3,
+    0.3,
+    0.25,
+    0.3
+   ],
+   "surround_proj": 0.06,
+   "evidence": "small window with a maroon frame, 2nd floor SW end (082337 f0.5)",
+   "confidence": "medium"
+  }
+ },
+ "rows": {
+  "F1": 0.92,
+  "F2": 3.98,
+  "F3": 7.04
+ },
+ "facades": [
+  {
+   "edge": 3,
+   "name": "west_square",
+   "windows": [
+    {
+     "type": "WF",
+     "u": [
+      3.31,
+      11.54,
+      14.27
+     ],
+     "rows": [
+      "F3"
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      6.08,
+      8.77,
+      17.11
+     ],
+     "rows": [
+      "F3"
+     ]
+    },
+    {
+     "type": "WF",
+     "u": [
+      6.08,
+      8.77
+     ],
+     "rows": [
+      "F2"
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      3.31,
+      11.54,
+      14.27
+     ],
+     "rows": [
+      "F2"
+     ]
+    },
+    {
+     "type": "SF",
+     "u": [
+      17.11
+     ],
+     "sills": [
+      4.85
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      3.31,
+      6.08,
+      11.54
+     ],
+     "rows": [
+      "F1"
+     ]
+    },
+    {
+     "type": "WF",
+     "u": [
+      8.77
+     ],
+     "rows": [
+      "F1"
+     ]
+    },
+    {
+     "type": "S",
+     "u": [
+      17.11
+     ],
+     "sills": [
+      1.82
+     ]
+    }
+   ],
+   "entrance": {
+    "u0": 13.6,
+    "u1": 15.2,
+    "z1": 2.25,
+    "evidence": "double glass door under the pavilion, pano rect x 897-966 px; 2026 frame opening 0.63 storey from the paving",
+    "confidence": "medium"
+   },
+   "evidence": "rectified pano intro.jpg (yaw 48, 120 deg view, f=808.3 px) + 082337 f0.5 (2026 frame colours/frames): 6 columns at 2.78 m pitch, heads 2.39/5.42/8.45, sills 0.92/3.98/6.98, wall top 9.93 above FFL; FFL = ground-floor sill - 0.92",
+   "confidence": "medium"
+  },
+  {
+   "edge": 0,
+   "name": "south_street",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.6,
+      5.38,
+      8.16,
+      10.94,
+      13.72,
+      16.5,
+      19.28,
+      22.06,
+      24.84,
+      27.62,
+      30.4,
+      33.18,
+      35.96
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3"
+     ]
+    }
+   ],
+   "status": "assumed: west-facade window pitch (2.78 m) over the whole south facade; hidden by trees from the street (065653194) and the render shows only regular rows",
+   "confidence": "low"
+  },
+  {
+   "edge": 1,
+   "name": "east_parking",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.0,
+      6.0,
+      9.78,
+      13.56,
+      16.55
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3"
+     ]
+    }
+   ],
+   "status": "assumed: no photo of the east facade",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north_courts",
+   "windows": [],
+   "status": "mostly covered by A_W/A_N/A_E; exposed only above the strip roof (z > 7.6) and at the NW pilaster return; openings unknown",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "pitch": 13,
+  "overhang": 0.45,
+  "evidence": "hip ends visible in Google z20/Esri 2020 (SW hip at 45 deg in plan); pitch taken from the A_N north gable rake (13 deg, rect 081158 f0.3). Real ridge sits at y 9.8 (south slope 7 m, north slope 13 m, A_N slopes run into it with diagonal valleys); the east 7 m (x 31.2..38.6) has its own N-S ridge. Builder hip = symmetric approximation.",
+  "confidence": "low"
+ },
+ "attachments": [
+  {
+   "type": "porch",
+   "edge": 3,
+   "u0": 11.4,
+   "u1": 15.4,
+   "depth": 4.7,
+   "piers_u": [
+    11.7,
+    15.1
+   ],
+   "pier_w": 0.6,
+   "z_eave": 3.25,
+   "pitch": 34,
+   "overhang": 0.35,
+   "evidence": "Google z20 pavilion roof local y 7.2-11.7 (u 11.05-15.55 incl. eaves); pano intro camera solved from the A_S corner yaws/eave elevations at local (-7.6, 3.6): front pier rays (bearing 26-31 / 40-47 deg) meet the roof-centre constraint at depth 4.7 -> piers at u 11.6 / 14.8; pediment rise/half-span 165/242 px in the rect (34 deg); eave meets the wall at z 3.25; beige block-tile piers on a red-brick base (2026 frame), rear on brick pilasters flanking the door",
+   "confidence": "medium"
+  }
+ ],
+ "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4)."
+}

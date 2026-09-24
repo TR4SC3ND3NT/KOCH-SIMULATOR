@@ -1,0 +1,206 @@
+{
+ "id": "BLD_A_N",
+ "collection": "BLD_A",
+ "replaces": [
+  "GB_BLD_A_N",
+  "GB_BLD_A_N_Roof",
+  "GB_BLD_A_S",
+  "GB_BLD_A_S_Roof"
+ ],
+ "scale": 1.0,
+ "status": "probable",
+ "note": "Block A main N-S wing (phase 2), 3 storeys, between A_S (south, shared wall y=22.75) and the parking (east); the 2-storey strip A_W leans on its west wall. North end wall faces the plaza in front of Block C.",
+ "anchor": {
+  "world_xy": [
+   158.84,
+   -92.76
+  ],
+  "x_dir": [
+   0.999,
+   -0.049
+  ],
+  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly)"
+ },
+ "plinth_m": 0.729,
+ "plinth_note": "same FFL as A_S; the terrain model falls 1.6 m to the north end, the photo shows ~0.9 m (north plinth 1.36 m brick band, sill 1.78 m above the ground) -> fix in the terrain carve",
+ "wall_thk": 0.45,
+ "storey_m": 3.06,
+ "storeys": 3,
+ "eave_z": 9.3,
+ "ring": [
+  [
+   10.9,
+   22.75
+  ],
+  [
+   35.2,
+   22.75
+  ],
+  [
+   35.2,
+   76.5
+  ],
+  [
+   10.9,
+   76.5
+  ]
+ ],
+ "ring_notes": "Google z20: main roof x 10.3..35.9 (ridge 23.1 = centred -> no E-W lean), north eave y 76.7..77.1; south end merges into the A_S roof",
+ "cornice": {
+  "z0": 9.05,
+  "z1": 9.3,
+  "proj": 0.03
+ },
+ "plinth": {
+  "z_top": 0.5,
+  "proj": 0.03
+ },
+ "pilasters": [
+  {
+   "edge": 2,
+   "u0": 0.0,
+   "u1": 0.55,
+   "proj": 0.55,
+   "z0": -0.8,
+   "z1": 11.4,
+   "evidence": "galvanised ventilation duct up the NE corner, above the eave (081158 f0.3)",
+   "confidence": "medium"
+  }
+ ],
+ "window_types": {
+  "N": {
+   "w": 1.9,
+   "h": 1.2,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "A_N north end wall: 3-light windows 0.62 x 0.39 storey (rect of 081158 f0.3); ground-floor ones barred",
+   "confidence": "medium"
+  },
+  "W": {
+   "w": 1.97,
+   "h": 1.47,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.68
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "A_S west 3rd-floor windows 86 x 64 px in the rectified pano (0.02289 m/px): 1.97 x 1.47 m; 3 lights + top transom (082337 f0.5, pano intro)",
+   "confidence": "medium"
+  }
+ },
+ "rows": {
+  "F1": 0.92,
+  "F2": 3.98,
+  "F3": 7.04
+ },
+ "facades": [
+  {
+   "edge": 2,
+   "name": "north_end",
+   "windows": [
+    {
+     "type": "N",
+     "u": [
+      3.48,
+      9.63
+     ],
+     "rows": [
+      "F1",
+      "F2"
+     ]
+    },
+    {
+     "type": "N",
+     "u": [
+      14.67,
+      20.82
+     ],
+     "rows": [
+      "F1",
+      "F2"
+     ],
+     "status": "assumed mirror (west half not in the clip)"
+    }
+   ],
+   "evidence": "rect of 081158036 f0.3 (+ SfM plane from the Block C model): from the NE corner 1.14 and 3.2 storeys; sills 1.0 storey apart; 3rd floor blank; red fire ladder at u 8.8-9.5 to a roof hatch; storey 266 px",
+   "confidence": "medium"
+  },
+  {
+   "edge": 1,
+   "name": "east_parking",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.0,
+      6.0,
+      9.0,
+      12.0,
+      15.0,
+      18.0,
+      21.0,
+      24.0,
+      27.0,
+      30.0,
+      33.0,
+      36.0,
+      39.0,
+      42.0,
+      45.0,
+      48.0,
+      51.0
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3"
+     ]
+    }
+   ],
+   "status": "assumed: no photo (parking side)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "name": "west_above_strip",
+   "windows": [],
+   "status": "wall above the strip roof (z 5.9..9.3) assumed blank (render 2025)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "name": "south_shared",
+   "windows": [],
+   "status": "shared with A_S"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "pitch": 13,
+  "overhang": 0.45,
+  "evidence": "north gable rake rises 13 deg from the NE corner (rect 081158 f0.3); Esri 2020/Google z20 show a clipped (half-hip) north end: wall rises to ~1.3 m above the eave, small hip triangle 9-12 m wide on top; N-S ridge at x 23.1. Builder hip approximates the clipped gable.",
+  "confidence": "medium"
+ },
+ "attachments": []
+}

@@ -5,42 +5,42 @@
   "GB_CNP_Gate",
   "GB_CNP_Gate_Roof"
  ],
- "note": "Main gate area (game opening scene). Gate-line frame: origin = canopy west end on the fence line [150.05, -96.955], s east along [0.99872, -0.05059] (street direction), t north. Booth in BLD_GateBooth.json. No bus shelter seen near the crossing (bus stop position unconfirmed).",
+ "note": "Main gate area (game opening scene). Gate-line frame: origin = canopy west end on the fence line [149.78, -96.74], s east along [0.99872, -0.05059] (street direction), t north. Booth in BLD_GateBooth.json. No bus shelter seen near the crossing (bus stop position unconfirmed).",
  "elements": [
   {
    "type": "canopy",
    "name": "GateCanopy",
    "outline": [
     [
-     149.896,
-     -100.001
+     149.613,
+     -100.036
     ],
     [
-     161.85,
-     -100.607
+     161.468,
+     -100.636
     ],
     [
-     162.022,
-     -97.211
+     161.642,
+     -97.191
     ],
     [
-     150.068,
-     -96.605
+     149.788,
+     -96.59
     ]
    ],
    "posts": [
     [
-     150.581,
-     -98.334
+     150.201,
+     -98.313
     ]
    ],
    "post_d": 0.35,
    "post_shape": "round",
    "z_underside": 3.4,
-   "pitch": 28,
+   "pitch": 27,
    "ridge": "long",
    "thk": 0.28,
-   "evidence": "Long gable canopy over the gate + booth: brown shingles, white sawtooth fascia trim ~0.25 m, stained timber board soffit (boards N-S), downlights. Length 12.0 m: column -> booth SW corner 7.2 m (065856484 f7.0 frontal: 7.2; f3.5: 7.4-7.8; 065835543 bearings: 6.7; old-site elevation 8.2 but edge-compressed: it shows the booth 11 pct narrower than its 21.2-course tile count), cantilever 0.6 m west of the column (065835543: 0.3-0.6; old-site 0.7), 0.75 m past the booth east face (old-site). Depth 3.4 m (Google z20 roof -96.8..-100.2 at x 151.6-156.2; rest under pine / elm crowns). Soffit = booth wall top 21.5 +- 0.5 courses = 3.40 m. Pitch 27-34 deg from the apparent ridge rise (065856484 f7.0, old-site photo) -> 28. East end is a HIP over the booth, west end a gable cut (builder draws gable both ends). One white round column ~0.35 m (0.33-0.38) west end; depth position uncertain: old-site base height says near the gate line, f7.0 base height says ~2 m south of it, pano 2022 shows it south of the gate post -> placed on the centre line. East end rests on the booth. Absolute x +-1 m (two photo solutions 150.3 / 151.0 for the column, walker assumed on the zebra axis)",
+   "evidence": "Long gable canopy over the gate + booth: brown shingles, white sawtooth fascia trim ~0.25 m, stained timber board soffit (boards N-S), downlights. Length 11.9 m: column -> booth SW corner 7.2 m (065856484 f7.0 frontal: 7.2; f3.5: 7.4-7.8; 065835543 bearings: 6.7; old-site elevation 8.2 but edge-compressed: it shows the booth 11 pct narrower than its 21.2-course tile count), cantilever 0.5 m west of the column (065835543: 0.3; f3.5: 0.85; old-site 0.7), 0.75 m past the booth east face (old-site). Depth 3.45 m (Google z20 roof -96.8..-100.2 at x 151.6-156.2, rest under pine / elm crowns; = booth 3.10 + eaves 0.15 N / 0.20 S). Soffit = booth wall top 21.5 +- 0.5 courses = 3.40 m. Pitch 26-30 deg from the apparent ridge rise over the fascia (065856484 f7.0: 27; old-site photo 27-33) -> 27. East end is a HIP over the booth, west end a gable cut (builder draws gable both ends). One white round column ~0.35 m (0.33-0.38) west end; depth position uncertain: old-site base height says near the gate line, f7.0 base height says ~2 m south of it, pano 2022 shows it south of the gate post -> placed on the centre line. East end rests on the booth. Absolute x +-0.8 m: column 150.2 (065835543.MP.jpg, EXIF 24 mm, camera 15.5 m from the north curb by zebra width 4.3 m = 787 px and a 1.6 m pedestrian, 1.0 m east of the zebra axis by the near-stripe edge) and 150.3 (065856484 f7.0, column 3.9 m west of a walker on the zebra axis)",
    "confidence": "medium"
   },
   {
@@ -48,12 +48,12 @@
    "name": "SlidingGate",
    "line": [
     [
-     150.949,
-     -97.001
+     150.579,
+     -96.78
     ],
     [
-     155.243,
-     -97.218
+     154.873,
+     -96.998
     ]
    ],
    "height": 1.5,
@@ -66,12 +66,12 @@
    "name": "GatePost_E",
    "line": [
     [
-     155.243,
-     -97.218
+     154.873,
+     -96.998
     ],
     [
-     155.363,
-     -97.224
+     154.993,
+     -97.004
     ]
    ],
    "height": 1.6,
@@ -86,12 +86,12 @@
    "name": "LaneRail_West",
    "line": [
     [
-     155.443,
-     -97.228
+     155.073,
+     -97.008
     ],
     [
-     155.332,
-     -99.425
+     154.962,
+     -99.205
     ]
    ],
    "height": 1.1,
@@ -107,12 +107,12 @@
    "name": "LaneRail_Turnstile",
    "line": [
     [
-     155.443,
-     -97.228
+     155.073,
+     -97.008
     ],
     [
-     156.592,
-     -97.286
+     156.102,
+     -97.06
     ]
    ],
    "height": 1.1,
@@ -127,8 +127,8 @@
    "type": "turnstile",
    "name": "Turnstile",
    "pos": [
-    157.283,
-    -97.472
+    156.664,
+    -97.239
    ],
    "dir_deg": 87.1,
    "count": 1,
@@ -144,12 +144,12 @@
    "name": "Fence_West",
    "line": [
     [
-     150.799,
-     -96.993
+     150.429,
+     -96.773
     ],
     [
-     136.068,
-     -96.247
+     135.798,
+     -96.032
     ]
    ],
    "height": 1.7,
@@ -165,12 +165,12 @@
    "name": "Fence_East",
    "line": [
     [
-     163.053,
-     -97.614
+     162.683,
+     -97.394
     ],
     [
-     177.235,
-     -98.332
+     176.865,
+     -98.112
     ]
    ],
    "height": 1.7,
@@ -186,12 +186,12 @@
    "name": "BikeRack_Gate",
    "line": [
     [
-     150.314,
-     -97.669
+     149.944,
+     -97.449
     ],
     [
-     145.321,
-     -97.416
+     144.951,
+     -97.196
     ]
    ],
    "count": 10,
@@ -202,8 +202,8 @@
    "type": "sign",
    "name": "Billboard_West",
    "pos": [
-    143.563,
-    -97.528
+    143.592,
+    -97.328
    ],
    "dir_deg": 267.1,
    "w": 3.0,
@@ -217,8 +217,8 @@
    "type": "sign",
    "name": "BoothPlaque",
    "pos": [
-    158.252,
-    -100.094
+    157.862,
+    -100.273
    ],
    "dir_deg": 267.1,
    "w": 0.7,
@@ -227,6 +227,18 @@
    "z0": 2.33,
    "evidence": "brass name plaque on the booth south face (rect 065910461 f9.3): u 0.2-0.9 m from the SW corner, 2.33-2.80 m above ground -> KOCH plaque",
    "confidence": "high"
+  },
+  {
+   "type": "lamp",
+   "name": "GateLamp_W",
+   "pos": [
+    150.507,
+    -96.627
+   ],
+   "height": 2.3,
+   "head": "ball",
+   "evidence": "black post with a ball lamp at the west end of the sliding gate beside the column (061913764 f0.5, 065835543.MP.jpg)",
+   "confidence": "low"
   },
   {
    "type": "lamp",
@@ -283,9 +295,9 @@
     ]
    ],
    "width": 4.3,
-   "stripe_w": 0.5,
-   "gap": 0.5,
-   "evidence": "Google z20 stripe profiles: crossing x 152.0-156.4 (4.3 m), N-S aligned; brightness peaks every 1.00 m along the axis (-115.8 ... -122.6) -> white 0.5 + gap 0.5; the gaps are painted YELLOW (Bishkek yellow-white zebra: 065835543.MP.jpg, 065856484). Stripes worn.",
+   "stripe_w": 0.4,
+   "gap": 0.6,
+   "evidence": "Google z20 stripe profiles: crossing x 152.0-156.4 (4.3 m), N-S aligned; brightness peaks every 1.00 m along the axis (-115.8 ... -122.6), bright cores ~0.4 m -> GOST 0.4 white + 0.6 gap; the gaps are painted YELLOW (Bishkek yellow-white zebra: 065835543.MP.jpg, 065856484). Stripes worn.",
    "confidence": "medium"
   },
   {
@@ -382,8 +394,8 @@
    "type": "bench",
    "name": "Bench_InsideEast",
    "pos": [
-    164.197,
-    -96.771
+    163.828,
+    -96.55
    ],
    "dir_deg": 87.1,
    "length": 1.8,
@@ -397,8 +409,8 @@
    "type": "bin",
    "name": "Bin_Alley",
    "pos": [
-    155.122,
-    -91.705
+    154.852,
+    -91.49
    ],
    "size": [
     0.4,

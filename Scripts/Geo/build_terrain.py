@@ -26,6 +26,12 @@ MASK_BUFFER_M = 18.0  # 30 m posts average ~30x30 m: drop posts whose cell touch
 LANE_W, GUTTER_W = 3.5, 0.5
 SERVICE_W = {"service": 5.0, "residential": 6.0, "tertiary": 8.0}
 CURB_REVEAL_M = 0.15
+# Measured corrections per OSM street: (dx, dy) shift of the centreline (m) and carriageway width (m).
+STREET_FIX = {
+    # Curbs at the zebra in front of the gate: north y=-110.8, south y=-125.6 at x=153 (Google z20, 2026-09-24)
+    # -> centre -118.2 vs OSM -119.15, width 14.8 m.
+    "way/187959018": {"shift": (0.0, 0.95), "width_m": 14.8},
+}
 
 
 def dem_posts(path, extent):
@@ -99,8 +105,14 @@ def main():
         w = road_width(f["tags"])
         if not w:
             continue
+        line = f["line"]
+        fix = STREET_FIX.get(f["osm"])
+        if fix:
+            dx, dy = fix["shift"]
+            line = [[round(x + dx, 3), round(y + dy, 3)] for x, y in line]
+            w = fix.get("width_m", w)
         streets.append({"osm": f["osm"], "class": f["tags"]["highway"], "lanes": f["tags"].get("lanes"),
-                        "width_m": w, "centerline": f["line"]})
+                        "width_m": w, "centerline": line, "corrected": bool(fix)})
 
     out = {"frame": {"proj": LOCAL_PROJ, "z_datum_asl": Z_DATUM_ASL},
            "source": "Copernicus GLO-30 DSM, posts within %.0f m of buildings/wood masked, Tukey IRLS quadratic" % MASK_BUFFER_M,
