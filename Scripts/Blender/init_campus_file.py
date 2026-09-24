@@ -11,11 +11,12 @@ LAYOUT = {
     "00_Reference": ["REF_Satellite", "REF_Plans"],
     "01_Terrain": [],
     "02_Buildings": ["BLD_A", "BLD_B", "BLD_C", "BLD_D", "BLD_Gallery", "BLD_Other"],
-    "03_Site": ["SITE_Paving", "SITE_Curbs", "SITE_StairsRamps", "SITE_FenceGate", "SITE_Checkpoint"],
+    "03_Site": ["SITE_Paving", "SITE_Curbs", "SITE_StairsRamps", "SITE_FenceGate", "SITE_Checkpoint", "SITE_Sport"],
     "04_Garden": ["GRD_Hedges", "GRD_Arch", "GRD_Gazebos", "GRD_Furniture"],
     "05_Street": ["STR_Road", "STR_Crossing", "STR_BusStop"],
     "06_Vegetation": ["VEG_Trees", "VEG_Shrubs"],
     "07_BlockC_Interior": ["INT_C_Basement", "INT_C_F1", "INT_C_F2", "INT_C_F3", "INT_C_F4", "INT_C_F5"],
+    "08_Context": ["CTX_Buildings"],  # neighbour massing, backdrop only
 }
 
 

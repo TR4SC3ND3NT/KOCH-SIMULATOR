@@ -26,6 +26,13 @@ Raw site captures (photos/videos) are **not** in the repo: they contain people. 
 | **D** | west, largest (≈184×55 m) | Faculty of Humanities, Faculty of Medicine, International Distance Learning Center, Labs, Lecture rooms, Coffee shop, Cafeteria |
 | other | — | Sport, Culture & Health Center; Dining Hall; mini football pitch; courts; garden with a hedge maze, a hedge arch and gazebos |
 
+## Map owner notes (2026-09-24)
+- **A:** 3 floors, except its left part as seen from the square, which holds the Konya Hall and the library. That part is 2 storeys, probably with double-height interiors.
+- **D:** 4 floors (panoramas).
+- **E:** a separate building behind the sports hall, not joined to D. It is most likely greybox `BLD_W1` (≈3 floors); to confirm. The large ex-ruin complex south of D is not E.
+- **C west side:** a mono-pitch (shed) structure, high where it meets C and sloping down toward the sports hall. It is visible in the capture videos.
+- **Sports area (for the site phase, not modelled yet):** left to right, one large football pitch, then an area of the same size split into 3 courts: basketball, volleyball and an empty hard court. A green steel mesh fence runs around the full perimeter and between the courts.
+
 ## Measured and estimated dimensions (±5%)
 - Classroom door, clear opening ≈ 0.90–0.95 m × 2.00–2.05 m. Outer frame ≈ 1.05 × 2.10 m.
   - Single leaf, black aluminium frame, two glass panels, opens outward into the corridor.

@@ -1,0 +1,1893 @@
+{
+ "note": "Phase-1 footprints, local campus frame (Scripts/Geo/campus_frame.py). ring = roof/eave outline traced from OSM/Bing (CCW); the builder insets walls by roof.overhang_m. Heights: storeys*ftf_m above FFL; FFL = highest terrain under the footprint + plinth_m.",
+ "items": [
+  {
+   "group": "A",
+   "kind": "building",
+   "osm": "way/169915365",
+   "storeys": 3,
+   "ftf_m": 3.6,
+   "plinth_m": 0.6,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 18,
+    "overhang_m": 0.5
+   },
+   "status": "probable",
+   "evidence": [
+    "OSM building:levels=3",
+    "pano2020 intro: A-block west facade 3 window rows",
+    "render2025: one large N-S roof with lower west strip"
+   ],
+   "notes": "Render shows a lower 2-storey strip along the west facade under a separate roof; split in phase 2.",
+   "id": "BLD_A_N",
+   "ring": [
+    [
+     166.18,
+     -16.11
+    ],
+    [
+     163.48,
+     -70.77
+    ],
+    [
+     194.69,
+     -72.31
+    ],
+    [
+     197.39,
+     -17.63
+    ]
+   ]
+  },
+  {
+   "group": "A",
+   "kind": "building",
+   "osm": "way/169915352",
+   "storeys": 3,
+   "ftf_m": 3.6,
+   "plinth_m": 0.6,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 18,
+    "overhang_m": 0.5
+   },
+   "status": "probable",
+   "evidence": [
+    "pano2020 intro: \"A Block\" sign, 3 window rows, pitched entrance canopy on brick-tile piers",
+    "render2025: separate E-W hipped roof",
+    "2GIS: 4 ground floors (conflict)"
+   ],
+   "notes": "",
+   "id": "BLD_A_S",
+   "ring": [
+    [
+     158.84,
+     -92.76
+    ],
+    [
+     197.44,
+     -94.65
+    ],
+    [
+     198.53,
+     -72.49
+    ],
+    [
+     194.69,
+     -72.31
+    ],
+    [
+     163.48,
+     -70.77
+    ],
+    [
+     159.94,
+     -70.61
+    ]
+   ]
+  },
+  {
+   "group": "B",
+   "kind": "building",
+   "osm": "way/169915394",
+   "storeys": 2,
+   "ftf_m": 3.6,
+   "plinth_m": 0.6,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 20,
+    "overhang_m": 0.5
+   },
+   "status": "confirmed",
+   "evidence": [
+    "pano2020 intro + frames 070309303/082606037: 2 storeys, lettering band, covered gallery with red posts",
+    "render2025: E-W hipped roof"
+   ],
+   "notes": "",
+   "id": "BLD_B",
+   "ring": [
+    [
+     98.51,
+     -79.47
+    ],
+    [
+     147.73,
+     -81.88
+    ],
+    [
+     148.99,
+     -56.45
+    ],
+    [
+     99.76,
+     -54.05
+    ]
+   ]
+  },
+  {
+   "group": "C",
+   "kind": "building",
+   "osm": "way/169915321",
+   "storeys": 4,
+   "ftf_m": 3.9,
+   "plinth_m": 1.05,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 38,
+    "overhang_m": 0.4,
+    "attic": true
+   },
+   "status": "confirmed",
+   "evidence": [
+    "photo 061428331: 4 window rows, 7 granite entrance steps (~1.05 m)",
+    "render2025: 4 storeys + mansard with dormers",
+    "room C501 exists -> attic level 5",
+    "campus.md: floor-to-floor 3.8-4.0 m (estimate)"
+   ],
+   "notes": "Mansard with dormers approximated by a steep hip in phase 1.",
+   "id": "BLD_C",
+   "ring": [
+    [
+     172.61,
+     -4.49
+    ],
+    [
+     203.22,
+     -5.71
+    ],
+    [
+     203.98,
+     13.22
+    ],
+    [
+     173.37,
+     14.44
+    ]
+   ]
+  },
+  {
+   "group": "C",
+   "kind": "building",
+   "osm": null,
+   "storeys": 1,
+   "ftf_m": 4.2,
+   "plinth_m": 0.6,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.4
+   },
+   "status": "uncertain",
+   "evidence": [
+    "render2025: grey flat-roof block on C west side, full C depth",
+    "event map 2026: dark (non-red) block west of C"
+   ],
+   "notes": "Not visible in 2020/2021 imagery (trees there): probably built after 2021. Width 7.5 m estimated from render proportions.",
+   "id": "BLD_C_Annex",
+   "ring": [
+    [
+     165.12,
+     -4.19
+    ],
+    [
+     172.61,
+     -4.49
+    ],
+    [
+     173.37,
+     14.44
+    ],
+    [
+     165.88,
+     14.74
+    ]
+   ]
+  },
+  {
+   "group": "Canteen",
+   "kind": "building",
+   "osm": "way/1529424635",
+   "storeys": 1,
+   "ftf_m": 4.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "gable",
+    "pitch_deg": 15,
+    "overhang_m": 0.5
+   },
+   "status": "probable",
+   "evidence": [
+    "schematic2026: \"canteen\" north of C",
+    "pano2020 basketball: hotspot Kantin",
+    "render2025: long dark low roof north of C"
+   ],
+   "notes": "",
+   "id": "BLD_Canteen",
+   "ring": [
+    [
+     207.03,
+     35.87
+    ],
+    [
+     182.55,
+     36.75
+    ],
+    [
+     182.19,
+     26.68
+    ],
+    [
+     206.67,
+     25.8
+    ]
+   ]
+  },
+  {
+   "group": "Gate",
+   "kind": "building",
+   "osm": null,
+   "storeys": 1,
+   "ftf_m": 3.0,
+   "plinth_m": 0.15,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.0
+   },
+   "status": "uncertain",
+   "evidence": [
+    "old site photo: booth ~5x4 m, beige tile + red-brick plinth, east of the sliding gate",
+    "OSM gate node (152.6,-97.1)",
+    "pano2020 intro: booth SE of camera"
+   ],
+   "notes": "Position +-2 m; refine from photos in phase 3.",
+   "id": "BLD_GateBooth",
+   "ring": [
+    [
+     154.41,
+     -100.61
+    ],
+    [
+     159.4,
+     -100.85
+    ],
+    [
+     159.59,
+     -96.86
+    ],
+    [
+     154.6,
+     -96.61
+    ]
+   ]
+  },
+  {
+   "group": "Gate",
+   "kind": "canopy",
+   "osm": null,
+   "storeys": 1,
+   "ftf_m": 3.9,
+   "plinth_m": 0.0,
+   "roof": {
+    "type": "gable",
+    "pitch_deg": 12,
+    "overhang_m": 0.3,
+    "open_sides": true
+   },
+   "status": "uncertain",
+   "evidence": [
+    "old site photo + frame 065856484: long brown pitched canopy on 2 round posts + the booth",
+    "fest map 2026: dark bar at the entrance"
+   ],
+   "notes": "",
+   "id": "CNP_Gate",
+   "ring": [
+    [
+     144.89,
+     -101.73
+    ],
+    [
+     159.87,
+     -102.46
+    ],
+    [
+     160.11,
+     -97.46
+    ],
+    [
+     145.13,
+     -96.73
+    ]
+   ]
+  },
+  {
+   "group": "Hall",
+   "kind": "building",
+   "osm": "way/169915360",
+   "storeys": 1,
+   "ftf_m": 5.5,
+   "plinth_m": 0.45,
+   "roof": {
+    "type": "gable",
+    "pitch_deg": 15,
+    "overhang_m": 0.6
+   },
+   "status": "probable",
+   "evidence": [
+    "schematic2026: \"sports hall\" north of the garden",
+    "ROUTE 061757320: 1-storey gallery building with red columns",
+    "pano2020 c_intro_2 hotspot \"Sport Hall\""
+   ],
+   "notes": "",
+   "id": "BLD_Hall",
+   "ring": [
+    [
+     88.07,
+     -1.35
+    ],
+    [
+     149.28,
+     -3.09
+    ],
+    [
+     149.7,
+     11.57
+    ],
+    [
+     88.49,
+     13.31
+    ]
+   ]
+  },
+  {
+   "group": "Hall",
+   "kind": "building",
+   "osm": null,
+   "storeys": 2,
+   "ftf_m": 3.6,
+   "plinth_m": 0.45,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 22,
+    "overhang_m": 0.5
+   },
+   "status": "probable",
+   "evidence": [
+    "Bing 2021 + Esri 2020: red hipped roof at hall NE end, ~18x11 m",
+    "render2025: red wing north of the hall east end",
+    "fest map 2026: red wing at hall east end"
+   ],
+   "notes": "",
+   "id": "BLD_Hall_Wing",
+   "ring": [
+    [
+     133.8,
+     12.02
+    ],
+    [
+     151.5,
+     11.52
+    ],
+    [
+     151.81,
+     22.52
+    ],
+    [
+     134.11,
+     23.02
+    ]
+   ]
+  },
+  {
+   "group": "Pavilion",
+   "kind": "building",
+   "osm": "way/635534999",
+   "storeys": 1,
+   "ftf_m": 4.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "gable",
+    "pitch_deg": 20,
+    "overhang_m": 0.5
+   },
+   "status": "probable",
+   "evidence": [
+    "schematic2026: small N-S building west of the concert area",
+    "render2025: dark pitched-roof pavilion in the fair zone",
+    "Esri 2020: grey gable roof, short shadow"
+   ],
+   "notes": "",
+   "id": "BLD_Pavilion",
+   "ring": [
+    [
+     59.15,
+     61.81
+    ],
+    [
+     58.72,
+     41.95
+    ],
+    [
+     69.67,
+     41.72
+    ],
+    [
+     70.1,
+     61.57
+    ]
+   ]
+  },
+  {
+   "group": "W1",
+   "kind": "building",
+   "osm": "way/169915374",
+   "storeys": 3,
+   "ftf_m": 3.6,
+   "plinth_m": 0.6,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 22,
+    "overhang_m": 0.5
+   },
+   "status": "uncertain",
+   "evidence": [
+    "Esri/Bing: red hipped roof west of the hall, shadow ~10 m (March) -> ~3 storeys",
+    "2GIS: university building, 4 ground floors, at its grey extension",
+    "pano2020 c_intro1: 3-storey grey block with external fire stair"
+   ],
+   "notes": "Outside the OSM campus polygon; campus membership to confirm.",
+   "id": "BLD_W1",
+   "ring": [
+    [
+     70.68,
+     8.63
+    ],
+    [
+     70.97,
+     22.1
+    ],
+    [
+     51.65,
+     22.51
+    ],
+    [
+     51.36,
+     9.05
+    ]
+   ]
+  },
+  {
+   "group": "W1",
+   "kind": "building",
+   "osm": null,
+   "storeys": 3,
+   "ftf_m": 3.6,
+   "plinth_m": 0.6,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.6
+   },
+   "status": "uncertain",
+   "evidence": [
+    "Bing/Esri: light-grey flat roof west and south of W1",
+    "2GIS: 4 ground floors here"
+   ],
+   "notes": "",
+   "id": "BLD_W1_Ext",
+   "ring": [
+    [
+     42.4,
+     5.4
+    ],
+    [
+     51.0,
+     4.95
+    ],
+    [
+     51.0,
+     9.0
+    ],
+    [
+     52.0,
+     23.0
+    ],
+    [
+     43.2,
+     23.4
+    ]
+   ]
+  },
+  {
+   "group": "D",
+   "kind": "building",
+   "osm": null,
+   "storeys": 4,
+   "ftf_m": 3.6,
+   "plinth_m": 0.5,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 25,
+    "overhang_m": 0.6
+   },
+   "status": "probable",
+   "evidence": [
+    "Bing 2021 (near-nadir): light-grey hipped roof X -192.5..-158, Y 15.5..74.5",
+    "Esri 2020 roof = Bing + lean (-7.6,+3.4) at ~17 m: consistent",
+    "pano2020 D_block: 4 window rows, curved entrance canopy"
+   ],
+   "notes": "OSM way/129705662 west part is ~8 m east/north of the imagery; re-traced.",
+   "id": "BLD_D_W",
+   "ring": [
+    [
+     -192.5,
+     15.5
+    ],
+    [
+     -160.54,
+     13.94
+    ],
+    [
+     -157.8,
+     72.94
+    ],
+    [
+     -189.75,
+     74.5
+    ]
+   ]
+  },
+  {
+   "group": "D",
+   "kind": "building",
+   "osm": null,
+   "storeys": 4,
+   "ftf_m": 3.6,
+   "plinth_m": 0.5,
+   "roof": {
+    "type": "hip",
+    "pitch_deg": 20,
+    "overhang_m": 0.5
+   },
+   "status": "probable",
+   "evidence": [
+    "OSM way/129705662 east part (south notch matches Bing)",
+    "Bing: red roofs with several E-W ridges and skylight strips",
+    "OSM building:levels=5 (attic/basement?)"
+   ],
+   "notes": "Complex multi-ridge roof with glazed strips approximated by one hip in phase 1.",
+   "id": "BLD_D_M",
+   "ring": [
+    [
+     -160.54,
+     13.94
+    ],
+    [
+     -151.41,
+     13.5
+    ],
+    [
+     -150.66,
+     37.54
+    ],
+    [
+     -91.81,
+     34.69
+    ],
+    [
+     -92.35,
+     23.52
+    ],
+    [
+     -1.27,
+     19.13
+    ],
+    [
+     1.19,
+     69.81
+    ],
+    [
+     -157.8,
+     72.94
+    ]
+   ]
+  },
+  {
+   "group": "E",
+   "kind": "building",
+   "osm": null,
+   "storeys": 4,
+   "ftf_m": 3.6,
+   "plinth_m": 0.5,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.8
+   },
+   "status": "uncertain",
+   "evidence": [
+    "Esri 2020/Bing 2021: unfinished RC-frame complex (flat slab west half, open frame east half), tall shadow",
+    "Sentinel-2 2026-08-27: built-up, bright roofs",
+    "strategic plan 2021-26: \"block E, 20000 m2\" to be commissioned"
+   ],
+   "notes": "Outside the OSM campus polygon; ownership, storeys and final footprint unknown.",
+   "id": "BLD_E",
+   "ring": [
+    [
+     -98.91,
+     -67.75
+    ],
+    [
+     32.43,
+     -74.18
+    ],
+    [
+     35.41,
+     -13.25
+    ],
+    [
+     -95.93,
+     -6.82
+    ]
+   ]
+  },
+  {
+   "group": "Garden",
+   "kind": "gazebo",
+   "osm": null,
+   "storeys": 1,
+   "ftf_m": 2.7,
+   "plinth_m": 0.15,
+   "roof": {
+    "type": "pyramid",
+    "pitch_deg": 28,
+    "overhang_m": 0.4,
+    "open_sides": true
+   },
+   "status": "uncertain",
+   "evidence": [
+    "event map 2026: 2 octagonal gazebos symmetric in the garden",
+    "signboard render: 2 octagonal gazebos between B and A",
+    "frames 081924271: white pillars, red-brick base, wood-slat soffit"
+   ],
+   "notes": "Hidden by conifers on both orthos; position from the not-to-scale event map (+-3 m), size 6 m across flats estimated.",
+   "id": "GRD_Gazebo_1",
+   "ring": [
+    [
+     115.2,
+     -28.06
+    ],
+    [
+     113.44,
+     -26.3
+    ],
+    [
+     110.96,
+     -26.3
+    ],
+    [
+     109.2,
+     -28.06
+    ],
+    [
+     109.2,
+     -30.54
+    ],
+    [
+     110.96,
+     -32.3
+    ],
+    [
+     113.44,
+     -32.3
+    ],
+    [
+     115.2,
+     -30.54
+    ]
+   ]
+  },
+  {
+   "group": "Garden",
+   "kind": "gazebo",
+   "osm": null,
+   "storeys": 1,
+   "ftf_m": 2.7,
+   "plinth_m": 0.15,
+   "roof": {
+    "type": "pyramid",
+    "pitch_deg": 28,
+    "overhang_m": 0.4,
+    "open_sides": true
+   },
+   "status": "uncertain",
+   "evidence": [
+    "event map 2026: 2 octagonal gazebos symmetric in the garden",
+    "signboard render: 2 octagonal gazebos between B and A",
+    "frames 081924271: white pillars, red-brick base, wood-slat soffit"
+   ],
+   "notes": "Hidden by conifers on both orthos; position from the not-to-scale event map (+-3 m), size 6 m across flats estimated.",
+   "id": "GRD_Gazebo_2",
+   "ring": [
+    [
+     142.5,
+     -28.06
+    ],
+    [
+     140.74,
+     -26.3
+    ],
+    [
+     138.26,
+     -26.3
+    ],
+    [
+     136.5,
+     -28.06
+    ],
+    [
+     136.5,
+     -30.54
+    ],
+    [
+     138.26,
+     -32.3
+    ],
+    [
+     140.74,
+     -32.3
+    ],
+    [
+     142.5,
+     -30.54
+    ]
+   ]
+  },
+  {
+   "group": "Sport",
+   "kind": "pitch",
+   "osm": null,
+   "storeys": 0,
+   "ftf_m": 0,
+   "plinth_m": 0.05,
+   "roof": {
+    "type": "none"
+   },
+   "status": "probable",
+   "evidence": [
+    "Bing/Esri: green turf 45x25.8 m",
+    "pano2020 c_intro1: fenced pitch, ~5 m green mesh"
+   ],
+   "notes": "",
+   "id": "SITE_FootballPitch",
+   "ring": [
+    [
+     112.5,
+     44.64
+    ],
+    [
+     157.47,
+     42.83
+    ],
+    [
+     158.5,
+     68.56
+    ],
+    [
+     113.53,
+     70.37
+    ]
+   ]
+  },
+  {
+   "group": "Sport",
+   "kind": "pitch",
+   "osm": "way/1529424634",
+   "storeys": 0,
+   "ftf_m": 0,
+   "plinth_m": 0.05,
+   "roof": {
+    "type": "none"
+   },
+   "status": "confirmed",
+   "evidence": [
+    "OSM leisure=pitch",
+    "Bing: basketball + tennis surfaces",
+    "event map 2026: basketball/volley/tennis"
+   ],
+   "notes": "",
+   "id": "SITE_Courts",
+   "ring": [
+    [
+     165.87,
+     70.63
+    ],
+    [
+     164.82,
+     45.23
+    ],
+    [
+     210.29,
+     43.4
+    ],
+    [
+     211.33,
+     68.79
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/168164292",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_168164292",
+   "ring": [
+    [
+     -351.893,
+     92.114
+    ],
+    [
+     -354.733,
+     16.984
+    ],
+    [
+     -342.711,
+     16.528
+    ],
+    [
+     -339.871,
+     91.669
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/169828217",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"amenity\": \"car_wash\", \"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_169828217",
+   "ring": [
+    [
+     200.832,
+     -148.88
+    ],
+    [
+     200.644,
+     -158.589
+    ],
+    [
+     234.768,
+     -159.232
+    ],
+    [
+     234.947,
+     -149.523
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/169915330",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_169915330",
+   "ring": [
+    [
+     208.268,
+     -91.879
+    ],
+    [
+     257.855,
+     -94.933
+    ],
+    [
+     258.663,
+     -81.946
+    ],
+    [
+     209.069,
+     -78.893
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206613116",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206613116",
+   "ring": [
+    [
+     -462.478,
+     140.722
+    ],
+    [
+     -464.908,
+     99.53
+    ],
+    [
+     -456.956,
+     99.063
+    ],
+    [
+     -338.081,
+     92.091
+    ],
+    [
+     -337.623,
+     99.823
+    ],
+    [
+     -408.784,
+     103.981
+    ],
+    [
+     -408.555,
+     107.858
+    ],
+    [
+     -458.001,
+     110.761
+    ],
+    [
+     -456.258,
+     140.366
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206613712",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206613712",
+   "ring": [
+    [
+     -413.676,
+     166.814
+    ],
+    [
+     -415.706,
+     117.935
+    ],
+    [
+     -339.878,
+     114.809
+    ],
+    [
+     -337.849,
+     163.688
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206614083",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"amenity\": \"cafe\", \"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206614083",
+   "ring": [
+    [
+     -266.686,
+     5.904
+    ],
+    [
+     -267.586,
+     -10.504
+    ],
+    [
+     -271.084,
+     -10.315
+    ],
+    [
+     -271.583,
+     -19.513
+    ],
+    [
+     -268.003,
+     -19.702
+    ],
+    [
+     -268.583,
+     -30.345
+    ],
+    [
+     -264.194,
+     -30.589
+    ],
+    [
+     -265.209,
+     -49.197
+    ],
+    [
+     -240.42,
+     -50.542
+    ],
+    [
+     -237.435,
+     4.325
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206623783",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206623783",
+   "ring": [
+    [
+     12.684,
+     128.087
+    ],
+    [
+     12.071,
+     114.5
+    ],
+    [
+     53.549,
+     112.623
+    ],
+    [
+     54.17,
+     126.221
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206623794",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206623794",
+   "ring": [
+    [
+     79.563,
+     121.111
+    ],
+    [
+     79.719,
+     105.28
+    ],
+    [
+     122.52,
+     103.348
+    ],
+    [
+     123.084,
+     115.679
+    ],
+    [
+     93.04,
+     120.0
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206623848",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206623848",
+   "ring": [
+    [
+     216.79,
+     -1.241
+    ],
+    [
+     215.328,
+     -38.923
+    ],
+    [
+     227.31,
+     -39.378
+    ],
+    [
+     228.78,
+     -1.707
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/206623867",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_206623867",
+   "ring": [
+    [
+     217.654,
+     55.46
+    ],
+    [
+     215.645,
+     3.769
+    ],
+    [
+     226.303,
+     3.359
+    ],
+    [
+     227.675,
+     38.585
+    ],
+    [
+     284.731,
+     36.388
+    ],
+    [
+     285.367,
+     52.84
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/255081513",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"school\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_255081513",
+   "ring": [
+    [
+     -185.332,
+     -4.641
+    ],
+    [
+     -185.635,
+     -27.859
+    ],
+    [
+     -192.271,
+     -27.77
+    ],
+    [
+     -192.394,
+     -36.957
+    ],
+    [
+     -185.823,
+     -37.046
+    ],
+    [
+     -186.159,
+     -62.397
+    ],
+    [
+     -167.688,
+     -62.642
+    ],
+    [
+     -166.926,
+     -4.886
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/635535016",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_635535016",
+   "ring": [
+    [
+     217.856,
+     139.355
+    ],
+    [
+     215.888,
+     91.519
+    ],
+    [
+     231.645,
+     90.864
+    ],
+    [
+     233.613,
+     138.7
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/635535018",
+   "storeys": 9,
+   "ftf_m": 3.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_635535018",
+   "ring": [
+    [
+     106.28,
+     146.995
+    ],
+    [
+     105.675,
+     132.487
+    ],
+    [
+     172.48,
+     129.733
+    ],
+    [
+     173.077,
+     144.241
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/635535021",
+   "storeys": 9,
+   "ftf_m": 3.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_635535021",
+   "ring": [
+    [
+     141.643,
+     191.943
+    ],
+    [
+     140.328,
+     160.271
+    ],
+    [
+     154.213,
+     159.705
+    ],
+    [
+     155.529,
+     191.376
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/635535022",
+   "storeys": 9,
+   "ftf_m": 3.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_635535022",
+   "ring": [
+    [
+     175.176,
+     189.766
+    ],
+    [
+     173.861,
+     158.094
+    ],
+    [
+     187.755,
+     157.517
+    ],
+    [
+     189.07,
+     189.189
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/635535023",
+   "storeys": 9,
+   "ftf_m": 3.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_635535023",
+   "ring": [
+    [
+     208.284,
+     187.579
+    ],
+    [
+     206.969,
+     155.907
+    ],
+    [
+     220.855,
+     155.341
+    ],
+    [
+     222.17,
+     187.001
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/635535024",
+   "storeys": 9,
+   "ftf_m": 3.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_635535024",
+   "ring": [
+    [
+     240.501,
+     185.835
+    ],
+    [
+     239.187,
+     154.164
+    ],
+    [
+     253.081,
+     153.587
+    ],
+    [
+     254.387,
+     185.258
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/742042612",
+   "storeys": 9,
+   "ftf_m": 3.0,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"residential\", \"building:levels\": \"9\", \"building:levels:underground\": \"1\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_742042612",
+   "ring": [
+    [
+     143.982,
+     111.391
+    ],
+    [
+     143.173,
+     96.961
+    ],
+    [
+     190.527,
+     94.34
+    ],
+    [
+     191.328,
+     108.771
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/761341970",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_761341970",
+   "ring": [
+    [
+     -201.501,
+     162.894
+    ],
+    [
+     -201.812,
+     153.796
+    ],
+    [
+     -190.158,
+     153.407
+    ],
+    [
+     -190.706,
+     137.243
+    ],
+    [
+     -171.949,
+     136.609
+    ],
+    [
+     -172.35,
+     124.645
+    ],
+    [
+     -131.518,
+     123.278
+    ],
+    [
+     -131.183,
+     133.176
+    ],
+    [
+     -125.029,
+     134.909
+    ],
+    [
+     -124.162,
+     160.271
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/761341971",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_761341971",
+   "ring": [
+    [
+     -75.55,
+     123.732
+    ],
+    [
+     -75.55,
+     110.513
+    ],
+    [
+     7.625,
+     104.391
+    ],
+    [
+     8.59,
+     117.611
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/761341972",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_761341972",
+   "ring": [
+    [
+     14.033,
+     144.428
+    ],
+    [
+     14.466,
+     131.442
+    ],
+    [
+     54.415,
+     129.72
+    ],
+    [
+     54.415,
+     143.129
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/761350987",
+   "storeys": 1,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_761350987",
+   "ring": [
+    [
+     69.006,
+     -68.442
+    ],
+    [
+     69.431,
+     -71.819
+    ],
+    [
+     72.618,
+     -72.241
+    ],
+    [
+     73.043,
+     -67.798
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/761350988",
+   "storeys": 1,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_761350988",
+   "ring": [
+    [
+     78.985,
+     -80.073
+    ],
+    [
+     78.985,
+     -84.306
+    ],
+    [
+     84.298,
+     -84.728
+    ],
+    [
+     84.935,
+     -80.284
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/1529424567",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_1529424567",
+   "ring": [
+    [
+     93.724,
+     317.04
+    ],
+    [
+     92.466,
+     301.988
+    ],
+    [
+     91.738,
+     302.054
+    ],
+    [
+     91.011,
+     293.334
+    ],
+    [
+     92.948,
+     293.167
+    ],
+    [
+     92.842,
+     291.878
+    ],
+    [
+     94.133,
+     291.767
+    ],
+    [
+     90.366,
+     246.443
+    ],
+    [
+     89.663,
+     238.055
+    ],
+    [
+     88.364,
+     222.469
+    ],
+    [
+     87.285,
+     209.505
+    ],
+    [
+     86.534,
+     200.407
+    ],
+    [
+     81.769,
+     200.807
+    ],
+    [
+     75.166,
+     121.477
+    ],
+    [
+     79.563,
+     121.111
+    ],
+    [
+     93.04,
+     120.0
+    ],
+    [
+     100.468,
+     209.072
+    ],
+    [
+     104.759,
+     208.717
+    ],
+    [
+     113.674,
+     315.385
+    ]
+   ]
+  },
+  {
+   "group": "Context",
+   "kind": "context",
+   "osm": "way/1529424629",
+   "storeys": 2,
+   "ftf_m": 3.5,
+   "plinth_m": 0.3,
+   "roof": {
+    "type": "flat",
+    "parapet_m": 0.5
+   },
+   "status": "context",
+   "evidence": [
+    "OSM {\"building\": \"yes\"}"
+   ],
+   "notes": "Backdrop massing; storeys guessed where OSM has none.",
+   "id": "CTX_1529424629",
+   "ring": [
+    [
+     -254.292,
+     -120.017
+    ],
+    [
+     -286.323,
+     -118.416
+    ],
+    [
+     -286.666,
+     -125.081
+    ],
+    [
+     -254.627,
+     -126.682
+    ]
+   ]
+  }
+ ]
+}

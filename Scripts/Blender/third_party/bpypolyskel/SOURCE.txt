@@ -1,0 +1,2 @@
+bpypolyskel (straight-skeleton hipped roofs), GPL-3.0-only, tool code only: never ship in the game or UE C++.
+https://github.com/prochitecture/bpypolyskel @ bd1ce5b2e9dc2028595e6a3e116926e1c58e45dd (2026-03-13), files copied unmodified.

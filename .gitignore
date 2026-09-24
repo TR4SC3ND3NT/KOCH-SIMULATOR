@@ -55,3 +55,6 @@ Thumbs.db
 # Python
 .venv/
 __pycache__/
+
+# Blender autosave backups
+*.blend[0-9]
