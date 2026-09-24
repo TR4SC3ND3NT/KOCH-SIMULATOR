@@ -28,7 +28,8 @@ COL = {  # viewport object colours only (greybox review aid, not materials)
     "wall": (0.83, 0.78, 0.66, 1), "maroon": (0.50, 0.16, 0.14, 1), "plinth": (0.55, 0.22, 0.17, 1),
     "frame": (0.92, 0.92, 0.90, 1), "glass": (0.35, 0.45, 0.52, 1), "roof": (0.58, 0.22, 0.20, 1),
     "metal": (0.40, 0.42, 0.44, 1), "granite": (0.52, 0.40, 0.38, 1), "canopy": (0.75, 0.38, 0.22, 1),
-    "sign": (0.20, 0.25, 0.45, 1), "brick": (0.45, 0.20, 0.16, 1),
+    "sign": (0.20, 0.25, 0.45, 1), "brick": (0.45, 0.20, 0.16, 1), "low": (0.95, 0.55, 0.20, 1),
+    "post": (0.55, 0.14, 0.12, 1),
 }
 
 
@@ -91,9 +92,14 @@ class Building:
         self.kit_meshes = {}
 
     # ------------------------------------------------------------------ helpers
-    def obj(self, name, bm, color, item_evidence=None):
+    def obj(self, name, bm, color, item_evidence=None, confidence=None):
+        """Link one element; confidence 'low' is shown orange (unverified estimate, see photo_requests.md)."""
         it = {"id": self.id, "status": self.s.get("status", "probable"), "evidence": [item_evidence] if item_evidence else []}
-        return make_object(f"GBF_{self.id}_{name}", bm, self.col, None, it, color, gen=self.gen, matrix=self.M)
+        if confidence == "low":
+            color = COL["low"]
+        ob = make_object(f"GBF_{self.id}_{name}", bm, self.col, None, it, color, gen=self.gen, matrix=self.M)
+        ob["koch_confidence"] = confidence or ""
+        return ob
 
     def corner_cut(self, i, end):
         """Inner-face inset at the start (end=False) or end of edge i: +thk convex, -thk concave (90 deg)."""
@@ -223,26 +229,38 @@ class Building:
 
     # ------------------------------------------------------------------ bands, pilasters, plinth
     def build_trim(self):
-        bm_c, bm_p, bm_pl = bmesh.new(), bmesh.new(), bmesh.new()
-        c = self.s["cornice"]
-        pl = self.s["plinth"]
-        for i, e in enumerate(self.edges):
-            ext0 = c["proj"] if self.corner_cut(i, False) > 0 else -c["proj"]
-            ext1 = c["proj"] if self.corner_cut(i, True) > 0 else -c["proj"]
-            box(bm_c, e["frame"], -ext0, e["L"] + ext1, 0.0, c["proj"], c["z0"], c["z1"])
-            p0 = pl["proj"] if self.corner_cut(i, False) > 0 else -pl["proj"]
-            p1 = pl["proj"] if self.corner_cut(i, True) > 0 else -pl["proj"]
-            box(bm_pl, e["frame"], -p0, e["L"] + p1, 0.0, pl["proj"], e["zg"] - 0.05, pl["z_top"])
-        for p in self.s.get("pilasters", []):
+        c = self.s.get("cornice")
+        pl = self.s.get("plinth")
+        if c:
+            bm_c = bmesh.new()
+            for i, e in enumerate(self.edges):
+                ext0 = c["proj"] if self.corner_cut(i, False) > 0 else -c["proj"]
+                ext1 = c["proj"] if self.corner_cut(i, True) > 0 else -c["proj"]
+                box(bm_c, e["frame"], -ext0, e["L"] + ext1, 0.0, c["proj"], c["z0"], c["z1"])
+            self.obj("Cornice", bm_c, COL["maroon"], c.get("evidence", "cornice band under the eaves"), c.get("confidence"))
+        if pl:
+            bm_pl = bmesh.new()
+            for i, e in enumerate(self.edges):
+                p0 = pl["proj"] if self.corner_cut(i, False) > 0 else -pl["proj"]
+                p1 = pl["proj"] if self.corner_cut(i, True) > 0 else -pl["proj"]
+                box(bm_pl, e["frame"], -p0, e["L"] + p1, 0.0, pl["proj"], e["zg"] - 0.05, pl["z_top"])
+            self.obj("Plinth", bm_pl, COL["plinth"], pl.get("evidence", "brick-tile plinth"), pl.get("confidence"))
+        for k, p in enumerate(self.s.get("pilasters", [])):
             e = self.edges[p["edge"]]
+            bm_p = bmesh.new()
             box(bm_p, e["frame"], p["u0"], p["u1"], 0.0, p["proj"], p["z0"], p["z1"])
-        self.obj("Cornice", bm_c, COL["maroon"], "cornice band under the eaves (rect photos)")
-        self.obj("Pilasters", bm_p, COL["maroon"], "corner pilasters")
-        self.obj("Plinth", bm_pl, COL["plinth"], "brick-tile plinth ~1.0 m (9 tile rows, photo 061638726)")
+            self.obj(f"Pilaster_E{p['edge']}_{k:02d}", bm_p, COL["maroon"], p.get("evidence", "pilaster"), p.get("confidence"))
 
     # ------------------------------------------------------------------ roof
     def build_roof(self):
         r = self.s["roof"]
+        kind = r.get("type", "hip")
+        if kind == "none":
+            return
+        if kind == "flat":
+            return self.build_flat_roof(r)
+        if kind in ("gable", "shed"):
+            return self.build_gable_or_shed(r, kind)
         z0 = self.s["eave_z"]
         outline = offset_ring(self.ring, -r["overhang"])
         bm = bmesh.new()
@@ -275,9 +293,79 @@ class Building:
                     bm.faces.new([allv[k] for k in f])
                 except ValueError:
                     pass
-        self.obj("Roof", bm, COL["roof"], r.get("evidence"))
+        self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
         if r.get("dormers"):
             self.build_dormers(outline, r)
+
+    def build_flat_roof(self, r):
+        """Parapet band on the wall ring (the eave slab already closes the top)."""
+        h, t = r.get("parapet_h", 0.0), r.get("parapet_t", 0.25)
+        if h <= 0:
+            return
+        z0 = self.s["eave_z"] - 0.02  # overlaps the wall top by 2 cm: no coincident faces
+        bm = bmesh.new()
+        _ring_band(bm, self.ring, offset_ring(self.ring, t), z0, self.s["eave_z"] + h)
+        self.obj("Parapet", bm, COL["wall"], r.get("evidence"), r.get("confidence"))
+
+    def build_gable_or_shed(self, r, kind):
+        """Rectangular rings only: gable (ridge between the mid-points of the two gable ends) or mono-pitch."""
+        if len(self.ring) != 4:
+            print(f"  {self.id}: {kind} roof needs a 4-vertex ring, falling back to hip")
+            r = dict(r, type="hip")
+            self.s["roof"] = r
+            return self.build_roof()
+        z0 = self.s["eave_z"]
+        out = offset_ring(self.ring, -r.get("overhang", 0.4))
+        tp = math.tan(math.radians(r.get("pitch", 20)))
+        bm = bmesh.new()
+        if kind == "gable":
+            g0 = r["gable_edges"][0] % 4
+            g1 = (g0 + 2) % 4
+            span = math.dist(out[g0], out[(g0 + 1) % 4])
+            h = span / 2 * tp
+            bot = [bm.verts.new((x, y, z0 - FASCIA_M)) for x, y in out]
+            top = [bm.verts.new((x, y, z0)) for x, y in out]
+            for i in range(4):
+                j = (i + 1) % 4
+                bm.faces.new((bot[i], bot[j], top[j], top[i]))
+            bm.faces.new(list(reversed(bot)))
+
+            def mid(e):
+                a, b = out[e], out[(e + 1) % 4]
+                return bm.verts.new(((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, z0 + h))
+            m0, m1 = mid(g0), mid(g1)
+            ea, eb = (g0 + 1) % 4, (g1 + 1) % 4
+            bm.faces.new((top[ea], top[(ea + 1) % 4], m1, m0))
+            bm.faces.new((top[eb], top[(eb + 1) % 4], m0, m1))
+            bm.faces.new((top[g0], top[(g0 + 1) % 4], m0))
+            bm.faces.new((top[g1], top[(g1 + 1) % 4], m1))
+        else:  # shed: high side along edge high_edge
+            hi = r["high_edge"] % 4
+            a, b = Vector(out[hi]), Vector(out[(hi + 1) % 4])
+            d = (b - a).normalized()
+            nrm = Vector((-d.y, d.x))  # into the building from the high edge
+            depth = abs((Vector(out[(hi + 2) % 4]) - a).dot(nrm))
+
+            def zt(p):
+                return z0 + (depth - (Vector(p) - a).dot(nrm)) * tp
+            bot = [bm.verts.new((x, y, zt((x, y)) - FASCIA_M)) for x, y in out]
+            top = [bm.verts.new((x, y, zt((x, y)))) for x, y in out]
+            for i in range(4):
+                j = (i + 1) % 4
+                bm.faces.new((bot[i], bot[j], top[j], top[i]))
+            bm.faces.new(list(reversed(bot)))
+            bm.faces.new(top)
+            # wall infill from the eave slab up to the sloped roof underside
+            bm2 = bmesh.new()
+            lo = [bm2.verts.new((x, y, z0 - 0.25)) for x, y in self.ring]
+            up = [bm2.verts.new((x, y, zt((x, y)) - FASCIA_M + 0.01)) for x, y in self.ring]
+            for i in range(4):
+                j = (i + 1) % 4
+                bm2.faces.new((lo[i], lo[j], up[j], up[i]))
+            bm2.faces.new(list(reversed(lo)))
+            bm2.faces.new(up)
+            self.obj("RoofInfill", bm2, COL["wall"], r.get("evidence"), r.get("confidence"))
+        self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
 
     def build_dormers(self, outline, r):
         """Pointed (triangular) dormers standing on the roof slope, bodies buried in the roof solid."""
@@ -312,10 +400,15 @@ class Building:
             fr = e["frame"]
             t = a["type"]
             bm = bmesh.new()
+            cf = a.get("confidence")
             if t == "stairs":
                 stair_flight(bm, fr, a["u0"], a["u1"], a["risers"], a["riser_h"], a["tread"], a["landing"],
                              z_base=-a["risers"] * a["riser_h"])
-                self.obj(f"Stairs_E{a['edge']}", bm, COL["granite"], a.get("evidence"))
+                self.obj(f"Stairs_E{a['edge']}_{a['u0']:.0f}", bm, COL["granite"], a.get("evidence"), cf)
+            elif t == "gallery":
+                self.build_gallery(a, e, fr)
+            elif t == "porch":
+                self.build_porch(a, e, fr)
             elif t == "canopy":
                 box(bm, fr, a["u0"], a["u1"], 0.0, a["depth"], a["z0"], a["z1"])
                 s = a.get("sign")
@@ -358,6 +451,52 @@ class Building:
                         box(bm2, fr, u - 0.05, u + 0.05, cn["depth"] - 0.1, cn["depth"], zg, cn["z"])
                 self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
                 self.obj(a["name"] + "_Canopy", bm2, COL["metal"], a.get("evidence"))
+            else:
+                print(f"  {self.id}: skip unsupported attachment type {t!r}")
+
+    def build_gallery(self, a, e, fr):
+        """Covered colonnade along a wall: posts on the outer line, edge beam, sloped/flat roof slab, optional deck."""
+        u0, u1, dep = a["u0"], a["u1"], a["depth"]
+        pw, pd = a.get("post_w", 0.3), a.get("post_d", a.get("post_w", 0.3))
+        zu, fall, thk, bh = a["z_underside"], a.get("roof_fall", 0.0), a.get("roof_thk", 0.15), a.get("beam_h", 0.3)
+        zb = a["floor_z"] if "floor_z" in a else e["zg"]
+        cf, ev = a.get("confidence"), a.get("evidence")
+        tag = f"E{a['edge']}_{u0:.0f}"
+        bm = bmesh.new()
+        for u in a.get("posts_u", []):
+            box(bm, fr, u - pw / 2, u + pw / 2, dep - pd, dep, zb - (0.0 if "floor_z" in a else BURY_M), zu - bh)
+        self.obj(f"GalleryPosts_{tag}", bm, COL["post"], ev, cf)
+        bm = bmesh.new()
+        box(bm, fr, u0, u1, dep - pd - 0.02, dep + 0.02, zu - bh, zu)
+        oh = a.get("roof_overhang", 0.15)
+        prism_profile(bm, fr, [(0.0, zu + fall), (dep + oh, zu - oh * fall / max(dep, 1e-3)),
+                               (dep + oh, zu - oh * fall / max(dep, 1e-3) + thk), (0.0, zu + fall + thk)], u0 - oh, u1 + oh)
+        self.obj(f"GalleryRoof_{tag}", bm, COL["roof"], ev, cf)
+        if "floor_z" in a:
+            bm = bmesh.new()
+            box(bm, fr, u0, u1, 0.0, dep, e["zg"] - BURY_M, a["floor_z"])
+            self.obj(f"GalleryDeck_{tag}", bm, COL["granite"], ev, cf)
+
+    def build_porch(self, a, e, fr):
+        """Entrance pavilion: gable roof with its ridge perpendicular to the wall, on piers, with a pediment."""
+        u0, u1, dep = a["u0"], a["u1"], a["depth"]
+        ze, oh, pw = a["z_eave"], a.get("overhang", 0.4), a.get("pier_w", 0.5)
+        tp = math.tan(math.radians(a.get("pitch", 25)))
+        um = (u0 + u1) / 2
+        hs = (u1 - u0) / 2 * tp
+        thk = a.get("roof_thk", 0.2)
+        cf, ev = a.get("confidence"), a.get("evidence")
+        tag = f"E{a['edge']}_{u0:.0f}"
+        bm = bmesh.new()
+        for u in a.get("piers_u", [u0 + pw / 2, u1 - pw / 2]):
+            box(bm, fr, u - pw / 2, u + pw / 2, dep - pw, dep, e["zg"] - BURY_M, ze)
+        box(bm, fr, u0, u1, dep - pw, dep, ze - 0.35, ze)                                    # front beam
+        _prism_along_w(bm, fr, [(u0, ze), (u1, ze), (um, ze + hs)], dep - pw, dep - 0.05)      # pediment
+        self.obj(f"PorchPiers_{tag}", bm, COL["wall"], ev, cf)
+        bm = bmesh.new()
+        _prism_along_w(bm, fr, [(u0 - oh, ze - oh * tp), (um, ze + hs), (u1 + oh, ze - oh * tp), (u1 + oh, ze - oh * tp + thk),
+                                (um, ze + hs + thk), (u0 - oh, ze - oh * tp + thk)], 0.0, dep + oh)
+        self.obj(f"PorchRoof_{tag}", bm, COL["roof"], ev, cf)
 
     def build(self):
         self.build_walls()
@@ -380,6 +519,21 @@ class Building:
             bm.faces.new(list(reversed(lo)))
             bm.faces.new(hi)
         self.obj("Slabs", bm, (0.6, 0.6, 0.6, 1), "closing slabs; floor plates come with the interior")
+
+
+def _ring_band(bm, outer, inner, z0, z1):
+    """Closed band between two rings with matching vertex order (e.g. a parapet), z0..z1."""
+    n = len(outer)
+    ob = [bm.verts.new((x, y, z0)) for x, y in outer]
+    ot = [bm.verts.new((x, y, z1)) for x, y in outer]
+    ib = [bm.verts.new((x, y, z0)) for x, y in inner]
+    it = [bm.verts.new((x, y, z1)) for x, y in inner]
+    for i in range(n):
+        j = (i + 1) % n
+        bm.faces.new((ob[i], ob[j], ot[j], ot[i]))
+        bm.faces.new((it[i], it[j], ib[j], ib[i]))
+        bm.faces.new((ot[i], ot[j], it[j], it[i]))
+        bm.faces.new((ib[i], ib[j], ob[j], ob[i]))
 
 
 def _surround(bm, w, h, l, r, b, t, proj):

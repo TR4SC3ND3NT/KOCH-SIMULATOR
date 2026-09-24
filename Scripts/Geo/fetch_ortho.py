@@ -19,11 +19,13 @@ SOURCES = {
     "esri": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     # Esri Wayback archive: pass --release <id> (list: https://s3-us-west-2.amazonaws.com/config.maptiles.arcgis.com/waybackconfig.json)
     "wayback": "https://wayback.maptiles.arcgis.com/arcgis/rest/services/World_Imagery/WMTS/1.0.0/default028mm/MapServer/tile/{release}/{z}/{y}/{x}",
+    # Google satellite (map owner permits it as a local tracing reference).
+    "google": "https://mt{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}",
     # Bing aerial (quadkey addressing).
     "bing": "https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1",
 }
 TILE = 256
-UA = "KochSimulator-greybox/0.1 (local tracing reference)"
+UA = "Mozilla/5.0 (X11; Linux x86_64) KochSimulator-greybox/0.1 (local tracing reference)"
 
 
 def lonlat_to_gpx(lon, lat, z):
