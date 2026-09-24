@@ -31,6 +31,13 @@ Raw site captures (photos/videos) are **not** in the repo: they contain people. 
 - **D:** 4 floors (panoramas).
 - **E:** a separate building behind the sports hall, not joined to D. It is most likely greybox `BLD_W1` (≈3 floors); to confirm. The large ex-ruin complex south of D is not E.
 - **C west side:** a mono-pitch (shed) structure, high where it meets C and sloping down toward the sports hall. It is visible in the capture videos.
+- **Night measurement run (2026-09-25, from captures/panos/orthos; details and confidence per element are in `Art/Blender/Specs/*.json`):**
+  - The covered gallery on red posts and the "…to the world" slogan band belong to the lower 2-storey west strip of A (library/hall part), not to B. The big lettering + round logo are on B's street (south) facade, SE bay.
+  - Storey heights differ per block: A ≈3.06 m (3 floors, wall top 9.9 m), B ≈3.85 m (2 floors, wall top 8.0 m), C 3.30 m in the model (exterior evidence 3.30–3.40; the interior door-frame reading suggests ≥3.45; settle by counting risers).
+  - C has a west basement entry signed "Dance Hall" (sunken stair under a canopy next to a brick box), and 5 dormers on the south slope, 5–6 on the north, 2 on the east hip.
+  - Gazebos: 7.7 m across the posts, 9.15 m across the roof, parapet 0.94 m, posts 2.6 m, 2 open sides with 1.15 m clear openings.
+  - Gate: the booth is 3.42 × 3.10 m (brick-tile courses of 0.16 m); the canopy is 11.9 × 3.45 m on one round column; the zebra is 4.3 m wide with 0.4/0.6 m stripes; the carriageway is 14.8 m (curbs at y −110.8 / −125.6).
+  - Google satellite (2026) is newest but leans ≈0.29 m/m east and ≈0.20 m/m north with height; Bing is near-nadir and is the footprint base.
 - **Sports area (for the site phase, not modelled yet):** left to right, one large football pitch, then an area of the same size split into 3 courts: basketball, volleyball and an empty hard court. A green steel mesh fence runs around the full perimeter and between the courts.
 
 ## Measured and estimated dimensions (±5%)
