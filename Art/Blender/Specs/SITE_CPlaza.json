@@ -1,0 +1,212 @@
+{
+ "id": "SITE_CPlaza",
+ "collection": "06_Vegetation",
+ "note": "Plaza in front of Block C (hero destination). Positions from ray-casts in posed photos. World XY; z relative to ground.",
+ "elements": [
+  {
+   "type": "planter",
+   "name": "PlanterW_0",
+   "ring": [
+    [
+     173.079,
+     -8.286
+    ],
+    [
+     174.478,
+     -8.342
+    ],
+    [
+     174.513,
+     -7.443
+    ],
+    [
+     173.115,
+     -7.387
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "TreeW_0",
+   "pos": [
+    173.796,
+    -7.865
+   ],
+   "height": 5.5,
+   "crown_d": 2.4,
+   "trunk_d": 0.15,
+   "crown_base": 1.8,
+   "shape": "ellipsoid",
+   "evidence": "small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterW_1",
+   "ring": [
+    [
+     177.625,
+     -8.468
+    ],
+    [
+     179.034,
+     -8.524
+    ],
+    [
+     179.07,
+     -7.625
+    ],
+    [
+     177.661,
+     -7.568
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeW_1",
+   "pos": [
+    178.347,
+    -8.046
+   ],
+   "height": 5.5,
+   "crown_d": 2.4,
+   "trunk_d": 0.15,
+   "crown_base": 1.8,
+   "shape": "ellipsoid",
+   "evidence": "small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterW_2",
+   "ring": [
+    [
+     180.353,
+     -8.576
+    ],
+    [
+     182.091,
+     -8.646
+    ],
+    [
+     182.127,
+     -7.746
+    ],
+    [
+     180.389,
+     -7.677
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeW_2",
+   "pos": [
+    181.24,
+    -8.161
+   ],
+   "height": 5.5,
+   "crown_d": 2.4,
+   "trunk_d": 0.15,
+   "crown_base": 1.8,
+   "shape": "ellipsoid",
+   "evidence": "small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterW_3",
+   "ring": [
+    [
+     183.266,
+     -8.693
+    ],
+    [
+     184.664,
+     -8.748
+    ],
+    [
+     184.7,
+     -7.849
+    ],
+    [
+     183.301,
+     -7.793
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeW_3",
+   "pos": [
+    183.983,
+    -8.271
+   ],
+   "height": 5.5,
+   "crown_d": 2.4,
+   "trunk_d": 0.15,
+   "crown_base": 1.8,
+   "shape": "ellipsoid",
+   "evidence": "small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterE_Ramp",
+   "ring": [
+    [
+     191.878,
+     -8.686
+    ],
+    [
+     193.276,
+     -8.742
+    ],
+    [
+     193.324,
+     -7.542
+    ],
+    [
+     191.925,
+     -7.487
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "JuniperE_Ramp",
+   "pos": [
+    192.601,
+    -8.114
+   ],
+   "height": 7.0,
+   "crown_d": 2.6,
+   "trunk_d": 0.25,
+   "crown_base": 0.8,
+   "shape": "cone",
+   "evidence": "tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated",
+   "confidence": "low"
+  }
+ ]
+}

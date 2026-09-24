@@ -387,6 +387,27 @@ class Site:
         p = el["line"][0]
         self.emit(el, bm, COL["stone"], (p[0], p[1], self.gz(*p)))
 
+    def b_tree(self, el):
+        """Tree proxy: trunk cylinder + cone (conifer) or octahedral-ish ellipsoid crown. Real foliage comes in UE."""
+        P = Vector(el["pos"])
+        z = self.gz(P.x, P.y)
+        h, cd = el.get("height", 5.0), el.get("crown_d", 2.5)
+        td = el.get("trunk_d", 0.25)
+        cb = el.get("crown_base", h * 0.3)
+        bm = bmesh.new()
+        _cyl(bm, P, td / 2, z - BURY, z + cb + 0.2, 8)
+        seg = 10
+        if el.get("shape", "cone") == "cone":
+            ring = [bm.verts.new((P.x + cd / 2 * math.cos(2 * math.pi * k / seg), P.y + cd / 2 * math.sin(2 * math.pi * k / seg), z + cb)) for k in range(seg)]
+            apex = bm.verts.new((P.x, P.y, z + h))
+            bm.faces.new(list(reversed(ring)))
+            for k in range(seg):
+                bm.faces.new((ring[k], ring[(k + 1) % seg], apex))
+        else:
+            bmesh.ops.create_icosphere(bm, subdivisions=1, radius=1.0,
+                                       matrix=Matrix.Translation((P.x, P.y, z + (cb + h) / 2)) @ Matrix.Diagonal((cd / 2, cd / 2, (h - cb) / 2, 1)))
+        self.emit(el, bm, COL["hedge"], (P.x, P.y, z))
+
     def b_zebra(self, el):
         A, B = Vector(el["line"][0]), Vector(el["line"][-1])
         L = (B - A).length
