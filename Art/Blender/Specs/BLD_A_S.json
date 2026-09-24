@@ -393,6 +393,18 @@
    "overhang": 0.35,
    "evidence": "Google z20 pavilion roof local y 7.2-11.7 (u 11.05-15.55 incl. eaves); pano intro camera solved from the A_S corner yaws/eave elevations at local (-7.6, 3.6): front pier rays (bearing 26-31 / 40-47 deg) meet the roof-centre constraint at depth 4.7 -> piers at u 11.6 / 14.8; pediment rise/half-span 165/242 px in the rect (34 deg); eave meets the wall at z 3.25; beige block-tile piers on a red-brick base (2026 frame), rear on brick pilasters flanking the door",
    "confidence": "medium"
+  },
+  {
+   "type": "wall_sign",
+   "name": "BlockPlate",
+   "edge": 3,
+   "u0": 18.55,
+   "u1": 19.2,
+   "z0": 4.15,
+   "z1": 4.45,
+   "t": 0.03,
+   "evidence": "blue block name plate on the SW pilaster (pano intro, 2020)",
+   "confidence": "medium"
   }
  ],
  "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4)."

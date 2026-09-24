@@ -191,21 +191,32 @@ class Site:
             p = corners[k]
             m = _frame2(Vector((p.x, p.y)), (Vector((c.x, c.y)) - Vector((p.x, p.y))).normalized())
             box(bm, m, -pw / 2, pw / 2, -pw / 2, pw / 2, zf, zf + ph)
+        cw = el.get("opening_clear_w")      # clear opening in an open side (the rest is parapet stubs)
         for k in range(N):
-            if k in open_sides:
-                continue
             a, b = corners[k], corners[(k + 1) % N]
             A, B = Vector((a.x, a.y)), Vector((b.x, b.y))
             d = (B - A).normalized()
             L = (B - A).length
             m = _frame2(A, d)
-            box(bm, m, pw / 2, L - pw / 2, -par_t / 2, par_t / 2, zf, zf + par_h)
+            if k in open_sides:
+                if not cw:
+                    continue
+                g0, g1 = (L - cw) / 2, (L + cw) / 2   # centred gap
+                box(bm, m, pw / 2, g0, -par_t / 2, par_t / 2, zf, zf + par_h)
+                box(bm, m, g1, L - pw / 2, -par_t / 2, par_t / 2, zf, zf + par_h)
+            else:
+                box(bm, m, pw / 2, L - pw / 2, -par_t / 2, par_t / 2, zf, zf + par_h)
+                # timber bench inside the parapet (seat 0.45 m, 0.4 m deep); w+ is toward the centre
+                box(bm, m, pw / 2 + 0.05, L - pw / 2 - 0.05, par_t / 2 + 0.01, par_t / 2 + 0.41, zf + 0.40, zf + 0.45)
+        cc = el.get("center_column")
+        if cc:
+            _cyl(bm, Vector((c.x, c.y)), cc.get("d", 0.2) / 2, zf, zf + ph, 12)
         rb = 0.22
         _ring_band(bm, poly(R + pw / 2 + 0.02, 0), poly(R - pw / 2 - 0.02, 0), zf + ph, zf + ph + rb)
         self.emit(dict(el, name=el.get("name", "Gazebo") + "_Frame"), bm, COL["white"], (c.x, c.y, z0))
         bm = bmesh.new()   # pyramid roof with fascia
         zt = zf + ph + rb
-        ro = R + el.get("overhang", 0.4)
+        ro = (el["roof_across_flats"] / 2 / math.cos(math.pi / N)) if el.get("roof_across_flats") else R + el.get("overhang", 0.4)
         apo = ro * math.cos(math.pi / N)
         apex = Vector((c.x, c.y, zt + 0.15 + apo * math.tan(math.radians(el.get("roof_pitch", 30)))))
         bot = [bm.verts.new(v) for v in poly(ro, zt)]

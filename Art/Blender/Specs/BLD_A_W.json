@@ -348,6 +348,7 @@
    "roof_fall": 0.35,
    "beam_h": 0.35,
    "roof_overhang": 0.15,
+   "floor_z": -0.15,
    "evidence": "pano intro2 rect + 070309303 f17-f36: pink corrugated mono-pitch roof (2.9 m at the wall, 2.55 at the front), deep fascia beam 2.2-2.55, thin red steel posts on the bay rhythm (5.9 m; post positions assumed aligned with the wall columns); depth from Google (gallery roof + shadow x -0.3..1.9)",
    "confidence": "medium"
   },
@@ -361,6 +362,18 @@
    "z1": 2.55,
    "evidence": "2026: small corrugated awning over the south-end door (070309303 f17/f19), under the gallery line",
    "confidence": "low"
+  },
+  {
+   "type": "wall_sign",
+   "name": "LetterBand",
+   "edge": 3,
+   "u0": 40.5,
+   "u1": 50.5,
+   "z0": 4.3,
+   "z1": 4.85,
+   "t": 0.05,
+   "evidence": "2026 blue letter band on the blank upper wall ('... to the world' slogan), letters ~0.55 m (vs 0.55 m AC units), z 4.35-4.75 in the 082337 f0.5 rect, ends 2-3 m north of the A_S pilaster (070309303 f17-f30); content -> KOCH slogan (R4)",
+   "confidence": "medium"
   }
  ],
  "sign_notes": "2026 big blue letter band on the upper west wall at z ~4.3-4.9, from ~4 to ~16 m north of the A_S corner (KOCH slogan later, R4). Sunken basement stair (stone steps + steel grating stair with railings) beside the path near the south end (070309303 f28-f34; Google light strip x -3..-0.5, y 16-30) -> site spec later."

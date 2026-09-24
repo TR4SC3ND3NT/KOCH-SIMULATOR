@@ -261,6 +261,8 @@ class Building:
             return self.build_flat_roof(r)
         if kind in ("gable", "shed"):
             return self.build_gable_or_shed(r, kind)
+        if kind == "hip" and r.get("ridge_len") and len(self.ring) == 4:
+            return self.build_rect_hip(r)
         z0 = self.s["eave_z"]
         outline = offset_ring(self.ring, -r["overhang"])
         bm = bmesh.new()
@@ -296,6 +298,37 @@ class Building:
         self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
         if r.get("dormers"):
             self.build_dormers(outline, r)
+
+    def build_rect_hip(self, r):
+        """Hip roof on a rectangle with a given ridge length: long slopes at `pitch`, ends as steep as needed."""
+        z0 = self.s["eave_z"]
+        out = offset_ring(self.ring, -r.get("overhang", 0.5))
+        P = [Vector(p) for p in out]
+        e = [(P[(i + 1) % 4] - P[i]) for i in range(4)]
+        k = 0 if e[0].length >= e[1].length else 1                  # edges k, k+2 are the long eaves
+        a, b, c, d = P[k], P[(k + 1) % 4], P[(k + 2) % 4], P[(k + 3) % 4]
+        L, W = (b - a).length, (d - a).length
+        ridge = min(r["ridge_len"], L - 0.2)
+        h = W / 2 * math.tan(math.radians(r.get("pitch", 20)))
+        ax = (b - a).normalized()
+        mid = (a + b + c + d) / 4
+        r0, r1 = mid - ax * ridge / 2, mid + ax * ridge / 2
+        bm = bmesh.new()
+        bot = [bm.verts.new((p.x, p.y, z0 - FASCIA_M)) for p in (a, b, c, d)]
+        top = [bm.verts.new((p.x, p.y, z0)) for p in (a, b, c, d)]
+        for i in range(4):
+            j = (i + 1) % 4
+            bm.faces.new((bot[i], bot[j], top[j], top[i]))
+        bm.faces.new(list(reversed(bot)))
+        R0 = bm.verts.new((r0.x, r0.y, z0 + h))
+        R1 = bm.verts.new((r1.x, r1.y, z0 + h))
+        ta, tb, tc, td = top
+        bm.faces.new((ta, tb, R1, R0))    # long slope a-b
+        bm.faces.new((tc, td, R0, R1))    # long slope c-d
+        bm.faces.new((tb, tc, R1))        # hip end b-c
+        bm.faces.new((td, ta, R0))        # hip end d-a
+        self.obj("Roof", bm, COL["roof"], r.get("evidence", r.get("note")), r.get("confidence"))
+        self.s["roof"]["_end_pitch_deg"] = round(math.degrees(math.atan2(h, (L - ridge) / 2)), 1)
 
     def build_flat_roof(self, r):
         """Parapet band on the wall ring (the eave slab already closes the top)."""
