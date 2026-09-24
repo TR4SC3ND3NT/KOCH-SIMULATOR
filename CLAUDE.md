@@ -15,6 +15,7 @@
 - **Driving the editor.** Follow the `unreal-mcp` skill. Save and commit first, make one change at a time, and read back or screenshot every change (some 5.8 tools fail silently). Never use `--dangerously-skip-permissions`.
 - **VibeUE** (landscape, foliage, splines, Python services). Before the first VibeUE call in a session, read `Plugins/VibeUE/Content/samples/AGENTS.md.sample`, then use `ListSkills`/`GetSkills` via `AgentSkillToolset`.
 - **Blender batches:** headless `blender -b -P Scripts/Blender/<script>.py`.
-- **Research.** Broad research runs in a subagent with precise parallel queries; keep only the conclusion.
+- **Research.** Broad research runs in the `researcher` subagent (Opus, high effort) with precise parallel queries; keep only the conclusion.
+- **Workflows (multi-agent orchestration):** only when the user explicitly asks, and always within the AGENTS.md budget: at most 4 agents total and no Verify phase. If a workflow is running, never stop it or relaunch it.
 - **Reply in the user's language.** Code, commits and docs are in English.
 - **When compacting,** keep: modified files, build/test commands, and open decisions.

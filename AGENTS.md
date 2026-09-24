@@ -26,6 +26,14 @@ Story-driven first-person **shooter / action sandbox** (GTA-like) in **Unreal En
   Check the license and 5.8 compatibility, and credit the source in a code comment. Only if nothing fits, write it ourselves, to the same quality bar.
 - **Verify APIs.** Never invent API names; check them against the docs or engine headers.
 
+## IMPORTANT: agent and token budget (hard limits)
+- **Max 4 subagents per task, in total,** including every agent inside a workflow. Never more, and no nested fan-out.
+- **Subagents run Opus at high effort.** Use the `researcher` agent (`.claude/agents/researcher.md`) for research.
+- **No verify, adversarial-review or "second opinion" phases or agents** unless the user explicitly asks. Verification means build, test, and a screenshot compared with the reference.
+- **Never stop, kill or relaunch a running agent or workflow.** Let it finish and reuse its result. Never redo work that already has a result.
+- **State the agent count first.** Before any multi-agent run, say in one line how many agents and why.
+- **Why this rule exists.** On 2026-09-24 a research workflow spent about 690k tokens on 4 agents (186k + 133k + 168k + 204k), then started 3 verify agents. When told to skip verify, it killed them and the 204k-token agent that was almost done, then relaunched that agent. Those tokens were thrown away twice.
+
 ## Output discipline
 - **Replies to the user are short.** Give the result, what you verified (command/output/screenshot), and the next step or a blocking question. No recaps and no tables unless asked.
 - **No new .md files or long docs unless the user asks.** Only these exceptions:
