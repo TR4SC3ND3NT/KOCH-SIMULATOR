@@ -293,7 +293,8 @@
      ]
     }
    ],
-   "evidence": "rect of video 070629483 f_3.4 (solved focal 13.5 mm-eq, 54.2 px/m from the 3.3 m storey): width 17.0 m; from the NW corner 3.1, 7.2 (F3-F4 only, blank wall on F1-F2), 9.5, 13.6; SW double maroon strip 15.7-16.9"
+   "evidence": "rect of video 070629483 f_3.4 (solved focal 13.5 mm-eq, 54.2 px/m from the 3.3 m storey): width 17.0 m; from the NW corner 3.1, 7.2 (F3-F4 only, blank wall on F1-F2), 9.5, 13.6; SW double maroon strip 15.7-16.9; CONFIRMED by still 081836969 (24 mm main camera, from the SW): single column at the NW corner on all floors, a pair on F3-F4 whose south member continues on F1-F2, then the next column toward the SW corner",
+   "confidence": "medium"
   }
  ],
  "roof": {
@@ -415,7 +416,7 @@
    "z_high": 0.8,
    "z_low": -0.1,
    "wall_h_from_ground": true,
-   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected)."
+   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey."
   },
   {
    "type": "stair_box",
