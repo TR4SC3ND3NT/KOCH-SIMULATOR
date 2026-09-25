@@ -19,7 +19,7 @@ sys.path.insert(0, HERE)
 from greybox.common import (FASCIA_M, SPECS, Terrain, bpypolyskel, ensure_collection, load,  # noqa: E402
                             make_object)
 from greybox.kit import (Opening, WindowSpec, box, facade_frame, offset_ring, prism_profile,  # noqa: E402
-                         railing, stair_flight, wall_piece, window_unit)
+                         railing, ring_box, stair_flight, wall_piece, window_unit)
 
 MAX_PIECE_M = 12.0   # Lumen SW: keep wall pieces well under ~15 m (distance field / card quality)
 BURY_M = 0.3         # walls reach this far below the lowest ground along a facade
@@ -203,6 +203,10 @@ class Building:
             ident = Matrix.Identity(4)
             w, h = o.u1 - o.u0, o.z1 - o.z0
             if tname == "entrance":
+                bays = wt.get("bays")  # [[width_m, "fixed"|"door"], ...] left to right, frame included
+                if bays:
+                    self.build_entrance_doors(i, k, o, wt)
+                    continue
                 me = self.kit_mesh(f"Entrance_{w:.2f}x{h:.2f}", lambda bm: window_unit(
                     bm, ident, Opening(0, w, 0, h), WindowSpec(reveal=0.25, mullions=[0.25, 0.5, 0.75], transoms=[0.78], sill_proj=0)))
                 color = COL["frame"]
@@ -218,6 +222,64 @@ class Building:
                 proj = wt.get("surround_proj", 0.04)
                 me2 = self.kit_mesh(f"Surround_{tname}", lambda bm: _surround(bm, w, h, l, r, b, t, proj))
                 self._link(f"Sur_E{i}_{k:02d}", me2, place, COL["maroon"])
+
+    def build_stair_extras(self, a, fr, cf):
+        """Optional stair side cheeks (solid blocks with a top sloping from the landing to the plaza) and handrails.
+        cheeks: [{"u0", "u1", "w1" (outer end, m from the wall), "z_wall", "z_out"}]  (z rel FFL)
+        handrails: [{"u": u, "h": 0.9}] along the flight nosing line, from the landing edge to the bottom step."""
+        H = a["risers"] * a["riser_h"]
+        zb = -H
+        for n, c in enumerate(a.get("cheeks", [])):
+            bm = bmesh.new()
+            prism_profile(bm, fr, [(0.0, zb - 0.2), (0.0, c["z_wall"]), (c["w1"], c["z_out"]), (c["w1"], zb - 0.2)],
+                          c["u0"], c["u1"])
+            self.obj(f"StairCheek_E{a['edge']}_{n}", bm, COL["granite"], c.get("evidence", a.get("evidence")), c.get("confidence", cf))
+        rails = a.get("handrails", [])
+        if rails:
+            bm = bmesh.new()
+            w_top = a["landing"]
+            w_bot = a["landing"] + (a["risers"] - 1) * a["tread"]
+            for r in rails:
+                pts = [fr @ Vector((r["u"], w_top - 0.3, 0.0)), fr @ Vector((r["u"], w_top, 0.0)),
+                       fr @ Vector((r["u"], w_bot, zb + a["riser_h"])), fr @ Vector((r["u"], w_bot + 0.3, zb + a["riser_h"]))]
+                railing(bm, pts, height=r.get("h", 0.9), spacing=1.6, mid_rails=r.get("mid_rails", 0))
+            self.obj(f"StairRail_E{a['edge']}", bm, COL["metal"], a.get("evidence"), cf)
+
+    def build_entrance_doors(self, i, k, o, ent):
+        """Aluminium glazed entrance: outer frame, bay mullions, transom, glass, and per door bay a leaf frame,
+        optional mid rail and a pull bar (doors are separate objects so UE can swap in hinged actors)."""
+        fr = self.edges[i]["frame"]  # obj() applies self.M
+        rev = ent.get("reveal", 0.25)
+        fw, fd = ent.get("frame_w", 0.06), ent.get("frame_d", 0.08)
+        w1, w0 = -rev, -rev - fd
+        zt = ent.get("transom_z", o.z1 - 0.6)   # underside of the transom bar (m above FFL)
+        bm = bmesh.new()
+        ring_box(bm, fr, o.u0 + fw, o.u1 - fw, o.z0 + fw, o.z1 - fw, fw, w0, w1)
+        box(bm, fr, o.u0 + fw, o.u1 - fw, w0, w1, zt, zt + fw)
+        u = o.u0
+        widths = [b[0] for b in ent["bays"]]
+        sc = (o.u1 - o.u0) / sum(widths)  # bays are measured widths: rescale so they fill the opening exactly
+        bm_d, bm_g = bmesh.new(), bmesh.new()
+        for bw, kind in ent["bays"]:
+            ua, ub = u, u + bw * sc
+            if ub < o.u1 - 1e-3:
+                box(bm, fr, ub - fw / 2, ub + fw / 2, w0, w1, o.z0 + fw, zt)
+            if kind == "door":
+                lw = 0.055  # leaf stile/rail width
+                ring_box(bm_d, fr, ua + fw / 2 + lw + 0.005, ub - fw / 2 - lw - 0.005, o.z0 + 0.01 + lw, zt - 0.01 - lw, lw,
+                         w0 + 0.01, w1 - 0.01)
+                zm = ent.get("door_mid_z")  # optional leaf mid rail (only where a photo shows one)
+                if zm:
+                    box(bm_d, fr, ua + fw / 2 + 0.01, ub - fw / 2 - 0.01, w0 + 0.01, w1 - 0.01, zm - 0.05, zm + 0.05)
+                hu = ub - fw / 2 - 0.12 if ent.get("hinge", "left") == "left" else ua + fw / 2 + 0.12
+                box(bm_d, fr, hu - 0.015, hu + 0.015, w1 - 0.01, w1 + 0.05, 0.8, 1.6)  # vertical pull bar
+            gm = (w0 + w1) / 2
+            box(bm_g, fr, ua + fw / 2, ub - fw / 2, gm - 0.006, gm + 0.006, o.z0 + fw, zt)
+            u = ub
+        box(bm_g, fr, o.u0 + fw, o.u1 - fw, (w0 + w1) / 2 - 0.006, (w0 + w1) / 2 + 0.006, zt + fw, o.z1 - fw)
+        self.obj(f"Entrance_E{i}_{k:02d}_Frame", bm, COL["frame"], ent.get("evidence"), ent.get("confidence"))
+        self.obj(f"Entrance_E{i}_{k:02d}_Doors", bm_d, COL["frame"], ent.get("evidence"), ent.get("confidence"))
+        self.obj(f"Entrance_E{i}_{k:02d}_Glass", bm_g, COL.get("glass", COL["frame"]), ent.get("evidence"), ent.get("confidence"))
 
     def _link(self, name, me, matrix, color):
         ob = bpy.data.objects.new(f"GBF_{self.id}_{name}", me)
@@ -438,11 +500,21 @@ class Building:
                 stair_flight(bm, fr, a["u0"], a["u1"], a["risers"], a["riser_h"], a["tread"], a["landing"],
                              z_base=-a["risers"] * a["riser_h"])
                 self.obj(f"Stairs_E{a['edge']}_{a['u0']:.0f}", bm, COL["granite"], a.get("evidence"), cf)
+                self.build_stair_extras(a, fr, cf)
             elif t == "gallery":
                 self.build_gallery(a, e, fr)
+            elif t == "downpipe":  # rainwater downpipe: square-ish section d, off the wall by `off`, z0..z1 rel FFL
+                d, off = a.get("d", 0.1), a.get("off", 0.04)
+                for u in a["u"]:
+                    box(bm, fr, u - d / 2, u + d / 2, off, off + d, a["z0"], a["z1"])
+                self.obj(f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}", bm, COL["frame"], a.get("evidence"), cf)
+            elif t == "floodlight":  # small wall/sign-mounted flood lamps: box heads on short arms
+                for u in a["u"]:
+                    box(bm, fr, u - 0.12, u + 0.12, a.get("w", 0.35), a.get("w", 0.35) + 0.12, a["z"], a["z"] + 0.18)
+                self.obj(f"Flood_E{a['edge']}_{a['u'][0]:.0f}", bm, COL["metal"], a.get("evidence"), cf)
             elif t == "wall_sign":  # lettering/logo panel on the wall face (content = KOCH branding later)
                 box(bm, fr, a["u0"], a["u1"], 0.0, a.get("t", 0.08), a["z0"], a["z1"])
-                self.obj(f"Sign_{a.get('name', a['u0'])}", bm, COL["sign"], a.get("evidence"), cf)
+                self.obj(f"Sign_{a.get('name', a['u0'])}", bm, COL[a.get("color", "sign")], a.get("evidence"), cf)
             elif t == "stair_well":
                 self.build_stair_well(a, e, fr)
             elif t == "porch":
@@ -450,8 +522,10 @@ class Building:
             elif t == "canopy":
                 box(bm, fr, a["u0"], a["u1"], 0.0, a["depth"], a["z0"], a["z1"])
                 s = a.get("sign")
-                if s:
-                    box(bm, fr, a["u0"], a["u1"], a["depth"] - s["t"], a["depth"], a["z1"], s["z1"])
+                if s:  # sign box on the canopy front: own object (content = KOCH branding in UE)
+                    bm_s = bmesh.new()
+                    box(bm_s, fr, a["u0"], a["u1"], a["depth"] - s["t"], a["depth"], a["z1"], s["z1"])
+                    self.obj(f"CanopySign_E{a['edge']}", bm_s, COL["sign"], a.get("evidence"))
                 self.obj(f"Canopy_E{a['edge']}", bm, COL["canopy"], a.get("evidence"))
             elif t == "ramp":
                 # wedge running along u: high end at u0 (landing), low end at u1 (plaza)
