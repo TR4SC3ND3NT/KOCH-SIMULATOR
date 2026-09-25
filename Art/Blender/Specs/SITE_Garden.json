@@ -2447,8 +2447,8 @@
    "z0": 6.03,
    "z1": 6.11,
    "material": "metal",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): steel grating landing with rails at the path edge beside the granite stairs (070309303 t28-30)",
-   "confidence": "low"
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides",
+   "confidence": "medium"
   },
   {
    "type": "roof_plane",
@@ -2479,8 +2479,8 @@
    ],
    "thk": 0.06,
    "material": "metal",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): steel grating ramp descending along the lawn to the walkway (070309303 t28-30, 012327726 t22-26)",
-   "confidence": "low"
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides",
+   "confidence": "medium"
   },
   {
    "type": "rail3d",
@@ -2505,8 +2505,9 @@
    "height": 0.9,
    "spacing": 1.5,
    "mid_rails": 2,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): square-tube rails, top + 2 mid rails",
-   "confidence": "low"
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides",
+   "confidence": "medium",
+   "material": "metal"
   },
   {
    "type": "rail3d",
@@ -2531,8 +2532,9 @@
    "height": 0.9,
    "spacing": 1.5,
    "mid_rails": 2,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): square-tube rails, top + 2 mid rails",
-   "confidence": "low"
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides",
+   "confidence": "medium",
+   "material": "metal"
   },
   {
    "type": "rail3d",
@@ -2552,7 +2554,9 @@
    "height": 0.9,
    "spacing": 1.5,
    "mid_rails": 2,
-   "confidence": "low"
+   "confidence": "medium",
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides",
+   "material": "metal"
   },
   {
    "type": "wall",
@@ -2933,6 +2937,60 @@
    "dir_deg": -2.81,
    "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): 240 l wheelie bin on the square (012404116 t11-14)",
    "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "AW_Ramp_Foot",
+   "ring": [
+    [
+     157.554,
+     -58.756
+    ],
+    [
+     158.753,
+     -58.815
+    ],
+    [
+     158.813,
+     -57.614999999999995
+    ],
+    [
+     157.614,
+     -57.556
+    ]
+   ],
+   "z0": 5.29,
+   "z1": 5.37,
+   "material": "metal",
+   "confidence": "medium",
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides"
+  },
+  {
+   "type": "rail3d",
+   "name": "AW_RampRail_Foot",
+   "points": [
+    [
+     157.554,
+     -58.756,
+     5.37
+    ],
+    [
+     157.614,
+     -57.556,
+     5.37
+    ],
+    [
+     158.813,
+     -57.614999999999995,
+     5.37
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.2,
+   "mid_rails": 2,
+   "material": "metal",
+   "confidence": "medium",
+   "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides"
   }
  ],
  "ground": "pads"
