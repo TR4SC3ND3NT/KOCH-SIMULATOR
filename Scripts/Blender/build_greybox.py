@@ -142,6 +142,45 @@ def build_reference():
     return ob
 
 
+def apply_terrain_pads():
+    """Set terrain z inside 'terrain_pads' rings of Specs/*.json to their z, blending linearly over 'blend' m outside.
+    For measured ground levels the smooth DEM fit misses (e.g. the lower ground west of Block C)."""
+    specs = os.path.join(REPO, "Art", "Blender", "Specs")
+    pads = []
+    for fn in sorted(os.listdir(specs)) if os.path.isdir(specs) else []:
+        if fn.endswith(".json"):
+            pads += json.load(open(os.path.join(specs, fn), encoding="utf-8")).get("terrain_pads", [])
+    ob = bpy.data.objects.get("TER_Ground")
+    if not pads or ob is None:
+        return
+    me = ob.data
+    co = np.empty(len(me.vertices) * 3, np.float32)
+    me.vertices.foreach_get("co", co)
+    co = co.reshape(-1, 3)
+    for pad in pads:
+        ring = np.array(pad["ring"], float)
+        blend = float(pad.get("blend", 0.0))
+        x, y = co[:, 0], co[:, 1]
+        inside = np.zeros(len(co), bool)
+        n = len(ring)
+        for i in range(n):  # even-odd point-in-polygon, vectorised
+            (x1, y1), (x2, y2) = ring[i], ring[(i + 1) % n]
+            cross = (y1 > y) != (y2 > y)
+            xi = x1 + (y - y1) * (x2 - x1) / np.where(y2 != y1, y2 - y1, 1e-12)
+            inside ^= cross & (x < xi)
+        d = np.full(len(co), np.inf)  # distance to the ring for outside points
+        for i in range(n):
+            a, b = ring[i], ring[(i + 1) % n]
+            ab = b - a
+            t = np.clip(((x - a[0]) * ab[0] + (y - a[1]) * ab[1]) / (ab @ ab), 0, 1)
+            d = np.minimum(d, np.hypot(x - (a[0] + t * ab[0]), y - (a[1] + t * ab[1])))
+        w = np.where(inside, 1.0, np.clip(1.0 - d / blend, 0.0, 1.0) if blend > 0 else 0.0)
+        co[:, 2] = co[:, 2] * (1 - w) + pad["z"] * w
+    me.vertices.foreach_set("co", co.ravel())
+    me.update()
+    print(f"terrain: {len(pads)} pads applied")
+
+
 def cut_terrain_holes():
     """Delete terrain quads inside 'terrain_holes' rings of Specs/*.json (open stairwells, light wells)."""
     specs = os.path.join(REPO, "Art", "Blender", "Specs")
@@ -198,6 +237,7 @@ def main():
             print("FAILED", it["id"], repr(ex))
     build_reference()
     hide_replaced()
+    apply_terrain_pads()
     cut_terrain_holes()
     sc = bpy.context.scene
     sc["koch_origin_lat"], sc["koch_origin_lon"] = 42.8566, 74.6790

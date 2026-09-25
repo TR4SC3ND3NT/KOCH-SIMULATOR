@@ -21,6 +21,30 @@
    ]
   ]
  ],
+ "terrain_pads": [
+  {
+   "ring": [
+    [
+     161.034,
+     -9.157
+    ],
+    [
+     174.024,
+     -9.675
+    ],
+    [
+     175.02,
+     15.305
+    ],
+    [
+     162.031,
+     15.823
+    ]
+   ],
+   "z": 3.75,
+   "blend": 8.0
+  }
+ ],
  "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall (zone reconstruction 2026-09-25, direction corrected by the map owner).",
  "elements": [
   {
@@ -35,7 +59,7 @@
    "risers": 8,
    "riser_h": 0.138,
    "tread": 0.36,
-   "z_top": 4.48,
+   "z_top": 3.75,
    "run_out": 1.2,
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910)",
    "confidence": "medium"
@@ -52,7 +76,7 @@
    "risers": 2,
    "riser_h": 0.138,
    "tread": 0.36,
-   "z_top": 3.3760000000000003,
+   "z_top": 2.646,
    "run_out": 0.5,
    "evidence": "photo 012543364: 2 steps from the mid landing down to the corridor floor; riser as upper flight",
    "confidence": "medium"
@@ -78,8 +102,8 @@
      -3.655
     ]
    ],
-   "z0": 2.9000000000000004,
-   "z1": 3.1000000000000005,
+   "z0": 2.17,
+   "z1": 2.37,
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; floor -1.38 m below the plaza (10 risers)",
    "confidence": "medium"
   },
@@ -104,8 +128,8 @@
      -3.655
     ]
    ],
-   "z0": 5.4,
-   "z1": 5.550000000000001,
+   "z0": 4.67,
+   "z1": 4.82,
    "material": "white",
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; flat ceiling with downlights ~2.3 m above the corridor floor",
    "confidence": "medium"
@@ -123,16 +147,16 @@
      -3.59
     ]
    ],
-   "z0": 3.1000000000000005,
-   "z1": 5.380000000000001,
+   "z0": 2.37,
+   "z1": 4.65,
    "thk": 0.25,
    "material": "brick",
    "openings": [
     {
      "u0": 2.9699999999999998,
      "u1": 3.87,
-     "z0": 3.3760000000000003,
-     "z1": 5.376
+     "z0": 2.646,
+     "z1": 4.646
     }
    ],
    "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box",
@@ -151,8 +175,8 @@
      -5.264
     ]
    ],
-   "z0": 3.1000000000000005,
-   "z1": 4.53,
+   "z0": 2.37,
+   "z1": 3.8,
    "thk": 0.25,
    "material": "brick",
    "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80)",
@@ -171,8 +195,8 @@
      -5.653
     ]
    ],
-   "z0": 3.1000000000000005,
-   "z1": 5.4,
+   "z0": 2.37,
+   "z1": 4.67,
    "thk": 0.3,
    "material": "brick",
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile parapet under the sloped covers (map owner photo 10:55)",
@@ -199,19 +223,76 @@
    "confidence": "medium"
   },
   {
+   "type": "roof_plane",
+   "name": "EntryRoof",
+   "thk": 0.12,
+   "ring": [
+    [
+     167.133,
+     -5.547
+    ],
+    [
+     173.178,
+     -5.788
+    ],
+    [
+     173.407,
+     -0.043
+    ],
+    [
+     167.362,
+     0.198
+    ]
+   ],
+   "z": [
+    5.95,
+    5.95,
+    6.53,
+    6.53
+   ],
+   "evidence": "photo 10:55 (PnP camera): south eave 2.2 m above grade, north edge under the F1 sills; west verge ~0.25 m past the box/shed wall line; 012459414, 012507444, 012511910",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Entry_Landing",
+   "ring": [
+    [
+     167.349,
+     -6.406
+    ],
+    [
+     169.128,
+     -6.477
+    ],
+    [
+     169.249,
+     -3.43
+    ],
+    [
+     167.471,
+     -3.359
+    ]
+   ],
+   "z0": 3.55,
+   "z1": 3.77,
+   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head (012507444, 012511910, photo 10:55)",
+   "confidence": "medium"
+  },
+  {
    "type": "box",
    "name": "EntryRoof_Post",
    "center": [
-    168.288,
-    -5.443
+    169.018,
+    -5.472
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.1,
     0.1,
-    2.1999999999999993
+    2.5
    ],
-   "z0": 4.180000000000001,
+   "z0": 3.45,
    "material": "metal",
    "evidence": "single steel post at the front corner of the entry roof by the stair head (012507444, 012511910)",
    "confidence": "medium"
@@ -229,7 +310,7 @@
     0.6,
     1.85
    ],
-   "z0": 3.1000000000000005,
+   "z0": 2.37,
    "evidence": "orange wooden wardrobes against C's south wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
    "confidence": "medium"
   },
@@ -246,7 +327,7 @@
     0.6,
     1.85
    ],
-   "z0": 3.1000000000000005,
+   "z0": 2.37,
    "evidence": "orange wooden wardrobes against C's south wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
    "confidence": "low"
   }

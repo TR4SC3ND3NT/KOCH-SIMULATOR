@@ -185,7 +185,7 @@
       2.5
      ],
      "sills": [
-      -1.63
+      -2.36
      ]
     }
    ],
@@ -422,8 +422,8 @@
    "u0": 0.0,
    "u1": 12.8,
    "depth": 2.3,
-   "z_wall": 0.35,
-   "z_edge": 0.05,
+   "z_wall": -0.55,
+   "z_edge": -0.85,
    "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated",
    "confidence": "low"
   },
@@ -440,13 +440,14 @@
    "type": "shed",
    "name": "WestShed",
    "edge": 7,
-   "u0": 1.0,
+   "u0": -5.2,
    "u1": 13.7,
-   "depth": 5.0,
-   "z_high": 0.8,
-   "z_low": -0.1,
+   "depth": 5.8,
+   "z_high": 0.95,
+   "z_low": -0.48,
    "wall_h_from_ground": true,
-   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey. 2026-09-25: likely the semi-sunken Dance Hall (sign on the box at its south end); interior not captured. Front line = the brick front under the entry roof (continuous wall, map owner photo 10:55 + sketch); depth 5.0 m."
+   "evidence": "semi-sunken Dance Hall block along C's west wall: front wall (dark stone band on red tile) 1.3 m above the west-side grade, grey profiled roof rising to C's wall just under the F1 sills (012456258, 012459414, photo 10:55); plan from Google z20 (grey roof x -6.0..0, y 3.5..22.8 in C local, lean-corrected): depth 5.8 m, runs 5.2 m past C's NW corner",
+   "z_base": -2.08
   },
   {
    "type": "stair_box",
@@ -455,27 +456,15 @@
    "u0": 13.72,
    "u1": 17.15,
    "w0": 0.0,
-   "depth": 5.0,
-   "z_top": 0.83,
-   "evidence": "brick walls with the Dance Hall sign, front flush with the shed front (continuous wall), under the entry roof (map owner photo 10:55 + sketch, 012507444)",
-   "confidence": "medium"
-  },
-  {
-   "type": "shed",
-   "name": "EntryRoof",
-   "edge": 7,
-   "u0": 13.7,
-   "u1": 19.4,
-   "depth": 5.1,
-   "z_high": 1.0,
-   "z_low": 0.85,
-   "roof_only": true,
-   "evidence": "red profiled-sheet mono-pitch roof running straight from C's west wall (under the F1 sills) over the Dance Hall walls and the stairwell, no separate canopy (map owner photo 10:55 + sketch)",
-   "confidence": "medium"
+   "depth": 5.8,
+   "z_top": 0.47,
+   "evidence": "brick box at the south end of the same west wall line (flush with the shed front, taller), 'Dance Hall' sign on its south face above the landing (012459414, 012507444, photo 10:55)",
+   "confidence": "medium",
+   "z_base": -2.08
   }
  ],
  "basement": {
-  "floor_z": -2.43,
+  "floor_z": -3.16,
   "slab_t": 0.25,
   "status": "probable",
   "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483). 2026-09-25: basement corridor floor 1.38 m below the plaza = -2.43 rel FFL (SfM, 10 risers x 0.138); corridor runs east along the south wall.",

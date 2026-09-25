@@ -18,7 +18,12 @@ C_ORIGIN = np.array([173.264, -3.640])
 C_X = np.array([0.99920, -0.03985])
 C_Y = np.array([-C_X[1], C_X[0]])
 FFL = 5.53            # world z of the C ground floor (build_facades output, terrain-derived)
-GRADE = FFL - 1.05    # plaza at the entrance: 7 risers x 0.15 below FFL (BLD_C plinth evidence)
+# Ground at the SW corner / basement entry: 1.78 m below the C ground floor (0.73 m lower than the main entrance
+# plaza). From the map owner's photo 10:55 (camera solved by PnP on 10 C window centres, 5 px rms): with this grade the
+# stair railing reads 1.0 m and the roof post 2.2 m; the entry roof then meets C's west wall just under the F1 sills,
+# as in the photo. Also consistent with the earlier note that the ground west of C is lower than the entrance plaza.
+GW = -1.78
+GRADE = FFL + GW
 
 # --- SfM metric frame (sfm_views --scale 0.60) -> C local -----------------------------------------------------------
 # Scale 0.60 m/unit: stair profile tread 0.60 u / riser 0.231 u + Blondel 2h+b = 0.63 m -> 0.593; hand-held camera
@@ -32,7 +37,7 @@ TOP_M = np.array([-3.87, 0.12, -0.36])
 # the plaza with the planters is on the right. Frame +x (walking) = C +x (east), frame +y (left) = C +y (north).
 # y: corridor north face (frame y_m +1.00) = C south wall face (y 0); x: the brick box ends / white C wall starts at
 # frame x_m ~0.2 (frame 41: brick wall -> column -> white wall) = C SW corner (x 0).
-TOP_C = np.array([-4.07, -0.88, GRADE - FFL])
+TOP_C = np.array([-4.07, -0.88, GW])
 
 
 def m_to_c(q):
@@ -57,7 +62,7 @@ N1, N2 = 8, 2       # 8 risers to the mid landing (SfM levels), 2 into the corri
 Y_N, Y_S = m_to_c([0, 1.05, 0])[1], m_to_c([0, -0.80, 0])[1]   # stair wall faces (SfM wall peaks at x_m -1.5)
 LANDING = 1.20      # mid landing depth: SfM gap between the 8th nosing (x_m -1.35) and the next edge; photo ~3 treads
 CY_N, CY_S = 0.0, m_to_c([0, -1.00, 0])[1]   # corridor: C south wall face / retaining wall (SfM y_m +-1.00)
-CEIL = -0.13        # ceiling 2.30 m above the corridor floor (SfM 2.2-2.6 m); must stay under the sloped covers
+CEIL_H = 2.30       # corridor clear height (SfM 2.2-2.6 m); must stay under the sloped covers
 X_END = m_to_c([7.0, 0, 0])[0]    # last frames of the segment (corridor continues toward the piano room)
 # Grilled basement window in C's south wall, frame-x extent (m), fitted by overlay on frames 41/101/121.
 WIN_M0, WIN_M1 = 1.5, 3.9
@@ -71,6 +76,7 @@ def build():
     x_land1 = x_land0 + LANDING
     x_corr0 = x_land1 + N2 * TREAD
     z_corr = z_land - N2 * RISER
+    CEIL = z_corr + CEIL_H
     cy = (Y_N + Y_S) / 2
     east = math.degrees(math.atan2(C_X[1], C_X[0]))
     ev_sfm = "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals"
@@ -112,8 +118,22 @@ def build():
                 "height": 0.95, "post_spacing": 1.3, "post": 0.05, "panel": "bars",
                 "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
                 "confidence": "medium"})
-    els.append({"type": "box", "name": "EntryRoof_Post", "center": c_to_w((-4.9, Y_S - 0.2)), "dir_deg": east,
-                "size": [0.1, 0.1, (FFL + 0.85) - (FFL + z_top) + 0.3], "z0": FFL + z_top - 0.3, "material": "metal",
+    # Entry roof: one red profiled-sheet mono-pitch roof over the Dance Hall box, the landing and the stairwell,
+    # high at the north (box, under C's F1 sills) and sloping down to the south eave above the railing (photo 10:55:
+    # the west verge falls toward the camera; 012459414/012507444: roof over the box and the stair head).
+    R_W, R_E, R_S, R_N = -6.05, 0.0, Y_S - 0.35, 3.60
+    Z_N, Z_S = 1.00, GW + 2.20
+    els.append({"type": "roof_plane", "name": "EntryRoof", "thk": 0.12,
+                "ring": [c_to_w((R_W, R_S)), c_to_w((R_E, R_S)), c_to_w((R_E, R_N)), c_to_w((R_W, R_N))],
+                "z": [FFL + Z_S, FFL + Z_S, FFL + Z_N, FFL + Z_N],
+                "evidence": "photo 10:55 (PnP camera): south eave 2.2 m above grade, north edge under the F1 sills; west verge "
+                            "~0.25 m past the box/shed wall line; 012459414, 012507444, 012511910", "confidence": "medium"})
+    els.append({"type": "slab", "name": "Entry_Landing", "ring": ring_c(-5.8, x0 + 0.05, Y_S - 1.2, Y_N),
+                "z0": FFL + GW - 0.2, "z1": FFL + GW + 0.02,
+                "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head "
+                            "(012507444, 012511910, photo 10:55)", "confidence": "medium"})
+    els.append({"type": "box", "name": "EntryRoof_Post", "center": c_to_w((x0 - 0.1, Y_S - 0.2)), "dir_deg": east,
+                "size": [0.1, 0.1, 2.2 + 0.3], "z0": FFL + GW - 0.3, "material": "metal",
                 "evidence": "single steel post at the front corner of the entry roof by the stair head (012507444, 012511910)",
                 "confidence": "medium"})
     for k, xm in enumerate((4.2, 5.0)):
@@ -124,11 +144,13 @@ def build():
                                 "height 1.85 m (frames 110/120/130)", "confidence": "medium" if k == 0 else "low"})
     win = (m_to_c([WIN_M0, 0, 0])[0], m_to_c([WIN_M1, 0, 0])[0])
     hole = ring_c(x0 - 0.05, x_corr0 + 0.4, Y_S - 0.25, Y_N)   # open stairwell: cut the terrain heightfield here
-    return {"id": "INT_C_Basement", "collection": "INT_C_Basement", "terrain_holes": [hole],
+    # lower ground west/south-west of C (see GW); blends back to the DEM surface over 8 m
+    pad = {"ring": ring_c(-12.0, 1.0, -6.0, 19.0), "z": FFL + GW, "blend": 8.0}
+    return {"id": "INT_C_Basement", "collection": "INT_C_Basement", "terrain_holes": [hole], "terrain_pads": [pad],
             "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall "
                     "(zone reconstruction 2026-09-25, direction corrected by the map owner).",
             "elements": els}, dict(z_corr=round(z_corr, 3), x_corr0=round(x_corr0, 3), window_x=[round(w, 2) for w in win],
-                                   ceiling=CEIL, x_end=round(X_END, 2))
+                                   ceiling=round(CEIL, 2), x_end=round(X_END, 2))
 
 
 def alignment(work):

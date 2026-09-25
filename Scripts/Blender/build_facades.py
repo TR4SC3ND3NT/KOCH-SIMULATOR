@@ -470,6 +470,7 @@ class Building:
                 self.obj(f"LightwellCover_E{a['edge']}_{a['u0']:.0f}", bm, COL["maroon"], a.get("evidence"))
             elif t == "shed":
                 zg = e["zg"]
+                zg = a.get("z_base", zg - BURY_M) + BURY_M  # explicit base where a terrain pad lowers the ground
                 if a.get("roof_only"):  # open roof over an entry: only the roof sheet below
                     pass
                 elif a.get("hollow"):  # interior modelled separately (INT_* spec): roof deck + outer wall only
@@ -490,7 +491,7 @@ class Building:
                     self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
                 self.obj(a["name"] + "_Roof", bm2, COL["roof"] if a.get("roof_only") else COL["metal"], a.get("evidence"))
             elif t == "stair_box":
-                zg = e["zg"]
+                zg = a.get("z_base", e["zg"] - BURY_M) + BURY_M
                 box(bm, fr, a["u0"], a["u1"], a.get("w0", 0.0), a["depth"], zg - BURY_M, a["z_top"])
                 cn = a.get("canopy")
                 bm2 = bmesh.new()

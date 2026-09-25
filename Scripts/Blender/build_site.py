@@ -418,6 +418,15 @@ class Site:
         _close_loops(bm, [lo, hi])
         self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (ring[0][0], ring[0][1], el["z1"]))
 
+    def b_roof_plane(self, el):
+        """Planar sloped roof sheet: ring (4 world corners) with absolute z per corner, thickness thk (m)."""
+        ring, zs, t = el["ring"], el["z"], el.get("thk", 0.12)
+        bm = bmesh.new()
+        lo = [bm.verts.new((x, y, z - t)) for (x, y), z in zip(ring, zs)]
+        hi = [bm.verts.new((x, y, z)) for (x, y), z in zip(ring, zs)]
+        _close_loops(bm, [lo, hi])
+        self.emit(el, bm, COL.get(el.get("material", "roof"), COL["roof"]), (ring[0][0], ring[0][1], zs[0]))
+
     def b_int_wall(self, el):
         """Straight wall between two world points, absolute z0..z1, thickness to the LEFT of p0->p1 (w negative),
         openings [{u0,u1,z0,z1}] with u along p0->p1 (m) and z absolute."""
