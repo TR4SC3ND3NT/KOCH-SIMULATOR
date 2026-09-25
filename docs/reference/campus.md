@@ -38,6 +38,14 @@ Raw site captures (photos/videos) are **not** in the repo: they contain people. 
   - Gazebos: 7.7 m across the posts, 9.15 m across the roof, parapet 0.94 m, posts 2.6 m, 2 open sides with 1.15 m clear openings.
   - Gate: the booth is 3.42 × 3.10 m (brick-tile courses of 0.16 m); the canopy is 11.9 × 3.45 m on one round column; the zebra is 4.3 m wide with 0.4/0.6 m stripes; the carriageway is 14.8 m (curbs at y −110.8 / −125.6).
   - Google satellite (2026) is newest but leans ≈0.29 m/m east and ≈0.20 m/m north with height; Bing is near-nadir and is the footprint base.
+- **Levels (map owner, 2026-09-25):** the site steps down northward in terraces joined by outdoor stairs. The gate plaza and alley are highest. Stairs lead down to the level of A, the garden with its gazebos, and C. A second stair leads further down to the level of the sports hall, the courts and the canteen. The map owner walked these stairs repeatedly in the capture videos.
+- **Block C interior layout (map owner, 2026-09-25):**
+  - From the main (south) entrance, straight ahead across the hall are the two WC doors.
+  - Just before the WCs, the hall runs left (west) and right (east) to two mirrored staircases.
+  - The west stair serves F1–F3 only. The east stair serves F1–F4 and F5.
+  - F5 is not a full storey: it is inside the roof (compact teachers' offices, low ceilings; lit by the dormers).
+  - On F4, where the west stair would be, there are 1–2 offices instead. Model F4 like the other floors, without the west stair, with offices facing the windows.
+  - The prototype classroom is probably room 203 (F2), next to a stair. Its windows face the apartment towers and the football pitch (north), with the factory to the right of the college.
 - **Sports area (for the site phase, not modelled yet):** left to right, one large football pitch, then an area of the same size split into 3 courts: basketball, volleyball and an empty hard court. A green steel mesh fence runs around the full perimeter and between the courts.
 
 ## Measured and estimated dimensions (±5%)

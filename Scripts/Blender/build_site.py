@@ -25,7 +25,8 @@ COL = {
     "hedge": (0.25, 0.42, 0.22, 1), "wall": (0.62, 0.60, 0.55, 1), "brick": (0.50, 0.22, 0.17, 1),
     "metal": (0.18, 0.18, 0.19, 1), "white": (0.90, 0.90, 0.88, 1), "roof": (0.45, 0.25, 0.18, 1),
     "wood": (0.40, 0.27, 0.16, 1), "stone": (0.55, 0.53, 0.50, 1), "paint": (0.95, 0.95, 0.92, 1),
-    "glass": (0.40, 0.50, 0.55, 1), "low": (0.95, 0.55, 0.20, 1),
+    "glass": (0.40, 0.50, 0.55, 1), "low": (0.95, 0.55, 0.20, 1), "accent": (0.42, 0.52, 0.85, 1),
+    "terrazzo": (0.80, 0.79, 0.76, 1), "granite": (0.52, 0.40, 0.38, 1),
 }
 
 
@@ -277,7 +278,8 @@ class Site:
                 _cyl(bm, P, r, zb, z_top, 12)
             else:
                 box(bm, _frame2(P, ax), -r, r, -r, r, zb, z_top)
-        self.emit(dict(el, name=el.get("name", "Canopy") + "_Posts"), bm, COL["metal"], (cen.x, cen.y, zc))
+        self.emit(dict(el, name=el.get("name", "Canopy") + "_Posts"), bm, COL.get(el.get("post_material", "metal"), COL["metal"]),
+                  (cen.x, cen.y, zc))
         pb = el.get("post_base")  # coloured plinth ring at the column foot: {"h": m, "material": COL key}
         if pb and el.get("posts"):
             bm = bmesh.new()
@@ -333,11 +335,12 @@ class Site:
         P = Vector(el["pos"])
         fwd, left = rot2(el.get("dir_deg", 0.0))
         L, D, sh, bh = el.get("length", 1.8), el.get("depth", 0.45), el.get("seat_h", 0.45), el.get("back_h", 0.85)
-        z = self.gz(P.x, P.y)
+        z = el["z"] if "z" in el else self.gz(P.x, P.y)  # explicit z: indoor benches stand on a floor slab
         m = _frame2(P, left)         # u along the bench, w = forward (facing)
         bm = bmesh.new()
         box(bm, m, -L / 2, L / 2, -D / 2, D / 2, z + sh - 0.05, z + sh)                 # seat
-        box(bm, m, -L / 2, L / 2, -D / 2 - 0.04, -D / 2, z + sh + 0.1, z + bh)          # back
+        if el.get("back", True):  # corridor benches in C have no backrest
+            box(bm, m, -L / 2, L / 2, -D / 2 - 0.04, -D / 2, z + sh + 0.1, z + bh)      # back
         for u in (-L / 2 + 0.1, L / 2 - 0.1):                                          # legs / side frames
             box(bm, m, u - 0.03, u + 0.03, -D / 2, D / 2, z, z + sh - 0.05)
         self.emit(el, bm, COL["wood"], (P.x, P.y, z))
@@ -729,7 +732,7 @@ class Site:
         bm = bmesh.new()
         railing(bm, pts, height=el.get("height", 1.0), post=el.get("post", 0.05), rail=el.get("rail", 0.05),
                 spacing=el.get("spacing", 1.2), mid_rails=el.get("mid_rails", 1))
-        self.emit(el, bm, COL["metal"], tuple(pts[0]))
+        self.emit(el, bm, COL.get(el.get("material", "metal"), COL["metal"]), tuple(pts[0]))
 
     def build(self):
         n = 0
@@ -816,7 +819,10 @@ def _pad_z(pads, x, y, z):
             t = min(1.0, max(0.0, ((x - x1) * ax + (y - y1) * ay) / (ax * ax + ay * ay)))
             d = min(d, math.hypot(x - x1 - t * ax, y - y1 - t * ay))
         w = 1.0 if inside else (max(0.0, 1.0 - d / blend) if blend > 0 else 0.0)
-        z = z * (1 - w) + pad["z"] * w
+        zp = pad["z"]
+        if "grad" in pad:  # sloped pad plane, same as build_greybox.pad_plane_z
+            zp += pad["grad"][0] * (x - pad["ref"][0]) + pad["grad"][1] * (y - pad["ref"][1])
+        z = z * (1 - w) + zp * w
     return z
 
 

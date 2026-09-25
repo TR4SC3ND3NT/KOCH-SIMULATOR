@@ -1,0 +1,1421 @@
+{
+ "id": "INT_C_F1",
+ "collection": "INT_C_F1",
+ "note": "Block C ground floor interior (zone pass 2026-09-25). Topology from the map owner; hall width from the ceiling grid; stairs from riser counts; doors from person-scaled metrology. Room partitions and door positions along the hall are estimates (orange) until the evacuation plan photo arrives.",
+ "elements": [
+  {
+   "type": "slab",
+   "name": "F1_Floor",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     202.209,
+     -4.344
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 5.38,
+   "z1": 5.53,
+   "material": "terrazzo",
+   "evidence": "terrazzo floor (lobby frames); FFL from BLD_C",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_Mid",
+   "ring": [
+    [
+     176.729,
+     -3.328
+    ],
+    [
+     199.211,
+     -4.224
+    ],
+    [
+     199.861,
+     12.062
+    ],
+    [
+     177.379,
+     12.959
+    ]
+   ],
+   "z0": 8.58,
+   "z1": 8.83,
+   "material": "stone",
+   "evidence": "F2 structural slab, 3.30 m storey",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F1_Ceiling_Mid",
+   "ring": [
+    [
+     176.729,
+     -3.328
+    ],
+    [
+     199.211,
+     -4.224
+    ],
+    [
+     199.861,
+     12.062
+    ],
+    [
+     177.379,
+     12.959
+    ]
+   ],
+   "z0": 8.53,
+   "z1": 8.55,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.729,
+     -3.328
+    ],
+    [
+     176.938,
+     1.918
+    ],
+    [
+     173.941,
+     2.038
+    ]
+   ],
+   "z0": 8.58,
+   "z1": 8.83,
+   "material": "stone",
+   "evidence": "F2 structural slab, 3.30 m storey",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F1_Ceiling_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.729,
+     -3.328
+    ],
+    [
+     176.938,
+     1.918
+    ],
+    [
+     173.941,
+     2.038
+    ]
+   ],
+   "z0": 8.53,
+   "z1": 8.55,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_W_N",
+   "ring": [
+    [
+     174.172,
+     7.833
+    ],
+    [
+     177.17,
+     7.713
+    ],
+    [
+     177.379,
+     12.959
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 8.58,
+   "z1": 8.83,
+   "material": "stone",
+   "evidence": "F2 structural slab, 3.30 m storey",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F1_Ceiling_W_N",
+   "ring": [
+    [
+     174.172,
+     7.833
+    ],
+    [
+     177.17,
+     7.713
+    ],
+    [
+     177.379,
+     12.959
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 8.53,
+   "z1": 8.55,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_E_S",
+   "ring": [
+    [
+     199.263,
+     -2.926
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.418,
+     0.902
+    ],
+    [
+     199.42,
+     1.021
+    ]
+   ],
+   "z0": 8.58,
+   "z1": 8.83,
+   "material": "stone",
+   "evidence": "F2 structural slab, 3.30 m storey",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F1_Ceiling_E_S",
+   "ring": [
+    [
+     199.263,
+     -2.926
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.418,
+     0.902
+    ],
+    [
+     199.42,
+     1.021
+    ]
+   ],
+   "z0": 8.53,
+   "z1": 8.55,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_E_N",
+   "ring": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     202.649,
+     6.697
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.861,
+     12.062
+    ]
+   ],
+   "z0": 8.58,
+   "z1": 8.83,
+   "material": "stone",
+   "evidence": "F2 structural slab, 3.30 m storey",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F1_Ceiling_E_N",
+   "ring": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     202.649,
+     6.697
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.861,
+     12.062
+    ]
+   ],
+   "z0": 8.53,
+   "z1": 8.55,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "Hall_Beam_0",
+   "ring": [
+    [
+     185.648,
+     -1.782
+    ],
+    [
+     186.047,
+     -1.798
+    ],
+    [
+     186.404,
+     7.145
+    ],
+    [
+     186.004,
+     7.161
+    ]
+   ],
+   "z0": 8.23,
+   "z1": 8.53,
+   "material": "white",
+   "evidence": "plasterboard bulkheads crossing the hall at the lobby sides (frames F_2.5, F_8.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Hall_Beam_1",
+   "ring": [
+    [
+     190.044,
+     -1.957
+    ],
+    [
+     190.444,
+     -1.973
+    ],
+    [
+     190.801,
+     6.97
+    ],
+    [
+     190.401,
+     6.985
+    ]
+   ],
+   "z0": 8.23,
+   "z1": 8.53,
+   "material": "white",
+   "evidence": "plasterboard bulkheads crossing the hall at the lobby sides (frames F_2.5, F_8.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Hall_S_West",
+   "line": [
+    [
+     176.938,
+     1.918
+    ],
+    [
+     185.981,
+     1.557
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 0.935,
+     "u1": 1.965,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 7.335,
+     "u1": 8.365,
+     "z0": 5.53,
+     "z1": 7.6
+    }
+   ],
+   "material": "white"
+  },
+  {
+   "type": "door",
+   "name": "Door_S_W0",
+   "line": [
+    [
+     176.938,
+     1.918
+    ],
+    [
+     185.981,
+     1.557
+    ]
+   ],
+   "u0": 0.955,
+   "u1": 1.945,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, two glass panes, frame 0.99 x 2.05 (080420598); blue accent panel above (lobby frames); position within the room assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Door_S_W1",
+   "line": [
+    [
+     176.938,
+     1.918
+    ],
+    [
+     185.981,
+     1.557
+    ]
+   ],
+   "u0": 7.355,
+   "u1": 8.345,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, two glass panes, frame 0.99 x 2.05 (080420598); blue accent panel above (lobby frames); position within the room assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Hall_S_East",
+   "line": [
+    [
+     190.378,
+     1.382
+    ],
+    [
+     199.42,
+     1.021
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 0.685,
+     "u1": 1.715,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 7.085,
+     "u1": 8.115,
+     "z0": 5.53,
+     "z1": 7.6
+    }
+   ],
+   "material": "white"
+  },
+  {
+   "type": "door",
+   "name": "Door_S_E0",
+   "line": [
+    [
+     190.378,
+     1.382
+    ],
+    [
+     199.42,
+     1.021
+    ]
+   ],
+   "u0": 0.705,
+   "u1": 1.695,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "as Door_S_W: glazed black aluminium classroom door; position assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Door_S_E1",
+   "line": [
+    [
+     190.378,
+     1.382
+    ],
+    [
+     199.42,
+     1.021
+    ]
+   ],
+   "u0": 7.105,
+   "u1": 8.095,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "as Door_S_W: glazed black aluminium classroom door; position assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Lobby_W",
+   "line": [
+    [
+     185.981,
+     1.557
+    ],
+    [
+     185.772,
+     -3.688
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "lobby = entrance tower bay; vending + coffee machine against its side (070704360 t 4-6 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Lobby_E",
+   "line": [
+    [
+     190.22,
+     -2.565
+    ],
+    [
+     190.378,
+     1.382
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "lobby east wall, mirror of Lobby_W",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_S_W12",
+   "line": [
+    [
+     179.277,
+     -3.429
+    ],
+    [
+     179.486,
+     1.816
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (BLD_C south columns)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_S_E12",
+   "line": [
+    [
+     196.315,
+     -2.808
+    ],
+    [
+     196.473,
+     1.139
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (BLD_C south columns)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_S_WStair_End",
+   "line": [
+    [
+     176.729,
+     -3.328
+    ],
+    [
+     176.938,
+     1.918
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room beside the stair bay, same line as the stair edge",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_S_EStair_End",
+   "line": [
+    [
+     199.263,
+     -2.926
+    ],
+    [
+     199.42,
+     1.021
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room beside the stair bay, same line as the stair edge",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Hall_N",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 19.635,
+     "u1": 20.665,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 14.535,
+     "u1": 15.565,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 6.835,
+     "u1": 7.865,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 1.735,
+     "u1": 2.765,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 12.08,
+     "u1": 13.02,
+     "z0": 5.53,
+     "z1": 7.6
+    },
+    {
+     "u0": 9.48,
+     "u1": 10.42,
+     "z0": 5.53,
+     "z1": 7.6
+    }
+   ],
+   "material": "white"
+  },
+  {
+   "type": "door",
+   "name": "Door_N0",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "u0": 19.655,
+   "u1": 20.645,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "glazed black aluminium classroom door; position assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Door_N1",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "u0": 14.555,
+   "u1": 15.545,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "glazed black aluminium classroom door; position assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Door_N2",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "u0": 6.855,
+   "u1": 7.845,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "glazed black aluminium classroom door; position assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Door_N3",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "u0": 1.755,
+   "u1": 2.745,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "glazed black aluminium classroom door; position assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Door_WC4",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "u0": 12.1,
+   "u1": 13.0,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "Door_WC5",
+   "line": [
+    [
+     199.652,
+     6.817
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "u0": 9.5,
+   "u1": 10.4,
+   "z0": 5.53,
+   "z1": 7.58,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_N_W12",
+   "line": [
+    [
+     180.726,
+     12.826
+    ],
+    [
+     180.517,
+     7.58
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between window bays (north facade assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_WC_W",
+   "line": [
+    [
+     186.222,
+     12.606
+    ],
+    [
+     186.012,
+     7.361
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_WC_Mid",
+   "line": [
+    [
+     188.62,
+     12.511
+    ],
+    [
+     188.411,
+     7.265
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_WC_E",
+   "line": [
+    [
+     191.018,
+     12.415
+    ],
+    [
+     190.809,
+     7.169
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_N_E12",
+   "line": [
+    [
+     196.513,
+     12.196
+    ],
+    [
+     196.304,
+     6.95
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between window bays (north facade assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_N_Stair_W",
+   "line": [
+    [
+     177.379,
+     12.959
+    ],
+    [
+     177.17,
+     7.713
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room beside the stair bay",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "Room_N_Stair_E",
+   "line": [
+    [
+     199.861,
+     12.062
+    ],
+    [
+     199.652,
+     6.817
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 8.53,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room beside the stair bay",
+   "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairW_Flight1",
+   "top": [
+    176.38,
+    5.493
+   ],
+   "dir_deg": 267.7161454954155,
+   "width": 1.4,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.3,
+   "z_top": 7.18,
+   "material": "granite",
+   "evidence": "frames 070704360 t 15-22 s: 11 risers to the half-landing, granite treads",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairW_Landing",
+   "ring": [
+    [
+     174.082,
+     5.585
+    ],
+    [
+     177.08,
+     5.465
+    ],
+    [
+     177.162,
+     7.513
+    ],
+    [
+     174.164,
+     7.633
+    ]
+   ],
+   "z0": 6.98,
+   "z1": 7.18,
+   "material": "granite",
+   "evidence": "half-landing across both flights at the far side of the hall end (frames t 19-22 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairW_Flight2",
+   "top": [
+    174.662,
+    2.559
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.4,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.3,
+   "z_top": 8.83,
+   "material": "granite",
+   "evidence": "frames t 23-28 s: second flight returns along the end wall, 11 risers to F2",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "StairW_Balustrade1",
+   "points": [
+    [
+     175.549,
+     2.224,
+     5.53
+    ],
+    [
+     175.561,
+     2.523,
+     5.68
+    ],
+    [
+     175.681,
+     5.521,
+     7.18
+    ]
+   ],
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "white steel balustrade, vertical bars ~0.12 m, rounded top rail (frames t 16-18 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_Flight1",
+   "top": [
+    200.261,
+    4.541
+   ],
+   "dir_deg": 267.7161454954155,
+   "width": 1.4,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.3,
+   "z_top": 7.18,
+   "material": "granite",
+   "evidence": "frames 070704360 t 15-22 s: 11 risers to the half-landing, granite treads",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairE_Landing",
+   "ring": [
+    [
+     199.562,
+     4.568
+    ],
+    [
+     202.559,
+     4.449
+    ],
+    [
+     202.641,
+     6.497
+    ],
+    [
+     199.644,
+     6.617
+    ]
+   ],
+   "z0": 6.98,
+   "z1": 7.18,
+   "material": "granite",
+   "evidence": "half-landing across both flights at the far side of the hall end (frames t 19-22 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_Flight2",
+   "top": [
+    201.74,
+    1.479
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.4,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.3,
+   "z_top": 8.83,
+   "material": "granite",
+   "evidence": "frames t 23-28 s: second flight returns along the end wall, 11 risers to F2",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_Balustrade1",
+   "points": [
+    [
+     200.829,
+     1.215,
+     5.53
+    ],
+    [
+     200.841,
+     1.515,
+     5.68
+    ],
+    [
+     200.961,
+     4.513,
+     7.18
+    ]
+   ],
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "white steel balustrade, vertical bars ~0.12 m, rounded top rail (frames t 16-18 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Hall_Bench_N0",
+   "pos": [
+    181.998,
+    7.07
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 5.53,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Hall_Bench_N1",
+   "pos": [
+    194.588,
+    6.568
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 5.53,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Hall_Bench_S0",
+   "pos": [
+    181.802,
+    2.174
+   ],
+   "dir_deg": 87.71614549541547,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 5.53,
+   "evidence": "as Hall_Bench_N",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Hall_Bench_S1",
+   "pos": [
+    194.392,
+    1.672
+   ],
+   "dir_deg": 87.71614549541547,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 5.53,
+   "evidence": "as Hall_Bench_N",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Vending",
+   "center": [
+    186.339,
+    -0.759
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.9,
+    0.85,
+    1.83
+   ],
+   "z0": 5.53,
+   "material": "metal",
+   "evidence": "vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Coffee",
+   "center": [
+    186.333,
+    0.342
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.75,
+    0.7,
+    1.9
+   ],
+   "z0": 5.53,
+   "material": "metal",
+   "evidence": "vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "WaterCooler",
+   "center": [
+    190.02,
+    -1.306
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.32,
+    0.32,
+    1.1
+   ],
+   "z0": 5.53,
+   "material": "metal",
+   "evidence": "vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hall_Radiator_0",
+   "center": [
+    183.504,
+    7.2
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 5.68,
+   "material": "white",
+   "evidence": "white sectional radiator on the hall wall (F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hall_Radiator_1",
+   "center": [
+    193.096,
+    6.818
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 5.68,
+   "material": "white",
+   "evidence": "white sectional radiator on the hall wall (F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Accent_N_6",
+   "center": [
+    179.509,
+    7.41
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2,
+    0.02,
+    0.9000000000000001
+   ],
+   "z0": 7.63,
+   "material": "accent",
+   "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Accent_N_11",
+   "center": [
+    184.605,
+    7.207
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2,
+    0.02,
+    0.9000000000000001
+   ],
+   "z0": 7.63,
+   "material": "accent",
+   "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Accent_N_19",
+   "center": [
+    192.299,
+    6.9
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2,
+    0.02,
+    0.9000000000000001
+   ],
+   "z0": 7.63,
+   "material": "accent",
+   "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Accent_N_24",
+   "center": [
+    197.395,
+    6.697
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2,
+    0.02,
+    0.9000000000000001
+   ],
+   "z0": 7.63,
+   "material": "accent",
+   "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Accent_WC",
+   "center": [
+    188.402,
+    7.055
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.800000000000001,
+    0.02,
+    2.9
+   ],
+   "z0": 5.53,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  }
+ ]
+}
