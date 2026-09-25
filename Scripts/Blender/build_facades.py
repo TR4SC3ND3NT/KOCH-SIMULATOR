@@ -507,8 +507,9 @@ class Building:
             elif t == "gallery":
                 self.build_gallery(a, e, fr)
             elif t == "wall_boxes":  # small wall-mounted boxes (AC outdoor units, junction boxes): items [u, z, w, h, d]
+                w0 = a.get("w0", 0.0)  # face offset along the outward normal (m; <0 = on a wall behind this edge)
                 for u, zb, bw, bh, bd in a["items"]:
-                    box(bm, fr, u - bw / 2, u + bw / 2, 0.0, bd, zb, zb + bh)
+                    box(bm, fr, u - bw / 2, u + bw / 2, w0, w0 + bd, zb, zb + bh)
                 self.obj(f"{a.get('name', 'WallBoxes')}_E{a['edge']}", bm, COL["frame"], a.get("evidence"), cf)
             elif t == "downpipe":  # rainwater downpipe: square-ish section d, off the wall by `off`, z0..z1 rel FFL
                 d, off = a.get("d", 0.1), a.get("off", 0.04)
@@ -520,7 +521,8 @@ class Building:
                     box(bm, fr, u - 0.12, u + 0.12, a.get("w", 0.35), a.get("w", 0.35) + 0.12, a["z"], a["z"] + 0.18)
                 self.obj(f"Flood_E{a['edge']}_{a['u'][0]:.0f}", bm, COL["metal"], a.get("evidence"), cf)
             elif t == "wall_sign":  # lettering/logo panel on the wall face (content = KOCH branding later)
-                box(bm, fr, a["u0"], a["u1"], 0.0, a.get("t", 0.08), a["z0"], a["z1"])
+                w0 = a.get("w0", 0.0)  # face offset along the outward normal (m; <0 = on a wall behind this edge)
+                box(bm, fr, a["u0"], a["u1"], w0, w0 + a.get("t", 0.08), a["z0"], a["z1"])
                 self.obj(f"Sign_{a.get('name', a['u0'])}", bm, COL[a.get("color", "sign")], a.get("evidence"), cf)
             elif t == "stair_well":
                 self.build_stair_well(a, e, fr)
