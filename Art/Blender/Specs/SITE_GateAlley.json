@@ -1113,13 +1113,13 @@
     -53.736
    ],
    "dir_deg": 87.192,
-   "risers": 5,
-   "riser_h": 0.132,
+   "risers": 8,
+   "riser_h": 0.169,
    "tread": 0.35,
    "width": 4.21,
    "z_top": 6.75,
    "material": "granite",
-   "evidence": "map owner (2026-09-25 screenshot marks): a descent across the path right after the end of B; the flat alley (drone SfM, B's level) meets the north path of the A_W zone (6.09) -> 0.66 m, 5 risers; exact position and riser count to confirm (photo request)",
+   "evidence": "map owner (2026-09-25 screenshot marks): a descent across the path right after the end of B; the flat alley (drone SfM, B's level) drops to the lower terrace (path, garden, gazebos, C: 5.40) -> 1.35 m, 8 risers; exact position and riser count to confirm (photo request)",
    "confidence": "low"
   }
  ]

@@ -256,14 +256,14 @@ for k, u in enumerate((9.0, 14.8, 20.5, 25.6)):
                 "confidence": "low"})
 
 # ---------------------------------------------------------------- descent at B's NE corner (alley -> north path)
-PATH_N_Z = 6.09                  # north path level (SITE_Garden / BLD_A_W pad AW_PathN, gallery zone)
+PATH_N_Z = 5.40                  # lower terrace after the descent: path, garden, gazebos, C (map owner)
 X_PATH_W = -7.63                 # north path west edge (A local x at B's NE corner, world x 153.1)
-N_STEPS = 5
+N_STEPS = 8
 els.append({"type": "stairs_run", "name": "Steps_BCorner", "top": W((X_PATH_W + X_CURB) / 2, B_NE_Y), "dir_deg": r3(ANG + 90),
             "risers": N_STEPS, "riser_h": r3((ALLEY_Z - PATH_N_Z) / N_STEPS), "tread": 0.35,
             "width": r3(X_CURB - X_PATH_W), "z_top": r3(ALLEY_Z), "material": "granite",
             "evidence": "map owner (2026-09-25 screenshot marks): a descent across the path right after the end of B; the "
-                        "flat alley (drone SfM, B's level) meets the north path of the A_W zone (6.09) -> 0.66 m, 5 risers; "
+                        "flat alley (drone SfM, B's level) drops to the lower terrace (path, garden, gazebos, C: 5.40) -> 1.35 m, 8 risers; "
                         "exact position and riser count to confirm (photo request)", "confidence": "low"})
 
 # ---------------------------------------------------------------- terrain pad (lowered ground under the lower zone)

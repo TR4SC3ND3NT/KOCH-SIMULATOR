@@ -2407,23 +2407,6 @@
    "confidence": "medium"
   },
   {
-   "type": "stairs_run",
-   "name": "AW_Stairs_North",
-   "top": [
-    156.969,
-    -25.788
-   ],
-   "dir_deg": 87.19,
-   "risers": 6,
-   "riser_h": 0.132,
-   "tread": 0.35,
-   "width": 3.7,
-   "z_top": 6.09,
-   "run_out": 0.1,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): 6 granite risers ~0.15 x 0.35 over the full path width, square below (012404116 t0-3, 061757320 t13-19); N end of the lawn strip from Google z20 junipers (low)",
-   "confidence": "low"
-  },
-  {
    "type": "slab",
    "name": "AW_Ramp_Landing",
    "ring": [
@@ -2605,42 +2588,6 @@
    "material": "stone",
    "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): pink granite curb at the lawn toe, ~0.13 above the walkway",
    "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "AW_RetainingWall_Garden",
-   "center": [
-    154.459,
-    -35.101
-   ],
-   "dir_deg": 87.19,
-   "size": [
-    22.35,
-    0.4,
-    1.82
-   ],
-   "z0": 4.32,
-   "material": "stone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): boulder retaining wall between the sunken garden and the raised path, running out at the north steps (081856511 t3.5, 012404116 t2-4)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "AW_LawnCheek_N",
-   "center": [
-    159.72,
-    -25.823
-   ],
-   "dir_deg": -2.81,
-   "size": [
-    1.8,
-    0.2,
-    1.12
-   ],
-   "z0": 5.0,
-   "material": "stone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): granite cheek at the north end of the lawn bank above the square (012327726 t27.5)",
-   "confidence": "low"
   },
   {
    "type": "tree",

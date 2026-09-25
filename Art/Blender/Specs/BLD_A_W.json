@@ -494,9 +494,9 @@
      -25.697
     ]
    ],
-   "z": 6.09,
-   "blend": 1.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5) | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM)"
+   "z": 5.4,
+   "blend": 1.5,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5) | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM) | 2026-09-25 map owner: after the steps at B's NE corner the path, lawn strip and garden are on the lower level -> flat 5.40"
   },
   {
    "name": "AW_LawnN",
@@ -518,17 +518,9 @@
      -25.879
     ]
    ],
-   "z": 6.07,
-   "grad": [
-    -0.36068,
-    0.01769
-   ],
-   "ref": [
-    156.788,
-    -67.229
-   ],
-   "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM)"
+   "z": 5.4,
+   "blend": 1.5,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM) | 2026-09-25 map owner: after the steps at B's NE corner the path, lawn strip and garden are on the lower level -> flat 5.40"
   },
   {
    "name": "AW_Walkway",
