@@ -418,39 +418,27 @@
    "z_high": 0.8,
    "z_low": -0.1,
    "wall_h_from_ground": true,
-   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey."
+   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey. 2026-09-25: it covers the semi-sunken basement corridor (INT_C_Basement), so it is modelled hollow.",
+   "hollow": true,
+   "z_floor": -2.63
   },
   {
    "type": "stair_box",
    "name": "BasementEntry",
    "edge": 7,
-   "u0": 12.0,
-   "u1": 14.2,
-   "depth": 3.5,
+   "u0": 12.4,
+   "u1": 16.8,
+   "depth": 3.8,
    "z_top": 0.9,
    "canopy": {
-    "u0": 14.2,
-    "u1": 17.4,
-    "depth": 1.7,
+    "u0": 12.4,
+    "u1": 17.2,
+    "depth": 2.2,
     "z": 0.92
    },
-   "evidence": "video 070629483 f_3.4/f_4.2: brick box with the sign 'Dance Hall' (basement), front corner at u≈12.1 after perspective correction (box front is 3.5 m in front of the wall: projection factor 1.57); flat corrugated canopy on one post over the stair south of the box",
-   "confidence": "medium"
-  },
-  {
-   "type": "stair_well",
-   "name": "BasementStair",
-   "edge": 7,
-   "u_top": 17.0,
-   "u_bottom": 14.2,
-   "w0": 0.15,
-   "w1": 1.45,
-   "z_bottom": -3.3,
-   "riser_h": 0.165,
-   "wall_t": 0.2,
-   "rail_h": 1.0,
-   "evidence": "070629483 f_4.2: stair descends north along the west wall under the canopy toward the box (railing top slopes down to the box); wrought-iron railing on the outer side; depth to the basement floor assumed −3.30",
-   "confidence": "low"
+   "evidence": "video 070629483 f_3.4/f_4.2: brick box with the sign 'Dance Hall' (basement), front corner at u≈12.1 after perspective correction (box front is 3.5 m in front of the wall: projection factor 1.57); flat corrugated canopy on one post over the stair south of the box; 2026-09-25: the sunken stair runs along the box's east side (INT_C_Basement), box assumed to span the stair length",
+   "confidence": "low",
+   "w0": 2.38
   }
  ],
  "basement": {

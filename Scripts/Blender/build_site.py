@@ -17,7 +17,7 @@ from mathutils import Matrix, Vector
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from greybox.common import SPECS, Terrain, ensure_collection, load, make_object  # noqa: E402
-from greybox.kit import box  # noqa: E402
+from greybox.kit import Opening, box, wall_piece  # noqa: E402
 from greybox.sweep import hedge_profile, rect_profile, sweep_profile  # noqa: E402
 
 BURY = 0.3
@@ -407,6 +407,72 @@ class Site:
             bmesh.ops.create_icosphere(bm, subdivisions=1, radius=1.0,
                                        matrix=Matrix.Translation((P.x, P.y, z + (cb + h) / 2)) @ Matrix.Diagonal((cd / 2, cd / 2, (h - cb) / 2, 1)))
         self.emit(el, bm, COL["hedge"], (P.x, P.y, z))
+
+    # ------------------------------------------------------------------ interior / absolute-z elements
+    def b_slab(self, el):
+        """Horizontal slab over a world ring between absolute z0..z1 (floors, landings, ceilings)."""
+        ring = _ccw(el["ring"])
+        bm = bmesh.new()
+        lo = [bm.verts.new((x, y, el["z0"])) for x, y in ring]
+        hi = [bm.verts.new((x, y, el["z1"])) for x, y in ring]
+        _close_loops(bm, [lo, hi])
+        self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (ring[0][0], ring[0][1], el["z1"]))
+
+    def b_int_wall(self, el):
+        """Straight wall between two world points, absolute z0..z1, thickness to the LEFT of p0->p1 (w negative),
+        openings [{u0,u1,z0,z1}] with u along p0->p1 (m) and z absolute."""
+        A, Bp = Vector(el["line"][0]), Vector(el["line"][1])
+        L = (Bp - A).length
+        d = (Bp - A) / L
+        m = Matrix.Identity(4)
+        # facade frame: u along the wall, w = right-hand normal (outer face at w=0), z absolute
+        m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = d.to_3d(), Vector((d.y, -d.x, 0)), Vector((0, 0, 1))
+        m.col[3].xyz = Vector((A.x, A.y, 0))
+        ops = [Opening(o["u0"], o["u1"], o["z0"], o["z1"]) for o in el.get("openings", [])]
+        bm = bmesh.new()
+        wall_piece(bm, m, L, el["z0"], el["z1"], el.get("thk", 0.25), ops, cut_start=0.0, cut_end=0.0)
+        self.emit(el, bm, COL.get(el.get("material", "white"), COL["white"]), (A.x, A.y, el["z0"]))
+
+    def b_stairs_run(self, el):
+        """Straight flight: 'top' = world point at the centre of the top nosing line, dir_deg = downhill direction,
+        z_top absolute; risers of riser_h, treads of tread; solid down to z_top - risers*riser_h - 0.2."""
+        P = Vector(el["top"])
+        fwd, left = rot2(el["dir_deg"])
+        n, rh, tr, W = int(el["risers"]), el["riser_h"], el["tread"], el["width"]
+        zt = el["z_top"]
+        zb = zt - n * rh
+        prof = [(0.0, zb - 0.2), (0.0, zt)]
+        x = 0.0
+        z = zt
+        for k in range(n):
+            z -= rh
+            prof.append((x, z))
+            if k < n - 1:
+                x += tr
+                prof.append((x, z))
+        prof += [(x + el.get("run_out", 0.0), z), (x + el.get("run_out", 0.0), zb - 0.2)]
+        m = Matrix.Identity(4)
+        m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = left.to_3d(), fwd.to_3d(), Vector((0, 0, 1))
+        m.col[3].xyz = Vector((P.x, P.y, 0))
+        bm = bmesh.new()
+        A = [bm.verts.new(m @ Vector((-W / 2, y, zz))) for y, zz in prof]
+        Bv = [bm.verts.new(m @ Vector((W / 2, y, zz))) for y, zz in prof]
+        k = len(prof)
+        for i in range(k):
+            j = (i + 1) % k
+            bm.faces.new((A[i], A[j], Bv[j], Bv[i]))
+        bm.faces.new(list(reversed(A)))
+        bm.faces.new(Bv)
+        self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
+
+    def b_box(self, el):
+        """Axis box: centre (world xy), size [along dir, across, height], dir_deg, z0 absolute (furniture, cabinets)."""
+        P = Vector(el["center"])
+        fwd, _ = rot2(el.get("dir_deg", 0.0))
+        a, b, h = el["size"]
+        bm = bmesh.new()
+        box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, el["z0"], el["z0"] + h)
+        self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, el["z0"]))
 
     def b_zebra(self, el):
         A, B = Vector(el["line"][0]), Vector(el["line"][-1])

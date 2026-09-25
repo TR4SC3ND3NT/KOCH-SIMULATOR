@@ -40,7 +40,7 @@ def main():
     background = bpy.app.background
     files = sorted(f[:-5] for f in os.listdir(SPECS) if f.endswith(".json"))
     bld = [f for f in files if f.startswith("BLD_")]
-    site = [f for f in files if f.startswith("SITE_")]
+    site = [f for f in files if f.startswith(("SITE_", "INT_"))]  # INT_* = interiors, same element builder
     run("build_greybox.py")
     if bld:
         run("build_facades.py", "KOCH_SPECS", bld)

@@ -1,0 +1,224 @@
+{
+ "id": "INT_C_Basement",
+ "collection": "INT_C_Basement",
+ "note": "Block C west basement entry: sunken stair + corridor along the west wall (zone reconstruction 2026-09-25).",
+ "elements": [
+  {
+   "type": "stairs_run",
+   "name": "Stair_Upper",
+   "top": [
+    172.076,
+    -3.192
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.8499999999999999,
+   "risers": 8,
+   "riser_h": 0.138,
+   "tread": 0.36,
+   "z_top": 4.48,
+   "run_out": 1.2,
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364)",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "Stair_Lower",
+   "top": [
+    172.224,
+    0.525
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.8499999999999999,
+   "risers": 2,
+   "riser_h": 0.138,
+   "tread": 0.36,
+   "z_top": 3.3760000000000003,
+   "run_out": 0.5,
+   "evidence": "photo 012543364: 2 steps from the mid landing down to the corridor floor; riser as upper flight",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Corridor_Floor",
+   "ring": [
+    [
+     171.379,
+     1.279
+    ],
+    [
+     173.377,
+     1.199
+    ],
+    [
+     173.632,
+     7.594
+    ],
+    [
+     171.634,
+     7.674
+    ]
+   ],
+   "z0": 2.9000000000000004,
+   "z1": 3.1000000000000005,
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; floor -1.38 m below the plaza (10 risers); SfM floor at x_m 0.75: -2.49 rel FFL (model -2.43)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Corridor_Ceiling",
+   "ring": [
+    [
+     171.302,
+     -0.639
+    ],
+    [
+     173.3,
+     -0.719
+    ],
+    [
+     173.632,
+     7.594
+    ],
+    [
+     171.634,
+     7.674
+    ]
+   ],
+   "z0": 5.55,
+   "z1": 5.75,
+   "material": "white",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; ceiling with downlights ~2.45 m above the corridor floor",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Stair_Wall_W",
+   "line": [
+    [
+     171.14,
+     -3.455
+    ],
+    [
+     171.329,
+     1.281
+    ]
+   ],
+   "z0": 3.1000000000000005,
+   "z1": 5.380000000000001,
+   "thk": 0.25,
+   "material": "brick",
+   "openings": [
+    {
+     "u0": 2.9699999999999998,
+     "u1": 3.87,
+     "z0": 3.3760000000000003,
+     "z1": 5.376
+    }
+   ],
+   "evidence": "brick-effect tile wall on the west (left going down) with a brown wooden door at the mid landing (012543364, frames 1-10); top = brick box height",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Stair_Wall_E",
+   "line": [
+    [
+     173.177,
+     1.207
+    ],
+    [
+     172.988,
+     -3.529
+    ]
+   ],
+   "z0": 3.1000000000000005,
+   "z1": 4.53,
+   "thk": 0.25,
+   "material": "brick",
+   "evidence": "brick-tile retaining wall on the east (right) side under the wrought-iron railing (frames 1-10, 70-80)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Corridor_Wall_W",
+   "line": [
+    [
+     171.379,
+     1.279
+    ],
+    [
+     171.534,
+     5.176
+    ]
+   ],
+   "z0": 3.1000000000000005,
+   "z1": 5.55,
+   "thk": 0.3,
+   "material": "white",
+   "openings": [
+    {
+     "u0": 0.9299999999999997,
+     "u1": 3.329999999999999,
+     "z0": 3.9000000000000004,
+     "z1": 5.3999999999999995
+    }
+   ],
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; big window with white hexagon grilles, sill at the grey dado top ~0.8 m, head just under the ceiling; extent fitted by overlay on frames 41/101/121",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Corridor_Wall_E",
+   "line": [
+    [
+     173.677,
+     1.187
+    ],
+    [
+     173.932,
+     7.582
+    ]
+   ],
+   "z0": 3.1000000000000005,
+   "z1": 5.55,
+   "thk": 0.3,
+   "material": "white",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado (frames 100-150); coincides with the Block C west wall line",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Wardrobe_0",
+   "center": [
+    171.841,
+    5.344
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.8,
+    0.6,
+    1.85
+   ],
+   "z0": 3.1000000000000005,
+   "evidence": "orange wooden wardrobes against the west wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Wardrobe_1",
+   "center": [
+    171.871,
+    6.093
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.8,
+    0.6,
+    1.85
+   ],
+   "z0": 3.1000000000000005,
+   "evidence": "orange wooden wardrobes against the west wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
+   "confidence": "low"
+  }
+ ]
+}

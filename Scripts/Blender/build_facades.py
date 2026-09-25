@@ -470,8 +470,16 @@ class Building:
                 self.obj(f"LightwellCover_E{a['edge']}_{a['u0']:.0f}", bm, COL["maroon"], a.get("evidence"))
             elif t == "shed":
                 zg = e["zg"]
-                prof = [(0.0, zg - BURY_M), (0.0, a["z_high"]), (a["depth"], a["z_low"]), (a["depth"], zg - BURY_M)]
-                prism_profile(bm, fr, prof, a["u0"], a["u1"])
+                if a.get("hollow"):  # interior modelled separately (INT_* spec): roof deck + outer wall only
+                    zb = a.get("z_floor", zg - BURY_M)
+                    wt = a.get("wall_t", 0.3)
+                    prism_profile(bm, fr, [(a["depth"] - wt, zb), (a["depth"] - wt, a["z_low"] - 0.02),
+                                           (a["depth"], a["z_low"] - 0.02), (a["depth"], zb)], a["u0"], a["u1"])
+                    prism_profile(bm, fr, [(0.0, a["z_high"] - 0.3), (0.0, a["z_high"]), (a["depth"], a["z_low"]),
+                                           (a["depth"], a["z_low"] - 0.3)], a["u0"], a["u1"])  # roof deck under the sheet
+                else:
+                    prof = [(0.0, zg - BURY_M), (0.0, a["z_high"]), (a["depth"], a["z_low"]), (a["depth"], zg - BURY_M)]
+                    prism_profile(bm, fr, prof, a["u0"], a["u1"])
                 bm2 = bmesh.new()  # corrugated roof sheet, 0.15 m overhang on three sides
                 prism_profile(bm2, fr, [(0.0, a["z_high"] + 0.01), (a["depth"] + 0.15, a["z_low"] - 0.01),
                                         (a["depth"] + 0.15, a["z_low"] + 0.05), (0.0, a["z_high"] + 0.07)],
@@ -480,7 +488,7 @@ class Building:
                 self.obj(a["name"] + "_Roof", bm2, COL["metal"], a.get("evidence"))
             elif t == "stair_box":
                 zg = e["zg"]
-                box(bm, fr, a["u0"], a["u1"], 0.0, a["depth"], zg - BURY_M, a["z_top"])
+                box(bm, fr, a["u0"], a["u1"], a.get("w0", 0.0), a["depth"], zg - BURY_M, a["z_top"])
                 cn = a.get("canopy")
                 bm2 = bmesh.new()
                 if cn:
