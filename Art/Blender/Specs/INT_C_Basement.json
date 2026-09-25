@@ -179,6 +179,26 @@
    "confidence": "medium"
   },
   {
+   "type": "fence",
+   "name": "Stair_Railing_S",
+   "line": [
+    [
+     168.921,
+     -5.388
+    ],
+    [
+     173.557,
+     -5.573
+    ]
+   ],
+   "height": 0.95,
+   "post_spacing": 1.3,
+   "post": 0.05,
+   "panel": "bars",
+   "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
+   "confidence": "medium"
+  },
+  {
    "type": "box",
    "name": "Wardrobe_0",
    "center": [

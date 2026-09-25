@@ -107,6 +107,10 @@ def build():
          "evidence": ev_sfm + "; plain wall with a grey tile dado (frames 100-150), under the red sloped covers",
          "confidence": "medium"},
     ]
+    els.append({"type": "fence", "name": "Stair_Railing_S", "line": [c_to_w((x0 - 0.2, Y_S - 0.12)), c_to_w((x_corr0, Y_S - 0.12))],
+                "height": 0.95, "post_spacing": 1.3, "post": 0.05, "panel": "bars",
+                "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
+                "confidence": "medium"})
     for k, xm in enumerate((4.2, 5.0)):
         c = m_to_c([xm + 0.4, 0, 0])
         els.append({"type": "box", "name": f"Wardrobe_{k}", "center": c_to_w((c[0], CY_N - 0.3)), "dir_deg": east,

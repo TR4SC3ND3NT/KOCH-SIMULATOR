@@ -455,15 +455,15 @@
    "u0": 13.7,
    "u1": 17.15,
    "depth": 3.8,
-   "z_top": 1.6,
+   "z_top": 0.83,
    "canopy": {
-    "u0": 17.1,
+    "u0": 13.7,
     "u1": 19.4,
-    "w0": -0.4,
+    "w0": 0.0,
     "depth": 4.6,
-    "z": 1.62
+    "z": 0.85
    },
-   "evidence": "brick box with the Dance Hall sign at C's SW corner, west of the facade; its south face is the stair's north wall (012507444, 012511910, 012543364); box top and canopy ~2.65 m above the landing (sign at ~2 m, photo 012507444)",
+   "evidence": "brick walls UNDER one continuous red canopy at C's SW corner: the Dance Hall part (north, with the sign) and the stair opening with a wrought-iron railing (south, at the corner); canopy meets the west wall just under the F1 windows (map owner photo 2026-09-25 10:55 from the C entrance, 012507444, 012511910)",
    "confidence": "medium",
    "w0": 0.0
   }
