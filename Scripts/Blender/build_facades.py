@@ -506,6 +506,10 @@ class Building:
                 self.build_stair_extras(a, fr, cf)
             elif t == "gallery":
                 self.build_gallery(a, e, fr)
+            elif t == "wall_boxes":  # small wall-mounted boxes (AC outdoor units, junction boxes): items [u, z, w, h, d]
+                for u, zb, bw, bh, bd in a["items"]:
+                    box(bm, fr, u - bw / 2, u + bw / 2, 0.0, bd, zb, zb + bh)
+                self.obj(f"{a.get('name', 'WallBoxes')}_E{a['edge']}", bm, COL["frame"], a.get("evidence"), cf)
             elif t == "downpipe":  # rainwater downpipe: square-ish section d, off the wall by `off`, z0..z1 rel FFL
                 d, off = a.get("d", 0.1), a.get("off", 0.04)
                 for u in a["u"]:

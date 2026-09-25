@@ -1106,6 +1106,54 @@
    "confidence": "low"
   },
   {
+   "type": "tree",
+   "name": "LawnThuja_00",
+   "pos": [
+    156.68,
+    -79.238
+   ],
+   "z": 6.55,
+   "height": 1.2,
+   "crown_d": 0.9,
+   "shape": "round",
+   "trunk_d": 0.06,
+   "crown_base": 0.15,
+   "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "LawnThuja_01",
+   "pos": [
+    156.954,
+    -73.645
+   ],
+   "z": 6.55,
+   "height": 1.2,
+   "crown_d": 0.9,
+   "shape": "round",
+   "trunk_d": 0.06,
+   "crown_base": 0.15,
+   "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "LawnThuja_02",
+   "pos": [
+    157.777,
+    -56.865
+   ],
+   "z": 6.55,
+   "height": 1.2,
+   "crown_d": 0.9,
+   "shape": "round",
+   "trunk_d": 0.06,
+   "crown_base": 0.15,
+   "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
+   "confidence": "low"
+  },
+  {
    "type": "stairs_run",
    "name": "Steps_BCorner",
    "top": [

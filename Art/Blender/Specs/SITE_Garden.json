@@ -3046,6 +3046,20 @@
    "curb_w": 0.08,
    "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
    "confidence": "medium"
+  },
+  {
+   "type": "sign",
+   "name": "Signboard_Arch",
+   "pos": [
+    154.3,
+    -42.9
+   ],
+   "dir_deg": 0.0,
+   "w": 1.0,
+   "h": 1.9,
+   "t": 0.08,
+   "evidence": "white campus map signboard on two posts right of the hedge arch at the foot of the wide stair (012404116 f10-f12; 070309303 f73-f75); content = KOCH map in UE",
+   "confidence": "low"
   }
  ],
  "ground": "pads",

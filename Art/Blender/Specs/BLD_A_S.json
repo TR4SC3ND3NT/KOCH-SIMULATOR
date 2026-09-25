@@ -420,6 +420,50 @@
    "t": 0.03,
    "evidence": "blue block name plate on the SW pilaster (pano intro, 2020)",
    "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "AC_Units",
+   "edge": 3,
+   "items": [
+    [
+     4.6,
+     3.25,
+     0.8,
+     0.6,
+     0.32
+    ],
+    [
+     5.5,
+     3.25,
+     0.8,
+     0.6,
+     0.32
+    ],
+    [
+     7.4,
+     3.25,
+     0.8,
+     0.6,
+     0.32
+    ],
+    [
+     9.9,
+     3.25,
+     0.8,
+     0.6,
+     0.32
+    ],
+    [
+     4.3,
+     6.3,
+     0.8,
+     0.6,
+     0.32
+    ]
+   ],
+   "evidence": "AC units between the F1/F2 windows on A_S's west face near the NW corner (070309303 f24-f30)",
+   "confidence": "low"
   }
  ],
  "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4).",

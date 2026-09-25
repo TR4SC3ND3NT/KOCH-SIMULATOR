@@ -266,6 +266,19 @@ for k, u in enumerate((9.0, 14.8, 20.5, 25.6)):
                 "evidence": "conical thujas in the B shrub bed (012249348 spruce/thuja beyond the porch, drone 2022)",
                 "confidence": "low"})
 
+# ---------------------------------------------------------------- lawn strip planting (upper lawn, A side)
+# round clipped thujas ~0.9-1.3 m every ~5.5 m along the lawn strip + a few saplings (070309303 f19-f44, f53-f72)
+XL = (X_CURB + X_BANK) / 2
+k = 0
+for yl in [S2_N + 1.5 + 5.6 * i for i in range(8)]:
+    if GAP0 - 0.5 < yl < GAP1 + 0.5 or yl > B_NE_Y - 0.8:
+        continue
+    els.append({"type": "tree", "name": f"LawnThuja_{k:02d}", "pos": W(XL, yl), "z": r3(zA(yl) - 0.2), "height": 1.2, "crown_d": 0.9,
+                "shape": "round", "trunk_d": 0.06, "crown_base": 0.15,
+                "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
+                "confidence": "low"})
+    k += 1
+
 # ---------------------------------------------------------------- descent at B's NE corner (alley -> north path)
 PATH_N_Z = 5.35                  # lower terrace after the descent: path, garden, gazebos, C (map owner)
 X_PATH_W = -7.63                 # north path west edge (A local x at B's NE corner, world x 153.1)

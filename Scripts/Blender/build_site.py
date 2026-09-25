@@ -431,7 +431,7 @@ class Site:
     def b_tree(self, el):
         """Tree proxy: trunk cylinder + cone (conifer) or octahedral-ish ellipsoid crown. Real foliage comes in UE."""
         P = Vector(el["pos"])
-        z = self.gz(P.x, P.y)
+        z = el["z"] if "z" in el else self.gz(P.x, P.y)   # explicit z: planted on a raised bed solid
         h, cd = el.get("height", 5.0), el.get("crown_d", 2.5)
         td = el.get("trunk_d", 0.25)
         cb = el.get("crown_base", h * 0.3)
