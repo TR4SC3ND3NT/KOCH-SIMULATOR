@@ -442,30 +442,36 @@
    "edge": 7,
    "u0": 1.0,
    "u1": 13.7,
-   "depth": 7.0,
+   "depth": 5.0,
    "z_high": 0.8,
    "z_low": -0.1,
    "wall_h_from_ground": true,
-   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey. 2026-09-25: likely the semi-sunken Dance Hall (sign on the box at its south end); interior not captured."
+   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey. 2026-09-25: likely the semi-sunken Dance Hall (sign on the box at its south end); interior not captured. Front line = the brick front under the entry roof (continuous wall, map owner photo 10:55 + sketch); depth 5.0 m."
   },
   {
    "type": "stair_box",
-   "name": "BasementEntry",
+   "name": "DanceHallEntry",
+   "edge": 7,
+   "u0": 13.72,
+   "u1": 17.15,
+   "w0": 0.0,
+   "depth": 5.0,
+   "z_top": 0.83,
+   "evidence": "brick walls with the Dance Hall sign, front flush with the shed front (continuous wall), under the entry roof (map owner photo 10:55 + sketch, 012507444)",
+   "confidence": "medium"
+  },
+  {
+   "type": "shed",
+   "name": "EntryRoof",
    "edge": 7,
    "u0": 13.7,
-   "u1": 17.15,
-   "depth": 3.8,
-   "z_top": 0.83,
-   "canopy": {
-    "u0": 13.7,
-    "u1": 19.4,
-    "w0": 0.0,
-    "depth": 4.6,
-    "z": 0.85
-   },
-   "evidence": "brick walls UNDER one continuous red canopy at C's SW corner: the Dance Hall part (north, with the sign) and the stair opening with a wrought-iron railing (south, at the corner); canopy meets the west wall just under the F1 windows (map owner photo 2026-09-25 10:55 from the C entrance, 012507444, 012511910)",
-   "confidence": "medium",
-   "w0": 0.0
+   "u1": 19.4,
+   "depth": 5.1,
+   "z_high": 1.0,
+   "z_low": 0.85,
+   "roof_only": true,
+   "evidence": "red profiled-sheet mono-pitch roof running straight from C's west wall (under the F1 sills) over the Dance Hall walls and the stairwell, no separate canopy (map owner photo 10:55 + sketch)",
+   "confidence": "medium"
   }
  ],
  "basement": {

@@ -87,7 +87,7 @@ def build():
         {"type": "slab", "name": "Corridor_Floor", "ring": ring_c(x_corr0, X_END, CY_S, CY_N),
          "z0": FFL + z_corr - 0.2, "z1": FFL + z_corr,
          "evidence": ev_sfm + f"; floor {z_corr - z_top:.2f} m below the plaza ({N1 + N2} risers)", "confidence": "medium"},
-        {"type": "slab", "name": "Corridor_Ceiling", "ring": ring_c(x_land0, X_END, CY_S, CY_N),
+        {"type": "slab", "name": "Corridor_Ceiling", "ring": ring_c(x_corr0, X_END, CY_S, CY_N),
          "z0": FFL + CEIL, "z1": FFL + CEIL + 0.15, "material": "white",
          "evidence": ev_sfm + "; flat ceiling with downlights ~2.3 m above the corridor floor", "confidence": "medium"},
         # north wall of the stair = south face of the Dance Hall box, with the brown door at the mid landing
@@ -103,13 +103,18 @@ def build():
          "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80)",
          "confidence": "medium"},
         {"type": "int_wall", "name": "Corridor_Wall_S", "line": [c_to_w((X_END, CY_S)), c_to_w((x_corr0, CY_S))],
-         "z0": FFL + z_corr, "z1": FFL + CEIL, "thk": 0.3, "material": "white",
-         "evidence": ev_sfm + "; plain wall with a grey tile dado (frames 100-150), under the red sloped covers",
+         "z0": FFL + z_corr, "z1": FFL + CEIL, "thk": 0.3, "material": "brick",
+         "evidence": ev_sfm + "; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile "
+                     "parapet under the sloped covers (map owner photo 10:55)",
          "confidence": "medium"},
     ]
     els.append({"type": "fence", "name": "Stair_Railing_S", "line": [c_to_w((x0 - 0.2, Y_S - 0.12)), c_to_w((x_corr0, Y_S - 0.12))],
                 "height": 0.95, "post_spacing": 1.3, "post": 0.05, "panel": "bars",
                 "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
+                "confidence": "medium"})
+    els.append({"type": "box", "name": "EntryRoof_Post", "center": c_to_w((-4.9, Y_S - 0.2)), "dir_deg": east,
+                "size": [0.1, 0.1, (FFL + 0.85) - (FFL + z_top) + 0.3], "z0": FFL + z_top - 0.3, "material": "metal",
+                "evidence": "single steel post at the front corner of the entry roof by the stair head (012507444, 012511910)",
                 "confidence": "medium"})
     for k, xm in enumerate((4.2, 5.0)):
         c = m_to_c([xm + 0.4, 0, 0])

@@ -470,7 +470,9 @@ class Building:
                 self.obj(f"LightwellCover_E{a['edge']}_{a['u0']:.0f}", bm, COL["maroon"], a.get("evidence"))
             elif t == "shed":
                 zg = e["zg"]
-                if a.get("hollow"):  # interior modelled separately (INT_* spec): roof deck + outer wall only
+                if a.get("roof_only"):  # open roof over an entry: only the roof sheet below
+                    pass
+                elif a.get("hollow"):  # interior modelled separately (INT_* spec): roof deck + outer wall only
                     zb = a.get("z_floor", zg - BURY_M)
                     wt = a.get("wall_t", 0.3)
                     prism_profile(bm, fr, [(a["depth"] - wt, zb), (a["depth"] - wt, a["z_low"] - 0.02),
@@ -484,8 +486,9 @@ class Building:
                 prism_profile(bm2, fr, [(0.0, a["z_high"] + 0.01), (a["depth"] + 0.15, a["z_low"] - 0.01),
                                         (a["depth"] + 0.15, a["z_low"] + 0.05), (0.0, a["z_high"] + 0.07)],
                               a["u0"] - 0.15, a["u1"] + 0.15)
-                self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
-                self.obj(a["name"] + "_Roof", bm2, COL["metal"], a.get("evidence"))
+                if not a.get("roof_only"):
+                    self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
+                self.obj(a["name"] + "_Roof", bm2, COL["roof"] if a.get("roof_only") else COL["metal"], a.get("evidence"))
             elif t == "stair_box":
                 zg = e["zg"]
                 box(bm, fr, a["u0"], a["u1"], a.get("w0", 0.0), a["depth"], zg - BURY_M, a["z_top"])
