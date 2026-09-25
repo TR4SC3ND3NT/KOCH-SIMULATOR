@@ -126,5 +126,8 @@
   "evidence": "Google z20 (plan only)",
   "confidence": "low"
  },
- "attachments": []
+ "attachments": [],
+ "ffl_z": 5.47,
+ "ffl_note": "2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace).",
+ "walls_to_ffl": true
 }

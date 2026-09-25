@@ -1200,8 +1200,8 @@
      -27.829
     ],
     [
-     157.571,
-     -28.146
+     154.108,
+     -27.976
     ]
    ],
    "width": 1.2,
@@ -1219,8 +1219,8 @@
      -26.781
     ],
     [
-     157.622,
-     -27.097
+     154.159,
+     -26.928
     ]
    ],
    "width": 0.7,
@@ -1238,8 +1238,8 @@
      -27.18
     ],
     [
-     157.603,
-     -27.497
+     154.14,
+     -27.327
     ]
    ],
    "height": 0.22,
@@ -1259,8 +1259,8 @@
      -28.878
     ],
     [
-     157.52,
-     -29.194
+     154.057,
+     -29.025
     ]
    ],
    "width": 0.7,
@@ -1278,8 +1278,8 @@
      -28.479
     ],
     [
-     157.539,
-     -28.795
+     154.076,
+     -28.626
     ]
    ],
    "height": 0.22,
@@ -1993,18 +1993,18 @@
    "name": "Hedge_East_0",
    "line": [
     [
-     157.196,
-     -42.986
+     153.731,
+     -42.816
     ],
     [
-     157.891,
-     -28.762
+     154.428,
+     -28.592
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
-   "evidence": "East garden edge x=158.0 at y -27 (Google z20 canopy edge), herringbone walkway outside with a lawn strip + scalloped edging, thujas and ball lamps (081856511). Gap at the G2_E path.",
+   "evidence": "A_W gallery zone 2026-09-25: moved to the foot of the boulder retaining wall of the raised A_W terrace path (x_l -7.0); old x=158 (Google canopy edge incl. lean) put it on the path; Bing garden edge ~155.5",
    "confidence": "low"
   },
   {
@@ -2012,18 +2012,18 @@
    "name": "Hedge_East_1",
    "line": [
     [
-     157.95,
-     -27.564
+     154.487,
+     -27.394
     ],
     [
-     158.698,
-     -12.273
+     155.237,
+     -12.103
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
-   "evidence": "East garden edge x=158.0 at y -27 (Google z20 canopy edge), herringbone walkway outside with a lawn strip + scalloped edging, thujas and ball lamps (081856511). Gap at the G2_E path.",
+   "evidence": "A_W gallery zone 2026-09-25: moved to the foot of the boulder retaining wall of the raised A_W terrace path (x_l -7.0); old x=158 (Google canopy edge incl. lean) put it on the path; Bing garden edge ~155.5",
    "confidence": "low"
   },
   {
@@ -2369,8 +2369,8 @@
    "type": "lamp",
    "name": "Lamp_EastWalk_0",
    "pos": [
-    158.7,
-    -36.802
+    153.438,
+    -36.544
    ],
    "height": 3.2,
    "head": "ball",
@@ -2381,13 +2381,559 @@
    "type": "lamp",
    "name": "Lamp_EastWalk_1",
    "pos": [
-    159.481,
-    -20.821
+    154.221,
+    -20.563
    ],
    "height": 3.2,
    "head": "ball",
    "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders.",
    "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "AW_Stairs_Mid",
+   "top": [
+    156.788,
+    -67.229
+   ],
+   "dir_deg": -2.81,
+   "risers": 5,
+   "riser_h": 0.16,
+   "tread": 0.36,
+   "width": 2.4,
+   "z_top": 6.09,
+   "run_out": 0.12,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): granite stairs from the terrace path down across the lawn bank to the walkway, 5 risers (070309303 t28-30); position: steel ramp landing/foot back-projected from the PnP camera of 070309303 t21 (y_l 26.8 / 32.9), stairs just south of the landing (070309303 t28 view); may be the same stair as SITE_GateAlley NorthStair (y_l ~19.3)",
+   "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "AW_Stairs_North",
+   "top": [
+    156.969,
+    -25.788
+   ],
+   "dir_deg": 87.19,
+   "risers": 6,
+   "riser_h": 0.132,
+   "tread": 0.35,
+   "width": 3.7,
+   "z_top": 6.09,
+   "run_out": 0.1,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): 6 granite risers ~0.15 x 0.35 over the full path width, square below (012404116 t0-3, 061757320 t13-19); N end of the lawn strip from Google z20 junipers (low)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "AW_Ramp_Landing",
+   "ring": [
+    [
+     156.752,
+     -65.925
+    ],
+    [
+     158.4,
+     -66.006
+    ],
+    [
+     158.459,
+     -64.808
+    ],
+    [
+     156.811,
+     -64.727
+    ]
+   ],
+   "z0": 6.03,
+   "z1": 6.11,
+   "material": "metal",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): steel grating landing with rails at the path edge beside the granite stairs (070309303 t28-30)",
+   "confidence": "low"
+  },
+  {
+   "type": "roof_plane",
+   "name": "AW_Ramp",
+   "ring": [
+    [
+     157.26,
+     -64.749
+    ],
+    [
+     158.459,
+     -64.808
+    ],
+    [
+     158.753,
+     -58.815
+    ],
+    [
+     157.554,
+     -58.756
+    ]
+   ],
+   "z": [
+    6.11,
+    6.11,
+    5.37,
+    5.37
+   ],
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): steel grating ramp descending along the lawn to the walkway (070309303 t28-30, 012327726 t22-26)",
+   "confidence": "low"
+  },
+  {
+   "type": "rail3d",
+   "name": "AW_RampRail_W",
+   "points": [
+    [
+     157.202,
+     -65.948,
+     6.11
+    ],
+    [
+     157.26,
+     -64.749,
+     6.11
+    ],
+    [
+     157.554,
+     -58.756,
+     5.37
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.5,
+   "mid_rails": 2,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): square-tube rails, top + 2 mid rails",
+   "confidence": "low"
+  },
+  {
+   "type": "rail3d",
+   "name": "AW_RampRail_E",
+   "points": [
+    [
+     158.4,
+     -66.006,
+     6.11
+    ],
+    [
+     158.459,
+     -64.808,
+     6.11
+    ],
+    [
+     158.753,
+     -58.815,
+     5.37
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.5,
+   "mid_rails": 2,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): square-tube rails, top + 2 mid rails",
+   "confidence": "low"
+  },
+  {
+   "type": "rail3d",
+   "name": "AW_RampRail_N",
+   "points": [
+    [
+     156.752,
+     -65.925,
+     6.11
+    ],
+    [
+     157.202,
+     -65.948,
+     6.11
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.5,
+   "mid_rails": 2,
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "AW_Edging_Path",
+   "line": [
+    [
+     156.718,
+     -69.879
+    ],
+    [
+     156.785,
+     -68.53
+    ],
+    [
+     156.917,
+     -65.833
+    ],
+    [
+     158.876,
+     -25.881
+    ]
+   ],
+   "height": 0.04,
+   "thk": 0.08,
+   "cap_proj": 0.0,
+   "material": "brick",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red concrete lawn edging flush with the path",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "AW_Curb_Lawn",
+   "line": [
+    [
+     158.336,
+     -69.958
+    ],
+    [
+     160.494,
+     -25.961
+    ]
+   ],
+   "height": 0.03,
+   "thk": 0.2,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): pink granite curb at the lawn toe, ~0.13 above the walkway",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "AW_RetainingWall_Garden",
+   "center": [
+    154.459,
+    -35.101
+   ],
+   "dir_deg": 87.19,
+   "size": [
+    22.35,
+    0.4,
+    1.82
+   ],
+   "z0": 4.32,
+   "material": "stone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): boulder retaining wall between the sunken garden and the raised path, running out at the north steps (081856511 t3.5, 012404116 t2-4)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "AW_LawnCheek_N",
+   "center": [
+    159.72,
+    -25.823
+   ],
+   "dir_deg": -2.81,
+   "size": [
+    1.8,
+    0.2,
+    1.12
+   ],
+   "z0": 5.0,
+   "material": "stone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): granite cheek at the north end of the lawn bank above the square (012327726 t27.5)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_0",
+   "pos": [
+    158.231,
+    -56.186
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_1",
+   "pos": [
+    158.427,
+    -52.191
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_2",
+   "pos": [
+    158.623,
+    -48.196
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_3",
+   "pos": [
+    158.819,
+    -44.201
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_4",
+   "pos": [
+    159.015,
+    -40.205
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_5",
+   "pos": [
+    159.211,
+    -36.21
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_6",
+   "pos": [
+    159.407,
+    -32.215
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Thuja_7",
+   "pos": [
+    159.603,
+    -28.22
+   ],
+   "height": 1.4,
+   "crown_d": 0.7,
+   "trunk_d": 0.05,
+   "crown_base": 0.15,
+   "shape": "cone",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AW_SqPlanter_0",
+   "ring": [
+    [
+     160.445,
+     -24.306
+    ],
+    [
+     161.344,
+     -24.351
+    ],
+    [
+     161.388,
+     -23.452
+    ],
+    [
+     160.49,
+     -23.408
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_SqJuniper_0",
+   "pos": [
+    160.917,
+    -23.879
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "trunk_d": 0.06,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AW_SqPlanter_1",
+   "ring": [
+    [
+     160.592,
+     -21.31
+    ],
+    [
+     161.491,
+     -21.354
+    ],
+    [
+     161.535,
+     -20.455
+    ],
+    [
+     160.637,
+     -20.411
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_SqJuniper_1",
+   "pos": [
+    161.064,
+    -20.883
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "trunk_d": 0.06,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AW_SqPlanter_2",
+   "ring": [
+    [
+     160.739,
+     -18.314
+    ],
+    [
+     161.638,
+     -18.358
+    ],
+    [
+     161.682,
+     -17.459
+    ],
+    [
+     160.784,
+     -17.415
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_SqJuniper_2",
+   "pos": [
+    161.211,
+    -17.886
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "trunk_d": 0.06,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AW_SqPlanter_3",
+   "ring": [
+    [
+     160.886,
+     -15.317
+    ],
+    [
+     161.785,
+     -15.361
+    ],
+    [
+     161.829,
+     -14.462
+    ],
+    [
+     160.93,
+     -14.418
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "AW_SqJuniper_3",
+   "pos": [
+    161.358,
+    -14.89
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "trunk_d": 0.06,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "confidence": "low"
+  },
+  {
+   "type": "bin",
+   "name": "AW_Bin_0",
+   "pos": [
+    159.721,
+    -21.718
+   ],
+   "size": [
+    0.58,
+    0.73,
+    1.07
+   ],
+   "dir_deg": -2.81,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): 240 l wheelie bin on the square (012404116 t11-14)",
+   "confidence": "low"
   }
- ]
+ ],
+ "ground": "pads"
 }

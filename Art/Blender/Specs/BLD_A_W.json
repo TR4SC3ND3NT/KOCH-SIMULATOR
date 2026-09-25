@@ -51,8 +51,10 @@
   "proj": 0.03
  },
  "plinth": {
-  "z_top": 0.45,
-  "proj": 0.03
+  "z_top": 0.67,
+  "proj": 0.03,
+  "evidence": "A_W gallery zone 2026-09-25: red brick-tile plinth, 5 courses of ~0.145 m (0.72 m) from the gallery floor to the window surround (012327726 t28.5 frontal, scale = 1.80 x 1.30 window)",
+  "confidence": "medium"
  },
  "pilasters": [
   {
@@ -61,8 +63,8 @@
    "u1": 51.27,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -71,8 +73,8 @@
    "u1": 47.73,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -81,8 +83,8 @@
    "u1": 41.83,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -91,8 +93,8 @@
    "u1": 35.93,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -101,8 +103,8 @@
    "u1": 30.03,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -111,8 +113,8 @@
    "u1": 24.13,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -121,8 +123,8 @@
    "u1": 18.23,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -131,8 +133,8 @@
    "u1": 12.33,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -141,8 +143,8 @@
    "u1": 6.43,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   },
   {
@@ -151,8 +153,8 @@
    "u1": 0.53,
    "proj": 0.05,
    "z0": 0.0,
-   "z1": 2.55,
-   "evidence": "dark-red wall columns of the gallery bays (pano intro2 rect, 5.9 m pitch)",
+   "z1": 2.25,
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
    "confidence": "medium"
   }
  ],
@@ -168,13 +170,13 @@
    ],
    "reveal": 0.12,
    "surround": [
-    0,
-    0,
-    0,
-    0
+    0.13,
+    0.13,
+    0.2,
+    0.08
    ],
-   "surround_proj": 0.0,
-   "evidence": "ground-floor windows behind the gallery: 1.74-1.95 x 1.30 m, sill 0.87, head 2.17 (rect of pano intro2 yaw 80, f=780.9 px, scale from the 2.17 m double door; eave then 5.87 m = independent check of 5.7-5.9 from the A_S rects)",
+   "surround_proj": 0.03,
+   "evidence": "ground-floor windows behind the gallery: 1.74-1.95 x 1.30 m, sill 0.87, head 2.17 (rect of pano intro2 yaw 80, f=780.9 px, scale from the 2.17 m double door; eave then 5.87 m = independent check of 5.7-5.9 from the A_S rects); 2026 (012327726 t28.5 frontal): glass 1.80 x 1.30 (w/h ratio 1.38), sill 0.92 / head 2.22 above the gallery floor, maroon surround 0.13 sides, 0.20 bottom down to the plinth, 0.08 top up to the soffit",
    "confidence": "medium"
   },
   "GN": {
@@ -184,18 +186,18 @@
    "transoms": [],
    "reveal": 0.12,
    "surround": [
-    0,
-    0,
-    0,
-    0
+    0.13,
+    0.13,
+    0.2,
+    0.08
    ],
-   "surround_proj": 0.0,
+   "surround_proj": 0.03,
    "evidence": "narrow windows at the south end (pano intro2 rect)",
    "confidence": "medium"
   },
   "D": {
-   "w": 1.2,
-   "h": 2.17,
+   "w": 1.0,
+   "h": 2.1,
    "mullions": [],
    "transoms": [],
    "reveal": 0.12,
@@ -206,7 +208,7 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "glazed double door at the south end (pano intro2 rect: 55 x 100 px); 2026: single door under a small awning next to the A_S pilaster (070309303 f17/f19)",
+   "evidence": "glazed double door at the south end (pano intro2 rect: 55 x 100 px); 2026: single door under a small awning next to the A_S pilaster (070309303 f17/f19); 2026 single grey aluminium door with glazed upper panel, one step above the walkway (070309303 t17-21); 2026 position south of the brick pier next to the A_S pilaster (PnP 070309303 t21)",
    "confidence": "medium"
   },
   "UW": {
@@ -226,10 +228,49 @@
    "surround_proj": 0.0,
    "evidence": "single small window high in the blank upper wall (pano intro2 rect x 533-593 px)",
    "confidence": "medium"
+  },
+  "GNE": {
+   "w": 1.3,
+   "h": 1.15,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0.12,
+    0.12,
+    0.1,
+    0.06
+   ],
+   "surround_proj": 0.03,
+   "evidence": "A_W gallery zone 2026-09-25: northernmost west window (012429784 t1): plinth 7 courses (1.02 m) to the surround, glass ~1.15 high, 2 panes",
+   "confidence": "low"
+  },
+  "DD": {
+   "w": 1.5,
+   "h": 2.17,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.86
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "glazed double door with transom ('Dining Hall' plate, 2GIS 2025-05 photo): dark open doorway with a chair beside it in the bay north of the brick pier (070309303 t21 and t28)",
+   "confidence": "low"
   }
  },
  "rows": {
-  "G1": 0.87
+  "G1": 0.87,
+  "NE": 1.07
  },
  "facades": [
   {
@@ -252,30 +293,19 @@
     {
      "type": "G",
      "u": [
-      18.1,
-      12.2,
-      6.3,
-      1.6
+      9.18,
+      15.08,
+      20.98
      ],
      "rows": [
       "G1"
      ],
-     "status": "assumed: north part hidden behind a tree in the 2020 pano"
-    },
-    {
-     "type": "GN",
-     "u": [
-      52.22,
-      48.7
-     ],
-     "rows": [
-      "G1"
-     ]
+     "status": "one window per bay, centred between the wall columns (012327726 t28.5, 061757320 t15-17 frontal: window centre 2.7-2.9 m from the column)"
     },
     {
      "type": "D",
      "u": [
-      50.45
+      51.95
      ],
      "sills": [
       0.02
@@ -288,6 +318,24 @@
      ],
      "sills": [
       3.3
+     ]
+    },
+    {
+     "type": "DD",
+     "u": [
+      49.3
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "GNE",
+     "u": [
+      1.6
+     ],
+     "rows": [
+      "NE"
      ]
     }
    ],
@@ -325,42 +373,57 @@
    "type": "gallery",
    "edge": 3,
    "u0": 0.3,
-   "u1": 53.3,
-   "depth": 2.5,
+   "u1": 50.9,
+   "depth": 2.25,
    "posts_u": [
-    51.07,
-    47.53,
-    41.63,
-    35.73,
-    29.83,
-    23.93,
-    18.03,
-    12.13,
-    6.23,
-    0.33,
-    0.6
+    3.28,
+    9.18,
+    15.08,
+    20.98,
+    26.88,
+    32.78,
+    38.68,
+    44.58
    ],
-   "post_w": 0.16,
-   "post_d": 0.16,
-   "z_underside": 2.55,
+   "post_w": 0.114,
+   "post_d": 0.114,
+   "z_underside": 2.7,
    "roof_type": "shed",
    "roof_thk": 0.06,
-   "roof_fall": 0.35,
-   "beam_h": 0.35,
+   "roof_fall": 0.3,
+   "beam_h": 0.45,
    "roof_overhang": 0.15,
-   "floor_z": -0.15,
-   "evidence": "pano intro2 rect + 070309303 f17-f36: pink corrugated mono-pitch roof (2.9 m at the wall, 2.55 at the front), deep fascia beam 2.2-2.55, thin red steel posts on the bay rhythm (5.9 m; post positions assumed aligned with the wall columns); depth from Google (gallery roof + shadow x -0.3..1.9)",
-   "confidence": "medium"
+   "floor_z": -0.05,
+   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door)",
+   "confidence": "medium",
+   "post_round": true,
+   "post_inset": 0.0,
+   "soffit_z": 2.25,
+   "soffit_t": 0.03,
+   "coping": {
+    "t": 0.05,
+    "proj": 0.03,
+    "w": 0.3
+   },
+   "deck_bottom": -1.2,
+   "gutter": true,
+   "downpipes_u": [
+    9.33,
+    21.13,
+    32.93,
+    44.73
+   ],
+   "deck_extra": 0.25
   },
   {
    "type": "canopy",
    "edge": 3,
-   "u0": 49.6,
-   "u1": 51.9,
-   "depth": 1.1,
-   "z0": 2.45,
-   "z1": 2.55,
-   "evidence": "2026: small corrugated awning over the south-end door (070309303 f17/f19), under the gallery line",
+   "u0": 50.9,
+   "u1": 53.2,
+   "depth": 1.3,
+   "z0": 2.25,
+   "z1": 2.33,
+   "evidence": "2026: corrugated awning over the south door bay, continuing the gallery line past the brick pier (070309303 t17-21)",
    "confidence": "low"
   },
   {
@@ -376,5 +439,242 @@
    "confidence": "medium"
   }
  ],
- "sign_notes": "2026 big blue letter band on the upper west wall at z ~4.3-4.9, from ~4 to ~16 m north of the A_S corner (KOCH slogan later, R4). Sunken basement stair (stone steps + steel grating stair with railings) beside the path near the south end (070309303 f28-f34; Google light strip x -3..-0.5, y 16-30) -> site spec later."
+ "ffl_z": 5.47,
+ "ffl_note": "A_W ground floor = gallery deck G + 0.05, G = 5.70 (campus z). Relative levels measured on site footage: deck flat along the whole gallery (5 brick-tile courses of ~0.145 m to the window surround everywhere), square at the N end G-0.36, walkway along the deck G-0.15, raised terrace path G+0.60 (G+0.15 at the A_S corner). Absolute G is the least-squares fit of those levels to the DEM base at the S and N ends (DEM rms 0.97 m): +-0.5 m. The other A parts still sit at the DEM rule FFL 7.08; at the A_S/A_W junction the floors are equal on site (A_S sill ~1.0 m above the same walkway), and the A_N-over-A_W wall step then matches the Google shadow (~1.9 m). | 2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace). A_W zone shifted by -0.28 m.",
+ "terrain_pads": [
+  {
+   "name": "AW_SquareN",
+   "ring": [
+    [
+     152.71,
+     -23.827
+    ],
+    [
+     161.899,
+     -24.278
+    ],
+    [
+     162.472,
+     -12.592
+    ],
+    [
+     153.283,
+     -12.141
+    ]
+   ],
+   "z": 5.06,
+   "grad": [
+    -0.00153,
+    -0.03113
+   ],
+   "ref": [
+    162.276,
+    -16.587
+   ],
+   "blend": 6.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): square north of the lawn strip: deck edge 2 brick-tile courses + coping = 0.36 m above it at the north end (012429784), ~0.10 (coping + part of a course) 8 m further south: PnP of 061757320 t15 (camera 1.0 m above G = phone 1.1 m above the square)"
+  },
+  {
+   "name": "AW_PathS",
+   "ring": [
+    [
+     152.963,
+     -69.694
+    ],
+    [
+     156.658,
+     -69.876
+    ],
+    [
+     156.788,
+     -67.229
+    ],
+    [
+     153.093,
+     -67.048
+    ]
+   ],
+   "z": 6.02,
+   "grad": [
+    0.00129,
+    0.02638
+   ],
+   "ref": [
+    156.658,
+    -69.876
+   ],
+   "blend": 3.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): path at the A_S corner ~0.6 above the walkway (070309303 t17-21 lawn bank + SITE_GateAlley alley paving 6.31), rising to the terrace level at the mid stairs"
+  },
+  {
+   "name": "AW_PathN",
+   "ring": [
+    [
+     153.093,
+     -67.048
+    ],
+    [
+     156.788,
+     -67.229
+    ],
+    [
+     158.817,
+     -25.879
+    ],
+    [
+     155.121,
+     -25.697
+    ]
+   ],
+   "z": 6.09,
+   "blend": 1.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5)"
+  },
+  {
+   "name": "AW_LawnS1",
+   "ring": [
+    [
+     156.658,
+     -69.876
+    ],
+    [
+     156.788,
+     -67.229
+    ],
+    [
+     158.586,
+     -67.317
+    ]
+   ],
+   "z": 6.0,
+   "grad": [
+    -0.35935,
+    0.04409
+   ],
+   "ref": [
+    156.658,
+    -69.876
+   ],
+   "blend": 0.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank between the path (red concrete edging) and the lower walkway (pink granite curb), red-edged lawn with thujas"
+  },
+  {
+   "name": "AW_LawnS2",
+   "ring": [
+    [
+     156.658,
+     -69.876
+    ],
+    [
+     158.586,
+     -67.317
+    ],
+    [
+     158.456,
+     -69.964
+    ]
+   ],
+   "z": 6.0,
+   "grad": [
+    -0.32181,
+    0.0158
+   ],
+   "ref": [
+    156.658,
+    -69.876
+   ],
+   "blend": 0.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank between the path (red concrete edging) and the lower walkway (pink granite curb), red-edged lawn with thujas"
+  },
+  {
+   "name": "AW_LawnN",
+   "ring": [
+    [
+     156.788,
+     -67.229
+    ],
+    [
+     158.586,
+     -67.317
+    ],
+    [
+     160.614,
+     -25.967
+    ],
+    [
+     158.817,
+     -25.879
+    ]
+   ],
+   "z": 6.07,
+   "grad": [
+    -0.36068,
+    0.01769
+   ],
+   "ref": [
+    156.788,
+    -67.229
+   ],
+   "blend": 0.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs"
+  },
+  {
+   "name": "AW_Walkway",
+   "ring": [
+    [
+     158.456,
+     -69.964
+    ],
+    [
+     159.705,
+     -70.025
+    ],
+    [
+     161.667,
+     -30.023
+    ],
+    [
+     160.418,
+     -29.962
+    ]
+   ],
+   "z": 5.29,
+   "blend": 0.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lower walkway along the deck: deck edge coping + ~1 course (~0.13) above it (012327726 t28-29, 070309303 t20)"
+  },
+  {
+   "name": "AW_WalkwayN",
+   "ring": [
+    [
+     160.418,
+     -29.962
+    ],
+    [
+     161.667,
+     -30.023
+    ],
+    [
+     161.949,
+     -24.28
+    ],
+    [
+     160.7,
+     -24.219
+    ]
+   ],
+   "z": 5.29,
+   "grad": [
+    9e-05,
+    0.00174
+   ],
+   "ref": [
+    161.617,
+    -30.021
+   ],
+   "blend": 0.0,
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): walkway running out onto the square north of the lawn strip"
+  }
+ ],
+ "site_notes": "Stairs, steel ramp, lawn bank edgings, retaining wall, planters of the gallery surroundings are in SITE_Garden (AW_* elements).",
+ "walls_to_ffl": true
 }

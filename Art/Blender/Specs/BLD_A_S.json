@@ -106,22 +106,22 @@
   },
   {
    "edge": 3,
-   "u0": 13.1,
-   "u1": 13.55,
+   "u0": 12.53,
+   "u1": 12.98,
    "proj": 0.12,
    "z0": 0.0,
-   "z1": 3.25,
-   "evidence": "red-brick pilaster left of the entrance, carries the pavilion (082337 f0.5 rect, 0.47 m)",
+   "z1": 3.95,
+   "evidence": "red brick-tile pilaster north of the entrance bay, just south of the F1 window at u 11.54 (012305655, 012227815)",
    "confidence": "medium"
   },
   {
    "edge": 3,
-   "u0": 15.25,
+   "u0": 15.2,
    "u1": 15.7,
    "proj": 0.12,
    "z0": 0.0,
-   "z1": 3.25,
-   "evidence": "red-brick pilaster right of the entrance (pano intro, 082337 f0.5)",
+   "z1": 3.95,
+   "evidence": "red brick-tile pilaster south of the entrance bay (012305655)",
    "confidence": "medium"
   }
  ],
@@ -298,10 +298,25 @@
     }
    ],
    "entrance": {
-    "u0": 13.6,
-    "u1": 15.2,
-    "z1": 2.25,
-    "evidence": "double glass door under the pavilion, pano rect x 897-966 px; 2026 frame opening 0.63 storey from the paving",
+    "u0": 13.4,
+    "u1": 14.95,
+    "z1": 2.45,
+    "transom_z": 2.05,
+    "reveal": 0.2,
+    "frame_w": 0.06,
+    "frame_d": 0.08,
+    "bays": [
+     [
+      0.75,
+      "door"
+     ],
+     [
+      0.75,
+      "door"
+     ]
+    ],
+    "door_mid_z": 0.95,
+    "evidence": "black aluminium double glazed door + glazed transom, recessed between two red brick-tile pilasters with beige tile infill beside/above it, opening onto the lower walkway under the pavilion. 012305655 (frontal, wall scale 116 px/m from the 0.45 m pilaster): F1 window edge u 12.53 | pilaster 0.45 | infill 0.43 | door 1.56 | infill 0.27 | pilaster 0.5 | S window from ~16.0 (spec 16.31); 012227815 (24 mm: window, narrow strip, pilaster, door); 012233382, 012251895",
     "confidence": "medium"
    },
    "evidence": "rectified pano intro.jpg (yaw 48, 120 deg view, f=808.3 px) + 082337 f0.5 (2026 frame colours/frames): 6 columns at 2.78 m pitch, heads 2.39/5.42/8.45, sills 0.92/3.98/6.98, wall top 9.93 above FFL; FFL = ground-floor sill - 0.92",
@@ -380,18 +395,18 @@
   {
    "type": "porch",
    "edge": 3,
-   "u0": 11.4,
-   "u1": 15.4,
+   "u0": 12.0,
+   "u1": 16.0,
    "depth": 4.7,
    "piers_u": [
-    11.7,
-    15.1
+    12.3,
+    15.7
    ],
    "pier_w": 0.6,
-   "z_eave": 3.25,
+   "z_eave": 3.95,
    "pitch": 34,
    "overhang": 0.35,
-   "evidence": "Google z20 pavilion roof local y 7.2-11.7 (u 11.05-15.55 incl. eaves); pano intro camera solved from the A_S corner yaws/eave elevations at local (-7.6, 3.6): front pier rays (bearing 26-31 / 40-47 deg) meet the roof-centre constraint at depth 4.7 -> piers at u 11.6 / 14.8; pediment rise/half-span 165/242 px in the rect (34 deg); eave meets the wall at z 3.25; beige block-tile piers on a red-brick base (2026 frame), rear on brick pilasters flanking the door",
+   "evidence": "Google z20 pavilion roof local y 7.2-11.7 (u 11.05-15.55 incl. eaves); pano intro camera solved from the A_S corner yaws/eave elevations at local (-7.6, 3.6): front pier rays (bearing 26-31 / 40-47 deg) meet the roof-centre constraint at depth 4.7 -> piers at u 11.6 / 14.8; pediment rise/half-span 165/242 px in the rect (34 deg); eave meets the wall at z 3.25; beige block-tile piers on a red-brick base (2026 frame), rear on brick pilasters flanking the door; 2026 update: eave 3.95 above FFL = ~2.6 m above the alley paving where the front piers stand (aerial SfM roof points 2.6-3.9 m above the alley; 012305655 pier ~2.4-2.5 m to the beam). Assumes A's FFL at the lower walkway (see SITE_GateAlley note); shifted 0.6 m south of the Google-roof position: 012305655 (frontal, piers symmetric about the image centre) puts the pavilion axis 0.18 m south of the door centre +-0.57 (yaw) = u 14.35 +-0.6 vs 13.3 from the ortho; compromise axis 14.0, pier spacing 3.4 (photo 3.26)",
    "confidence": "medium"
   },
   {
@@ -413,5 +428,8 @@
   "south and east facades (no photos)",
   "roof pitch and the real hip/valley layout (ridge at y 9.8, east 7 m own ridge)",
   "north face above the strip"
- ]
+ ],
+ "ffl_z": 5.47,
+ "ffl_note": "2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace).",
+ "walls_to_ffl": true
 }

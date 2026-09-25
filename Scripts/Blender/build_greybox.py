@@ -142,6 +142,15 @@ def build_reference():
     return ob
 
 
+def pad_plane_z(pad, x, y):
+    """Pad target z: flat 'z', or a sloped plane when 'grad' [dz/dx, dz/dy] (m/m) is given about 'ref' [x, y]
+    (ramps, sloping paths and lawn banks). Works on scalars and numpy arrays; mirrored in build_site._pad_z."""
+    if "grad" not in pad:
+        return pad["z"]
+    (gx, gy), (x0, y0) = pad["grad"], pad["ref"]
+    return pad["z"] + gx * (x - x0) + gy * (y - y0)
+
+
 def apply_terrain_pads():
     """Set terrain z inside 'terrain_pads' rings of Specs/*.json to their z, blending linearly over 'blend' m outside.
     For measured ground levels the smooth DEM fit misses (e.g. the lower ground west of Block C)."""
@@ -175,7 +184,7 @@ def apply_terrain_pads():
             t = np.clip(((x - a[0]) * ab[0] + (y - a[1]) * ab[1]) / (ab @ ab), 0, 1)
             d = np.minimum(d, np.hypot(x - (a[0] + t * ab[0]), y - (a[1] + t * ab[1])))
         w = np.where(inside, 1.0, np.clip(1.0 - d / blend, 0.0, 1.0) if blend > 0 else 0.0)
-        co[:, 2] = co[:, 2] * (1 - w) + pad["z"] * w
+        co[:, 2] = co[:, 2] * (1 - w) + pad_plane_z(pad, x, y) * w
     me.vertices.foreach_set("co", co.ravel())
     me.update()
     print(f"terrain: {len(pads)} pads applied")

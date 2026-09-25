@@ -489,7 +489,27 @@
     "u0": 1.5,
     "u1": 3.4,
     "z1": 2.6,
-    "evidence": "glazed vestibule door between the SE corner pilaster and the first pier (070309303 t1.6; 061757320 t34 rect 1.8-3.35)"
+    "evidence": "glazed vestibule door between the SE corner pilaster and the first pier (070309303 t1.6; 061757320 t34 rect 1.8-3.35); dark aluminium glazed double door with side lights + transom (012249348, 012205046, drone 2022 36-39 s)",
+    "transom_z": 2.15,
+    "reveal": 0.25,
+    "bays": [
+     [
+      0.45,
+      "fixed"
+     ],
+     [
+      0.5,
+      "door"
+     ],
+     [
+      0.5,
+      "door"
+     ],
+     [
+      0.45,
+      "fixed"
+     ]
+    ]
    },
    "evidence": "pano intro2 2020 elevation (eave fit psi -89.4; d 6.45 from matching the street-facade heights; the SE-corner pilaster then falls at 24.9 vs 24.46): window north edges exact under reveal occlusion (camera at the NE corner); widths 1.9-1.95 where seen frontally; columns 5.9/8.55/11.5/14.1/16.4, blank pier 17.4-20, one more column at 21.0 near the NE corner; blank wall with an AC unit above the porch (u 1-5). 2026 061757320 t34 rect: double maroon box around the upper pair 5.9/8.55, box around the ground window 16.4; ground windows under the upper ones.",
    "confidence": "medium-low (positions +-0.4)"
@@ -629,12 +649,13 @@
    "post_d": 0.6,
    "z_underside": 3.0,
    "roof_type": "flat",
-   "roof_thk": 0.45,
-   "roof_fall": 0.0,
+   "roof_thk": 0.3,
+   "roof_fall": 0.8,
    "beam_h": 0.0,
-   "roof_overhang": 0.1,
-   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).",
-   "confidence": "medium-low"
+   "roof_overhang": 0.25,
+   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley)",
+   "confidence": "medium-low",
+   "wedge": true
   },
   {
    "type": "lightwell",

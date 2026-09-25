@@ -40,8 +40,19 @@
    "pitch": 27,
    "ridge": "long",
    "thk": 0.28,
-   "evidence": "Long gable canopy over the gate + booth: brown shingles, white sawtooth fascia trim ~0.25 m, stained timber board soffit (boards N-S), downlights. Length 11.9 m: column -> booth SW corner 7.2 m (065856484 f7.0 frontal: 7.2; f3.5: 7.4-7.8; 065835543 bearings: 6.7; old-site elevation 8.2 but edge-compressed: it shows the booth 11 pct narrower than its 21.2-course tile count), cantilever 0.5 m west of the column (065835543: 0.3; f3.5: 0.85; old-site 0.7), 0.75 m past the booth east face (old-site). Depth 3.45 m (Google z20 roof -96.8..-100.2 at x 151.6-156.2, rest under pine / elm crowns; = booth 3.10 + eaves 0.15 N / 0.20 S). Soffit = booth wall top 21.5 +- 0.5 courses = 3.40 m. Pitch 26-30 deg from the apparent ridge rise over the fascia (065856484 f7.0: 27; old-site photo 27-33) -> 27. East end is a HIP over the booth, west end a gable cut (builder draws gable both ends). One white round column ~0.35 m (0.33-0.38) west end; depth position uncertain: old-site base height says near the gate line, f7.0 base height says ~2 m south of it, pano 2022 shows it south of the gate post -> placed on the centre line. East end rests on the booth. Absolute x +-0.8 m: column 150.2 (065835543.MP.jpg, EXIF 24 mm, camera 15.5 m from the north curb by zebra width 4.3 m = 787 px and a 1.6 m pedestrian, 1.0 m east of the zebra axis by the near-stripe edge) and 150.3 (065856484 f7.0, column 3.9 m west of a walker on the zebra axis)",
-   "confidence": "medium"
+   "evidence": "Long gable canopy over the gate + booth: brown shingles, white sawtooth fascia trim ~0.25 m, stained timber board soffit (boards N-S), downlights. Length 11.9 m: column -> booth SW corner 7.2 m (065856484 f7.0 frontal: 7.2; f3.5: 7.4-7.8; 065835543 bearings: 6.7; old-site elevation 8.2 but edge-compressed: it shows the booth 11 pct narrower than its 21.2-course tile count), cantilever 0.5 m west of the column (065835543: 0.3; f3.5: 0.85; old-site 0.7), 0.75 m past the booth east face (old-site). Depth 3.45 m (Google z20 roof -96.8..-100.2 at x 151.6-156.2, rest under pine / elm crowns; = booth 3.10 + eaves 0.15 N / 0.20 S). Soffit = booth wall top 21.5 +- 0.5 courses = 3.40 m. Pitch 26-30 deg from the apparent ridge rise over the fascia (065856484 f7.0: 27; old-site photo 27-33) -> 27. East end is a HIP over the booth, west end a gable cut (builder draws gable both ends). One white round column ~0.35 m (0.33-0.38) west end; depth position uncertain: old-site base height says near the gate line, f7.0 base height says ~2 m south of it, pano 2022 shows it south of the gate post -> placed on the centre line. East end rests on the booth. Absolute x +-0.8 m: column 150.2 (065835543.MP.jpg, EXIF 24 mm, camera 15.5 m from the north curb by zebra width 4.3 m = 787 px and a 1.6 m pedestrian, 1.0 m east of the zebra axis by the near-stripe edge) and 150.3 (065856484 f7.0, column 3.9 m west of a walker on the zebra axis); 2026 detail: flat boarded timber soffit (012258813, 012136583), white sawtooth trim ~0.2 m teeth at ~0.4 m pitch along both long eaves (~21 teeth from the column to the booth's west face, 012258813), column white with a maroon base ~0.55 m (web gate photo from the street)",
+   "confidence": "medium",
+   "soffit": "flat",
+   "trim": {
+    "h": 0.2,
+    "pitch": 0.4,
+    "t": 0.02
+   },
+   "post_base": {
+    "h": 0.55,
+    "material": "brick"
+   },
+   "post_material": "white"
   },
   {
    "type": "gate_leaf",
@@ -156,8 +167,8 @@
    "post_spacing": 2.5,
    "post": 0.08,
    "panel": "bars",
-   "bottom_gap": 0.08,
-   "evidence": "black steel bar fence with spear tops west of the column (061913764 f0.5, pano 2022 right side); height ~ gate top +0.2; run length to the west not measured",
+   "bottom_gap": 0.32,
+   "evidence": "black steel bar fence with spear tops west of the column (061913764 f0.5, pano 2022 right side); height ~ gate top +0.2; run length to the west not measured; bars stand on a light concrete plinth ~0.3 m (web gate photo from the street)",
    "confidence": "medium"
   },
   {
@@ -406,19 +417,152 @@
    "confidence": "low"
   },
   {
+   "type": "wall",
+   "name": "FencePlinth_West",
+   "line": [
+    [
+     150.429,
+     -96.773
+    ],
+    [
+     135.798,
+     -96.032
+    ]
+   ],
+   "height": 0.3,
+   "thk": 0.3,
+   "material": "stone",
+   "evidence": "light concrete plinth under the west fence (web gate photo from the street, 012136583 f5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "Bed_InsideWest",
+   "ring": [
+    [
+     149.85,
+     -96.45
+    ],
+    [
+     140.9,
+     -95.99
+    ],
+    [
+     141.0,
+     -94.39
+    ],
+    [
+     149.93,
+     -94.85
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.12,
+   "evidence": "yellow/white painted curb round the hedge/lawn bed inside the fence west of the column (012258813 right, 070021774 f10, drone 2022 f 30 s: benches in front of it)",
+   "confidence": "medium"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_InsideWest",
+   "line": [
+    [
+     149.6,
+     -95.95
+    ],
+    [
+     141.2,
+     -95.52
+    ]
+   ],
+   "width": 0.8,
+   "height": 1.05,
+   "top": "flat",
+   "evidence": "dense clipped hedge along the inside of the fence west of the column, ~1 m (012258813, 070021774 f10)",
+   "confidence": "medium"
+  },
+  {
    "type": "bin",
-   "name": "Bin_Alley",
+   "name": "WheelieBin_West",
    "pos": [
-    154.852,
-    -91.49
+    149.2,
+    -94.3
    ],
+   "dir_deg": 87.1,
    "size": [
-    0.4,
-    0.4,
-    0.75
+    0.58,
+    0.72,
+    1.07
    ],
-   "evidence": "round black steel litter bin on a stand at the start of the tree alley inside the gate (065934318 t2-5)",
+   "evidence": "blue 240 l wheelie bin at the hedge beside the column (012258813, 012218760, 070021774 f10)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "Pine_InsideWest",
+   "pos": [
+    145.2,
+    -95.2
+   ],
+   "height": 12.0,
+   "crown_d": 6.0,
+   "shape": "cone",
+   "trunk_d": 0.45,
+   "crown_base": 2.5,
+   "evidence": "large pine just inside the fence west of the column (web gate photo, 012136583 f5)",
    "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "PipeBarrier_Booth",
+   "line": [
+    [
+     158.6,
+     -101.2
+    ],
+    [
+     160.4,
+     -101.3
+    ]
+   ],
+   "height": 0.45,
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "yellow-black steel pipe barrier on the forecourt in front of the booth's south face (web gate photo, bottom right); position estimated",
+   "confidence": "low"
+  },
+  {
+   "type": "sign",
+   "name": "FaceTerminal_Turnstile",
+   "pos": [
+    156.4,
+    -96.75
+   ],
+   "dir_deg": 87.1,
+   "w": 0.25,
+   "h": 0.4,
+   "t": 0.05,
+   "z0": 1.25,
+   "evidence": "face-recognition terminal on a pole at the turnstile entry (070021774 f0, 065910461); pole omitted",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "BagRest_Booth",
+   "line": [
+    [
+     157.2,
+     -98.1
+    ],
+    [
+     157.22,
+     -98.7
+    ]
+   ],
+   "height": 0.8,
+   "thk": 0.3,
+   "material": "metal",
+   "evidence": "black steel bag rest on the booth's west face below the service window (070021774 f1, 012258813)",
+   "confidence": "medium"
   }
  ]
 }

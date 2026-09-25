@@ -79,7 +79,8 @@ class Building:
         wx = np.array([ox + dx * x - dy * y for x, y in self.ring])
         wy = np.array([oy + dy * x + dx * y for x, y in self.ring])
         g = ter.base(wx, wy)
-        self.ffl = float(g.max()) + spec["plinth_m"]
+        # "ffl_z": measured absolute FFL (campus z) where the DEM-based rule is known to be off (e.g. A_W gallery).
+        self.ffl = float(spec["ffl_z"]) if "ffl_z" in spec else float(g.max()) + spec["plinth_m"]
         self.ground_local = g - self.ffl  # per ring vertex, local z of the ground
         self.M = Matrix.Translation((ox, oy, self.ffl)) @ rot
         self.col = ensure_collection(spec.get("collection", "BLD_" + self.id.split("_")[1]))
@@ -143,6 +144,8 @@ class Building:
             L = e["L"]
             cut0, cut1 = self.corner_cut(i, False), self.corner_cut(i, True)
             z_bottom = e["zg"] - BURY_M
+            if self.s.get("walls_to_ffl"):  # ground above FFL on some sides (block sunk into a slope / terrain pad)
+                z_bottom = min(z_bottom, -BURY_M)
             bsm = self.s.get("basement")
             if bsm:  # walls continue down to the underside of the basement floor slab
                 z_bottom = min(z_bottom, bsm["floor_z"] - bsm["slab_t"])
@@ -587,19 +590,61 @@ class Building:
         cf, ev = a.get("confidence"), a.get("evidence")
         tag = f"E{a['edge']}_{u0:.0f}"
         bm = bmesh.new()
+        inset = a.get("post_inset", 0.0)          # post centre this far inside the deck edge (m)
         for u in a.get("posts_u", []):
-            box(bm, fr, u - pw / 2, u + pw / 2, dep - pd, dep, zb - (0.0 if "floor_z" in a else BURY_M), zu - bh)
+            zp0 = zb - (0.0 if "floor_z" in a else BURY_M)
+            if a.get("post_round"):                # round steel tube, diameter post_w
+                wc = dep - inset - pw / 2 if inset else dep - pd / 2
+                bmesh.ops.create_cone(bm, cap_ends=True, cap_tris=False, segments=12, radius1=pw / 2, radius2=pw / 2,
+                                      depth=zu - bh - zp0, matrix=fr @ Matrix.Translation((u, wc, (zp0 + zu - bh) / 2)))
+            else:
+                box(bm, fr, u - pw / 2, u + pw / 2, dep - pd - inset, dep - inset, zp0, zu - bh)
         self.obj(f"GalleryPosts_{tag}", bm, COL["post"], ev, cf)
+        self.build_gallery_extras(a, fr, tag, ev, cf)
         bm = bmesh.new()
         box(bm, fr, u0, u1, dep - pd - 0.02, dep + 0.02, zu - bh, zu)
         oh = a.get("roof_overhang", 0.15)
-        prism_profile(bm, fr, [(0.0, zu + fall), (dep + oh, zu - oh * fall / max(dep, 1e-3)),
-                               (dep + oh, zu - oh * fall / max(dep, 1e-3) + thk), (0.0, zu + fall + thk)], u0 - oh, u1 + oh)
+        if a.get("wedge"):  # lean-to with a flat boarded soffit: solid wedge from the wall (zu+fall+thk) to the eave (zu+thk)
+            prism_profile(bm, fr, [(0.0, zu), (dep + oh, zu), (dep + oh, zu + thk), (0.0, zu + fall + thk)], u0 - oh, u1 + oh)
+        else:
+            prism_profile(bm, fr, [(0.0, zu + fall), (dep + oh, zu - oh * fall / max(dep, 1e-3)),
+                                   (dep + oh, zu - oh * fall / max(dep, 1e-3) + thk), (0.0, zu + fall + thk)], u0 - oh, u1 + oh)
         self.obj(f"GalleryRoof_{tag}", bm, COL["roof"], ev, cf)
         if "floor_z" in a:
             bm = bmesh.new()
-            box(bm, fr, u0, u1, 0.0, dep, e["zg"] - BURY_M, a["floor_z"])
-            self.obj(f"GalleryDeck_{tag}", bm, COL["granite"], ev, cf)
+            cp = a.get("coping")  # {"t", "proj", "w"}: stone coping band on the exposed deck edge (front + both ends)
+            zt = a["floor_z"] - (cp["t"] if cp else 0.0)
+            dd = dep + a.get("deck_extra", 0.0)   # deck edge beyond the post/beam line (m)
+            box(bm, fr, u0, u1, 0.0, dd, a.get("deck_bottom", e["zg"] - BURY_M), zt)
+            self.obj(f"GalleryDeck_{tag}", bm, COL["brick"] if cp else COL["granite"], ev, cf)
+            if cp:
+                t, pr, cw = cp["t"], cp.get("proj", 0.03), cp.get("w", 0.3)
+                bm = bmesh.new()
+                box(bm, fr, u0 - pr, u1 + pr, dd - cw, dd + pr, zt, a["floor_z"])
+                box(bm, fr, u0 - pr, u0 + cw, 0.0, dd - cw, zt, a["floor_z"])
+                box(bm, fr, u1 - cw, u1 + pr, 0.0, dd - cw, zt, a["floor_z"])
+                self.obj(f"GalleryCoping_{tag}", bm, COL["granite"], ev, cf)
+                bm = bmesh.new()  # deck paving (ornamental concrete tiles) between wall and coping, 2 cm proud of the body
+                box(bm, fr, u0 + cw, u1 - cw, 0.0, dd - cw, zt, a["floor_z"])
+                self.obj(f"GalleryFloor_{tag}", bm, (0.62, 0.60, 0.58, 1), ev, cf)
+
+    def build_gallery_extras(self, a, fr, tag, ev, cf):
+        """Optional gallery parts: flat boarded soffit ('soffit_z', timber), eaves gutter and downpipes ('gutter',
+        'downpipes_u'). Gallery frame: u along the wall, w outward from the wall face, z above FFL (m)."""
+        u0, u1, dep = a["u0"], a["u1"], a["depth"]
+        zu, bh, pd = a["z_underside"], a.get("beam_h", 0.3), a.get("post_d", a.get("post_w", 0.3))
+        if "soffit_z" in a:
+            bm = bmesh.new()
+            box(bm, fr, u0, u1, 0.0, dep - pd - 0.02, a["soffit_z"], a["soffit_z"] + a.get("soffit_t", 0.03))
+            self.obj(f"GallerySoffit_{tag}", bm, (0.55, 0.36, 0.20, 1), ev, cf)
+        if a.get("gutter") or a.get("downpipes_u"):
+            oh = a.get("roof_overhang", 0.15)
+            bm = bmesh.new()
+            if a.get("gutter"):
+                box(bm, fr, u0 - oh, u1 + oh, dep + oh, dep + oh + 0.12, zu - 0.12, zu)
+            for u in a.get("downpipes_u", []):
+                box(bm, fr, u - 0.045, u + 0.045, dep + 0.03, dep + 0.12, zu - bh - 0.1, zu - 0.12)  # fascia drop into the post
+            self.obj(f"GalleryGutter_{tag}", bm, COL["frame"], ev, cf)
 
     def build_stair_well(self, a, e, fr):
         """Sunken stair along the wall (u_top at grade -> u_bottom at z_bottom), outer retaining wall + railing.

@@ -173,18 +173,11 @@
   {
    "edge": 1,
    "name": "east_path",
-   "windows": [],
-   "evidence": "east face toward the footpath along the booth (people walk north there: 065910461 f1.5, 061913764 f4.5); no photo of it: openings unknown",
-   "confidence": "low"
-  },
-  {
-   "edge": 2,
-   "name": "north_campus",
    "windows": [
     {
      "type": "D",
      "u": [
-      0.75
+      2.35
      ],
      "sills": [
       0.02
@@ -193,14 +186,31 @@
     {
      "type": "DW",
      "u": [
-      1.56
+      1.54
      ],
      "sills": [
       0.73
      ]
     }
    ],
-   "evidence": "2026: white PVC door + window unit (1.55 m) near the NE corner, opens outward toward the campus (065934318 f0.3/f1: seen looking east along the north face, bench + utility pipe post beyond the NE corner); 2022 pano intro.jpg showed a single window 1.19-2.30 m from the NE corner here (replaced). Door height by course count (13.1 courses); widths +-0.1; u from the NE corner",
+   "evidence": "east face toward the clover path: white PVC door (opens out) at the NE end + the window half of the door/window unit south of it (065934318 f0-f1: seen frontally from the path east of the booth, lamp post and the south stair beyond the NE corner; 070021774 f7 bench against this face)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 2,
+   "name": "north_campus",
+   "windows": [
+    {
+     "type": "WN",
+     "u": [
+      1.9
+     ],
+     "sills": [
+      0.68
+     ]
+    }
+   ],
+   "evidence": "north face: one white PVC window, no door (012258813 2026, seen from the alley: window slightly west of the face centre; the door is on the east face)",
    "confidence": "medium"
   },
   {
