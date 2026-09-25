@@ -354,31 +354,28 @@
    {
     "edge": 0,
     "u": [
-     5.2,
-     8.4,
+     9.2,
      12.2
-    ]
-   },
-   {
-    "edge": 2,
-    "u": [
-     3.1
     ]
    },
    {
     "edge": 4,
     "u": [
-     3.6
+     1.45,
+     4.5,
+     8.6
     ]
    },
    {
     "edge": 6,
     "u": [
-     9.5,
-     13.5,
-     17.0,
-     20.5,
-     23.8
+     4.7,
+     6.4,
+     8.3,
+     10.1,
+     13.1,
+     16.4,
+     20.1
     ]
    },
    {
@@ -394,9 +391,9 @@
    "h": 1.5,
    "inset": 1.3
   },
-  "evidence": "Google z20 (0.1 m/px): 5 pointed dormers on the south slope, 5 (6?) on the north slope, 2 on the east hip; positions corrected for Google roof lean measured by phase correlation vs near-nadir Bing (ground +1.5/+0.25 m, C roof ~19 m: +7.0/+4.0 m -> 0.29 m/m E, 0.20 m/m N); pitch ~25 deg (only sky above the cornice from the plaza)",
+  "evidence": "Google z20 (0.1 m/px): 5 pointed dormers on the south slope, 5 (6?) on the north slope, 2 on the east hip; positions corrected for Google roof lean measured by phase correlation vs near-nadir Bing (ground +1.5/+0.25 m, C roof ~19 m: +7.0/+4.0 m -> 0.29 m/m E, 0.20 m/m N); pitch ~25 deg (only sky above the cornice from the plaza) | 2026-09-25 recount on the near-top-down drone frame (web video mjkCUJhlPN8 t=12 s, 2022, ~34 px/m on the roof): south slope 2 dormers over the west wing (x 9.2, 12.5 -> 12.2 kept) + 3 over the east wing (x 18.05, 21.1, 25.2), north slope 7 (x 24.7, 23.0, 21.1, 19.3 small; 16.3, 13.0, 9.3), east hip 2 big crowned dormers; the tower slope has none. Positions +-0.5 m (drone slightly off-nadir).",
   "status": "probable (pitch estimated)",
-  "confidence": "low"
+  "confidence": "medium"
  },
  "attachments": [
   {
