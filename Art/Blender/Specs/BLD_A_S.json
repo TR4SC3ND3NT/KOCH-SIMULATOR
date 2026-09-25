@@ -395,18 +395,18 @@
   {
    "type": "porch",
    "edge": 3,
-   "u0": 12.0,
-   "u1": 16.0,
-   "depth": 4.7,
+   "u0": 13.15,
+   "u1": 16.15,
+   "depth": 5.43,
    "piers_u": [
-    12.3,
-    15.7
+    13.4,
+    15.9
    ],
-   "pier_w": 0.6,
-   "z_eave": 3.95,
+   "pier_w": 0.5,
+   "z_eave": 3.8,
    "pitch": 34,
-   "overhang": 0.35,
-   "evidence": "Google z20 pavilion roof local y 7.2-11.7 (u 11.05-15.55 incl. eaves); pano intro camera solved from the A_S corner yaws/eave elevations at local (-7.6, 3.6): front pier rays (bearing 26-31 / 40-47 deg) meet the roof-centre constraint at depth 4.7 -> piers at u 11.6 / 14.8; pediment rise/half-span 165/242 px in the rect (34 deg); eave meets the wall at z 3.25; beige block-tile piers on a red-brick base (2026 frame), rear on brick pilasters flanking the door; 2026 update: eave 3.95 above FFL = ~2.6 m above the alley paving where the front piers stand (aerial SfM roof points 2.6-3.9 m above the alley; 012305655 pier ~2.4-2.5 m to the beam). Assumes A's FFL at the lower walkway (see SITE_GateAlley note); shifted 0.6 m south of the Google-roof position: 012305655 (frontal, piers symmetric about the image centre) puts the pavilion axis 0.18 m south of the door centre +-0.57 (yaw) = u 14.35 +-0.6 vs 13.3 from the ortho; compromise axis 14.0, pier spacing 3.4 (photo 3.26)",
+   "overhang": 0.45,
+   "evidence": "Google z20 pavilion roof local y 7.2-11.7 (u 11.05-15.55 incl. eaves); pano intro camera solved from the A_S corner yaws/eave elevations at local (-7.6, 3.6): front pier rays (bearing 26-31 / 40-47 deg) meet the roof-centre constraint at depth 4.7 -> piers at u 11.6 / 14.8; pediment rise/half-span 165/242 px in the rect (34 deg); eave meets the wall at z 3.25; beige block-tile piers on a red-brick base (2026 frame), rear on brick pilasters flanking the door; 2026 update: eave 3.95 above FFL = ~2.6 m above the alley paving where the front piers stand (aerial SfM roof points 2.6-3.9 m above the alley; 012305655 pier ~2.4-2.5 m to the beam). Assumes A's FFL at the lower walkway (see SITE_GateAlley note); shifted 0.6 m south of the Google-roof position: 012305655 (frontal, piers symmetric about the image centre) puts the pavilion axis 0.18 m south of the door centre +-0.57 (yaw) = u 14.35 +-0.6 vs 13.3 from the ortho; compromise axis 14.0, pier spacing 3.4 (photo 3.26) | 2026-09-26 photo-match 070309303 (two-lens SfM aligned to the A_S walls): front piers 0.5 m square, west faces at A-local x -4.12..-4.26 (dense SfM face points at x -4.10 +-0.03 for y 9.08-9.5 on the north pier; south pier corners triangulated in f04/f10 at x -4.26/-3.77, y 6.5-6.7), pier centres y 9.35 / 6.85 -> u 13.4 / 15.9, depth 5.43 (was 4.7); front beam bottom ~2.2 m above the alley, SfM beam/gutter points y 5.1-10.2 -> eave overhang ~0.8 | overlay f04/f10: beam ~0.15 lower (z_eave 3.8), gable-end/side overhang ~0.45 (the SfM points at y 5.1/10.2 are gutters/downpipes)",
    "confidence": "medium"
   },
   {
@@ -427,43 +427,43 @@
    "edge": 3,
    "items": [
     [
-     4.6,
-     3.25,
+     5.55,
+     2.85,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     5.5,
-     3.25,
+     6.7,
+     2.85,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     7.4,
-     3.25,
+     8.85,
+     2.85,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     9.9,
-     3.25,
+     6.2,
+     6.6,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     4.3,
-     6.3,
+     12.95,
+     5.6,
      0.8,
      0.6,
-     0.32
+     0.3
     ]
    ],
-   "evidence": "AC units between the F1/F2 windows on A_S's west face near the NW corner (070309303 f24-f30)",
-   "confidence": "low"
+   "evidence": "white AC outdoor units on the A_S west face: rays of 070309303 f04/f05/f09/f28 through the SfM-aligned cameras onto the face plane (+ one SfM keypoint, track 11, at y 16.06 z_rel 3.04): lower row centres y 17.2/16.1/13.9 at z_rel 3.1, upper units y 16.5 z_rel 6.9 and y 9.8 z_rel 5.9 (u = 22.75 - y)",
+   "confidence": "medium"
   }
  ],
  "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4).",

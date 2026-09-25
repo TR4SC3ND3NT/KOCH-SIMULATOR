@@ -23,12 +23,12 @@
  },
  "plinth_m": 0.698,
  "wall_thk": 0.4,
- "storey_m": 2.95,
- "storeys": 2,
- "eave_z": 5.87,
+ "storey_m": 3.2,
+ "storeys": 1,
+ "eave_z": 3.2,
  "ring": [
   [
-   2.2,
+   4.5,
    22.75
   ],
   [
@@ -40,16 +40,12 @@
    76.25
   ],
   [
-   2.2,
+   4.5,
    76.25
   ]
  ],
- "ring_notes": "Google z20 strip roof x 1.55..2.03 (west eave) to the main wall; north eave y 76.7. West wall 0.9 m behind the A_S west face (070309303 f17-f20). Open question: Google shows a 3 m dark band between A_S and the strip roof (y 23.2-26.2) that a shadow alone does not explain (low roof section or light well at the south end?).",
- "cornice": {
-  "z0": 5.62,
-  "z1": 5.87,
-  "proj": 0.03
- },
+ "ring_notes": "Google z20 strip roof x 1.55..2.03 (west eave) to the main wall; north eave y 76.7. West wall 0.9 m behind the A_S west face (070309303 f17-f20). Open question: Google shows a 3 m dark band between A_S and the strip roof (y 23.2-26.2) that a shadow alone does not explain (low roof section or light well at the south end?). | 2026-09-26 photo-match (070309303 SfM): the gallery is a LOGGIA under a single-storey strip, not a colonnade in front of a 2-storey wall: posts/fascia/door bay on the facade line x ~2.2-2.3 (Google west eave x 1.55-2.03), deck and window wall back to x ~4.5 (plane-sweep deck heights reach x 4.5); the blank lettered wall above the gallery roof is the A_N west wall (SfM tracks of 16-66 frames at x 10.9-11.4), not an A_W upper storey.",
+ "cornice": null,
  "plinth": {
   "z_top": 0.67,
   "proj": 0.03,
@@ -303,24 +299,6 @@
      "status": "one window per bay, centred between the wall columns (012327726 t28.5, 061757320 t15-17 frontal: window centre 2.7-2.9 m from the column)"
     },
     {
-     "type": "D",
-     "u": [
-      51.95
-     ],
-     "sills": [
-      0.02
-     ]
-    },
-    {
-     "type": "UW",
-     "u": [
-      31.75
-     ],
-     "sills": [
-      3.3
-     ]
-    },
-    {
      "type": "DD",
      "u": [
       49.3
@@ -339,7 +317,7 @@
      ]
     }
    ],
-   "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige",
+   "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige | 2026-09-26: the south door moved to the door-bay front (attachment DoorBay_S); the small high 'UW' window is on the A_N wall above the strip roof (A_N owner)",
    "confidence": "medium"
   },
   {
@@ -362,11 +340,11 @@
  ],
  "roof": {
   "type": "shed",
-  "pitch": 10,
+  "pitch": 7,
   "high_edge": 1,
-  "overhang": 0.45,
-  "evidence": "Google z20: separate lower roof x 1.8..9.4 under a 1.0 m shadow of the A_N west wall (gallery shadows give 0.53 m per m of height -> ~1.8 m step at the main wall); eave line straight and level in the rect; roof surface not visible from the ground -> low mono-pitch rising to the main wall; pitch estimated.",
-  "confidence": "low"
+  "overhang": 0.1,
+  "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: strip roof hidden from the ground: gallery roof meets the loggia wall at ~3.05-3.2, the exposed A_N wall starts at z_rel ~4.1 (lowest SfM points on it) -> mono-pitch 3.2 at x 4.5 rising to ~4.0 at the A_N wall (Google: lower roof x 1.8-9.4 under the A_N shadow)",
+  "confidence": "medium"
  },
  "attachments": [
   {
@@ -374,16 +352,16 @@
    "edge": 3,
    "u0": 0.3,
    "u1": 50.9,
-   "depth": 2.25,
+   "depth": 2.2,
    "posts_u": [
-    3.28,
-    9.18,
-    15.08,
-    20.98,
-    26.88,
-    32.78,
-    38.68,
-    44.58
+    3.85,
+    9.75,
+    15.65,
+    21.55,
+    27.45,
+    33.35,
+    39.25,
+    45.15
    ],
    "post_w": 0.114,
    "post_d": 0.114,
@@ -394,7 +372,7 @@
    "beam_h": 0.45,
    "roof_overhang": 0.15,
    "floor_z": -0.05,
-   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door)",
+   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line",
    "confidence": "medium",
    "post_round": true,
    "post_inset": 0.0,
@@ -408,10 +386,10 @@
    "deck_bottom": -1.2,
    "gutter": true,
    "downpipes_u": [
-    9.33,
-    21.13,
-    32.93,
-    44.73
+    9.9,
+    21.7,
+    33.5,
+    45.3
    ],
    "deck_extra": 0.25
   },
@@ -420,23 +398,24 @@
    "edge": 3,
    "u0": 50.9,
    "u1": 53.2,
-   "depth": 1.3,
+   "depth": 3.6,
    "z0": 2.25,
    "z1": 2.33,
-   "evidence": "2026: corrugated awning over the south door bay, continuing the gallery line past the brick pier (070309303 t17-21)",
+   "evidence": "2026: corrugated awning over the south door bay, continuing the gallery line past the brick pier (070309303 t17-21) | 2026-09-26: awning projects ~1.3 m in front of the door-bay front (x 2.2), wall moved to x 4.5 -> depth 3.6",
    "confidence": "low"
   },
   {
    "type": "wall_sign",
    "name": "LetterBand",
    "edge": 3,
-   "u0": 40.5,
-   "u1": 50.5,
-   "z0": 4.3,
-   "z1": 4.85,
-   "t": 0.05,
-   "evidence": "2026 blue slogan letter band on the blank upper wall, letters ~0.55 m (vs 0.55 m AC units), z 4.35-4.75 in the 082337 f0.5 rect, ends 2-3 m north of the A_S pilaster (070309303 f17-f30); content -> KOCH slogan (R4)",
-   "confidence": "medium"
+   "u0": 20.15,
+   "u1": 38.25,
+   "z0": 6.2,
+   "z1": 7.3,
+   "t": 0.06,
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: letters on the A_N west wall x 10.9-11.4 (SfM keypoints, tracks 5-66), '!' at y 38.0, 'G' at y 56.1, z_rel 6.35-7.37 (~1 m letters); kept in this spec (w0 = A_N face) until the A_N owner moves it; content -> KOCH slogan (R4)",
+   "confidence": "medium",
+   "w0": -6.4
   },
   {
    "type": "wall_boxes",
@@ -444,71 +423,70 @@
    "edge": 3,
    "items": [
     [
-     3.2,
-     3.35,
+     16.95,
+     4.75,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     9.1,
-     3.35,
+     22.85,
+     4.75,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     15.0,
-     3.35,
+     27.65,
+     4.75,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     20.9,
-     3.35,
+     33.55,
+     4.75,
      0.8,
      0.6,
-     0.32
+     0.3
     ],
     [
-     26.8,
-     3.35,
-     0.8,
-     0.6,
-     0.32
-    ],
-    [
-     32.7,
-     3.35,
-     0.8,
-     0.6,
-     0.32
-    ],
-    [
-     38.6,
-     3.35,
-     0.8,
-     0.6,
-     0.32
-    ],
-    [
-     44.5,
-     3.35,
-     0.8,
-     0.6,
-     0.32
-    ],
-    [
-     50.4,
-     3.35,
-     0.8,
-     0.6,
-     0.32
+     39.05,
+     4.4,
+     1.0,
+     1.3,
+     0.4
     ]
    ],
-   "evidence": "white AC outdoor units on the upper wall above the gallery roof, about one per bay (070309303 f40, f58-f62; 012404116 f15-f38); u +-1 m",
-   "confidence": "low"
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: outdoor AC units on the A_N west wall above the strip roof: SfM keypoints in f40 and f60 agree at y 59.3/53.4/48.6/42.7/37.2, centres z_rel 4.9-5.2, x 10.5-11.8; the southern one is a tall multi-fan unit; units north of y 60 not surveyed",
+   "confidence": "medium",
+   "w0": -6.4
+  },
+  {
+   "type": "shed",
+   "name": "DoorBay_S",
+   "edge": 3,
+   "u0": 50.9,
+   "u1": 53.5,
+   "depth": 2.3,
+   "z_high": 3.2,
+   "z_low": 3.05,
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: closed south bay between the brick pier (u 50.9) and the A_S pilaster: door wall + yellow sign at A-local x 2.11-2.16 (SfM keypoints, f38), flush with the posts line; the loggia starts north of the pier",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall_sign",
+   "name": "DoorS",
+   "edge": 3,
+   "u0": 51.45,
+   "u1": 52.45,
+   "z0": 0.02,
+   "z1": 2.1,
+   "t": 0.04,
+   "w0": 2.3,
+   "color": "frame",
+   "evidence": "grey aluminium door with glazed upper panel in the door-bay front, one step above the walkway (070309303 t17-21)",
+   "confidence": "medium"
   }
  ],
  "ffl_z": 5.47,
@@ -566,44 +544,44 @@
    "name": "AW_Walkway",
    "ring": [
     [
-     158.456,
-     -69.964
+     160.227,
+     -70.001
     ],
     [
-     159.705,
-     -70.025
+     162.054,
+     -70.09
     ],
     [
-     161.667,
-     -30.023
+     164.014,
+     -30.138
     ],
     [
-     160.418,
-     -29.962
+     162.186,
+     -30.049
     ]
    ],
    "z": 5.35,
    "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lower walkway along the deck: deck edge coping + ~1 course (~0.13) above it (012327726 t28-29, 070309303 t20)"
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lower walkway along the deck: deck edge coping + ~1 course (~0.13) above it (012327726 t28-29, 070309303 t20) | 2026-09-26: walkway x 0.27-2.1 (bank foot curb .. loggia deck edge), 070309303 SfM/sweep"
   },
   {
    "name": "AW_WalkwayN",
    "ring": [
     [
-     160.418,
-     -29.962
+     162.186,
+     -30.049
     ],
     [
-     161.667,
-     -30.023
+     164.014,
+     -30.138
     ],
     [
-     161.949,
-     -24.28
+     164.293,
+     -24.445
     ],
     [
-     160.7,
-     -24.219
+     162.466,
+     -24.355
     ]
    ],
    "z": 5.35,

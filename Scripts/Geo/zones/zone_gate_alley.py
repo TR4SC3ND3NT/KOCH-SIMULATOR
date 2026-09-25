@@ -1,7 +1,9 @@
 # Zone "gate + alley" (R1): writes Art/Blender/Specs/SITE_GateAlley.json. Geometry in the Block A local frame
-# (x east along A's south face, y north, origin = A anchor), converted to world. Levels from the 2022 drone SfM
-# cross-sections (sfm4, scaled by the 13.43 m B-A wall gap): the alley is FLAT at B's level, the planter strip 0.2 m
-# below it and the walkway along A 1.35-1.44 m below, constant along the whole B frontage.
+# (x east along A's south face, y north, origin = A anchor), converted to world.
+# 2026-09-26 photo-match of 070309303 (all 76 frames at 2 fps): two-lens COLMAP SfM (zoom switch f38/f39 -> two
+# cameras, 151 frames, 0.80 px), aligned to the A_S/A_W walls (ICP + picks + gravity from vertical lines), dense
+# plane-sweep ground heights of every frame -> levels and plan positions below (A-local, m). The 2022 drone numbers
+# were scaled by the model's B-A gap (13.43), which the SfM measures at ~12.6 (B's east wall ~0.8 m further east).
 # Run: python3 Scripts/Geo/zones/zone_gate_alley.py
 import json, math, sys
 
@@ -28,36 +30,47 @@ def ring(pts):
     return [W(*p) for p in pts]
 
 
-X_WALL, X_CURB, X_RW = 1.28, -3.42, -1.22   # A west face, alley edge (= pavilion front), retaining wall walkway face
-PAV_S, PAV_N, PIER = 6.75, 10.75, 0.6      # pavilion pier outer faces (A local y) = BLD_A_S porch u 16.0 / 12.0
-S2_S, S2_N, S2_XT = PAV_S + PIER, 11.9, X_CURB + PIER   # pavilion stair: from the south pier to 1.15 m past the north one; top nosing behind the piers
-RW_T = 0.3
-A_FFL = 5.47          # shared Block A floor (BLD_A_*.json ffl_z)
-WALK_Z = 5.35         # walkway along A: 0.12 below the floor (A_W deck edge ~0.1 above it, gallery zone)
-DROP = 1.40           # drone SfM: walkway 1.35-1.44 below the alley (profiles Y 6-26)
-ALLEY_Z = WALK_Z + DROP   # 6.75: flat alley (drone: +-0.04 over 24 m), ~0.17 below B's floor
-B_NE_Y = 38.8         # B's NE corner in A local y (world y -54.0): end of the flat alley, descent steps start here
+EV_SFM = ("070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 "
+          "frames, per-frame overlays)")
+X_WALL = 1.28          # A_S west face
+X_DECK = 2.05          # A_W facade line: loggia deck edge (posts x 2.3), door bay front 2.2 (BLD_A_W)
+Y_AW = 22.75           # A_S / A_W junction
+X_PAV = -4.15          # pavilion front piers' outer face = alley edge at the pavilion (SfM face points -4.10..-4.26)
+PAV_S, PAV_N, PIER = 6.6, 9.6, 0.5    # pavilion pier outer faces (A local y) = BLD_A_S porch piers_u 15.9 / 13.4
+S2_S, S2_N, S2_XT = PAV_S + PIER, PAV_N + 1.15, X_PAV + PIER   # pavilion stair: south pier -> 1.15 m past the north one
+X_CURB = -3.3          # red curb (alley side) of the lawn strip at y 15, face; curb 0.1 wide
+# the curb is NOT parallel to A: red-curb sweep points (all frames, z 6.4-6.5) at x -3.35 (y 13-18), -3.05 (y 20-22),
+# -2.55 (y 28), -2.45 (y 33-34), -2.25 (y 37) -> the lawn strip narrows northwards
+xc = lambda y: X_CURB - 0.05 + 0.0458 * (y - 13.0)
+X_SC = -3.85           # red curb of the south bed, from the pavilion's south pier down to the manhole (f04 ground rays)
+X_BT, X_BB = -0.6, 0.15   # bank top / bank foot = walkway curb (0.12 wide) north of the pavilion
+X_RW, RW_T = -1.45, 0.3   # south bed retaining wall walkway face (coping rays f04/f05: -1.45..-1.9)
+A_FFL = 5.47           # shared Block A floor (BLD_A_*.json ffl_z)
+WALK_Z = 5.35          # walkway along A: 0.12 below the floor; deck/walkway continuous in the sweep
+ALLEY_S, ALLEY_N = 6.75, 6.63   # alley south of y 10 (pavilion, gate plaza) / north of y 15 (lawn strip, B frontage)
+# sweep: path along the lawn strip 1.26 +-0.05 above the walkway/deck (y 12-40 flat within +-0.05), the alley at the
+# pavilion and the gate plaza 0.12-0.2 higher; drone 1.35-1.44 x 0.94 (true B-A gap) = 1.27-1.35
+Y_STAIR_N = 40.45      # top nosing of the wide stair north of the alley (f74 ground rays, pink granite band)
 
 
-def zA(y):   # alley level: flat
-    return ALLEY_Z
-
-
-Y0, Y1 = 0.0, B_NE_Y
-ZW0, ZW1 = WALK_Z, WALK_Z
+def zA(y):   # alley level
+    if y <= 10.0:
+        return ALLEY_S
+    if y >= 15.0:
+        return ALLEY_N
+    return ALLEY_S + (ALLEY_N - ALLEY_S) * (y - 10.0) / 5.0
 
 
 def zw(y):   # walkway level: flat (A's floor is flat)
     return WALK_Z
 
 
-PAD_Z = round(min(zw(Y0), zw(Y1 + 2)) - 0.35, 3)
+Y0, Y1 = 0.0, Y_STAIR_N
+PAD_Z = round(WALK_Z - 0.35, 3)
 r3 = lambda v: round(v, 3)
 
-EV_DROP = ("aerial SfM of the 2022 drone shot (sfm4: 21 frames, 14.7k points, scaled by the B east wall - A west wall "
-           "spacing 13.43 m): alley plane 0, planter soil -0.2, lower walkway -1.35 constant along the alley; "
-           "8 risers on the south stair (7 red-granite + concrete kerb, 012218760) and on the pavilion stair (7 treads, "
-           "012227815) -> 0.169 m")
+EV_DROP = ("levels: " + EV_SFM + ": walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the "
+           "pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815)")
 
 els = []
 
@@ -71,31 +84,36 @@ def slab(name, pts_l, ztop_fn, thk, material, ev, conf, extra=None):
     els.append(d)
 
 
+def strip(name, a, b, w, ztop, thk_to, material, ev, conf):
+    dx, dy = b[0] - a[0], b[1] - a[1]; L = math.hypot(dx, dy); nx, ny = dy / L * w, -dx / L * w   # right-hand offset
+    pts = [a, b, (b[0] + nx, b[1] + ny), (a[0] + nx, a[1] + ny)]
+    slab(name, pts, ztop, 0.0, material, ev, conf, {"thk": r3(max(ztop(*p) for p in pts) - thk_to)})
+
+
 # ---------------------------------------------------------------- south stair (plaza -> A SW corner landing)
 t_dir = (0.467, -0.884)        # top nosing direction NNW -> SSE (A frame)
 d_dir = (0.884, 0.467)         # downhill (ENE, bearing ~65 deg)
 S1_W, S1_N, S1_T = 4.33, 8, 0.34
-TNW = (-4.6, 3.6)   # manhole corner; the planter curb angles SW from the pavilion south pier to here
+# manhole corner: the south-bed curb runs straight from the pavilion's south pier to the manhole (f04 ground rays at
+# the plaza level: curb x -3.91..-4.01 for y 0.9-3.7, manhole ~(-3.9, 0.4)); the bed's SE coping corner at (-1.7, 1.5)
+# (f05 rays) -> the stair's north cheek starts here, 2.6 m further south than the first-pass estimate (-4.6, 3.6)
+TNW = (-4.0, 1.0)
 TSE = (TNW[0] + S1_W * t_dir[0], TNW[1] + S1_W * t_dir[1])
 TC = ((TNW[0] + TSE[0]) / 2, (TNW[1] + TSE[1]) / 2)
 RUN = (S1_N - 1) * S1_T
 BNW = (TNW[0] + RUN * d_dir[0], TNW[1] + RUN * d_dir[1])
 BSE = (TSE[0] + RUN * d_dir[0], TSE[1] + RUN * d_dir[1])
 BC = ((BNW[0] + BSE[0]) / 2, (BNW[1] + BSE[1]) / 2)
-zt1 = ALLEY_Z   # 8 measured risers x 0.173 from the walkway land exactly on the flat alley level (plaza = alley)
+zt1 = zA(TC[1])
 zb1 = zw(BC[1])
 dir_w = math.degrees(math.atan2(XD[1] * d_dir[0] + YD[1] * d_dir[1], XD[0] * d_dir[0] + YD[0] * d_dir[1]))
 els.append({"type": "stairs_run", "name": "SouthStair", "top": W(*TC), "dir_deg": r3(dir_w), "risers": S1_N,
             "riser_h": r3((zt1 - zb1) / S1_N), "tread": S1_T, "width": S1_W, "z_top": r3(zt1),
             "evidence": "wide granite flight (grey treads, red-granite risers, concrete kerb as the top riser) from the gate "
-                        "plaza down NE to the landing at A's SW corner: 012218760 (8 risers, looking back up SW at the gate), "
-                        "012208814 (from the top, looking down-flight at the 'A Block' corner, landing with a drain grate before it), 012258813 (looking S: top nosing runs away from the manhole at the "
-                        "lawn-planter corner, both cheeks and the flight run to the east), bearing of 012218760 (view up-flight "
-                        "~WSW: gate column left, blue bin right); position: ground rays of 012258813 with the booth-PnP camera "
-                        "(f nominal 708 px: manhole/planter curb 1.5 m west of the pavilion front line; f 881: 2 m) and the "
-                        "SW-angled curb south of the pavilion in 012251895 -> manhole corner 1.2 m west of the pier line, "
-                        "+-1 m, "
-                        "drone 2022 frames 26-31 s. " + EV_DROP,
+                        "plaza down NE to the landing at A's SW corner: 012218760 (8 risers), 012208814, 012258813; "
+                        "070309303 f05 (lower treads beyond the bed coping, drain grate on the landing). Position: NW top "
+                        "corner at the manhole, " + EV_SFM + ". NOTE: SfM heights of the landing (f03-f09, rotation-only "
+                        "frames, short tracks) read ~0.6 m below the door walkway - not adopted (photo request)",
             "confidence": "medium"})
 
 els.append({"type": "path", "name": "Plaza_StairTop", "line": [W(TNW[0] - 0.8 * d_dir[0], TNW[1] - 0.8 * d_dir[1]),
@@ -105,86 +123,93 @@ els.append({"type": "path", "name": "Plaza_StairTop", "line": [W(TNW[0] - 0.8 * 
 # ---------------------------------------------------------------- pavilion stair (alley -> walkway, between the piers)
 S2_Y, S2_W, S2_T = (S2_S + S2_N) / 2, S2_N - S2_S, 0.34
 zt2 = zA(S2_Y)
+S2_FOOT = S2_XT + 7 * S2_T + S2_T            # walkway side of the bottom tread
 els.append({"type": "stairs_run", "name": "PavilionStair", "top": W(S2_XT, S2_Y), "dir_deg": r3(ANG), "risers": 8,
             "riser_h": r3((zt2 - zw(S2_Y)) / 8), "tread": S2_T, "width": S2_W, "z_top": r3(zt2),
-            "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.2 m north of the north pier "
-                        "(lower treads run further north, staggered, modelled straight), piers on a 0.6 m top landing, deep bottom "
-                        "step 0.8 m into the walkway: 012227815 (7 treads + top), 012233382, 012305655 "
-                        "(frontal: whole width between the piers drops), 012251895 (door floor ~0.9-1.4 below the pier bases), "
-                        "drone 2022 f 29-31 s. " + EV_DROP,
-            "confidence": "medium"})
+            "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.15 m past the north "
+                        "pier (lower treads run further north, staggered, modelled straight): 012227815 (7 treads + top), "
+                        "012233382, 012305655; 070309303 f04/f09 (flight down to the east between the piers); piers moved "
+                        "with the pavilion (" + EV_SFM + ")", "confidence": "medium"})
 
-slab("PavilionStair_TopLanding", [(X_CURB, S2_S), (S2_XT, S2_S), (S2_XT, S2_N), (X_CURB, S2_N)], lambda x, y: zA(y) + 0.02, 0.0,
-     "stone", "herringbone top landing between the alley and the pavilion stair, the front piers stand on it (012305655)",
+slab("PavilionStair_TopLanding", [(X_PAV, S2_S - PIER), (S2_XT, S2_S - PIER), (S2_XT, S2_N), (X_PAV, S2_N)],
+     lambda x, y: zA(y) + 0.02, 0.0, "stone",
+     "herringbone top landing between the alley and the pavilion stair, the front piers stand on it (012305655)",
      "medium", {"thk": r3(zA(S2_S) - PAD_Z + 0.3)})
 
-# ---------------------------------------------------------------- side stair + steel ramp opening (walkway <-> alley)
-# The railed "north stair" of the first pass is not in the drone profiles (Y 18-22: walkway -1.38, planter -0.2).
-# The only crossing is at Y ~24-35 (drone Y 30: -0.34 / -0.5 / -1.14 across the strip) = the granite side stair +
-# steel grating ramp of 070309303 t28-31, modelled in SITE_Garden (AW_Stairs_Mid, AW_Ramp*): leave the strip open there.
-GAP0, GAP1 = 24.2, 35.1          # A local y: stair south edge .. ramp foot north edge
-RAMP_XW = -2.65                  # ramp west edge (A local x); planter stays west of it
 # ---------------------------------------------------------------- lower walkway + landings (paving solids)
 lowtop = lambda x, y: zw(y) + 0.0
-slab("Walkway", [(X_RW, BNW[1]), (X_WALL + 0.12, BNW[1] - 0.6), (X_WALL + 0.12, Y1 + 0.5), (X_RW, Y1 + 0.5)], lowtop, 1.3, "stone",
-     "herringbone walkway along A_S's west face, 2.5 m from the wall to the planter retaining wall (aerial SfM profile: "
-     "walkway 2.0-2.5, planter 1.9, alley edge 4.7 m from the wall = pavilion front); A's west door opens onto it. " + EV_DROP,
-     "medium")
-slab("Landing_SW", [BNW, BSE, (2.6, BSE[1] + 0.55), (2.6, 3.2), (X_WALL + 0.12, 3.2), (X_WALL + 0.12, BNW[1] - 0.6), (X_RW, BNW[1])],
+Y_WS = min(BNW[1], 2.0)
+slab("Walkway_South", [(X_RW, Y_WS), (X_WALL + 0.12, Y_WS - 0.6), (X_WALL + 0.12, S2_N), (S2_FOOT, S2_N), (S2_FOOT, S2_S),
+                       (X_RW, S2_S)], lowtop, 1.3, "stone",
+     "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it "
+     "(070309303 f05/f06). " + EV_DROP, "medium")
+slab("Landing_SW", [BNW, BSE, (2.6, BSE[1] + 0.55), (2.6, 3.2), (X_WALL + 0.12, 3.2), (X_WALL + 0.12, Y_WS - 0.6), (X_RW, Y_WS)],
      lowtop, 1.3, "stone",
-     "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814), joins the "
-     "walkway", "medium")
-slab("Walkway_RampBay", [(RAMP_XW, GAP0 + 2.5), (X_RW, GAP0 + 2.5), (X_RW, GAP1), (RAMP_XW, GAP1)], lowtop, 1.3, "stone",
-     "walkway paving under/around the steel ramp and at the foot of the side stair (070309303 t28-32)", "medium")
+     "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 "
+     "f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway", "medium")
+X_WC = X_BB + 0.12     # walkway (lower) edge behind the curb
+slab("Walkway_North", [(X_WC, S2_N), (X_WALL + 0.12, S2_N), (X_WALL + 0.12, Y_AW), (X_DECK + 0.05, Y_AW),
+                       (X_DECK + 0.05, Y1 + 0.5), (X_WC, Y1 + 0.5)], lowtop, 1.3, "stone",
+     "lower walkway: 1.0 m wide along A_S (curb x 0.15-0.27 .. wall 1.28), ~1.8 m along the A_W loggia up to its deck "
+     "edge (x 2.05); sweep: walkway and deck at one level, 1.26 below the path; " + EV_SFM, "medium")
 
-# ---------------------------------------------------------------- planters (upper level, soil 0.15-0.2 below the curb)
-soil = lambda x, y: zA(y) - 0.2
-slab("Planter_South", [TNW, BNW, (X_RW - RW_T, BNW[1]), (X_RW - RW_T, PAV_S + PIER), (X_CURB, PAV_S + PIER), (X_CURB, PAV_S)], soil, 0.0, "hedge",
-     "raised bed between the south stair and the pavilion stair: lawn + one thuja in the open part (012205046, 012258813), "
-     "bare soil under the pavilion (012233382); red granite cheeks with polished coping; the pavilion's south pier stands "
-     "on its NW corner", "medium", {"thk": r3(zA(4) - 0.15 - PAD_Z + 0.2)})
-def strip(name, a, b, w, ztop, thk_to, material, ev, conf):
-    dx, dy = b[0] - a[0], b[1] - a[1]; L = math.hypot(dx, dy); nx, ny = dy / L * w, -dx / L * w   # right-hand offset
-    pts = [a, b, (b[0] + nx, b[1] + ny), (a[0] + nx, a[1] + ny)]
-    slab(name, pts, ztop, 0.0, material, ev, conf, {"thk": r3(max(ztop(*p) for p in pts) - thk_to)})
-# North of the pavilion the strip is NOT walled: flat lawn ~0.2 below the alley, then a steep grass bank down to a
-# low pink curb at the walkway edge (video 070309303 f19-f44 at 2 fps, frame f40 overlay through its PnP camera;
-# drone SfM profiles Y 10-26: -0.2 over 2-3 m, then -1.4 within ~1 m).
-X_BANK = X_RW - 1.0
-bank = lambda x, y: (zA(y) - 0.2) if x <= X_BANK + 1e-6 else (zw(y) + 0.12)
-for nm, y0, y1 in (("Bank_North", S2_N, GAP0), ("Bank_NorthEnd", GAP1, B_NE_Y)):
-    slab(nm, [(X_BANK, y0), (X_RW, y0), (X_RW, y1), (X_BANK, y1)], bank, 0.0, "hedge",
-         "steep grass bank from the lawn down to the walkway curb, no retaining wall (070309303 f19-f44, f40 overlay; "
-         "drone SfM)", "medium", {"thk": r3(zA(10) - PAD_Z + 0.2)})
-    strip("Curb_Walkway" + nm[4:], (X_RW, y0), (X_RW, y1), 0.12, lambda x, y: zw(y) + 0.12, PAD_Z - 0.2, "brick",
-          "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44)", "medium")
-slab("Planter_North", [(X_CURB, S2_N), (X_BANK, S2_N), (X_BANK, GAP0), (X_CURB, GAP0)], soil, 0.0, "hedge",
-     "long lawn/shrub strip between the alley and the lower walkway north of the pavilion (thujas, low shrubs; drone 2022 "
-     "shrubs): aerial SfM soil -0.2 m below the alley, 1.9 m wide; its south end is staggered along the pavilion stair "
-     "(012227815, modelled straight)", "medium", {"thk": r3(zA(10) - 0.15 - PAD_Z + 0.2)})
-slab("Planter_RampW", [(X_CURB, GAP0 + 2.5), (RAMP_XW, GAP0 + 2.5), (RAMP_XW, GAP1), (X_CURB, GAP1)], soil, 0.0, "hedge",
-     "narrow lawn strip between the alley and the steel ramp (070309303 t31: red-edged bed left of the grating)", "medium",
-     {"thk": r3(zA(30) - 0.15 - PAD_Z + 0.2)})
-slab("Planter_NorthEnd", [(X_CURB, GAP1), (X_BANK, GAP1), (X_BANK, B_NE_Y), (X_CURB, B_NE_Y)], soil, 0.0, "hedge",
-     "planter strip continues along A_W up to B's NE corner (drone Y 26-32, 070309303 t22-27 red-edged lawn with shrubs)",
-     "medium", {"thk": r3(zA(36) - 0.15 - PAD_Z + 0.2)})
+# ---------------------------------------------------------------- south bed (between the south stair and the pavilion)
+soilS = lambda x, y: (zA(y) - 0.25) + ((zw(y) + 0.45) - (zA(y) - 0.25)) * (x - X_SC) / ((X_RW - RW_T) - X_SC)
+slab("Planter_South", [TNW, BNW, (X_RW - RW_T, BNW[1]), (X_RW - RW_T, S2_S), (X_SC, S2_S), (X_SC, TNW[1])], soilS, 0.0, "hedge",
+     "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil "
+     "slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 "
+     "across it); " + EV_SFM, "medium", {"thk": r3(zA(4) - PAD_Z + 0.2)})
+els.append({"type": "tree", "name": "SouthBed_Thuja", "pos": W(-2.75, 4.9), "z": r3(soilS(-2.75, 4.9)), "height": 1.6,
+            "crown_d": 0.9, "shape": "cone", "trunk_d": 0.08, "crown_base": 0.15,
+            "evidence": "conical thuja in the south bed (070309303 f04: centre of the bed, ~1.6 m)", "confidence": "low"})
+cap = lambda x, y: zw(y) + 0.47
+slab("RetWall_South", [(X_RW - RW_T, BNW[1]), (X_RW, BNW[1]), (X_RW, S2_S), (X_RW - RW_T, S2_S)], cap, 0.0, "brick",
+     "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 "
+     "f04-f06), pink polished coping", "medium", {"thk": r3(zw(3) + 0.47 - PAD_Z + 0.2)})
+slab("RetWall_South_Coping", [(X_RW - RW_T - 0.03, BNW[1]), (X_RW + 0.03, BNW[1]), (X_RW + 0.03, S2_S), (X_RW - RW_T - 0.03, S2_S)],
+     lambda x, y: zw(y) + 0.52, 0.06, "stone", "polished pink granite coping (070309303 f04/f05)", "medium")
+strip("Curb_PlanterSouth", TNW, (X_SC, S2_S - PIER), 0.1, lambda x, y: zA(y) + 0.08, PAD_Z - 0.2, "brick",
+      "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04)", "medium")
 
-# retaining walls (walkway face) with polished coping 0.03 proud
-cap = lambda x, y: zA(y) + 0.05
-for name, y0, y1 in (("RetWall_South", BNW[1], PAV_S + PIER),):
-    slab(name, [(X_RW - RW_T, y0), (X_RW, y0), (X_RW, y1), (X_RW - RW_T, y1)], cap, 0.0, "brick",
-         "red rock-face granite block retaining wall (3-4 courses) with a polished pink granite coping between the planter "
-         "and the walkway (012227815, 012231007, 012233382); height = alley - walkway", "medium",
-         {"thk": r3(zA(y0) + 0.05 - PAD_Z + 0.2)})
-    slab(name + "_Coping", [(X_RW - RW_T - 0.03, y0), (X_RW + 0.03, y0), (X_RW + 0.03, y1), (X_RW - RW_T - 0.03, y1)],
-         lambda x, y: zA(y) + 0.08, 0.06, "stone", "polished granite coping", "medium")
-# alley-edge curbs (red concrete, 0.1 wide, 0.08 proud of the alley); absolute z (the planter strip is inside the pad)
-EV_CURB = "red concrete edging along the alley side of the planters (012205046, 012255312, 012251895, drone 2022)"
-strip("Curb_PlanterSouth", TNW, (X_CURB, PAV_S), 0.1, lambda x, y: zA(y) + 0.08, PAD_Z - 0.2, "brick",
-      EV_CURB + "; angles SW from the pavilion south pier to the manhole corner of the south stair", "medium")
-strip("Curb_PlanterNorth", (X_CURB, S2_N), (X_CURB, GAP0), 0.1, lambda x, y: zA(y) + 0.08, PAD_Z - 0.2, "brick", EV_CURB, "medium")
-strip("Curb_PlanterNorthEnd", (X_CURB, GAP0 + 2.5), (X_CURB, B_NE_Y), 0.1, lambda x, y: zA(y) + 0.08, PAD_Z - 0.2, "brick",
-      EV_CURB, "medium")
+# ---------------------------------------------------------------- lawn strip north of the pavilion (A side)
+# sweep profiles (y 12-40): path, red curb at x -3.3, lawn sloping from 0.1 to ~0.43 below the path at x -0.6, then a
+# steep grass bank down to the low pink curb at x 0.15; no retaining wall. The wide side stair + steel ramp cut it at
+# y 29.4-32.6 (f55-f63 ground rays: south bed NW corner (-2.5, 28.9), its NE coping corner (0.0..0.4, 29.6); ramp landing
+# y 31.4-32.6); the strip ends with a pink coping at the wide stair north of the alley (f73/f74).
+G_S0, G_S1 = 29.4, 32.6          # side stair (SITE_Garden AW_Stairs_Mid), cheeks 0.3 on both sides
+Y_LN = Y_STAIR_N - 0.3           # lawn strip north end (coping)
+lawn = lambda x, y: (zA(y) - 0.10) + (-0.33) * (x - (xc(y) + 0.1)) / (X_BT - (xc(y) + 0.1))
+bank = lambda x, y: (zA(y) - 0.43) if x <= X_BT + 1e-6 else (zw(y) + 0.12)
+for sfx, y0, y1 in (("S", S2_N, G_S0 - 0.3), ("N", G_S1 + 0.3, Y_LN)):
+    slab("Lawn_" + sfx, [(xc(y0) + 0.1, y0), (X_BT, y0), (X_BT, y1), (xc(y1) + 0.1, y1)], lawn, 0.0, "hedge",
+         "lawn strip between the path and the lower walkway, sloping gently towards A (sweep: -0.1 at the curb, -0.43 at "
+         "x -0.6); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); " + EV_SFM, "medium",
+         {"thk": r3(zA(y0) - PAD_Z + 0.2)})
+    slab("Bank_" + sfx, [(X_BT, y0), (X_BB, y0), (X_BB, y1), (X_BT, y1)], bank, 0.0, "hedge",
+         "steep grass bank from the lawn down to the walkway curb, no retaining wall (sweep: ~0.85 m over 0.75 m; "
+         "070309303 f24-f44)", "medium", {"thk": r3(zA(y0) - PAD_Z + 0.2)})
+    strip("Curb_Walkway_" + sfx, (X_BB, y1), (X_BB, y0), 0.12, lambda x, y: zw(y) + 0.12, PAD_Z - 0.2, "brick",
+          "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
+          "medium")
+    strip("Curb_Path_" + sfx, (xc(y1), y1), (xc(y0), y0), 0.1, lambda x, y: zA(y) + 0.08, PAD_Z - 0.2, "brick",
+          "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+          "medium")
+# pink granite cheeks along the side stair (raised bed edges, f55-f63): top follows the flight
+cheek = lambda x, y: (zA(y) + 0.05) if x <= -2.15 else (zA(y) + 0.05) + ((zw(y) + 0.40) - (zA(y) + 0.05)) * (x + 2.15) / 2.55
+for nm, y0, y1 in (("StairCheek_S", G_S0 - 0.3, G_S0), ("StairCheek_N", G_S1, G_S1 + 0.3)):
+    slab(nm, [(xc(y0) + 0.1, y0), (-2.15, y0), (0.4, y0), (0.4, y1), (-2.15, y1), (xc(y1) + 0.1, y1)], cheek, 0.0, "stone",
+         "pink granite coping cheek of the raised bed beside the side stair (070309303 f55-f63), east face at x 0.4 on "
+         "the walkway", "medium", {"thk": r3(zA(30) + 0.05 - PAD_Z + 0.2)})
+slab("SideStair_TopLanding", [(xc(G_S0), G_S0), (-2.15, G_S0), (-2.15, G_S1), (xc(G_S1), G_S1)], lambda x, y: zA(y) + 0.02, 0.0,
+     "stone", "paving at the head of the side stair between the path and the first nosing (070309303 f60/f62)", "medium",
+     {"thk": r3(zA(30) - PAD_Z + 0.2)})
+slab("LawnEnd_Coping", [(xc(Y_LN), Y_LN), (X_BB, Y_LN), (X_BB, Y_STAIR_N), (xc(Y_STAIR_N), Y_STAIR_N)], lambda x, y: zA(y) + 0.05, 0.0,
+     "stone", "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74)", "medium",
+     {"thk": r3(zA(40) - PAD_Z + 0.2)})
+
+# ---------------------------------------------------------------- terrain pad (lowered ground under the lower zone)
+pad_l = [TNW, TSE, (TSE[0] + 0.33, -1.0), (38.6, -1.0), (38.6, 4.4), (2.5, 4.4), (2.5, Y1), (xc(Y1), Y1), (xc(S2_N), S2_N),
+         (X_PAV, S2_N), (X_PAV, PAV_S), (X_SC, PAV_S)]
 
 # ---------------------------------------------------------------- south bank: raised bed + hedge strip in front of A's south face
 up = lambda x, y: gz(*W(x, y))
@@ -231,92 +256,97 @@ els.append({"type": "path", "name": "PathClover_S", "line": [W(2.4, -3.5), W(19.
 bpt_B0, bdir = (147.256, -81.356), (0.04891, 0.9988)
 bn = (0.9988, -0.04891)
 Bw = lambda u, w: [round(bpt_B0[0] + bdir[0] * u + bn[0] * w, 3), round(bpt_B0[1] + bdir[1] * u + bn[1] * w, 3)]
-# alley strip: west edge = B bed curb (1.6 m off B's wall), east edge = A curb line
+# B's east wall: model ring at A-local x -12.13; the SfM puts it at -11.35 (upper-storey wall points z 11-15, peak
+# -11.4..-11.3) -> BLD_B owner. The bed elements below are placed at their measured A-local positions.
+X_BW = -11.35          # B east wall (measured)
+X_BC = -7.8            # B bed curb face (alley side): f48/f49/f52 ground rays -7.35..-8.2, SfM shrub fronts -7.8..-8.0
+Y_BB0, Y_BB1 = 17.8, 38.2   # bed from the porch's north end to B's NE corner trees
 ys, yn = -93.2, -52.0
 def xw_B(y):
-    return bpt_B0[0] + bdir[0] * (y - bpt_B0[1]) / bdir[1] + 1.6
+    return W(X_BC, (y - O[1] - XD[1] * X_BC) / YD[1])[0]
 def xe_A(y):
     yl = (y - O[1] - XD[1] * X_CURB) / YD[1]
-    return W(X_CURB, yl)[0]
+    return W(xc(yl), yl)[0]
 mid = lambda y: [(xw_B(y) + xe_A(y)) / 2, y]
-YS2 = W(X_CURB, PAV_S + 0.05)[1]
+YS2 = W(X_PAV, PAV_S + 0.05)[1]
 xs2 = W(-4.45, 3.0)[0]
 els.append({"type": "path", "name": "Alley_Paving_S", "line": [[r3((xw_B(ys) + xs2) / 2), ys], [r3((xw_B(YS2) + xs2) / 2), r3(YS2)]],
             "width": r3(xs2 - xw_B(-89)), "thk": 0.08, "surface": "herringbone_200x100",
-            "evidence": "alley south of the pavilion, west of the angled planter curb (012205046, 012258813)", "confidence": "medium"})
-els.append({"type": "path", "name": "Alley_Paving_Curb", "line": [W(TNW[0] - 0.75, TNW[1] - 0.2), W(X_CURB - 0.75, PAV_S + 0.25)],
-            "width": 1.5, "thk": 0.08, "surface": "herringbone_200x100",
-            "evidence": "alley paving along the angled planter curb", "confidence": "medium"})
-ys = YS2
-els.append({"type": "path", "name": "Alley_Paving", "line": [[r3(v) for v in mid(ys)], [r3(v) for v in mid(yn)]],
+            "evidence": "alley south of the pavilion, west of the south-bed curb (012205046, 012258813, 070309303 f00-f10)",
+            "confidence": "medium"})
+els.append({"type": "path", "name": "Alley_Paving", "line": [[r3(v) for v in mid(YS2)], [r3(v) for v in mid(yn)]],
             "width": r3(xe_A(-75) - xw_B(-75)), "thk": 0.08, "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)",
-            "evidence": "level alley from the gate to the square between B's shrub bed and A's planter edge (012249348, 012255312, "
-                        "drone 2022 38.5 s); aerial SfM: flat, alley edge 7.9-8.0 m from B's east wall",
-            "confidence": "medium"})
-B_END_U = 27.2   # B's NE corner along its east face (u from bpt_B0): the tree bed runs to the end of B (map owner)
-els.append({"type": "wall", "name": "BBed_Curb", "line": [Bw(6.9, 1.55), Bw(B_END_U, 1.55)], "height": 0.12, "thk": 0.12,
+            "evidence": "alley from the gate to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb "
+                        "(x -3.35 at y 13 .. -2.25 at y 37): 4.5-5.5 m wide, " + EV_SFM, "confidence": "medium"})
+els.append({"type": "wall", "name": "BBed_Curb", "line": [W(X_BC - 0.06, Y_BB0), W(X_BC - 0.06, Y_BB1)], "height": 0.12, "thk": 0.12,
             "material": "stone", "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north "
-                                             "of the porch (drone 2022 38.5 s, 012249348)", "confidence": "medium"})
-els.append({"type": "hedge", "name": "BBed_Shrubs", "line": [Bw(7.4, 0.8), Bw(B_END_U - 0.4, 0.8)], "width": 1.1, "height": 1.2,
-            "top": "round", "evidence": "rounded clipped shrubs along B's east wall (012249348, 012255312, drone)",
+                                             "of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs)",
             "confidence": "medium"})
-for k, u in enumerate((9.0, 14.8, 20.5, 25.6)):
-    els.append({"type": "tree", "name": f"BBed_Thuja_{k:02d}", "pos": Bw(u, 0.8), "height": 3.8, "crown_d": 1.5,
-                "shape": "cone", "trunk_d": 0.15, "crown_base": 0.3,
-                "evidence": "conical thujas in the B shrub bed (012249348 spruce/thuja beyond the porch, drone 2022)",
-                "confidence": "low"})
+for k, y in enumerate((21.3, 24.0, 26.8, 29.5)):
+    els.append({"type": "tree", "name": f"BBed_Shrub_{k:02d}", "pos": W(-8.65, y), "height": 1.6, "crown_d": 1.6,
+                "shape": "round", "trunk_d": 0.1, "crown_base": 0.05,
+                "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; "
+                            "070309303 f45-f53 frontal views, ~2.7 m pitch)", "confidence": "medium" if 23 < y < 31 else "low"})
+for k, y in enumerate((22.5, 28.3)):
+    els.append({"type": "lamp_orn", "name": f"BBed_Lamp_{k:02d}", "pos": W(-8.5, y), "height": 3.2, "arm_span": 0.7,
+                "globes": 2, "globe_d": 0.28, "dir_deg": r3(ANG),
+                "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base "
+                            "rays: (-8.7, 22.5), (-8.35, 28.3))", "confidence": "medium"})
+for k, (x, y, h, cd) in enumerate([(-8.8, 33.9, 9.0, 3.6), (-8.3, 37.4, 8.0, 3.2)]):
+    els.append({"type": "tree", "name": f"BBed_Conifer_{k:02d}", "pos": W(x, y), "height": h, "crown_d": cd, "shape": "cone",
+                "trunk_d": 0.3, "crown_base": 1.0,
+                "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51)", "confidence": "low"})
 
-# ---------------------------------------------------------------- lawn strip planting (upper lawn, A side)
-# round clipped thujas ~0.9-1.3 m every ~5.5 m along the lawn strip + a few saplings (070309303 f19-f44, f53-f72)
-XL = (X_CURB + X_BANK) / 2
-k = 0
-for yl in [S2_N + 1.5 + 5.6 * i for i in range(8)]:
-    if GAP0 - 0.5 < yl < GAP1 + 0.5 or yl > B_NE_Y - 0.8:
-        continue
-    els.append({"type": "tree", "name": f"LawnThuja_{k:02d}", "pos": W(XL, yl), "z": r3(zA(yl) - 0.2), "height": 1.2, "crown_d": 0.9,
-                "shape": "round", "trunk_d": 0.06, "crown_base": 0.15,
-                "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
-                "confidence": "low"})
-    k += 1
+# ---------------------------------------------------------------- lawn strip planting (A side)
+# conical thujas from the SfM crowns (plan blobs z 0.3-1.5 above the lawn) and frames f30-f45
+for k, (x, y, h) in enumerate([(-2.7, 13.7, 1.5), (-2.05, 18.25, 1.6), (-2.4, 20.3, 1.2), (-2.2, 22.8, 1.2)]):
+    els.append({"type": "tree", "name": f"LawnThuja_{k:02d}", "pos": W(x, y), "z": r3(lawn(x, y)), "height": h, "crown_d": 0.8,
+                "shape": "cone", "trunk_d": 0.06, "crown_base": 0.15,
+                "evidence": "conical thujas on the lawn strip: SfM crown blobs at A-local (%.1f, %.1f) (070309303 f28-f45)"
+                            % (x, y), "confidence": "medium"})
 
-# ---------------------------------------------------------------- descent at B's NE corner (alley -> north path)
+# ---------------------------------------------------------------- wide stair north of the alley (-> lower terrace)
 PATH_N_Z = 5.35                  # lower terrace after the descent: path, garden, gazebos, C (map owner)
-X_PATH_W = -7.63                 # north path west edge (A local x at B's NE corner, world x 153.1)
+X_PATH_W = -7.63                 # alley west edge at the stair (A local x at B's NE corner, world x 153.1)
+X_STAIR_E = X_BB                 # the flight runs in front of the lawn-strip end coping (f74: band to x -2.3 and beyond)
 N_STEPS = 8
-els.append({"type": "stairs_run", "name": "Steps_BCorner", "top": W((X_PATH_W + X_CURB) / 2, B_NE_Y), "dir_deg": r3(ANG + 90),
-            "risers": N_STEPS, "riser_h": r3((ALLEY_Z - PATH_N_Z) / N_STEPS), "tread": 0.35,
-            "width": r3(X_CURB - X_PATH_W), "z_top": r3(ALLEY_Z), "material": "granite",
-            "evidence": "map owner (2026-09-25 screenshot marks): a descent across the path right after the end of B; the "
-                        "flat alley (drone SfM, B's level) drops to the lower terrace (path, garden, gazebos, C: 5.40) -> 1.35 m, 8 risers; "
-                        "exact position and riser count to confirm (photo request)", "confidence": "low"})
+els.append({"type": "stairs_run", "name": "Steps_BCorner", "top": W((X_PATH_W + X_STAIR_E) / 2, Y_STAIR_N), "dir_deg": r3(ANG + 90),
+            "risers": N_STEPS, "riser_h": r3((ALLEY_N - PATH_N_Z) / N_STEPS), "tread": 0.35,
+            "width": r3(X_STAIR_E - X_PATH_W), "z_top": r3(ALLEY_N), "material": "granite",
+            "evidence": "map owner: a descent across the path right after the end of B; 070309303 f71-f75: the path ends at a "
+                        "transverse pink granite band (top nosing, ground rays y 40.35-40.53) with the lower plaza, hedge "
+                        "arch and signboard beyond; 8 x 0.16 to the lower terrace (5.35); riser count to confirm",
+            "confidence": "low"})
 
-# ---------------------------------------------------------------- terrain pad (lowered ground under the lower zone)
-pad_l = [TNW, TSE, (TSE[0] + 0.33, -1.0), (38.6, -1.0), (38.6, 4.4), (2.5, 4.4), (2.5, Y1), (X_CURB, Y1), (X_CURB, PAV_S)]
-# the whole planter strip is lowered and rebuilt as solids; terrain facets dipping at the pad edge stay under the
-# alley paving strips (opaque) on the west and under the stair/bed solids elsewhere
 spec = {
     "id": "SITE_GateAlley",
     "collection": "03_Site",
     "ground": "pads",
-    "note": ("Alley from the gate north between Block B (west, level with the gate) and Block A_S (east). A_S stands "
-             f"{DROP} m lower: a lower walkway along its west face, reached by the wide south stair from the gate plaza, the "
-             "stair under the entrance pavilion and a railed stair at the planter's north end; planters with granite "
-             "retaining walls between. Geometry designed in the A local frame (gen script in the R1 scratch "
-             "~/koch_work/zone_gate/gen_alley.py), world XY here. Lower-level solids use absolute z; terrain_pads lower "
-             f"TER_Ground under them to {PAD_Z}. REQUIRES A's FFL = {r3(zw(S2_Y) + 0.03)} (walkway at the west door) - see "
-             "the note to the lead. Old AlleyParapet_W / AlleyHedge_W removed: that fluted parapet + hedge is along A_S's "
-             "south side (path from the booth), not along B."),
+    "note": ("Alley from the gate north between Block B (west) and Block A_S/A_W (east). A stands ~1.3 m lower: a lower "
+             "walkway along its west face, reached by the wide south stair from the gate plaza, the stair under the "
+             "entrance pavilion and the side stair + steel ramp opposite the A_W lettering (SITE_Garden AW_*). North of "
+             "the pavilion a sloping lawn strip with a steep grass bank separates the path from the walkway; south of it "
+             "a raised bed with a low retaining wall. Geometry designed in the A local frame (Scripts/Geo/zones/"
+             "zone_gate_alley.py), world XY here. Lower-level solids use absolute z; terrain_pads lower TER_Ground under "
+             f"them to {PAD_Z}. 2026-09-26: re-measured from the 070309303 SfM photo-match (see the generator header)."),
     "terrain_pads": [{"ring": ring(pad_l), "z": PAD_Z, "blend": 0.0,
                       "evidence": "lower walkway zone at A_S's west/south side (see note)"},
-                     {"name": "Alley_Flat", "ring": [[r3(xw_B(-88.0) - 1.6), -88.0], [r3(xe_A(-88.0)), -88.0],
-                                                     [r3(W(X_CURB, B_NE_Y)[0]), r3(W(X_CURB, B_NE_Y)[1])],
-                                                     [r3(xw_B(-54.0) - 1.6), -54.0]],
-                      "z": r3(ALLEY_Z - 0.08), "blend": 1.5,
-                      "evidence": "drone SfM: alley flat (+-0.04 m over 24 m) at B's level from the gate plaza to B's NE "
-                                  "corner; paving 0.08 on top"}],
+                     {"name": "Alley_Flat_S", "ring": [[r3(xw_B(-89.0) - 3.0), -89.0], [r3(xe_A(-89.0) - 0.8), -89.0],
+                                                       W(X_PAV, 10.0), [r3(xw_B(-82.3) - 3.0), -82.3]],
+                      "z": r3(ALLEY_S - 0.08), "blend": 1.5,
+                      "evidence": "alley at the pavilion and the gate plaza (sweep 0.12-0.2 above the lawn-strip path)"},
+                     {"name": "Alley_Fall", "ring": [[r3(xw_B(-82.3) - 3.0), -82.3], W(X_PAV, 10.0), W(xc(15.0), 15.0),
+                                                     [r3(xw_B(-77.3) - 3.0), -77.3]],
+                      "z": r3(ALLEY_S - 0.08), "grad": [r3(-(ALLEY_S - ALLEY_N) / 5.0 * 0.049), r3(-(ALLEY_S - ALLEY_N) / 5.0 * 0.9988)],
+                      "ref": [r3(xw_B(-82.3)), -82.3], "blend": 0.5,
+                      "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep)"},
+                     {"name": "Alley_Flat_N", "ring": [[r3(xw_B(-77.3) - 3.0), -77.3], W(xc(15.0), 15.0),
+                                                       W(xc(Y_STAIR_N), Y_STAIR_N), [r3(xw_B(-52.3) - 3.5), -52.3]],
+                      "z": r3(ALLEY_N - 0.08), "blend": 1.0,
+                      "evidence": "sweep: path flat within +-0.05 from y 12 to the wide stair, 1.26 above the walkway"}],
     "elements": els,
 }
 out = sys.argv[1] if len(sys.argv) > 1 else '/home/faust/KOCH-SIMULATOR/Art/Blender/Specs/SITE_GateAlley.json'
 json.dump(spec, open(out, 'w'), indent=1, ensure_ascii=False)
-print("wrote", out, len(els), "elements; PAD_Z", PAD_Z, "zw(0..26)", r3(ZW0), r3(ZW1), "A FFL target", r3(zw(S2_Y) + 0.03),
-      "zA(S2_Y)", r3(zA(S2_Y)), "S1 top", r3(zt1), "bottom", r3(zb1), "rh", r3((zt1 - zb1) / 8))
+print("wrote", out, len(els), "elements; PAD_Z", PAD_Z, "alley", ALLEY_S, ALLEY_N, "S1 top", r3(zt1), "bottom", r3(zb1),
+      "rh", r3((zt1 - zb1) / 8), "TNW", TNW, "BNW", tuple(round(v, 2) for v in BNW))

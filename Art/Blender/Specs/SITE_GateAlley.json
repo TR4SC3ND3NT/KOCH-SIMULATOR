@@ -2,21 +2,21 @@
  "id": "SITE_GateAlley",
  "collection": "03_Site",
  "ground": "pads",
- "note": "Alley from the gate north between Block B (west, level with the gate) and Block A_S (east). A_S stands 1.4 m lower: a lower walkway along its west face, reached by the wide south stair from the gate plaza, the stair under the entrance pavilion and a railed stair at the planter's north end; planters with granite retaining walls between. Geometry designed in the A local frame (gen script in the R1 scratch ~/koch_work/zone_gate/gen_alley.py), world XY here. Lower-level solids use absolute z; terrain_pads lower TER_Ground under them to 5.0. REQUIRES A's FFL = 5.38 (walkway at the west door) - see the note to the lead. Old AlleyParapet_W / AlleyHedge_W removed: that fluted parapet + hedge is along A_S's south side (path from the booth), not along B.",
+ "note": "Alley from the gate north between Block B (west) and Block A_S/A_W (east). A stands ~1.3 m lower: a lower walkway along its west face, reached by the wide south stair from the gate plaza, the stair under the entrance pavilion and the side stair + steel ramp opposite the A_W lettering (SITE_Garden AW_*). North of the pavilion a sloping lawn strip with a steep grass bank separates the path from the walkway; south of it a raised bed with a low retaining wall. Geometry designed in the A local frame (Scripts/Geo/zones/zone_gate_alley.py), world XY here. Lower-level solids use absolute z; terrain_pads lower TER_Ground under them to 5.0. 2026-09-26: re-measured from the 070309303 SfM photo-match (see the generator header).",
  "terrain_pads": [
   {
    "ring": [
     [
-     154.422,
-     -88.939
+     154.894,
+     -91.565
     ],
     [
-     156.254,
-     -92.861
+     156.726,
+     -95.487
     ],
     [
-     156.546,
-     -93.649
+     157.145,
+     -93.678
     ],
     [
      197.345,
@@ -31,16 +31,28 @@
      -88.488
     ],
     [
-     163.238,
-     -54.129
+     163.319,
+     -52.481
     ],
     [
-     157.325,
-     -53.839
+     158.731,
+     -52.256
     ],
     [
-     155.755,
-     -85.851
+     155.918,
+     -81.854
+    ],
+    [
+     155.222,
+     -81.82
+    ],
+    [
+     155.018,
+     -85.965
+    ],
+    [
+     155.318,
+     -85.979
     ]
    ],
    "z": 5.0,
@@ -48,28 +60,84 @@
    "evidence": "lower walkway zone at A_S's west/south side (see note)"
   },
   {
-   "name": "Alley_Flat",
+   "name": "Alley_Flat_S",
    "ring": [
     [
-     146.931,
-     -88.0
+     148.215,
+     -89.0
     ],
     [
-     155.649,
-     -88.0
+     154.441,
+     -89.0
     ],
     [
-     157.325,
-     -53.839
+     155.185,
+     -82.569
     ],
     [
-     148.596,
-     -54.0
+     148.544,
+     -82.3
     ]
    ],
    "z": 6.67,
    "blend": 1.5,
-   "evidence": "drone SfM: alley flat (+-0.04 m over 24 m) at B's level from the gate plaza to B's NE corner; paving 0.08 on top"
+   "evidence": "alley at the pavilion and the gate plaza (sweep 0.12-0.2 above the lawn-strip path)"
+  },
+  {
+   "name": "Alley_Fall",
+   "ring": [
+    [
+     148.544,
+     -82.3
+    ],
+    [
+     155.185,
+     -82.569
+    ],
+    [
+     156.32,
+     -77.618
+    ],
+    [
+     148.789,
+     -77.3
+    ]
+   ],
+   "z": 6.67,
+   "grad": [
+    -0.001,
+    -0.024
+   ],
+   "ref": [
+    151.544,
+    -82.3
+   ],
+   "blend": 0.5,
+   "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep)"
+  },
+  {
+   "name": "Alley_Flat_N",
+   "ring": [
+    [
+     148.789,
+     -77.3
+    ],
+    [
+     156.32,
+     -77.618
+    ],
+    [
+     158.731,
+     -52.256
+    ],
+    [
+     149.515,
+     -52.3
+    ]
+   ],
+   "z": 6.55,
+   "blend": 1.0,
+   "evidence": "sweep: path flat within +-0.05 from y 12 to the wide stair, 1.26 above the walkway"
   }
  ],
  "elements": [
@@ -77,8 +145,8 @@
    "type": "stairs_run",
    "name": "SouthStair",
    "top": [
-    155.338,
-    -90.9
+    155.81,
+    -93.526
    ],
    "dir_deg": 25.039,
    "risers": 8,
@@ -86,7 +154,7 @@
    "tread": 0.34,
    "width": 4.33,
    "z_top": 6.75,
-   "evidence": "wide granite flight (grey treads, red-granite risers, concrete kerb as the top riser) from the gate plaza down NE to the landing at A's SW corner: 012218760 (8 risers, looking back up SW at the gate), 012208814 (from the top, looking down-flight at the 'A Block' corner, landing with a drain grate before it), 012258813 (looking S: top nosing runs away from the manhole at the lawn-planter corner, both cheeks and the flight run to the east), bearing of 012218760 (view up-flight ~WSW: gate column left, blue bin right); position: ground rays of 012258813 with the booth-PnP camera (f nominal 708 px: manhole/planter curb 1.5 m west of the pavilion front line; f 881: 2 m) and the SW-angled curb south of the pavilion in 012251895 -> manhole corner 1.2 m west of the pier line, +-1 m, drone 2022 frames 26-31 s. aerial SfM of the 2022 drone shot (sfm4: 21 frames, 14.7k points, scaled by the B east wall - A west wall spacing 13.43 m): alley plane 0, planter soil -0.2, lower walkway -1.35 constant along the alley; 8 risers on the south stair (7 red-granite + concrete kerb, 012218760) and on the pavilion stair (7 treads, 012227815) -> 0.169 m",
+   "evidence": "wide granite flight (grey treads, red-granite risers, concrete kerb as the top riser) from the gate plaza down NE to the landing at A's SW corner: 012218760 (8 risers), 012208814, 012258813; 070309303 f05 (lower treads beyond the bed coping, drain grate on the landing). Position: NW top corner at the manhole, 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays). NOTE: SfM heights of the landing (f03-f09, rotation-only frames, short tracks) read ~0.6 m below the door walkway - not adopted (photo request)",
    "confidence": "medium"
   },
   {
@@ -94,12 +162,12 @@
    "name": "Plaza_StairTop",
    "line": [
     [
-     153.697,
-     -89.277
+     154.169,
+     -91.904
     ],
     [
-     155.529,
-     -93.2
+     156.001,
+     -95.826
     ]
    ],
    "width": 1.6,
@@ -112,16 +180,16 @@
    "type": "stairs_run",
    "name": "PavilionStair",
    "top": [
-    156.495,
-    -83.008
+    155.632,
+    -83.667
    ],
    "dir_deg": -2.808,
    "risers": 8,
    "riser_h": 0.175,
    "tread": 0.34,
-   "width": 4.550000000000001,
+   "width": 3.6500000000000004,
    "z_top": 6.75,
-   "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.2 m north of the north pier (lower treads run further north, staggered, modelled straight), piers on a 0.6 m top landing, deep bottom step 0.8 m into the walkway: 012227815 (7 treads + top), 012233382, 012305655 (frontal: whole width between the piers drops), 012251895 (door floor ~0.9-1.4 below the pier bases), drone 2022 f 29-31 s. aerial SfM of the 2022 drone shot (sfm4: 21 frames, 14.7k points, scaled by the B east wall - A west wall spacing 13.43 m): alley plane 0, planter soil -0.2, lower walkway -1.35 constant along the alley; 8 risers on the south stair (7 red-granite + concrete kerb, 012218760) and on the pavilion stair (7 treads, 012227815) -> 0.169 m",
+   "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.15 m past the north pier (lower treads run further north, staggered, modelled straight): 012227815 (7 treads + top), 012233382, 012305655; 070309303 f04/f09 (flight down to the east between the piers); piers moved with the pavilion (070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays))",
    "confidence": "medium"
   },
   {
@@ -129,27 +197,27 @@
    "name": "PavilionStair_TopLanding",
    "ring": [
     [
-     155.784,
-     -85.251
+     155.018,
+     -85.965
     ],
     [
-     156.383,
-     -85.281
+     155.518,
+     -85.989
     ],
     [
-     156.606,
-     -80.736
+     155.721,
+     -81.844
     ],
     [
-     156.007,
-     -80.707
+     155.222,
+     -81.82
     ]
    ],
    "z": [
     6.77,
     6.77,
-    6.77,
-    6.77
+    6.752,
+    6.752
    ],
    "thk": 2.05,
    "material": "stone",
@@ -158,26 +226,36 @@
   },
   {
    "type": "roof_plane",
-   "name": "Walkway",
+   "name": "Walkway_South",
    "ring": [
     [
-     157.852,
-     -87.994
+     157.49,
+     -90.691
     ],
     [
-     160.44,
-     -88.722
+     160.307,
+     -91.43
     ],
     [
-     162.164,
-     -53.576
+     160.765,
+     -82.091
     ],
     [
-     159.547,
-     -53.447
+     158.438,
+     -81.977
+    ],
+    [
+     158.259,
+     -85.623
+    ],
+    [
+     157.74,
+     -85.597
     ]
    ],
    "z": [
+    5.35,
+    5.35,
     5.35,
     5.35,
     5.35,
@@ -185,7 +263,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "herringbone walkway along A_S's west face, 2.5 m from the wall to the planter retaining wall (aerial SfM profile: walkway 2.0-2.5, planter 1.9, alley edge 4.7 m from the wall = pavilion front); A's west door opens onto it. aerial SfM of the 2022 drone shot (sfm4: 21 frames, 14.7k points, scaled by the B east wall - A west wall spacing 13.43 m): alley plane 0, planter soil -0.2, lower walkway -1.35 constant along the alley; 8 risers on the south stair (7 red-granite + concrete kerb, 012218760) and on the pavilion stair (7 treads, 012227815) -> 0.169 m",
+   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815)",
    "confidence": "medium"
   },
   {
@@ -193,16 +271,16 @@
    "name": "Landing_SW",
    "ring": [
     [
-     156.578,
-     -87.932
+     157.05,
+     -90.558
     ],
     [
-     158.41,
-     -91.854
+     158.882,
+     -94.48
     ],
     [
-     161.507,
-     -91.455
+     161.38,
+     -94.052
     ],
     [
      161.594,
@@ -213,12 +291,12 @@
      -89.632
     ],
     [
-     160.44,
-     -88.722
+     160.307,
+     -91.43
     ],
     [
-     157.852,
-     -87.994
+     157.49,
+     -90.691
     ]
    ],
    "z": [
@@ -232,31 +310,41 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814), joins the walkway",
+   "evidence": "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway",
    "confidence": "medium"
   },
   {
    "type": "roof_plane",
-   "name": "Walkway_RampBay",
+   "name": "Walkway_North",
    "ring": [
     [
-     157.501,
-     -65.962
+     159.636,
+     -82.036
     ],
     [
-     158.93,
-     -66.032
+     160.765,
+     -82.091
     ],
     [
-     159.341,
-     -57.642
+     161.353,
+     -70.106
     ],
     [
-     157.913,
-     -57.572
+     162.052,
+     -70.14
+    ],
+    [
+     162.944,
+     -51.962
+    ],
+    [
+     161.116,
+     -51.872
     ]
    ],
    "z": [
+    5.35,
+    5.35,
     5.35,
     5.35,
     5.35,
@@ -264,7 +352,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "walkway paving under/around the steel ramp and at the foot of the side stair (070309303 t28-32)",
+   "evidence": "lower walkway: 1.0 m wide along A_S (curb x 0.15-0.27 .. wall 1.28), ~1.8 m along the A_W loggia up to its deck edge (x 2.05); sweep: walkway and deck at one level, 1.26 below the path; 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
    "confidence": "medium"
   },
   {
@@ -272,297 +360,89 @@
    "name": "Planter_South",
    "ring": [
     [
-     154.422,
-     -88.939
+     154.894,
+     -91.565
     ],
     [
-     156.578,
-     -87.932
+     157.05,
+     -90.558
     ],
     [
-     157.553,
-     -87.98
+     157.196,
+     -90.565
     ],
     [
-     157.682,
-     -85.344
+     157.44,
+     -85.583
     ],
     [
-     155.784,
-     -85.251
+     155.342,
+     -85.48
     ],
     [
-     155.755,
-     -85.851
+     155.044,
+     -91.573
     ]
    ],
    "z": [
     6.55,
-    6.55,
-    6.55,
-    6.55,
-    6.55,
-    6.55
-   ],
-   "thk": 1.8,
-   "material": "hedge",
-   "evidence": "raised bed between the south stair and the pavilion stair: lawn + one thuja in the open part (012205046, 012258813), bare soil under the pavilion (012233382); red granite cheeks with polished coping; the pavilion's south pier stands on its NW corner",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Bank_North",
-   "ring": [
-    [
-     157.206,
-     -80.766
-    ],
-    [
-     158.204,
-     -80.815
-    ],
-    [
-     158.807,
-     -68.529
-    ],
-    [
-     157.808,
-     -68.48
-    ]
-   ],
-   "z": [
-    6.55,
-    5.47,
-    5.47,
-    6.55
+    5.849,
+    5.8,
+    5.8,
+    6.5,
+    6.5
    ],
    "thk": 1.95,
    "material": "hedge",
-   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (070309303 f19-f44, f40 overlay; drone SfM)",
+   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
    "confidence": "medium"
   },
   {
-   "type": "roof_plane",
-   "name": "Curb_Walkway_North",
-   "ring": [
-    [
-     158.204,
-     -80.815
-    ],
-    [
-     158.807,
-     -68.529
-    ],
-    [
-     158.927,
-     -68.535
-    ],
-    [
-     158.324,
-     -80.82
-    ]
+   "type": "tree",
+   "name": "SouthBed_Thuja",
+   "pos": [
+    156.333,
+    -87.731
    ],
-   "z": [
-    5.47,
-    5.47,
-    5.47,
-    5.47
-   ],
-   "thk": 0.67,
-   "material": "brick",
-   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Bank_NorthEnd",
-   "ring": [
-    [
-     158.342,
-     -57.593
-    ],
-    [
-     159.341,
-     -57.642
-    ],
-    [
-     159.522,
-     -53.947
-    ],
-    [
-     158.523,
-     -53.898
-    ]
-   ],
-   "z": [
-    6.55,
-    5.47,
-    5.47,
-    6.55
-   ],
-   "thk": 1.95,
-   "material": "hedge",
-   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (070309303 f19-f44, f40 overlay; drone SfM)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Curb_Walkway_NorthEnd",
-   "ring": [
-    [
-     159.341,
-     -57.642
-    ],
-    [
-     159.522,
-     -53.947
-    ],
-    [
-     159.642,
-     -53.953
-    ],
-    [
-     159.461,
-     -57.648
-    ]
-   ],
-   "z": [
-    5.47,
-    5.47,
-    5.47,
-    5.47
-   ],
-   "thk": 0.67,
-   "material": "brick",
-   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Planter_North",
-   "ring": [
-    [
-     156.007,
-     -80.707
-    ],
-    [
-     157.206,
-     -80.766
-    ],
-    [
-     157.808,
-     -68.48
-    ],
-    [
-     156.61,
-     -68.422
-    ]
-   ],
-   "z": [
-    6.55,
-    6.55,
-    6.55,
-    6.55
-   ],
-   "thk": 1.8,
-   "material": "hedge",
-   "evidence": "long lawn/shrub strip between the alley and the lower walkway north of the pavilion (thujas, low shrubs; drone 2022 shrubs): aerial SfM soil -0.2 m below the alley, 1.9 m wide; its south end is staggered along the pavilion stair (012227815, modelled straight)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Planter_RampW",
-   "ring": [
-    [
-     156.732,
-     -65.925
-    ],
-    [
-     157.501,
-     -65.962
-    ],
-    [
-     157.913,
-     -57.572
-    ],
-    [
-     157.144,
-     -57.535
-    ]
-   ],
-   "z": [
-    6.55,
-    6.55,
-    6.55,
-    6.55
-   ],
-   "thk": 1.8,
-   "material": "hedge",
-   "evidence": "narrow lawn strip between the alley and the steel ramp (070309303 t31: red-edged bed left of the grating)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Planter_NorthEnd",
-   "ring": [
-    [
-     157.144,
-     -57.535
-    ],
-    [
-     158.342,
-     -57.593
-    ],
-    [
-     158.523,
-     -53.898
-    ],
-    [
-     157.325,
-     -53.839
-    ]
-   ],
-   "z": [
-    6.55,
-    6.55,
-    6.55,
-    6.55
-   ],
-   "thk": 1.8,
-   "material": "hedge",
-   "evidence": "planter strip continues along A_W up to B's NE corner (drone Y 26-32, 070309303 t22-27 red-edged lawn with shrubs)",
-   "confidence": "medium"
+   "z": 6.133,
+   "height": 1.6,
+   "crown_d": 0.9,
+   "shape": "cone",
+   "trunk_d": 0.08,
+   "crown_base": 0.15,
+   "evidence": "conical thuja in the south bed (070309303 f04: centre of the bed, ~1.6 m)",
+   "confidence": "low"
   },
   {
    "type": "roof_plane",
    "name": "RetWall_South",
    "ring": [
     [
-     157.553,
-     -87.98
+     157.196,
+     -90.565
     ],
     [
-     157.852,
-     -87.994
+     157.495,
+     -90.58
     ],
     [
-     157.982,
-     -85.359
+     157.74,
+     -85.597
     ],
     [
-     157.682,
-     -85.344
+     157.44,
+     -85.583
     ]
    ],
    "z": [
-    6.8,
-    6.8,
-    6.8,
-    6.8
+    5.82,
+    5.82,
+    5.82,
+    5.82
    ],
-   "thk": 2.0,
+   "thk": 1.02,
    "material": "brick",
-   "evidence": "red rock-face granite block retaining wall (3-4 courses) with a polished pink granite coping between the planter and the walkway (012227815, 012231007, 012233382); height = alley - walkway",
+   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping",
    "confidence": "medium"
   },
   {
@@ -570,31 +450,31 @@
    "name": "RetWall_South_Coping",
    "ring": [
     [
-     157.523,
-     -87.978
+     157.166,
+     -90.564
     ],
     [
-     157.882,
-     -87.996
+     157.525,
+     -90.582
     ],
     [
-     158.012,
-     -85.361
+     157.77,
+     -85.599
     ],
     [
-     157.652,
-     -85.343
+     157.41,
+     -85.581
     ]
    ],
    "z": [
-    6.83,
-    6.83,
-    6.83,
-    6.83
+    5.87,
+    5.87,
+    5.87,
+    5.87
    ],
    "thk": 0.06,
    "material": "stone",
-   "evidence": "polished granite coping",
+   "evidence": "polished pink granite coping (070309303 f04/f05)",
    "confidence": "medium"
   },
   {
@@ -602,20 +482,20 @@
    "name": "Curb_PlanterSouth",
    "ring": [
     [
-     154.422,
-     -88.939
+     154.894,
+     -91.565
     ],
     [
-     155.755,
-     -85.851
+     155.318,
+     -85.979
     ],
     [
-     155.847,
-     -85.89
+     155.418,
+     -85.987
     ],
     [
-     154.514,
-     -88.979
+     154.994,
+     -91.573
     ]
    ],
    "z": [
@@ -626,71 +506,411 @@
    ],
    "thk": 2.03,
    "material": "brick",
-   "evidence": "red concrete edging along the alley side of the planters (012205046, 012255312, 012251895, drone 2022); angles SW from the pavilion south pier to the manhole corner of the south stair",
+   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04)",
    "confidence": "medium"
   },
   {
    "type": "roof_plane",
-   "name": "Curb_PlanterNorth",
+   "name": "Lawn_S",
    "ring": [
     [
-     156.007,
-     -80.707
+     156.018,
+     -81.859
     ],
     [
-     156.61,
-     -68.422
+     158.767,
+     -81.994
     ],
     [
-     156.71,
-     -68.426
+     159.666,
+     -63.666
     ],
     [
-     156.107,
-     -80.712
+     157.756,
+     -63.572
     ]
    ],
    "z": [
-    6.83,
-    6.83,
-    6.83,
-    6.83
+    6.632,
+    6.302,
+    6.2,
+    6.53
    ],
-   "thk": 2.03,
-   "material": "brick",
-   "evidence": "red concrete edging along the alley side of the planters (012205046, 012255312, 012251895, drone 2022)",
+   "thk": 1.932,
+   "material": "hedge",
+   "evidence": "lawn strip between the path and the lower walkway, sloping gently towards A (sweep: -0.1 at the curb, -0.43 at x -0.6); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
    "confidence": "medium"
   },
   {
    "type": "roof_plane",
-   "name": "Curb_PlanterNorthEnd",
+   "name": "Bank_S",
    "ring": [
     [
-     156.732,
-     -65.925
+     158.767,
+     -81.994
     ],
     [
-     157.325,
-     -53.839
+     159.516,
+     -82.03
     ],
     [
-     157.425,
-     -53.844
+     160.415,
+     -63.702
     ],
     [
-     156.832,
-     -65.929
+     159.666,
+     -63.666
     ]
    ],
    "z": [
-    6.83,
-    6.83,
-    6.83,
-    6.83
+    6.302,
+    5.47,
+    5.47,
+    6.2
    ],
-   "thk": 2.03,
+   "thk": 1.932,
+   "material": "hedge",
+   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Walkway_S",
+   "ring": [
+    [
+     160.415,
+     -63.702
+    ],
+    [
+     159.516,
+     -82.03
+    ],
+    [
+     159.397,
+     -82.024
+    ],
+    [
+     160.296,
+     -63.696
+    ]
+   ],
+   "z": [
+    5.47,
+    5.47,
+    5.47,
+    5.47
+   ],
+   "thk": 0.67,
    "material": "brick",
-   "evidence": "red concrete edging along the alley side of the planters (012205046, 012255312, 012251895, drone 2022)",
+   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Path_S",
+   "ring": [
+    [
+     157.656,
+     -63.567
+    ],
+    [
+     155.918,
+     -81.854
+    ],
+    [
+     155.818,
+     -81.844
+    ],
+    [
+     157.557,
+     -63.557
+    ]
+   ],
+   "z": [
+    6.71,
+    6.812,
+    6.812,
+    6.71
+   ],
+   "thk": 2.012,
+   "material": "brick",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Lawn_N",
+   "ring": [
+    [
+     158.116,
+     -59.785
+    ],
+    [
+     159.852,
+     -59.87
+    ],
+    [
+     160.208,
+     -52.629
+    ],
+    [
+     158.803,
+     -52.56
+    ]
+   ],
+   "z": [
+    6.53,
+    6.2,
+    6.2,
+    6.53
+   ],
+   "thk": 1.83,
+   "material": "hedge",
+   "evidence": "lawn strip between the path and the lower walkway, sloping gently towards A (sweep: -0.1 at the curb, -0.43 at x -0.6); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Bank_N",
+   "ring": [
+    [
+     159.852,
+     -59.87
+    ],
+    [
+     160.602,
+     -59.907
+    ],
+    [
+     160.957,
+     -52.666
+    ],
+    [
+     160.208,
+     -52.629
+    ]
+   ],
+   "z": [
+    6.2,
+    5.47,
+    5.47,
+    6.2
+   ],
+   "thk": 1.83,
+   "material": "hedge",
+   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Walkway_N",
+   "ring": [
+    [
+     160.957,
+     -52.666
+    ],
+    [
+     160.602,
+     -59.907
+    ],
+    [
+     160.482,
+     -59.901
+    ],
+    [
+     160.837,
+     -52.66
+    ]
+   ],
+   "z": [
+    5.47,
+    5.47,
+    5.47,
+    5.47
+   ],
+   "thk": 0.67,
+   "material": "brick",
+   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Path_N",
+   "ring": [
+    [
+     158.703,
+     -52.555
+    ],
+    [
+     158.016,
+     -59.78
+    ],
+    [
+     157.917,
+     -59.771
+    ],
+    [
+     158.603,
+     -52.546
+    ]
+   ],
+   "z": [
+    6.71,
+    6.71,
+    6.71,
+    6.71
+   ],
+   "thk": 1.91,
+   "material": "brick",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "StairCheek_S",
+   "ring": [
+    [
+     157.756,
+     -63.572
+    ],
+    [
+     158.118,
+     -63.59
+    ],
+    [
+     160.665,
+     -63.715
+    ],
+    [
+     160.68,
+     -63.415
+    ],
+    [
+     158.133,
+     -63.29
+    ],
+    [
+     157.784,
+     -63.273
+    ]
+   ],
+   "z": [
+    6.68,
+    6.68,
+    5.75,
+    5.75,
+    6.68,
+    6.68
+   ],
+   "thk": 1.88,
+   "material": "stone",
+   "evidence": "pink granite coping cheek of the raised bed beside the side stair (070309303 f55-f63), east face at x 0.4 on the walkway",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "StairCheek_N",
+   "ring": [
+    [
+     158.088,
+     -60.084
+    ],
+    [
+     158.29,
+     -60.094
+    ],
+    [
+     160.837,
+     -60.219
+    ],
+    [
+     160.851,
+     -59.919
+    ],
+    [
+     158.304,
+     -59.794
+    ],
+    [
+     158.116,
+     -59.785
+    ]
+   ],
+   "z": [
+    6.68,
+    6.68,
+    5.75,
+    5.75,
+    6.68,
+    6.68
+   ],
+   "thk": 1.88,
+   "material": "stone",
+   "evidence": "pink granite coping cheek of the raised bed beside the side stair (070309303 f55-f63), east face at x 0.4 on the walkway",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "SideStair_TopLanding",
+   "ring": [
+    [
+     157.685,
+     -63.268
+    ],
+    [
+     158.133,
+     -63.29
+    ],
+    [
+     158.29,
+     -60.094
+    ],
+    [
+     157.988,
+     -60.079
+    ]
+   ],
+   "z": [
+    6.65,
+    6.65,
+    6.65,
+    6.65
+   ],
+   "thk": 1.83,
+   "material": "stone",
+   "evidence": "paving at the head of the side stair between the path and the first nosing (070309303 f60/f62)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "LawnEnd_Coping",
+   "ring": [
+    [
+     158.703,
+     -52.555
+    ],
+    [
+     160.957,
+     -52.666
+    ],
+    [
+     160.971,
+     -52.366
+    ],
+    [
+     158.731,
+     -52.256
+    ]
+   ],
+   "z": [
+    6.68,
+    6.68,
+    6.68,
+    6.68
+   ],
+   "thk": 1.83,
+   "material": "stone",
+   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74)",
    "confidence": "medium"
   },
   {
@@ -698,16 +918,16 @@
    "name": "SouthBed_Cheek",
    "ring": [
     [
-     156.254,
-     -92.861
+     156.726,
+     -95.487
     ],
     [
-     158.41,
-     -91.854
+     158.882,
+     -94.48
     ],
     [
-     161.507,
-     -91.455
+     161.38,
+     -94.052
     ],
     [
      161.246,
@@ -719,7 +939,7 @@
     ]
    ],
    "z": [
-    7.389,
+    7.46,
     5.65,
     5.65,
     7.476,
@@ -955,37 +1175,18 @@
    "name": "Alley_Paving_S",
    "line": [
     [
-     151.409,
+     152.775,
      -93.2
     ],
     [
-     151.59,
-     -85.801
+     152.954,
+     -85.915
     ]
    ],
-   "width": 6.06,
+   "width": 3.327,
    "thk": 0.08,
    "surface": "herringbone_200x100",
-   "evidence": "alley south of the pavilion, west of the angled planter curb (012205046, 012258813)",
-   "confidence": "medium"
-  },
-  {
-   "type": "path",
-   "name": "Alley_Paving_Curb",
-   "line": [
-    [
-     153.663,
-     -89.102
-    ],
-    [
-     155.018,
-     -85.564
-    ]
-   ],
-   "width": 1.5,
-   "thk": 0.08,
-   "surface": "herringbone_200x100",
-   "evidence": "alley paving along the angled planter curb",
+   "evidence": "alley south of the pavilion, west of the south-bed curb (012205046, 012258813, 070309303 f00-f10)",
    "confidence": "medium"
   },
   {
@@ -993,18 +1194,18 @@
    "name": "Alley_Paving",
    "line": [
     [
-     152.198,
-     -85.801
+     153.45,
+     -85.915
     ],
     [
-     153.854,
+     155.89,
      -52.0
     ]
    ],
-   "width": 7.12,
+   "width": 4.667,
    "thk": 0.08,
    "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)",
-   "evidence": "level alley from the gate to the square between B's shrub bed and A's planter edge (012249348, 012255312, drone 2022 38.5 s); aerial SfM: flat, alley edge 7.9-8.0 m from B's east wall",
+   "evidence": "alley from the gate to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37): 4.5-5.5 m wide, 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
    "confidence": "medium"
   },
   {
@@ -1012,162 +1213,219 @@
    "name": "BBed_Curb",
    "line": [
     [
-     149.142,
-     -74.54
+     151.861,
+     -74.596
     ],
     [
-     150.134,
-     -54.264
+     152.861,
+     -54.221
     ]
    ],
    "height": 0.12,
    "thk": 0.12,
    "material": "stone",
-   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (drone 2022 38.5 s, 012249348)",
-   "confidence": "medium"
-  },
-  {
-   "type": "hedge",
-   "name": "BBed_Shrubs",
-   "line": [
-    [
-     148.417,
-     -74.004
-    ],
-    [
-     149.366,
-     -54.627
-    ]
-   ],
-   "width": 1.1,
-   "height": 1.2,
-   "top": "round",
-   "evidence": "rounded clipped shrubs along B's east wall (012249348, 012255312, drone)",
+   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs)",
    "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "BBed_Thuja_00",
+   "name": "BBed_Shrub_00",
    "pos": [
-    148.495,
-    -72.406
+    151.244,
+    -71.062
    ],
-   "height": 3.8,
-   "crown_d": 1.5,
-   "shape": "cone",
-   "trunk_d": 0.15,
-   "crown_base": 0.3,
-   "evidence": "conical thujas in the B shrub bed (012249348 spruce/thuja beyond the porch, drone 2022)",
+   "height": 1.6,
+   "crown_d": 1.6,
+   "shape": "round",
+   "trunk_d": 0.1,
+   "crown_base": 0.05,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
    "confidence": "low"
   },
   {
    "type": "tree",
-   "name": "BBed_Thuja_01",
+   "name": "BBed_Shrub_01",
    "pos": [
-    148.779,
-    -66.613
+    151.376,
+    -68.365
    ],
-   "height": 3.8,
-   "crown_d": 1.5,
+   "height": 1.6,
+   "crown_d": 1.6,
+   "shape": "round",
+   "trunk_d": 0.1,
+   "crown_base": 0.05,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "BBed_Shrub_02",
+   "pos": [
+    151.513,
+    -65.568
+   ],
+   "height": 1.6,
+   "crown_d": 1.6,
+   "shape": "round",
+   "trunk_d": 0.1,
+   "crown_base": 0.05,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "BBed_Shrub_03",
+   "pos": [
+    151.646,
+    -62.872
+   ],
+   "height": 1.6,
+   "crown_d": 1.6,
+   "shape": "round",
+   "trunk_d": 0.1,
+   "crown_base": 0.05,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "BBed_Lamp_00",
+   "pos": [
+    151.452,
+    -69.871
+   ],
+   "height": 3.2,
+   "arm_span": 0.7,
+   "globes": 2,
+   "globe_d": 0.28,
+   "dir_deg": -2.808,
+   "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base rays: (-8.7, 22.5), (-8.35, 28.3))",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "BBed_Lamp_01",
+   "pos": [
+    151.737,
+    -64.078
+   ],
+   "height": 3.2,
+   "arm_span": 0.7,
+   "globes": 2,
+   "globe_d": 0.28,
+   "dir_deg": -2.808,
+   "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base rays: (-8.7, 22.5), (-8.35, 28.3))",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "BBed_Conifer_00",
+   "pos": [
+    151.711,
+    -58.47
+   ],
+   "height": 9.0,
+   "crown_d": 3.6,
    "shape": "cone",
-   "trunk_d": 0.15,
-   "crown_base": 0.3,
-   "evidence": "conical thujas in the B shrub bed (012249348 spruce/thuja beyond the porch, drone 2022)",
+   "trunk_d": 0.3,
+   "crown_base": 1.0,
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51)",
    "confidence": "low"
   },
   {
    "type": "tree",
-   "name": "BBed_Thuja_02",
+   "name": "BBed_Conifer_01",
    "pos": [
-    149.058,
-    -60.92
+    152.382,
+    -54.998
    ],
-   "height": 3.8,
-   "crown_d": 1.5,
+   "height": 8.0,
+   "crown_d": 3.2,
    "shape": "cone",
-   "trunk_d": 0.15,
-   "crown_base": 0.3,
-   "evidence": "conical thujas in the B shrub bed (012249348 spruce/thuja beyond the porch, drone 2022)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "BBed_Thuja_03",
-   "pos": [
-    149.307,
-    -55.826
-   ],
-   "height": 3.8,
-   "crown_d": 1.5,
-   "shape": "cone",
-   "trunk_d": 0.15,
-   "crown_base": 0.3,
-   "evidence": "conical thujas in the B shrub bed (012249348 spruce/thuja beyond the porch, drone 2022)",
+   "trunk_d": 0.3,
+   "crown_base": 1.0,
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "LawnThuja_00",
    "pos": [
-    156.68,
-    -79.238
+    156.814,
+    -78.944
    ],
-   "z": 6.55,
-   "height": 1.2,
-   "crown_d": 0.9,
-   "shape": "round",
+   "z": 6.496,
+   "height": 1.5,
+   "crown_d": 0.8,
+   "shape": "cone",
    "trunk_d": 0.06,
    "crown_base": 0.15,
-   "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
-   "confidence": "low"
+   "evidence": "conical thujas on the lawn strip: SfM crown blobs at A-local (-2.7, 13.7) (070309303 f28-f45)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "LawnThuja_01",
    "pos": [
-    156.954,
-    -73.645
+    157.687,
+    -74.431
    ],
-   "z": 6.55,
-   "height": 1.2,
-   "crown_d": 0.9,
-   "shape": "round",
+   "z": 6.399,
+   "height": 1.6,
+   "crown_d": 0.8,
+   "shape": "cone",
    "trunk_d": 0.06,
    "crown_base": 0.15,
-   "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
-   "confidence": "low"
+   "evidence": "conical thujas on the lawn strip: SfM crown blobs at A-local (-2.0, 18.2) (070309303 f28-f45)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "LawnThuja_02",
    "pos": [
-    157.777,
-    -56.865
+    157.437,
+    -72.367
    ],
-   "z": 6.55,
+   "z": 6.457,
    "height": 1.2,
-   "crown_d": 0.9,
-   "shape": "round",
+   "crown_d": 0.8,
+   "shape": "cone",
    "trunk_d": 0.06,
    "crown_base": 0.15,
-   "evidence": "round clipped thujas on the lawn strip, ~5.5 m pitch (070309303 f19-f44, f53-f72, 2 fps)",
-   "confidence": "low"
+   "evidence": "conical thujas on the lawn strip: SfM crown blobs at A-local (-2.4, 20.3) (070309303 f28-f45)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "LawnThuja_03",
+   "pos": [
+    157.76,
+    -69.88
+   ],
+   "z": 6.44,
+   "height": 1.2,
+   "crown_d": 0.8,
+   "shape": "cone",
+   "trunk_d": 0.06,
+   "crown_base": 0.15,
+   "evidence": "conical thujas on the lawn strip: SfM crown blobs at A-local (-2.2, 22.8) (070309303 f28-f45)",
+   "confidence": "medium"
   },
   {
    "type": "stairs_run",
    "name": "Steps_BCorner",
    "top": [
-    155.222,
-    -53.736
+    157.086,
+    -52.175
    ],
    "dir_deg": 87.192,
    "risers": 8,
-   "riser_h": 0.175,
+   "riser_h": 0.16,
    "tread": 0.35,
-   "width": 4.21,
-   "z_top": 6.75,
+   "width": 7.78,
+   "z_top": 6.63,
    "material": "granite",
-   "evidence": "map owner (2026-09-25 screenshot marks): a descent across the path right after the end of B; the flat alley (drone SfM, B's level) drops to the lower terrace (path, garden, gazebos, C: 5.40) -> 1.35 m, 8 risers; exact position and riser count to confirm (photo request)",
+   "evidence": "map owner: a descent across the path right after the end of B; 070309303 f71-f75: the path ends at a transverse pink granite band (top nosing, ground rays y 40.35-40.53) with the lower plaza, hedge arch and signboard beyond; 8 x 0.16 to the lower terrace (5.35); riser count to confirm",
    "confidence": "low"
   }
  ]
