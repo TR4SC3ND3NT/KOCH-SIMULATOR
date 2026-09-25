@@ -41,10 +41,12 @@ Raw site captures (photos/videos) are **not** in the repo: they contain people. 
 - **Sports area (for the site phase, not modelled yet):** left to right, one large football pitch, then an area of the same size split into 3 courts: basketball, volleyball and an empty hard court. A green steel mesh fence runs around the full perimeter and between the courts.
 
 ## Measured and estimated dimensions (±5%)
-- Classroom door, clear opening ≈ 0.90–0.95 m × 2.00–2.05 m. Outer frame ≈ 1.05 × 2.10 m.
-  - Single leaf, black aluminium frame, two glass panels, opens outward into the corridor.
-- Classroom floor to ceiling beam ≈ 3.0 m. Light switch ≈ 0.85–0.9 m.
-- Corridor ceiling ≈ 3.5 m (classroom lower at ≈3.0 m because of the beam/suspended ceiling). Floor-to-floor ≈ 3.8–4.0 m (estimate).
+- **Classroom door (Block C), single-view metrology on PXL_20260924_080420598** (person 1.87 m + shoes in the doorway, Criminisi height transfer with the vertical VP and the floor horizon; 2026-09-25):
+  - outer black aluminium frame 2.05 m high × 0.99 m wide; clear opening 2.00 × 0.87 m; wall opening 2.07 × 1.04 m; threshold strip ~0.04 m.
+  - Single leaf, two glass panels, opens outward into the corridor.
+- Classroom floor to the underside of the ceiling beam at the wall ≈ 2.80–2.85 m (same photo); light switch centre 0.84 m.
+- Corridor ceiling ≈ 3.1–3.5 m (earlier estimates; not yet re-measured). Floor-to-floor open (3.30 vs 3.50): count risers.
+- Block C basement entry stair: 8 + 2 risers of ~0.138 m, treads 0.36 m, 1.85 m wide (SfM, 2026-09-25).
 
 ## Material palette
 **Exteriors**
