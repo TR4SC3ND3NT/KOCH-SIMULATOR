@@ -15,12 +15,30 @@ def _dirs(pts, closed):
     return segs
 
 
-def sweep_profile(bm, pts, profile, ground, closed=False):
+def _subdivide(pts, closed, max_seg):
+    """Insert points so no segment is longer than max_seg (m): the sweep then follows the ground between vertices."""
+    out = []
+    n = len(pts)
+    for i in range(n if closed else n - 1):
+        a, b = pts[i], pts[(i + 1) % n]
+        k = max(1, math.ceil(math.dist(a, b) / max_seg))
+        out += [(a[0] + (b[0] - a[0]) * j / k, a[1] + (b[1] - a[1]) * j / k) for j in range(k)]
+    if not closed:
+        out.append(tuple(pts[-1]))
+    return out
+
+
+def sweep_profile(bm, pts, profile, ground, closed=False, max_seg=None, cut0=None, cut1=None):
     """Sweep a closed CCW profile [(across, dz)] along pts [(x, y)]; ground(x, y) -> z of the base at that point.
 
     across > 0 is to the LEFT of the travel direction. dz is added to the ground z at each vertex.
+    max_seg (m): subdivide longer segments so z follows the ground in between (paths over pad edges / blends).
+    cut0 / cut1: world heading (deg) of the start / end cap line for open lines (mitred joint against another
+    element, e.g. a path meeting a landing at an angle); default = square to the line.
     Returns nothing; adds one closed manifold solid to bm (end caps for open lines).
     """
+    if max_seg:
+        pts = _subdivide(pts, closed, max_seg)
     n = len(pts)
     segs = _dirs(pts, closed)
     loops = []
@@ -34,6 +52,13 @@ def sweep_profile(bm, pts, profile, ground, closed=False):
         t = t.normalized() if t.length > 1e-9 else d1
         left = Vector((-t.y, t.x))
         cos_half = max(0.2, left.dot(Vector((-d1.y, d1.x))))  # mitre stretch, clamped for very sharp turns
+        cut = None if closed else (cut0 if i == 0 else cut1 if i == n - 1 else None)
+        if cut is not None:  # cap along the given heading; 'across' stays the perpendicular distance
+            c = Vector((math.cos(math.radians(cut)), math.sin(math.radians(cut))))
+            nrm = Vector((-d1.y, d1.x))
+            if c.dot(nrm) < 0:
+                c = -c
+            left, cos_half = c, max(0.2, c.dot(nrm))
         x, y = pts[i]
         zg = ground(x, y)
         loops.append([bm.verts.new((x + left.x * a / cos_half, y + left.y * a / cos_half, zg + dz)) for a, dz in profile])

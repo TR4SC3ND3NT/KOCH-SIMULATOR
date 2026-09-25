@@ -118,8 +118,8 @@
    "name": "LaneRail_Turnstile",
    "line": [
     [
-     155.073,
-     -97.008
+     155.113,
+     -97.01
     ],
     [
      156.102,
@@ -131,7 +131,7 @@
    "post": 0.04,
    "panel": "bars",
    "bottom_gap": 0.08,
-   "evidence": "short railing on the gate line between the gate post and the turnstile so all walkers pass the tripod (061913764 f2.5; exact run not seen straight on)",
+   "evidence": "short railing on the gate line between the gate post and the turnstile so all walkers pass the tripod (061913764 f2.5; exact run not seen straight on) | starts one post (4 cm) east of LaneRail_West's corner post (no doubled post)",
    "confidence": "low"
   },
   {

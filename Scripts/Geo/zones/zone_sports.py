@@ -37,13 +37,14 @@ def add(**e): els.append(e); return e
 
 # ================================================================= PITCH (mini-football cage)
 pc_v = (P_V0 + P_IN + P_V1 - P_IN) / 2
-add(type="slab", name="Pitch_Plinth", ring=rect(P_U0, P_U1, P_V0, P_V1), z0=3.1, z1=Z_PITCH - 0.01, material="brick",
+TURF = rect(P_U0 + P_IN, P_U1 - P_IN, P_V0 + P_IN, P_V1 - P_IN)
+# plinth = red border frame around the turf (hole): a full plinth top 1 cm under the turf top would z-fight through it
+add(type="slab", name="Pitch_Plinth", ring=rect(P_U0, P_U1, P_V0, P_V1), holes=[TURF], z0=3.1, z1=Z_PITCH - 0.01, material="brick",
     evidence=EV_ORTHO + ": turf/fence line W u -0.1 (Google -0.11..-0.05, Bing -0.02..-0.19), E u 44.35 (Bing 44.27..44.42; "
              "Google 44.0-44.6 blurred by the E fence shadow), S v 0.15 (Google 0.12..0.26), N v 25.4 (Google 25.42, Bing 25.35..25.45)"
              " -> 44.45 x 25.25 m. Red brick-tile plinth ~0.35 m above the walkway at the SE gate (070410255 t=60 s) and along "
              "the W end (drone 2022 f 0:14)", confidence="medium")
-add(type="slab", name="Pitch_Turf", ring=rect(P_U0 + P_IN, P_U1 - P_IN, P_V0 + P_IN, P_V1 - P_IN), z0=Z_PITCH - 0.04,
-    z1=Z_PITCH, material="hedge",
+add(type="slab", name="Pitch_Turf", ring=TURF, z0=3.1, z1=Z_PITCH, material="hedge",
     evidence="green artificial turf inside a ~0.3 m red border strip (drone 2022 d_07/d_19); level surface", confidence="medium")
 tu0, tu1, tv0, tv1 = P_U0 + P_IN + 0.05, P_U1 - P_IN - 0.05, P_V0 + P_IN + 0.05, P_V1 - P_IN - 0.05
 um = (tu0 + tu1) / 2
@@ -86,7 +87,7 @@ add(type="cage_fence", name="PitchGate_S", line=poly([(g_u0 + 0.04, P_V0), (g_u1
 add(type="steps", name="PitchGate_S_Steps", pos=W((g_u0 + g_u1) / 2, P_V0 - 0.33), dir_deg=DEG_N, width=1.45,
     risers=2, riser_h=0.17, tread=0.3, top_landing=0.02,
     evidence="two dark steps in front of the S gate (070410255 t=52/60 s): 2 x 0.17 = the 0.35 plinth", confidence="medium")
-add(type="net_roof", name="Pitch_NetRoof", ring=rect(P_U0, P_U1, P_V0, P_V1), z=Z_PITCH - 0.01 + H_P, spacing=2.0,
+add(type="net_roof", name="Pitch_NetRoof", ring=rect(P_U0, P_U1, P_V0, P_V1), z=Z_PITCH - 0.01 + H_P + 0.03, spacing=2.0,  # ropes ON the top rail
     rope=0.03, evidence="rope net over the whole cage, ~2 m grid (drone 2022 d_19; night photo 2GIS 2025-01)",
     confidence="medium")
 for nm, (u, v, d) in dict(SE=(40.7, P_V0, 90 + ROT), SW=(P_U0 + P_U1 - 40.7, P_V0, 90 + ROT),
@@ -98,18 +99,20 @@ for nm, (u, v, d) in dict(SE=(40.7, P_V0, 90 + ROT), SW=(P_U0 + P_U1 - 40.7, P_V
         confidence="medium" if nm == "SE" else "low")
 
 # ================================================================= COURTS (basketball | volleyball | hard court)
-add(type="slab", name="Courts_Slab", ring=rect(C_U0, C_U1, C_V0, C_V1), z0=3.1, z1=Z_COURT - 0.005, material="brick",
+HARD = (DIV2 + 0.05, C_U1 - 0.05, C_V0 + 0.05, C_V1 - 0.05)
+# fields sit flush in holes of the courts slab (stacked coplanar-ish tops z-fight); paint lines 5 mm proud of them
+add(type="slab", name="Courts_Slab", ring=rect(C_U0, C_U1, C_V0, C_V1), holes=[rect(*BB), rect(*VB), rect(*HARD)], z0=3.1,
+    z1=Z_COURT, material="brick",
     evidence=EV_ORTHO + ": courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 "
              "(Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) "
              "-> 46.1 x 26.3 m; red acrylic surface, flush with the walkway + 5 cm curb", confidence="medium")
-add(type="slab", name="Court_Basket_Field", ring=rect(*BB), z0=Z_COURT - 0.02, z1=Z_COURT, material="hedge",
+add(type="slab", name="Court_Basket_Field", ring=rect(*BB), z0=3.1, z1=Z_COURT, material="hedge",
     evidence="green basketball field u 52.9..67.4, v 3.04..26.8 (Google profiles, rms 0.03-0.06 m; N edge 26.4..27.3 blurred)",
     confidence="medium")
-add(type="slab", name="Court_Volley_Field", ring=rect(*VB), z0=Z_COURT - 0.02, z1=Z_COURT, material="hedge",
+add(type="slab", name="Court_Volley_Field", ring=rect(*VB), z0=3.1, z1=Z_COURT, material="hedge",
     evidence="green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06)",
     confidence="medium")
-add(type="slab", name="Court_Hard_Field", ring=rect(DIV2 + 0.05, C_U1 - 0.05, C_V0 + 0.05, C_V1 - 0.05), z0=Z_COURT - 0.02,
-    z1=Z_COURT - 0.001, material="brick", evidence="third court: red surface with white tennis lines, net (Google 2026, drone 2022 "
+add(type="slab", name="Court_Hard_Field", ring=rect(*HARD), z0=3.1, z1=Z_COURT, material="brick", evidence="third court: red surface with white tennis lines, net (Google 2026, drone 2022 "
     "d_23; in 2022 its margin was green)", confidence="medium")
 # basketball markings (FIBA-like, fitted to a 14.5 x 23.76 field)
 b_u0, b_u1, b_v0, b_v1 = BB
@@ -174,7 +177,7 @@ cg0, cg1 = 2.25, 3.35
 add(type="cage_fence", name="CourtsFence_Perimeter", line=poly([(C_U0, cg1), (C_U0, C_V1), (C_U1, C_V1), (C_U1, C_V0),
                                                                   (C_U0, C_V0), (C_U0, cg0)]),
     evidence=ev_cf, confidence="medium", **cf)
-add(type="gate_leaf", name="CourtsGate_W", line=poly([(C_U0, cg0 + 0.05), (C_U0, cg1 - 0.05)]), height=2.1, panel="bars",
+add(type="gate_leaf", name="CourtsGate_W", line=poly([(C_U0, cg0 + 0.08), (C_U0, cg1 - 0.08)]), height=2.1, panel="bars",  # leaf posts beside the fence posts
     evidence="white barred door in the W fence at the S end (070410255 t=52/60 s)", confidence="medium")
 for nm, u in (("Div1", DIV1), ("Div2", DIV2)):
     add(type="cage_fence", name=f"CourtsFence_{nm}", line=poly([(u, C_V0), (u, C_V1)]),

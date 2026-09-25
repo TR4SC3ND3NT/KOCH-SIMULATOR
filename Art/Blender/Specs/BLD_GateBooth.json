@@ -44,7 +44,7 @@
  "ring_notes": "width 3.42 m: south face = 10.6 tiles = 21.2 courses counted along two courses in 065910461 f0.5 (aspect-free); north face ~10.8 tiles (pano 2022). Depth 3.10 m (+-0.2): west face = 9.5-10 tiles counted along one course in 065910461 f4.5 (NW corner to SW corner, aspect-free); agrees with the old-site west-face perspective (3.2-3.6) and the Google z20 canopy depth 3.4 minus thin eaves. Rejected: 3-VP ground-plane reconstruction of video 061913764 f4.5 (2.7) and pano subtended angles (2.1) - unreliable intrinsics.",
  "plinth": {
   "z_top": 1.02,
-  "proj": 0.01,
+  "proj": 0.02,
   "evidence": "red brick-look tile band, 7 courses = 1.12 m above ground (all faces)",
   "confidence": "high"
  },

@@ -78,6 +78,7 @@ class Site:
         h, sp, post = el.get("height", 2.0), el.get("post_spacing", 2.5), el.get("post", 0.06)
         gap, panel = el.get("bottom_gap", 0.05), el.get("panel", "mesh")
         bm = bmesh.new()
+        first = True
         for a, b in zip(pts[:-1], pts[1:]):
             A, B = Vector(a), Vector(b)
             L = (B - A).length
@@ -86,10 +87,11 @@ class Site:
             d = (B - A) / L
             n = max(1, round(L / sp))
             m = _frame2(A, d)
-            for k in range(n + 1):
+            for k in range(0 if first else 1, n + 1):  # joint post only once (a second one would z-fight in it)
                 p = A + d * (L * k / n)
                 z = self.gz(p.x, p.y)
                 box(bm, m, L * k / n - post / 2, L * k / n + post / 2, -post / 2, post / 2, z - BURY, z + h)
+            first = False
             for k in range(n):
                 u0, u1 = L * k / n + post / 2, L * (k + 1) / n - post / 2
                 pm = A + d * ((u0 + u1) / 2)
@@ -109,12 +111,13 @@ class Site:
         bm = bmesh.new()
         cap = el.get("cap_proj", 0.0)
         # "bury": depth below the ground line (retaining walls reaching down to a lower terrace level)
+        kw = _sweep_kw(el)
         sweep_profile(bm, el["line"], rect_profile(el.get("thk", 0.3), el["height"], el.get("bury", BURY)), self.gz,
-                      el.get("closed", False))
+                      el.get("closed", False), **kw)
         if cap > 0:
             sweep_profile(bm, el["line"], [(el["thk"] / 2 + cap, el["height"]), (el["thk"] / 2 + cap, el["height"] + 0.06),
                                            (-el["thk"] / 2 - cap, el["height"] + 0.06), (-el["thk"] / 2 - cap, el["height"])],
-                          self.gz, el.get("closed", False))
+                          self.gz, el.get("closed", False), **kw)
         p = el["line"][0]
         self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (p[0], p[1], self.gz(*p)))
 
@@ -140,7 +143,8 @@ class Site:
             bm.faces.new(loops[-1])
             p = ring[0]
         else:
-            sweep_profile(bm, el["line"], hedge_profile(el["width"], el["height"], rt, BURY), self.gz, el.get("closed", False))
+            sweep_profile(bm, el["line"], hedge_profile(el["width"], el["height"], rt, BURY), self.gz, el.get("closed", False),
+                          **_sweep_kw(el))
             p = el["line"][0]
         self.emit(el, bm, COL["hedge"], (p[0], p[1], self.gz(*p)))
 
@@ -422,9 +426,10 @@ class Site:
         """Paved path strip: thin slab following the ground (surface texture comes later in UE)."""
         bm = bmesh.new()
         w, t = el.get("width", 1.5), el.get("thk", 0.08)
-        # top 2 cm above the terrain so it reads over the heightfield; slab reaches t below it
+        # top 2 cm above the terrain so it reads over the heightfield; slab reaches t below it. Subdivided every
+        # 0.5 m so it follows pad blends/edges instead of bridging them (terrain poking through or a floating strip)
         sweep_profile(bm, el["line"], [(w / 2, 0.02 - t), (w / 2, 0.02), (-w / 2, 0.02), (-w / 2, 0.02 - t)],
-                      self.gz, el.get("closed", False))
+                      self.gz, el.get("closed", False), **_sweep_kw(el, 0.5))
         p = el["line"][0]
         self.emit(el, bm, COL["stone"], (p[0], p[1], self.gz(*p)))
 
@@ -454,9 +459,12 @@ class Site:
         """Horizontal slab over a world ring between absolute z0..z1 (floors, landings, ceilings)."""
         ring = _ccw(el["ring"])
         bm = bmesh.new()
-        lo = [bm.verts.new((x, y, el["z0"])) for x, y in ring]
-        hi = [bm.verts.new((x, y, el["z1"])) for x, y in ring]
-        _close_loops(bm, [lo, hi])
+        if el.get("holes"):  # cut-outs (inset fields/surfaces sit flush in them instead of overlapping the top)
+            _slab_with_holes(bm, ring, [_ccw(h)[::-1] for h in el["holes"]], el["z0"], el["z1"])
+        else:
+            lo = [bm.verts.new((x, y, el["z0"])) for x, y in ring]
+            hi = [bm.verts.new((x, y, el["z1"])) for x, y in ring]
+            _close_loops(bm, [lo, hi])
         self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (ring[0][0], ring[0][1], el["z1"]))
 
     def b_roof_plane(self, el):
@@ -641,6 +649,7 @@ class Site:
         zb = el.get("z_base")
         mt = el.get("mesh_thk", 0.01)
         bm = bmesh.new()
+        first = True
         for A, B in zip(pts[:-1], pts[1:]):
             L = (B - A).length
             if L < 1e-3:
@@ -648,10 +657,11 @@ class Site:
             m = _frame2(A, B - A)
             n = max(1, round(L / sp))
             z0 = zb if zb is not None else self.gz(*((A + B) / 2))
-            for k in range(n + 1):
+            for k in range(0 if first else 1, n + 1):  # corner post once
                 q = A + (B - A) * (k / n)
                 zp = zb if zb is not None else self.gz(q.x, q.y)
                 box(bm, m, L * k / n - ps / 2, L * k / n + ps / 2, -ps / 2, ps / 2, zp - BURY, zp + h)
+            first = False
             for zr in el.get("rails", [h - rs / 2]):
                 box(bm, m, ps / 2, L - ps / 2, -rs / 2, rs / 2, z0 + zr - rs / 2, z0 + zr + rs / 2)
             for k in range(n):
@@ -736,8 +746,12 @@ class Site:
         from greybox.kit import railing
         pts = [Vector(p) for p in el["points"]]
         bm = bmesh.new()
-        railing(bm, pts, height=el.get("height", 1.0), post=el.get("post", 0.05), rail=el.get("rail", 0.05),
-                spacing=el.get("spacing", 1.2), mid_rails=el.get("mid_rails", 1))
+        if el.get("unique_posts"):   # opt-in: one post per joint (kit.railing doubles them -> coincident faces)
+            _railing_unique(bm, pts, el.get("height", 1.0), el.get("post", 0.05), el.get("rail", 0.05),
+                            el.get("spacing", 1.2), el.get("mid_rails", 1))
+        else:
+            railing(bm, pts, height=el.get("height", 1.0), post=el.get("post", 0.05), rail=el.get("rail", 0.05),
+                    spacing=el.get("spacing", 1.2), mid_rails=el.get("mid_rails", 1))
         self.emit(el, bm, COL.get(el.get("material", "metal"), COL["metal"]), tuple(pts[0]))
 
     def build(self):
@@ -766,6 +780,32 @@ def _frame2(p, d):
     m.col[2].xyz = Vector((0, 0, 1))
     m.col[3].xyz = Vector((p.x, p.y, 0))
     return m
+
+
+def _railing_unique(bm, points, height, post, rail, spacing, mid_rails):
+    """Like greybox.kit.railing, but a post within 8 cm (xy) of an earlier one is skipped (polyline joints)."""
+    from greybox.kit import _sloped_bar
+    placed = []
+    for p, q in zip(points[:-1], points[1:]):
+        seg = q - p
+        flat = Vector((seg.x, seg.y, 0))
+        run = flat.length
+        if run < 1e-6:
+            continue
+        flat /= run
+        m = Matrix.Identity(4)
+        m.col[0].xyz, m.col[1].xyz, m.col[2].xyz, m.col[3].xyz = flat, Vector((-flat.y, flat.x, 0)), Vector((0, 0, 1)), p
+        slope = seg.z / run
+        n = max(1, round(run / spacing))
+        for k in range(n + 1):
+            u = run * k / n
+            c = p + flat * u
+            if any((c.x - a) ** 2 + (c.y - b) ** 2 < 0.08 ** 2 for a, b in placed):
+                continue
+            placed.append((c.x, c.y))
+            box(bm, m, u - post / 2, u + post / 2, -post / 2, post / 2, slope * u, slope * u + height)
+        for zr in [height] + [height * (i + 1) / (mid_rails + 1) for i in range(mid_rails)]:
+            _sloped_bar(bm, m, run, slope, zr, rail)
 
 
 def _cyl(bm, p, r, z0, z1, seg):
@@ -798,6 +838,31 @@ def _ring_band(bm, outer, inner, z0, z1):
         bm.faces.new((it[i], it[j], ib[j], ib[i]))
         bm.faces.new((ot[i], ot[j], it[j], it[i]))
         bm.faces.new((ib[i], ib[j], ob[j], ob[i]))
+
+
+def _sweep_kw(el, max_seg=None):
+    """Optional sweep controls of a line element: 'follow_m' (subdivision step, m), 'cut_start_deg'/'cut_end_deg'."""
+    return {"max_seg": el.get("follow_m", max_seg), "cut0": el.get("cut_start_deg"), "cut1": el.get("cut_end_deg")}
+
+
+def _slab_with_holes(bm, ring, holes, z0, z1):
+    """Closed slab z0..z1 over a CCW ring minus CW hole rings: triangulated caps, outer and hole side walls."""
+    from mathutils.geometry import tessellate_polygon
+    loops = [ring] + holes
+    flat = [p for lp in loops for p in lp]
+    tris = tessellate_polygon([[(x, y, 0.0) for x, y in lp] for lp in loops])
+    lo = [bm.verts.new((x, y, z0)) for x, y in flat]
+    hi = [bm.verts.new((x, y, z1)) for x, y in flat]
+    for a, b, c in tris:
+        bm.faces.new((hi[a], hi[b], hi[c]))
+        bm.faces.new((lo[c], lo[b], lo[a]))
+    k = 0
+    for lp in loops:
+        n = len(lp)
+        for i in range(n):
+            j = (i + 1) % n
+            bm.faces.new((lo[k + i], lo[k + j], hi[k + j], hi[k + i]))
+        k += n
 
 
 def _all_pads():

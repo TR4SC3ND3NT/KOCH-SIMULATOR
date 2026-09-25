@@ -137,8 +137,9 @@ def window_unit(bm, frame, o, spec):
         box(bm, frame, iu0, iu1, w0, w1, z - hb, z + hb)
     gm = (w0 + w1) / 2
     box(bm, frame, iu0, iu1, gm - spec.glass_t / 2, gm + spec.glass_t / 2, iz0, iz1)
-    if spec.sill_proj > 0:  # sloped metal sill from the frame to beyond the wall face (thin closed box)
-        box(bm, frame, o.u0 - 0.03, o.u1 + 0.03, w1, spec.sill_proj, o.z0 - spec.sill_t, o.z0)
+    if spec.sill_proj > 0:  # metal sill from the frame to beyond the wall face (thin closed box) lying ON the reveal
+        # floor (z0..z0 + sill_t): flush with it, its top would be coplanar with the wall's sill face (z-fight)
+        box(bm, frame, o.u0 - 0.03, o.u1 + 0.03, w1, spec.sill_proj, o.z0, o.z0 + spec.sill_t)
 
 
 def prism_profile(bm, frame, profile_wz, u0, u1):
@@ -176,7 +177,7 @@ def ramp(bm, frame, u0, u1, w0, w1, z_low, z_high, thk=0.25):
 
 def railing(bm, points, height=0.9, post=0.05, rail=0.05, spacing=1.2, mid_rails=1):
     """Posts + top rail + mid rails along a world-space polyline of Vector (z = walking surface)."""
-    for p, q in zip(points[:-1], points[1:]):
+    for si, (p, q) in enumerate(zip(points[:-1], points[1:])):
         seg = q - p
         d = seg.normalized()
         flat = Vector((d.x, d.y, 0)).normalized()
@@ -186,7 +187,7 @@ def railing(bm, points, height=0.9, post=0.05, rail=0.05, spacing=1.2, mid_rails
         run = Vector((seg.x, seg.y, 0)).length
         slope = seg.z / run if run > 1e-6 else 0.0
         n = max(1, round(run / spacing))
-        for k in range(n + 1):
+        for k in range(0 if si == 0 else 1, n + 1):  # joint post once (the previous segment placed it)
             u = run * k / n
             z = slope * u
             box(bm, m, u - post / 2, u + post / 2, -post / 2, post / 2, z, z + height)

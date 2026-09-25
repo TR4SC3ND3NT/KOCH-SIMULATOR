@@ -22,7 +22,9 @@ NORTH = EAST + 90.0
 T = 0.45
 X_W, X_E = T, 29.4 - T                        # inner faces of the west / east walls
 Y_N = 17.2 - T                                # inner face of the north wall
-Y_S_WEST, Y_S_TOWER, Y_S_EAST = 0.0 + T, 1.9 + T, 1.3 + T
+# 2026-09-26 photo match (061621646 PnP 6 px on 26 window corners, 061428331 eave, drone 2022): the tower face is
+# flush with the east wing (y 1.3); only the west wing projects (1.3 m). The older 0.6 m tower recess was wrong.
+Y_S_WEST, Y_S_TOWER, Y_S_EAST = 0.0 + T, 1.3 + T, 1.3 + T
 X_TOWER0, X_TOWER1 = 12.8, 16.6               # tower (entrance) bay, outer faces
 
 # --- levels -------------------------------------------------------------------------------------------------------
@@ -76,12 +78,15 @@ F5_CORR = 1.80                                # ridge corridor width
 
 
 # slab/ceiling strips between the stair bays, one per wing (each stops at its own south wall)
-MID = {"Mid_W": (FRONT_W, X_TOWER0, Y_S_WEST), "Mid_T": (X_TOWER0, X_TOWER1, Y_S_TOWER),
-       "Mid_E": (X_TOWER1, FRONT_E, Y_S_EAST)}
+# Mid_W stops at the inner face of the west-wing return (x 12.35) south of the tower bay, so its edge face is never
+# flush with the return's outer face (the air in front of the tower); the strip behind the return is Mid_WT.
+MID = {"Mid_W": (FRONT_W, X_TOWER0 - T, Y_S_WEST), "Mid_WT": (X_TOWER0 - T, X_TOWER0, Y_S_TOWER),
+       "Mid_T": (X_TOWER0, X_TOWER1, Y_S_TOWER), "Mid_E": (X_TOWER1, FRONT_E, Y_S_EAST)}
 
 
 def c_to_w(x, y):
-    return (C_ORIGIN + x * C_X + y * C_Y).round(3).tolist()
+    # 1e-6 m: 1 mm rounding skewed shared slab edges into overlapping slivers (coplanar z-fight)
+    return (C_ORIGIN + x * C_X + y * C_Y).round(6).tolist()
 
 
 def ring(x0, x1, y0, y1):
@@ -101,14 +106,20 @@ def wall(name, a, b, zb=0.0, openings=(), thk=PART, h=CEIL, **kw):
     L = float(np.hypot(b[0] - a[0], b[1] - a[1]))
     # openings start at the finished floor; the wall base sits inside the slab (an opening flush with the wall base
     # would make wall_piece emit duplicate bottom faces)
-    ops = [{"u0": round(u0, 3), "u1": round(u1, 3), "z0": z(zb), "z1": z(zb + oh)} for u0, u1, oh in openings]
+    # opening sill 1 cm below the finished floor: a sill flush with the slab top z-fights with it at every threshold
+    ops = [{"u0": round(u0, 3), "u1": round(u1, 3), "z0": z(zb - 0.01), "z1": z(zb + oh)} for u0, u1, oh in openings]
     assert all(0 < o["u0"] < o["u1"] < L for o in ops), (name, L, ops)
     return {"type": "int_wall", "name": name, "line": [c_to_w(*a), c_to_w(*b)], "z0": z(zb - 0.10), "z1": z(zb + h),
             "thk": thk, "openings": ops, "material": "white", **kw}
 
 
 def door(name, a, b, u_mid, zb=0.0, width=DOOR_W, leaf="glass2", hinge="left", material="metal", **kw):
-    """Door set centred at u_mid along the host wall a->b (same line as its int_wall)."""
+    """Door set centred at u_mid along the host wall a->b (same line as its int_wall). Map owner 2026-09-26: every C
+    door is the same black aluminium glazed door (glass2), only WC doors are solid black; an estimated door keeps that
+    look (confidence medium, never the orange 'low' colour) and flags only its position."""
+    if kw.get("confidence") == "low":
+        kw = dict(kw, confidence="medium", position_confidence="low",
+                  evidence=kw.get("evidence", "") + " | position_confidence: low (standard C door, position estimated)")
     return {"type": "door", "name": name, "line": [c_to_w(*a), c_to_w(*b)], "u0": round(u_mid - width / 2, 3),
             "u1": round(u_mid + width / 2, 3), "z0": z(zb), "z1": z(zb + DOOR_H), "wall_thk": PART, "leaf": leaf,
             "mid": 1.0, "hinge": hinge, "material": material, **kw}
@@ -331,9 +342,9 @@ def f5(zb):
         a, b = ((x0, y - PART), (X_E, y - PART)) if side == "S" else ((X_E, y + PART), (x0, y + PART))
         els.append(wall(f"{P}Knee_{side}", a, b, zb, h=KNEE, **lo))
     for n, (u, w) in enumerate(doors_s):
-        els.append(door(f"{P}Door_S{n}", (x0, y0c - PART), (x1, y0c - PART), u - x0, zb, leaf="solid", **lo))
+        els.append(door(f"{P}Door_S{n}", (x0, y0c - PART), (x1, y0c - PART), u - x0, zb, **lo))
     for n, (u, w) in enumerate(doors_n):
-        els.append(door(f"{P}Door_N{n}", (x1, y1c + PART), (x0, y1c + PART), x1 - u, zb, leaf="solid", **lo))
+        els.append(door(f"{P}Door_N{n}", (x1, y1c + PART), (x0, y1c + PART), x1 - u, zb, **lo))
     for x in (8.5, 14.7, 21.0, x0, x1):
         els.append(wall(f"{P}Office_S_{x:.0f}", (x, Y_S_WEST + KNEE_Y), (x, y0c - PART), zb, h=2.40, **lo))
         els.append(wall(f"{P}Office_N_{x:.0f}", (x, y1c + PART), (x, Y_N - KNEE_Y), zb, h=2.40, **lo))
@@ -360,7 +371,8 @@ def fittings_f1():
                          "low")})
     # hall bulkheads at the lobby sides (F_2.5: two cross beams framing the entrance axis)
     for k, xb in enumerate((LOB0, LOB1)):
-        els.append(slab(f"Hall_Beam_{k}", xb - 0.2, xb + 0.2, Y_S_TOWER, HALL_Y1, CEIL - 0.30, CEIL, "white",
+        # across the hall only (HALL_Y0..HALL_Y1): over the lobby it would enclose the lobby wall head (coplanar tops)
+        els.append(slab(f"Hall_Beam_{k}", xb - 0.2, xb + 0.2, HALL_Y0, HALL_Y1, CEIL - 0.30, CEIL, "white",
                         **ev("plasterboard bulkheads crossing the hall at the lobby sides (frames F_2.5, F_8.5)")))
     return els
 

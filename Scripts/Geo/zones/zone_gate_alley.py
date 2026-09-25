@@ -172,37 +172,126 @@ strip("Curb_PlanterSouth", TNW, (X_SC, S2_S - PIER), 0.1, lambda x, y: zA(y) + 0
       "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04)", "medium")
 
 # ---------------------------------------------------------------- lawn strip north of the pavilion (A side)
-# sweep profiles (y 12-40): path, red curb at x -3.3, lawn sloping from 0.1 to ~0.43 below the path at x -0.6, then a
-# steep grass bank down to the low pink curb at x 0.15; no retaining wall. The wide side stair + steel ramp cut it at
-# y 29.4-32.6 (f55-f63 ground rays: south bed NW corner (-2.5, 28.9), its NE coping corner (0.0..0.4, 29.6); ramp landing
-# y 31.4-32.6); the strip ends with a pink coping at the wide stair north of the alley (f73/f74).
-G_S0, G_S1 = 29.4, 32.6          # side stair (SITE_Garden AW_Stairs_Mid), cheeks 0.3 on both sides
-Y_LN = Y_STAIR_N - 0.3           # lawn strip north end (coping)
-lawn = lambda x, y: (zA(y) - 0.10) + (-0.33) * (x - (xc(y) + 0.1)) / (X_BT - (xc(y) + 0.1))
-bank = lambda x, y: (zA(y) - 0.43) if x <= X_BT + 1e-6 else (zw(y) + 0.12)
-for sfx, y0, y1 in (("S", S2_N, G_S0 - 0.3), ("N", G_S1 + 0.3, Y_LN)):
-    slab("Lawn_" + sfx, [(xc(y0) + 0.1, y0), (X_BT, y0), (X_BT, y1), (xc(y1) + 0.1, y1)], lawn, 0.0, "hedge",
-         "lawn strip between the path and the lower walkway, sloping gently towards A (sweep: -0.1 at the curb, -0.43 at "
-         "x -0.6); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); " + EV_SFM, "medium",
+# sweep profiles (y 12-40): path, red curb at x -3.3, lawn falling ~0.3 from the curb to the bank top at x -0.6 (cloud
+# 6.48 -> 6.17), pink coping 0.3 wide along the bank top (070309303 f55/f56 south of the side stair, f71 north of it),
+# then a steep grass bank down to the low pink curb at x 0.15. The side stair + steel ramp cut the strip at y 29.3-32.64.
+PATH_T = lambda y: zA(y) - 0.06   # walkable top of the alley paving (pad zA-0.08 + 'path' 0.02)
+X_CP = X_BT - 0.3                 # bank-top coping, west face (coping x -0.9 .. -0.6)
+Y_LN = Y_STAIR_N - 0.3            # lawn strip north end (coping)
+lawn = lambda x, y: PATH_T(y) - 0.30 * (x - xc(y)) / (X_BT - xc(y))
+bank = lambda x, y: lawn(X_BT, y) if x <= X_BT + 1e-6 else (zw(y) + 0.12)
+
+# ---------------------------------------------------------------- side stair + steel ramp (070309303 f55-f68)
+# All A-local, measured on the two-lens SfM of 070309303 (plane-sweep tread heights of all frames + triangulated rail
+# posts / coping corners on the undistorted frames, 0.2-5 px): 7 granite risers of 0.171 (sweep treads 6.46 6.28 6.09
+# 5.94 5.76 5.59 5.44 -> walkway 5.26, cloud z), nosings x -2.27 -1.75 -1.33 -0.92 -0.50 -0.12 0.25 (0.42 treads).
+# Flight between the pink copings of the two lawn beds: south coping y 28.95-29.30 (NE corner (-0.58, 29.03)), north
+# coping y 32.64-32.94 (corners (-2.28, 32.73) and (-0.64, 32.64)). Steel grating ramp laid over the north part of the
+# flight: run 1 east from the path (x -2.27) to a landing x -0.55..0.55 (top rail 0.9 above: posts (-0.41..0.51, 31.7)
+# z 6.93-6.97 cloud), then run 2 north over the bank line to the walkway (east rail end post (0.56, 36.2), rail
+# 0.9 above the walkway; west rail end (-0.3, 36.1)); both runs ~1:4.3. Model levels: path top PATH_T, walkway zw.
+SS_S, SS_N = 29.30, 32.64                         # flight side faces (coping faces)
+SS_XT, SS_NR, SS_T = -2.27, 7, 0.42               # top nosing x, risers, tread
+SS_XB = SS_XT + (SS_NR - 1) * SS_T                # bottom nosing 0.25
+CPS0, CPN1 = 28.95, 32.94                         # outer faces of the south / north stair copings
+ZT_SS = PATH_T(30.0)
+RH_SS = (ZT_SS - zw(30.0)) / SS_NR
+RP_Y0, RP_Y1 = 31.65, 32.62                       # ramp run 1 grating (north edge on the north coping face)
+RP_X1, RP_XE = -0.55, 0.55                        # landing / run 2 grating x
+RP_Y2 = 36.2                                      # run 2 foot (walkway level)
+RP_ZL = ZT_SS - 0.39                              # landing (cloud: path 6.46, landing 6.07)
+RP_ZF = zw(36.2) + 0.02
+Y_RB1 = RP_Y2 + 1.0                               # walkway-level bay under/after run 2: bank cut y 32.94..37.2
+EV_SS = ("070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, "
+         "012327726 t8-t31 views of the ramp")
+els.append({"type": "stairs_run", "name": "SideStair", "top": W(SS_XT, (SS_S + SS_N) / 2), "dir_deg": r3(ANG),
+            "risers": SS_NR, "riser_h": r3(RH_SS), "tread": SS_T, "width": r3(SS_N - SS_S), "z_top": r3(ZT_SS),
+            "run_out": r3(X_WC - SS_XB), "material": "granite",
+            "evidence": "pink granite side stair from the path down east to the walkway: 7 risers x 0.171 (sweep), treads "
+                        "0.42, nosings x -2.27..0.25, between the two lawn-bed copings (y 29.30-32.64); " + EV_SS,
+            "confidence": "medium"})
+slab("SideStair_TopLanding", [(xc(SS_S) - 0.1, SS_S), (SS_XT, SS_S), (SS_XT, SS_N), (xc(SS_N) - 0.1, SS_N)], lambda x, y: PATH_T(y), 0.0,
+     "stone", "grey concrete kerb strip between the path and the top nosing (070309303 f58, 012327726 t30.5)", "medium",
+     {"thk": r3(ZT_SS - PAD_Z + 0.2)})
+# copings of the two lawn beds along the flight: flat part follows the lawn to the bank top (x -0.6), then a sloped
+# cheek down the bank end to the walkway beside the lowest treads (f57/f58: pink slab sweeping down to the stair foot)
+cp_top = lambda x, y: lawn(x, y) + 0.05
+for nm, y0, y1 in (("StairCoping_S", CPS0, SS_S), ("StairCoping_N", SS_N, CPN1)):
+    slab(nm, [(xc(y0), y0), (X_BT, y0), (X_BT, y1), (xc(y1), y1)], cp_top, 0.0, "stone",
+         "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: "
+         "(-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); " + EV_SS, "medium",
+         {"thk": r3(ZT_SS + 0.1 - PAD_Z + 0.2)})
+    slab(nm + "Cheek", [(X_BT, y0), (X_WC, y0), (X_WC, y1), (X_BT, y1)],
+         lambda x, y: cp_top(X_BT, y) + (zw(y) + 0.14 - cp_top(X_BT, y)) * (x - X_BT) / (X_WC - X_BT), 0.0, "stone",
+         "sloped pink cheek down the bank end beside the lowest treads to the walkway (070309303 f57/f58)", "medium",
+         {"thk": r3(cp_top(X_BT, 30) - PAD_Z + 0.2)})
+
+for sfx, y0, y1 in (("S", S2_N, CPS0), ("N", CPN1, Y_LN)):
+    yc0 = Y_RB1 if sfx == "N" else y0      # RampBay_Wall carries the coping along the ramp bay
+    slab("Lawn_" + sfx, [(xc(y0), y0), (X_CP, y0), (X_CP, y1), (xc(y1), y1)], lawn, 0.0, "hedge",
+         "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud "
+         "6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); " + EV_SFM, "medium",
          {"thk": r3(zA(y0) - PAD_Z + 0.2)})
-    slab("Bank_" + sfx, [(X_BT, y0), (X_BB, y0), (X_BB, y1), (X_BT, y1)], bank, 0.0, "hedge",
-         "steep grass bank from the lawn down to the walkway curb, no retaining wall (sweep: ~0.85 m over 0.75 m; "
-         "070309303 f24-f44)", "medium", {"thk": r3(zA(y0) - PAD_Z + 0.2)})
-    strip("Curb_Walkway_" + sfx, (X_BB, y1), (X_BB, y0), 0.12, lambda x, y: zw(y) + 0.12, PAD_Z - 0.2, "brick",
-          "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
-          "medium")
-    strip("Curb_Path_" + sfx, (xc(y1), y1), (xc(y0), y0), 0.1, lambda x, y: zA(y) + 0.08, PAD_Z - 0.2, "brick",
+    slab("LawnCoping_" + sfx, [(X_CP, yc0), (X_BT, yc0), (X_BT, y1), (X_CP, y1)], cp_top, 0.0, "stone",
+         "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23)", "medium",
+         {"thk": r3(zA(y0) - PAD_Z + 0.2)})
+    strip("Curb_Path_" + sfx, (xc(y1), y1), (xc(y0), y0), 0.1, lambda x, y: PATH_T(y) + 0.07, PAD_Z - 0.2, "brick",
           "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
           "medium")
-# pink granite cheeks along the side stair (raised bed edges, f55-f63): top follows the flight
-cheek = lambda x, y: (zA(y) + 0.05) if x <= -2.15 else (zA(y) + 0.05) + ((zw(y) + 0.40) - (zA(y) + 0.05)) * (x + 2.15) / 2.55
-for nm, y0, y1 in (("StairCheek_S", G_S0 - 0.3, G_S0), ("StairCheek_N", G_S1, G_S1 + 0.3)):
-    slab(nm, [(xc(y0) + 0.1, y0), (-2.15, y0), (0.4, y0), (0.4, y1), (-2.15, y1), (xc(y1) + 0.1, y1)], cheek, 0.0, "stone",
-         "pink granite coping cheek of the raised bed beside the side stair (070309303 f55-f63), east face at x 0.4 on "
-         "the walkway", "medium", {"thk": r3(zA(30) + 0.05 - PAD_Z + 0.2)})
-slab("SideStair_TopLanding", [(xc(G_S0), G_S0), (-2.15, G_S0), (-2.15, G_S1), (xc(G_S1), G_S1)], lambda x, y: zA(y) + 0.02, 0.0,
-     "stone", "paving at the head of the side stair between the path and the first nosing (070309303 f60/f62)", "medium",
-     {"thk": r3(zA(30) - PAD_Z + 0.2)})
+# grass bank + walkway curb, cut by the walkway-level bay under ramp run 2 (y 32.94 .. 37.2)
+for sfx, y0, y1 in (("S", S2_N, CPS0), ("N", Y_RB1, Y_LN)):
+    slab("Bank_" + sfx, [(X_BT, y0), (X_BB, y0), (X_BB, y1), (X_BT, y1)], bank, 0.0, "hedge",
+         "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 "
+         "f24-f44)", "medium", {"thk": r3(zA(y0) - PAD_Z + 0.2)})
+    strip("Curb_Walkway_" + sfx, (X_BB, y0), (X_BB, y1), 0.12, lambda x, y: zw(y) + 0.12, PAD_Z - 0.2, "brick",
+          "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
+          "medium")
+slab("RampBay_Wall", [(X_CP, CPN1), (X_BT, CPN1), (X_BT, Y_RB1), (X_CP, Y_RB1)], cp_top, 0.0, "stone",
+     "lawn edge retained by a wall with the pink coping where ramp run 2 replaces the bank (070309303 f66/f67: grating "
+     "directly below the coping edge); foot bay length to the bank restart assumed 1.0 m", "medium",
+     {"thk": r3(cp_top(X_BT, 34) - PAD_Z + 0.2)})
+slab("RampBay_Paving", [(X_BT, CPN1), (X_WC, CPN1), (X_WC, Y_RB1), (X_BT, Y_RB1)], lowtop, 1.3, "stone",
+     "walkway-level paving under ramp run 2 and at its foot (bank cut); foot bay extent low confidence", "low")
+# steel ramp (dark grating on a steel frame, 3-bar railings, legs down to the treads / walkway)
+tread_z = lambda x: ZT_SS if x < SS_XT else (ZT_SS - RH_SS * min(SS_NR, 1 + int((x - SS_XT) / SS_T)) if x < SS_XB else zw(30))
+r1z = lambda x: ZT_SS + (RP_ZL - ZT_SS) * (x - SS_XT) / (RP_X1 - SS_XT)
+els.append({"type": "roof_plane", "name": "Ramp_Run1", "ring": ring([(SS_XT, RP_Y0), (RP_X1, RP_Y0), (RP_X1, RP_Y1), (SS_XT, RP_Y1)]),
+            "z": [r3(ZT_SS + 0.005), r3(RP_ZL), r3(RP_ZL), r3(ZT_SS + 0.005)], "thk": 0.06, "material": "metal",
+            "evidence": "grating run 1 over the north part of the flight, from the path kerb down east to the landing "
+                        "(sweep: 6.45 at x -2.2, 6.36 at -1.77, 6.29 at -1.4, 6.22 at -0.93 cloud); " + EV_SS,
+            "confidence": "medium"})
+els.append({"type": "slab", "name": "Ramp_Landing", "ring": ring([(RP_X1, RP_Y0), (RP_XE, RP_Y0), (RP_XE, RP_Y1), (RP_X1, RP_Y1)]),
+            "z0": r3(RP_ZL - 0.06), "z1": r3(RP_ZL), "material": "metal",
+            "evidence": "flat grating landing over the lowest treads, top rail level 0.9 above it on 3 posts; " + EV_SS,
+            "confidence": "medium"})
+els.append({"type": "roof_plane", "name": "Ramp_Run2", "ring": ring([(RP_X1, RP_Y1), (RP_XE, RP_Y1), (RP_XE, RP_Y2), (RP_X1, RP_Y2)]),
+            "z": [r3(RP_ZL), r3(RP_ZL), r3(RP_ZF), r3(RP_ZF)], "thk": 0.06, "material": "metal",
+            "evidence": "grating run 2 north along the bank line down to the walkway (east rail end post (0.56, 36.2) "
+                        "0.9 above the walkway, f66/f67 rays; 012327726 t21-23 long rails over the walkway); " + EV_SS,
+            "confidence": "medium"})
+RY_S, RY_N, RX_W, RX_E = RP_Y0 + 0.03, RP_Y1 - 0.03, RP_X1 + 0.03, RP_XE - 0.03
+
+
+def ramp_z(x, y):   # grating top at an A-local point of the ramp
+    if y <= RP_Y1:
+        return r1z(x) if x < RP_X1 else RP_ZL
+    return RP_ZL + (RP_ZF - RP_ZL) * (y - RP_Y1) / (RP_Y2 - RP_Y1)
+
+
+# rail polylines, broken at the grade changes (run 1 -> landing at x RP_X1, landing -> run 2 at y RP_Y1)
+for nm, pts in (("RampRail_S", [(SS_XT + 0.03, RY_S), (RP_X1, RY_S), (RX_E, RY_S), (RX_E, RP_Y1), (RX_E, RP_Y2 - 0.03)]),
+                ("RampRail_N", [(SS_XT + 0.03, RY_N), (RX_W, RY_N), (RX_W, RP_Y2 - 0.03)])):
+    els.append({"type": "rail3d", "name": nm, "points": [W(x, y) + [r3(ramp_z(x, y))] for x, y in pts],
+                "height": 0.9, "spacing": 1.0, "mid_rails": 2, "post": 0.05, "rail": 0.05, "material": "metal",
+                "unique_posts": True, "evidence": "dark grey square-tube railing, top rail + 2 bars (f55-f64); " + EV_SS,
+                "confidence": "medium"})
+# legs under the grating frame (posts continue down to the treads / walkway, f55-f60)
+for k, (x, y) in enumerate([(-1.1, RY_S), (-1.1, RY_N), (RX_W, RY_S), (RX_E, RY_S), (RX_E, RY_N), (RX_W, 34.4), (RX_E, 34.4)]):
+    ztop = ramp_z(x, y)
+    zg = tread_z(x) if y < SS_N else zw(y)
+    els.append({"type": "box", "name": f"Ramp_Leg_{k}", "center": W(x, y), "size": [0.05, 0.05, r3(ztop - 0.06 - zg + 0.05)],
+                "dir_deg": r3(ANG), "z0": r3(zg - 0.05), "material": "metal",
+                "evidence": "grating frame leg (070309303 f55-f60)", "confidence": "medium"})
 slab("LawnEnd_Coping", [(xc(Y_LN), Y_LN), (X_BB, Y_LN), (X_BB, Y_STAIR_N), (xc(Y_STAIR_N), Y_STAIR_N)], lambda x, y: zA(y) + 0.05, 0.0,
      "stone", "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74)", "medium",
      {"thk": r3(zA(40) - PAD_Z + 0.2)})
@@ -270,14 +359,27 @@ def xe_A(y):
 mid = lambda y: [(xw_B(y) + xe_A(y)) / 2, y]
 YS2 = W(X_PAV, PAV_S + 0.05)[1]
 xs2 = W(-4.45, 3.0)[0]
-els.append({"type": "path", "name": "Alley_Paving_S", "line": [[r3((xw_B(ys) + xs2) / 2), ys], [r3((xw_B(YS2) + xs2) / 2), r3(YS2)]],
+# south of the pavilion the plaza follows the ground: a densified line (1 m) so the slab tracks the pads/terrain
+_n = max(2, int(abs(YS2 - ys)) + 1)
+els.append({"type": "path", "name": "Alley_Paving_S",
+            "line": [[r3((xw_B(ys + (YS2 - ys) * i / (_n - 1)) + xs2) / 2), r3(ys + (YS2 - ys) * i / (_n - 1))] for i in range(_n)],
             "width": r3(xs2 - xw_B(-89)), "thk": 0.08, "surface": "herringbone_200x100",
             "evidence": "alley south of the pavilion, west of the south-bed curb (012205046, 012258813, 070309303 f00-f10)",
             "confidence": "medium"})
-els.append({"type": "path", "name": "Alley_Paving", "line": [[r3(v) for v in mid(YS2)], [r3(v) for v in mid(yn)]],
-            "width": r3(xe_A(-75) - xw_B(-75)), "thk": 0.08, "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)",
-            "evidence": "alley from the gate to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb "
-                        "(x -3.35 at y 13 .. -2.25 at y 37): 4.5-5.5 m wide, " + EV_SFM, "confidence": "medium"})
+# alley paving from the pavilion to the wide stair: explicit planar slabs between B's bed curb (x -7.8) and the red
+# curb of the lawn strip (face xc(y) - 0.1), top 0.02 above the Alley_* pads (a 2-point 'path' sloped between its
+# end grounds and let the pads poke through)
+PV_E = X_PAV
+ptop = lambda x, y: PATH_T(y)
+slab("Alley_Paving", [(X_BC, PAV_S + 0.05), (PV_E, PAV_S + 0.05), (PV_E, 10.0), (X_BC, 10.0)], ptop, 0.12, "stone",
+     "alley at the pavilion (flat, sweep 0.12-0.2 above the lawn-strip path); " + EV_SFM, "medium",
+     {"surface": "herringbone_200x100"})
+slab("Alley_Paving_Fall", [(X_BC, 10.0), (PV_E, 10.0), (PV_E, S2_N), (xc(S2_N) - 0.1, S2_N), (xc(15.0) - 0.1, 15.0), (X_BC, 15.0)],
+     ptop, 0.12, "stone", "alley falls 0.12 m between A-local y 10 and 15 (sweep)", "medium", {"surface": "herringbone_200x100"})
+slab("Alley_Paving_N", [(X_BC, 15.0), (xc(15.0) - 0.1, 15.0), (xc(Y_STAIR_N) - 0.1, Y_STAIR_N), (X_BC, Y_STAIR_N)], ptop, 0.12,
+     "stone", "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb "
+     "(x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); " + EV_SFM, "medium",
+     {"surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)"})
 els.append({"type": "wall", "name": "BBed_Curb", "line": [W(X_BC - 0.06, Y_BB0), W(X_BC - 0.06, Y_BB1)], "height": 0.12, "thk": 0.12,
             "material": "stone", "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north "
                                              "of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs)",

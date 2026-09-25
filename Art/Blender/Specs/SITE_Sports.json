@@ -90,6 +90,26 @@
      70.385
     ]
    ],
+   "holes": [
+    [
+     [
+      114.217,
+      45.442
+     ],
+     [
+      158.035,
+      43.759
+     ],
+     [
+      158.981,
+      68.391
+     ],
+     [
+      115.163,
+      70.074
+     ]
+    ]
+   ],
    "z0": 3.1,
    "z1": 3.79,
    "material": "brick",
@@ -117,7 +137,7 @@
      70.074
     ]
    ],
-   "z0": 3.76,
+   "z0": 3.1,
    "z1": 3.8,
    "material": "hedge",
    "evidence": "green artificial turf inside a ~0.3 m red border strip (drone 2022 d_07/d_19); level surface",
@@ -530,7 +550,7 @@
      70.385
     ]
    ],
-   "z": 11.989999999999998,
+   "z": 12.019999999999998,
    "spacing": 2.0,
    "rope": 0.03,
    "evidence": "rope net over the whole cage, ~2 m grid (drone 2022 d_19; night photo 2GIS 2025-01)",
@@ -613,8 +633,64 @@
      71.025
     ]
    ],
+   "holes": [
+    [
+     [
+      166.978,
+      46.007
+     ],
+     [
+      181.467,
+      45.45
+     ],
+     [
+      182.379,
+      69.193
+     ],
+     [
+      167.89,
+      69.75
+     ]
+    ],
+    [
+     [
+      186.567,
+      47.966
+     ],
+     [
+      195.261,
+      47.633
+     ],
+     [
+      195.938,
+      65.27
+     ],
+     [
+      187.245,
+      65.603
+     ]
+    ],
+    [
+     [
+      198.405,
+      43.509
+     ],
+     [
+      210.946,
+      43.027
+     ],
+     [
+      211.951,
+      69.208
+     ],
+     [
+      199.411,
+      69.689
+     ]
+    ]
+   ],
    "z0": 3.1,
-   "z1": 3.495,
+   "z1": 3.5,
    "material": "brick",
    "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 (Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) -> 46.1 x 26.3 m; red acrylic surface, flush with the walkway + 5 cm curb",
    "confidence": "medium"
@@ -640,7 +716,7 @@
      69.75
     ]
    ],
-   "z0": 3.48,
+   "z0": 3.1,
    "z1": 3.5,
    "material": "hedge",
    "evidence": "green basketball field u 52.9..67.4, v 3.04..26.8 (Google profiles, rms 0.03-0.06 m; N edge 26.4..27.3 blurred)",
@@ -667,7 +743,7 @@
      65.603
     ]
    ],
-   "z0": 3.48,
+   "z0": 3.1,
    "z1": 3.5,
    "material": "hedge",
    "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06)",
@@ -694,8 +770,8 @@
      69.689
     ]
    ],
-   "z0": 3.48,
-   "z1": 3.499,
+   "z0": 3.1,
+   "z1": 3.5,
    "material": "brick",
    "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green)",
    "confidence": "medium"
@@ -1308,12 +1384,12 @@
    "name": "CourtsGate_W",
    "line": [
     [
-     164.951,
-     45.344
+     164.952,
+     45.374
     ],
     [
-     164.989,
-     46.344
+     164.988,
+     46.314
     ]
    ],
    "height": 2.1,

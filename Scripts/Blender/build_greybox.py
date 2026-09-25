@@ -151,9 +151,112 @@ def pad_plane_z(pad, x, y):
     return pad["z"] + gx * (x - x0) + gy * (y - y0)
 
 
-def apply_terrain_pads():
+def _in_ring(ring, x, y):
+    """Even-odd point-in-polygon for numpy arrays x, y against ring (N, 2)."""
+    inside = np.zeros(np.shape(x), bool)
+    n = len(ring)
+    for i in range(n):
+        (x1, y1), (x2, y2) = ring[i], ring[(i + 1) % n]
+        cross = (y1 > y) != (y2 > y)
+        xi = x1 + (y - y1) * (x2 - x1) / np.where(y2 != y1, y2 - y1, 1e-12)
+        inside ^= cross & (x < xi)
+    return inside
+
+
+def _ring_dist(ring, x, y):
+    d = np.full(np.shape(x), np.inf)
+    n = len(ring)
+    for i in range(n):
+        a, b = ring[i], ring[(i + 1) % n]
+        ab = b - a
+        t = np.clip(((x - a[0]) * ab[0] + (y - a[1]) * ab[1]) / (ab @ ab), 0, 1)
+        d = np.minimum(d, np.hypot(x - (a[0] + t * ab[0]), y - (a[1] + t * ab[1])))
+    return d
+
+
+def _conform_hard_edges(ob, hard):
+    """Re-mesh TER_Ground so every hard pad ring (blend 0) is a chain of mesh edges, with the vertices on it split into
+    one copy per side. Returns (co, faces, side, skirts): side[v] = bitmask of the hard pads whose inside that copy
+    belongs to; skirts = [(a, b, c, d)] quads joining the two copies of each ring edge (the vertical step).
+    Without this a 1 m grid smears every step over one cell, so terrain pokes through the edges of flat plazas and
+    stairs. Constrained Delaunay (mathutils.geometry.delaunay_2d_cdt) keeps untouched grid quads as quads."""
+    from mathutils import Vector
+    from mathutils.geometry import delaunay_2d_cdt
+    me = ob.data
+    co = np.empty(len(me.vertices) * 3)
+    me.vertices.foreach_get("co", co)
+    co = co.reshape(-1, 3)
+    faces = [list(p.vertices) for p in me.polygons]
+    verts = [Vector((x, y)) for x, y in co[:, :2]]
+    edges = []
+    for pad in hard:
+        k0 = len(verts)
+        verts += [Vector(p) for p in pad["ring"]]
+        n = len(pad["ring"])
+        edges += [(k0 + i, k0 + (i + 1) % n) for i in range(n)]
+    vo, eo, fo, vorig, eorig, forig = delaunay_2d_cdt(verts, edges, faces, 3, 1e-5, True)
+    n_grid = len(co)
+    vo = np.array([tuple(v) for v in vo])
+    z = np.empty(len(vo))
+    known = np.array([next((k for k in o if k < n_grid), -1) for o in vorig])
+    z[known >= 0] = co[known[known >= 0], 2]
+    miss = np.nonzero(known < 0)[0]
+    if len(miss):  # new vertices (ring corners, ring x grid crossings): linear z from their original grid face
+        z[miss] = np.nan
+    # face side masks from the centroid
+    cen = np.array([vo[f].mean(0) for f in fo])
+    fmask = np.zeros(len(fo), np.int64)
+    for k, pad in enumerate(hard):
+        fmask |= _in_ring(np.array(pad["ring"], float), cen[:, 0], cen[:, 1]).astype(np.int64) << k
+    # merge triangle pairs of an untouched grid quad back into the quad
+    groups = {}
+    for i, fs in enumerate(forig):
+        if fs:
+            groups.setdefault(fs[0], []).append(i)
+    out_faces, out_mask = [], []
+    for i, f in enumerate(fo):
+        fs = forig[i]
+        g = groups.get(fs[0]) if fs else None
+        if g and len(g) == 2 and fmask[g[0]] == fmask[g[1]] and len(set(fo[g[0]]) | set(fo[g[1]])) == 4:
+            if i != g[0]:
+                continue
+            quad = faces[fs[0]]
+            o2n = {int(known[j]): j for j in set(fo[g[0]]) | set(fo[g[1]]) if known[j] >= 0}
+            if len(o2n) == 4 and all(v in o2n for v in quad):
+                out_faces.append([o2n[v] for v in quad]); out_mask.append(fmask[i])
+                continue
+        out_faces.append(list(f)); out_mask.append(fmask[i])
+    # vertex copies per (vertex, side)
+    key, vid, side = {}, [], []
+    new_faces = []
+    for f, m in zip(out_faces, out_mask):
+        nf = []
+        for v in f:
+            k = (v, int(m))
+            if k not in key:
+                key[k] = len(vid); vid.append(v); side.append(int(m))
+            nf.append(key[k])
+        new_faces.append(nf)
+    # skirts along edges whose two faces lie on different sides
+    emap = {}
+    for f, m in zip(out_faces, out_mask):
+        for a, b in zip(f, f[1:] + f[:1]):
+            emap.setdefault((min(a, b), max(a, b)), []).append((a, b, int(m)))
+    skirts = []
+    for (a, b), uses in emap.items():
+        if len(uses) == 2 and uses[0][2] != uses[1][2]:
+            (a1, b1, m1), (a2, b2, m2) = uses
+            skirts.append((key[(a1, m1)], key[(b1, m1)], key[(b1, m2)], key[(a1, m2)]))
+    vid = np.array(vid)
+    xyz = np.column_stack([vo[vid], z[vid]])
+    return xyz, new_faces, np.array(side, np.int64), skirts
+
+
+def apply_terrain_pads(ter=None):
     """Set terrain z inside 'terrain_pads' rings of Specs/*.json to their z, blending linearly over 'blend' m outside.
-    For measured ground levels the smooth DEM fit misses (e.g. the lower ground west of Block C)."""
+    For measured ground levels the smooth DEM fit misses (e.g. the lower ground west of Block C).
+    Pads with blend 0 are hard edges: the ring becomes mesh edges with a vertical step (see _conform_hard_edges),
+    so a flat plaza is exactly flat up to its outline and the level beside it is untouched."""
     specs = os.path.join(REPO, "Art", "Blender", "Specs")
     pads = []
     for fn in sorted(os.listdir(specs)) if os.path.isdir(specs) else []:
@@ -162,31 +265,52 @@ def apply_terrain_pads():
     ob = bpy.data.objects.get("TER_Ground")
     if not pads or ob is None:
         return
-    me = ob.data
-    co = np.empty(len(me.vertices) * 3, np.float32)
-    me.vertices.foreach_get("co", co)
-    co = co.reshape(-1, 3)
+    hard = [p for p in pads if float(p.get("blend", 0.0)) <= 0.0]
+    skirts, side, faces = [], None, None
+    if hard:
+        co, faces, side, skirts = _conform_hard_edges(ob, hard)
+        nan = np.isnan(co[:, 2])
+        if nan.any():  # vertices the CDT added: base terrain (smooth quadratic, same as the grid samples)
+            x, y = co[nan, 0], co[nan, 1]
+            co[nan, 2] = ter.base(x, y) - np.where(ter.carriageway_mask(x, y), ter.curb, 0.0)
+    else:
+        me = ob.data
+        co = np.empty(len(me.vertices) * 3)
+        me.vertices.foreach_get("co", co)
+        co = co.reshape(-1, 3)
+    x, y = co[:, 0], co[:, 1]
+    hk = 0
     for pad in pads:
         ring = np.array(pad["ring"], float)
         blend = float(pad.get("blend", 0.0))
-        x, y = co[:, 0], co[:, 1]
-        inside = np.zeros(len(co), bool)
-        n = len(ring)
-        for i in range(n):  # even-odd point-in-polygon, vectorised
-            (x1, y1), (x2, y2) = ring[i], ring[(i + 1) % n]
-            cross = (y1 > y) != (y2 > y)
-            xi = x1 + (y - y1) * (x2 - x1) / np.where(y2 != y1, y2 - y1, 1e-12)
-            inside ^= cross & (x < xi)
-        d = np.full(len(co), np.inf)  # distance to the ring for outside points
-        for i in range(n):
-            a, b = ring[i], ring[(i + 1) % n]
-            ab = b - a
-            t = np.clip(((x - a[0]) * ab[0] + (y - a[1]) * ab[1]) / (ab @ ab), 0, 1)
-            d = np.minimum(d, np.hypot(x - (a[0] + t * ab[0]), y - (a[1] + t * ab[1])))
-        w = np.where(inside, 1.0, np.clip(1.0 - d / blend, 0.0, 1.0) if blend > 0 else 0.0)
+        if blend <= 0.0:
+            w = ((side >> hk) & 1).astype(float)   # the side of the hard edge each vertex copy belongs to
+            hk += 1
+        else:
+            inside = _in_ring(ring, x, y)
+            w = np.where(inside, 1.0, np.clip(1.0 - _ring_dist(ring, x, y) / blend, 0.0, 1.0))
         co[:, 2] = co[:, 2] * (1 - w) + pad_plane_z(pad, x, y) * w
-    me.vertices.foreach_set("co", co.ravel())
-    me.update()
+    if hard:
+        bm = bmesh.new()
+        bv = [bm.verts.new(p) for p in co]
+        for f in faces:
+            bm.faces.new([bv[i] for i in f])
+        ns = 0
+        for a, b, c, d in skirts:
+            if abs(co[a, 2] - co[d, 2]) > 1e-3 or abs(co[b, 2] - co[c, 2]) > 1e-3:
+                try:
+                    bm.faces.new((bv[a], bv[b], bv[c], bv[d]))
+                    ns += 1
+                except ValueError:
+                    pass
+        bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)   # re-weld the copies where no step is needed
+        bm.normal_update()
+        bm.to_mesh(ob.data)
+        bm.free()
+        print(f"terrain: {len(hard)} hard pad edges conformed, {ns} step faces")
+    else:
+        ob.data.vertices.foreach_set("co", co.ravel().astype(np.float32))
+    ob.data.update()
     print(f"terrain: {len(pads)} pads applied")
 
 
@@ -246,8 +370,12 @@ def main():
             print("FAILED", it["id"], repr(ex))
     build_reference()
     hide_replaced()
-    apply_terrain_pads()
+    apply_terrain_pads(ter)
     cut_terrain_holes()
+    ter_ob = bpy.data.objects.get("TER_Ground")
+    if ter_ob:  # smooth shading hides the 1 m facet pattern of gentle slopes; steps/curbs (> 30 deg) stay crisp
+        ter_ob.data.shade_smooth()
+        ter_ob.data.set_sharp_from_angle(angle=np.radians(30.0))
     sc = bpy.context.scene
     sc["koch_origin_lat"], sc["koch_origin_lon"] = 42.8566, 74.6790
     sc["koch_z_datum_asl"] = ter_spec["frame"]["z_datum_asl"]

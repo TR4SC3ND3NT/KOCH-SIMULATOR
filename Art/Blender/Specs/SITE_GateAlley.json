@@ -510,35 +510,373 @@
    "confidence": "medium"
   },
   {
+   "type": "stairs_run",
+   "name": "SideStair",
+   "top": [
+    158.09,
+    -61.716
+   ],
+   "dir_deg": -2.808,
+   "risers": 7,
+   "riser_h": 0.174,
+   "tread": 0.42,
+   "width": 3.34,
+   "z_top": 6.57,
+   "run_out": 0.02,
+   "material": "granite",
+   "evidence": "pink granite side stair from the path down east to the walkway: 7 risers x 0.171 (sweep), treads 0.42, nosings x -2.27..0.25, between the two lawn-bed copings (y 29.30-32.64); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "SideStair_TopLanding",
+   "ring": [
+    [
+     157.575,
+     -63.363
+    ],
+    [
+     158.008,
+     -63.384
+    ],
+    [
+     158.172,
+     -60.048
+    ],
+    [
+     157.892,
+     -60.034
+    ]
+   ],
+   "z": [
+    6.57,
+    6.57,
+    6.57,
+    6.57
+   ],
+   "thk": 1.77,
+   "material": "stone",
+   "evidence": "grey concrete kerb strip between the path and the top nosing (070309303 f58, 012327726 t30.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "StairCoping_S",
+   "ring": [
+    [
+     157.642,
+     -63.716
+    ],
+    [
+     159.659,
+     -63.815
+    ],
+    [
+     159.676,
+     -63.466
+    ],
+    [
+     157.675,
+     -63.368
+    ]
+   ],
+   "z": [
+    6.62,
+    6.32,
+    6.32,
+    6.62
+   ],
+   "thk": 1.87,
+   "material": "stone",
+   "evidence": "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: (-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "StairCoping_SCheek",
+   "ring": [
+    [
+     159.659,
+     -63.815
+    ],
+    [
+     160.528,
+     -63.858
+    ],
+    [
+     160.545,
+     -63.508
+    ],
+    [
+     159.676,
+     -63.466
+    ]
+   ],
+   "z": [
+    6.32,
+    5.49,
+    5.49,
+    6.32
+   ],
+   "thk": 1.52,
+   "material": "stone",
+   "evidence": "sloped pink cheek down the bank end beside the lowest treads to the walkway (070309303 f57/f58)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "StairCoping_N",
+   "ring": [
+    [
+     157.991,
+     -60.039
+    ],
+    [
+     159.84,
+     -60.13
+    ],
+    [
+     159.854,
+     -59.83
+    ],
+    [
+     158.02,
+     -59.74
+    ]
+   ],
+   "z": [
+    6.62,
+    6.32,
+    6.32,
+    6.62
+   ],
+   "thk": 1.87,
+   "material": "stone",
+   "evidence": "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: (-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "StairCoping_NCheek",
+   "ring": [
+    [
+     159.84,
+     -60.13
+    ],
+    [
+     160.709,
+     -60.172
+    ],
+    [
+     160.723,
+     -59.873
+    ],
+    [
+     159.854,
+     -59.83
+    ]
+   ],
+   "z": [
+    6.32,
+    5.49,
+    5.49,
+    6.32
+   ],
+   "thk": 1.52,
+   "material": "stone",
+   "evidence": "sloped pink cheek down the bank end beside the lowest treads to the walkway (070309303 f57/f58)",
+   "confidence": "medium"
+  },
+  {
    "type": "roof_plane",
    "name": "Lawn_S",
    "ring": [
     [
-     156.018,
-     -81.859
+     155.918,
+     -81.854
+    ],
+    [
+     158.468,
+     -81.979
+    ],
+    [
+     159.359,
+     -63.801
+    ],
+    [
+     157.642,
+     -63.716
+    ]
+   ],
+   "z": [
+    6.672,
+    6.404,
+    6.315,
+    6.57
+   ],
+   "thk": 1.932,
+   "material": "hedge",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "LawnCoping_S",
+   "ring": [
+    [
+     158.468,
+     -81.979
     ],
     [
      158.767,
      -81.994
     ],
     [
-     159.666,
-     -63.666
+     159.659,
+     -63.815
     ],
     [
-     157.756,
-     -63.572
+     159.359,
+     -63.801
     ]
    ],
    "z": [
-    6.632,
-    6.302,
-    6.2,
-    6.53
+    6.454,
+    6.422,
+    6.32,
+    6.365
    ],
    "thk": 1.932,
+   "material": "stone",
+   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Path_S",
+   "ring": [
+    [
+     157.642,
+     -63.716
+    ],
+    [
+     155.918,
+     -81.854
+    ],
+    [
+     155.818,
+     -81.844
+    ],
+    [
+     157.542,
+     -63.707
+    ]
+   ],
+   "z": [
+    6.64,
+    6.742,
+    6.742,
+    6.64
+   ],
+   "thk": 1.942,
+   "material": "brick",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Lawn_N",
+   "ring": [
+    [
+     158.02,
+     -59.74
+    ],
+    [
+     159.555,
+     -59.815
+    ],
+    [
+     159.908,
+     -52.614
+    ],
+    [
+     158.703,
+     -52.555
+    ]
+   ],
+   "z": [
+    6.57,
+    6.319,
+    6.33,
+    6.57
+   ],
+   "thk": 1.83,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, sloping gently towards A (sweep: -0.1 at the curb, -0.43 at x -0.6); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "LawnCoping_N",
+   "ring": [
+    [
+     159.764,
+     -55.561
+    ],
+    [
+     160.063,
+     -55.575
+    ],
+    [
+     160.208,
+     -52.629
+    ],
+    [
+     159.908,
+     -52.614
+    ]
+   ],
+   "z": [
+    6.375,
+    6.32,
+    6.32,
+    6.38
+   ],
+   "thk": 1.83,
+   "material": "stone",
+   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Path_N",
+   "ring": [
+    [
+     158.703,
+     -52.555
+    ],
+    [
+     158.02,
+     -59.74
+    ],
+    [
+     157.92,
+     -59.731
+    ],
+    [
+     158.603,
+     -52.546
+    ]
+   ],
+   "z": [
+    6.64,
+    6.64,
+    6.64,
+    6.64
+   ],
+   "thk": 1.84,
+   "material": "brick",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
    "confidence": "medium"
   },
   {
@@ -554,23 +892,23 @@
      -82.03
     ],
     [
-     160.415,
-     -63.702
+     160.408,
+     -63.852
     ],
     [
-     159.666,
-     -63.666
+     159.659,
+     -63.815
     ]
    ],
    "z": [
-    6.302,
+    6.372,
     5.47,
     5.47,
-    6.2
+    6.27
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
+   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
    "confidence": "medium"
   },
   {
@@ -578,20 +916,20 @@
    "name": "Curb_Walkway_S",
    "ring": [
     [
-     160.415,
-     -63.702
-    ],
-    [
      159.516,
      -82.03
     ],
     [
-     159.397,
-     -82.024
+     160.408,
+     -63.852
     ],
     [
-     160.296,
-     -63.696
+     160.528,
+     -63.858
+    ],
+    [
+     159.636,
+     -82.036
     ]
    ],
    "z": [
@@ -603,70 +941,6 @@
    "thk": 0.67,
    "material": "brick",
    "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Curb_Path_S",
-   "ring": [
-    [
-     157.656,
-     -63.567
-    ],
-    [
-     155.918,
-     -81.854
-    ],
-    [
-     155.818,
-     -81.844
-    ],
-    [
-     157.557,
-     -63.557
-    ]
-   ],
-   "z": [
-    6.71,
-    6.812,
-    6.812,
-    6.71
-   ],
-   "thk": 2.012,
-   "material": "brick",
-   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Lawn_N",
-   "ring": [
-    [
-     158.116,
-     -59.785
-    ],
-    [
-     159.852,
-     -59.87
-    ],
-    [
-     160.208,
-     -52.629
-    ],
-    [
-     158.803,
-     -52.56
-    ]
-   ],
-   "z": [
-    6.53,
-    6.2,
-    6.2,
-    6.53
-   ],
-   "thk": 1.83,
-   "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, sloping gently towards A (sweep: -0.1 at the curb, -0.43 at x -0.6); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
    "confidence": "medium"
   },
   {
@@ -674,12 +948,12 @@
    "name": "Bank_N",
    "ring": [
     [
-     159.852,
-     -59.87
+     160.063,
+     -55.575
     ],
     [
-     160.602,
-     -59.907
+     160.812,
+     -55.612
     ],
     [
      160.957,
@@ -691,14 +965,14 @@
     ]
    ],
    "z": [
-    6.2,
+    6.27,
     5.47,
     5.47,
-    6.2
+    6.27
    ],
    "thk": 1.83,
    "material": "hedge",
-   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
+   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
    "confidence": "medium"
   },
   {
@@ -706,20 +980,20 @@
    "name": "Curb_Walkway_N",
    "ring": [
     [
+     160.812,
+     -55.612
+    ],
+    [
      160.957,
      -52.666
     ],
     [
-     160.602,
-     -59.907
+     161.077,
+     -52.671
     ],
     [
-     160.482,
-     -59.901
-    ],
-    [
-     160.837,
-     -52.66
+     160.932,
+     -55.618
     ]
    ],
    "z": [
@@ -735,150 +1009,353 @@
   },
   {
    "type": "roof_plane",
-   "name": "Curb_Path_N",
+   "name": "RampBay_Wall",
    "ring": [
     [
-     158.703,
-     -52.555
+     159.555,
+     -59.815
     ],
     [
-     158.016,
-     -59.78
+     159.854,
+     -59.83
     ],
     [
-     157.917,
-     -59.771
+     160.063,
+     -55.575
     ],
     [
-     158.603,
-     -52.546
+     159.764,
+     -55.561
     ]
    ],
    "z": [
-    6.71,
-    6.71,
-    6.71,
-    6.71
+    6.369,
+    6.32,
+    6.32,
+    6.375
    ],
-   "thk": 1.91,
-   "material": "brick",
-   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+   "thk": 1.52,
+   "material": "stone",
+   "evidence": "lawn edge retained by a wall with the pink coping where ramp run 2 replaces the bank (070309303 f66/f67: grating directly below the coping edge); foot bay length to the bank restart assumed 1.0 m",
    "confidence": "medium"
   },
   {
    "type": "roof_plane",
-   "name": "StairCheek_S",
+   "name": "RampBay_Paving",
    "ring": [
     [
-     157.756,
-     -63.572
+     159.854,
+     -59.83
     ],
     [
-     158.118,
-     -63.59
+     160.723,
+     -59.873
     ],
     [
-     160.665,
-     -63.715
+     160.932,
+     -55.618
     ],
     [
-     160.68,
-     -63.415
-    ],
-    [
-     158.133,
-     -63.29
-    ],
-    [
-     157.784,
-     -63.273
+     160.063,
+     -55.575
     ]
    ],
    "z": [
-    6.68,
-    6.68,
-    5.75,
-    5.75,
-    6.68,
-    6.68
+    5.35,
+    5.35,
+    5.35,
+    5.35
    ],
-   "thk": 1.88,
+   "thk": 1.3,
    "material": "stone",
-   "evidence": "pink granite coping cheek of the raised bed beside the side stair (070309303 f55-f63), east face at x 0.4 on the walkway",
+   "evidence": "walkway-level paving under ramp run 2 and at its foot (bank cut); foot bay extent low confidence",
+   "confidence": "low"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Ramp_Run1",
+   "ring": [
+    [
+     158.123,
+     -61.037
+    ],
+    [
+     159.841,
+     -61.121
+    ],
+    [
+     159.889,
+     -60.152
+    ],
+    [
+     158.171,
+     -60.068
+    ]
+   ],
+   "z": [
+    6.575,
+    6.18,
+    6.18,
+    6.575
+   ],
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "grating run 1 over the north part of the flight, from the path kerb down east to the landing (sweep: 6.45 at x -2.2, 6.36 at -1.77, 6.29 at -1.4, 6.22 at -0.93 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Ramp_Landing",
+   "ring": [
+    [
+     159.841,
+     -61.121
+    ],
+    [
+     160.94,
+     -61.175
+    ],
+    [
+     160.987,
+     -60.206
+    ],
+    [
+     159.889,
+     -60.152
+    ]
+   ],
+   "z0": 6.12,
+   "z1": 6.18,
+   "material": "metal",
+   "evidence": "flat grating landing over the lowest treads, top rail level 0.9 above it on 3 posts; 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
    "confidence": "medium"
   },
   {
    "type": "roof_plane",
-   "name": "StairCheek_N",
+   "name": "Ramp_Run2",
    "ring": [
     [
-     158.088,
-     -60.084
+     159.889,
+     -60.152
     ],
     [
-     158.29,
-     -60.094
+     160.987,
+     -60.206
     ],
     [
-     160.837,
-     -60.219
+     161.163,
+     -56.63
     ],
     [
-     160.851,
-     -59.919
-    ],
-    [
-     158.304,
-     -59.794
-    ],
-    [
-     158.116,
-     -59.785
+     160.064,
+     -56.577
     ]
    ],
    "z": [
-    6.68,
-    6.68,
-    5.75,
-    5.75,
-    6.68,
-    6.68
+    6.18,
+    6.18,
+    5.37,
+    5.37
    ],
-   "thk": 1.88,
-   "material": "stone",
-   "evidence": "pink granite coping cheek of the raised bed beside the side stair (070309303 f55-f63), east face at x 0.4 on the walkway",
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "grating run 2 north along the bank line down to the walkway (east rail end post (0.56, 36.2) 0.9 above the walkway, f66/f67 rays; 012327726 t21-23 long rails over the walkway); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
    "confidence": "medium"
   },
   {
-   "type": "roof_plane",
-   "name": "SideStair_TopLanding",
-   "ring": [
+   "type": "rail3d",
+   "name": "RampRail_S",
+   "points": [
     [
-     157.685,
-     -63.268
+     158.155,
+     -61.008,
+     6.563
     ],
     [
-     158.133,
-     -63.29
+     159.843,
+     -61.091,
+     6.18
     ],
     [
-     158.29,
-     -60.094
+     160.911,
+     -61.144,
+     6.18
     ],
     [
-     157.988,
-     -60.079
+     160.957,
+     -60.205,
+     6.18
+    ],
+    [
+     161.131,
+     -56.659,
+     5.377
     ]
    ],
-   "z": [
-    6.65,
-    6.65,
-    6.65,
-    6.65
+   "height": 0.9,
+   "spacing": 1.0,
+   "mid_rails": 2,
+   "post": 0.05,
+   "rail": 0.05,
+   "material": "metal",
+   "unique_posts": true,
+   "evidence": "dark grey square-tube railing, top rail + 2 bars (f55-f64); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "RampRail_N",
+   "points": [
+    [
+     158.199,
+     -60.099,
+     6.563
+    ],
+    [
+     159.917,
+     -60.184,
+     6.18
+    ],
+    [
+     160.093,
+     -56.608,
+     5.377
+    ]
    ],
-   "thk": 1.83,
-   "material": "stone",
-   "evidence": "paving at the head of the side stair between the path and the first nosing (070309303 f60/f62)",
+   "height": 0.9,
+   "spacing": 1.0,
+   "mid_rails": 2,
+   "post": 0.05,
+   "rail": 0.05,
+   "material": "metal",
+   "unique_posts": true,
+   "evidence": "dark grey square-tube railing, top rail + 2 bars (f55-f64); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_0",
+   "center": [
+    159.293,
+    -61.064
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.248
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.997,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_1",
+   "center": [
+    159.338,
+    -60.155
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.248
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.997,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_2",
+   "center": [
+    159.873,
+    -61.093
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.471
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.649,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_3",
+   "center": [
+    160.911,
+    -61.144
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.82
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.3,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_4",
+   "center": [
+    160.956,
+    -60.235
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.82
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.3,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_5",
+   "center": [
+    160.006,
+    -58.376
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.417
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.3,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Ramp_Leg_6",
+   "center": [
+    161.045,
+    -58.427
+   ],
+   "size": [
+    0.05,
+    0.05,
+    0.417
+   ],
+   "dir_deg": -2.808,
+   "z0": 5.3,
+   "material": "metal",
+   "evidence": "grating frame leg (070309303 f55-f60)",
    "confidence": "medium"
   },
   {
@@ -1179,6 +1656,30 @@
      -93.2
     ],
     [
+     152.801,
+     -92.159
+    ],
+    [
+     152.827,
+     -91.119
+    ],
+    [
+     152.852,
+     -90.078
+    ],
+    [
+     152.877,
+     -89.037
+    ],
+    [
+     152.903,
+     -87.996
+    ],
+    [
+     152.928,
+     -86.956
+    ],
+    [
      152.954,
      -85.915
     ]
@@ -1190,23 +1691,113 @@
    "confidence": "medium"
   },
   {
-   "type": "path",
+   "type": "roof_plane",
    "name": "Alley_Paving",
-   "line": [
+   "ring": [
     [
-     153.45,
+     151.375,
+     -85.736
+    ],
+    [
+     155.021,
      -85.915
     ],
     [
-     155.89,
-     -52.0
+     155.185,
+     -82.569
+    ],
+    [
+     151.539,
+     -82.39
     ]
    ],
-   "width": 4.667,
-   "thk": 0.08,
-   "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)",
-   "evidence": "alley from the gate to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37): 4.5-5.5 m wide, 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
-   "confidence": "medium"
+   "z": [
+    6.69,
+    6.69,
+    6.69,
+    6.69
+   ],
+   "thk": 0.12,
+   "material": "stone",
+   "evidence": "alley at the pavilion (flat, sweep 0.12-0.2 above the lawn-strip path); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "confidence": "medium",
+   "surface": "herringbone_200x100"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Alley_Paving_Fall",
+   "ring": [
+    [
+     151.539,
+     -82.39
+    ],
+    [
+     155.185,
+     -82.569
+    ],
+    [
+     155.222,
+     -81.82
+    ],
+    [
+     155.818,
+     -81.849
+    ],
+    [
+     156.22,
+     -77.613
+    ],
+    [
+     151.784,
+     -77.396
+    ]
+   ],
+   "z": [
+    6.69,
+    6.69,
+    6.672,
+    6.672,
+    6.57,
+    6.57
+   ],
+   "thk": 0.12,
+   "material": "stone",
+   "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep)",
+   "confidence": "medium",
+   "surface": "herringbone_200x100"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Alley_Paving_N",
+   "ring": [
+    [
+     151.784,
+     -77.396
+    ],
+    [
+     156.22,
+     -77.613
+    ],
+    [
+     158.631,
+     -52.251
+    ],
+    [
+     153.031,
+     -51.976
+    ]
+   ],
+   "z": [
+    6.57,
+    6.57,
+    6.57,
+    6.57
+   ],
+   "thk": 0.12,
+   "material": "stone",
+   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "confidence": "medium",
+   "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)"
   },
   {
    "type": "wall",
@@ -1354,7 +1945,7 @@
     156.814,
     -78.944
    ],
-   "z": 6.496,
+   "z": 6.533,
    "height": 1.5,
    "crown_d": 0.8,
    "shape": "cone",
@@ -1370,7 +1961,7 @@
     157.687,
     -74.431
    ],
-   "z": 6.399,
+   "z": 6.443,
    "height": 1.6,
    "crown_d": 0.8,
    "shape": "cone",
@@ -1386,7 +1977,7 @@
     157.437,
     -72.367
    ],
-   "z": 6.457,
+   "z": 6.494,
    "height": 1.2,
    "crown_d": 0.8,
    "shape": "cone",
@@ -1402,7 +1993,7 @@
     157.76,
     -69.88
    ],
-   "z": 6.44,
+   "z": 6.479,
    "height": 1.2,
    "crown_d": 0.8,
    "shape": "cone",

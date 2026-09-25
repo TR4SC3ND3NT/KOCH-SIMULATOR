@@ -110,7 +110,15 @@ class Building:
         c = self.ring[(i + 1) % n] if not end else self.ring[(i + 2) % n]
         cross = (b[0] - a[0]) * (c[1] - b[1]) - (b[1] - a[1]) * (c[0] - b[0])
         t = self.s["wall_thk"]
+        if abs(cross) < 1e-9:  # collinear ring vertex (e.g. C's tower bay flush with a wing): straight butt joint
+            return 0.0
         return t if cross > 0 else -t
+
+    def trim_ext(self, i, end, proj):
+        """Band (cornice/plinth) extension at an edge end: +proj round a convex corner, -proj into a concave one,
+        0 at a collinear vertex (the next edge's band continues flush)."""
+        cut = self.corner_cut(i, end)
+        return proj if cut > 0 else (-proj if cut < 0 else 0.0)
 
     def openings_for(self, i):
         """[(Opening, type_name, spec)] for edge i from the facade spec."""
@@ -220,7 +228,7 @@ class Building:
             place = self.M @ e["frame"] @ Matrix.Translation((o.u0, 0, o.z0))
             self._link(f"Win_E{i}_{k:02d}", me, place, color)
             sw = wt.get("surround") if tname != "entrance" else None
-            if sw and any(sw):
+            if sw and any(sw) and wt.get("surround_proj", 0.04) > 0:
                 l, r, b, t = sw
                 proj = wt.get("surround_proj", 0.04)
                 me2 = self.kit_mesh(f"Surround_{tname}", lambda bm: _surround(bm, w, h, l, r, b, t, proj))
@@ -297,23 +305,33 @@ class Building:
         c = self.s.get("cornice")
         pl = self.s.get("plinth")
         if c:
-            bm_c = bmesh.new()
-            for i, e in enumerate(self.edges):
-                ext0 = c["proj"] if self.corner_cut(i, False) > 0 else -c["proj"]
-                ext1 = c["proj"] if self.corner_cut(i, True) > 0 else -c["proj"]
-                box(bm_c, e["frame"], -ext0, e["L"] + ext1, 0.0, c["proj"], c["z0"], c["z1"])
-            self.obj("Cornice", bm_c, COL["maroon"], c.get("evidence", "cornice band under the eaves"), c.get("confidence"))
-        if pl:
+            z0, z1 = c["z0"], c["z1"]
+            r = self.s["roof"]
+            if r.get("type", "hip") not in ("flat", "none") and r.get("overhang", 0.0) >= c["proj"]:
+                # the roof's fascia band (eave_z - FASCIA_M .. eave_z) already covers the wall head: keep only the
+                # part below its soffit, else the cornice is buried in the roof with its underside coplanar to it
+                z1 = min(z1, self.s["eave_z"] - FASCIA_M)
+            if c["proj"] > 0.005 and z1 - z0 > 0.01:
+                bm_c = bmesh.new()
+                for i, e in enumerate(self.edges):
+                    ext0 = self.trim_ext(i, False, c["proj"])
+                    ext1 = self.trim_ext(i, True, c["proj"])
+                    box(bm_c, e["frame"], -ext0, e["L"] + ext1, 0.0, c["proj"], z0, z1)
+                self.obj("Cornice", bm_c, COL["maroon"], c.get("evidence", "cornice band under the eaves"), c.get("confidence"))
+        if pl and pl["proj"] > 0.005:
             bm_pl = bmesh.new()
             for i, e in enumerate(self.edges):
-                p0 = pl["proj"] if self.corner_cut(i, False) > 0 else -pl["proj"]
-                p1 = pl["proj"] if self.corner_cut(i, True) > 0 else -pl["proj"]
+                p0 = self.trim_ext(i, False, pl["proj"])
+                p1 = self.trim_ext(i, True, pl["proj"])
                 box(bm_pl, e["frame"], -p0, e["L"] + p1, 0.0, pl["proj"], e["zg"] - 0.05, pl["z_top"])
             self.obj("Plinth", bm_pl, COL["plinth"], pl.get("evidence", "brick-tile plinth"), pl.get("confidence"))
         for k, p in enumerate(self.s.get("pilasters", [])):
             e = self.edges[p["edge"]]
+            z0 = p["z0"]
+            if pl and p["proj"] < pl["proj"] + 0.016:  # plinth as proud as the pilaster: start on its top (no coplanar fronts)
+                z0 = max(z0, pl["z_top"])
             bm_p = bmesh.new()
-            box(bm_p, e["frame"], p["u0"], p["u1"], 0.0, p["proj"], p["z0"], p["z1"])
+            box(bm_p, e["frame"], p["u0"], p["u1"], 0.0, p["proj"], z0, p["z1"])
             self.obj(f"Pilaster_E{p['edge']}_{k:02d}", bm_p, COL["maroon"], p.get("evidence", "pilaster"), p.get("confidence"))
 
     # ------------------------------------------------------------------ roof
@@ -329,7 +347,7 @@ class Building:
         if kind == "hip" and r.get("ridge_len") and len(self.ring) == 4:
             return self.build_rect_hip(r)
         z0 = self.s["eave_z"]
-        outline = offset_ring(self.ring, -r["overhang"])
+        outline = _drop_collinear(offset_ring(self.ring, -r["overhang"]))  # straight skeleton needs true corners
         bm = bmesh.new()
         bot = [bm.verts.new((x, y, z0 - FASCIA_M)) for x, y in outline]
         top = [bm.verts.new((x, y, z0)) for x, y in outline]
@@ -643,6 +661,15 @@ class Building:
             bm = bmesh.new()
             box(bm, fr, u0, u1, 0.0, dep - pd - 0.02, a["soffit_z"], a["soffit_z"] + a.get("soffit_t", 0.03))
             self.obj(f"GallerySoffit_{tag}", bm, (0.55, 0.36, 0.20, 1), ev, cf)
+        if a.get("end_boards"):   # opt-in: close the gallery ends between the soffit/beam and the sloped roof (fascia
+            # board flush with the beam ends; without it the roof underside shows as an open wedge at each end)
+            oh, fall = a.get("roof_overhang", 0.15), a.get("roof_fall", 0.0)
+            zs = a.get("soffit_z", zu - bh)
+            prof = [(0.0, zs), (dep + 0.02, zs), (dep + 0.02, zu - 0.02 * fall / max(dep, 1e-3)), (0.0, zu + fall)]
+            bm = bmesh.new()
+            for ua, ub in ((u0 - 0.03, u0), (u1, u1 + 0.03)):
+                prism_profile(bm, fr, prof, ua, ub)
+            self.obj(f"GalleryEnds_{tag}", bm, COL["frame"], ev, cf)
         if a.get("gutter") or a.get("downpipes_u"):
             oh = a.get("roof_overhang", 0.15)
             bm = bmesh.new()
@@ -711,6 +738,10 @@ class Building:
         bm = bmesh.new()
         inner = offset_ring(self.ring, self.s["wall_thk"])
         slabs = [(-0.25, 0.0), (self.s["eave_z"] - 0.25, self.s["eave_z"])]
+        if self.s["roof"].get("type", "hip") not in ("flat", "none"):
+            # a pitched roof solid already closes the top at eave_z - FASCIA_M: an eave slab would only add a
+            # coplanar ceiling face (z-fight seen through the windows) and a buried top face
+            slabs = slabs[:1]
         # "interior_floors": true -> the INT_* specs model every floor plate (with stair openings); the shell only
         # keeps the basement slab (an eave slab would cut through an attic storey)
         if self.s.get("interior_floors"):
@@ -729,6 +760,17 @@ class Building:
         self.obj("Slabs", bm, (0.6, 0.6, 0.6, 1), "closing slabs; floor plates come with the interior")
 
 
+def _drop_collinear(ring, eps=1e-6):
+    """Remove vertices lying on the line of their neighbours (no-op for rings without them)."""
+    n = len(ring)
+    out = []
+    for i in range(n):
+        a, b, c = ring[i - 1], ring[i], ring[(i + 1) % n]
+        if abs((b[0] - a[0]) * (c[1] - b[1]) - (b[1] - a[1]) * (c[0] - b[0])) > eps:
+            out.append(b)
+    return out
+
+
 def _ring_band(bm, outer, inner, z0, z1):
     """Closed band between two rings with matching vertex order (e.g. a parapet), z0..z1."""
     n = len(outer)
@@ -745,11 +787,18 @@ def _ring_band(bm, outer, inner, z0, z1):
 
 
 def _surround(bm, w, h, l, r, b, t, proj):
+    """Window surround bands; zero-width bands are skipped (a flat box has coincident faces and no inside)."""
     ident = Matrix.Identity(4)
-    box(bm, ident, -l, w + r, 0.0, proj, -b, 0.0)          # bottom
-    box(bm, ident, -l, w + r, 0.0, proj, h, h + t)         # top
-    box(bm, ident, -l, 0.0, 0.0, proj, 0.0, h)             # left
-    box(bm, ident, w, w + r, 0.0, proj, 0.0, h)            # right
+    if proj <= 0:
+        return
+    if b > 0:
+        box(bm, ident, -l, w + r, 0.0, proj, -b, 0.0)      # bottom
+    if t > 0:
+        box(bm, ident, -l, w + r, 0.0, proj, h, h + t)     # top
+    if l > 0:
+        box(bm, ident, -l, 0.0, 0.0, proj, 0.0, h)         # left
+    if r > 0:
+        box(bm, ident, w, w + r, 0.0, proj, 0.0, h)        # right
 
 
 def _prism_along_w(bm, fr, prof_uz, w0, w1):
