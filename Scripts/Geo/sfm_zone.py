@@ -36,8 +36,9 @@ def extract(zone, img_dir):
             subprocess.run(cmd, check=True)
         groups[g] = v.get("f35")  # video: EIS crop changes intrinsics; let COLMAP refine from a prior
     for p in zone.get("photos", []):
-        im = Image.open(os.path.join(RAW, p))
-        f35 = float(im.getexif().get_ifd(0x8769).get(41989) or 0) or None
+        src = p if os.path.isabs(p) else os.path.join(RAW, p)  # absolute paths: photos sent outside the capture set
+        im = Image.open(src)
+        f35 = float(im.getexif().get_ifd(0x8769).get(41989) or 0) or zone.get("default_f35", {}).get(p)
         g = f"p{int(f35 or 0):02d}mm"
         d = os.path.join(img_dir, g)
         os.makedirs(d, exist_ok=True)
@@ -81,7 +82,7 @@ def main():
         cams = {c.camera_id: c for c in d.read_all_cameras()}
         for im in d.read_all_images():
             c = cams[im.camera_id]
-            f35 = groups.get(im.name.split("/")[0]) or 26.0
+            f35 = groups.get(im.name.split("/")[0]) or 26.0  # p00mm/p27mm groups: EXIF-less photos use their prior
             f = f35 * np.hypot(c.width, c.height) / DIAG_35MM
             p = list(c.params)
             if c.model.name in ("SIMPLE_RADIAL", "SIMPLE_PINHOLE", "RADIAL"):
