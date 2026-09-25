@@ -709,6 +709,10 @@ class Building:
         bm = bmesh.new()
         inner = offset_ring(self.ring, self.s["wall_thk"])
         slabs = [(-0.25, 0.0), (self.s["eave_z"] - 0.25, self.s["eave_z"])]
+        # "interior_floors": true -> the INT_* specs model every floor plate (with stair openings); the shell only
+        # keeps the basement slab (an eave slab would cut through an attic storey)
+        if self.s.get("interior_floors"):
+            slabs = []
         bsm = self.s.get("basement")
         if bsm:
             slabs.append((bsm["floor_z"] - bsm["slab_t"], bsm["floor_z"]))

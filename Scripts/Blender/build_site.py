@@ -553,6 +553,12 @@ class Site:
                 x += tr
                 prof.append((x, z))
         prof += [(x + el.get("run_out", 0.0), z), (x + el.get("run_out", 0.0), zb - 0.2)]
+        st = el.get("soffit_thk")
+        if st:  # sloped waist slab instead of a solid block (headroom under the flight): underside parallel to the
+            # pitch line, st (m, normal to the slope) below the inner step corners; flat 0.2 m slab end at the bottom
+            k = math.hypot(tr, rh) / tr                      # normal -> vertical thickness
+            prof[0] = (0.0, zt - rh - st * k)
+            prof[-1] = (prof[-1][0], zb - 0.2)
         m = Matrix.Identity(4)
         m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = left.to_3d(), fwd.to_3d(), Vector((0, 0, 1))
         m.col[3].xyz = Vector((P.x, P.y, 0))

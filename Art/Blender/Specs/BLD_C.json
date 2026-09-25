@@ -275,7 +275,6 @@
      "type": "W",
      "u": [
       2.2,
-      6.6,
       9.0,
       13.0
      ],
@@ -285,9 +284,39 @@
       "F3",
       "F4"
      ]
+    },
+    {
+     "type": "W",
+     "u": [
+      6.6
+     ],
+     "rows": [
+      "F2",
+      "F3",
+      "F4"
+     ]
     }
    ],
-   "status": "assumed: mirror of the west facade (no photo of the east facade)"
+   "status": "assumed: mirror of the west facade (no photo of the east facade) | F1 exit door from the hall photo (2026-09-25)",
+   "entrance": {
+    "u0": 5.0,
+    "u1": 6.86,
+    "z1": 2.5,
+    "bays": [
+     [
+      0.93,
+      "door"
+     ],
+     [
+      0.93,
+      "door"
+     ]
+    ],
+    "transom_z": 2.05,
+    "reveal": 0.15,
+    "evidence": "2026-09-25 map owner's hall photo (east hall end, solved camera + 0.6 m ceiling grid): brown double exit door with a 3-light transom in the east end wall under the stair's second flight, 1.86 m wide, head ~2.5-2.6 m, 3.4-5.2 m south of the north hall wall (y 6.3-8.2); greenery outside. Replaces the assumed F1 window of column u 6.6 (the west end has a window in the same column, frame c38). Outside steps/landing unknown.",
+    "confidence": "medium"
+   }
   },
   {
    "edge": 6,
@@ -423,14 +452,15 @@
    "edge": 2,
    "u0": -0.53,
    "u1": 4.33,
-   "depth": 2.2,
+   "depth": 3.6,
    "z0": 3.45,
    "z1": 3.75,
    "sign": {
-    "z1": 5.24,
+    "z1": 5.55,
     "t": 0.35
    },
-   "evidence": "rect 061621646, depth-corrected with the recovered camera (off-plane factor 0.853): soffit 3.45, sign box to 5.24, width 4.85; sloped terracotta soffit; sign content -> KOCH branding in UE"
+   "evidence": "rect 061621646, depth-corrected with the recovered camera (off-plane factor 0.853): soffit 3.45, sign box to 5.24, width 4.85; sloped terracotta soffit; sign content -> KOCH branding in UE | 2026-09-25 photo match of 070647586: soffit grid of 0.6 m panels, 8 across (4.8 m) x 6 deep (tele still 061631264, frames b13/b14) -> depth 3.6; frame b12 (PnP 11 px) puts the sign front 3.7-3.8 m out and the sign 3.75-5.69, frame b07 overlay agrees with the deep box; the 2.2 m box left the photo sign 1-1.5 m in front of the model's in b07/b10/b12. Sign top 5.55 (b12 5.69, 061621646 aspect 1.66-1.9 m tall)",
+   "confidence": "medium"
   },
   {
    "type": "ramp",
@@ -450,10 +480,10 @@
    "u0": 0.0,
    "u1": 12.8,
    "depth": 2.3,
-   "z_wall": -0.55,
-   "z_edge": -0.85,
-   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated",
-   "confidence": "low"
+   "z_wall": -0.1,
+   "z_edge": -0.7,
+   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated | 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band and fall to a low fascia ~0.35 m above the paving (012526070, 061624280); they roof the basement corridor, whose floor is now plaza-1.38 (INT_C_Basement)",
+   "confidence": "medium"
   },
   {
    "type": "lightwell",
@@ -461,32 +491,34 @@
    "u0": 0.3,
    "u1": 12.5,
    "depth": 1.2,
-   "z_wall": -0.3,
-   "z_edge": -0.85
+   "z_wall": -0.1,
+   "z_edge": -0.7,
+   "evidence": "red sloped covers along the east wing under the steel ramp, same profile as the south-west covers (frames b05/b07 of 070647586)",
+   "confidence": "low"
   },
   {
    "type": "shed",
    "name": "WestShed",
    "edge": 7,
    "u0": -5.2,
-   "u1": 13.7,
+   "u1": 16.75,
    "depth": 5.8,
    "z_high": 1.0,
    "z_low": -0.91,
    "wall_h_from_ground": true,
-   "evidence": "semi-sunken Dance Hall block along C's west wall: front wall (dark stone band on red tile) 1.3 m above the west-side grade, grey profiled roof rising to C's wall just under the F1 sills (012456258, 012459414, photo 10:55); plan from Google z20 (grey roof x -6.0..0, y 3.5..22.8 in C local, lean-corrected): depth 5.8 m, runs 5.2 m past C's NW corner 2026-09-25 photo-match 012459414 (PnP camera): front wall 0.87 m above grade (vs the 2.25 m Dance Hall box in the same plane), roof meets C's wall at the F1 sill line.",
+   "evidence": "semi-sunken Dance Hall block along C's west wall: front wall (dark stone band on red tile) 1.3 m above the west-side grade, grey profiled roof rising to C's wall just under the F1 sills (012456258, 012459414, photo 10:55); plan from Google z20 (grey roof x -6.0..0, y 3.5..22.8 in C local, lean-corrected): depth 5.8 m, runs 5.2 m past C's NW corner 2026-09-25 photo-match 012459414 (PnP camera): front wall 0.87 m above grade (vs the 2.25 m Dance Hall box in the same plane), roof meets C's wall at the F1 sill line. | 2026-09-25 frames a04-a08 of 070629483: the shed roof and front wall continue south to the brick wall at the stair (u 16.75)",
    "z_base": -2.08
   },
   {
    "type": "stair_box",
    "name": "DanceHallEntry",
    "edge": 7,
-   "u0": 13.72,
+   "u0": 16.75,
    "u1": 17.15,
    "w0": 0.0,
    "depth": 5.8,
-   "z_top": 0.47,
-   "evidence": "brick box at the south end of the same west wall line (flush with the shed front, taller), 'Dance Hall' sign on its south face above the landing (012459414, 012507444, photo 10:55)",
+   "z_top": 1.05,
+   "evidence": "brick box at the south end of the same west wall line (flush with the shed front, taller), 'Dance Hall' sign on its south face above the landing (012459414, 012507444, photo 10:55) | 2026-09-25 frames a06-a08 of 070629483: brick top just under the entry roof (+1.3 at the west verge); kept at +1.0 so the F1 window of the west wall (sill +1.05) stays clear, the entry roof (INT_C_Basement) covers the south part | 2026-09-25 frames a04-a08 (5 viewpoints 6-8 m west/south-west): the lit west end face of the brick block is only ~0.4 m wide in every view while the shed roof and its stone-band front run right up to it, so it is a 0.4 m brick wall along the stair (south end of the shed), 2.3 m above the landing, not a 3.4 m deep box; top kept just under the entry roof",
    "confidence": "medium",
    "z_base": -2.08
   },
@@ -519,8 +551,8 @@
     0.05,
     4.0
    ],
-   "z": 5.24,
-   "w": 1.9,
+   "z": 5.55,
+   "w": 3.3,
    "evidence": "two black flood lamps on top of the sign box ends (061621646)"
   },
   {
@@ -535,13 +567,58 @@
    "color": "canopy",
    "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726)",
    "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "ACUnits",
+   "edge": 0,
+   "items": [
+    [
+     4.7,
+     3.7,
+     0.8,
+     0.55,
+     0.3
+    ]
+   ],
+   "evidence": "AC outdoor unit hanging under the F2 sill at the east jamb of window column u 3.52, pipe up to the window (frames a06/a08/a10 of 070629483; ray-cast u 4.3-5.2, z 3.9-4.2)",
+   "confidence": "medium"
+  },
+  {
+   "type": "downpipe",
+   "edge": 7,
+   "u": [
+    16.33,
+    17.08
+   ],
+   "z0": 1.2,
+   "z1": 13.3,
+   "d": 0.1,
+   "evidence": "two white downpipes on the west face at the SW corner, one splitting the maroon strip into the 'double strip', both ending on the entry roof (frame a06 of 070629483, ray-cast y 0.87 / 0.12)",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "CCTV_W",
+   "edge": 7,
+   "items": [
+    [
+     16.2,
+     2.95,
+     0.12,
+     0.12,
+     0.22
+    ]
+   ],
+   "evidence": "small CCTV camera on the SW maroon strip of the west face (frames a06/a07 of 070629483, ray-cast y 0.81-1.11, z 2.8-3.0)",
+   "confidence": "low"
   }
  ],
  "basement": {
-  "floor_z": -3.16,
+  "floor_z": -2.43,
   "slab_t": 0.25,
   "status": "probable",
-  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483). 2026-09-25: basement corridor floor 1.38 m below the plaza = -2.43 rel FFL (SfM, 10 risers x 0.138); corridor runs east along the south wall.",
+  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483). 2026-09-25: basement corridor floor 1.38 m below the plaza = -2.43 rel FFL (SfM, 10 risers x 0.138); corridor runs east along the south wall. | 2026-09-25 photo match of 070629483: the stair head is on the south plaza (FFL-1.05), not the lower west grade, so the corridor floor is -2.43 (10 x 0.138 below the plaza) and floor_z follows it.",
   "pending": [
    "entry stair/ramp geometry and door position (west side)",
    "basement windows behind the light wells",
@@ -550,5 +627,6 @@
   "later": "gameplay: 2 playable pianos in the basement (R3/R4, not now)"
  },
  "ffl_z": 6.4,
- "ffl_note": "2026-09-25 map owner: the C entrance plaza, the garden with the gazebos and the lower plaza along A_W (below the wide stair north of B) are one level; that level = A_W walkway 5.35 (drone SfM + 8 risers from the alley). C FFL = plaza + 7 risers x 0.15 = 6.40 (DEM rule gave 5.53)."
+ "ffl_note": "2026-09-25 map owner: the C entrance plaza, the garden with the gazebos and the lower plaza along A_W (below the wide stair north of B) are one level; that level = A_W walkway 5.35 (drone SfM + 8 risers from the alley). C FFL = plaza + 7 risers x 0.15 = 6.40 (DEM rule gave 5.53).",
+ "interior_floors": true
 }

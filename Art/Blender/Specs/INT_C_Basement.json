@@ -1,6 +1,7 @@
 {
  "id": "INT_C_Basement",
  "collection": "INT_C_Basement",
+ "ground": "pads",
  "terrain_holes": [
   [
    [
@@ -59,7 +60,7 @@
    "risers": 8,
    "riser_h": 0.138,
    "tread": 0.36,
-   "z_top": 4.62,
+   "z_top": 5.3500000000000005,
    "run_out": 1.2,
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910)",
    "confidence": "medium"
@@ -76,7 +77,7 @@
    "risers": 2,
    "riser_h": 0.138,
    "tread": 0.36,
-   "z_top": 3.516,
+   "z_top": 4.246,
    "run_out": 0.5,
    "evidence": "photo 012543364: 2 steps from the mid landing down to the corridor floor; riser as upper flight",
    "confidence": "medium"
@@ -102,14 +103,16 @@
      -3.655
     ]
    ],
-   "z0": 3.04,
-   "z1": 3.24,
+   "z0": 3.7700000000000005,
+   "z1": 3.9700000000000006,
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; floor -1.38 m below the plaza (10 risers)",
    "confidence": "medium"
   },
   {
-   "type": "slab",
+   "type": "roof_plane",
    "name": "Corridor_Ceiling",
+   "thk": 0.05,
+   "material": "white",
    "ring": [
     [
      173.554,
@@ -128,11 +131,14 @@
      -3.655
     ]
    ],
-   "z0": 5.54,
-   "z1": 5.69,
-   "material": "white",
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; flat ceiling with downlights ~2.3 m above the corridor floor",
-   "confidence": "medium"
+   "z": [
+    5.718260869565218,
+    5.718260869565218,
+    6.24,
+    6.24
+   ],
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; lining under the sloped covers (downlights), height from the covers (frame b12)",
+   "confidence": "low"
   },
   {
    "type": "int_wall",
@@ -147,16 +153,16 @@
      -3.59
     ]
    ],
-   "z0": 3.24,
-   "z1": 5.5200000000000005,
+   "z0": 3.9700000000000006,
+   "z1": 6.250000000000001,
    "thk": 0.25,
    "material": "brick",
    "openings": [
     {
      "u0": 2.9699999999999998,
      "u1": 3.87,
-     "z0": 3.516,
-     "z1": 5.516
+     "z0": 4.246,
+     "z1": 6.246
     }
    ],
    "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box",
@@ -175,8 +181,8 @@
      -5.264
     ]
    ],
-   "z0": 3.24,
-   "z1": 4.67,
+   "z0": 3.9700000000000006,
+   "z1": 5.4,
    "thk": 0.25,
    "material": "brick",
    "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80)",
@@ -195,8 +201,8 @@
      -5.653
     ]
    ],
-   "z0": 3.24,
-   "z1": 5.54,
+   "z0": 3.9700000000000006,
+   "z1": 5.718260869565218,
    "thk": 0.3,
    "material": "brick",
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile parapet under the sloped covers (map owner photo 10:55)",
@@ -225,7 +231,8 @@
   {
    "type": "roof_plane",
    "name": "EntryRoof",
-   "thk": 0.12,
+   "thk": 0.2,
+   "material": "metal",
    "ring": [
     [
      167.133,
@@ -236,22 +243,54 @@
      -5.788
     ],
     [
-     173.407,
-     -0.043
+     173.352,
+     -1.442
     ],
     [
-     167.362,
-     0.198
+     167.307,
+     -1.201
     ]
    ],
    "z": [
-    6.82,
-    6.82,
-    7.4,
-    7.4
+    7.5200000000000005,
+    7.5200000000000005,
+    7.75,
+    7.75
    ],
-   "evidence": "photo 10:55 (PnP camera): south eave 2.2 m above grade, north edge under the F1 sills; west verge ~0.25 m past the box/shed wall line; 012459414, 012507444, 012511910",
+   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140)",
    "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "EntryRoof_E",
+   "thk": 0.2,
+   "material": "metal",
+   "ring": [
+    [
+     173.178,
+     -5.788
+    ],
+    [
+     173.478,
+     -5.8
+    ],
+    [
+     173.562,
+     -3.702
+    ],
+    [
+     173.262,
+     -3.69
+    ]
+   ],
+   "z": [
+    7.5200000000000005,
+    7.5200000000000005,
+    7.631034482758621,
+    7.631034482758621
+   ],
+   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140)",
+   "confidence": "low"
   },
   {
    "type": "slab",
@@ -274,14 +313,14 @@
      -3.359
     ]
    ],
-   "z0": 4.42,
-   "z1": 4.64,
-   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head (012507444, 012511910, photo 10:55)",
+   "z0": 5.15,
+   "z1": 5.4,
+   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head, one kerb above the plaza paving (012507444, frame a10 of 070629483)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "EntryRoof_Post",
+   "name": "EntryRoof_Post0",
    "center": [
     169.018,
     -5.472
@@ -290,11 +329,29 @@
    "size": [
     0.1,
     0.1,
-    2.5
+    2.27
    ],
-   "z0": 4.32,
+   "z0": 5.050000000000001,
    "material": "metal",
-   "evidence": "single steel post at the front corner of the entry roof by the stair head (012507444, 012511910)",
+   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "EntryRoof_Post1",
+   "center": [
+    171.915,
+    -5.588
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    2.27
+   ],
+   "z0": 5.050000000000001,
+   "material": "metal",
+   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150)",
    "confidence": "medium"
   },
   {
@@ -310,7 +367,7 @@
     0.6,
     1.85
    ],
-   "z0": 3.24,
+   "z0": 3.9700000000000006,
    "evidence": "orange wooden wardrobes against C's south wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
    "confidence": "medium"
   },
@@ -327,7 +384,7 @@
     0.6,
     1.85
    ],
-   "z0": 3.24,
+   "z0": 3.9700000000000006,
    "evidence": "orange wooden wardrobes against C's south wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
    "confidence": "low"
   }

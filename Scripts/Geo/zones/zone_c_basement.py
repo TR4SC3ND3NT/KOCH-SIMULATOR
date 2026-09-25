@@ -24,6 +24,13 @@ FFL = 6.40            # world z of the C ground floor (build_facades output, ter
 # as in the photo. Also consistent with the earlier note that the ground west of C is lower than the entrance plaza.
 GW = -1.78
 GRADE = FFL + GW
+# Stair head / landing = the south plaza level (FFL - 7 risers x 0.15), NOT the lower west grade GW. 2026-09-25 photo
+# match of video 070629483 (frames a06-a08, window PnP cameras): the brick-box corner base, both canopy-post bases and
+# the stair-head railing base triangulate/ray-cast to -0.9..-1.17 below FFL; stills 012507444/012536150/061624280 and
+# frame a10 show the granite landing one kerb above the paving that runs flat east to the entrance plaza (people's
+# feet vs the horizon agree), and the model terrain there is already the 5.35 lower terrace. GW stays for the ground
+# west of the shed (sloping paving north of the box, 012456258).
+PLAZA = -1.05
 
 # --- SfM metric frame (sfm_views --scale 0.60) -> C local -----------------------------------------------------------
 # Scale 0.60 m/unit: stair profile tread 0.60 u / riser 0.231 u + Blondel 2h+b = 0.63 m -> 0.593; hand-held camera
@@ -37,7 +44,7 @@ TOP_M = np.array([-3.87, 0.12, -0.36])
 # the plaza with the planters is on the right. Frame +x (walking) = C +x (east), frame +y (left) = C +y (north).
 # y: corridor north face (frame y_m +1.00) = C south wall face (y 0); x: the brick box ends / white C wall starts at
 # frame x_m ~0.2 (frame 41: brick wall -> column -> white wall) = C SW corner (x 0).
-TOP_C = np.array([-4.07, -0.88, GW])
+TOP_C = np.array([-4.07, -0.88, PLAZA])
 
 
 def m_to_c(q):
@@ -63,9 +70,18 @@ Y_N, Y_S = m_to_c([0, 1.05, 0])[1], m_to_c([0, -0.80, 0])[1]   # stair wall face
 LANDING = 1.20      # mid landing depth: SfM gap between the 8th nosing (x_m -1.35) and the next edge; photo ~3 treads
 CY_N, CY_S = 0.0, m_to_c([0, -1.00, 0])[1]   # corridor: C south wall face / retaining wall (SfM y_m +-1.00)
 CEIL_H = 2.30       # corridor clear height (SfM 2.2-2.6 m); must stay under the sloped covers
+# Sloped red covers over the corridor = BLD_C lightwell edge 0 (keep in sync): top at C's wall / at the outer edge (z rel
+# FFL) and depth (m). 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band
+# and fall to a low fascia ~0.35 m above the paving (also 012526070, 061624280).
+COVER_WALL, COVER_EDGE, COVER_DEPTH, COVER_T = -0.10, -0.70, 2.30, 0.06
 X_END = m_to_c([7.0, 0, 0])[0]    # last frames of the segment (corridor continues toward the piano room)
 # Grilled basement window in C's south wall, frame-x extent (m), fitted by overlay on frames 41/101/121.
 WIN_M0, WIN_M1 = 1.5, 3.9
+
+
+def cover_under(y):
+    """Underside of the sloped covers at C-local y (<= 0, south of C's wall), z rel FFL."""
+    return COVER_WALL + (COVER_EDGE - COVER_WALL) * min(-y, COVER_DEPTH) / COVER_DEPTH - COVER_T
 
 
 def build():
@@ -93,9 +109,14 @@ def build():
         {"type": "slab", "name": "Corridor_Floor", "ring": ring_c(x_corr0, X_END, CY_S, CY_N),
          "z0": FFL + z_corr - 0.2, "z1": FFL + z_corr,
          "evidence": ev_sfm + f"; floor {z_corr - z_top:.2f} m below the plaza ({N1 + N2} risers)", "confidence": "medium"},
-        {"type": "slab", "name": "Corridor_Ceiling", "ring": ring_c(x_corr0, X_END, CY_S, CY_N),
-         "z0": FFL + CEIL, "z1": FFL + CEIL + 0.15, "material": "white",
-         "evidence": ev_sfm + "; flat ceiling with downlights ~2.3 m above the corridor floor", "confidence": "medium"},
+        # ceiling lining directly under the sloped covers (the covers are the corridor roof since the stair head moved up
+        # to the plaza level; the SfM 'flat 2.2-2.6 m' ceiling would pierce them): 2.2 m clear at C's wall, ~1.6 m at the
+        # south wall
+        {"type": "roof_plane", "name": "Corridor_Ceiling", "thk": 0.05, "material": "white",
+         "ring": ring_c(x_corr0, X_END, CY_S, CY_N),
+         "z": [FFL + cover_under(CY_S), FFL + cover_under(CY_S), FFL + cover_under(CY_N), FFL + cover_under(CY_N)],
+         "evidence": ev_sfm + "; lining under the sloped covers (downlights), height from the covers (frame b12)",
+         "confidence": "low"},
         # north wall of the stair = south face of the Dance Hall box, with the brown door at the mid landing
         {"type": "int_wall", "name": "Stair_Wall_N", "line": [c_to_w((x0 - 0.3, Y_N)), c_to_w((0.0, Y_N))],
          "z0": FFL + z_corr, "z1": FFL + z_top + 0.9, "thk": 0.25, "material": "brick",
@@ -109,7 +130,7 @@ def build():
          "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80)",
          "confidence": "medium"},
         {"type": "int_wall", "name": "Corridor_Wall_S", "line": [c_to_w((X_END, CY_S)), c_to_w((x_corr0, CY_S))],
-         "z0": FFL + z_corr, "z1": FFL + CEIL, "thk": 0.3, "material": "brick",
+         "z0": FFL + z_corr, "z1": FFL + cover_under(CY_S), "thk": 0.3, "material": "brick",
          "evidence": ev_sfm + "; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile "
                      "parapet under the sloped covers (map owner photo 10:55)",
          "confidence": "medium"},
@@ -118,24 +139,33 @@ def build():
                 "height": 0.95, "post_spacing": 1.3, "post": 0.05, "panel": "bars",
                 "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
                 "confidence": "medium"})
-    # Entry roof: one red profiled-sheet mono-pitch roof over the Dance Hall box, the landing and the stairwell,
-    # high at the north (box, under C's F1 sills) and sloping down to the south eave above the railing (photo 10:55:
-    # the west verge falls toward the camera; 012459414/012507444: roof over the box and the stair head).
-    R_W, R_E, R_S, R_N = -6.05, 0.0, Y_S - 0.35, 3.60
-    Z_N, Z_S = 1.00, GW + 2.20
-    els.append({"type": "roof_plane", "name": "EntryRoof", "thk": 0.12,
-                "ring": [c_to_w((R_W, R_S)), c_to_w((R_E, R_S)), c_to_w((R_E, R_N)), c_to_w((R_W, R_N))],
-                "z": [FFL + Z_S, FFL + Z_S, FFL + Z_N, FFL + Z_N],
-                "evidence": "photo 10:55 (PnP camera): south eave 2.2 m above grade, north edge under the F1 sills; west verge "
-                            "~0.25 m past the box/shed wall line; 012459414, 012507444, 012511910", "confidence": "medium"})
+    # Entry roof: grey profiled-sheet canopy with a white soffit over the landing, the box and the stair head (frames
+    # a05-a10 of 070629483, stills 012507444/012520140/012536150): near-flat, a little higher over the box; fascia 0.2 m;
+    # front beam on two steel posts along the plaza side of the stairwell; east end ~0.3 m past C's SW corner line.
+    # Heights from the a06-a08 cameras: post tops (beam underside) +0.87..+0.91, front top +1.17, top over the box
+    # +1.28..+1.43; its north edge stays south of the F1 window of C's west wall (sill +1.05 from y 2.675, seen above it).
+    R_W, R_E, R_S, R_N = -6.05, 0.30, Y_S - 0.35, 2.20
+    Z_N, Z_S, R_T = 1.35, 1.12, 0.20
+    zr = lambda y: Z_S + (Z_N - Z_S) * (y - R_S) / (R_N - R_S)
+    ev_roof = ("frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front "
+               "edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140)")
+    els.append({"type": "roof_plane", "name": "EntryRoof", "thk": R_T, "material": "metal",
+                "ring": [c_to_w((R_W, R_S)), c_to_w((0.0, R_S)), c_to_w((0.0, R_N)), c_to_w((R_W, R_N))],
+                "z": [FFL + Z_S, FFL + Z_S, FFL + Z_N, FFL + Z_N], "evidence": ev_roof, "confidence": "medium"})
+    # east end past C's corner line only south of the south facade (y < 0)
+    els.append({"type": "roof_plane", "name": "EntryRoof_E", "thk": R_T, "material": "metal",
+                "ring": [c_to_w((0.0, R_S)), c_to_w((R_E, R_S)), c_to_w((R_E, -0.05)), c_to_w((0.0, -0.05))],
+                "z": [FFL + Z_S, FFL + Z_S, FFL + zr(-0.05), FFL + zr(-0.05)], "evidence": ev_roof, "confidence": "low"})
     els.append({"type": "slab", "name": "Entry_Landing", "ring": ring_c(-5.8, x0 + 0.05, Y_S - 1.2, Y_N),
-                "z0": FFL + GW - 0.2, "z1": FFL + GW + 0.02,
-                "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head "
-                            "(012507444, 012511910, photo 10:55)", "confidence": "medium"})
-    els.append({"type": "box", "name": "EntryRoof_Post", "center": c_to_w((x0 - 0.1, Y_S - 0.2)), "dir_deg": east,
-                "size": [0.1, 0.1, 2.2 + 0.3], "z0": FFL + GW - 0.3, "material": "metal",
-                "evidence": "single steel post at the front corner of the entry roof by the stair head (012507444, 012511910)",
-                "confidence": "medium"})
+                "z0": FFL + PLAZA - 0.2, "z1": FFL + PLAZA + 0.05,
+                "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head, one kerb "
+                            "above the plaza paving (012507444, frame a10 of 070629483)", "confidence": "medium"})
+    # two steel posts under the front beam; spacing 2.9 m from the a06/a08 triangulation (post 1 -> post 2)
+    for k, xp in enumerate((x0 - 0.1, x0 - 0.1 + 2.9)):
+        els.append({"type": "box", "name": f"EntryRoof_Post{k}", "center": c_to_w((xp, Y_S - 0.2)), "dir_deg": east,
+                    "size": [0.1, 0.1, Z_S - R_T - PLAZA + 0.3], "z0": FFL + PLAZA - 0.3, "material": "metal",
+                    "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east "
+                                "(frames a06-a08 of 070629483, 012507444, 012536150)", "confidence": "medium"})
     for k, xm in enumerate((4.2, 5.0)):
         c = m_to_c([xm + 0.4, 0, 0])
         els.append({"type": "box", "name": f"Wardrobe_{k}", "center": c_to_w((c[0], CY_N - 0.3)), "dir_deg": east,
@@ -146,7 +176,8 @@ def build():
     hole = ring_c(x0 - 0.05, x_corr0 + 0.4, Y_S - 0.25, Y_N)   # open stairwell: cut the terrain heightfield here
     # lower ground west/south-west of C (see GW); blends back to the DEM surface over 8 m
     pad = {"ring": ring_c(-12.0, 1.0, -6.0, 19.0), "z": FFL + GW, "blend": 8.0}
-    return {"id": "INT_C_Basement", "collection": "INT_C_Basement", "terrain_holes": [hole], "terrain_pads": [pad],
+    # "ground": "pads" -> the plaza-side railing stands on the padded terrain (5.35 terrace), not the raw DEM
+    return {"id": "INT_C_Basement", "collection": "INT_C_Basement", "ground": "pads", "terrain_holes": [hole], "terrain_pads": [pad],
             "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall "
                     "(zone reconstruction 2026-09-25, direction corrected by the map owner).",
             "elements": els}, dict(z_corr=round(z_corr, 3), x_corr0=round(x_corr0, 3), window_x=[round(w, 2) for w in win],

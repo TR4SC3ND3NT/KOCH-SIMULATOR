@@ -1,0 +1,5177 @@
+{
+ "id": "INT_C_Floors",
+ "collection": "INT_C_Floors",
+ "note": "Block C interior (zone pass 2026-09-25, stair + hall from the map owner's hall photo). Topology from the map owner; hall width and stair ratios from the photo metrology; room partitions between window bays and middle-room doors are estimates (orange). F2-F4 repeat F1 (room over the lobby); west stair F1-F3, east stair to F5; F4 west hall end = offices; F5 inside the roof.",
+ "elements": [
+  {
+   "type": "slab",
+   "name": "F2_Slab_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     176.895,
+     3.336
+    ],
+    [
+     173.997,
+     3.451
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_W_N",
+   "ring": [
+    [
+     174.173,
+     7.858
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.474,
+     2.316
+    ],
+    [
+     199.577,
+     2.431
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Slab_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 9.45,
+   "z1": 9.7,
+   "material": "stone",
+   "evidence": "F2 structural slab at 1 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     176.837,
+     1.897
+    ],
+    [
+     173.94,
+     2.013
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_W_N",
+   "ring": [
+    [
+     174.173,
+     7.858
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.417,
+     0.877
+    ],
+    [
+     199.519,
+     0.992
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Ceiling_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 12.62,
+   "z1": 12.64,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Hall_S",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 10.535,
+     "u1": 11.565,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 13.735,
+     "u1": 14.765,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 16.935,
+     "u1": 17.965,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 22.685,
+     "u1": 23.715,
+     "z0": 9.7,
+     "z1": 11.77
+    }
+   ],
+   "material": "white",
+   "evidence": "hall wall along the classrooms, full length to the end walls (map owner: the rooms continue alongside the stair bays)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_S0",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 4.805,
+   "u1": 5.795,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); end room: 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_S1",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 10.555,
+   "u1": 11.545,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_S2",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 13.755,
+   "u1": 14.745,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_S3",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 16.955,
+   "u1": 17.945,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_S4",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 22.705,
+   "u1": 23.695,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); end room: 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Lobby_W",
+   "line": [
+    [
+     185.972,
+     1.332
+    ],
+    [
+     185.772,
+     -3.688
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "tower bay side wall (F1: lobby with vending + coffee machine, 070704360 t 4-6 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Lobby_E",
+   "line": [
+    [
+     190.22,
+     -2.565
+    ],
+    [
+     190.369,
+     1.157
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "tower bay side wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_S_W12",
+   "line": [
+    [
+     179.977,
+     -3.457
+    ],
+    [
+     180.177,
+     1.564
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_S_E12",
+   "line": [
+    [
+     195.916,
+     -2.792
+    ],
+    [
+     196.064,
+     0.93
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Hall_N",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 22.685,
+     "u1": 23.715,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 17.035,
+     "u1": 18.065,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 10.435,
+     "u1": 11.465,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 15.08,
+     "u1": 16.02,
+     "z0": 9.7,
+     "z1": 11.77
+    },
+    {
+     "u0": 12.48,
+     "u1": 13.42,
+     "z0": 9.7,
+     "z1": 11.77
+    }
+   ],
+   "material": "white",
+   "evidence": "north hall wall, full length; the stair landings meet it (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_N0",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 22.705,
+   "u1": 23.695,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "end room door 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_N1",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 17.055,
+   "u1": 18.045,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "middle room door near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_N2",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 10.455,
+   "u1": 11.445,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "middle room door near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_N3",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 4.805,
+   "u1": 5.795,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "end room door 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_WC4",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 15.1,
+   "u1": 16.0,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F2_Door_WC5",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 12.5,
+   "u1": 13.4,
+   "z0": 9.7,
+   "z1": 11.75,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_N_W12",
+   "line": [
+    [
+     180.626,
+     12.83
+    ],
+    [
+     180.426,
+     7.809
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_WC_W",
+   "line": [
+    [
+     186.222,
+     12.606
+    ],
+    [
+     186.021,
+     7.585
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_WC_Mid",
+   "line": [
+    [
+     188.62,
+     12.511
+    ],
+    [
+     188.419,
+     7.49
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_WC_E",
+   "line": [
+    [
+     191.018,
+     12.415
+    ],
+    [
+     190.818,
+     7.394
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_N_E12",
+   "line": [
+    [
+     196.513,
+     12.196
+    ],
+    [
+     196.313,
+     7.175
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Hall_Bulkhead_W",
+   "ring": [
+    [
+     180.684,
+     1.744
+    ],
+    [
+     181.084,
+     1.728
+    ],
+    [
+     181.317,
+     7.573
+    ],
+    [
+     180.918,
+     7.589
+    ]
+   ],
+   "z0": 12.24,
+   "z1": 12.62,
+   "material": "white",
+   "evidence": "plasterboard bulkhead across the hall in front of the stair zone (hall photo: 3.9-4.2 m before the stair, underside 2.54 m)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_SW_Side",
+   "center": [
+    178.122,
+    1.856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2000000000000002,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_SW_Head",
+   "center": [
+    179.236,
+    1.811
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 11.8,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_NW_Side",
+   "center": [
+    178.354,
+    7.681
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2000000000000002,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_NW_Head",
+   "center": [
+    179.468,
+    7.637
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 11.8,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_FireAlarm_W",
+   "center": [
+    178.352,
+    7.631
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.35,
+    0.1,
+    0.45
+   ],
+   "z0": 10.95,
+   "material": "brick",
+   "evidence": "red fire-alarm / hose box on the blue panel (hall photo)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F2_Hall_Bulkhead_E",
+   "ring": [
+    [
+     195.273,
+     1.162
+    ],
+    [
+     195.672,
+     1.146
+    ],
+    [
+     195.906,
+     6.991
+    ],
+    [
+     195.506,
+     7.007
+    ]
+   ],
+   "z0": 12.24,
+   "z1": 12.62,
+   "material": "white",
+   "evidence": "plasterboard bulkhead across the hall in front of the stair zone (hall photo: 3.9-4.2 m before the stair, underside 2.54 m)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_SE_Side",
+   "center": [
+    198.236,
+    1.054
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.1999999999999993,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_SE_Head",
+   "center": [
+    197.122,
+    1.098
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 11.8,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_NE_Side",
+   "center": [
+    198.468,
+    6.879
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.1999999999999993,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_NE_Head",
+   "center": [
+    197.354,
+    6.923
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 11.8,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_FireAlarm_E",
+   "center": [
+    198.466,
+    6.829
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.35,
+    0.1,
+    0.45
+   ],
+   "z0": 10.95,
+   "material": "brick",
+   "evidence": "red fire-alarm / hose box on the blue panel (hall photo)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_WC",
+   "center": [
+    188.411,
+    7.28
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.800000000000001,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Hall_Radiator_0",
+   "center": [
+    180.965,
+    7.527
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 9.85,
+   "material": "white",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Hall_Radiator_1",
+   "center": [
+    195.853,
+    6.933
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 9.85,
+   "material": "white",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "F2_Hall_Bench_N0",
+   "pos": [
+    183.006,
+    7.255
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 9.7,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "F2_Hall_Bench_N1",
+   "pos": [
+    193.797,
+    6.825
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 9.7,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairW_F2_Flight1",
+   "top": [
+    176.353,
+    6.7
+   ],
+   "dir_deg": 267.7161454954155,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 11.35,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.44 m from the south wall",
+   "confidence": "medium",
+   "soffit_thk": 0.18
+  },
+  {
+   "type": "slab",
+   "name": "StairW_F2_Landing",
+   "ring": [
+    [
+     174.13,
+     6.789
+    ],
+    [
+     177.028,
+     6.673
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     174.173,
+     7.858
+    ]
+   ],
+   "z0": 11.15,
+   "z1": 11.35,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.07 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairW_F2_Flight2",
+   "top": [
+    174.672,
+    3.424
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 13.0,
+   "material": "granite",
+   "soffit_thk": 0.18,
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "StairW_F2_Rail1",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     176.833,
+     3.038,
+     9.7
+    ],
+    [
+     176.845,
+     3.338,
+     9.85
+    ],
+    [
+     176.978,
+     6.675,
+     11.35
+    ],
+    [
+     177.019,
+     7.694,
+     11.35
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairW_F2_Rail2",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     175.529,
+     6.733,
+     11.35
+    ],
+    [
+     175.396,
+     3.396,
+     13.0
+    ],
+    [
+     175.384,
+     3.096,
+     13.0
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairW_F2_TopGuard",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     175.394,
+     3.346,
+     13.0
+    ],
+    [
+     176.843,
+     3.288,
+     13.0
+    ],
+    [
+     177.019,
+     7.694,
+     13.0
+    ]
+   ]
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_F2_Flight1",
+   "top": [
+    200.384,
+    5.742
+   ],
+   "dir_deg": 267.7161454954155,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 11.35,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.44 m from the south wall",
+   "confidence": "medium",
+   "soffit_thk": 0.18
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F2_Landing",
+   "ring": [
+    [
+     199.71,
+     5.769
+    ],
+    [
+     202.607,
+     5.653
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     199.752,
+     6.838
+    ]
+   ],
+   "z0": 11.15,
+   "z1": 11.35,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.07 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_F2_Flight2",
+   "top": [
+    201.8,
+    2.343
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 13.0,
+   "material": "granite",
+   "soffit_thk": 0.18,
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F2_Rail1",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     199.615,
+     2.129,
+     9.7
+    ],
+    [
+     199.627,
+     2.429,
+     9.85
+    ],
+    [
+     199.76,
+     5.767,
+     11.35
+    ],
+    [
+     199.8,
+     6.786,
+     11.35
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F2_Rail2",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     201.209,
+     5.709,
+     11.35
+    ],
+    [
+     201.075,
+     2.371,
+     13.0
+    ],
+    [
+     201.064,
+     2.072,
+     13.0
+    ]
+   ]
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     176.895,
+     3.336
+    ],
+    [
+     173.997,
+     3.451
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_W_N",
+   "ring": [
+    [
+     174.173,
+     7.858
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.474,
+     2.316
+    ],
+    [
+     199.577,
+     2.431
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Slab_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 12.75,
+   "z1": 13.0,
+   "material": "stone",
+   "evidence": "F3 structural slab at 2 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     176.837,
+     1.897
+    ],
+    [
+     173.94,
+     2.013
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_W_N",
+   "ring": [
+    [
+     174.173,
+     7.858
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.417,
+     0.877
+    ],
+    [
+     199.519,
+     0.992
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Ceiling_W_H",
+   "ring": [
+    [
+     173.94,
+     2.013
+    ],
+    [
+     176.837,
+     1.897
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     174.173,
+     7.858
+    ]
+   ],
+   "z0": 15.92,
+   "z1": 15.94,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Hall_S",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 10.535,
+     "u1": 11.565,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 13.735,
+     "u1": 14.765,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 16.935,
+     "u1": 17.965,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 22.685,
+     "u1": 23.715,
+     "z0": 13.0,
+     "z1": 15.07
+    }
+   ],
+   "material": "white",
+   "evidence": "hall wall along the classrooms, full length to the end walls (map owner: the rooms continue alongside the stair bays)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_S0",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 4.805,
+   "u1": 5.795,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); end room: 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_S1",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 10.555,
+   "u1": 11.545,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_S2",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 13.755,
+   "u1": 14.745,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_S3",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 16.955,
+   "u1": 17.945,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_S4",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 22.705,
+   "u1": 23.695,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); end room: 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Lobby_W",
+   "line": [
+    [
+     185.972,
+     1.332
+    ],
+    [
+     185.772,
+     -3.688
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "tower bay side wall (F1: lobby with vending + coffee machine, 070704360 t 4-6 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Lobby_E",
+   "line": [
+    [
+     190.22,
+     -2.565
+    ],
+    [
+     190.369,
+     1.157
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "tower bay side wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_S_W12",
+   "line": [
+    [
+     179.977,
+     -3.457
+    ],
+    [
+     180.177,
+     1.564
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_S_E12",
+   "line": [
+    [
+     195.916,
+     -2.792
+    ],
+    [
+     196.064,
+     0.93
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Hall_N",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 22.685,
+     "u1": 23.715,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 17.035,
+     "u1": 18.065,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 10.435,
+     "u1": 11.465,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 15.08,
+     "u1": 16.02,
+     "z0": 13.0,
+     "z1": 15.07
+    },
+    {
+     "u0": 12.48,
+     "u1": 13.42,
+     "z0": 13.0,
+     "z1": 15.07
+    }
+   ],
+   "material": "white",
+   "evidence": "north hall wall, full length; the stair landings meet it (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_N0",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 22.705,
+   "u1": 23.695,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "end room door 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_N1",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 17.055,
+   "u1": 18.045,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "middle room door near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_N2",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 10.455,
+   "u1": 11.445,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "middle room door near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_N3",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 4.805,
+   "u1": 5.795,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "end room door 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_WC4",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 15.1,
+   "u1": 16.0,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F3_Door_WC5",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 12.5,
+   "u1": 13.4,
+   "z0": 13.0,
+   "z1": 15.05,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_N_W12",
+   "line": [
+    [
+     180.626,
+     12.83
+    ],
+    [
+     180.426,
+     7.809
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_WC_W",
+   "line": [
+    [
+     186.222,
+     12.606
+    ],
+    [
+     186.021,
+     7.585
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_WC_Mid",
+   "line": [
+    [
+     188.62,
+     12.511
+    ],
+    [
+     188.419,
+     7.49
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_WC_E",
+   "line": [
+    [
+     191.018,
+     12.415
+    ],
+    [
+     190.818,
+     7.394
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F3_Room_N_E12",
+   "line": [
+    [
+     196.513,
+     12.196
+    ],
+    [
+     196.313,
+     7.175
+    ]
+   ],
+   "z0": 12.9,
+   "z1": 15.92,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Hall_Bulkhead_W",
+   "ring": [
+    [
+     180.684,
+     1.744
+    ],
+    [
+     181.084,
+     1.728
+    ],
+    [
+     181.317,
+     7.573
+    ],
+    [
+     180.918,
+     7.589
+    ]
+   ],
+   "z0": 15.54,
+   "z1": 15.92,
+   "material": "white",
+   "evidence": "plasterboard bulkhead across the hall in front of the stair zone (hall photo: 3.9-4.2 m before the stair, underside 2.54 m)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_SW_Side",
+   "center": [
+    178.122,
+    1.856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2000000000000002,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_SW_Head",
+   "center": [
+    179.236,
+    1.811
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 15.1,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_NW_Side",
+   "center": [
+    178.354,
+    7.681
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.2000000000000002,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_NW_Head",
+   "center": [
+    179.468,
+    7.637
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 15.1,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_FireAlarm_W",
+   "center": [
+    178.352,
+    7.631
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.35,
+    0.1,
+    0.45
+   ],
+   "z0": 14.25,
+   "material": "brick",
+   "evidence": "red fire-alarm / hose box on the blue panel (hall photo)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F3_Hall_Bulkhead_E",
+   "ring": [
+    [
+     195.273,
+     1.162
+    ],
+    [
+     195.672,
+     1.146
+    ],
+    [
+     195.906,
+     6.991
+    ],
+    [
+     195.506,
+     7.007
+    ]
+   ],
+   "z0": 15.54,
+   "z1": 15.92,
+   "material": "white",
+   "evidence": "plasterboard bulkhead across the hall in front of the stair zone (hall photo: 3.9-4.2 m before the stair, underside 2.54 m)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_SE_Side",
+   "center": [
+    198.236,
+    1.054
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.1999999999999993,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_SE_Head",
+   "center": [
+    197.122,
+    1.098
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 15.1,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_NE_Side",
+   "center": [
+    198.468,
+    6.879
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.1999999999999993,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_NE_Head",
+   "center": [
+    197.354,
+    6.923
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 15.1,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_FireAlarm_E",
+   "center": [
+    198.466,
+    6.829
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.35,
+    0.1,
+    0.45
+   ],
+   "z0": 14.25,
+   "material": "brick",
+   "evidence": "red fire-alarm / hose box on the blue panel (hall photo)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_WC",
+   "center": [
+    188.411,
+    7.28
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.800000000000001,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Hall_Radiator_0",
+   "center": [
+    180.965,
+    7.527
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 13.15,
+   "material": "white",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Hall_Radiator_1",
+   "center": [
+    195.853,
+    6.933
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 13.15,
+   "material": "white",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "F3_Hall_Bench_N0",
+   "pos": [
+    183.006,
+    7.255
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 13.0,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "F3_Hall_Bench_N1",
+   "pos": [
+    193.797,
+    6.825
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 13.0,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_F3_Flight1",
+   "top": [
+    200.384,
+    5.742
+   ],
+   "dir_deg": 267.7161454954155,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 14.65,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.44 m from the south wall",
+   "confidence": "medium",
+   "soffit_thk": 0.18
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F3_Landing",
+   "ring": [
+    [
+     199.71,
+     5.769
+    ],
+    [
+     202.607,
+     5.653
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     199.752,
+     6.838
+    ]
+   ],
+   "z0": 14.45,
+   "z1": 14.65,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.07 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_F3_Flight2",
+   "top": [
+    201.8,
+    2.343
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 16.3,
+   "material": "granite",
+   "soffit_thk": 0.18,
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F3_Rail1",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     199.615,
+     2.129,
+     13.0
+    ],
+    [
+     199.627,
+     2.429,
+     13.15
+    ],
+    [
+     199.76,
+     5.767,
+     14.65
+    ],
+    [
+     199.8,
+     6.786,
+     14.65
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F3_Rail2",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     201.209,
+     5.709,
+     14.65
+    ],
+    [
+     201.075,
+     2.371,
+     16.3
+    ],
+    [
+     201.064,
+     2.072,
+     16.3
+    ]
+   ]
+  },
+  {
+   "type": "slab",
+   "name": "F4_Slab_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 16.05,
+   "z1": 16.3,
+   "material": "stone",
+   "evidence": "F4 structural slab at 3 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Slab_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 16.05,
+   "z1": 16.3,
+   "material": "stone",
+   "evidence": "F4 structural slab at 3 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Slab_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 16.05,
+   "z1": 16.3,
+   "material": "stone",
+   "evidence": "F4 structural slab at 3 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Slab_W",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 16.05,
+   "z1": 16.3,
+   "material": "stone",
+   "evidence": "F4 structural slab at 3 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Slab_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.474,
+     2.316
+    ],
+    [
+     199.577,
+     2.431
+    ]
+   ],
+   "z0": 16.05,
+   "z1": 16.3,
+   "material": "stone",
+   "evidence": "F4 structural slab at 3 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Slab_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 16.05,
+   "z1": 16.3,
+   "material": "stone",
+   "evidence": "F4 structural slab at 3 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_W_S",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     176.837,
+     1.897
+    ],
+    [
+     173.94,
+     2.013
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_W_N",
+   "ring": [
+    [
+     174.173,
+     7.858
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.417,
+     0.877
+    ],
+    [
+     199.519,
+     0.992
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Ceiling_W_H",
+   "ring": [
+    [
+     173.94,
+     2.013
+    ],
+    [
+     176.837,
+     1.897
+    ],
+    [
+     177.071,
+     7.742
+    ],
+    [
+     174.173,
+     7.858
+    ]
+   ],
+   "z0": 19.22,
+   "z1": 19.24,
+   "material": "white",
+   "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels, 2.92 m (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Hall_S",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 10.535,
+     "u1": 11.565,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 13.735,
+     "u1": 14.765,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 16.935,
+     "u1": 17.965,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 22.685,
+     "u1": 23.715,
+     "z0": 16.3,
+     "z1": 18.37
+    }
+   ],
+   "material": "white",
+   "evidence": "hall wall along the classrooms, full length to the end walls (map owner: the rooms continue alongside the stair bays)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_S0",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 4.805,
+   "u1": 5.795,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); end room: 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_S1",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 10.555,
+   "u1": 11.545,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_S2",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 13.755,
+   "u1": 14.745,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_S3",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 16.955,
+   "u1": 17.945,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); middle room: near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_S4",
+   "line": [
+    [
+     173.932,
+     1.813
+    ],
+    [
+     202.409,
+     0.677
+    ]
+   ],
+   "u0": 22.705,
+   "u1": 23.695,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "black aluminium door, glass leaf with a mid rail, frame 0.99 x 2.05 (080420598); end room: 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Lobby_W",
+   "line": [
+    [
+     185.972,
+     1.332
+    ],
+    [
+     185.772,
+     -3.688
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "tower bay side wall (F1: lobby with vending + coffee machine, 070704360 t 4-6 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Lobby_E",
+   "line": [
+    [
+     190.22,
+     -2.565
+    ],
+    [
+     190.369,
+     1.157
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "tower bay side wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_S_W12",
+   "line": [
+    [
+     179.977,
+     -3.457
+    ],
+    [
+     180.177,
+     1.564
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_S_E12",
+   "line": [
+    [
+     195.916,
+     -2.792
+    ],
+    [
+     196.064,
+     0.93
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Hall_N",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 22.685,
+     "u1": 23.715,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 17.035,
+     "u1": 18.065,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 10.435,
+     "u1": 11.465,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 15.08,
+     "u1": 16.02,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 12.48,
+     "u1": 13.42,
+     "z0": 16.3,
+     "z1": 18.37
+    }
+   ],
+   "material": "white",
+   "evidence": "north hall wall, full length; the stair landings meet it (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_N0",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 22.705,
+   "u1": 23.695,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "end room door 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_N1",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 17.055,
+   "u1": 18.045,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "middle room door near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_N2",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 10.455,
+   "u1": 11.445,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "middle room door near its inner end (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_N3",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 4.805,
+   "u1": 5.795,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "end room door 1.9-2.9 m in front of the stair (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_WC4",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 15.1,
+   "u1": 16.0,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_WC5",
+   "line": [
+    [
+     202.658,
+     6.922
+    ],
+    [
+     174.181,
+     8.058
+    ]
+   ],
+   "u0": 12.5,
+   "u1": 13.4,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_N_W12",
+   "line": [
+    [
+     180.626,
+     12.83
+    ],
+    [
+     180.426,
+     7.809
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_WC_W",
+   "line": [
+    [
+     186.222,
+     12.606
+    ],
+    [
+     186.021,
+     7.585
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_WC_Mid",
+   "line": [
+    [
+     188.62,
+     12.511
+    ],
+    [
+     188.419,
+     7.49
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_WC_E",
+   "line": [
+    [
+     191.018,
+     12.415
+    ],
+    [
+     190.818,
+     7.394
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "WC block: two narrow rooms (vestibule with 2 pedestal sinks + stalls, 075931189) behind the doors straight ahead of the entrance; stacked on every floor",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Room_N_E12",
+   "line": [
+    [
+     196.513,
+     12.196
+    ],
+    [
+     196.313,
+     7.175
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "room partition between facade window bays (door and layout estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Office_W_Front",
+   "line": [
+    [
+     176.837,
+     1.897
+    ],
+    [
+     177.071,
+     7.742
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 0.88,
+     "u1": 1.91,
+     "z0": 16.3,
+     "z1": 18.37
+    },
+    {
+     "u0": 3.94,
+     "u1": 4.97,
+     "z0": 16.3,
+     "z1": 18.37
+    }
+   ],
+   "material": "white",
+   "evidence": "map owner: on F4 the west hall end holds 1-2 offices with windows instead of the stair; front wall on the stair-bay line, two doors (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_Office_W0",
+   "line": [
+    [
+     176.837,
+     1.897
+    ],
+    [
+     177.071,
+     7.742
+    ]
+   ],
+   "u0": 0.9,
+   "u1": 1.89,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "office door (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F4_Door_Office_W1",
+   "line": [
+    [
+     176.837,
+     1.897
+    ],
+    [
+     177.071,
+     7.742
+    ]
+   ],
+   "u0": 3.96,
+   "u1": 4.95,
+   "z0": 16.3,
+   "z1": 18.35,
+   "wall_thk": 0.2,
+   "leaf": "glass2",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "office door (estimate)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F4_Office_W_Split",
+   "line": [
+    [
+     176.754,
+     4.828
+    ],
+    [
+     174.056,
+     4.935
+    ]
+   ],
+   "z0": 16.2,
+   "z1": 19.22,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "split between the two offices, one west window each (BLD_C west F4 y 7.7 / 10.0)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F4_Hall_Bulkhead_E",
+   "ring": [
+    [
+     195.273,
+     1.162
+    ],
+    [
+     195.672,
+     1.146
+    ],
+    [
+     195.906,
+     6.991
+    ],
+    [
+     195.506,
+     7.007
+    ]
+   ],
+   "z0": 18.84,
+   "z1": 19.22,
+   "material": "white",
+   "evidence": "plasterboard bulkhead across the hall in front of the stair zone (hall photo: 3.9-4.2 m before the stair, underside 2.54 m)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_SE_Side",
+   "center": [
+    198.236,
+    1.054
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.1999999999999993,
+    0.02,
+    2.82
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_SE_Head",
+   "center": [
+    197.122,
+    1.098
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 18.4,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_NE_Side",
+   "center": [
+    198.468,
+    6.879
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.1999999999999993,
+    0.02,
+    2.82
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "periwinkle-blue panel beside the end-room door, floor to ceiling (hall photo; red fire alarm box on the north one)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_NE_Head",
+   "center": [
+    197.354,
+    6.923
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.8200000000000001
+   ],
+   "z0": 18.4,
+   "material": "accent",
+   "evidence": "blue panel above the door (hall photo)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_FireAlarm_E",
+   "center": [
+    198.466,
+    6.829
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.35,
+    0.1,
+    0.45
+   ],
+   "z0": 17.55,
+   "material": "brick",
+   "evidence": "red fire-alarm / hose box on the blue panel (hall photo)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_WC",
+   "center": [
+    188.411,
+    7.28
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.800000000000001,
+    0.02,
+    2.82
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Hall_Radiator_0",
+   "center": [
+    180.965,
+    7.527
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 16.45,
+   "material": "white",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Hall_Radiator_1",
+   "center": [
+    195.853,
+    6.933
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.8,
+    0.08,
+    0.55
+   ],
+   "z0": 16.45,
+   "material": "white",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "F4_Hall_Bench_N0",
+   "pos": [
+    183.006,
+    7.255
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 16.3,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "F4_Hall_Bench_N1",
+   "pos": [
+    193.797,
+    6.825
+   ],
+   "dir_deg": 267.7161454954155,
+   "length": 1.8,
+   "depth": 0.4,
+   "seat_h": 0.45,
+   "back": false,
+   "z": 16.3,
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_F4_Flight1",
+   "top": [
+    200.384,
+    5.742
+   ],
+   "dir_deg": 267.7161454954155,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 17.95,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.44 m from the south wall",
+   "confidence": "medium",
+   "soffit_thk": 0.18
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F4_Landing",
+   "ring": [
+    [
+     199.71,
+     5.769
+    ],
+    [
+     202.607,
+     5.653
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     199.752,
+     6.838
+    ]
+   ],
+   "z0": 17.75,
+   "z1": 17.95,
+   "material": "granite",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.07 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "StairE_F4_Flight2",
+   "top": [
+    201.8,
+    2.343
+   ],
+   "dir_deg": 87.71614549541547,
+   "width": 1.35,
+   "risers": 11,
+   "riser_h": 0.15,
+   "tread": 0.334,
+   "z_top": 19.6,
+   "material": "granite",
+   "soffit_thk": 0.18,
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F4_Rail1",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     199.615,
+     2.129,
+     16.3
+    ],
+    [
+     199.627,
+     2.429,
+     16.45
+    ],
+    [
+     199.76,
+     5.767,
+     17.95
+    ],
+    [
+     199.8,
+     6.786,
+     17.95
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F4_Rail2",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     201.209,
+     5.709,
+     17.95
+    ],
+    [
+     201.075,
+     2.371,
+     19.6
+    ],
+    [
+     201.064,
+     2.072,
+     19.6
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F4_TopGuard",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
+   "confidence": "medium",
+   "points": [
+    [
+     201.074,
+     2.321,
+     19.6
+    ],
+    [
+     199.625,
+     2.379,
+     19.6
+    ],
+    [
+     199.8,
+     6.786,
+     19.6
+    ]
+   ]
+  },
+  {
+   "type": "slab",
+   "name": "F5_Slab_Mid_W",
+   "ring": [
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     186.072,
+     -3.7
+    ],
+    [
+     186.721,
+     12.587
+    ],
+    [
+     177.279,
+     12.963
+    ]
+   ],
+   "z0": 19.35,
+   "z1": 19.6,
+   "material": "stone",
+   "evidence": "F5 structural slab at 4 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F5_Slab_Mid_T",
+   "ring": [
+    [
+     186.147,
+     -1.802
+    ],
+    [
+     189.944,
+     -1.953
+    ],
+    [
+     190.518,
+     12.435
+    ],
+    [
+     186.721,
+     12.587
+    ]
+   ],
+   "z0": 19.35,
+   "z1": 19.6,
+   "material": "stone",
+   "evidence": "F5 structural slab at 4 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F5_Slab_Mid_E",
+   "ring": [
+    [
+     189.92,
+     -2.553
+    ],
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     199.961,
+     12.059
+    ],
+    [
+     190.518,
+     12.435
+    ]
+   ],
+   "z0": 19.35,
+   "z1": 19.6,
+   "material": "stone",
+   "evidence": "F5 structural slab at 4 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F5_Slab_W",
+   "ring": [
+    [
+     173.732,
+     -3.208
+    ],
+    [
+     176.629,
+     -3.324
+    ],
+    [
+     177.279,
+     12.963
+    ],
+    [
+     174.381,
+     13.079
+    ]
+   ],
+   "z0": 19.35,
+   "z1": 19.6,
+   "material": "stone",
+   "evidence": "F5 structural slab at 4 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F5_Slab_E_S",
+   "ring": [
+    [
+     199.363,
+     -2.929
+    ],
+    [
+     202.261,
+     -3.045
+    ],
+    [
+     202.474,
+     2.316
+    ],
+    [
+     199.577,
+     2.431
+    ]
+   ],
+   "z0": 19.35,
+   "z1": 19.6,
+   "material": "stone",
+   "evidence": "F5 structural slab at 4 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "F5_Slab_E_N",
+   "ring": [
+    [
+     199.752,
+     6.838
+    ],
+    [
+     202.65,
+     6.722
+    ],
+    [
+     202.858,
+     11.943
+    ],
+    [
+     199.961,
+     12.059
+    ]
+   ],
+   "z0": 19.35,
+   "z1": 19.6,
+   "material": "stone",
+   "evidence": "F5 structural slab at 4 x 3.30 m; openings over the stair bays the stair reaches",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Corr_S",
+   "line": [
+    [
+     176.011,
+     3.756
+    ],
+    [
+     199.592,
+     2.816
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 3.035,
+     "u1": 4.065,
+     "z0": 19.6,
+     "z1": 21.67
+    },
+    {
+     "u0": 8.035,
+     "u1": 9.065,
+     "z0": 19.6,
+     "z1": 21.67
+    },
+    {
+     "u0": 15.535,
+     "u1": 16.565,
+     "z0": 19.6,
+     "z1": 21.67
+    },
+    {
+     "u0": 20.535,
+     "u1": 21.565,
+     "z0": 19.6,
+     "z1": 21.67
+    }
+   ],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Corr_N",
+   "line": [
+    [
+     199.68,
+     5.014
+    ],
+    [
+     176.099,
+     5.955
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 19.535,
+     "u1": 20.565,
+     "z0": 19.6,
+     "z1": 21.67
+    },
+    {
+     "u0": 14.535,
+     "u1": 15.565,
+     "z0": 19.6,
+     "z1": 21.67
+    },
+    {
+     "u0": 7.035,
+     "u1": 8.065,
+     "z0": 19.6,
+     "z1": 21.67
+    },
+    {
+     "u0": 2.035,
+     "u1": 3.065,
+     "z0": 19.6,
+     "z1": 21.67
+    }
+   ],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Knee_S",
+   "line": [
+    [
+     175.808,
+     -1.34
+    ],
+    [
+     202.286,
+     -2.396
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 20.8,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Knee_N",
+   "line": [
+    [
+     202.781,
+     9.995
+    ],
+    [
+     176.302,
+     11.051
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 20.8,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_S0",
+   "line": [
+    [
+     176.011,
+     3.756
+    ],
+    [
+     199.592,
+     2.816
+    ]
+   ],
+   "u0": 3.055,
+   "u1": 4.045,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_S1",
+   "line": [
+    [
+     176.011,
+     3.756
+    ],
+    [
+     199.592,
+     2.816
+    ]
+   ],
+   "u0": 8.055,
+   "u1": 9.045,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_S2",
+   "line": [
+    [
+     176.011,
+     3.756
+    ],
+    [
+     199.592,
+     2.816
+    ]
+   ],
+   "u0": 15.555,
+   "u1": 16.545,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_S3",
+   "line": [
+    [
+     176.011,
+     3.756
+    ],
+    [
+     199.592,
+     2.816
+    ]
+   ],
+   "u0": 20.555,
+   "u1": 21.545,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_N0",
+   "line": [
+    [
+     199.68,
+     5.014
+    ],
+    [
+     176.099,
+     5.955
+    ]
+   ],
+   "u0": 19.555,
+   "u1": 20.545,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_N1",
+   "line": [
+    [
+     199.68,
+     5.014
+    ],
+    [
+     176.099,
+     5.955
+    ]
+   ],
+   "u0": 14.555,
+   "u1": 15.545,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_N2",
+   "line": [
+    [
+     199.68,
+     5.014
+    ],
+    [
+     176.099,
+     5.955
+    ]
+   ],
+   "u0": 7.055,
+   "u1": 8.045,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "F5_Door_N3",
+   "line": [
+    [
+     199.68,
+     5.014
+    ],
+    [
+     176.099,
+     5.955
+    ]
+   ],
+   "u0": 2.055,
+   "u1": 3.045,
+   "z0": 19.6,
+   "z1": 21.65,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_S_8",
+   "line": [
+    [
+     181.861,
+     -1.381
+    ],
+    [
+     182.056,
+     3.515
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_N_8",
+   "line": [
+    [
+     182.144,
+     5.714
+    ],
+    [
+     182.339,
+     10.61
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_S_15",
+   "line": [
+    [
+     188.056,
+     -1.628
+    ],
+    [
+     188.251,
+     3.268
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_N_15",
+   "line": [
+    [
+     188.339,
+     5.466
+    ],
+    [
+     188.534,
+     10.363
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_S_21",
+   "line": [
+    [
+     194.351,
+     -1.879
+    ],
+    [
+     194.546,
+     3.017
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_N_21",
+   "line": [
+    [
+     194.634,
+     5.215
+    ],
+    [
+     194.829,
+     10.111
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_S_2",
+   "line": [
+    [
+     175.816,
+     -1.14
+    ],
+    [
+     176.011,
+     3.756
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_N_2",
+   "line": [
+    [
+     176.099,
+     5.955
+    ],
+    [
+     176.294,
+     10.851
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_S_26",
+   "line": [
+    [
+     199.397,
+     -2.08
+    ],
+    [
+     199.592,
+     2.816
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F5_Office_N_26",
+   "line": [
+    [
+     199.68,
+     5.014
+    ],
+    [
+     199.875,
+     9.91
+    ]
+   ],
+   "z0": 19.5,
+   "z1": 22.0,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "F5_Ceiling_Flat",
+   "ring": [
+    [
+     175.918,
+     1.432
+    ],
+    [
+     202.397,
+     0.376
+    ],
+    [
+     202.67,
+     7.223
+    ],
+    [
+     176.191,
+     8.279
+    ]
+   ],
+   "z0": 22.0,
+   "z1": 22.03,
+   "material": "white",
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "roof_plane",
+   "name": "F5_Ceiling_Slope_S",
+   "thk": 0.03,
+   "material": "white",
+   "ring": [
+    [
+     175.816,
+     -1.14
+    ],
+    [
+     202.294,
+     -2.196
+    ],
+    [
+     202.397,
+     0.376
+    ],
+    [
+     175.918,
+     1.432
+    ]
+   ],
+   "z": [
+    20.8,
+    20.8,
+    22.0,
+    22.0
+   ],
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  },
+  {
+   "type": "roof_plane",
+   "name": "F5_Ceiling_Slope_N",
+   "thk": 0.03,
+   "material": "white",
+   "ring": [
+    [
+     176.294,
+     10.851
+    ],
+    [
+     202.773,
+     9.795
+    ],
+    [
+     202.67,
+     7.223
+    ],
+    [
+     176.191,
+     8.279
+    ]
+   ],
+   "z": [
+    20.8,
+    20.8,
+    22.0,
+    22.0
+   ],
+   "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
+   "confidence": "low"
+  }
+ ]
+}
