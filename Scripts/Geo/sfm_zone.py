@@ -39,13 +39,14 @@ def extract(zone, img_dir):
         src = p if os.path.isabs(p) else os.path.join(RAW, p)  # absolute paths: photos sent outside the capture set
         im = Image.open(src)
         f35 = float(im.getexif().get_ifd(0x8769).get(41989) or 0) or zone.get("default_f35", {}).get(p)
-        g = f"p{int(f35 or 0):02d}mm"
+        im = ImageOps.exif_transpose(im).convert("RGB")
+        im.thumbnail((ms, ms))
+        # one COLMAP camera per folder: split by lens AND frame size (portrait/landscape stills share a lens)
+        g = f"p{int(f35 or 0):02d}mm_{im.width}x{im.height}"
         d = os.path.join(img_dir, g)
         os.makedirs(d, exist_ok=True)
         out = os.path.join(d, os.path.splitext(p)[0][-9:] + ".jpg")
         if not os.path.exists(out):
-            im = ImageOps.exif_transpose(im).convert("RGB")
-            im.thumbnail((ms, ms))
             im.save(out, quality=95)
         groups[g] = f35
     return groups
@@ -75,6 +76,7 @@ def main():
     ro.camera_model = zone.get("camera_model", "SIMPLE_RADIAL")
     eo = pycolmap.FeatureExtractionOptions()
     eo.sift.max_num_features = zone.get("max_features", 8000)
+    eo.num_threads = zone.get("threads", 4)  # CPU SIFT needs ~1 GB/thread at 2400 px: keep under the job's MemoryMax
     pycolmap.extract_features(db, img_dir, camera_mode=pycolmap.CameraMode.PER_FOLDER, reader_options=ro,
                               extraction_options=eo, device=pycolmap.Device.cpu)
     # Focal priors from EXIF 35 mm-eq (stills) or a per-video guess (Pixel 9 4K EIS ~26 mm-eq main lens).

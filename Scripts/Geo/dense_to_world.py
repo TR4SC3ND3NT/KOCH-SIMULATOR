@@ -12,24 +12,56 @@ from PIL import Image, ImageDraw
 C_ORIGIN = np.array([173.264, -3.640, 5.53])      # Block C local origin (SW corner, FFL), Specs/BLD_C.json
 C_X = np.array([0.99920, -0.03985, 0.0])
 C_Y = np.array([0.03985, 0.99920, 0.0])
-PLY_TYPES = {"float": "f4", "float32": "f4", "double": "f8", "uchar": "u1", "uint8": "u1", "int": "i4", "uint": "u4"}
+PLY_TYPES = {"float": "f4", "float32": "f4", "double": "f8", "uchar": "u1", "uint8": "u1", "int": "i4", "uint": "u4", "uint32": "u4", "int32": "i4"}
 
 
 def read_ply(path):
+    """Binary little-endian PLY vertices (x, y, z, optional red/green/blue). Handles per-vertex list properties
+    (OpenMVS writes view_indices / view_weights lists) with a sequential offset scan."""
     with open(path, "rb") as f:
         props, n = [], 0
         while True:
             line = f.readline().decode("ascii", "ignore").strip()
             if line.startswith("element vertex"):
                 n = int(line.split()[2])
-            elif line.startswith("property") and n and "list" not in line:
-                _, t, name = line.split()
-                props.append((name, "<" + PLY_TYPES[t]))
+            elif line.startswith("element"):
+                pass  # faces etc. after the vertices are ignored
+            elif line.startswith("property") and n:
+                parts = line.split()
+                if parts[1] == "list":
+                    props.append((parts[4], ("list", "<" + PLY_TYPES[parts[2]], "<" + PLY_TYPES[parts[3]])))
+                else:
+                    props.append((parts[2], "<" + PLY_TYPES[parts[1]]))
             if line == "end_header":
                 break
-        data = np.fromfile(f, dtype=np.dtype(props), count=n)
-    xyz = np.stack([data["x"], data["y"], data["z"]], 1).astype(np.float64)
-    rgb = np.stack([data[k] for k in ("red", "green", "blue")], 1) if "red" in data.dtype.names else np.full((n, 3), 200)
+        raw = f.read()
+    if not any(isinstance(t, tuple) for _, t in props):
+        data = np.frombuffer(raw, dtype=np.dtype(props), count=n)
+        cols = {k: data[k] for k, _ in props}
+    else:
+        fixed = []
+        for k, t in props:
+            if isinstance(t, tuple):
+                break
+            fixed.append((k, t))
+        fdt = np.dtype(fixed)
+        lists = [t for _, t in props[len(fixed):]]
+        buf = np.frombuffer(raw, np.uint8)
+        offs = np.empty(n, np.int64)
+        o = 0
+        csz = [np.dtype(c).itemsize for _, c, _ in lists]
+        isz = [np.dtype(i).itemsize for _, _, i in lists]
+        for k in range(n):  # records are variable length: walk the counts
+            offs[k] = o
+            o += fdt.itemsize
+            for cs, it in zip(csz, isz):
+                cnt = int(buf[o]) if cs == 1 else int.from_bytes(buf[o:o + cs].tobytes(), "little")
+                o += cs + cnt * it
+        idx = offs[:, None] + np.arange(fdt.itemsize)[None, :]
+        data = buf[idx].copy().view(fdt).ravel()
+        cols = {k: data[k] for k, _ in fixed}
+    xyz = np.stack([cols["x"], cols["y"], cols["z"]], 1).astype(np.float64)
+    rgb = np.stack([cols[k] for k in ("red", "green", "blue")], 1) if "red" in cols else np.full((n, 3), 200)
     return xyz, rgb
 
 
