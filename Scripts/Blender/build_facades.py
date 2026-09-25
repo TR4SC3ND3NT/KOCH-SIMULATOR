@@ -492,7 +492,7 @@ class Building:
                 cn = a.get("canopy")
                 bm2 = bmesh.new()
                 if cn:
-                    box(bm2, fr, cn["u0"], cn["u1"], 0.0, cn["depth"], cn["z"], cn["z"] + 0.12)
+                    box(bm2, fr, cn["u0"], cn["u1"], cn.get("w0", 0.0), cn["depth"], cn["z"], cn["z"] + 0.12)
                     for u in (cn["u1"] - 0.1,):
                         box(bm2, fr, u - 0.05, u + 0.05, cn["depth"] - 0.1, cn["depth"], zg, cn["z"])
                 self.obj(a["name"], bm, COL["brick"], a.get("evidence"))

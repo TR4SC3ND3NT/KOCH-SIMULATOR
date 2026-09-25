@@ -1,34 +1,54 @@
 {
  "id": "INT_C_Basement",
  "collection": "INT_C_Basement",
- "note": "Block C west basement entry: sunken stair + corridor along the west wall (zone reconstruction 2026-09-25).",
+ "terrain_holes": [
+  [
+   [
+    169.066,
+    -5.524
+   ],
+   [
+    173.952,
+    -5.719
+   ],
+   [
+    174.035,
+    -3.621
+   ],
+   [
+    169.149,
+    -3.426
+   ]
+  ]
+ ],
+ "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall (zone reconstruction 2026-09-25, direction corrected by the map owner).",
  "elements": [
   {
    "type": "stairs_run",
    "name": "Stair_Upper",
    "top": [
-    172.076,
-    -3.192
+    169.162,
+    -4.352
    ],
-   "dir_deg": 87.71614549541547,
-   "width": 1.8499999999999999,
+   "dir_deg": -2.2838545045845304,
+   "width": 1.85,
    "risers": 8,
    "riser_h": 0.138,
    "tread": 0.36,
    "z_top": 4.48,
    "run_out": 1.2,
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364)",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910)",
    "confidence": "medium"
   },
   {
    "type": "stairs_run",
    "name": "Stair_Lower",
    "top": [
-    172.224,
-    0.525
+    172.879,
+    -4.5
    ],
-   "dir_deg": 87.71614549541547,
-   "width": 1.8499999999999999,
+   "dir_deg": -2.2838545045845304,
+   "width": 1.85,
    "risers": 2,
    "riser_h": 0.138,
    "tread": 0.36,
@@ -42,25 +62,25 @@
    "name": "Corridor_Floor",
    "ring": [
     [
-     171.379,
-     1.279
+     173.554,
+     -5.653
     ],
     [
-     173.377,
-     1.199
+     179.979,
+     -5.909
     ],
     [
-     173.632,
-     7.594
+     180.059,
+     -3.911
     ],
     [
-     171.634,
-     7.674
+     173.634,
+     -3.655
     ]
    ],
    "z0": 2.9000000000000004,
    "z1": 3.1000000000000005,
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; floor -1.38 m below the plaza (10 risers); SfM floor at x_m 0.75: -2.49 rel FFL (model -2.43)",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; floor -1.38 m below the plaza (10 risers)",
    "confidence": "medium"
   },
   {
@@ -68,39 +88,39 @@
    "name": "Corridor_Ceiling",
    "ring": [
     [
-     171.302,
-     -0.639
+     171.636,
+     -5.577
     ],
     [
-     173.3,
-     -0.719
+     179.979,
+     -5.909
     ],
     [
-     173.632,
-     7.594
+     180.059,
+     -3.911
     ],
     [
-     171.634,
-     7.674
+     171.715,
+     -3.578
     ]
    ],
-   "z0": 5.55,
-   "z1": 5.75,
+   "z0": 5.4,
+   "z1": 5.550000000000001,
    "material": "white",
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; ceiling with downlights ~2.45 m above the corridor floor",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; flat ceiling with downlights ~2.3 m above the corridor floor",
    "confidence": "medium"
   },
   {
    "type": "int_wall",
-   "name": "Stair_Wall_W",
+   "name": "Stair_Wall_N",
    "line": [
     [
-     171.14,
-     -3.455
+     168.899,
+     -3.416
     ],
     [
-     171.329,
-     1.281
+     173.266,
+     -3.59
     ]
    ],
    "z0": 3.1000000000000005,
@@ -115,109 +135,81 @@
      "z1": 5.376
     }
    ],
-   "evidence": "brick-effect tile wall on the west (left going down) with a brown wooden door at the mid landing (012543364, frames 1-10); top = brick box height",
+   "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box",
    "confidence": "medium"
   },
   {
    "type": "int_wall",
-   "name": "Stair_Wall_E",
+   "name": "Stair_Wall_S",
    "line": [
     [
-     173.177,
-     1.207
+     173.562,
+     -5.453
     ],
     [
-     172.988,
-     -3.529
+     168.826,
+     -5.264
     ]
    ],
    "z0": 3.1000000000000005,
    "z1": 4.53,
    "thk": 0.25,
    "material": "brick",
-   "evidence": "brick-tile retaining wall on the east (right) side under the wrought-iron railing (frames 1-10, 70-80)",
+   "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80)",
    "confidence": "medium"
   },
   {
    "type": "int_wall",
-   "name": "Corridor_Wall_W",
+   "name": "Corridor_Wall_S",
    "line": [
     [
-     171.379,
-     1.279
+     179.979,
+     -5.909
     ],
     [
-     171.534,
-     5.176
+     173.554,
+     -5.653
     ]
    ],
    "z0": 3.1000000000000005,
-   "z1": 5.55,
+   "z1": 5.4,
    "thk": 0.3,
    "material": "white",
-   "openings": [
-    {
-     "u0": 0.9299999999999997,
-     "u1": 3.329999999999999,
-     "z0": 3.9000000000000004,
-     "z1": 5.3999999999999995
-    }
-   ],
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; big window with white hexagon grilles, sill at the grey dado top ~0.8 m, head just under the ceiling; extent fitted by overlay on frames 41/101/121",
-   "confidence": "medium"
-  },
-  {
-   "type": "int_wall",
-   "name": "Corridor_Wall_E",
-   "line": [
-    [
-     173.677,
-     1.187
-    ],
-    [
-     173.932,
-     7.582
-    ]
-   ],
-   "z0": 3.1000000000000005,
-   "z1": 5.55,
-   "thk": 0.3,
-   "material": "white",
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado (frames 100-150); coincides with the Block C west wall line",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado (frames 100-150), under the red sloped covers",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Wardrobe_0",
    "center": [
-    171.841,
-    5.344
+    177.649,
+    -4.115
    ],
-   "dir_deg": 87.71614549541547,
+   "dir_deg": -2.2838545045845304,
    "size": [
     0.8,
     0.6,
     1.85
    ],
    "z0": 3.1000000000000005,
-   "evidence": "orange wooden wardrobes against the west wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
+   "evidence": "orange wooden wardrobes against C's south wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Wardrobe_1",
    "center": [
-    171.871,
-    6.093
+    178.448,
+    -4.147
    ],
-   "dir_deg": 87.71614549541547,
+   "dir_deg": -2.2838545045845304,
    "size": [
     0.8,
     0.6,
     1.85
    ],
    "z0": 3.1000000000000005,
-   "evidence": "orange wooden wardrobes against the west wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
+   "evidence": "orange wooden wardrobes against C's south wall; front corner triangulated at x_m 4.2-4.3, height 1.85 m (frames 110/120/130)",
    "confidence": "low"
   }
  ]

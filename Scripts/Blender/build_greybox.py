@@ -142,6 +142,33 @@ def build_reference():
     return ob
 
 
+def cut_terrain_holes():
+    """Delete terrain quads inside 'terrain_holes' rings of Specs/*.json (open stairwells, light wells)."""
+    specs = os.path.join(REPO, "Art", "Blender", "Specs")
+    rings = []
+    for fn in sorted(os.listdir(specs)) if os.path.isdir(specs) else []:
+        if fn.endswith(".json"):
+            rings += json.load(open(os.path.join(specs, fn), encoding="utf-8")).get("terrain_holes", [])
+    ob = bpy.data.objects.get("TER_Ground")
+    if not rings or ob is None:
+        return
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+
+    def inside(x, y, ring):
+        c, n = False, len(ring)
+        for i in range(n):
+            (x1, y1), (x2, y2) = ring[i], ring[(i + 1) % n]
+            if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
+                c = not c
+        return c
+    dead = [f for f in bm.faces if any(inside(f.calc_center_median().x, f.calc_center_median().y, r) for r in rings)]
+    bmesh.ops.delete(bm, geom=dead, context="FACES")
+    bm.to_mesh(ob.data)
+    bm.free()
+    print(f"terrain: cut {len(dead)} quads for {len(rings)} holes")
+
+
 def hide_replaced():
     """Phase-1 massing that a phase-2/site spec replaces stays in the file but hidden (Specs/*.json 'replaces')."""
     specs = os.path.join(REPO, "Art", "Blender", "Specs")
@@ -171,6 +198,7 @@ def main():
             print("FAILED", it["id"], repr(ex))
     build_reference()
     hide_replaced()
+    cut_terrain_holes()
     sc = bpy.context.scene
     sc["koch_origin_lat"], sc["koch_origin_lon"] = 42.8566, 74.6790
     sc["koch_z_datum_asl"] = ter_spec["frame"]["z_datum_asl"]

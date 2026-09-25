@@ -134,6 +134,24 @@
    ],
    "surround_proj": 0.0,
    "evidence": "stair-tower landing windows 1.0 x 1.4 at +4.2/+7.5/+10.7 (behind the sign box at +4.2)"
+  },
+  "BW": {
+   "w": 2.4,
+   "h": 1.4,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "grilled basement window of C's south wall seen from the basement corridor (SfM 012547860, overlay frames 41/101/121)"
   }
  },
  "rows": {
@@ -159,6 +177,15 @@
       "F2",
       "F3",
       "F4"
+     ]
+    },
+    {
+     "type": "BW",
+     "u": [
+      2.5
+     ],
+     "sills": [
+      -1.63
      ]
     }
    ],
@@ -392,12 +419,13 @@
   {
    "type": "lightwell",
    "edge": 0,
-   "u0": 0.3,
-   "u1": 12.5,
-   "depth": 1.2,
-   "z_wall": -0.3,
-   "z_edge": -0.85,
-   "evidence": "sloped red metal covers over basement light wells along the south facade"
+   "u0": 0.0,
+   "u1": 12.8,
+   "depth": 2.3,
+   "z_wall": 0.35,
+   "z_edge": 0.05,
+   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated",
+   "confidence": "low"
   },
   {
    "type": "lightwell",
@@ -413,39 +441,38 @@
    "name": "WestShed",
    "edge": 7,
    "u0": 1.0,
-   "u1": 12.0,
+   "u1": 13.7,
    "depth": 7.0,
    "z_high": 0.8,
    "z_low": -0.1,
    "wall_h_from_ground": true,
-   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey. 2026-09-25: it covers the semi-sunken basement corridor (INT_C_Basement), so it is modelled hollow.",
-   "hollow": true,
-   "z_floor": -2.63
+   "evidence": "070629483: semi-sunken structure, low-pitch corrugated mono-pitch roof high at C (meets the wall just under the F1 sills), sloping down west toward the sports hall; front wall ~5-6 brick-tile courses + fascia (~0.95 m above the path); Esri 2020 grey roof ~7 m deep. Map owner confirmed. South end meets the basement-entry box at u≈12 (070629483 f_3.4, perspective-corrected). Roof sheet is red-brown corrugated metal (still 081836969), not grey. 2026-09-25: likely the semi-sunken Dance Hall (sign on the box at its south end); interior not captured."
   },
   {
    "type": "stair_box",
    "name": "BasementEntry",
    "edge": 7,
-   "u0": 12.4,
-   "u1": 16.8,
+   "u0": 13.7,
+   "u1": 17.15,
    "depth": 3.8,
-   "z_top": 0.9,
+   "z_top": 1.6,
    "canopy": {
-    "u0": 12.4,
-    "u1": 17.2,
-    "depth": 2.2,
-    "z": 0.92
+    "u0": 17.1,
+    "u1": 19.4,
+    "w0": -0.4,
+    "depth": 4.6,
+    "z": 1.62
    },
-   "evidence": "video 070629483 f_3.4/f_4.2: brick box with the sign 'Dance Hall' (basement), front corner at u≈12.1 after perspective correction (box front is 3.5 m in front of the wall: projection factor 1.57); flat corrugated canopy on one post over the stair south of the box; 2026-09-25: the sunken stair runs along the box's east side (INT_C_Basement), box assumed to span the stair length",
-   "confidence": "low",
-   "w0": 2.38
+   "evidence": "brick box with the Dance Hall sign at C's SW corner, west of the facade; its south face is the stair's north wall (012507444, 012511910, 012543364); box top and canopy ~2.65 m above the landing (sign at ~2 m, photo 012507444)",
+   "confidence": "medium",
+   "w0": 0.0
   }
  ],
  "basement": {
-  "floor_z": -3.3,
+  "floor_z": -2.43,
   "slab_t": 0.25,
   "status": "probable",
-  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483).",
+  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483). 2026-09-25: basement corridor floor 1.38 m below the plaza = -2.43 rel FFL (SfM, 10 risers x 0.138); corridor runs east along the south wall.",
   "pending": [
    "entry stair/ramp geometry and door position (west side)",
    "basement windows behind the light wells",
