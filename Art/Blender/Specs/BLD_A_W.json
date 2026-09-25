@@ -475,47 +475,15 @@
    "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): square north of the lawn strip: deck edge 2 brick-tile courses + coping = 0.36 m above it at the north end (012429784), ~0.10 (coping + part of a course) 8 m further south: PnP of 061757320 t15 (camera 1.0 m above G = phone 1.1 m above the square)"
   },
   {
-   "name": "AW_PathS",
-   "ring": [
-    [
-     152.963,
-     -69.694
-    ],
-    [
-     156.658,
-     -69.876
-    ],
-    [
-     156.788,
-     -67.229
-    ],
-    [
-     153.093,
-     -67.048
-    ]
-   ],
-   "z": 6.02,
-   "grad": [
-    0.00129,
-    0.02638
-   ],
-   "ref": [
-    156.658,
-    -69.876
-   ],
-   "blend": 3.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): path at the A_S corner ~0.6 above the walkway (070309303 t17-21 lawn bank + SITE_GateAlley alley paving 6.31), rising to the terrace level at the mid stairs"
-  },
-  {
    "name": "AW_PathN",
    "ring": [
     [
      153.093,
-     -67.048
+     -52.6
     ],
     [
      156.788,
-     -67.229
+     -52.6
     ],
     [
      158.817,
@@ -528,74 +496,18 @@
    ],
    "z": 6.09,
    "blend": 1.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5)"
-  },
-  {
-   "name": "AW_LawnS1",
-   "ring": [
-    [
-     156.658,
-     -69.876
-    ],
-    [
-     156.788,
-     -67.229
-    ],
-    [
-     158.586,
-     -67.317
-    ]
-   ],
-   "z": 6.0,
-   "grad": [
-    -0.35935,
-    0.04409
-   ],
-   "ref": [
-    156.658,
-    -69.876
-   ],
-   "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank between the path (red concrete edging) and the lower walkway (pink granite curb), red-edged lawn with thujas"
-  },
-  {
-   "name": "AW_LawnS2",
-   "ring": [
-    [
-     156.658,
-     -69.876
-    ],
-    [
-     158.586,
-     -67.317
-    ],
-    [
-     158.456,
-     -69.964
-    ]
-   ],
-   "z": 6.0,
-   "grad": [
-    -0.32181,
-    0.0158
-   ],
-   "ref": [
-    156.658,
-    -69.876
-   ],
-   "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank between the path (red concrete edging) and the lower walkway (pink granite curb), red-edged lawn with thujas"
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5) | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM)"
   },
   {
    "name": "AW_LawnN",
    "ring": [
     [
      156.788,
-     -67.229
+     -52.6
     ],
     [
      158.586,
-     -67.317
+     -52.6
     ],
     [
      160.614,
@@ -616,7 +528,7 @@
     -67.229
    ],
    "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs"
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM)"
   },
   {
    "name": "AW_Walkway",
@@ -638,7 +550,7 @@
      -29.962
     ]
    ],
-   "z": 5.29,
+   "z": 5.35,
    "blend": 0.0,
    "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lower walkway along the deck: deck edge coping + ~1 course (~0.13) above it (012327726 t28-29, 070309303 t20)"
   },
@@ -662,7 +574,7 @@
      -24.219
     ]
    ],
-   "z": 5.29,
+   "z": 5.35,
    "grad": [
     9e-05,
     0.00174

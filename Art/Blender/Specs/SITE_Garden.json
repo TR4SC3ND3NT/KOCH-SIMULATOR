@@ -2397,14 +2397,14 @@
     -67.229
    ],
    "dir_deg": -2.81,
-   "risers": 5,
-   "riser_h": 0.16,
-   "tread": 0.36,
+   "risers": 8,
+   "riser_h": 0.175,
+   "tread": 0.26,
    "width": 2.4,
-   "z_top": 6.09,
+   "z_top": 6.75,
    "run_out": 0.12,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): granite stairs from the terrace path down across the lawn bank to the walkway, 5 risers (070309303 t28-30); position: steel ramp landing/foot back-projected from the PnP camera of 070309303 t21 (y_l 26.8 / 32.9), stairs just south of the landing (070309303 t28 view); may be the same stair as SITE_GateAlley NorthStair (y_l ~19.3)",
-   "confidence": "low"
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): granite stairs from the terrace path down across the lawn bank to the walkway, 5 risers (070309303 t28-30); position: steel ramp landing/foot back-projected from the PnP camera of 070309303 t21 (y_l 26.8 / 32.9), stairs just south of the landing (070309303 t28 view); may be the same stair as SITE_GateAlley NorthStair (y_l ~19.3) | 2026-09-25: drop = flat alley 6.75 -> walkway 5.35 (drone SfM 1.35-1.44) -> 8 risers x 0.175",
+   "confidence": "medium"
   },
   {
    "type": "stairs_run",
@@ -2444,8 +2444,8 @@
      -64.727
     ]
    ],
-   "z0": 6.03,
-   "z1": 6.11,
+   "z0": 6.67,
+   "z1": 6.75,
    "material": "metal",
    "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides",
    "confidence": "medium"
@@ -2472,10 +2472,10 @@
     ]
    ],
    "z": [
-    6.11,
-    6.11,
-    5.37,
-    5.37
+    6.75,
+    6.75,
+    5.35,
+    5.35
    ],
    "thk": 0.06,
    "material": "metal",
@@ -2489,17 +2489,17 @@
     [
      157.202,
      -65.948,
-     6.11
+     6.75
     ],
     [
      157.26,
      -64.749,
-     6.11
+     6.75
     ],
     [
      157.554,
      -58.756,
-     5.37
+     5.35
     ]
    ],
    "height": 0.9,
@@ -2516,17 +2516,17 @@
     [
      158.4,
      -66.006,
-     6.11
+     6.75
     ],
     [
      158.459,
      -64.808,
-     6.11
+     6.75
     ],
     [
      158.753,
      -58.815,
-     5.37
+     5.35
     ]
    ],
    "height": 0.9,
@@ -2543,12 +2543,12 @@
     [
      156.752,
      -65.925,
-     6.11
+     6.75
     ],
     [
      157.202,
      -65.948,
-     6.11
+     6.75
     ]
    ],
    "height": 0.9,
@@ -2959,8 +2959,8 @@
      -57.556
     ]
    ],
-   "z0": 5.29,
-   "z1": 5.37,
+   "z0": 5.27,
+   "z1": 5.35,
    "material": "metal",
    "confidence": "medium",
    "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides"
@@ -2972,17 +2972,17 @@
     [
      157.554,
      -58.756,
-     5.37
+     5.35
     ],
     [
      157.614,
      -57.556,
-     5.37
+     5.35
     ],
     [
      158.813,
      -57.614999999999995,
-     5.37
+     5.35
     ]
    ],
    "height": 0.9,
