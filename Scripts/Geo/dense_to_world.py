@@ -9,7 +9,7 @@ import json
 import numpy as np
 from PIL import Image, ImageDraw
 
-C_ORIGIN = np.array([173.264, -3.640, 5.53])      # Block C local origin (SW corner, FFL), Specs/BLD_C.json
+C_ORIGIN = np.array([173.264, -3.640, 6.40])      # Block C local origin (SW corner, FFL), Specs/BLD_C.json
 C_X = np.array([0.99920, -0.03985, 0.0])
 C_Y = np.array([0.03985, 0.99920, 0.0])
 PLY_TYPES = {"float": "f4", "float32": "f4", "double": "f8", "uchar": "u1", "uint8": "u1", "int": "i4", "uint": "u4", "uint32": "u4", "int32": "i4"}

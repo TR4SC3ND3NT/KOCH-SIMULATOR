@@ -297,16 +297,144 @@
     ]
    ],
    "z": [
-    6.6,
-    6.6,
-    6.6,
-    6.6,
-    6.6,
-    6.6
+    6.55,
+    6.55,
+    6.55,
+    6.55,
+    6.55,
+    6.55
    ],
    "thk": 1.8,
    "material": "hedge",
    "evidence": "raised bed between the south stair and the pavilion stair: lawn + one thuja in the open part (012205046, 012258813), bare soil under the pavilion (012233382); red granite cheeks with polished coping; the pavilion's south pier stands on its NW corner",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Bank_North",
+   "ring": [
+    [
+     157.206,
+     -80.766
+    ],
+    [
+     158.204,
+     -80.815
+    ],
+    [
+     158.807,
+     -68.529
+    ],
+    [
+     157.808,
+     -68.48
+    ]
+   ],
+   "z": [
+    6.55,
+    5.47,
+    5.47,
+    6.55
+   ],
+   "thk": 1.95,
+   "material": "hedge",
+   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (070309303 f19-f44, f40 overlay; drone SfM)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Walkway_North",
+   "ring": [
+    [
+     158.204,
+     -80.815
+    ],
+    [
+     158.807,
+     -68.529
+    ],
+    [
+     158.927,
+     -68.535
+    ],
+    [
+     158.324,
+     -80.82
+    ]
+   ],
+   "z": [
+    5.47,
+    5.47,
+    5.47,
+    5.47
+   ],
+   "thk": 0.67,
+   "material": "brick",
+   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Bank_NorthEnd",
+   "ring": [
+    [
+     158.342,
+     -57.593
+    ],
+    [
+     159.341,
+     -57.642
+    ],
+    [
+     159.522,
+     -53.947
+    ],
+    [
+     158.523,
+     -53.898
+    ]
+   ],
+   "z": [
+    6.55,
+    5.47,
+    5.47,
+    6.55
+   ],
+   "thk": 1.95,
+   "material": "hedge",
+   "evidence": "steep grass bank from the lawn down to the walkway curb, no retaining wall (070309303 f19-f44, f40 overlay; drone SfM)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_Walkway_NorthEnd",
+   "ring": [
+    [
+     159.341,
+     -57.642
+    ],
+    [
+     159.522,
+     -53.947
+    ],
+    [
+     159.642,
+     -53.953
+    ],
+    [
+     159.461,
+     -57.648
+    ]
+   ],
+   "z": [
+    5.47,
+    5.47,
+    5.47,
+    5.47
+   ],
+   "thk": 0.67,
+   "material": "brick",
+   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44)",
    "confidence": "medium"
   },
   {
@@ -318,12 +446,12 @@
      -80.707
     ],
     [
-     157.905,
-     -80.8
+     157.206,
+     -80.766
     ],
     [
-     158.507,
-     -68.515
+     157.808,
+     -68.48
     ],
     [
      156.61,
@@ -331,10 +459,10 @@
     ]
    ],
    "z": [
-    6.6,
-    6.6,
-    6.6,
-    6.6
+    6.55,
+    6.55,
+    6.55,
+    6.55
    ],
    "thk": 1.8,
    "material": "hedge",
@@ -363,10 +491,10 @@
     ]
    ],
    "z": [
-    6.6,
-    6.6,
-    6.6,
-    6.6
+    6.55,
+    6.55,
+    6.55,
+    6.55
    ],
    "thk": 1.8,
    "material": "hedge",
@@ -382,12 +510,12 @@
      -57.535
     ],
     [
-     159.041,
-     -57.628
+     158.342,
+     -57.593
     ],
     [
-     159.223,
-     -53.932
+     158.523,
+     -53.898
     ],
     [
      157.325,
@@ -395,10 +523,10 @@
     ]
    ],
    "z": [
-    6.6,
-    6.6,
-    6.6,
-    6.6
+    6.55,
+    6.55,
+    6.55,
+    6.55
    ],
    "thk": 1.8,
    "material": "hedge",
@@ -456,134 +584,6 @@
     [
      157.652,
      -85.343
-    ]
-   ],
-   "z": [
-    6.83,
-    6.83,
-    6.83,
-    6.83
-   ],
-   "thk": 0.06,
-   "material": "stone",
-   "evidence": "polished granite coping",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "RetWall_North",
-   "ring": [
-    [
-     157.905,
-     -80.8
-    ],
-    [
-     158.204,
-     -80.815
-    ],
-    [
-     158.807,
-     -68.529
-    ],
-    [
-     158.507,
-     -68.515
-    ]
-   ],
-   "z": [
-    6.8,
-    6.8,
-    6.8,
-    6.8
-   ],
-   "thk": 2.0,
-   "material": "brick",
-   "evidence": "red rock-face granite block retaining wall (3-4 courses) with a polished pink granite coping between the planter and the walkway (012227815, 012231007, 012233382); height = alley - walkway",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "RetWall_North_Coping",
-   "ring": [
-    [
-     157.875,
-     -80.798
-    ],
-    [
-     158.234,
-     -80.816
-    ],
-    [
-     158.837,
-     -68.531
-    ],
-    [
-     158.477,
-     -68.513
-    ]
-   ],
-   "z": [
-    6.83,
-    6.83,
-    6.83,
-    6.83
-   ],
-   "thk": 0.06,
-   "material": "stone",
-   "evidence": "polished granite coping",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "RetWall_NorthEnd",
-   "ring": [
-    [
-     159.041,
-     -57.628
-    ],
-    [
-     159.341,
-     -57.642
-    ],
-    [
-     159.522,
-     -53.947
-    ],
-    [
-     159.223,
-     -53.932
-    ]
-   ],
-   "z": [
-    6.8,
-    6.8,
-    6.8,
-    6.8
-   ],
-   "thk": 2.0,
-   "material": "brick",
-   "evidence": "red rock-face granite block retaining wall (3-4 courses) with a polished pink granite coping between the planter and the walkway (012227815, 012231007, 012233382); height = alley - walkway",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "RetWall_NorthEnd_Coping",
-   "ring": [
-    [
-     159.011,
-     -57.626
-    ],
-    [
-     159.371,
-     -57.644
-    ],
-    [
-     159.552,
-     -53.948
-    ],
-    [
-     159.193,
-     -53.931
     ]
    ],
    "z": [
@@ -1114,7 +1114,7 @@
    ],
    "dir_deg": 87.192,
    "risers": 8,
-   "riser_h": 0.169,
+   "riser_h": 0.175,
    "tread": 0.35,
    "width": 4.21,
    "z_top": 6.75,

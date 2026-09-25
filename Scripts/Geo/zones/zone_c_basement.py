@@ -17,7 +17,7 @@ WORK = sys.argv[1] if len(sys.argv) > 1 else None
 C_ORIGIN = np.array([173.264, -3.640])
 C_X = np.array([0.99920, -0.03985])
 C_Y = np.array([-C_X[1], C_X[0]])
-FFL = 5.53            # world z of the C ground floor (build_facades output, terrain-derived)
+FFL = 6.40            # world z of the C ground floor (build_facades output, terrain-derived)
 # Ground at the SW corner / basement entry: 1.78 m below the C ground floor (0.73 m lower than the main entrance
 # plaza). From the map owner's photo 10:55 (camera solved by PnP on 10 C window centres, 5 px rms): with this grade the
 # stair railing reads 1.0 m and the roof post 2.2 m; the entry roof then meets C's west wall just under the F1 sills,

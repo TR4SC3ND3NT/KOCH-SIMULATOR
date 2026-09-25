@@ -13,7 +13,7 @@ from PIL import Image, ImageOps
 
 C_ORIGIN = np.array([173.264, -3.640])   # Block C SW corner (Specs/BLD_C.json anchor)
 C_X = np.array([0.99920, -0.03985])
-C_FFL = 5.53                             # C ground-floor finished level, world z
+C_FFL = 6.40                             # C ground-floor finished level, world z
 DIAG_35MM = 43.27
 
 

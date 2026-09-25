@@ -77,7 +77,7 @@ def main():
     t = sol.x[3:6]
     C = -R.T @ t
     print(f"rms {np.sqrt(np.mean(e ** 2)):.1f} px, max {e.max():.1f} px (pt {int(e.argmax())}); f {f:.0f} px "
-          f"({f / np.hypot(W, H) * DIAG_35MM:.1f} mm-eq); camera world {C.round(2)}, z rel C FFL {C[2] - 5.53:.2f}")
+          f"({f / np.hypot(W, H) * DIAG_35MM:.1f} mm-eq); camera world {C.round(2)}, z rel C FFL {C[2] - 6.40:.2f}")
     for i, (p, ei) in enumerate(zip(cfg["points"], e)):
         if ei > 3 * np.median(e):
             print(f"  outlier? #{i} {p[:3]} {ei:.1f} px")

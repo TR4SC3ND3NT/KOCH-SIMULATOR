@@ -13,7 +13,7 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")
 C_ORIGIN = np.array([173.264, -3.640])        # Specs/BLD_C.json anchor
 C_X = np.array([0.99920, -0.03985])
 C_Y = np.array([-C_X[1], C_X[0]])
-FFL = 5.53                                    # C ground floor, world z (build_facades output)
+FFL = 6.40                                    # C ground floor, world z (build_facades output)
 EAST = math.degrees(math.atan2(C_X[1], C_X[0]))
 NORTH = EAST + 90.0
 

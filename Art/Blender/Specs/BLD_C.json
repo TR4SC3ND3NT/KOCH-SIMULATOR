@@ -548,5 +548,7 @@
    "room layout"
   ],
   "later": "gameplay: 2 playable pianos in the basement (R3/R4, not now)"
- }
+ },
+ "ffl_z": 6.4,
+ "ffl_note": "2026-09-25 map owner: the C entrance plaza, the garden with the gazebos and the lower plaza along A_W (below the wide stair north of B) are one level; that level = A_W walkway 5.35 (drone SfM + 8 risers from the alley). C FFL = plaza + 7 risers x 0.15 = 6.40 (DEM rule gave 5.53)."
 }

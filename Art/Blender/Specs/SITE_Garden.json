@@ -2542,54 +2542,6 @@
    "material": "metal"
   },
   {
-   "type": "wall",
-   "name": "AW_Edging_Path",
-   "line": [
-    [
-     156.718,
-     -69.879
-    ],
-    [
-     156.785,
-     -68.53
-    ],
-    [
-     156.917,
-     -65.833
-    ],
-    [
-     158.876,
-     -25.881
-    ]
-   ],
-   "height": 0.04,
-   "thk": 0.08,
-   "cap_proj": 0.0,
-   "material": "brick",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red concrete lawn edging flush with the path",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "AW_Curb_Lawn",
-   "line": [
-    [
-     158.336,
-     -69.958
-    ],
-    [
-     160.494,
-     -25.961
-    ]
-   ],
-   "height": 0.03,
-   "thk": 0.2,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): pink granite curb at the lawn toe, ~0.13 above the walkway",
-   "confidence": "medium"
-  },
-  {
    "type": "tree",
    "name": "AW_Thuja_0",
    "pos": [
@@ -2631,8 +2583,8 @@
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
-   "confidence": "low"
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
@@ -2646,8 +2598,8 @@
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
-   "confidence": "low"
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
@@ -2661,8 +2613,8 @@
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
-   "confidence": "low"
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
@@ -2676,8 +2628,8 @@
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
-   "confidence": "low"
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
@@ -2691,8 +2643,8 @@
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
-   "confidence": "low"
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
@@ -2706,8 +2658,8 @@
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs",
-   "confidence": "low"
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   },
   {
    "type": "planter",
@@ -2938,7 +2890,217 @@
    "material": "metal",
    "confidence": "medium",
    "evidence": "070309303 t28-31 (frames r_28-r_32): steel mesh-grating ramp for prams/wheelchairs beside the granite side stair: flat top landing at the path level at the stair head, 90-degree turn, sloping run along the lawn bank, turn at the foot onto the gallery walkway; dark grey square-tube frame, top rail + mid rails both sides"
+  },
+  {
+   "type": "planter",
+   "name": "AW_ThujaPit_2",
+   "ring": [
+    [
+     158.173,
+     -48.646
+    ],
+    [
+     159.073,
+     -48.646
+    ],
+    [
+     159.073,
+     -47.746
+    ],
+    [
+     158.173,
+     -47.746
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_ThujaPit_3",
+   "ring": [
+    [
+     158.369,
+     -44.651
+    ],
+    [
+     159.269,
+     -44.651
+    ],
+    [
+     159.269,
+     -43.751
+    ],
+    [
+     158.369,
+     -43.751
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_ThujaPit_4",
+   "ring": [
+    [
+     158.565,
+     -40.655
+    ],
+    [
+     159.465,
+     -40.655
+    ],
+    [
+     159.465,
+     -39.755
+    ],
+    [
+     158.565,
+     -39.755
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_ThujaPit_5",
+   "ring": [
+    [
+     158.761,
+     -36.66
+    ],
+    [
+     159.661,
+     -36.66
+    ],
+    [
+     159.661,
+     -35.76
+    ],
+    [
+     158.761,
+     -35.76
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_ThujaPit_6",
+   "ring": [
+    [
+     158.957,
+     -32.665
+    ],
+    [
+     159.857,
+     -32.665
+    ],
+    [
+     159.857,
+     -31.765
+    ],
+    [
+     158.957,
+     -31.765
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_ThujaPit_7",
+   "ring": [
+    [
+     159.153,
+     -28.67
+    ],
+    [
+     160.053,
+     -28.67
+    ],
+    [
+     160.053,
+     -27.77
+    ],
+    [
+     159.153,
+     -27.77
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "confidence": "medium"
   }
  ],
- "ground": "pads"
+ "ground": "pads",
+ "terrain_pads": [
+  {
+   "name": "LowerTerrace",
+   "z": 5.35,
+   "blend": 3.0,
+   "ring": [
+    [
+     104.0,
+     -47.0
+    ],
+    [
+     153.0,
+     -48.6
+    ],
+    [
+     157.2,
+     -52.3
+    ],
+    [
+     161.6,
+     -52.5
+    ],
+    [
+     162.1,
+     -17.6
+    ],
+    [
+     205.0,
+     -19.2
+    ],
+    [
+     205.3,
+     -4.9
+    ],
+    [
+     173.0,
+     -4.4
+    ],
+    [
+     168.5,
+     -3.2
+    ],
+    [
+     150.0,
+     -0.6
+    ],
+    [
+     104.0,
+     0.8
+    ]
+   ],
+   "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza"
+  }
+ ]
 }

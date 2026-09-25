@@ -24,8 +24,8 @@
      13.079
     ]
    ],
-   "z0": 5.38,
-   "z1": 5.53,
+   "z0": 6.25,
+   "z1": 6.4,
    "material": "terrazzo",
    "evidence": "terrazzo floor (lobby frames); FFL from BLD_C",
    "confidence": "medium"
@@ -51,8 +51,8 @@
      12.959
     ]
    ],
-   "z0": 8.58,
-   "z1": 8.83,
+   "z0": 9.45,
+   "z1": 9.7,
    "material": "stone",
    "evidence": "F2 structural slab, 3.30 m storey",
    "confidence": "medium"
@@ -78,8 +78,8 @@
      12.959
     ]
    ],
-   "z0": 8.53,
-   "z1": 8.55,
+   "z0": 9.4,
+   "z1": 9.42,
    "material": "white",
    "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
    "confidence": "low"
@@ -105,8 +105,8 @@
      2.038
     ]
    ],
-   "z0": 8.58,
-   "z1": 8.83,
+   "z0": 9.45,
+   "z1": 9.7,
    "material": "stone",
    "evidence": "F2 structural slab, 3.30 m storey",
    "confidence": "medium"
@@ -132,8 +132,8 @@
      2.038
     ]
    ],
-   "z0": 8.53,
-   "z1": 8.55,
+   "z0": 9.4,
+   "z1": 9.42,
    "material": "white",
    "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
    "confidence": "low"
@@ -159,8 +159,8 @@
      13.079
     ]
    ],
-   "z0": 8.58,
-   "z1": 8.83,
+   "z0": 9.45,
+   "z1": 9.7,
    "material": "stone",
    "evidence": "F2 structural slab, 3.30 m storey",
    "confidence": "medium"
@@ -186,8 +186,8 @@
      13.079
     ]
    ],
-   "z0": 8.53,
-   "z1": 8.55,
+   "z0": 9.4,
+   "z1": 9.42,
    "material": "white",
    "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
    "confidence": "low"
@@ -213,8 +213,8 @@
      1.021
     ]
    ],
-   "z0": 8.58,
-   "z1": 8.83,
+   "z0": 9.45,
+   "z1": 9.7,
    "material": "stone",
    "evidence": "F2 structural slab, 3.30 m storey",
    "confidence": "medium"
@@ -240,8 +240,8 @@
      1.021
     ]
    ],
-   "z0": 8.53,
-   "z1": 8.55,
+   "z0": 9.4,
+   "z1": 9.42,
    "material": "white",
    "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
    "confidence": "low"
@@ -267,8 +267,8 @@
      12.062
     ]
    ],
-   "z0": 8.58,
-   "z1": 8.83,
+   "z0": 9.45,
+   "z1": 9.7,
    "material": "stone",
    "evidence": "F2 structural slab, 3.30 m storey",
    "confidence": "medium"
@@ -294,8 +294,8 @@
      12.062
     ]
    ],
-   "z0": 8.53,
-   "z1": 8.55,
+   "z0": 9.4,
+   "z1": 9.42,
    "material": "white",
    "evidence": "600x600 lay-in grid ceiling with 1-tile LED panels; height to be taped (photo request)",
    "confidence": "low"
@@ -321,8 +321,8 @@
      7.161
     ]
    ],
-   "z0": 8.23,
-   "z1": 8.53,
+   "z0": 9.1,
+   "z1": 9.4,
    "material": "white",
    "evidence": "plasterboard bulkheads crossing the hall at the lobby sides (frames F_2.5, F_8.5)",
    "confidence": "medium"
@@ -348,8 +348,8 @@
      6.985
     ]
    ],
-   "z0": 8.23,
-   "z1": 8.53,
+   "z0": 9.1,
+   "z1": 9.4,
    "material": "white",
    "evidence": "plasterboard bulkheads crossing the hall at the lobby sides (frames F_2.5, F_8.5)",
    "confidence": "medium"
@@ -367,21 +367,21 @@
      1.557
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [
     {
      "u0": 0.935,
      "u1": 1.965,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 7.335,
      "u1": 8.365,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     }
    ],
    "material": "white"
@@ -401,8 +401,8 @@
    ],
    "u0": 0.955,
    "u1": 1.945,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -426,8 +426,8 @@
    ],
    "u0": 7.355,
    "u1": 8.345,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -449,21 +449,21 @@
      1.021
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [
     {
      "u0": 0.685,
      "u1": 1.715,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 7.085,
      "u1": 8.115,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     }
    ],
    "material": "white"
@@ -483,8 +483,8 @@
    ],
    "u0": 0.705,
    "u1": 1.695,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -508,8 +508,8 @@
    ],
    "u0": 7.105,
    "u1": 8.095,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -531,8 +531,8 @@
      -3.688
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -552,8 +552,8 @@
      1.382
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -573,8 +573,8 @@
      1.816
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -594,8 +594,8 @@
      1.139
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -615,8 +615,8 @@
      1.918
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -636,8 +636,8 @@
      1.021
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -657,45 +657,45 @@
      7.713
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [
     {
      "u0": 19.635,
      "u1": 20.665,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 14.535,
      "u1": 15.565,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 6.835,
      "u1": 7.865,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 1.735,
      "u1": 2.765,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 12.08,
      "u1": 13.02,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     },
     {
      "u0": 9.48,
      "u1": 10.42,
-     "z0": 5.53,
-     "z1": 7.6
+     "z0": 6.4,
+     "z1": 8.47
     }
    ],
    "material": "white"
@@ -715,8 +715,8 @@
    ],
    "u0": 19.655,
    "u1": 20.645,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -740,8 +740,8 @@
    ],
    "u0": 14.555,
    "u1": 15.545,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -765,8 +765,8 @@
    ],
    "u0": 6.855,
    "u1": 7.845,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -790,8 +790,8 @@
    ],
    "u0": 1.755,
    "u1": 2.745,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
@@ -815,8 +815,8 @@
    ],
    "u0": 12.1,
    "u1": 13.0,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "solid",
    "mid": 1.0,
@@ -840,8 +840,8 @@
    ],
    "u0": 9.5,
    "u1": 10.4,
-   "z0": 5.53,
-   "z1": 7.58,
+   "z0": 6.4,
+   "z1": 8.45,
    "wall_thk": 0.2,
    "leaf": "solid",
    "mid": 1.0,
@@ -863,8 +863,8 @@
      7.58
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -884,8 +884,8 @@
      7.361
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -905,8 +905,8 @@
      7.265
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -926,8 +926,8 @@
      7.169
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -947,8 +947,8 @@
      6.95
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -968,8 +968,8 @@
      7.713
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -989,8 +989,8 @@
      6.817
     ]
    ],
-   "z0": 5.43,
-   "z1": 8.53,
+   "z0": 6.3,
+   "z1": 9.4,
    "thk": 0.2,
    "openings": [],
    "material": "white",
@@ -1009,7 +1009,7 @@
    "risers": 11,
    "riser_h": 0.15,
    "tread": 0.3,
-   "z_top": 7.18,
+   "z_top": 8.05,
    "material": "granite",
    "evidence": "frames 070704360 t 15-22 s: 11 risers to the half-landing, granite treads",
    "confidence": "medium"
@@ -1035,8 +1035,8 @@
      7.633
     ]
    ],
-   "z0": 6.98,
-   "z1": 7.18,
+   "z0": 7.85,
+   "z1": 8.05,
    "material": "granite",
    "evidence": "half-landing across both flights at the far side of the hall end (frames t 19-22 s)",
    "confidence": "medium"
@@ -1053,7 +1053,7 @@
    "risers": 11,
    "riser_h": 0.15,
    "tread": 0.3,
-   "z_top": 8.83,
+   "z_top": 9.7,
    "material": "granite",
    "evidence": "frames t 23-28 s: second flight returns along the end wall, 11 risers to F2",
    "confidence": "medium"
@@ -1065,17 +1065,17 @@
     [
      175.549,
      2.224,
-     5.53
+     6.4
     ],
     [
      175.561,
      2.523,
-     5.68
+     6.55
     ],
     [
      175.681,
      5.521,
-     7.18
+     8.05
     ]
    ],
    "height": 0.95,
@@ -1097,7 +1097,7 @@
    "risers": 11,
    "riser_h": 0.15,
    "tread": 0.3,
-   "z_top": 7.18,
+   "z_top": 8.05,
    "material": "granite",
    "evidence": "frames 070704360 t 15-22 s: 11 risers to the half-landing, granite treads",
    "confidence": "medium"
@@ -1123,8 +1123,8 @@
      6.617
     ]
    ],
-   "z0": 6.98,
-   "z1": 7.18,
+   "z0": 7.85,
+   "z1": 8.05,
    "material": "granite",
    "evidence": "half-landing across both flights at the far side of the hall end (frames t 19-22 s)",
    "confidence": "medium"
@@ -1141,7 +1141,7 @@
    "risers": 11,
    "riser_h": 0.15,
    "tread": 0.3,
-   "z_top": 8.83,
+   "z_top": 9.7,
    "material": "granite",
    "evidence": "frames t 23-28 s: second flight returns along the end wall, 11 risers to F2",
    "confidence": "medium"
@@ -1153,17 +1153,17 @@
     [
      200.829,
      1.215,
-     5.53
+     6.4
     ],
     [
      200.841,
      1.515,
-     5.68
+     6.55
     ],
     [
      200.961,
      4.513,
-     7.18
+     8.05
     ]
    ],
    "height": 0.95,
@@ -1185,7 +1185,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 5.53,
+   "z": 6.4,
    "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
    "confidence": "medium"
   },
@@ -1201,7 +1201,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 5.53,
+   "z": 6.4,
    "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
    "confidence": "medium"
   },
@@ -1217,7 +1217,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 5.53,
+   "z": 6.4,
    "evidence": "as Hall_Bench_N",
    "confidence": "low"
   },
@@ -1233,7 +1233,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 5.53,
+   "z": 6.4,
    "evidence": "as Hall_Bench_N",
    "confidence": "low"
   },
@@ -1250,7 +1250,7 @@
     0.85,
     1.83
    ],
-   "z0": 5.53,
+   "z0": 6.4,
    "material": "metal",
    "evidence": "vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",
    "confidence": "low"
@@ -1268,7 +1268,7 @@
     0.7,
     1.9
    ],
-   "z0": 5.53,
+   "z0": 6.4,
    "material": "metal",
    "evidence": "vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",
    "confidence": "low"
@@ -1286,7 +1286,7 @@
     0.32,
     1.1
    ],
-   "z0": 5.53,
+   "z0": 6.4,
    "material": "metal",
    "evidence": "vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",
    "confidence": "low"
@@ -1304,7 +1304,7 @@
     0.08,
     0.55
    ],
-   "z0": 5.68,
+   "z0": 6.55,
    "material": "white",
    "evidence": "white sectional radiator on the hall wall (F_12)",
    "confidence": "low"
@@ -1322,7 +1322,7 @@
     0.08,
     0.55
    ],
-   "z0": 5.68,
+   "z0": 6.55,
    "material": "white",
    "evidence": "white sectional radiator on the hall wall (F_12)",
    "confidence": "low"
@@ -1340,7 +1340,7 @@
     0.02,
     0.9000000000000001
    ],
-   "z0": 7.63,
+   "z0": 8.5,
    "material": "accent",
    "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
    "confidence": "low"
@@ -1358,7 +1358,7 @@
     0.02,
     0.9000000000000001
    ],
-   "z0": 7.63,
+   "z0": 8.5,
    "material": "accent",
    "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
    "confidence": "low"
@@ -1376,7 +1376,7 @@
     0.02,
     0.9000000000000001
    ],
-   "z0": 7.63,
+   "z0": 8.5,
    "material": "accent",
    "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
    "confidence": "low"
@@ -1394,7 +1394,7 @@
     0.02,
     0.9000000000000001
    ],
-   "z0": 7.63,
+   "z0": 8.5,
    "material": "accent",
    "evidence": "periwinkle-blue accent panel above each classroom door (lobby frames)",
    "confidence": "low"
@@ -1412,7 +1412,7 @@
     0.02,
     2.9
    ],
-   "z0": 5.53,
+   "z0": 6.4,
    "material": "accent",
    "evidence": "blue accent wall around the two WC doors (F_2.5)",
    "confidence": "medium"
