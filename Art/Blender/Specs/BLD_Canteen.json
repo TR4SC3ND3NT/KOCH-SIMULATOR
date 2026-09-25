@@ -1,0 +1,121 @@
+{
+ "id": "BLD_Canteen",
+ "collection": "BLD_Other",
+ "replaces": [
+  "GB_BLD_Canteen",
+  "GB_BLD_Canteen_Roof"
+ ],
+ "scale": 1.0,
+ "status": "probable",
+ "note": "Canteen (2020 pano hotspot 'Kantin'): long single-storey gable-roofed block north of Block C, between the round bed (W) and the east service road; beige horizontal siding with one brown band, red brick-tile plinth, dark-brown roof with boxed eaves, a glazed porch at the west gable. Frame x along the south wall from its SW corner (sports frame u axis, -2.2 deg), y north, z above FFL. Only the west gable is photographed (070410255 t=44-48/65.5 s): no windows modelled on S/E/N (unknown, see photo_requests).",
+ "anchor": {
+  "world_xy": [
+   182.258,
+   26.966
+  ],
+  "x_dir": [
+   0.99926,
+   -0.03839
+  ],
+  "evidence": "plan: OSM way/1529424635 outline local u 68.8..93.3 x v -15.7..-5.6 (24.5 x 10.1) and Google z20 roof u 69.4..94.7 x v -15.1..-5.4 lean-corrected by the eave height (-1.2/-0.8 m) -> roof u 68.5..93.4 x v -15.8..-5.9; walls = roof minus a 0.4 m overhang: 24.1 x 9.1 m",
+  "confidence": "medium"
+ },
+ "plinth_m": 0.35,
+ "wall_thk": 0.3,
+ "storey_m": 4.3,
+ "storeys": 1,
+ "eave_z": 4.3,
+ "ring": [
+  [
+   0,
+   0
+  ],
+  [
+   24.1,
+   0
+  ],
+  [
+   24.1,
+   9.1
+  ],
+  [
+   0,
+   9.1
+  ]
+ ],
+ "plinth": {
+  "z_top": 0.53,
+  "proj": 0.03,
+  "evidence": "red brick-tile plinth, 6 courses of ~0.15 m = 0.88 m above the paving at the W gable (070410255 t=46 s full-res: plinth 73 px vs wall 393 px); FFL = 0.35 above the paving (steps at the porch)",
+  "confidence": "medium"
+ },
+ "cornice": {
+  "z0": 4.1,
+  "z1": 4.3,
+  "proj": 0.05,
+  "evidence": "white fascia/soffit trim under the eaves (070410255 t=46 s)",
+  "confidence": "low"
+ },
+ "window_types": {},
+ "rows": {},
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south",
+   "windows": [],
+   "evidence": "not photographed (parking lane toward Block C)",
+   "confidence": "low"
+  },
+  {
+   "edge": 1,
+   "name": "east",
+   "windows": [],
+   "evidence": "not photographed",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north",
+   "windows": [],
+   "evidence": "not photographed; drone 2022 d_23 shows red-framed glazing on a building side east of the courts (possibly this north wall)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "name": "west_gable",
+   "windows": [],
+   "evidence": "blank siding gable with a brown band at 2.4-2.7 m (070410255 t=46/65.5 s)",
+   "confidence": "medium"
+  }
+ ],
+ "roof": {
+  "type": "gable",
+  "pitch": 18,
+  "overhang": 0.4,
+  "gable_edges": [
+   1,
+   3
+  ],
+  "evidence": "gable ends W/E, ridge E-W (070410255 t=46 s: eave 4.75 m and apex ~6.25 m above the paving from the 0.88 m plinth scale -> 18 deg over the 9.9 m roof span; Google z20 ridge E-W)",
+  "confidence": "medium"
+ },
+ "attachments": [
+  {
+   "type": "stair_box",
+   "edge": 3,
+   "name": "WestGlazedPorch",
+   "u0": 0.3,
+   "u1": 3.1,
+   "depth": 1.8,
+   "z_top": 2.9,
+   "canopy": {
+    "u0": 0.1,
+    "u1": 3.3,
+    "depth": 2.0,
+    "z": 2.9
+   },
+   "evidence": "dark glazed porch with its own low roof at the NW end of the west gable, steps + a ramp with a handrail (070410255 t=46 s); size and position estimated",
+   "confidence": "low"
+  }
+ ]
+}

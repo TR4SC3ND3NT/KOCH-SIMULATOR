@@ -1,0 +1,4598 @@
+{
+ "id": "SITE_Sports",
+ "collection": "SITE_Sport",
+ "ground": "pads",
+ "replaces": [
+  "GB_SITE_FootballPitch",
+  "GB_SITE_Courts"
+ ],
+ "note": "Sports area north of the hall and Block C: a roofed 44.45 x 25.25 m mini-football cage (7 m mesh fence on a 0.35 m brick plinth) and, 6.5 m east across a paved walkway, a 46.1 x 26.3 m block of three fenced courts (basketball | volleyball | tennis-lined hard court, 4.9 m fences). South of them the bench strip and the decorated alley (2 rows of hexagonal thuja beds with double-globe lamps and festoon lights), the round bed at the canteen gable; north the path, a spruce lawn bed, a lane, a tree lawn and the boundary wall. Sports frame: origin (114,45), u along -2.2 deg (world), v 'local north'; the spec generator keeps all measurements in that frame. Levels (relative from photos, absolute anchored to the DEM +-1 m): pads at z 3.45 (platform) / 3.75 (north terrace); pitch turf 3.80, courts 3.50. Geometry is placed on the padded ground ('ground': 'pads').",
+ "georef": "user satellite screenshot (Google, 540x795) -> Google z20 ortho by SIFT + RANSAC affine: 1619 inliers, rms 0.19 m (0.8 screenshot px), scale 0.2299/0.2289 m/px, rotation -0.07 deg",
+ "terrain_pads": [
+  {
+   "name": "SportsPlatform",
+   "ring": [
+    [
+     93.93,
+     43.569
+    ],
+    [
+     214.841,
+     38.924
+    ],
+    [
+     216.615,
+     85.09
+    ],
+    [
+     163.254,
+     87.14
+    ],
+    [
+     162.598,
+     70.053
+    ],
+    [
+     95.047,
+     72.648
+    ]
+   ],
+   "z": 3.45,
+   "blend": 10.0,
+   "evidence": "bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone 2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives 3.3-3.6 along it, rms 1 m) so the 10 m blend into the alley/canteen stays within 0.1-0.4 m",
+   "confidence": "low"
+  },
+  {
+   "name": "NorthTerrace",
+   "ring": [
+    [
+     95.047,
+     72.648
+    ],
+    [
+     162.598,
+     70.053
+    ],
+    [
+     163.254,
+     87.14
+    ],
+    [
+     95.704,
+     89.735
+    ]
+   ],
+   "z": 3.75,
+   "blend": 3.0,
+   "evidence": "north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend)",
+   "confidence": "low"
+  }
+ ],
+ "elements": [
+  {
+   "type": "slab",
+   "name": "Pitch_Plinth",
+   "ring": [
+    [
+     113.906,
+     45.154
+    ],
+    [
+     158.323,
+     43.447
+    ],
+    [
+     159.292,
+     68.679
+    ],
+    [
+     114.875,
+     70.385
+    ]
+   ],
+   "z0": 3.1,
+   "z1": 3.79,
+   "material": "brick",
+   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): turf/fence line W u -0.1 (Google -0.11..-0.05, Bing -0.02..-0.19), E u 44.35 (Bing 44.27..44.42; Google 44.0-44.6 blurred by the E fence shadow), S v 0.15 (Google 0.12..0.26), N v 25.4 (Google 25.42, Bing 25.35..25.45) -> 44.45 x 25.25 m. Red brick-tile plinth ~0.35 m above the walkway at the SE gate (070410255 t=60 s) and along the W end (drone 2022 f 0:14)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Pitch_Turf",
+   "ring": [
+    [
+     114.217,
+     45.442
+    ],
+    [
+     158.035,
+     43.759
+    ],
+    [
+     158.981,
+     68.391
+    ],
+    [
+     115.163,
+     70.074
+    ]
+   ],
+   "z0": 3.76,
+   "z1": 3.8,
+   "material": "hedge",
+   "evidence": "green artificial turf inside a ~0.3 m red border strip (drone 2022 d_07/d_19); level surface",
+   "confidence": "medium"
+  },
+  {
+   "type": "paint",
+   "name": "Pitch_Lines",
+   "lines": [
+    [
+     [
+      114.269,
+      45.49
+     ],
+     [
+      157.987,
+      43.811
+     ],
+     [
+      158.929,
+      68.342
+     ],
+     [
+      115.211,
+      70.022
+     ],
+     [
+      114.269,
+      45.49
+     ]
+    ],
+    [
+     [
+      136.128,
+      44.65
+     ],
+     [
+      137.07,
+      69.182
+     ]
+    ],
+    [
+     [
+      120.678,
+      56.027
+     ],
+     [
+      120.793,
+      59.025
+     ]
+    ],
+    [
+     [
+      152.405,
+      54.808
+     ],
+     [
+      152.52,
+      57.806
+     ]
+    ]
+   ],
+   "arcs": [
+    {
+     "c": [
+      136.599,
+      56.916
+     ],
+     "r": 3.0,
+     "a0": 0,
+     "a1": 360
+    },
+    {
+     "c": [
+      136.599,
+      56.916
+     ],
+     "r": 0.12,
+     "a0": 0,
+     "a1": 360
+    },
+    {
+     "c": [
+      114.798,
+      59.255
+     ],
+     "r": 6.0,
+     "a0": -2.2,
+     "a1": 87.8
+    },
+    {
+     "c": [
+      114.683,
+      56.257
+     ],
+     "r": 6.0,
+     "a0": -2.2,
+     "a1": -92.2
+    },
+    {
+     "c": [
+      120.736,
+      57.526
+     ],
+     "r": 0.1,
+     "a0": 0,
+     "a1": 360
+    },
+    {
+     "c": [
+      158.516,
+      57.575
+     ],
+     "r": 6.0,
+     "a0": 177.8,
+     "a1": 87.80000000000001
+    },
+    {
+     "c": [
+      158.4,
+      54.578
+     ],
+     "r": 6.0,
+     "a0": 177.8,
+     "a1": 267.8
+    },
+    {
+     "c": [
+      152.462,
+      56.307
+     ],
+     "r": 0.1,
+     "a0": 0,
+     "a1": 360
+    }
+   ],
+   "width": 0.08,
+   "z": 3.8,
+   "evidence": "drone 2022 d_07/d_19 + Google 2026: white outline, halfway line, centre circle, futsal-style D areas (r ~6 m arcs from the goal posts); radii from the Google image (centre circle ~3 m)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_W_Post0",
+   "center": [
+    114.643,
+    56.259
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.0
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.8,
+   "material": "white",
+   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_W_Post1",
+   "center": [
+    114.758,
+    59.256
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.0
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.8,
+   "material": "white",
+   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_W_Bar",
+   "center": [
+    114.7,
+    57.758
+   ],
+   "size": [
+    0.08,
+    3.08,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.8,
+   "material": "white",
+   "evidence": "goal crossbar 2.0 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_W_Back",
+   "center": [
+    113.741,
+    57.794
+   ],
+   "size": [
+    0.05,
+    3.0,
+    0.05
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.8,
+   "material": "white",
+   "evidence": "goal ground frame ~1 m deep (drone 2022 d_19)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Goal_E_Post0",
+   "center": [
+    158.44,
+    54.576
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.0
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.8,
+   "material": "white",
+   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_E_Post1",
+   "center": [
+    158.556,
+    57.574
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.0
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.8,
+   "material": "white",
+   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_E_Bar",
+   "center": [
+    158.498,
+    56.075
+   ],
+   "size": [
+    0.08,
+    3.08,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.8,
+   "material": "white",
+   "evidence": "goal crossbar 2.0 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Goal_E_Back",
+   "center": [
+    159.457,
+    56.038
+   ],
+   "size": [
+    0.05,
+    3.0,
+    0.05
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.8,
+   "material": "white",
+   "evidence": "goal ground frame ~1 m deep (drone 2022 d_19)",
+   "confidence": "low"
+  },
+  {
+   "type": "cage_fence",
+   "name": "PitchFence_Main",
+   "line": [
+    [
+     157.024,
+     43.497
+    ],
+    [
+     113.906,
+     45.154
+    ],
+    [
+     114.875,
+     70.385
+    ],
+    [
+     159.292,
+     68.679
+    ],
+    [
+     158.323,
+     43.447
+    ]
+   ],
+   "evidence": "PnP camera on 070410255 t=52 s (5 ground points, rms 2 px; checks: wheelie bin 1.09 m, courts gate 2.0 m, person 1.86 m): S fence top rail level at z 11.85-11.92 = 8.2-8.3 m above the plinth top, mid rail z 7.47 = 3.8 m; posts ~3 m (15 bays x 2.96 m on the S side, drone 2022 d_19); rope-net roof (drone d_19, 2GIS night photo 2025)",
+   "confidence": "medium",
+   "height": 8.2,
+   "post_spacing": 3.0,
+   "post": 0.1,
+   "rail": 0.06,
+   "rails": [
+    0.1,
+    3.8,
+    8.17
+   ],
+   "z_base": 3.79
+  },
+  {
+   "type": "cage_fence",
+   "name": "PitchFence_S_Corner",
+   "line": [
+    [
+     158.323,
+     43.447
+    ],
+    [
+     158.123,
+     43.455
+    ]
+   ],
+   "evidence": "PnP camera on 070410255 t=52 s (5 ground points, rms 2 px; checks: wheelie bin 1.09 m, courts gate 2.0 m, person 1.86 m): S fence top rail level at z 11.85-11.92 = 8.2-8.3 m above the plinth top, mid rail z 7.47 = 3.8 m; posts ~3 m (15 bays x 2.96 m on the S side, drone 2022 d_19); rope-net roof (drone d_19, 2GIS night photo 2025)",
+   "confidence": "medium",
+   "height": 8.2,
+   "post_spacing": 9.0,
+   "post": 0.1,
+   "rail": 0.06,
+   "rails": [
+    0.1,
+    3.8,
+    8.17
+   ],
+   "z_base": 3.79
+  },
+  {
+   "type": "cage_fence",
+   "name": "PitchGate_S",
+   "line": [
+    [
+     157.064,
+     43.496
+    ],
+    [
+     158.083,
+     43.457
+    ]
+   ],
+   "height": 1.95,
+   "post_spacing": 9.0,
+   "post": 0.05,
+   "rail": 0.04,
+   "rails": [
+    0.05,
+    1.0,
+    1.93
+   ],
+   "z_base": 3.79,
+   "evidence": "white barred door in the S fence next to the SE corner: back-projected u 43.57..44.09 (door ajar), steps u 42.86..44.3; door ~1.9 m (070410255 t=39/52 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "steps",
+   "name": "PitchGate_S_Steps",
+   "pos": [
+    157.561,
+    43.146
+   ],
+   "dir_deg": 87.8,
+   "width": 1.45,
+   "risers": 2,
+   "riser_h": 0.17,
+   "tread": 0.3,
+   "top_landing": 0.02,
+   "evidence": "two dark steps in front of the S gate (070410255 t=52/60 s): 2 x 0.17 = the 0.35 plinth",
+   "confidence": "medium"
+  },
+  {
+   "type": "net_roof",
+   "name": "Pitch_NetRoof",
+   "ring": [
+    [
+     113.906,
+     45.154
+    ],
+    [
+     158.323,
+     43.447
+    ],
+    [
+     159.292,
+     68.679
+    ],
+    [
+     114.875,
+     70.385
+    ]
+   ],
+   "z": 11.989999999999998,
+   "spacing": 2.0,
+   "rope": 0.03,
+   "evidence": "rope net over the whole cage, ~2 m grid (drone 2022 d_19; night photo 2GIS 2025-01)",
+   "confidence": "medium"
+  },
+  {
+   "type": "floodlight",
+   "name": "PitchFlood_SE",
+   "pos": [
+    154.676,
+    43.588
+   ],
+   "z_base": 3.79,
+   "height": 8.6,
+   "heads": 2,
+   "dir_deg": 87.8,
+   "evidence": "mast on the S fence at u 40.7 (back-projected, 070410255 t=52 s), 2 lamp heads at z 12.2-12.7 = 8.6-9.0 m above the plinth, ladder rungs on it",
+   "confidence": "medium"
+  },
+  {
+   "type": "floodlight",
+   "name": "PitchFlood_SW",
+   "pos": [
+    117.553,
+    45.014
+   ],
+   "z_base": 3.79,
+   "height": 8.6,
+   "heads": 2,
+   "dir_deg": 87.8,
+   "evidence": "assumed mirror/opposite of the measured SE mast (drone 2022 d_07/d_19 show masts on both long sides)",
+   "confidence": "low"
+  },
+  {
+   "type": "floodlight",
+   "name": "PitchFlood_NE",
+   "pos": [
+    155.645,
+    68.819
+   ],
+   "z_base": 3.79,
+   "height": 8.6,
+   "heads": 2,
+   "dir_deg": -92.2,
+   "evidence": "assumed mirror/opposite of the measured SE mast (drone 2022 d_07/d_19 show masts on both long sides)",
+   "confidence": "low"
+  },
+  {
+   "type": "floodlight",
+   "name": "PitchFlood_NW",
+   "pos": [
+    118.522,
+    70.245
+   ],
+   "z_base": 3.79,
+   "height": 8.6,
+   "heads": 2,
+   "dir_deg": -92.2,
+   "evidence": "assumed mirror/opposite of the measured SE mast (drone 2022 d_07/d_19 show masts on both long sides)",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "Courts_Slab",
+   "ring": [
+    [
+     164.928,
+     44.745
+    ],
+    [
+     210.994,
+     42.975
+    ],
+    [
+     212.003,
+     69.256
+    ],
+    [
+     165.937,
+     71.025
+    ]
+   ],
+   "z0": 3.1,
+   "z1": 3.495,
+   "material": "brick",
+   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 (Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) -> 46.1 x 26.3 m; red acrylic surface, flush with the walkway + 5 cm curb",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Court_Basket_Field",
+   "ring": [
+    [
+     166.978,
+     46.007
+    ],
+    [
+     181.467,
+     45.45
+    ],
+    [
+     182.379,
+     69.193
+    ],
+    [
+     167.89,
+     69.75
+    ]
+   ],
+   "z0": 3.48,
+   "z1": 3.5,
+   "material": "hedge",
+   "evidence": "green basketball field u 52.9..67.4, v 3.04..26.8 (Google profiles, rms 0.03-0.06 m; N edge 26.4..27.3 blurred)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Court_Volley_Field",
+   "ring": [
+    [
+     186.567,
+     47.966
+    ],
+    [
+     195.261,
+     47.633
+    ],
+    [
+     195.938,
+     65.27
+    ],
+    [
+     187.245,
+     65.603
+    ]
+   ],
+   "z0": 3.48,
+   "z1": 3.5,
+   "material": "hedge",
+   "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06)",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "Court_Hard_Field",
+   "ring": [
+    [
+     198.405,
+     43.509
+    ],
+    [
+     210.946,
+     43.027
+    ],
+    [
+     211.951,
+     69.208
+    ],
+    [
+     199.411,
+     69.689
+    ]
+   ],
+   "z0": 3.48,
+   "z1": 3.499,
+   "material": "brick",
+   "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green)",
+   "confidence": "medium"
+  },
+  {
+   "type": "paint",
+   "name": "Court_Basket_Lines",
+   "lines": [
+    [
+     [
+      166.978,
+      46.007
+     ],
+     [
+      181.467,
+      45.45
+     ],
+     [
+      182.379,
+      69.193
+     ],
+     [
+      167.89,
+      69.75
+     ],
+     [
+      166.978,
+      46.007
+     ]
+    ],
+    [
+     [
+      167.434,
+      57.878
+     ],
+     [
+      181.923,
+      57.322
+     ]
+    ],
+    [
+     [
+      171.774,
+      45.823
+     ],
+     [
+      171.997,
+      51.619
+     ],
+     [
+      176.893,
+      51.43
+     ],
+     [
+      176.671,
+      45.635
+     ]
+    ],
+    [
+     [
+      167.627,
+      45.982
+     ],
+     [
+      167.742,
+      48.97
+     ]
+    ],
+    [
+     [
+      180.817,
+      45.475
+     ],
+     [
+      180.932,
+      48.463
+     ]
+    ],
+    [
+     [
+      172.686,
+      69.565
+     ],
+     [
+      172.464,
+      63.77
+     ],
+     [
+      177.36,
+      63.581
+     ],
+     [
+      177.583,
+      69.377
+     ]
+    ],
+    [
+     [
+      168.539,
+      69.725
+     ],
+     [
+      168.425,
+      66.737
+     ]
+    ],
+    [
+     [
+      181.73,
+      69.218
+     ],
+     [
+      181.615,
+      66.23
+     ]
+    ]
+   ],
+   "arcs": [
+    {
+     "c": [
+      174.678,
+      57.6
+     ],
+     "r": 1.8,
+     "a0": 0,
+     "a1": 360
+    },
+    {
+     "c": [
+      174.445,
+      51.524
+     ],
+     "r": 1.8,
+     "a0": -2.2,
+     "a1": 177.8
+    },
+    {
+     "c": [
+      174.283,
+      47.303
+     ],
+     "r": 6.75,
+     "a0": 9.901492031823494,
+     "a1": 165.6985079681765
+    },
+    {
+     "c": [
+      174.912,
+      63.675
+     ],
+     "r": 1.8,
+     "a0": 177.8,
+     "a1": 357.8
+    },
+    {
+     "c": [
+      175.074,
+      67.897
+     ],
+     "r": 6.75,
+     "a0": -170.0985079681765,
+     "a1": -14.3014920318235
+    }
+   ],
+   "width": 0.05,
+   "z": 3.5,
+   "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_S_Pole",
+   "center": [
+    174.184,
+    44.729
+   ],
+   "size": [
+    0.16,
+    0.16,
+    3.35
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.5,
+   "material": "metal",
+   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_S_Arm",
+   "center": [
+    174.226,
+    45.829
+   ],
+   "size": [
+    2.2,
+    0.1,
+    0.1
+   ],
+   "dir_deg": 87.8,
+   "z0": 6.7,
+   "material": "metal",
+   "evidence": "arm to the board",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_S_Board",
+   "center": [
+    174.268,
+    46.928
+   ],
+   "size": [
+    1.8,
+    0.05,
+    1.05
+   ],
+   "dir_deg": -2.2,
+   "z0": 6.4,
+   "material": "white",
+   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_S_Rim",
+   "center": [
+    174.283,
+    47.303
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.02
+   ],
+   "dir_deg": -2.2,
+   "z0": 6.54,
+   "material": "metal",
+   "evidence": "rim 0.45 m at 3.05 m",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_N_Pole",
+   "center": [
+    175.173,
+    70.47
+   ],
+   "size": [
+    0.16,
+    0.16,
+    3.35
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.5,
+   "material": "metal",
+   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_N_Arm",
+   "center": [
+    175.131,
+    69.371
+   ],
+   "size": [
+    2.2,
+    0.1,
+    0.1
+   ],
+   "dir_deg": 87.8,
+   "z0": 6.7,
+   "material": "metal",
+   "evidence": "arm to the board",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_N_Board",
+   "center": [
+    175.088,
+    68.272
+   ],
+   "size": [
+    1.8,
+    0.05,
+    1.05
+   ],
+   "dir_deg": -2.2,
+   "z0": 6.4,
+   "material": "white",
+   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Hoop_N_Rim",
+   "center": [
+    175.074,
+    67.897
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.02
+   ],
+   "dir_deg": -2.2,
+   "z0": 6.54,
+   "material": "metal",
+   "evidence": "rim 0.45 m at 3.05 m",
+   "confidence": "low"
+  },
+  {
+   "type": "paint",
+   "name": "Court_Volley_Lines",
+   "width": 0.05,
+   "z": 3.5,
+   "lines": [
+    [
+     [
+      186.567,
+      47.966
+     ],
+     [
+      195.261,
+      47.633
+     ],
+     [
+      195.938,
+      65.27
+     ],
+     [
+      187.245,
+      65.603
+     ],
+     [
+      186.567,
+      47.966
+     ]
+    ],
+    [
+     [
+      186.906,
+      56.785
+     ],
+     [
+      195.6,
+      56.451
+     ]
+    ],
+    [
+     [
+      186.791,
+      53.787
+     ],
+     [
+      195.485,
+      53.453
+     ]
+    ],
+    [
+     [
+      187.021,
+      59.783
+     ],
+     [
+      195.715,
+      59.449
+     ]
+    ]
+   ],
+   "evidence": "white lines on the green inner court; net line across the long axis (drone d_23)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "VolleyNetPost_0",
+   "center": [
+    186.307,
+    56.808
+   ],
+   "size": [
+    0.1,
+    0.1,
+    2.55
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.5,
+   "material": "white",
+   "evidence": "white net posts outside the sidelines (drone 2022 d_23)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "VolleyNetPost_1",
+   "center": [
+    196.199,
+    56.428
+   ],
+   "size": [
+    0.1,
+    0.1,
+    2.55
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.5,
+   "material": "white",
+   "evidence": "white net posts outside the sidelines (drone 2022 d_23)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "VolleyNet",
+   "center": [
+    191.253,
+    56.618
+   ],
+   "size": [
+    9.799999999999988,
+    0.02,
+    1.0
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.93,
+   "material": "white",
+   "evidence": "net top 2.43 m (standard); drone d_23",
+   "confidence": "low"
+  },
+  {
+   "type": "paint",
+   "name": "Court_Hard_Lines",
+   "lines": [
+    [
+     [
+      199.241,
+      44.693
+     ],
+     [
+      210.203,
+      44.271
+     ],
+     [
+      211.115,
+      68.024
+     ],
+     [
+      200.154,
+      68.445
+     ],
+     [
+      199.241,
+      44.693
+     ]
+    ],
+    [
+     [
+      200.61,
+      44.64
+     ],
+     [
+      201.522,
+      68.392
+     ]
+    ],
+    [
+     [
+      208.834,
+      44.324
+     ],
+     [
+      209.746,
+      68.077
+     ]
+    ],
+    [
+     [
+      200.821,
+      50.121
+     ],
+     [
+      209.045,
+      49.805
+     ]
+    ],
+    [
+     [
+      201.312,
+      62.911
+     ],
+     [
+      209.536,
+      62.596
+     ]
+    ],
+    [
+     [
+      204.933,
+      49.963
+     ],
+     [
+      205.424,
+      62.754
+     ]
+    ]
+   ],
+   "width": 0.05,
+   "z": 3.5,
+   "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "HardNetPost_0",
+   "center": [
+    199.183,
+    56.589
+   ],
+   "size": [
+    0.08,
+    0.08,
+    1.07
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.5,
+   "material": "metal",
+   "evidence": "net across the court (drone 2022 d_23)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "HardNetPost_1",
+   "center": [
+    211.174,
+    56.128
+   ],
+   "size": [
+    0.08,
+    0.08,
+    1.07
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.5,
+   "material": "metal",
+   "evidence": "net across the court (drone 2022 d_23)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "HardNet",
+   "center": [
+    205.178,
+    56.358
+   ],
+   "size": [
+    12.0,
+    0.02,
+    0.9
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.55,
+   "material": "white",
+   "evidence": "tennis net 0.91 m",
+   "confidence": "low"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsFence_Perimeter",
+   "line": [
+    [
+     164.991,
+     46.394
+    ],
+    [
+     165.937,
+     71.025
+    ],
+    [
+     212.003,
+     69.256
+    ],
+    [
+     210.994,
+     42.975
+    ],
+    [
+     164.928,
+     44.745
+    ],
+    [
+     164.949,
+     45.294
+    ]
+   ],
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)",
+   "confidence": "medium",
+   "height": 4.9,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.1,
+    4.875
+   ],
+   "z_base": 3.5
+  },
+  {
+   "type": "gate_leaf",
+   "name": "CourtsGate_W",
+   "line": [
+    [
+     164.951,
+     45.344
+    ],
+    [
+     164.989,
+     46.344
+    ]
+   ],
+   "height": 2.1,
+   "panel": "bars",
+   "evidence": "white barred door in the W fence at the S end (070410255 t=52/60 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsFence_Div1",
+   "line": [
+    [
+     182.914,
+     44.054
+    ],
+    [
+     183.924,
+     70.334
+    ]
+   ],
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 68.9 (Google profile rms 0.14-0.34)",
+   "confidence": "medium",
+   "height": 4.9,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.1,
+    4.875
+   ],
+   "z_base": 3.5
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsFence_Div2",
+   "line": [
+    [
+     198.353,
+     43.461
+    ],
+    [
+     199.363,
+     69.741
+    ]
+   ],
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 84.35 (Google profile rms 0.14-0.34)",
+   "confidence": "medium",
+   "height": 4.9,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.1,
+    4.875
+   ],
+   "z_base": 3.5
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_00",
+   "pos": [
+    120.962,
+    43.882
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_01",
+   "pos": [
+    124.21,
+    43.757
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_02",
+   "pos": [
+    127.058,
+    43.648
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_03",
+   "pos": [
+    129.956,
+    43.536
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_04",
+   "pos": [
+    132.953,
+    43.421
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_05",
+   "pos": [
+    137.45,
+    43.249
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_06",
+   "pos": [
+    140.448,
+    43.133
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_07",
+   "pos": [
+    143.995,
+    42.997
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_08",
+   "pos": [
+    147.842,
+    42.849
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "PitchBench_09",
+   "pos": [
+    151.04,
+    42.726
+   ],
+   "dir_deg": 87.8,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]; dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_0",
+   "ring": [
+    [
+     173.233,
+     42.124
+    ],
+    [
+     174.033,
+     42.093
+    ],
+    [
+     174.063,
+     42.893
+    ],
+    [
+     173.264,
+     42.923
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_0",
+   "pos": [
+    173.648,
+    42.508
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_1",
+   "ring": [
+    [
+     179.329,
+     41.89
+    ],
+    [
+     180.128,
+     41.859
+    ],
+    [
+     180.159,
+     42.659
+    ],
+    [
+     179.359,
+     42.689
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_1",
+   "pos": [
+    179.744,
+    42.274
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_2",
+   "ring": [
+    [
+     185.124,
+     41.667
+    ],
+    [
+     185.924,
+     41.637
+    ],
+    [
+     185.955,
+     42.436
+    ],
+    [
+     185.155,
+     42.467
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_2",
+   "pos": [
+    185.54,
+    42.052
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_3",
+   "ring": [
+    [
+     190.321,
+     41.468
+    ],
+    [
+     191.12,
+     41.437
+    ],
+    [
+     191.151,
+     42.236
+    ],
+    [
+     190.351,
+     42.267
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_3",
+   "pos": [
+    190.736,
+    41.852
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_4",
+   "ring": [
+    [
+     195.417,
+     41.272
+    ],
+    [
+     196.216,
+     41.241
+    ],
+    [
+     196.247,
+     42.041
+    ],
+    [
+     195.448,
+     42.071
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_4",
+   "pos": [
+    195.832,
+    41.656
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_5",
+   "ring": [
+    [
+     201.313,
+     41.045
+    ],
+    [
+     202.112,
+     41.015
+    ],
+    [
+     202.143,
+     41.814
+    ],
+    [
+     201.343,
+     41.845
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_5",
+   "pos": [
+    201.728,
+    41.43
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "CourtsThujaPot_6",
+   "ring": [
+    [
+     207.108,
+     40.823
+    ],
+    [
+     207.908,
+     40.792
+    ],
+    [
+     207.938,
+     41.591
+    ],
+    [
+     207.139,
+     41.622
+    ]
+   ],
+   "curb_w": 0.08,
+   "curb_h": 0.35,
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "CourtsThuja_6",
+   "pos": [
+    207.523,
+    41.207
+   ],
+   "height": 2.4,
+   "crown_d": 0.8,
+   "crown_base": 0.4,
+   "trunk_d": 0.08,
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_N0",
+   "ring": [
+    [
+     96.752,
+     37.557
+    ],
+    [
+     97.639,
+     35.921
+    ],
+    [
+     101.636,
+     35.768
+    ],
+    [
+     102.647,
+     37.33
+    ],
+    [
+     101.759,
+     38.965
+    ],
+    [
+     97.762,
+     39.119
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N0_0",
+   "pos": [
+    97.901,
+    37.512
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N0_1",
+   "pos": [
+    101.498,
+    37.374
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_N0",
+   "pos": [
+    99.699,
+    37.443
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_N1",
+   "ring": [
+    [
+     112.14,
+     36.965
+    ],
+    [
+     113.028,
+     35.33
+    ],
+    [
+     117.025,
+     35.177
+    ],
+    [
+     118.036,
+     36.739
+    ],
+    [
+     117.148,
+     38.374
+    ],
+    [
+     113.151,
+     38.528
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N1_0",
+   "pos": [
+    113.289,
+    36.921
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N1_1",
+   "pos": [
+    116.887,
+    36.783
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_N1",
+   "pos": [
+    115.088,
+    36.852
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_N2",
+   "ring": [
+    [
+     120.134,
+     36.658
+    ],
+    [
+     121.022,
+     35.023
+    ],
+    [
+     125.019,
+     34.87
+    ],
+    [
+     126.03,
+     36.432
+    ],
+    [
+     125.142,
+     38.067
+    ],
+    [
+     121.145,
+     38.221
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N2_0",
+   "pos": [
+    121.283,
+    36.614
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N2_1",
+   "pos": [
+    124.881,
+    36.476
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_N2",
+   "pos": [
+    123.082,
+    36.545
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_N3",
+   "ring": [
+    [
+     136.422,
+     36.033
+    ],
+    [
+     137.31,
+     34.397
+    ],
+    [
+     141.307,
+     34.244
+    ],
+    [
+     142.318,
+     35.806
+    ],
+    [
+     141.43,
+     37.441
+    ],
+    [
+     137.433,
+     37.595
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N3_0",
+   "pos": [
+    137.571,
+    35.989
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N3_1",
+   "pos": [
+    141.169,
+    35.85
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_N3",
+   "pos": [
+    139.37,
+    35.919
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_N4",
+   "ring": [
+    [
+     144.716,
+     35.714
+    ],
+    [
+     145.604,
+     34.079
+    ],
+    [
+     149.601,
+     33.925
+    ],
+    [
+     150.612,
+     35.488
+    ],
+    [
+     149.724,
+     37.123
+    ],
+    [
+     145.727,
+     37.276
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N4_0",
+   "pos": [
+    145.865,
+    35.67
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_N4_1",
+   "pos": [
+    149.463,
+    35.532
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_N4",
+   "pos": [
+    147.664,
+    35.601
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_S0",
+   "ring": [
+    [
+     96.387,
+     30.666
+    ],
+    [
+     97.275,
+     29.03
+    ],
+    [
+     101.272,
+     28.877
+    ],
+    [
+     102.282,
+     30.439
+    ],
+    [
+     101.395,
+     32.074
+    ],
+    [
+     97.397,
+     32.228
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S0_0",
+   "pos": [
+    97.536,
+    30.621
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S0_1",
+   "pos": [
+    101.133,
+    30.483
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_S0",
+   "pos": [
+    99.335,
+    30.552
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_S1",
+   "ring": [
+    [
+     111.975,
+     30.067
+    ],
+    [
+     112.863,
+     28.431
+    ],
+    [
+     116.86,
+     28.278
+    ],
+    [
+     117.871,
+     29.84
+    ],
+    [
+     116.983,
+     31.476
+    ],
+    [
+     112.986,
+     31.629
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S1_0",
+   "pos": [
+    113.124,
+    30.023
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S1_1",
+   "pos": [
+    116.722,
+    29.884
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_S1",
+   "pos": [
+    114.923,
+    29.953
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_S2",
+   "ring": [
+    [
+     120.069,
+     29.756
+    ],
+    [
+     120.957,
+     28.12
+    ],
+    [
+     124.954,
+     27.967
+    ],
+    [
+     125.965,
+     29.529
+    ],
+    [
+     125.077,
+     31.165
+    ],
+    [
+     121.08,
+     31.318
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S2_0",
+   "pos": [
+    121.218,
+    29.712
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S2_1",
+   "pos": [
+    124.816,
+    29.573
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_S2",
+   "pos": [
+    123.017,
+    29.643
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_S3",
+   "ring": [
+    [
+     128.063,
+     29.449
+    ],
+    [
+     128.951,
+     27.813
+    ],
+    [
+     132.948,
+     27.66
+    ],
+    [
+     133.959,
+     29.222
+    ],
+    [
+     133.071,
+     30.857
+    ],
+    [
+     129.074,
+     31.011
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S3_0",
+   "pos": [
+    129.213,
+    29.405
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S3_1",
+   "pos": [
+    132.81,
+    29.266
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_S3",
+   "pos": [
+    131.011,
+    29.335
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_S4",
+   "ring": [
+    [
+     135.958,
+     29.145
+    ],
+    [
+     136.845,
+     27.51
+    ],
+    [
+     140.842,
+     27.357
+    ],
+    [
+     141.853,
+     28.919
+    ],
+    [
+     140.965,
+     30.554
+    ],
+    [
+     136.968,
+     30.708
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S4_0",
+   "pos": [
+    137.107,
+    29.101
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S4_1",
+   "pos": [
+    140.704,
+    28.963
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_S4",
+   "pos": [
+    138.905,
+    29.032
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AlleyBed_S5",
+   "ring": [
+    [
+     144.152,
+     28.831
+    ],
+    [
+     145.039,
+     27.195
+    ],
+    [
+     149.036,
+     27.042
+    ],
+    [
+     150.047,
+     28.604
+    ],
+    [
+     149.159,
+     30.239
+    ],
+    [
+     145.162,
+     30.393
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S5_0",
+   "pos": [
+    145.301,
+    28.786
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AlleyThuja_S5_1",
+   "pos": [
+    148.898,
+    28.648
+   ],
+   "height": 4.6,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "trunk_d": 0.12,
+   "evidence": "two tall thujas per bed (dark crown pairs in Google at +-1.8 m); ~2.6 x a 1.75 m walker (070541257 t=3.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "AlleyLamp_S5",
+   "pos": [
+    147.099,
+    28.717
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "globe_d": 0.3,
+   "dir_deg": 87.8,
+   "evidence": "black ornamental cast post with two scroll arms and white globes in the bed between the thujas (070541257 t=8/9.5 s); height est. vs the thujas",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoon_N",
+   "ends": [
+    [
+     97.901,
+     37.512,
+     3.6
+    ],
+    [
+     101.498,
+     37.374,
+     3.6
+    ],
+    [
+     113.289,
+     36.921,
+     3.6
+    ],
+    [
+     116.887,
+     36.783,
+     3.6
+    ],
+    [
+     121.283,
+     36.614,
+     3.6
+    ],
+    [
+     124.881,
+     36.476,
+     3.6
+    ],
+    [
+     137.571,
+     35.989,
+     3.6
+    ],
+    [
+     141.169,
+     35.85,
+     3.6
+    ],
+    [
+     145.865,
+     35.67,
+     3.6
+    ],
+    [
+     149.463,
+     35.532,
+     3.6
+    ]
+   ],
+   "sag": 0.35,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "warm bulbs on wires strung between the thujas along the alley at ~3-3.6 m (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoon_S",
+   "ends": [
+    [
+     97.536,
+     30.621,
+     3.6
+    ],
+    [
+     101.133,
+     30.483,
+     3.6
+    ],
+    [
+     113.124,
+     30.023,
+     3.6
+    ],
+    [
+     116.722,
+     29.884,
+     3.6
+    ],
+    [
+     121.218,
+     29.712,
+     3.6
+    ],
+    [
+     124.816,
+     29.573,
+     3.6
+    ],
+    [
+     129.213,
+     29.405,
+     3.6
+    ],
+    [
+     132.81,
+     29.266,
+     3.6
+    ],
+    [
+     137.107,
+     29.101,
+     3.6
+    ],
+    [
+     140.704,
+     28.963,
+     3.6
+    ],
+    [
+     145.301,
+     28.786,
+     3.6
+    ],
+    [
+     148.898,
+     28.648,
+     3.6
+    ]
+   ],
+   "sag": 0.35,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "warm bulbs on wires strung between the thujas along the alley at ~3-3.6 m (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoonX_m14",
+   "ends": [
+    [
+     99.661,
+     36.444,
+     3.5
+    ],
+    [
+     99.373,
+     31.552,
+     3.5
+    ]
+   ],
+   "sag": 0.4,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "cross strings over the alley (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoonX_p1",
+   "ends": [
+    [
+     115.05,
+     35.853,
+     3.5
+    ],
+    [
+     114.961,
+     30.953,
+     3.5
+    ]
+   ],
+   "sag": 0.4,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "cross strings over the alley (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoonX_p9",
+   "ends": [
+    [
+     123.044,
+     35.546,
+     3.5
+    ],
+    [
+     123.055,
+     30.642,
+     3.5
+    ]
+   ],
+   "sag": 0.4,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "cross strings over the alley (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoonX_p26",
+   "ends": [
+    [
+     139.332,
+     34.92,
+     3.5
+    ],
+    [
+     138.944,
+     30.031,
+     3.5
+    ]
+   ],
+   "sag": 0.4,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "cross strings over the alley (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "string_lights",
+   "name": "AlleyFestoonX_p34",
+   "ends": [
+    [
+     147.626,
+     34.602,
+     3.5
+    ],
+    [
+     147.138,
+     29.717,
+     3.5
+    ]
+   ],
+   "sag": 0.4,
+   "spacing": 0.9,
+   "bulb_d": 0.08,
+   "evidence": "cross strings over the alley (070541257 t=0-5 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "RoundBed",
+   "ring": [
+    [
+     176.308,
+     30.998
+    ],
+    [
+     176.246,
+     31.674
+    ],
+    [
+     176.01,
+     32.31
+    ],
+    [
+     175.618,
+     32.864
+    ],
+    [
+     175.096,
+     33.298
+    ],
+    [
+     174.479,
+     33.581
+    ],
+    [
+     173.81,
+     33.696
+    ],
+    [
+     173.134,
+     33.633
+    ],
+    [
+     172.498,
+     33.398
+    ],
+    [
+     171.944,
+     33.005
+    ],
+    [
+     171.51,
+     32.483
+    ],
+    [
+     171.227,
+     31.866
+    ],
+    [
+     171.112,
+     31.197
+    ],
+    [
+     171.175,
+     30.522
+    ],
+    [
+     171.41,
+     29.885
+    ],
+    [
+     171.803,
+     29.331
+    ],
+    [
+     172.325,
+     28.898
+    ],
+    [
+     172.941,
+     28.614
+    ],
+    [
+     173.611,
+     28.5
+    ],
+    [
+     174.286,
+     28.562
+    ],
+    [
+     174.923,
+     28.798
+    ],
+    [
+     175.477,
+     29.19
+    ],
+    [
+     175.91,
+     29.712
+    ],
+    [
+     176.194,
+     30.329
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 disc: fitted ellipse centre local (60.22,-11.62), axes 5.14/5.20 m, area 21.7 m2; yellow/white curb, soil, two young trees and a plaque (070410255 t=44-46/65.5 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "RoundBed_Lamp",
+   "pos": [
+    173.71,
+    31.098
+   ],
+   "height": 3.6,
+   "arm_span": 0.95,
+   "globes": 2,
+   "dir_deg": 87.8,
+   "evidence": "same ornamental double-globe post in the bed centre (070410255 t=65.5 s; 2GIS 2019)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "RoundBed_Tree_0",
+   "pos": [
+    172.542,
+    31.943
+   ],
+   "height": 2.2,
+   "crown_d": 1.0,
+   "crown_base": 0.9,
+   "trunk_d": 0.06,
+   "shape": "round",
+   "evidence": "two young deciduous trees (070410255 t=65.5 s); positions approximate",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "RoundBed_Tree_1",
+   "pos": [
+    174.775,
+    30.156
+   ],
+   "height": 2.2,
+   "crown_d": 1.0,
+   "crown_base": 0.9,
+   "trunk_d": 0.06,
+   "shape": "round",
+   "evidence": "two young deciduous trees (070410255 t=65.5 s); positions approximate",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_0",
+   "pos": [
+    91.585,
+    21.593
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_1",
+   "pos": [
+    97.78,
+    21.355
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_2",
+   "pos": [
+    103.276,
+    21.144
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_3",
+   "pos": [
+    108.872,
+    20.929
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_4",
+   "pos": [
+    116.217,
+    20.647
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_5",
+   "pos": [
+    121.863,
+    20.43
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_6",
+   "pos": [
+    127.359,
+    20.219
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallRowTree_7",
+   "pos": [
+    132.655,
+    20.015
+   ],
+   "height": 3.5,
+   "crown_d": 1.6,
+   "crown_base": 0.6,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "NorthBed",
+   "ring": [
+    [
+     115.036,
+     71.98
+    ],
+    [
+     159.404,
+     70.276
+    ],
+    [
+     159.646,
+     76.571
+    ],
+    [
+     115.278,
+     78.275
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 lawn bed u 0..44.4, v 27.0..33.3 behind a 1.6 m paved path along the N fence (drone 2022 d_07/d_19: grey path, lawn with two rows of young blue spruces)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_00",
+   "pos": [
+    115.909,
+    73.848
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_01",
+   "pos": [
+    120.455,
+    73.673
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_02",
+   "pos": [
+    125.851,
+    73.466
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_03",
+   "pos": [
+    130.948,
+    73.27
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_04",
+   "pos": [
+    135.644,
+    73.09
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_05",
+   "pos": [
+    140.541,
+    72.902
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_06",
+   "pos": [
+    145.687,
+    72.704
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_07",
+   "pos": [
+    149.584,
+    72.554
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_08",
+   "pos": [
+    154.48,
+    72.366
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_09",
+   "pos": [
+    118.824,
+    75.487
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_10",
+   "pos": [
+    123.47,
+    75.309
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_11",
+   "pos": [
+    128.866,
+    75.101
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_12",
+   "pos": [
+    133.863,
+    74.91
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_13",
+   "pos": [
+    138.26,
+    74.741
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_14",
+   "pos": [
+    143.406,
+    74.543
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_15",
+   "pos": [
+    148.002,
+    74.366
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_16",
+   "pos": [
+    152.599,
+    74.19
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedSpruce_17",
+   "pos": [
+    155.902,
+    75.514
+   ],
+   "height": 2.6,
+   "crown_d": 1.4,
+   "crown_base": 0.2,
+   "trunk_d": 0.08,
+   "evidence": "Google 2026 dark crowns 1.0-1.8 m (lean-corrected ~-0.35/-0.2 m), two staggered rows ~4.9 m apart; young blue spruces ~2.5 m (drone d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthBedTree_Big",
+   "pos": [
+    158.301,
+    72.82
+   ],
+   "height": 9.0,
+   "crown_d": 5.0,
+   "crown_base": 2.5,
+   "shape": "round",
+   "evidence": "large crown u 41..46, v 27..32 (Google 2026)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "NorthTreeLawn",
+   "ring": [
+    [
+     75.5,
+     84.807
+    ],
+    [
+     212.399,
+     79.548
+    ],
+    [
+     212.522,
+     82.746
+    ],
+    [
+     75.623,
+     88.005
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 lawn strip v 38.3..41.5 along the boundary with a row of trees",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_00",
+   "pos": [
+    79.339,
+    85.761
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_01",
+   "pos": [
+    91.63,
+    85.288
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_02",
+   "pos": [
+    97.426,
+    85.066
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_03",
+   "pos": [
+    102.622,
+    84.866
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_04",
+   "pos": [
+    108.018,
+    84.659
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_05",
+   "pos": [
+    113.214,
+    84.459
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_06",
+   "pos": [
+    119.01,
+    84.237
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_07",
+   "pos": [
+    124.106,
+    84.041
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_08",
+   "pos": [
+    129.902,
+    83.818
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_09",
+   "pos": [
+    135.398,
+    83.607
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_10",
+   "pos": [
+    139.994,
+    83.43
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_11",
+   "pos": [
+    147.489,
+    83.143
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_12",
+   "pos": [
+    152.685,
+    82.943
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_13",
+   "pos": [
+    157.981,
+    82.739
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_14",
+   "pos": [
+    185.161,
+    81.695
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_15",
+   "pos": [
+    190.557,
+    81.488
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTree_16",
+   "pos": [
+    207.245,
+    80.847
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "NorthBoundary_Plinth",
+   "line": [
+    [
+     75.649,
+     88.704
+    ],
+    [
+     208.551,
+     83.599
+    ],
+    [
+     215.961,
+     81.113
+    ]
+   ],
+   "height": 0.5,
+   "thk": 0.3,
+   "material": "stone",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; solid plinth + steel fence between red brick piers (drone 2022 d_07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "fence",
+   "name": "NorthBoundary_Fence",
+   "line": [
+    [
+     75.649,
+     88.704
+    ],
+    [
+     208.551,
+     83.599
+    ],
+    [
+     215.961,
+     81.113
+    ]
+   ],
+   "height": 2.0,
+   "post_spacing": 3.0,
+   "post": 0.06,
+   "panel": "bars",
+   "evidence": "steel bar fence ~2 m on the plinth (drone 2022 d_07)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_00",
+   "center": [
+    75.649,
+    88.704
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_01",
+   "center": [
+    78.647,
+    88.589
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_02",
+   "center": [
+    81.645,
+    88.474
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_03",
+   "center": [
+    84.643,
+    88.359
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_04",
+   "center": [
+    87.641,
+    88.244
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_05",
+   "center": [
+    90.638,
+    88.129
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_06",
+   "center": [
+    93.636,
+    88.013
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_07",
+   "center": [
+    96.634,
+    87.898
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_08",
+   "center": [
+    99.632,
+    87.783
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_09",
+   "center": [
+    102.63,
+    87.668
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_10",
+   "center": [
+    105.627,
+    87.553
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_11",
+   "center": [
+    108.625,
+    87.438
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_12",
+   "center": [
+    111.623,
+    87.322
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_13",
+   "center": [
+    114.621,
+    87.207
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_14",
+   "center": [
+    117.618,
+    87.092
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_15",
+   "center": [
+    120.616,
+    86.977
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_16",
+   "center": [
+    123.614,
+    86.862
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_17",
+   "center": [
+    126.612,
+    86.747
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_18",
+   "center": [
+    129.61,
+    86.631
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_19",
+   "center": [
+    132.607,
+    86.516
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_20",
+   "center": [
+    135.605,
+    86.401
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_21",
+   "center": [
+    138.603,
+    86.286
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_22",
+   "center": [
+    141.601,
+    86.171
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_23",
+   "center": [
+    144.599,
+    86.056
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_24",
+   "center": [
+    147.596,
+    85.94
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_25",
+   "center": [
+    150.594,
+    85.825
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_26",
+   "center": [
+    153.592,
+    85.71
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_27",
+   "center": [
+    156.59,
+    85.595
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_28",
+   "center": [
+    159.588,
+    85.48
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_29",
+   "center": [
+    162.585,
+    85.365
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_30",
+   "center": [
+    165.583,
+    85.25
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_31",
+   "center": [
+    168.581,
+    85.134
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_32",
+   "center": [
+    171.579,
+    85.019
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_33",
+   "center": [
+    174.576,
+    84.904
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_34",
+   "center": [
+    177.574,
+    84.789
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_35",
+   "center": [
+    180.572,
+    84.674
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_36",
+   "center": [
+    183.57,
+    84.559
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_37",
+   "center": [
+    186.568,
+    84.443
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_38",
+   "center": [
+    189.565,
+    84.328
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_39",
+   "center": [
+    192.563,
+    84.213
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_40",
+   "center": [
+    195.561,
+    84.098
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_41",
+   "center": [
+    198.559,
+    83.983
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_42",
+   "center": [
+    201.557,
+    83.868
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_43",
+   "center": [
+    204.554,
+    83.752
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pier_44",
+   "center": [
+    207.552,
+    83.637
+   ],
+   "size": [
+    0.42,
+    0.42,
+    2.3
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.45,
+   "material": "brick",
+   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "WestRedSquare",
+   "ring": [
+    [
+     98.184,
+     63.12
+    ],
+    [
+     109.176,
+     62.698
+    ],
+    [
+     109.422,
+     69.094
+    ],
+    [
+     98.43,
+     69.516
+    ]
+   ],
+   "z0": 3.4000000000000004,
+   "z1": 3.48,
+   "material": "brick",
+   "evidence": "Google 2026: mauve-red 11.0 x 6.4 m surface (not in Bing 2021/Esri 2020, which show a round bed at u ~-10, v 13); use unknown (rubber mat / stage?)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "WestBigSpruce",
+   "pos": [
+    97.203,
+    76.668
+   ],
+   "height": 12.0,
+   "crown_d": 8.0,
+   "crown_base": 0.5,
+   "evidence": "large blue spruce clump u -24..-12, v 25..38 (Google 2026, drone 2022)",
+   "confidence": "low"
+  }
+ ]
+}

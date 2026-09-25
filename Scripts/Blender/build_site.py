@@ -42,12 +42,16 @@ class Site:
         self.ter = ter
         self.col = ensure_collection(spec.get("collection", "03_Site"))
         self.names = set()
+        # opt-in ("ground": "pads"): gz follows the terrain_pads of all specs like TER_Ground does
+        self.pads = _all_pads() if spec.get("ground") == "pads" else None
 
     def gz(self, x, y):
-        """Ground z: terrain base, minus the curb reveal on carriageways."""
+        """Ground z: terrain base, minus the curb reveal on carriageways (+ terrain pads if the spec opts in)."""
         z = float(self.ter.base(x, y))
         if self.ter.carriageway_mask(x, y):
             z -= self.ter.curb
+        if self.pads:
+            z = _pad_z(self.pads, x, y, z)
         return z
 
     def name(self, el):
@@ -103,7 +107,9 @@ class Site:
     def b_wall(self, el):
         bm = bmesh.new()
         cap = el.get("cap_proj", 0.0)
-        sweep_profile(bm, el["line"], rect_profile(el.get("thk", 0.3), el["height"], BURY), self.gz, el.get("closed", False))
+        # "bury": depth below the ground line (retaining walls reaching down to a lower terrace level)
+        sweep_profile(bm, el["line"], rect_profile(el.get("thk", 0.3), el["height"], el.get("bury", BURY)), self.gz,
+                      el.get("closed", False))
         if cap > 0:
             sweep_profile(bm, el["line"], [(el["thk"] / 2 + cap, el["height"]), (el["thk"] / 2 + cap, el["height"] + 0.06),
                                            (-el["thk"] / 2 - cap, el["height"] + 0.06), (-el["thk"] / 2 - cap, el["height"])],
@@ -245,6 +251,8 @@ class Site:
         hr = (W / 2) * math.tan(pitch)
         prof = [(-W / 2, 0.0), (0.0, hr), (W / 2, 0.0), (W / 2, thk), (0.0, hr + thk), (-W / 2, thk)] if pitch > 0 else \
                [(-W / 2, 0.0), (W / 2, 0.0), (W / 2, thk), (-W / 2, thk)]
+        if pitch > 0 and el.get("soffit") == "flat":  # boarded horizontal soffit under the gable (gate canopy)
+            prof = [(-W / 2, 0.0), (W / 2, 0.0), (W / 2, thk), (0.0, hr + thk), (-W / 2, thk)]
         m = Matrix.Identity(4)
         m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = ax.to_3d(), acr.to_3d(), Vector((0, 0, 1))
         m.col[3].xyz = Vector((cen.x, cen.y, zc))
@@ -263,13 +271,43 @@ class Site:
         for p in el.get("posts", []):
             P = Vector(p)
             across = (P - cen).dot(acr)
-            z_top = zc + (hr * (1 - min(1.0, abs(across) / (W / 2))) if pitch > 0 else 0.0)
+            z_top = zc + (hr * (1 - min(1.0, abs(across) / (W / 2))) if pitch > 0 and el.get("soffit") != "flat" else 0.0)
             zb = self.gz(P.x, P.y) - BURY
             if el.get("post_shape", "round") == "round":
                 _cyl(bm, P, r, zb, z_top, 12)
             else:
                 box(bm, _frame2(P, ax), -r, r, -r, r, zb, z_top)
         self.emit(dict(el, name=el.get("name", "Canopy") + "_Posts"), bm, COL["metal"], (cen.x, cen.y, zc))
+        pb = el.get("post_base")  # coloured plinth ring at the column foot: {"h": m, "material": COL key}
+        if pb and el.get("posts"):
+            bm = bmesh.new()
+            for p in el["posts"]:
+                P = Vector(p)
+                _cyl(bm, P, r + 0.01, self.gz(P.x, P.y) - BURY, self.gz(P.x, P.y) + pb["h"], 12)
+            self.emit(dict(el, name=el.get("name", "Canopy") + "_PostBase"), bm, COL.get(pb.get("material", "brick")),
+                      (cen.x, cen.y, zc))
+        tr = el.get("trim")  # sawtooth fascia trim along both long eaves: {"h": tooth height, "pitch": m, "t": m}
+        if tr:
+            bm = bmesh.new()
+            th, tp, tt = tr.get("h", 0.2), tr.get("pitch", 0.35), tr.get("t", 0.02)
+            n = max(1, int(L / tp))
+            for side in (-1.0, 1.0):
+                y0 = side * (W / 2 + 0.005)
+                y1 = y0 + side * tt
+                for k in range(n):
+                    u0 = -L / 2 + (L - n * tp) / 2 + k * tp
+                    tri = [(u0, 0.02), (u0 + tp, 0.02), (u0 + tp / 2, 0.02 + th)]
+                    va = [bm.verts.new(m @ Vector((u, y0, z))) for u, z in tri]
+                    vb = [bm.verts.new(m @ Vector((u, y1, z))) for u, z in tri]
+                    if side < 0:
+                        va, vb = vb, va
+                    bm.faces.new(va)
+                    bm.faces.new(list(reversed(vb)))
+                    for i in range(3):
+                        j = (i + 1) % 3
+                        bm.faces.new((va[j], va[i], vb[i], vb[j]))
+            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+            self.emit(dict(el, name=el.get("name", "Canopy") + "_Trim"), bm, COL["white"], (cen.x, cen.y, zc))
 
     def b_turnstile(self, el):
         P = Vector(el["pos"])
@@ -442,6 +480,58 @@ class Site:
         wall_piece(bm, m, L, el["z0"], el["z1"], el.get("thk", 0.25), ops, cut_start=0.0, cut_end=0.0)
         self.emit(el, bm, COL.get(el.get("material", "white"), COL["white"]), (A.x, A.y, el["z0"]))
 
+    def b_door(self, el):
+        """Door set in a wall opening: frame (jambs + head), leaf (closed; UE swaps in a hinged actor), optional
+        glass panels and a lever/pull handle. line = the host int_wall line, u0..u1 = frame outer width along it,
+        z0..z1 absolute (frame outer), w_face = frame face offset (m, right-hand normal; host wall occupies -thk..0).
+        leaf: "solid" | "glass" | "glass2" (two panes split by a mid rail at z0 + mid)."""
+        A, Bp = Vector(el["line"][0]), Vector(el["line"][1])
+        d = (Bp - A) / (Bp - A).length
+        m = Matrix.Identity(4)
+        m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = d.to_3d(), Vector((d.y, -d.x, 0)), Vector((0, 0, 1))
+        m.col[3].xyz = Vector((A.x, A.y, 0))
+        u0, u1, z0, z1 = el["u0"], el["u1"], el["z0"], el["z1"]
+        fw, fd = el.get("frame_w", 0.06), el.get("frame_d", 0.07)
+        wf = el.get("w_face", -el.get("wall_thk", 0.2) / 2 + fd / 2)
+        bm = bmesh.new()
+        box(bm, m, u0, u0 + fw, wf - fd, wf, z0, z1)          # jambs + head
+        box(bm, m, u1 - fw, u1, wf - fd, wf, z0, z1)
+        box(bm, m, u0 + fw, u1 - fw, wf - fd, wf, z1 - fw, z1)
+        self.emit({**el, "name": el.get("name", "Door") + "_Frame"}, bm, COL[el.get("material", "metal")], (A.x, A.y, z0))
+        lu0, lu1, lz0, lz1 = u0 + fw + 0.004, u1 - fw - 0.004, z0 + 0.01, z1 - fw - 0.004
+        lt, sw = el.get("leaf_t", 0.05), el.get("stile", 0.09)
+        wl1 = wf - (fd - lt) / 2
+        wl0 = wl1 - lt
+        bl, bg = bmesh.new(), bmesh.new()
+        kind = el.get("leaf", "solid")
+        if kind == "solid":
+            box(bl, m, lu0, lu1, wl0, wl1, lz0, lz1)
+        else:  # stiles/rails + glass panes
+            box(bl, m, lu0, lu0 + sw, wl0, wl1, lz0, lz1)
+            box(bl, m, lu1 - sw, lu1, wl0, wl1, lz0, lz1)
+            box(bl, m, lu0 + sw, lu1 - sw, wl0, wl1, lz1 - sw, lz1)
+            box(bl, m, lu0 + sw, lu1 - sw, wl0, wl1, lz0, lz0 + el.get("bottom_rail", 0.12))
+            zs = [lz0 + el.get("bottom_rail", 0.12), lz1 - sw]
+            if kind == "glass2":
+                zm = z0 + el.get("mid", 1.0)
+                box(bl, m, lu0 + sw, lu1 - sw, wl0, wl1, zm - sw / 2, zm + sw / 2)
+                panes = [(zs[0], zm - sw / 2), (zm + sw / 2, zs[1])]
+            else:
+                panes = [tuple(zs)]
+            gm = (wl0 + wl1) / 2
+            for pa, pb in panes:
+                box(bg, m, lu0 + sw, lu1 - sw, gm - 0.004, gm + 0.004, pa, pb)
+        left = el.get("hinge", "left") == "left"      # hinge side seen from the +w face; handle on the other side
+        hu = lu1 - 0.07 if left else lu0 + 0.07
+        ha, hb = (hu - 0.12, hu) if left else (hu, hu + 0.12)
+        box(bl, m, ha, hb, wl1, wl1 + 0.05, z0 + 1.0, z0 + 1.03)  # lever handles on both faces, 1.0 m
+        box(bl, m, ha, hb, wl0 - 0.05, wl0, z0 + 1.0, z0 + 1.03)
+        self.emit({**el, "name": el.get("name", "Door") + "_Leaf"}, bl, COL[el.get("leaf_material", el.get("material", "metal"))], (A.x, A.y, z0))
+        if bg.verts:
+            self.emit({**el, "name": el.get("name", "Door") + "_Glass"}, bg, COL["glass"], (A.x, A.y, z0))
+        else:
+            bg.free()
+
     def b_stairs_run(self, el):
         """Straight flight: 'top' = world point at the centre of the top nosing line, dir_deg = downhill direction,
         z_top absolute; risers of riser_h, treads of tread; solid down to z_top - risers*riser_h - 0.2."""
@@ -515,6 +605,132 @@ class Site:
         box(bm, m, -L / 2 + 0.4, L / 2 - 0.4, -D / 2 + 0.05, -D / 2 + 0.45, z + 0.42, z + 0.47)  # bench
         self.emit(el, bm, COL["glass"], (P.x, P.y, z))
 
+    # ------------------------------------------------------------------ sports area (SITE_Sports)
+    def b_paint(self, el):
+        """Line markings 5 mm proud of an absolute surface z: 'lines' (polylines) and 'arcs' {c, r, a0, a1 deg}."""
+        w, z = el.get("width", 0.05), el["z"]
+        polys = [[Vector(p) for p in ln] for ln in el.get("lines", [])]
+        for a in el.get("arcs", []):
+            c, r, a0, a1 = Vector(a["c"]), a["r"], math.radians(a["a0"]), math.radians(a["a1"])
+            n = max(4, int(abs(a1 - a0) * r / 0.4))       # ~0.4 m chords
+            polys.append([c + Vector((math.cos(a0 + (a1 - a0) * k / n), math.sin(a0 + (a1 - a0) * k / n))) * r
+                          for k in range(n + 1)])
+        bm = bmesh.new()
+        for pl in polys:
+            for A, B in zip(pl[:-1], pl[1:]):
+                L = (B - A).length
+                if L > 1e-4:   # segments overlap by w/2 at joints: each piece stays a closed box
+                    box(bm, _frame2(A, B - A), -w / 2, L + w / 2, -w / 2, w / 2, z, z + 0.005)
+        p = polys[0][0]
+        self.emit(el, bm, COL["paint"], (p.x, p.y, z))
+
+    def b_cage_fence(self, el):
+        """Tall sports fence: square posts every ~post_spacing, horizontal rails at 'rails' heights (m above the base),
+        one thin mesh plate per bay (masked mesh/net material later). Base = absolute 'z_base' or the ground."""
+        pts = [Vector(p) for p in el["line"]]
+        h, sp, ps, rs = el["height"], el.get("post_spacing", 3.0), el.get("post", 0.08), el.get("rail", 0.05)
+        zb = el.get("z_base")
+        mt = el.get("mesh_thk", 0.01)
+        bm = bmesh.new()
+        for A, B in zip(pts[:-1], pts[1:]):
+            L = (B - A).length
+            if L < 1e-3:
+                continue
+            m = _frame2(A, B - A)
+            n = max(1, round(L / sp))
+            z0 = zb if zb is not None else self.gz(*((A + B) / 2))
+            for k in range(n + 1):
+                q = A + (B - A) * (k / n)
+                zp = zb if zb is not None else self.gz(q.x, q.y)
+                box(bm, m, L * k / n - ps / 2, L * k / n + ps / 2, -ps / 2, ps / 2, zp - BURY, zp + h)
+            for zr in el.get("rails", [h - rs / 2]):
+                box(bm, m, ps / 2, L - ps / 2, -rs / 2, rs / 2, z0 + zr - rs / 2, z0 + zr + rs / 2)
+            for k in range(n):
+                box(bm, m, L * k / n + ps / 2, L * (k + 1) / n - ps / 2, -mt / 2, mt / 2,
+                    z0 + el.get("bottom_gap", 0.03), z0 + h - rs)
+        p = pts[0]
+        self.emit(el, bm, COL["metal"], (p.x, p.y, zb if zb is not None else self.gz(p.x, p.y)))
+
+    def b_net_roof(self, el):
+        """Rope net over a cage: 'ring' (4 corners, world), absolute z, rope grid every 'spacing' m both ways."""
+        o = [Vector(p) for p in el["ring"]]
+        z, sp, t = el["z"], el.get("spacing", 2.0), el.get("rope", 0.03)
+        bm = bmesh.new()
+        for a, b, c_, d in ((o[0], o[1], o[3], o[2]), (o[0], o[3], o[1], o[2])):   # ropes parallel to a->b
+            n = max(1, round((c_ - a).length / sp))
+            for k in range(n + 1):
+                A, B = a + (c_ - a) * (k / n), b + (d - b) * (k / n)
+                box(bm, _frame2(A, B - A), 0.0, (B - A).length, -t / 2, t / 2, z - t, z)
+        self.emit(el, bm, COL["metal"], (o[0].x, o[0].y, z))
+
+    def b_floodlight(self, el):
+        """Floodlight mast: round pole from the base to 'height', crossbar with 'heads' lamp boxes facing dir_deg."""
+        P = Vector(el["pos"])
+        zb = el.get("z_base", self.gz(P.x, P.y))
+        h, nh = el.get("height", 9.0), int(el.get("heads", 2))
+        fwd, left = rot2(el.get("dir_deg", 0.0))
+        bm = bmesh.new()
+        _cyl(bm, P, el.get("pole_d", 0.14) / 2, zb - BURY, zb + h, 12)
+        span = 0.45 * nh
+        m = _frame2(P, left)
+        box(bm, m, -span / 2, span / 2, -0.03, 0.03, zb + h - 0.05, zb + h + 0.01)
+        for k in range(nh):
+            u = -span / 2 + span * (k + 0.5) / nh
+            box(bm, m, u - 0.19, u + 0.19, -0.15, -0.03, zb + h + 0.01, zb + h + 0.33)  # lamp body, facing dir_deg
+        self.emit(el, bm, COL["metal"], (P.x, P.y, zb))
+
+    def b_lamp_orn(self, el):
+        """Ornamental cast lamp post: pole, symmetric scroll arms (simplified to bars) with a globe at each end."""
+        P = Vector(el["pos"])
+        z = self.gz(P.x, P.y)
+        h, span, n = el.get("height", 3.6), el.get("arm_span", 1.0), int(el.get("globes", 2))
+        r = el.get("globe_d", 0.3) / 2
+        fwd, left = rot2(el.get("dir_deg", 0.0))
+        bm = bmesh.new()
+        _cyl(bm, P, 0.11, z, z + 0.5, 10)                     # cast base
+        _cyl(bm, P, 0.045, z + 0.5, z + h + 0.35, 10)         # pole + finial
+        m = _frame2(P, left)
+        box(bm, m, -span / 2, span / 2, -0.02, 0.02, z + h - 0.22, z + h - 0.18)   # arm bar
+        for k in range(n):
+            u = -span / 2 + span * k / max(1, n - 1)
+            q = P + left * u
+            box(bm, _frame2(q, fwd), -0.02, 0.02, -0.02, 0.02, z + h - 0.22, z + h - r)     # drop to the globe
+            bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=r,
+                                      matrix=Matrix.Translation((q.x, q.y, z + h)))
+        self.emit(el, bm, COL["metal"], (P.x, P.y, z))
+
+    def b_string_lights(self, el):
+        """Festoon: wire between 'ends' [[x, y, z_above_ground], ...] sagging 'sag' m, bulbs every 'spacing' m."""
+        E = el["ends"]
+        sag, sp, r = el.get("sag", 0.3), el.get("spacing", 0.8), el.get("bulb_d", 0.08) / 2
+        bm = bmesh.new()
+        for a, b in zip(E[:-1], E[1:]):
+            A = Vector((a[0], a[1], self.gz(a[0], a[1]) + a[2]))
+            B = Vector((b[0], b[1], self.gz(b[0], b[1]) + b[2]))
+            L = (B - A).length
+            n = max(2, round(L / sp))
+            pts = [A.lerp(B, k / n) - Vector((0, 0, 4 * sag * (k / n) * (1 - k / n))) for k in range(n + 1)]
+            for p0, p1 in zip(pts[:-1], pts[1:]):
+                d = p1 - p0
+                m = Matrix.Identity(4)
+                u = d.normalized()
+                w_ = Vector((-u.y, u.x, 0)).normalized() if abs(u.z) < 0.99 else Vector((1, 0, 0))
+                m.col[0].xyz, m.col[1].xyz, m.col[2].xyz, m.col[3].xyz = u, w_, u.cross(w_), p0
+                box(bm, m, 0.0, d.length, -0.006, 0.006, -0.006, 0.006)
+            for p in pts[1:-1]:
+                bmesh.ops.create_uvsphere(bm, u_segments=8, v_segments=4, radius=r,
+                                          matrix=Matrix.Translation(p - Vector((0, 0, r + 0.02))))
+        self.emit(el, bm, COL["white"], (E[0][0], E[0][1], self.gz(E[0][0], E[0][1])))
+
+    def b_rail3d(self, el):
+        """Handrail/railing along a 3D polyline 'points' [[x, y, z_abs], ...] (walking surface, e.g. stair nosings)."""
+        from greybox.kit import railing
+        pts = [Vector(p) for p in el["points"]]
+        bm = bmesh.new()
+        railing(bm, pts, height=el.get("height", 1.0), post=el.get("post", 0.05), rail=el.get("rail", 0.05),
+                spacing=el.get("spacing", 1.2), mid_rails=el.get("mid_rails", 1))
+        self.emit(el, bm, COL["metal"], tuple(pts[0]))
+
     def build(self):
         n = 0
         for el in self.s["elements"]:
@@ -573,6 +789,35 @@ def _ring_band(bm, outer, inner, z0, z1):
         bm.faces.new((it[i], it[j], ib[j], ib[i]))
         bm.faces.new((ot[i], ot[j], it[j], it[i]))
         bm.faces.new((ib[i], ib[j], ob[j], ob[i]))
+
+
+def _all_pads():
+    """terrain_pads of every spec, in the order build_greybox.apply_terrain_pads applies them."""
+    pads = []
+    for fn in sorted(os.listdir(SPECS)):
+        if fn.endswith(".json"):
+            try:
+                pads += json.load(open(os.path.join(SPECS, fn), encoding="utf-8")).get("terrain_pads", [])
+            except ValueError:   # a half-written spec of another zone: its pads are skipped here too
+                pass
+    return pads
+
+
+def _pad_z(pads, x, y, z):
+    """Same blend as build_greybox.apply_terrain_pads for one point (inside -> pad z, linear over 'blend' m)."""
+    for pad in pads:
+        ring, blend = pad["ring"], float(pad.get("blend", 0.0))
+        n, inside, d = len(ring), False, float("inf")
+        for i in range(n):
+            (x1, y1), (x2, y2) = ring[i], ring[(i + 1) % n]
+            if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
+                inside = not inside
+            ax, ay = x2 - x1, y2 - y1
+            t = min(1.0, max(0.0, ((x - x1) * ax + (y - y1) * ay) / (ax * ax + ay * ay)))
+            d = min(d, math.hypot(x - x1 - t * ax, y - y1 - t * ay))
+        w = 1.0 if inside else (max(0.0, 1.0 - d / blend) if blend > 0 else 0.0)
+        z = z * (1 - w) + pad["z"] * w
+    return z
 
 
 def _ccw(r):
