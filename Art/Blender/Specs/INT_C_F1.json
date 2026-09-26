@@ -1274,17 +1274,18 @@
    "type": "stairs_run",
    "name": "StairW_F1_Flight1",
    "top": [
-    176.353492,
-    6.700037
+    176.349905,
+    6.610109
    ],
    "dir_deg": 267.7161454954155,
    "width": 1.35,
    "risers": 11,
-   "riser_h": 0.15,
-   "tread": 0.334,
-   "z_top": 8.05,
+   "riser_h": 0.1535,
+   "tread": 0.332,
+   "z_top": 8.012,
+   "bottom_riser_h": 0.0767,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.44 m from the south wall",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.37 m from the south wall",
    "confidence": "medium"
   },
   {
@@ -1292,12 +1293,12 @@
    "name": "StairW_F1_Landing",
    "ring": [
     [
-     174.130272,
-     6.788704
+     174.126685,
+     6.698775
     ],
     [
-     177.027952,
-     6.673138
+     177.024365,
+     6.58321
     ],
     [
      177.070591,
@@ -1309,23 +1310,23 @@
     ]
    ],
    "z0": 6.3,
-   "z1": 8.05,
+   "z1": 8.012,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.07 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.16 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
    "confidence": "medium"
   },
   {
    "type": "stairs_run",
    "name": "StairW_F1_Flight2",
    "top": [
-    174.671633,
-    3.424477
+    174.668843,
+    3.354533
    ],
    "dir_deg": 87.71614549541547,
    "width": 1.35,
    "risers": 11,
-   "riser_h": 0.15,
-   "tread": 0.334,
+   "riser_h": 0.1535,
+   "tread": 0.332,
    "z_top": 9.7,
    "material": "granite",
    "soffit_thk": 0.18,
@@ -1343,24 +1344,19 @@
    "confidence": "medium",
    "points": [
     [
-     176.832938,
-     3.038043,
-     6.4
+     176.855333,
+     3.599593,
+     6.63
     ],
     [
-     176.844893,
-     3.337803,
-     6.55
-    ],
-    [
-     176.977992,
-     6.675131,
-     8.05
+     176.974405,
+     6.585203,
+     8.012
     ],
     [
      177.018639,
      7.694315,
-     8.05
+     8.012
     ]
    ]
   },
@@ -1375,37 +1371,128 @@
    "confidence": "medium",
    "points": [
     [
-     175.529152,
-     6.732914,
-     8.05
+     175.525565,
+     6.642985,
+     8.012
     ],
     [
-     175.396053,
-     3.395586,
+     175.393263,
+     3.325641,
      9.7
     ],
     [
-     175.384098,
-     3.095826,
+     175.381308,
+     3.025881,
      9.7
     ]
    ]
   },
   {
+   "type": "roof_plane",
+   "name": "Closet_W_Front",
+   "thk": 2.306,
+   "material": "white",
+   "ring": [
+    [
+     174.058342,
+     4.985147
+    ],
+    [
+     175.407263,
+     4.93135
+    ],
+    [
+     175.412044,
+     5.051254
+    ],
+    [
+     174.063124,
+     5.105051
+    ]
+   ],
+   "z": [
+    8.586,
+    8.586,
+    8.586,
+    8.586
+   ],
+   "evidence": "janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner",
+   "confidence": "low"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Closet_W_Side",
+   "thk": 2.306,
+   "material": "white",
+   "ring": [
+    [
+     175.287358,
+     4.936132
+    ],
+    [
+     175.407263,
+     4.93135
+    ],
+    [
+     175.475605,
+     6.644978
+    ],
+    [
+     175.355701,
+     6.64976
+    ]
+   ],
+   "z": [
+    8.586,
+    8.586,
+    7.793,
+    7.793
+   ],
+   "evidence": "janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner",
+   "confidence": "low"
+  },
+  {
+   "type": "door",
+   "name": "Closet_W_Door",
+   "line": [
+    [
+     174.058342,
+     4.985147
+    ],
+    [
+     175.407263,
+     4.93135
+    ]
+   ],
+   "u0": 0.275,
+   "u1": 1.075,
+   "z0": 6.4,
+   "z1": 8.45,
+   "wall_thk": 0.2,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "metal",
+   "evidence": "janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner | position_confidence: low (standard C door, position estimated)",
+   "confidence": "medium",
+   "position_confidence": "low"
+  },
+  {
    "type": "stairs_run",
    "name": "StairE_F1_Flight1",
    "top": [
-    200.384252,
-    5.741645
+    200.380665,
+    5.651717
    ],
    "dir_deg": 267.7161454954155,
    "width": 1.35,
    "risers": 11,
-   "riser_h": 0.15,
-   "tread": 0.334,
-   "z_top": 8.05,
+   "riser_h": 0.1535,
+   "tread": 0.332,
+   "z_top": 8.012,
+   "bottom_riser_h": 0.0767,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.44 m from the south wall",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.37 m from the south wall",
    "confidence": "medium"
   },
   {
@@ -1413,12 +1500,12 @@
    "name": "StairE_F1_Landing",
    "ring": [
     [
-     199.709792,
-     5.768544
+     199.706205,
+     5.678615
     ],
     [
-     202.607472,
-     5.652978
+     202.603885,
+     5.56305
     ],
     [
      202.650111,
@@ -1430,23 +1517,23 @@
     ]
    ],
    "z0": 6.3,
-   "z1": 8.05,
+   "z1": 8.012,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.07 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.16 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
    "confidence": "medium"
   },
   {
    "type": "stairs_run",
    "name": "StairE_F1_Flight2",
    "top": [
-    201.799913,
-    2.342549
+    201.797123,
+    2.272605
    ],
    "dir_deg": 87.71614549541547,
    "width": 1.35,
    "risers": 11,
-   "riser_h": 0.15,
-   "tread": 0.334,
+   "riser_h": 0.1535,
+   "tread": 0.332,
    "z_top": 9.7,
    "material": "granite",
    "soffit_thk": 0.18,
@@ -1464,24 +1551,19 @@
    "confidence": "medium",
    "points": [
     [
-     199.614698,
-     2.129463,
-     6.4
+     199.637093,
+     2.691013,
+     6.63
     ],
     [
-     199.626653,
-     2.429223,
-     6.55
-    ],
-    [
-     199.759752,
-     5.766551,
-     8.05
+     199.756165,
+     5.676623,
+     8.012
     ],
     [
      199.800399,
      6.785735,
-     8.05
+     8.012
     ]
    ]
   },
@@ -1496,18 +1578,18 @@
    "confidence": "medium",
    "points": [
     [
-     201.208592,
-     5.708768,
-     8.05
+     201.205005,
+     5.61884,
+     8.012
     ],
     [
-     201.075493,
-     2.371441,
+     201.072703,
+     2.301496,
      9.7
     ],
     [
-     201.063538,
-     2.071681,
+     201.060748,
+     2.001736,
      9.7
     ]
    ]

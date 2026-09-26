@@ -550,12 +550,13 @@ class Site:
         fwd, left = rot2(el["dir_deg"])
         n, rh, tr, W = int(el["risers"]), el["riser_h"], el["tread"], el["width"]
         zt = el["z_top"]
-        zb = zt - n * rh
+        rb = el.get("bottom_riser_h", rh)   # optional lower first (bottom) riser, e.g. a half step at the hall floor
+        zb = zt - (n - 1) * rh - rb
         prof = [(0.0, zb - 0.2), (0.0, zt)]
         x = 0.0
         z = zt
         for k in range(n):
-            z -= rh
+            z -= rb if k == n - 1 else rh
             prof.append((x, z))
             if k < n - 1:
                 x += tr

@@ -54,8 +54,13 @@ HALL_Y1 = HALL_Y0 + HALL_W                                            # hall nor
 # the exit door to the F2 edge. White balustrade on the hall side of flight 1 and the landing. Bay depth along the hall
 # 2.8-2.9 m (front plane 6.36, end wall 9.1-9.2 m from the camera). 11 risers per flight (0.15 m, 22 per 3.30 storey;
 # 070704360 t 13-28 s); the photo's landing edge reads +1.80 (one riser more?) -> kept 11 + 11, see photo_requests.
-RISERS, RISER_H, TREAD = 11, STOREY / 22, 0.334
-LANDING = 1.07
+# 2026-09-26 re-read of the hall photo (map owner's corrections, all confirmed there): the rail starts at the SECOND
+# riser, the first riser at the hall floor is ~half height, the landing ~0.1 m longer -> 11 risers per flight with a
+# half-height bottom riser on flight 1: 21.5 risers per storey, riser 3.30 / 21.5 = 0.1535, tread 0.332, landing 1.16,
+# run-in 1.37 (fixC analysis, ~/koch_work/fixC/ovl/hall_before).
+RISERS, RISER_H, TREAD = 11, STOREY / 21.5, 0.332
+BOTTOM_RISER = 0.5 * RISER_H
+LANDING = 1.16
 FLIGHT_W, WELL = 1.35, 0.20
 STAIR_X = 2 * FLIGHT_W + WELL                 # 2.90 m bay depth along x
 RUNIN = HALL_W - LANDING - (RISERS - 1) * TREAD   # hall floor in front of the bottom riser (south side)
@@ -145,11 +150,11 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
     x_in2 = x_wall + sgn * FLIGHT_W                        # well-side edge of flight 2
     y_bot = HALL_Y0 + RUNIN                                # bottom riser of flight 1 = top nosing of flight 2
     y_land = y_bot + (RISERS - 1) * TREAD                  # landing edge (top nosing of flight 1)
-    h1 = zb + RISERS * RISER_H
+    h1 = zb + BOTTOM_RISER + (RISERS - 1) * RISER_H
     photo = "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s"
     f1 = {"type": "stairs_run", "name": f"{prefix}_Flight1", "top": c_to_w(xa, y_land), "dir_deg": NORTH + 180,
           "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD, "z_top": z(h1),
-          "material": "granite", **ev(f"{photo}: flight 1 on the hall side, rises north across the hall end, "
+          "bottom_riser_h": round(BOTTOM_RISER, 4), "material": "granite", **ev(f"{photo}: flight 1 on the hall side, rises north across the hall end, "
                                       f"{RISERS} risers, bottom riser {RUNIN:.2f} m from the south wall")}
     if not solid:
         f1["soffit_thk"] = SOFFIT
@@ -167,8 +172,7 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
     rev = ev(f"{photo}: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom")
     # flight 1 + landing: hall side (open to the hall)
     els.append({"type": "rail3d", "name": f"{prefix}_Rail1", **rail, **rev,
-                "points": [c_to_w(x_front - sgn * 0.05, y_bot - 0.30) + [z(zb)],
-                           c_to_w(x_front - sgn * 0.05, y_bot) + [z(zb + RISER_H)],
+                "points": [c_to_w(x_front - sgn * 0.05, y_bot + TREAD) + [z(zb + BOTTOM_RISER + RISER_H)],
                            c_to_w(x_front - sgn * 0.05, y_land) + [z(h1)],
                            c_to_w(x_front - sgn * 0.05, HALL_Y1 - 0.05) + [z(h1)]]})
     # flight 2: well side, from the landing up to the next floor; flight 1 well side (upper floors: void next to it)
@@ -382,6 +386,22 @@ def build():
     f1 = floor_slabs(1, 0.0, {}) + ceilings(1, 0.0, {"W": True, "E": True})
     f1 += plan(1, 0.0, lobby=True, stairs={"W": True, "E": True})
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
+    # janitor's closet under flight 2 of the WEST stair (070704360 t 19-22 s: dark single door under the flight; the east
+    # end has the brown exit door there instead, hall photo + still 081100714). Front wall + door facing south at
+    # y 8.65, side wall on the well side with a sloped top following the flight soffit.
+    y_c = 8.65
+    y_b = HALL_Y0 + RUNIN
+    soff = lambda y: STOREY - RISER_H - SOFFIT * (TREAD ** 2 + RISER_H ** 2) ** 0.5 / TREAD - (y - y_b) * RISER_H / TREAD
+    y_l = y_b + (RISERS - 1) * TREAD
+    x0c, x1c = X_W, X_W + FLIGHT_W
+    evc = ev("janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner", "low")
+    f1.append({"type": "roof_plane", "name": "Closet_W_Front", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
+               "ring": [c_to_w(x0c, y_c), c_to_w(x1c, y_c), c_to_w(x1c, y_c + 0.12), c_to_w(x0c, y_c + 0.12)],
+               "z": [z(soff(y_c) - 0.02)] * 4, **evc})
+    f1.append({"type": "roof_plane", "name": "Closet_W_Side", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
+               "ring": [c_to_w(x1c - 0.12, y_c), c_to_w(x1c, y_c), c_to_w(x1c, y_l), c_to_w(x1c - 0.12, y_l)],
+               "z": [z(soff(y_c) - 0.02), z(soff(y_c) - 0.02), z(soff(y_l) - 0.02), z(soff(y_l) - 0.02)], **evc})
+    f1.append(door("Closet_W_Door", (x0c, y_c), (x1c, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", **evc))
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
     f1 += fittings_f1()
     up = []
