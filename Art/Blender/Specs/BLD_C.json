@@ -419,8 +419,8 @@
   {
    "type": "stairs",
    "edge": 2,
-   "u0": -0.35,
-   "u1": 4.15,
+   "u0": 0.0,
+   "u1": 3.8,
    "risers": 7,
    "riser_h": 0.15,
    "tread": 0.33,
@@ -428,12 +428,21 @@
    "evidence": "7 granite risers ~0.15 (061428331, 061431726); width 4.5 m after depth correction (factor 0.705)",
    "cheeks": [
     {
-     "u0": -0.85,
-     "u1": -0.35,
+     "u0": -0.5,
+     "u1": 0.0,
      "w1": 3.78,
      "z_wall": 0.5,
      "z_out": -0.75,
-     "evidence": "061631264 / 061621646 overlay: brick-tile cheek block with a sloping granite cap on the west side of the flight, from ~0.5 m above the landing at the wall down to ~0.3 m above the plaza at the bottom step",
+     "evidence": "brick-tile cheek with a sloping granite cap on the W side of the flight, against the W wing's corner (061428331, 061621646)",
+     "confidence": "medium"
+    },
+    {
+     "u0": 3.8,
+     "u1": 4.2,
+     "w1": 3.78,
+     "z_wall": 0.5,
+     "z_out": -0.75,
+     "evidence": "same brick cheek on the E side of the flight between the steps and the ramp (map owner; 061621646 crop: brick block behind the ramp rails)",
      "confidence": "medium"
     }
    ]
@@ -506,9 +515,9 @@
    "u1": 16.75,
    "depth": 5.8,
    "z_high": 1.0,
-   "z_low": -0.91,
+   "z_low": -0.15,
    "wall_h_from_ground": true,
-   "evidence": "semi-sunken Dance Hall block along C's west wall: front wall (dark stone band on red tile) 1.3 m above the west-side grade, grey profiled roof rising to C's wall just under the F1 sills (012456258, 012459414, photo 10:55); plan from Google z20 (grey roof x -6.0..0, y 3.5..22.8 in C local, lean-corrected): depth 5.8 m, runs 5.2 m past C's NW corner 2026-09-25 photo-match 012459414 (PnP camera): front wall 0.87 m above grade (vs the 2.25 m Dance Hall box in the same plane), roof meets C's wall at the F1 sill line. | 2026-09-25 frames a04-a08 of 070629483: the shed roof and front wall continue south to the brick wall at the stair (u 16.75) | 2026-09-26: north end to C-local y 22.8 (Google z20 grey roof end); overlay of 070410255 t17 (fixC/ovl/ovl_sh17.jpg): front edge and south end match, north end hidden by the spruce",
+   "evidence": "semi-sunken Dance Hall block along C's west wall: front wall (dark stone band on red tile) 1.3 m above the west-side grade, grey profiled roof rising to C's wall just under the F1 sills (012456258, 012459414, photo 10:55); plan from Google z20 (grey roof x -6.0..0, y 3.5..22.8 in C local, lean-corrected): depth 5.8 m, runs 5.2 m past C's NW corner 2026-09-25 photo-match 012459414 (PnP camera): front wall 0.87 m above grade (vs the 2.25 m Dance Hall box in the same plane), roof meets C's wall at the F1 sill line. | 2026-09-25 frames a04-a08 of 070629483: the shed roof and front wall continue south to the brick wall at the stair (u 16.75) | 2026-09-26: north end to C-local y 22.8 (Google z20 grey roof end); overlay of 070410255 t17 (fixC/ovl/ovl_sh17.jpg): front edge and south end match, north end hidden by the spruce | 2026-09-26: the ground in front of the shed is the plaza terrace (FFL-1.05, not the old -1.78): front wall 0.9 m above it (hex-tile band over a brick band, 012459414), roof low edge at FFL-0.15; the old -0.91 left the roof almost on the ground (map owner: 'the lower roof continues')",
    "z_base": -2.08
   },
   {

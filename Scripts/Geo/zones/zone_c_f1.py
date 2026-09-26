@@ -386,21 +386,24 @@ def build():
     f1 = floor_slabs(1, 0.0, {}) + ceilings(1, 0.0, {"W": True, "E": True})
     f1 += plan(1, 0.0, lobby=True, stairs={"W": True, "E": True})
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
-    # janitor's closet under flight 2 of the WEST stair (070704360 t 19-22 s: dark single door under the flight; the east
-    # end has the brown exit door there instead, hall photo + still 081100714). Front wall + door facing south at
-    # y 8.65, side wall on the well side with a sloped top following the flight soffit.
+    # janitor's closets under flight 2 of BOTH F1 stairs (map owner: "on F1 in both such places there are cleaners'
+    # booths with ordinary brown doors"; west one seen in 070704360 t 19-22 s). Under the east flight the brown double
+    # exit door sits south of it (BLD_C edge 4 u 5.0-6.86 = y 6.3-8.16), the closet fills the low part north of y 8.65.
     y_c = 8.65
     y_b = HALL_Y0 + RUNIN
     soff = lambda y: STOREY - RISER_H - SOFFIT * (TREAD ** 2 + RISER_H ** 2) ** 0.5 / TREAD - (y - y_b) * RISER_H / TREAD
     y_l = y_b + (RISERS - 1) * TREAD
-    x0c, x1c = X_W, X_W + FLIGHT_W
-    evc = ev("janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner", "low")
-    f1.append(wall("Closet_W_Front", (x1c, y_c), (x0c, y_c), h=soff(y_c) - 0.02, thk=0.12,
-                   openings=[(FLIGHT_W / 2 - 0.42, FLIGHT_W / 2 + 0.42, DOOR_H + 0.02)], **evc))
-    f1.append({"type": "roof_plane", "name": "Closet_W_Side", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
-               "ring": [c_to_w(x1c - 0.12, y_c), c_to_w(x1c, y_c), c_to_w(x1c, y_l), c_to_w(x1c - 0.12, y_l)],
-               "z": [z(soff(y_c) - 0.02), z(soff(y_c) - 0.02), z(soff(y_l) - 0.02), z(soff(y_l) - 0.02)], **evc})
-    f1.append(door("Closet_W_Door", (x1c, y_c), (x0c, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", wall_thk=0.12, **evc))
+    evc = ev("janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)", "medium")
+    for side, xw, sg in (("W", X_W, +1), ("E", X_E, -1)):
+        xo = xw + sg * FLIGHT_W                  # well-side face of the closet
+        xa, xb = (xw, xo) if sg > 0 else (xo, xw)
+        f1.append(wall(f"Closet_{side}_Front", (xb, y_c), (xa, y_c), h=soff(y_c) - 0.02, thk=0.12,
+                       openings=[(FLIGHT_W / 2 - 0.42, FLIGHT_W / 2 + 0.42, DOOR_H + 0.02)], **evc))
+        f1.append(door(f"Closet_{side}_Door", (xb, y_c), (xa, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", wall_thk=0.12,
+                       material="wood", **evc))
+        f1.append({"type": "roof_plane", "name": f"Closet_{side}_Side", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
+                   "ring": [c_to_w(xo - sg * 0.12, y_c), c_to_w(xo, y_c), c_to_w(xo, y_l), c_to_w(xo - sg * 0.12, y_l)],
+                   "z": [z(soff(y_c) - 0.02), z(soff(y_c) - 0.02), z(soff(y_l) - 0.02), z(soff(y_l) - 0.02)], **evc})
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
     f1 += fittings_f1()
     up = []

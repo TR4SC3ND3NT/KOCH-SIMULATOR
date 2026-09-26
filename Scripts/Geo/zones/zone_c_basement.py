@@ -182,7 +182,9 @@ def build():
     win = (m_to_c([WIN_M0, 0, 0])[0], m_to_c([WIN_M1, 0, 0])[0])
     hole = ring_c(x0 - 0.05, x_corr0 + 0.4, Y_S - 0.25, Y_N)   # open stairwell: cut the terrain heightfield here
     # lower ground west/south-west of C (see GW); blends back to the DEM surface over 8 m
-    pad = {"ring": ring_c(-12.0, 1.0, -6.0, 19.0), "z": FFL + GW, "blend": 8.0}
+    # 2026-09-26: the ground west / south-west of C is the plaza terrace (5.35 = FFL - 1.05), the same level as the
+    # passage by the sports hall (SITE_HallCPassage) and the south plaza; the old 'GW' pad (4.62) made the landing float
+    pad = {"ring": ring_c(-12.0, 1.0, -6.0, 12.5), "z": round(FFL + PLAZA - 0.02, 3), "blend": 1.0}
     # "ground": "pads" -> the plaza-side railing stands on the padded terrain (5.35 terrace), not the raw DEM
     return {"id": "INT_C_Basement", "collection": "INT_C_Basement", "ground": "pads", "terrain_holes": [hole], "terrain_pads": [pad],
             "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall "

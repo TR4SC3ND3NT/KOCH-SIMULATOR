@@ -1412,8 +1412,33 @@
     }
    ],
    "material": "white",
-   "evidence": "janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner",
-   "confidence": "low"
+   "evidence": "janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "door",
+   "name": "Closet_W_Door",
+   "line": [
+    [
+     175.407263,
+     4.93135
+    ],
+    [
+     174.058342,
+     4.985147
+    ]
+   ],
+   "u0": 0.275,
+   "u1": 1.075,
+   "z0": 6.4,
+   "z1": 8.45,
+   "wall_thk": 0.12,
+   "leaf": "solid",
+   "mid": 1.0,
+   "hinge": "left",
+   "material": "wood",
+   "evidence": "janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)",
+   "confidence": "medium"
   },
   {
    "type": "roof_plane",
@@ -1444,20 +1469,48 @@
     7.793,
     7.793
    ],
-   "evidence": "janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner",
-   "confidence": "low"
+   "evidence": "janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Closet_E_Front",
+   "line": [
+    [
+     202.535543,
+     3.849422
+    ],
+    [
+     201.186623,
+     3.90322
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 8.586,
+   "thk": 0.12,
+   "openings": [
+    {
+     "u0": 0.255,
+     "u1": 1.095,
+     "z0": 6.34,
+     "z1": 8.47
+    }
+   ],
+   "material": "white",
+   "evidence": "janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)",
+   "confidence": "medium"
   },
   {
    "type": "door",
-   "name": "Closet_W_Door",
+   "name": "Closet_E_Door",
    "line": [
     [
-     175.407263,
-     4.93135
+     202.535543,
+     3.849422
     ],
     [
-     174.058342,
-     4.985147
+     201.186623,
+     3.90322
     ]
    ],
    "u0": 0.275,
@@ -1468,10 +1521,41 @@
    "leaf": "solid",
    "mid": 1.0,
    "hinge": "left",
-   "material": "metal",
-   "evidence": "janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner | position_confidence: low (standard C door, position estimated)",
-   "confidence": "medium",
-   "position_confidence": "low"
+   "material": "wood",
+   "evidence": "janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Closet_E_Side",
+   "thk": 2.306,
+   "material": "white",
+   "ring": [
+    [
+     201.306527,
+     3.898438
+    ],
+    [
+     201.186623,
+     3.90322
+    ],
+    [
+     201.254965,
+     5.616848
+    ],
+    [
+     201.374869,
+     5.612066
+    ]
+   ],
+   "z": [
+    8.586,
+    8.586,
+    7.793,
+    7.793
+   ],
+   "evidence": "janitor's closet under flight 2, ordinary brown door (map owner; west: 070704360 t 19-22 s)",
+   "confidence": "medium"
   },
   {
    "type": "stairs_run",
