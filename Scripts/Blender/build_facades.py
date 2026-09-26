@@ -569,6 +569,12 @@ class Building:
                 prism_profile(bm, fr, [(0.0, a["z_wall"]), (a["depth"], a["z_edge"]), (a["depth"], a["z_edge"] - 0.06),
                                        (0.0, a["z_wall"] - 0.06)], a["u0"], a["u1"])
                 self.obj(f"LightwellCover_E{a['edge']}_{a['u0']:.0f}", bm, COL["maroon"], a.get("evidence"))
+                pp = a.get("parapet")  # optional low tile parapet the cover's outer edge rests on (z rel FFL)
+                if pp:
+                    bm_p = bmesh.new()
+                    for u0, u1 in pp["spans"]:
+                        box(bm_p, fr, u0, u1, a["depth"] - pp.get("t", 0.25), a["depth"], pp["z0"], a["z_edge"] - 0.06)
+                    self.obj(f"LightwellParapet_E{a['edge']}_{a['u0']:.0f}", bm_p, COL["brick"], pp.get("evidence"), cf)
             elif t == "shed":
                 zg = e["zg"]
                 zg = a.get("z_base", zg - BURY_M) + BURY_M  # explicit base where a terrain pad lowers the ground
