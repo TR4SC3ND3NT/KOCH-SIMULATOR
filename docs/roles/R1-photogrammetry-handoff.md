@@ -95,6 +95,64 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
    - **Shared machine resources.** Heavy jobs go under a memory cap. Replies to the owner are short and in Russian.
    - **Lore.** No real names or logos anywhere in the game (KOCH only). Never commit the raw footage.
 
+## 4a. Detail standard: real modelled structure, not boxes (the owner's hard requirement)
+The owner wants the Blender result to look close to reality **as geometry**, not a blockout. Model every element as it is built in reality, down to the smallest part with visible relief (about 1 cm or more). Do not move to the next element until the current one matches the footage pixel by pixel.
+
+### What to model as real geometry
+- **Walls:**
+  - real thickness, window and door reveals;
+  - plinth bands and cornices with their true profiles (steps, drips, chamfers);
+  - pilasters, expansion joints, parapets and copings.
+- **Windows:**
+  - outer frame, sashes and mullions with real sections;
+  - glass set back in the frame;
+  - the exterior sill with its slope and drip;
+  - surrounds as separate profiled pieces.
+- **Doors:**
+  - frame, leaf with stiles, rails and glass panes;
+  - handles or pull bars, thresholds, transoms;
+  - hinges where visible.
+- **Stairs:**
+  - each step: tread, riser, nosing/chamfer, stone joints where they are relief;
+  - cheek walls and their caps;
+  - handrails and balustrades with posts, rails, bars, end curls and wall brackets.
+- **Ramps:** grating deck, frame and stringers, rails, posts with feet.
+- **Ground:**
+  - every kerb with its section (chamfer or round), painted kerbs as separate pieces;
+  - planter and tree-pit rims, drains and manhole covers, paving level changes;
+  - bank slopes and retaining walls with copings.
+- **Roofs:**
+  - corrugated or standing-seam sheets as real ribs where visible up close;
+  - ridge caps, fascia boards, gutters with hangers, downpipes with elbows and shoes;
+  - dormers with their own roofs;
+  - snow guards and flashing.
+- **Canopies and galleries:** posts with bases and caps, beams, soffit panels, edge trims.
+- **Fittings:** AC units with brackets, lamps (pole, arms, lantern), benches (frame, slats), bins, signs (panel and posts; blank KOCH panels), cameras, floodlights, fences (posts, rails, mesh panels, gates with hinges).
+- **Interiors (Block C):** skirting, door frames, ceiling grid with LED panels, bulkheads, radiators with pipes, stair balustrades, WC stalls, sinks, cisterns.
+
+### What stays material (for UE, not geometry)
+- Surface texture: brick-tile pattern, render roughness, paver pattern, stone grain, dirt.
+- If a pattern has real depth (deep mortar joints, corrugation seen close), model it; otherwise leave it to materials and decals.
+
+### Rules for the geometry
+- True-scale metres, with the real construction logic: parts join as they do in reality, with no floating and no interpenetrating slabs.
+- One surface per real surface (no coplanar overlaps).
+- Manifold meshes.
+- Repeated parts (windows, doors, lamps, posts, railing bays, benches) as one mesh plus linked instances, i.e. a modular kit.
+- Nanite handles dense meshes in UE, so detail is fine. Still, no hidden or internal faces, and no micro-geometry where a material works.
+- Put everything through the spec/generator pipeline, extending the builders with new element types and profiles, so it rebuilds. Hand-modelled one-offs are acceptable only for unique pieces; keep them in their own collection with a note.
+
+### Per-element loop (do not skip steps)
+1. List the element and its parts. Collect every photo and video frame that shows it; ROUTE.md and file times help.
+2. Measure positions, levels and sizes on the photogrammetry mesh (snap to it). Cross-check with the known sizes: storey 3.30, door 0.99 × 2.05, risers, pavers.
+3. Model it at the detail standard above.
+4. Verify:
+   - render the model through at least 2 of the real cameras solved by RealityScan (export its camera poses; `Scripts/Blender/sfm_overlay.py` does photo | blend | model triptychs);
+   - compare edges, heights and counts (steps, posts, bars, windows) pixel by pixel;
+   - fix and repeat until they match.
+5. Also check from the owner's screenshot viewpoint if they marked that spot.
+6. Commit only then. Move on to the next element.
+
 ## 5. Open items the mesh must settle (from the owner's marked screenshots)
 - **Block C:**
   - The west "Dance Hall" shed roof and its continuation toward the spruces SW of C: shape, depth and height.
