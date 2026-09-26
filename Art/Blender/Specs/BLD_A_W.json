@@ -276,7 +276,7 @@
     {
      "type": "G",
      "u": [
-      44.82,
+      43.8,
       38.2,
       33.3,
       27.7,
@@ -301,11 +301,12 @@
     {
      "type": "DD",
      "u": [
-      49.3
+      46.95
      ],
      "sills": [
       0.02
-     ]
+     ],
+     "evidence": "glazed grey double door between the last post and the brick pier: post | narrow window | double door | narrow window | narrow window | pier (012327726 t4-5 s)"
     },
     {
      "type": "GNE",
@@ -315,6 +316,19 @@
      "rows": [
       "NE"
      ]
+    },
+    {
+     "type": "GN",
+     "name": "S_end",
+     "u": [
+      45.7,
+      48.3,
+      50.25
+     ],
+     "rows": [
+      "G1"
+     ],
+     "evidence": "narrow 2-pane windows between the last post and the brick pier (012327726 t4-5 s)"
     }
    ],
    "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige | 2026-09-26: the south door moved to the door-bay front (attachment DoorBay_S); the small high 'UW' window is on the A_N wall above the strip roof (A_N owner)",
@@ -371,8 +385,8 @@
    "roof_fall": 0.3,
    "beam_h": 0.45,
    "roof_overhang": 0.15,
-   "floor_z": -0.05,
-   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line",
+   "floor_z": 0.0,
+   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line | A_W gallery deck: one flat tiled platform ~0.30 above the walkway / square along the whole gallery (map owner: 'not less than 25 cm, level everywhere'; 012327726 t4-6 s and t26-30 s: tiled deck with a pink granite edge and a lower step strip; north end 0.36 above the square, 012429784)",
    "confidence": "medium",
    "post_round": true,
    "post_inset": 0.0,
@@ -383,7 +397,7 @@
     "proj": 0.03,
     "w": 0.3
    },
-   "deck_bottom": -1.2,
+   "deck_bottom": -0.6,
    "gutter": true,
    "downpipes_u": [
     9.9,
@@ -490,8 +504,8 @@
    "confidence": "medium"
   }
  ],
- "ffl_z": 5.47,
- "ffl_note": "A_W ground floor = gallery deck G + 0.05, G = 5.70 (campus z). Relative levels measured on site footage: deck flat along the whole gallery (5 brick-tile courses of ~0.145 m to the window surround everywhere), square at the N end G-0.36, walkway along the deck G-0.15, raised terrace path G+0.60 (G+0.15 at the A_S corner). Absolute G is the least-squares fit of those levels to the DEM base at the S and N ends (DEM rms 0.97 m): +-0.5 m. The other A parts still sit at the DEM rule FFL 7.08; at the A_S/A_W junction the floors are equal on site (A_S sill ~1.0 m above the same walkway), and the A_N-over-A_W wall step then matches the Google shadow (~1.9 m). | 2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace). A_W zone shifted by -0.28 m.",
+ "ffl_z": 5.65,
+ "ffl_note": "A_W ground floor = gallery deck G + 0.05, G = 5.70 (campus z). Relative levels measured on site footage: deck flat along the whole gallery (5 brick-tile courses of ~0.145 m to the window surround everywhere), square at the N end G-0.36, walkway along the deck G-0.15, raised terrace path G+0.60 (G+0.15 at the A_S corner). Absolute G is the least-squares fit of those levels to the DEM base at the S and N ends (DEM rms 0.97 m): +-0.5 m. The other A parts still sit at the DEM rule FFL 7.08; at the A_S/A_W junction the floors are equal on site (A_S sill ~1.0 m above the same walkway), and the A_N-over-A_W wall step then matches the Google shadow (~1.9 m). | 2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace). A_W zone shifted by -0.28 m. | 2026-09-26: A_W floor = gallery deck 5.65, 0.30 above the lower walkway (map owner + 012327726); A_S keeps 5.47 (interiors not modelled)",
  "terrain_pads": [
   {
    "name": "AW_PathN",
