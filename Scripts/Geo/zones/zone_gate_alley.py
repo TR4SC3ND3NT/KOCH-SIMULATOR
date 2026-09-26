@@ -408,17 +408,40 @@ for k, (x, y, h) in enumerate([(-2.7, 13.7, 1.5), (-2.05, 18.25, 1.6), (-2.4, 20
                             % (x, y), "confidence": "medium"})
 
 # ---------------------------------------------------------------- wide stair north of the alley (-> lower terrace)
-PATH_N_Z = 5.35                  # lower terrace after the descent: path, garden, gazebos, C (map owner)
-X_PATH_W = -7.63                 # alley west edge at the stair (A local x at B's NE corner, world x 153.1)
-X_STAIR_E = X_BB                 # the flight runs in front of the lawn-strip end coping (f74: band to x -2.3 and beyond)
-N_STEPS = 8
-els.append({"type": "stairs_run", "name": "Steps_BCorner", "top": W((X_PATH_W + X_STAIR_E) / 2, Y_STAIR_N), "dir_deg": r3(ANG + 90),
-            "risers": N_STEPS, "riser_h": r3((ALLEY_N - PATH_N_Z) / N_STEPS), "tread": 0.35,
-            "width": r3(X_STAIR_E - X_PATH_W), "z_top": r3(ALLEY_N), "material": "granite",
-            "evidence": "map owner: a descent across the path right after the end of B; 070309303 f71-f75: the path ends at a "
-                        "transverse pink granite band (top nosing, ground rays y 40.35-40.53) with the lower plaza, hedge "
-                        "arch and signboard beyond; 8 x 0.16 to the lower terrace (5.35); riser count to confirm",
-            "confidence": "low"})
+# 012404116 t0-3.5 s (2 fps, frames ~/koch_work/ws): 6 pink granite steps + a grey concrete kerb as the top riser =
+# 7 risers down to the lower terrace. The upper 4 risers run between two raised beds: east = the end of the lawn strip
+# (rubble-stone wall with a pink granite coping, stepped down along the flight), west = the rose bed at B's corner
+# (rubble-stone retaining wall). The lower 3 steps run past both bed walls (t0.5 / t2.0 frames).
+PATH_N_Z = 5.35                  # lower terrace (path, garden, gazebos, C plaza)
+N_STEPS, N_UP = 7, 4
+RH = (ALLEY_N - PATH_N_Z) / N_STEPS
+TR = 0.35
+X_UP_W, X_UP_E = -7.63, -2.3     # upper flight between the bed walls (B bed curb line / lawn-strip end, f74 band)
+X_LO_W, X_LO_E = -8.4, -1.5      # lower steps run ~0.8 m past both walls
+EV_WS = ("012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past "
+         "them), 070309303 f71-f75 (top nosing band y 40.35-40.53)")
+els.append({"type": "stairs_run", "name": "Steps_BCorner_Upper", "top": W((X_UP_W + X_UP_E) / 2, Y_STAIR_N),
+            "dir_deg": r3(ANG + 90), "risers": N_UP, "riser_h": r3(RH), "tread": TR, "width": r3(X_UP_E - X_UP_W),
+            "z_top": r3(ALLEY_N), "material": "granite", "evidence": EV_WS, "confidence": "medium"})
+Y_LO = Y_STAIR_N + N_UP * TR     # nosing of the first lower step
+els.append({"type": "stairs_run", "name": "Steps_BCorner_Lower", "top": W((X_LO_W + X_LO_E) / 2, Y_LO),
+            "dir_deg": r3(ANG + 90), "risers": N_STEPS - N_UP, "riser_h": r3(RH), "tread": TR,
+            "width": r3(X_LO_E - X_LO_W), "z_top": r3(ALLEY_N - N_UP * RH), "material": "granite",
+            "evidence": EV_WS, "confidence": "medium"})
+# bed walls beside the upper flight (rubble stone + pink coping), top = upper level + 0.3 (bed soil + coping)
+for nm, x0, x1 in (("WS_BedWall_E", X_UP_E, X_UP_E + 0.35), ("WS_BedWall_W", X_UP_W - 0.35, X_UP_W)):
+    slab(nm, [(x0, Y_STAIR_N - 0.3), (x1, Y_STAIR_N - 0.3), (x1, Y_LO), (x0, Y_LO)], lambda x, y: ALLEY_N + 0.3, 0.0,
+         "stone", "rubble-stone bed wall with pink granite coping beside the upper flight (" + EV_WS + ")", "medium",
+         {"thk": r3(ALLEY_N + 0.3 - PAD_Z + 0.2)})
+# the raised beds behind the walls continue alongside the upper flight at the upper level (012404116 t0.5 / t2.0)
+for nm, x0, x1 in (("WS_Bed_E", X_UP_E + 0.35, X_BB), ("WS_Bed_W", X_UP_W - 1.8, X_UP_W - 0.35)):
+    slab(nm, [(x0, Y_STAIR_N - 0.3), (x1, Y_STAIR_N - 0.3), (x1, Y_LO), (x0, Y_LO)], lambda x, y: ALLEY_N + 0.15, 0.0,
+         "hedge", "raised bed (lawn / roses) beside the upper flight, soil just below the coping (" + EV_WS + ")", "medium",
+         {"thk": r3(ALLEY_N + 0.15 - PAD_Z + 0.2)})
+    xf = x0 if nm.endswith("E") else x1
+    slab(nm + "_Front", [(x0, Y_LO), (x1, Y_LO), (x1, Y_LO + 0.3), (x0, Y_LO + 0.3)], lambda x, y: ALLEY_N + 0.3, 0.0,
+         "stone", "rubble-stone front wall of the raised bed facing the lower plaza (" + EV_WS + ")", "medium",
+         {"thk": r3(ALLEY_N + 0.3 - PAD_Z + 0.2)})
 
 spec = {
     "id": "SITE_GateAlley",

@@ -333,7 +333,12 @@ P0 = np.array([157.4, 9.2])
 def pw(x, y): return R3(P0 + DU * x + DV * y)
 def prect(x0, x1, y0, y1): return [pw(x0, y0), pw(x1, y0), pw(x1, y1), pw(x0, y1)]
 TREAD = 0.33
-SX0, SX1, S_RUN = -2.1, 2.1, (RISERS - 1) * TREAD + 0.40     # stair width 4.2 m, run incl. top landing
+SX0, SX1, S_RUN = -0.1, 2.1, (RISERS - 1) * TREAD + 0.40     # stair 2.2 m wide (x 157.3-159.5), run incl. top landing
+RX0 = -1.1                                                     # grey grating ramp W of the stair (x 156.3-157.3)
+RY0, RY1 = -2.0, 1.4                                           # ramp top / foot (world y 7.2 / 10.6)
+EV_RAMP = ("070410255 t=33.5-34.5 s (fixG/hc/f4k/t30_15..19, st/t30_17c.jpg): grey steel mesh-grating ramp with square-"
+           "tube rails (top + mid + bottom stringer) on the W side of the stair, same type as the other campus ramps; plan "
+           "from Google z20: rails ~1.0 m apart at x 156.3-157.3, y 7.2-10.6 (fixG/st/ortho_stair.jpg, g_up.jpg)")
 SHED_X = 10.45                                                 # Block C west shed front at the return arm (x 167.9)
 pe = []
 def padd(**e): pe.append(e); return e
@@ -344,7 +349,7 @@ EV_STAIR = ("070410255 t=26-33 s (2 fps a_053..a_067 + 10 fps crops): herringbon
             "Google z20 (return-arm coping shadow y 9.0-9.2, lower lawn W edge x 160.5, strip y 9.2-10.8, dirt bed y 0-9). 5 risers counted from the top "
             "landing (4K frame t=29.5 s: nosings at 1640/1450/1335/1235/1170 px); drop 0.44 SfM units x 2.0 m/unit = 0.88 m "
             "(SfM of t=12-34 s, 80 frames, pavement-normal up; scale from 0.2 x 0.1 m pavers and 1.0 m curbs) -> 5 x 0.175")
-padd(type="steps", name="Passage_Stair", pos=pw(0.0, 0.02), dir_deg=-92.2, width=SX1 - SX0, risers=RISERS,
+padd(type="steps", name="Passage_Stair", pos=pw((SX0 + SX1) / 2, 0.02), dir_deg=-92.2, width=SX1 - SX0, risers=RISERS,
      riser_h=round((Z_UP - Z_LOW) / RISERS, 3), tread=TREAD, top_landing=0.40, evidence=EV_STAIR, confidence="medium")
 padd(type="slab", name="Passage_Cheek_E", ring=prect(SX1, SX1 + 0.3, -S_RUN, 0.0), z0=Z_LOW - 0.3, z1=Z_UP + 0.05,
      material="granite", evidence="pink granite cheek/coping along the E side of the flight, ~0.3 m wide, top ~5 cm above "
@@ -353,13 +358,23 @@ padd(type="slab", name="Passage_Cheek_Return", ring=prect(SX1, SHED_X, -0.3, 0.0
      material="granite", evidence="the cheek turns E at the stair foot and runs to the C shed front as the coping of the "
      "upper lawn's retaining edge; lower paved strip with a manhole N of it (a_062, Google z20 shadow line y 9.0-9.2)",
      confidence="medium")
-padd(type="slab", name="Passage_Cheek_W", ring=prect(SX0 - 0.3, SX0, -S_RUN, 0.0), z0=Z_LOW - 0.3, z1=Z_UP + 0.05,
-     material="granite", evidence="W end of the flight against the landing at the hall wing corner (s_01 t=26 s: flight "
-     "spans the path from the landing to the E cheek); W cheek assumed like the E one", confidence="low")
-padd(type="rail3d", name="Passage_LandingRail", points=[[*pw(-5.5, -0.05), Z_UP], [*pw(SX0 - 0.15, -0.05), Z_UP]],
-     height=1.0, post=0.05, rail=0.04, spacing=1.2, mid_rails=1, material="metal",
-     evidence="black steel railing on the raised landing W of the stair top, at the hall wing corner (s_01 t=26 s)",
-     confidence="low")
+RZ = lambda y: Z_UP + (Z_LOW - Z_UP) * (y - RY0) / (RY1 - RY0)
+padd(type="roof_plane", name="Passage_Ramp_Base", ring=prect(RX0, SX0, RY0, RY1), z=[Z_UP - 0.06, Z_UP - 0.06, Z_LOW - 0.06, Z_LOW - 0.06],
+     thk=round(Z_UP - Z_LOW + 0.3, 3), material="stone", evidence=EV_RAMP + "; solid infill under the grating", confidence="medium")
+padd(type="roof_plane", name="Passage_Ramp", ring=prect(RX0, SX0, RY0, RY1), z=[Z_UP, Z_UP, Z_LOW, Z_LOW], thk=0.06,
+     material="metal", evidence=EV_RAMP, confidence="medium")
+for nm, x in (("W", RX0 + 0.03), ("E", SX0 - 0.03)):
+    padd(type="rail3d", name=f"Passage_RampRail_{nm}", points=[[*pw(x, RY0), Z_UP], [*pw(x, RY1), Z_LOW]], height=0.9,
+         spacing=1.2, mid_rails=1, material="metal", unique_posts=True, evidence=EV_RAMP, confidence="medium")
+padd(type="rail3d", name="Passage_LandingRail", points=[[*pw(-3.2, -1.35), Z_UP], [*pw(RX0, -1.35), Z_UP]],
+     height=0.8, post=0.03, rail=0.04, spacing=0.12, mid_rails=0, material="metal", unique_posts=True,
+     evidence="low black bar fence on the upper landing W of the ramp, dense verticals (~0.12 m), E-W at y 7.85, "
+              "x 154.2-156.3 (070410255 frames 0030-0033, fixG/st/land.jpg; map owner: lower and denser than modelled)",
+     confidence="medium")
+padd(type="box", name="Passage_Bench", center=pw(-3.6, -4.9), dir_deg=round(float(np.degrees(np.arctan2(DV[1], DV[0]))), 2),
+     size=[6.4, 0.8, 0.42], z0=Z_UP, material="brick",
+     evidence="low maroon bench/ledge along the hall's E wall on the upper landing, x 153.4-154.2 (070410255 f55 overlay, "
+              "fixG/st/ortho_stair.jpg); length estimated", confidence="low")
 padd(type="planter", name="Passage_Lawn_Upper", ring=[pw(SX1, -8.8), pw(SHED_X - 0.2, -8.8), pw(SHED_X - 0.2, -0.3),
                                                       pw(SX1 + 0.3, -0.3), pw(SX1 + 0.3, -S_RUN), pw(SX1, -S_RUN)],
      curb_w=0.12, curb_h=0.12, evidence="upper lawn E of the path with yellow/white painted curbs and three blue spruces "
@@ -381,12 +396,12 @@ padd(type="wall", name="Passage_Curb_North", line=[[153.5, 24.5], [161.0, 24.2]]
 pass_pads = [
     dict(name="PassageUpper", z=Z_UP, blend=0.0,
          ring=[pw(-8.2, -10.0), pw(SHED_X - 0.1, -10.0), pw(SHED_X - 0.1, 0.0), pw(SX1, 0.0), pw(SX1, -S_RUN),
-               pw(SX0, -S_RUN), pw(SX0, 0.0), pw(-8.2, 0.0)],
+               pw(SX0, -S_RUN), pw(SX0, RY0), pw(RX0, RY0), pw(RX0, 0.0), pw(-8.2, 0.0)],
          evidence="the lower-terrace level continues N between the hall E gable and the upper lawn to the stair top "
                   "(flat camera track t=13-30 s in the SfM, no steps in a_026..a_061)", confidence="medium"),
     dict(name="PassageLower", z=Z_LOW, blend=0.0,
-         ring=[pw(SX0, -S_RUN), pw(SX1, -S_RUN), pw(SX1, 0.0), pw(SHED_X + 0.4, 0.0), pw(SHED_X + 0.8, 12.7),
-               pw(-5.0, 12.9), pw(-8.2, 3.0), pw(-8.2, 0.0), pw(SX0, 0.0)],
+         ring=[pw(RX0, RY0), pw(SX0, RY0), pw(SX0, -S_RUN), pw(SX1, -S_RUN), pw(SX1, 0.0), pw(SHED_X + 0.4, 0.0),
+               pw(SHED_X + 0.8, 12.7), pw(-5.0, 12.9), pw(-8.2, 3.0), pw(-8.2, 0.0), pw(RX0, 0.0)],
          evidence="stair foot and the herringbone path N along the hall wing, flat (a_062..a_078); PnP-free check at t=39 s: "
                   "camera (156.5,20.6) from the pitch/courts door sizes (22.9/26.1 m), horizon from the walkway-edge "
                   "vanishing point 2.55 m above the pitch walkway -> ground there = walkway + 1.2 = 4.6", confidence="medium"),

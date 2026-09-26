@@ -391,7 +391,8 @@
     33.5,
     45.3
    ],
-   "deck_extra": 0.25
+   "deck_extra": 0.25,
+   "end_boards": true
   },
   {
    "type": "canopy",

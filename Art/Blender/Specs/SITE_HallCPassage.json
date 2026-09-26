@@ -30,12 +30,20 @@
      7.401
     ],
     [
-     155.236,
-     7.562
+     157.234,
+     7.485
     ],
     [
-     155.302,
-     9.281
+     157.223,
+     7.205
+    ],
+    [
+     156.224,
+     7.244
+    ],
+    [
+     156.301,
+     9.242
     ],
     [
      149.206,
@@ -51,8 +59,16 @@
    "blend": 0.0,
    "ring": [
     [
-     155.236,
-     7.562
+     156.224,
+     7.244
+    ],
+    [
+     157.223,
+     7.205
+    ],
+    [
+     157.234,
+     7.485
     ],
     [
      159.432,
@@ -83,8 +99,8 @@
      9.515
     ],
     [
-     155.302,
-     9.281
+     156.301,
+     9.242
     ]
    ],
    "evidence": "stair foot and the herringbone path N along the hall wing, flat (a_062..a_078); PnP-free check at t=39 s: camera (156.5,20.6) from the pitch/courts door sizes (22.9/26.1 m), horizon from the walkway-edge vanishing point 2.55 m above the pitch walkway -> ground there = walkway + 1.2 = 4.6",
@@ -129,11 +145,11 @@
    "type": "steps",
    "name": "Passage_Stair",
    "pos": [
-    157.401,
-    9.22
+    158.4,
+    9.182
    ],
    "dir_deg": -92.2,
-   "width": 4.2,
+   "width": 2.2,
    "risers": 5,
    "riser_h": 0.175,
    "tread": 0.33,
@@ -196,54 +212,156 @@
    "confidence": "medium"
   },
   {
-   "type": "slab",
-   "name": "Passage_Cheek_W",
+   "type": "roof_plane",
+   "name": "Passage_Ramp_Base",
    "ring": [
     [
-     154.936,
-     7.573
+     156.224,
+     7.244
     ],
     [
-     155.236,
-     7.562
+     157.223,
+     7.205
     ],
     [
-     155.302,
-     9.281
+     157.354,
+     10.603
     ],
     [
-     155.002,
-     9.292
+     156.355,
+     10.641
     ]
    ],
-   "z0": 4.175,
-   "z1": 5.3999999999999995,
-   "material": "granite",
-   "evidence": "W end of the flight against the landing at the hall wing corner (s_01 t=26 s: flight spans the path from the landing to the E cheek); W cheek assumed like the E one",
-   "confidence": "low"
+   "z": [
+    5.29,
+    5.29,
+    4.415,
+    4.415
+   ],
+   "thk": 1.175,
+   "material": "stone",
+   "evidence": "070410255 t=33.5-34.5 s (fixG/hc/f4k/t30_15..19, st/t30_17c.jpg): grey steel mesh-grating ramp with square-tube rails (top + mid + bottom stringer) on the W side of the stair, same type as the other campus ramps; plan from Google z20: rails ~1.0 m apart at x 156.3-157.3, y 7.2-10.6 (fixG/st/ortho_stair.jpg, g_up.jpg); solid infill under the grating",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Passage_Ramp",
+   "ring": [
+    [
+     156.224,
+     7.244
+    ],
+    [
+     157.223,
+     7.205
+    ],
+    [
+     157.354,
+     10.603
+    ],
+    [
+     156.355,
+     10.641
+    ]
+   ],
+   "z": [
+    5.35,
+    5.35,
+    4.475,
+    4.475
+   ],
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "070410255 t=33.5-34.5 s (fixG/hc/f4k/t30_15..19, st/t30_17c.jpg): grey steel mesh-grating ramp with square-tube rails (top + mid + bottom stringer) on the W side of the stair, same type as the other campus ramps; plan from Google z20: rails ~1.0 m apart at x 156.3-157.3, y 7.2-10.6 (fixG/st/ortho_stair.jpg, g_up.jpg)",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "Passage_RampRail_W",
+   "points": [
+    [
+     156.254,
+     7.243,
+     5.35
+    ],
+    [
+     156.385,
+     10.64,
+     4.475
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.2,
+   "mid_rails": 1,
+   "material": "metal",
+   "unique_posts": true,
+   "evidence": "070410255 t=33.5-34.5 s (fixG/hc/f4k/t30_15..19, st/t30_17c.jpg): grey steel mesh-grating ramp with square-tube rails (top + mid + bottom stringer) on the W side of the stair, same type as the other campus ramps; plan from Google z20: rails ~1.0 m apart at x 156.3-157.3, y 7.2-10.6 (fixG/st/ortho_stair.jpg, g_up.jpg)",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "Passage_RampRail_E",
+   "points": [
+    [
+     157.193,
+     7.206,
+     5.35
+    ],
+    [
+     157.324,
+     10.604,
+     4.475
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.2,
+   "mid_rails": 1,
+   "material": "metal",
+   "unique_posts": true,
+   "evidence": "070410255 t=33.5-34.5 s (fixG/hc/f4k/t30_15..19, st/t30_17c.jpg): grey steel mesh-grating ramp with square-tube rails (top + mid + bottom stringer) on the W side of the stair, same type as the other campus ramps; plan from Google z20: rails ~1.0 m apart at x 156.3-157.3, y 7.2-10.6 (fixG/st/ortho_stair.jpg, g_up.jpg)",
+   "confidence": "medium"
   },
   {
    "type": "rail3d",
    "name": "Passage_LandingRail",
    "points": [
     [
-     151.902,
-     9.361,
+     154.151,
+     7.974,
      5.35
     ],
     [
-     155.15,
-     9.236,
+     156.249,
+     7.893,
      5.35
     ]
    ],
-   "height": 1.0,
-   "post": 0.05,
+   "height": 0.8,
+   "post": 0.03,
    "rail": 0.04,
-   "spacing": 1.2,
-   "mid_rails": 1,
+   "spacing": 0.12,
+   "mid_rails": 0,
    "material": "metal",
-   "evidence": "black steel railing on the raised landing W of the stair top, at the hall wing corner (s_01 t=26 s)",
+   "unique_posts": true,
+   "evidence": "low black bar fence on the upper landing W of the ramp, dense verticals (~0.12 m), E-W at y 7.85, x 154.2-156.3 (070410255 frames 0030-0033, fixG/st/land.jpg; map owner: lower and denser than modelled)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "Passage_Bench",
+   "center": [
+    153.615,
+    4.442
+   ],
+   "dir_deg": 87.8,
+   "size": [
+    6.4,
+    0.8,
+    0.42
+   ],
+   "z0": 5.35,
+   "material": "brick",
+   "evidence": "low maroon bench/ledge along the hall's E wall on the upper landing, x 153.4-154.2 (070410255 f55 overlay, fixG/st/ortho_stair.jpg); length estimated",
    "confidence": "low"
   },
   {

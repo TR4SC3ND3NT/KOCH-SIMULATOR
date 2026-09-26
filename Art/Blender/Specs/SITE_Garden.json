@@ -1394,8 +1394,8 @@
    "width": 2.9,
    "thk": 0.08,
    "surface": "herringbone_pavers",
-   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway.",
-   "confidence": "low"
+   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path",
+   "confidence": "medium"
   },
   {
    "type": "hedge",
@@ -2391,22 +2391,6 @@
   },
   {
    "type": "tree",
-   "name": "AW_Thuja_0",
-   "pos": [
-    158.871,
-    -57.419
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs | 2026-09-26: sweep crown blob at A-local (-1.7, 35.3) (070309303 f50-f75), on the sloping lawn",
-   "confidence": "low",
-   "z": 6.423
-  },
-  {
-   "type": "tree",
    "name": "AW_Thuja_1",
    "pos": [
     159.564,
@@ -2422,261 +2406,11 @@
    "z": 6.337
   },
   {
-   "type": "tree",
-   "name": "AW_Thuja_2",
-   "pos": [
-    158.623,
-    -48.196
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AW_Thuja_3",
-   "pos": [
-    158.819,
-    -44.201
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AW_Thuja_4",
-   "pos": [
-    159.015,
-    -40.205
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AW_Thuja_5",
-   "pos": [
-    159.211,
-    -36.21
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AW_Thuja_6",
-   "pos": [
-    159.407,
-    -32.215
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AW_Thuja_7",
-   "pos": [
-    159.603,
-    -28.22
-   ],
-   "height": 1.4,
-   "crown_d": 0.7,
-   "trunk_d": 0.05,
-   "crown_base": 0.15,
-   "shape": "cone",
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "planter",
-   "name": "AW_SqPlanter_0",
-   "ring": [
-    [
-     160.445,
-     -24.306
-    ],
-    [
-     161.344,
-     -24.351
-    ],
-    [
-     161.388,
-     -23.452
-    ],
-    [
-     160.49,
-     -23.408
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AW_SqJuniper_0",
-   "pos": [
-    160.917,
-    -23.879
-   ],
-   "height": 2.4,
-   "crown_d": 0.8,
-   "trunk_d": 0.06,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
-   "name": "AW_SqPlanter_1",
-   "ring": [
-    [
-     160.592,
-     -21.31
-    ],
-    [
-     161.491,
-     -21.354
-    ],
-    [
-     161.535,
-     -20.455
-    ],
-    [
-     160.637,
-     -20.411
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AW_SqJuniper_1",
-   "pos": [
-    161.064,
-    -20.883
-   ],
-   "height": 2.4,
-   "crown_d": 0.8,
-   "trunk_d": 0.06,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
-   "name": "AW_SqPlanter_2",
-   "ring": [
-    [
-     160.739,
-     -18.314
-    ],
-    [
-     161.638,
-     -18.358
-    ],
-    [
-     161.682,
-     -17.459
-    ],
-    [
-     160.784,
-     -17.415
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AW_SqJuniper_2",
-   "pos": [
-    161.211,
-    -17.886
-   ],
-   "height": 2.4,
-   "crown_d": 0.8,
-   "trunk_d": 0.06,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
-   "name": "AW_SqPlanter_3",
-   "ring": [
-    [
-     160.886,
-     -15.317
-    ],
-    [
-     161.785,
-     -15.361
-    ],
-    [
-     161.829,
-     -14.462
-    ],
-    [
-     160.93,
-     -14.418
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): red-tile square tree pits on the square (012327726 t27.5, 012404116 t7-12)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AW_SqJuniper_3",
-   "pos": [
-    161.358,
-    -14.89
-   ],
-   "height": 2.4,
-   "crown_d": 0.8,
-   "trunk_d": 0.06,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "confidence": "low"
-  },
-  {
    "type": "bin",
    "name": "AW_Bin_0",
    "pos": [
-    159.721,
-    -21.718
+    162.642,
+    -36.679
    ],
    "size": [
     0.58,
@@ -2684,163 +2418,7 @@
     1.07
    ],
    "dir_deg": -2.81,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): 240 l wheelie bin on the square (012404116 t11-14)",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
-   "name": "AW_ThujaPit_2",
-   "ring": [
-    [
-     158.173,
-     -48.646
-    ],
-    [
-     159.073,
-     -48.646
-    ],
-    [
-     159.073,
-     -47.746
-    ],
-    [
-     158.173,
-     -47.746
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "planter",
-   "name": "AW_ThujaPit_3",
-   "ring": [
-    [
-     158.369,
-     -44.651
-    ],
-    [
-     159.269,
-     -44.651
-    ],
-    [
-     159.269,
-     -43.751
-    ],
-    [
-     158.369,
-     -43.751
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "planter",
-   "name": "AW_ThujaPit_4",
-   "ring": [
-    [
-     158.565,
-     -40.655
-    ],
-    [
-     159.465,
-     -40.655
-    ],
-    [
-     159.465,
-     -39.755
-    ],
-    [
-     158.565,
-     -39.755
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "planter",
-   "name": "AW_ThujaPit_5",
-   "ring": [
-    [
-     158.761,
-     -36.66
-    ],
-    [
-     159.661,
-     -36.66
-    ],
-    [
-     159.661,
-     -35.76
-    ],
-    [
-     158.761,
-     -35.76
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "planter",
-   "name": "AW_ThujaPit_6",
-   "ring": [
-    [
-     158.957,
-     -32.665
-    ],
-    [
-     159.857,
-     -32.665
-    ],
-    [
-     159.857,
-     -31.765
-    ],
-    [
-     158.957,
-     -31.765
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
-   "confidence": "medium"
-  },
-  {
-   "type": "planter",
-   "name": "AW_ThujaPit_7",
-   "ring": [
-    [
-     159.153,
-     -28.67
-    ],
-    [
-     160.053,
-     -28.67
-    ],
-    [
-     160.053,
-     -27.77
-    ],
-    [
-     159.153,
-     -27.77
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.08,
-   "evidence": "thujas in square red-edged pits on the paving along the gallery, lower plaza (video 012404116 f13-f38, 2 fps)",
+   "evidence": "black wheelie bin between pits 1 and 2 at the deck edge (fixAW orthophoto m1_orthoD_0.09)",
    "confidence": "medium"
   },
   {
@@ -2856,6 +2434,295 @@
    "t": 0.08,
    "evidence": "white campus map signboard on two posts right of the hedge arch at the foot of the wide stair (012404116 f10-f12; 070309303 f73-f75); content = KOCH map in UE",
    "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "AW_Pit_0",
+   "ring": [
+    [
+     161.485,
+     -43.931
+    ],
+    [
+     162.384,
+     -43.975
+    ],
+    [
+     162.443,
+     -42.776
+    ],
+    [
+     161.544,
+     -42.732
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AW_PitThuja_0",
+   "pos": [
+    161.964,
+    -43.354
+   ],
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
+   "trunk_d": 0.08,
+   "crown_base": 0.2,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_Pit_1",
+   "ring": [
+    [
+     161.706,
+     -39.436
+    ],
+    [
+     162.605,
+     -39.48
+    ],
+    [
+     162.663,
+     -38.282
+    ],
+    [
+     161.765,
+     -38.238
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AW_PitThuja_1",
+   "pos": [
+    162.185,
+    -38.859
+   ],
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
+   "trunk_d": 0.08,
+   "crown_base": 0.2,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_Pit_2",
+   "ring": [
+    [
+     161.924,
+     -34.992
+    ],
+    [
+     162.823,
+     -35.036
+    ],
+    [
+     162.881,
+     -33.837
+    ],
+    [
+     161.983,
+     -33.793
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AW_PitThuja_2",
+   "pos": [
+    162.403,
+    -34.414
+   ],
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
+   "trunk_d": 0.08,
+   "crown_base": 0.2,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_Pit_3",
+   "ring": [
+    [
+     162.142,
+     -30.547
+    ],
+    [
+     163.041,
+     -30.591
+    ],
+    [
+     163.099,
+     -29.393
+    ],
+    [
+     162.201,
+     -29.348
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AW_PitThuja_3",
+   "pos": [
+    162.621,
+    -29.97
+   ],
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
+   "trunk_d": 0.08,
+   "crown_base": 0.2,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Juniper_0",
+   "pos": [
+    159.257,
+    -57.929
+   ],
+   "height": 0.6,
+   "crown_d": 0.7,
+   "shape": "round",
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "evidence": "small round juniper on the upper lawn strip (fixAW SfM of 012404116/012429784)",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "AW_Bush_0",
+   "pos": [
+    159.195,
+    -55.933
+   ],
+   "height": 0.7,
+   "crown_d": 0.8,
+   "shape": "round",
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "evidence": "low bush on the upper lawn strip (fixAW SfM)",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "AW_NorthSteps",
+   "top": [
+    166.356,
+    -17.087
+   ],
+   "dir_deg": 87.192,
+   "risers": 2,
+   "riser_h": 0.18,
+   "tread": 0.35,
+   "width": 1.3,
+   "z_top": 5.42,
+   "material": "granite",
+   "evidence": "north end of the A_W gallery: deck 2 brick courses + coping = 0.36 above the square (012429784 f01-f05, earlier gallery-zone PnP), 2 pink granite steps down north beside the wall and a small grey steel grating ramp outside them (012436367 f01-f07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "AW_NorthRamp",
+   "ring": [
+    [
+     164.608,
+     -17.002
+    ],
+    [
+     165.657,
+     -17.053
+    ],
+    [
+     165.765,
+     -14.856
+    ],
+    [
+     164.716,
+     -14.804
+    ]
+   ],
+   "z": [
+    5.42,
+    5.42,
+    5.06,
+    5.06
+   ],
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "north end of the A_W gallery: deck 2 brick courses + coping = 0.36 above the square (012429784 f01-f05, earlier gallery-zone PnP), 2 pink granite steps down north beside the wall and a small grey steel grating ramp outside them (012436367 f01-f07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "AW_NorthRampRail_W",
+   "points": [
+    [
+     164.638,
+     -17.003,
+     5.42
+    ],
+    [
+     164.746,
+     -14.806,
+     5.06
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.1,
+   "mid_rails": 1,
+   "material": "metal",
+   "unique_posts": true,
+   "evidence": "north end of the A_W gallery: deck 2 brick courses + coping = 0.36 above the square (012429784 f01-f05, earlier gallery-zone PnP), 2 pink granite steps down north beside the wall and a small grey steel grating ramp outside them (012436367 f01-f07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "AW_NorthRampRail_E",
+   "points": [
+    [
+     165.627,
+     -17.052,
+     5.42
+    ],
+    [
+     165.735,
+     -14.854,
+     5.06
+    ]
+   ],
+   "height": 0.9,
+   "spacing": 1.1,
+   "mid_rails": 1,
+   "material": "metal",
+   "unique_posts": true,
+   "evidence": "north end of the A_W gallery: deck 2 brick courses + coping = 0.36 above the square (012429784 f01-f05, earlier gallery-zone PnP), 2 pink granite steps down north beside the wall and a small grey steel grating ramp outside them (012436367 f01-f07)",
+   "confidence": "medium"
   }
  ],
  "ground": "pads",
@@ -2911,6 +2778,30 @@
     ]
    ],
    "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza"
+  },
+  {
+   "name": "AW_SquareN",
+   "ring": [
+    [
+     158.588,
+     -16.256
+    ],
+    [
+     173.47,
+     -16.986
+    ],
+    [
+     174.038,
+     -5.4
+    ],
+    [
+     159.156,
+     -4.67
+    ]
+   ],
+   "z": 5.06,
+   "blend": 6.0,
+   "evidence": "north end of the A_W gallery: deck 2 brick courses + coping = 0.36 above the square (012429784 f01-f05, earlier gallery-zone PnP), 2 pink granite steps down north beside the wall and a small grey steel grating ramp outside them (012436367 f01-f07)"
   }
  ]
 }

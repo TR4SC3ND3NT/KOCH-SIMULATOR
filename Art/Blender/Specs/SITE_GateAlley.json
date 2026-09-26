@@ -2004,20 +2004,229 @@
   },
   {
    "type": "stairs_run",
-   "name": "Steps_BCorner",
+   "name": "Steps_BCorner_Upper",
    "top": [
-    157.086,
-    -52.175
+    155.863,
+    -52.115
    ],
    "dir_deg": 87.192,
-   "risers": 8,
-   "riser_h": 0.16,
+   "risers": 4,
+   "riser_h": 0.183,
    "tread": 0.35,
-   "width": 7.78,
+   "width": 5.33,
    "z_top": 6.63,
    "material": "granite",
-   "evidence": "map owner: a descent across the path right after the end of B; 070309303 f71-f75: the path ends at a transverse pink granite band (top nosing, ground rays y 40.35-40.53) with the lower plaza, hedge arch and signboard beyond; 8 x 0.16 to the lower terrace (5.35); riser count to confirm",
-   "confidence": "low"
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "Steps_BCorner_Lower",
+   "top": [
+    155.946,
+    -50.718
+   ],
+   "dir_deg": 87.192,
+   "risers": 3,
+   "riser_h": 0.183,
+   "tread": 0.35,
+   "width": 6.9,
+   "z_top": 5.899,
+   "material": "granite",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_BedWall_E",
+   "ring": [
+    [
+     158.51,
+     -52.546
+    ],
+    [
+     158.859,
+     -52.563
+    ],
+    [
+     158.943,
+     -50.865
+    ],
+    [
+     158.593,
+     -50.848
+    ]
+   ],
+   "z": [
+    6.93,
+    6.93,
+    6.93,
+    6.93
+   ],
+   "thk": 2.13,
+   "material": "stone",
+   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_BedWall_W",
+   "ring": [
+    [
+     152.837,
+     -52.267
+    ],
+    [
+     153.186,
+     -52.284
+    ],
+    [
+     153.269,
+     -50.586
+    ],
+    [
+     152.92,
+     -50.569
+    ]
+   ],
+   "z": [
+    6.93,
+    6.93,
+    6.93,
+    6.93
+   ],
+   "thk": 2.13,
+   "material": "stone",
+   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_Bed_E",
+   "ring": [
+    [
+     158.859,
+     -52.563
+    ],
+    [
+     160.957,
+     -52.666
+    ],
+    [
+     161.04,
+     -50.968
+    ],
+    [
+     158.943,
+     -50.865
+    ]
+   ],
+   "z": [
+    6.78,
+    6.78,
+    6.78,
+    6.78
+   ],
+   "thk": 1.98,
+   "material": "hedge",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_Bed_E_Front",
+   "ring": [
+    [
+     158.943,
+     -50.865
+    ],
+    [
+     161.04,
+     -50.968
+    ],
+    [
+     161.055,
+     -50.668
+    ],
+    [
+     158.957,
+     -50.565
+    ]
+   ],
+   "z": [
+    6.93,
+    6.93,
+    6.93,
+    6.93
+   ],
+   "thk": 2.13,
+   "material": "stone",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_Bed_W",
+   "ring": [
+    [
+     151.388,
+     -52.196
+    ],
+    [
+     152.837,
+     -52.267
+    ],
+    [
+     152.92,
+     -50.569
+    ],
+    [
+     151.472,
+     -50.498
+    ]
+   ],
+   "z": [
+    6.78,
+    6.78,
+    6.78,
+    6.78
+   ],
+   "thk": 1.98,
+   "material": "hedge",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_Bed_W_Front",
+   "ring": [
+    [
+     151.472,
+     -50.498
+    ],
+    [
+     152.92,
+     -50.569
+    ],
+    [
+     152.935,
+     -50.27
+    ],
+    [
+     151.486,
+     -50.199
+    ]
+   ],
+   "z": [
+    6.93,
+    6.93,
+    6.93,
+    6.93
+   ],
+   "thk": 2.13,
+   "material": "stone",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "confidence": "medium"
   }
  ]
 }
