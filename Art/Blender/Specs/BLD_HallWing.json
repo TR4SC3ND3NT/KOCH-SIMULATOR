@@ -1,0 +1,107 @@
+{
+ "id": "BLD_HallWing",
+ "collection": "BLD_Gallery",
+ "replaces": [
+  "GB_BLD_Hall_Wing",
+  "GB_BLD_Hall_Wing_Roof"
+ ],
+ "scale": 1.0,
+ "status": "probable",
+ "note": "North wing of the sports hall, joined to the hall (one continuous mass, map owner) and flush with its east end (2026-09-26).",
+ "anchor": {
+  "world_xy": [
+   88.638,
+   1.035
+  ],
+  "x_dir": [
+   0.9996,
+   -0.02845
+  ],
+  "evidence": "plan: OSM way/169915360 roof outline 61.23 x 14.66 (matches Bing 2021), minus 0.5 m eave overhang each end and a 2.4 m south gallery (light strip on Google z20); wall ring 60.2 x 11.26",
+  "confidence": "medium"
+ },
+ "ffl_z": 4.95,
+ "walls_to_ffl": true,
+ "plinth_m": 0.3,
+ "wall_thk": 0.4,
+ "storey_m": 3.3,
+ "storeys": 2,
+ "eave_z": 6.3,
+ "ring": [
+  [
+   45.8,
+   11.26
+  ],
+  [
+   64.6,
+   11.26
+  ],
+  [
+   64.6,
+   21.3
+  ],
+  [
+   45.8,
+   21.3
+  ]
+ ],
+ "plinth": {
+  "z_top": 0.6,
+  "proj": 0.03,
+  "evidence": "red brick-tile plinth (070410255 a_030-a_034)",
+  "confidence": "low"
+ },
+ "pilasters": [],
+ "window_types": {
+  "W": {
+   "w": 1.2,
+   "h": 1.3,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0
+  }
+ },
+ "rows": {
+  "G": 1.0,
+  "U": 4.3
+ },
+ "facades": [
+  {
+   "edge": 1,
+   "name": "east",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.5,
+      5.0,
+      7.5
+     ],
+     "rows": [
+      "G",
+      "U"
+     ]
+    }
+   ],
+   "evidence": "gable-end building with a lean-to annex, windows (070410255 a_030-a_034)",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "pitch": 22,
+  "overhang": 0.5,
+  "evidence": "red hipped roof at the hall NE end in Bing 2021 / Esri 2020 / Google z20 (x 135-153, y 12-22)",
+  "confidence": "medium"
+ },
+ "attachments": []
+}
