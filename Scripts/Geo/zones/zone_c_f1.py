@@ -111,8 +111,8 @@ def wall(name, a, b, zb=0.0, openings=(), thk=PART, h=CEIL, **kw):
     L = float(np.hypot(b[0] - a[0], b[1] - a[1]))
     # openings start at the finished floor; the wall base sits inside the slab (an opening flush with the wall base
     # would make wall_piece emit duplicate bottom faces)
-    # opening sill 1 cm below the finished floor: a sill flush with the slab top z-fights with it at every threshold
-    ops = [{"u0": round(u0, 3), "u1": round(u1, 3), "z0": z(zb - 0.01), "z1": z(zb + oh)} for u0, u1, oh in openings]
+    # opening sill 6 cm below the finished floor, inside the slab: flush or 1 cm below still z-fights with the slab top
+    ops = [{"u0": round(u0, 3), "u1": round(u1, 3), "z0": z(zb - 0.06), "z1": z(zb + oh)} for u0, u1, oh in openings]
     assert all(0 < o["u0"] < o["u1"] < L for o in ops), (name, L, ops)
     return {"type": "int_wall", "name": name, "line": [c_to_w(*a), c_to_w(*b)], "z0": z(zb - 0.10), "z1": z(zb + h),
             "thk": thk, "openings": ops, "material": "white", **kw}
@@ -395,13 +395,12 @@ def build():
     y_l = y_b + (RISERS - 1) * TREAD
     x0c, x1c = X_W, X_W + FLIGHT_W
     evc = ev("janitor's closet under the west stair's flight 2, dark single door (070704360 t 19-22 s); map owner", "low")
-    f1.append({"type": "roof_plane", "name": "Closet_W_Front", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
-               "ring": [c_to_w(x0c, y_c), c_to_w(x1c, y_c), c_to_w(x1c, y_c + 0.12), c_to_w(x0c, y_c + 0.12)],
-               "z": [z(soff(y_c) - 0.02)] * 4, **evc})
+    f1.append(wall("Closet_W_Front", (x1c, y_c), (x0c, y_c), h=soff(y_c) - 0.02, thk=0.12,
+                   openings=[(FLIGHT_W / 2 - 0.42, FLIGHT_W / 2 + 0.42, DOOR_H + 0.02)], **evc))
     f1.append({"type": "roof_plane", "name": "Closet_W_Side", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
                "ring": [c_to_w(x1c - 0.12, y_c), c_to_w(x1c, y_c), c_to_w(x1c, y_l), c_to_w(x1c - 0.12, y_l)],
                "z": [z(soff(y_c) - 0.02), z(soff(y_c) - 0.02), z(soff(y_l) - 0.02), z(soff(y_l) - 0.02)], **evc})
-    f1.append(door("Closet_W_Door", (x0c, y_c), (x1c, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", **evc))
+    f1.append(door("Closet_W_Door", (x1c, y_c), (x0c, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", wall_thk=0.12, **evc))
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
     f1 += fittings_f1()
     up = []

@@ -208,13 +208,15 @@ def _sloped_bar(bm, m, run, slope, z, s):
 
 
 def offset_ring(ring, d):
-    """Mitre offset of a CCW ring (list of (x, y)); d > 0 moves edges inward."""
+    """Mitre offset of a CCW ring (list of (x, y)); d > 0 moves edges inward. d may be a list (one value per edge i,
+    edge i = ring[i] -> ring[i+1]), e.g. a roof overhang that is 0 on an edge shared with a taller neighbour."""
     n = len(ring)
+    ds = list(d) if isinstance(d, (list, tuple)) else [d] * n
     lines = []
     for i in range(n):
         p, q = Vector(ring[i]), Vector(ring[(i + 1) % n])
         t = (q - p).normalized()
-        lines.append((p + Vector((-t.y, t.x)) * d, t))
+        lines.append((p + Vector((-t.y, t.x)) * ds[i], t))
     out = []
     for i in range(n):
         (p1, d1), (p2, d2) = lines[i - 1], lines[i]

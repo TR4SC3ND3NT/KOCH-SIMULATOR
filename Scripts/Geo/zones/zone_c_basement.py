@@ -118,7 +118,9 @@ def build():
          "evidence": ev_sfm + "; lining under the sloped covers (downlights), height from the covers (frame b12)",
          "confidence": "low"},
         # north wall of the stair = south face of the Dance Hall box, with the brown door at the mid landing
-        {"type": "int_wall", "name": "Stair_Wall_N", "line": [c_to_w((x0 - 0.3, Y_N)), c_to_w((0.0, Y_N))],
+        # line 8 cm inside the Dance Hall wall (BLD_C DanceHallEntry, 0.4 m): its face is hidden inside the box above the
+        # box base and continues the wall face below it; no coplanar / 1 cm layered faces with the box (z-fight)
+        {"type": "int_wall", "name": "Stair_Wall_N", "line": [c_to_w((x0 - 0.3, Y_N + 0.08)), c_to_w((0.0, Y_N + 0.08))],
          "z0": FFL + z_corr, "z1": FFL + z_top + 0.9, "thk": 0.25, "material": "brick",
          "openings": [{"u0": x_land0 - x0 + 0.3 + 0.15, "u1": x_land0 - x0 + 0.3 + 1.05,
                        "z0": FFL + z_land, "z1": FFL + z_land + 2.0}],
@@ -135,6 +137,11 @@ def build():
                      "parapet under the sloped covers (map owner photo 10:55)",
          "confidence": "medium"},
     ]
+    du0 = x_land0 + 0.15
+    els.append({"type": "box", "name": "DanceHall_Door", "center": c_to_w((du0 + 0.45, Y_N - 0.02)), "dir_deg": east,
+                "size": [0.9, 0.04, 2.0], "z0": FFL + z_land, "material": "wood",
+                "evidence": "brown wooden door at the mid landing in the Dance Hall wall (012543364, frames 1-10); leaf on the "
+                            "wall face (the BLD_C box has no opening yet)", "confidence": "medium"})
     els.append({"type": "fence", "name": "Stair_Railing_S", "line": [c_to_w((x0 - 0.2, Y_S - 0.12)), c_to_w((x_corr0, Y_S - 0.12))],
                 "height": 0.95, "post_spacing": 1.3, "post": 0.05, "panel": "bars",
                 "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",

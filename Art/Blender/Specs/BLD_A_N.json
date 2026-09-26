@@ -199,8 +199,11 @@
   "type": "hip",
   "pitch": 13,
   "overhang": 0.45,
-  "evidence": "north gable rake rises 13 deg from the NE corner (rect 081158 f0.3); Esri 2020/Google z20 show a clipped (half-hip) north end: wall rises to ~1.3 m above the eave, small hip triangle 9-12 m wide on top; N-S ridge at x 23.1. Builder hip approximates the clipped gable.",
-  "confidence": "medium"
+  "evidence": "north gable rake rises 13 deg from the NE corner (rect 081158 f0.3); Esri 2020/Google z20 show a clipped (half-hip) north end: wall rises to ~1.3 m above the eave, small hip triangle 9-12 m wide on top; N-S ridge at x 23.1. Builder hip approximates the clipped gable. | no overhang on edge 0 (shared with the taller A_S): the eave would cut into A_S's wall",
+  "confidence": "medium",
+  "overhang_edges": {
+   "0": 0.0
+  }
  },
  "attachments": [],
  "ffl_z": 5.47,

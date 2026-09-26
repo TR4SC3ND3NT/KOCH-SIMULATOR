@@ -3,6 +3,7 @@
 # Run: blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py   (saves the file)
 import os
 import runpy
+import sys
 
 import bmesh
 import bpy
@@ -38,6 +39,9 @@ def validate():
 
 def main():
     background = bpy.app.background
+    # a live Blender session keeps imported helper modules: drop them so edited kit/common/sweep code is used
+    for m in [m for m in sys.modules if m == "greybox" or m.startswith("greybox.")]:
+        del sys.modules[m]
     files = sorted(f[:-5] for f in os.listdir(SPECS) if f.endswith(".json"))
     bld = [f for f in files if f.startswith("BLD_")]
     site = [f for f in files if f.startswith(("SITE_", "INT_"))]  # INT_* = interiors, same element builder

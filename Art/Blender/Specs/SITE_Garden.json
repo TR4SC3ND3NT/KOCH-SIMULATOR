@@ -2734,11 +2734,11 @@
    "ring": [
     [
      104.0,
-     -47.0
+     -49.4
     ],
     [
      153.0,
-     -48.6
+     -49.6
     ],
     [
      157.2,
@@ -2777,7 +2777,7 @@
      0.8
     ]
    ],
-   "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza"
+   "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza | south edge moved to y -49.5 so UpperWalk_South (B north side) sits on it"
   },
   {
    "name": "AW_SquareN",

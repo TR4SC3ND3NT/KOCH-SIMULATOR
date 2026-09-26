@@ -347,7 +347,11 @@ class Building:
         if kind == "hip" and r.get("ridge_len") and len(self.ring) == 4:
             return self.build_rect_hip(r)
         z0 = self.s["eave_z"]
-        outline = _drop_collinear(offset_ring(self.ring, -r["overhang"]))  # straight skeleton needs true corners
+        ov = r["overhang"]
+        if r.get("overhang_edges"):  # per-edge overrides {"edge": m}, e.g. 0 against a taller neighbour's wall
+            ov = [float(r["overhang_edges"].get(str(i), ov)) for i in range(len(self.ring))]
+        neg = [-v for v in ov] if isinstance(ov, list) else -ov
+        outline = _drop_collinear(offset_ring(self.ring, neg))  # straight skeleton needs true corners
         bm = bmesh.new()
         bot = [bm.verts.new((x, y, z0 - FASCIA_M)) for x, y in outline]
         top = [bm.verts.new((x, y, z0)) for x, y in outline]
@@ -473,7 +477,7 @@ class Building:
             bm.faces.new(top)
             # wall infill from the eave slab up to the sloped roof underside
             bm2 = bmesh.new()
-            lo = [bm2.verts.new((x, y, z0 - 0.25)) for x, y in self.ring]
+            lo = [bm2.verts.new((x, y, z0)) for x, y in self.ring]   # starts on the wall top: no coplanar overlap band
             up = [bm2.verts.new((x, y, zt((x, y)) - FASCIA_M + 0.01)) for x, y in self.ring]
             for i in range(4):
                 j = (i + 1) % 4

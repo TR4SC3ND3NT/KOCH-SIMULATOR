@@ -145,12 +145,12 @@
    "name": "Stair_Wall_N",
    "line": [
     [
-     168.899,
-     -3.416
+     168.903,
+     -3.336
     ],
     [
-     173.266,
-     -3.59
+     173.269,
+     -3.51
     ]
    ],
    "z0": 3.9700000000000006,
@@ -206,6 +206,24 @@
    "thk": 0.3,
    "material": "brick",
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile parapet under the sloped covers (map owner photo 10:55)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "DanceHall_Door",
+   "center": [
+    172.316,
+    -3.572
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.04,
+    2.0
+   ],
+   "z0": 4.246,
+   "material": "wood",
+   "evidence": "brown wooden door at the mid landing in the Dance Hall wall (012543364, frames 1-10); leaf on the wall face (the BLD_C box has no opening yet)",
    "confidence": "medium"
   },
   {

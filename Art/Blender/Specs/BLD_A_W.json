@@ -543,51 +543,27 @@
   },
   {
    "name": "AW_Walkway",
+   "z": 5.32,
+   "blend": 0.0,
    "ring": [
     [
-     160.227,
-     -70.001
+     160.087,
+     -70.394
     ],
     [
-     162.054,
-     -70.09
+     164.532,
+     -70.612
     ],
     [
-     164.014,
-     -30.138
+     167.177,
+     -16.677
     ],
     [
-     162.186,
-     -30.049
+     162.733,
+     -16.459
     ]
    ],
-   "z": 5.35,
-   "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lower walkway along the deck: deck edge coping + ~1 course (~0.13) above it (012327726 t28-29, 070309303 t20) | 2026-09-26: walkway x 0.27-2.1 (bank foot curb .. loggia deck edge), 070309303 SfM/sweep"
-  },
-  {
-   "name": "AW_WalkwayN",
-   "ring": [
-    [
-     162.186,
-     -30.049
-    ],
-    [
-     164.014,
-     -30.138
-    ],
-    [
-     164.293,
-     -24.445
-    ],
-    [
-     162.466,
-     -24.355
-    ]
-   ],
-   "z": 5.35,
-   "blend": 0.0,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): walkway running out onto the square north of the lawn strip"
+   "evidence": "lower walkway + gallery deck zone along A_W, flat 5.35 (drone SfM, 070309303 photo-match): pad reaches the A_W wall so the terrain never pokes through the deck"
   }
  ],
  "site_notes": "Stairs, steel ramp, lawn bank edgings, retaining wall, planters of the gallery surroundings are in SITE_Garden (AW_* elements).",

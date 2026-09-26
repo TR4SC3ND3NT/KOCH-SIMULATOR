@@ -297,7 +297,7 @@ slab("LawnEnd_Coping", [(xc(Y_LN), Y_LN), (X_BB, Y_LN), (X_BB, Y_STAIR_N), (xc(Y
      {"thk": r3(zA(40) - PAD_Z + 0.2)})
 
 # ---------------------------------------------------------------- terrain pad (lowered ground under the lower zone)
-pad_l = [TNW, TSE, (TSE[0] + 0.33, -1.0), (38.6, -1.0), (38.6, 4.4), (2.5, 4.4), (2.5, Y1), (xc(Y1), Y1), (xc(S2_N), S2_N),
+pad_l = [TNW, TSE, (BSE[0] + 0.05, BSE[1] - 0.05), (2.65, BSE[1] + 0.5), (2.65, -1.0), (38.6, -1.0), (38.6, 4.4), (2.5, 4.4), (2.5, Y1), (xc(Y1), Y1), (xc(S2_N), S2_N),
          (X_PAV, S2_N), (X_PAV, PAV_S), (X_SC, PAV_S)]
 
 # ---------------------------------------------------------------- south bank: raised bed + hedge strip in front of A's south face
