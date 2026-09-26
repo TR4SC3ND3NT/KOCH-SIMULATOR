@@ -179,5 +179,8 @@ def make_object(name, bm, collection, origin, item=None, color=None, gen="phase1
             ob["koch_notes"] = item["notes"]
     if color:
         ob.color = color
+        if not me.materials:  # review slot so Workbench MATERIAL colour mode shows old and detail parts alike
+            from .materials import color_mat
+            me.materials.append(color_mat(color))
     collection.objects.link(ob)
     return ob

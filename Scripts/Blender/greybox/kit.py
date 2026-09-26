@@ -65,11 +65,12 @@ def ring_box(bm, frame, u0, u1, z0, z1, width, w0, w1):
     box(bm, frame, u1, u1 + width, w0, w1, z0, z1)                          # right
 
 
-def wall_piece(bm, frame, length, z0, z1, thk, openings, cut_start=None, cut_end=None):
+def wall_piece(bm, frame, length, z0, z1, thk, openings, cut_start=None, cut_end=None, reveal_faces=None):
     """Wall slab from u=0..length (outer face) with through-openings and mitred ends.
 
     cut_start / cut_end: inner-face inset at each end (m); defaults to thk (90-degree convex corner).
     Openings must lie inside [cut_start, length - cut_end] x [z0, z1]. Result is one closed manifold.
+    reveal_faces: optional list; the opening reveal faces are appended (e.g. to give them a painted material slot).
     """
     a = thk if cut_start is None else cut_start
     b = thk if cut_end is None else cut_end
@@ -110,15 +111,16 @@ def wall_piece(bm, frame, length, z0, z1, thk, openings, cut_start=None, cut_end
         bm.faces.new((vert("o", i, 0), vert("i", i, 0), vert("i", i + 1, 0), vert("o", i + 1, 0)))
         bm.faces.new((vert("o", i + 1, top), vert("i", i + 1, top), vert("i", i, top), vert("o", i, top)))
     # Reveals: the four sides of every opening, outer loop to inner loop.
+    rf = reveal_faces if reveal_faces is not None else []
     for o in openings:
         i0, i1 = uo.index(o.u0), uo.index(o.u1)
         j0, j1 = zs.index(o.z0), zs.index(o.z1)
         for j in range(j0, j1):          # left and right jambs
-            bm.faces.new((vert("o", i0, j), vert("o", i0, j + 1), vert("i", i0, j + 1), vert("i", i0, j)))
-            bm.faces.new((vert("o", i1, j + 1), vert("o", i1, j), vert("i", i1, j), vert("i", i1, j + 1)))
+            rf.append(bm.faces.new((vert("o", i0, j), vert("o", i0, j + 1), vert("i", i0, j + 1), vert("i", i0, j))))
+            rf.append(bm.faces.new((vert("o", i1, j + 1), vert("o", i1, j), vert("i", i1, j), vert("i", i1, j + 1))))
         for i in range(i0, i1):          # sill and head
-            bm.faces.new((vert("o", i + 1, j0), vert("o", i, j0), vert("i", i, j0), vert("i", i + 1, j0)))
-            bm.faces.new((vert("o", i, j1), vert("o", i + 1, j1), vert("i", i + 1, j1), vert("i", i, j1)))
+            rf.append(bm.faces.new((vert("o", i + 1, j0), vert("o", i, j0), vert("i", i, j0), vert("i", i + 1, j0))))
+            rf.append(bm.faces.new((vert("o", i, j1), vert("o", i + 1, j1), vert("i", i + 1, j1), vert("i", i, j1))))
 
 
 def window_unit(bm, frame, o, spec):

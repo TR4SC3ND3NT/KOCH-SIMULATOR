@@ -20,9 +20,14 @@ from greybox.common import (FASCIA_M, SPECS, Terrain, bpypolyskel, ensure_collec
                             make_object)
 from greybox.kit import (Opening, WindowSpec, box, facade_frame, offset_ring, prism_profile,  # noqa: E402
                          railing, ring_box, stair_flight, wall_piece, window_unit)
+from greybox import detail as D  # noqa: E402
+from greybox.materials import ensure_slot, mat, parts_to_mesh  # noqa: E402
 
 MAX_PIECE_M = 12.0   # Lumen SW: keep wall pieces well under ~15 m (distance field / card quality)
 BURY_M = 0.3         # walls reach this far below the lowest ground along a facade
+EAVE_BOARD = 0.025   # detail eave: soffit lining / fascia board thickness (m)
+GUTTER_R = 0.0625    # detail eave: 125 mm half-round gutter radius (m)
+GUTTER_DROP = 0.03   # gutter rim below the fascia top (m)
 
 COL = {  # viewport object colours only (greybox review aid, not materials)
     "wall": (0.83, 0.78, 0.66, 1), "maroon": (0.50, 0.16, 0.14, 1), "plinth": (0.55, 0.22, 0.17, 1),
@@ -102,6 +107,61 @@ class Building:
         ob["koch_confidence"] = confidence or ""
         return ob
 
+    def obj_parts(self, name, parts, item_evidence=None, confidence=None):
+        """Link one detail-kit element built from several material parts {material_name: bmesh}."""
+        parts = {k: v for k, v in parts.items() if len(v.faces)}
+        if not parts:
+            return None
+        nm = f"GBF_{self.id}_{name}"
+        me = parts_to_mesh(nm, parts)
+        ob = bpy.data.objects.new(nm, me)
+        ob.matrix_world = self.M
+        ob["koch_gen"], ob["koch_id"] = self.gen, self.id
+        ob["koch_status"] = self.s.get("status", "probable")
+        ob["koch_evidence"] = item_evidence or ""
+        ob["koch_confidence"] = confidence or ""
+        ob.color = COL["low"] if confidence == "low" else tuple(me.materials[0].diffuse_color)  # OBJECT colour view
+        self.col.objects.link(ob)
+        return ob
+
+    def obj_mat(self, name, bm, mats, item_evidence=None, confidence=None):
+        """Link one element whose bmesh faces carry material_index into `mats` (material names)."""
+        nm = f"GBF_{self.id}_{name}"
+        me = bpy.data.meshes.new(nm)
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+        bm.to_mesh(me)
+        bm.free()
+        for m in mats:
+            me.materials.append(mat(m))
+        ob = bpy.data.objects.new(nm, me)
+        ob.matrix_world = self.M
+        ob["koch_gen"], ob["koch_id"] = self.gen, self.id
+        ob["koch_status"] = self.s.get("status", "probable")
+        ob["koch_evidence"] = item_evidence or ""
+        ob["koch_confidence"] = confidence or ""
+        ob.color = tuple(me.materials[0].diffuse_color)  # OBJECT colour view
+        self.col.objects.link(ob)
+        return ob
+
+    def eave_geometry(self):
+        """Detail eave levels (local z) and the gutter line offset from the wall face."""
+        r = self.s["roof"]
+        ov = r.get("overhang", 0.5)
+        z_soffit = self.s["eave_z"] - FASCIA_M - EAVE_BOARD
+        fh = FASCIA_M + EAVE_BOARD
+        z_rim = z_soffit + fh - GUTTER_DROP
+        return {"ov": ov, "z_soffit": z_soffit, "fascia_h": fh, "z_rim": z_rim, "w_gutter": ov + GUTTER_R + 0.005}
+
+    def build_eave_detail(self):
+        """Boxed eave round the whole ring: soffit + fascia (M_Sheet_Brown), gutter with brackets (M_Steel_Galv)."""
+        g = self.eave_geometry()
+        soffit, gutter = bmesh.new(), bmesh.new()
+        D.eave_box({"soffit": soffit, "gutter": gutter}, self.ring, g["z_soffit"], g["ov"], fascia_h=g["fascia_h"],
+                   board_t=EAVE_BOARD, gutter_r=GUTTER_R, gutter_drop=GUTTER_DROP)
+        r = self.s["roof"]
+        self.obj_parts("Eave", {r.get("eave_material", "M_Sheet_Brown"): soffit}, r.get("evidence"), r.get("confidence"))
+        self.obj_parts("Gutter", {r.get("gutter_material", "M_Steel_Galv"): gutter}, r.get("evidence"), r.get("confidence"))
+
     def corner_cut(self, i, end):
         """Inner-face inset at the start (end=False) or end of edge i: +thk convex, -thk concave (90 deg)."""
         n = len(self.ring)
@@ -158,19 +218,32 @@ class Building:
             if bsm:  # walls continue down to the underside of the basement floor slab
                 z_bottom = min(z_bottom, bsm["floor_z"] - bsm["slab_t"])
             bands = [(z_bottom, levels[0])] + list(zip(levels[:-1], levels[1:]))
+            maroon_face = bool(fspec and fspec.get("name", "").startswith("south_tower"))
             for bi, (z0, z1) in enumerate(bands):
-                bo = [o for o, _, _ in ops if o.z0 >= z0 - 1e-6 and o.z1 <= z1 + 1e-6]
+                bo = [(o, wt) for o, _, wt in ops if o.z0 >= z0 - 1e-6 and o.z1 <= z1 + 1e-6]
                 # split long bands at wall gaps between openings
-                cuts = self._split_points(bo, L, cut0, cut1)
+                cuts = self._split_points([o for o, _ in bo], L, cut0, cut1)
                 for ci, (u0, u1) in enumerate(cuts):
-                    local = [Opening(o.u0 - u0, o.u1 - u0, o.z0, o.z1) for o in bo if o.u0 >= u0 and o.u1 <= u1]
+                    inside = [(o, wt) for o, wt in bo if o.u0 >= u0 and o.u1 <= u1]
+                    local = [Opening(o.u0 - u0, o.u1 - u0, o.z0, o.z1) for o, _ in inside]
                     fr = e["frame"] @ Matrix.Translation((u0, 0, 0))
                     bm = bmesh.new()
+                    reveals = []
                     wall_piece(bm, fr, u1 - u0, z0, z1, thk, local,
                                cut_start=cut0 if abs(u0) < 1e-6 else 0.0,
-                               cut_end=cut1 if abs(u1 - L) < 1e-6 else 0.0)
-                    self.obj(f"Wall_E{i}_B{bi}_{ci}", bm, COL["maroon"] if fspec and fspec.get("name", "").startswith("south_tower") else COL["wall"],
-                             fspec.get("evidence") if fspec else None)
+                               cut_end=cut1 if abs(u1 - L) < 1e-6 else 0.0, reveal_faces=reveals)
+                    ev = fspec.get("evidence") if fspec else None
+                    if self.s.get("detail"):
+                        # painted reveals: the maroon surround paint runs into the opening (photo 061621646 crops)
+                        paint = next((wt.get("reveal_paint") for _, wt in inside if wt.get("reveal_paint")), None)
+                        if paint is None and any(wt.get("surround") and any(wt["surround"]) for _, wt in inside):
+                            paint = "M_Paint_Maroon"
+                        base = "M_Paint_Maroon" if maroon_face else self.s.get("wall_material", "M_Render_Beige")
+                        for f in reveals:
+                            f.material_index = 1 if paint else 0
+                        self.obj_mat(f"Wall_E{i}_B{bi}_{ci}", bm, [base, paint or base], ev)
+                        continue
+                    self.obj(f"Wall_E{i}_B{bi}_{ci}", bm, COL["maroon"] if maroon_face else COL["wall"], ev)
             self.build_windows(i, ops)
 
     @staticmethod
@@ -208,6 +281,20 @@ class Building:
         self.kit_meshes[key] = me
         return me
 
+    def pvc_mesh(self, tname, wt, w, h):
+        """Detailed PVC window (greybox/detail.py) for window type tname: frame+sash (PVC), glass, steel sill slots.
+        wt['pvc'] overrides PvcWindow fields (measured profiles), wt['sashes'] lists the opening lights."""
+        key = f"PVC_{tname}"
+        if key in self.kit_meshes:
+            return self.kit_meshes[key]
+        pv = D.PvcWindow(reveal=wt.get("reveal", 0.16), mullions=wt.get("mullions", []), transoms=wt.get("transoms", []),
+                         sashes=wt.get("sashes", []), **wt.get("pvc", {}))
+        pvc, glass, sill = bmesh.new(), bmesh.new(), bmesh.new()
+        D.pvc_window({"frame": pvc, "sash": pvc, "glass": glass, "sill": sill}, Matrix.Identity(4), Opening(0, w, 0, h), pv)
+        me = parts_to_mesh(f"KIT_{self.id}_{key}", {"M_PVC_White": pvc, "M_Glass": glass, "M_Steel_Galv": sill})
+        self.kit_meshes[key] = me
+        return me
+
     def build_windows(self, i, ops):
         e = self.edges[i]
         for k, (o, tname, wt) in enumerate(ops):
@@ -215,11 +302,27 @@ class Building:
             w, h = o.u1 - o.u0, o.z1 - o.z0
             if tname == "entrance":
                 bays = wt.get("bays")  # [[width_m, "fixed"|"door"], ...] left to right, frame included
+                if bays and self.s.get("detail"):
+                    sf = D.AluStorefront(reveal=wt.get("reveal", 0.25), bays=bays, transom_z=wt.get("transom_z", h - 0.6),
+                                         leaf_mid=wt.get("door_mid_z", 0.0), **wt.get("alu", {}))
+                    parts = {k: bmesh.new() for k in ("alu", "glass", "steel", "leaf", "leaf_glass", "leaf_steel")}
+                    D.alu_storefront(parts, e["frame"], o, sf)
+                    ev, cf = wt.get("evidence"), wt.get("confidence")
+                    self.obj_parts(f"Entrance_E{i}_{k:02d}_Frame", {"M_Alu_Black": parts["alu"], "M_Glass": parts["glass"]}, ev, cf)
+                    # door leaves: own object so UE can swap them for hinged door actors
+                    self.obj_parts(f"Entrance_E{i}_{k:02d}_Doors", {"M_Alu_Black": parts["leaf"], "M_Glass": parts["leaf_glass"],
+                                                                    "M_Steel_Galv": parts["leaf_steel"]}, ev, cf)
+                    for b in (parts["steel"],):
+                        b.free()
+                    continue
                 if bays:
                     self.build_entrance_doors(i, k, o, wt)
                     continue
                 me = self.kit_mesh(f"Entrance_{w:.2f}x{h:.2f}", lambda bm: window_unit(
                     bm, ident, Opening(0, w, 0, h), WindowSpec(reveal=0.25, mullions=[0.25, 0.5, 0.75], transoms=[0.78], sill_proj=0)))
+                color = COL["frame"]
+            elif self.s.get("detail"):
+                me = self.pvc_mesh(tname, wt, w, h)
                 color = COL["frame"]
             else:
                 spec = WindowSpec(reveal=wt.get("reveal", 0.16), mullions=wt.get("mullions", []), transoms=wt.get("transoms", []))
@@ -232,6 +335,8 @@ class Building:
                 l, r, b, t = sw
                 proj = wt.get("surround_proj", 0.04)
                 me2 = self.kit_mesh(f"Surround_{tname}", lambda bm: _surround(bm, w, h, l, r, b, t, proj))
+                if self.s.get("detail") and not me2.materials:
+                    me2.materials.append(mat(wt.get("reveal_paint", "M_Paint_Maroon")))
                 self._link(f"Sur_E{i}_{k:02d}", me2, place, COL["maroon"])
 
     def build_stair_extras(self, a, fr, cf):
@@ -293,6 +398,7 @@ class Building:
         self.obj(f"Entrance_E{i}_{k:02d}_Glass", bm_g, COL.get("glass", COL["frame"]), ent.get("evidence"), ent.get("confidence"))
 
     def _link(self, name, me, matrix, color):
+        ensure_slot(me, color)
         ob = bpy.data.objects.new(f"GBF_{self.id}_{name}", me)
         ob.matrix_world = matrix
         ob["koch_gen"] = self.gen
@@ -342,6 +448,16 @@ class Building:
             return
         if kind == "flat":
             return self.build_flat_roof(r)
+        if self.s.get("detail") and kind == "hip" and not r.get("overhang_edges") and not r.get("_eave_done"):
+            # detail eave: the fascia board is its own part, so the roof solid stops just inside it (no coplanar
+            # faces); built once per roof, the recursion below uses the shortened overhang
+            self.s["roof"] = dict(r, overhang=r["overhang"] - EAVE_BOARD - 0.003, _eave_done=True)
+            try:
+                self.build_roof()
+            finally:
+                self.s["roof"] = r
+            self.build_eave_detail()
+            return
         if kind in ("gable", "shed"):
             return self.build_gable_or_shed(r, kind)
         if kind == "hip" and r.get("ridge_len") and len(self.ring) == 4:
@@ -514,11 +630,105 @@ class Building:
         self.obj("Dormers", bm, COL["roof"], "pointed dormers on the roof slopes (render 2025, Esri 2020)")
 
     # ------------------------------------------------------------------ attachments
+    def build_attachment_detail(self, a, e, fr):
+        """Detail-kit versions of the attachments (spec 'detail': true). Returns False for types without one."""
+        t, cf, ev = a["type"], a.get("confidence"), a.get("evidence")
+        if t == "downpipe":
+            # round pipe (d = diameter), clamps every ~1.5 m, swan neck from the eave gutter outlet back to the wall,
+            # kick-out shoe at the foot; 'top': 'gutter' (default) or 'free' (ends at z1 against the wall)
+            g = self.eave_geometry()
+            r = a.get("d", 0.09) / 2
+            w_wall = a.get("off", 0.04) + r
+            steel = bmesh.new()
+            for u in a["u"]:
+                pts = []
+                if a.get("top", "gutter") == "gutter":
+                    zo = g["z_rim"] - GUTTER_R - 0.02
+                    pts += [fr @ Vector((u, g["w_gutter"], g["z_rim"] - GUTTER_R * 0.5)), fr @ Vector((u, g["w_gutter"], zo - 0.1))]
+                    pts += [fr @ Vector((u, w_wall, zo - 0.1 - (g["w_gutter"] - w_wall) * 1.0))]
+                else:
+                    pts.append(fr @ Vector((u, w_wall, a["z1"])))
+                foot = a["z0"]
+                pts += [fr @ Vector((u, w_wall, foot + 0.3)), fr @ Vector((u, w_wall + 0.18, foot + 0.1))]
+                D.tube(steel, pts, r, seg=16, bend_r=0.1)
+                z_top = pts[-3].z if len(pts) >= 3 else a["z1"]
+                n = max(1, int((z_top - foot - 0.6) / 1.5))
+                for k in range(n + 1):
+                    zc = foot + 0.5 + (z_top - foot - 1.0) * k / max(n, 1)
+                    D.ring_clamp(steel, fr @ Vector((u, w_wall, zc)), fr.to_3x3() @ Vector((0, 0, 1)), r)
+                    box(steel, fr, u - 0.01, u + 0.01, 0.0, w_wall - r, zc - 0.012, zc + 0.012)  # clamp stem to the wall
+            self.obj_parts(f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}", {a.get("material", "M_PVC_Gutter_White"): steel}, ev, cf)
+            return True
+        if t == "stairs":
+            H = a["risers"] * a["riser_h"]
+            stone = bmesh.new()
+            D.stone_stair(stone, fr, a["u0"], a["u1"], a["risers"], a["riser_h"], a["tread"], a["landing"], 0.0,
+                          w_back=-0.05, nosing=a.get("nosing", 0.02))
+            self.obj_parts(f"Stairs_E{a['edge']}_{a['u0']:.0f}", {"M_Granite_Red": stone}, ev, cf)
+            for n, c in enumerate(a.get("cheeks", [])):
+                body, cap = bmesh.new(), bmesh.new()
+                ct = c.get("cap_t", 0.04)
+                ov = c.get("cap_over", 0.02)
+                zb = -H - 0.2
+                prism_profile(body, fr, [(0.0, zb), (0.0, c["z_wall"] - ct), (c["w1"], c["z_out"] - ct), (c["w1"], zb)],
+                              c["u0"], c["u1"])
+                prism_profile(cap, fr, [(0.0, c["z_wall"] - ct), (c["w1"] + ov, c["z_out"] - ct - ov * (c["z_wall"] - c["z_out"]) / c["w1"]),
+                                        (c["w1"] + ov, c["z_out"] - ov * (c["z_wall"] - c["z_out"]) / c["w1"]), (0.0, c["z_wall"])],
+                              c["u0"] - ov, c["u1"] + ov)
+                self.obj_parts(f"StairCheek_E{a['edge']}_{n}", {c.get("material", "M_Tile_Brick_Red"): body, "M_Granite_Red": cap},
+                               c.get("evidence", ev), c.get("confidence", cf))
+            return True
+        if t == "ramp":
+            parts = {"frame": bmesh.new(), "deck": bmesh.new()}
+            zg = a["z_low"]
+            D.steel_ramp(parts, fr, a["u0"], a["u1"], a["w0"], a["w1"], a["z_high"], a["z_low"],
+                         ground=lambda u: a.get("z_ground", zg))
+            rails = bmesh.new()
+            if a.get("rails"):
+                for w in (a["w0"] + 0.03, a["w1"] - 0.03):
+                    pts = [fr @ Vector((a["u0"], w, a["z_high"])), fr @ Vector((a["u1"], w, a["z_low"]))]
+                    D.railing_detailed(rails, pts, height=a.get("rail_h", 0.9), post=0.04, spacing=a.get("post_pitch", 1.5),
+                                       mid=tuple(a.get("mid_rails", [0.45])), base_plate=0.0, plate_t=0.0)
+            self.obj_parts(f"Ramp_E{a['edge']}", {"M_Steel_Paint_Dark": parts["frame"], "M_Steel_Grating": parts["deck"]}, ev, cf)
+            self.obj_parts(f"RampRail_E{a['edge']}", {"M_Steel_Paint_Dark": rails}, ev, cf)
+            return True
+        if t == "canopy":
+            parts = {k: bmesh.new() for k in ("frame", "panel", "soffit", "roof")}
+            s = a.get("sign", {})
+            D.canopy_box(parts, fr, a["u0"], a["u1"], a["depth"], a.get("z_soffit_wall", a["z0"]), a["z0"],
+                         s.get("z1", a["z1"]), sign_frame=s.get("frame", 0.05), panel=a.get("panel", 0.6))
+            self.obj_parts(f"Canopy_E{a['edge']}", {"M_Sign_Frame_White": parts["frame"], "M_Terracotta_Soffit": parts["soffit"],
+                                                    "M_Sheet_Brown": parts["roof"]}, ev, cf)
+            self.obj_parts(f"CanopySign_E{a['edge']}", {"M_Sign_Panel": parts["panel"]}, ev, cf)
+            return True
+        if t == "floodlight":
+            bm = bmesh.new()
+            for u in a["u"]:
+                D.floodlight(bm, fr, u, a.get("w", 0.35), a["z"])
+            self.obj_parts(f"Flood_E{a['edge']}_{a['u'][0]:.0f}", {"M_Alu_Black": bm}, ev, cf)
+            return True
+        if t == "lightwell":
+            sheet = bmesh.new()
+            D.corrugated_sheet(sheet, fr, a["u0"], a["u1"], 0.0, a["z_wall"], a["depth"] + 0.05, a["z_edge"] - 0.03,
+                               pitch=a.get("rib_pitch", 0.2), rib_h=a.get("rib_h", 0.021))
+            parts = {"M_Sheet_Red": sheet}
+            pp = a.get("parapet")
+            if pp:
+                bm_p = bmesh.new()
+                for u0, u1 in pp["spans"]:
+                    box(bm_p, fr, u0, u1, a["depth"] - pp.get("t", 0.25), a["depth"], pp["z0"], a["z_edge"] - 0.06)
+                self.obj_parts(f"LightwellParapet_E{a['edge']}_{a['u0']:.0f}", {"M_Tile_Brick_Red": bm_p}, pp.get("evidence"), cf)
+            self.obj_parts(f"LightwellCover_E{a['edge']}_{a['u0']:.0f}", parts, ev, cf)
+            return True
+        return False
+
     def build_attachments(self):
         for a in self.s.get("attachments", []):
             e = self.edges[a["edge"]]
             fr = e["frame"]
             t = a["type"]
+            if self.s.get("detail") and self.build_attachment_detail(a, e, fr):
+                continue
             bm = bmesh.new()
             cf = a.get("confidence")
             if t == "stairs":

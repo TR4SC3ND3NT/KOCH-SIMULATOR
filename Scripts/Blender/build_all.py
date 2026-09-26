@@ -51,6 +51,13 @@ def main():
     if site:
         run("build_site.py", "KOCH_SITE", site)
     ok = validate()
+    # detail-kit parts carry several material slots: show material colours in every 3D view and in Workbench
+    for scr in bpy.data.screens:
+        for area in scr.areas:
+            for sp in area.spaces:
+                if sp.type == "VIEW_3D":
+                    sp.shading.color_type = "MATERIAL"
+    bpy.context.scene.display.shading.color_type = "MATERIAL"
     if background:
         bpy.ops.wm.save_mainfile(compress=True)
     print("build_all:", "OK" if ok else "CHECK FAILED", "| buildings:", bld, "| site:", site)

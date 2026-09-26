@@ -4,8 +4,10 @@
 #   KOCH_SFM_MODEL=model.json KOCH_SFM_ALIGN=align.json KOCH_SFM_OUT=/scratch/ovl KOCH_SFM_CAMS=every:10 \
 #   blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/sfm_overlay.py
 # KOCH_SFM_CAMS: "every:N" or comma list of frame names; KOCH_SFM_CLOUD=1 links REF_SfM_<zone> (00_Reference).
+# KOCH_SFM_SHOW=GBF_BLD_C_Win,GBS_...: render only objects with these name prefixes. Writes <out>/manifest.json.
 import json
 import os
+import shutil
 import subprocess
 
 import bpy
@@ -81,7 +83,9 @@ def main():
     sc = bpy.context.scene
     sc.render.engine = "BLENDER_WORKBENCH"
     sh = sc.display.shading
-    sh.light, sh.color_type, sh.show_cavity, sh.show_object_outline = "STUDIO", "OBJECT", True, True
+    # MATERIAL: detail-kit meshes carry several material slots (frame / glass / sill); every older part has a
+    # review slot in its object colour (greybox/materials.py)
+    sh.light, sh.color_type, sh.show_cavity, sh.show_object_outline = "STUDIO", "MATERIAL", True, True
     sc.render.film_transparent = True
     sc.render.image_settings.file_format = "PNG"
     sc.render.image_settings.color_mode = "RGBA"
@@ -91,19 +95,32 @@ def main():
             ob.hide_render = True
     if os.environ.get("KOCH_SFM_CLOUD"):
         link_cloud(model, al)
+    # KOCH_SFM_SHOW: only objects whose name starts with one of these prefixes are rendered (one element at a time)
+    show = tuple(p for p in os.environ.get("KOCH_SFM_SHOW", "").split(",") if p)
+    if show:
+        for ob in bpy.data.objects:
+            if ob.type == "MESH" and not ob.name.startswith(show):
+                ob.hide_render = True
+    magick = shutil.which("magick")
+    manifest = []
     for c in cams:
         setup_camera(c, al)
         tag = c["name"].replace("/", "_").rsplit(".", 1)[0]
         png = os.path.join(out, f"r_{tag}.png")
         sc.render.filepath = png
         bpy.ops.render.render(write_still=True)
+        manifest.append({"name": c["name"], "image": c["image"], "render": png})
+        if not magick:  # no ImageMagick (Windows): Scripts/Geo/rs/overlay_compose.py makes the triptychs + metrics
+            print("render", png)
+            continue
         jpg = os.path.join(out, f"ovl_{tag}.jpg")
         # left: frame, middle: 55 % blend, right: render alone
-        subprocess.run(["magick", c["image"], "(", png, "-channel", "A", "-evaluate", "multiply", "0.55", "+channel", ")",
+        subprocess.run([magick, c["image"], "(", png, "-channel", "A", "-evaluate", "multiply", "0.55", "+channel", ")",
                         "-compose", "over", "-composite", jpg], check=True)
-        subprocess.run(["magick", c["image"], jpg, "(", png, "-background", "#303030", "-flatten", ")", "+append",
+        subprocess.run([magick, c["image"], jpg, "(", png, "-background", "#303030", "-flatten", ")", "+append",
                         "-resize", "x900", jpg], check=True)
         print("overlay", jpg)
+    json.dump(manifest, open(os.path.join(out, "manifest.json"), "w"), indent=1)
     tmp = bpy.data.objects.get("TMP_SfMCam")
     if tmp:
         bpy.data.objects.remove(tmp, do_unlink=True)
