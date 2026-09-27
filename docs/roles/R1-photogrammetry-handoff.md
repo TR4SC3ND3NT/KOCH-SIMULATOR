@@ -101,8 +101,10 @@ Rules:
 - A seam object that touches both (e.g. the passage stair at C's west side, the garden edge at the alley): the owner of
   the object's spec file decides; the other stream writes a one-line request in the log instead of editing.
 
-**Mesh drops for stream B** (stream A, as soon as a zone's mesh is ready: Garden, Sports, C_sw, WEB_drone, then any
-later zone that covers stream B's area):
+**Mesh drops for stream B: do them NOW for the meshes that already exist (Garden, Sports, C_sw), then each new one
+(WEB_drone and any later zone over stream B's area) as soon as it is ready.** The GPU queue keeps computing the
+remaining meshes meanwhile; a drop never waits for the queue or for the world frame. Check first that the Garden mesh
+is whole (it failed once on a -nan component). Each drop:
 - `<zone>/mesh.ply`: world metres (`rs_world.py apply`), decimated to ≤ 3M triangles, no texture, no vertex colours;
 - `<zone>/align.json`, `<zone>/model.json` (cameras only, no images: the owner has the raw footage and re-extracts the
   frames by name), and the zone's `route.json` from route_profile.py;
