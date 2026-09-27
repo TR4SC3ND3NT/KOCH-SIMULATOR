@@ -95,6 +95,13 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
    - **Shared machine resources.** Heavy jobs go under a memory cap. Replies to the owner are short and in Russian.
    - **Lore.** No real names or logos anywhere in the game (KOCH only). Never commit the raw footage.
 
+## 3a. Agent and token budget for this job (map owner, 2026-09-27; stricter than AGENTS.md)
+- Work solo by default. At most **2 subagents** at a time, only when they really save time; never more.
+- **No workflows, no Verify / review / adversarial phases, no "second opinion" agents.** Verification means a build plus
+  an overlay through real cameras, done by you.
+- The run on 2026-09-27 wasted most of a session limit on a 20-agent review workflow (1.5M tokens) that changed nothing on the map.
+- Use high effort; reserve deeper thinking for hard problems (alignment, registration), not for routine measuring.
+
 ## 4a. Detail standard: real modelled structure, not boxes (the owner's hard requirement)
 The owner wants the Blender result to look close to reality **as geometry**, not a blockout. Model every element as it is built in reality, down to the smallest part with visible relief (about 1 cm or more). Do not move to the next element until the current one matches the footage pixel by pixel.
 
