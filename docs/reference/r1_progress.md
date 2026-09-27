@@ -64,7 +64,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] CI.6 Prototype classroom 203 (computer lab): desks, chairs, TV, whiteboard, grid ceiling, windows with blinds — approx.: computer-lab furniture in the F2 north room next to door N1 (INT_C_Floors F2_Lab_*); room choice from ROUTE (north windows), not confirmed
 - [ ] CI.7 Floors F2–F4: corridors, classrooms, WCs (F4 without the west stair: offices) — approx., in the model (GBS_INT_C_Floors)
 - [ ] CI.8 F5 attic offices under the roof, lit by the dormers — approx., in the model (GBS_INT_C_Floors)
-- [ ] CI.9 Basement: stair down with wrought-iron balustrade, vaulted corridor, barred windows, art room, piano room — approx., in the model (GBS_INT_C_Basement)
+- [ ] CI.9 Basement: stair down with wrought-iron balustrade, vaulted corridor, barred windows, art room, piano room — P1 partly: stair count re-checked on 012547860 f00008/f00233 (8 upper + landing + 2 lower, spec OK); C_base c11 eye-height scale fails on the stair (camera path 2.4x too deep), mesh empty on the treads -> riser 0.138 stays from the earlier SfM; corridor/rooms not measured yet
 
 ## 3. A_W gallery and its plaza (zone `AW`)
 - [ ] AW.1 Gallery deck: tiled deck above the walkway, granite edge, the single step between the 1st and 2nd post from the north — approx., in the model (GBF_BLD_A_W gallery deck)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: basement stair count confirmed from frames (8 + 2); lesson: eye-height scale is unreliable where the walker is on a stair or in a narrow stairwell (few ground planes) - check the scale on a known size before using a walk depth.
 - [A] 2026-09-28: C south-west wing facade section on the C_entr mesh: window heads F1 9.01 / F2 12.16 (spec rows 8.85+0.2 / 12.15: confirmed); the last wing column lies at u 10.3-12.7 in the mesh vs 9.57-11.80 in the spec (+0.9 m, same size as the old storefront/tower offset) - overlays from 070647586 f00354 / 081158036 f00644 inconclusive (11 / 17 px); left as is until a frontal check.
 - [A] 2026-09-28: gate forecourt checked on Google z20 (parking noses/bars, north kerb, booth, pits 06/07 under the canopy) - no gross error. AW c8 (clip 012404116): the B-corner steps counted again 6 granite + kerb = 7 risers (spec OK); the -0.75 m in its walk profile is the phone lowered at the stair foot, not a descent; the mesh has no stair (region misses it), riser 0.183 stays unverified. C_F2F5 (upper floors) aligned into small pieces only (largest 49 of ~830 frames: white walls).
 - [A] 2026-09-28: Street P1 pass_check: route 76 % within 0.07 m (FAIL) - the bad runs are camera-height artefacts (phone lowered/raised at the clip ends, gap between c3 and c2), the mesh sidewalk is flat 7.46-7.53 vs the model 7.57-7.37; overlays median <= 8 px. South footway + zebra link added (Google z20, Street c6 is bent).
