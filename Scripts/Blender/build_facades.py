@@ -266,7 +266,9 @@ class Building:
                             f.material_index = 1 if paint else 0
                         self.obj_mat(f"Wall_E{i}_B{bi}_{ci}", bm, [base, paint or base], ev)
                         continue
-                    self.obj(f"Wall_E{i}_B{bi}_{ci}", bm, COL["maroon"] if maroon_face else COL["wall"], ev)
+                    ob = self.obj(f"Wall_E{i}_B{bi}_{ci}", bm, COL["maroon"] if maroon_face else COL["wall"], ev)
+                    ob.data.materials[0] = mat("M_Paint_Maroon" if maroon_face else
+                                               self.s.get("wall_material", self.s.get("slots", {}).get("Wall", "M_Render_Beige")))
             self.build_windows(i, ops)
 
     @staticmethod
