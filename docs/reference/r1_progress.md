@@ -119,7 +119,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] B.5 Low red-roofed annex at the NE corner — not confirmed: no annex visible on Bing z19 at B's NE corner (trees); not modelled
 - [x] B.6 Roof: slopes, hatch on the north slope — approx., in the model (GBF_BLD_B Roof)
 - [x] B.7 Front gallery on brick piers with terracotta soffit, white low railing and planters along the front path — approx., in the model (GBF_BLD_B GalleryPosts/GalleryRoof)
-- [ ] B.8 Position: B–A gap settled on the mesh
+- [x] B.8 Position: B–A gap settled on the mesh — approx.: Bing z19 roof edges B 147.0 / A gallery roof 157.6 (+2.2 m gallery) give a wall gap ≈13.0 m, close to the spec (13.4); B not moved (the Gate mesh is too hole-filled here; see M12)
 
 ## 11. Block A (zones `AW`, `Gate`)
 - [x] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N)
@@ -178,8 +178,10 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M8 | Высота этажа C | 3.30 | BLD_C `storey_m` | подступенки одного марша × высота |
 | M10 | Сев. торец A_N / A_W (стена) | y −20.2 (сдвинут на 3.3 м к югу; фото даёт −22.5±1.5) | BLD_A_N.json / BLD_A_W.json `ring` (y 73.2 / 72.95) | от угла C до торца A_N |
 | M11 | Окна вост. крыла C | сдвиг ~0.3 м от фото | BLD_C.json `facades[edge 3].windows[].u` | шаг окон по фасаду |
+| M12 | Зазор B–A (стена B – стена A_S) | 13.0–13.4 | BLD_B.json `ring` / anchor | рулеткой поперёк аллеи |
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
 - 2026-09-27: list built from ROUTE.md, campus.md, photo_requests.md, the handoff, the specs, the capture clips (incl. the 2026-09-25 batch: gate, A_W walkway, C west side, C basement) and the web-media triage (C:\koch\web\triage_part1.md, triage_part2.md). Best web sources for roofs and back sides: the 2023-01-28 drone flight, 2022-04-19, 2020-05-16 and 2022-10-30 aerials.
+- 2026-09-27: queue extended with WEB_front (2026-05-22, 2023-03-20 clips), WEB_drone (2023-01-28, 640x352), C_F1, C_lab, C_wc (interior clips extracted + masked).
 - 2026-09-27: GPU queue started with zones C_sw, AW, Gate, Sports, Garden, Street, C_base.
