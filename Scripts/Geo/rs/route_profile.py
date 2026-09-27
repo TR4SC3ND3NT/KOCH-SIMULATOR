@@ -67,6 +67,10 @@ def clean(S):
         dev = np.abs(P[:, d] - med)
         mad = rolling_median(dev, 7) * 1.4826
         keep &= dev <= np.maximum(3 * mad, 0.3)
+    # the phone tilted far from the walking posture (lowered at a clip end, raised to film a facade): the camera is
+    # then not at the eye height above the ground, so the pose says nothing about the level
+    pitch = np.array([q["pitch"] for q in S])
+    keep &= np.abs(pitch - np.median(pitch)) <= 12.0
     return [q for q, k in zip(S, keep) if k]
 
 
