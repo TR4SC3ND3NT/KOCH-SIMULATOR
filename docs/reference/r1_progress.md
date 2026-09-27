@@ -287,7 +287,7 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 ### Street front
 - [x] INV.ST.1 Pink-tinted clover-paver patches set into the grey sidewalk and forecourt : 065653194_s3, 065934318_s2 — [x] at the Blender cap e8c7646: surface colour/pattern only, nothing to model in Blender (handoff 4a «Leave to Unreal»: decal/material on the existing M_Paver/M_Paving slot)
 - [x] INV.ST.2 Storm-drain grating in the sidewalk against the parapet : 065653194_s1, 065653194_s2 — [x] at the Blender cap e8c7646: flush drain grating = decal on the sidewalk (handoff 4a «Leave to Unreal»)
-- [ ] INV.ST.3 Two A-frame sandwich-board signs with blue faces at the crossing pole : 065856484_s1, 065856484_s2
+- [x] INV.ST.3 Two A-frame sandwich-board signs with blue faces at the crossing pole : 065856484_s1, 065856484_s2 — [x] at the Blender cap 51ee792: 2 placeholders AFrameSign_0/1 (koch_ue_asset sign_aframe) at the NW zebra pole base (f00158/f00209, movable, +-0.5 m)
 - [ ] INV.ST.4 Two steel pyramid rebar tree guards on the pavement near the gate : 061913764_s2, 065856484_s1
 - [ ] INV.ST.5 Blue traffic sign on a post by the crossing (pedestrian-crossing sign) : 061913764_s2, 012108212_s1
 ### Gate + booth + yard

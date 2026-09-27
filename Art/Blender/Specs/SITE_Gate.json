@@ -665,6 +665,44 @@
    "material": "stone",
    "evidence": "P1: Google z20 asphalt edge at y -109.6 for x 85-125 (flat, not the Curb_North slope); trolley pole of Street c3 f00996 stands on the paved strip right at it",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "AFrameSign_0",
+   "center": [
+    152.35,
+    -110.0
+   ],
+   "dir_deg": 87.0,
+   "size": [
+    0.6,
+    0.45,
+    0.9
+   ],
+   "material": "accent",
+   "slot": "M_Sign_Panel",
+   "ue_asset": "sign_aframe",
+   "evidence": "P2 placeholder: two blue-faced A-frame sandwich boards at the base of the concrete pole at the NW corner of the zebra (crossing clip 065856484 f00158/f00209, pole = StreetLamp_ZebraN); movable, +-0.5 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "AFrameSign_1",
+   "center": [
+    152.85,
+    -109.95
+   ],
+   "dir_deg": 87.0,
+   "size": [
+    0.6,
+    0.45,
+    0.9
+   ],
+   "material": "accent",
+   "slot": "M_Sign_Panel",
+   "ue_asset": "sign_aframe",
+   "evidence": "P2 placeholder: two blue-faced A-frame sandwich boards at the base of the concrete pole at the NW corner of the zebra (crossing clip 065856484 f00158/f00209, pole = StreetLamp_ZebraN); movable, +-0.5 m",
+   "confidence": "medium"
   }
  ],
  "ground_surfaces": [
