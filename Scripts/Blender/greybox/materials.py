@@ -100,3 +100,46 @@ def parts_to_mesh(name, parts):
     out.to_mesh(me)
     out.free()
     return me
+
+
+def assign_ground_surfaces(ter, specs_dir):
+    """Per-face slots on the terrain from the specs' "ground_surfaces" [{"name", "ring": [[x, y], ...], "slot": M_*}]
+    (paved areas that are ground, not separate objects: carriageway, forecourts, yards, plazas). Base slot 0 stays
+    M_Ground_Grass; later rings (spec file order, then list order) win. Returns the face count per surface."""
+    import json
+    import os
+    import numpy as np
+
+    def inside_ring(P, ring):   # even-odd rule, vectorised over the points (Blender's Python has no matplotlib)
+        R = np.asarray(ring, float); x, y = P[:, 0], P[:, 1]; res = np.zeros(len(P), bool)
+        for (x1, y1), (x2, y2) in zip(R, np.roll(R, -1, axis=0)):
+            c = ((y1 > y) != (y2 > y)) & (x < (x2 - x1) * (y - y1) / ((y2 - y1) + 1e-12) + x1)
+            res ^= c
+        return res
+    surf = []
+    for fn in sorted(os.listdir(specs_dir)):
+        if fn.endswith(".json"):
+            try:
+                surf += json.load(open(os.path.join(specs_dir, fn), encoding="utf-8")).get("ground_surfaces", [])
+            except (ValueError, AttributeError):
+                pass
+    if ter is None or not surf:
+        return {}
+    me = ter.data
+    if not me.materials:
+        me.materials.append(mat("M_Ground_Grass"))
+    M = ter.matrix_world
+    cen = np.array([(M @ p.center)[:2] for p in me.polygons])
+    idx = np.zeros(len(cen), int)
+    counts = {}
+    for sf in surf:
+        slot = sf["slot"]
+        names = [m.name for m in me.materials]
+        if slot not in names:
+            me.materials.append(mat(slot)); names.append(slot)
+        inside = inside_ring(cen, sf["ring"])
+        idx[inside] = names.index(slot)
+        counts[sf.get("name", slot)] = int(inside.sum())
+    me.polygons.foreach_set("material_index", idx.astype(np.int32))
+    me.update()
+    return counts
