@@ -523,7 +523,7 @@
    ],
    "curb_h": 0.1,
    "curb_w": 0.1,
-   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): pit 1.5 m wide (kerb outer), west end x 114.4, runs >= 4.2 m east (mosaic edge at 118.6; photo f01622)",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): pit 1.5 m wide (kerb outer), west end x 114.4, runs >= 4.2 m east (mosaic edge at 118.6; photo f01622); east end <= 118.8 (Street c2 mosaic paved from 118.8)",
    "confidence": "medium"
   },
   {
@@ -542,126 +542,33 @@
    "confidence": "medium"
   },
   {
-   "type": "planter",
-   "name": "StreetPit_03",
-   "ring": [
-    [
-     122.3,
-     -102.372
-    ],
-    [
-     123.7,
-     -102.372
-    ],
-    [
-     123.7,
-     -100.972
-    ],
-    [
-     122.3,
-     -100.972
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.1,
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
-  },
-  {
    "type": "tree",
    "name": "StreetTree_03",
    "pos": [
-    123,
-    -101.672
+    123.053,
+    -98.042
    ],
    "height": 9.0,
    "crown_d": 6.0,
    "trunk_d": 0.35,
    "crown_base": 2.6,
    "shape": "round",
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
-   "name": "StreetPit_04",
-   "ring": [
-    [
-     130.3,
-     -102.796
-    ],
-    [
-     131.7,
-     -102.796
-    ],
-    [
-     131.7,
-     -101.396
-    ],
-    [
-     130.3,
-     -101.396
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.1,
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "evidence": "P1 ground mosaic of zone Street c2 (clip 065653194 f02711-f03470, placed by the gate booth corner, +-1 m along): the sidewalk at x 118.8-133 is paved (grey clover pavers with pink rosettes at x ~122 and ~126.5), no tree pit; the tree seen on the satellite stands in the planter strip behind the wall (frames f02711-f03229), moved there 1.0 m north of the wall line; species/size not measured",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "StreetTree_04",
    "pos": [
-    131,
-    -102.096
+    131.053,
+    -98.463
    ],
    "height": 9.0,
    "crown_d": 6.0,
    "trunk_d": 0.35,
    "crown_base": 2.6,
    "shape": "round",
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
-   "name": "StreetPit_05",
-   "ring": [
-    [
-     138.3,
-     -103.22
-    ],
-    [
-     139.7,
-     -103.22
-    ],
-    [
-     139.7,
-     -101.82
-    ],
-    [
-     138.3,
-     -101.82
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.1,
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "StreetTree_05",
-   "pos": [
-    139,
-    -102.52
-   ],
-   "height": 9.0,
-   "crown_d": 6.0,
-   "trunk_d": 0.35,
-   "crown_base": 2.6,
-   "shape": "round",
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "evidence": "P1 ground mosaic of zone Street c2 (clip 065653194 f02711-f03470, placed by the gate booth corner, +-1 m along): the sidewalk at x 118.8-133 is paved (grey clover pavers with pink rosettes at x ~122 and ~126.5), no tree pit; the tree seen on the satellite stands in the planter strip behind the wall (frames f02711-f03229), moved there 1.0 m north of the wall line; species/size not measured",
    "confidence": "low"
   },
   {
