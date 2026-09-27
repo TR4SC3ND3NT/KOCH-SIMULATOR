@@ -325,11 +325,11 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [ ] INV.AWP.12 Stamped pink pavers with a painted red line on the paving : 081235159_s1, 081249927_s1 — BLOCKED: gallery placement +-2 m along (see AW.*); photo request «Галерея A_W»
 - [ ] INV.AWP.13 Yellow bar or tape across the far path (temporary?) : 081235159_s1 — BLOCKED: gallery placement +-2 m along (see AW.*); photo request «Галерея A_W»
 ### C plaza + exterior
-- [ ] INV.CX.1 Small "C" plate above the storefront : 070647586_s2, photos_p20260924_s1 (061431726, 061631264), zz_c_front2
+- [x] INV.CX.1 Small "C" plate above the storefront : 070647586_s2, photos_p20260924_s1 (061431726, 061631264), zz_c_front2 — [x] P2 (next commit): CPlate wall sign on the entrance fascia (BLD_C attachments)
 - [ ] INV.CX.2 Small ground flood-lamp boxes standing on the light-well cover, x2 : 081158036_s2
 - [x] INV.CX.3 Parked cars east of C (a parking area) : 070647586_s1, zz_c_front, photos_p20260924_s1 (061621646, 061624280) — [x] at the Blender cap e8c7646: parked cars are movable game props, not map geometry (the parking surfaces are modelled with their slots)
 - [ ] INV.CX.4 Brown/maroon boundary fence far east of C : 070647586_s1, zz_c_front — BLOCKED: outside every placed frame (west/north side of C); photo request «Корпус C: остальные фасады»
-- [ ] INV.CX.5 Overhead wires crossing over C and the plaza : 070647586_s1, 081158036_s1, 070629483_s1, zz_c_side
+- [x] INV.CX.5 Overhead wires crossing over C and the plaza : 070647586_s1, 081158036_s1, 070629483_s1, zz_c_side — [x] at the Blender cap 7378332: overhead cables are < 0.10 m (handoff 4a: no sub-10 cm geometry in Blender) - UE cable actors between the modelled poles
 - [x] INV.CX.6 Wall vent grille on the C.12 box : photos_p20260925_s2 (012520140) — [x] at the Blender cap e8c7646: flush wall vent grille = decal on the M_Tile_Brick_Red wall (handoff 4a)
 - [ ] INV.CX.7 Black lamp post, blue spruce and yellow-kerbed lawn behind the west shed : photos_p20260925_s1 (012456258), photos_p20260925_s2 (012458018), zz_c_side — BLOCKED: outside every placed frame (west/north side of C); photo request «Корпус C: остальные фасады»
 - [ ] INV.CX.8 Second sunken basement stair with rails at the north end of the C west wall : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012526070) — BLOCKED: outside every placed frame (west/north side of C); photo request «Корпус C: остальные фасады»

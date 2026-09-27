@@ -656,6 +656,19 @@
    ],
    "evidence": "small CCTV camera on the SW maroon strip of the west face (frames a06/a07 of 070629483, ray-cast y 0.81-1.11, z 2.8-3.0)",
    "confidence": "low"
+  },
+  {
+   "type": "wall_sign",
+   "name": "CPlate",
+   "edge": 2,
+   "u0": 1.65,
+   "u1": 2.15,
+   "z0": 3.33,
+   "z1": 3.56,
+   "t": 0.02,
+   "color": "white",
+   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH",
+   "confidence": "medium"
   }
  ],
  "basement": {
