@@ -320,6 +320,44 @@
      -109.382
     ],
     [
+     151.8,
+     -110.739
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "north carriageway edge y=-110.8 at x=153 (Google z20 profiles; parking forecourt pavers north of it); yellow-painted at the crossing. NOTE terrain.json carriageway (OSM centre, 15 m) puts this edge at -111.6: shift the carriageway mask 0.8 m north",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_North_Dropped",
+   "line": [
+    [
+     151.8,
+     -110.739
+    ],
+    [
+     156.6,
+     -110.982
+    ]
+   ],
+   "height": 0.02,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "P1 crossing clip 065856484 (zone Gate c13, placed on the Google zebra): the asphalt zebra meets the forecourt pavers flush (frames f00437/f00491), walked profile shows no step up (7.63 -> 7.54 m); dropped kerb over the zebra width",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_North_E",
+   "line": [
+    [
+     156.6,
+     -110.982
+    ],
+    [
      190.0,
      -112.674
     ]
@@ -346,7 +384,7 @@
    "height": 0.15,
    "thk": 0.15,
    "material": "stone",
-   "evidence": "south carriageway edge y=-125.6 at x=153 (Google z20: light gutter strip then lawn from -126.3); road width 14.8 m, centre line (white) at -118.5",
+   "evidence": "P1 crossing clip (Gate c13): walked profile drops 0.14 m at y -126.5 (8.25 -> 8.11), the kerb height 0.15 confirmed. south carriageway edge y=-125.6 at x=153 (Google z20: light gutter strip then lawn from -126.3); road width 14.8 m, centre line (white) at -118.5",
    "confidence": "medium"
   },
   {
