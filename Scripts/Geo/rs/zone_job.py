@@ -313,7 +313,7 @@ def step_mesh(z, job, zdir, a):
     proj = os.path.join(zdir, f"{z}.rsproj")
     proj_mesh = os.path.join(zdir, f"{z}_mesh.rsproj")   # the aligned project itself is never overwritten
     comps = jload(os.path.join(zdir, "components.json"))["components"][: job.get("mesh_comps", 2)]
-    ok = True
+    ok = False
     for c in comps:
         out = os.path.join(zdir, c["dir"])
         obj = os.path.join(out, "mesh.obj")
@@ -340,7 +340,7 @@ def step_mesh(z, job, zdir, a):
         good = run_rs(zdir, f"mesh_{c['dir']}", cmds, tmo) and os.path.exists(obj)
         if good:
             open(done, "w").write(time.strftime("%Y-%m-%d %H:%M:%S"))
-        ok &= good
+        ok |= good          # one failed component (e.g. High Detail failing on a thin one) does not fail the zone
     return ok
 
 
