@@ -96,7 +96,7 @@ def main():
     zones = {z: json.load(open(os.path.join(a.work, "zones", z, "job.json"), encoding="utf-8-sig")) for z in (a.a, a.b)}
     clips = {c for j in zones.values() for c in j.get("clips", [])}
     sp = os.path.join(out, a.sparse)
-    if not (a.reuse and glob.glob(os.path.join(sp, "*", "images.txt"))):
+    if not (a.reuse and glob.glob(os.path.join(sp, "*", "images.*"))):
         n = sub_db(os.path.join(a.work, "sfm", "db.db"), os.path.join(out, "sub.db"), clips)
         os.makedirs(sp, exist_ok=True)
         with open(os.path.join(out, "mapper.log"), "w") as f:

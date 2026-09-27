@@ -62,40 +62,59 @@
   },
   {
    "type": "path",
-   "name": "Sidewalk_Front",
+   "name": "Sidewalk_Front_W",
    "line": [
     [
-     92.402,
-     -99.289
+     92.251,
+     -100.258
     ],
     [
-     150.302,
-     -102.342
+     117.851,
+     -101.608
     ]
    ],
-   "width": 3.5,
+   "width": 5.45,
    "thk": 0.08,
    "surface": "clover_paver_267x218",
-   "evidence": "Google z20: perpendicular parked cars' noses at y≈-103.4 (x 137-150) -> 3.5 m from the parapet; video 065653194: clover pavers with a red-paver band",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): clover pavers from the planter-wall face to the yellow-black parking bars, 5.45 m at x 98-105",
    "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "Sidewalk_Front_E",
+   "line": [
+    [
+     117.881,
+     -101.033
+    ],
+    [
+     150.181,
+     -102.736
+    ]
+   ],
+   "width": 4.3,
+   "thk": 0.08,
+   "surface": "clover_paver_267x218",
+   "evidence": "Google z20 car noses at y -103.4 (x 137-150) minus a 0.8 m overhang past the bars -> 4.3 m; not measured on the mesh yet (Street c2 not placed). Google z20: perpendicular parked cars' noses at y≈-103.4 (x 137-150) -> 3.5 m from the parapet; video 065653194: clover pavers with a red-paver band",
+   "confidence": "low"
   },
   {
    "type": "wall",
    "name": "WheelStop_00",
    "line": [
     [
-     98.91,
-     -101.375
+     98.618,
+     -103.315
     ],
     [
-     100.71,
-     -101.47
+     100.42,
+     -103.364
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -103,18 +122,18 @@
    "name": "WheelStop_01",
    "line": [
     [
-     101.51,
-     -101.512
+     101.221,
+     -103.386
     ],
     [
-     103.31,
-     -101.607
+     103.024,
+     -103.435
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -122,18 +141,18 @@
    "name": "WheelStop_02",
    "line": [
     [
-     104.11,
-     -101.649
+     103.825,
+     -103.457
     ],
     [
-     105.91,
-     -101.744
+     105.627,
+     -103.506
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -141,18 +160,18 @@
    "name": "WheelStop_03",
    "line": [
     [
-     106.71,
-     -101.786
+     106.428,
+     -103.528
     ],
     [
-     108.51,
-     -101.881
+     108.23,
+     -103.578
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -160,18 +179,18 @@
    "name": "WheelStop_04",
    "line": [
     [
-     109.31,
-     -101.923
+     109.032,
+     -103.599
     ],
     [
-     111.11,
-     -102.018
+     110.834,
+     -103.649
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -179,18 +198,18 @@
    "name": "WheelStop_05",
    "line": [
     [
-     111.91,
-     -102.06
+     111.635,
+     -103.671
     ],
     [
-     113.71,
-     -102.155
+     113.437,
+     -103.72
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -198,18 +217,18 @@
    "name": "WheelStop_06",
    "line": [
     [
-     114.51,
-     -102.197
+     114.238,
+     -103.742
     ],
     [
-     116.31,
-     -102.292
+     116.041,
+     -103.791
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -217,18 +236,18 @@
    "name": "WheelStop_07",
    "line": [
     [
-     117.11,
-     -102.334
+     116.842,
+     -103.813
     ],
     [
-     118.91,
-     -102.429
+     118.644,
+     -103.862
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -236,18 +255,18 @@
    "name": "WheelStop_08",
    "line": [
     [
-     119.71,
-     -102.471
+     119.445,
+     -103.884
     ],
     [
-     121.51,
-     -102.566
+     121.248,
+     -103.934
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -255,18 +274,18 @@
    "name": "WheelStop_09",
    "line": [
     [
-     122.31,
-     -102.608
+     122.049,
+     -103.956
     ],
     [
-     124.11,
-     -102.703
+     123.851,
+     -104.005
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -274,18 +293,18 @@
    "name": "WheelStop_10",
    "line": [
     [
-     124.91,
-     -102.745
+     124.652,
+     -104.027
     ],
     [
-     126.71,
-     -102.84
+     126.455,
+     -104.076
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -293,18 +312,18 @@
    "name": "WheelStop_11",
    "line": [
     [
-     127.51,
-     -102.883
+     127.256,
+     -104.098
     ],
     [
-     129.31,
-     -102.977
+     129.058,
+     -104.147
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -312,18 +331,18 @@
    "name": "WheelStop_12",
    "line": [
     [
-     130.11,
-     -103.02
+     129.859,
+     -104.169
     ],
     [
-     131.91,
-     -103.115
+     131.662,
+     -104.219
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -331,18 +350,18 @@
    "name": "WheelStop_13",
    "line": [
     [
-     132.71,
-     -103.157
+     132.463,
+     -104.24
     ],
     [
-     134.51,
-     -103.252
+     134.265,
+     -104.29
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -350,18 +369,18 @@
    "name": "WheelStop_14",
    "line": [
     [
-     135.31,
-     -103.294
+     135.066,
+     -104.312
     ],
     [
-     137.11,
-     -103.389
+     136.869,
+     -104.361
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -369,18 +388,18 @@
    "name": "WheelStop_15",
    "line": [
     [
-     137.91,
-     -103.431
+     137.67,
+     -104.383
     ],
     [
-     139.71,
-     -103.526
+     139.472,
+     -104.432
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -388,18 +407,18 @@
    "name": "WheelStop_16",
    "line": [
     [
-     140.51,
-     -103.568
+     140.273,
+     -104.454
     ],
     [
-     142.31,
-     -103.663
+     142.076,
+     -104.503
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -407,18 +426,18 @@
    "name": "WheelStop_17",
    "line": [
     [
-     143.11,
-     -103.705
+     142.877,
+     -104.525
     ],
     [
-     144.91,
-     -103.8
+     144.679,
+     -104.575
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -426,18 +445,18 @@
    "name": "WheelStop_18",
    "line": [
     [
-     145.71,
-     -103.842
+     145.48,
+     -104.597
     ],
     [
-     147.51,
-     -103.937
+     147.283,
+     -104.646
     ]
    ],
    "height": 0.35,
    "thk": 0.08,
    "material": "metal",
-   "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
    "confidence": "low"
   },
   {
@@ -483,85 +502,44 @@
   },
   {
    "type": "planter",
-   "name": "StreetPit_01",
-   "ring": [
-    [
-     106.3,
-     -101.524
-    ],
-    [
-     107.7,
-     -101.524
-    ],
-    [
-     107.7,
-     -100.124
-    ],
-    [
-     106.3,
-     -100.124
-    ]
-   ],
-   "curb_h": 0.1,
-   "curb_w": 0.1,
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "StreetTree_01",
-   "pos": [
-    107,
-    -100.824
-   ],
-   "height": 9.0,
-   "crown_d": 6.0,
-   "trunk_d": 0.35,
-   "crown_base": 2.6,
-   "shape": "round",
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
-  },
-  {
-   "type": "planter",
    "name": "StreetPit_02",
    "ring": [
     [
-     114.3,
-     -101.948
+     114.295,
+     -100.584
     ],
     [
-     115.7,
-     -101.948
+     118.495,
+     -100.805
     ],
     [
-     115.7,
-     -100.548
+     118.416,
+     -102.303
     ],
     [
-     114.3,
-     -100.548
+     114.216,
+     -102.082
     ]
    ],
    "curb_h": 0.1,
    "curb_w": 0.1,
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): pit 1.5 m wide (kerb outer), west end x 114.4, runs >= 4.2 m east (mosaic edge at 118.6; photo f01622)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "StreetTree_02",
    "pos": [
-    115,
-    -101.248
+    115.155,
+    -101.38
    ],
    "height": 9.0,
    "crown_d": 6.0,
    "trunk_d": 0.35,
    "crown_base": 2.6,
    "shape": "round",
-   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "evidence": "trunk in the west part of StreetPit_02 (photo f01622, ground mosaic)",
+   "confidence": "medium"
   },
   {
    "type": "planter",
