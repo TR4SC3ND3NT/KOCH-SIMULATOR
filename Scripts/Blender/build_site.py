@@ -45,6 +45,10 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark"}
 
 
+TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
+           "bike_rack": "bike_rack", "tree": "tree", "hedge": "hedge"}
+
+
 def site_slot(el):
     """Material slot of a site element: its "slots" {part keyword: slot} for multi-part elements (keyword found in the
     part name, e.g. Canopy_Roof), explicit "slot", else its surface, else its material, else its type."""
@@ -104,6 +108,10 @@ class Site:
         ob["koch_confidence"] = el.get("confidence", "")
         # P2 material slot (handoff 4a): one M_<Material>_<Finish> slot instead of the plain review colour; the
         # object colour keeps the confidence flag (orange = low)
+        # generic props are placeholders that UE swaps for Fab/Megascans assets (handoff 4a "Leave to Unreal")
+        ue = el.get("ue_asset") or TYPE_UE.get(el.get("type"))
+        if ue:
+            ob["koch_ue_asset"] = ue if ue != "tree" else f"tree_{el.get('shape', 'cone')}"
         me = ob.data
         if len(me.materials) == 1 and me.materials[0] and me.materials[0].name.startswith("VC_"):
             me.materials[0] = mat(site_slot(el))
@@ -626,8 +634,9 @@ class Site:
         fwd, _ = rot2(el.get("dir_deg", 0.0))
         a, b, h = el["size"]
         bm = bmesh.new()
-        box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, el["z0"], el["z0"] + h)
-        self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, el["z0"]))
+        z0 = el["z0"] if "z0" in el else self.gz(P.x, P.y)   # no z0: standing on the ground
+        box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, z0, z0 + h)
+        self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, z0))
 
     def b_zebra(self, el):
         A, B = Vector(el["line"][0]), Vector(el["line"][-1])
