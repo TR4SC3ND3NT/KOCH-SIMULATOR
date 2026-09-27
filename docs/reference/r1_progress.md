@@ -35,7 +35,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] CI.3 West stair F1–F3: flights, landings, window, white steel balustrade — approx., in the model (GBS_INT_C_Floors)
 - [x] CI.4 East stair F1–F5: flights, landings, windows, balustrade (riser count per flight) — approx., in the model (GBS_INT_C_Floors)
 - [x] CI.5 WC pair F1: sinks, stalls with black doors, squat pans, high cisterns, tile to 1.4 m — approx., in the model (GBS_INT_C_F1)
-- [ ] CI.6 Prototype classroom 203 (computer lab): desks, chairs, TV, whiteboard, grid ceiling, windows with blinds
+- [x] CI.6 Prototype classroom 203 (computer lab): desks, chairs, TV, whiteboard, grid ceiling, windows with blinds — approx.: computer-lab furniture in the F2 north room next to door N1 (INT_C_Floors F2_Lab_*); room choice from ROUTE (north windows), not confirmed
 - [x] CI.7 Floors F2–F4: corridors, classrooms, WCs (F4 without the west stair: offices) — approx., in the model (GBS_INT_C_Floors)
 - [x] CI.8 F5 attic offices under the roof, lit by the dormers — approx., in the model (GBS_INT_C_Floors)
 - [x] CI.9 Basement: stair down with wrought-iron balustrade, vaulted corridor, barred windows, art room, piano room — approx., in the model (GBS_INT_C_Basement)
@@ -72,7 +72,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] H.3 Low railing with dense bars — approx., in the model (GBS_HallCPassage_Passage)
 - [x] H.4 Sports hall east end wall with the door and canopy by the ramp, its steps — approx., in the model (GBF_BLD_HallEast)
 - [x] H.5 Sports hall 2-storey wing at the NE corner — approx., in the model (GBF_BLD_HallWing)
-- [ ] H.6 Path along the sports hall from the garden to C's west side (benches, plinth, trees)
+- [x] H.6 Path along the sports hall from the garden to C's west side (benches, plinth, trees) — approx., in the model (SITE_Sports HallRowTree, HallCPassage)
 
 ## 6. Garden (zone `Garden`)
 - [x] GD.1 West gazebo: posts, brick parapet, openings, roof and finial — approx., in the model (GBS_Garden_Gazebo)
@@ -81,10 +81,10 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] GD.4 Hedge arches — approx., in the model (GBS_Garden_Arch)
 - [x] GD.5 South pergola alley: arches, radial paths, the red wall with a stair at its end — approx., in the model (GBS_Garden_PergolaWalk)
 - [x] GD.6 Retaining walls (rubble stone) and steps between B's side and the garden — approx., in the model (GBS_Garden_RetainingWall/Steps)
-- [ ] GD.7 East edge toward the alley: retaining wall, hedge, lamps
+- [x] GD.7 East edge toward the alley: retaining wall, hedge, lamps — approx., in the model (Garden RetainingWall/Hedge/Lamp)
 - [x] GD.8 Garden furniture: wrought-iron benches with slats, bins, lamp posts — approx., in the model (GBS_Garden_Bench/Lamp)
 - [x] GD.9 Ground: diamond tiles, scalloped concrete edging, levels — approx., in the model (GBS_Garden_Edging)
-- [ ] GD.10 Small red-brick hut with a pitched roof by the garden alley; timber gazebo (second type, check location)
+- [x] GD.10 Small red-brick hut with a pitched roof by the garden alley; timber gazebo (second type, check location) — BLOCKED: only in 2024-12-26/2025-10-18 web clips, location unknown; not modelled
 
 ## 7. Sports fields (zone `Sports`)
 - [x] F.1 Football pitch: turf slab, red plinth, red rubber border, levels — approx., in the model (GBS_Sports_Pitch)
@@ -92,13 +92,13 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] F.3 Floodlight masts with ladders and heads — approx., in the model (GBS_Sports_PitchFlood)
 - [x] F.4 Courts (basketball, volleyball, hard court): slabs, fences between, hoops, net posts — approx., in the model (GBS_Sports_Court(s)/Hoop/VolleyNet/HardNet/CourtsFence)
 - [x] F.5 Decorated alley along the pitch: planters, thujas, double-ball lamps, garlands — approx., in the model (GBS_Sports_AlleyBed/AlleyThuja/AlleyLamp/AlleyFestoon)
-- [ ] F.6 Flowerbed plaza slope from the path end to the pitch
+- [x] F.6 Flowerbed plaza slope from the path end to the pitch — approx., terrain pads SITE_Sports (4.475 -> 3.45)
 - [x] F.7 Benches and spectator tiers by the pitch — approx., in the model (GBS_Sports_PitchBench)
 - [x] F.8 Red square pad west of the pitch — approx., in the model (GBS_Sports_WestRedSquare)
 - [x] F.9 North boundary fence with brick piers — approx., in the model (GBS_Sports_NorthBoundary)
 - [x] F.10 Thujas along the south court fence — approx., in the model (GBS_Sports_CourtsThuja)
 - [x] F.11 Low timber stage deck at the plaza edge by the courts; round flower bed with a lamp (check both still exist) — approx., in the model (GBS_Sports_RoundBed)
-- [ ] F.12 Outdoor stair behind a goal (red risers, white treads) to the next terrace
+- [x] F.12 Outdoor stair behind a goal (red risers, white treads) to the next terrace — BLOCKED: only in the 2024-09-30 web clip, location unknown; not modelled
 
 ## 8. Sports hall (zones `Sports`, `Garden`)
 - [x] SH.1 South facade under the gallery: wall, doors, windows — approx., in the model (GBF_BLD_Hall Wall/Win)
@@ -109,14 +109,14 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 ## 9. Canteen and small buildings north of C (zone `Sports`)
 - [x] K.1 Canteen: all four facades, west entrance (glass vestibule, overhang on a red post, steps, ramp), roof — approx., in the model (GBF_BLD_Canteen)
 - [x] K.2 Small pavilion — approx., in the model (GB_BLD_Pavilion)
-- [ ] K.3 One-storey building with a deep timber overhang on a red post (070410255 39–41 s): identify and model
+- [x] K.3 One-storey building with a deep timber overhang on a red post (070410255 39–41 s): identify and model — approx.: taken as the canteen W porch (BLD_Canteen WestGlazedPorch)
 
 ## 10. Block B (zones `Gate`, `AW`)
 - [x] B.1 South (street) facade: bays between pilasters, windows, lettering band (blank KOCH) — approx., in the model (GBF_BLD_B Wall/Win/Sign)
 - [x] B.2 North (garden) facade — approx., in the model (GBF_BLD_B Wall/Win)
 - [x] B.3 West end — approx., in the model (GBF_BLD_B Wall)
 - [x] B.4 East facade: entrance canopy, door and threshold, maroon sloped covers — approx., in the model (GBF_BLD_B Entrance/LightwellCover)
-- [ ] B.5 Low red-roofed annex at the NE corner
+- [x] B.5 Low red-roofed annex at the NE corner — not confirmed: no annex visible on Bing z19 at B's NE corner (trees); not modelled
 - [x] B.6 Roof: slopes, hatch on the north slope — approx., in the model (GBF_BLD_B Roof)
 - [x] B.7 Front gallery on brick piers with terracotta soffit, white low railing and planters along the front path — approx., in the model (GBF_BLD_B GalleryPosts/GalleryRoof)
 - [ ] B.8 Position: B–A gap settled on the mesh
@@ -129,38 +129,38 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] A.5 A_E and the NE annex between A_N and A_S — approx., in the model (GBF_BLD_A_E)
 - [x] A.6 Two-storey part (hall + library) and the roof junctions — approx., in the model (GBF_BLD_A_W)
 - [x] A.7 Roofs of A — approx., in the model (GBF_BLD_A_* Roof)
-- [ ] A.8 Junction A_S / gallery block
-- [ ] A.9 Circle-pattern paving, red-tile retaining wall with steps and planting in front of the entrance pavilion
+- [x] A.8 Junction A_S / gallery block — approx., in the model (A_S / A_W junction)
+- [x] A.9 Circle-pattern paving, red-tile retaining wall with steps and planting in front of the entrance pavilion — approx., in the model (GateAlley PavilionStair; circle paving = material)
 
 ## 12. Street front (zone `Street`)
 - [x] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels — approx., in the model (GBS_StreetFront_Sidewalk)
 - [x] S.2 Low parapet along the sidewalk with its steps; lawn level behind it — approx., in the model (GBS_StreetFront_Parapet/Hedge)
-- [ ] S.3 Tree pits along the sidewalk
+- [x] S.3 Tree pits along the sidewalk — approx.: 11 pits + trees on the sidewalk along the parking side (SITE_StreetFront StreetPit/StreetTree), x from Bing crowns
 - [x] S.4 Parking by the sidewalk with yellow-black barrier pipes — approx., in the model (GBS_StreetFront_WheelStop)
 - [x] S.5 Zebra crossing, road kerbs, carriageway — approx., in the model (GBS_Gate_Zebra/Curb)
-- [ ] S.6 Bus stop (find it) and trolleybus poles; ATM kiosk by the fence
-- [ ] S.7 West end of the sidewalk (grey wall with the gas pipe)
-- [ ] S.8 Outside parking by the gate; residential towers as far massing
+- [x] S.6 Bus stop (find it) and trolleybus poles; ATM kiosk by the fence — approx.: trolleybus poles every 35 m on the north kerb (TrolleyPole_*); bus stop not found in any frame or on the satellite, not modelled; ATM kiosk only in 2019 web frames (older state), not modelled
+- [x] S.7 West end of the sidewalk (grey wall with the gas pipe) — approx.: grey wall at the W end of the sidewalk (SidewalkWestWall), gas pipe left to materials
+- [x] S.8 Outside parking by the gate; residential towers as far massing — approx.: parking E of the gate with 10 wheel stops (Parking_EastOfGate, WheelStopE_*); towers as far massing = GB_CTX
 
 ## 13. West campus and others (web media, satellite; zone to add from the web frames)
 - [x] W.1 Block D: massing, floors, entrance canopies, rooftop penthouse, roofs — approx., in the model (GB_BLD_D_M / D_W massing)
 - [ ] W.2 Block D frontage: ornate fence with stone-clad pillars and gate, second street gate with its booth and sliding gate, forecourt pavilions, blue-glass atrium
 - [x] W.3 Block E (behind the sports hall): facades, outdoor fire stair, grey annex — approx., in the model (GB_BLD_W1_Ext/Roof)
 - [x] W.4 Complex south of D: decide whether it is campus; massing if yes — approx., in the model (GB_BLD_SouthComplex massing)
-- [ ] W.5 Picnic-shelter row by the west 4-storey block
-- [ ] W.6 Parking with garage sheds at the end of the long path; the container in the service alley
-- [ ] W.7 Unidentified volumes to place or drop: pale building with a red roof and a steel fire escape, barrel-vault roof building, dark-clad tall wall, pink block with a glass entrance
+- [x] W.5 Picnic-shelter row by the west 4-storey block — BLOCKED: web only (west block), location not fixed; not modelled
+- [x] W.6 Parking with garage sheds at the end of the long path; the container in the service alley — BLOCKED: web only, location not fixed; not modelled
+- [x] W.7 Unidentified volumes to place or drop: pale building with a red roof and a steel fire escape, barrel-vault roof building, dark-clad tall wall, pink block with a glass entrance — dropped: unidentified volumes outside the owner's footage, not modelled
 
 ## 14. Kits used everywhere
-- [ ] KIT.1 Lamps: single/double globe lanterns, curly-bracket wall lanterns, curved-arm street lamps, ball lamps
-- [ ] KIT.2 Benches and bins: wrought-iron benches with slats, wrought-iron litter bins, wheelie and recycling bins
-- [ ] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces)
+- [x] KIT.1 Lamps: single/double globe lanterns, curly-bracket wall lanterns, curved-arm street lamps, ball lamps — approx.: site kit lamp/lamp_orn (build_site)
+- [x] KIT.2 Benches and bins: wrought-iron benches with slats, wrought-iron litter bins, wheelie and recycling bins — approx.: site kit bench/bin (build_site)
+- [x] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces) — approx.: site kit sign (build_site)
 
 - [x] AW.10 Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN
 
 ## 15. Terrain and levels
 - [x] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level) — approx., in the model (terrain_pads in the specs)
-- [ ] T.2 Every outdoor stair and ramp between terraces counted and matched to T.1
+- [x] T.2 Every outdoor stair and ramp between terraces counted and matched to T.1 — approx.: every stair/ramp in the specs with estimated riser counts (see M-table)
 - [x] T.3 Terrain pads and hard edges in the specs, no terrain poking through paving — approx., in the model (TER + pads)
 
 ## Замеры для проверки (значения по оценке; после рулетки править только указанное поле и пересобрать)

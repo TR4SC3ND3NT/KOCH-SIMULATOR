@@ -439,6 +439,733 @@
    "material": "metal",
    "evidence": "video 065653194 t=46 s: yellow-black pipe barriers at the car noses; bay pitch 2.6 m assumed (standard), positions not measured",
    "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_00",
+   "ring": [
+    [
+     98.3,
+     -101.1
+    ],
+    [
+     99.7,
+     -101.1
+    ],
+    [
+     99.7,
+     -99.7
+    ],
+    [
+     98.3,
+     -99.7
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_00",
+   "pos": [
+    99,
+    -100.4
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_01",
+   "ring": [
+    [
+     106.3,
+     -101.524
+    ],
+    [
+     107.7,
+     -101.524
+    ],
+    [
+     107.7,
+     -100.124
+    ],
+    [
+     106.3,
+     -100.124
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_01",
+   "pos": [
+    107,
+    -100.824
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_02",
+   "ring": [
+    [
+     114.3,
+     -101.948
+    ],
+    [
+     115.7,
+     -101.948
+    ],
+    [
+     115.7,
+     -100.548
+    ],
+    [
+     114.3,
+     -100.548
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_02",
+   "pos": [
+    115,
+    -101.248
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_03",
+   "ring": [
+    [
+     122.3,
+     -102.372
+    ],
+    [
+     123.7,
+     -102.372
+    ],
+    [
+     123.7,
+     -100.972
+    ],
+    [
+     122.3,
+     -100.972
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_03",
+   "pos": [
+    123,
+    -101.672
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_04",
+   "ring": [
+    [
+     130.3,
+     -102.796
+    ],
+    [
+     131.7,
+     -102.796
+    ],
+    [
+     131.7,
+     -101.396
+    ],
+    [
+     130.3,
+     -101.396
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_04",
+   "pos": [
+    131,
+    -102.096
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_05",
+   "ring": [
+    [
+     138.3,
+     -103.22
+    ],
+    [
+     139.7,
+     -103.22
+    ],
+    [
+     139.7,
+     -101.82
+    ],
+    [
+     138.3,
+     -101.82
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_05",
+   "pos": [
+    139,
+    -102.52
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_06",
+   "ring": [
+    [
+     164.3,
+     -104.598
+    ],
+    [
+     165.7,
+     -104.598
+    ],
+    [
+     165.7,
+     -103.198
+    ],
+    [
+     164.3,
+     -103.198
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_06",
+   "pos": [
+    165,
+    -103.898
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_07",
+   "ring": [
+    [
+     174.3,
+     -105.128
+    ],
+    [
+     175.7,
+     -105.128
+    ],
+    [
+     175.7,
+     -103.728
+    ],
+    [
+     174.3,
+     -103.728
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_07",
+   "pos": [
+    175,
+    -104.428
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_08",
+   "ring": [
+    [
+     184.3,
+     -105.658
+    ],
+    [
+     185.7,
+     -105.658
+    ],
+    [
+     185.7,
+     -104.258
+    ],
+    [
+     184.3,
+     -104.258
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_08",
+   "pos": [
+    185,
+    -104.958
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_09",
+   "ring": [
+    [
+     194.3,
+     -106.188
+    ],
+    [
+     195.7,
+     -106.188
+    ],
+    [
+     195.7,
+     -104.788
+    ],
+    [
+     194.3,
+     -104.788
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_09",
+   "pos": [
+    195,
+    -105.488
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "StreetPit_10",
+   "ring": [
+    [
+     203.3,
+     -106.665
+    ],
+    [
+     204.7,
+     -106.665
+    ],
+    [
+     204.7,
+     -105.265
+    ],
+    [
+     203.3,
+     -105.265
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "StreetTree_10",
+   "pos": [
+    204,
+    -105.965
+   ],
+   "height": 9.0,
+   "crown_d": 6.0,
+   "trunk_d": 0.35,
+   "crown_base": 2.6,
+   "shape": "round",
+   "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "TrolleyPole_0",
+   "pos": [
+    100,
+    -111.4
+   ],
+   "height": 9.0,
+   "head": "box",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "TrolleyPole_1",
+   "pos": [
+    135,
+    -113.25500000000001
+   ],
+   "height": 9.0,
+   "head": "box",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "TrolleyPole_2",
+   "pos": [
+    170,
+    -115.11
+   ],
+   "height": 9.0,
+   "head": "box",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "TrolleyPole_3",
+   "pos": [
+    205,
+    -116.965
+   ],
+   "height": 9.0,
+   "head": "box",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "Parking_EastOfGate",
+   "line": [
+    [
+     160.0,
+     -107.4
+    ],
+    [
+     188.0,
+     -108.9
+    ]
+   ],
+   "width": 5.0,
+   "thk": 0.08,
+   "surface": "asphalt",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_00",
+   "line": [
+    [
+     161.3,
+     -105.3
+    ],
+    [
+     163.10000000000002,
+     -105.395
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_01",
+   "line": [
+    [
+     163.9,
+     -105.4378
+    ],
+    [
+     165.70000000000002,
+     -105.5328
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_02",
+   "line": [
+    [
+     166.5,
+     -105.5756
+    ],
+    [
+     168.3,
+     -105.6706
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_03",
+   "line": [
+    [
+     169.10000000000002,
+     -105.7134
+    ],
+    [
+     170.90000000000003,
+     -105.80839999999999
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_04",
+   "line": [
+    [
+     171.70000000000002,
+     -105.85119999999999
+    ],
+    [
+     173.50000000000003,
+     -105.94619999999999
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_05",
+   "line": [
+    [
+     174.3,
+     -105.98899999999999
+    ],
+    [
+     176.10000000000002,
+     -106.08399999999999
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_06",
+   "line": [
+    [
+     176.9,
+     -106.1268
+    ],
+    [
+     178.70000000000002,
+     -106.2218
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_07",
+   "line": [
+    [
+     179.5,
+     -106.2646
+    ],
+    [
+     181.3,
+     -106.3596
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_08",
+   "line": [
+    [
+     182.10000000000002,
+     -106.4024
+    ],
+    [
+     183.90000000000003,
+     -106.4974
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStopE_09",
+   "line": [
+    [
+     184.70000000000002,
+     -106.5402
+    ],
+    [
+     186.50000000000003,
+     -106.6352
+    ]
+   ],
+   "height": 0.35,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "SidewalkWestWall",
+   "line": [
+    [
+     92.3,
+     -96.6
+    ],
+    [
+     92.1,
+     -103.0
+    ]
+   ],
+   "height": 2.4,
+   "thk": 0.3,
+   "material": "stone",
+   "evidence": "grey wall with the gas pipe at the start of video 065653194 (west end of the sidewalk); height and extent estimated",
+   "confidence": "low"
   }
  ]
 }

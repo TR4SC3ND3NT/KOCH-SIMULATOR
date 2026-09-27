@@ -5370,6 +5370,423 @@
    ],
    "evidence": "map owner: F5 = compact teachers' offices inside the roof, low ceilings, lit by the dormers; layout estimate (not photographed)",
    "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_DeskWindow",
+   "center": [
+    184.288,
+    12.023
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    6.6000000000000005,
+    0.7,
+    0.75
+   ],
+   "z0": 9.7,
+   "material": "white",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_DeskRow0",
+   "center": [
+    184.476,
+    9.214
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    4.6,
+    0.7,
+    0.75
+   ],
+   "z0": 9.7,
+   "material": "white",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair00",
+   "center": [
+    182.653,
+    8.686
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair01",
+   "center": [
+    183.553,
+    8.65
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair02",
+   "center": [
+    184.452,
+    8.614
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair03",
+   "center": [
+    185.351,
+    8.578
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair04",
+   "center": [
+    186.25,
+    8.542
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_DeskRow1",
+   "center": [
+    184.52,
+    10.313
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    4.6,
+    0.7,
+    0.75
+   ],
+   "z0": 9.7,
+   "material": "white",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair10",
+   "center": [
+    182.697,
+    9.785
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair11",
+   "center": [
+    183.596,
+    9.749
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair12",
+   "center": [
+    184.496,
+    9.713
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair13",
+   "center": [
+    185.395,
+    9.677
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair14",
+   "center": [
+    186.294,
+    9.641
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_DeskRow2",
+   "center": [
+    184.553,
+    11.162
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    4.6,
+    0.7,
+    0.75
+   ],
+   "z0": 9.7,
+   "material": "white",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair20",
+   "center": [
+    182.731,
+    10.634
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair21",
+   "center": [
+    183.63,
+    10.598
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair22",
+   "center": [
+    184.529,
+    10.562
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair23",
+   "center": [
+    185.429,
+    10.527
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Chair24",
+   "center": [
+    186.328,
+    10.491
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_TV",
+   "center": [
+    180.761,
+    10.413
+   ],
+   "dir_deg": 87.7161455,
+   "size": [
+    1.45,
+    0.08,
+    0.85
+   ],
+   "z0": 10.899999999999999,
+   "material": "metal",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Whiteboard",
+   "center": [
+    187.685,
+    10.136
+   ],
+   "dir_deg": 87.7161455,
+   "size": [
+    2.4,
+    0.04,
+    1.2
+   ],
+   "z0": 10.6,
+   "material": "white",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_WallAccent",
+   "center": [
+    180.727,
+    10.314
+   ],
+   "dir_deg": 87.7161455,
+   "size": [
+    4.4,
+    0.02,
+    2.8
+   ],
+   "z0": 9.7,
+   "material": "accent",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "F2_Room_N_Lab_E",
+   "line": [
+    [
+     187.719,
+     7.733
+    ],
+    [
+     187.911,
+     12.529
+    ]
+   ],
+   "z0": 9.6,
+   "z1": 12.62,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "confidence": "low"
   }
  ]
 }
