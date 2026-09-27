@@ -48,9 +48,9 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] C.9 West facade — approx., in the model (GBF_BLD_C Wall/Win (W edges))
 - [ ] C.10 Roof: hips, ridges, eaves, fascia, gutters with hangers, downpipes with elbows and shoes, snow guards — approx., in the model (GBF_BLD_C Roof/Eave/Gutter/Downpipe)
 - [ ] C.11 Dormers: south 2+3, north 7, east 2, each with its own roof — approx., in the model (GBF_BLD_C Dormers)
-- [ ] C.12 West basement entry "Dance Hall": sunken stair, wrought-iron guard, brick box, red mono-pitch canopy and its post — approx., in the model (GBF_BLD_C DanceHallEntry + INT_C_Basement stair)
+- [ ] C.12 West basement entry "Dance Hall": sunken stair, wrought-iron guard, brick box, red mono-pitch canopy and its post — approx., in the model (GBF_BLD_C DanceHallEntry + INT_C_Basement stair) — P1 partly: the Dance Hall box at the west end of the covers lines up in 081158036 f00439/f00570 (brick box, railing, awning edge); the sunken stair itself: see CI.9
 - [ ] C.13 West mono-pitch shed and its continuation toward the spruces SW of C — approx., in the model (GBF_BLD_C WestShed)
-- [ ] C.14 Basement light wells: red corrugated sloped covers along the south and east walls, low parapet — approx., in the model (GBF_BLD_C LightwellCover/Parapet)
+- [ ] C.14 Basement light wells: red corrugated sloped covers along the south and east walls, low parapet — approx., in the model (GBF_BLD_C LightwellCover/Parapet) — P1✓ a904f9d (own look C_entr c2 081158036 f00439/f00570 and 070647586 f00354: the red corrugated sloped covers lie on the model covers along the south wall, end at the stair cheek; median 8.0-11.6 px)
 - [ ] C.15 Wall fittings on C: AC units with brackets, CCTV, lamps, vents, sign plates — approx., in the model (GBF_BLD_C ACUnits/CCTV/Flood/Sign)
 - [ ] C.16 Plaza south of C: paving levels and falls, kerbs, red-edged planters, tree pits, spruces, benches, bins, bike parking at the stair — approx.: the tree pits by the stair and the ramp moved 1-2 m south to the trunk positions cut through solved cameras (f00023/f00090/f00128); bike parking not in the 2026 footage (web 2021 only), not modelled
 - [ ] C.17 Ground drop plaza → basement-entry corner, kerb step to the granite pad at the brick wall — approx., in the model (terrain pads SITE_CPlaza)
