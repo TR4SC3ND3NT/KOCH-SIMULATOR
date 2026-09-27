@@ -260,13 +260,18 @@ def step_cams(z, job, zdir, a):
                  f"-exportSparsePointCloud {q(os.path.join(out, 'sparse.ply'))}"]
     if not run_rs(zdir, "cams", cmds, job.get("cams_timeout_s", 1800 + 3 * sum(n for _, n in comps))):
         return False
-    ok = True
+    good = []
     for name, n in comps:
         out = os.path.join(zdir, "c" + name.split()[-1])
         r = subprocess.run([PY, os.path.join(HERE, "rs_to_model.py"), out, os.path.join(out, "model.json"), "--zone", z],
                            capture_output=True, text=True, timeout=1800)
         log(zdir, f"cams: {name} ({n} images) model.json exit {r.returncode} {r.stdout.strip()[-200:]} {r.stderr.strip()[-300:]}")
-        ok &= r.returncode == 0
+        if r.returncode == 0:
+            good.append((name, n))
+    # a component RealityScan exported with a broken camera (-nan intrinsics) is dropped, not the whole zone; the
+    # mesh step only uses the components listed here
+    comps = good
+    ok = bool(good)
     json.dump({"components": [{"name": c, "images": n, "dir": "c" + c.split()[-1]} for c, n in comps]},
               open(os.path.join(zdir, "components.json"), "w"), indent=1)
     return ok
