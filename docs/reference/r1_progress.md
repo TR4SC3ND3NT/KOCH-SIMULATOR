@@ -163,6 +163,100 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [ ] T.2 Every outdoor stair and ramp between terraces counted and matched to T.1 — approx.: every stair/ramp in the specs with estimated riser counts (see M-table)
 - [ ] T.3 Terrain pads and hard edges in the specs, no terrain poking through paving — approx., in the model (TER + pads)
 
+## 16. Surroundings (500 m ring, handoff section 6; OSM © OpenStreetMap contributors, Art/Blender/Data/ctx_osm.json)
+Each building: footprint from OSM, height from OSM `building:levels`/`height`, else floors counted in the owner's street videos / web photos / obliques (≈3.0 m per residential floor + ground floor + parapet); ready-made models (Fab, Poly Haven, BlenderKit free, Sketchfab CC0/CC-BY) scaled to the footprint, sources in docs/reference/asset_sources.md; collections `CTX_*`.
+
+### Near buildings (≤150 m: facades, entrances, balconies, ground-floor shops from photos)
+- [ ] CTX.Bway/169915330 yes, SE 2 m, 646 m², levels: count from photos
+- [ ] CTX.Bway/206623867 yes, E 3 m, 1492 m², levels: count from photos
+- [ ] CTX.Bway/206623848 yes, E 6 m, 452 m², levels: count from photos
+- [ ] CTX.Bway/169915374 yes, E 7 m, 260 m², levels: count from photos
+- [ ] CTX.Bway/761350988 yes, S 10 m, 24 m², levels: count from photos
+- [ ] CTX.Bway/635535016 yes, NE 14 m, 755 m², levels: count from photos
+- [ ] CTX.Bway/742042612 residential, NE 15 m, 685 m², 9.0 levels (OSM)
+- [ ] CTX.Bway/761341971 yes, NW 16 m, 1109 m², levels: count from photos
+- [ ] CTX.Bway/255081513 school, W 19 m, 1126 m², levels: count from photos
+- [ ] CTX.Bway/206623794 yes, NE 20 m, 621 m², levels: count from photos
+- [ ] CTX.Bway/761350987 yes, S 23 m, 14 m², levels: count from photos
+- [ ] CTX.Bway/206623783 yes, N 26 m, 565 m², levels: count from photos
+- [ ] CTX.Bway/761341970 yes «Технодом соода борбору», NW 26 m, 2262 m², levels: count from photos
+- [ ] CTX.Bway/206614083 yes, W 30 m, 1558 m², levels: count from photos
+- [ ] CTX.Bway/1529424567 yes, N 36 m, 3498 m², levels: count from photos
+- [ ] CTX.Bway/761341972 yes, N 43 m, 530 m², levels: count from photos
+- [ ] CTX.Bway/169828217 yes, SE 46 m, 331 m², levels: count from photos
+- [ ] CTX.Bway/635535018 yes, NE 49 m, 971 m², levels: count from photos
+- [ ] CTX.Bway/635535017 yes, E 70 m, 617 m², levels: count from photos
+- [ ] CTX.Bway/129705598 yes, NW 72 m, 1985 m², levels: count from photos
+- [ ] CTX.Bway/635535009 yes, NW 77 m, 879 m², levels: count from photos
+- [ ] CTX.Bway/635535023 yes, NE 78 m, 440 m², levels: count from photos
+- [ ] CTX.Bway/635535022 yes, NE 78 m, 441 m², levels: count from photos
+- [ ] CTX.Bway/635535019 yes, NE 78 m, 440 m², levels: count from photos
+- [ ] CTX.Bway/635535021 yes, NE 78 m, 440 m², levels: count from photos
+- [ ] CTX.Bway/635535024 yes, NE 80 m, 441 m², levels: count from photos
+- [ ] CTX.Bway/761345513 yes, NE 80 m, 1349 m², levels: count from photos
+- [ ] CTX.Bway/632728361 yes, SE 82 m, 1128 m², 9.0 levels (OSM)
+- [ ] CTX.Bway/341105719 yes «Аю Grand», N 86 m, 22747 m², levels: count from photos
+- [ ] CTX.Bway/632728362 yes, S 91 m, 862 m², 9.0 levels (OSM)
+- [ ] CTX.Bway/632728363 yes, S 91 m, 1004 m², 9.0 levels (OSM)
+- [ ] CTX.Bway/169915344 yes, E 94 m, 5429 m², levels: count from photos
+- [ ] CTX.Bway/206623827 yes, E 94 m, 911 m², levels: count from photos
+- [ ] CTX.Bway/206623793 yes, E 95 m, 275 m², levels: count from photos
+- [ ] CTX.Bway/169915381 yes, E 96 m, 1529 m², levels: count from photos
+- [ ] CTX.Bway/335552917 house, SE 99 m, 93 m², 2.0 levels (OSM)
+- [ ] CTX.Bway/206623816 yes, E 100 m, 383 m², levels: count from photos
+- [ ] CTX.Bway/635535020 yes, NE 114 m, 440 m², levels: count from photos
+- [ ] CTX.Bway/1555086426 yes, S 115 m, 237 m², levels: count from photos
+- [ ] CTX.Bway/897518010 yes, SE 116 m, 217 m², levels: count from photos
+- [ ] CTX.Bway/635535014 yes, NE 120 m, 440 m², levels: count from photos
+- [ ] CTX.Bway/635535013 yes, NE 121 m, 440 m², levels: count from photos
+- [ ] CTX.Bway/1529424569 roof, N 125 m, 322 m², levels: count from photos
+- [ ] CTX.Bway/206623782 yes, NE 126 m, 430 m², levels: count from photos
+- [ ] CTX.Bway/169916490 mosque, S 127 m, 1564 m², levels: count from photos
+- [ ] CTX.Bway/206613116 yes, W 133 m, 1384 m², levels: count from photos
+- [ ] CTX.Bway/168164292 yes, W 134 m, 905 m², levels: count from photos
+- [ ] CTX.Bway/394617087 office «Центр обслуживания населения», NW 134 m, 1182 m², levels: count from photos
+- [ ] CTX.Bway/168164264 yes, W 135 m, 721 m², levels: count from photos
+- [ ] CTX.Bway/407836680 house, SE 136 m, 363 m², 3.0 levels (OSM)
+- [ ] CTX.Bway/206613712 yes, W 136 m, 3713 m², levels: count from photos
+- [ ] CTX.Bway/635535008 yes, NW 137 m, 1681 m², levels: count from photos
+- [ ] CTX.Bway/169828200 house, SE 143 m, 90 m², levels: count from photos
+- [ ] CTX.Bway/1529424629 yes, SW 143 m, 214 m², levels: count from photos
+- [ ] CTX.Bway/877560915 yes, SE 143 m, 279 m², levels: count from photos
+
+### Far buildings (150–500 m: massing, roof shape, floor rhythm, colour zones), grouped by direction
+- [ ] CTX.FAR_E 21 buildings E of the campus (1 with OSM levels, 20 to count from photos/obliques)
+- [ ] CTX.FAR_N 19 buildings N of the campus (1 with OSM levels, 18 to count from photos/obliques)
+- [ ] CTX.FAR_NE 27 buildings NE of the campus (1 with OSM levels, 26 to count from photos/obliques)
+- [ ] CTX.FAR_NW 29 buildings NW of the campus (0 with OSM levels, 29 to count from photos/obliques)
+- [ ] CTX.FAR_S 31 buildings S of the campus (3 with OSM levels, 28 to count from photos/obliques)
+- [ ] CTX.FAR_SE 65 buildings SE of the campus (22 with OSM levels, 43 to count from photos/obliques)
+- [ ] CTX.FAR_SW 27 buildings SW of the campus (1 with OSM levels, 26 to count from photos/obliques)
+- [ ] CTX.FAR_W 34 buildings W of the campus (1 with OSM levels, 33 to count from photos/obliques)
+
+### Streets and stops
+- [ ] CTX.ST Чолпон-Ата көчөсү: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Анкара көчөсү: carriageway (lanes 4), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST unnamed residential: carriageway (lanes 2), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Чокон Валиханов көчөсү: carriageway (lanes 3), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Исакеева улица: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Чолпон-Атинская улица: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Исакеев көчөсү: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Isakeeva street: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Altyn-Ordo street: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Akmatova Zhusupa street: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Subanova Temirkana street: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Kadyrbay Ata street: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.ST Alieva Chynybeka street: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
+- [ ] CTX.CROSS 17 crossings with zebras and signals
+- [ ] CTX.STOPnode/1985920206 stop (no name) (SE 55 m): shelter, sign, kerb
+- [ ] CTX.STOPnode/1985920208 stop "Ала-Тоо" университети (SW 107 m): shelter, sign, kerb
+- [ ] CTX.STOPnode/13938860732 stop (no name) (S 108 m): shelter, sign, kerb
+- [ ] CTX.STOPnode/1987293827 stop (no name) (W 196 m): shelter, sign, kerb
+- [ ] CTX.STOPnode/3659060695 stop (no name) (SE 240 m): shelter, sign, kerb
+- [ ] CTX.STOPnode/5886987749 stop Аю Гранд Комфорт (NW 420 m): shelter, sign, kerb
+- [ ] CTX.STOPnode/5886987748 stop Аю Гранд Комфорт (NW 441 m): shelter, sign, kerb
+- [ ] CTX.TROLLEY trolleybus poles and wires along the served streets
+
 ## Замеры для проверки (значения по оценке; после рулетки править только указанное поле и пересобрать)
 Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py`
 
