@@ -214,10 +214,10 @@
     }
    ],
    "entrance": {
-    "u0": 0.25,
-    "u1": 3.55,
-    "z1": 2.8,
-    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera)",
+    "u0": 0.02,
+    "u1": 3.78,
+    "z1": 3.29,
+    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera) | 2026-09-27: head +3.29, transom underside +2.65, sill on the landing (rays of 070647586 f00449 cut on the storefront plane of the photogrammetry mesh); the frame measured u -0.35..4.43 is wider than the tower of the ring (3.8): width limited to the tower until the tower width is settled (C.5)",
     "bays": [
      [
       0.9,
@@ -236,8 +236,9 @@
       "fixed"
      ]
     ],
-    "transom_z": 2.27,
-    "reveal": 0.25
+    "transom_z": 2.65,
+    "reveal": 0.12,
+    "confidence": "medium"
    },
    "evidence": "maroon stair tower, 2 landing windows per half-level"
   },
@@ -460,7 +461,7 @@
    },
    "evidence": "2026-09-27: sign-box front, top edge and side edges fitted on photo edges through 6 solved cameras of 070647586 (depth 5.55, bottom +3.10, top +4.60, u -0.2..4.0), agreeing with the photogrammetry mesh section on the flight axis (front 5.8 out, bottom +3.02, top +4.6-4.8, soffit rising to ~+3.8 at the wall); soffit of 0.6 m cassettes (f00449)",
    "confidence": "high",
-   "z_soffit_wall": 3.8,
+   "z_soffit_wall": 3.6,
    "panel": 0.6
   },
   {
@@ -601,13 +602,13 @@
    "type": "wall_sign",
    "name": "EntranceFascia",
    "edge": 2,
-   "u0": 0.25,
-   "u1": 3.55,
-   "z0": 2.8,
-   "z1": 3.45,
+   "u0": 0.02,
+   "u1": 3.78,
+   "z0": 3.29,
+   "z1": 3.6,
    "t": 0.03,
    "color": "canopy",
-   "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726)",
+   "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726) | 2026-09-27: between the frame head +3.29 and the soffit +3.6 at the wall (f00449 on the storefront plane)",
    "confidence": "medium"
   },
   {
