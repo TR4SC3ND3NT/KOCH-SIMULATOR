@@ -99,386 +99,6 @@
    "confidence": "low"
   },
   {
-   "type": "wall",
-   "name": "WheelStop_00",
-   "line": [
-    [
-     98.618,
-     -103.315
-    ],
-    [
-     100.42,
-     -103.364
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_01",
-   "line": [
-    [
-     101.221,
-     -103.386
-    ],
-    [
-     103.024,
-     -103.435
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_02",
-   "line": [
-    [
-     103.825,
-     -103.457
-    ],
-    [
-     105.627,
-     -103.506
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_03",
-   "line": [
-    [
-     106.428,
-     -103.528
-    ],
-    [
-     108.23,
-     -103.578
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_04",
-   "line": [
-    [
-     109.032,
-     -103.599
-    ],
-    [
-     110.834,
-     -103.649
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_05",
-   "line": [
-    [
-     111.635,
-     -103.671
-    ],
-    [
-     113.437,
-     -103.72
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_06",
-   "line": [
-    [
-     114.238,
-     -103.742
-    ],
-    [
-     116.041,
-     -103.791
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_07",
-   "line": [
-    [
-     116.842,
-     -103.813
-    ],
-    [
-     118.644,
-     -103.862
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_08",
-   "line": [
-    [
-     119.445,
-     -103.884
-    ],
-    [
-     121.248,
-     -103.934
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_09",
-   "line": [
-    [
-     122.049,
-     -103.956
-    ],
-    [
-     123.851,
-     -104.005
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_10",
-   "line": [
-    [
-     124.652,
-     -104.027
-    ],
-    [
-     126.455,
-     -104.076
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_11",
-   "line": [
-    [
-     127.256,
-     -104.098
-    ],
-    [
-     129.058,
-     -104.147
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_12",
-   "line": [
-    [
-     129.859,
-     -104.169
-    ],
-    [
-     131.662,
-     -104.219
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_13",
-   "line": [
-    [
-     132.463,
-     -104.24
-    ],
-    [
-     134.265,
-     -104.29
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_14",
-   "line": [
-    [
-     135.066,
-     -104.312
-    ],
-    [
-     136.869,
-     -104.361
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_15",
-   "line": [
-    [
-     137.67,
-     -104.383
-    ],
-    [
-     139.472,
-     -104.432
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_16",
-   "line": [
-    [
-     140.273,
-     -104.454
-    ],
-    [
-     142.076,
-     -104.503
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_17",
-   "line": [
-    [
-     142.877,
-     -104.525
-    ],
-    [
-     144.679,
-     -104.575
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
-   "type": "wall",
-   "name": "WheelStop_18",
-   "line": [
-    [
-     145.48,
-     -104.597
-    ],
-    [
-     147.283,
-     -104.646
-    ]
-   ],
-   "height": 0.25,
-   "thk": 0.08,
-   "material": "metal",
-   "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low",
-   "slot": "M_Steel_Paint_YellowBlack"
-  },
-  {
    "type": "planter",
    "name": "StreetPit_00",
    "ring": [
@@ -1121,6 +741,246 @@
    "slot": "M_Paint_White",
    "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate)",
    "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_00",
+   "line": [
+    [
+     97.556,
+     -103.286
+    ],
+    [
+     99.559,
+     -103.34
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "medium",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_01",
+   "line": [
+    [
+     101.812,
+     -103.402
+    ],
+    [
+     103.815,
+     -103.457
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "medium",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_02",
+   "line": [
+    [
+     106.068,
+     -103.518
+    ],
+    [
+     108.07,
+     -103.573
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_03",
+   "line": [
+    [
+     110.323,
+     -103.635
+    ],
+    [
+     112.326,
+     -103.69
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_04",
+   "line": [
+    [
+     114.579,
+     -103.751
+    ],
+    [
+     116.582,
+     -103.806
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_05",
+   "line": [
+    [
+     118.835,
+     -103.868
+    ],
+    [
+     120.837,
+     -103.922
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_06",
+   "line": [
+    [
+     123.09,
+     -103.984
+    ],
+    [
+     125.093,
+     -104.039
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_07",
+   "line": [
+    [
+     127.346,
+     -104.1
+    ],
+    [
+     129.349,
+     -104.155
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_08",
+   "line": [
+    [
+     131.602,
+     -104.217
+    ],
+    [
+     133.604,
+     -104.272
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_09",
+   "line": [
+    [
+     135.857,
+     -104.333
+    ],
+    [
+     137.86,
+     -104.388
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_10",
+   "line": [
+    [
+     140.113,
+     -104.45
+    ],
+    [
+     142.116,
+     -104.505
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
+  },
+  {
+   "type": "wall",
+   "name": "WheelStop_11",
+   "line": [
+    [
+     144.369,
+     -104.566
+    ],
+    [
+     146.371,
+     -104.621
+    ]
+   ],
+   "height": 0.25,
+   "thk": 0.08,
+   "material": "metal",
+   "evidence": "P1: ground mosaic of Street c3: bars at x 97.85-99.55 and 102.1-104.6 (y -103.3), pitch 4.25 m (one bar per two 2.1 m bays); the rest continue the pitch (not seen: mosaic coverage ends at x 106); height 0.25 (Street c2 mesh), line from the mosaic + Google car noses",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   }
  ]
 }
