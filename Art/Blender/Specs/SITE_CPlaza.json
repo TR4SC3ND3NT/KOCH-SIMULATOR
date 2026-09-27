@@ -292,40 +292,55 @@
    "confidence": "low"
   },
   {
+   "type": "tree",
+   "name": "TreeAN_0",
+   "pos": [
+    174.4,
+    -18.026
+   ],
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
    "type": "planter",
    "name": "PlanterAN_0",
    "ring": [
     [
-     174.0,
-     -18.986
+     173.8,
+     -18.626
     ],
     [
-     175.2,
-     -18.986
+     175.0,
+     -18.626
     ],
     [
-     175.2,
-     -17.786
+     175.0,
+     -17.426
     ],
     [
-     174.0,
-     -17.786
+     173.8,
+     -17.426
     ]
    ],
    "curb_h": 0.12,
    "curb_w": 0.08,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "TreeAN_0",
+   "name": "TreeAN_1",
    "pos": [
-    174.6,
-    -18.386
+    177.33,
+    -18.17
    ],
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
    "height": 5.0,
    "crown_d": 2.2,
    "trunk_d": 0.2,
@@ -337,36 +352,36 @@
    "name": "PlanterAN_1",
    "ring": [
     [
-     179.9,
-     -19.275
+     176.73,
+     -18.77
     ],
     [
-     181.1,
-     -19.275
+     177.93,
+     -18.77
     ],
     [
-     181.1,
-     -18.075
+     177.93,
+     -17.57
     ],
     [
-     179.9,
-     -18.075
+     176.73,
+     -17.57
     ]
    ],
    "curb_h": 0.12,
    "curb_w": 0.08,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "TreeAN_1",
+   "name": "TreeAN_2",
    "pos": [
-    180.5,
-    -18.675
+    180.27,
+    -18.314
    ],
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
    "height": 5.0,
    "crown_d": 2.2,
    "trunk_d": 0.2,
@@ -378,36 +393,36 @@
    "name": "PlanterAN_2",
    "ring": [
     [
-     185.6,
-     -19.555
+     179.67,
+     -18.914
     ],
     [
-     186.79999999999998,
-     -19.555
+     180.87,
+     -18.914
     ],
     [
-     186.79999999999998,
-     -18.355
+     180.87,
+     -17.714
     ],
     [
-     185.6,
-     -18.355
+     179.67,
+     -17.714
     ]
    ],
    "curb_h": 0.12,
    "curb_w": 0.08,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "TreeAN_2",
+   "name": "TreeAN_3",
    "pos": [
-    186.2,
-    -18.955
+    183.2,
+    -18.457
    ],
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
    "height": 5.0,
    "crown_d": 2.2,
    "trunk_d": 0.2,
@@ -419,36 +434,36 @@
    "name": "PlanterAN_3",
    "ring": [
     [
-     191.70000000000002,
-     -19.853
+     182.6,
+     -19.057
     ],
     [
-     192.9,
-     -19.853
+     183.8,
+     -19.057
     ],
     [
-     192.9,
-     -18.653
+     183.8,
+     -17.857
     ],
     [
-     191.70000000000002,
-     -18.653
+     182.6,
+     -17.857
     ]
    ],
    "curb_h": 0.12,
    "curb_w": 0.08,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "TreeAN_3",
+   "name": "TreeAN_4",
    "pos": [
-    192.3,
-    -19.253
+    186.13,
+    -18.601
    ],
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
    "height": 5.0,
    "crown_d": 2.2,
    "trunk_d": 0.2,
@@ -456,64 +471,202 @@
    "shape": "cone"
   },
   {
+   "type": "planter",
+   "name": "PlanterAN_4",
+   "ring": [
+    [
+     185.53,
+     -19.201
+    ],
+    [
+     186.73,
+     -19.201
+    ],
+    [
+     186.73,
+     -18.001
+    ],
+    [
+     185.53,
+     -18.001
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_5",
+   "pos": [
+    189.06,
+    -18.745
+   ],
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_5",
+   "ring": [
+    [
+     188.46,
+     -19.345
+    ],
+    [
+     189.66,
+     -19.345
+    ],
+    [
+     189.66,
+     -18.145
+    ],
+    [
+     188.46,
+     -18.145
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_6",
+   "pos": [
+    192.0,
+    -18.889
+   ],
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_6",
+   "ring": [
+    [
+     191.4,
+     -19.489
+    ],
+    [
+     192.6,
+     -19.489
+    ],
+    [
+     192.6,
+     -18.289
+    ],
+    [
+     191.4,
+     -18.289
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "confidence": "medium"
+  },
+  {
    "type": "bench",
    "name": "BenchAN_0",
    "pos": [
-    171.3,
-    -19.924
+    175.865,
+    -19.638
    ],
    "dir_deg": 87.2,
-   "length": 2.0,
+   "length": 1.8,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_1",
    "pos": [
-    177.5,
-    -20.228
+    178.8,
+    -19.782
    ],
    "dir_deg": 87.2,
-   "length": 2.0,
+   "length": 1.8,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_2",
    "pos": [
-    183.4,
-    -20.517
+    181.735,
+    -19.926
    ],
    "dir_deg": 87.2,
-   "length": 2.0,
+   "length": 1.8,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_3",
    "pos": [
-    189.3,
-    -20.806
+    184.665,
+    -20.069
    ],
    "dir_deg": 87.2,
-   "length": 2.0,
+   "length": 1.8,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
-   "confidence": "low"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_4",
+   "pos": [
+    187.595,
+    -20.213
+   ],
+   "dir_deg": 87.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_5",
+   "pos": [
+    190.53,
+    -20.357
+   ],
+   "dir_deg": 87.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "confidence": "medium"
   }
  ],
  "ground_surfaces": [

@@ -182,7 +182,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] KIT.2 Benches and bins: wrought-iron benches with slats, wrought-iron litter bins, wheelie and recycling bins — approx.: site kit bench/bin (build_site)
 - [ ] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces) — approx.: site kit sign (build_site)
 
-- [ ] AW.10 (CHECK: the inventory puts this bench row at the sports-hall east end, not A_N N end) Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN | 2026-09-28 [A]: CHECK resolved - C_entr c2 frames 081158036 f00006/f00194 look at the N end of A_N (blank wall with a ladder and ducts, roof line and the 3 windows match the model): the bench row stands along it; tree positions: 2 of 4 match, 1 off by ~1.5 m (P1 open)
+- [ ] AW.10 (CHECK: the inventory puts this bench row at the sports-hall east end, not A_N N end) Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN | 2026-09-28 [A]: CHECK resolved - C_entr c2 frames 081158036 f00006/f00194 look at the N end of A_N (blank wall with a ladder and ducts, roof line and the 3 windows match the model): the bench row stands along it; tree positions: 2 of 4 match, 1 off by ~1.5 m (P1 open); 2026-09-28 row rebuilt: 7 trees every 2.93 m (x 174.4-192.0) on pits with 6 benches between them against the wall (trunk projections f00006/f00194); own look: model cones sit on the real crowns in both frames
 
 ## 15. Terrain and levels
 - [ ] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level) — approx., in the model (terrain_pads in the specs)
