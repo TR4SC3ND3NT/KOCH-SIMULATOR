@@ -237,7 +237,7 @@
      ]
     ],
     "transom_z": 2.65,
-    "reveal": 0.12,
+    "reveal": 0.9,
     "confidence": "medium"
    },
    "evidence": "maroon stair tower, 2 landing windows per half-level"
@@ -429,18 +429,18 @@
    "risers": 7,
    "riser_h": 0.154,
    "tread": 0.475,
-   "landing": 2.65,
-   "evidence": "2026-09-27 photogrammetry mesh (RealityScan comp. 2 of clips 070647586+081158036, scale 0.4737 m/unit from the 0.20x0.10 paver module, levelled on plaza/treads): landing +1.28 over the plaza, landing edge 2.65 m out from the storefront, upper treads 0.48-0.49; riser count and tread fitted on photo edges through 8 solved cameras (7 risers x 0.154, treads 0.475, bottom nosing 5.50 m out); flight 3.70 wide between the side walls",
+   "landing": 1.75,
+   "evidence": "2026-09-27 photogrammetry mesh (RealityScan comp. 2 of clips 070647586+081158036, scale 0.4737 m/unit from the 0.20x0.10 paver module, levelled on plaza/treads): landing +1.28 over the plaza, landing edge 2.65 m out from the storefront, upper treads 0.48-0.49; riser count and tread fitted on photo edges through 8 solved cameras (7 risers x 0.154, treads 0.475, bottom nosing 5.50 m out); flight 3.70 wide between the side walls | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
    "cheeks": [
     {
      "u0": -0.45,
      "u1": 0.05,
-     "w1": 5.5,
+     "w1": 4.6,
      "z_wall": 0.55,
      "z_out": -0.82,
      "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449",
      "confidence": "medium",
-     "w_knee": 2.65,
+     "w_knee": 1.75,
      "w0": 1.3
     }
    ],
@@ -452,14 +452,14 @@
    "edge": 2,
    "u0": -0.2,
    "u1": 4.0,
-   "depth": 5.6,
+   "depth": 4.7,
    "z0": 3.1,
    "z1": 3.4,
    "sign": {
     "z1": 4.65,
     "t": 0.35
    },
-   "evidence": "2026-09-27: sign-box front, top edge and side edges fitted on photo edges through 6 solved cameras of 070647586 (depth 5.55, bottom +3.10, top +4.60, u -0.2..4.0), agreeing with the photogrammetry mesh section on the flight axis (front 5.8 out, bottom +3.02, top +4.6-4.8, soffit rising to ~+3.8 at the wall); soffit of 0.6 m cassettes (f00449)",
+   "evidence": "2026-09-27: sign-box front, top edge and side edges fitted on photo edges through 6 solved cameras of 070647586 (depth 5.55, bottom +3.10, top +4.60, u -0.2..4.0), agreeing with the photogrammetry mesh section on the flight axis (front 5.8 out, bottom +3.02, top +4.6-4.8, soffit rising to ~+3.8 at the wall); soffit of 0.6 m cassettes (f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
    "confidence": "high",
    "z_soffit_wall": 3.6,
    "panel": 0.6
@@ -474,12 +474,12 @@
    ],
    "post_pitch": 1.2,
    "confidence": "medium",
-   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449)",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
    "name": "Top",
    "along": "w",
    "over_stairs": true,
-   "u0": 2.65,
-   "u1": 4.5,
+   "u0": 1.75,
+   "u1": 3.6,
    "w0": -3.75,
    "w1": -2.75,
    "z_high": 0.0,
@@ -496,12 +496,12 @@
    ],
    "post_pitch": 1.2,
    "confidence": "medium",
-   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449)",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
    "name": "Run",
    "u0": 3.75,
    "u1": 9.5,
-   "w0": 3.5,
-   "w1": 4.5,
+   "w0": 2.6,
+   "w1": 3.6,
    "z_high": 0.0,
    "z_low": -1.078,
    "z_ground": -1.078
@@ -595,7 +595,7 @@
     3.9
    ],
    "z": 4.65,
-   "w": 5.35,
+   "w": 4.45,
    "evidence": "two black flood lamps on top of the sign box ends (061621646) | on the sign-box top ends after the 2026-09-27 canopy fit"
   },
   {
@@ -609,7 +609,8 @@
    "t": 0.03,
    "color": "canopy",
    "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726) | 2026-09-27: between the frame head +3.29 and the soffit +3.6 at the wall (f00449 on the storefront plane)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "w0": -0.9
   },
   {
    "type": "wall_boxes",

@@ -276,6 +276,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- 2026-09-27 (evening): C entrance re-expressed from the tower face: the mesh puts the tower wall 0.9 m in front of the storefront (landing 1.75, canopy 4.7, storefront recess 0.9); C.5/C.6 window fit by photo edges is unstable (periodic facade) -> waiting for the C_photos zone mesh; next object H.1-H.3 (C_sw c7: pavers 0.305 u, camera height 4.38 u -> ~0.33-0.37 m/unit, frame is -Y up).
 - 2026-09-27: list built from ROUTE.md, campus.md, photo_requests.md, the handoff, the specs, the capture clips (incl. the 2026-09-25 batch: gate, A_W walkway, C west side, C basement) and the web-media triage (C:\koch\web\triage_part1.md, triage_part2.md). Best web sources for roofs and back sides: the 2023-01-28 drone flight, 2022-04-19, 2020-05-16 and 2022-10-30 aerials.
 - 2026-09-27: queue extended with WEB_front (2026-05-22, 2023-03-20 clips), WEB_drone (2023-01-28, 640x352), C_F1, C_lab, C_wc (interior clips extracted + masked).
 - 2026-09-27: GPU queue started with zones C_sw, AW, Gate, Sports, Garden, Street, C_base.
