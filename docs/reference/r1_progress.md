@@ -10,25 +10,27 @@ cap. "approx.", "in the model", "estimated" never count. Blockers: `BLOCKED: <re
 - **Levels:** `route_profile.py` over all zones → `route_check.py` (handoff 0a).
 
 ## Pass grid (zone × pass; cell = commit when passed, `—` above the cap; P3 is done later in Unreal)
-| Zone (route order) | Cap | P0 | P1 | P2 |
-|---|---|---|---|---|
-| Street, bus stop, crossing (§12) | P2 | | |  |
-| Gate, booth, yard (§4 G.1-G.5) | P2 | | |  |
-| Alley B–A (§4 G.6-G.13) | P2 | | |  |
-| A_W gallery + plaza (§3) | P2 | | |  |
-| C plaza + exterior (§1) | P2 | | |  |
-| C interior F1-F5 (§2 CI.1-CI.8) | P2 | | |  |
-| C basement (§2 CI.9, §1 C.12) | P2 | | |  |
-| Hall–C passage (§5) | P2 | | |  |
-| Garden (§6) | P2 | | |  |
-| Sports fields (§7) | P2 | | |  |
-| Sports hall, canteen (§8, §9) | P2 | | |  |
-| Block B (§10) | P2 | | |  |
-| Block A (§11) | P2 | | |  |
-| Terrain + levels (§15) | P2 | | |  |
-| West campus D/E (§13) | P2 | | |  |
-| Ring ≤ 150 m + streets/stops (§16) | P2 | | |  |
-| Ring > 150 m (§16 far) | P1 | | | — |
+| Zone (route order) | Stream | Cap | P0 | P1 | P2 |
+|---|---|---|---|---|---|
+| Street, bus stop, crossing (§12) | A | P2 | | |  |
+| Gate, booth, yard (§4 G.1-G.5) | A | P2 | | |  |
+| Alley B–A (§4 G.6-G.13) | A | P2 | | |  |
+| A_W gallery + plaza (§3) | A | P2 | | |  |
+| C plaza + exterior (§1) | A | P2 | | |  |
+| C interior F1-F5 (§2 CI.1-CI.8) | A | P2 | | |  |
+| C basement (§2 CI.9, §1 C.12) | A | P2 | | |  |
+| Hall–C passage (§5) | B | P2 | | |  |
+| Garden (§6) | B | P2 | | |  |
+| Sports fields (§7) | B | P2 | | |  |
+| Sports hall, canteen (§8, §9) | B | P2 | | |  |
+| Block B (§10) | A | P2 | | |  |
+| Block A (§11) | A | P2 | | |  |
+| Terrain + levels (§15) | A+B (pads of own zones) | P2 | | |  |
+| West campus D/E (§13) | B | P2 | | |  |
+| Ring ≤ 150 m + streets/stops (§16) | A | P2 | | |  |
+| Ring > 150 m (§16 far) | A | P1 | | | — |
+
+Streams: handoff 0b (A = RTX PC, B = owner laptop). Log lines start with [A] or [B].
 
 The ticks below from before 2026-09-27 (C.1-C.3) were fitted before the world frame was fixed: they count as P2 only
 after the C zone passes P0 and P1 with them unchanged.

@@ -80,6 +80,35 @@ where the model's walking surface is off (with the object under it).
   merge. Hand shake is about ±5-10 cm, so single-step heights come from the mesh profile (mesh_section.py profile)
   and the event frames, not from the camera path alone.
 
+## 0b. Two work streams, no conflicts (map owner, 2026-09-27)
+Two agents work on the map at the same time, each on its own zones and files:
+- **Stream A:** the RTX PC (this job). It computes every mesh, owns the `.blend`, and takes the route from its start.
+- **Stream B:** the map owner's laptop agent (no GPU, no Unreal). It takes the route from its end, works from the
+  meshes stream A exports, and commits spec/generator changes only, never the `.blend`.
+
+| | Stream A (RTX PC) | Stream B (owner laptop) |
+|---|---|---|
+| Zones | Street, bus stop, crossing; Gate + booth + yard; Alley B–A; A_W gallery + plaza; C plaza + exterior; C interior F1-F5; C basement; Blocks A and B; ring (CTX) | Garden (gazebos, hedges, arches, pergola, retaining walls); Hall–C passage; Sports fields; Sports hall + wing + east end; Canteen and the small buildings north of C; West campus (D frontage, E) |
+| Spec files | SITE_StreetFront, SITE_Gate, BLD_GateBooth, SITE_GateAlley (+ zone_gate_alley.py), BLD_A_S/A_N/A_E/A_W, BLD_B, SITE_CPlaza, BLD_C, INT_C_* (+ zone_c_f1.py, zone_c_basement.py), footprints.json, ctx_osm.json | SITE_Garden, SITE_HallCPassage, SITE_Sports (+ zone_sports.py), BLD_Hall, BLD_HallEast, BLD_HallWing, BLD_Canteen, SITE_WestFront |
+| `.blend` | rebuilds and commits it (holds the LFS lock) | never commits it; builds a local scratch copy for its checks |
+
+Rules:
+- Each stream edits only its own spec files and its own sections/grid rows of `r1_progress.md`; log lines start with
+  `[A]` or `[B]`. Terrain pads live in the zone's own spec, so they follow the zone.
+- Shared code (`Scripts/Blender/*`, `greybox/*`, `Scripts/Geo/*`): small separate commits, `git pull --rebase` right
+  before every commit; never reformat or move code you did not change.
+- Stream A pulls at the start of every iteration and rebuilds the `.blend` when stream B's specs changed.
+- A seam object that touches both (e.g. the passage stair at C's west side, the garden edge at the alley): the owner of
+  the object's spec file decides; the other stream writes a one-line request in the log instead of editing.
+
+**Mesh drops for stream B** (stream A, as soon as a zone's mesh is ready: Garden, Sports, C_sw, WEB_drone, then any
+later zone that covers stream B's area):
+- `<zone>/mesh.ply`: world metres (`rs_world.py apply`), decimated to ≤ 3M triangles, no texture, no vertex colours;
+- `<zone>/align.json`, `<zone>/model.json` (cameras only, no images: the owner has the raw footage and re-extracts the
+  frames by name), and the zone's `route.json` from route_profile.py;
+- zipped per zone (`<zone>_<date>.zip`) into the Google Drive folder `koch_meshes`, shared with the map owner only
+  (never "anyone with the link"), then one log line `[A] mesh drop <zone>`. Never commit meshes.
+
 ## 1. Get the data (never commit it: people in the frames)
 - **Repo:**
   - branch `feat/r1/greybox-zones`; `git lfs pull` for the `.blend`;
