@@ -180,7 +180,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] KIT.2 Benches and bins: wrought-iron benches with slats, wrought-iron litter bins, wheelie and recycling bins — approx.: site kit bench/bin (build_site)
 - [ ] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces) — approx.: site kit sign (build_site)
 
-- [ ] AW.10 Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN
+- [ ] AW.10 (CHECK: the inventory puts this bench row at the sports-hall east end, not A_N N end) Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN
 
 ## 15. Terrain and levels
 - [ ] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level) — approx., in the model (terrain_pads in the specs)
@@ -280,6 +280,207 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [ ] CTX.STOPnode/5886987749 stop Аю Гранд Комфорт (NW 420 m): shelter, sign, kerb
 - [ ] CTX.STOPnode/5886987748 stop Аю Гранд Комфорт (NW 441 m): shelter, sign, kerb
 - [ ] CTX.TROLLEY trolleybus poles and wires along the served streets
+
+## 17. Objects added from the owner-footage inventory (2026-09-27, C:\koch\workiews\inventory_owner.md; sheets in views\inv)
+### Street front
+- [ ] INV.ST.1 Pink-tinted clover-paver patches set into the grey sidewalk and forecourt : 065653194_s3, 065934318_s2
+- [ ] INV.ST.2 Storm-drain grating in the sidewalk against the parapet : 065653194_s1, 065653194_s2
+- [ ] INV.ST.3 Two A-frame sandwich-board signs with blue faces at the crossing pole : 065856484_s1, 065856484_s2
+- [ ] INV.ST.4 Two steel pyramid rebar tree guards on the pavement near the gate : 061913764_s2, 065856484_s1
+- [ ] INV.ST.5 Blue traffic sign on a post by the crossing (pedestrian-crossing sign) : 061913764_s2, 012108212_s1
+### Gate + booth + yard
+- [ ] INV.GT.1 Brass "ALA-TOO INTERNATIONAL UNIVERSITY" plaque on the booth : 065910461_s1, 061913764_s1, 065856484_s1, 012136583_s1
+- [ ] INV.GT.2 "Approved Test Centre" steel plate on the booth : 065910461_s1
+- [ ] INV.GT.3 White round bulkhead lamps or sensors on the booth corners, x2 : 065910461_s1
+- [ ] INV.GT.4 Card-reader box on the booth wall by the turnstile : 065910461_s1, 070021774_s1
+- [ ] INV.GT.5 Brown steel pipe post with an electric meter box and cable, west of the booth : 065934318_s1
+- [ ] INV.GT.6 Square recessed lights in the canopy soffit, x4–5 : 065910461_s1, 065910461_s2, 061757320_s3, 012136583_s1
+- [ ] INV.GT.7 CCTV bullet camera under the canopy at the booth corner : 065910461_s2, 061913764_s1
+- [ ] INV.GT.8 Hikvision face-recognition terminal on a steel pole/frame at the turnstiles : 065910461_s1, 065910461_s2, 070021774_s1
+- [ ] INV.GT.9 Blue info plates on the gate and fence, x2 : 065856484_s1, 065910461_s2, 061757320_s3, 012136583_s1
+- [ ] INV.GT.10 "Abiturient 2026" advertising billboard on 2 posts, leaning, west of the gate : 061913764_s1, 065653194_s3, 012136583_s2, 012108212_s2
+- [ ] INV.GT.11 Green container/bin outside the fence : 082337333_s2
+- [ ] INV.GT.12 Large pines beside the gate and a big poplar/elm over the booth : 061913764_s1, 012136583_s1, 012136583_s2, 082337333_s2
+- [ ] INV.GT.13 Round cast-iron manhole cover (radial pattern) at the head of the south stair : 070309303_s1, photos_p20260925_s1 (012258813)
+### Alley B-A
+- [ ] INV.AL.1 Round manhole cover at the foot of the south stair : photos_p20260925_s1 (012205046), 061757320_s2
+- [ ] INV.AL.2 Linear drainage channel between the circle strip and the herringbone : 082537786_s1, 082537786_s2
+- [ ] INV.AL.3 Round clipped shrubs, x3–4, in the bed along A_S : 070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1
+- [ ] INV.AL.4 Maroon ledge/plinth boxes at the foot of A_S, plus a small maroon box : 012327726_s1, 012404116_s1
+- [ ] INV.AL.5 Benches (black frame, wooden slats) under the trees at the A_S corner, x2 : 070021774_s2
+### A_W gallery + plaza between C and A
+- [ ] INV.AWP.1 Flat grey corrugated-metal awnings over the doors under the gallery, x2 : 012327726_s1, 070309303_s2
+- [ ] INV.AWP.2 Yellow sign plate above a gallery door : 070309303_s2, 012404116_s2
+- [ ] INV.AWP.3 Floor drain grille in the gallery deck : 012327726_s2
+- [ ] INV.AWP.4 White plastic chair under the gallery (movable) : 070309303_s2, 070309303_s3
+- [ ] INV.AWP.5 White downpipes on the A_W wall, x3 : 070309303_s3
+- [ ] INV.AWP.6 LED floodlight on the A_W wall at F2 sill level, x1–2 : 070309303_s3
+- [ ] INV.AWP.7 Round vent hole in the A_W wall : 070309303_s3
+- [ ] INV.AWP.8 Round manhole cover on the plaza by the gallery : 012327726_s2, 012404116_s1
+- [ ] INV.AWP.9 Red-kerbed lawn beds with small conifers : 070309303_s3
+- [ ] INV.AWP.10 Small ground spot lamp in one of those beds : 070309303_s3
+- [ ] INV.AWP.11 Blue spruces x3 and a thuja row at the plaza : 081235159_s1, 081235159_s2, 012404116_s2
+- [ ] INV.AWP.12 Stamped pink pavers with a painted red line on the paving : 081235159_s1, 081249927_s1
+- [ ] INV.AWP.13 Yellow bar or tape across the far path (temporary?) : 081235159_s1
+### C plaza + exterior
+- [ ] INV.CX.1 Small "C" plate above the storefront : 070647586_s2, photos_p20260924_s1 (061431726, 061631264), zz_c_front2
+- [ ] INV.CX.2 Small ground flood-lamp boxes standing on the light-well cover, x2 : 081158036_s2
+- [ ] INV.CX.3 Parked cars east of C (a parking area) : 070647586_s1, zz_c_front, photos_p20260924_s1 (061621646, 061624280)
+- [ ] INV.CX.4 Brown/maroon boundary fence far east of C : 070647586_s1, zz_c_front
+- [ ] INV.CX.5 Overhead wires crossing over C and the plaza : 070647586_s1, 081158036_s1, 070629483_s1, zz_c_side
+- [ ] INV.CX.6 Wall vent grille on the C.12 box : photos_p20260925_s2 (012520140)
+- [ ] INV.CX.7 Black lamp post, blue spruce and yellow-kerbed lawn behind the west shed : photos_p20260925_s1 (012456258), photos_p20260925_s2 (012458018), zz_c_side
+- [ ] INV.CX.8 Second sunken basement stair with rails at the north end of the C west wall : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012526070)
+- [ ] INV.CX.9 White painted arrows on the paving west of C, x3 : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012507444)
+- [ ] INV.CX.10 Parked cars at the north end of the C west side : 070629483_s2
+### C interior (lobby, corridors, stairs, classroom, WC)
+- [ ] INV.CIN.1 Water cooler with a blue bottle : 070704360_s1, 080443026_s1
+- [ ] INV.CIN.2 Double wall socket by the cooler : 070704360_s1
+- [ ] INV.CIN.3 Pull-up banner stands (blue/yellow), x2 : 070704360_s1
+- [ ] INV.CIN.4 Red fire-hose cabinets: lobby, stair hall, below the landing [CI.2 lists only fire-alarm boxes] : 070704360_s1, 070704360_s2, 080051708_s1
+- [ ] INV.CIN.5 Linear LED wall lights in the stair hall and landings : 070704360_s2, 080051708_s2
+- [ ] INV.CIN.6 Wall-mounted CCTV in the lobby corridor, CCTV domes on the stair-hall ceiling and a landing corner : 070704360_s1, 052716931_s2, 080051708_s2
+- [ ] INV.CIN.7 White heating pipes along the floor and walls, riser pipes with brass/red valves : 070704360_s2, 080011086_s1, 080051708_s2, 080443026_s2, 052716931_s2
+- [ ] INV.CIN.8 Potted plants on landing sills and ledges: x3 in the stair hall, x2 in the stairwell, spider plants x3 on the landing ledge : 070704360_s2, 080011086_s1, 080051708_s1
+- [ ] INV.CIN.9 Potted floor plants (ficus/dracaena), x4, along the rail at the foot of the stair : 052716931_s2
+- [ ] INV.CIN.10 Black utility doors at the landings, beside the landing windows : 070704360_s2, 080011086_s2, 080051708_s2
+- [ ] INV.CIN.11 Red fire box on the upper landing : 080011086_s2
+- [ ] INV.CIN.12 Light switches in the stairwell : 080011086_s1
+- [ ] INV.CIN.13 Small black notice frames on the blue panels, x2 : 080443026_s1
+- [ ] INV.CIN.14 Black wall-mounted units high on the corridor walls (Wi-Fi APs/speakers), x3 : 080443026_s1, 080443026_s2
+- [ ] INV.CIN.15 Card reader/electronic lock on a classroom door : 052716931_s1
+- [ ] INV.CIN.16 Open double glazed doors from the corridor to the stair hall : 052716931_s2
+- [ ] INV.CIN.17 Black network rack cabinet with a distribution board below it, on the classroom wall : 074805359_s1, 074805359_s2
+- [ ] INV.CIN.18 Round smoke detector and a CCTV dome in the corner of the classroom ceiling : 074805359_s1, 074805359_s2
+- [ ] INV.CIN.19 Sloped ceiling bulkhead along one classroom wall : 074805359_s1
+- [ ] INV.CIN.20 Teal wire waste bin by the classroom door : 074805359_s2
+- [ ] INV.CIN.21 Light switch by the classroom door : 074805359_s2
+- [ ] INV.CIN.22 Heating pipe along the classroom skirting : 074805359_s2
+- [ ] INV.CIN.23 WC large frameless mirror : 075931189_s1, 075931189_s2
+- [ ] INV.CIN.24 WC white soap dispenser : 075931189_s1, 075931189_s2
+- [ ] INV.CIN.25 WC waste bin with a black bag between the sinks : 075931189_s1, 075931189_s2
+- [ ] INV.CIN.26 WC radiator, 6-section : 075931189_s1
+- [ ] INV.CIN.27 WC high narrow window with a transom at the end wall : 075931189_s1, 075931189_s2
+- [ ] INV.CIN.28 WC wall vent grille above the tile, and a socket : 075931189_s2
+- [ ] INV.CIN.29 WC round ceiling light and white cornice moulding : 075931189_s1, 075725091_s1
+- [ ] INV.CIN.30 Small floor-drain grate in the WC vestibule : 075931189_s2
+- [ ] INV.CIN.31 Aluminium threshold at the black solid WC entry door : 075931189_s2
+- [ ] INV.CIN.32 WC stall: grey gloss stretch ceiling with a round downlight and a round vent diffuser : 075725091_s1, 075725091_s2
+- [ ] INV.CIN.33 WC stall: cistern pull chain, flexi hose, angle valve, white flush pipe : 075725091_s1, 075725091_s2
+- [ ] INV.CIN.34 WC stall: vertical riser pipe in the corner, tiled duct ledge on the back wall : 075725091_s1, 075725091_s2
+- [ ] INV.CIN.35 WC stall: toilet-brush holder, "FOCUS" paper dispensers : 075725091_s1, 075725091_s2, 075928860_s1
+- [ ] INV.CIN.36 WC stall: small grey or black lidded bins, x2+ : 075725091_s2, 075928860_s1
+- [ ] INV.CIN.37 WC stall: air-freshener can : 075725091_s2
+- [ ] INV.CIN.38 WC stall door lever handles; light switch on the tile : 075725091_s2, 075928860_s1
+### C basement
+- [ ] INV.CB.1 Wood-look PVC door in the red-tile wall at the stair landing : 012547860_s1
+- [ ] INV.CB.2 Beige brick-slip tile wainscot ~1 m, with white textured plaster above : 012547860_s1, 012547860_s2, photos_p20260925_s2 (012657890)
+- [ ] INV.CB.3 White coved cornice : 012547860_s1
+- [ ] INV.CB.4 Recessed round downlights in a row, x10+ : 012547860_s1, 012547860_s2
+- [ ] INV.CB.5 Round inline duct fans (blue/steel) high on the wall, x2 : 012547860_s1, 012547860_s2
+- [ ] INV.CB.6 Tall orange-laminate wardrobes stored along the corridor, x3 : 012547860_s1, 012547860_s2
+- [ ] INV.CB.7 Stored orange laminate desks/benches, x3 : 012547860_s3
+- [ ] INV.CB.8 Second stair, 4–5 granite risers with a scroll rail, up to an exit under a white corrugated canopy : 012547860_s1, 012547860_s2
+- [ ] INV.CB.9 Bentwood chairs in the piano room, x2 : 012547860_s3, photos_p20260925_s2 (012646951, 012648584)
+- [ ] INV.CB.10 Paper notices on the piano-room walls, x2 : 012547860_s3, photos_p20260925_s2 (012646951)
+- [ ] INV.CB.11 One-step raised floor/threshold strip and a sloped ceiling under the stair : 012547860_s3
+- [ ] INV.CB.12 Basement exit: brown steel door : photos_p20260925_s2 (012657890)
+- [ ] INV.CB.13 Barred transom windows, x3, and flanking windows, x2, with hexagon grilles at the exit door : photos_p20260925_s2 (012657890)
+- [ ] INV.CB.14 Stainless 3-bar floor frame (boot scraper or drain frame) on the tile : photos_p20260925_s3 (012705563)
+- [ ] INV.CB.15 Basement hall (assumed C basement, check): beige polished porcelain 60 × 60 tiles with dark-grey border strips : 012714931_s1, 012714931_s2, 012800431_s1, 012800431_s2
+- [ ] INV.CB.16 Grey-painted dado ~1.1 m, white above : 012714931_s1, 012744144_s1, 012800431_s1
+- [ ] INV.CB.17 LED 600 panels (recessed and surface-mounted) : 012714931_s1, 012744144_s1, 012744144_s2
+- [ ] INV.CB.18 Black 4-seat beam seating (airport style), x2, plus a 2-seat, x1 : 012714931_s1, 012714931_s2
+- [ ] INV.CB.19 White marble-look wardrobes (2-door, and a tall one) : 012714931_s1, 012744144_s2
+- [ ] INV.CB.20 Hall radiators and a black bin : 012714931_s1
+- [ ] INV.CB.21 Exposed black cable conduit along the ceiling : 012714931_s1, 012744144_s2
+- [ ] INV.CB.22 White electrical cabinet with a hazard sign in a wall niche : 012714931_s1
+- [ ] INV.CB.23 CCTV domes, x2+ : 012714931_s1, 012714931_s2, 012744144_s1, 012744144_s2
+- [ ] INV.CB.24 Arched vestibule with 2 brown wooden doors (vision panel, card lock, name plates) and black louvred vent grilles high up, x2 : 012714931_s2
+- [ ] INV.CB.25 Brown tile steps with grooved nosings: 1–3 risers into the vestibule, 4 risers down to the lower lobby, 3–4 risers at the "C001 LAB" door : 012714931_s2, 012744144_s1, 012800431_s1, 012800431_s2
+- [ ] INV.CB.26 "C001 LAB" wooden door with a purple plate, vision panel, card reader, QR poster : 012800431_s1
+- [ ] INV.CB.27 Wooden doors with vision panels and plates, and a door plated "ИЗОБРАЖ…" (art room), x3+ : 012744144_s1, 012800431_s2
+- [ ] INV.CB.28 Black door with an ornamental frame, circle emblem and vision panel : 012800431_s2
+- [ ] INV.CB.29 Art room: black office chairs, x2–3 : 012744144_s1
+- [ ] INV.CB.30 Art room: stacked wooden easels and plywood boards, ~15 : 012744144_s1, 012714931_s1, 012714931_s2
+- [ ] INV.CB.31 Brown line-art wall mural (mountains, horse, yurt) : 012744144_s1, 012714931_s2
+- [ ] INV.CB.32 Art room: radiators x2, surface LED panels x2, smoke detector, CCTV domes x2 : 012744144_s1
+- [ ] INV.CB.33 Round Ala-Too logo discs on the walls above the arches, x2 : 012744144_s2, 012800431_s1, 012800431_s2
+- [ ] INV.CB.34 Black-framed notice board on the wall : 012744144_s2
+- [ ] INV.CB.35 Rectangular wall moulding panels, x2–3 : 012800431_s2
+- [ ] INV.CB.36 Exit end wall: steel entry door with a "ПОЖАР / ВЫХОД" sign, barred transom windows x3, flanking barred windows x2, radiators x2 : 012744144_s2
+- [ ] INV.CB.37 Navy/blue steel 2-door locker cabinet with posters : 012800431_s2
+- [ ] INV.CB.38 Blue folding panel leaning on the wall : 012800431_s2
+- [ ] INV.CB.39 Ceiling access hatches, x2 : 012800431_s1, 012800431_s2
+- [ ] INV.CB.40 Small wall vent grilles, x2 : 012800431_s2
+### Hall-C passage + sports hall + wing
+- [ ] INV.HP.1 Red steel ladder up to a roof-hatch opening : 081158036_s1
+- [ ] INV.HP.2 Tall galvanised ventilation duct up the corner; 2 exhaust stacks above the roof : 081158036_s1, 070629483_s1, 061707849_s1
+- [ ] INV.HP.3 Galvanised ventilation box units with fans at ground level, x2 : 061707849_s1, 061707849_s2, photos_p20260924_s1 (061638726)
+- [ ] INV.HP.4 BEKO AC outdoor unit on the ground; AC units on the wall, x2 : 061707849_s1, 081158036_s1
+- [ ] INV.HP.5 White and red downpipes, x2 : 061707849_s1, 081158036_s1
+- [ ] INV.HP.6 Black tarp-covered pile (generator or stock), with leaning boards/planks and a wooden dog-kennel box : 061707849_s1, 061707849_s2, 081158036_s1, 081213784_s1, 070629483_s1, 012436367_s1
+- [ ] INV.HP.7 Black-yellow striped bollards at the parking entrance, x2, plus a short post : photos_p20260924_s1 (061643243, 061648727), 061707849_s2
+- [ ] INV.HP.8 Parking lot beside the hall, ~10 cars, with a brown corrugated-sheet boundary fence : 081158036_s1, 061707849_s2, photos_p20260924_s1 (061643243, 061648727)
+- [ ] INV.HP.9 CCTV under the east-end canopy soffit : 012429784_s1
+- [ ] INV.HP.10 Floodlights on the wing fascia, x2 : 081213784_s1, 070629483_s1
+- [ ] INV.HP.11 Small stair with handrails at the end of the wing, and a brick pier : 081213784_s1
+- [ ] INV.HP.12 Vent/AC box near the hall corner by the passage : 012436367_s1
+- [ ] INV.HP.13 2 steps up to the gallery deck (red-brown granite edge), with a ramp and rail at the far end : 070410255_s1
+- [ ] INV.HP.14 Colourful mural band with windows on the pink hall wall, seen from the garden gazebo : 082013462_s2
+### Garden
+- [ ] INV.GDN.1 Gazebo recessed downlights in the soffit, x2 : 082013462_s1
+- [ ] INV.GDN.2 Continuous polygonal wooden bench on steel legs inside the gazebo : 081924271_s1, 081924271_s3
+- [ ] INV.GDN.3 "NO SMOKING" sign on a gazebo pillar : 082013462_s1
+- [ ] INV.GDN.4 Maroon fence/wall behind the rubble-stone wall : 081958653_s1
+- [ ] INV.GDN.5 Red-brick block/seat or stand at the far side : 081924271_s1
+- [ ] INV.GDN.6 Bench with an arched ornamental back rail (a second bench type) : 082006491_s1
+- [ ] INV.GDN.7 Big white-bark poplars x2, a willow : 081946180_s1, 081958653_s1, 082006491_s1
+- [ ] INV.GDN.8 Sprinkler risers in the lawn, x3 : 081856511_s1
+- [ ] INV.GDN.9 Boulder in the lawn : 081946180_s1
+- [ ] INV.GDN.10 Orange flower pot at the mouth of a path : 081958653_s1
+- [ ] INV.GDN.11 Rose bed with a low fence along the B north facade : 082013462_s1
+- [ ] INV.GDN.12 Yellow wheelie bin at the garden edge : 012404116_s2
+### Sports fields/courts + decorated alley
+- [ ] INV.SPF.1 White football goal : 070541257_s2
+- [ ] INV.SPF.2 Black bin by the pitch gate : 070410255_s3
+- [ ] INV.SPF.3 Wooden-framed glazed hexagonal kiosk/conservatory at the E corner of the pitch : 070410255_s3
+- [ ] INV.SPF.4 Clover pavers laid in a pink-and-grey pattern on the sports plaza : 070410255_s3
+- [ ] INV.SPF.5 Blue spruces, x3, on the plaza slope : 070410255_s2
+- [ ] INV.SPF.6 Plant name tag on a stake by a shrub : 070410255_s3
+- [ ] INV.SPF.7 Yellow painted line on the paving (plaza boundary) : 070410255_s2
+- [ ] INV.SPF.8 Manhole cover in the square : 070410255_s2
+- [ ] INV.SPF.9 Rose shrubs in the alley beds : 070541257_s1, 070541257_s2
+### Canteen + small buildings
+- [ ] INV.KN.1 Ventilation grilles/boxes at the base of the canteen wall, x2 : 070541257_s1
+- [ ] INV.KN.2 Grey-green cylindrical fan box on a stand in the service yard : 070410255_s3
+- [ ] INV.KN.3 Parked cars behind the canteen, x4 (service parking) : 070410255_s3
+- [ ] INV.KN.4 Yellow-kerbed planter bed with a young tree in the service yard : 070410255_s3
+- [ ] INV.KN.5 Short yellow/white painted parking-stop kerb segments on the paving, x3 : 070541257_s1
+- [ ] INV.KN.6 Blue spruces x3–4 and thuja pairs x3 around the canteen lawn : 081249927_s1, 081249927_s2, 081213784_s1
+- [ ] INV.KN.7 Triangular lawn with yellow and white painted kerbs; curving herringbone path : 081249927_s1, 081249927_s2
+- [ ] INV.KN.8 Tall chimney/flue mast : 061550830_s1, 070541257_s1, 081235159_s1, 061707849_s1
+### Block B
+- [ ] INV.BB.1 White-column gallery on the B north side, seen beyond the hedge : 082006491_s1, 082006491_s2
+- [ ] INV.BB.2 Blue-roofed sheds and corrugated structures at B's rear : 081904575_s1, 081904575_s2
+- [ ] INV.BB.3 AC outdoor units on the B south facade upper floors, x5–6 : 065934318_s1, 065934318_s2
+- [ ] INV.BB.4 Drain grating at the far end of the front path : 065934318_s1
+- [ ] INV.BB.5 Step down from the booth apron to the front path : 065934318_s1
+- [ ] INV.BB.6 Pines and poplars along the front path : 065934318_s1, 065934318_s2
+### Block A
+- [ ] INV.BA.1 Benches (black), x3, along the path in front of A : 082248481_s1
+- [ ] INV.BA.2 Small ground spot lamps on short posts in the lawn, x2 : 082248481_s1, 082606037_s1
+- [ ] INV.BA.3 Pavilion horizontal downpipe : 070309303_s1, 061757320_s2
+- [ ] INV.BA.4 Wheelie bin under the pavilion : 082537786_s1
+- [ ] INV.BA.5 "A Block" blue plate on the maroon corner pilaster : 082337333_s1, 070309303_s1, photos_p20260925_s1 (012208814)
+- [ ] INV.BA.6 CCTV bullet cameras on the A_S corner pilaster, x2 : 082337333_s1, 070309303_s1, 070021774_s1, photos_p20260925_s1 (012208814)
+- [ ] INV.BA.7 AC unit cluster (AUX/Beko/Midea) on the A_S west face over F1–F2, x6+ : 082337333_s1, 070309303_s2, photos_p20260925_s1 (012227815, 012231007)
+- [ ] INV.BA.8 Potted plants on the A_S window sills : 070309303_s2
+- [ ] INV.BA.9 Small clipped conifers planted in the paving in front of A_S, x2 : 082337333_s1
+- [ ] INV.BA.10 Round manhole cover beside a red-kerbed planter at the A_S corner : 070021774_s2
+- [ ] INV.BA.11 Red-kerbed sloped planter with a conifer at the stair head : 070021774_s2
+### Other
+- [ ] INV.OT.1 Overhead power/telecom wires strung across the campus between the buildings : 070647586_s1, 081158036_s1, 081249927_s1, 070410255_s1, 012436367_s1, zz_c_side
 
 ## Замеры для проверки (значения по оценке; после рулетки править только указанное поле и пересобрать)
 Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py`
