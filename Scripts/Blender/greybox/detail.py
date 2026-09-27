@@ -597,9 +597,10 @@ def ac_unit(parts, frame, u, z, w=0.80, h=0.55, d=0.28, off=0.12):
             c.faces.new((a[i], a[j], b[j], b[i]))
         c.faces.new(list(reversed(a)))
         c.faces.new(b)
-    for k in range(6):  # grille bars across the fan
+    for k in range(6):  # grille bars across the fan, each ending on the guard ring (chord length)
         zz = fz - fr_ + 2 * fr_ * (k + 0.5) / 6
-        box(c, frame, fu - fr_ * 0.95, fu + fr_ * 0.95, w1 + 0.002, w1 + 0.008, zz - 0.003, zz + 0.003)
+        half = math.sqrt(max(0.0, (fr_ - 0.006) ** 2 - (zz - fz) ** 2))
+        box(c, frame, fu - half, fu + half, w1 + 0.002, w1 + 0.008, zz - 0.003, zz + 0.003)
     s = parts["steel"]
     for uu in (u - w / 2 + 0.08, u + w / 2 - 0.08):   # L-brackets: arm under the unit + diagonal strut to the wall
         box(s, frame, uu - 0.02, uu + 0.02, 0.0, w1 + 0.03, z - 0.04, z)

@@ -670,11 +670,16 @@ class Building:
                 ct = c.get("cap_t", 0.04)
                 ov = c.get("cap_over", 0.02)
                 zb = -H - 0.2
-                prism_profile(body, fr, [(0.0, zb), (0.0, c["z_wall"] - ct), (c["w1"], c["z_out"] - ct), (c["w1"], zb)],
-                              c["u0"], c["u1"])
-                prism_profile(cap, fr, [(0.0, c["z_wall"] - ct), (c["w1"] + ov, c["z_out"] - ct - ov * (c["z_wall"] - c["z_out"]) / c["w1"]),
-                                        (c["w1"] + ov, c["z_out"] - ov * (c["z_wall"] - c["z_out"]) / c["w1"]), (0.0, c["z_wall"])],
-                              c["u0"] - ov, c["u1"] + ov)
+                # optional knee: level top from the wall to w_knee (along the landing), then the slope to w1
+                # w0: where the cheek starts (e.g. at a wing face in front of a recessed tower)
+                w0 = c.get("w0", 0.0)
+                wk = max(c.get("w_knee", 0.0), w0)
+                sl = (c["z_wall"] - c["z_out"]) / (c["w1"] - wk)
+                top = [(w0, c["z_wall"])] + ([(wk, c["z_wall"])] if wk > w0 else []) + [(c["w1"], c["z_out"])]
+                prism_profile(body, fr, [(w0, zb)] + [(w, z - ct) for w, z in top] + [(c["w1"], zb)], c["u0"], c["u1"])
+                capb = [(w, z - ct) for w, z in top[:-1]] + [(c["w1"] + ov, c["z_out"] - ct - ov * sl)]
+                capt = [(c["w1"] + ov, c["z_out"] - ov * sl)] + top[-2::-1]
+                prism_profile(cap, fr, capb + capt, c["u0"] - ov, c["u1"] + ov)
                 self.obj_parts(f"StairCheek_E{a['edge']}_{n}", {c.get("material", "M_Tile_Brick_Red"): body, "M_Granite_Red": cap},
                                c.get("evidence", ev), c.get("confidence", cf))
             return True
@@ -706,6 +711,31 @@ class Building:
             for u in a["u"]:
                 D.floodlight(bm, fr, u, a.get("w", 0.35), a["z"])
             self.obj_parts(f"Flood_E{a['edge']}_{a['u'][0]:.0f}", {"M_Alu_Black": bm}, ev, cf)
+            return True
+        if t == "wall_boxes" and a.get("kind", _box_kind(a.get("name", ""))) in ("ac", "cctv", "lamp", "vent", "sign"):
+            # items [u, z, w, h, d]: z = underside; detail kit per kind (AC outdoor unit on brackets, CCTV, lamp, ...)
+            kind = a.get("kind", _box_kind(a.get("name", "")))
+            w0 = a.get("w0", 0.0)
+            fr_w = fr @ Matrix.Translation((0.0, w0, 0.0))
+            p = {"casing": bmesh.new(), "steel": bmesh.new(), "body": bmesh.new(), "diffuser": bmesh.new(),
+                 "frame": bmesh.new(), "slats": bmesh.new(), "plate": bmesh.new(), "pins": bmesh.new()}
+            for u, zb, bw, bh, bd in a["items"]:
+                if kind == "ac":
+                    D.ac_unit(p, fr_w, u, zb, w=bw, h=bh, d=bd, off=a.get("off", 0.12))
+                elif kind == "cctv":
+                    D.cctv_camera(p, fr_w, u, zb + bh / 2, arm=max(0.12, bd))
+                elif kind == "lamp":
+                    D.wall_lamp(p, fr_w, u, zb + bh / 2, w=bw, h=bh, d=bd)
+                elif kind == "vent":
+                    D.vent_grille(p, fr_w, u - bw / 2, u + bw / 2, zb, zb + bh)
+                else:
+                    D.sign_plate(p, fr_w, u - bw / 2, u + bw / 2, zb, zb + bh)
+            mats = {"ac": {"M_AC_Casing": p["casing"], "M_Steel_Paint_Dark": p["steel"]},
+                    "cctv": {"M_Plastic_White": p["body"]},
+                    "lamp": {"M_Alu_Black": p["body"], "M_Lamp_Diffuser": p["diffuser"]},
+                    "vent": {"M_Alu_Grey": p["frame"], "M_Alu_Grey_Slats": p["slats"]},
+                    "sign": {"M_Sign_Panel": p["plate"], "M_Steel_Galv": p["pins"]}}[kind]
+            self.obj_parts(f"{a.get('name', kind)}_E{a['edge']}", mats, ev, cf)
             return True
         if t == "lightwell":
             sheet = bmesh.new()
@@ -978,6 +1008,15 @@ class Building:
             bm.faces.new(list(reversed(lo)))
             bm.faces.new(hi)
         self.obj("Slabs", bm, (0.6, 0.6, 0.6, 1), "closing slabs; floor plates come with the interior")
+
+
+def _box_kind(name):
+    """Detail kind of a 'wall_boxes' attachment from its spec name (ACUnits, CCTV_W, Lamp..., Vent..., Sign...)."""
+    n = name.lower()
+    for key, kind in (("ac", "ac"), ("cctv", "cctv"), ("lamp", "lamp"), ("vent", "vent"), ("sign", "sign")):
+        if n.startswith(key):
+            return kind
+    return "box"
 
 
 def _drop_collinear(ring, eps=1e-6):

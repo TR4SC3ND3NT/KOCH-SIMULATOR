@@ -12,6 +12,8 @@ PALETTE = {
     "M_PVC_Gutter_White": (0.95, 0.95, 0.95, 1), "M_Alu_Black": (0.08, 0.08, 0.09, 1),
     "M_Terracotta_Soffit": (0.75, 0.38, 0.22, 1), "M_Sign_Panel": (0.20, 0.25, 0.45, 1), "M_Concrete": (0.62, 0.61, 0.58, 1),
     "M_Steel_Grating": (0.30, 0.32, 0.34, 1), "M_Sign_Frame_White": (0.90, 0.90, 0.90, 1),
+    "M_AC_Casing": (0.88, 0.88, 0.86, 1), "M_Plastic_White": (0.92, 0.92, 0.92, 1), "M_Lamp_Diffuser": (0.96, 0.95, 0.85, 1),
+    "M_Alu_Grey": (0.60, 0.61, 0.62, 1), "M_Alu_Grey_Slats": (0.55, 0.56, 0.57, 1), "M_Wrought_Iron": (0.10, 0.10, 0.10, 1),
 }
 
 

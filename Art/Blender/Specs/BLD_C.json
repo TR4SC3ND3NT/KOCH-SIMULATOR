@@ -423,33 +423,28 @@
   {
    "type": "stairs",
    "edge": 2,
-   "u0": 0.0,
-   "u1": 3.8,
+   "u0": 0.05,
+   "u1": 3.75,
    "risers": 7,
-   "riser_h": 0.15,
-   "tread": 0.33,
-   "landing": 1.8,
-   "evidence": "7 granite risers ~0.15 (061428331, 061431726); width 4.5 m after depth correction (factor 0.705)",
+   "riser_h": 0.154,
+   "tread": 0.475,
+   "landing": 2.65,
+   "evidence": "2026-09-27 photogrammetry mesh (RealityScan comp. 2 of clips 070647586+081158036, scale 0.4737 m/unit from the 0.20x0.10 paver module, levelled on plaza/treads): landing +1.28 over the plaza, landing edge 2.65 m out from the storefront, upper treads 0.48-0.49; riser count and tread fitted on photo edges through 8 solved cameras (7 risers x 0.154, treads 0.475, bottom nosing 5.50 m out); flight 3.70 wide between the side walls",
    "cheeks": [
     {
-     "u0": -0.5,
-     "u1": 0.0,
-     "w1": 3.78,
-     "z_wall": 0.5,
-     "z_out": -0.75,
-     "evidence": "brick-tile cheek with a sloping granite cap on the W side of the flight, against the W wing's corner (061428331, 061621646)",
-     "confidence": "medium"
-    },
-    {
-     "u0": 3.8,
-     "u1": 4.2,
-     "w1": 3.78,
-     "z_wall": 0.5,
-     "z_out": -0.75,
-     "evidence": "same brick cheek on the E side of the flight between the steps and the ramp (map owner; 061621646 crop: brick block behind the ramp rails)",
-     "confidence": "medium"
+     "u0": -0.45,
+     "u1": 0.05,
+     "w1": 5.5,
+     "z_wall": 0.55,
+     "z_out": -0.82,
+     "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449",
+     "confidence": "medium",
+     "w_knee": 2.65,
+     "w0": 1.3
     }
-   ]
+   ],
+   "nosing": 0.02,
+   "confidence": "high"
   },
   {
    "type": "canopy",
