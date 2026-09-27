@@ -46,7 +46,7 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
-           "bike_rack": "bike_rack", "tree": "tree", "hedge": "hedge"}
+           "bike_rack": "bike_rack", "tree": "tree", "hedge": "hedge", "sign": "sign_board"}
 
 
 def site_slot(el):
