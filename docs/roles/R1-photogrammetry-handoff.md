@@ -108,8 +108,10 @@ is whole (it failed once on a -nan component). Each drop:
 - `<zone>/mesh.ply`: world metres (`rs_world.py apply`), decimated to ≤ 3M triangles, no texture, no vertex colours;
 - `<zone>/align.json`, `<zone>/model.json` (cameras only, no images: the owner has the raw footage and re-extracts the
   frames by name), and the zone's `route.json` from route_profile.py;
-- zipped per zone (`<zone>_<date>.zip`) into the Google Drive folder `koch_meshes`, shared with the map owner only
-  (never "anyone with the link"), then one log line `[A] mesh drop <zone>`. Never commit meshes.
+- zipped per zone as `C:\koch\drop\<zone>_<date>.zip`; the agent cannot upload to Google Drive, so it tells the
+  teammate in one Russian line which zips are ready (path + size), and the teammate uploads them by hand to the Drive
+  folder `koch_meshes`, shared with the map owner only (never "anyone with the link"); then one log line
+  `[A] mesh drop <zone>`. Never commit meshes.
 
 ## 1. Get the data (never commit it: people in the frames)
 - **Repo:**
