@@ -148,7 +148,19 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
 
 ## 4. How to rebuild on the mesh
 1. **Import.** Import the mesh into the `.blend` as `REF_Photogrammetry` in the `00_Reference` collection. Lock it; it is never exported (the builders skip `REF_*`).
-2. **One world frame first (P0).** All zone models must agree before anything is measured on them:
+2. **One world frame first (P0).** All zone models must agree before anything is measured on them.
+   **Rule (map owner, 2026-09-27): divide and merge, never one whole-site solve.** The zone models are the chunks;
+   join them pairwise in route order (Street → Gate → Alley → AW → C → ...), one pair per step, each step minutes.
+   Whole-site runs (COLMAP/GLOMAP on all ~3900 frames) are not allowed: a 2026-09-27 run needed hours and 13 GB RAM,
+   GLOMAP is known to run out of memory late on thousands of images (github.com/colmap/glomap/issues/78), and an
+   earlier global COLMAP model false-merged on the herringbone paving and repeating windows. This is the standard
+   large-scene method (COLMAP FAQ: overlapping sub-models, then merge; RealityScan: component workflow). No job over
+   10 GB RAM. For each pair:
+   - shared frames first: a walking clip that crosses both zones;
+   - else 4-6 control points on corners seen in both zones, plus satellite corners;
+   - check the pair (route_profile REG ≤ 0.30 m) before the next pair; one bundle adjustment at the end.
+
+   Ways to do the merge:
    - Preferred: merge the zones in RealityScan through control points (at least 4 CPs per component, each seen in
      several images; 6 shared CPs between two components; rshelp "Merging Components Using Control Points"): kerb
      corners, building corners and paving joints that are visible from both zones.
