@@ -45,6 +45,7 @@ def main():
     files = sorted(f[:-5] for f in os.listdir(SPECS) if f.endswith(".json"))
     bld = [f for f in files if f.startswith("BLD_")]
     site = [f for f in files if f.startswith(("SITE_", "INT_"))]  # INT_* = interiors, same element builder
+    bpy.app.driver_namespace["koch_build_failures"] = []
     run("build_greybox.py")
     if os.path.exists(os.path.join(os.path.dirname(SPECS), "Data", "ctx_osm.json")):
         run("build_context.py")   # surroundings ring from OSM (P0 massing)
@@ -57,6 +58,10 @@ def main():
     print("material slots by name:", assign_name_slots(bpy.data.objects))
     print("ground surfaces:", assign_ground_surfaces(bpy.data.objects.get("TER_Ground"), SPECS))
     ok = validate()
+    fails = bpy.app.driver_namespace.get("koch_build_failures", [])
+    if fails:   # a failed building/element must not be saved silently (a missing Block C was committed once)
+        print(f"build failures ({len(fails)}):", "; ".join(fails[:10]))
+        ok = False
     # detail-kit parts carry several material slots: show material colours in every 3D view and in Workbench
     for scr in bpy.data.screens:
         for area in scr.areas:
@@ -64,8 +69,10 @@ def main():
                 if sp.type == "VIEW_3D":
                     sp.shading.color_type = "MATERIAL"
     bpy.context.scene.display.shading.color_type = "MATERIAL"
-    if background:
+    if background and ok:
         bpy.ops.wm.save_mainfile(compress=True)
+    elif background:
+        print("build_all: NOT SAVED (fix the failures above)")
     print("build_all:", "OK" if ok else "CHECK FAILED", "| buildings:", bld, "| site:", site)
 
 

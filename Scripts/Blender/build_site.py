@@ -815,6 +815,7 @@ class Site:
                 n += 1
             except Exception as ex:  # keep building the rest; report the bad element
                 print(f"  FAILED {el.get('name', el['type'])}: {ex!r}")
+                bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"  FAILED {el.get('name', el['type'])}: {ex!r}")
         return n
 
 
@@ -979,6 +980,7 @@ def main():
             n = site.build()
         except Exception as ex:
             print(f"{sid}: FAILED {ex!r}")
+            bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"{sid}: FAILED {ex!r}")
             continue
         print(f"{sid}: {n} elements built")
     if bpy.app.background:

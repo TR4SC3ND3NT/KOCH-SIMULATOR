@@ -1135,6 +1135,7 @@ def main():
             b.build()
         except Exception as ex:
             print(f"{bid}: FAILED {ex!r}")
+            bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"{bid}: FAILED {ex!r}")
             continue
         n = sum(1 for o in bpy.data.objects if o.get("koch_gen") == b.gen)
         print(f"{bid}: {n} objects, FFL z={b.ffl:.2f} (ASL {b.ffl + 800:.2f})")
