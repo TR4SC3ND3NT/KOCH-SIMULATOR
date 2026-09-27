@@ -145,7 +145,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] B.5 Low red-roofed annex at the NE corner — not confirmed: no annex visible on Bing z19 at B's NE corner (trees); not modelled
 - [ ] B.6 Roof: slopes, hatch on the north slope — approx., in the model (GBF_BLD_B Roof)
 - [ ] B.7 Front gallery on brick piers with terracotta soffit, white low railing and planters along the front path — approx., in the model (GBF_BLD_B GalleryPosts/GalleryRoof)
-- [ ] B.8 Position: B–A gap settled on the mesh — approx.: Bing z19 roof edges B 147.0 / A gallery roof 157.6 (+2.2 m gallery) give a wall gap ≈13.0 m, close to the spec (13.4); B not moved (the Gate mesh is too hole-filled here; see M12)
+- [ ] B.8 Position: B–A gap settled on the mesh — approx.: Bing z19 roof edges B 147.0 / A gallery roof 157.6 (+2.2 m gallery) give a wall gap ≈13.0 m, close to the spec (13.4); B not moved (the Gate mesh is too hole-filled here; see M12) — BLOCKED: the Gate c8 mesh gives two scales that disagree (B-A wall gap 16.8 m at the eye-height scale vs 13.0-13.4 satellite; A_S window rows every 4.0 m after a gap-based rescale vs the 3.06 m storey of the spec) - the gap cannot be settled from this footage; photo request «Аллея B–A: ширина» (tape/laser)
 
 ## 11. Block A (zones `AW`, `Gate`)
 - [ ] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N) — P1✓ 3e8ba38 (obj_test GBF_BLD_A_S: Street c3 4.2/1.4 px, Gate c13 3.0/4.0 px; own look Gate c8 f00034/f00550: lettering panel, round panel, window rows, porch)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: Gate c8 scale conflict: after the gap-based rescale (x0.798) the A_S west facade rows in its mesh are ~4.0 m apart (spec storey 3.06 from two independent rects) - either the spec storey or the satellite gap is off, or the mesh is distorted along the alley; B.8 BLOCKED with a tape request, c8 kept at the rescaled value for placement only (overlays 4.0-4.4 px).
 - [A] 2026-09-28: Gate c8 RESCALED x0.798: inside that one mesh the B east wall (x 145.3) and the A_S west wall (x 162.1), both at 4-9 m height, are 16.8 m apart vs 13.0-13.4 m (spec + satellite): the eye-height scale was 25 % high (phone held low in 070309303). After the rescale f00034/f00550 overlay 4.4/4.0 px. Nothing in the specs came from c8 distances. The same caveat applies to AW c8 (paver check clamps at the search limit, scale unverified): the planter positions sent to [B] for the A_W gallery are +-1 m.
 - [A] 2026-09-28: dead end (do not retry): roof edges on the Google z20 ortho as a P1 plan check - the 4-5 storey roofs are displaced 3-4 m north/east by the image lean (A_N, A_W, B, C all show +3.5..+4 m on the same sides), so roof outlines cannot check walls to +-0.15; wall bases (ground mosaics) remain the plan evidence.
 - [A] 2026-09-28: Street pass_check P0: 93 % of route samples within 0.30 m (limit 95 %); the misses are camera-height artefacts, not model errors (own look: f03347 phone lowered, f01963 seam between the c3 and c2 pieces). Grid row updated; not marked passed.
