@@ -46,7 +46,11 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
 
 
 def site_slot(el):
-    """Material slot of a site element: explicit "slot", else its surface, else its material, else its type."""
+    """Material slot of a site element: its "slots" {part keyword: slot} for multi-part elements (keyword found in the
+    part name, e.g. Canopy_Roof), explicit "slot", else its surface, else its material, else its type."""
+    for key, slot in (el.get("slots") or {}).items():
+        if key.lower() in str(el.get("name", "")).lower():
+            return slot
     if el.get("slot"):
         return el["slot"]
     srf = str(el.get("surface", "")).lower()
