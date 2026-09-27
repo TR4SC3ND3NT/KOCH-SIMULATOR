@@ -164,10 +164,11 @@ def step_prep(z, job, zdir, a):
             raise SystemExit(f"prep: frame folder missing: {src}")
         dst = os.path.join(imgs, clip)
         os.makedirs(dst, exist_ok=True)
-        for f in os.listdir(src):
-            if f.endswith(".jpg") or f.endswith(".jpg.mask.png"):
-                link(os.path.join(src, f), os.path.join(dst, f))
-                n += f.endswith(".jpg")
+        jpgs = sorted(f for f in os.listdir(src) if f.endswith(".jpg"))[::max(1, int(job.get("every", 1)))]
+        for f in jpgs:          # "every": N keeps every N-th adaptive frame (whole-site alignment jobs)
+            link(os.path.join(src, f), os.path.join(dst, f)); n += 1
+            if os.path.exists(os.path.join(src, f + ".mask.png")):
+                link(os.path.join(src, f + ".mask.png"), os.path.join(dst, f + ".mask.png"))
     dst = os.path.join(imgs, "photos")
     for pat in job.get("photos", []):
         hits = sorted(glob.glob(os.path.join(a.photos, pat)))
