@@ -1,13 +1,37 @@
-# R1 progress: the whole campus as 1:1 geometry
+# R1 progress: the whole map as 1:1 geometry, coarse to fine
 
-Checklist for the photogrammetry rebuild (docs/roles/R1-photogrammetry-handoff.md). Every item goes through the loop of handoff 4a:
-mesh → metric scale → sizes → model at the detail standard → overlay check through ≥2 solved cameras → commit + push → `[x]`.
-An item is ticked only after its overlay check; the commit hash goes after the tick. `approx.`, "in the model" and "estimated" are NOT done (handoff section 0); blockers are marked `BLOCKED: <reason>` with a photo request in photo_requests.md and stay unticked.
+Checklist for docs/roles/R1-photogrammetry-handoff.md **section 0 (passes)**. Every zone reaches pass N before any zone
+starts N+1. A zone-pass is done when its scripted test AND your own review of the frames/overlays both pass (handoff
+3a). Each object line gets the highest pass it passed plus the commit, e.g. `P1✓ 1a2b3c4`; `[x]` only at its depth
+cap. "approx.", "in the model", "estimated" never count. Blockers: `BLOCKED: <reason>` + a photo request.
 
-- **Meshes** come from the GPU queue (outside git): `C:\koch\work\gpu_queue.ps1` runs the zones of `C:\koch\work\queue.txt` one by one through `Scripts/Geo/rs/zone_job.py` (align → cameras/poses → mesh into `C:\koch\work\zones\<zone>\`). The state of each zone is in `C:\koch\work\status.txt`. Each section below names its queue zone.
-- **Sources:** the owner's capture (`C:\koch\alatoo-capture\raw`, frames in `C:\koch\work\frames_a`, clip ids `PXL_2026092x_<id>`), web media (`C:\koch\web`), satellite orthos (`alatoo-capture/data/ortho`).
-- Meshes, frames, masks and photos stay outside git.
-- **Order:** C → A_W gallery → B–A alley and gate → hall–C passage → garden → fields → everything else. New objects found on the way are added to their zone.
+- **Meshes** come from the GPU queue (outside git): `C:\koch\work\gpu_queue.ps1` runs the zones of `C:\koch\work\queue.txt` one by one through `Scripts/Geo/rs/zone_job.py` (align → cameras/poses → mesh into `C:\koch\work\zones\<zone>\`). The state of each zone is in `C:\koch\work\status.txt`.
+- **Sources:** the owner's capture (`C:\koch\alatoo-capture\raw`, frames in `C:\koch\work\frames_a`, clip ids `PXL_2026092x_<id>`), web media (`C:\koch\web`), satellite orthos (`alatoo-capture/data/ortho`). Meshes, frames, masks and photos stay outside git.
+- **Levels:** `route_profile.py` over all zones → `route_check.py` (handoff 0a).
+
+## Pass grid (zone × pass; cell = commit when passed, `—` above the cap)
+| Zone (route order) | Cap | P0 | P1 | P2 | P3 |
+|---|---|---|---|---|---|
+| Street, bus stop, crossing (§12) | P3 | | | | |
+| Gate, booth, yard (§4 G.1-G.5) | P3 | | | | |
+| Alley B–A (§4 G.6-G.13) | P3 | | | | |
+| A_W gallery + plaza (§3) | P3 | | | | |
+| C plaza + exterior (§1) | P3 | | | | |
+| C interior F1-F5 (§2 CI.1-CI.8) | P3 | | | | |
+| C basement (§2 CI.9, §1 C.12) | P3 | | | | |
+| Hall–C passage (§5) | P3 | | | | |
+| Garden (§6) | P3 | | | | |
+| Sports fields (§7) | P3 | | | | |
+| Sports hall, canteen (§8, §9) | P3 | | | | |
+| Block B (§10) | P3 | | | | |
+| Block A (§11) | P3 | | | | |
+| Terrain + levels (§15) | P3 | | | | |
+| West campus D/E (§13) | P2 | | | | — |
+| Ring ≤ 150 m + streets/stops (§16) | P2 | | | | — |
+| Ring > 150 m (§16 far) | P1 | | | — | — |
+
+The ticks below from before 2026-09-27 (C.1-C.3) were fitted before the world frame was fixed: they count as P3 only
+after the C zone passes P0 and P1 with them unchanged.
 
 ## 1. Block C, exterior (zones `C_entr` done, `C_sw`)
 - [x] C.1 Main entrance stair: granite treads/risers with nosings, landing, cheek walls with caps — 7 × 0.154, treads 0.475, landing 2.65 (mesh + photo-edge fit, overlay f00023/f00090/f00128/f00449) (cdb826f)

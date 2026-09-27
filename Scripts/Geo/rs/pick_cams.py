@@ -2,7 +2,7 @@
 # projects the element's world box (8 corners) through every camera of model.json (+ align.json model -> world) and
 # ranks by visible projected area, penalising boxes cut by the frame edge or seen at grazing angles.
 # Prints the top N as a comma list for KOCH_SFM_CAMS (Scripts/Blender/sfm_overlay.py).
-# Usage: python pick_cams.py model.json align.json --box x0,y0,z0,x1,y1,z1 [--n 4] [--min-sep 2.0]
+# Usage: python pick_cams.py model.json align.json --box x0,y0,z0,x1,y1,z1 [--n 4] [--min-sep 2.0] [--dist 2,15]
 import argparse
 import json
 import sys
@@ -17,6 +17,7 @@ def main():
     ap.add_argument("--box", required=True)
     ap.add_argument("--n", type=int, default=4)
     ap.add_argument("--min-sep", type=float, default=2.0, help="m between picked camera centres (diverse views)")
+    ap.add_argument("--dist", help="min,max m from the box centre (pass bands: P1 wide 8,80; P2 2,15; P3 0,5)")
     a = ap.parse_args()
     model, al = json.load(open(a.model)), json.load(open(a.align))
     s, Rw, tw = al["scale"], np.array(al["R"]), np.array(al["t"])
@@ -45,6 +46,9 @@ def main():
         axis = Rw @ (R.T @ np.array([0, 0, 1.0]))
         cos = float(view @ axis)
         score = vis / (W * H) * inside ** 2 * max(cos, 0) ** 2
+        d = float(np.linalg.norm(centre - cw))
+        if a.dist and not (float(a.dist.split(",")[0]) <= d <= float(a.dist.split(",")[1])):
+            continue
         rows.append((score, c["name"], cw, inside, vis / (W * H), float(np.linalg.norm(centre - cw))))
     rows.sort(key=lambda r: -r[0])
     picked = []

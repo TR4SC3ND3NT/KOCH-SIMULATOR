@@ -2,26 +2,77 @@
 
 For the teammate's PC and its Claude Code. It continues the R1 greybox (`Art/Blender/KOCH_Campus_Greybox.blend`) where the map owner's laptop stopped: that laptop has no NVIDIA GPU, so levels, stairs and platforms were estimated from single frames and are often wrong. **Goal:** one metric mesh of the site from the footage, then every element traced on it.
 
-## 0. Scope and definition of done (map owner, 2026-09-27; overrides any shorter list)
-**Scope:** the complete game map, production-ready as geometry in Blender. Unreal, materials, lighting and physics come later.
-1. **The whole campus**, every object that appears in the owner's footage or the web media: buildings (every facade, entrance, door, window, roof, dormer, gutter), interiors that were filmed, stairs, ramps, platforms, kerbs, paving and level changes, planters, trees, hedges, the garden with its arches and gazebos, alleys, paths, the gate and checkpoint, fences, parking, the fields and courts, benches, lamps, bins, signs, AC units and everything else visible.
-2. **The surroundings within ~500 m of the campus** (section 6): streets, sidewalks, crossings, bus/trolleybus stops, neighbouring buildings and high-rises, walls and fences, open ground.
+## 0. Strategy: the whole map coarse to fine, in passes (map owner, 2026-09-27; overrides everything below)
+**Scope:** the complete game map as geometry in Blender (Unreal, materials, lighting and physics come later):
+1. **The whole campus:** every object in the owner's footage or the web media (buildings with every facade element,
+   filmed interiors incl. the C basement, stairs, single steps, ramps, terraces, kerbs, planters, trees, hedges, the
+   garden with arches and gazebos, alleys, the gate, fences, fields, benches, lamps, bins, signs, AC units, ...).
+2. **The surroundings within ~500 m** (section 6).
 
-**How the object list is made:** never from a hard-coded list, including the order suggestions in this file. Walk through all footage (owner capture + web media, see ROUTE.md) and the satellite image, and write every object you can see into `docs/reference/r1_progress.md`, grouped by area. Add objects whenever you find new ones.
+**Why passes.** Polishing one object to centimetres while its neighbours are 2-4 m off wastes the work: when the
+frame or a level moves, the polished object moves with it. On 2026-09-27 the C entrance was fitted to the centimetre
+while the gazebos, the gate→C path, the first steps after the gate, the planters and the street were off by 2-4 m.
+So the map is refined like a progressive render: every zone reaches pass N before any zone starts pass N+1.
 
-**One object at a time, finished before the next:**
-1. collect every photo and frame that shows it, and analyse them;
-2. align those images in RealityScan and build the mesh (GPU queue);
-3. metric scale and world frame;
-4. read every size and level off the mesh;
-5. model at the detail standard (4a);
-6. overlay-check through at least 2 real solved cameras, detail by detail;
-7. fix, commit and push, then tick `[x]` with the commit hash.
+### The object list
+Built from the footage, never from a fixed list (the lists in this file are hints): walk through the owner's clips
+(ROUTE.md), the web media and the satellite/mesh orthophoto, and keep every object in `docs/reference/r1_progress.md`
+by zone. Add new objects whenever they turn up.
 
-**Done rules:**
-- `approx.`, "already in the model" and "estimated" are NOT done: leave such items unticked.
-- A blocker (no footage, alignment impossible) is written next to the item as `BLOCKED: <reason>` and stays unticked. Also add a Russian photo request to `docs/reference/photo_requests.md`.
-- The map is finished only when `r1_progress.md` has no `[ ]` and no `approx.`, or only `BLOCKED` items with photo requests.
+### Passes, tolerances and exit tests
+Each pass has two checks, and a zone passes only when both pass: the **scripted numeric test** below, and **your own
+look** at the footage vs the model (section 3a "Your own review"). Scripts find and measure; you confirm. Neither
+replaces the other: numbers catch what the eye misses, the eye catches what the scripts miss (a wrong object, a
+missing step, a mis-registered camera that scores well).
+
+| Pass | What exists | Tolerance | Sources used | Exit test |
+|---|---|---|---|---|
+| P0 frame | one world frame for all zones; every object as a box/massing at its place; every terrace level and level change from the routes (0a); the ring as OSM footprints × floors | campus ±0.30 m, ring ±2 m | satellite/mesh orthophoto, OSM, web drone/aerials, all walking clips (camera paths) | REG ≤ 0.30 m between zones (route_profile.py), control corners ≤ 0.30 m (rs_world.py fit), route_check `--tol 0.30` ≥ 95 %, every list object present |
+| P1 blockout | true outlines, heights and roof masses; every stair with its riser count, every single step, ramp and kerb > 0.10 m; gazebos (plan, post count, heights), hedge blocks, planters; interiors as rooms + stairs; ring: ready-made models fitted to footprint and floor count | levels ±0.07 m (< half a riser), plan ±0.15 m | mesh sections (mesh_section.py plan/profile), wide solved cameras (`pick_cams --dist 8,80`), route event frames | route_check `--tol 0.07` ≥ 95 %; riser counts = event frames; overlay_compose median ≤ 8 px on 2 cameras per object |
+| P2 greybox | every feature ≥ 0.10 m: doors and windows (mesh_section facade), reveals, cheek walls, rails, benches, lamps and bins as kit pieces, kerb sections, interior doors, radiators, stair balustrades; ring near: facades, entrances, balconies | ±0.04 m | medium cameras (`--dist 2,15`), web photos of the object | route_check `--tol 0.04` on mesh-eye clips; overlay median ≤ 3 px, p90 ≤ 8 px on ≥ 2 cameras; counts (posts, bars, windows, steps) match |
+| P3 detail | section 4a: real profiles down to ~1 cm, modular kit | ~0.01-0.02 m | close cameras and stills (`--dist 0,5`), owner screenshots | overlay median ≤ 2 px on the closest cameras; the owner's screenshot viewpoints match |
+
+**Depth cap** (last pass per zone): the whole campus P3 (it is all playable); Block D/E and the west campus P2
+(web media only); ring ≤ 150 m P2; ring > 150 m P1.
+
+**Order inside a pass:** the player's route first, then outward: street + bus stop + crossing → gate + booth →
+alley B–A → A_W gallery → C plaza → C exterior → C interior → **C basement** → hall–C passage → garden → sports →
+hall, canteen, B, A → west campus → ring near → ring far. The C basement is still poor (owner, 2026-09-27): it goes
+through every pass like the rest, never skipped as "done".
+
+**Every photo and video is used in every pass, at the depth of that pass:** P0 wide views and camera paths, P1 wide
+cameras and sections, P2 medium cameras, P3 close ones. `pick_cams.py --dist` picks them per object; web photos that do
+not align are camera-matched to the model (known sizes: storey 3.30, door 0.99 × 2.05, pavers 0.20 × 0.10).
+
+### Progress file and done rules
+- `r1_progress.md` has a grid zone × pass at the top. Each object line carries the highest pass it passed and the
+  commit, e.g. `P1✓ 1a2b3c4`; `[x]` only at its depth cap.
+- "approx.", "in the model" and "estimated" never count as a pass.
+- A blocker is written next to the item as `BLOCKED: <reason>`, stays open, and gets a Russian photo request in
+  `docs/reference/photo_requests.md`. Blocked items do not stop the pass for the rest of the zone.
+- **Finished** = every zone at its cap and no open item except BLOCKED ones with photo requests.
+
+### Loop (each iteration)
+1. Read the grid → the lowest open pass → the first zone in route order that has not passed it.
+2. Run the zone's checks (one command, short summary) and do your own review of the frames and overlays → fix what
+   fails in the specs/generators → rebuild → re-check both.
+3. Commit + push when the zone passes; update the grid and the item lines; one log line.
+4. While RealityScan runs a queue job, work on another zone; never wait idle, never poll with sleep loops.
+
+## 0a. Levels from the owner's walks (P0/P1)
+The phone was carried at a near-constant height, so the solved camera centres of a walking clip trace the ground the
+owner walked on. `Scripts/Geo/rs/route_profile.py` turns every walking clip into a level profile: flat levels, every
+step, stair and ramp (with the time and frame names), a riser hint, and the zone-to-zone registration error from frames
+solved in two zones. `Scripts/Blender/route_check.py` casts rays down through the model along the same samples and lists
+where the model's walking surface is off (with the object under it).
+- Run route_profile over **all** zones at once so clips that cross zones chain the levels (gate → alley → C).
+- Give it `--mesh` (world mesh) where there is one: the eye height then comes from the mesh; without it only level
+  *differences* are trusted (route_check scores those clips relative).
+- Look only at the event frames: count risers, see single steps and kerbs (e.g. the single steps every ~2 m after
+  the sports hall), then write the levels into the terrain pads and stair specs.
+- Pose accuracy depends on the frames per second: re-extract walking clips at `--fps 6` if steps closer than ~1.5 m
+  merge. Hand shake is about ±5-10 cm, so single-step heights come from the mesh profile (mesh_section.py profile)
+  and the event frames, not from the camera path alone.
 
 ## 1. Get the data (never commit it: people in the frames)
 - **Repo:**
@@ -97,19 +148,18 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
 
 ## 4. How to rebuild on the mesh
 1. **Import.** Import the mesh into the `.blend` as `REF_Photogrammetry` in the `00_Reference` collection. Lock it; it is never exported (the builders skip `REF_*`).
-2. **Rebuild zone by zone, in this order:**
-   1. C (exterior, basement entry, west shed);
-   2. the A_W gallery deck and its plaza;
-   3. the B–A alley and its stairs;
-   4. the hall–C passage and the sports hall's east end;
-   5. the garden;
-   6. the gate.
-
-   For each zone:
-   - Read the levels (Z) of every walking surface, step, kerb and platform, the plan outlines, and the roof edges directly off the mesh. Snap to faces.
-   - Write them into the spec or generator, with evidence strings saying "photogrammetry mesh".
-   - Rebuild, then compare with the mesh from several viewpoints and with the photos.
-3. **Owner's rules:**
+2. **One world frame first (P0).** All zone models must agree before anything is measured on them:
+   - Preferred: merge the zones in RealityScan through control points (at least 4 CPs per component, each seen in
+     several images; 6 shared CPs between two components; rshelp "Merging Components Using Control Points"): kerb
+     corners, building corners and paving joints that are visible from both zones.
+   - Else: fit every zone to the world with `rs_world.py fit` on shared corners (the control corners of section 2 +
+     corners picked on the satellite orthophoto) and check each pair of zones with the REG lines of route_profile.py.
+   - Take plan outlines (planters, gazebos, hedges, paths, kerbs, tree pits) from the mesh orthophoto
+     (`rs_world.py level` → plan_rgb.png) or the satellite orthophoto, never from single oblique frames.
+3. **Then the passes of section 0**, zone by zone in route order. For each zone and pass: levels from 0a, outlines
+   and heights from mesh_section.py (plan/profile/facade), written into the specs/generators with evidence strings
+   ("mesh profile", "route event f00123"); rebuild; run the pass test.
+4. **Owner's rules:**
    - **Every item.** Number every screenshot and bug the owner sends, close each one, and report each as done or blocked with a reason.
    - **Verify before "done".** Check from the same viewpoint as the owner's screenshot and the real photo before saying done.
    - **The owner can be wrong** (it happened twice). Verify their claims against the footage and show proof when it disagrees.
@@ -119,12 +169,36 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
 ## 3a. Agent and token budget for this job (map owner, 2026-09-27; stricter than AGENTS.md)
 - Work solo by default. At most **2 subagents** at a time, only when they really save time; never more.
 - **No workflows, no Verify / review / adversarial phases, no "second opinion" agents.** Verification means a build plus
-  an overlay through real cameras, done by you.
+  the scripted pass test, done by you.
 - The run on 2026-09-27 wasted most of a session limit on a 20-agent review workflow (1.5M tokens) that changed nothing on the map.
-- Use high effort; reserve deeper thinking for hard problems (alignment, registration), not for routine measuring.
+- High effort for hard problems (registration, alignment, a test that keeps failing); routine spec edits are quick.
+
+### Token economy (same quality, fewer tokens)
+- **Scripts do the work, you read summaries.** Every command prints at most ~20 lines: send logs to files
+  (`> log.txt 2>&1`) and print `tail`/summary lines only. Never dump JSON, CSV, specs or logs whole into the context.
+- **One command per check:** write once a `pass_check` script (zone + pass → build, route_check, pick_cams, sfm_overlay,
+  overlay_compose, a 10-line verdict) and use it every iteration instead of re-typing chains of commands.
+- **Images, targeted:** open the images the review below needs, ≤ 1280 px, composites from overlay_compose; never
+  open raw 4K frames or whole folders. Contact sheets for triage.
+- **Read little:** `grep` the spec field you change instead of reading whole specs; from this file read section 0/0a
+  and the part you need; from r1_progress.md read the grid and the current zone only. After a context compaction,
+  re-read just those.
+- **GPU waits:** RealityScan jobs run in the queue (gpu_queue.ps1); meanwhile work on another zone or pass. When
+  nothing else is left, schedule a long wake-up (≥ 20 min) instead of polling.
+- **Chat:** at most 3 short Russian lines per iteration, e.g. `P1 · Gate · G.7 ступени 5→6, route ±0.04 ✓ 1a2b3c4 · дальше G.8`.
+  No tables, no recaps, no plans in chat. Details go into the progress log (one line per zone-pass).
+- **Your own review (required, every zone-pass):** look at the footage yourself and judge it as a modeller:
+  - every route event (step, stair, ramp): the frames around it; count the risers and see what the edge is;
+  - every object group in the zone: one overlay composite from 2 cameras at the pass distance; check shape, count and
+    position against the photo, not only the metric;
+  - anything the scripts flag, plus one look at the zone overall (a wide camera) for missing or extra objects;
+  - where you disagree with a script, trust the footage, find why the script was wrong and fix it or its input;
+  - write what you saw in the log line (e.g. `looked: 6 events, 9 overlays; H.2 ramp side wrong → fixed`).
+- **Keep going on your own** until "Finished" (section 0). Stop only for a real blocker on every remaining item; then
+  write the photo requests and say so in 2 lines.
 
 ## 4a. Detail standard: real modelled structure, not boxes (the owner's hard requirement)
-The owner wants the Blender result to look close to reality **as geometry**, not a blockout. Model every element as it is built in reality, down to the smallest part with visible relief (about 1 cm or more). Do not move to the next element until the current one matches the footage pixel by pixel.
+The owner wants the Blender result to look close to reality **as geometry**, not a blockout. Model every element as it is built in reality, down to the smallest part with visible relief (about 1 cm or more). This is the P3 standard: an element gets it only after every zone has passed P2 (section 0).
 
 ### What to model as real geometry
 - **Walls:**
@@ -170,18 +244,21 @@ The owner wants the Blender result to look close to reality **as geometry**, not
 - Nanite handles dense meshes in UE, so detail is fine. Still, no hidden or internal faces, and no micro-geometry where a material works.
 - Put everything through the spec/generator pipeline, extending the builders with new element types and profiles, so it rebuilds. Hand-modelled one-offs are acceptable only for unique pieces; keep them in their own collection with a note.
 
-### Per-element loop (do not skip steps)
-1. List the element and its parts. Collect every photo and video frame that shows it; ROUTE.md and file times help.
-2. Measure positions, levels and sizes on the photogrammetry mesh (snap to it). Cross-check with the known sizes: storey 3.30, door 0.99 × 2.05, risers, pavers.
+### Per-element loop in P3
+1. Collect the close cameras and stills that show the element (`pick_cams.py --dist 0,5`, ROUTE.md, web photos).
+2. Measure on the mesh (mesh_section.py) and check against known sizes: storey 3.30, door 0.99 × 2.05, risers, pavers.
 3. Model it at the detail standard above.
-4. Verify:
-   - render the model through at least 2 of the real cameras solved by RealityScan (export its camera poses; `Scripts/Blender/sfm_overlay.py` does photo | blend | model triptychs);
-   - compare edges, heights and counts (steps, posts, bars, windows) pixel by pixel;
-   - fix and repeat until they match.
-5. Also check from the owner's screenshot viewpoint if they marked that spot.
-6. Commit only then. Move on to the next element.
+4. Check: sfm_overlay.py + overlay_compose.py through ≥ 2 real cameras (median ≤ 2 px), and look at the composites
+   yourself: edges, heights and counts (steps, posts, bars, windows). Fix and repeat until both agree.
+5. Also check from the owner's screenshot viewpoint if they marked that spot. Commit.
 
 ## 5. Open items the mesh must settle (from the owner's marked screenshots)
+- **C basement (owner 2026-09-27: "still poor"):** rebuild it from the `C_base` zone and the basement clips, not from
+  the old estimates: the stair down (riser count and heights from the route events of the walk down), landing, the
+  vaulted corridor (width, vault spring and crown heights from mesh_section profile), barred windows and light wells,
+  the art room, the piano room, doors, and how it joins the Dance Hall entry and the F1 stairs.
+- **Single steps and small level changes on the paths** (e.g. after passing the sports hall: one step, ~2 m, another
+  step, ...): every one from the route events (0a), with its frames.
 - **Block C:**
   - The west "Dance Hall" shed roof and its continuation toward the spruces SW of C: shape, depth and height.
   - The basement entry roof: red mono-pitch over the box and stair.
