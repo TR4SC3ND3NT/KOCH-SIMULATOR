@@ -1281,11 +1281,11 @@
    "width": 1.35,
    "risers": 11,
    "riser_h": 0.1535,
-   "tread": 0.332,
+   "tread": 0.3,
    "z_top": 8.012,
    "bottom_riser_h": 0.0767,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.37 m from the south wall",
+   "evidence": "P1 C_F1 mesh profile along the main stair (zone C_F1 c3, clip 080011086, levelled, eye-height scale): risers 0.149-0.169 (median 0.155, spec 0.1535 confirmed), treads 0.28-0.30 -> 0.30 (was 0.332 from the hall photo). hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.37 m from the south wall",
    "confidence": "medium"
   },
   {
@@ -1326,11 +1326,11 @@
    "width": 1.35,
    "risers": 11,
    "riser_h": 0.1535,
-   "tread": 0.332,
+   "tread": 0.3,
    "z_top": 9.7,
    "material": "granite",
    "soffit_thk": 0.18,
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
+   "evidence": "P1 C_F1 mesh profile along the main stair (zone C_F1 c3, clip 080011086, levelled, eye-height scale): risers 0.149-0.169 (median 0.155, spec 0.1535 confirmed), treads 0.28-0.30 -> 0.30 (was 0.332 from the hall photo). hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
    "confidence": "medium"
   },
   {
@@ -1568,11 +1568,11 @@
    "width": 1.35,
    "risers": 11,
    "riser_h": 0.1535,
-   "tread": 0.332,
+   "tread": 0.3,
    "z_top": 8.012,
    "bottom_riser_h": 0.0767,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.37 m from the south wall",
+   "evidence": "P1 C_F1 mesh profile along the main stair (zone C_F1 c3, clip 080011086, levelled, eye-height scale): risers 0.149-0.169 (median 0.155, spec 0.1535 confirmed), treads 0.28-0.30 -> 0.30 (was 0.332 from the hall photo). hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 1 on the hall side, rises north across the hall end, 11 risers, bottom riser 1.37 m from the south wall",
    "confidence": "medium"
   },
   {
@@ -1613,11 +1613,11 @@
    "width": 1.35,
    "risers": 11,
    "riser_h": 0.1535,
-   "tread": 0.332,
+   "tread": 0.3,
    "z_top": 9.7,
    "material": "granite",
    "soffit_thk": 0.18,
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
+   "evidence": "P1 C_F1 mesh profile along the main stair (zone C_F1 c3, clip 080011086, levelled, eye-height scale): risers 0.149-0.169 (median 0.155, spec 0.1535 confirmed), treads 0.28-0.30 -> 0.30 (was 0.332 from the hall photo). hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
    "confidence": "medium"
   },
   {

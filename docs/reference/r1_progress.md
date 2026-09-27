@@ -58,8 +58,8 @@ after the C zone passes P0 and P1 with them unchanged.
 ## 2. Block C, interior (zone `C_base`; F1–F5 zone to add: clips 070704360, 052716931, 080443026, 080011086, 080051708, 074805359, 075725091, 075928860, 075931189)
 - [ ] CI.1 Entrance lobby F1: terrazzo floor, blue accent panels, vending/coffee niche, radiators, ceiling grid with LED panels — approx., in the model (GBS_INT_C_F1)
 - [ ] CI.2 F1 corridors west/east: benches, classroom doors (0.99 × 2.05 kit), fire-alarm boxes — approx., in the model (GBS_INT_C_F1)
-- [ ] CI.3 West stair F1–F3: flights, landings, window, white steel balustrade — approx., in the model (GBS_INT_C_Floors)
-- [ ] CI.4 East stair F1–F5: flights, landings, windows, balustrade (riser count per flight) — approx., in the model (GBS_INT_C_Floors)
+- [ ] CI.3 West stair F1–F3: flights, landings, window, white steel balustrade — P1 partly: riser 0.155 confirms 0.1535, tread 0.30 from the C_F1 mesh (was 0.332); landing positions and which stair the clip climbs still to confirm once C_F1 is placed in C
+- [ ] CI.4 East stair F1–F5: flights, landings, windows, balustrade (riser count per flight) — P1 partly: tread 0.30 / riser 0.1535 as the west stair (same design, C_F1 mesh); riser count per flight (11 + half bottom riser) not yet seen as a full flight
 - [ ] CI.5 WC pair F1: sinks, stalls with black doors, squat pans, high cisterns, tile to 1.4 m — approx., in the model (GBS_INT_C_F1)
 - [ ] CI.6 Prototype classroom 203 (computer lab): desks, chairs, TV, whiteboard, grid ceiling, windows with blinds — approx.: computer-lab furniture in the F2 north room next to door N1 (INT_C_Floors F2_Lab_*); room choice from ROUTE (north windows), not confirmed
 - [ ] CI.7 Floors F2–F4: corridors, classrooms, WCs (F4 without the west stair: offices) — approx., in the model (GBS_INT_C_Floors)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: C_F1 meshed at Normal (c3 288 cams, 3M tris; c5). Main stair profile on the mesh: risers 0.149-0.169 (median 0.155), treads 0.28-0.30 -> all 12 C stair flights tread 0.332 -> 0.30. C_sw c1 mesh is a 10 x 5 m spot (camera stood still): not usable for placement.
 - [A] 2026-09-28: Gate c8 (alley B-A walk) placed: yaw from its A_S facade line, along from the A_S porch block in the mesh, across from the Google z20 ortho (B gallery left of the walker in f00550); +-1.5 m along. Alley walk profile flat 6.8-7.1 (no steps on that line). Gate c6 is a pan from one spot (weak mesh) -> forecourt stays on Google z20. Queue: unfinished zones switched to detail normal + simplify 3M (handoff 2.5).
 - [A] 2026-09-27: mesh drop Garden (c8, c3), Sports (c2, c9), C_sw (c1, c7), WEB_drone (c1, c2) -> C:\koch\drop\koch_meshes_20260927.zip (321 MB): world-metre PLY <= 3M tris (vertex clustering 0.8-5.6 cm), cameras, route.json; aligns are levelled + eye-height metric with xy/yaw placeholders (WEB_drone raw RS units, not metric).
 - 2026-09-27 (night): crossing: Gate c13 placed (sparse ground plane + Google zebra); dropped kerb at the zebra, parking bars 0.25 m (Street c2 mesh), route_profile over Street c3/c2 + Gate c13: sidewalk flat 7.46-7.53, the -0.42/-1.69 'events' in c2 are the phone lowered at the end of the clip (mesh ground flat), not steps.
