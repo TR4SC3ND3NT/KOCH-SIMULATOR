@@ -115,7 +115,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -134,7 +135,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -153,7 +155,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -172,7 +175,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -191,7 +195,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -210,7 +215,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -229,7 +235,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -248,7 +255,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -267,7 +275,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -286,7 +295,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -305,7 +315,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -324,7 +335,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -343,7 +355,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -362,7 +375,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -381,7 +395,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -400,7 +415,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -419,7 +435,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -438,7 +455,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -457,7 +475,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): bars at 5.55 m from the parapet centreline at x 98-105 (was 3.6); east end 4.51 m from the Google car noses; bay pitch 2.6 m still assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "planter",
@@ -483,7 +502,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -524,7 +544,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "P1 ground mosaic of zone Street c3 (clip 065653194 frames re-projected on the walking plane, world placement P0 by the planter-wall face, +-0.5 m along): pit 1.5 m wide (kerb outer), west end x 114.4, runs >= 4.2 m east (mosaic edge at 118.6; photo f01622); east end <= 118.8 (Street c2 mosaic paved from 118.8)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -595,7 +616,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -636,7 +658,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -677,7 +700,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -718,7 +742,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -759,7 +784,8 @@
    "curb_h": 0.1,
    "curb_w": 0.1,
    "evidence": "2026-09-27 approx.: tree pits on the sidewalk along the parking side (photo_requests: pits on the sidewalk, video 065653194), x from the Bing z19 crowns; not measured",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Concrete_Precast"
   },
   {
    "type": "tree",
@@ -860,7 +886,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -879,7 +906,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -898,7 +926,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -917,7 +946,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -936,7 +966,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -955,7 +986,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -974,7 +1006,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -993,7 +1026,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -1012,7 +1046,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
@@ -1031,7 +1066,8 @@
    "thk": 0.08,
    "material": "metal",
    "evidence": "height 0.25 from the Street c2 mesh cross-profiles (+0.22/0.24/0.25/0.25 at x 126-129). 2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Steel_Paint_YellowBlack"
   },
   {
    "type": "wall",
