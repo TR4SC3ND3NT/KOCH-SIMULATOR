@@ -2661,7 +2661,7 @@
    "name": "AW_NorthSteps",
    "top": [
     165.233,
-    -17.032
+    -20.332
    ],
    "dir_deg": 87.192,
    "risers": 2,
@@ -2670,7 +2670,7 @@
    "width": 1.25,
    "z_top": 5.65,
    "material": "granite",
-   "evidence": "north end of the deck: 2 granite steps on the outer part of the deck end (012436367 f01-f07; map owner)",
+   "evidence": "north end of the deck: 2 granite steps on the outer part of the deck end (012436367 f01-f07; map owner) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
    "confidence": "medium"
   },
   {
@@ -2679,19 +2679,19 @@
    "ring": [
     [
      165.857,
-     -17.063
+     -20.363
     ],
     [
      167.055,
-     -17.122
+     -20.422
     ],
     [
      167.173,
-     -14.725
+     -18.025
     ],
     [
      165.974,
-     -14.666
+     -17.966
     ]
    ],
    "z": [
@@ -2702,7 +2702,7 @@
    ],
    "thk": 0.06,
    "material": "metal",
-   "evidence": "grey grating ramp on the wall side of the deck end, running straight north down to the square (map owner 2026-09-26 marked screenshot)",
+   "evidence": "grey grating ramp on the wall side of the deck end, running straight north down to the square (map owner 2026-09-26 marked screenshot) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
    "confidence": "medium"
   },
   {
@@ -2711,19 +2711,19 @@
    "ring": [
     [
      165.857,
-     -17.063
+     -20.363
     ],
     [
      167.055,
-     -17.122
+     -20.422
     ],
     [
      167.173,
-     -14.725
+     -18.025
     ],
     [
      165.974,
-     -14.666
+     -17.966
     ]
    ],
    "z": [
@@ -2734,7 +2734,7 @@
    ],
    "thk": 0.5,
    "material": "stone",
-   "evidence": "infill under the ramp",
+   "evidence": "infill under the ramp | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
    "confidence": "medium"
   },
   {
@@ -2743,12 +2743,12 @@
    "points": [
     [
      165.887,
-     -17.064,
+     -20.364,
      5.65
     ],
     [
      166.004,
-     -14.667,
+     -17.967,
      5.3
     ]
    ],
@@ -2757,7 +2757,7 @@
    "mid_rails": 1,
    "material": "metal",
    "unique_posts": true,
-   "evidence": "ramp rail",
+   "evidence": "ramp rail | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
    "confidence": "medium"
   }
  ],

@@ -156,6 +156,8 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [ ] KIT.2 Benches and bins: wrought-iron benches with slats, wrought-iron litter bins, wheelie and recycling bins
 - [ ] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces)
 
+- [x] AW.10 Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN
+
 ## 15. Terrain and levels
 - [x] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level) — approx., in the model (terrain_pads in the specs)
 - [ ] T.2 Every outdoor stair and ramp between terraces counted and matched to T.1
@@ -174,6 +176,8 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M6 | Козырёк: вынос, низ и верх короба | 5.6 / +3.10 / +4.65 | BLD_C `attachments[canopy].depth/z0/sign.z1` | вынос шагами, высоты рулеткой |
 | M7 | Пандус: ширина, отступ от фасада, длина | 1.0 / 3.5 / до u 9.5 | BLD_C `attachments[ramp name Run]` | ширина настила, где кончается |
 | M8 | Высота этажа C | 3.30 | BLD_C `storey_m` | подступенки одного марша × высота |
+| M10 | Сев. торец A_N / A_W (стена) | y −20.2 (сдвинут на 3.3 м к югу; фото даёт −22.5±1.5) | BLD_A_N.json / BLD_A_W.json `ring` (y 73.2 / 72.95) | от угла C до торца A_N |
+| M11 | Окна вост. крыла C | сдвиг ~0.3 м от фото | BLD_C.json `facades[edge 3].windows[].u` | шаг окон по фасаду |
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log

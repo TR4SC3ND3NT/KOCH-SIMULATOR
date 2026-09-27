@@ -290,6 +290,230 @@
    "shape": "cone",
    "evidence": "tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
    "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_0",
+   "ring": [
+    [
+     174.0,
+     -18.986
+    ],
+    [
+     175.2,
+     -18.986
+    ],
+    [
+     175.2,
+     -17.786
+    ],
+    [
+     174.0,
+     -17.786
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_0",
+   "pos": [
+    174.6,
+    -18.386
+   ],
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_1",
+   "ring": [
+    [
+     179.9,
+     -19.275
+    ],
+    [
+     181.1,
+     -19.275
+    ],
+    [
+     181.1,
+     -18.075
+    ],
+    [
+     179.9,
+     -18.075
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_1",
+   "pos": [
+    180.5,
+    -18.675
+   ],
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_2",
+   "ring": [
+    [
+     185.6,
+     -19.555
+    ],
+    [
+     186.79999999999998,
+     -19.555
+    ],
+    [
+     186.79999999999998,
+     -18.355
+    ],
+    [
+     185.6,
+     -18.355
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_2",
+   "pos": [
+    186.2,
+    -18.955
+   ],
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_3",
+   "ring": [
+    [
+     191.70000000000002,
+     -19.853
+    ],
+    [
+     192.9,
+     -19.853
+    ],
+    [
+     192.9,
+     -18.653
+    ],
+    [
+     191.70000000000002,
+     -18.653
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.08,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_3",
+   "pos": [
+    192.3,
+    -19.253
+   ],
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low",
+   "height": 5.0,
+   "crown_d": 2.2,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_0",
+   "pos": [
+    171.3,
+    -19.924
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_1",
+   "pos": [
+    177.5,
+    -20.228
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_2",
+   "pos": [
+    183.4,
+    -20.517
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_3",
+   "pos": [
+    189.3,
+    -20.806
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
+   "confidence": "low"
   }
  ]
 }
