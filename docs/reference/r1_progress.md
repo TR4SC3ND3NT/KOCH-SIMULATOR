@@ -151,7 +151,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N) — P1✓ 3e8ba38 (obj_test GBF_BLD_A_S: Street c3 4.2/1.4 px, Gate c13 3.0/4.0 px; own look Gate c8 f00034/f00550: lettering panel, round panel, window rows, porch)
 - [ ] A.2 A_S south facade (street) — approx., in the model (GBF_BLD_A_S)
 - [ ] A.3 A_S and A_N east facades (parking side) — approx., in the model (GBF_BLD_A_S/A_N)
-- [ ] A.4 A_N north end (cut gable) — approx., in the model (GBF_BLD_A_N)
+- [ ] A.4 A_N north end (cut gable) — approx., in the model (GBF_BLD_A_N) — P1 partly: overlay 081158036 f00006/f00194 (C_entr c2): wall, roof line and windows of the N end match by eye (median 20/29 px from trees/people)
 - [ ] A.5 A_E and the NE annex between A_N and A_S — approx., in the model (GBF_BLD_A_E)
 - [ ] A.6 Two-storey part (hall + library) and the roof junctions — approx., in the model (GBF_BLD_A_W)
 - [ ] A.7 Roofs of A — approx., in the model (GBF_BLD_A_* Roof)
@@ -182,7 +182,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] KIT.2 Benches and bins: wrought-iron benches with slats, wrought-iron litter bins, wheelie and recycling bins — approx.: site kit bench/bin (build_site)
 - [ ] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces) — approx.: site kit sign (build_site)
 
-- [ ] AW.10 (CHECK: the inventory puts this bench row at the sports-hall east end, not A_N N end) Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN
+- [ ] AW.10 (CHECK: the inventory puts this bench row at the sports-hall east end, not A_N N end) Bench and conifer row along the N end of A_N (new, 081158036) — approx., SITE_CPlaza BenchAN/TreeAN/PlanterAN | 2026-09-28 [A]: CHECK resolved - C_entr c2 frames 081158036 f00006/f00194 look at the N end of A_N (blank wall with a ladder and ducts, roof line and the 3 windows match the model): the bench row stands along it; tree positions: 2 of 4 match, 1 off by ~1.5 m (P1 open)
 
 ## 15. Terrain and levels
 - [ ] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level) — approx., in the model (terrain_pads in the specs)
