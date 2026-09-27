@@ -89,12 +89,13 @@ def main():
     ap.add_argument("--reuse", action="store_true", help="keep an existing pair solve"); ap.add_argument("--threads", type=int, default=6)
     ap.add_argument("--tracks", type=int, default=150000, help="cap on tracks: global positioning time and RAM (<= 10 GB rule)")
     ap.add_argument("--eye", type=float, default=1.52)
+    ap.add_argument("--sparse", default="sparse", help="model folder in the pair dir (sparse_inc: incremental mapper run by hand)")
     ap.add_argument("--scale", type=float, help="metres per pair-model unit (else from a component with align.json)")
     a = ap.parse_args()
     out = os.path.join(a.work, "pairs", f"{a.a}_{a.b}"); os.makedirs(out, exist_ok=True)
     zones = {z: json.load(open(os.path.join(a.work, "zones", z, "job.json"), encoding="utf-8-sig")) for z in (a.a, a.b)}
     clips = {c for j in zones.values() for c in j.get("clips", [])}
-    sp = os.path.join(out, "sparse")
+    sp = os.path.join(out, a.sparse)
     if not (a.reuse and glob.glob(os.path.join(sp, "*", "images.txt"))):
         n = sub_db(os.path.join(a.work, "sfm", "db.db"), os.path.join(out, "sub.db"), clips)
         os.makedirs(sp, exist_ok=True)
@@ -107,6 +108,10 @@ def main():
         for m in glob.glob(os.path.join(sp, "*", "")):
             subprocess.run([a.colmap, "model_converter", "--input_path", m, "--output_path", m, "--output_type", "TXT"],
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    for m in glob.glob(os.path.join(sp, "*", "images.bin")):
+        if not os.path.exists(os.path.join(os.path.dirname(m), "images.txt")):
+            subprocess.run([a.colmap, "model_converter", "--input_path", os.path.dirname(m), "--output_path", os.path.dirname(m),
+                            "--output_type", "TXT"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     models = sorted(((read_images_txt(f), os.path.basename(os.path.dirname(f))) for f in glob.glob(os.path.join(sp, "*", "images.txt"))),
                     key=lambda m: -len(m[0]))
     if not models:
