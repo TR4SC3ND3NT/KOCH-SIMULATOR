@@ -193,6 +193,111 @@ def cmd_fit(a):
     print("align.json written", os.path.join(a.out, "align.json"))
 
 
+def world_walls(specs, footprints=None):
+    """World XY wall rings: building specs (walls) + phase-1 footprints (buildings, context blocks, canopies)."""
+    rings = list(spec_walls(specs).values())
+    if footprints and os.path.exists(footprints):
+        for it in json.load(open(footprints, encoding="utf-8"))["items"]:
+            if it.get("kind") in ("building", "context", "canopy", "gazebo") and len(it.get("ring", [])) >= 3:
+                rings.append(np.array(it["ring"], float))
+    return rings
+
+
+def raster_lines(rings, lo, px, shape, width=2):
+    img = np.zeros(shape, np.float32)
+    for r in rings:
+        pts = np.round((r - lo) / px).astype(np.int32)
+        pts[:, 1] = shape[0] - 1 - pts[:, 1]
+        cv2.polylines(img, [pts.reshape(-1, 1, 2)], True, 1.0, width)
+    return img
+
+
+def cmd_register(a):
+    """Global 2D search mesh -> world: wall points of the levelled mesh vs rasterised world walls, brute force over
+    rotation and scale, translation from the FFT cross-correlation peak; then ICP (cmd_fit machinery)."""
+    lv = json.load(open(os.path.join(a.out, "level.json")))
+    V, F, _ = load_mesh(lv["mesh"])
+    L = V @ np.array(lv["R_level"]).T
+    n, ar = tri_normals(L, F)
+    wall = (np.abs(n[:, 2]) < 0.1) & (ar > np.percentile(ar, 20))
+    cen = L[F[wall]].mean(1)
+    zg = np.percentile(L[:, 2], 5)
+    P = cen[:, :2]
+    rng = np.random.default_rng(0)
+    if len(P) > a.max_pts:
+        P = P[rng.choice(len(P), a.max_pts, replace=False)]
+    pc = P.mean(0)
+    P = P - pc
+    rings = world_walls(a.specs, a.footprints)
+    allw = np.concatenate(rings)
+    wlo, whi = allw.min(0) - a.margin, allw.max(0) + a.margin
+    px = a.px
+    H = int(2 ** np.ceil(np.log2((whi[1] - wlo[1]) / px * 1.5)))
+    W = int(2 ** np.ceil(np.log2((whi[0] - wlo[0]) / px * 1.5)))
+    off = np.array([W - (whi[0] - wlo[0]) / px, H - (whi[1] - wlo[1]) / px]) / 2   # world raster centred in the canvas
+    world = raster_lines(rings, wlo - off * px, px, (H, W), width=2)
+    world = cv2.GaussianBlur(world, (0, 0), a.blur)
+    Fw = np.fft.rfft2(world)
+    best = []
+    scales = np.geomspace(a.smin, a.smax, a.nscale)
+    if a.thetas:  # narrow search around given rotations (e.g. from the dominant wall direction, +k*90)
+        ths = np.concatenate([np.arange(t - a.th_span, t + a.th_span + 1e-9, a.dth)
+                              for t in map(float, a.thetas.split(","))]) % 360
+    else:
+        ths = np.arange(0, 360, a.dth)
+    for s in scales:
+        for th in ths:
+            c, si = math.cos(math.radians(th)), math.sin(math.radians(th))
+            Q = s * (P @ np.array([[c, si], [-si, c]]))
+            iu = np.round(Q[:, 0] / px + W / 2).astype(int)
+            iv = np.round(H / 2 - Q[:, 1] / px).astype(int)
+            ok = (iu >= 0) & (iu < W) & (iv >= 0) & (iv < H)
+            img = np.zeros((H, W), np.float32)
+            np.add.at(img, (iv[ok], iu[ok]), 1.0)
+            img = np.minimum(img, 3.0)            # dense clutter (trees) must not dominate
+            cc = np.fft.irfft2(Fw * np.conj(np.fft.rfft2(img)), s=(H, W))
+            k = int(np.argmax(cc))
+            best.append((float(cc.flat[k] / max(ok.sum(), 1)), s, th, k // W, k % W))
+    best.sort(key=lambda b: -b[0])
+    print("top solutions (score, scale m/unit, rotation deg):")
+    for b in best[:8]:
+        print(f"  {b[0]:.4f}  s {b[1]:.3f}  th {b[2]:.1f}")
+    score, s, th, dy, dx = best[0]
+    # translation: the mesh raster shifted by (dy, dx) (circular) lines up with the world raster
+    dy = dy - H if dy > H / 2 else dy
+    dx = dx - W if dx > W / 2 else dx
+    c, si = math.cos(math.radians(th)), math.sin(math.radians(th))
+    R2 = np.array([[c, -si], [si, c]])
+    # canvas pixel (u, v) of world raster <-> world XY: x = wlo_x - off_x*px + u*px; y = wlo_y - off_y*px + (H-1-v)*px
+    # mesh point q (centred) is drawn at u = q_x/px + W/2, v = H/2 - q_y/px, and matches the world at u + dx, v + dy
+    x0 = wlo[0] - off[0] * px + (W / 2 + dx) * px
+    y0 = wlo[1] - off[1] * px + (H - 1 - (H / 2 + dy)) * px
+    t2 = np.array([x0, y0]) - s * R2 @ pc          # world_xy = s R2 p + t2 for levelled mesh xy p
+    R3 = np.eye(3)
+    R3[:2, :2] = R2
+    Rw = R3 @ np.array(lv["R_level"])
+    json.dump({"scale": float(s), "R": Rw.tolist(), "t": [float(t2[0]), float(t2[1]), 0.0], "score": score,
+               "theta_deg": float(th), "top": [list(map(float, b[:3])) for b in best[:8]],
+               "note": "rs_world.py register: 2D wall correlation, z offset not set yet"},
+              open(os.path.join(a.out, "align_register.json"), "w"), indent=1)
+    # verification drawing: world walls red, registered mesh wall points blue (0.25 m/px)
+    Q = s * ((P + pc) @ R2.T) + t2
+    vpx = 0.25
+    vlo, vhi = wlo, whi
+    VW, VH = int((vhi[0] - vlo[0]) / vpx) + 1, int((vhi[1] - vlo[1]) / vpx) + 1
+    vis = np.full((VH, VW, 3), 255, np.uint8)
+    iu = ((Q[:, 0] - vlo[0]) / vpx).astype(int)
+    iv = (VH - 1 - (Q[:, 1] - vlo[1]) / vpx).astype(int)
+    ok = (iu >= 0) & (iu < VW) & (iv >= 0) & (iv < VH)
+    vis[iv[ok], iu[ok]] = (200, 120, 40)
+    for r in rings:
+        p = np.round((r - vlo) / vpx).astype(np.int32)
+        p[:, 1] = VH - 1 - p[:, 1]
+        cv2.polylines(vis, [p.reshape(-1, 1, 2)], True, (0, 0, 230), 1)
+    cv2.imwrite(os.path.join(a.out, "register_check.png"), vis)
+    print(f"best: scale {s:.3f} m/unit, rotation {th:.1f} deg; align_register.json + register_check.png written")
+
+
 def cmd_apply(a):
     """Mesh in the RealityScan grid -> campus world metres (align.json), binary PLY with vertex colours."""
     al = json.load(open(a.align))
@@ -210,6 +315,21 @@ def cmd_apply(a):
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
+    p = sub.add_parser("register")
+    p.add_argument("--out", required=True)
+    p.add_argument("--specs", default=os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs"))
+    p.add_argument("--footprints", default=os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender",
+                                                        "Data", "footprints.json"))
+    p.add_argument("--px", type=float, default=0.5, help="m per pixel of the search rasters")
+    p.add_argument("--blur", type=float, default=2.0, help="px sigma: tolerance for the footprint error")
+    p.add_argument("--margin", type=float, default=40.0)
+    p.add_argument("--smin", type=float, default=5.0)
+    p.add_argument("--smax", type=float, default=30.0)
+    p.add_argument("--nscale", type=int, default=36)
+    p.add_argument("--dth", type=float, default=2.0)
+    p.add_argument("--max-pts", type=int, default=200000)
+    p.add_argument("--thetas", help="comma list of rotation centres (deg) for a narrow search")
+    p.add_argument("--th-span", type=float, default=3.0)
     p = sub.add_parser("apply")
     p.add_argument("--mesh", required=True)
     p.add_argument("--align", required=True)
@@ -230,7 +350,7 @@ def main():
     p.add_argument("--icp-zmin", type=float, default=1.0, help="m above the low ground: skip kerbs and plinths")
     p.add_argument("--fix-scale", action="store_true", help="keep the pairs' scale (e.g. set from pavers)")
     a = ap.parse_args()
-    return {"level": cmd_level, "fit": cmd_fit, "apply": cmd_apply}[a.cmd](a)
+    return {"level": cmd_level, "fit": cmd_fit, "apply": cmd_apply, "register": cmd_register}[a.cmd](a)
 
 
 if __name__ == "__main__":

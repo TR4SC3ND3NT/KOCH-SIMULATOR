@@ -2,8 +2,8 @@
 # (colmap.github.io) with per-clip cameras, people masks, sequential matching (neighbour frames + vocab-tree loop
 # closure) plus vocab-tree matching across clips, then the global mapper (GLOMAP). The result can be loaded into
 # RealityScan (-loadColmap) for GPU meshing, or converted for sfm_overlay.py.
-# Layout it builds under <work>: images/<clip>/<frame>.jpg (directory junctions to the frame folders; stills are
-# grouped per lens+size so each group is one camera), masks/<clip>/<frame>.jpg.png (hard links to *.mask.png).
+# Layout it builds under <work> (hard links, same volume): images/<clip>/<frame>.jpg (stills grouped per lens+size
+# so each group is one camera), masks/<clip>/<frame>.jpg.png (COLMAP mask naming, from *.jpg.mask.png).
 # Usage: python colmap_sfm.py --work C:/koch/work/sfm --frames C:/koch/work/frames_a --photos C:/koch/work/photos \
 #          --colmap C:/koch/work/tools/colmap/bin/colmap.exe --vocab C:/koch/work/tools/vocab_tree_faiss_flickr100K_words256K.bin
 import argparse
@@ -23,11 +23,6 @@ def run(cmd, log):
         raise SystemExit(f"{cmd[1]} failed ({r.returncode}), see {log}")
 
 
-def junction(src, dst):
-    if not os.path.exists(dst):
-        subprocess.run(["cmd", "/c", "mklink", "/J", dst, src], check=True, stdout=subprocess.DEVNULL)
-
-
 def layout(a):
     img, msk = os.path.join(a.work, "images"), os.path.join(a.work, "masks")
     os.makedirs(img, exist_ok=True)
@@ -36,11 +31,16 @@ def layout(a):
         src = os.path.join(a.frames, clip)
         if not os.path.isdir(src):
             continue
-        junction(src, os.path.join(img, clip))
+        # hard links, not a directory junction: COLMAP's recursive directory walk skips junctions/symlinks
+        os.makedirs(os.path.join(img, clip), exist_ok=True)
         os.makedirs(os.path.join(msk, clip), exist_ok=True)
         for f in os.listdir(src):
             if f.endswith(".mask.png"):
                 dst = os.path.join(msk, clip, f.replace(".mask.png", ".png"))  # x.jpg.mask.png -> x.jpg.png
+                if not os.path.exists(dst):
+                    os.link(os.path.join(src, f), dst)
+            elif f.lower().endswith(".jpg"):
+                dst = os.path.join(img, clip, f)
                 if not os.path.exists(dst):
                     os.link(os.path.join(src, f), dst)
     if a.photos:
@@ -74,8 +74,13 @@ def main():
     ap.add_argument("--colmap", required=True)
     ap.add_argument("--vocab", required=True)
     ap.add_argument("--max-size", type=int, default=3200)
-    ap.add_argument("--features", type=int, default=12000)
-    ap.add_argument("--overlap", type=int, default=20)
+    ap.add_argument("--camera-model", default="RADIAL",
+                    help="one focal (square pixels): OPENCV's separate fx/fy drifted 2.7 %% on EIS video and "
+                         "RealityScan then re-projected at 1.4 px instead of 0.8 px")
+    ap.add_argument("--features", type=int, default=8192)
+    ap.add_argument("--overlap", type=int, default=12)
+    ap.add_argument("--loop-period", type=int, default=5)
+    ap.add_argument("--loop-images", type=int, default=30)
     ap.add_argument("--stage", default="all", choices=["all", "extract", "match", "map"])
     a = ap.parse_args()
     os.makedirs(a.work, exist_ok=True)
@@ -84,24 +89,39 @@ def main():
     C = a.colmap
     if a.stage in ("all", "extract"):
         run([C, "feature_extractor", "--database_path", db, "--image_path", img, "--ImageReader.mask_path", msk,
-             "--ImageReader.camera_model", "OPENCV", "--ImageReader.single_camera_per_folder", "1",
+             "--ImageReader.camera_model", a.camera_model, "--ImageReader.single_camera_per_folder", "1",
              "--FeatureExtraction.use_gpu", "1", "--FeatureExtraction.max_image_size", str(a.max_size),
              "--SiftExtraction.max_num_features", str(a.features)], log)
     if a.stage in ("all", "match"):
+        # neighbours within a clip + loop detection against the whole database every `loop_period` frames (this is
+        # also what links different clips and the stills, so no separate exhaustive/vocab-tree pass is needed)
         run([C, "sequential_matcher", "--database_path", db, "--SequentialMatching.overlap", str(a.overlap),
              "--SequentialMatching.quadratic_overlap", "1", "--SequentialMatching.loop_detection", "1",
+             "--SequentialMatching.loop_detection_period", str(a.loop_period),
+             "--SequentialMatching.loop_detection_num_images", str(a.loop_images),
              "--SequentialMatching.vocab_tree_path", a.vocab, "--FeatureMatching.use_gpu", "1"], log)
-        run([C, "vocab_tree_matcher", "--database_path", db, "--VocabTreeMatching.vocab_tree_path", a.vocab,
-             "--VocabTreeMatching.num_images", "50", "--FeatureMatching.use_gpu", "1"], log)
     if a.stage in ("all", "map"):
         out = os.path.join(a.work, "sparse")
         if os.path.isdir(out):
             shutil.rmtree(out)
         os.makedirs(out)
+        # video frames carry no EXIF focal: estimate every clip camera's focal from the view graph first (the global
+        # mapper needs focal priors for >= 50 % of the cameras, else it can end with no 3D points)
+        run([C, "view_graph_calibrator", "--database_path", db], log)
         run([C, "global_mapper", "--database_path", db, "--image_path", img, "--output_path", out], log)
-        for d in sorted(os.listdir(out)):
-            run([C, "model_analyzer", "--path", os.path.join(out, d)], os.path.join(a.work, f"analyze_{d}.log"))
+        models = sorted(x for x in os.listdir(out) if os.path.isdir(os.path.join(out, x)))
+        for d in models:
+            md = os.path.join(out, d)
+            run([C, "model_analyzer", "--path", md], os.path.join(a.work, f"analyze_{d}.log"))
+            run([C, "model_converter", "--input_path", md, "--output_path", md, "--output_type", "TXT"], log)
             print(d, open(os.path.join(a.work, f"analyze_{d}.log")).read()[-600:])
+        # RealityScan -loadColmap resolves image names relative to the folder of cameras.txt: put the largest
+        # model's text files at the images root
+        if models:
+            best = max(models, key=lambda d: os.path.getsize(os.path.join(out, d, "images.txt")))
+            for f in ("cameras.txt", "images.txt", "points3D.txt"):
+                shutil.copyfile(os.path.join(out, best, f), os.path.join(img, f))
+            print("RealityScan import:", os.path.join(img, "cameras.txt"), "(model", best + ")")
 
 
 if __name__ == "__main__":

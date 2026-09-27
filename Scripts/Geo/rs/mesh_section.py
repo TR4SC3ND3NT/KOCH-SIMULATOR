@@ -5,7 +5,10 @@
 #   profile: vertical section along a world line p0 -> p1 (stairs, ramps, kerbs, plinths): (s, z) polyline,
 #            horizontal runs (treads/landings/paving) and vertical steps (risers/kerbs) listed with their levels.
 # Mesh: PLY/OBJ in campus world metres (Scripts/Blender/import_photogrammetry.py writes world_mesh.ply).
+#   facade:  depth map of a wall along p0 -> p1 (u, z grid, value = offset from the wall plane) with the openings
+#            read as recessed/empty rectangles -> facade u/z of every window and door, sill/head levels.
 # Usage: python mesh_section.py plan --mesh m.ply --z 8.4 --bbox 170,-10,210,20 --out plan.png
+#        python mesh_section.py facade --mesh m.ply --p0 173.26,-3.64 --p1 186.05,-4.15 --z 5,21 --out s.png
 #        python mesh_section.py profile --mesh m.ply --p0 187.4,-10 --p1 187.2,-1 --band 0.15 --out prof.png
 import argparse
 import json
@@ -24,7 +27,11 @@ def load(path, bbox=None, zr=None):
         keep = (c[:, 0] >= x0) & (c[:, 0] <= x1) & (c[:, 1] >= y0) & (c[:, 1] <= y1)
         if zr is not None:
             keep &= (c[:, 2] >= zr[0]) & (c[:, 2] <= zr[1])
+        if not keep.any():
+            raise SystemExit(f"no mesh triangles in bbox {bbox} z {zr}: check the world coordinates")
         m = m.submesh([np.nonzero(keep)[0]], append=True)
+        if isinstance(m, list):
+            m = trimesh.util.concatenate(m)
     return m
 
 
@@ -120,6 +127,9 @@ def cmd_profile(a):
     x0, x1 = min(p0[0], p1[0]) - 1, max(p0[0], p1[0]) + 1
     y0, y1 = min(p0[1], p1[1]) - 1, max(p0[1], p1[1]) + 1
     m = load(a.mesh, [x0, y0, x1, y1])
+    if a.up_only:  # walking surfaces only: under a canopy the top surface would otherwise be its soffit
+        up = m.face_normals[:, 2] > 0.8
+        m = m.submesh([np.nonzero(up)[0]], append=True)
     L = float(np.linalg.norm(p1 - p0))
     all_sz = []
     for off in np.linspace(-a.band, a.band, a.slices):  # several parallel cuts: median profile resists holes/noise
@@ -174,9 +184,105 @@ def cmd_profile(a):
     json.dump({"p0": p0.tolist(), "p1": p1.tolist(), "runs": runs}, open(a.out.rsplit(".", 1)[0] + ".json", "w"), indent=1)
 
 
+def cmd_facade(a):
+    """Depth map of a facade: the mesh surface sampled on a (u, z) grid along the world wall line p0 -> p1, value =
+    offset w from the wall plane (+ outward = right of p0->p1, the CCW-ring convention of the specs). Openings are
+    read as connected regions recessed by more than --recess (or empty: glass reconstructs as holes) inside the wall.
+    Writes <out>.png (colour-coded depth + 0.1/1 m grid), <out>_rgb.png (mesh colours) and <out>.json (openings in
+    facade u/z, z in world metres)."""
+    p0, p1 = np.array(list(map(float, a.p0.split(",")))), np.array(list(map(float, a.p1.split(","))))
+    L = float(np.linalg.norm(p1 - p0))
+    d = (p1 - p0) / L
+    out_n = np.array([d[1], -d[0]])               # right of travel = outside for a CCW ring
+    z0, z1 = map(float, a.z.split(","))
+    lo = np.minimum(p0, p1) - 2.0
+    hi = np.maximum(p0, p1) + 2.0
+    m = load(a.mesh, [lo[0], lo[1], hi[0], hi[1]], (z0 - 0.5, z1 + 0.5))
+    n_samples = int(L * (z1 - z0) / a.px ** 2 * 3)
+    pts, fi = trimesh.sample.sample_surface(m, n_samples, seed=0)
+    col = None
+    if hasattr(m.visual, "vertex_colors") and len(m.visual.vertex_colors):
+        col = m.visual.vertex_colors[m.faces[fi][:, 0], :3]
+    u = (pts[:, :2] - p0) @ d
+    w = (pts[:, :2] - p0) @ out_n
+    zz = pts[:, 2]
+    keep = (u >= 0) & (u <= L) & (zz >= z0) & (zz <= z1) & (w >= -a.back) & (w <= a.front)
+    u, w, zz = u[keep], w[keep], zz[keep]
+    if col is not None:
+        col = col[keep]
+    W, H = int(L / a.px) + 1, int((z1 - z0) / a.px) + 1
+    iu, iz = (u / a.px).astype(int), ((z1 - zz) / a.px).astype(int)
+    order = np.argsort(w)                          # front-most sample wins
+    depth = np.full((H, W), np.nan, np.float32)
+    depth[iz[order], iu[order]] = w[order]
+    rgb = np.zeros((H, W, 3), np.uint8)
+    if col is not None:
+        rgb[iz[order], iu[order]] = col[order][:, ::-1]
+    # wall plane: the dominant depth near w = 0 (robust), then openings = recessed or empty cells inside the wall
+    ref = float(np.nanmedian(depth[np.abs(depth) < 0.1])) if np.any(np.abs(depth) < 0.1) else 0.0
+    rel = depth - ref
+    recess = np.nan_to_num(rel, nan=0.0) < -a.recess
+    # empty cells enclosed by data (glass reconstructs as holes) count as openings too: pad with empties, flood the
+    # outside from the border, what stays empty is enclosed
+    holes = np.pad(np.isnan(rel).astype(np.uint8), 1, constant_values=1)
+    cv2.floodFill(holes, None, (0, 0), 0)
+    recess |= holes[1:-1, 1:-1] > 0
+    recess = cv2.morphologyEx(recess.astype(np.uint8), cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(recess, 8)
+    openings = []
+    for k in range(1, n):
+        x, y, bw, bh, area = stats[k]
+        if area * a.px ** 2 < a.min_area or bw * a.px < 0.3 or bh * a.px < 0.3:
+            continue
+        ys, xs = np.nonzero(lab == k)
+        uu = np.percentile(xs, [2, 98]) * a.px
+        zt = z1 - np.percentile(ys, [2, 98]) * a.px
+        fill = area / (bw * bh)
+        dep = float(np.nanmedian(rel[lab == k])) if np.any(~np.isnan(rel[lab == k])) else float("nan")
+        openings.append({"u0": round(float(uu[0]), 3), "u1": round(float(uu[1]), 3), "z0": round(float(zt[1]), 3),
+                         "z1": round(float(zt[0]), 3), "w": round(float(uu[1] - uu[0]), 3), "h": round(float(zt[0] - zt[1]), 3),
+                         "rectangularity": round(float(fill), 2), "recess_m": round(dep, 3)})
+    openings.sort(key=lambda o: (round(-o["z1"], 0), o["u0"]))
+    # drawing: depth colour map (blue = recessed, red = proud), grid, opening boxes
+    vis = np.clip((np.nan_to_num(rel, nan=-0.5) + 0.3) / 0.6, 0, 1)
+    img = cv2.applyColorMap((vis * 255).astype(np.uint8), cv2.COLORMAP_JET)
+    img[np.isnan(rel)] = (40, 40, 40)
+    for g, c in ((0.1, (90, 90, 90)), (1.0, (255, 255, 255))):
+        for x in np.arange(0, L, g):
+            cv2.line(img, (int(x / a.px), 0), (int(x / a.px), 6 if g < 1 else H - 1), c, 1)
+        for zg in np.arange(np.ceil(z0), z1, g):
+            v = int((z1 - zg) / a.px)
+            cv2.line(img, (0, v), (6 if g < 1 else W - 1, v), c, 1)
+    for i, o in enumerate(openings):
+        cv2.rectangle(img, (int(o["u0"] / a.px), int((z1 - o["z1"]) / a.px)), (int(o["u1"] / a.px), int((z1 - o["z0"]) / a.px)),
+                      (255, 255, 255), 1)
+        cv2.putText(img, str(i), (int(o["u0"] / a.px) + 3, int((z1 - o["z1"]) / a.px) + 14), cv2.FONT_HERSHEY_SIMPLEX, 0.45,
+                    (255, 255, 255), 1)
+    base = a.out.rsplit(".", 1)[0]
+    cv2.imwrite(a.out, img)
+    cv2.imwrite(base + "_rgb.png", rgb)
+    np.save(base + "_depth.npy", rel)
+    json.dump({"p0": p0.tolist(), "p1": p1.tolist(), "z": [z0, z1], "px": a.px, "wall_ref_w": ref, "openings": openings},
+              open(base + ".json", "w"), indent=1)
+    print(f"facade {L:.2f} m x {z1 - z0:.2f} m, wall plane at w {ref:+.3f}, {len(openings)} openings")
+    for i, o in enumerate(openings):
+        print(i, json.dumps(o))
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
+    p = sub.add_parser("facade")
+    p.add_argument("--mesh", required=True)
+    p.add_argument("--p0", required=True, help="wall line start x,y (world)")
+    p.add_argument("--p1", required=True, help="wall line end x,y (world); outside = right of p0->p1")
+    p.add_argument("--z", required=True, help="z0,z1 world")
+    p.add_argument("--px", type=float, default=0.01)
+    p.add_argument("--front", type=float, default=0.6, help="m in front of the wall plane kept")
+    p.add_argument("--back", type=float, default=0.6, help="m behind the wall plane kept")
+    p.add_argument("--recess", type=float, default=0.07, help="m behind the wall plane that counts as an opening")
+    p.add_argument("--min-area", type=float, default=0.25, help="m2")
+    p.add_argument("--out", required=True)
     p = sub.add_parser("plan")
     p.add_argument("--mesh", required=True)
     p.add_argument("--z", type=float, required=True)
@@ -194,9 +300,10 @@ def main():
     p.add_argument("--px", type=float, default=0.005)
     p.add_argument("--flat-tol", type=float, default=0.012)
     p.add_argument("--min-run", type=float, default=0.12)
+    p.add_argument("--up-only", action="store_true", help="only upward-facing faces (treads, landings, paving)")
     p.add_argument("--out", required=True)
     a = ap.parse_args()
-    return {"plan": cmd_plan, "profile": cmd_profile}[a.cmd](a)
+    return {"plan": cmd_plan, "profile": cmd_profile, "facade": cmd_facade}[a.cmd](a)
 
 
 if __name__ == "__main__":

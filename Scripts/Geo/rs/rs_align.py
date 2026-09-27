@@ -35,6 +35,7 @@ def main():
     cmd = [
         '-set "appIncSubdirs=true"',
         '-set "appAutoSaveMode=false"',
+        '-set "appQuitOnError=true"',  # never hang headless on an error dialog
         f'-set "sfmMaxFeaturesPerImage={a.max_features}"',
         f'-set "sfmImagesOverlap={a.overlap}"',
         f'-set "sfmDistortionModel={a.distortion}"',

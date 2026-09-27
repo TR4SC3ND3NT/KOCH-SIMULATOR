@@ -4,7 +4,9 @@
 #   mesh: model of a reconstruction region (.rsbox or auto) at preview/normal/high detail, optional simplify and
 #         texture, exported as OBJ in the RealityScan grid frame (Z up, same frame as cams.csv).
 # Params XMLs carry the export format ids from <RealityScan>/calibration.xml (e.g. COLMAP {280B11A4-...}).
+#   import: COLMAP model (colmap_sfm.py) -> new RealityScan project (for GPU meshing with those poses).
 # Usage:
+#   python rs_export.py import --colmap-txt C:/koch/work/sfm/images/cameras.txt --project C:/koch/work/rs_c/campus.rsproj --out C:/koch/work/rs_c
 #   python rs_export.py cams --project C:/koch/work/rs/campus.rsproj --out C:/koch/work/rs/exp
 #   python rs_export.py mesh --project ... --out ... --detail normal [--region box.rsbox] [--downscale 4]
 #                            [--simplify 20000000] [--texture] [--name campus]
@@ -71,7 +73,8 @@ def run(out, tag, cmds):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("stage", choices=["cams", "mesh"])
+    ap.add_argument("stage", choices=["import", "cams", "mesh"])
+    ap.add_argument("--colmap-txt", help="import: cameras.txt at the COLMAP images root (colmap_sfm.py puts it there)")
     ap.add_argument("--project", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--component", help="component name (default: the largest)")
@@ -86,8 +89,24 @@ def main():
     a = ap.parse_args()
     out = os.path.abspath(a.out)
     os.makedirs(out, exist_ok=True)
-    sel = f"-selectComponent {q(a.component)}" if a.component else "-selectMaximalComponent"
-    base = ['-set "appAutoSaveMode=false"', f"-load {q(os.path.abspath(a.project))}", sel]
+    comp = a.component.strip().strip('"') if a.component else None  # shells may pass the quotes through
+    sel = f"-selectComponent {q(comp)}" if comp else "-selectMaximalComponent"
+    if a.stage == "import":
+        # COLMAP poses -> RealityScan component (grid = (x, z, -y) of COLMAP); masks come with the images by name.
+        # The params file holds the import transform (identity); without it the CLI blocks on the import dialog.
+        prm = os.path.join(out, "import_colmap.xml")
+        with open(prm, "w") as f:
+            f.write('<Configuration id="{2D5793BC-A65D-4318-A1B9-A05044608385}">\n' + "".join(
+                f'  <entry key="{k}" value="{v}"/>\n' for k, v in (("ImportMoveX", 0.0), ("ImportMoveY", 0.0),
+                ("ImportMoveZ", 0.0), ("ImportRotationX", 0.0), ("ImportRotationY", 0.0), ("ImportRotationZ", 0.0),
+                ("ImportScale", 1.0))) + "</Configuration>\n")
+        reports = os.path.join(os.path.dirname(RS), "Reports")
+        cmds = ['-set "appAutoSaveMode=false"', f"-loadColmap {q(os.path.abspath(a.colmap_txt))} {q(prm)}",
+                "-selectMaximalComponent", f"-save {q(os.path.abspath(a.project))}",
+                f"-exportReport {q(os.path.join(out, 'report_import.html'))} {q(os.path.join(reports, 'SelectedComponent.html'))}"]
+        return run(out, "import", cmds)
+    # appQuitOnError: a failed command must end the run, not leave a headless instance waiting on a dialog for hours
+    base = ['-set "appAutoSaveMode=false"', '-set "appQuitOnError=true"', f"-load {q(os.path.abspath(a.project))}", sel]
     if a.stage == "cams":
         os.makedirs(os.path.join(out, "colmap"), exist_ok=True)
         cmds = base + [
