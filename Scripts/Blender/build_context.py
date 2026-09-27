@@ -45,7 +45,10 @@ def main():
     cols = {"near": collection("CTX_Near", par), "far": collection("CTX_Far", par)}
     for c in cols.values():
         for ob in list(c.objects):
+            me_old = ob.data
             bpy.data.objects.remove(ob, do_unlink=True)
+            if me_old and me_old.users == 0:
+                bpy.data.meshes.remove(me_old)
     ter = next((o for o in bpy.data.objects if o.name.startswith("TER")), None)
     dg = bpy.context.evaluated_depsgraph_get(); te = ter.evaluated_get(dg) if ter else None
     inv = ter.matrix_world.inverted() if ter else None
@@ -81,7 +84,11 @@ def main():
             j = (i + 1) % k
             bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
         bm.normal_update()
-        me = bpy.data.meshes.new(f"CTX_OSM_{b['osm_id']}".replace("/", "_"))
+        nm = f"CTX_OSM_{b['osm_id']}".replace("/", "_")
+        for old in [x for x in bpy.data.meshes if x.name == nm or x.name.startswith(nm + ".")]:
+            if old.users == 0:
+                bpy.data.meshes.remove(old)
+        me = bpy.data.meshes.new(nm)
         bm.to_mesh(me); bm.free()
         ob = bpy.data.objects.new(me.name, me)
         ob["koch_gen"] = "build_context.py"; ob["koch_osm"] = str(b["osm_id"]); ob["koch_height_m"] = h
