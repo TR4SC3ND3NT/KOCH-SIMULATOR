@@ -159,7 +159,16 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
 
      The C floor (FFL) is Z 6.40; the plaza south of C is Z 5.35 (= FFL − 7 × 0.15).
      These corners come from the current specs: good to ~0.3–1 m in plan. Use them for position and rotation. Take the scale from the tape-like distances above, not from these corners.
-5. **Build.** Normal-detail mesh + texture. Export OBJ (+ PLY point cloud) in that local frame.
+5. **Build: Normal by default, High only where it is needed (map owner, 2026-09-27).**
+   - **Every zone: `"detail": "normal"` with `"simplify": 3000000`** in its job.json. Normal is ~1-3 cm, well inside
+     the P1/P2 tolerances; the mesh is only a measuring reference and never goes into the game, and the camera poses
+     (overlays, colour sampling for UE) come from the alignment, which is the same in both modes. The result needs no
+     extra decimation for the mesh drops. Zones already built at High stay as they are (never recompute them).
+   - **High only for a small box** (`rs_box.py` region, a few metres) and only when Normal really leaves the element
+     unclear after you looked at it: the section or the overlay cannot settle a size or profile that P2 needs (gazebo
+     carving and posts, cornice and plinth profiles, railing bars, stair nosings, roof edges), or the object may be
+     used as a scan in UE. Write the reason in the log line (`[A] high box <zone> <object>: <why>`).
+   - Export OBJ (+ PLY point cloud) in that local frame.
    - Put the mesh in `Art/Blender/Reference/` locally. It is big and shows people/texture: **never commit it**; add the path to `.gitignore` if needed.
 
 ## 3. Frames and conventions
