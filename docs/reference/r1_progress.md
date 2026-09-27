@@ -159,7 +159,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] A.9 Circle-pattern paving, red-tile retaining wall with steps and planting in front of the entrance pavilion — approx., in the model (GateAlley PavilionStair; circle paving = material)
 
 ## 12. Street front (zone `Street`)
-- [ ] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels — P1 measured x 92-118: 5.45 m from the planter-wall face to the parking bars, flat (ground mosaic + mesh cross-profiles, zone Street c3); x 118-150 still 4.3 m from Google (Street c2 not placed)
+- [ ] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels — P1 measured x 92-118: 5.45 m from the planter-wall face to the parking bars, flat (ground mosaic + mesh cross-profiles, zone Street c3); x 118-150 4.3 m from Google; south side of the road: asphalt footway 1.9 m at y -135 between two lawn strips + paved link from the zebra (Google z20 + Street c6 mosaic), added
 - [ ] S.2 Low parapet along the sidewalk with its steps; lawn level behind it — P1 measured: planter wall 0.35 m (mesh 0.31/0.38), west end at the block pillar x 90.95; steps at the joints and thickness (~0.12-0.15 m) still open (P2)
 - [ ] S.3 Tree pits along the sidewalk — P1 partly: pit 02 measured (x 114.4, 1.5 m wide, >= 4.2 m long, overlay f01622 2.0 px), pits 01, 03, 04, 05 removed (paved in the Street c3/c2 mosaics and in f03347; trees 03/04 moved into the planter strip); pit 00 (mosaic hole) and 06-10 (east of the gate) still from Bing crowns
 - [ ] S.4 Parking by the sidewalk with yellow-black barrier pipes — P1 partly: bar line 5.55 m from the parapet centreline at x 98-105 (was 3.6), tapering to 4.5 m at x 140 (Google noses); bar pitch not measured (mosaic: bars at x 98.0-99.6 and 102.3-104.7, model still 2.6 m)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: Street P1 pass_check: route 76 % within 0.07 m (FAIL) - the bad runs are camera-height artefacts (phone lowered/raised at the clip ends, gap between c3 and c2), the mesh sidewalk is flat 7.46-7.53 vs the model 7.57-7.37; overlays median <= 8 px. South footway + zebra link added (Google z20, Street c6 is bent).
 - [A] 2026-09-28: C_F1 meshed at Normal (c3 288 cams, 3M tris; c5). Main stair profile on the mesh: risers 0.149-0.169 (median 0.155), treads 0.28-0.30 -> all 12 C stair flights tread 0.332 -> 0.30. C_sw c1 mesh is a 10 x 5 m spot (camera stood still): not usable for placement.
 - [A] 2026-09-28: Gate c8 (alley B-A walk) placed: yaw from its A_S facade line, along from the A_S porch block in the mesh, across from the Google z20 ortho (B gallery left of the walker in f00550); +-1.5 m along. Alley walk profile flat 6.8-7.1 (no steps on that line). Gate c6 is a pan from one spot (weak mesh) -> forecourt stays on Google z20. Queue: unfinished zones switched to detail normal + simplify 3M (handoff 2.5).
 - [A] 2026-09-27: mesh drop Garden (c8, c3), Sports (c2, c9), C_sw (c1, c7), WEB_drone (c1, c2) -> C:\koch\drop\koch_meshes_20260927.zip (321 MB): world-metre PLY <= 3M tris (vertex clustering 0.8-5.6 cm), cameras, route.json; aligns are levelled + eye-height metric with xy/yaw placeholders (WEB_drone raw RS units, not metric).
