@@ -238,5 +238,10 @@
   "evidence": "no own roof: walls run up to the timber soffit of the gate canopy (SITE_Gate Canopy)",
   "confidence": "high"
  },
- "attachments": []
+ "attachments": [],
+ "wall_material": "M_Tile_Beige",
+ "slots": {
+  "Plinth": "M_Tile_Brick_Red"
+ },
+ "materials_note": "P2 slots from the booth close-ups (clip 065910461 f00022-f00574): cream brick-look tiles with joints on the walls, red brick-look tile band at the bottom (7 courses), white PVC windows"
 }
