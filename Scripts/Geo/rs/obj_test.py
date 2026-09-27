@@ -34,8 +34,10 @@ def main():
     ap.add_argument("--objects", required=True); ap.add_argument("--comps", required=True)
     ap.add_argument("--pass", dest="p", default="P1", choices=list(BANDS)); ap.add_argument("--work", default=r"C:\koch\work")
     ap.add_argument("--cams", type=int, default=2)
+    ap.add_argument("--dist", help="override the pass distance band (long objects: the walker is close to them)")
     a = ap.parse_args()
     band, limit = BANDS[a.p]
+    band = a.dist or band
     tmp = os.path.join(tempfile.gettempdir(), "koch_bbox.py"); open(tmp, "w").write(BBOX_PY)
     r = subprocess.run([BLENDER, "-b", BLEND, "-P", tmp, "--", a.objects], capture_output=True, text=True)
     boxes = json.loads(next(l[4:] for l in r.stdout.splitlines() if l.startswith("BBOX")))
