@@ -193,61 +193,61 @@ after the C zone passes P0 and P1 with them unchanged.
 Each building: footprint from OSM, height from OSM `building:levels`/`height`, else floors counted in the owner's street videos / web photos / obliques (≈3.0 m per residential floor + ground floor + parapet); ready-made models (Fab, Poly Haven, BlenderKit free, Sketchfab CC0/CC-BY) scaled to the footprint, sources in docs/reference/asset_sources.md; collections `CTX_*`.
 
 ### Near buildings (≤150 m: facades, entrances, balconies, ground-floor shops from photos)
-- [ ] CTX.Bway/169915330 yes, SE 2 m, 646 m², levels: count from photos
-- [ ] CTX.Bway/206623867 yes, E 3 m, 1492 m², levels: count from photos
-- [ ] CTX.Bway/206623848 yes, E 6 m, 452 m², levels: count from photos
-- [ ] CTX.Bway/169915374 yes, E 7 m, 260 m², levels: count from photos
-- [ ] CTX.Bway/761350988 yes, S 10 m, 24 m², levels: count from photos
-- [ ] CTX.Bway/635535016 yes, NE 14 m, 755 m², levels: count from photos
+- [ ] CTX.Bway/169915330 yes, SE 2 m, 646 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623867 yes, E 3 m, 1492 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623848 yes, E 6 m, 452 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/169915374 yes, E 7 m, 260 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/761350988 yes, S 10 m, 24 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535016 yes, NE 14 m, 755 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 - [ ] CTX.Bway/742042612 residential, NE 15 m, 685 m², 9.0 levels (OSM)
-- [ ] CTX.Bway/761341971 yes, NW 16 m, 1109 m², levels: count from photos
-- [ ] CTX.Bway/255081513 school, W 19 m, 1126 m², levels: count from photos
-- [ ] CTX.Bway/206623794 yes, NE 20 m, 621 m², levels: count from photos
-- [ ] CTX.Bway/761350987 yes, S 23 m, 14 m², levels: count from photos
-- [ ] CTX.Bway/206623783 yes, N 26 m, 565 m², levels: count from photos
-- [ ] CTX.Bway/761341970 yes «Технодом соода борбору», NW 26 m, 2262 m², levels: count from photos
-- [ ] CTX.Bway/206614083 yes, W 30 m, 1558 m², levels: count from photos
-- [ ] CTX.Bway/1529424567 yes, N 36 m, 3498 m², levels: count from photos
-- [ ] CTX.Bway/761341972 yes, N 43 m, 530 m², levels: count from photos
-- [ ] CTX.Bway/169828217 yes, SE 46 m, 331 m², levels: count from photos
-- [ ] CTX.Bway/635535018 yes, NE 49 m, 971 m², levels: count from photos
-- [ ] CTX.Bway/635535017 yes, E 70 m, 617 m², levels: count from photos
-- [ ] CTX.Bway/129705598 yes, NW 72 m, 1985 m², levels: count from photos
-- [ ] CTX.Bway/635535009 yes, NW 77 m, 879 m², levels: count from photos
-- [ ] CTX.Bway/635535023 yes, NE 78 m, 440 m², levels: count from photos
-- [ ] CTX.Bway/635535022 yes, NE 78 m, 441 m², levels: count from photos
-- [ ] CTX.Bway/635535019 yes, NE 78 m, 440 m², levels: count from photos
-- [ ] CTX.Bway/635535021 yes, NE 78 m, 440 m², levels: count from photos
-- [ ] CTX.Bway/635535024 yes, NE 80 m, 441 m², levels: count from photos
-- [ ] CTX.Bway/761345513 yes, NE 80 m, 1349 m², levels: count from photos
+- [ ] CTX.Bway/761341971 yes, NW 16 m, 1109 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/255081513 school, W 19 m, 1126 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623794 yes, NE 20 m, 621 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/761350987 yes, S 23 m, 14 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623783 yes, N 26 m, 565 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/761341970 yes «Технодом соода борбору», NW 26 m, 2262 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206614083 yes, W 30 m, 1558 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/1529424567 yes, N 36 m, 3498 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/761341972 yes, N 43 m, 530 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/169828217 yes, SE 46 m, 331 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535018 yes, NE 49 m, 971 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535017 yes, E 70 m, 617 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/129705598 yes, NW 72 m, 1985 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535009 yes, NW 77 m, 879 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535023 yes, NE 78 m, 440 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535022 yes, NE 78 m, 441 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535019 yes, NE 78 m, 440 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535021 yes, NE 78 m, 440 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535024 yes, NE 80 m, 441 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/761345513 yes, NE 80 m, 1349 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 - [ ] CTX.Bway/632728361 yes, SE 82 m, 1128 m², 9.0 levels (OSM)
-- [ ] CTX.Bway/341105719 yes «Аю Grand», N 86 m, 22747 m², levels: count from photos
+- [ ] CTX.Bway/341105719 yes «Аю Grand», N 86 m, 22747 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 - [ ] CTX.Bway/632728362 yes, S 91 m, 862 m², 9.0 levels (OSM)
 - [ ] CTX.Bway/632728363 yes, S 91 m, 1004 m², 9.0 levels (OSM)
-- [ ] CTX.Bway/169915344 yes, E 94 m, 5429 m², levels: count from photos
-- [ ] CTX.Bway/206623827 yes, E 94 m, 911 m², levels: count from photos
-- [ ] CTX.Bway/206623793 yes, E 95 m, 275 m², levels: count from photos
-- [ ] CTX.Bway/169915381 yes, E 96 m, 1529 m², levels: count from photos
+- [ ] CTX.Bway/169915344 yes, E 94 m, 5429 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623827 yes, E 94 m, 911 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623793 yes, E 95 m, 275 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/169915381 yes, E 96 m, 1529 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 - [ ] CTX.Bway/335552917 house, SE 99 m, 93 m², 2.0 levels (OSM)
-- [ ] CTX.Bway/206623816 yes, E 100 m, 383 m², levels: count from photos
-- [ ] CTX.Bway/635535020 yes, NE 114 m, 440 m², levels: count from photos
-- [ ] CTX.Bway/1555086426 yes, S 115 m, 237 m², levels: count from photos
-- [ ] CTX.Bway/897518010 yes, SE 116 m, 217 m², levels: count from photos
-- [ ] CTX.Bway/635535014 yes, NE 120 m, 440 m², levels: count from photos
-- [ ] CTX.Bway/635535013 yes, NE 121 m, 440 m², levels: count from photos
-- [ ] CTX.Bway/1529424569 roof, N 125 m, 322 m², levels: count from photos
-- [ ] CTX.Bway/206623782 yes, NE 126 m, 430 m², levels: count from photos
-- [ ] CTX.Bway/169916490 mosque, S 127 m, 1564 m², levels: count from photos
-- [ ] CTX.Bway/206613116 yes, W 133 m, 1384 m², levels: count from photos
-- [ ] CTX.Bway/168164292 yes, W 134 m, 905 m², levels: count from photos
-- [ ] CTX.Bway/394617087 office «Центр обслуживания населения», NW 134 m, 1182 m², levels: count from photos
-- [ ] CTX.Bway/168164264 yes, W 135 m, 721 m², levels: count from photos
+- [ ] CTX.Bway/206623816 yes, E 100 m, 383 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535020 yes, NE 114 m, 440 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/1555086426 yes, S 115 m, 237 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/897518010 yes, SE 116 m, 217 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535014 yes, NE 120 m, 440 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535013 yes, NE 121 m, 440 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/1529424569 roof, N 125 m, 322 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206623782 yes, NE 126 m, 430 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/169916490 mosque, S 127 m, 1564 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/206613116 yes, W 133 m, 1384 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/168164292 yes, W 134 m, 905 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/394617087 office «Центр обслуживания населения», NW 134 m, 1182 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/168164264 yes, W 135 m, 721 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 - [ ] CTX.Bway/407836680 house, SE 136 m, 363 m², 3.0 levels (OSM)
-- [ ] CTX.Bway/206613712 yes, W 136 m, 3713 m², levels: count from photos
-- [ ] CTX.Bway/635535008 yes, NW 137 m, 1681 m², levels: count from photos
-- [ ] CTX.Bway/169828200 house, SE 143 m, 90 m², levels: count from photos
-- [ ] CTX.Bway/1529424629 yes, SW 143 m, 214 m², levels: count from photos
-- [ ] CTX.Bway/877560915 yes, SE 143 m, 279 m², levels: count from photos
+- [ ] CTX.Bway/206613712 yes, W 136 m, 3713 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/635535008 yes, NW 137 m, 1681 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/169828200 house, SE 143 m, 90 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/1529424629 yes, SW 143 m, 214 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
+- [ ] CTX.Bway/877560915 yes, SE 143 m, 279 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 
 ### Far buildings (150–500 m: massing, roof shape, floor rhythm, colour zones), grouped by direction
 - [ ] CTX.FAR_E 21 buildings E of the campus (1 with OSM levels, 20 to count from photos/obliques)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: near ring floor counts: 49 buildings have no OSM levels; projected into every placed camera (Street c3/c2, Gate c13/c8, C_entr c2): only 6 in view and those hidden behind campus blocks/trees -> BLOCKED with one photo request (street walk around the campus). P2 material slots everywhere (site/facade/name/ground surfaces).
 - [A] 2026-09-28: basement stair count confirmed from frames (8 + 2); lesson: eye-height scale is unreliable where the walker is on a stair or in a narrow stairwell (few ground planes) - check the scale on a known size before using a walk depth.
 - [A] 2026-09-28: C south-west wing facade section on the C_entr mesh: window heads F1 9.01 / F2 12.16 (spec rows 8.85+0.2 / 12.15: confirmed); the last wing column lies at u 10.3-12.7 in the mesh vs 9.57-11.80 in the spec (+0.9 m, same size as the old storefront/tower offset) - overlays from 070647586 f00354 / 081158036 f00644 inconclusive (11 / 17 px); left as is until a frontal check.
 - [A] 2026-09-28: gate forecourt checked on Google z20 (parking noses/bars, north kerb, booth, pits 06/07 under the canopy) - no gross error. AW c8 (clip 012404116): the B-corner steps counted again 6 granite + kerb = 7 risers (spec OK); the -0.75 m in its walk profile is the phone lowered at the stair foot, not a descent; the mesh has no stair (region misses it), riser 0.183 stays unverified. C_F2F5 (upper floors) aligned into small pieces only (largest 49 of ~830 frames: white walls).
