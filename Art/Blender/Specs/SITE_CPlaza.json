@@ -215,24 +215,24 @@
    "ring": [
     [
      183.266,
-     -8.693
+     -9.693
     ],
     [
      184.664,
-     -8.748
+     -9.748
     ],
     [
      184.7,
-     -7.849
+     -8.849
     ],
     [
      183.301,
-     -7.793
+     -8.793
     ]
    ],
    "curb_h": 0.12,
    "curb_w": 0.08,
-   "evidence": "ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
+   "evidence": "ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
    "confidence": "medium"
   },
   {
@@ -240,14 +240,14 @@
    "name": "TreeW_3",
    "pos": [
     183.983,
-    -8.271
+    -9.271
    ],
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.18,
    "crown_base": 1.2,
    "shape": "cone",
-   "evidence": "small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy",
+   "evidence": "small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
    "confidence": "low"
   },
   {
@@ -256,24 +256,24 @@
    "ring": [
     [
      191.878,
-     -8.686
+     -10.686
     ],
     [
      193.276,
-     -8.742
+     -10.742
     ],
     [
      193.324,
-     -7.542
+     -9.542
     ],
     [
      191.925,
-     -7.487
+     -9.487
     ]
    ],
    "curb_h": 0.12,
    "curb_w": 0.08,
-   "evidence": "ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end",
+   "evidence": "ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
    "confidence": "medium"
   },
   {
@@ -281,14 +281,14 @@
    "name": "JuniperE_Ramp",
    "pos": [
     192.601,
-    -8.114
+    -10.114
    ],
    "height": 7.0,
    "crown_d": 2.6,
    "trunk_d": 0.25,
    "crown_base": 0.8,
    "shape": "cone",
-   "evidence": "tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated",
+   "evidence": "tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
    "confidence": "low"
   }
  ]

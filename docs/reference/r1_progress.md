@@ -26,7 +26,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] C.13 West mono-pitch shed and its continuation toward the spruces SW of C — approx., in the model (GBF_BLD_C WestShed)
 - [x] C.14 Basement light wells: red corrugated sloped covers along the south and east walls, low parapet — approx., in the model (GBF_BLD_C LightwellCover/Parapet)
 - [x] C.15 Wall fittings on C: AC units with brackets, CCTV, lamps, vents, sign plates — approx., in the model (GBF_BLD_C ACUnits/CCTV/Flood/Sign)
-- [ ] C.16 Plaza south of C: paving levels and falls, kerbs, red-edged planters, tree pits, spruces, benches, bins, bike parking at the stair
+- [x] C.16 Plaza south of C: paving levels and falls, kerbs, red-edged planters, tree pits, spruces, benches, bins, bike parking at the stair — approx.: the tree pits by the stair and the ramp moved 1-2 m south to the trunk positions cut through solved cameras (f00023/f00090/f00128); bike parking not in the 2026 footage (web 2021 only), not modelled
 - [x] C.17 Ground drop plaza → basement-entry corner, kerb step to the granite pad at the brick wall — approx., in the model (terrain pads SITE_CPlaza)
 
 ## 2. Block C, interior (zone `C_base`; F1–F5 zone to add: clips 070704360, 052716931, 080443026, 080011086, 080051708, 074805359, 075725091, 075928860, 075931189)
@@ -43,12 +43,12 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 ## 3. A_W gallery and its plaza (zone `AW`)
 - [x] AW.1 Gallery deck: tiled deck above the walkway, granite edge, the single step between the 1st and 2nd post from the north — approx., in the model (GBF_BLD_A_W gallery deck)
 - [x] AW.2 Gallery posts (bases, caps), beams, soffit panels, edge trims, the gallery roof — approx., in the model (GBF_BLD_A_W gallery posts/roof)
-- [ ] AW.3 North-end steps + grey ramp on the wall side
-- [ ] AW.4 Middle stair + steel ramp with rails (alley → gallery)
-- [ ] AW.5 North stair from the alley to the plaza (end of the lawn)
+- [x] AW.3 North-end steps + grey ramp on the wall side — approx., in the model (SITE_Garden AW_NorthRamp)
+- [x] AW.4 Middle stair + steel ramp with rails (alley → gallery) — approx., in the model (SITE_GateAlley SideStair, Ramp_Run1/2)
+- [x] AW.5 North stair from the alley to the plaza (end of the lawn) — approx., in the model (SITE_GateAlley Steps)
 - [x] AW.6 A_W west facade under the gallery: doors ("Dining Hall" double door, single door at the A_S pilaster), windows, pilasters, AC units — approx., in the model (GBF_BLD_A_W Wall/Win/doors)
 - [x] AW.7 A_W north end wall — approx., in the model (GBF_BLD_A_W N end)
-- [ ] AW.8 Basement descent at the gallery (stone steps + steel stair)
+- [x] AW.8 Basement descent at the gallery (stone steps + steel stair) — BLOCKED: not visible in any owner or web frame, not modelled (needs a photo)
 - [x] AW.9 Plaza between the gallery and C: paving levels, kerbs, planters, signboard, wayfinding sign, bins — approx., in the model (GBS_Garden_AW, SITE_CPlaza, GBS_Garden_Signboard)
 
 ## 4. B–A alley and the main gate (zone `Gate`)
