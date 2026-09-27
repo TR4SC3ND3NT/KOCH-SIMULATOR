@@ -22,11 +22,12 @@ PALETTE = {
     "M_Paint_Blue": (0.36, 0.48, 0.80, 1), "M_Terrazzo": (0.80, 0.79, 0.76, 1), "M_Plastic_Grey": (0.45, 0.46, 0.47, 1),
     "M_Steel_Paint_YellowBlack": (0.85, 0.72, 0.10, 1), "M_Shingle_Brown": (0.36, 0.24, 0.20, 1),
     "M_Context_Facade": (0.70, 0.68, 0.64, 1), "M_Context_Roof": (0.45, 0.33, 0.28, 1),
+    "M_Ground_Grass": (0.36, 0.45, 0.27, 1),
 }
 
 # object-name keyword -> slot for parts still on a plain review colour after all builders ran (attachments, P0/P1
 # massing, the context ring); first match wins, matched case-insensitively
-NAME_SLOTS = [("ctx", "_roof", "M_Context_Roof"), ("ctx", "", "M_Context_Facade"),
+NAME_SLOTS = [("ter_ground", "", "M_Ground_Grass"), ("ctx", "_roof", "M_Context_Roof"), ("ctx", "", "M_Context_Facade"),
               ("ac_units", "", "M_AC_Casing"), ("porchpiers", "", "M_Tile_Brick_Red"), ("porchroof", "", "M_Shingle_Brown"),
               ("sign", "", "M_Sign_Panel"), ("glazedporch_canopy", "", "M_Sheet_Brown"), ("glazedporch", "", "M_Glass"),
               ("canopy", "", "M_Sheet_Brown"), ("lightwellcover", "", "M_Sheet_Red"), ("dancehallentry", "", "M_Tile_Brick_Red"),
