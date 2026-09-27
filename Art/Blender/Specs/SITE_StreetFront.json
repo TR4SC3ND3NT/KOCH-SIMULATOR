@@ -8,8 +8,8 @@
    "name": "Parapet_Front",
    "line": [
     [
-     92.5,
-     -97.432
+     90.95,
+     -97.35
     ],
     [
      135.8,
@@ -19,7 +19,7 @@
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat). Was 0.48 from horizon geometry. parapet line = OSM campus boundary (way/341105734); the gate booth's measured south face (-100.23 at x=157) lies on the same line; video 065653194 t=6/10/42 s: parapet top 0.45-0.52 m and hedge top ~1.05 m above the sidewalk, from horizon geometry (eye height 1.45 m assumed; horizon placed 60 px above the distant Block B plinth); precast concrete segments with vertical fluting, stepped at joints",
+   "evidence": "west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat). Was 0.48 from horizon geometry. parapet line = OSM campus boundary (way/341105734); the gate booth's measured south face (-100.23 at x=157) lies on the same line; video 065653194 t=6/10/42 s: parapet top 0.45-0.52 m and hedge top ~1.05 m above the sidewalk, from horizon geometry (eye height 1.45 m assumed; horizon placed 60 px above the distant Block B plinth); precast concrete segments with vertical fluting, stepped at joints",
    "confidence": "medium"
   },
   {
@@ -46,7 +46,7 @@
    "name": "Hedge_Front",
    "line": [
     [
-     93.029,
+     91.2,
      -96.909
     ],
     [
@@ -1131,19 +1131,19 @@
    "name": "SidewalkWestWall",
    "line": [
     [
-     92.3,
+     90.75,
      -96.6
     ],
     [
-     92.1,
+     90.55,
      -103.0
     ]
    ],
    "height": 2.4,
    "thk": 0.3,
    "material": "stone",
-   "evidence": "grey wall with the gas pipe at the start of video 065653194 (west end of the sidewalk); height and extent estimated",
-   "confidence": "low"
+   "evidence": "P1: base of the concrete-block pillar at the west end projected from Street c3 frames f00001/f00030/f00048 onto the walking plane: east face x 90.9 +-0.2, on the parapet line; was x 92.2 (it blocked the view of the first frames). grey wall with the gas pipe at the start of video 065653194 (west end of the sidewalk); height and extent estimated",
+   "confidence": "medium"
   }
  ]
 }

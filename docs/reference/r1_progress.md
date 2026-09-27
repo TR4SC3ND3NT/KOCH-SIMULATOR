@@ -157,13 +157,13 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] A.9 Circle-pattern paving, red-tile retaining wall with steps and planting in front of the entrance pavilion — approx., in the model (GateAlley PavilionStair; circle paving = material)
 
 ## 12. Street front (zone `Street`)
-- [ ] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels — approx., in the model (GBS_StreetFront_Sidewalk)
-- [ ] S.2 Low parapet along the sidewalk with its steps; lawn level behind it — approx., in the model (GBS_StreetFront_Parapet/Hedge)
-- [ ] S.3 Tree pits along the sidewalk — approx.: 11 pits + trees on the sidewalk along the parking side (SITE_StreetFront StreetPit/StreetTree), x from Bing crowns
-- [ ] S.4 Parking by the sidewalk with yellow-black barrier pipes — approx., in the model (GBS_StreetFront_WheelStop)
+- [ ] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels — P1 measured x 92-118: 5.45 m from the planter-wall face to the parking bars, flat (ground mosaic + mesh cross-profiles, zone Street c3); x 118-150 still 4.3 m from Google (Street c2 not placed)
+- [ ] S.2 Low parapet along the sidewalk with its steps; lawn level behind it — P1 measured: planter wall 0.35 m (mesh 0.31/0.38), west end at the block pillar x 90.95; steps at the joints and thickness (~0.12-0.15 m) still open (P2)
+- [ ] S.3 Tree pits along the sidewalk — P1 partly: pit 02 measured (x 114.4, 1.5 m wide, >= 4.2 m long, overlay f01622 2.0 px), pit 01 removed (not in the mosaic); pits 00, 03-10 still from Bing crowns
+- [ ] S.4 Parking by the sidewalk with yellow-black barrier pipes — P1 partly: bar line 5.55 m from the parapet centreline at x 98-105 (was 3.6), tapering to 4.5 m at x 140 (Google noses); bar pitch not measured (mosaic: bars at x 98.0-99.6 and 102.3-104.7, model still 2.6 m)
 - [ ] S.5 Zebra crossing, road kerbs, carriageway — approx., in the model (GBS_Gate_Zebra/Curb)
 - [ ] S.6 Bus stop (find it) and trolleybus poles; ATM kiosk by the fence — approx.: trolleybus poles every 35 m on the north kerb (TrolleyPole_*); bus stop not found in any frame or on the satellite, not modelled; ATM kiosk only in 2019 web frames (older state), not modelled
-- [ ] S.7 West end of the sidewalk (grey wall with the gas pipe) — approx.: grey wall at the W end of the sidewalk (SidewalkWestWall), gas pipe left to materials
+- [ ] S.7 West end of the sidewalk (grey wall with the gas pipe) — P1 partly: block pillar / wall east face at x 90.9 (3 frames projected; was 92.2 and blocked the view), overlay f00030 1.4 px; mesh fence behind the kerb and the gas pipe not modelled yet
 - [ ] S.8 Outside parking by the gate; residential towers as far massing — approx.: parking E of the gate with 10 wheel stops (Parking_EastOfGate, WheelStopE_*); towers as far massing = GB_CTX
 
 ## 13. West campus and others (web media, satellite; zone to add from the web frames)
@@ -501,6 +501,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- 2026-09-27 (night): world frame: pairwise merge Street+Gate (pair_merge.py) failed three ways (GLOMAP pair: scale differs 3x between the zones; strict incremental: 10 models, Street and Gate never joined) -> zones placed by the mesh/satellite (owner rule). Street c3 placed by the planter-wall face (yaw, lateral) and the block pillar (along), scale from the eye height checked on the paver lattice; sidewalk, bars, pit 02, west wall and planter-wall height set from a ground mosaic of the frames (tools/ground_mosaic.py) and mesh profiles.
 - 2026-09-27 P0 frame: per-component auto registration failed (walls vs specs, ground ortho vs Bing, outlines vs photos: the true C-entrance pose scores below wrong ones); up/scale per component are good (ground planes + eye 1.52 m, scale within 0.8 %%). Whole-site alignment ALL (38 exterior clips, every 2nd frame, all stills) queued first for one world frame; cp_fit.py ready for control points on what stays separate. route_profile tested on C_entr (4 events). pass_check.py written.
 - 2026-09-27 (evening): C entrance re-expressed from the tower face: the mesh puts the tower wall 0.9 m in front of the storefront (landing 1.75, canopy 4.7, storefront recess 0.9); C.5/C.6 window fit by photo edges is unstable (periodic facade) -> waiting for the C_photos zone mesh; next object H.1-H.3 (C_sw c7: pavers 0.305 u, camera height 4.38 u -> ~0.33-0.37 m/unit, frame is -Y up).
 - 2026-09-27: list built from ROUTE.md, campus.md, photo_requests.md, the handoff, the specs, the capture clips (incl. the 2026-09-25 batch: gate, A_W walkway, C west side, C basement) and the web-media triage (C:\koch\web\triage_part1.md, triage_part2.md). Best web sources for roofs and back sides: the 2023-01-28 drone flight, 2022-04-19, 2020-05-16 and 2022-10-30 aerials.
