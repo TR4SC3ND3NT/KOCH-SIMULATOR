@@ -11,7 +11,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 
 ## 1. Block C, exterior (zones `C_entr` done, `C_sw`)
 - [x] C.1 Main entrance stair: granite treads/risers with nosings, landing, cheek walls with caps — 7 × 0.154, treads 0.475, landing 2.65 (mesh + photo-edge fit, overlay f00023/f00090/f00128/f00449)
-- [ ] C.2 Entrance ramp: grating deck, frame, stringers, rails and posts with feet
+- [x] C.2 Entrance ramp: grating deck, frame, stringers, rails and posts with feet — run 1.0 wide 3.5–4.5 m out, u 3.75→9.5, top plate over the flight (photo-edge fit, 6 cameras)
 - [ ] C.3 Entrance canopy: slab, terracotta soffit panels, fascia/edge trims, sign box (blank KOCH panel), flood lamps
 - [ ] C.4 Vestibule / storefront: glazed frame, doors with stiles and rails, pull bars, threshold, transom, side lights, fascia cladding
 - [ ] C.5 South facade, centre + tower: plinth tile band, pilasters, window kit (frame, sashes, mullions, sills, surrounds), cornice

@@ -463,15 +463,45 @@
   },
   {
    "type": "ramp",
-   "edge": 3,
-   "u0": 0.4,
-   "u1": 6.5,
-   "w0": 1.3,
-   "w1": 2.5,
-   "z_high": -0.02,
-   "z_low": -1.05,
+   "edge": 2,
    "rails": true,
-   "evidence": "steel-railed ramp along the east wing from the landing to the plaza; 6.1 m after depth correction (factor 0.825), 061621646"
+   "rail_h": 0.9,
+   "mid_rails": [
+    0.45
+   ],
+   "post_pitch": 1.2,
+   "confidence": "medium",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449)",
+   "name": "Top",
+   "along": "w",
+   "over_stairs": true,
+   "u0": 2.65,
+   "u1": 4.5,
+   "w0": -3.75,
+   "w1": -2.75,
+   "z_high": 0.0,
+   "z_low": 0.0,
+   "rail_sides": "w1"
+  },
+  {
+   "type": "ramp",
+   "edge": 2,
+   "rails": true,
+   "rail_h": 0.9,
+   "mid_rails": [
+    0.45
+   ],
+   "post_pitch": 1.2,
+   "confidence": "medium",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449)",
+   "name": "Run",
+   "u0": 3.75,
+   "u1": 9.5,
+   "w0": 3.5,
+   "w1": 4.5,
+   "z_high": 0.0,
+   "z_low": -1.078,
+   "z_ground": -1.078
   },
   {
    "type": "lightwell",

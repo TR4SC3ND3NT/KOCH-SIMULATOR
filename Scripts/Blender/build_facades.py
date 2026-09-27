@@ -686,16 +686,29 @@ class Building:
         if t == "ramp":
             parts = {"frame": bmesh.new(), "deck": bmesh.new()}
             zg = a["z_low"]
-            D.steel_ramp(parts, fr, a["u0"], a["u1"], a["w0"], a["w1"], a["z_high"], a["z_low"],
-                         ground=lambda u: a.get("z_ground", zg))
+            ground = lambda u: a.get("z_ground", zg)
+            if a.get("along") == "w":
+                # ramp running out from the wall (u0/u1 = distances from the wall, w0/w1 = -u along the wall):
+                # frame turned +90 deg about z, so (u', w') -> (u = -w', w = u')
+                fr = fr @ Matrix.Rotation(math.radians(90.0), 4, "Z")
+                st = a.get("over_stairs")
+                if st:
+                    # legs stand on the flight it is laid over: landing, treads, then the plaza
+                    s_ = next(x for x in self.s["attachments"] if x["type"] == "stairs" and x["edge"] == a["edge"])
+                    L_, t_, h_, n_ = s_["landing"], s_["tread"], s_["riser_h"], s_["risers"]
+                    ground = lambda w: 0.0 if w <= L_ else -min(n_, 1 + int((w - L_) / t_)) * h_
+            D.steel_ramp(parts, fr, a["u0"], a["u1"], a["w0"], a["w1"], a["z_high"], a["z_low"], ground=ground)
             rails = bmesh.new()
             if a.get("rails"):
-                for w in (a["w0"] + 0.03, a["w1"] - 0.03):
+                sides = {"both": (a["w0"] + 0.03, a["w1"] - 0.03), "w0": (a["w0"] + 0.03,), "w1": (a["w1"] - 0.03,)}
+                for w in sides[a.get("rail_sides", "both")]:
                     pts = [fr @ Vector((a["u0"], w, a["z_high"])), fr @ Vector((a["u1"], w, a["z_low"]))]
                     D.railing_detailed(rails, pts, height=a.get("rail_h", 0.9), post=0.04, spacing=a.get("post_pitch", 1.5),
                                        mid=tuple(a.get("mid_rails", [0.45])), base_plate=0.0, plate_t=0.0)
-            self.obj_parts(f"Ramp_E{a['edge']}", {"M_Steel_Paint_Dark": parts["frame"], "M_Steel_Grating": parts["deck"]}, ev, cf)
-            self.obj_parts(f"RampRail_E{a['edge']}", {"M_Steel_Paint_Dark": rails}, ev, cf)
+            nm = a.get("name", "")
+            self.obj_parts(f"Ramp{nm}_E{a['edge']}", {"M_Steel_Paint_Dark": parts["frame"], "M_Steel_Grating": parts["deck"]}, ev, cf)
+            if a.get("rails"):
+                self.obj_parts(f"RampRail{nm}_E{a['edge']}", {"M_Steel_Paint_Dark": rails}, ev, cf)
             return True
         if t == "canopy":
             parts = {k: bmesh.new() for k in ("frame", "panel", "soffit", "roof")}
