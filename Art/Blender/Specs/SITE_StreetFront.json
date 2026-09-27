@@ -1087,6 +1087,32 @@
    "material": "stone",
    "evidence": "P1: base of the concrete-block pillar at the west end projected from Street c3 frames f00001/f00030/f00048 onto the walking plane: east face x 90.9 +-0.2, on the parapet line; was x 92.2 (it blocked the view of the first frames). grey wall with the gas pipe at the start of video 065653194 (west end of the sidewalk); height and extent estimated",
    "confidence": "medium"
+  },
+  {
+   "type": "lamp",
+   "name": "Flagpole_0",
+   "pos": [
+    126.684,
+    -99.535
+   ],
+   "height": 9.0,
+   "head": "ball",
+   "slot": "M_Paint_White",
+   "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate)",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp",
+   "name": "Flagpole_1",
+   "pos": [
+    128.284,
+    -99.619
+   ],
+   "height": 9.0,
+   "head": "ball",
+   "slot": "M_Paint_White",
+   "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate)",
+   "confidence": "medium"
   }
  ]
 }

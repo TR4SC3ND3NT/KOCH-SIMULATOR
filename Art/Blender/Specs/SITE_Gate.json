@@ -220,16 +220,16 @@
    "type": "sign",
    "name": "Billboard_West",
    "pos": [
-    143.592,
-    -97.328
+    129.776,
+    -99.848
    ],
    "dir_deg": 267.1,
    "w": 3.0,
    "h": 2.0,
    "t": 0.12,
    "z0": 0.8,
-   "evidence": "freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster",
-   "confidence": "low"
+   "evidence": "P1: bearings from Street c2 frames f02711/f02830/f02947 cut with the planter-wall face: posts at x 128.5-131 on the sidewalk edge; range from its 2.0 m height in f02947 (1030 px at f 3463 -> 6.7 m) agrees; was x 143.6. freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster",
+   "confidence": "medium"
   },
   {
    "type": "sign",

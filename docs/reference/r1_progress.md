@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: street banner billboard moved to x ~129.8 at the planter edge (was 143.6; bearings from 3 Street c2 frames + its 2 m height), 2 white flagpoles added next to it; overlays f02711/f02947 median 2.0/2.2 px.
 - [A] 2026-09-28: near ring floor counts: 49 buildings have no OSM levels; projected into every placed camera (Street c3/c2, Gate c13/c8, C_entr c2): only 6 in view and those hidden behind campus blocks/trees -> BLOCKED with one photo request (street walk around the campus). P2 material slots everywhere (site/facade/name/ground surfaces).
 - [A] 2026-09-28: basement stair count confirmed from frames (8 + 2); lesson: eye-height scale is unreliable where the walker is on a stair or in a narrow stairwell (few ground planes) - check the scale on a known size before using a walk depth.
 - [A] 2026-09-28: C south-west wing facade section on the C_entr mesh: window heads F1 9.01 / F2 12.16 (spec rows 8.85+0.2 / 12.15: confirmed); the last wing column lies at u 10.3-12.7 in the mesh vs 9.57-11.80 in the spec (+0.9 m, same size as the old storefront/tower offset) - overlays from 070647586 f00354 / 081158036 f00644 inconclusive (11 / 17 px); left as is until a frontal check.
