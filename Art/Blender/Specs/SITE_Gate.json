@@ -646,6 +646,25 @@
    "surface": "clover_paver_267x218",
    "evidence": "P1: Google z20 paved gap between Lawn_SouthWest and Lawn_SouthEast from the zebra's south end to the south footway (x 152.0-156.4); clip 20260925_012108212 f00878 reaches the zebra from it",
    "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_North_W",
+   "line": [
+    [
+     88.0,
+     -109.6
+    ],
+    [
+     125.0,
+     -109.382
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "P1: Google z20 asphalt edge at y -109.6 for x 85-125 (flat, not the Curb_North slope); trolley pole of Street c3 f00996 stands on the paved strip right at it",
+   "confidence": "medium"
   }
  ],
  "ground_surfaces": [
@@ -654,7 +673,11 @@
    "ring": [
     [
      88,
-     -107.508
+     -109.6
+    ],
+    [
+     125,
+     -109.382
     ],
     [
      210,
@@ -670,7 +693,7 @@
     ]
    ],
    "slot": "M_Asphalt",
-   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484"
+   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484; north edge west of x 125 flat at y -109.6 (Google z20: the road does not follow the Curb_North slope westward; trolley pole f00996 on the paved strip at the edge)"
   },
   {
    "name": "Forecourt",

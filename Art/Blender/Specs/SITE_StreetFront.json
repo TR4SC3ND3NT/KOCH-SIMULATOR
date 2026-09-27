@@ -806,13 +806,15 @@
    "type": "lamp",
    "name": "TrolleyPole_0",
    "pos": [
-    100,
-    -111.4
+    101.35,
+    -109.35
    ],
    "height": 9.0,
    "head": "box",
-   "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "evidence": "P1: base projected from Street c3 f00996 onto the walking plane (101.35, -110.2, +-0.8 m) and set on the paved strip at the kerb where the photo shows it; square spun-concrete pole ~0.35 m (width in the frame at 9-10 m); was (100, -111.4) on the asphalt",
+   "confidence": "medium",
+   "pole_r": 0.18,
+   "slot": "M_Concrete"
   },
   {
    "type": "lamp",
@@ -824,7 +826,9 @@
    "height": 9.0,
    "head": "box",
    "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "pole_r": 0.18,
+   "slot": "M_Concrete"
   },
   {
    "type": "lamp",
@@ -836,7 +840,9 @@
    "height": 9.0,
    "head": "box",
    "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "pole_r": 0.18,
+   "slot": "M_Concrete"
   },
   {
    "type": "lamp",
@@ -848,7 +854,9 @@
    "height": 9.0,
    "head": "box",
    "evidence": "2026-09-27 approx. from Bing z19 (tree crowns, parked cars, kerb at y -110.8) and video 065653194; positions not measured (see r1_progress M-table)",
-   "confidence": "low"
+   "confidence": "low",
+   "pole_r": 0.18,
+   "slot": "M_Concrete"
   },
   {
    "type": "path",
