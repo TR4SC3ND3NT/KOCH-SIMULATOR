@@ -138,7 +138,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] K.3 One-storey building with a deep timber overhang on a red post (070410255 39–41 s): identify and model — approx.: taken as the canteen W porch (BLD_Canteen WestGlazedPorch)
 
 ## 10. Block B (zones `Gate`, `AW`)
-- [ ] B.1 South (street) facade: bays between pilasters, windows, lettering band (blank KOCH) — approx., in the model (GBF_BLD_B Wall/Win/Sign)
+- [ ] B.1 South (street) facade: bays between pilasters, windows, lettering band (blank KOCH) — approx., in the model (GBF_BLD_B Wall/Win/Sign) — P1✓ 3e8ba38 (obj_test GBF_BLD_B: Street c3 f00419/f00649 1.4/1.0 px, Gate c8 5.4/5.0 px; own look Street c3 f01309: pilasters, window rows and the blue panel line up behind the pines)
 - [ ] B.2 North (garden) facade — approx., in the model (GBF_BLD_B Wall/Win)
 - [ ] B.3 West end — approx., in the model (GBF_BLD_B Wall)
 - [ ] B.4 East facade: entrance canopy, door and threshold, maroon sloped covers — approx., in the model (GBF_BLD_B Entrance/LightwellCover)
@@ -148,7 +148,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] B.8 Position: B–A gap settled on the mesh — approx.: Bing z19 roof edges B 147.0 / A gallery roof 157.6 (+2.2 m gallery) give a wall gap ≈13.0 m, close to the spec (13.4); B not moved (the Gate mesh is too hole-filled here; see M12)
 
 ## 11. Block A (zones `AW`, `Gate`)
-- [ ] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N)
+- [ ] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N) — P1✓ 3e8ba38 (obj_test GBF_BLD_A_S: Street c3 4.2/1.4 px, Gate c13 3.0/4.0 px; own look Gate c8 f00034/f00550: lettering panel, round panel, window rows, porch)
 - [ ] A.2 A_S south facade (street) — approx., in the model (GBF_BLD_A_S)
 - [ ] A.3 A_S and A_N east facades (parking side) — approx., in the model (GBF_BLD_A_S/A_N)
 - [ ] A.4 A_N north end (cut gable) — approx., in the model (GBF_BLD_A_N)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: A_W gallery (A.6/AW items) not decidable at the AW c8 placement (+-2 m along; along-scan of the overlay flat): posts/doors stay open until a better anchor (AW c5 via Gate c8 REG 0.73, or the gallery lettering seen from the plaza clips).
 - [A] 2026-09-28: mesh drop AW (c8, placed P0: A_W gallery, plaza in front of it, garden edge) -> C:/koch/drop/koch_meshes_20260928_2.zip (53 MB).
 - [A] 2026-09-28 request to [B] (SITE_Garden, A_W gallery planters): the ground mosaic of AW c8 (clip 012404116, P0 placement +-2 m) shows the 4 red-edged planters in front of the gallery at centres ~(161.4,-28.8), (161.3,-34.3), (161.0,-38.4), (161.1,-43.2), 0.8 x 1.0 m; the spec has them ~0.8 m further east and evenly every 4.5 m (-30.0/-34.5/-38.9/-43.5). Mosaic: C:/koch/work/zones/AW/c8/mosaic.png (same drop as the AW mesh if needed).
 - [A] 2026-09-28: AW c8 (clip 012404116, B-corner steps -> gallery -> garden arch) placed at P0 (+-2 m): yaw from its gallery-front line, across on the gallery post line x 162.8, along from the steps. f00638: the red-edged planters with trees stand on the plaza in front of the A_W gallery (confirms the PlanterAN/TreeAN row near the gallery); planter positions still ~1-2 m off in that frame (P1 open).
