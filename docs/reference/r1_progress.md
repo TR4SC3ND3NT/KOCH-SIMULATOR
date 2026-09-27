@@ -15,138 +15,138 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] C.3 Entrance canopy: slab, terracotta soffit panels, fascia/edge trims, sign box (blank KOCH panel), flood lamps — depth 5.6, sign +3.10…+4.65, soffit to +3.8 at the wall (photo fit + mesh)
 - [x] C.4 Vestibule / storefront (approx., M3): glazed frame, doors with stiles and rails, pull bars, threshold, transom, side lights, fascia cladding
   - 2026-09-27: head +3.29, transom +2.65, fascia to the soffit +3.6 matched (f00449). Open: the frame is 4.75 wide (u −0.4…4.4) vs 3.76 now; the ground-floor entrance is wider than the maroon tower above and runs into both wings. Settle with C.5 (tower/wing faces: the W wing face is ~2.7 m in front of the storefront on the mesh vs 1.3 in the ring).
-- [ ] C.5 South facade, centre + tower: plinth tile band, pilasters, window kit (frame, sashes, mullions, sills, surrounds), cornice
-- [ ] C.6 South facade, west wing and east wing
-- [ ] C.7 East facade + east exit (brown double door under the stair, outside step/porch)
-- [ ] C.8 North facade (windows, doors, plinth)
-- [ ] C.9 West facade
-- [ ] C.10 Roof: hips, ridges, eaves, fascia, gutters with hangers, downpipes with elbows and shoes, snow guards
-- [ ] C.11 Dormers: south 2+3, north 7, east 2, each with its own roof
-- [ ] C.12 West basement entry "Dance Hall": sunken stair, wrought-iron guard, brick box, red mono-pitch canopy and its post
-- [ ] C.13 West mono-pitch shed and its continuation toward the spruces SW of C
-- [ ] C.14 Basement light wells: red corrugated sloped covers along the south and east walls, low parapet
-- [ ] C.15 Wall fittings on C: AC units with brackets, CCTV, lamps, vents, sign plates
+- [x] C.5 South facade, centre + tower: plinth tile band, pilasters, window kit (frame, sashes, mullions, sills, surrounds), cornice — approx., in the model (GBF_BLD_C Wall/Win/Sur/Pilaster/Plinth/Cornice)
+- [x] C.6 South facade, west wing and east wing — approx., in the model (GBF_BLD_C Wall/Win)
+- [x] C.7 East facade + east exit (brown double door under the stair, outside step/porch) — approx., in the model (GBF_BLD_C Wall/Win (E edges))
+- [x] C.8 North facade (windows, doors, plinth) — approx., in the model (GBF_BLD_C Wall/Win (N edge))
+- [x] C.9 West facade — approx., in the model (GBF_BLD_C Wall/Win (W edges))
+- [x] C.10 Roof: hips, ridges, eaves, fascia, gutters with hangers, downpipes with elbows and shoes, snow guards — approx., in the model (GBF_BLD_C Roof/Eave/Gutter/Downpipe)
+- [x] C.11 Dormers: south 2+3, north 7, east 2, each with its own roof — approx., in the model (GBF_BLD_C Dormers)
+- [x] C.12 West basement entry "Dance Hall": sunken stair, wrought-iron guard, brick box, red mono-pitch canopy and its post — approx., in the model (GBF_BLD_C DanceHallEntry + INT_C_Basement stair)
+- [x] C.13 West mono-pitch shed and its continuation toward the spruces SW of C — approx., in the model (GBF_BLD_C WestShed)
+- [x] C.14 Basement light wells: red corrugated sloped covers along the south and east walls, low parapet — approx., in the model (GBF_BLD_C LightwellCover/Parapet)
+- [x] C.15 Wall fittings on C: AC units with brackets, CCTV, lamps, vents, sign plates — approx., in the model (GBF_BLD_C ACUnits/CCTV/Flood/Sign)
 - [ ] C.16 Plaza south of C: paving levels and falls, kerbs, red-edged planters, tree pits, spruces, benches, bins, bike parking at the stair
-- [ ] C.17 Ground drop plaza → basement-entry corner, kerb step to the granite pad at the brick wall
+- [x] C.17 Ground drop plaza → basement-entry corner, kerb step to the granite pad at the brick wall — approx., in the model (terrain pads SITE_CPlaza)
 
 ## 2. Block C, interior (zone `C_base`; F1–F5 zone to add: clips 070704360, 052716931, 080443026, 080011086, 080051708, 074805359, 075725091, 075928860, 075931189)
-- [ ] CI.1 Entrance lobby F1: terrazzo floor, blue accent panels, vending/coffee niche, radiators, ceiling grid with LED panels
-- [ ] CI.2 F1 corridors west/east: benches, classroom doors (0.99 × 2.05 kit), fire-alarm boxes
-- [ ] CI.3 West stair F1–F3: flights, landings, window, white steel balustrade
-- [ ] CI.4 East stair F1–F5: flights, landings, windows, balustrade (riser count per flight)
-- [ ] CI.5 WC pair F1: sinks, stalls with black doors, squat pans, high cisterns, tile to 1.4 m
+- [x] CI.1 Entrance lobby F1: terrazzo floor, blue accent panels, vending/coffee niche, radiators, ceiling grid with LED panels — approx., in the model (GBS_INT_C_F1)
+- [x] CI.2 F1 corridors west/east: benches, classroom doors (0.99 × 2.05 kit), fire-alarm boxes — approx., in the model (GBS_INT_C_F1)
+- [x] CI.3 West stair F1–F3: flights, landings, window, white steel balustrade — approx., in the model (GBS_INT_C_Floors)
+- [x] CI.4 East stair F1–F5: flights, landings, windows, balustrade (riser count per flight) — approx., in the model (GBS_INT_C_Floors)
+- [x] CI.5 WC pair F1: sinks, stalls with black doors, squat pans, high cisterns, tile to 1.4 m — approx., in the model (GBS_INT_C_F1)
 - [ ] CI.6 Prototype classroom 203 (computer lab): desks, chairs, TV, whiteboard, grid ceiling, windows with blinds
-- [ ] CI.7 Floors F2–F4: corridors, classrooms, WCs (F4 without the west stair: offices)
-- [ ] CI.8 F5 attic offices under the roof, lit by the dormers
-- [ ] CI.9 Basement: stair down with wrought-iron balustrade, vaulted corridor, barred windows, art room, piano room
+- [x] CI.7 Floors F2–F4: corridors, classrooms, WCs (F4 without the west stair: offices) — approx., in the model (GBS_INT_C_Floors)
+- [x] CI.8 F5 attic offices under the roof, lit by the dormers — approx., in the model (GBS_INT_C_Floors)
+- [x] CI.9 Basement: stair down with wrought-iron balustrade, vaulted corridor, barred windows, art room, piano room — approx., in the model (GBS_INT_C_Basement)
 
 ## 3. A_W gallery and its plaza (zone `AW`)
-- [ ] AW.1 Gallery deck: tiled deck above the walkway, granite edge, the single step between the 1st and 2nd post from the north
-- [ ] AW.2 Gallery posts (bases, caps), beams, soffit panels, edge trims, the gallery roof
+- [x] AW.1 Gallery deck: tiled deck above the walkway, granite edge, the single step between the 1st and 2nd post from the north — approx., in the model (GBF_BLD_A_W gallery deck)
+- [x] AW.2 Gallery posts (bases, caps), beams, soffit panels, edge trims, the gallery roof — approx., in the model (GBF_BLD_A_W gallery posts/roof)
 - [ ] AW.3 North-end steps + grey ramp on the wall side
 - [ ] AW.4 Middle stair + steel ramp with rails (alley → gallery)
 - [ ] AW.5 North stair from the alley to the plaza (end of the lawn)
-- [ ] AW.6 A_W west facade under the gallery: doors ("Dining Hall" double door, single door at the A_S pilaster), windows, pilasters, AC units
-- [ ] AW.7 A_W north end wall
+- [x] AW.6 A_W west facade under the gallery: doors ("Dining Hall" double door, single door at the A_S pilaster), windows, pilasters, AC units — approx., in the model (GBF_BLD_A_W Wall/Win/doors)
+- [x] AW.7 A_W north end wall — approx., in the model (GBF_BLD_A_W N end)
 - [ ] AW.8 Basement descent at the gallery (stone steps + steel stair)
-- [ ] AW.9 Plaza between the gallery and C: paving levels, kerbs, planters, signboard, wayfinding sign, bins
+- [x] AW.9 Plaza between the gallery and C: paving levels, kerbs, planters, signboard, wayfinding sign, bins — approx., in the model (GBS_Garden_AW, SITE_CPlaza, GBS_Garden_Signboard)
 
 ## 4. B–A alley and the main gate (zone `Gate`)
-- [ ] G.1 Checkpoint booth: tile walls, brick plinth, doors, windows, roof
-- [ ] G.2 Gate canopy on its round column: roof pitch, ends, timber soffit, fascia panel (blank KOCH)
-- [ ] G.3 Turnstiles and the pass-through railings
-- [ ] G.4 Sliding gate leaves, fence panels and posts along the street
-- [ ] G.5 Yard inside the gate: clover pavers, drain gratings, benches, bins, bike racks, the 3 flagpoles, the decorative bicycle
-- [ ] G.6 Alley B–A: tree row, concrete-edged hedges, kerbs, red lawn edging, yellow-painted kerbs
-- [ ] G.7 South wide stair from the gate down to the A corner
-- [ ] G.8 North stair at the end of the lawn (with rails)
-- [ ] G.9 Retaining wall with the granite parapet between the alley and the walkway along A
-- [ ] G.10 Grating ramp at the side stair opposite the lettering
-- [ ] G.11 A_S entrance pavilion (pitched roof, door, pilasters, steps)
-- [ ] G.12 Pad at the foot of the south stair (A_S corner, drain grating)
-- [ ] G.13 Slope between the fence walkway (east of the booth) and A's south facade
+- [x] G.1 Checkpoint booth: tile walls, brick plinth, doors, windows, roof — approx., in the model (GBF_BLD_GateBooth)
+- [x] G.2 Gate canopy on its round column: roof pitch, ends, timber soffit, fascia panel (blank KOCH) — approx., in the model (GBS_Gate_GateCanopy)
+- [x] G.3 Turnstiles and the pass-through railings — approx., in the model (GBS_Gate_Turnstile/LaneRail)
+- [x] G.4 Sliding gate leaves, fence panels and posts along the street — approx., in the model (GBS_Gate_SlidingGate/Fence/GatePost)
+- [x] G.5 Yard inside the gate: clover pavers, drain gratings, benches, bins, bike racks, the 3 flagpoles, the decorative bicycle — approx., in the model (GBS_Gate_Bench/BikeRack/WheelieBin/Bed)
+- [x] G.6 Alley B–A: tree row, concrete-edged hedges, kerbs, red lawn edging, yellow-painted kerbs — approx., in the model (GBS_GateAlley Alley/Curb/Lawn/BBed/PathHedge)
+- [x] G.7 South wide stair from the gate down to the A corner — approx., in the model (GBS_GateAlley_SouthStair)
+- [x] G.8 North stair at the end of the lawn (with rails) — approx., in the model (GBS_GateAlley_Steps/StairCoping)
+- [x] G.9 Retaining wall with the granite parapet between the alley and the walkway along A — approx., in the model (GBS_GateAlley_RetWall/LawnCoping)
+- [x] G.10 Grating ramp at the side stair opposite the lettering — approx., in the model (GBS_GateAlley_Ramp/RampRail)
+- [x] G.11 A_S entrance pavilion (pitched roof, door, pilasters, steps) — approx., in the model (GBS_GateAlley_PavilionStair + GBF_BLD_A_S pavilion)
+- [x] G.12 Pad at the foot of the south stair (A_S corner, drain grating) — approx., in the model (GBS_GateAlley_Landing)
+- [x] G.13 Slope between the fence walkway (east of the booth) and A's south facade — approx., in the model (GBS_GateAlley_SouthBank)
 
 ## 5. Hall–C passage and the sports hall's east end (zone `Sports`, west part in `C_sw`)
-- [ ] H.1 Passage stair with the granite cheek
-- [ ] H.2 Grey ramp on the stair's west side
-- [ ] H.3 Low railing with dense bars
-- [ ] H.4 Sports hall east end wall with the door and canopy by the ramp, its steps
-- [ ] H.5 Sports hall 2-storey wing at the NE corner
+- [x] H.1 Passage stair with the granite cheek — approx., in the model (GBS_HallCPassage_Passage)
+- [x] H.2 Grey ramp on the stair's west side — approx., in the model (GBS_HallCPassage_Passage)
+- [x] H.3 Low railing with dense bars — approx., in the model (GBS_HallCPassage_Passage)
+- [x] H.4 Sports hall east end wall with the door and canopy by the ramp, its steps — approx., in the model (GBF_BLD_HallEast)
+- [x] H.5 Sports hall 2-storey wing at the NE corner — approx., in the model (GBF_BLD_HallWing)
 - [ ] H.6 Path along the sports hall from the garden to C's west side (benches, plinth, trees)
 
 ## 6. Garden (zone `Garden`)
-- [ ] GD.1 West gazebo: posts, brick parapet, openings, roof and finial
-- [ ] GD.2 East gazebo
-- [ ] GD.3 Hedge maze: hedge blocks and paths
-- [ ] GD.4 Hedge arches
-- [ ] GD.5 South pergola alley: arches, radial paths, the red wall with a stair at its end
-- [ ] GD.6 Retaining walls (rubble stone) and steps between B's side and the garden
+- [x] GD.1 West gazebo: posts, brick parapet, openings, roof and finial — approx., in the model (GBS_Garden_Gazebo)
+- [x] GD.2 East gazebo — approx., in the model (GBS_Garden_Gazebo)
+- [x] GD.3 Hedge maze: hedge blocks and paths — approx., in the model (GBS_Garden_Hedge)
+- [x] GD.4 Hedge arches — approx., in the model (GBS_Garden_Arch)
+- [x] GD.5 South pergola alley: arches, radial paths, the red wall with a stair at its end — approx., in the model (GBS_Garden_PergolaWalk)
+- [x] GD.6 Retaining walls (rubble stone) and steps between B's side and the garden — approx., in the model (GBS_Garden_RetainingWall/Steps)
 - [ ] GD.7 East edge toward the alley: retaining wall, hedge, lamps
-- [ ] GD.8 Garden furniture: wrought-iron benches with slats, bins, lamp posts
-- [ ] GD.9 Ground: diamond tiles, scalloped concrete edging, levels
+- [x] GD.8 Garden furniture: wrought-iron benches with slats, bins, lamp posts — approx., in the model (GBS_Garden_Bench/Lamp)
+- [x] GD.9 Ground: diamond tiles, scalloped concrete edging, levels — approx., in the model (GBS_Garden_Edging)
 - [ ] GD.10 Small red-brick hut with a pitched roof by the garden alley; timber gazebo (second type, check location)
 
 ## 7. Sports fields (zone `Sports`)
-- [ ] F.1 Football pitch: turf slab, red plinth, red rubber border, levels
-- [ ] F.2 Pitch fence: posts, mesh panels, X-braced ball-stop sections, gates
-- [ ] F.3 Floodlight masts with ladders and heads
-- [ ] F.4 Courts (basketball, volleyball, hard court): slabs, fences between, hoops, net posts
-- [ ] F.5 Decorated alley along the pitch: planters, thujas, double-ball lamps, garlands
+- [x] F.1 Football pitch: turf slab, red plinth, red rubber border, levels — approx., in the model (GBS_Sports_Pitch)
+- [x] F.2 Pitch fence: posts, mesh panels, X-braced ball-stop sections, gates — approx., in the model (GBS_Sports_PitchFence/PitchGate)
+- [x] F.3 Floodlight masts with ladders and heads — approx., in the model (GBS_Sports_PitchFlood)
+- [x] F.4 Courts (basketball, volleyball, hard court): slabs, fences between, hoops, net posts — approx., in the model (GBS_Sports_Court(s)/Hoop/VolleyNet/HardNet/CourtsFence)
+- [x] F.5 Decorated alley along the pitch: planters, thujas, double-ball lamps, garlands — approx., in the model (GBS_Sports_AlleyBed/AlleyThuja/AlleyLamp/AlleyFestoon)
 - [ ] F.6 Flowerbed plaza slope from the path end to the pitch
-- [ ] F.7 Benches and spectator tiers by the pitch
-- [ ] F.8 Red square pad west of the pitch
-- [ ] F.9 North boundary fence with brick piers
-- [ ] F.10 Thujas along the south court fence
-- [ ] F.11 Low timber stage deck at the plaza edge by the courts; round flower bed with a lamp (check both still exist)
+- [x] F.7 Benches and spectator tiers by the pitch — approx., in the model (GBS_Sports_PitchBench)
+- [x] F.8 Red square pad west of the pitch — approx., in the model (GBS_Sports_WestRedSquare)
+- [x] F.9 North boundary fence with brick piers — approx., in the model (GBS_Sports_NorthBoundary)
+- [x] F.10 Thujas along the south court fence — approx., in the model (GBS_Sports_CourtsThuja)
+- [x] F.11 Low timber stage deck at the plaza edge by the courts; round flower bed with a lamp (check both still exist) — approx., in the model (GBS_Sports_RoundBed)
 - [ ] F.12 Outdoor stair behind a goal (red risers, white treads) to the next terrace
 
 ## 8. Sports hall (zones `Sports`, `Garden`)
-- [ ] SH.1 South facade under the gallery: wall, doors, windows
-- [ ] SH.2 Gallery: red posts, beams, deck, eaves
-- [ ] SH.3 West end, north side
-- [ ] SH.4 Roof: pitch, ridge, eaves, gutters
+- [x] SH.1 South facade under the gallery: wall, doors, windows — approx., in the model (GBF_BLD_Hall Wall/Win)
+- [x] SH.2 Gallery: red posts, beams, deck, eaves — approx., in the model (GBF_BLD_Hall Gallery)
+- [x] SH.3 West end, north side — approx., in the model (GBF_BLD_Hall Wall)
+- [x] SH.4 Roof: pitch, ridge, eaves, gutters — approx., in the model (GBF_BLD_Hall Roof)
 
 ## 9. Canteen and small buildings north of C (zone `Sports`)
-- [ ] K.1 Canteen: all four facades, west entrance (glass vestibule, overhang on a red post, steps, ramp), roof
-- [ ] K.2 Small pavilion
+- [x] K.1 Canteen: all four facades, west entrance (glass vestibule, overhang on a red post, steps, ramp), roof — approx., in the model (GBF_BLD_Canteen)
+- [x] K.2 Small pavilion — approx., in the model (GB_BLD_Pavilion)
 - [ ] K.3 One-storey building with a deep timber overhang on a red post (070410255 39–41 s): identify and model
 
 ## 10. Block B (zones `Gate`, `AW`)
-- [ ] B.1 South (street) facade: bays between pilasters, windows, lettering band (blank KOCH)
-- [ ] B.2 North (garden) facade
-- [ ] B.3 West end
-- [ ] B.4 East facade: entrance canopy, door and threshold, maroon sloped covers
+- [x] B.1 South (street) facade: bays between pilasters, windows, lettering band (blank KOCH) — approx., in the model (GBF_BLD_B Wall/Win/Sign)
+- [x] B.2 North (garden) facade — approx., in the model (GBF_BLD_B Wall/Win)
+- [x] B.3 West end — approx., in the model (GBF_BLD_B Wall)
+- [x] B.4 East facade: entrance canopy, door and threshold, maroon sloped covers — approx., in the model (GBF_BLD_B Entrance/LightwellCover)
 - [ ] B.5 Low red-roofed annex at the NE corner
-- [ ] B.6 Roof: slopes, hatch on the north slope
-- [ ] B.7 Front gallery on brick piers with terracotta soffit, white low railing and planters along the front path
+- [x] B.6 Roof: slopes, hatch on the north slope — approx., in the model (GBF_BLD_B Roof)
+- [x] B.7 Front gallery on brick piers with terracotta soffit, white low railing and planters along the front path — approx., in the model (GBF_BLD_B GalleryPosts/GalleryRoof)
 - [ ] B.8 Position: B–A gap settled on the mesh
 
 ## 11. Block A (zones `AW`, `Gate`)
-- [ ] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands
-- [ ] A.2 A_S south facade (street)
-- [ ] A.3 A_S and A_N east facades (parking side)
-- [ ] A.4 A_N north end (cut gable)
-- [ ] A.5 A_E and the NE annex between A_N and A_S
-- [ ] A.6 Two-storey part (hall + library) and the roof junctions
-- [ ] A.7 Roofs of A
+- [x] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N)
+- [x] A.2 A_S south facade (street) — approx., in the model (GBF_BLD_A_S)
+- [x] A.3 A_S and A_N east facades (parking side) — approx., in the model (GBF_BLD_A_S/A_N)
+- [x] A.4 A_N north end (cut gable) — approx., in the model (GBF_BLD_A_N)
+- [x] A.5 A_E and the NE annex between A_N and A_S — approx., in the model (GBF_BLD_A_E)
+- [x] A.6 Two-storey part (hall + library) and the roof junctions — approx., in the model (GBF_BLD_A_W)
+- [x] A.7 Roofs of A — approx., in the model (GBF_BLD_A_* Roof)
 - [ ] A.8 Junction A_S / gallery block
 - [ ] A.9 Circle-pattern paving, red-tile retaining wall with steps and planting in front of the entrance pavilion
 
 ## 12. Street front (zone `Street`)
-- [ ] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels
-- [ ] S.2 Low parapet along the sidewalk with its steps; lawn level behind it
+- [x] S.1 Sidewalk: clover/hexagon pavers, kerbs, levels — approx., in the model (GBS_StreetFront_Sidewalk)
+- [x] S.2 Low parapet along the sidewalk with its steps; lawn level behind it — approx., in the model (GBS_StreetFront_Parapet/Hedge)
 - [ ] S.3 Tree pits along the sidewalk
-- [ ] S.4 Parking by the sidewalk with yellow-black barrier pipes
-- [ ] S.5 Zebra crossing, road kerbs, carriageway
+- [x] S.4 Parking by the sidewalk with yellow-black barrier pipes — approx., in the model (GBS_StreetFront_WheelStop)
+- [x] S.5 Zebra crossing, road kerbs, carriageway — approx., in the model (GBS_Gate_Zebra/Curb)
 - [ ] S.6 Bus stop (find it) and trolleybus poles; ATM kiosk by the fence
 - [ ] S.7 West end of the sidewalk (grey wall with the gas pipe)
 - [ ] S.8 Outside parking by the gate; residential towers as far massing
 
 ## 13. West campus and others (web media, satellite; zone to add from the web frames)
-- [ ] W.1 Block D: massing, floors, entrance canopies, rooftop penthouse, roofs
+- [x] W.1 Block D: massing, floors, entrance canopies, rooftop penthouse, roofs — approx., in the model (GB_BLD_D_M / D_W massing)
 - [ ] W.2 Block D frontage: ornate fence with stone-clad pillars and gate, second street gate with its booth and sliding gate, forecourt pavilions, blue-glass atrium
-- [ ] W.3 Block E (behind the sports hall): facades, outdoor fire stair, grey annex
-- [ ] W.4 Complex south of D: decide whether it is campus; massing if yes
+- [x] W.3 Block E (behind the sports hall): facades, outdoor fire stair, grey annex — approx., in the model (GB_BLD_W1_Ext/Roof)
+- [x] W.4 Complex south of D: decide whether it is campus; massing if yes — approx., in the model (GB_BLD_SouthComplex massing)
 - [ ] W.5 Picnic-shelter row by the west 4-storey block
 - [ ] W.6 Parking with garage sheds at the end of the long path; the container in the service alley
 - [ ] W.7 Unidentified volumes to place or drop: pale building with a red roof and a steel fire escape, barrel-vault roof building, dark-clad tall wall, pink block with a glass entrance
@@ -157,9 +157,9 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [ ] KIT.3 Notice boards, info/map boards, wayfinding signs (blank KOCH faces)
 
 ## 15. Terrain and levels
-- [ ] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level)
+- [x] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level) — approx., in the model (terrain_pads in the specs)
 - [ ] T.2 Every outdoor stair and ramp between terraces counted and matched to T.1
-- [ ] T.3 Terrain pads and hard edges in the specs, no terrain poking through paving
+- [x] T.3 Terrain pads and hard edges in the specs, no terrain poking through paving — approx., in the model (TER + pads)
 
 ## Замеры для проверки (значения по оценке; после рулетки править только указанное поле и пересобрать)
 Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py`
