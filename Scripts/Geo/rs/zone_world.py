@@ -58,6 +58,19 @@ def ground_planes(scene, model):
     return out
 
 
+def robust_up(gp, model, max_dev=20.0):
+    """Up and camera height from the ground planes that agree with the cameras' image-up axis (planes fitted on
+    hole-filled mesh next to the walker can be anything); falls back to the camera up when too few agree."""
+    cu = np.mean([np.array(c["R"]).T @ np.array([0.0, -1.0, 0.0]) for c in model["cameras"]], 0); cu /= np.linalg.norm(cu)
+    good = [g for g in gp if np.degrees(np.arccos(np.clip(g[0] @ cu, -1, 1))) < max_dev]
+    if len(good) >= 8:
+        up = np.median([g[0] for g in good], 0); up /= np.linalg.norm(up)
+    else:
+        up = cu
+    hs = [g[1] for g in good] if good else [g[1] for g in gp]
+    return up, float(np.median(hs)), len(good)
+
+
 def terrain_z(x, y):
     t = json.load(open(os.path.join(REPO, "Art", "Blender", "Data", "terrain.json")))
     c = t["base"]["coef"]; X, Y = x / 100.0, y / 100.0
@@ -174,8 +187,7 @@ def main():
             gp = ground_planes(sc, m)
             if len(gp) < 5:
                 print(f"{tag}: {len(gp)} ground planes, skipped"); continue
-            N = np.array([g[0] for g in gp]); up = np.median(N, 0); up /= np.linalg.norm(up)
-            h = np.median([g[1] for g in gp]); s = a.eye / h
+            up, h, ngood = robust_up(gp, m); s = a.eye / h
             Rl = rot_to_z(up)
             L = V @ Rl.T
             T = L[F]; n = np.cross(T[:, 1] - T[:, 0], T[:, 2] - T[:, 0]); ar = np.linalg.norm(n, axis=1); n = n / (ar[:, None] + 1e-12)

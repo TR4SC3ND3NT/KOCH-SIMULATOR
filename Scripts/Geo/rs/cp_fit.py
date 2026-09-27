@@ -3,7 +3,8 @@
 # corner at the ground from the BLD specs, a kerb corner from the orthophoto); the pixel ray is cast into the
 # component mesh to get the model point. Up and scale come from zone_world.py (ground planes, eye height) unless
 # --free (>= 3 points: full similarity). Writes <comp>/align.json and prints the residual per point.
-# cps.json: [{"cam": "070647586_f00255", "u": 1234, "v": 2100, "world": [x, y] or [x, y, z], "note": "C SE corner"}]
+# cps.json: [{"cam": "070647586_f00255", "u": 1234, "v": 2100, "world": [x, y] or [x, y, z], "note": "C SE corner",
+#             "ground": true (default: ray cut with the ground plane under the camera; false: ray cast into the mesh)}]
 # Usage: python cp_fit.py <comp_dir> cps.json [--eye 1.52] [--free] [--z-known]
 import argparse
 import json
@@ -27,7 +28,8 @@ def main():
     V = np.asarray(tm.vertices); F = np.asarray(tm.triangles)
     sc = o3d.t.geometry.RaycastingScene(); sc.add_triangles(o3d.core.Tensor(V.astype(np.float32)), o3d.core.Tensor(F.astype(np.uint32)))
     gp = zw.ground_planes(sc, m)
-    up = np.median([g[0] for g in gp], 0); up /= np.linalg.norm(up); h = float(np.median([g[1] for g in gp])); s = a.eye / h
+    up, h, ngood = zw.robust_up(gp, m); s = a.eye / h
+    print(f"up from {ngood} agreeing ground planes, camera height {h:.3f} units, scale {s:.4f} m/unit")
     Rl = zw.rot_to_z(up)
     cps = json.load(open(a.cps, encoding="utf-8-sig"))
     P, Wd, notes = [], [], []
@@ -35,7 +37,15 @@ def main():
         c = next(x for x in m["cameras"] if cp["cam"] in x["name"])
         d = np.array(c["R"]).T @ np.array([(cp["u"] - c["cx"]) / c["f"], (cp["v"] - c["cy"]) / c["fy"], 1.0]); d /= np.linalg.norm(d)
         o = np.array(c["center"])
-        t = sc.cast_rays(o3d.core.Tensor(np.concatenate([o, d])[None].astype(np.float32)))["t_hit"].numpy()[0]
+        if cp.get("ground", True):
+            # ground-level point: the ray meets the ground plane under this camera (normal = up, camera height h):
+            # robust where the mesh near the walker is hole-filled (masked people)
+            den = d @ up
+            if den >= -1e-6:
+                print("ray above the horizon:", cp.get("note", cp["cam"])); continue
+            t = -h / den
+        else:
+            t = sc.cast_rays(o3d.core.Tensor(np.concatenate([o, d])[None].astype(np.float32)))["t_hit"].numpy()[0]
         if not np.isfinite(t):
             print("miss:", cp.get("note", cp["cam"])); continue
         P.append(o + d * t); Wd.append(cp["world"]); notes.append(cp.get("note", cp["cam"]))
