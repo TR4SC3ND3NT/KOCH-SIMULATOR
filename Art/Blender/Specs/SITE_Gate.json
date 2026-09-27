@@ -647,5 +647,103 @@
    "evidence": "P1: Google z20 paved gap between Lawn_SouthWest and Lawn_SouthEast from the zebra's south end to the south footway (x 152.0-156.4); clip 20260925_012108212 f00878 reaches the zebra from it",
    "confidence": "medium"
   }
+ ],
+ "ground_surfaces": [
+  {
+   "name": "Carriageway",
+   "ring": [
+    [
+     88,
+     -107.508
+    ],
+    [
+     210,
+     -113.687
+    ],
+    [
+     210,
+     -128.487
+    ],
+    [
+     88,
+     -122.308
+    ]
+   ],
+   "slot": "M_Asphalt",
+   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484"
+  },
+  {
+   "name": "Forecourt",
+   "ring": [
+    [
+     136,
+     -103.6
+    ],
+    [
+     176,
+     -105.6
+    ],
+    [
+     176,
+     -111.965
+    ],
+    [
+     136,
+     -109.939
+    ]
+   ],
+   "slot": "M_Asphalt",
+   "evidence": "parking lanes outside the gate between the car noses and the north kerb (Google z20 asphalt; Street c2 frames f03347/f03470 asphalt lane)"
+  },
+  {
+   "name": "GateApron",
+   "ring": [
+    [
+     150.0,
+     -100.3
+    ],
+    [
+     157.3,
+     -100.6
+    ],
+    [
+     157.3,
+     -110.6
+    ],
+    [
+     150.0,
+     -110.3
+    ]
+   ],
+   "slot": "M_Paver_Clover_Grey",
+   "evidence": "paved apron in front of the gate and the booth to the zebra (crossing frames f00437/f00491: pavers meet the zebra)"
+  },
+  {
+   "name": "GateYard",
+   "ring": [
+    [
+     136,
+     -97.2
+    ],
+    [
+     161.6,
+     -98.5
+    ],
+    [
+     160.3,
+     -89.6
+    ],
+    [
+     147.3,
+     -81.4
+    ],
+    [
+     136,
+     -81.0
+    ]
+   ],
+   "slot": "M_Paver_Herringbone_Grey",
+   "evidence": "yard inside the gate, herringbone (alley clip 070309303 f00034, Gate c8 ground mosaic)"
+  }
  ]
 }

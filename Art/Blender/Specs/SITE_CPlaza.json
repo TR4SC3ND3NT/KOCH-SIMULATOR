@@ -515,5 +515,30 @@
    "evidence": "2026-09-27: row of benches and conifers on red-edged pits along the N end of A_N, seen from the C plaza in 081158036 f00006/f00199 (solved cameras; along-wall positions from ground-ray cuts, distance to the wall kept from the model because far ground rays are +-1.5 m)",
    "confidence": "low"
   }
+ ],
+ "ground_surfaces": [
+  {
+   "name": "CPlaza",
+   "ring": [
+    [
+     170,
+     -4.2
+    ],
+    [
+     205,
+     -5.6
+    ],
+    [
+     205,
+     -14
+    ],
+    [
+     170,
+     -14
+    ]
+   ],
+   "slot": "M_Paver_Herringbone_Grey",
+   "evidence": "plaza south of C, herringbone pavers (C_sw frames 061707849, 012436367; C_entr frames); south edge kept at y -14 (the hall and the Hall-C passage south of it are stream B)"
+  }
  ]
 }
