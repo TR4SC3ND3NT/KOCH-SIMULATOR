@@ -12,7 +12,7 @@ cap. "approx.", "in the model", "estimated" never count. Blockers: `BLOCKED: <re
 ## Pass grid (zone × pass; cell = commit when passed, `—` above the cap; P3 is done later in Unreal)
 | Zone (route order) | Stream | Cap | P0 | P1 | P2 |
 |---|---|---|---|---|---|
-| Street, bus stop, crossing (§12) | A | P2 | | |  |
+| Street, bus stop, crossing (§12) | A | P2 | open: route 93 % within 0.30 (3 bad runs = phone lowered at the clip end f03347 and the c3/c2 seam f01963, mesh ground flat); placed pieces c3, c2, c13 | P1 items S.1 (W), S.2, S.5 ticked |  |
 | Gate, booth, yard (§4 G.1-G.5) | A | P2 | | |  |
 | Alley B–A (§4 G.6-G.13) | A | P2 | | |  |
 | A_W gallery + plaza (§3) | A | P2 | | |  |
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [A] 2026-09-28: Street pass_check P0: 93 % of route samples within 0.30 m (limit 95 %); the misses are camera-height artefacts, not model errors (own look: f03347 phone lowered, f01963 seam between the c3 and c2 pieces). Grid row updated; not marked passed.
 - [A] 2026-09-28: C plaza west planter row moved ~1.0 m south (and 0.25-0.4 m west) to the C_entr c2 ground-mosaic positions: 5.3 m in front of the west-wing face (the older 061624280 ray-cast said 4.2 +-0.4); the C_entr pose is checked against the whole C facade (f00302), scale on the pavers. Own look f00570: planters on the red-edged pits.
 - [A] 2026-09-28: CORRECTION: the C stair tread change 0.332 -> 0.30 (c239dfe) is reverted - the C_F1 mesh scale comes from the eye height in a stairwell and its floor-to-floor spacing (6.05 m between the two floor planes) does not fit 2 x 3.30; riser/tread from that mesh are not evidence. Stair size added to the tape request.
 - [A] 2026-09-28: dead ends (do not retry): (1) FFT registration of the C_F1 interior mesh walls to the INT_C_F1 plan - all 4 yaws score 0.16, no peak; (2) comp_graph chained through the ALL-alignment components - Garden/AW pieces land with scale 0.01 and tilted up vectors (ALL false merges, as handoff 4.2 warns). C_F1 needs a manual anchor (stair foot + lobby wall).
