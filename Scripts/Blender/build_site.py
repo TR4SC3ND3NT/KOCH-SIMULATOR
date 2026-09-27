@@ -392,7 +392,7 @@ class Site:
         z = self.gz(P.x, P.y)
         h = el.get("height", 3.5)
         bm = bmesh.new()
-        _cyl(bm, P, 0.05, z - BURY, z + h, 10)
+        _cyl(bm, P, el.get("pole_r", 0.05), z - BURY, z + h, 10)
         if el.get("head", "ball") == "ball":
             bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=0.18,
                                       matrix=Matrix.Translation((P.x, P.y, z + h + 0.16)))
