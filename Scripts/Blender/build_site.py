@@ -17,6 +17,7 @@ from mathutils import Matrix, Vector
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from greybox.common import SPECS, Terrain, ensure_collection, load, make_object  # noqa: E402
+from greybox.materials import mat  # noqa: E402
 from greybox.kit import Opening, box, wall_piece  # noqa: E402
 from greybox.sweep import hedge_profile, rect_profile, sweep_profile  # noqa: E402
 
@@ -28,6 +29,33 @@ COL = {
     "glass": (0.40, 0.50, 0.55, 1), "low": (0.95, 0.55, 0.20, 1), "accent": (0.42, 0.52, 0.85, 1),
     "terrazzo": (0.80, 0.79, 0.76, 1), "granite": (0.52, 0.40, 0.38, 1),
 }
+
+
+SURFACE_SLOT = (("clover", "M_Paver_Clover_Grey"), ("herringbone", "M_Paver_Herringbone_Grey"), ("asphalt", "M_Asphalt"),
+                ("granite", "M_Granite_Red"), ("grating", "M_Steel_Grating"), ("terrazzo", "M_Terrazzo"))
+MATERIAL_SLOT = {"metal": "M_Steel_Paint_Dark", "stone": "M_Concrete_Precast", "brick": "M_Tile_Brick_Red",
+                 "granite": "M_Granite_Red", "hedge": "M_Hedge_Foliage", "wood": "M_Wood_Stained", "white": "M_Paint_White",
+                 "paint": "M_Paint_White", "glass": "M_Glass", "terrazzo": "M_Terrazzo", "accent": "M_Paint_Blue",
+                 "roof": "M_Sheet_Brown", "concrete": "M_Concrete", "wrought_iron": "M_Wrought_Iron"}
+TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concrete_Precast", "lamp": "M_Steel_Paint_Dark",
+             "lamp_orn": "M_Steel_Paint_Dark", "bench": "M_Wood_Stained", "roof_plane": "M_Paving_Generic",
+             "path": "M_Paving_Generic", "zebra": "M_Road_Paint_White", "wall": "M_Concrete", "fence": "M_Steel_Paint_Dark",
+             "stairs_run": "M_Granite_Red", "sign": "M_Sign_Panel", "bin": "M_Plastic_Grey", "bike_rack": "M_Steel_Galv",
+             "turnstile": "M_Steel_Galv", "gate_leaf": "M_Steel_Paint_Dark", "canopy": "M_Sheet_Brown", "slab": "M_Concrete",
+             "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark"}
+
+
+def site_slot(el):
+    """Material slot of a site element: explicit "slot", else its surface, else its material, else its type."""
+    if el.get("slot"):
+        return el["slot"]
+    srf = str(el.get("surface", "")).lower()
+    for key, slot in SURFACE_SLOT:
+        if key in srf:
+            return slot
+    if el.get("material") in MATERIAL_SLOT:
+        return MATERIAL_SLOT[el["material"]]
+    return TYPE_SLOT.get(el.get("type"), "M_Concrete")
 
 
 def rot2(deg):
@@ -70,6 +98,12 @@ class Site:
               "evidence": [el.get("evidence", "")] if el.get("evidence") else []}
         ob = make_object(self.name(el), bm, self.col, origin, it, color, gen=self.gen)
         ob["koch_confidence"] = el.get("confidence", "")
+        # P2 material slot (handoff 4a): one M_<Material>_<Finish> slot instead of the plain review colour; the
+        # object colour keeps the confidence flag (orange = low)
+        me = ob.data
+        if len(me.materials) == 1 and me.materials[0] and me.materials[0].name.startswith("VC_"):
+            me.materials[0] = mat(site_slot(el))
+            ob["koch_slot"] = me.materials[0].name
         return ob
 
     # ------------------------------------------------------------------ element builders

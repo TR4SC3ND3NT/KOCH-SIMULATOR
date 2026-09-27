@@ -7,6 +7,7 @@
 import json
 import math
 import os
+import re
 import sys
 
 import bmesh
@@ -58,6 +59,16 @@ def scale_spec(v, k, key=None):
     return v
 
 
+
+# part keyword (in the object name) -> default material slot; order matters (first match wins)
+PART_KEYS = ["Glass", "Win", "Sur", "Pilaster", "Plinth", "Slabs", "Roof", "Eave", "Gutter", "Downpipe", "Cornice",
+             "Entrance", "Door", "GalleryPosts", "Gallery", "Wall"]
+PART_SLOT = {"Glass": "M_Glass", "Win": "M_PVC_White", "Sur": "M_Paint_Maroon", "Pilaster": "M_Paint_Maroon",
+             "Plinth": "M_Tile_Brick_Red", "Slabs": "M_Concrete", "Roof": "M_Sheet_Red", "Eave": "M_PVC_Gutter_White",
+             "Gutter": "M_PVC_Gutter_White", "Downpipe": "M_PVC_Gutter_White", "Cornice": "M_Paint_Maroon",
+             "Entrance": "M_Alu_Black", "Door": "M_Alu_Black", "GalleryPosts": "M_Steel_Paint_Dark",
+             "Gallery": "M_Sheet_Brown", "Wall": "M_Render_Beige"}
+
 class Building:
     def __init__(self, spec, ter):
         k = float(spec.get("scale", 1.0))
@@ -105,7 +116,19 @@ class Building:
             color = COL["low"]
         ob = make_object(f"GBF_{self.id}_{name}", bm, self.col, None, it, color, gen=self.gen, matrix=self.M)
         ob["koch_confidence"] = confidence or ""
+        self._slot(ob.data, name)
         return ob
+
+    def _slot(self, me, name):
+        """P2 material slot (handoff 4a) for a single-colour part: spec "slots" {keyword: M_...} first, then the
+        default for the part keyword in its name; detail-kit parts already carry their own slots."""
+        if len(me.materials) != 1 or not me.materials[0] or not me.materials[0].name.startswith("VC_"):
+            return
+        own = self.s.get("slots", {})
+        for key in PART_KEYS:
+            if re.search(r"(^|_)" + key, name):
+                me.materials[0] = mat(own.get(key, PART_SLOT[key]))
+                return
 
     def obj_parts(self, name, parts, item_evidence=None, confidence=None):
         """Link one detail-kit element built from several material parts {material_name: bmesh}."""
@@ -399,6 +422,7 @@ class Building:
 
     def _link(self, name, me, matrix, color):
         ensure_slot(me, color)
+        self._slot(me, name)
         ob = bpy.data.objects.new(f"GBF_{self.id}_{name}", me)
         ob.matrix_world = matrix
         ob["koch_gen"] = self.gen

@@ -14,6 +14,13 @@ PALETTE = {
     "M_Steel_Grating": (0.30, 0.32, 0.34, 1), "M_Sign_Frame_White": (0.90, 0.90, 0.90, 1),
     "M_AC_Casing": (0.88, 0.88, 0.86, 1), "M_Plastic_White": (0.92, 0.92, 0.92, 1), "M_Lamp_Diffuser": (0.96, 0.95, 0.85, 1),
     "M_Alu_Grey": (0.60, 0.61, 0.62, 1), "M_Alu_Grey_Slats": (0.55, 0.56, 0.57, 1), "M_Wrought_Iron": (0.10, 0.10, 0.10, 1),
+    # site surfaces (build_site.py slots)
+    "M_Paver_Clover_Grey": (0.66, 0.65, 0.63, 1), "M_Paver_Herringbone_Grey": (0.64, 0.63, 0.61, 1),
+    "M_Paving_Generic": (0.62, 0.61, 0.59, 1), "M_Asphalt": (0.28, 0.28, 0.29, 1), "M_Road_Paint_White": (0.93, 0.93, 0.90, 1),
+    "M_Concrete_Precast": (0.66, 0.65, 0.61, 1), "M_Hedge_Foliage": (0.22, 0.38, 0.20, 1), "M_Tree": (0.30, 0.45, 0.25, 1),
+    "M_Soil_Mulch": (0.36, 0.28, 0.20, 1), "M_Wood_Stained": (0.42, 0.28, 0.17, 1), "M_Paint_White": (0.93, 0.93, 0.91, 1),
+    "M_Paint_Blue": (0.36, 0.48, 0.80, 1), "M_Terrazzo": (0.80, 0.79, 0.76, 1), "M_Plastic_Grey": (0.45, 0.46, 0.47, 1),
+    "M_Steel_Paint_YellowBlack": (0.85, 0.72, 0.10, 1),
 }
 
 
