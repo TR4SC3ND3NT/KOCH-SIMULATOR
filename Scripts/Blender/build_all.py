@@ -46,6 +46,8 @@ def main():
     bld = [f for f in files if f.startswith("BLD_")]
     site = [f for f in files if f.startswith(("SITE_", "INT_"))]  # INT_* = interiors, same element builder
     run("build_greybox.py")
+    if os.path.exists(os.path.join(os.path.dirname(SPECS), "Data", "ctx_osm.json")):
+        run("build_context.py")   # surroundings ring from OSM (P0 massing)
     if bld:
         run("build_facades.py", "KOCH_SPECS", bld)
     if site:
