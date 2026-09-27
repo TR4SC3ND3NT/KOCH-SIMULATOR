@@ -2,6 +2,27 @@
 
 For the teammate's PC and its Claude Code. It continues the R1 greybox (`Art/Blender/KOCH_Campus_Greybox.blend`) where the map owner's laptop stopped: that laptop has no NVIDIA GPU, so levels, stairs and platforms were estimated from single frames and are often wrong. **Goal:** one metric mesh of the site from the footage, then every element traced on it.
 
+## 0. Scope and definition of done (map owner, 2026-09-27; overrides any shorter list)
+**Scope:** the complete game map, production-ready as geometry in Blender. Unreal, materials, lighting and physics come later.
+1. **The whole campus**, every object that appears in the owner's footage or the web media: buildings (every facade, entrance, door, window, roof, dormer, gutter), interiors that were filmed, stairs, ramps, platforms, kerbs, paving and level changes, planters, trees, hedges, the garden with its arches and gazebos, alleys, paths, the gate and checkpoint, fences, parking, the fields and courts, benches, lamps, bins, signs, AC units and everything else visible.
+2. **The surroundings within ~500 m of the campus** (section 6): streets, sidewalks, crossings, bus/trolleybus stops, neighbouring buildings and high-rises, walls and fences, open ground.
+
+**How the object list is made:** never from a hard-coded list, including the order suggestions in this file. Walk through all footage (owner capture + web media, see ROUTE.md) and the satellite image, and write every object you can see into `docs/reference/r1_progress.md`, grouped by area. Add objects whenever you find new ones.
+
+**One object at a time, finished before the next:**
+1. collect every photo and frame that shows it, and analyse them;
+2. align those images in RealityScan and build the mesh (GPU queue);
+3. metric scale and world frame;
+4. read every size and level off the mesh;
+5. model at the detail standard (4a);
+6. overlay-check through at least 2 real solved cameras, detail by detail;
+7. fix, commit and push, then tick `[x]` with the commit hash.
+
+**Done rules:**
+- `approx.`, "already in the model" and "estimated" are NOT done: leave such items unticked.
+- A blocker (no footage, alignment impossible) is written next to the item as `BLOCKED: <reason>` and stays unticked. Also add a Russian photo request to `docs/reference/photo_requests.md`.
+- The map is finished only when `r1_progress.md` has no `[ ]` and no `approx.`, or only `BLOCKED` items with photo requests.
+
 ## 1. Get the data (never commit it: people in the frames)
 - **Repo:**
   - branch `feat/r1/greybox-zones`; `git lfs pull` for the `.blend`;
@@ -184,3 +205,20 @@ The owner wants the Blender result to look close to reality **as geometry**, not
 - **Block B.** Possibly 0.8 m further east (B–A gap 12.6 vs 13.43).
 - **Not built yet:** WC interiors (videos `075725091`, `075928860`, `075931189`) and classroom 203 (`074805359`).
 - Full lists: `docs/reference/photo_requests.md`, `docs/reference/campus.md`.
+
+## 6. Surroundings within ~500 m (context ring)
+The player sees the city around the campus from the gate, the street, the bus and upper floors. It must be at the right place, the right height and the right shape, but it does not need the campus's detail level.
+- **Footprints and heights:**
+  - OSM buildings in a 500 m buffer around the campus boundary. Use the Overpass API with `building` + `building:levels` / `height`; the world frame is in section 3 and `Art/Blender/Data/site_osm.json` (origin 42.8566 N, 74.6790 E).
+  - Where OSM has no levels: count floors in the owner's street videos, web photos and 2GIS photos, and on Google/Bing obliques (≈3.0 m per residential floor, plus the ground floor and a parapet).
+  - Put the list in `r1_progress.md` under "Surroundings" with the evidence for each building.
+- **Streets:** carriageways with the real lane count, kerbs, sidewalks, crossings with zebras, bus and trolleybus stops with shelters, trolleybus poles and wires, street lamps, trees, parking, fences and walls. The main street in front of the gate is already partly modelled (SITE_StreetFront, SITE_Gate).
+- **Buildings: reuse ready-made models instead of modelling each one.**
+  - Sources: Fab (free, Standard License, allowed in games), Poly Haven (CC0), BlenderKit free (Royalty-Free), Sketchfab CC0/CC-BY. Do not use CC-BY-NC or ND.
+  - Pick models that match the real type: Soviet-era 5- and 9-storey panel blocks, modern 12–16-storey residential towers, low shops and garages, the industrial halls to the north.
+  - Scale each model to the real footprint and floor count, and place and rotate it exactly on the OSM footprint.
+  - Record the source URL and licence of every asset in `docs/reference/asset_sources.md` (one line each).
+  - Remove real names, logos, signs and brands from the models (AGENTS.md → Lore).
+  - Where nothing fits, build a clean massing with window bands and floor lines from the photos.
+- **Detail by distance:** buildings the player can walk up to (along the gate street and the west street) get facades, entrances, balconies and ground-floor shops from the photos. Distant blocks get correct massing, roof shape, floor rhythm and colour zones only. Keep the polycount sane (instances for repeated blocks).
+- **Collections:** everything outside the campus goes into `CTX_*` collections so UE can stream and HLOD it separately.
