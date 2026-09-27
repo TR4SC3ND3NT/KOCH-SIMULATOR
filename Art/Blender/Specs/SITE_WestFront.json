@@ -1,0 +1,102 @@
+{
+ "id": "SITE_WestFront",
+ "collection": "05_Street",
+ "note": "D block frontage on the west street (web media only; approximate).",
+ "elements": [
+  {
+   "type": "fence",
+   "name": "DFront_Fence_0",
+   "line": [
+    [
+     -198.0,
+     12.0
+    ],
+    [
+     -198.0,
+     38.0
+    ]
+   ],
+   "height": 1.8,
+   "post_spacing": 3.0,
+   "post": 0.45,
+   "panel": "bars",
+   "bottom_gap": 0.4,
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "fence",
+   "name": "DFront_Fence_1",
+   "line": [
+    [
+     -198.0,
+     46.0
+    ],
+    [
+     -198.0,
+     76.0
+    ]
+   ],
+   "height": 1.8,
+   "post_spacing": 3.0,
+   "post": 0.45,
+   "panel": "bars",
+   "bottom_gap": 0.4,
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "gate_leaf",
+   "name": "DFront_SlidingGate",
+   "line": [
+    [
+     -198.0,
+     38.0
+    ],
+    [
+     -198.0,
+     44.0
+    ]
+   ],
+   "height": 1.9,
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DFront_Booth",
+   "center": [
+    -196.0,
+    45.6
+   ],
+   "dir_deg": 90.0,
+   "size": [
+    3.0,
+    3.0,
+    2.8
+   ],
+   "z0": 7.05,
+   "material": "stone",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DFront_BoothRoof",
+   "center": [
+    -196.0,
+    45.6
+   ],
+   "dir_deg": 90.0,
+   "size": [
+    3.6,
+    3.6,
+    0.3
+   ],
+   "z0": 9.85,
+   "material": "wood",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "confidence": "low"
+  }
+ ]
+}

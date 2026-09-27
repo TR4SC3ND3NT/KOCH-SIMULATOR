@@ -144,7 +144,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 
 ## 13. West campus and others (web media, satellite; zone to add from the web frames)
 - [x] W.1 Block D: massing, floors, entrance canopies, rooftop penthouse, roofs — approx., in the model (GB_BLD_D_M / D_W massing)
-- [ ] W.2 Block D frontage: ornate fence with stone-clad pillars and gate, second street gate with its booth and sliding gate, forecourt pavilions, blue-glass atrium
+- [x] W.2 Block D frontage: ornate fence with stone-clad pillars and gate, second street gate with its booth and sliding gate, forecourt pavilions, blue-glass atrium — approx. from web photos only: fence with stone pillars + sliding gate + booth along the W face of D (SITE_WestFront); pavilions and atrium not placed (positions unknown)
 - [x] W.3 Block E (behind the sports hall): facades, outdoor fire stair, grey annex — approx., in the model (GB_BLD_W1_Ext/Roof)
 - [x] W.4 Complex south of D: decide whether it is campus; massing if yes — approx., in the model (GB_BLD_SouthComplex massing)
 - [x] W.5 Picnic-shelter row by the west 4-storey block — BLOCKED: web only (west block), location not fixed; not modelled
