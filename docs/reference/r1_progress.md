@@ -250,14 +250,14 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [ ] CTX.Bway/877560915 yes, SE 143 m, 279 m², levels: count from photos — BLOCKED: not visible from any placed camera of the owner clips (campus blocks/trees in front, 2026-09-28 check); photo request «Окружение: фасады соседних зданий»
 
 ### Far buildings (150–500 m: massing, roof shape, floor rhythm, colour zones), grouped by direction
-- [ ] CTX.FAR_E 21 buildings E of the campus (1 with OSM levels, 20 to count from photos/obliques)
-- [ ] CTX.FAR_N 19 buildings N of the campus (1 with OSM levels, 18 to count from photos/obliques)
-- [ ] CTX.FAR_NE 27 buildings NE of the campus (1 with OSM levels, 26 to count from photos/obliques)
-- [ ] CTX.FAR_NW 29 buildings NW of the campus (0 with OSM levels, 29 to count from photos/obliques)
-- [ ] CTX.FAR_S 31 buildings S of the campus (3 with OSM levels, 28 to count from photos/obliques)
-- [ ] CTX.FAR_SE 65 buildings SE of the campus (22 with OSM levels, 43 to count from photos/obliques)
-- [ ] CTX.FAR_SW 27 buildings SW of the campus (1 with OSM levels, 26 to count from photos/obliques)
-- [ ] CTX.FAR_W 34 buildings W of the campus (1 with OSM levels, 33 to count from photos/obliques)
+- [ ] CTX.FAR_E 21 buildings E of the campus (1 with OSM levels, 20 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_N 19 buildings N of the campus (1 with OSM levels, 18 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_NE 27 buildings NE of the campus (1 with OSM levels, 26 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_NW 29 buildings NW of the campus (0 with OSM levels, 29 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_S 31 buildings S of the campus (3 with OSM levels, 28 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_SE 65 buildings SE of the campus (22 with OSM levels, 43 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_SW 27 buildings SW of the campus (1 with OSM levels, 26 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
+- [ ] CTX.FAR_W 34 buildings W of the campus (1 with OSM levels, 33 to count from photos/obliques) — BLOCKED: no owner clip shows them whole (campus blocks and trees in front); photo request «Окружение: фасады соседних зданий» (towers: one photo each)
 
 ### Streets and stops
 - [ ] CTX.ST Чолпон-Ата көчөсү: carriageway (lanes from photos), kerbs, sidewalks, lamps, trees, parking
