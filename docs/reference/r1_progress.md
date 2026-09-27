@@ -84,11 +84,11 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] G.4 Sliding gate leaves, fence panels and posts along the street — approx., in the model (GBS_Gate_SlidingGate/Fence/GatePost)
 - [ ] G.5 Yard inside the gate: clover pavers, drain gratings, benches, bins, bike racks, the 3 flagpoles, the decorative bicycle — approx., in the model (GBS_Gate_Bench/BikeRack/WheelieBin/Bed)
 - [ ] G.6 Alley B–A: tree row, concrete-edged hedges, kerbs, red lawn edging, yellow-painted kerbs — approx., in the model (GBS_GateAlley Alley/Curb/Lawn/BBed/PathHedge)
-- [ ] G.7 South wide stair from the gate down to the A corner — approx., in the model (GBS_GateAlley_SouthStair)
+- [ ] G.7 South wide stair from the gate down to the A corner — BLOCKED: riser height not measurable (Gate c8 mesh has no surface at the stair, no clip climbs it); tape request in photo_requests.md (Аллея B–A: высоты ступеней)
 - [ ] G.8 North stair at the end of the lawn (with rails) — approx., in the model (GBS_GateAlley_Steps/StairCoping)
 - [ ] G.9 Retaining wall with the granite parapet between the alley and the walkway along A — approx., in the model (GBS_GateAlley_RetWall/LawnCoping)
 - [ ] G.10 Grating ramp at the side stair opposite the lettering — approx., in the model (GBS_GateAlley_Ramp/RampRail)
-- [ ] G.11 A_S entrance pavilion (pitched roof, door, pilasters, steps) — approx., in the model (GBS_GateAlley_PavilionStair + GBF_BLD_A_S pavilion)
+- [ ] G.11 A_S entrance pavilion (pitched roof, door, pilasters, steps) — pavilion block found in the Gate c8 mesh (4 m out from the A_S face, used to place c8); stair BLOCKED: mesh empty under the porch (people masked), tape request in photo_requests.md
 - [ ] G.12 Pad at the foot of the south stair (A_S corner, drain grating) — approx., in the model (GBS_GateAlley_Landing)
 - [ ] G.13 Slope between the fence walkway (east of the booth) and A's south facade — approx., in the model (GBS_GateAlley_SouthBank)
 
