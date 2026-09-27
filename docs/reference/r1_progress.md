@@ -285,8 +285,8 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 
 ## 17. Objects added from the owner-footage inventory (2026-09-27, C:\koch\workiews\inventory_owner.md; sheets in views\inv)
 ### Street front
-- [ ] INV.ST.1 Pink-tinted clover-paver patches set into the grey sidewalk and forecourt : 065653194_s3, 065934318_s2
-- [ ] INV.ST.2 Storm-drain grating in the sidewalk against the parapet : 065653194_s1, 065653194_s2
+- [x] INV.ST.1 Pink-tinted clover-paver patches set into the grey sidewalk and forecourt : 065653194_s3, 065934318_s2 — [x] at the Blender cap e8c7646: surface colour/pattern only, nothing to model in Blender (handoff 4a «Leave to Unreal»: decal/material on the existing M_Paver/M_Paving slot)
+- [x] INV.ST.2 Storm-drain grating in the sidewalk against the parapet : 065653194_s1, 065653194_s2 — [x] at the Blender cap e8c7646: flush drain grating = decal on the sidewalk (handoff 4a «Leave to Unreal»)
 - [ ] INV.ST.3 Two A-frame sandwich-board signs with blue faces at the crossing pole : 065856484_s1, 065856484_s2
 - [ ] INV.ST.4 Two steel pyramid rebar tree guards on the pavement near the gate : 061913764_s2, 065856484_s1
 - [ ] INV.ST.5 Blue traffic sign on a post by the crossing (pedestrian-crossing sign) : 061913764_s2, 012108212_s1
@@ -327,14 +327,14 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 ### C plaza + exterior
 - [ ] INV.CX.1 Small "C" plate above the storefront : 070647586_s2, photos_p20260924_s1 (061431726, 061631264), zz_c_front2
 - [ ] INV.CX.2 Small ground flood-lamp boxes standing on the light-well cover, x2 : 081158036_s2
-- [ ] INV.CX.3 Parked cars east of C (a parking area) : 070647586_s1, zz_c_front, photos_p20260924_s1 (061621646, 061624280)
-- [ ] INV.CX.4 Brown/maroon boundary fence far east of C : 070647586_s1, zz_c_front
+- [x] INV.CX.3 Parked cars east of C (a parking area) : 070647586_s1, zz_c_front, photos_p20260924_s1 (061621646, 061624280) — [x] at the Blender cap e8c7646: parked cars are movable game props, not map geometry (the parking surfaces are modelled with their slots)
+- [ ] INV.CX.4 Brown/maroon boundary fence far east of C : 070647586_s1, zz_c_front — BLOCKED: outside every placed frame (west/north side of C); photo request «Корпус C: остальные фасады»
 - [ ] INV.CX.5 Overhead wires crossing over C and the plaza : 070647586_s1, 081158036_s1, 070629483_s1, zz_c_side
-- [ ] INV.CX.6 Wall vent grille on the C.12 box : photos_p20260925_s2 (012520140)
-- [ ] INV.CX.7 Black lamp post, blue spruce and yellow-kerbed lawn behind the west shed : photos_p20260925_s1 (012456258), photos_p20260925_s2 (012458018), zz_c_side
-- [ ] INV.CX.8 Second sunken basement stair with rails at the north end of the C west wall : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012526070)
-- [ ] INV.CX.9 White painted arrows on the paving west of C, x3 : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012507444)
-- [ ] INV.CX.10 Parked cars at the north end of the C west side : 070629483_s2
+- [x] INV.CX.6 Wall vent grille on the C.12 box : photos_p20260925_s2 (012520140) — [x] at the Blender cap e8c7646: flush wall vent grille = decal on the M_Tile_Brick_Red wall (handoff 4a)
+- [ ] INV.CX.7 Black lamp post, blue spruce and yellow-kerbed lawn behind the west shed : photos_p20260925_s1 (012456258), photos_p20260925_s2 (012458018), zz_c_side — BLOCKED: outside every placed frame (west/north side of C); photo request «Корпус C: остальные фасады»
+- [ ] INV.CX.8 Second sunken basement stair with rails at the north end of the C west wall : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012526070) — BLOCKED: outside every placed frame (west/north side of C); photo request «Корпус C: остальные фасады»
+- [x] INV.CX.9 White painted arrows on the paving west of C, x3 : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012507444) — [x] at the Blender cap e8c7646: surface colour/pattern only, nothing to model in Blender (handoff 4a «Leave to Unreal»: decal/material on the existing M_Paver/M_Paving slot)
+- [x] INV.CX.10 Parked cars at the north end of the C west side : 070629483_s2 — [x] at the Blender cap e8c7646: parked cars are movable game props, not map geometry (the parking surfaces are modelled with their slots)
 ### C interior (lobby, corridors, stairs, classroom, WC)
 - [ ] INV.CIN.1 Water cooler with a blue bottle : 070704360_s1, 080443026_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.2 Double wall socket by the cooler : 070704360_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
