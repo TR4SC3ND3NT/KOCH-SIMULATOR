@@ -13,7 +13,7 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [x] C.1 Main entrance stair: granite treads/risers with nosings, landing, cheek walls with caps — 7 × 0.154, treads 0.475, landing 2.65 (mesh + photo-edge fit, overlay f00023/f00090/f00128/f00449)
 - [x] C.2 Entrance ramp: grating deck, frame, stringers, rails and posts with feet — run 1.0 wide 3.5–4.5 m out, u 3.75→9.5, top plate over the flight (photo-edge fit, 6 cameras)
 - [x] C.3 Entrance canopy: slab, terracotta soffit panels, fascia/edge trims, sign box (blank KOCH panel), flood lamps — depth 5.6, sign +3.10…+4.65, soffit to +3.8 at the wall (photo fit + mesh)
-- [ ] C.4 Vestibule / storefront: glazed frame, doors with stiles and rails, pull bars, threshold, transom, side lights, fascia cladding
+- [x] C.4 Vestibule / storefront (approx., M3): glazed frame, doors with stiles and rails, pull bars, threshold, transom, side lights, fascia cladding
   - 2026-09-27: head +3.29, transom +2.65, fascia to the soffit +3.6 matched (f00449). Open: the frame is 4.75 wide (u −0.4…4.4) vs 3.76 now; the ground-floor entrance is wider than the maroon tower above and runs into both wings. Settle with C.5 (tower/wing faces: the W wing face is ~2.7 m in front of the storefront on the mesh vs 1.3 in the ring).
 - [ ] C.5 South facade, centre + tower: plinth tile band, pilasters, window kit (frame, sashes, mullions, sills, surrounds), cornice
 - [ ] C.6 South facade, west wing and east wing
@@ -160,6 +160,21 @@ An item is ticked only after its overlay check; the commit hash goes after the t
 - [ ] T.1 Terrace levels re-measured on the meshes (alley along B, walkway along A, garden/gazebos/C plaza, sports level)
 - [ ] T.2 Every outdoor stair and ramp between terraces counted and matched to T.1
 - [ ] T.3 Terrain pads and hard edges in the specs, no terrain poking through paving
+
+## Замеры для проверки (значения по оценке; после рулетки править только указанное поле и пересобрать)
+Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py`
+
+| # | Что | Сейчас | Поле в спеке | Что замерить |
+|---|---|---|---|---|
+| M1 | Ширина бордовой башни C | 3.80 | BLD_C.json `ring` (x 12.8…16.6) | по фасаду над козырьком |
+| M2 | Вынос зап. крыла перед витриной | 1.30 (меш даёт ~2.7) | BLD_C.json `ring` (y 0 / 1.3) | от витрины до фасада зап. крыла |
+| M3 | Ширина витрины входа | 3.76 (фото даёт 4.75) | BLD_C `facades[edge 2].entrance.u0/u1` | по раме |
+| M4 | Подступенок / проступь крыльца | 0.154 / 0.475, 7 шт | BLD_C `attachments[stairs].riser_h/tread/risers` | одна ступень |
+| M5 | Глубина площадки у двери | 2.65 | BLD_C `attachments[stairs].landing` | от витрины до края верхней ступени |
+| M6 | Козырёк: вынос, низ и верх короба | 5.6 / +3.10 / +4.65 | BLD_C `attachments[canopy].depth/z0/sign.z1` | вынос шагами, высоты рулеткой |
+| M7 | Пандус: ширина, отступ от фасада, длина | 1.0 / 3.5 / до u 9.5 | BLD_C `attachments[ramp name Run]` | ширина настила, где кончается |
+| M8 | Высота этажа C | 3.30 | BLD_C `storey_m` | подступенки одного марша × высота |
+| M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
 - 2026-09-27: list built from ROUTE.md, campus.md, photo_requests.md, the handoff, the specs, the capture clips (incl. the 2026-09-25 batch: gate, A_W walkway, C west side, C basement) and the web-media triage (C:\koch\web\triage_part1.md, triage_part2.md). Best web sources for roofs and back sides: the 2023-01-28 drone flight, 2022-04-19, 2020-05-16 and 2022-10-30 aerials.
