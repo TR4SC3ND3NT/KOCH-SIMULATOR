@@ -29,11 +29,13 @@ missing step, a mis-registered camera that scores well).
 |---|---|---|---|---|
 | P0 frame | one world frame for all zones; every object as a box/massing at its place; every terrace level and level change from the routes (0a); the ring as OSM footprints × floors | campus ±0.30 m, ring ±2 m | satellite/mesh orthophoto, OSM, web drone/aerials, all walking clips (camera paths) | REG ≤ 0.30 m between zones (route_profile.py), control corners ≤ 0.30 m (rs_world.py fit), route_check `--tol 0.30` ≥ 95 %, every list object present |
 | P1 blockout | true outlines, heights and roof masses; every stair with its riser count, every single step, ramp and kerb > 0.10 m; gazebos (plan, post count, heights), hedge blocks, planters; interiors as rooms + stairs; ring: ready-made models fitted to footprint and floor count | levels ±0.07 m (< half a riser), plan ±0.15 m | mesh sections (mesh_section.py plan/profile), wide solved cameras (`pick_cams --dist 8,80`), route event frames | route_check `--tol 0.07` ≥ 95 %; riser counts = event frames; overlay_compose median ≤ 8 px on 2 cameras per object |
-| P2 greybox | every feature ≥ 0.10 m: doors and windows (mesh_section facade), reveals, cheek walls, rails, benches, lamps and bins as kit pieces, kerb sections, interior doors, radiators, stair balustrades; ring near: facades, entrances, balconies | ±0.04 m | medium cameras (`--dist 2,15`), web photos of the object | route_check `--tol 0.04` on mesh-eye clips; overlay median ≤ 3 px, p90 ≤ 8 px on ≥ 2 cameras; counts (posts, bars, windows, steps) match |
-| P3 detail | section 4a: real profiles down to ~1 cm, modular kit | ~0.01-0.02 m | close cameras and stills (`--dist 0,5`), owner screenshots | overlay median ≤ 2 px on the closest cameras; the owner's screenshot viewpoints match |
+| P2 greybox (last pass in Blender) | every feature ≥ 0.10 m: doors and windows (mesh_section facade), reveals, cheek walls, rails, kerb sections, interior doors, radiators, stair balustrades; the **unique modules** with their real sections (section 4a); generic props as placeholders; a material slot on every surface (4a); ring near: facades, entrances, balconies | ±0.04 m | medium cameras (`--dist 2,15`), web photos of the object | route_check `--tol 0.04` on mesh-eye clips; overlay median ≤ 3 px, p90 ≤ 8 px on ≥ 2 cameras; counts (posts, bars, windows, steps) match |
+| P3 detail (**in Unreal**, not in this job) | surface relief from materials (Nanite displacement: brick, joints, render, pavers, corrugation), decals (dirt, cracks, stains), Fab/Megascans props swapped in for the placeholders, colours sampled from the photos per material slot | ~0.01 m look | close cameras, owner screenshots | UE screenshot vs photo from the same solved camera; 60 fps budget (AGENTS.md) |
 
-**Depth cap** (last pass per zone): the whole campus P3 (it is all playable); Block D/E and the west campus P2
-(web media only); ring ≤ 150 m P2; ring > 150 m P1.
+**Depth cap in Blender** (owner, 2026-09-27): P2 for the whole campus, Block D/E and the ring ≤ 150 m; P1 for the
+ring > 150 m. **P3 is done in Unreal** with materials, decals and ready-made assets: it is faster there and looks more
+real than hand-modelling every centimetre (Nanite displacement tessellates only where the screen needs it). So this
+Blender job is finished at P2; do not model sub-10 cm relief that a material or decal gives.
 
 **Order inside a pass:** the player's route first, then outward: street + bus stop + crossing → gate + booth →
 alley B–A → A_W gallery → C plaza → C exterior → C interior → **C basement** → hall–C passage → garden → sports →
@@ -53,6 +55,10 @@ not align are camera-matched to the model (known sizes: storey 3.30, door 0.99 �
 - **Finished** = every zone at its cap and no open item except BLOCKED ones with photo requests.
 
 ### Loop (each iteration)
+**Model every iteration; never wait for the world frame (owner, 2026-09-27: "a whole day, zero progress").** Each
+zone's own mesh is metric inside the zone: take levels, step counts and sizes from it now and place the zone on the map
+by the satellite ortho (±0.5 m) until the stitching is done; then only shift whole zones. Every iteration changes the
+.blend and is committed; stitching and GPU jobs run in the background.
 1. Read the grid → the lowest open pass → the first zone in route order that has not passed it.
 2. Run the zone's checks (one command, short summary) and do your own review of the frames and overlays → fix what
    fails in the specs/generators → rebuild → re-check both.
@@ -209,44 +215,39 @@ RealityScan is free for students and under $1M revenue: realityscan.com, Epic ac
 - **Keep going on your own** until "Finished" (section 0). Stop only for a real blocker on every remaining item; then
   write the photo requests and say so in 2 lines.
 
-## 4a. Detail standard: real modelled structure, not boxes (the owner's hard requirement)
-The owner wants the Blender result to look close to reality **as geometry**, not a blockout. Model every element as it is built in reality, down to the smallest part with visible relief (about 1 cm or more). This is the P3 standard: an element gets it only after every zone has passed P2 (section 0).
+## 4a. Detail standard in Blender (P2): real structure for the unique parts, slots for the rest
+Blender delivers the true shape, size and position of everything, and real modelled sections for the parts that no
+ready-made asset can match. Surface relief and generic props come in Unreal (P3, section 0).
 
-### What to model as real geometry
-- **Walls:**
-  - real thickness, window and door reveals;
-  - plinth bands and cornices with their true profiles (steps, drips, chamfers);
-  - pilasters, expansion joints, parapets and copings.
-- **Windows:**
-  - outer frame, sashes and mullions with real sections;
-  - glass set back in the frame;
-  - the exterior sill with its slope and drip;
-  - surrounds as separate profiled pieces.
-- **Doors:**
-  - frame, leaf with stiles, rails and glass panes;
-  - handles or pull bars, thresholds, transoms;
-  - hinges where visible.
-- **Stairs:**
-  - each step: tread, riser, nosing/chamfer, stone joints where they are relief;
-  - cheek walls and their caps;
-  - handrails and balustrades with posts, rails, bars, end curls and wall brackets.
-- **Ramps:** grating deck, frame and stringers, rails, posts with feet.
-- **Ground:**
-  - every kerb with its section (chamfer or round), painted kerbs as separate pieces;
-  - planter and tree-pit rims, drains and manhole covers, paving level changes;
-  - bank slopes and retaining walls with copings.
-- **Roofs:**
-  - corrugated or standing-seam sheets as real ribs where visible up close;
-  - ridge caps, fascia boards, gutters with hangers, downpipes with elbows and shoes;
-  - dormers with their own roofs;
-  - snow guards and flashing.
-- **Canopies and galleries:** posts with bases and caps, beams, soffit panels, edge trims.
-- **Fittings:** AC units with brackets, lamps (pole, arms, lantern), benches (frame, slats), bins, signs (panel and posts; blank KOCH panels), cameras, floodlights, fences (posts, rails, mesh panels, gates with hinges).
-- **Interiors (Block C):** skirting, door frames, ceiling grid with LED panels, bulkheads, radiators with pipes, stair balustrades, WC stalls, sinks, cisterns.
+### Model as real geometry (unique to this campus)
+- **Walls:** real thickness, window and door reveals; plinth bands and cornices with their true profiles; pilasters,
+  expansion joints, parapets and copings.
+- **Windows and doors:** frames, sashes, mullions, leaves with stiles and rails, glass set back, sills with their slope,
+  surrounds, thresholds, transoms (as a modular kit: one mesh + instances per type).
+- **Stairs and ramps:** each step (tread, riser, nosing), cheek walls with caps, handrails and balustrades with posts,
+  rails, bars and brackets; ramp decks, frames, rails.
+- **Ground:** every kerb with its section, planter and tree-pit rims, retaining walls with copings, paving level
+  changes, bank slopes.
+- **Roofs:** hips, ridges, eaves, fascia boards, gutters and downpipes, dormers with their own roofs.
+- **Canopies, galleries, gazebos, pergolas, arches, the gate canopy, the booth, fences with their real bays.**
+- **Interiors (Block C):** walls, openings, door frames, stairs with balustrades, ceiling steps and bulkheads, fixed
+  fittings (radiators, WC stalls, sinks) as simple true-size shapes.
 
-### What stays material (for UE, not geometry)
-- Surface texture: brick-tile pattern, render roughness, paver pattern, stone grain, dirt.
-- If a pattern has real depth (deep mortar joints, corrugation seen close), model it; otherwise leave it to materials and decals.
+### Leave to Unreal (P3)
+- **Surface relief and texture:** brick-tile pattern, mortar joints, render roughness, paver pattern, stone grain,
+  corrugation ribs, dirt, stains, cracks: materials with Nanite displacement and decals.
+- **Generic props:** bins, generic lamps, AC units, CCTV, floodlights, sign posts, bike racks, benches of a common
+  type, vegetation. In Blender they are simple placeholders at the true position, size and orientation, with a custom
+  property `koch_ue_asset = "<type>"` (e.g. `bin_wrought_iron`, `street_lamp_curved`, `ac_unit`) so UE swaps them for
+  Fab/Megascans assets. Props that are unique to the campus (the decorative bicycle, the gazebo lanterns) are modelled.
+
+### Material slots (every surface, from P2)
+- Every face gets a material slot from `Scripts/Blender/greybox/materials.py` (`M_<Material>_<Finish>`, e.g.
+  `M_Render_Beige`, `M_Tile_Brick_Red`, `M_Granite_Red`, `M_Sheet_Red`). Add new names to its PALETTE when a real
+  material is missing; one name per real material, used everywhere it occurs. The site/zone builders must use these
+  slots too (not only build_facades.py); no plain colour materials in the delivered file.
+- Choose the slot from the footage while modelling (what the surface really is). UE maps each slot to a PBR material
+  and samples its base colour from the photos through the solved cameras.
 
 ### Rules for the geometry
 - True-scale metres, with the real construction logic: parts join as they do in reality, with no floating and no interpenetrating slabs.
@@ -256,11 +257,11 @@ The owner wants the Blender result to look close to reality **as geometry**, not
 - Nanite handles dense meshes in UE, so detail is fine. Still, no hidden or internal faces, and no micro-geometry where a material works.
 - Put everything through the spec/generator pipeline, extending the builders with new element types and profiles, so it rebuilds. Hand-modelled one-offs are acceptable only for unique pieces; keep them in their own collection with a note.
 
-### Per-element loop in P3
+### Per-element loop for the unique modules (P2)
 1. Collect the close cameras and stills that show the element (`pick_cams.py --dist 0,5`, ROUTE.md, web photos).
 2. Measure on the mesh (mesh_section.py) and check against known sizes: storey 3.30, door 0.99 × 2.05, risers, pavers.
-3. Model it at the detail standard above.
-4. Check: sfm_overlay.py + overlay_compose.py through ≥ 2 real cameras (median ≤ 2 px), and look at the composites
+3. Model it at the detail standard above, with its material slots.
+4. Check: sfm_overlay.py + overlay_compose.py through ≥ 2 real cameras (median ≤ 3 px), and look at the composites
    yourself: edges, heights and counts (steps, posts, bars, windows). Fix and repeat until both agree.
 5. Also check from the owner's screenshot viewpoint if they marked that spot. Commit.
 

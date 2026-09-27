@@ -9,28 +9,28 @@ cap. "approx.", "in the model", "estimated" never count. Blockers: `BLOCKED: <re
 - **Sources:** the owner's capture (`C:\koch\alatoo-capture\raw`, frames in `C:\koch\work\frames_a`, clip ids `PXL_2026092x_<id>`), web media (`C:\koch\web`), satellite orthos (`alatoo-capture/data/ortho`). Meshes, frames, masks and photos stay outside git.
 - **Levels:** `route_profile.py` over all zones → `route_check.py` (handoff 0a).
 
-## Pass grid (zone × pass; cell = commit when passed, `—` above the cap)
-| Zone (route order) | Cap | P0 | P1 | P2 | P3 |
-|---|---|---|---|---|---|
-| Street, bus stop, crossing (§12) | P3 | | | | |
-| Gate, booth, yard (§4 G.1-G.5) | P3 | | | | |
-| Alley B–A (§4 G.6-G.13) | P3 | | | | |
-| A_W gallery + plaza (§3) | P3 | | | | |
-| C plaza + exterior (§1) | P3 | | | | |
-| C interior F1-F5 (§2 CI.1-CI.8) | P3 | | | | |
-| C basement (§2 CI.9, §1 C.12) | P3 | | | | |
-| Hall–C passage (§5) | P3 | | | | |
-| Garden (§6) | P3 | | | | |
-| Sports fields (§7) | P3 | | | | |
-| Sports hall, canteen (§8, §9) | P3 | | | | |
-| Block B (§10) | P3 | | | | |
-| Block A (§11) | P3 | | | | |
-| Terrain + levels (§15) | P3 | | | | |
-| West campus D/E (§13) | P2 | | | | — |
-| Ring ≤ 150 m + streets/stops (§16) | P2 | | | | — |
-| Ring > 150 m (§16 far) | P1 | | | — | — |
+## Pass grid (zone × pass; cell = commit when passed, `—` above the cap; P3 is done later in Unreal)
+| Zone (route order) | Cap | P0 | P1 | P2 |
+|---|---|---|---|---|
+| Street, bus stop, crossing (§12) | P2 | | |  |
+| Gate, booth, yard (§4 G.1-G.5) | P2 | | |  |
+| Alley B–A (§4 G.6-G.13) | P2 | | |  |
+| A_W gallery + plaza (§3) | P2 | | |  |
+| C plaza + exterior (§1) | P2 | | |  |
+| C interior F1-F5 (§2 CI.1-CI.8) | P2 | | |  |
+| C basement (§2 CI.9, §1 C.12) | P2 | | |  |
+| Hall–C passage (§5) | P2 | | |  |
+| Garden (§6) | P2 | | |  |
+| Sports fields (§7) | P2 | | |  |
+| Sports hall, canteen (§8, §9) | P2 | | |  |
+| Block B (§10) | P2 | | |  |
+| Block A (§11) | P2 | | |  |
+| Terrain + levels (§15) | P2 | | |  |
+| West campus D/E (§13) | P2 | | |  |
+| Ring ≤ 150 m + streets/stops (§16) | P2 | | |  |
+| Ring > 150 m (§16 far) | P1 | | | — |
 
-The ticks below from before 2026-09-27 (C.1-C.3) were fitted before the world frame was fixed: they count as P3 only
+The ticks below from before 2026-09-27 (C.1-C.3) were fitted before the world frame was fixed: they count as P2 only
 after the C zone passes P0 and P1 with them unchanged.
 
 ## 1. Block C, exterior (zones `C_entr` done, `C_sw`)
