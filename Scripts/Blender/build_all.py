@@ -52,6 +52,9 @@ def main():
         run("build_facades.py", "KOCH_SPECS", bld)
     if site:
         run("build_site.py", "KOCH_SITE", site)
+    sys.path.insert(0, HERE)
+    from greybox.materials import assign_name_slots
+    print("material slots by name:", assign_name_slots(bpy.data.objects))
     ok = validate()
     # detail-kit parts carry several material slots: show material colours in every 3D view and in Workbench
     for scr in bpy.data.screens:

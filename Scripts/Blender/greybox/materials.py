@@ -20,8 +20,40 @@ PALETTE = {
     "M_Concrete_Precast": (0.66, 0.65, 0.61, 1), "M_Hedge_Foliage": (0.22, 0.38, 0.20, 1), "M_Tree": (0.30, 0.45, 0.25, 1),
     "M_Soil_Mulch": (0.36, 0.28, 0.20, 1), "M_Wood_Stained": (0.42, 0.28, 0.17, 1), "M_Paint_White": (0.93, 0.93, 0.91, 1),
     "M_Paint_Blue": (0.36, 0.48, 0.80, 1), "M_Terrazzo": (0.80, 0.79, 0.76, 1), "M_Plastic_Grey": (0.45, 0.46, 0.47, 1),
-    "M_Steel_Paint_YellowBlack": (0.85, 0.72, 0.10, 1),
+    "M_Steel_Paint_YellowBlack": (0.85, 0.72, 0.10, 1), "M_Shingle_Brown": (0.36, 0.24, 0.20, 1),
+    "M_Context_Facade": (0.70, 0.68, 0.64, 1), "M_Context_Roof": (0.45, 0.33, 0.28, 1),
 }
+
+# object-name keyword -> slot for parts still on a plain review colour after all builders ran (attachments, P0/P1
+# massing, the context ring); first match wins, matched case-insensitively
+NAME_SLOTS = [("ctx", "_roof", "M_Context_Roof"), ("ctx", "", "M_Context_Facade"),
+              ("ac_units", "", "M_AC_Casing"), ("porchpiers", "", "M_Tile_Brick_Red"), ("porchroof", "", "M_Shingle_Brown"),
+              ("sign", "", "M_Sign_Panel"), ("glazedporch_canopy", "", "M_Sheet_Brown"), ("glazedporch", "", "M_Glass"),
+              ("canopy", "", "M_Sheet_Brown"), ("lightwellcover", "", "M_Sheet_Red"), ("dancehallentry", "", "M_Tile_Brick_Red"),
+              ("dormers", "", "M_Sheet_Red"), ("westshed", "", "M_Sheet_Red"), ("_roof", "", "M_Sheet_Red"),
+              ("gb_", "", "M_Render_Beige")]
+
+
+def assign_name_slots(objects):
+    """Replace the single plain review colour (VC_*) of every remaining mesh, or give an empty mesh its slot, from its
+    name (NAME_SLOTS); returns how many objects got a slot."""
+    n = 0
+    for ob in objects:
+        if ob.type != "MESH":
+            continue
+        me = ob.data
+        if len(me.materials) > 1 or (len(me.materials) == 1 and me.materials[0] and not me.materials[0].name.startswith("VC_")):
+            continue
+        low = ob.name.lower()
+        for a, b, slot in NAME_SLOTS:
+            if a in low and b in low:
+                if me.materials:
+                    me.materials[0] = mat(slot)
+                else:
+                    me.materials.append(mat(slot))
+                n += 1
+                break
+    return n
 
 
 def mat(name):
