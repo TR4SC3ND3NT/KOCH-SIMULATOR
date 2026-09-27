@@ -52,7 +52,14 @@
     "h": 0.55,
     "material": "brick"
    },
-   "post_material": "white"
+   "post_material": "white",
+   "slots": {
+    "Roof": "M_Shingle_Brown",
+    "Trim": "M_Paint_White",
+    "PostBase": "M_Concrete",
+    "Posts": "M_Paint_White",
+    "Soffit": "M_Wood_Stained"
+   }
   },
   {
    "type": "gate_leaf",

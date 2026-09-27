@@ -1136,7 +1136,10 @@
    "z1": 6.18,
    "material": "metal",
    "evidence": "flat grating landing over the lowest treads, top rail level 0.9 above it on 3 posts; 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slots": {
+    "Landing": "M_Steel_Grating"
+   }
   },
   {
    "type": "roof_plane",
