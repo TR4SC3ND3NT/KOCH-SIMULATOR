@@ -521,7 +521,7 @@
    "name": "CPlaza",
    "ring": [
     [
-     170,
+     172,
      -4.2
     ],
     [
@@ -530,15 +530,15 @@
     ],
     [
      205,
-     -14
+     -20.6
     ],
     [
-     170,
-     -14
+     172,
+     -20.4
     ]
    ],
    "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "plaza south of C, herringbone pavers (C_sw frames 061707849, 012436367; C_entr frames); south edge kept at y -14 (the hall and the Hall-C passage south of it are stream B)"
+   "evidence": "plaza between C (south face y -4) and A_N (north face y -20.2), herringbone pavers (C_sw frames 061707849, 012436367; Google z20 paved light area); west edge x 172 (the Hall-C passage west of C is stream B)"
   }
  ]
 }
