@@ -12,7 +12,7 @@ cap. "approx.", "in the model", "estimated" never count. Blockers: `BLOCKED: <re
 ## Pass grid (zone × pass; cell = commit when passed, `—` above the cap; P3 is done later in Unreal)
 | Zone (route order) | Stream | Cap | P0 | P1 | P2 |
 |---|---|---|---|---|---|
-| Street, bus stop, crossing (§12) | A | P2 | open: route 93 % within 0.30 (3 bad runs = phone lowered at the clip end f03347 and the c3/c2 seam f01963, mesh ground flat); placed pieces c3, c2, c13 | P1 items S.1 (W), S.2, S.5 ticked |  |
+| Street, bus stop, crossing (§12) | A | P2 | open: route 94.x % within 0.30 after the tilt filter (3 bad runs = phone lowered at the clip end f03347 and the c3/c2 seam f01963, mesh ground flat); placed pieces c3, c2, c13 | P1 items S.1 (W), S.2, S.5 ticked |  |
 | Gate, booth, yard (§4 G.1-G.5) | A | P2 | | |  |
 | Alley B–A (§4 G.6-G.13) | A | P2 | | |  |
 | A_W gallery + plaza (§3) | A | P2 | | |  |
