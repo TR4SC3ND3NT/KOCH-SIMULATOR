@@ -476,6 +476,18 @@
      "confidence": "medium",
      "w_knee": 1.75,
      "w0": 1.3
+    },
+    {
+     "name": "EastCheek",
+     "u0": 3.75,
+     "u1": 4.25,
+     "w0": 0.0,
+     "w_knee": 1.75,
+     "w1": 4.9,
+     "z_wall": -0.06,
+     "z_out": -0.82,
+     "confidence": "medium",
+     "evidence": "[B] owner 2026-09-28 + 070647586 t6.8/t7.4: brick-tile cheek with a granite cap on the stair's east side too, like the west one but from the tower/east-wing face (base 1.3 m longer at the wall, 0.3 m longer at the plaza); top kept 6 cm under the landing so the steel ramp deck starting over it (Top/Run) stays clear"
     }
    ],
    "nosing": 0.02,

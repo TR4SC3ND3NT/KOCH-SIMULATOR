@@ -1824,46 +1824,6 @@
   },
   {
    "type": "box",
-   "name": "F1_Banner_0",
-   "center": [
-    189.3,
-    -2.0
-   ],
-   "dir_deg": 0,
-   "size": [
-    0.8,
-    0.3,
-    2.0
-   ],
-   "z0": 6.4,
-   "material": "accent",
-   "slot": "M_Sign_Panel",
-   "ue_asset": "pullup_banner",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): blue/yellow pull-up banner in the lobby",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "F1_Banner_1",
-   "center": [
-    186.9,
-    -2.1
-   ],
-   "dir_deg": 0,
-   "size": [
-    0.8,
-    0.3,
-    2.0
-   ],
-   "z0": 6.4,
-   "material": "accent",
-   "slot": "M_Sign_Panel",
-   "ue_asset": "pullup_banner",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): second pull-up banner",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
    "name": "F1_FireHose_W",
    "center": [
     178.250516,
