@@ -42,7 +42,7 @@
     "material": "dark brown painted steel/timber"
    },
    "notes": "across_flats = post-centre octagon (builder convention). Eave (fascia bottom) = 2.77 m; apex ~5.0 m at 25 deg. Pier/parapet: red brick-effect tile (2026; plain maroon paint in 2020), white render posts with dark-brown capital band ~0.12 m.",
-   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (116.95,-26.75) minus north lean 0.18 m/m (Google B roof edge 1.3-1.7 m N of the Bing footprint) averaged with Bing 2021 (116.6,-26.6), then both gazebos snapped symmetric on the -2.8 deg campus grid (moves each <=0.35 m). Orientation from the 2020 pano: C block (4 fl.) at pano yaw 54-59 = bearing 58-63 from here -> pano yaw offset +4 deg -> a post (vertex) points grid-N, openings face bearings 160/205; confirmed by the SSE path on Google z20 (bearing 161.6, radial) and the N path at x=117.4 hitting the N vertex. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)",
+   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (116.95,-26.75) minus north lean 0.18 m/m (Google B roof edge 1.3-1.7 m N of the Bing footprint) averaged with Bing 2021 (116.6,-26.6), then both gazebos snapped symmetric on the -2.8 deg campus grid (moves each <=0.35 m). Orientation from the 2020 pano: C block (4 fl.) at pano yaw 54-59 = bearing 58-63 from here -> pano yaw offset +4 deg -> a post (vertex) points grid-N, openings face bearings 160/205; confirmed by the SSE path on Google z20 (bearing 161.6, radial) and the N path at x=117.4 hitting the N vertex. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)",
    "confidence": "medium",
    "eave_h": 2.74
   },
@@ -79,7 +79,7 @@
     "material": "dark brown painted steel/timber"
    },
    "notes": "across_flats = post-centre octagon (builder convention). Eave (fascia bottom) = 2.77 m; apex ~5.0 m at 25 deg. Pier/parapet: red brick-effect tile (2026; plain maroon paint in 2020), white render posts with dark-brown capital band ~0.12 m.",
-   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (145.2,-28.8, NE half hidden by trees) lean-corrected + Bing (145.0,-28.9), snapped symmetric to Gazebo_1. Same design as Gazebo_1 (2026 videos 081918134/081924271 walk in through its SSE opening from the SE landing). Rotation +7.3 deg vs Gazebo_1 inferred from its two radial paths on Google z20 (least-squares SSE bearing 151.5 -> 28.5; noisy SSW ~200 -> 25; vs Gazebo_1 159.4/205) -> confidence low on rot_deg. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)",
+   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (145.2,-28.8, NE half hidden by trees) lean-corrected + Bing (145.0,-28.9), snapped symmetric to Gazebo_1. Same design as Gazebo_1 (2026 videos 081918134/081924271 walk in through its SSE opening from the SE landing). Rotation +7.3 deg vs Gazebo_1 inferred from its two radial paths on Google z20 (least-squares SSE bearing 151.5 -> 28.5; noisy SSW ~200 -> 25; vs Gazebo_1 159.4/205) -> confidence low on rot_deg. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)",
    "confidence": "medium",
    "eave_h": 2.74,
    "sign_post": 3
@@ -108,8 +108,8 @@
    "name": "Hedge_G1_N_L",
    "line": [
     [
-     116.182,
-     -20.748
+     116.21,
+     -20.19
     ],
     [
      116.68,
@@ -148,8 +148,8 @@
    "name": "Hedge_G1_N_R",
    "line": [
     [
-     118.28,
-     -20.85
+     118.307,
+     -20.293
     ],
     [
      118.778,
@@ -207,8 +207,8 @@
    "name": "Hedge_G1_W_L",
    "line": [
     [
-     110.938,
-     -27.508
+     110.381,
+     -27.48
     ],
     [
      101.208,
@@ -247,8 +247,8 @@
    "name": "Hedge_G1_W_R",
    "line": [
     [
-     111.04,
-     -25.41
+     110.483,
+     -25.383
     ],
     [
      101.311,
@@ -291,8 +291,8 @@
      -27.009
     ],
     [
-     134.37,
-     -27.603
+     127.828,
+     -27.283
     ]
    ],
    "width": 1.2,
@@ -306,12 +306,12 @@
    "name": "Hedge_G1_Link_L",
    "line": [
     [
-     122.942,
-     -25.992
+     123.499,
+     -26.02
     ],
     [
-     134.771,
-     -26.571
+     127.18,
+     -26.2
     ]
    ],
    "width": 0.7,
@@ -329,8 +329,8 @@
      -26.38
     ],
     [
-     134.751,
-     -26.97
+     127.16,
+     -26.599
     ]
    ],
    "height": 0.22,
@@ -346,12 +346,12 @@
    "name": "Hedge_G1_Link_R",
    "line": [
     [
-     122.84,
-     -28.09
+     123.397,
+     -28.117
     ],
     [
-     134.668,
-     -28.668
+     127.077,
+     -28.297
     ]
    ],
    "width": 0.7,
@@ -369,8 +369,8 @@
      -27.678
     ],
     [
-     134.688,
-     -28.269
+     127.097,
+     -27.898
     ]
    ],
    "height": 0.22,
@@ -394,8 +394,8 @@
      -32.988
     ],
     [
-     113.176,
-     -49.643
+     113.203,
+     -49.094
     ]
    ],
    "width": 1.2,
@@ -409,16 +409,16 @@
    "name": "Hedge_G1_S_L",
    "line": [
     [
-     115.343,
-     -32.585
+     115.105,
+     -33.09
     ],
     [
      115.03,
      -33.248
     ],
     [
-     114.262,
-     -48.945
+     114.289,
+     -48.396
     ]
    ],
    "width": 0.7,
@@ -440,8 +440,8 @@
      -33.149
     ],
     [
-     113.862,
-     -48.926
+     113.889,
+     -48.377
     ]
    ],
    "height": 0.22,
@@ -457,16 +457,16 @@
    "name": "Hedge_G1_S_R",
    "line": [
     [
-     113.444,
-     -31.688
+     113.206,
+     -32.192
     ],
     [
      112.953,
      -32.728
     ],
     [
-     112.164,
-     -48.842
+     112.191,
+     -48.293
     ]
    ],
    "width": 0.7,
@@ -488,8 +488,8 @@
      -32.827
     ],
     [
-     112.564,
-     -48.862
+     112.591,
+     -48.313
     ]
    ],
    "height": 0.22,
@@ -513,8 +513,8 @@
      -33.246
     ],
     [
-     131.146,
-     -50.522
+     126.828,
+     -49.76
     ]
    ],
    "width": 1.2,
@@ -528,16 +528,16 @@
    "name": "Hedge_G1_D_L",
    "line": [
     [
-     119.937,
-     -32.005
+     120.125,
+     -32.531
     ],
     [
-     120.208,
-     -32.764
+     120.239,
+     -32.85
     ],
     [
-     131.931,
-     -49.809
+     127.658,
+     -49.05
     ]
    ],
    "width": 0.7,
@@ -555,12 +555,12 @@
      -31.91
     ],
     [
-     119.849,
-     -32.947
+     119.868,
+     -33.001
     ],
     [
-     131.428,
-     -49.785
+     127.208,
+     -49.028
     ]
    ],
    "height": 0.22,
@@ -576,16 +576,16 @@
    "name": "Hedge_G1_D_R",
    "line": [
     [
-     117.96,
-     -32.713
+     118.148,
+     -33.238
     ],
     [
-     118.323,
-     -33.729
+     118.293,
+     -33.642
     ],
     [
-     129.293,
-     -49.68
+     125.295,
+     -48.934
     ]
    ],
    "width": 0.7,
@@ -603,12 +603,12 @@
      -32.348
     ],
     [
-     118.682,
-     -33.545
+     118.663,
+     -33.491
     ],
     [
-     129.796,
-     -49.705
+     125.745,
+     -48.956
     ]
    ],
    "height": 0.22,
@@ -643,8 +643,8 @@
    "name": "Hedge_G2_N_L",
    "line": [
     [
-     144.15,
-     -22.116
+     144.178,
+     -21.559
     ],
     [
      144.648,
@@ -683,8 +683,8 @@
    "name": "Hedge_G2_N_R",
    "line": [
     [
-     146.248,
-     -22.218
+     146.275,
+     -21.661
     ],
     [
      146.746,
@@ -742,8 +742,8 @@
    "name": "Hedge_G2_E_L",
    "line": [
     [
-     150.91,
-     -27.36
+     151.467,
+     -27.388
     ],
     [
      154.181,
@@ -782,8 +782,8 @@
    "name": "Hedge_G2_E_R",
    "line": [
     [
-     150.808,
-     -29.458
+     151.365,
+     -29.485
     ],
     [
      154.078,
@@ -826,8 +826,8 @@
      -27.859
     ],
     [
-     127.478,
-     -27.265
+     134.02,
+     -27.585
     ]
    ],
    "width": 1.2,
@@ -841,12 +841,12 @@
    "name": "Hedge_G2_Link_L",
    "line": [
     [
-     138.906,
-     -28.876
+     138.349,
+     -28.848
     ],
     [
-     127.077,
-     -28.297
+     134.668,
+     -28.668
     ]
    ],
    "width": 0.7,
@@ -864,8 +864,8 @@
      -28.488
     ],
     [
-     127.097,
-     -27.898
+     134.688,
+     -28.269
     ]
    ],
    "height": 0.22,
@@ -881,12 +881,12 @@
    "name": "Hedge_G2_Link_R",
    "line": [
     [
-     139.008,
-     -26.778
+     138.451,
+     -26.751
     ],
     [
-     127.18,
-     -26.2
+     134.771,
+     -26.571
     ]
    ],
    "width": 0.7,
@@ -904,8 +904,8 @@
      -27.19
     ],
     [
-     127.16,
-     -26.599
+     134.751,
+     -26.97
     ]
    ],
    "height": 0.22,
@@ -929,8 +929,8 @@
      -34.614
     ],
     [
-     146.419,
-     -51.269
+     146.446,
+     -50.72
     ]
    ],
    "width": 1.2,
@@ -944,16 +944,16 @@
    "name": "Hedge_G2_S_L",
    "line": [
     [
-     147.905,
-     -33.374
+     148.093,
+     -33.899
     ],
     [
      148.293,
      -34.457
     ],
     [
-     147.505,
-     -50.571
+     147.531,
+     -50.022
     ]
    ],
    "width": 0.7,
@@ -975,8 +975,8 @@
      -34.517
     ],
     [
-     147.105,
-     -50.552
+     147.132,
+     -50.003
     ]
    ],
    "height": 0.22,
@@ -992,16 +992,16 @@
    "name": "Hedge_G2_S_R",
    "line": [
     [
-     145.928,
-     -34.081
+     146.116,
+     -34.607
     ],
     [
      146.175,
      -34.772
     ],
     [
-     145.407,
-     -50.469
+     145.434,
+     -49.92
     ]
    ],
    "width": 0.7,
@@ -1023,8 +1023,8 @@
      -34.712
     ],
     [
-     145.807,
-     -50.488
+     145.833,
+     -49.939
     ]
    ],
    "height": 0.22,
@@ -1048,8 +1048,8 @@
      -34.356
     ],
     [
-     128.449,
-     -50.39
+     132.821,
+     -50.054
     ]
    ],
    "width": 1.2,
@@ -1063,16 +1063,16 @@
    "name": "Hedge_G2_D_L",
    "line": [
     [
-     143.311,
-     -33.953
+     143.073,
+     -34.458
     ],
     [
-     142.85,
-     -34.928
+     142.889,
+     -34.846
     ],
     [
-     130.376,
-     -49.733
+     134.427,
+     -49.381
     ]
    ],
    "width": 0.7,
@@ -1090,12 +1090,12 @@
      -33.561
     ],
     [
-     142.511,
-     -34.71
+     142.535,
+     -34.659
     ],
     [
-     129.873,
-     -49.709
+     133.977,
+     -49.359
     ]
    ],
    "height": 0.22,
@@ -1111,16 +1111,16 @@
    "name": "Hedge_G2_D_R",
    "line": [
     [
-     141.412,
-     -33.056
+     141.174,
+     -33.56
     ],
     [
-     141.068,
-     -33.784
+     141.029,
+     -33.867
     ],
     [
-     127.738,
-     -49.604
+     132.065,
+     -49.266
     ]
    ],
    "width": 0.7,
@@ -1138,12 +1138,12 @@
      -33.005
     ],
     [
-     141.408,
-     -34.002
+     141.383,
+     -34.053
     ],
     [
-     128.241,
-     -49.629
+     132.515,
+     -49.288
     ]
    ],
    "height": 0.22,
@@ -1262,8 +1262,8 @@
      -31.229
     ],
     [
-     129.798,
-     -50.456
+     129.825,
+     -49.907
     ]
    ],
    "width": 1.2,
@@ -1281,8 +1281,8 @@
      -31.281
     ],
     [
-     130.883,
-     -49.758
+     130.91,
+     -49.209
     ]
    ],
    "width": 0.7,
@@ -1300,8 +1300,8 @@
      -30.852
     ],
     [
-     130.484,
-     -49.739
+     130.511,
+     -49.19
     ]
    ],
    "height": 0.22,
@@ -1321,8 +1321,8 @@
      -31.178
     ],
     [
-     128.786,
-     -49.656
+     128.813,
+     -49.107
     ]
    ],
    "width": 0.7,
@@ -1340,8 +1340,8 @@
      -30.788
     ],
     [
-     129.185,
-     -49.675
+     129.212,
+     -49.126
     ]
    ],
    "height": 0.22,
@@ -1376,12 +1376,12 @@
    "name": "Hedge_Bnd_S0",
    "line": [
     [
-     99.803,
-     -48.588
+     99.83,
+     -48.039
     ],
     [
-     112.477,
-     -49.208
+     112.504,
+     -48.659
     ]
    ],
    "width": 0.7,
@@ -1395,12 +1395,50 @@
    "name": "Hedge_Bnd_S1",
    "line": [
     [
-     113.915,
-     -49.279
+     113.942,
+     -48.73
     ],
     [
-     127.75,
-     -49.955
+     126.129,
+     -49.326
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_S2",
+   "line": [
+    [
+     127.567,
+     -49.396
+    ],
+    [
+     129.125,
+     -49.472
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_S3",
+   "line": [
+    [
+     130.563,
+     -49.543
+    ],
+    [
+     132.121,
+     -49.619
     ]
    ],
    "width": 0.7,
@@ -1414,12 +1452,12 @@
    "name": "Hedge_Bnd_S4",
    "line": [
     [
-     131.885,
-     -50.158
+     133.56,
+     -49.689
     ],
     [
-     145.72,
-     -50.834
+     145.746,
+     -50.285
     ]
    ],
    "width": 0.7,
@@ -1433,12 +1471,12 @@
    "name": "Hedge_Bnd_S5",
    "line": [
     [
-     147.158,
-     -50.905
+     147.185,
+     -50.356
     ],
     [
-     153.372,
-     -51.209
+     153.399,
+     -50.66
     ]
    ],
    "width": 0.7,
@@ -1452,8 +1490,8 @@
    "name": "Hedge_Bnd_W0",
    "line": [
     [
-     99.82,
-     -48.239
+     99.847,
+     -47.69
     ],
     [
      100.875,
@@ -1490,8 +1528,8 @@
    "name": "Hedge_Bnd_E0",
    "line": [
     [
-     153.389,
-     -50.859
+     153.416,
+     -50.31
     ],
     [
      154.444,
@@ -2468,8 +2506,8 @@
    "type": "hedge_arch",
    "name": "Arch_G1_Link",
    "center": [
-    135.618,
-    -27.664
+    126.23,
+    -27.204
    ],
    "dir_deg": -2.8,
    "span": 1.3,
@@ -2481,10 +2519,10 @@
    "type": "hedge_arch",
    "name": "Arch_G1_D",
    "center": [
-    128.596,
-    -46.814
+    124.955,
+    -45.669
    ],
-   "dir_deg": -55.48,
+   "dir_deg": -65.4,
    "span": 1.3,
    "height": 2.25,
    "confidence": "medium",
@@ -2507,8 +2545,8 @@
    "type": "hedge_arch",
    "name": "Arch_G2_Link",
    "center": [
-    126.23,
-    -27.204
+    135.618,
+    -27.664
    ],
    "dir_deg": -2.8,
    "span": 1.3,
@@ -2520,172 +2558,12 @@
    "type": "hedge_arch",
    "name": "Arch_G2_D",
    "center": [
-    131.349,
-    -46.949
+    135.085,
+    -46.164
    ],
-   "dir_deg": -130.12,
+   "dir_deg": -120.21,
    "span": 1.3,
    "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Centre_NS_N_L",
-   "line": [
-    [
-     130.061,
-     -23.587
-    ],
-    [
-     130.664,
-     -11.252
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_Centre_NS_N_L",
-   "line": [
-    [
-     130.44,
-     -24.016
-    ],
-    [
-     131.064,
-     -11.271
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Centre_NS_N_R",
-   "line": [
-    [
-     132.158,
-     -23.69
-    ],
-    [
-     132.762,
-     -11.355
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_Centre_NS_N_R",
-   "line": [
-    [
-     131.739,
-     -24.08
-    ],
-    [
-     132.362,
-     -11.335
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Centre_NS_S_L",
-   "line": [
-    [
-     131.787,
-     -31.281
-    ],
-    [
-     130.883,
-     -49.758
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_Centre_NS_S_L",
-   "line": [
-    [
-     131.408,
-     -30.852
-    ],
-    [
-     130.484,
-     -49.739
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Centre_NS_S_R",
-   "line": [
-    [
-     129.69,
-     -31.178
-    ],
-    [
-     128.786,
-     -49.656
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_Centre_NS_S_R",
-   "line": [
-    [
-     130.109,
-     -30.788
-    ],
-    [
-     129.185,
-     -49.675
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
   },
@@ -2694,50 +2572,50 @@
    "name": "CentreSquare_Paving",
    "line": [
     [
-     127.834,
-     -27.049
+     127.828,
+     -27.283
     ],
     [
-     134.026,
-     -27.351
+     134.02,
+     -27.585
     ]
    ],
    "width": 6.2,
    "thk": 0.08,
    "top": 0.022,
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_N0",
    "line": [
     [
-     127.303,
-     -23.568
+     127.297,
+     -23.802
     ],
     [
-     130.499,
-     -23.725
+     130.493,
+     -23.959
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_N0",
    "line": [
     [
-     127.283,
-     -23.978
+     127.277,
+     -24.212
     ],
     [
-     130.479,
-     -24.134
+     130.473,
+     -24.368
     ]
    ],
    "height": 0.22,
@@ -2746,38 +2624,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_N1",
    "line": [
     [
-     131.698,
-     -23.783
+     131.692,
+     -24.017
     ],
     [
-     134.894,
-     -23.94
+     134.888,
+     -24.174
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_N1",
    "line": [
     [
-     131.678,
-     -24.193
+     131.672,
+     -24.427
     ],
     [
-     134.874,
-     -24.349
+     134.868,
+     -24.583
     ]
    ],
    "height": 0.22,
@@ -2786,38 +2664,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_S0",
    "line": [
     [
-     126.966,
-     -30.46
+     126.96,
+     -30.694
     ],
     [
-     130.162,
-     -30.617
+     130.156,
+     -30.851
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_S0",
    "line": [
     [
-     126.986,
-     -30.051
+     126.98,
+     -30.285
     ],
     [
-     130.182,
-     -30.207
+     130.176,
+     -30.441
     ]
    ],
    "height": 0.22,
@@ -2826,38 +2704,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_S1",
    "line": [
     [
-     131.361,
-     -30.675
+     131.355,
+     -30.909
     ],
     [
-     134.557,
-     -30.832
+     134.551,
+     -31.066
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_S1",
    "line": [
     [
-     131.381,
-     -30.266
+     131.375,
+     -30.5
     ],
     [
-     134.577,
-     -30.422
+     134.571,
+     -30.656
     ]
    ],
    "height": 0.22,
@@ -2866,38 +2744,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_W0",
    "line": [
     [
-     127.298,
-     -30.827
+     127.326,
+     -30.362
     ],
     [
-     127.455,
-     -27.631
+     127.449,
+     -27.865
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28 zaudit: stops at the N/S hedge (corner block was modelled twice) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_W0",
    "line": [
     [
-     127.708,
-     -30.847
+     127.702,
+     -31.081
     ],
     [
-     127.864,
-     -27.651
+     127.858,
+     -27.885
     ]
    ],
    "height": 0.22,
@@ -2906,38 +2784,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_W1",
    "line": [
     [
-     127.513,
-     -26.432
+     127.507,
+     -26.666
     ],
     [
-     127.67,
-     -23.236
+     127.63,
+     -24.169
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28 zaudit: stops at the N/S hedge (corner block was modelled twice) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_W1",
    "line": [
     [
-     127.923,
-     -26.452
+     127.917,
+     -26.686
     ],
     [
-     128.079,
-     -23.256
+     128.073,
+     -23.49
     ]
    ],
    "height": 0.22,
@@ -2946,38 +2824,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_E0",
    "line": [
     [
-     134.19,
-     -31.164
+     134.218,
+     -30.699
     ],
     [
-     134.347,
-     -27.968
+     134.341,
+     -28.202
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28 zaudit: stops at the N/S hedge (corner block was modelled twice) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_E0",
    "line": [
     [
-     133.781,
-     -31.144
+     133.775,
+     -31.378
     ],
     [
-     133.937,
-     -27.948
+     133.931,
+     -28.182
     ]
    ],
    "height": 0.22,
@@ -2986,38 +2864,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "hedge",
    "name": "CentreSquare_Hedge_E1",
    "line": [
     [
-     134.405,
-     -26.769
+     134.399,
+     -27.003
     ],
     [
-     134.562,
-     -23.573
+     134.522,
+     -24.506
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28 zaudit: stops at the N/S hedge (corner block was modelled twice) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "wall",
    "name": "CentreSquare_Edging_E1",
    "line": [
     [
-     133.996,
-     -26.749
+     133.99,
+     -26.983
     ],
     [
-     134.152,
-     -23.553
+     134.146,
+     -23.787
     ]
    ],
    "height": 0.22,
@@ -3026,66 +2904,66 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_0",
    "pos": [
-    129.461,
-    -24.475
+    129.455,
+    -24.709
    ],
    "dir_deg": -92.8,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_1",
    "pos": [
-    132.658,
-    -24.631
+    132.652,
+    -24.865
    ],
    "dir_deg": -92.8,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_2",
    "pos": [
-    129.202,
-    -29.769
+    129.196,
+    -30.003
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_3",
    "pos": [
-    132.399,
-    -29.925
+    132.393,
+    -30.159
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "box",
    "name": "CentreSquare_Drain",
    "center": [
-    132.08,
-    -28.257
+    132.074,
+    -28.491
    ],
    "dir_deg": -2.8,
    "size": [
@@ -3097,7 +2975,7 @@
    "material": "metal",
    "slot": "M_Steel_Grating",
    "confidence": "low",
-   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m)"
+   "evidence": "[B] 2026-09-28 map owner (top-view mark) + 081946180 t8-t10.8: paved square with the diamond tiles between the two gazebos, wrought-iron slatted benches against its hedges, a drain in the paving, hedged on all sides with openings for the N-S path and the two gazebo links; size from the owner's mark (~6.2 m) | 2026-09-28: square centred on the gazebo axis (was 0.23 m off, the links ran off-centre)"
   },
   {
    "type": "path",
@@ -3211,12 +3089,12 @@
    "name": "PergolaWalk_South",
    "line": [
     [
-     99.681,
-     -50.084
+     99.708,
+     -49.535
     ],
     [
-     152.218,
-     -52.654
+     152.245,
+     -52.105
     ]
    ],
    "width": 2.2,
@@ -3228,7 +3106,7 @@
     "color": "maroon",
     "vines": true
    },
-   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
@@ -3236,12 +3114,12 @@
    "name": "Pergola_South",
    "line": [
     [
-     99.693,
-     -50.452
+     99.72,
+     -49.903
     ],
     [
-     152.193,
-     -53.052
+     152.22,
+     -52.503
     ]
    ],
    "width": 2.0,
@@ -3249,7 +3127,7 @@
    "post_h": 2.2,
    "apex_h": 2.9,
    "tube": 0.05,
-   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "medium",
    "gaps": []
   },
@@ -3257,173 +3135,173 @@
    "type": "bench",
    "name": "Bench_Pergola_0",
    "pos": [
-    140.693,
-    -53.192
+    140.72,
+    -52.643
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_1",
    "pos": [
-    145.193,
-    -53.412
+    145.22,
+    -52.863
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_2",
    "pos": [
-    149.693,
-    -53.632
+    149.72,
+    -53.083
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_3",
    "pos": [
-    129.193,
-    -52.63
+    129.22,
+    -52.081
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_4",
    "pos": [
-    133.693,
-    -52.85
+    133.72,
+    -52.301
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_5",
    "pos": [
-    101.193,
-    -51.26
+    101.22,
+    -50.711
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_6",
    "pos": [
-    105.693,
-    -51.481
+    105.72,
+    -50.932
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_7",
    "pos": [
-    110.193,
-    -51.701
+    110.22,
+    -51.152
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_8",
    "pos": [
-    114.693,
-    -51.921
+    114.72,
+    -51.372
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_9",
    "pos": [
-    119.193,
-    -52.141
+    119.22,
+    -51.592
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_10",
    "pos": [
-    123.693,
-    -52.361
+    123.72,
+    -51.812
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_125",
    "pos": [
-    124.893,
-    -52.52
+    124.92,
+    -51.971
    ],
    "size": [
     0.45,
@@ -3433,14 +3311,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_137",
    "pos": [
-    136.993,
-    -53.111
+    137.02,
+    -52.562
    ],
    "size": [
     0.45,
@@ -3450,19 +3328,19 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)"
   },
   {
    "type": "wall",
    "name": "RetainingWall_South_0",
    "line": [
     [
-     99.099,
-     -51.758
+     99.126,
+     -51.209
     ],
     [
-     152.135,
-     -54.352
+     152.162,
+     -53.803
     ]
    ],
    "height": 1.0,
@@ -3470,7 +3348,7 @@
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
    "confidence": "low"
   },
   {
@@ -3958,16 +3836,16 @@
      -57.183
     ],
     [
-     147.193,
-     -54.11
+     147.22,
+     -53.561
     ],
     [
-     99.099,
-     -51.758
+     99.126,
+     -51.209
     ]
    ],
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing)."
+   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing). | 2026-09-28: N edge follows the boulder wall 0.55 m north (owner screenshot 58)"
   },
   {
    "name": "AW_SquareN",

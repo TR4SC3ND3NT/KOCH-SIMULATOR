@@ -12,10 +12,13 @@ import os
 import re
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
-OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[12]_.*|North_\d+|South_\d+|East_\d+|West_\d+|Bnd_.*)|"
+OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[12]_.*|Centre_NS_.*|North_\d+|South_\d+|East_\d+|West_\d+|Bnd_.*)|"
                  r"Arch_G[12]_.*|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W = 1.2, 0.65, 1.05, 0.7
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
+# diagonals meet the walk this far either side of the centre spine: their inner hedge then clears the spine hedge
+# (1.05 + 0.35) at the walk for a ~65 deg diagonal (1.4 + 1.4 / sin) - no crossing, no overlapping paving/hedges
+D_END_U = 3.0
 EV = "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
 
 
@@ -63,7 +66,7 @@ def main():
         nm = "G1" if s < 0 else "G2"
         paths.append((f"{nm}_N", [(c[0], c[1] + R_APRON), (c[0], v_n - 0.35)], "bnd"))
         paths.append((f"{nm}_W" if s < 0 else f"{nm}_E", [(c[0] + s * R_APRON, c[1]), (u_w + 0.35 if s < 0 else u_e - 0.35, c[1])], "bnd"))
-        paths.append((f"{nm}_Link", [(c[0] - s * R_APRON, c[1]), (-s * sq, c[1])], "sq"))
+        paths.append((f"{nm}_Link", [(c[0] - s * R_APRON, c[1]), (s * sq, c[1])], "sq"))   # ends at the square's near side
         a_out = down + s * math.radians(22.5)                 # outer south face (away from the centre)
         a_in = down - s * math.radians(22.5)                  # inner south face (toward the centre)
         p0 = (c[0] + R_APRON * math.cos(a_out), c[1] + R_APRON * math.sin(a_out))
@@ -71,7 +74,7 @@ def main():
         paths.append((f"{nm}_S", [p0, p1, (p1[0], v_s)], "walk"))
         q0 = (c[0] + R_APRON * math.cos(a_in), c[1] + R_APRON * math.sin(a_in))
         q1 = (q0[0] + 1.6 * math.cos(a_in), q0[1] + 1.6 * math.sin(a_in))
-        paths.append((f"{nm}_D", [q0, q1, (-s * 1.35, v_s)], "walk"))
+        paths.append((f"{nm}_D", [q0, q1, (s * D_END_U, v_s)], "walk"))
     paths.append(("Centre_NS_N", [(0.0, sq), (0.0, v_n - 0.35)], "bnd"))
     paths.append(("Centre_NS_S", [(0.0, -sq), (0.0, v_s)], "walk"))
 
@@ -121,7 +124,7 @@ def main():
             v_t = v_s + (0.0 if not inner else 0.75)
             t = (v_t - ay) / (by_ - ay) if abs(by_ - ay) > 1e-9 else 1.0
         elif kind == "sq":
-            u_t = math.copysign(sq if inner else sq - 0.35, bx)
+            u_t = math.copysign(sq if inner else sq - 0.7, bx)          # path butts onto the square paving
             t = (u_t - ax) / (bx - ax) if abs(bx - ax) > 1e-9 else 1.0
         else:
             if abs(bx - ax) > abs(by_ - ay):
@@ -150,7 +153,7 @@ def main():
             h = offset(pts, dd * HEDGE_OFF)
             ed = offset(pts, dd * EDGE_OFF)
             if c:
-                h = trim_start(h, c, R_HEDGE - 0.3)
+                h = trim_start(h, c, R_HEDGE + HEDGE_W / 2 - 0.1)   # butts onto the ring hedge's outer face (no doubled block)
                 ed = trim_start(ed, c, R_EDGE)
             elif kind in ("bnd", "walk"):
                 h = [(h[0][0], math.copysign(sq, h[0][1]))] + h[1:]
@@ -233,7 +236,7 @@ def main():
                     "confidence": "medium", "evidence": EV})
     for gname, s in (("G1", -1), ("G2", 1)):
         arch(f"Arch_{gname}_N", (s * ug, v_n - 0.35 - 1.2), math.pi / 2)
-        arch(f"Arch_{gname}_Link", (-s * (sq + 0.9), 0.0), 0.0)
+        arch(f"Arch_{gname}_Link", (s * (sq + 0.9), 0.0), 0.0)
         dpts = [p for nme, p, _ in paths if nme == f"{gname}_D"][0]
         q1, q2 = dpts[1], dpts[2]
         l = math.hypot(q2[0] - q1[0], q2[1] - q1[1])
