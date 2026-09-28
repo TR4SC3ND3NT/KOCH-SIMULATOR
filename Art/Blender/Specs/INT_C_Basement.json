@@ -20,6 +20,42 @@
     169.149,
     -3.19
    ]
+  ],
+  [
+   [
+    173.835,
+    -1.861
+   ],
+   [
+    202.213,
+    -2.993
+   ],
+   [
+    202.806,
+    11.895
+   ],
+   [
+    174.429,
+    13.027
+   ]
+  ],
+  [
+   [
+    173.45,
+    -6.05
+   ],
+   [
+    186.05,
+    -6.55
+   ],
+   [
+    186.078,
+    -2.3
+   ],
+   [
+    173.588,
+    -1.801
+   ]
   ]
  ],
  "terrain_pads": [
@@ -785,8 +821,8 @@
    "name": "Piano_Step",
    "ring": [
     [
-     182.403,
-     -6.006
+     182.463,
+     -6.008
     ],
     [
      185.9,
@@ -797,8 +833,8 @@
      -4.397
     ],
     [
-     182.473,
-     -4.257
+     182.532,
+     -4.26
     ]
    ],
    "z0": 3.97,
@@ -821,7 +857,7 @@
      -6.006
     ]
    ],
-   "z0": 3.93,
+   "z0": 3.9,
    "z1": 5.66,
    "thk": 0.12,
    "material": "white",
@@ -829,7 +865,7 @@
     {
      "u0": 0.35,
      "u1": 1.3,
-     "z0": 3.97,
+     "z0": 3.99,
      "z1": 5.6
     }
    ],
@@ -841,8 +877,8 @@
    "name": "BH_Floor_W",
    "ring": [
     [
-     179.927,
-     1.574
+     179.887,
+     1.575
     ],
     [
      189.819,
@@ -853,11 +889,11 @@
      7.414
     ],
     [
-     180.176,
-     7.809
+     180.136,
+     7.81
     ]
    ],
-   "z0": 3.77,
+   "z0": 3.72,
    "z1": 3.97,
    "material": "concrete",
    "slot": "M_Tile_Beige",
@@ -941,7 +977,7 @@
      7.414
     ]
    ],
-   "z0": 3.32,
+   "z0": 3.28,
    "z1": 3.52,
    "material": "concrete",
    "slot": "M_Tile_Beige",
@@ -956,7 +992,7 @@
     6.187
    ],
    "dir_deg": 87.7161455,
-   "width": 1.4,
+   "width": 1.36,
    "risers": 3,
    "riser_h": 0.15,
    "tread": 0.3,
@@ -964,7 +1000,8 @@
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
-   "confidence": "low"
+   "confidence": "low",
+   "top_flush": true
   },
   {
    "type": "slab",
@@ -998,8 +1035,8 @@
    "type": "stairs_run",
    "name": "BH_Vestibule_Steps",
    "top": [
-    180.051,
-    4.691
+    180.001,
+    4.693
    ],
    "dir_deg": -2.2838545045845304,
    "width": 3.2,
@@ -1010,7 +1047,8 @@
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
-   "confidence": "low"
+   "confidence": "low",
+   "top_flush": true
   },
   {
    "type": "slab",
@@ -2275,20 +2313,20 @@
    "name": "BH_Art_Floor",
    "ring": [
     [
-     180.775,
-     7.785
+     180.875,
+     7.781
     ],
     [
-     186.271,
-     7.566
+     186.171,
+     7.569
     ],
     [
-     186.457,
-     12.222
+     186.355,
+     12.176
     ],
     [
-     180.961,
-     12.441
+     181.059,
+     12.387
     ]
    ],
    "z0": 3.77,
@@ -2604,5 +2642,6 @@
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
    "confidence": "low"
   }
- ]
+ ],
+ "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor"
 }

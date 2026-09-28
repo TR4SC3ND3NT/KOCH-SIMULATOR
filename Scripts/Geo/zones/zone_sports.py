@@ -191,7 +191,7 @@ for k, (a, b) in enumerate(((GATES[2][1], GATES[1][2]), (GATES[1][1], GATES[0][2
 for nm, g0, g1 in GATES:
     add(type="gate_leaf", name=f"CourtsGate_{nm}", line=poly([(g0 + 0.08, C_V0), (g1 - 0.08, C_V0)]), height=2.1, panel="bars",
         z_base=Z_COURT, evidence="white barred door as filmed on the old W door (070410255 t=52/60 s); " + ev_g, confidence="low")
-    add(type="cage_fence", name=f"CourtsGate_{nm}_Head", line=poly([(g0, C_V0), (g1, C_V0)]), evidence=ev_g, confidence="low",
+    add(type="cage_fence", name=f"CourtsGate_{nm}_Head", line=poly([(g0 + 0.09, C_V0), (g1 - 0.09, C_V0)]),   # posts clear of the fence end posts evidence=ev_g, confidence="low",
         **dict(cf, height=H_C - 2.15, z_base=Z_COURT + 2.15, rails=[0.03, H_C - 2.15 - 0.025]))
 for nm, u in (("Div1", DIV1), ("Div2", DIV2)):
     add(type="cage_fence", name=f"CourtsFence_{nm}", line=poly([(u, C_V0), (u, C_V1)]),

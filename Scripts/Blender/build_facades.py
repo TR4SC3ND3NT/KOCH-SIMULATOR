@@ -1088,7 +1088,7 @@ class Building:
         if self.s.get("interior_floors"):
             slabs = []
         bsm = self.s.get("basement")
-        if bsm:
+        if bsm and not bsm.get("slab_by_interior"):   # an INT_* spec models the basement floors itself (no coplanar double)
             slabs.append((bsm["floor_z"] - bsm["slab_t"], bsm["floor_z"]))
         for z0, z1 in slabs:
             lo = [bm.verts.new((x, y, z0)) for x, y in inner]

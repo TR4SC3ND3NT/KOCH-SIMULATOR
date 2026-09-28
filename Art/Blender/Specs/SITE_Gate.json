@@ -626,7 +626,8 @@
    "thk": 0.08,
    "surface": "asphalt",
    "evidence": "P1: Google z20 light strip y -134..-136 (x 100-160) between the two lawn strips south of the road; width 1.9 from the ground mosaic of zone Street c6 (clip 20260925_012108212 walks it: asphalt footway, painted white edge, lawn on both sides); c6 is bent (not usable for placement)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top": 0.05
   },
   {
    "type": "path",

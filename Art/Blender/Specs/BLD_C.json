@@ -542,15 +542,15 @@
    ],
    "post_pitch": 1.2,
    "confidence": "medium",
-   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-09-28 0c: low end -1.078 -> -1.04 so it meets the plaza (FFL-1.05 + 1 cm) instead of sitting 6 cm under the ground",
    "name": "Run",
    "u0": 3.75,
    "u1": 9.5,
    "w0": 2.6,
    "w1": 3.6,
    "z_high": 0.0,
-   "z_low": -1.078,
-   "z_ground": -1.078
+   "z_low": -1.04,
+   "z_ground": -1.04
   },
   {
    "type": "lightwell",
@@ -751,7 +751,8 @@
    "basement windows behind the light wells",
    "room layout"
   ],
-  "later": "gameplay: 2 playable pianos in the basement (R3/R4, not now)"
+  "later": "gameplay: 2 playable pianos in the basement (R3/R4, not now)",
+  "slab_by_interior": true
  },
  "ffl_z": 6.4,
  "ffl_note": "2026-09-25 map owner: the C entrance plaza, the garden with the gazebos and the lower plaza along A_W (below the wide stair north of B) are one level; that level = A_W walkway 5.35 (drone SfM + 8 risers from the alley). C FFL = plaza + 7 risers x 0.15 = 6.40 (DEM rule gave 5.53).",

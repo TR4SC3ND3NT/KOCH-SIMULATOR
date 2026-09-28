@@ -207,5 +207,32 @@
  "attachments": [],
  "ffl_z": 5.47,
  "ffl_note": "2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace).",
- "walls_to_ffl": true
+ "walls_to_ffl": true,
+ "terrain_pads": [
+  {
+   "name": "A_N_Inside",
+   "ring": [
+    [
+     170.896,
+     -70.519
+    ],
+    [
+     195.072,
+     -71.705
+    ],
+    [
+     197.539,
+     -21.406
+    ],
+    [
+     173.363,
+     -20.22
+    ]
+   ],
+   "z": 5.17,
+   "blend": 0.0,
+   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows",
+   "confidence": "low"
+  }
+ ]
 }

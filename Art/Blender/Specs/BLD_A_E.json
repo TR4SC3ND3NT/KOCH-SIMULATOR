@@ -154,5 +154,57 @@
    "slot": "M_Asphalt",
    "evidence": "Google z20: paved lot east of Block A with a row of parked cars at x 205-212 (y -75..-35); no clip walks it (surface from the satellite only)"
   }
+ ],
+ "terrain_pads": [
+  {
+   "name": "A_EastLot",
+   "ring": [
+    [
+     198.5,
+     -92
+    ],
+    [
+     216,
+     -92
+    ],
+    [
+     216,
+     -19
+    ],
+    [
+     198.5,
+     -19
+    ]
+   ],
+   "z": 5.75,
+   "blend": 4.0,
+   "evidence": "2026-09-28 0c: the DEM (rms 1 m) put the east lot at 6.4-6.7, over the sills of A_S's east F1 windows (sill 6.39) and the plinths of A_S/A_N/A_E; lot levelled 0.64 m under the sills (not measured)",
+   "confidence": "low"
+  },
+  {
+   "name": "A_E_Inside",
+   "ring": [
+    [
+     195.172,
+     -71.71
+    ],
+    [
+     201.066,
+     -71.999
+    ],
+    [
+     201.691,
+     -59.262
+    ],
+    [
+     195.797,
+     -58.973
+    ]
+   ],
+   "z": 5.17,
+   "blend": 0.0,
+   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows",
+   "confidence": "low"
+  }
  ]
 }

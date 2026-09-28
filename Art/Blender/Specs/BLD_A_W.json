@@ -633,6 +633,31 @@
     ]
    ],
    "evidence": "lower walkway + gallery deck zone along A_W, flat 5.35 (drone SfM, 070309303 photo-match): pad reaches the A_W wall so the terrain never pokes through the deck"
+  },
+  {
+   "name": "A_W_Inside",
+   "ring": [
+    [
+     164.503,
+     -70.206
+    ],
+    [
+     170.796,
+     -70.514
+    ],
+    [
+     173.251,
+     -20.465
+    ],
+    [
+     166.958,
+     -20.156
+    ]
+   ],
+   "z": 5.35,
+   "blend": 0.0,
+   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows",
+   "confidence": "low"
   }
  ],
  "site_notes": "Stairs, steel ramp, lawn bank edgings, retaining wall, planters of the gallery surroundings are in SITE_Garden (AW_* elements).",
