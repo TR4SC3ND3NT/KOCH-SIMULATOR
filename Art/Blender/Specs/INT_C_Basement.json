@@ -14,11 +14,11 @@
    ],
    [
     174.035,
-    -3.621
+    -3.36
    ],
    [
     169.149,
-    -3.426
+    -3.19
    ]
   ]
  ],
@@ -154,8 +154,8 @@
     ]
    ],
    "z0": 3.9700000000000006,
-   "z1": 6.250000000000001,
-   "thk": 0.25,
+   "z1": 7.45,
+   "thk": 0.4,
    "material": "brick",
    "openings": [
     {
@@ -165,7 +165,7 @@
      "z1": 6.246
     }
    ],
-   "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box",
+   "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box | [B] owner 2026-09-28 ('walls on top of each other'): this wall is the Dance Hall box's south wall itself, from the stair foot up to the canopy (the separate BLD_C DanceHallEntry box on the same spot was removed)",
    "confidence": "medium"
   },
   {
@@ -213,7 +213,7 @@
    "name": "DanceHall_Door",
    "center": [
     172.316,
-    -3.572
+    -3.49
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -223,7 +223,7 @@
    ],
    "z0": 4.246,
    "material": "wood",
-   "evidence": "brown wooden door at the mid landing in the Dance Hall wall (012543364, frames 1-10); leaf on the wall face (the BLD_C box has no opening yet)",
+   "evidence": "brown wooden door at the mid landing in the Dance Hall wall (012543364, frames 1-10); leaf on the wall face (the BLD_C box has no opening yet) | [B] leaf set into the wall opening",
    "confidence": "medium"
   },
   {
@@ -278,38 +278,6 @@
    ],
    "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140)",
    "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "EntryRoof_E",
-   "thk": 0.2,
-   "material": "metal",
-   "ring": [
-    [
-     173.178,
-     -5.788
-    ],
-    [
-     173.478,
-     -5.8
-    ],
-    [
-     173.562,
-     -3.702
-    ],
-    [
-     173.262,
-     -3.69
-    ]
-   ],
-   "z": [
-    7.5200000000000005,
-    7.5200000000000005,
-    7.631034482758621,
-    7.631034482758621
-   ],
-   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140)",
-   "confidence": "low"
   },
   {
    "type": "slab",
