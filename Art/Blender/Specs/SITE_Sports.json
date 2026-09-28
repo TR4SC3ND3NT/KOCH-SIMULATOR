@@ -1583,6 +1583,54 @@
    "z_base": 3.5
   },
   {
+   "type": "tree",
+   "name": "NorthLawnSpruce_0",
+   "pos": [
+    171.471,
+    82.221
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28 (marks on the overview): two spruces along the back fence",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnSpruce_1",
+   "pos": [
+    177.467,
+    81.991
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28 (marks on the overview): two spruces along the back fence",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_Manhole",
+   "center": [
+    165.385,
+    80.754
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.7,
+    0.7,
+    0.03
+   ],
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "manhole_cover",
+   "evidence": "owner 2026-09-28 (overview): sewer manhole on the lane in front of the bench opposite the yard stair",
+   "confidence": "low"
+  },
+  {
    "type": "roof_plane",
    "name": "LowerYard_RampE",
    "ring": [
@@ -1626,7 +1674,7 @@
    "size": [
     0.4000000000000057,
     3.6999999999999993,
-    1.25
+    0.9499999999999997
    ],
    "z0": 2.5500000000000003,
    "material": "stone",
@@ -1645,7 +1693,7 @@
    "size": [
     0.25,
     5.0,
-    1.25
+    0.9499999999999997
    ],
    "z0": 2.5500000000000003,
    "material": "stone",
@@ -2694,8 +2742,8 @@
    "type": "box",
    "name": "Workout_Dip_BarW",
    "center": [
-    167.126,
-    72.781
+    167.072,
+    71.382
    ],
    "size": [
     2.0,
@@ -2713,8 +2761,8 @@
    "type": "box",
    "name": "Workout_Dip_BarE",
    "center": [
-    167.685,
-    72.76
+    167.631,
+    71.361
    ],
    "size": [
     2.0,
@@ -3004,7 +3052,7 @@
    "size": [
     0.3999999999999986,
     1.1999999999999993,
-    1.25
+    0.9499999999999997
    ],
    "z0": 2.5500000000000003,
    "material": "stone",
@@ -3016,8 +3064,8 @@
    "type": "box",
    "name": "Workout_Dip_PostWS",
    "center": [
-    167.091,
-    71.882
+    167.037,
+    70.483
    ],
    "size": [
     0.07,
@@ -3036,8 +3084,8 @@
    "type": "box",
    "name": "Workout_Dip_PostES",
    "center": [
-    167.651,
-    71.86
+    167.597,
+    70.461
    ],
    "size": [
     0.07,
@@ -3055,8 +3103,8 @@
    "type": "box",
    "name": "Workout_Dip_PostWN",
    "center": [
-    167.16,
-    73.68
+    167.106,
+    72.281
    ],
    "size": [
     0.07,
@@ -3074,8 +3122,8 @@
    "type": "box",
    "name": "Workout_Dip_PostEN",
    "center": [
-    167.72,
-    73.659
+    167.666,
+    72.26
    ],
    "size": [
     0.07,

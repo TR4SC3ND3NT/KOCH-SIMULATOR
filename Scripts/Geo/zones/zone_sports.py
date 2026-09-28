@@ -226,13 +226,13 @@ wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0
 # the lane behind the pitch is low too (owner 2026-09-28): retaining wall along the N side of the raised bed / west terrace
 wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
 wall_box("LowerYard_Retain_West", -20.0, 0.0, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)
-wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.4, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)  # stair E cheek (owner: bigger)
+wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.4, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_COURT)  # stair E cheek, flush with the concrete strip (owner)
 RE_L = 5.0   # owner 2026-09-28: the east way down is a plain ramp, no steps (0.6 m over 5 m, ~7 deg)
 add(type="roof_plane", name="LowerYard_RampE", ring=rect(SE_U0, SE_U1, C_V1, C_V1 + RE_L), z=[Z_PLAZA, Z_PLAZA, Z_LOW, Z_LOW],
     thk=0.6, material="stone", slot="M_Concrete_Precast",
     evidence=ev_ly + "; owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps)", confidence="low")
-wall_box("LowerYard_RampE_CheekW", C_U1 - 0.25, SE_U0, C_V1 + RW_TOP, C_V1 + RE_L, Z_LOW - 0.3, Z_PLAZA + 0.35)
-wall_box("LowerYard_RampE_CheekE", SE_U1, SE_U1 + 0.25, C_V1, C_V1 + RE_L, Z_LOW - 0.3, Z_PLAZA + 0.35)
+wall_box("LowerYard_RampE_CheekW", C_U1 - 0.25, SE_U0, C_V1 + RW_TOP, C_V1 + RE_L, Z_LOW - 0.3, Z_COURT)
+wall_box("LowerYard_RampE_CheekE", SE_U1, SE_U1 + 0.25, C_V1, C_V1 + RE_L, Z_LOW - 0.3, Z_COURT)
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
 # between the basketball court's N fence (v 25.40) and the lane; owner 2026-09-28: only parallel bars and 4 pull-up bars, the
@@ -260,7 +260,7 @@ def tube(nm, u0, v0, u1, v1, z0, z1, d=0.05, ue=None):
 # owner sketches 2026-09-28: parallel bars just east of the stair foot (clear of the way down), the 4 pull-up bars behind them
 # in two rows of two with a short gap, all bars along v (the stair's direction); wall bars (3 bays) against the retaining
 # wall under the courts' N fence, east of the pull-ups
-pv0, pv1, ph, pu = C_V1 + ST_N * ST_TR + 0.9, C_V1 + ST_N * ST_TR + 2.9, 1.25, ST_U1 + 1.4   # parallel (dip) bars
+pv0, pv1, ph, pu = C_V1 + RW_TOP + 0.7, C_V1 + RW_TOP + 2.7, 1.25, ST_U1 + 1.4   # parallel (dip) bars, closer to the strip (owner)
 for su, u in (("W", pu - 0.28), ("E", pu + 0.28)):
     for sv, v in (("S", pv0 + 0.1), ("N", pv1 - 0.1)):
         tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
@@ -370,6 +370,12 @@ add(type="slab", name="WastePoint_Pad", ring=rect(79.3, 86.1, 40.3, 42.0), z0=Z_
 for k, u in enumerate((80.55, 82.7, 84.85)):
     add(type="box", name=f"WastePoint_Container_{k}", center=W(u, 41.25), dir_deg=ROT, size=[1.9, 1.3, 1.35], z0=Z_LOW + 0.05,
         material="metal", slot="M_Steel_Galv", ue_asset="waste_container_metal", evidence=EV_BIN, confidence="low")
+for k, u in enumerate((56.0, 62.0)):   # owner 2026-09-28: a pair of spruces in the gap of the tree row east of the stair
+    add(type="tree", name=f"NorthLawnSpruce_{k}", pos=W(u, 39.4), height=4.5, crown_d=2.0, crown_base=0.4, shape="cone",
+        evidence="owner 2026-09-28 (marks on the overview): two spruces along the back fence", confidence="low")
+add(type="box", name="LowerYard_Manhole", center=W((ST_U0 + ST_U1) / 2 + 2.3, 37.7), dir_deg=ROT, size=[0.7, 0.7, 0.03], z0=Z_LOW,
+    material="metal", slot="M_Steel_Paint_Dark", ue_asset="manhole_cover",
+    evidence="owner 2026-09-28 (overview): sewer manhole on the lane in front of the bench opposite the yard stair", confidence="low")
 for k, u in enumerate([-35.6, -23.3, -17.5, -12.3, -6.9, -1.7, 4.1, 9.2, 15.0, 20.5, 25.1, 32.6, 37.8, 43.1, 70.3, 75.7, 92.4]):
     big = u in (9.2, 15.0, 25.1, 37.8, 43.1, 70.3, 75.7, 92.4)
     add(type="tree", name=f"NorthLawnTree_{k:02d}", pos=W(u - 0.6, 39.4), height=7.0 if big else 4.5,
