@@ -187,14 +187,14 @@
     ],
     [
      159.242,
-     -52.932
+     -53.252
     ],
     [
      152.45,
-     -52.599
+     -52.919
     ]
    ],
-   "evidence": "2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): ground held at the lower level under the solid flights (the smooth field ramped above the lower treads)",
+   "evidence": "2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): ground held at the lower level under the solid flights (the smooth field ramped above the lower treads) | 2026-09-29 zone loop (alley): check_stairs.py: north edge cut to the lower foot (it showed a 0.2 m x 5 cm dip strip in front of the stair)",
    "confidence": "medium"
   },
   {
@@ -233,6 +233,31 @@
    "blend": 0.0,
    "field": false,
    "evidence": "2026-09-28 terrain audit: ground inside the solid SouthBed_Cheek planter held 0.10 m under its sloped top (plane under all 5 top corners); hard edge 5 cm inside its faces. The plaza plateau (6.95) showed 0.29 m above the warped top",
+   "confidence": "medium"
+  },
+  {
+   "name": "SouthStair_Head",
+   "ring": [
+    [
+     154.441,
+     -91.777
+    ],
+    [
+     156.273,
+     -95.699
+    ],
+    [
+     154.823,
+     -96.376
+    ],
+    [
+     152.991,
+     -92.454
+    ]
+   ],
+   "z": 6.75,
+   "blend": 2.5,
+   "evidence": "2026-09-29 zone loop (alley): check_stairs.py: plaza at the south stair head held at the top nosing 6.75 (8 risers x 0.175 above the landing 5.35), blending 2.5 m into the plaza; the DEM plateau ran 0.16 m above it",
    "confidence": "medium"
   }
  ],
@@ -338,12 +363,12 @@
      -82.091
     ],
     [
-     158.438,
-     -81.977
+     158.079,
+     -81.96
     ],
     [
-     158.259,
-     -85.623
+     157.9,
+     -85.605
     ],
     [
      157.74,
@@ -360,7 +385,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815)",
+   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815) | 2026-09-29 zone loop (alley): check_stairs.py: west edge moved onto the pavilion stair foot (a 0.3-0.44 m slot ran down to the terrain 5.0)",
    "confidence": "medium"
   },
   {
@@ -1421,7 +1446,7 @@
     ]
    ],
    "z": [
-    7.46,
+    7.1,
     5.65,
     5.65,
     7.476,
@@ -1429,7 +1454,7 @@
    ],
    "thk": 2.715,
    "material": "hedge",
-   "evidence": "raised bed with conifers SE of the south stair, red-granite cheek wall along the stair (top ~0.35 above the plaza at the top of the flight, 012258813; ~0.3 above the landing at the foot, 012208814)",
+   "evidence": "raised bed with conifers SE of the south stair, red-granite cheek wall along the stair (top ~0.35 above the plaza at the top of the flight, 012258813; ~0.3 above the landing at the foot, 012208814) | 2026-09-29 zone loop (alley): check_stairs.py: top corner at the flight head = plaza 6.75 + 0.35 (was 7.46)",
    "confidence": "medium"
   },
   {
@@ -2021,14 +2046,15 @@
    ],
    "dir_deg": 87.192,
    "risers": 4,
-   "riser_h": 0.183,
+   "riser_h": 0.1743,
    "tread": 0.35,
    "width": 5.33,
-   "z_top": 6.63,
+   "z_top": 6.57,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap)",
    "confidence": "medium",
-   "top_flush": true
+   "top_flush": true,
+   "run_out": 0.35
   },
   {
    "type": "stairs_run",
@@ -2039,12 +2065,12 @@
    ],
    "dir_deg": 87.192,
    "risers": 3,
-   "riser_h": 0.183,
+   "riser_h": 0.1743,
    "tread": 0.35,
    "width": 6.9,
-   "z_top": 5.899,
+   "z_top": 5.873,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap)",
    "confidence": "medium"
   },
   {
