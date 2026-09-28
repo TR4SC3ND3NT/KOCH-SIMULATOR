@@ -577,12 +577,12 @@
    "name": "F1_Lobby_E",
    "line": [
     [
-     190.220218,
-     -2.564865
+     190.220509,
+     -2.559893
     ],
     [
-     190.368659,
-     1.157155
+     190.386685,
+     1.606794
     ]
    ],
    "z0": 6.3,
@@ -590,7 +590,7 @@
    "thk": 0.2,
    "openings": [],
    "material": "white",
-   "evidence": "tower bay side wall",
+   "evidence": "tower bay side wall | [B] owner 2026-09-28 (screenshot 46): the lobby's east wall runs 0.45 m further into the corridor than the west one (a pier at the lobby mouth)",
    "confidence": "medium"
   },
   {
@@ -637,39 +637,11 @@
   },
   {
    "type": "int_wall",
-   "name": "F1_Hall_N_E",
-   "line": [
-    [
-     202.658244,
-     6.921992
-    ],
-    [
-     196.313288,
-     7.175041
-    ]
-   ],
-   "z0": 6.3,
-   "z1": 9.32,
-   "thk": 0.2,
-   "openings": [
-    {
-     "u0": 4.785,
-     "u1": 5.815,
-     "z0": 6.34,
-     "z1": 8.47
-    }
-   ],
-   "material": "white",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15)",
-   "confidence": "medium"
-  },
-  {
-   "type": "int_wall",
    "name": "F1_Hall_N_Recess",
    "line": [
     [
-     196.361109,
-     8.374088
+     202.706065,
+     8.121039
     ],
     [
      188.667225,
@@ -681,42 +653,27 @@
    "thk": 0.2,
    "openings": [
     {
-     "u0": 4.085,
-     "u1": 5.115,
+     "u0": 10.435,
+     "u1": 11.465,
      "z0": 6.34,
      "z1": 8.47
     },
     {
-     "u0": 6.13,
-     "u1": 7.07,
+     "u0": 4.785,
+     "u1": 5.815,
+     "z0": 6.34,
+     "z1": 8.47
+    },
+    {
+     "u0": 12.48,
+     "u1": 13.42,
      "z0": 6.34,
      "z1": 8.47
     }
    ],
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15)",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15) | [B] owner 2026-09-28 (video 14-44-44 t2.4-t3.9): from the blue side wall to the east end, incl. the classroom and the east stair hall, the north wall is one plane on the back line",
    "confidence": "medium"
-  },
-  {
-   "type": "int_wall",
-   "name": "F1_Hall_N_RecessE",
-   "line": [
-    [
-     196.361109,
-     8.374088
-    ],
-    [
-     196.305318,
-     6.9752
-    ]
-   ],
-   "z0": 6.3,
-   "z1": 9.32,
-   "thk": 0.2,
-   "openings": [],
-   "material": "white",
-   "confidence": "medium",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15)"
   },
   {
    "type": "int_wall",
@@ -840,12 +797,12 @@
    "name": "F1_Door_N3",
    "line": [
     [
-     202.658244,
-     6.921992
+     202.706065,
+     8.121039
     ],
     [
-     174.180883,
-     8.057723
+     174.228703,
+     9.25677
     ]
    ],
    "u0": 4.805,
@@ -1235,8 +1192,8 @@
    "type": "box",
    "name": "F1_FireAlarm_E",
    "center": [
-    198.466068,
-    6.828943
+    198.513888,
+    8.02799
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1664,18 +1621,18 @@
      5.56305
     ],
     [
-     202.650111,
-     6.722122
+     202.697933,
+     7.921204
     ],
     [
-     199.752431,
-     6.837687
+     199.800253,
+     8.036769
     ]
    ],
    "z0": 6.3,
    "z1": 8.012,
    "material": "granite",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.16 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1",
+   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: half-landing 1.16 m deep against the north hall wall (it meets the wall, not a room); white wall under it on F1 | [B] owner 2026-09-28 (video 14-44-44 t2.4-t3.9): from the blue side wall to the east end, incl. the classroom and the east stair hall, the north wall is one plane on the back line",
    "confidence": "medium"
   },
   {
@@ -1718,8 +1675,8 @@
      8.012
     ],
     [
-     199.800399,
-     6.785735,
+     199.848221,
+     7.984816,
      8.012
     ]
    ]
@@ -2225,8 +2182,8 @@
    "type": "box",
    "name": "F1_CCTV_1",
    "center": [
-    194.651,
-    6.891
+    194.69882,
+    8.090047
    ],
    "dir_deg": 0,
    "size": [
@@ -2459,8 +2416,8 @@
    "type": "box",
    "name": "F1_StairE_LandingDoor",
    "center": [
-    201.75,
-    6.848
+    201.79782,
+    8.047047
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -2479,8 +2436,8 @@
    "type": "box",
    "name": "F1_StairE_LandingRadiator",
    "center": [
-    202.47,
-    6.35
+    202.51782,
+    7.549047
    ],
    "dir_deg": 87.71614549541547,
    "size": [
@@ -2499,8 +2456,8 @@
    "type": "box",
    "name": "F1_StairE_WallLight",
    "center": [
-    202.49,
-    6.35
+    202.53782,
+    7.549047
    ],
    "dir_deg": 87.71614549541547,
    "size": [
@@ -2519,8 +2476,8 @@
    "type": "box",
    "name": "F1_StairE_FireBox",
    "center": [
-    198.9,
-    6.8
+    198.94782,
+    7.999047
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -2639,8 +2596,8 @@
    "type": "box",
    "name": "F1_HeatPipe_N_5_r2",
    "center": [
-    196.675204,
-    7.029969
+    196.718662,
+    8.119637
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -2659,8 +2616,8 @@
    "type": "box",
    "name": "F1_HeatPipe_N_6",
    "center": [
-    200.00538,
-    6.897155
+    200.048838,
+    7.986823
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
