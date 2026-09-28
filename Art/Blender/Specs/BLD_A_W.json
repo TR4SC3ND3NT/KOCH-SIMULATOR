@@ -502,6 +502,61 @@
    "color": "frame",
    "evidence": "grey aluminium door with glazed upper panel in the door-bay front, one step above the walkway (070309303 t17-21)",
    "confidence": "medium"
+  },
+  {
+   "type": "canopy",
+   "name": "Awning_DD",
+   "edge": 3,
+   "u0": 42.75,
+   "u1": 44.55,
+   "depth": 0.9,
+   "z0": 2.3,
+   "z1": 2.36,
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): flat grey corrugated awning over the glazed double door under the gallery, just below the gallery beam; width = door + 0.3 m each side",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall_sign",
+   "name": "YellowPlate_DoorS",
+   "edge": 3,
+   "u0": 48.3,
+   "u1": 49.0,
+   "z0": 2.18,
+   "z1": 2.42,
+   "t": 0.02,
+   "w0": 2.34,
+   "color": "sign",
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): yellow sign plate above the south door-bay door (070309303 s2, 012404116 s2); blank KOCH",
+   "confidence": "medium"
+  },
+  {
+   "type": "downpipe",
+   "name": "Downpipes_AN",
+   "edge": 3,
+   "u": [
+    1.0,
+    24.4,
+    46.8
+   ],
+   "z0": 3.2,
+   "z1": 9.9,
+   "d": 0.1,
+   "off": -6.36,
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): white downpipes on the A_N west wall above the gallery roof, three: near the north end, mid-way and at the south end (070309303 s3 f01550/f01713, 012327726 s1 f00021); u +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "floodlight",
+   "name": "Flood_AN",
+   "edge": 3,
+   "u": [
+    12.0,
+    36.8
+   ],
+   "z": 4.3,
+   "w": -6.4,
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): LED floodlights on the A_N west wall at the F2 sill band over the gallery (070309303 s3 f01713/f01947); +-1.5 m along",
+   "confidence": "low"
   }
  ],
  "ffl_z": 5.65,

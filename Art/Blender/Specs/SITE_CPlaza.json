@@ -667,6 +667,54 @@
    "back_h": 0.85,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
    "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "BlueSpruce_Plaza_0",
+   "pos": [
+    172.8,
+    -14.3
+   ],
+   "height": 7.0,
+   "crown_d": 3.4,
+   "trunk_d": 0.3,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "slot": "M_Tree",
+   "evidence": "P1 by frames: three blue spruces on the plaza between C and A (081235159 s1/s2, 012404116 s2); positions from Google z20 bluish crowns over the plaza north of A_N (x 170-178, y -13..-15, bases shifted 0.5 m SW for the image lean); +-1.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BlueSpruce_Plaza_1",
+   "pos": [
+    176.8,
+    -14.5
+   ],
+   "height": 7.0,
+   "crown_d": 3.4,
+   "trunk_d": 0.3,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "slot": "M_Tree",
+   "evidence": "P1 by frames: three blue spruces on the plaza between C and A (081235159 s1/s2, 012404116 s2); positions from Google z20 bluish crowns over the plaza north of A_N (x 170-178, y -13..-15, bases shifted 0.5 m SW for the image lean); +-1.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BlueSpruce_Plaza_2",
+   "pos": [
+    169.8,
+    -13.8
+   ],
+   "height": 7.0,
+   "crown_d": 3.4,
+   "trunk_d": 0.3,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "slot": "M_Tree",
+   "evidence": "P1 by frames: three blue spruces on the plaza between C and A (081235159 s1/s2, 012404116 s2); positions from Google z20 bluish crowns over the plaza north of A_N (x 170-178, y -13..-15, bases shifted 0.5 m SW for the image lean); +-1.5 m",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [
