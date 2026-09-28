@@ -1,7 +1,7 @@
 # Garden layout generator (R1 stream B, SITE_Garden.json): the hedged path network between the two gazebos, laid out
 # in one garden frame (u along the pergola walk, v north) and MIRROR-symmetric about the centre axis between the
-# gazebos (map owner 2026-09-28: "зеркально, к центру"): per gazebo a north path, an outer side path, a link to the
-# centre bench square, a straight south path and a diagonal south path converging on the centre; boundary hedges on
+# gazebos: per gazebo a north path, an outer side path, a link to the centre bench square (8 benches) and a straight
+# south path; a north-south spine through the square (owner 2026-09-28: no diagonal paths); boundary hedges on
 # one rectangle (west/east/north hedge lines + the row along the pergola walk) with gaps where paths cross; ring hedges
 # and edging around each gazebo apron with gaps at the paths; hedge arches inside the rectangle. Everything is clipped
 # to the rectangle. Rewrites only the elements it owns (listed in OWN); run it after moving a gazebo or the walk.
@@ -13,12 +13,10 @@ import re
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
 OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[12]_.*|Centre_NS_.*|North_\d+|South_\d+|East_\d+|West_\d+|Bnd_.*)|"
-                 r"Arch_G[12]_.*|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+)$")
+                 r"Arch_G[12]_.*|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+|CentreSquare_.*)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W = 1.2, 0.65, 1.05, 0.7
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
-# diagonals meet the walk this far either side of the centre spine: their inner hedge then clears the spine hedge
-# (1.05 + 0.35) at the walk for a ~65 deg diagonal (1.4 + 1.4 / sin) - no crossing, no overlapping paving/hedges
-D_END_U = 3.0
+SQ_P = 4.0       # centre bench square: paving half size (m); 8 benches, one each side of the 4 entrances
 EV = "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
 
 
@@ -53,7 +51,7 @@ def main():
         g["rot_deg"] = g1["rot_deg"]
         g["evidence"] = g.get("evidence", "") + " | " + EV
     rot = math.radians(g1["rot_deg"])
-    sq = 3.1 + 0.35 + 0.35                                    # centre square half size to the outside of its hedge
+    sq = SQ_P + 0.35 + 0.35                                   # centre square half size to the outside of its hedge
     new = []
     paths = []                                                # (name, [(u, v), ...], start_r, end_kind)
 
@@ -68,15 +66,11 @@ def main():
         paths.append((f"{nm}_W" if s < 0 else f"{nm}_E", [(c[0] + s * R_APRON, c[1]), (u_w + 0.35 if s < 0 else u_e - 0.35, c[1])], "bnd"))
         paths.append((f"{nm}_Link", [(c[0] - s * R_APRON, c[1]), (s * sq, c[1])], "sq"))   # ends at the square's near side
         a_out = down + s * math.radians(22.5)                 # outer south face (away from the centre)
-        a_in = down - s * math.radians(22.5)                  # inner south face (toward the centre)
         p0 = (c[0] + R_APRON * math.cos(a_out), c[1] + R_APRON * math.sin(a_out))
         p1 = (p0[0] + 1.6 * math.cos(a_out), p0[1] + 1.6 * math.sin(a_out))
         paths.append((f"{nm}_S", [p0, p1, (p1[0], v_s)], "walk"))
-        q0 = (c[0] + R_APRON * math.cos(a_in), c[1] + R_APRON * math.sin(a_in))
-        q1 = (q0[0] + 1.6 * math.cos(a_in), q0[1] + 1.6 * math.sin(a_in))
-        paths.append((f"{nm}_D", [q0, q1, (s * D_END_U, v_s)], "walk"))
-    paths.append(("Centre_NS_N", [(0.0, sq), (0.0, v_n - 0.35)], "bnd"))
-    paths.append(("Centre_NS_S", [(0.0, -sq), (0.0, v_s)], "walk"))
+    paths.append(("Centre_NS_N", [(0.0, SQ_P), (0.0, v_n - 0.35)], "bnd"))     # from the square paving edge
+    paths.append(("Centre_NS_S", [(0.0, -SQ_P), (0.0, v_s)], "walk"))
 
     def offset(pts, d):
         """Offset polyline (u, v) by d to the left, mitred at the bends."""
@@ -237,11 +231,34 @@ def main():
     for gname, s in (("G1", -1), ("G2", 1)):
         arch(f"Arch_{gname}_N", (s * ug, v_n - 0.35 - 1.2), math.pi / 2)
         arch(f"Arch_{gname}_Link", (s * (sq + 0.9), 0.0), 0.0)
-        dpts = [p for nme, p, _ in paths if nme == f"{gname}_D"][0]
-        q1, q2 = dpts[1], dpts[2]
-        l = math.hypot(q2[0] - q1[0], q2[1] - q1[1])
-        u2 = ((q2[0] - q1[0]) / l, (q2[1] - q1[1]) / l)
-        arch(f"Arch_{gname}_D", (q2[0] - u2[0] * 4.5, q2[1] - u2[1] * 4.5), math.atan2(u2[1], u2[0]))
+    # centre bench square (owner 2026-09-28): paving 2*SQ_P, hedge + scalloped edging on 4 sides with the 4 entrances
+    # (gap = path width), 8 benches (one each side of every entrance) facing the middle, drain grate
+    P, gh = SQ_P, PATH_W / 2
+    hd = math.degrees(math.atan2(T[1], T[0]))                 # world heading of +u
+    new.append({"type": "path", "name": "CentreSquare_Paving", "line": [W(-P, 0.0), W(P, 0.0)], "width": 2 * P,
+                "thk": 0.08, "top": 0.022, "confidence": "medium", "evidence": EV})
+    for side, (nx, ny) in (("N", (0, 1)), ("S", (0, -1)), ("E", (1, 0)), ("W", (-1, 0))):
+        along = (ny != 0)                                     # N/S sides run along u and own the corners
+        hr, er = P + 0.35, P - 0.05                           # hedge / edging centre lines
+        hl, el_ = (sq if along else P), (P if along else P - 0.1)
+        for k, (a0, a1) in enumerate(((-hl, -gh), (gh, hl))):
+            pts = [(a0, ny * hr), (a1, ny * hr)] if along else [(nx * hr, a0), (nx * hr, a1)]
+            new.append({"type": "hedge", "name": f"CentreSquare_Hedge_{side}{k}", "line": [W(*q) for q in pts],
+                        "width": HEDGE_W, "height": 1.05, "top": "flat", "confidence": "medium", "evidence": EV})
+        for k, (a0, a1) in enumerate(((-el_, -gh), (gh, el_))):
+            pts = [(a0, ny * er), (a1, ny * er)] if along else [(nx * er, a0), (nx * er, a1)]
+            new.append({"type": "wall", "name": f"CentreSquare_Edging_{side}{k}", "line": [W(*q) for q in pts],
+                        "height": 0.22, "thk": 0.1, "cap_proj": 0.0, "material": "stone", "kind": "scalloped_edging",
+                        "confidence": "medium", "evidence": EV})
+        bu = (gh + 0.1 + P) / 2                               # bench centre along the side (mid of each half)
+        face = math.degrees(math.atan2(-ny, -nx)) + hd        # sitter faces the middle of the square
+        for k, sgn in enumerate((-1, 1)):
+            q = (sgn * bu, ny * (P - 0.4)) if along else (nx * (P - 0.4), sgn * bu)
+            new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": W(*q), "dir_deg": round(face, 2),
+                        "length": 1.5, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium", "evidence": EV})
+    new.append({"type": "box", "name": "CentreSquare_Drain", "center": W(1.2, -1.0), "dir_deg": round(hd, 2),
+                "size": [0.5, 0.5, 0.03], "z_rel": 0.0, "material": "metal", "slot": "M_Steel_Grating", "confidence": "low",
+                "evidence": EV})
     keep = [e for e in E if e["name"] not in old]
     i = next(k for k, e in enumerate(keep) if e["name"] == "Gazebo_2") + 1
     keep[i:i] = new
