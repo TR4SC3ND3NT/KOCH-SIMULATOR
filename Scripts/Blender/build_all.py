@@ -1,5 +1,5 @@
 # Rebuilds the whole campus greybox in order: phase-1 terrain/massing, every building spec (Specs/BLD_*.json),
-# every site spec (Specs/SITE_*.json), then validates (unique dot-free names, closed manifold meshes). Used by R1.
+# every site spec (Specs/SITE_*.json), the clean-up pass (greybox/finalize.py), then validates (unique dot-free names, closed manifold meshes). Used by R1.
 # Run: blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py   (saves the file)
 import os
 import runpy
@@ -57,6 +57,8 @@ def main():
     from greybox.materials import assign_ground_surfaces, assign_name_slots
     print("material slots by name:", assign_name_slots(bpy.data.objects))
     print("ground surfaces:", assign_ground_surfaces(bpy.data.objects.get("TER_Ground"), SPECS))
+    from greybox.finalize import run as finalize
+    print("finalize:", {k: (v if not isinstance(v, list) else (len(v), v[:4])) for k, v in finalize().items()})
     ok = validate()
     fails = bpy.app.driver_namespace.get("koch_build_failures", [])
     if fails:   # a failed building/element must not be saved silently (a missing Block C was committed once)

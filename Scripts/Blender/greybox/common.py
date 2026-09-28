@@ -218,7 +218,10 @@ def add_roof(bm, ring, z_eave, roof):
             pass
 
 def ensure_collection(name, parent_name=None):
-    col = bpy.data.collections.get(name) or bpy.data.collections.new(name)
+    col = bpy.data.collections.get(name)
+    if col is not None and parent_name is None and any(col.name in c.children for c in bpy.data.collections):
+        return col   # already filed under a parent (e.g. BLD_A in 02_Buildings): never link it to the scene root too
+    col = col or bpy.data.collections.new(name)
     parent = bpy.data.collections.get(parent_name) if parent_name else bpy.context.scene.collection
     if parent is None:
         parent = ensure_collection(parent_name)

@@ -31,7 +31,8 @@ PALETTE = {
 # massing, the context ring); first match wins, matched case-insensitively
 NAME_SLOTS = [("ter_ground", "", "M_Ground_Grass"), ("ctx", "_roof", "M_Context_Roof"), ("ctx", "", "M_Context_Facade"),
               ("ac_units", "", "M_AC_Casing"), ("porchpiers", "", "M_Tile_Brick_Red"), ("porchroof", "", "M_Shingle_Brown"),
-              ("sign", "", "M_Sign_Panel"), ("glazedporch_canopy", "", "M_Sheet_Brown"), ("glazedporch", "", "M_Glass"),
+              ("sign", "", "M_Sign_Panel"), ("cctv", "", "M_Plastic_White"), ("downpipe", "", "M_PVC_Gutter_White"),
+              ("_flood_", "", "M_Alu_Black"), ("_ac_", "", "M_AC_Casing"), ("glazedporch_canopy", "", "M_Sheet_Brown"), ("glazedporch", "", "M_Glass"),
               ("canopy", "", "M_Sheet_Brown"), ("lightwellcover", "", "M_Sheet_Red"), ("dancehallentry", "", "M_Tile_Brick_Red"),
               ("dormers", "", "M_Sheet_Red"), ("westshed", "", "M_Sheet_Red"), ("_roof", "", "M_Sheet_Red"),
               ("gb_", "", "M_Render_Beige")]
