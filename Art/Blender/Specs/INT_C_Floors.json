@@ -1506,9 +1506,19 @@
    "spacing": 0.12,
    "mid_rails": 0,
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side | [B] owner 2026-09-28: balustrade continuous across the floor where the flight from below meets the flight going up (was two parallel rails)",
    "confidence": "medium",
    "points": [
+    [
+     175.511174,
+     3.270897,
+     9.7
+    ],
+    [
+     175.59111,
+     3.267708,
+     9.7
+    ],
     [
      175.606333,
      3.649405,
@@ -1663,9 +1673,19 @@
    "spacing": 0.12,
    "mid_rails": 0,
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side | [B] owner 2026-09-28: balustrade continuous across the floor where the flight from below meets the flight going up (was two parallel rails) | [B] owner 2026-09-28: balustrade continuous across the floor where the flight from below meets the flight going up (was two parallel rails)",
    "confidence": "medium",
    "points": [
+    [
+     200.950806,
+     2.256317,
+     9.7
+    ],
+    [
+     200.87087,
+     2.259503,
+     9.7
+    ],
     [
      200.886093,
      2.6412,
@@ -1687,8 +1707,13 @@
      13.0
     ],
     [
-     201.060748,
-     2.001736,
+     201.07071,
+     2.251536,
+     13.0
+    ],
+    [
+     200.97079,
+     2.25552,
      13.0
     ]
    ]
@@ -3223,9 +3248,19 @@
    "spacing": 0.12,
    "mid_rails": 0,
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side | [B] owner 2026-09-28: balustrade continuous across the floor where the flight from below meets the flight going up (was two parallel rails) | [B] owner 2026-09-28: balustrade continuous across the floor where the flight from below meets the flight going up (was two parallel rails)",
    "confidence": "medium",
    "points": [
+    [
+     200.950806,
+     2.256317,
+     13.0
+    ],
+    [
+     200.87087,
+     2.259503,
+     13.0
+    ],
     [
      200.886093,
      2.6412,
@@ -3247,8 +3282,13 @@
      16.3
     ],
     [
-     201.060748,
-     2.001736,
+     201.07071,
+     2.251536,
+     16.3
+    ],
+    [
+     200.97079,
+     2.25552,
      16.3
     ]
    ]
@@ -4746,9 +4786,19 @@
    "spacing": 0.12,
    "mid_rails": 0,
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side | [B] owner 2026-09-28: balustrade continuous across the floor where the flight from below meets the flight going up (was two parallel rails)",
    "confidence": "medium",
    "points": [
+    [
+     200.950806,
+     2.256317,
+     16.3
+    ],
+    [
+     200.87087,
+     2.259503,
+     16.3
+    ],
     [
      200.886093,
      2.6412,
