@@ -1796,8 +1796,12 @@
      -54.61
     ],
     [
-     152.916,
-     -54.32
+     151.967,
+     -54.274
+    ],
+    [
+     150.967,
+     -74.55
     ]
    ],
    "z": [
@@ -1808,7 +1812,7 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end)",
+   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end) | 2026-09-28: west edge follows the moved B-bed curb",
    "confidence": "medium",
    "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)"
   },
@@ -1817,138 +1821,138 @@
    "name": "BBed_Curb",
    "line": [
     [
-     151.861,
-     -74.596
+     150.912,
+     -74.55
     ],
     [
-     152.861,
-     -54.221
+     151.912,
+     -54.175
     ]
    ],
    "height": 0.12,
    "thk": 0.12,
    "material": "stone",
-   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs)",
+   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs) | owner 2026-09-28 (screenshot 56): bed slightly narrower: curb moved 0.95 m toward B",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_00",
    "pos": [
-    151.244,
-    -71.062
+    149.746,
+    -70.989
    ],
    "height": 1.6,
    "crown_d": 1.6,
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_01",
    "pos": [
-    151.376,
-    -68.365
+    149.878,
+    -68.292
    ],
    "height": 1.6,
    "crown_d": 1.6,
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_02",
    "pos": [
-    151.513,
-    -65.568
+    150.015,
+    -65.495
    ],
    "height": 1.6,
    "crown_d": 1.6,
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_03",
    "pos": [
-    151.646,
-    -62.872
+    150.148,
+    -62.799
    ],
    "height": 1.6,
    "crown_d": 1.6,
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
    "confidence": "medium"
   },
   {
    "type": "lamp_orn",
    "name": "BBed_Lamp_00",
    "pos": [
-    151.452,
-    -69.871
+    149.954,
+    -69.798
    ],
    "height": 3.2,
    "arm_span": 0.7,
    "globes": 2,
    "globe_d": 0.28,
    "dir_deg": -2.808,
-   "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base rays: (-8.7, 22.5), (-8.35, 28.3))",
+   "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base rays: (-8.7, 22.5), (-8.35, 28.3)) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
    "confidence": "medium"
   },
   {
    "type": "lamp_orn",
    "name": "BBed_Lamp_01",
    "pos": [
-    151.737,
-    -64.078
+    150.239,
+    -64.005
    ],
    "height": 3.2,
    "arm_span": 0.7,
    "globes": 2,
    "globe_d": 0.28,
    "dir_deg": -2.808,
-   "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base rays: (-8.7, 22.5), (-8.35, 28.3))",
+   "evidence": "black cast lamp post with two lanterns between the shrubs (070309303 f48, f49, f51, f52 base rays: (-8.7, 22.5), (-8.35, 28.3)) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Conifer_00",
    "pos": [
-    151.711,
-    -58.47
+    150.762,
+    -58.424
    ],
    "height": 9.0,
    "crown_d": 3.6,
    "shape": "cone",
    "trunk_d": 0.3,
    "crown_base": 1.0,
-   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51)",
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "BBed_Conifer_01",
    "pos": [
-    152.382,
-    -54.998
+    151.433,
+    -54.952
    ],
    "height": 8.0,
    "crown_d": 3.2,
    "shape": "cone",
    "trunk_d": 0.3,
    "crown_base": 1.0,
-   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51)",
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb",
    "confidence": "low"
   },
   {

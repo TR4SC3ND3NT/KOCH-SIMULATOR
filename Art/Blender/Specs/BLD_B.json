@@ -661,11 +661,13 @@
    "type": "lightwell",
    "edge": 1,
    "u0": 7.2,
-   "u1": 23.4,
+   "u1": 24.46,
    "depth": 1.0,
    "z_wall": 0.5,
    "z_edge": -0.6,
-   "evidence": "sloped maroon sheet covers over basement light wells, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36)",
+   "box": true,
+   "wrap": {"edge": 2, "u1": 48.25},
+   "evidence": "maroon light-well cover, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36) | owner 2026-09-28 (screenshots 56-57): a box (vertical front, flat top), not a slope, and it runs round the NE corner along the whole north face with the same width and height",
    "confidence": "medium"
   },
   {

@@ -874,6 +874,32 @@ class Building:
                         pts = [fr @ Vector((a["u0"], w, a["z_high"])), fr @ Vector((a["u1"], w, a["z_low"]))]
                         railing(bm2, pts, height=0.9, spacing=1.5, mid_rails=1)
                     self.obj(f"RampRail_E{a['edge']}", bm2, COL["metal"], a.get("evidence"))
+            elif t == "lightwell" and a.get("box"):
+                # box cover (vertical front, flat top at z_wall) down to the ground; "wrap" {edge, u1} continues it
+                # round the corner at this edge's u1 as ONE L solid (no shared/coplanar faces at the corner)
+                d = a["depth"]
+                pts = [fr @ Vector((a["u0"], 0.0, 0.0)), fr @ Vector((a["u0"], d, 0.0))]
+                zb = e["zg"]
+                wr = a.get("wrap")
+                if wr:
+                    e2 = self.edges[wr["edge"]]
+                    f2 = e2["frame"]
+                    zb = min(zb, e2["zg"])
+                    pts += [f2 @ Vector((-d, d, 0.0)), f2 @ Vector((wr["u1"], d, 0.0)), f2 @ Vector((wr["u1"], 0.0, 0.0)),
+                            f2 @ Vector((0.0, 0.0, 0.0))]
+                else:
+                    pts += [fr @ Vector((a["u1"], d, 0.0)), fr @ Vector((a["u1"], 0.0, 0.0))]
+                zb -= BURY_M
+                lo = [bm.verts.new((p.x, p.y, zb)) for p in pts]
+                hi = [bm.verts.new((p.x, p.y, a["z_wall"])) for p in pts]
+                n = len(pts)
+                for i in range(n):
+                    j = (i + 1) % n
+                    bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
+                bm.faces.new(list(reversed(lo)))
+                bm.faces.new(hi)
+                bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+                self.obj(f"LightwellCover_E{a['edge']}_{a['u0']:.0f}", bm, COL["maroon"], a.get("evidence"))
             elif t == "lightwell":
                 prism_profile(bm, fr, [(0.0, a["z_wall"]), (a["depth"], a["z_edge"]), (a["depth"], a["z_edge"] - 0.06),
                                        (0.0, a["z_wall"] - 0.06)], a["u0"], a["u1"])
