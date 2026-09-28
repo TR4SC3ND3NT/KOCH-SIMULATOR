@@ -47,7 +47,7 @@
  ],
  "plinth": {
   "z_top": 0.6,
-  "proj": 0.03,
+  "proj": 0.04,
   "evidence": "red brick-tile plinth (070410255 a_030-a_034)",
   "confidence": "low"
  },
