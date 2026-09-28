@@ -204,8 +204,10 @@ for nm, u in (("Div1", DIV1), ("Div2", DIV2)):
 ev_ly = ("owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps "
          "down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the "
          "path; drop 0.6 m = 4 risers assumed (not measured)")
-ST_U0, ST_U1 = 47.60, 50.90                   # stair between the terrace retaining wall and the courts' NW corner
+ST_U0, ST_U1 = 44.45, 50.90                   # stair over the full walkway width, pitch NE corner -> courts NW corner (owner)
 ST_N, ST_RH, ST_TR = 4, 0.15, 0.45
+LANE_V0 = 33.30                                # S edge of the low lane behind the pitch (N curb of the tree bed)
+NB_RAISE = 0.40   # owner 2026-09-28: the tree bed behind the pitch stands higher than the path (raised bed, 0.4 assumed)
 add(type="stairs_run", name="LowerYard_Stair", top=W((ST_U0 + ST_U1) / 2, C_V1), dir_deg=DEG_N, width=ST_U1 - ST_U0 - 0.02,
     risers=ST_N, riser_h=ST_RH, tread=ST_TR, z_top=Z_PLAZA, material="stone", slot="M_Concrete_Precast", evidence=ev_ly,
     confidence="low")
@@ -218,9 +220,12 @@ def wall_box(nm, u0, u1, v0, v1, z0, z1, slot="M_Concrete_Precast"):
 
 
 wall_box("LowerYard_Retain_Courts", ST_U1, C_U1 + 0.3, C_V1, C_V1 + 0.3, Z_LOW - 0.3, Z_COURT)           # under the N fence
-wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.3, ST_U0, C_V1, 42.0, Z_LOW - 0.3, Z_NORTH + 0.05)        # pitch side
+wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)  # pitch side
+# the lane behind the pitch is low too (owner 2026-09-28): retaining wall along the N side of the raised bed / west terrace
+wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
+wall_box("LowerYard_Retain_West", -20.0, 0.0, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)
 wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.3, C_V1 + 0.3, ST_V1, Z_LOW - 0.3, Z_PLAZA)          # stair E cheek
-for k, (u, s) in enumerate(((ST_U0 + 0.15, "W"), (ST_U1 - 0.15, "E"))):                                   # pipe handrails
+for k, (u, s) in enumerate(((ST_U0 + 0.15, "W"), ((ST_U0 + ST_U1) / 2, "M"), (ST_U1 - 0.15, "E"))):         # pipe handrails
     add(type="rail3d", name=f"LowerYard_Stair_Rail{s}", height=0.9, spacing=1.0, mid_rails=1, material="metal",
         points=[W(u, C_V1 - 0.2) + [Z_PLAZA], W(u, C_V1 + 0.1) + [Z_PLAZA], W(u, ST_V1 - 0.1) + [Z_LOW], W(u, ST_V1 + 0.3) + [Z_LOW]],
         evidence=ev_ly + "; pipe handrails as at the old walkway step (070410255 t=60 s)", confidence="low")
@@ -340,8 +345,7 @@ for k, u in enumerate([-21.2, -15.0, -9.5, -3.9, 3.45, 9.1, 14.6, 19.9]):
         "(drone 2022 row f 0:15-0:18)", confidence="low")
 
 # ================================================================= NORTH strip (path, lawn bed, lane, tree lawn, boundary)
-NB_RAISE = 0.40   # owner 2026-09-28: the tree bed behind the pitch stands higher than the path (raised bed, 0.4 assumed)
-add(type="planter", name="NorthBed", ring=rect(0.0, 44.4, 27.0, 33.3), curb_w=0.15, curb_h=NB_RAISE + 0.1,
+add(type="planter", name="NorthBed", ring=rect(0.0, 43.9, 27.0, 33.3), curb_w=0.15, curb_h=NB_RAISE + 0.1,
     evidence="Google 2026 lawn bed u 0..44.4, v 27.0..33.3 behind a 1.6 m paved path along the N fence (drone 2022 d_07/d_19: "
     "grey path, lawn with two rows of young blue spruces)", confidence="medium")
 for k, (u, v) in enumerate([(0.8, 28.9), (5.35, 28.9), (10.75, 28.9), (15.85, 28.9), (20.55, 28.9), (25.45, 28.9),
@@ -360,7 +364,10 @@ for k, u in enumerate([-35.6, -23.3, -17.5, -12.3, -6.9, -1.7, 4.1, 9.2, 15.0, 2
         crown_d=3.2 if big else 2.0, crown_base=1.5 if big else 0.4, shape="cone",
         evidence="Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
         confidence="low")
-add(type="wall", name="NorthBoundary_Wall", line=poly([(-40.0, 42.2), (93.0, 42.2), (100.5, 40.0)]), height=2.5, thk=0.25,
+add(type="path", name="NorthLane_Path_W", line=poly([(-20.0, 36.0), (-112.0, 36.0)]), width=3.0, slot="M_Paving_Generic",
+    evidence="owner 2026-09-28 (overview sketch): the low path along the back fence runs from the courts to Block D; west "
+    "of the pitch it follows the natural ground (DEM 2.9 at u -30 rising to 3.7 at u -112); width 3.0 assumed", confidence="low")
+add(type="wall", name="NorthBoundary_Wall", line=poly([(-112.0, 42.2), (93.0, 42.2), (100.5, 40.0)]), height=2.5, thk=0.25,
     material="stone", slot="M_Concrete_Precast",
     evidence="campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; 2026-09-28 "
     "owner: a solid sand-concrete block wall without openings (replaces the bar fence + brick piers read from drone 2022 d_07); "
@@ -374,20 +381,21 @@ add(type="tree", name="WestBigSpruce", pos=W(-18.0, 31.0), height=12.0, crown_d=
 
 # ---------------------------------------------------------------- terrain pads
 pads = [
-    dict(name="SportsPlatform", ring=poly([(-20.0, -2.2), (101.0, -2.2), (101.0, 25.4), (47.6, 25.4), (47.6, 26.9),
+    dict(name="SportsPlatform", ring=poly([(-20.0, -2.2), (101.0, -2.2), (101.0, 25.4), (44.35, 25.4), (44.35, 26.9),
                                            (-20.0, 26.9)]), z=Z_PLAZA, blend=10.0,
          evidence="bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone "
                   "2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives "
                   "3.3-3.6 along it, rms 1 m) so the 10 m blend into the alley/canteen stays within 0.1-0.4 m", confidence="low"),
-    dict(name="NorthTerrace", ring=rect(-20.0, 47.6, 26.9, 44.0), z=Z_NORTH, blend=3.0,
+    dict(name="NorthTerrace", ring=rect(-20.0, 44.35, 26.9, LANE_V0), z=Z_NORTH, blend=3.0,
          evidence="north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north "
                   "end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend)",
          confidence="low"),
 ]
 pads += [
-    dict(name="LowerYard", ring=poly([(ST_U0, C_V1), (ST_U1, C_V1), (ST_U1, C_V1 + 0.3), (101.0, C_V1 + 0.3), (101.0, 44.0),
-                                      (ST_U0, 44.0)]), z=Z_LOW, blend=0.0, evidence=ev_ly, confidence="low"),
-    dict(name="NorthBedRaised", ring=rect(0.15, 44.25, 27.15, 33.15), z=Z_NORTH + NB_RAISE, blend=0.0,
+    dict(name="LowerYard", ring=poly([(ST_U0 - 0.1, C_V1), (ST_U1, C_V1), (ST_U1, C_V1 + 0.3), (101.0, C_V1 + 0.3), (101.0, 44.0),
+                                      (-20.0, 44.0), (-20.0, LANE_V0 + 0.3), (ST_U0 - 0.1, LANE_V0 + 0.3)]), z=Z_LOW, blend=0.0,
+         evidence=ev_ly + "; the lane behind the pitch included (owner overview sketch)", confidence="low"),
+    dict(name="NorthBedRaised", ring=rect(0.15, 43.75, 27.15, 33.15), z=Z_NORTH + NB_RAISE, blend=0.0,
          evidence="raised bed inside its curb (owner 2026-09-28)", confidence="low"),
 ]
 for e in els:   # "ground" z0 marker -> resolved by the builder? (box needs absolute z0): use the pad z

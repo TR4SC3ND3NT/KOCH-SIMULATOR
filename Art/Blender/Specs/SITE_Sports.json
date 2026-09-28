@@ -25,12 +25,12 @@
      66.504
     ],
     [
-     162.54,
-     68.554
+     159.292,
+     68.679
     ],
     [
-     162.598,
-     70.053
+     159.35,
+     70.178
     ],
     [
      95.047,
@@ -50,16 +50,16 @@
      72.648
     ],
     [
-     162.598,
-     70.053
+     159.35,
+     70.178
     ],
     [
-     163.254,
-     87.14
+     159.596,
+     76.573
     ],
     [
-     95.704,
-     89.735
+     95.293,
+     79.043
     ]
    ],
    "z": 3.75,
@@ -71,8 +71,8 @@
    "name": "LowerYard",
    "ring": [
     [
-     162.54,
-     68.554
+     159.292,
+     68.679
     ],
     [
      165.838,
@@ -91,13 +91,21 @@
      85.09
     ],
     [
-     163.254,
-     87.14
+     95.704,
+     89.735
+    ],
+    [
+     95.305,
+     79.343
+    ],
+    [
+     159.607,
+     76.873
     ]
    ],
    "z": 2.85,
    "blend": 0.0,
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); the lane behind the pitch included (owner overview sketch)",
    "confidence": "low"
   },
   {
@@ -108,12 +116,12 @@
      72.124
     ],
     [
-     159.26,
-     70.431
+     158.76,
+     70.451
     ],
     [
-     159.49,
-     76.427
+     158.99,
+     76.446
     ],
     [
      115.422,
@@ -800,7 +808,7 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.504,
+   "z1": 3.5,
    "material": "hedge",
    "evidence": "green basketball field u 52.9..67.4, 23.76 m long (Google profiles v 3.04..26.8, rms 0.03-0.06 m; N edge 26.4..27.3 blurred); re-centred in the courts block made flush with the pitch (owner 2026-09-28)",
    "confidence": "medium"
@@ -827,7 +835,7 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.504,
+   "z1": 3.5,
    "material": "hedge",
    "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06)",
    "confidence": "medium"
@@ -854,7 +862,7 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.504,
+   "z1": 3.5,
    "material": "brick",
    "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green)",
    "confidence": "medium"
@@ -1020,7 +1028,7 @@
     }
    ],
    "width": 0.05,
-   "z": 3.504,
+   "z": 3.5,
    "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field",
    "confidence": "medium"
   },
@@ -1172,7 +1180,7 @@
    "type": "paint",
    "name": "Court_Volley_Lines",
    "width": 0.05,
-   "z": 3.504,
+   "z": 3.5,
    "lines": [
     [
      [
@@ -1362,7 +1370,7 @@
     ]
    ],
    "width": 0.05,
-   "z": 3.504,
+   "z": 3.5,
    "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred",
    "confidence": "low"
   },
@@ -1567,6 +1575,94 @@
    "z_base": 3.5
   },
   {
+   "type": "box",
+   "name": "LowerYard_Retain_Bed",
+   "center": [
+    137.293,
+    77.58
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    44.050000000000004,
+    0.29999999999999716,
+    1.6999999999999997
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_Retain_West",
+   "center": [
+    105.291,
+    78.809
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    20.0,
+    0.29999999999999716,
+    1.2499999999999996
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "rail3d",
+   "name": "LowerYard_Stair_RailM",
+   "height": 0.9,
+   "spacing": 1.0,
+   "mid_rails": 1,
+   "material": "metal",
+   "points": [
+    [
+     162.607,
+     68.351,
+     3.45
+    ],
+    [
+     162.619,
+     68.651,
+     3.45
+    ],
+    [
+     162.68,
+     70.25,
+     2.85
+    ],
+    [
+     162.696,
+     70.65,
+     2.85
+    ]
+   ],
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); pipe handrails as at the old walkway step (070410255 t=60 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "NorthLane_Path_W",
+   "line": [
+    [
+     95.397,
+     81.741
+    ],
+    [
+     3.465,
+     85.273
+    ]
+   ],
+   "width": 3.0,
+   "slot": "M_Paving_Generic",
+   "evidence": "owner 2026-09-28 (overview sketch): the low path along the back fence runs from the courts to Block D; west of the pitch it follows the natural ground (DEM 2.9 at u -30 rising to 3.7 at u -112); width 3.0 assumed",
+   "confidence": "low"
+  },
+  {
    "type": "gate_leaf",
    "name": "CourtsGate_Basket",
    "line": [
@@ -1702,11 +1798,11 @@
    "type": "stairs_run",
    "name": "LowerYard_Stair",
    "top": [
-    164.189,
-    68.491
+    162.615,
+    68.551
    ],
    "dir_deg": 87.8,
-   "width": 3.279999999999997,
+   "width": 6.429999999999996,
    "risers": 4,
    "riser_h": 0.15,
    "tread": 0.45,
@@ -1739,13 +1835,13 @@
    "type": "box",
    "name": "LowerYard_Retain_Terrace",
    "center": [
-    162.709,
-    76.854
+    159.3,
+    72.782
    ],
    "dir_deg": -2.2,
    "size": [
     0.29999999999999716,
-    16.6,
+    8.199999999999996,
     1.2499999999999996
    ],
    "z0": 2.5500000000000003,
@@ -1782,23 +1878,23 @@
    "material": "metal",
    "points": [
     [
-     162.682,
-     68.348,
+     159.534,
+     68.469,
      3.45
     ],
     [
-     162.694,
-     68.648,
+     159.546,
+     68.769,
      3.45
     ],
     [
-     162.755,
-     70.247,
+     159.607,
+     70.368,
      2.85
     ],
     [
-     162.77,
-     70.647,
+     159.623,
+     70.768,
      2.85
     ]
    ],
@@ -4442,12 +4538,12 @@
      71.98
     ],
     [
-     159.404,
-     70.276
+     158.904,
+     70.295
     ],
     [
-     159.646,
-     76.571
+     159.146,
+     76.59
     ],
     [
      115.278,
@@ -5034,8 +5130,8 @@
    "name": "NorthBoundary_Wall",
    "line": [
     [
-     75.649,
-     88.704
+     3.703,
+     91.468
     ],
     [
      208.551,
