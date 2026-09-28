@@ -669,6 +669,43 @@
    "color": "sign",
    "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH",
    "confidence": "medium"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_NW",
+   "edge": 5,
+   "u": [
+    29.0
+   ],
+   "z0": -0.3,
+   "z1": 13.2,
+   "d": 0.1,
+   "off": 0.04,
+   "evidence": "P1 by frames: NW end of the north facade seen from the canteen yard (070410255 f03942): white downpipe on the maroon corner strip",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "AC_North",
+   "edge": 5,
+   "items": [
+    [
+     27.2,
+     0.1,
+     0.8,
+     0.6,
+     0.3
+    ],
+    [
+     25.9,
+     0.1,
+     0.8,
+     0.6,
+     0.3
+    ]
+   ],
+   "evidence": "P1 by frames: NW end of the north facade seen from the canteen yard (070410255 f03942): two outdoor AC units standing at the foot of the north wall by the parking",
+   "confidence": "low"
   }
  ],
  "basement": {
