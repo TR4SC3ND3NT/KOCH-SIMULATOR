@@ -1583,6 +1583,173 @@
    "z_base": 3.5
   },
   {
+   "type": "slab",
+   "name": "LowerYard_SandPit",
+   "ring": [
+    [
+     202.979,
+     68.802
+    ],
+    [
+     209.974,
+     68.533
+    ],
+    [
+     210.089,
+     71.531
+    ],
+    [
+     203.094,
+     71.8
+    ]
+   ],
+   "z0": 2.5500000000000003,
+   "z1": 2.87,
+   "material": "stone",
+   "slot": "M_Sand",
+   "evidence": "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "LowerYard_SandPit_Curb",
+   "ring": [
+    [
+     202.876,
+     68.706
+    ],
+    [
+     210.07,
+     68.429
+    ],
+    [
+     210.193,
+     71.627
+    ],
+    [
+     202.998,
+     71.903
+    ]
+   ],
+   "curb_w": 0.1,
+   "curb_h": 0.08,
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars0_Rung11",
+   "center": [
+    174.386,
+    69.52
+   ],
+   "size": [
+    3.0,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.9,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars0_Rung12",
+   "center": [
+    174.386,
+    69.52
+   ],
+   "size": [
+    3.0,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 6.15,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars1_Rung11",
+   "center": [
+    177.783,
+    69.389
+   ],
+   "size": [
+    3.0,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.9,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars1_Rung12",
+   "center": [
+    177.783,
+    69.389
+   ],
+   "size": [
+    3.0,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 6.15,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "turnstile",
+   "name": "GuardPost_Turnstile",
+   "pos": [
+    211.039,
+    83.503
+   ],
+   "dir_deg": 87.8,
+   "count": 1,
+   "passage_w": 0.55,
+   "height": 1.0,
+   "housing_w": 0.3,
+   "housing_l": 0.8,
+   "ue_asset": "turnstile_tripod",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a FaceID terminal and a door (owner sketch), sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "gate_leaf",
+   "name": "GuardPost_Door",
+   "line": [
+    [
+     211.888,
+     83.471
+    ],
+    [
+     212.78,
+     83.436
+    ]
+   ],
+   "height": 2.1,
+   "panel": "bars",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a FaceID terminal and a door (owner sketch), sizes assumed",
+   "confidence": "low"
+  },
+  {
    "type": "tree",
    "name": "NorthLawnSpruce_0",
    "pos": [
@@ -1635,20 +1802,20 @@
    "name": "LowerYard_RampE",
    "ring": [
     [
-     212.053,
-     66.652
+     211.884,
+     66.658
     ],
     [
-     215.101,
-     66.535
+     215.351,
+     66.525
     ],
     [
-     215.293,
-     71.531
+     215.543,
+     71.522
     ],
     [
-     212.245,
-     71.648
+     212.076,
+     71.655
     ]
    ],
    "z": [
@@ -1661,44 +1828,6 @@
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "LowerYard_RampE_CheekW",
-   "center": [
-    211.975,
-    69.807
-   ],
-   "dir_deg": -2.2,
-   "size": [
-    0.4000000000000057,
-    3.6999999999999993,
-    0.9499999999999997
-   ],
-   "z0": 2.5500000000000003,
-   "material": "stone",
-   "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "LowerYard_RampE_CheekE",
-   "center": [
-    215.322,
-    69.028
-   ],
-   "dir_deg": -2.2,
-   "size": [
-    0.25,
-    5.0,
-    0.9499999999999997
-   ],
-   "z0": 2.5500000000000003,
-   "material": "stone",
-   "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
    "confidence": "low"
   },
   {
@@ -1816,51 +1945,11 @@
    "confidence": "low"
   },
   {
-   "type": "fence",
-   "name": "EastBoundary_Fence_N",
-   "line": [
-    [
-     216.036,
-     83.061
-    ],
-    [
-     215.908,
-     79.714
-    ]
-   ],
-   "height": 2.0,
-   "post_spacing": 2.5,
-   "post": 0.06,
-   "panel": "bars",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28 (overview sketch): black steel bar fence along the east edge from the N boundary corner south to the level of Block C, beside the neighbour's west wall (x ~215.6); height 2.0 assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "gate_leaf",
-   "name": "EastBoundary_ExitGate",
-   "line": [
-    [
-     215.872,
-     78.774
-    ],
-    [
-     215.905,
-     79.654
-    ]
-   ],
-   "height": 2.0,
-   "panel": "bars",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed",
-   "confidence": "low"
-  },
-  {
    "type": "box",
    "name": "GuardPost_FaceID_Post",
    "center": [
-    215.368,
-    79.985
+    211.721,
+    83.027
    ],
    "size": [
     0.08,
@@ -1871,19 +1960,19 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a FaceID terminal and a door (owner sketch), sizes assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "GuardPost_FaceID",
    "center": [
-    215.368,
-    79.985
+    211.721,
+    83.027
    ],
    "size": [
-    0.1,
     0.24,
+    0.1,
     0.32
    ],
    "dir_deg": -2.2,
@@ -1891,7 +1980,7 @@
    "material": "metal",
    "slot": "M_Plastic_Grey",
    "ue_asset": "face_terminal",
-   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a FaceID terminal and a door (owner sketch), sizes assumed",
    "confidence": "low"
   },
   {
@@ -2176,7 +2265,7 @@
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2190,13 +2279,13 @@
    "type": "box",
    "name": "Workout_WallBars0_Post1",
    "center": [
-    173.786,
-    69.543
+    173.886,
+    69.539
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2209,13 +2298,13 @@
    "type": "box",
    "name": "Workout_WallBars0_Post2",
    "center": [
-    174.686,
-    69.508
+    174.885,
+    69.501
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2228,13 +2317,13 @@
    "type": "box",
    "name": "Workout_WallBars0_Post3",
    "center": [
-    175.585,
-    69.474
+    175.885,
+    69.462
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2247,11 +2336,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung0",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2266,11 +2355,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung1",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2285,11 +2374,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung2",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2304,11 +2393,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung3",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2323,11 +2412,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung4",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2342,11 +2431,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung5",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2361,11 +2450,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung6",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2380,11 +2469,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung7",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2399,11 +2488,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung8",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2418,11 +2507,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung9",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2437,11 +2526,11 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung10",
    "center": [
-    174.236,
-    69.526
+    174.386,
+    69.52
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2456,13 +2545,13 @@
    "type": "box",
    "name": "Workout_WallBars1_Post0",
    "center": [
-    175.985,
-    69.459
+    176.284,
+    69.447
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2476,13 +2565,13 @@
    "type": "box",
    "name": "Workout_WallBars1_Post1",
    "center": [
-    176.884,
-    69.424
+    177.284,
+    69.409
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2495,13 +2584,13 @@
    "type": "box",
    "name": "Workout_WallBars1_Post2",
    "center": [
-    177.783,
-    69.389
+    178.283,
+    69.37
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2514,13 +2603,13 @@
    "type": "box",
    "name": "Workout_WallBars1_Post3",
    "center": [
-    178.683,
-    69.355
+    179.282,
+    69.332
    ],
    "size": [
     0.07,
     0.07,
-    2.9999999999999996
+    3.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
@@ -2533,11 +2622,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung0",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2552,11 +2641,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung1",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2571,11 +2660,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung2",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2590,11 +2679,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung3",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2609,11 +2698,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung4",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2628,11 +2717,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung5",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2647,11 +2736,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung6",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2666,11 +2755,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung7",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2685,11 +2774,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung8",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2704,11 +2793,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung9",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2723,11 +2812,11 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung10",
    "center": [
-    177.334,
-    69.407
+    177.783,
+    69.389
    ],
    "size": [
-    2.700000000000003,
+    3.0,
     0.03,
     0.03
    ],
@@ -2781,8 +2870,8 @@
    "name": "EastBoundary_Fence",
    "line": [
     [
-     215.869,
-     78.714
+     216.036,
+     83.061
     ],
     [
      213.082,

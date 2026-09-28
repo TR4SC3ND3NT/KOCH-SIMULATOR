@@ -220,7 +220,7 @@ def wall_box(nm, u0, u1, v0, v1, z0, z1, slot="M_Concrete_Precast"):
 
 
 RW_TOP = 1.3   # owner 2026-09-28: concrete strip between the courts fence and the lower yard wider again (0.3 -> 0.8 -> 1.3)
-SE_U0, SE_U1 = 97.15, 100.2   # second stair down at the E end, between the courts' E fence and the E bar fence (owner)
+SE_U0, SE_U1 = 96.98, 100.45   # E ramp between the retaining wall end and the E bar fence, no cheeks (owner)
 wall_box("LowerYard_Retain_Courts", ST_U1, C_U1, C_V1, C_V1 + RW_TOP, Z_LOW - 0.3, Z_COURT)              # under the N fence, to the E stair
 wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)  # pitch side
 # the lane behind the pitch is low too (owner 2026-09-28): retaining wall along the N side of the raised bed / west terrace
@@ -231,8 +231,12 @@ RE_L = 5.0   # owner 2026-09-28: the east way down is a plain ramp, no steps (0.
 add(type="roof_plane", name="LowerYard_RampE", ring=rect(SE_U0, SE_U1, C_V1, C_V1 + RE_L), z=[Z_PLAZA, Z_PLAZA, Z_LOW, Z_LOW],
     thk=0.6, material="stone", slot="M_Concrete_Precast",
     evidence=ev_ly + "; owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps)", confidence="low")
-wall_box("LowerYard_RampE_CheekW", C_U1 - 0.25, SE_U0, C_V1 + RW_TOP, C_V1 + RE_L, Z_LOW - 0.3, Z_COURT)
-wall_box("LowerYard_RampE_CheekE", SE_U1, SE_U1 + 0.25, C_V1, C_V1 + RE_L, Z_LOW - 0.3, Z_COURT)
+# sand pit for jumps (owner 2026-09-28), west of the ramp, along the retaining wall; long-jump pit size assumed
+EV_SP = "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed"
+add(type="slab", name="LowerYard_SandPit", ring=rect(88.0, 95.0, 27.2, 30.2), z0=Z_LOW - 0.3, z1=Z_LOW + 0.02, material="stone",
+    slot="M_Sand", evidence=EV_SP, confidence="low")
+add(type="planter", name="LowerYard_SandPit_Curb", ring=rect(87.9, 95.1, 27.1, 30.3), curb_w=0.1, curb_h=0.08,
+    slot="M_Concrete_Precast", evidence=EV_SP, confidence="low")
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
 # between the basketball court's N fence (v 25.40) and the lane; owner 2026-09-28: only parallel bars and 4 pull-up bars, the
@@ -275,12 +279,12 @@ for k, uc in enumerate((pu + 1.9, pu + 3.7)):
     for j, h in enumerate(PU_H):
         tube(f"Workout_PullUp{k}_Bar{j}", uc, vs[j], uc, vs[j + 1], Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
 # owner 2026-09-28: two wall-bar units, bigger (3 bays of 0.9 m, 3.0 m high, rungs every 0.25 m), 12 cm off the wall
-wb, wh, wv = 0.9, 3.0, C_V1 + RW_TOP + 0.12
+wb, wh, wv = 1.0, 3.4, C_V1 + RW_TOP + 0.12   # owner: bigger again (0.9 x 3.0 -> 1.0 x 3.4)
 for n, wu0 in enumerate((pu + 5.6, pu + 5.6 + 3 * wb + 0.4)):
     for j in range(4):
         u = wu0 + wb * j
         tube(f"Workout_WallBars{n}_Post{j}", u, wv, u, wv, Z_WO, Z_WO + wh, d=0.07, ue="workout_wall_bars" if j == 0 else None)
-    for k in range(11):
+    for k in range(13):
         z = Z_WO + 0.3 + 0.25 * k
         tube(f"Workout_WallBars{n}_Rung{k}", wu0, wv, wu0 + 3 * wb, wv, z, z, d=0.03)
 
@@ -410,18 +414,20 @@ for (ua, va), (ub, vb) in zip(NB_LINE[:-1], NB_LINE[1:]):
         _k += 1
 EV_EB = ("owner 2026-09-28 (overview sketch): black steel bar fence along the east edge from the N boundary corner south "
          "to the level of Block C, beside the neighbour's west wall (x ~215.6); height 2.0 assumed")
-EG0, EG1 = 37.6, 38.6   # exit wicket in the E fence beside the guard booth (owner)
-for k, (a_, b_) in enumerate(((41.95, EG1), (EG0, -35.0))):   # N piece starts clear of the corner pillar
-    add(type="fence", name=f"EastBoundary_Fence{'' if k else '_N'}", line=poly([(100.5, a_), (100.5, b_)]), height=2.0,
-        post_spacing=2.5, post=0.06, panel="bars", slot="M_Steel_Paint_Dark", evidence=EV_EB, confidence="low")
+add(type="fence", name="EastBoundary_Fence", line=poly([(100.5, 41.95), (100.5, -35.0)]), height=2.0,   # clear of the corner pillar
+    post_spacing=2.5, post=0.06, panel="bars", slot="M_Steel_Paint_Dark", evidence=EV_EB, confidence="low")
 EV_GB = ("owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, "
-         "like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed")
-add(type="gate_leaf", name="EastBoundary_ExitGate", line=poly([(100.5, EG0 + 0.06), (100.5, EG1 - 0.06)]), height=2.0, panel="bars",
-    slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
-add(type="box", name="GuardPost_FaceID_Post", center=W(99.95, EG1 + 0.25), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
+         "like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a "
+         "FaceID terminal and a door (owner sketch), sizes assumed")
+g0, g1 = NB_GAP[0] + 0.225, NB_GAP[1] - 0.225                                   # clear passage between the pillars
+add(type="turnstile", name="GuardPost_Turnstile", pos=W(g0 + 0.75, 42.2), dir_deg=DEG_N, count=1, passage_w=0.55, height=1.0,
+    housing_w=0.3, housing_l=0.8, ue_asset="turnstile_tripod", evidence=EV_GB, confidence="low")
+add(type="box", name="GuardPost_FaceID_Post", center=W(g0 + 1.45, 41.75), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
     material="metal", slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
-add(type="box", name="GuardPost_FaceID", center=W(99.95, EG1 + 0.25), size=[0.1, 0.24, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
+add(type="box", name="GuardPost_FaceID", center=W(g0 + 1.45, 41.75), size=[0.24, 0.1, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
     material="metal", slot="M_Plastic_Grey", ue_asset="face_terminal", evidence=EV_GB, confidence="low")
+add(type="gate_leaf", name="GuardPost_Door", line=poly([(g0 + 1.6, 42.2), (g1 - 0.05, 42.2)]), height=2.1, panel="bars",
+    slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
 # benches along the back fence (owner marks): between the boundary trees, facing the path; one opposite the yard stair
 for k, u in enumerate((-15.5, 6.05, 22.2, 39.85, (ST_U0 + ST_U1) / 2)):
     add(type="bench", name=f"NorthLawnBench_{k}", pos=W(u, 39.0), dir_deg=DEG_N - 180, length=1.8, depth=0.55, seat_h=0.45,
