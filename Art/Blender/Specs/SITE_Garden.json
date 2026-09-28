@@ -2092,6 +2092,34 @@
    "confidence": "low"
   },
   {
+   "type": "pergola",
+   "name": "Pergola_South",
+   "line": [
+    [
+     100.0,
+     -44.16
+    ],
+    [
+     152.5,
+     -46.76
+    ]
+   ],
+   "width": 2.0,
+   "pitch": 2.5,
+   "post_h": 2.2,
+   "apex_h": 2.9,
+   "tube": 0.05,
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide.",
+   "confidence": "medium",
+   "gaps": [
+    [
+     126.92,
+     -44.008,
+     1.0
+    ]
+   ]
+  },
+  {
    "type": "path",
    "name": "UpperWalk_South",
    "line": [

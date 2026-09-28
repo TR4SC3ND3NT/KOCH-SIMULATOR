@@ -42,7 +42,8 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "path": "M_Paving_Generic", "zebra": "M_Road_Paint_White", "wall": "M_Concrete", "fence": "M_Steel_Paint_Dark",
              "stairs_run": "M_Granite_Red", "sign": "M_Sign_Panel", "bin": "M_Plastic_Grey", "bike_rack": "M_Steel_Galv",
              "turnstile": "M_Steel_Galv", "gate_leaf": "M_Steel_Paint_Dark", "canopy": "M_Sheet_Brown", "slab": "M_Concrete",
-             "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark"}
+             "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark",
+             "pergola": "M_Steel_Paint_Maroon"}
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
@@ -209,6 +210,63 @@ class Site:
         bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
         p = el["line"][0]
         self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (p[0], p[1], self.gz(*p)))
+
+    def b_pergola(self, el):
+        """Steel pergola over a walk (SITE_Garden south walk, owner clip 081904575 t5-t9): pointed arches of thin
+        maroon tube every `pitch` m, straight legs to `post_h`, apex at `apex_h`, three longitudinal ties (apex and
+        both shoulders). The legs stand at the walk edges (`width` apart); sizes in metres."""
+        bm = bmesh.new()
+        A, B = Vector(el["line"][0]), Vector(el["line"][1])
+        L = (B - A).length
+        d = (B - A) / L
+        m = _frame2(A, d)
+        W, pitch, ph, ah = el["width"], el.get("pitch", 2.5), el.get("post_h", 2.2), el.get("apex_h", 2.9)
+        tube, seg = el.get("tube", 0.05), 10
+        n = max(1, round(L / pitch))
+
+        def rod(p0, p1):
+            v = p1 - p0
+            ln = v.length
+            if ln < 1e-4:
+                return
+            u = v / ln
+            s = u.cross(Vector((0, 0, 1)))
+            s = (s if s.length > 1e-6 else Vector((1, 0, 0))).normalized() * (tube / 2)
+            w = u.cross(s).normalized() * (tube / 2)
+            ring0 = [bm.verts.new(p0 + a * s + b * w) for a, b in ((1, 1), (-1, 1), (-1, -1), (1, -1))]
+            ring1 = [bm.verts.new(p1 + a * s + b * w) for a, b in ((1, 1), (-1, 1), (-1, -1), (1, -1))]
+            _close_loops(bm, [ring0, ring1])
+
+        def world(u, w, z):
+            q = m @ Vector((u, w, 0.0))
+            return Vector((q.x, q.y, z))
+        gaps = [(Vector(g[:2]), g[2]) for g in el.get("gaps", [])]   # [x, y, r]: no arch there (e.g. a hedge arch)
+        tops = []
+        for k in range(n + 1):
+            u = L * k / n
+            c = A + d * u
+            if any(min((c + d * (s * W / 2) - p).length for s in (0,)) < r or
+                   min((c + Vector((-d.y, d.x)) * s * W / 2 - p).length for s in (1, -1)) < r for p, r in gaps):
+                tops.append(None)
+                continue
+            z = self.gz(c.x, c.y)
+            pts = []
+            for side in (1, -1):
+                half = [world(u, side * W / 2, z - 0.1), world(u, side * W / 2, z + ph)]
+                for i in range(1, seg + 1):
+                    f = i / seg
+                    half.append(world(u, side * W / 2 * (1 - f), z + ph + (ah - ph) * math.sin(f * math.pi / 2)))
+                for p0, p1 in zip(half[:-1], half[1:]):
+                    rod(p0, p1)
+                pts.append(half)
+            tops.append((world(u, 0, z + ah), world(u, W / 2, z + ph), world(u, -W / 2, z + ph)))
+        for t0, t1 in zip(tops[:-1], tops[1:]):
+            if t0 is None or t1 is None:
+                continue
+            for i in range(3):
+                rod(t0[i], t1[i])
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+        self.emit(el, bm, COL["metal"], (A.x, A.y, self.gz(A.x, A.y)))
 
     def b_hedge(self, el):
         bm = bmesh.new()

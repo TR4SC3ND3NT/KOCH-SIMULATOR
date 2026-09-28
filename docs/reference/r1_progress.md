@@ -105,7 +105,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] GD.2 East gazebo — approx., in the model (GBS_Garden_Gazebo) | [B] P2 2026-09-28: parts with their own slots (red brick-tile parapet, timber bench, white posts, white fascia with the dark triangular shingle tabs, flat timber ceiling, shingle roof), eave (fascia bottom) 2.77 m from the spec notes; plan within ~0.3 m of the Google z20 ortho; checked against 081924271 t1-t18 frames by eye
 - [ ] GD.3 Hedge maze: hedge blocks and paths — approx., in the model (GBS_Garden_Hedge)
 - [ ] GD.4 Hedge arches — approx., in the model (GBS_Garden_Arch)
-- [ ] GD.5 South pergola alley: arches, radial paths, the red wall with a stair at its end — approx., in the model (GBS_Garden_PergolaWalk)
+- [ ] GD.5 South pergola alley: arches, radial paths, the red wall with a stair at its end — approx., in the model (GBS_Garden_PergolaWalk) | [B] P2 2026-09-28: the missing steel pergola added (Pergola_South: pointed maroon tube arches every 2.5 m, legs 2.2 m, apex 2.9 m, three ties; legs on the paving between the boulder-wall face and the north hedge; gap at the G1_SSE hedge arch) from 081904575 t5.5-t8.5; extent along the whole walk assumed
 - [ ] GD.6 Retaining walls (rubble stone) and steps between B's side and the garden — approx., in the model (GBS_Garden_RetainingWall/Steps)
 - [ ] GD.7 East edge toward the alley: retaining wall, hedge, lamps — approx., in the model (Garden RetainingWall/Hedge/Lamp)
 - [ ] GD.8 Garden furniture: wrought-iron benches with slats, bins, lamp posts — approx., in the model (GBS_Garden_Bench/Lamp)
