@@ -207,6 +207,8 @@ def alignment(work):
 if __name__ == "__main__":
     spec, info = build()
     out = os.path.join(REPO, "Art", "Blender", "Specs", "INT_C_Basement.json")
+    if os.path.exists(out) and "--force" not in sys.argv:   # the spec carries hand edits "by frames" since 2026-09-28
+        out = os.path.join(os.environ.get("TEMP", "/tmp"), "INT_C_Basement.gen.json")   # not in Specs: build_all reads every .json there
     json.dump(spec, open(out, "w"), indent=1)
     print("wrote", out, info)
     if WORK:

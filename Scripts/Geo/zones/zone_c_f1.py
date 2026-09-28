@@ -7,6 +7,7 @@
 import json
 import math
 import os
+import sys
 
 import numpy as np
 
@@ -431,6 +432,9 @@ if __name__ == "__main__":
     specs, info = build()
     for spec in specs:
         out = os.path.join(REPO, "Art", "Blender", "Specs", spec["id"] + ".json")
+        # since 2026-09-28 the specs carry hand edits "by frames" (fittings, WC layout, F2 lab): never overwrite them
+        if os.path.exists(out) and "--force" not in sys.argv:
+            out = os.path.join(os.environ.get("TEMP", "/tmp"), spec["id"] + ".gen.json")   # not in Specs: build_all reads every .json there
         json.dump(spec, open(out, "w"), indent=1)
         print(f"{out}: {len(spec['elements'])} elements")
     print(info)
