@@ -307,8 +307,8 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 ### Alley B-A
 - [x] INV.AL.1 Round manhole cover at the foot of the south stair : photos_p20260925_s1 (012205046), 061757320_s2 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | [x] at the Blender cap: flush manhole = decal (handoff 4a)
 - [x] INV.AL.2 Linear drainage channel between the circle strip and the herringbone : 082537786_s1, 082537786_s2 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | [x] at the Blender cap: flush linear drain = decal on the paving (handoff 4a)
-- [ ] INV.AL.3 Round clipped shrubs, x3–4, in the bed along A_S : 070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | re-opened: P1 by frames - SouthBed_Shrub_0-2
-- [ ] INV.AL.4 Maroon ledge/plinth boxes at the foot of A_S, plus a small maroon box : 012327726_s1, 012404116_s1 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | re-opened: P1 by frames - the maroon plinth boxes are the BLD_A_S plinth band at the A_S foot (existing, slot M_Paint_Maroon on the pilasters)
+- [ ] INV.AL.3 Round clipped shrubs, x3–4, in the bed along A_S : 070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | re-opened: P1 by frames - SouthBed_Shrub_0-2 | P1 by frames: SouthBed_Shrub_0-3
+- [ ] INV.AL.4 Maroon ledge/plinth boxes at the foot of A_S, plus a small maroon box : 012327726_s1, 012404116_s1 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | re-opened: P1 by frames - the maroon plinth boxes are the BLD_A_S plinth band at the A_S foot (existing, slot M_Paint_Maroon on the pilasters) | P1 by frames: BLD_A_S PlinthLedges (3 boxes)
 - [ ] INV.AL.5 Benches (black frame, wooden slats) under the trees at the A_S corner, x2 : 070021774_s2 — (was BLOCKED: alley pieces inconsistent (see G.* and B.8); photo request «Двор и аллея: медленный проход» | re-opened: P1 by frames - Bench_ASCorner_0/1 (+-1 m)
 ### A_W gallery + plaza between C and A
 - [ ] INV.AWP.1 Flat grey corrugated-metal awnings over the doors under the gallery, x2 : 012327726_s1, 070309303_s2 — (was BLOCKED: gallery placement +-2 m along (see AW.*); photo request «Галерея A_W» | re-opened: P1 by frames - Awning_DD over the double door + the existing south door-bay awning (BLD_A_W)
@@ -470,17 +470,17 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [ ] INV.BB.5 Step down from the booth apron to the front path : 065934318_s1
 - [ ] INV.BB.6 Pines and poplars along the front path : 065934318_s1, 065934318_s2
 ### Block A
-- [ ] INV.BA.1 Benches (black), x3, along the path in front of A : 082248481_s1
-- [ ] INV.BA.2 Small ground spot lamps on short posts in the lawn, x2 : 082248481_s1, 082606037_s1
-- [ ] INV.BA.3 Pavilion horizontal downpipe : 070309303_s1, 061757320_s2
-- [ ] INV.BA.4 Wheelie bin under the pavilion : 082537786_s1
-- [ ] INV.BA.5 "A Block" blue plate on the maroon corner pilaster : 082337333_s1, 070309303_s1, photos_p20260925_s1 (012208814)
-- [ ] INV.BA.6 CCTV bullet cameras on the A_S corner pilaster, x2 : 082337333_s1, 070309303_s1, 070021774_s1, photos_p20260925_s1 (012208814)
-- [ ] INV.BA.7 AC unit cluster (AUX/Beko/Midea) on the A_S west face over F1–F2, x6+ : 082337333_s1, 070309303_s2, photos_p20260925_s1 (012227815, 012231007)
-- [ ] INV.BA.8 Potted plants on the A_S window sills : 070309303_s2
-- [ ] INV.BA.9 Small clipped conifers planted in the paving in front of A_S, x2 : 082337333_s1
-- [ ] INV.BA.10 Round manhole cover beside a red-kerbed planter at the A_S corner : 070021774_s2
-- [ ] INV.BA.11 Red-kerbed sloped planter with a conifer at the stair head : 070021774_s2
+- [ ] INV.BA.1 Benches (black), x3, along the path in front of A : 082248481_s1 — P1 by frames (Bench_ASCorner_0-2)
+- [ ] INV.BA.2 Small ground spot lamps on short posts in the lawn, x2 : 082248481_s1, 082606037_s1 — P1 by frames (SpotLamp_Lawn_0/1)
+- [ ] INV.BA.3 Pavilion horizontal downpipe : 070309303_s1, 061757320_s2 — P1 by frames (BLD_A_S PorchDownpipe)
+- [ ] INV.BA.4 Wheelie bin under the pavilion : 082537786_s1 — P1 by frames (WheelieBin_Pavilion)
+- [ ] INV.BA.5 "A Block" blue plate on the maroon corner pilaster : 082337333_s1, 070309303_s1, photos_p20260925_s1 (012208814) — P1 by frames (BLD_A_S BlockPlate, blank KOCH face)
+- [ ] INV.BA.6 CCTV bullet cameras on the A_S corner pilaster, x2 : 082337333_s1, 070309303_s1, 070021774_s1, photos_p20260925_s1 (012208814) — P1 by frames (BLD_A_S CCTV_Corner x2)
+- [ ] INV.BA.7 AC unit cluster (AUX/Beko/Midea) on the A_S west face over F1–F2, x6+ : 082337333_s1, 070309303_s2, photos_p20260925_s1 (012227815, 012231007) — P1 by frames (BLD_A_S AC_Units x5 + AC_Units_More x2)
+- [x] INV.BA.8 Potted plants on the A_S window sills : 070309303_s2 — at the Blender cap: sill pots, UE dressing
+- [ ] INV.BA.9 Small clipped conifers planted in the paving in front of A_S, x2 : 082337333_s1 — P1 by frames (ConiferClipped_AS_0/1)
+- [ ] INV.BA.10 Round manhole cover beside a red-kerbed planter at the A_S corner : 070021774_s2 — P1 by frames (Manhole_ASCorner)
+- [ ] INV.BA.11 Red-kerbed sloped planter with a conifer at the stair head : 070021774_s2 — P1 by frames (Planter_South + Conifer_PlanterSouth)
 ### Other
 - [ ] INV.OT.1 Overhead power/telecom wires strung across the campus between the buildings : 070647586_s1, 081158036_s1, 081249927_s1, 070410255_s1, 012436367_s1, zz_c_side
 

@@ -2318,6 +2318,221 @@
    "ue_asset": "bench_generic",
    "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m",
    "confidence": "low"
+  },
+  {
+   "type": "sign",
+   "name": "NoticeStand_AS",
+   "pos": [
+    157.3,
+    -90.4
+   ],
+   "dir_deg": 87.2,
+   "w": 1.2,
+   "h": 1.3,
+   "z0": 0.6,
+   "t": 0.06,
+   "slot": "M_Sign_Panel",
+   "evidence": "070309303_s1 f00005, 082248481_s1 f00095/f00143/f00188: notice-board stand (2 posts + panel) in the bed with the painted kerb at the A_S corner, big conifer behind",
+   "ue_asset": "notice_board_stand",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NoticeStand_AS_Post0",
+   "center": [
+    157.33,
+    -89.8
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.06,
+    0.06,
+    2.0
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "evidence": "070309303_s1 f00005, 082248481_s1 f00095/f00143/f00188: notice-board stand (2 posts + panel) in the bed with the painted kerb at the A_S corner, big conifer behind",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NoticeStand_AS_Post1",
+   "center": [
+    157.27,
+    -91.0
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.06,
+    0.06,
+    2.0
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "evidence": "070309303_s1 f00005, 082248481_s1 f00095/f00143/f00188: notice-board stand (2 posts + panel) in the bed with the painted kerb at the A_S corner, big conifer behind",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_ASCorner_2",
+   "pos": [
+    167.6,
+    -90.3
+   ],
+   "dir_deg": 87.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "082248481_s1 f00095-00188: 3 black benches under the trees along the path in front of A (2 were placed, the third by eye)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "SpotLamp_Lawn_0",
+   "center": [
+    158.5,
+    -60.8
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.12,
+    0.12,
+    0.5
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "lamp_bollard_short",
+   "evidence": "082248481_s1, 082606037_s1 f00007/f00026/f00038: 2 small black spot lamps on short posts in the lawn along the walkway",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "SpotLamp_Lawn_1",
+   "center": [
+    157.4,
+    -70.2
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.12,
+    0.12,
+    0.5
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "lamp_bollard_short",
+   "evidence": "082248481_s1, 082606037_s1 f00007/f00026/f00038: 2 small black spot lamps on short posts in the lawn along the walkway",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "ConiferClipped_AS_0",
+   "pos": [
+    160.7,
+    -79.6
+   ],
+   "height": 1.3,
+   "crown_d": 0.8,
+   "shape": "cone",
+   "trunk_d": 0.05,
+   "crown_base": 0.1,
+   "ue_asset": "conifer_clipped_small",
+   "evidence": "082337333_s1 f00681/f00926, 082606037_s1: small clipped conifers in the strip along the A_S walkway",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "ConiferClipped_AS_1",
+   "pos": [
+    160.9,
+    -76.1
+   ],
+   "height": 1.3,
+   "crown_d": 0.8,
+   "shape": "cone",
+   "trunk_d": 0.05,
+   "crown_base": 0.1,
+   "ue_asset": "conifer_clipped_small",
+   "evidence": "082337333_s1 f00681/f00926, 082606037_s1: small clipped conifers in the strip along the A_S walkway",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Manhole_ASCorner",
+   "center": [
+    161.8,
+    -91.1
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.7,
+    0.7,
+    0.02
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "manhole_cover",
+   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Conifer_PlanterSouth",
+   "pos": [
+    155.9,
+    -87.3
+   ],
+   "height": 2.2,
+   "crown_d": 1.0,
+   "shape": "cone",
+   "trunk_d": 0.08,
+   "crown_base": 0.2,
+   "ue_asset": "conifer_small",
+   "evidence": "070021774_s2: red-kerbed sloped planter with a conifer at the stair head (= Planter_South)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "WheelieBin_Pavilion",
+   "center": [
+    159.2,
+    -86.1
+   ],
+   "dir_deg": 87.2,
+   "size": [
+    0.6,
+    0.7,
+    1.05
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "bin_wheelie",
+   "evidence": "082537786_s1: wheelie bin under the entrance pavilion",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "SouthBed_Shrub_3",
+   "pos": [
+    156.7,
+    -85.4
+   ],
+   "height": 0.9,
+   "crown_d": 0.9,
+   "trunk_d": 0.05,
+   "crown_base": 0.0,
+   "shape": "round",
+   "ue_asset": "shrub_clipped_round",
+   "evidence": "070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1: 3-4 round clipped shrubs in the bed along A_S",
+   "confidence": "low"
   }
  ]
 }

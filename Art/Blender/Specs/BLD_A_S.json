@@ -464,6 +464,100 @@
    ],
    "evidence": "white AC outdoor units on the A_S west face: rays of 070309303 f04/f05/f09/f28 through the SfM-aligned cameras onto the face plane (+ one SfM keypoint, track 11, at y 16.06 z_rel 3.04): lower row centres y 17.2/16.1/13.9 at z_rel 3.1, upper units y 16.5 z_rel 6.9 and y 9.8 z_rel 5.9 (u = 22.75 - y)",
    "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "CCTV_Corner",
+   "kind": "cctv",
+   "edge": 3,
+   "items": [
+    [
+     18.45,
+     3.55,
+     0.1,
+     0.1,
+     0.25
+    ],
+    [
+     19.35,
+     3.55,
+     0.1,
+     0.1,
+     0.25
+    ]
+   ],
+   "evidence": "A_S corner frames 082337333_s1 f00187, 070309303_s1 f00005/f00117, photos_p20260925_s1 (012208814): 2 bullet cameras on the SW corner pilaster above the block plate",
+   "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "AC_Units_More",
+   "kind": "ac",
+   "edge": 3,
+   "items": [
+    [
+     4.3,
+     5.9,
+     0.8,
+     0.6,
+     0.3
+    ],
+    [
+     10.1,
+     2.85,
+     0.8,
+     0.6,
+     0.3
+    ]
+   ],
+   "evidence": "082337333_s1 f00830, 070309303_s2, photos_p20260925_s1 (012227815, 012231007): 6+ AC outdoor units over F1-F2 of the west face; the two added by eye beside the ray-placed five",
+   "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "PorchDownpipe",
+   "edge": 3,
+   "items": [
+    [
+     14.65,
+     3.72,
+     3.0,
+     0.08,
+     0.1
+    ]
+   ],
+   "evidence": "070309303_s1, 061757320_s2: horizontal white downpipe along the pavilion eave back to the wall",
+   "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "PlinthLedges",
+   "edge": 3,
+   "items": [
+    [
+     4.2,
+     0.0,
+     2.2,
+     0.45,
+     0.35
+    ],
+    [
+     9.2,
+     0.0,
+     2.2,
+     0.45,
+     0.35
+    ],
+    [
+     11.9,
+     0.0,
+     0.5,
+     0.55,
+     0.4
+    ]
+   ],
+   "evidence": "012327726_s1, 012404116_s1: maroon ledge/plinth boxes at the foot of the west face, plus a small maroon box",
+   "confidence": "low"
   }
  ],
  "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4).",
