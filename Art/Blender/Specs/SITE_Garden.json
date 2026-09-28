@@ -1123,6 +1123,63 @@
      -9.485
     ],
     [
+     117.027,
+     -10.234
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_N1",
+   "line": [
+    [
+     118.465,
+     -10.305
+    ],
+    [
+     131.511,
+     -10.943
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_N2",
+   "line": [
+    [
+     132.949,
+     -11.013
+    ],
+    [
+     145.994,
+     -11.651
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_N3",
+   "line": [
+    [
+     147.432,
+     -11.722
+    ],
+    [
      155.285,
      -12.106
     ]

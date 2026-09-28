@@ -164,7 +164,8 @@ def main():
         if kind == "walk":
             gaps_bnd["S"].append(e0[0])
         elif kind == "bnd":
-            key = "N" if abs(e0[1] - (v_n - 0.35)) < 0.01 else ("W" if e0[0] < 0 else "E")
+            # north paths end on the boundary centre line (clip_end, not inner): test both, else they fell to W/E (no N gaps)
+            key = "N" if min(abs(e0[1] - v_n), abs(e0[1] - (v_n - 0.35))) < 0.01 else ("W" if e0[0] < 0 else "E")
             gaps_bnd[key].append(e0[1] if key in "WE" else e0[0])
         if c:
             a = math.atan2(pts[1][1] - pts[0][1], pts[1][0] - pts[0][0])
