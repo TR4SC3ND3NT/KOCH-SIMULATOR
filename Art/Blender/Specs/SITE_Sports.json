@@ -1575,6 +1575,122 @@
    "z_base": 3.5
   },
   {
+   "type": "box",
+   "name": "Workout_PullUp2_PostW",
+   "center": [
+    169.558,
+    74.089
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.4
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low",
+   "ue_asset": "workout_pullup_bar"
+  },
+  {
+   "type": "box",
+   "name": "Workout_PullUp2_PostE",
+   "center": [
+    170.757,
+    74.043
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.4
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_PullUp2_Bar",
+   "center": [
+    170.157,
+    74.066
+   ],
+   "size": [
+    1.2000000000000028,
+    0.035,
+    0.035
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.21,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_PullUp3_PostW",
+   "center": [
+    172.755,
+    73.966
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.2000000000000006
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low",
+   "ue_asset": "workout_pullup_bar"
+  },
+  {
+   "type": "box",
+   "name": "Workout_PullUp3_PostE",
+   "center": [
+    173.954,
+    73.92
+   ],
+   "size": [
+    0.08,
+    0.08,
+    2.2000000000000006
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_PullUp3_Bar",
+   "center": [
+    173.355,
+    73.943
+   ],
+   "size": [
+    1.2000000000000028,
+    0.035,
+    0.035
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.010000000000001,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
    "type": "fence",
    "name": "EastBoundary_Fence",
    "line": [
@@ -1631,38 +1747,6 @@
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
-   "confidence": "low"
-  },
-  {
-   "type": "rail3d",
-   "name": "LowerYard_Stair_RailM",
-   "height": 0.9,
-   "spacing": 1.0,
-   "mid_rails": 1,
-   "material": "metal",
-   "points": [
-    [
-     162.607,
-     68.351,
-     3.45
-    ],
-    [
-     162.619,
-     68.651,
-     3.45
-    ],
-    [
-     162.68,
-     70.25,
-     2.85
-    ],
-    [
-     162.696,
-     70.65,
-     2.85
-    ]
-   ],
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); pipe handrails as at the old walkway step (070410255 t=60 s)",
    "confidence": "low"
   },
   {
@@ -1891,86 +1975,22 @@
    "confidence": "low"
   },
   {
-   "type": "rail3d",
-   "name": "LowerYard_Stair_RailW",
-   "height": 0.9,
-   "spacing": 1.0,
-   "mid_rails": 1,
-   "material": "metal",
-   "points": [
-    [
-     159.534,
-     68.469,
-     3.45
-    ],
-    [
-     159.546,
-     68.769,
-     3.45
-    ],
-    [
-     159.607,
-     70.368,
-     2.85
-    ],
-    [
-     159.623,
-     70.768,
-     2.85
-    ]
-   ],
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); pipe handrails as at the old walkway step (070410255 t=60 s)",
-   "confidence": "low"
-  },
-  {
-   "type": "rail3d",
-   "name": "LowerYard_Stair_RailE",
-   "height": 0.9,
-   "spacing": 1.0,
-   "mid_rails": 1,
-   "material": "metal",
-   "points": [
-    [
-     165.68,
-     68.233,
-     3.45
-    ],
-    [
-     165.691,
-     68.533,
-     3.45
-    ],
-    [
-     165.753,
-     70.132,
-     2.85
-    ],
-    [
-     165.768,
-     70.532,
-     2.85
-    ]
-   ],
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); pipe handrails as at the old walkway step (070410255 t=60 s)",
-   "confidence": "low"
-  },
-  {
    "type": "box",
    "name": "Workout_PullUp0_PostW",
    "center": [
-    168.505,
-    72.728
+    169.465,
+    71.69
    ],
    "size": [
     0.08,
     0.08,
-    2.4999999999999996
+    2.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low",
    "ue_asset": "workout_pullup_bar"
   },
@@ -1978,27 +1998,27 @@
    "type": "box",
    "name": "Workout_PullUp0_PostE",
    "center": [
-    169.704,
-    72.682
+    170.665,
+    71.644
    ],
    "size": [
     0.08,
     0.08,
-    2.4999999999999996
+    2.4
    ],
    "dir_deg": -2.2,
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp0_Bar",
    "center": [
-    169.104,
-    72.705
+    170.065,
+    71.667
    ],
    "size": [
     1.2000000000000028,
@@ -2006,18 +2026,18 @@
     0.035
    ],
    "dir_deg": -2.2,
-   "z0": 5.31,
+   "z0": 5.21,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp1_PostW",
    "center": [
-    170.503,
-    72.651
+    172.663,
+    71.568
    ],
    "size": [
     0.08,
@@ -2028,7 +2048,7 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low",
    "ue_asset": "workout_pullup_bar"
   },
@@ -2036,8 +2056,8 @@
    "type": "box",
    "name": "Workout_PullUp1_PostE",
    "center": [
-    171.702,
-    72.605
+    173.862,
+    71.522
    ],
    "size": [
     0.08,
@@ -2048,15 +2068,15 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp1_Bar",
    "center": [
-    171.103,
-    72.628
+    173.263,
+    71.545
    ],
    "size": [
     1.2000000000000028,
@@ -2067,301 +2087,15 @@
    "z0": 5.010000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_PostWS",
-   "center": [
-    173.585,
-    72.133
-   ],
-   "size": [
-    0.08,
-    0.08,
-    2.3000000000000003
-   ],
-   "dir_deg": -2.2,
-   "z0": 2.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low",
-   "ue_asset": "workout_monkey_bars"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_PostWN",
-   "center": [
-    173.616,
-    72.932
-   ],
-   "size": [
-    0.08,
-    0.08,
-    2.3000000000000003
-   ],
-   "dir_deg": -2.2,
-   "z0": 2.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_PostES",
-   "center": [
-    177.583,
-    71.979
-   ],
-   "size": [
-    0.08,
-    0.08,
-    2.3000000000000003
-   ],
-   "dir_deg": -2.2,
-   "z0": 2.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_PostEN",
-   "center": [
-    177.613,
-    72.779
-   ],
-   "size": [
-    0.08,
-    0.08,
-    2.3000000000000003
-   ],
-   "dir_deg": -2.2,
-   "z0": 2.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_RailS",
-   "center": [
-    175.584,
-    72.056
-   ],
-   "size": [
-    4.0,
-    0.05,
-    0.05
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_RailN",
-   "center": [
-    175.615,
-    72.855
-   ],
-   "size": [
-    4.0,
-    0.05,
-    0.05
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung1",
-   "center": [
-    174.001,
-    72.517
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung2",
-   "center": [
-    174.4,
-    72.502
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung3",
-   "center": [
-    174.8,
-    72.486
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung4",
-   "center": [
-    175.2,
-    72.471
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung5",
-   "center": [
-    175.599,
-    72.456
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung6",
-   "center": [
-    175.999,
-    72.44
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung7",
-   "center": [
-    176.399,
-    72.425
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung8",
-   "center": [
-    176.798,
-    72.41
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_Monkey_Rung9",
-   "center": [
-    177.198,
-    72.394
-   ],
-   "size": [
-    0.7999999999999972,
-    0.03,
-    0.03
-   ],
-   "dir_deg": 87.8,
-   "z0": 5.090000000000001,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostWS",
    "center": [
-    178.486,
-    72.064
+    175.596,
+    72.376
    ],
    "size": [
     0.07,
@@ -2372,7 +2106,7 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low",
    "ue_asset": "workout_parallel_bars"
   },
@@ -2380,8 +2114,8 @@
    "type": "box",
    "name": "Workout_Dip_PostES",
    "center": [
-    180.285,
-    71.995
+    177.395,
+    72.307
    ],
    "size": [
     0.07,
@@ -2392,15 +2126,15 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_BarS",
    "center": [
-    179.386,
-    72.03
+    176.496,
+    72.341
    ],
    "size": [
     2.0,
@@ -2411,15 +2145,15 @@
    "z0": 4.08,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostWN",
    "center": [
-    178.508,
-    72.624
+    175.618,
+    72.935
    ],
    "size": [
     0.07,
@@ -2430,15 +2164,15 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostEN",
    "center": [
-    180.307,
-    72.555
+    177.416,
+    72.866
    ],
    "size": [
     0.07,
@@ -2449,15 +2183,15 @@
    "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_BarN",
    "center": [
-    179.407,
-    72.589
+    176.517,
+    72.901
    ],
    "size": [
     2.0,
@@ -2468,198 +2202,7 @@
    "z0": 4.08,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_PostW",
-   "center": [
-    181.395,
-    72.233
-   ],
-   "size": [
-    0.08,
-    0.08,
-    2.6
-   ],
-   "dir_deg": -2.2,
-   "z0": 2.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low",
-   "ue_asset": "workout_wall_bars"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_PostE",
-   "center": [
-    182.394,
-    72.195
-   ],
-   "size": [
-    0.08,
-    0.08,
-    2.6
-   ],
-   "dir_deg": -2.2,
-   "z0": 2.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung0",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.15,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung1",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.4499999999999997,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung2",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.75,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung3",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 4.05,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung4",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 4.35,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung5",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 4.65,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung6",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 4.949999999999999,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung7",
-   "center": [
-    181.895,
-    72.214
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.25,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
    "confidence": "low"
   },
   {

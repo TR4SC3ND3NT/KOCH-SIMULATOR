@@ -225,16 +225,12 @@ wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0
 wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
 wall_box("LowerYard_Retain_West", -20.0, 0.0, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)
 wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.3, C_V1 + 0.3, ST_V1, Z_LOW - 0.3, Z_PLAZA)          # stair E cheek
-for k, (u, s) in enumerate(((ST_U0 + 0.15, "W"), ((ST_U0 + ST_U1) / 2, "M"), (ST_U1 - 0.15, "E"))):         # pipe handrails
-    add(type="rail3d", name=f"LowerYard_Stair_Rail{s}", height=0.9, spacing=1.0, mid_rails=1, material="metal",
-        points=[W(u, C_V1 - 0.2) + [Z_PLAZA], W(u, C_V1 + 0.1) + [Z_PLAZA], W(u, ST_V1 - 0.1) + [Z_LOW], W(u, ST_V1 + 0.3) + [Z_LOW]],
-        evidence=ev_ly + "; pipe handrails as at the old walkway step (070410255 t=60 s)", confidence="low")
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
-# between the basketball court's N fence (v 25.40) and the lane; the equipment set is assumed (no photo yet): 2 pull-up bars,
-# monkey bars, parallel bars, wall bars; steel tube placeholders (UE swaps kits via koch_ue_asset)
+# between the basketball court's N fence (v 25.40) and the lane; owner 2026-09-28: only parallel bars and 4 pull-up bars, the
+# pull-ups in two rows of two (sketch); steel tube placeholders (UE swaps kits via koch_ue_asset)
 EV_WO = ("owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho "
-         "band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame")
+         "band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed")
 WO_V = 29.8                                   # strip centre in the lower yard (moved off the fence, owner sketch)
 Z_WO = Z_LOW                                  # lower yard level
 
@@ -253,31 +249,19 @@ def tube(nm, u0, v0, u1, v1, z0, z1, d=0.05, ue=None):
     return e
 
 
-for k, (uc, h) in enumerate(((54.0, 2.5), (56.0, 2.2))):                   # pull-up bars
-    for s in (-1, 1):
-        tube(f"Workout_PullUp{k}_Post{'W' if s < 0 else 'E'}", uc + 0.6 * s, WO_V, uc + 0.6 * s, WO_V, Z_WO, Z_WO + h, d=0.08,
-             ue="workout_pullup_bar" if s < 0 else None)
-    tube(f"Workout_PullUp{k}_Bar", uc - 0.6, WO_V, uc + 0.6, WO_V, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
-mu0, mu1, mh, mw = 58.5, 62.5, 2.3, 0.8                                        # monkey bars (horizontal ladder)
-for su, u in (("W", mu0), ("E", mu1)):
-    for sv, v in (("S", WO_V - mw / 2), ("N", WO_V + mw / 2)):
-        tube(f"Workout_Monkey_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + mh, d=0.08, ue="workout_monkey_bars" if su + sv == "WS" else None)
-for sv, v in (("S", WO_V - mw / 2), ("N", WO_V + mw / 2)):
-    tube(f"Workout_Monkey_Rail{sv}", mu0, v, mu1, v, Z_WO + mh - 0.06, Z_WO + mh - 0.06, d=0.05)
-for k in range(1, 10):
-    u = mu0 + 0.4 * k
-    tube(f"Workout_Monkey_Rung{k}", u, WO_V - mw / 2, u, WO_V + mw / 2, Z_WO + mh - 0.06, Z_WO + mh - 0.06, d=0.03)
-pu0, pu1, ph = 63.3, 65.3, 1.25                                                # parallel (dip) bars
-for sv, v in (("S", WO_V - 0.28), ("N", WO_V + 0.28)):
+k = 0
+for vr in (28.8, 31.2):                                                        # 4 pull-up bars: two rows of two
+    for uc, h in ((55.0, 2.4), (58.2, 2.2)):
+        for s in (-1, 1):
+            tube(f"Workout_PullUp{k}_Post{'W' if s < 0 else 'E'}", uc + 0.6 * s, vr, uc + 0.6 * s, vr, Z_WO, Z_WO + h, d=0.08,
+                 ue="workout_pullup_bar" if s < 0 else None)
+        tube(f"Workout_PullUp{k}_Bar", uc - 0.6, vr, uc + 0.6, vr, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
+        k += 1
+pu0, pu1, ph = 60.4, 62.4, 1.25                                                # parallel (dip) bars beside the rows
+for sv, v in (("S", 30.0 - 0.28), ("N", 30.0 + 0.28)):
     for su, u in (("W", pu0 + 0.1), ("E", pu1 - 0.1)):
         tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
     tube(f"Workout_Dip_Bar{sv}", pu0, v, pu1, v, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
-wu0, wu1, wh = 66.3, 67.3, 2.6                                                 # wall bars (ladder frame)
-for su, u in (("W", wu0), ("E", wu1)):
-    tube(f"Workout_WallBars_Post{su}", u, WO_V, u, WO_V, Z_WO, Z_WO + wh, d=0.08, ue="workout_wall_bars" if su == "W" else None)
-for k in range(8):
-    z = Z_WO + 0.3 + 0.3 * k
-    tube(f"Workout_WallBars_Rung{k}", wu0, WO_V, wu1, WO_V, z, z, d=0.03)
 
 # ================================================================= PLAZA strip south of the pitch and courts
 bench_u = [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]   # u 40.0 (Google) absent in 070410255 t=52 s
