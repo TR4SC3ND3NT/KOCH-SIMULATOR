@@ -1954,14 +1954,14 @@
      -46.563
     ],
     [
-     152.391,
-     -49.109
+     147.3,
+     -48.86
     ]
    ],
    "width": 1.5,
    "thk": 0.08,
    "surface": "concrete_tile",
-   "evidence": "Google z20: second light band y -47.5..-49.0 at x 140-150 just south of the dark wall line = strip on top of the retaining wall (2020 pano: benches standing on the wall top level). Real level ~0.95 m above the pergola walk; the builder puts it on the smooth terrain.",
+   "evidence": "Google z20: second light band y -47.5..-49.0 at x 140-150 just south of the dark wall line = strip on top of the retaining wall (2020 pano: benches standing on the wall top level). Real level ~0.95 m above the pergola walk; the builder puts it on the smooth terrain. | [B] ends at x 147.3 on the upper terrace (beyond it: the wide stair at B's NE corner, stream A).",
    "confidence": "low",
    "follow_m": 0.25
   },
@@ -2774,7 +2774,7 @@
    "blend": 3.0,
    "ring": [
     [
-     104.0,
+     99.3,
      -49.4
     ],
     [
@@ -2814,11 +2814,11 @@
      -0.6
     ],
     [
-     104.0,
+     99.3,
      0.8
     ]
    ],
-   "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza | south edge moved to y -49.5 so UpperWalk_South (B north side) sits on it"
+   "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza | south edge moved to y -49.5 so UpperWalk_South (B north side) sits on it | [B] 2026-09-28: W edge moved from x 104 to 99.3 (the garden, its hedges and the boulder wall start at x ~99.4; the pergola walk climbed 0.7 m over x 100-104)."
   },
   {
    "name": "UpperTerraceSouth",
