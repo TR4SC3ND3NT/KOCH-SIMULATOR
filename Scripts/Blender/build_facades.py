@@ -836,7 +836,7 @@ class Building:
                     bm_s = bmesh.new()
                     box(bm_s, fr, a["u0"], a["u1"], a["depth"] - s["t"], a["depth"], a["z1"], s["z1"])
                     self.obj(f"CanopySign_E{a['edge']}", bm_s, COL["sign"], a.get("evidence"))
-                self.obj(f"Canopy_E{a['edge']}", bm, COL["canopy"], a.get("evidence"))
+                self.obj(f"Canopy_E{a['edge']}" + (f"_{a['name']}" if a.get("name") else ""), bm, COL["canopy"], a.get("evidence"))
             elif t == "ramp":
                 # wedge running along u: high end at u0 (landing), low end at u1 (plaza)
                 prof = [(a["u0"], a["z_high"]), (a["u1"], a["z_low"]), (a["u1"], a["z_low"] - 0.25), (a["u0"], a["z_low"] - 0.25)]
