@@ -249,21 +249,29 @@ def tube(nm, u0, v0, u1, v1, z0, z1, d=0.05, ue=None):
     return e
 
 
-# owner sketch 2026-09-28: the parallel bars stand right at the foot of the yard stair, facing it; the 4 pull-up bars behind
-# them (east) in two rows of two; all bars run along v (the stair's direction)
-pv0, pv1, ph, pu = C_V1 + ST_N * ST_TR + 0.9, C_V1 + ST_N * ST_TR + 2.9, 1.25, ST_U1 - 0.6   # parallel (dip) bars
+# owner sketches 2026-09-28: parallel bars just east of the stair foot (clear of the way down), the 4 pull-up bars behind them
+# in two rows of two with a short gap, all bars along v (the stair's direction); wall bars (3 bays) against the retaining
+# wall under the courts' N fence, east of the pull-ups
+pv0, pv1, ph, pu = C_V1 + ST_N * ST_TR + 0.9, C_V1 + ST_N * ST_TR + 2.9, 1.25, ST_U1 + 1.4   # parallel (dip) bars
 for su, u in (("W", pu - 0.28), ("E", pu + 0.28)):
     for sv, v in (("S", pv0 + 0.1), ("N", pv1 - 0.1)):
         tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
     tube(f"Workout_Dip_Bar{su}", u, pv0, u, pv1, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
 k = 0
 for vr in (28.8, 31.2):                                                        # 4 pull-up bars: two rows of two, along v
-    for uc, h in ((55.0, 2.4), (58.2, 2.2)):
+    for uc, h in ((pu + 1.9, 2.4), (pu + 3.7, 2.2)):
         for s in (-1, 1):
             tube(f"Workout_PullUp{k}_Post{'S' if s < 0 else 'N'}", uc, vr + 0.6 * s, uc, vr + 0.6 * s, Z_WO, Z_WO + h, d=0.08,
                  ue="workout_pullup_bar" if s < 0 else None)
         tube(f"Workout_PullUp{k}_Bar", uc, vr - 0.6, uc, vr + 0.6, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
         k += 1
+wu0, wb, wh, wv = pu + 5.6, 0.9, 2.6, C_V1 + 0.3 + 0.12                      # wall bars: 3 bays of 0.9 m, 12 cm off the wall
+for j in range(4):
+    u = wu0 + wb * j
+    tube(f"Workout_WallBars_Post{j}", u, wv, u, wv, Z_WO, Z_WO + wh, d=0.07, ue="workout_wall_bars" if j == 0 else None)
+for k in range(8):
+    z = Z_WO + 0.3 + 0.3 * k
+    tube(f"Workout_WallBars_Rung{k}", wu0, wv, wu0 + 3 * wb, wv, z, z, d=0.03)
 
 # ================================================================= PLAZA strip south of the pitch and courts
 bench_u = [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]   # u 40.0 (Google) absent in 070410255 t=52 s

@@ -1576,10 +1576,239 @@
   },
   {
    "type": "box",
+   "name": "Workout_WallBars_Post0",
+   "center": [
+    172.848,
+    68.578
+   ],
+   "size": [
+    0.07,
+    0.07,
+    2.6
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low",
+   "ue_asset": "workout_wall_bars"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Post1",
+   "center": [
+    173.748,
+    68.544
+   ],
+   "size": [
+    0.07,
+    0.07,
+    2.6
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Post2",
+   "center": [
+    174.647,
+    68.509
+   ],
+   "size": [
+    0.07,
+    0.07,
+    2.6
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Post3",
+   "center": [
+    175.547,
+    68.475
+   ],
+   "size": [
+    0.07,
+    0.07,
+    2.6
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung0",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.15,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung1",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.4499999999999997,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung2",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.75,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung3",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.05,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung4",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.35,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung5",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.65,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung6",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.949999999999999,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung7",
+   "center": [
+    174.198,
+    68.526
+   ],
+   "size": [
+    2.700000000000003,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 5.25,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
    "name": "Workout_Dip_BarW",
    "center": [
-    165.1,
-    72.158
+    167.099,
+    72.082
    ],
    "size": [
     2.0,
@@ -1597,8 +1826,8 @@
    "type": "box",
    "name": "Workout_Dip_BarE",
    "center": [
-    165.66,
-    72.137
+    167.658,
+    72.06
    ],
    "size": [
     2.0,
@@ -1616,8 +1845,8 @@
    "type": "box",
    "name": "Workout_PullUp0_PostS",
    "center": [
-    170.042,
-    71.068
+    169.243,
+    71.099
    ],
    "size": [
     0.08,
@@ -1636,8 +1865,8 @@
    "type": "box",
    "name": "Workout_PullUp0_PostN",
    "center": [
-    170.088,
-    72.267
+    169.289,
+    72.298
    ],
    "size": [
     0.08,
@@ -1655,8 +1884,8 @@
    "type": "box",
    "name": "Workout_PullUp1_PostS",
    "center": [
-    173.24,
-    70.945
+    171.041,
+    71.029
    ],
    "size": [
     0.08,
@@ -1675,8 +1904,8 @@
    "type": "box",
    "name": "Workout_PullUp1_PostN",
    "center": [
-    173.286,
-    72.144
+    171.087,
+    72.229
    ],
    "size": [
     0.08,
@@ -1694,8 +1923,8 @@
    "type": "box",
    "name": "Workout_PullUp2_PostS",
    "center": [
-    170.134,
-    73.466
+    169.335,
+    73.497
    ],
    "size": [
     0.08,
@@ -1714,8 +1943,8 @@
    "type": "box",
    "name": "Workout_PullUp2_PostN",
    "center": [
-    170.18,
-    74.665
+    169.381,
+    74.696
    ],
    "size": [
     0.08,
@@ -1733,8 +1962,8 @@
    "type": "box",
    "name": "Workout_PullUp3_PostS",
    "center": [
-    173.332,
-    73.343
+    171.133,
+    73.428
    ],
    "size": [
     0.08,
@@ -1753,8 +1982,8 @@
    "type": "box",
    "name": "Workout_PullUp3_PostN",
    "center": [
-    173.378,
-    74.542
+    171.179,
+    74.627
    ],
    "size": [
     0.08,
@@ -1772,8 +2001,8 @@
    "type": "box",
    "name": "Workout_PullUp2_Bar",
    "center": [
-    170.157,
-    74.066
+    169.358,
+    74.096
    ],
    "size": [
     1.2000000000000028,
@@ -1791,8 +2020,8 @@
    "type": "box",
    "name": "Workout_PullUp3_Bar",
    "center": [
-    173.355,
-    73.943
+    171.156,
+    74.027
    ],
    "size": [
     1.2000000000000028,
@@ -2094,8 +2323,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Bar",
    "center": [
-    170.065,
-    71.667
+    169.266,
+    71.698
    ],
    "size": [
     1.2000000000000028,
@@ -2113,8 +2342,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Bar",
    "center": [
-    173.263,
-    71.545
+    171.064,
+    71.629
    ],
    "size": [
     1.2000000000000028,
@@ -2132,8 +2361,8 @@
    "type": "box",
    "name": "Workout_Dip_PostWS",
    "center": [
-    165.066,
-    71.259
+    167.064,
+    71.182
    ],
    "size": [
     0.07,
@@ -2152,8 +2381,8 @@
    "type": "box",
    "name": "Workout_Dip_PostES",
    "center": [
-    165.625,
-    71.238
+    167.624,
+    71.161
    ],
    "size": [
     0.07,
@@ -2171,8 +2400,8 @@
    "type": "box",
    "name": "Workout_Dip_PostWN",
    "center": [
-    165.135,
-    73.058
+    167.133,
+    72.981
    ],
    "size": [
     0.07,
@@ -2190,8 +2419,8 @@
    "type": "box",
    "name": "Workout_Dip_PostEN",
    "center": [
-    165.694,
-    73.036
+    167.693,
+    72.959
    ],
    "size": [
     0.07,
