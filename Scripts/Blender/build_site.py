@@ -1011,7 +1011,8 @@ class Site:
         self.emit(el, bm, COL["metal"], (P.x, P.y, zb))
 
     def b_lamp_orn(self, el):
-        """Ornamental cast lamp post: pole, symmetric scroll arms (simplified to bars) with a globe at each end."""
+        """Ornamental cast lamp post: pole, symmetric scroll arms (simplified to bars) with a globe at each end.
+        'cross': true = two crossed arms with a globe at each of the 4 ends (globes is then ignored)."""
         P = Vector(el["pos"])
         z = self.gz(P.x, P.y)
         h, span, n = el.get("height", 3.6), el.get("arm_span", 1.0), int(el.get("globes", 2))
@@ -1022,9 +1023,12 @@ class Site:
         _cyl(bm, P, 0.045, z + 0.5, z + h + 0.35, 10)         # pole + finial
         m = _frame2(P, left)
         box(bm, m, -span / 2, span / 2, -0.02, 0.02, z + h - 0.22, z + h - 0.18)   # arm bar
-        for k in range(n):
-            u = -span / 2 + span * k / max(1, n - 1)
-            q = P + left * u
+        ends = [left * (-span / 2 + span * k / max(1, n - 1)) for k in range(n)]
+        if el.get("cross"):   # second bar 1.5 cm lower so the crossing has no coplanar faces
+            box(bm, _frame2(P, fwd), -span / 2, span / 2, -0.02, 0.02, z + h - 0.235, z + h - 0.195)
+            ends = [left * (-span / 2), left * (span / 2), fwd * (-span / 2), fwd * (span / 2)]
+        for e in ends:
+            q = P + e
             box(bm, _frame2(q, fwd), -0.02, 0.02, -0.02, 0.02, z + h - 0.22, z + h - r)     # drop to the globe
             bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=r,
                                       matrix=Matrix.Translation((q.x, q.y, z + h)))

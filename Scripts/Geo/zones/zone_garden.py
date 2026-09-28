@@ -258,6 +258,9 @@ def main():
             q = (sgn * bu, ny * (P - 0.4)) if along else (nx * (P - 0.4), sgn * bu)
             new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": W(*q), "dir_deg": round(face, 2),
                         "length": 1.5, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium", "evidence": EV})
+    new.append({"type": "lamp_orn", "name": "CentreSquare_Lamp", "pos": W(0.0, 0.0), "dir_deg": round(hd, 2), "height": 3.2,
+                "cross": True, "arm_span": 0.8, "globe_d": 0.35, "confidence": "low",
+                "evidence": EV + " | owner: lamp post in the exact middle, 4 lamps (maybe 2)"})
     new.append({"type": "box", "name": "CentreSquare_Drain", "center": W(1.2, -1.0), "dir_deg": round(hd, 2),
                 "size": [0.5, 0.5, 0.03], "z_rel": 0.0, "material": "metal", "slot": "M_Steel_Grating", "confidence": "low",
                 "evidence": EV})
