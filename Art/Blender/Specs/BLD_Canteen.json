@@ -117,5 +117,32 @@
    "evidence": "dark glazed porch with its own low roof at the NW end of the west gable, steps + a ramp with a handrail (070410255 t=46 s); size and position estimated",
    "confidence": "low"
   }
+ ],
+ "slots": {
+  "Roof": "M_Sheet_Brown"
+ },
+ "cladding": [
+  {
+   "edge": 1,
+   "u0": 0.05,
+   "u1": 9.05,
+   "z0": 2.95,
+   "z1": 3.4,
+   "proj": 0.02,
+   "slot": "M_Paint_Brown",
+   "evidence": "brown horizontal band across the W/E ends ~2.6-3.05 m above the plinth top (070410255 t65.5: plinth 0.88 m = 40 px, band 110-150 px above it); light ribbed siding above and below; the gable triangle is dark-brown siding (not modelled as its own part yet)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 0.05,
+   "u1": 9.05,
+   "z0": 2.95,
+   "z1": 3.4,
+   "proj": 0.02,
+   "slot": "M_Paint_Brown",
+   "evidence": "brown horizontal band across the W/E ends ~2.6-3.05 m above the plinth top (070410255 t65.5: plinth 0.88 m = 40 px, band 110-150 px above it); light ribbed siding above and below; the gable triangle is dark-brown siding (not modelled as its own part yet)",
+   "confidence": "medium"
+  }
  ]
 }

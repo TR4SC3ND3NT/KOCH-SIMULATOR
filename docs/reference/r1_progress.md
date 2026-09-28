@@ -133,7 +133,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] SH.4 Roof: pitch, ridge, eaves, gutters — approx., in the model (GBF_BLD_Hall Roof)
 
 ## 9. Canteen and small buildings north of C (zone `Sports`)
-- [ ] K.1 Canteen: all four facades, west entrance (glass vestibule, overhang on a red post, steps, ramp), roof — approx., in the model (GBF_BLD_Canteen)
+- [ ] K.1 Canteen: all four facades, west entrance (glass vestibule, overhang on a red post, steps, ramp), roof — approx., in the model (GBF_BLD_Canteen) | [B] P2 2026-09-28: dark-brown roof sheet slot, brown band across the W/E ends 2.95-3.40 above FFL (070410255 t65.5); round bed curb painted yellow/white
 - [ ] K.2 Small pavilion — approx., in the model (GB_BLD_Pavilion)
 - [ ] K.3 One-storey building with a deep timber overhang on a red post (070410255 39–41 s): identify and model — approx.: taken as the canteen W porch (BLD_Canteen WestGlazedPorch)
 

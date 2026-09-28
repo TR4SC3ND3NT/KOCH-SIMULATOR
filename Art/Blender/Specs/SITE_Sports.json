@@ -3201,8 +3201,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 disc: fitted ellipse centre local (60.22,-11.62), axes 5.14/5.20 m, area 21.7 m2; yellow/white curb, soil, two young trees and a plaque (070410255 t=44-46/65.5 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 disc: fitted ellipse centre local (60.22,-11.62), axes 5.14/5.20 m, area 21.7 m2; yellow/white curb, soil, two young trees and a plaque (070410255 t=44-46/65.5 s) | [B] 2026-09-28: yellow/white painted curb (070410255 t65.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "lamp_orn",
