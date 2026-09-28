@@ -585,18 +585,14 @@ pass_pads = [
                pw(SX0, -S_RUN), pw(SX0, RY0), pw(RX0, RY0), pw(RX0, 0.0), pw(-8.2, 0.0)],
          evidence="the lower-terrace level continues N between the hall E gable and the upper lawn to the stair top "
                   "(flat camera track t=13-30 s in the SfM, no steps in a_026..a_061)", confidence="medium"),
-    dict(name="PassageLower", z=Z_LOW, blend=0.0,
+    dict(name="PassageLower", z=Z_LOW, blend=1.0,   # soft (owner 2026-09-28): the plaza grades from it to the platform
          ring=[pw(RX0, RY0), pw(SX0, RY0), pw(SX0, -S_RUN), pw(SX1, -S_RUN), pw(SX1, 0.0), pw(SHED_X + 0.4, 0.0),
                pw(SHED_X + 0.8, 12.7), pw(-5.0, 12.9), pw(-8.2, 3.0), pw(-8.2, 0.0), pw(RX0, 0.0)],
          evidence="stair foot and the herringbone path N along the hall wing, flat (a_062..a_078); PnP-free check at t=39 s: "
                   "camera (156.5,20.6) from the pitch/courts door sizes (22.9/26.1 m), horizon from the walkway-edge "
                   "vanishing point 2.55 m above the pitch walkway -> ground there = walkway + 1.2 = 4.6", confidence="medium"),
-    dict(name="PlazaSlope", z=Z_LOW, grad=[0.0, round(-(Z_LOW - 3.45) / 21.0, 4)], ref=[157.4, 22.0], blend=1.0,
-         ring=[[150.9, 22.0], [171.0, 21.2], [171.9, 42.3], [151.8, 43.1]],
-         evidence="clover-paver plaza between the hall wing and the canteen falls ~1.0 m from the path end (y 22, 4.475) to "
-                  "the pitch walkway (3.45): t=39 s horizon (above) and PnP at t=52 s at f 1740 px (camera 1.86 above the "
-                  "walkway at y 28.3 -> ground there ~3.95 +-0.25, slope model 4.13); no steps seen (a_079..a_110)",
-         confidence="low"),
+    # PlazaSlope (tilted plane over the clover plaza) removed by the owner 2026-09-28: it cut across the canteen and
+    # Block C's base; the terrain field (greybox/terrain_field.py) grades the plaza between the passage and the platform
 ]
 pspec = {
     "id": "SITE_HallCPassage", "collection": "SITE_Sport", "ground": "pads",
