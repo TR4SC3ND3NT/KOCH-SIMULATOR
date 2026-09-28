@@ -1019,7 +1019,11 @@ class Site:
         r = el.get("globe_d", 0.3) / 2
         fwd, left = rot2(el.get("dir_deg", 0.0))
         bm = bmesh.new()
-        _cyl(bm, P, 0.11, z, z + 0.5, 10)                     # cast base
+        bb = el.get("base_box")                               # [w, d, h] m: rectangular plinth instead of the round base
+        if bb:
+            box(bm, _frame2(P, fwd), -bb[0] / 2, bb[0] / 2, -bb[1] / 2, bb[1] / 2, z - 0.05, z + bb[2])
+        else:
+            _cyl(bm, P, 0.11, z, z + 0.5, 10)                 # cast base
         _cyl(bm, P, 0.045, z + 0.5, z + h + 0.35, 10)         # pole + finial
         m = _frame2(P, left)
         box(bm, m, -span / 2, span / 2, -0.02, 0.02, z + h - 0.22, z + h - 0.18)   # arm bar

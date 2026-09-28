@@ -233,8 +233,8 @@ def main():
         arch(f"Arch_{gname}_N", (s * ug, v_n - 0.35 - 1.2), math.pi / 2)
         arch(f"Arch_{gname}_Link", (s * (sq + 0.9), 0.0), 0.0)
     # centre bench square (owner 2026-09-28): paving 2*SQ_P, hedge + scalloped edging on 4 sides with the 4 entrances
-    # (gap = path width), 4 benches on the W/E sides (one each side of the link entrance) facing the middle, drain
-    # grate (owner 2026-09-28: 4 benches, none on the N/S sides; the 8 m size stays)
+    # (gap = path width), 4 benches on the W/E sides (one each side of the link entrance) facing the middle, a lamp post
+    # in the middle, no drain (owner 2026-09-28: 4 benches, none on the N/S sides; the 8 m size stays)
     P, gh = SQ_P, PATH_W / 2
     hd = math.degrees(math.atan2(T[1], T[0]))                 # world heading of +u
     new.append({"type": "path", "name": "CentreSquare_Paving", "line": [W(-P, 0.0), W(P, 0.0)], "width": 2 * P,
@@ -259,11 +259,8 @@ def main():
             new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": W(*q), "dir_deg": round(face, 2),
                         "length": 1.5, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium", "evidence": EV})
     new.append({"type": "lamp_orn", "name": "CentreSquare_Lamp", "pos": W(0.0, 0.0), "dir_deg": round(hd, 2), "height": 3.2,
-                "cross": True, "arm_span": 0.8, "globe_d": 0.35, "confidence": "low",
+                "cross": True, "arm_span": 0.8, "globe_d": 0.35, "base_box": [0.3, 0.3, 0.6], "confidence": "low",
                 "evidence": EV + " | owner: lamp post in the exact middle, 4 lamps (maybe 2)"})
-    new.append({"type": "box", "name": "CentreSquare_Drain", "center": W(1.2, -1.0), "dir_deg": round(hd, 2),
-                "size": [0.5, 0.5, 0.03], "z_rel": 0.0, "material": "metal", "slot": "M_Steel_Grating", "confidence": "low",
-                "evidence": EV})
     keep = [e for e in E if e["name"] not in old]
     i = next(k for k, e in enumerate(keep) if e["name"] == "Gazebo_2") + 1
     keep[i:i] = new
