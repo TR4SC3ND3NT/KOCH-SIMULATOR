@@ -352,8 +352,8 @@ class Site:
         fh, ph, pw = el.get("floor_h", 0.15), el.get("post_h", 2.4), el.get("post_w", 0.25)
         par_h, par_t = el.get("parapet_h", 0.8), el.get("parapet_t", 0.25)
         open_sides = set(el.get("open_sides", []))
-        el = dict(el, slots={"_Floor": "M_Paving_Diamond_Tile", "_Parapet": "M_Tile_Brick_Red", "_Bench": "M_Wood_Stained",
-                             "_Frame": "M_Paint_White", "_Posts": "M_Render_White", "_Capitals": "M_Paint_Brown", "_Ceiling": "M_Wood_Stained", "_FasciaTabs": "M_Shingle_Brown", "_Fascia": "M_Paint_White",
+        el = dict(el, slots={"_Floor": "M_Paving_Diamond_Tile", "_Parapet": "M_Tile_Brick_Red", "_BenchLegs": "M_Steel_Paint_Dark", "_Bench": "M_Wood_Stained",
+                             "_Frame": "M_Paint_White", "_Posts": "M_Render_White", "_Capitals": "M_Paint_Brown", "_Ceiling": "M_Wood_Stained", "_Downlights": "M_Lamp_Diffuser", "_Sign": "M_Sign_Panel", "_FasciaTabs": "M_Shingle_Brown", "_Fascia": "M_Paint_White",
                              "_Roof": "M_Shingle_Brown", **(el.get("slots") or {})})
 
         def poly(r, z, extra=0.0):
@@ -367,7 +367,7 @@ class Site:
         corners = poly(R, 0)
         zf = z0 + fh
         cw = el.get("opening_clear_w")      # clear opening in an open side (the rest is parapet stubs)
-        bm, bb = bmesh.new(), bmesh.new()   # parapet, bench
+        bm, bb, bl = bmesh.new(), bmesh.new(), bmesh.new()   # parapet, bench seat, bench legs
         for k in range(N):
             a, b = corners[k], corners[(k + 1) % N]
             A, B = Vector((a.x, a.y)), Vector((b.x, b.y))
@@ -384,8 +384,14 @@ class Site:
                 box(bm, m, pw / 2, L - pw / 2, -par_t / 2, par_t / 2, zf, zf + par_h)
                 # timber bench inside the parapet (seat 0.45 m, 0.4 m deep); w+ is toward the centre
                 box(bb, m, pw / 2 + 0.05, L - pw / 2 - 0.05, par_t / 2 + 0.01, par_t / 2 + 0.41, zf + 0.40, zf + 0.45)
+                # steel legs under the seat (INV.GDN.2: polygonal timber bench on steel legs), ~1.2 m apart
+                nl = max(2, round((L - pw - 0.1) / 1.2) + 1)
+                for j in range(nl):
+                    ul = pw / 2 + 0.12 + (L - pw - 0.24) * j / (nl - 1)
+                    box(bl, m, ul - 0.02, ul + 0.02, par_t / 2 + 0.3, par_t / 2 + 0.34, zf, zf + 0.40)
         self.emit(dict(el, name=nm + "_Parapet"), bm, COL["brick"], (c.x, c.y, z0))
         self.emit(dict(el, name=nm + "_Bench"), bb, COL["wood"], (c.x, c.y, z0))
+        self.emit(dict(el, name=nm + "_BenchLegs"), bl, COL["metal"], (c.x, c.y, z0))
         bm = bmesh.new()   # posts + ring beam + centre column
         for k in range(N):
             p = corners[k]
@@ -416,6 +422,17 @@ class Site:
         _close_loops(bm, [[bm.verts.new(v) for v in poly(ro - 0.031, zt)],
                           [bm.verts.new(v) for v in poly(ro - 0.031, zt + 0.02)]])
         self.emit(dict(el, name=nm + "_Ceiling"), bm, COL["wood"], (c.x, c.y, z0))
+        bm = bmesh.new()   # 2 round recessed downlights in the soffit (INV.GDN.1, 082013462)
+        for s in (-1, 1):
+            _cyl(bm, Vector((c.x + s * 0.9 * math.cos(rot), c.y + s * 0.9 * math.sin(rot))), 0.09, zt - 0.012, zt - 0.002, 12)
+        self.emit(dict(el, name=nm + "_Downlights"), bm, COL["white"], (c.x, c.y, z0))
+        sp = el.get("sign_post")   # small blank sign plate on one post (INV.GDN.3; the text is a UE decal)
+        if sp is not None:
+            p = corners[int(sp)]
+            m = _frame2(Vector((p.x, p.y)), (Vector((c.x, c.y)) - Vector((p.x, p.y))).normalized())
+            bs = bmesh.new()
+            box(bs, m, -pw / 2 - 0.012, -pw / 2 - 0.002, -0.1, 0.1, zf + 1.45, zf + 1.75)
+            self.emit(dict(el, name=nm + "_Sign", ue_asset="sign_plate"), bs, COL["white"], (c.x, c.y, z0))
         bm = bmesh.new()   # shingle tabs: dark triangles over the fascia, points down (~0.3 m pitch, ~0.12 m deep)
         tp, td, tt = el.get("tab_pitch", 0.3), min(el.get("tab_depth", 0.12), fas), 0.012
         cr = poly(ro, 0)

@@ -522,6 +522,23 @@
    "confidence": "medium"
   },
   {
+   "type": "bin",
+   "name": "Bin_PitchGate",
+   "pos": [
+    156.2,
+    43.05
+   ],
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "dir_deg": -2.2,
+   "ue_asset": "bin_generic",
+   "confidence": "medium",
+   "evidence": "INV.SPF.2: black litter bin against the S pitch fence just W of the white gate (070410255 t51)"
+  },
+  {
    "type": "steps",
    "name": "PitchGate_S_Steps",
    "pos": [

@@ -431,9 +431,9 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [ ] INV.HP.13 2 steps up to the gallery deck (red-brown granite edge), with a ramp and rail at the far end : 070410255_s1
 - [ ] INV.HP.14 Colourful mural band with windows on the pink hall wall, seen from the garden gazebo : 082013462_s2
 ### Garden
-- [ ] INV.GDN.1 Gazebo recessed downlights in the soffit, x2 : 082013462_s1
-- [ ] INV.GDN.2 Continuous polygonal wooden bench on steel legs inside the gazebo : 081924271_s1, 081924271_s3
-- [ ] INV.GDN.3 "NO SMOKING" sign on a gazebo pillar : 082013462_s1
+- [ ] INV.GDN.1 Gazebo recessed downlights in the soffit, x2 : 082013462_s1 | [B] P2 2026-09-28: 2 round downlights in each gazebo soffit
+- [ ] INV.GDN.2 Continuous polygonal wooden bench on steel legs inside the gazebo : 081924271_s1, 081924271_s3 | [B] P2: steel legs every ~1.2 m under the gazebo's continuous timber bench
+- [ ] INV.GDN.3 "NO SMOKING" sign on a gazebo pillar : 082013462_s1 | [B] P2: blank sign plate on a Gazebo_2 post (text = UE decal)
 - [ ] INV.GDN.4 Maroon fence/wall behind the rubble-stone wall : 081958653_s1
 - [ ] INV.GDN.5 Red-brick block/seat or stand at the far side : 081924271_s1
 - [ ] INV.GDN.6 Bench with an arched ornamental back rail (a second bench type) : 082006491_s1
@@ -445,7 +445,7 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [ ] INV.GDN.12 Yellow wheelie bin at the garden edge : 012404116_s2
 ### Sports fields/courts + decorated alley
 - [ ] INV.SPF.1 White football goal : 070541257_s2
-- [ ] INV.SPF.2 Black bin by the pitch gate : 070410255_s3
+- [ ] INV.SPF.2 Black bin by the pitch gate : 070410255_s3 | [B] P2: bin W of the pitch gate (070410255 t51)
 - [ ] INV.SPF.3 Wooden-framed glazed hexagonal kiosk/conservatory at the E corner of the pitch : 070410255_s3
 - [ ] INV.SPF.4 Clover pavers laid in a pink-and-grey pattern on the sports plaza : 070410255_s3
 - [ ] INV.SPF.5 Blue spruces, x3, on the plaza slope : 070410255_s2
