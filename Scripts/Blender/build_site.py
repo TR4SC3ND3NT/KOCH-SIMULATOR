@@ -43,7 +43,7 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "stairs_run": "M_Granite_Red", "sign": "M_Sign_Panel", "bin": "M_Plastic_Grey", "bike_rack": "M_Steel_Galv",
              "turnstile": "M_Steel_Galv", "gate_leaf": "M_Steel_Paint_Dark", "canopy": "M_Sheet_Brown", "slab": "M_Concrete",
              "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark",
-             "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White"}
+             "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White", "hedge_arch": "M_Hedge_Foliage"}
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",

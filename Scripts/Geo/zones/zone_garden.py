@@ -2,8 +2,8 @@
 # in one garden frame (u along the pergola walk, v north) and MIRROR-symmetric about the centre axis between the
 # gazebos: per gazebo a north path, an outer side path, a link to the centre bench square (4 benches) and a straight
 # south path; a north-south spine through the square (owner 2026-09-28: no diagonal paths); boundary hedges on
-# one rectangle (west/east/north hedge lines + the row along the pergola walk) with gaps where paths cross; ring hedges
-# and edging around each gazebo apron with gaps at the paths; hedge arches inside the rectangle. Everything is clipped
+# one rectangle (west/east/north hedge lines + the row along the pergola walk) with a topiary arch IN the hedge line
+# at every path exit; ring hedges and edging around each gazebo apron with gaps at the paths. Everything is clipped
 # to the rectangle. Rewrites only the elements it owns (listed in OWN); run it after moving a gazebo or the walk.
 # Usage: python Scripts/Geo/zones/zone_garden.py
 import json
@@ -13,9 +13,10 @@ import re
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
 OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[12]_.*|Centre_NS_.*|North_\d+|South_\d+|East_\d+|West_\d+|Bnd_.*)|"
-                 r"Arch_G[12]_.*|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+|CentreSquare_.*)$")
+                 r"(Arch_G[12]_.*|Arch_Bnd_.*|Arch_Square_.*)|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+|CentreSquare_.*)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W = 1.2, 0.65, 1.05, 0.7
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
+ARCH_T = 0.35    # topiary arch leg thickness (m): the hedge gap at an arch = path gap + 2 legs
 SQ_P = 4.0       # centre bench square: paving half size (m); 4 benches on its W/E sides
 EV = "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
 
@@ -136,6 +137,12 @@ def main():
             return (ug, 0.0)
         return None
 
+    def arch(name, p, a, span):
+        """Topiary hedge arch at p, opening along garden-frame angle a, legs ARCH_T, as deep as the hedge."""
+        new.append({"type": "hedge_arch", "name": name, "center": W(*p),
+                    "dir_deg": round(math.degrees(a + math.atan2(T[1], T[0])), 2), "span": round(span, 3),
+                    "thk": ARCH_T, "depth": HEDGE_W, "height": 2.25, "confidence": "medium", "evidence": EV})
+
     gaps_bnd = {"N": [], "S": [], "W": [], "E": []}
     ring_gaps = {"G1": [], "G2": []}
     for name, pts, kind in paths:
@@ -178,8 +185,12 @@ def main():
         cuts = sorted(g for g in gaps if lo < g < hi)
         spans, cur = [], lo
         for g in cuts:
-            spans.append((cur, g - hg))
-            cur = g + hg
+            spans.append((cur, g - hg - ARCH_T))
+            cur = g + hg + ARCH_T
+            # topiary arch IN the hedge line over the path (owner 2026-09-28: boundaries are continuous - hedge,
+            # arch, hedge - with the arch legs replacing the hedge ends, same depth as the hedge)
+            c = (g, fixed) if along_u else (fixed, g)
+            arch(f"Arch_Bnd_{name}{len(spans) - 1}", c, math.pi / 2 if along_u else 0.0, 2 * hg)
         spans.append((cur, hi))
         for k, (x0, x1) in enumerate(spans):
             if x1 - x0 < 0.2:
@@ -224,14 +235,6 @@ def main():
                     new.append({"type": "wall", "name": f"Edging_{gname}_Ring_{k}", "line": pts, "height": 0.22, "thk": 0.1,
                                 "cap_proj": 0.0, "material": "stone", "kind": "scalloped_edging", "confidence": "medium",
                                 "evidence": EV})
-    # hedge arches (topiary): on the north paths, the links and the diagonals, all inside the rectangle
-    def arch(name, p, a):
-        new.append({"type": "hedge_arch", "name": name, "center": W(*p),
-                    "dir_deg": round(math.degrees(a + math.atan2(T[1], T[0])), 2), "span": 1.3, "height": 2.25,
-                    "confidence": "medium", "evidence": EV})
-    for gname, s in (("G1", -1), ("G2", 1)):
-        arch(f"Arch_{gname}_N", (s * ug, v_n - 0.35 - 1.2), math.pi / 2)
-        arch(f"Arch_{gname}_Link", (s * (sq + 0.9), 0.0), 0.0)
     # centre bench square (owner 2026-09-28): paving 2*SQ_P, hedge + scalloped edging on 4 sides with the 4 entrances
     # (gap = path width), 4 benches on the W/E sides (one each side of the link entrance) facing the middle, a lamp post
     # in the middle, no drain (owner 2026-09-28: 4 benches, none on the N/S sides; the 8 m size stays)
@@ -243,7 +246,10 @@ def main():
         along = (ny != 0)                                     # N/S sides run along u and own the corners
         hr, er = P + 0.35, P - 0.05                           # hedge / edging centre lines
         hl, el_ = (sq if along else P), (P if along else P - 0.1)
-        for k, (a0, a1) in enumerate(((-hl, -gh), (gh, hl))):
+        ga = gh if along else gh + ARCH_T                     # W/E: the link entrances carry an arch in the hedge line
+        if not along:
+            arch(f"Arch_Square_{side}", (nx * hr, 0.0), 0.0, 2 * gh)
+        for k, (a0, a1) in enumerate(((-hl, -ga), (ga, hl))):
             pts = [(a0, ny * hr), (a1, ny * hr)] if along else [(nx * hr, a0), (nx * hr, a1)]
             new.append({"type": "hedge", "name": f"CentreSquare_Hedge_{side}{k}", "line": [W(*q) for q in pts],
                         "width": HEDGE_W, "height": 1.05, "top": "flat", "confidence": "medium", "evidence": EV})
