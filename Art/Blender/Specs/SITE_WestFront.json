@@ -8,12 +8,12 @@
    "name": "DFront_Fence_0",
    "line": [
     [
-     -198.0,
+     -206.5,
      12.0
     ],
     [
-     -198.0,
-     38.0
+     -206.5,
+     40.0
     ]
    ],
    "height": 1.8,
@@ -21,7 +21,7 @@
    "post": 0.45,
    "panel": "bars",
    "bottom_gap": 0.4,
-   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured | [B] 2026-09-28: moved to the street-side fence line seen on the Google z20 ortho (x -206.5, dark pillar line between the sidewalk and the lawns; it ran through the lawn and the pavilions at x -198); entrance gap y 40-46 = the pink paved drive.",
    "confidence": "low"
   },
   {
@@ -29,12 +29,12 @@
    "name": "DFront_Fence_1",
    "line": [
     [
-     -198.0,
+     -206.5,
      46.0
     ],
     [
-     -198.0,
-     76.0
+     -206.5,
+     88.0
     ]
    ],
    "height": 1.8,
@@ -42,7 +42,7 @@
    "post": 0.45,
    "panel": "bars",
    "bottom_gap": 0.4,
-   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured | [B] 2026-09-28: moved to the street-side fence line seen on the Google z20 ortho (x -206.5, dark pillar line between the sidewalk and the lawns; it ran through the lawn and the pavilions at x -198); entrance gap y 40-46 = the pink paved drive.",
    "confidence": "low"
   },
   {
@@ -50,24 +50,24 @@
    "name": "DFront_SlidingGate",
    "line": [
     [
-     -198.0,
-     38.0
+     -206.5,
+     40.0
     ],
     [
-     -198.0,
-     44.0
+     -206.5,
+     46.0
     ]
    ],
    "height": 1.9,
-   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured | [B] 2026-09-28: moved to the street-side fence line seen on the Google z20 ortho (x -206.5, dark pillar line between the sidewalk and the lawns; it ran through the lawn and the pavilions at x -198); entrance gap y 40-46 = the pink paved drive.",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "DFront_Booth",
    "center": [
-    -196.0,
-    45.6
+    -204.4,
+    47.8
    ],
    "dir_deg": 90.0,
    "size": [
@@ -77,15 +77,15 @@
    ],
    "z0": 7.05,
    "material": "stone",
-   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured | [B] booth moved inside the gate on the N side of the drive (2GIS 30258560092273593/603: booth right of the sliding gate seen from the street); position +-1.5 m.",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "DFront_BoothRoof",
    "center": [
-    -196.0,
-    45.6
+    -204.4,
+    47.8
    ],
    "dir_deg": 90.0,
    "size": [
@@ -95,8 +95,72 @@
    ],
    "z0": 9.85,
    "material": "wood",
-   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured",
+   "evidence": "2026-09-27 approx. from web media only (photos_00 #13, photos_02 #4-#7, photos_03 #4-#8, 2019-08-20 clip): ornate grey iron fence with stone-clad pillars along the D block frontage and a second street gate with a pitched-roof booth and a sliding steel gate; placed along the W face of GB_BLD_D_W (Cholpon-Ata St side), positions not measured | [B] booth moved inside the gate on the N side of the drive (2GIS 30258560092273593/603: booth right of the sliding gate seen from the street); position +-1.5 m.",
    "confidence": "low"
+  },
+  {
+   "type": "gazebo",
+   "name": "DForecourt_Pavilion_1",
+   "center": [
+    -198.6,
+    74.8
+   ],
+   "sides": 8,
+   "across_flats": 7.2,
+   "rot_deg": -2.8,
+   "post_w": 0.3,
+   "post_h": 2.7,
+   "parapet_h": 0.45,
+   "parapet_t": 0.25,
+   "open_sides": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "floor_h": 0.12,
+   "roof_pitch": 20,
+   "roof_across_flats": 8.8,
+   "fascia_h": 0.2,
+   "eave_h": 2.85,
+   "confidence": "low",
+   "evidence": "Google z20 roof octagons W of Block D's west wing (centre and roof across-flats read off the ortho, flats on the grid axes); 2GIS aerial 30258560047688468 shows two brown pyramid-roofed open pavilions in the lawn in front of D. Posts, heights and the open sides assumed like the garden gazebos (no close photo)."
+  },
+  {
+   "type": "gazebo",
+   "name": "DForecourt_Pavilion_2",
+   "center": [
+    -199.7,
+    58.8
+   ],
+   "sides": 8,
+   "across_flats": 7.6,
+   "rot_deg": -2.8,
+   "post_w": 0.3,
+   "post_h": 2.7,
+   "parapet_h": 0.45,
+   "parapet_t": 0.25,
+   "open_sides": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "floor_h": 0.12,
+   "roof_pitch": 20,
+   "roof_across_flats": 9.2,
+   "fascia_h": 0.2,
+   "eave_h": 2.85,
+   "confidence": "low",
+   "evidence": "Google z20 roof octagons W of Block D's west wing (centre and roof across-flats read off the ortho, flats on the grid axes); 2GIS aerial 30258560047688468 shows two brown pyramid-roofed open pavilions in the lawn in front of D. Posts, heights and the open sides assumed like the garden gazebos (no close photo)."
   }
  ]
 }
