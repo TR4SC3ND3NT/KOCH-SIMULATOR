@@ -18,7 +18,7 @@ PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W = 1.2, 0.65, 1.05, 0.7
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
 ARCH_T = 0.35    # topiary arch leg thickness (m): the hedge gap at an arch = path gap + 2 legs
 SQ_P = 4.0       # centre bench square: paving half size (m); 4 benches on its W/E sides
-EV = "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+EV = "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
 
 
 def main():
@@ -63,15 +63,17 @@ def main():
     # the west boundary near the SW corner, short SSE path to the walk; gazebo 2 - long diagonal to the east boundary
     # near the SE corner, short SSW path to the walk (mirror of G1's); both linked to the centre bench square.
     # (name, gazebo sign, world target point on the boundary/walk, end kind)
-    TRACE = [("G1_N", -1, None, "bndN"), ("G1_SW", -1, (101.0, -42.0), "bndW"), ("G1_SSE", -1, (121.0, -36.5), "walk"),
-             ("G2_SE", 1, (153.5, -43.0), "bndE"), ("G2_SSW", 1, None, "walk")]
+    TRACE = [("G1_N", -1, None, "bndN"), ("G1_SW", -1, (101.0, -42.0), "bndW"), ("G1_SSE", -1, "walk", "walk"),
+             ("G2_N", 1, None, "bndN"), ("G2_E", 1, "east", "bndE"), ("G2_SE", 1, (153.5, -43.0), "bndE")]
     for name, s, tgt, kind in TRACE:
         c = (s * ug, 0.0)
         if name.endswith("_N"):
             paths.append((name, [(c[0], c[1] + R_APRON), (c[0], v_n - 0.35)], kind))
             continue
-        if tgt is None:                                       # G2_SSW: mirror of G1_SSE about the centre axis
-            t1 = uv((121.0, -36.5)); dv = (-(t1[0] + ug), t1[1])
+        if tgt == "east":                                     # straight E arm to the east boundary
+            dv = (1.0, 0.0)
+        elif tgt == "walk":                                   # G1 SSE: reaches the walk between G1 and the square (owner sketch)
+            dv = (-ug / 2 + 1.5 - c[0], v_s - c[1])
         else:
             t1 = uv(tgt); dv = (t1[0] - c[0], t1[1] - c[1])
         l = math.hypot(*dv); dv = (dv[0] / l, dv[1] / l)
@@ -163,7 +165,7 @@ def main():
     ring_gaps = {"G1": [], "G2": []}
     for name, pts, kind in paths:
         c = centre_of(name)
-        cl = clip_end(pts, kind, False)
+        cl = clip_end(pts, kind, True)
         new.append({"type": "path", "name": name, "line": [W(*p) for p in cl], "width": PATH_W, "thk": 0.08,
                     "top": 0.016, "confidence": "medium", "evidence": EV})
         for side, dd in (("L", 1), ("R", -1)):
@@ -213,10 +215,10 @@ def main():
             p0, p1 = ((x0, fixed), (x1, fixed)) if along_u else ((fixed, x0), (fixed, x1))
             new.append({"type": "hedge", "name": f"Hedge_Bnd_{name}{k}", "line": [W(*p0), W(*p1)], "width": HEDGE_W,
                         "height": 1.04, "top": "flat", "confidence": "medium", "evidence": EV})
-    hedge_line("N", u_w, u_e, True, gaps_bnd["N"], v_n)
-    hedge_line("S", u_w, u_e, True, gaps_bnd["S"], v_sh)
-    hedge_line("W", v_sh + 0.35, v_n - 0.35, False, gaps_bnd["W"], u_w)
-    hedge_line("E", v_sh + 0.35, v_n - 0.35, False, gaps_bnd["E"], u_e)
+    hedge_line("N", u_w, u_e, True, [], v_n)
+    hedge_line("S", u_w, u_e, True, [], v_sh)
+    hedge_line("W", v_sh + 0.35, v_n - 0.35, False, [], u_w)
+    hedge_line("E", v_sh + 0.35, v_n - 0.35, False, [], u_e)
     # gazebo ring hedge + edging (24-gon) with gaps at the paths
     for gname, s in (("G1", -1), ("G2", 1)):
         c = (s * ug, 0.0)

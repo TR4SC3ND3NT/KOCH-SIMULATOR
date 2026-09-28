@@ -42,7 +42,7 @@
     "material": "dark brown painted steel/timber"
    },
    "notes": "across_flats = post-centre octagon (builder convention). Eave (fascia bottom) = 2.77 m; apex ~5.0 m at 25 deg. Pier/parapet: red brick-effect tile (2026; plain maroon paint in 2020), white render posts with dark-brown capital band ~0.12 m.",
-   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (116.95,-26.75) minus north lean 0.18 m/m (Google B roof edge 1.3-1.7 m N of the Bing footprint) averaged with Bing 2021 (116.6,-26.6), then both gazebos snapped symmetric on the -2.8 deg campus grid (moves each <=0.35 m). Orientation from the 2020 pano: C block (4 fl.) at pano yaw 54-59 = bearing 58-63 from here -> pano yaw offset +4 deg -> a post (vertex) points grid-N, openings face bearings 160/205; confirmed by the SSE path on Google z20 (bearing 161.6, radial) and the N path at x=117.4 hitting the N vertex. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept",
+   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (116.95,-26.75) minus north lean 0.18 m/m (Google B roof edge 1.3-1.7 m N of the Bing footprint) averaged with Bing 2021 (116.6,-26.6), then both gazebos snapped symmetric on the -2.8 deg campus grid (moves each <=0.35 m). Orientation from the 2020 pano: C block (4 fl.) at pano yaw 54-59 = bearing 58-63 from here -> pano yaw offset +4 deg -> a post (vertex) points grid-N, openings face bearings 160/205; confirmed by the SSE path on Google z20 (bearing 161.6, radial) and the N path at x=117.4 hitting the N vertex. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept | [B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)",
    "confidence": "medium",
    "eave_h": 2.74
   },
@@ -79,7 +79,7 @@
     "material": "dark brown painted steel/timber"
    },
    "notes": "across_flats = post-centre octagon (builder convention). Eave (fascia bottom) = 2.77 m; apex ~5.0 m at 25 deg. Pier/parapet: red brick-effect tile (2026; plain maroon paint in 2020), white render posts with dark-brown capital band ~0.12 m.",
-   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (145.2,-28.8, NE half hidden by trees) lean-corrected + Bing (145.0,-28.9), snapped symmetric to Gazebo_1. Same design as Gazebo_1 (2026 videos 081918134/081924271 walk in through its SSE opening from the SE landing). Rotation +7.3 deg vs Gazebo_1 inferred from its two radial paths on Google z20 (least-squares SSE bearing 151.5 -> 28.5; noisy SSW ~200 -> 25; vs Gazebo_1 159.4/205) -> confidence low on rot_deg. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | owner 2026-09-28 (screenshot 60): east gazebo 1.0 m further east | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept",
+   "evidence": "Octagon (8 posts, 8 sides), pyramid shingle roof. ROOF: Google z20 roof outline across flats 9.15 m (vertex-N octagon R=4.95 fits the N/NW/NE/E roof edge, 0.1 m/px). POST RING: 2020 in-gazebo 360 pano (tour360 gazebo.jpg): 7 visible parapet-base corners fitted by a regular octagon (rms 0.2 h); inner corner radius 2.60 h; fitted centre = central column (0.1 h). Camera h=1.55 m from floor tiles 0.25 h = 0.39 m (0.40 m tiles) and the roof size -> post-centre AF 7.7. Check 2026 frame 081924271 t7 (entrance side face-on): post c-c 1486 px vs 0.94 m brick-tile stub 450 px in the same plane -> side 3.19 m = AF 7.70. Equirect Cycles render of this spec from the fitted pano camera pose reproduces all 7 post azimuths within 1-5 deg and both openings. HEIGHTS: parapet top 0.61 h = 0.94 m (stub = 6.6 brick-tile courses of ~0.135 m + cap); post top / flat ceiling 1.665 h = 2.58 m (pano) and 2.71 x stub (t7) -> 2.6 m; ceiling is FLAT (column top and post tops at the same 0.60-0.67 h above camera). Roof pitch 18 deg: t6 frame apex 205 px above the fascia bottom at 388 px/m side scale, camera ~7 m out (f~2600 px, 4K main cam) -> apex ~4.4 m. OPENINGS: 2 adjacent sides (SSE, SSW), each ~1.15 m clear between ~0.8 m parapet stubs (pano pz_180, 081924271 t7-t10); other 6 sides parapet + continuous timber bench. Floor flush with the paths (same 0.40 m diamond tiles, no step). Materials: brown asphalt shingles, white fascia 0.2 m with dark triangular shingle tabs, dark-brown slatted ceiling, white rendered posts ~0.40 m sq with a dark-brown capital band, parapet/piers clad in red brick-effect tile (2026; painted maroon in 2020), dark-brown round central column d=0.20 m floor-to-ceiling. Centre: Google z20 roof (145.2,-28.8, NE half hidden by trees) lean-corrected + Bing (145.0,-28.9), snapped symmetric to Gazebo_1. Same design as Gazebo_1 (2026 videos 081918134/081924271 walk in through its SSE opening from the SE landing). Rotation +7.3 deg vs Gazebo_1 inferred from its two radial paths on Google z20 (least-squares SSE bearing 151.5 -> 28.5; noisy SSW ~200 -> 25; vs Gazebo_1 159.4/205) -> confidence low on rot_deg. | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | owner 2026-09-28 (screenshot 60): east gazebo 1.0 m further east | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary) | [B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept | [B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)",
    "confidence": "medium",
    "eave_h": 2.74,
    "sign_post": 3
@@ -93,15 +93,15 @@
      -21.456
     ],
     [
-     117.746,
-     -10.269
+     117.729,
+     -10.619
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -120,7 +120,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -141,7 +141,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -160,7 +160,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -181,7 +181,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -192,15 +192,15 @@
      -30.414
     ],
     [
-     100.083,
-     -42.878
+     100.45,
+     -42.526
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -212,14 +212,14 @@
     ],
     [
      100.376,
-     -44.05
+     -44.051
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -240,7 +240,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -252,14 +252,14 @@
     ],
     [
      100.525,
-     -41.001
+     -41.002
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -280,57 +280,57 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
    "name": "G1_SSE",
    "line": [
     [
-     118.977,
-     -31.643
+     118.617,
+     -31.778
     ],
     [
-     126.515,
-     -49.745
+     124.326,
+     -48.887
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_SSE_L",
    "line": [
     [
-     120.414,
-     -32.362
+     119.998,
+     -32.599
     ],
     [
-     127.357,
-     -49.035
+     125.451,
+     -48.942
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
    "name": "Edging_G1_SSE_L",
    "line": [
     [
-     119.736,
-     -31.774
+     119.365,
+     -31.964
     ],
     [
-     126.915,
-     -49.014
+     125.023,
+     -48.921
     ]
    ],
    "height": 0.22,
@@ -339,38 +339,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_SSE_R",
    "line": [
     [
-     118.475,
-     -33.169
+     118.006,
+     -33.263
     ],
     [
-     125.035,
-     -48.922
+     123.201,
+     -48.832
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
    "name": "Edging_G1_SSE_R",
    "line": [
     [
-     118.536,
-     -32.274
+     118.132,
+     -32.375
     ],
     [
-     125.477,
-     -48.943
+     123.629,
+     -48.853
     ]
    ],
    "height": 0.22,
@@ -379,7 +379,205 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "path",
+   "name": "G2_N",
+   "line": [
+    [
+     146.166,
+     -22.873
+    ],
+    [
+     146.696,
+     -12.036
+    ]
+   ],
+   "width": 1.2,
+   "thk": 0.08,
+   "top": 0.016,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_N_L",
+   "line": [
+    [
+     145.177,
+     -21.608
+    ],
+    [
+     145.647,
+     -11.985
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_N_L",
+   "line": [
+    [
+     145.537,
+     -22.429
+    ],
+    [
+     146.047,
+     -12.004
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_N_R",
+   "line": [
+    [
+     147.274,
+     -21.71
+    ],
+    [
+     147.745,
+     -12.087
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_N_R",
+   "line": [
+    [
+     146.835,
+     -22.492
+    ],
+    [
+     147.345,
+     -12.068
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "path",
+   "name": "G2_E",
+   "line": [
+    [
+     151.201,
+     -28.426
+    ],
+    [
+     154.129,
+     -28.569
+    ]
+   ],
+   "width": 1.2,
+   "thk": 0.08,
+   "top": 0.016,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_E_L",
+   "line": [
+    [
+     152.466,
+     -27.437
+    ],
+    [
+     154.181,
+     -27.52
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_E_L",
+   "line": [
+    [
+     151.645,
+     -27.797
+    ],
+    [
+     154.161,
+     -27.92
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_E_R",
+   "line": [
+    [
+     152.364,
+     -29.534
+    ],
+    [
+     154.078,
+     -29.618
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_E_R",
+   "line": [
+    [
+     151.582,
+     -29.095
+    ],
+    [
+     154.098,
+     -29.218
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -390,15 +588,15 @@
      -32.885
     ],
     [
-     153.75,
-     -43.488
+     153.43,
+     -42.863
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -417,7 +615,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -438,7 +636,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -457,7 +655,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -478,106 +676,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "path",
-   "name": "G2_SSW",
-   "line": [
-    [
-     143.402,
-     -32.838
-    ],
-    [
-     134.133,
-     -50.118
-    ]
-   ],
-   "width": 1.2,
-   "thk": 0.08,
-   "top": 0.016,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_SSW_L",
-   "line": [
-    [
-     143.752,
-     -34.405
-    ],
-    [
-     135.686,
-     -49.443
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_SSW_L",
-   "line": [
-    [
-     143.779,
-     -33.509
-    ],
-    [
-     135.244,
-     -49.421
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_SSW_R",
-   "line": [
-    [
-     141.902,
-     -33.413
-    ],
-    [
-     133.364,
-     -49.329
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_SSW_R",
-   "line": [
-    [
-     142.634,
-     -32.894
-    ],
-    [
-     133.807,
-     -49.351
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -588,15 +687,15 @@
      -27.009
     ],
     [
-     127.428,
-     -27.263
+     126.729,
+     -27.229
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -615,7 +714,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -636,7 +735,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -655,7 +754,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -676,7 +775,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -687,15 +786,15 @@
      -27.908
     ],
     [
-     135.419,
-     -27.654
+     136.118,
+     -27.688
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -714,7 +813,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -735,7 +834,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -754,7 +853,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -775,7 +874,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -786,15 +885,15 @@
      -23.463
     ],
     [
-     132.23,
-     -10.978
+     132.213,
+     -11.328
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -813,7 +912,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -834,7 +933,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -853,7 +952,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -874,7 +973,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -885,15 +984,15 @@
      -31.454
     ],
     [
-     130.324,
-     -49.931
+     130.361,
+     -49.182
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -912,7 +1011,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -933,7 +1032,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -952,7 +1051,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -973,37 +1072,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_N0",
-   "center": [
-    117.746,
-    -10.269
-   ],
-   "dir_deg": 87.2,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_N1",
-   "center": [
-    132.23,
-    -10.978
-   ],
-   "dir_deg": 87.2,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1014,44 +1083,6 @@
      -9.485
     ],
     [
-     116.677,
-     -10.217
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_N1",
-   "line": [
-    [
-     118.815,
-     -10.322
-    ],
-    [
-     131.161,
-     -10.926
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_N2",
-   "line": [
-    [
-     133.298,
-     -11.03
-    ],
-    [
      155.285,
      -12.106
     ]
@@ -1060,52 +1091,7 @@
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_S0",
-   "center": [
-    126.535,
-    -49.346
-   ],
-   "dir_deg": 87.2,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_S1",
-   "center": [
-    130.344,
-    -49.532
-   ],
-   "dir_deg": 87.2,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_S2",
-   "center": [
-    134.153,
-    -49.718
-   ],
-   "dir_deg": 87.2,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1116,63 +1102,6 @@
      -48.039
     ],
     [
-     125.466,
-     -49.293
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_S1",
-   "line": [
-    [
-     127.604,
-     -49.398
-    ],
-    [
-     129.275,
-     -49.48
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_S2",
-   "line": [
-    [
-     131.412,
-     -49.584
-    ],
-    [
-     133.084,
-     -49.666
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_S3",
-   "line": [
-    [
-     135.221,
-     -49.77
-    ],
-    [
      153.399,
      -50.66
     ]
@@ -1181,22 +1110,7 @@
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_W0",
-   "center": [
-    100.083,
-    -42.878
-   ],
-   "dir_deg": -2.8,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1207,25 +1121,6 @@
      -47.69
     ],
     [
-     100.03,
-     -43.946
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_W1",
-   "line": [
-    [
-     100.135,
-     -41.809
-    ],
-    [
      101.699,
      -9.835
     ]
@@ -1234,22 +1129,7 @@
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge_arch",
-   "name": "Arch_Bnd_E0",
-   "center": [
-    153.75,
-    -43.488
-   ],
-   "dir_deg": -2.8,
-   "span": 1.44,
-   "thk": 0.35,
-   "depth": 0.7,
-   "height": 2.25,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1260,25 +1140,6 @@
      -50.31
     ],
     [
-     153.698,
-     -44.557
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.04,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Bnd_E1",
-   "line": [
-    [
-     153.802,
-     -42.42
-    ],
-    [
      155.268,
      -12.455
     ]
@@ -1287,7 +1148,7 @@
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1342,7 +1203,7 @@
    "height": 1.06,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1421,7 +1282,7 @@
    "height": 1.06,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -1450,22 +1311,22 @@
     [
      117.46,
      -33.079
-    ],
-    [
-     118.282,
-     -32.957
     ]
    ],
    "width": 0.7,
    "height": 1.06,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_Ring_3",
    "line": [
+    [
+     119.843,
+     -32.398
+    ],
     [
      120.555,
      -31.971
@@ -1499,7 +1360,7 @@
    "height": 1.06,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -1556,7 +1417,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -1637,7 +1498,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -1678,12 +1539,16 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
    "name": "Edging_G1_Ring_3",
    "line": [
+    [
+     119.568,
+     -31.864
+    ],
     [
      120.213,
      -31.477
@@ -1719,44 +1584,12 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_Ring_0",
    "line": [
-    [
-     149.522,
-     -33.388
-    ],
-    [
-     150.172,
-     -32.871
-    ],
-    [
-     150.75,
-     -32.274
-    ],
-    [
-     151.245,
-     -31.607
-    ],
-    [
-     151.648,
-     -30.881
-    ],
-    [
-     151.953,
-     -30.108
-    ],
-    [
-     152.155,
-     -29.302
-    ],
-    [
-     152.249,
-     -28.477
-    ],
     [
      152.236,
      -27.647
@@ -1800,11 +1633,18 @@
     [
      147.042,
      -21.919
-    ],
-    [
-     146.217,
-     -21.825
-    ],
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.06,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_1",
+   "line": [
     [
      145.387,
      -21.838
@@ -1854,11 +1694,11 @@
    "height": 1.06,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
-   "name": "Hedge_G2_Ring_1",
+   "name": "Hedge_G2_Ring_2",
    "line": [
     [
      139.578,
@@ -1887,18 +1727,15 @@
     [
      141.8,
      -33.01
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.06,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_Ring_2",
-   "line": [
+    ],
+    [
+     142.467,
+     -33.505
+    ],
+    [
+     143.193,
+     -33.908
+    ],
     [
      143.966,
      -34.213
@@ -1928,44 +1765,51 @@
    "height": 1.06,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_3",
+   "line": [
+    [
+     149.522,
+     -33.388
+    ],
+    [
+     150.172,
+     -32.871
+    ],
+    [
+     150.75,
+     -32.274
+    ],
+    [
+     151.245,
+     -31.607
+    ],
+    [
+     151.648,
+     -30.881
+    ],
+    [
+     151.953,
+     -30.108
+    ],
+    [
+     152.155,
+     -29.302
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.06,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
    "name": "Edging_G2_Ring_0",
    "line": [
-    [
-     149.18,
-     -32.894
-    ],
-    [
-     149.769,
-     -32.427
-    ],
-    [
-     150.292,
-     -31.886
-    ],
-    [
-     150.74,
-     -31.282
-    ],
-    [
-     151.105,
-     -30.624
-    ],
-    [
-     151.382,
-     -29.925
-    ],
-    [
-     151.564,
-     -29.195
-    ],
-    [
-     151.65,
-     -28.448
-    ],
     [
      151.638,
      -27.696
@@ -2009,11 +1853,20 @@
     [
      146.935,
      -22.51
-    ],
-    [
-     146.188,
-     -22.424
-    ],
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_1",
+   "line": [
     [
      145.436,
      -22.436
@@ -2065,11 +1918,11 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
-   "name": "Edging_G2_Ring_1",
+   "name": "Edging_G2_Ring_2",
    "line": [
     [
      140.176,
@@ -2098,20 +1951,15 @@
     [
      142.188,
      -32.552
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_Ring_2",
-   "line": [
+    ],
+    [
+     142.792,
+     -33.0
+    ],
+    [
+     143.45,
+     -33.365
+    ],
     [
      144.149,
      -33.642
@@ -2143,7 +1991,48 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_3",
+   "line": [
+    [
+     149.18,
+     -32.894
+    ],
+    [
+     149.769,
+     -32.427
+    ],
+    [
+     150.292,
+     -31.886
+    ],
+    [
+     150.74,
+     -31.282
+    ],
+    [
+     151.105,
+     -30.624
+    ],
+    [
+     151.382,
+     -29.925
+    ],
+    [
+     151.564,
+     -29.195
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "path",
@@ -2162,7 +2051,7 @@
    "thk": 0.08,
    "top": 0.022,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2181,7 +2070,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2200,7 +2089,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2221,7 +2110,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2242,7 +2131,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2261,7 +2150,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2280,7 +2169,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2301,7 +2190,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2322,7 +2211,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2341,7 +2230,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2360,7 +2249,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2381,7 +2270,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2402,7 +2291,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "bench",
@@ -2415,7 +2304,7 @@
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "bench",
@@ -2428,7 +2317,7 @@
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2447,7 +2336,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "hedge",
@@ -2466,7 +2355,7 @@
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2487,7 +2376,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "wall",
@@ -2508,7 +2397,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "bench",
@@ -2521,7 +2410,7 @@
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "bench",
@@ -2534,7 +2423,7 @@
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
   },
   {
    "type": "lamp_orn",
@@ -2554,7 +2443,7 @@
     0.6
    ],
    "confidence": "low",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept | owner: lamp post in the exact middle, 4 lamps (maybe 2)"
+   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner) | owner: lamp post in the exact middle, 4 lamps (maybe 2)"
   },
   {
    "type": "path",

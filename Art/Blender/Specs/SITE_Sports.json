@@ -54,6 +54,31 @@
      70.178
     ],
     [
+     159.427,
+     72.177
+    ],
+    [
+     95.124,
+     74.647
+    ]
+   ],
+   "z": 3.75,
+   "blend": 3.0,
+   "evidence": "north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: flat 2.0 m path strip along the pitch, the rest is NorthTerrace_Bank",
+   "confidence": "low"
+  },
+  {
+   "name": "NorthTerrace_Bank",
+   "ring": [
+    [
+     95.124,
+     74.647
+    ],
+    [
+     159.427,
+     72.177
+    ],
+    [
      159.596,
      76.573
     ],
@@ -62,10 +87,18 @@
      79.043
     ]
    ],
+   "blend": 1.0,
+   "confidence": "medium",
+   "evidence": "2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: lawn bank 3.75 -> 2.675 over 4.4 m",
    "z": 3.75,
-   "blend": 3.0,
-   "evidence": "north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend)",
-   "confidence": "low"
+   "grad": [
+    -0.00938,
+    -0.24416
+   ],
+   "ref": [
+    95.124,
+    74.647
+   ]
   },
   {
    "name": "LowerYard",
@@ -179,8 +212,16 @@
    ],
    "z": 4.15,
    "blend": 0.0,
-   "evidence": "raised bed inside its curb (owner 2026-09-28)",
-   "confidence": "low"
+   "evidence": "raised bed inside its curb (owner 2026-09-28) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: plane 4.15 at the pitch side -> 2.675 at the yard side over 6.0 m (25%)",
+   "confidence": "low",
+   "grad": [
+    -0.00944,
+    -0.24564
+   ],
+   "ref": [
+    115.192,
+    72.124
+   ]
   }
  ],
  "elements": [
@@ -3714,12 +3755,12 @@
    "size": [
     44.050000000000004,
     0.29999999999999716,
-    2.375
+    0.98
    ],
    "z0": 1.875,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top 2.775 (0.60 above the yard)",
    "confidence": "low"
   },
   {
@@ -3733,12 +3774,12 @@
    "size": [
     20.0,
     0.29999999999999716,
-    1.925
+    0.98
    ],
    "z0": 1.875,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top 2.775 (0.60 above the yard)",
    "confidence": "low"
   },
   {
@@ -3929,23 +3970,37 @@
    "confidence": "low"
   },
   {
-   "type": "box",
+   "type": "roof_plane",
    "name": "LowerYard_Retain_Terrace",
-   "center": [
-    159.3,
-    72.782
+   "ring": [
+    [
+     159.15,
+     68.682
+    ],
+    [
+     159.45,
+     68.682
+    ],
+    [
+     159.45,
+     76.882
+    ],
+    [
+     159.15,
+     76.882
+    ]
    ],
-   "dir_deg": -2.2,
-   "size": [
-    0.29999999999999716,
-    8.199999999999996,
-    1.775
+   "z": [
+    3.8,
+    3.8,
+    2.775,
+    2.775
    ],
-   "z0": 2.025,
+   "thk": 1.775,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
-   "confidence": "low"
+   "confidence": "medium",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top slopes 3.8 -> 2.775 with the bank"
   },
   {
    "type": "box",
