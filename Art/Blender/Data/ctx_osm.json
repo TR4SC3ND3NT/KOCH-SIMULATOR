@@ -412,30 +412,31 @@
 "in_campus": false,
 "footprint": [
 [
-257.855,
+259.455,
 -94.933
 ],
 [
-258.663,
+260.263,
 -81.946
 ],
 [
-209.069,
+210.669,
 -78.893
 ],
 [
-208.268,
+209.868,
 -91.879
 ]
 ],
 "area_m2": 646.5,
 "centroid": [
-233.464,
+235.064,
 -86.913
 ],
 "levels": null,
 "height_m": null,
-"height_src": null
+"height_src": null,
+"moved_note": "2026-09-28 owner: shifted +1.6 m east so the campus east bar fence (straight on from the sports east fence) runs clear of its west wall"
 },
 {
 "osm_id": "way/206623867",

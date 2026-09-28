@@ -1318,6 +1318,31 @@
    "crown_base": 1.5,
    "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
    "confidence": "low"
+  },
+  {
+   "type": "fence",
+   "name": "EastBoundary_Fence_S",
+   "line": [
+    [
+     213.082,
+     6.166
+    ],
+    [
+     209.008,
+     -99.89
+    ],
+    [
+     176.865,
+     -98.112
+    ]
+   ],
+   "height": 2.0,
+   "post_spacing": 2.5,
+   "post": 0.06,
+   "panel": "bars",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28 (overview sketch): the black bar fence of the east edge runs on straight from the sports east fence (SITE_Sports EastBoundary_Fence, u 100.5) south past the A east lot to the street, then west along the street to the gate's east fence (Fence_East end); the OSM neighbour 169915330 moved 1.6 m east to clear it; height 2.0 as the sports part",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [

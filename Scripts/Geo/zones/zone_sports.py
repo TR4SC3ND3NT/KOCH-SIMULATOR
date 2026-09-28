@@ -258,7 +258,7 @@ for su, u in (("W", pu - 0.28), ("E", pu + 0.28)):
         tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
     tube(f"Workout_Dip_Bar{su}", u, pv0, u, pv1, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
 k = 0
-for vr in (28.8, 31.2):                                                        # 4 pull-up bars: two rows of two, along v
+for vr in (27.4, 29.6):                                                        # 4 pull-up bars: two rows of two, along v (owner: closer to the wall)
     for uc, h in ((pu + 1.9, 2.4), (pu + 3.7, 2.2)):
         for s in (-1, 1):
             tube(f"Workout_PullUp{k}_Post{'S' if s < 0 else 'N'}", uc, vr + 0.6 * s, uc, vr + 0.6 * s, Z_WO, Z_WO + h, d=0.08,
