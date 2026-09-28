@@ -542,14 +542,14 @@
    ],
    "post_pitch": 1.2,
    "confidence": "medium",
-   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-09-28 0c: low end -1.078 -> -1.04 so it meets the plaza (FFL-1.05 + 1 cm) instead of sitting 6 cm under the ground",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-09-28 0c: low end -1.078 -> -1.04 so it meets the plaza (FFL-1.05 + 1 cm) instead of sitting 6 cm under the ground | 2026-09-28 terrain audit: -1.02 - the plaza under the foot runs 2-4 cm above the old low end, the grating foot sat 2 cm under it",
    "name": "Run",
    "u0": 3.75,
    "u1": 9.5,
    "w0": 2.6,
    "w1": 3.6,
    "z_high": 0.0,
-   "z_low": -1.04,
+   "z_low": -1.02,
    "z_ground": -1.04
   },
   {

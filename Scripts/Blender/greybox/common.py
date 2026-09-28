@@ -37,6 +37,8 @@ class Terrain:
         self.curb = spec["curb_reveal_m"]
         self.streets = [(np.array(s["centerline"], float), s["width_m"] / 2) for s in spec["streets"]]
         self.grid = spec["grid"]
+        self.cw_rings = spec.get("carriageway_rings", [])   # curb breaklines (build_terrain.carriageway_rings)
+        self._entries = None
         self.influence = spec.get("pad_influence_m")   # screening length of the pad correction (terrain_field)
 
     def dem(self, x, y):
@@ -59,15 +61,58 @@ class Terrain:
         """Ground before the curb, on the point's side of the hard pad edges (side: see TerrainField.residual)."""
         return self.dem(x, y) + self.field.residual(x, y, side)
 
-    def ground(self, x, y):
+    CURB_FADE_M = 3.0   # where a carriageway enters a terrain pad the curb reveal fades out over this length
+
+    def curb_depth(self, x, y):
+        """Curb reveal on carriageways: full depth, fading to 0 within CURB_FADE_M of the points where a carriageway
+        enters a terrain pad (the pad's own level holds the lane there), so the lane never steps 0.15 m across its
+        width at a pad edge. Entries: soft pad edges, and hard pad edges whose plane is at lane level (+-0.25 m); a
+        hard edge well above or below the lane is a retaining step, and the lane keeps its full curb up to it."""
+        from .terrain_field import all_pads, pad_plane_z
+        if self._entries is None:
+            pts = []
+            for p in all_pads():
+                r = np.array(p["ring"], float)
+                seg, nrm = [], []
+                ccw_sign = np.sign(0.5 * float(np.sum(r[:, 0] * np.roll(r[:, 1], -1) - np.roll(r[:, 0], -1) * r[:, 1])))
+                for a, b in zip(r, np.roll(r, -1, 0)):
+                    L = float(np.linalg.norm(b - a))
+                    n = max(1, int(np.ceil(L / 0.25)))
+                    t = np.linspace(0, 1, n, endpoint=False)[:, None]
+                    seg.append(a + (b - a) * t)
+                    nrm.append(np.repeat([[(b - a)[1] * ccw_sign / max(L, 1e-9), -(b - a)[0] * ccw_sign / max(L, 1e-9)]], n, 0))
+                q, nout = np.concatenate(seg), np.concatenate(nrm)   # nout: outward unit normal of the sample's edge
+                on = self.carriageway_mask(q[:, 0], q[:, 1])
+                q, nout = q[on], nout[on]
+                if len(q) and float(p.get("blend", 0.0)) <= 0.0:
+                    o = q + 0.3 * nout   # lane level just outside the edge vs the pad plane on it
+                    lane = self.base(o[:, 0], o[:, 1]) - self.curb
+                    q = q[np.abs(pad_plane_z(p, q[:, 0], q[:, 1]) - lane) < 0.25]
+                pts.append(q)
+            pts = np.concatenate(pts) if pts else np.zeros((0, 2))
+            self._entries = pts
+        x, y = np.asarray(x, float), np.asarray(y, float)
+        if not len(self._entries):
+            return self.curb + 0.0 * x
+        flat_x, flat_y = x.ravel(), y.ravel()
+        d = np.full(flat_x.shape, np.inf)
+        for k in range(0, len(flat_x), 20000):
+            dx = flat_x[k:k + 20000, None] - self._entries[None, :, 0]
+            dy = flat_y[k:k + 20000, None] - self._entries[None, :, 1]
+            d[k:k + 20000] = np.sqrt((dx * dx + dy * dy).min(1))
+        return (self.curb * np.clip(d / self.CURB_FADE_M, 0.0, 1.0)).reshape(np.shape(x))
+
+    def ground(self, x, y, hidden=True):
         """Final ground z: base, minus the curb on carriageways outside pads (a pad's level overrides the curb, as it
-        always has); inside a hard pad its plane (the step side)."""
+        always has); inside a hard pad its plane (the step side). hidden=False: the ground a site element stands on,
+        ignoring "field": false pads (the terrain hidden inside a closed solid, e.g. under a planter or a basement)."""
         from .terrain_field import pad_plane_z
         f = self.field
-        z = np.asarray(self.base(x, y) - np.where(self.carriageway_mask(x, y) & (f.owner(x, y) < 0), self.curb, 0.0), float)
+        z = np.asarray(self.base(x, y) - np.where(self.carriageway_mask(x, y) & (f.owner(x, y) < 0), self.curb_depth(x, y), 0.0), float)
         own = f.hard_owner(x, y)
         for k in set(np.unique(own).tolist()) - {-1}:
-            z = np.where(own == k, pad_plane_z(f.pads[k], x, y), z)
+            if hidden or f.pads[k].get("field", True) is not False:
+                z = np.where(own == k, pad_plane_z(f.pads[k], x, y), z)
         return z
 
     def carriageway_mask(self, x, y):

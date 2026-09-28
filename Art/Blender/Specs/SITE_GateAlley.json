@@ -196,6 +196,44 @@
    ],
    "evidence": "2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): ground held at the lower level under the solid flights (the smooth field ramped above the lower treads)",
    "confidence": "medium"
+  },
+  {
+   "name": "SouthBed_Inside",
+   "ring": [
+    [
+     157.478,
+     -96.548
+    ],
+    [
+     161.199,
+     -96.731
+    ],
+    [
+     161.327,
+     -94.112
+    ],
+    [
+     158.897,
+     -94.528
+    ],
+    [
+     156.799,
+     -95.508
+    ]
+   ],
+   "z": 6.221,
+   "grad": [
+    -0.1174,
+    -0.7015
+   ],
+   "ref": [
+    159.137,
+    -95.48
+   ],
+   "blend": 0.0,
+   "field": false,
+   "evidence": "2026-09-28 terrain audit: ground inside the solid SouthBed_Cheek planter held 0.10 m under its sloped top (plane under all 5 top corners); hard edge 5 cm inside its faces. The plaza plateau (6.95) showed 0.29 m above the warped top",
+   "confidence": "medium"
   }
  ],
  "elements": [

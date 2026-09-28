@@ -28,6 +28,32 @@ def _subdivide(pts, closed, max_seg):
     return out
 
 
+def _refine_steps(pts, closed, ground, dz=0.05, min_len=0.02):
+    """Bisect segments whose ground z changes by more than dz (a curb or pad edge between two samples) down to
+    min_len, so the element steps where the ground steps instead of ramping through it (a path crossing a
+    dropped kerb sank 7 cm under the curb top on a 0.5 m sample)."""
+    P = [Vector(p) for p in pts]
+    z = [ground(p.x, p.y) for p in P]
+    out = [P[0]]
+    pairs = list(zip(range(len(P)), list(range(1, len(P))) + ([0] if closed else [])))
+    for i, j in pairs:
+        stack = [(P[i], z[i], P[j], z[j])]
+        seg = []
+        while stack:
+            a, za, b, zb = stack.pop()
+            if abs(za - zb) > dz and (b - a).length > min_len:
+                m = (a + b) / 2
+                zm = ground(m.x, m.y)
+                stack.append((m, zm, b, zb)); stack.append((a, za, m, zm))
+            else:
+                seg.append(b)
+        if j != 0 or not closed:
+            out += seg
+        else:
+            out += seg[:-1]
+    return [(p.x, p.y) for p in out]
+
+
 def sweep_profile(bm, pts, profile, ground, closed=False, max_seg=None, cut0=None, cut1=None):
     """Sweep a closed CCW profile [(across, dz)] along pts [(x, y)]; ground(x, y) -> z of the base at that point.
 
@@ -39,6 +65,7 @@ def sweep_profile(bm, pts, profile, ground, closed=False, max_seg=None, cut0=Non
     """
     if max_seg:
         pts = _subdivide(pts, closed, max_seg)
+        pts = _refine_steps(pts, closed, ground)
     n = len(pts)
     segs = _dirs(pts, closed)
     loops = []

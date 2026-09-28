@@ -8,6 +8,8 @@
 #     soft pad's blend band are released, so the later pad can still ramp into it (the old sequential-blend intent)
 #   - grid border: r = 0 (DEM topography); 'pad_influence_m' in terrain.json screens r back to 0 away from the pads
 #   - carriageways are not special here (callers subtract the curb reveal)
+#   - "field": false (a hard pad hidden inside a closed solid, e.g. a basement): left out of the solve, so adding it
+#     never moves the ground outside; it only replaces the surface inside its ring (owner / hard_owner)
 # Used by common.Terrain (base/ground) for TER_Ground, building walls and every site element's ground z.
 import json
 import os
@@ -73,7 +75,11 @@ class TerrainField:
         D = dem(X, Y)
         self.pads = pads
         self.hard_idx = [k for k, p in enumerate(pads) if float(p.get("blend", 0.0)) <= 0.0]
-        ins = [in_ring(np.array(p["ring"], float), X, Y) for p in pads]
+        in_solve = [p.get("field", True) is not False for p in pads]
+        # side bits follow hard_idx (callers pass masks built that way); only solved pads cut the graph
+        self.field_mask = sum(1 << bit for bit, k in enumerate(self.hard_idx) if in_solve[k])
+        ins = [in_ring(np.array(p["ring"], float), X, Y) if in_solve[k] else np.zeros(X.shape, bool)
+               for k, p in enumerate(pads)]
         owner = np.full(X.shape, -1)
         for k, m in enumerate(ins):
             owner[m] = k
@@ -177,7 +183,7 @@ class TerrainField:
         straddling a step never mixes the two levels). side = hard-ring bitmask of the point (default: ring test;
         mesh vertex copies on a ring pass theirs). No same-side node in the cell: the outside view r_out."""
         x, y = np.asarray(x, float), np.asarray(y, float)
-        side = self.side(x, y) if side is None else np.asarray(side, np.int64)
+        side = (self.side(x, y) if side is None else np.asarray(side, np.int64)) & self.field_mask
         fx = np.clip((x - self.x0) / self.s, 0, self.nx - 1.000001)
         fy = np.clip((y - self.y0) / self.s, 0, self.ny - 1.000001)
         i, j = np.floor(fx).astype(int), np.floor(fy).astype(int)
@@ -213,7 +219,7 @@ class TerrainField:
         x, y = np.asarray(x, float), np.asarray(y, float)
         i = np.clip(np.round((x - self.x0) / self.s).astype(int), 0, self.nx - 1)
         j = np.clip(np.round((y - self.y0) / self.s).astype(int), 0, self.ny - 1)
-        rel = self.released[j, i] & (self.node_side[j, i] == np.asarray(side, np.int64)) & (own >= 0)
+        rel = self.released[j, i] & (self.node_side[j, i] == (np.asarray(side, np.int64) & self.field_mask)) & (own >= 0)
         own[rel] = -1
         return own
 

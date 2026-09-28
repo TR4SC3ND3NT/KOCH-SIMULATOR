@@ -190,10 +190,11 @@ def _conform_hard_edges(ob, hard):
     verts = [Vector((x, y)) for x, y in co[:, :2]]
     edges = []
     for pad in hard:
-        k0 = len(verts)
-        verts += [Vector(p) for p in pad["ring"]]
-        n = len(pad["ring"])
-        edges += [(k0 + i, k0 + (i + 1) % n) for i in range(n)]
+        for ring in pad.get("rings") or [pad["ring"]]:   # "rings": several rings, even-odd (carriageways with holes)
+            k0 = len(verts)
+            verts += [Vector(p) for p in ring]
+            n = len(ring)
+            edges += [(k0 + i, k0 + (i + 1) % n) for i in range(n)]
     vo, eo, fo, vorig, eorig, forig = delaunay_2d_cdt(verts, edges, faces, 3, 1e-5, True)
     n_grid = len(co)
     vo = np.array([tuple(v) for v in vo])
@@ -207,7 +208,10 @@ def _conform_hard_edges(ob, hard):
     cen = np.array([vo[f].mean(0) for f in fo])
     fmask = np.zeros(len(fo), np.int64)
     for k, pad in enumerate(hard):
-        fmask |= _in_ring(np.array(pad["ring"], float), cen[:, 0], cen[:, 1]).astype(np.int64) << k
+        ins = np.zeros(len(cen), bool)
+        for ring in pad.get("rings") or [pad["ring"]]:
+            ins ^= _in_ring(np.array(ring, float), cen[:, 0], cen[:, 1])
+        fmask |= ins.astype(np.int64) << k
     # merge triangle pairs of an untouched grid quad back into the quad
     groups = {}
     for i, fs in enumerate(forig):
@@ -266,9 +270,11 @@ def apply_terrain_pads(ter):
     if not pads or ob is None:
         return
     hard = [p for p in pads if float(p.get("blend", 0.0)) <= 0.0]
+    cw = [r["ring"] for r in ter.cw_rings]
+    conform = hard + ([{"rings": cw}] if cw else [])   # carriageways: one extra side bit, curb = vertical breakline
     skirts, side, faces = [], None, None
-    if hard:
-        co, faces, side, skirts = _conform_hard_edges(ob, hard)   # z of the added vertices is set below
+    if conform:
+        co, faces, side, skirts = _conform_hard_edges(ob, conform)   # z of the added vertices is set below
     else:
         me = ob.data
         co = np.empty(len(me.vertices) * 3)
@@ -285,14 +291,17 @@ def apply_terrain_pads(ter):
             hk += 1
         else:
             owner[_in_ring(np.array(pad["ring"], float), x, y)] = k
-    co[:, 2] = ter.base(x, y, side) - np.where(ter.carriageway_mask(x, y) & (owner < 0), ter.curb, 0.0)  # pads override the curb
+    pad_side = side & ((1 << len(hard)) - 1) if side is not None else None
+    on_cw = ((side >> len(hard)) & 1).astype(bool) if (cw and side is not None) else ter.carriageway_mask(x, y)
+    # pads override the curb; near the points where a lane enters a pad the curb fades out (Terrain.curb_depth)
+    co[:, 2] = ter.base(x, y, pad_side) - np.where(on_cw & (owner < 0), ter.curb_depth(x, y), 0.0)
     if hard:   # released by a later soft pad's blend band (a bank ramping into the hard pad): the field holds them
-        owner = ter.field.plane_owner(owner, x, y, side)
+        owner = ter.field.plane_owner(owner, x, y, pad_side)
     for k, pad in enumerate(pads):
         m = owner == k
         if m.any() and float(pad.get("blend", 0.0)) <= 0.0:
             co[m, 2] = pad_plane_z(pad, x[m], y[m])
-    if hard:
+    if conform:
         bm = bmesh.new()
         bv = [bm.verts.new(p) for p in co]
         for f in faces:
@@ -306,10 +315,16 @@ def apply_terrain_pads(ter):
                 except ValueError:
                     pass
         bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)   # re-weld the copies where no step is needed
+        # where three levels meet at one ring vertex (a step corner) the pairwise skirts leave a small vertical
+        # opening: close every small boundary loop (the outer grid border is far larger; the intentional
+        # terrain_holes are cut after this)
+        bnd = [e for e in bm.edges if e.is_boundary]
+        filled = bmesh.ops.holes_fill(bm, edges=bnd, sides=16)
+        print(f"terrain: closed {len(filled['faces'])} step-corner openings")
         bm.normal_update()
         bm.to_mesh(ob.data)
         bm.free()
-        print(f"terrain: {len(hard)} hard pad edges conformed, {ns} step faces")
+        print(f"terrain: {len(hard)} hard pad edges + {len(cw)} carriageway rings conformed, {ns} step faces")
     else:
         ob.data.vertices.foreach_set("co", co.ravel().astype(np.float32))
     ob.data.update()

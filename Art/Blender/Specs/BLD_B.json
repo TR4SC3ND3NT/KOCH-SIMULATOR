@@ -748,5 +748,33 @@
   "roof pitches (long sides vs ends)",
   "porch piers exact u and canopy depth",
   "low red-roofed structure beyond the NE corner (pano intro2, far right)"
+ ],
+ "terrain_pads": [
+  {
+   "name": "B_Inside",
+   "ring": [
+    [
+     147.209,
+     -81.304
+    ],
+    [
+     148.4,
+     -56.973
+    ],
+    [
+     100.278,
+     -54.617
+    ],
+    [
+     99.086,
+     -78.948
+    ]
+   ],
+   "z": 3.457,
+   "blend": 0.0,
+   "field": false,
+   "evidence": "2026-09-28 terrain audit: ground inside the walls held 0.3 m under the basement floor (FFL 6.757 - 3.0), hard edge 5 cm inside the outer wall face (the basement walls run down to the slab underside and hide the step) - the DEM filled the basement 2.66 m above its floor",
+   "confidence": "medium"
+  }
  ]
 }

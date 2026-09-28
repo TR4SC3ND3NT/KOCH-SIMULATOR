@@ -213,25 +213,57 @@
    "name": "A_N_Inside",
    "ring": [
     [
-     170.896,
-     -70.519
+     170.737,
+     -70.666
     ],
     [
-     195.072,
-     -71.705
+     195.207,
+     -71.867
     ],
     [
-     197.539,
-     -21.406
+     195.21,
+     -71.817
     ],
     [
-     173.363,
-     -20.22
+     177.918,
+     -70.968
+    ],
+    [
+     177.923,
+     -70.869
+    ],
+    [
+     195.215,
+     -71.717
+    ],
+    [
+     195.839,
+     -58.982
+    ],
+    [
+     195.689,
+     -58.975
+    ],
+    [
+     197.531,
+     -21.42
+    ],
+    [
+     173.36,
+     -20.234
+    ],
+    [
+     173.348,
+     -20.484
+    ],
+    [
+     173.198,
+     -20.477
     ]
    ],
    "z": 5.17,
    "blend": 0.0,
-   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows",
+   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows | 2026-09-28 terrain audit: grown 0.10 m across the walls shared with the other A blocks (clipped to the block outline inset 0.05) - the 0.1 m strip of free ground left between two inside pads rose to the DEM (6.1-6.3) above the plinths inside the shared walls",
    "confidence": "low"
   }
  ]

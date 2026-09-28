@@ -68,3 +68,6 @@ Art/Blender/Reference/
 
 # Owner request log (personal, R1 stream B)
 /OWNER_LOG.md
+
+# terrain audit outputs (Scripts/Blender/terrain_audit.py)
+Art/Blender/Audit/

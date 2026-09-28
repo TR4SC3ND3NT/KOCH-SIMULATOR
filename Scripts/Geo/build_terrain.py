@@ -9,7 +9,7 @@ import os
 
 import numpy as np
 import rasterio
-from shapely.geometry import Point, Polygon
+from shapely.geometry import LineString, Point, Polygon, box
 from shapely.ops import unary_union
 from shapely.prepared import prep
 
@@ -33,6 +33,22 @@ STREET_FIX = {
     # -> centre -118.2 vs OSM -119.15, width 14.8 m.
     "way/187959018": {"shift": (0.0, 0.95), "width_m": 14.8},
 }
+
+
+def carriageway_rings(streets, extent, inset=0.02):
+    """Union of the carriageways (centreline buffered by half the width, round caps = the builders' distance test)
+    clipped to the grid: [{"ring": [[x, y], ...], "hole": bool}]. TER_Ground conforms to these rings so every curb
+    is a vertical 0.15 m breakline instead of a reveal smeared over one grid cell (2026-09-28 terrain audit)."""
+    geo = unary_union([LineString(s["centerline"]).buffer(s["width_m"] / 2, quad_segs=8) for s in streets])
+    x0, y0, x1, y1 = extent
+    geo = geo.intersection(box(x0 + inset, y0 + inset, x1 - inset, y1 - inset)).simplify(0.02)
+    polys = [geo] if geo.geom_type == "Polygon" else [g for g in getattr(geo, "geoms", []) if g.geom_type == "Polygon"]
+    out = []
+    for pg in polys:
+        out.append({"ring": [[round(x, 3), round(y, 3)] for x, y in list(pg.exterior.coords)[:-1]], "hole": False})
+        for h in pg.interiors:
+            out.append({"ring": [[round(x, 3), round(y, 3)] for x, y in list(h.coords)[:-1]], "hole": True})
+    return out
 
 
 def dem_posts(path, extent):
@@ -76,7 +92,15 @@ def road_width(tags):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fabdem", help="optional FABDEM tile for a cross-check fit (non-commercial licence)")
+    ap.add_argument("--rings-only", action="store_true", help="only recompute carriageway_rings of terrain.json")
     a = ap.parse_args()
+    if a.rings_only:
+        path = os.path.join(DATA, "terrain.json")
+        t = json.load(open(path))
+        t["carriageway_rings"] = carriageway_rings(t["streets"], t["grid"]["extent"])
+        json.dump(t, open(path, "w"), indent=1)
+        print("carriageway_rings:", len(t["carriageway_rings"]), "rings,", sum(len(r["ring"]) for r in t["carriageway_rings"]), "vertices")
+        return
 
     site = json.load(open(os.path.join(DATA, "site_osm.json"), encoding="utf-8"))
     fp_path = os.path.join(DATA, "footprints.json")
@@ -122,7 +146,8 @@ def main():
            "grid": GRID,
            "curb_reveal_m": CURB_REVEAL_M,
            "pad_influence_m": PAD_INFLUENCE_M,
-           "streets": streets}
+           "streets": streets,
+           "carriageway_rings": carriageway_rings(streets, GRID["extent"])}
     with open(os.path.join(DATA, "terrain.json"), "w") as fh:
         json.dump(out, fh, indent=1)
     print("wrote terrain.json,", len(streets), "street centrelines")

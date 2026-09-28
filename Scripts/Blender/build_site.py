@@ -87,10 +87,10 @@ class Site:
         """Ground z: Terrain.ground (smooth pad field + hard pad planes + curb) if the spec opts in, else the field
         outside hard pads minus the curb reveal on carriageways."""
         if self.pads:
-            return float(self.ter.ground(x, y))
+            return float(self.ter.ground(x, y, hidden=False))
         z = float(self.ter.base(x, y))
         if self.ter.carriageway_mask(x, y):
-            z -= self.ter.curb
+            z -= float(self.ter.curb_depth(x, y))
         return z
 
     def name(self, el):
@@ -574,7 +574,10 @@ class Site:
             # _frame2(P, left): w = left of `left` = -fwd, so the back (behind the sitter) is on +w
             box(bm, m, -L / 2, L / 2, D / 2, D / 2 + 0.04, z + sh + 0.1, z + bh)        # back
         for u in (-L / 2 + 0.1, L / 2 - 0.1):                                          # legs / side frames
-            box(bm, m, u - 0.03, u + 0.03, -D / 2, D / 2, z, z + sh - 0.05)
+            # on sloping ground each leg reaches 2 cm into the lowest ground under it (no visible gap)
+            zl = z if "z" in el else min(z, min(self.gz(*(m @ Vector((u + du, w, 0))).xy) for du in (-0.03, 0.03)
+                                                for w in (-D / 2, D / 2)) - 0.02)
+            box(bm, m, u - 0.03, u + 0.03, -D / 2, D / 2, zl, z + sh - 0.05)
         self.emit(el, bm, COL["wood"], (P.x, P.y, z))
 
     def b_lamp(self, el):
@@ -818,7 +821,13 @@ class Site:
         zt = el["z_top"]
         rb = el.get("bottom_riser_h", rh)   # optional lower first (bottom) riser, e.g. a half step at the hall floor
         zb = zt - (n - 1) * rh - rb
-        prof = [(0.0, zb - 0.2), (0.0, zt)]
+        run = (n - 1) * tr + el.get("run_out", 0.0)
+        # solid underside: 0.2 m under the foot, or buried BURY into the ground where the ground under the flight is
+        # lower (a flight standing on the terrain must not show a slit above it); a flight far above the ground
+        # (upper floors) keeps its own underside
+        g = min(self.gz(*(P + fwd * (run * i / 5) + left * (W * (j / 4 - 0.5)))) for i in range(6) for j in range(5))
+        zu = zb - 0.2 if not (g < zb - 0.2 < g + 1.0) else g - BURY
+        prof = [(0.0, zu), (0.0, zt)]
         x = 0.0
         z = zt
         for k in range(n):
@@ -829,18 +838,18 @@ class Site:
                 prof.append((x, z))
         ro = el.get("run_out", 0.0)
         if ro:   # run-out at the foot sits 4 mm into the floor it joins (a flush top would z-fight with that floor)
-            prof += [(x, z - 0.004), (x + ro, z - 0.004), (x + ro, zb - 0.2)]
+            prof += [(x, z - 0.004), (x + ro, z - 0.004), (x + ro, zu)]
         else:
-            prof += [(x, zb - 0.2)]
+            prof += [(x, zu)]
         if el.get("top_flush"):
             # the flight hangs off a landing/paving whose edge IS the top riser: start 5 mm inside it, no own top riser
-            prof[0:2] = [(-0.005, zb - 0.2), (-0.005, zt - rh)]
+            prof[0:2] = [(-0.005, zu), (-0.005, zt - rh)]
         st = el.get("soffit_thk")
         if st:  # sloped waist slab instead of a solid block (headroom under the flight): underside parallel to the
             # pitch line, st (m, normal to the slope) below the inner step corners; flat 0.2 m slab end at the bottom
             k = math.hypot(tr, rh) / tr                      # normal -> vertical thickness
             prof[0] = (0.0, zt - rh - st * k)
-            prof[-1] = (prof[-1][0], zb - 0.2)
+            prof[-1] = (prof[-1][0], zu)
             ts = el.get("top_slab_t")
             if ts and ts > rh:
                 # hung from a landing / floor slab of thickness ts: the top riser IS the slab edge, so the flight
