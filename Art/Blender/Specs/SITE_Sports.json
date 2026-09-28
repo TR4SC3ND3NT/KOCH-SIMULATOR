@@ -21,12 +21,12 @@
      38.924
     ],
     [
-     216.615,
-     85.09
+     215.901,
+     66.504
     ],
     [
-     163.254,
-     87.14
+     162.54,
+     68.554
     ],
     [
      162.598,
@@ -65,6 +65,64 @@
    "z": 3.75,
    "blend": 3.0,
    "evidence": "north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend)",
+   "confidence": "low"
+  },
+  {
+   "name": "LowerYard",
+   "ring": [
+    [
+     162.54,
+     68.554
+    ],
+    [
+     165.838,
+     68.427
+    ],
+    [
+     165.849,
+     68.727
+    ],
+    [
+     215.912,
+     66.804
+    ],
+    [
+     216.615,
+     85.09
+    ],
+    [
+     163.254,
+     87.14
+    ]
+   ],
+   "z": 2.85,
+   "blend": 0.0,
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "name": "NorthBedRaised",
+   "ring": [
+    [
+     115.192,
+     72.124
+    ],
+    [
+     159.26,
+     70.431
+    ],
+    [
+     159.49,
+     76.427
+    ],
+    [
+     115.422,
+     78.12
+    ]
+   ],
+   "z": 4.15,
+   "blend": 0.0,
+   "evidence": "raised bed inside its curb (owner 2026-09-28)",
    "confidence": "low"
   }
  ],
@@ -970,8 +1028,8 @@
    "type": "box",
    "name": "Hoop_S_Pole",
    "center": [
-    174.102,
-    42.591
+    174.119,
+    43.041
    ],
    "size": [
     0.16,
@@ -988,11 +1046,11 @@
    "type": "box",
    "name": "Hoop_S_Arm",
    "center": [
-    174.144,
-    43.69
+    174.153,
+    43.915
    ],
    "size": [
-    2.2,
+    1.75,
     0.1,
     0.1
    ],
@@ -1042,8 +1100,8 @@
    "type": "box",
    "name": "Hoop_N_Pole",
    "center": [
-    175.091,
-    68.332
+    175.073,
+    67.882
    ],
    "size": [
     0.16,
@@ -1060,11 +1118,11 @@
    "type": "box",
    "name": "Hoop_N_Arm",
    "center": [
-    175.048,
-    67.233
+    175.04,
+    67.008
    ],
    "size": [
-    2.2,
+    1.75,
     0.1,
     0.1
    ],
@@ -1367,8 +1425,12 @@
    "name": "CourtsFence_Perimeter",
    "line": [
     [
-     164.932,
-     44.845
+     166.267,
+     43.142
+    ],
+    [
+     164.868,
+     43.196
     ],
     [
      165.838,
@@ -1383,15 +1445,11 @@
      41.426
     ],
     [
-     164.868,
-     43.196
-    ],
-    [
-     164.889,
-     43.746
+     200.042,
+     41.845
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1403,24 +1461,6 @@
     4.875
    ],
    "z_base": 3.5
-  },
-  {
-   "type": "gate_leaf",
-   "name": "CourtsGate_W",
-   "line": [
-    [
-     164.892,
-     43.825
-    ],
-    [
-     164.929,
-     44.765
-    ]
-   ],
-   "height": 2.1,
-   "panel": "bars",
-   "evidence": "white barred door in the W fence at the S end (070410255 t=52/60 s)",
-   "confidence": "medium"
   },
   {
    "type": "cage_fence",
@@ -1475,19 +1515,342 @@
    "z_base": 3.5
   },
   {
+   "type": "cage_fence",
+   "name": "CourtsFence_S0",
+   "line": [
+    [
+     198.943,
+     41.887
+    ],
+    [
+     184.654,
+     42.436
+    ]
+   ],
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)",
+   "confidence": "medium",
+   "height": 4.9,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.1,
+    4.875
+   ],
+   "z_base": 3.5
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsFence_S1",
+   "line": [
+    [
+     183.554,
+     42.478
+    ],
+    [
+     167.366,
+     43.1
+    ]
+   ],
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)",
+   "confidence": "medium",
+   "height": 4.9,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.1,
+    4.875
+   ],
+   "z_base": 3.5
+  },
+  {
+   "type": "gate_leaf",
+   "name": "CourtsGate_Basket",
+   "line": [
+    [
+     166.347,
+     43.139
+    ],
+    [
+     167.286,
+     43.103
+    ]
+   ],
+   "height": 2.1,
+   "panel": "bars",
+   "z_base": 3.5,
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "confidence": "low"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsGate_Basket_Head",
+   "line": [
+    [
+     166.267,
+     43.142
+    ],
+    [
+     167.366,
+     43.1
+    ]
+   ],
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "confidence": "low",
+   "height": 2.7500000000000004,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.03,
+    2.7250000000000005
+   ],
+   "z_base": 5.65
+  },
+  {
+   "type": "gate_leaf",
+   "name": "CourtsGate_Volley",
+   "line": [
+    [
+     183.634,
+     42.475
+    ],
+    [
+     184.574,
+     42.439
+    ]
+   ],
+   "height": 2.1,
+   "panel": "bars",
+   "z_base": 3.5,
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "confidence": "low"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsGate_Volley_Head",
+   "line": [
+    [
+     183.554,
+     42.478
+    ],
+    [
+     184.654,
+     42.436
+    ]
+   ],
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "confidence": "low",
+   "height": 2.7500000000000004,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.03,
+    2.7250000000000005
+   ],
+   "z_base": 5.65
+  },
+  {
+   "type": "gate_leaf",
+   "name": "CourtsGate_Hard",
+   "line": [
+    [
+     199.023,
+     41.884
+    ],
+    [
+     199.962,
+     41.848
+    ]
+   ],
+   "height": 2.1,
+   "panel": "bars",
+   "z_base": 3.5,
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "confidence": "low"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsGate_Hard_Head",
+   "line": [
+    [
+     198.943,
+     41.887
+    ],
+    [
+     200.042,
+     41.845
+    ]
+   ],
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "confidence": "low",
+   "height": 2.7500000000000004,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.03,
+    2.7250000000000005
+   ],
+   "z_base": 5.65
+  },
+  {
+   "type": "stairs_run",
+   "name": "LowerYard_Stair",
+   "top": [
+    164.189,
+    68.491
+   ],
+   "dir_deg": 87.8,
+   "width": 3.279999999999997,
+   "risers": 4,
+   "riser_h": 0.15,
+   "tread": 0.45,
+   "z_top": 3.45,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_Retain_Courts",
+   "center": [
+    189.026,
+    67.687
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    46.4,
+    0.3000000000000007,
+    0.9499999999999997
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_Retain_Terrace",
+   "center": [
+    162.709,
+    76.854
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.29999999999999716,
+    16.6,
+    1.2499999999999996
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_Stair_CheekE",
+   "center": [
+    166.028,
+    69.471
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.29999999999999716,
+    1.5,
+    0.8999999999999999
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "rail3d",
+   "name": "LowerYard_Stair_RailW",
+   "height": 0.9,
+   "spacing": 1.0,
+   "mid_rails": 1,
+   "material": "metal",
+   "points": [
+    [
+     162.682,
+     68.348,
+     3.45
+    ],
+    [
+     162.694,
+     68.648,
+     3.45
+    ],
+    [
+     162.755,
+     70.247,
+     2.85
+    ],
+    [
+     162.77,
+     70.647,
+     2.85
+    ]
+   ],
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); pipe handrails as at the old walkway step (070410255 t=60 s)",
+   "confidence": "low"
+  },
+  {
+   "type": "rail3d",
+   "name": "LowerYard_Stair_RailE",
+   "height": 0.9,
+   "spacing": 1.0,
+   "mid_rails": 1,
+   "material": "metal",
+   "points": [
+    [
+     165.68,
+     68.233,
+     3.45
+    ],
+    [
+     165.691,
+     68.533,
+     3.45
+    ],
+    [
+     165.753,
+     70.132,
+     2.85
+    ],
+    [
+     165.768,
+     70.532,
+     2.85
+    ]
+   ],
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); pipe handrails as at the old walkway step (070410255 t=60 s)",
+   "confidence": "low"
+  },
+  {
    "type": "box",
    "name": "Workout_PullUp0_PostW",
    "center": [
-    168.397,
-    69.93
+    168.505,
+    72.728
    ],
    "size": [
     0.08,
     0.08,
-    2.5
+    2.4999999999999996
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1498,16 +1861,16 @@
    "type": "box",
    "name": "Workout_PullUp0_PostE",
    "center": [
-    169.596,
-    69.884
+    169.704,
+    72.682
    ],
    "size": [
     0.08,
     0.08,
-    2.5
+    2.4999999999999996
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1517,8 +1880,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Bar",
    "center": [
-    168.997,
-    69.907
+    169.104,
+    72.705
    ],
    "size": [
     1.2000000000000028,
@@ -1526,7 +1889,7 @@
     0.035
    ],
    "dir_deg": -2.2,
-   "z0": 5.91,
+   "z0": 5.31,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1536,16 +1899,16 @@
    "type": "box",
    "name": "Workout_PullUp1_PostW",
    "center": [
-    170.396,
-    69.853
+    170.503,
+    72.651
    ],
    "size": [
     0.08,
     0.08,
-    2.2
+    2.2000000000000006
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1556,16 +1919,16 @@
    "type": "box",
    "name": "Workout_PullUp1_PostE",
    "center": [
-    171.595,
-    69.807
+    171.702,
+    72.605
    ],
    "size": [
     0.08,
     0.08,
-    2.2
+    2.2000000000000006
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1575,8 +1938,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Bar",
    "center": [
-    170.995,
-    69.83
+    171.103,
+    72.628
    ],
    "size": [
     1.2000000000000028,
@@ -1584,7 +1947,7 @@
     0.035
    ],
    "dir_deg": -2.2,
-   "z0": 5.61,
+   "z0": 5.010000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1594,16 +1957,16 @@
    "type": "box",
    "name": "Workout_Monkey_PostWS",
    "center": [
-    173.478,
-    69.335
+    173.585,
+    72.133
    ],
    "size": [
     0.08,
     0.08,
-    2.3
+    2.3000000000000003
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1614,16 +1977,16 @@
    "type": "box",
    "name": "Workout_Monkey_PostWN",
    "center": [
-    173.509,
-    70.134
+    173.616,
+    72.932
    ],
    "size": [
     0.08,
     0.08,
-    2.3
+    2.3000000000000003
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1633,16 +1996,16 @@
    "type": "box",
    "name": "Workout_Monkey_PostES",
    "center": [
-    177.475,
-    69.181
+    177.583,
+    71.979
    ],
    "size": [
     0.08,
     0.08,
-    2.3
+    2.3000000000000003
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1652,16 +2015,16 @@
    "type": "box",
    "name": "Workout_Monkey_PostEN",
    "center": [
-    177.506,
-    69.981
+    177.613,
+    72.779
    ],
    "size": [
     0.08,
     0.08,
-    2.3
+    2.3000000000000003
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1671,8 +2034,8 @@
    "type": "box",
    "name": "Workout_Monkey_RailS",
    "center": [
-    175.477,
-    69.258
+    175.584,
+    72.056
    ],
    "size": [
     4.0,
@@ -1680,7 +2043,7 @@
     0.05
    ],
    "dir_deg": -2.2,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1690,8 +2053,8 @@
    "type": "box",
    "name": "Workout_Monkey_RailN",
    "center": [
-    175.507,
-    70.057
+    175.615,
+    72.855
    ],
    "size": [
     4.0,
@@ -1699,7 +2062,7 @@
     0.05
    ],
    "dir_deg": -2.2,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1709,8 +2072,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung1",
    "center": [
-    173.893,
-    69.719
+    174.001,
+    72.517
    ],
    "size": [
     0.7999999999999972,
@@ -1718,7 +2081,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1728,8 +2091,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung2",
    "center": [
-    174.293,
-    69.704
+    174.4,
+    72.502
    ],
    "size": [
     0.7999999999999972,
@@ -1737,7 +2100,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1747,8 +2110,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung3",
    "center": [
-    174.692,
-    69.688
+    174.8,
+    72.486
    ],
    "size": [
     0.7999999999999972,
@@ -1756,7 +2119,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1766,8 +2129,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung4",
    "center": [
-    175.092,
-    69.673
+    175.2,
+    72.471
    ],
    "size": [
     0.7999999999999972,
@@ -1775,7 +2138,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1785,8 +2148,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung5",
    "center": [
-    175.492,
-    69.658
+    175.599,
+    72.456
    ],
    "size": [
     0.7999999999999972,
@@ -1794,7 +2157,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1804,8 +2167,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung6",
    "center": [
-    175.892,
-    69.642
+    175.999,
+    72.44
    ],
    "size": [
     0.7999999999999972,
@@ -1813,7 +2176,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1823,8 +2186,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung7",
    "center": [
-    176.291,
-    69.627
+    176.399,
+    72.425
    ],
    "size": [
     0.7999999999999972,
@@ -1832,7 +2195,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1842,8 +2205,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung8",
    "center": [
-    176.691,
-    69.612
+    176.798,
+    72.41
    ],
    "size": [
     0.7999999999999972,
@@ -1851,7 +2214,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1861,8 +2224,8 @@
    "type": "box",
    "name": "Workout_Monkey_Rung9",
    "center": [
-    177.091,
-    69.596
+    177.198,
+    72.394
    ],
    "size": [
     0.7999999999999972,
@@ -1870,7 +2233,7 @@
     0.03
    ],
    "dir_deg": 87.8,
-   "z0": 5.69,
+   "z0": 5.090000000000001,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1880,16 +2243,16 @@
    "type": "box",
    "name": "Workout_Dip_PostWS",
    "center": [
-    178.379,
-    69.267
+    178.486,
+    72.064
    ],
    "size": [
     0.07,
     0.07,
-    1.25
+    1.2499999999999996
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1900,16 +2263,16 @@
    "type": "box",
    "name": "Workout_Dip_PostES",
    "center": [
-    180.178,
-    69.197
+    180.285,
+    71.995
    ],
    "size": [
     0.07,
     0.07,
-    1.25
+    1.2499999999999996
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1919,8 +2282,8 @@
    "type": "box",
    "name": "Workout_Dip_BarS",
    "center": [
-    179.278,
-    69.232
+    179.386,
+    72.03
    ],
    "size": [
     2.0,
@@ -1928,7 +2291,7 @@
     0.045
    ],
    "dir_deg": -2.2,
-   "z0": 4.680000000000001,
+   "z0": 4.08,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1938,16 +2301,16 @@
    "type": "box",
    "name": "Workout_Dip_PostWN",
    "center": [
-    178.4,
-    69.826
+    178.508,
+    72.624
    ],
    "size": [
     0.07,
     0.07,
-    1.25
+    1.2499999999999996
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1957,16 +2320,16 @@
    "type": "box",
    "name": "Workout_Dip_PostEN",
    "center": [
-    180.199,
-    69.757
+    180.307,
+    72.555
    ],
    "size": [
     0.07,
     0.07,
-    1.25
+    1.2499999999999996
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1976,8 +2339,8 @@
    "type": "box",
    "name": "Workout_Dip_BarN",
    "center": [
-    179.3,
-    69.792
+    179.407,
+    72.589
    ],
    "size": [
     2.0,
@@ -1985,7 +2348,7 @@
     0.045
    ],
    "dir_deg": -2.2,
-   "z0": 4.680000000000001,
+   "z0": 4.08,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -1995,16 +2358,16 @@
    "type": "box",
    "name": "Workout_WallBars_PostW",
    "center": [
-    181.288,
-    69.435
+    181.395,
+    72.233
    ],
    "size": [
     0.08,
     0.08,
-    2.6000000000000005
+    2.6
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -2015,16 +2378,16 @@
    "type": "box",
    "name": "Workout_WallBars_PostE",
    "center": [
-    182.287,
-    69.397
+    182.394,
+    72.195
    ],
    "size": [
     0.08,
     0.08,
-    2.6000000000000005
+    2.6
    ],
    "dir_deg": -2.2,
-   "z0": 3.45,
+   "z0": 2.85,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -2034,8 +2397,46 @@
    "type": "box",
    "name": "Workout_WallBars_Rung0",
    "center": [
-    181.787,
-    69.416
+    181.895,
+    72.214
+   ],
+   "size": [
+    1.0,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.15,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung1",
+   "center": [
+    181.895,
+    72.214
+   ],
+   "size": [
+    1.0,
+    0.03,
+    0.03
+   ],
+   "dir_deg": -2.2,
+   "z0": 3.4499999999999997,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Workout_WallBars_Rung2",
+   "center": [
+    181.895,
+    72.214
    ],
    "size": [
     1.0,
@@ -2051,10 +2452,10 @@
   },
   {
    "type": "box",
-   "name": "Workout_WallBars_Rung1",
+   "name": "Workout_WallBars_Rung3",
    "center": [
-    181.787,
-    69.416
+    181.895,
+    72.214
    ],
    "size": [
     1.0,
@@ -2070,10 +2471,10 @@
   },
   {
    "type": "box",
-   "name": "Workout_WallBars_Rung2",
+   "name": "Workout_WallBars_Rung4",
    "center": [
-    181.787,
-    69.416
+    181.895,
+    72.214
    ],
    "size": [
     1.0,
@@ -2089,10 +2490,10 @@
   },
   {
    "type": "box",
-   "name": "Workout_WallBars_Rung3",
+   "name": "Workout_WallBars_Rung5",
    "center": [
-    181.787,
-    69.416
+    181.895,
+    72.214
    ],
    "size": [
     1.0,
@@ -2108,48 +2509,10 @@
   },
   {
    "type": "box",
-   "name": "Workout_WallBars_Rung4",
-   "center": [
-    181.787,
-    69.416
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 4.95,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars_Rung5",
-   "center": [
-    181.787,
-    69.416
-   ],
-   "size": [
-    1.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.25,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
    "name": "Workout_WallBars_Rung6",
    "center": [
-    181.787,
-    69.416
+    181.895,
+    72.214
    ],
    "size": [
     1.0,
@@ -2157,7 +2520,7 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 5.55,
+   "z0": 4.949999999999999,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -2167,8 +2530,8 @@
    "type": "box",
    "name": "Workout_WallBars_Rung7",
    "center": [
-    181.787,
-    69.416
+    181.895,
+    72.214
    ],
    "size": [
     1.0,
@@ -2176,7 +2539,7 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 5.85,
+   "z0": 5.25,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame",
@@ -4091,8 +4454,8 @@
      78.275
     ]
    ],
-   "curb_w": 0.12,
-   "curb_h": 0.12,
+   "curb_w": 0.15,
+   "curb_h": 0.5,
    "evidence": "Google 2026 lawn bed u 0..44.4, v 27.0..33.3 behind a 1.6 m paved path along the N fence (drone 2022 d_07/d_19: grey path, lawn with two rows of young blue spruces)",
    "confidence": "medium"
   },
@@ -4627,863 +4990,6 @@
    "confidence": "low"
   },
   {
-   "type": "wall",
-   "name": "NorthBoundary_Plinth",
-   "line": [
-    [
-     75.649,
-     88.704
-    ],
-    [
-     208.551,
-     83.599
-    ],
-    [
-     215.961,
-     81.113
-    ]
-   ],
-   "height": 0.5,
-   "thk": 0.3,
-   "material": "stone",
-   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; solid plinth + steel fence between red brick piers (drone 2022 d_07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "fence",
-   "name": "NorthBoundary_Fence",
-   "line": [
-    [
-     75.649,
-     88.704
-    ],
-    [
-     208.551,
-     83.599
-    ],
-    [
-     215.961,
-     81.113
-    ]
-   ],
-   "height": 2.0,
-   "post_spacing": 3.0,
-   "post": 0.06,
-   "panel": "bars",
-   "evidence": "steel bar fence ~2 m on the plinth (drone 2022 d_07)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_00",
-   "center": [
-    75.649,
-    88.704
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_01",
-   "center": [
-    78.647,
-    88.589
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_02",
-   "center": [
-    81.645,
-    88.474
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_03",
-   "center": [
-    84.643,
-    88.359
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_04",
-   "center": [
-    87.641,
-    88.244
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_05",
-   "center": [
-    90.638,
-    88.129
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_06",
-   "center": [
-    93.636,
-    88.013
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_07",
-   "center": [
-    96.634,
-    87.898
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_08",
-   "center": [
-    99.632,
-    87.783
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_09",
-   "center": [
-    102.63,
-    87.668
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_10",
-   "center": [
-    105.627,
-    87.553
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_11",
-   "center": [
-    108.625,
-    87.438
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_12",
-   "center": [
-    111.623,
-    87.322
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_13",
-   "center": [
-    114.621,
-    87.207
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_14",
-   "center": [
-    117.618,
-    87.092
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_15",
-   "center": [
-    120.616,
-    86.977
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_16",
-   "center": [
-    123.614,
-    86.862
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_17",
-   "center": [
-    126.612,
-    86.747
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_18",
-   "center": [
-    129.61,
-    86.631
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_19",
-   "center": [
-    132.607,
-    86.516
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_20",
-   "center": [
-    135.605,
-    86.401
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_21",
-   "center": [
-    138.603,
-    86.286
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_22",
-   "center": [
-    141.601,
-    86.171
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_23",
-   "center": [
-    144.599,
-    86.056
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_24",
-   "center": [
-    147.596,
-    85.94
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_25",
-   "center": [
-    150.594,
-    85.825
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_26",
-   "center": [
-    153.592,
-    85.71
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_27",
-   "center": [
-    156.59,
-    85.595
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_28",
-   "center": [
-    159.588,
-    85.48
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_29",
-   "center": [
-    162.585,
-    85.365
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_30",
-   "center": [
-    165.583,
-    85.25
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_31",
-   "center": [
-    168.581,
-    85.134
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_32",
-   "center": [
-    171.579,
-    85.019
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_33",
-   "center": [
-    174.576,
-    84.904
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_34",
-   "center": [
-    177.574,
-    84.789
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_35",
-   "center": [
-    180.572,
-    84.674
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_36",
-   "center": [
-    183.57,
-    84.559
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_37",
-   "center": [
-    186.568,
-    84.443
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_38",
-   "center": [
-    189.565,
-    84.328
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_39",
-   "center": [
-    192.563,
-    84.213
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_40",
-   "center": [
-    195.561,
-    84.098
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_41",
-   "center": [
-    198.559,
-    83.983
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_42",
-   "center": [
-    201.557,
-    83.868
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_43",
-   "center": [
-    204.554,
-    83.752
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NorthBoundary_Pier_44",
-   "center": [
-    207.552,
-    83.637
-   ],
-   "size": [
-    0.42,
-    0.42,
-    2.3
-   ],
-   "dir_deg": -2.2,
-   "z0": 3.45,
-   "material": "brick",
-   "evidence": "red brick piers (drone 2022 d_07); 3 m pitch assumed",
-   "confidence": "low"
-  },
-  {
    "type": "slab",
    "name": "WestRedSquare",
    "ring": [
@@ -5522,6 +5028,30 @@
    "crown_base": 0.5,
    "evidence": "large blue spruce clump u -24..-12, v 25..38 (Google 2026, drone 2022)",
    "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "NorthBoundary_Wall",
+   "line": [
+    [
+     75.649,
+     88.704
+    ],
+    [
+     208.551,
+     83.599
+    ],
+    [
+     215.961,
+     81.113
+    ]
+   ],
+   "height": 2.5,
+   "thk": 0.25,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; 2026-09-28 owner: a solid sand-concrete block wall without openings (replaces the bar fence + brick piers read from drone 2022 d_07); height 2.5 kept from the old plinth + fence",
+   "confidence": "medium"
   }
  ]
 }
