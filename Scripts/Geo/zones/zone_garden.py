@@ -12,13 +12,13 @@ import os
 import re
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
-OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[12]_.*|Centre_NS_.*|North_\d+|South_\d+|East_\d+|West_\d+|Bnd_.*)|"
+OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link|SW|SE|SSE|SSW)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[12]_.*|Centre_NS_.*|North_\d+|South_\d+|East_\d+|West_\d+|Bnd_.*)|"
                  r"(Arch_G[12]_.*|Arch_Bnd_.*|Arch_Square_.*)|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+|CentreSquare_.*)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W = 1.2, 0.65, 1.05, 0.7
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
 ARCH_T = 0.35    # topiary arch leg thickness (m): the hedge gap at an arch = path gap + 2 legs
 SQ_P = 4.0       # centre bench square: paving half size (m); 4 benches on its W/E sides
-EV = "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
+EV = "[B] zone_garden.py 2026-09-29: paths traced on the georeferenced Google z20 ortho (G1: N, SW diagonal, SSE; G2: SE diagonal, SSW; centre bench square linked to both); boundary rectangle kept"
 
 
 def main():
@@ -58,19 +58,29 @@ def main():
 
     def ang(a):
         return (math.cos(a), math.sin(a))
-    # face normals of the gazebo octagon that open to the south (owner photos: two south openings per gazebo)
-    down = math.atan2(-1, 0)                                  # -v direction in the garden frame
+    # path network traced on the georeferenced Google z20 ortho (2026-09-29, light-paving mask; owner satellite
+    # screenshots 36/37 agree, the 2026-09-28 "no diagonals" layout was wrong): gazebo 1 - north arm, long diagonal to
+    # the west boundary near the SW corner, short SSE path to the walk; gazebo 2 - long diagonal to the east boundary
+    # near the SE corner, short SSW path to the walk (mirror of G1's); both linked to the centre bench square.
+    # (name, gazebo sign, world target point on the boundary/walk, end kind)
+    TRACE = [("G1_N", -1, None, "bndN"), ("G1_SW", -1, (101.0, -42.0), "bndW"), ("G1_SSE", -1, (121.0, -36.5), "walk"),
+             ("G2_SE", 1, (153.5, -43.0), "bndE"), ("G2_SSW", 1, None, "walk")]
+    for name, s, tgt, kind in TRACE:
+        c = (s * ug, 0.0)
+        if name.endswith("_N"):
+            paths.append((name, [(c[0], c[1] + R_APRON), (c[0], v_n - 0.35)], kind))
+            continue
+        if tgt is None:                                       # G2_SSW: mirror of G1_SSE about the centre axis
+            t1 = uv((121.0, -36.5)); dv = (-(t1[0] + ug), t1[1])
+        else:
+            t1 = uv(tgt); dv = (t1[0] - c[0], t1[1] - c[1])
+        l = math.hypot(*dv); dv = (dv[0] / l, dv[1] / l)
+        p0 = (c[0] + R_APRON * dv[0], c[1] + R_APRON * dv[1])
+        paths.append((name, [p0, (c[0] + 60 * dv[0], c[1] + 60 * dv[1])], kind))
     for g, s in ((g1, -1), (g2, 1)):
         c = (s * ug, 0.0)
-        nm = "G1" if s < 0 else "G2"
-        paths.append((f"{nm}_N", [(c[0], c[1] + R_APRON), (c[0], v_n - 0.35)], "bnd"))
-        paths.append((f"{nm}_W" if s < 0 else f"{nm}_E", [(c[0] + s * R_APRON, c[1]), (u_w + 0.35 if s < 0 else u_e - 0.35, c[1])], "bnd"))
-        paths.append((f"{nm}_Link", [(c[0] - s * R_APRON, c[1]), (s * sq, c[1])], "sq"))   # ends at the square's near side
-        a_out = down + s * math.radians(22.5)                 # outer south face (away from the centre)
-        p0 = (c[0] + R_APRON * math.cos(a_out), c[1] + R_APRON * math.sin(a_out))
-        p1 = (p0[0] + 1.6 * math.cos(a_out), p0[1] + 1.6 * math.sin(a_out))
-        paths.append((f"{nm}_S", [p0, p1, (p1[0], v_s)], "walk"))
-    paths.append(("Centre_NS_N", [(0.0, SQ_P), (0.0, v_n - 0.35)], "bnd"))     # from the square paving edge
+        paths.append((("G1" if s < 0 else "G2") + "_Link", [(c[0] - s * R_APRON, c[1]), (s * sq, c[1])], "sq"))
+    paths.append(("Centre_NS_N", [(0.0, SQ_P), (0.0, v_n - 0.35)], "bndN"))     # from the square paving edge
     paths.append(("Centre_NS_S", [(0.0, -SQ_P), (0.0, v_s)], "walk"))
 
     def offset(pts, d):
@@ -121,6 +131,12 @@ def main():
         elif kind == "sq":
             u_t = math.copysign(sq if inner else sq - 0.7, bx)          # path butts onto the square paving
             t = (u_t - ax) / (bx - ax) if abs(bx - ax) > 1e-9 else 1.0
+        elif kind in ("bndW", "bndE"):
+            u_t = (u_w + (0.35 if inner else 0.0)) if kind == "bndW" else (u_e - (0.35 if inner else 0.0))
+            t = (u_t - ax) / (bx - ax)
+        elif kind == "bndN":
+            v_t = v_n - (0.35 if inner else 0.0)
+            t = (v_t - ay) / (by_ - ay)
         else:
             if abs(bx - ax) > abs(by_ - ay):
                 u_t = (u_w + (0.35 if inner else 0.0)) if bx < ax else (u_e - (0.35 if inner else 0.0))
@@ -156,7 +172,7 @@ def main():
             if c:
                 h = trim_start(h, c, R_HEDGE + HEDGE_W / 2 - 0.1)   # butts onto the ring hedge's outer face (no doubled block)
                 ed = trim_start(ed, c, R_EDGE)
-            elif kind in ("bnd", "walk"):
+            elif kind.startswith("bnd") or kind == "walk":
                 h = [(h[0][0], math.copysign(sq, h[0][1]))] + h[1:]
                 ed = [(ed[0][0], math.copysign(sq - 0.35 - 0.06, ed[0][1]))] + ed[1:]
             h = clip_end(h, kind, True)
@@ -170,9 +186,8 @@ def main():
         e0 = cl[-1]
         if kind == "walk":
             gaps_bnd["S"].append(e0[0])
-        elif kind == "bnd":
-            # north paths end on the boundary centre line (clip_end, not inner): test both, else they fell to W/E (no N gaps)
-            key = "N" if min(abs(e0[1] - v_n), abs(e0[1] - (v_n - 0.35))) < 0.01 else ("W" if e0[0] < 0 else "E")
+        elif kind.startswith("bnd"):
+            key = kind[3:] if len(kind) > 3 else ("N" if min(abs(e0[1] - v_n), abs(e0[1] - (v_n - 0.35))) < 0.01 else ("W" if e0[0] < 0 else "E"))
             gaps_bnd[key].append(e0[1] if key in "WE" else e0[0])
         if c:
             a = math.atan2(pts[1][1] - pts[0][1], pts[1][0] - pts[0][0])
