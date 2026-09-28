@@ -25,10 +25,13 @@ Z_COURT = 3.50   # courts: flush with the walkway + a 5 cm curb (070410255 t=52/
 # ---------------------------------------------------------------- measured outlines (local u, v)
 P_U0, P_U1, P_V0, P_V1 = -0.10, 44.35, 0.15, 25.40     # pitch plinth = fence line
 P_IN = 0.30                                            # red rubber border inside the fence (drone d_07/d_19)
-C_U0, C_U1, C_V0, C_V1 = 50.90, 97.00, 1.70, 28.00     # courts block = fence line
+# courts block = fence line. 2026-09-28 owner: the courts fence is flush with the pitch fence on both long sides (S and N);
+# the ortho read S v 1.7 / N v 28.0 (Google 28.6 incl. the lean band): the band beyond v 25.4 is the workout area
+# behind the basketball court (WORKOUT below), not courts surface
+C_U0, C_U1, C_V0, C_V1 = 50.90, 97.00, P_V0, P_V1
 DIV1, DIV2 = 68.90, 84.35                              # division fences bb|vb, vb|third court
-BB = (52.90, 67.40, 3.04, 26.80)                       # basketball green field (painted lines on its edge)
-VB = (72.40, 81.10, 5.75, 23.40)                       # volleyball green inner court
+BB = (52.90, 67.40, 0.90, 24.66)                       # basketball green field: measured 23.76 m long, re-centred in the flush block
+VB = (72.40, 81.10, 3.95, 21.60)                       # volleyball green inner court (8.7 x 17.65 measured), re-centred
 
 EV_ORTHO = ("Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the "
             "rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration)")
@@ -105,9 +108,11 @@ add(type="slab", name="Courts_Slab", ring=rect(C_U0, C_U1, C_V0, C_V1), holes=[r
     z1=Z_COURT, material="brick",
     evidence=EV_ORTHO + ": courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 "
              "(Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) "
-             "-> 46.1 x 26.3 m; red acrylic surface, flush with the walkway + 5 cm curb", confidence="medium")
+             "-> 46.1 x 26.3 m; 2026-09-28 owner: S and N fences flush with the pitch -> v 0.15..25.40 (46.1 x 25.25 m); red acrylic "
+             "surface, flush with the walkway + 5 cm curb", confidence="medium")
 add(type="slab", name="Court_Basket_Field", ring=rect(*BB), z0=3.1, z1=Z_COURT, material="hedge",
-    evidence="green basketball field u 52.9..67.4, v 3.04..26.8 (Google profiles, rms 0.03-0.06 m; N edge 26.4..27.3 blurred)",
+    evidence="green basketball field u 52.9..67.4, 23.76 m long (Google profiles v 3.04..26.8, rms 0.03-0.06 m; N edge 26.4..27.3 "
+             "blurred); re-centred in the courts block made flush with the pitch (owner 2026-09-28)",
     confidence="medium")
 add(type="slab", name="Court_Volley_Field", ring=rect(*VB), z0=3.1, z1=Z_COURT, material="hedge",
     evidence="green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06)",
@@ -173,7 +178,7 @@ H_C = 4.9
 ev_cf = ("height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division "
          "fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)")
 cf = dict(height=H_C, post_spacing=3.0, post=0.08, rail=0.05, rails=[0.08, 2.1, H_C - 0.025], z_base=Z_COURT)
-cg0, cg1 = 2.25, 3.35
+cg0, cg1 = C_V0 + 0.55, C_V0 + 1.65   # gate 0.55 m from the SW corner (was measured at v 2.25..3.35)
 add(type="cage_fence", name="CourtsFence_Perimeter", line=poly([(C_U0, cg1), (C_U0, C_V1), (C_U1, C_V1), (C_U1, C_V0),
                                                                   (C_U0, C_V0), (C_U0, cg0)]),
     evidence=ev_cf, confidence="medium", **cf)
@@ -183,6 +188,55 @@ for nm, u in (("Div1", DIV1), ("Div2", DIV2)):
     add(type="cage_fence", name=f"CourtsFence_{nm}", line=poly([(u, C_V0), (u, C_V1)]),
         evidence=ev_cf + f"; division fence at u {u} (Google profile rms 0.14-0.34)", confidence="medium", **cf)
 
+# ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
+# between the basketball court's N fence (v 25.40) and the lane; the equipment set is assumed (no photo yet): 2 pull-up bars,
+# monkey bars, parallel bars, wall bars; steel tube placeholders (UE swaps kits via koch_ue_asset)
+EV_WO = ("owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho "
+         "band v 25.4..28.6 that was read as courts); positions and the set of bars assumed, no frame")
+WO_V = 27.0                                   # strip centre (v 25.6..28.4)
+Z_WO = Z_PLAZA                                # the lane level (SportsPlatform pad)
+
+
+def tube(nm, u0, v0, u1, v1, z0, z1, d=0.05, ue=None):
+    """straight steel tube as a thin box: along u, along v or vertical (z0 != z1 with u0 == u1, v0 == v1)"""
+    if abs(z1 - z0) > 1e-6:
+        e = add(type="box", name=nm, center=W(u0, v0), size=[d, d, z1 - z0], dir_deg=ROT, z0=z0, material="metal")
+    elif abs(v1 - v0) < 1e-6:
+        e = add(type="box", name=nm, center=W((u0 + u1) / 2, v0), size=[abs(u1 - u0), d, d], dir_deg=ROT, z0=z0, material="metal")
+    else:
+        e = add(type="box", name=nm, center=W(u0, (v0 + v1) / 2), size=[abs(v1 - v0), d, d], dir_deg=DEG_N, z0=z0, material="metal")
+    e.update(slot="M_Steel_Paint_Dark", evidence=EV_WO, confidence="low")
+    if ue:
+        e["ue_asset"] = ue
+    return e
+
+
+for k, (uc, h) in enumerate(((54.0, 2.5), (56.0, 2.2))):                   # pull-up bars
+    for s in (-1, 1):
+        tube(f"Workout_PullUp{k}_Post{'W' if s < 0 else 'E'}", uc + 0.6 * s, WO_V, uc + 0.6 * s, WO_V, Z_WO, Z_WO + h, d=0.08,
+             ue="workout_pullup_bar" if s < 0 else None)
+    tube(f"Workout_PullUp{k}_Bar", uc - 0.6, WO_V, uc + 0.6, WO_V, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
+mu0, mu1, mh, mw = 58.5, 62.5, 2.3, 0.8                                        # monkey bars (horizontal ladder)
+for su, u in (("W", mu0), ("E", mu1)):
+    for sv, v in (("S", WO_V - mw / 2), ("N", WO_V + mw / 2)):
+        tube(f"Workout_Monkey_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + mh, d=0.08, ue="workout_monkey_bars" if su + sv == "WS" else None)
+for sv, v in (("S", WO_V - mw / 2), ("N", WO_V + mw / 2)):
+    tube(f"Workout_Monkey_Rail{sv}", mu0, v, mu1, v, Z_WO + mh - 0.06, Z_WO + mh - 0.06, d=0.05)
+for k in range(1, 10):
+    u = mu0 + 0.4 * k
+    tube(f"Workout_Monkey_Rung{k}", u, WO_V - mw / 2, u, WO_V + mw / 2, Z_WO + mh - 0.06, Z_WO + mh - 0.06, d=0.03)
+pu0, pu1, ph = 63.3, 65.3, 1.25                                                # parallel (dip) bars
+for sv, v in (("S", WO_V - 0.28), ("N", WO_V + 0.28)):
+    for su, u in (("W", pu0 + 0.1), ("E", pu1 - 0.1)):
+        tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
+    tube(f"Workout_Dip_Bar{sv}", pu0, v, pu1, v, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
+wu0, wu1, wh = 66.3, 67.3, 2.6                                                 # wall bars (ladder frame)
+for su, u in (("W", wu0), ("E", wu1)):
+    tube(f"Workout_WallBars_Post{su}", u, WO_V, u, WO_V, Z_WO, Z_WO + wh, d=0.08, ue="workout_wall_bars" if su == "W" else None)
+for k in range(8):
+    z = Z_WO + 0.3 + 0.3 * k
+    tube(f"Workout_WallBars_Rung{k}", wu0, WO_V, wu1, WO_V, z, z, d=0.03)
+
 # ================================================================= PLAZA strip south of the pitch and courts
 bench_u = [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]   # u 40.0 (Google) absent in 070410255 t=52 s
 for k, u in enumerate(bench_u):
@@ -190,10 +244,10 @@ for k, u in enumerate(bench_u):
         back_h=0.85, evidence=f"Google 2026: grey 2.0 x 0.55 m bench tops at v -0.6..-1.1, local u {bench_u}; "
         "dark steel frame benches facing the pitch (070541257 t=8-9.5 s, winter photo 2014)", confidence="medium")
 for k, u in enumerate([59.7, 65.8, 71.6, 76.8, 81.9, 87.8, 93.6]):   # none at u 53.8 (070410255 t=52 s)
-    add(type="planter", name=f"CourtsThujaPot_{k}", ring=rect(u - 0.4, u + 0.4, -0.6, 0.2), curb_w=0.08, curb_h=0.35,
+    add(type="planter", name=f"CourtsThujaPot_{k}", ring=rect(u - 0.4, u + 0.4, C_V0 - 2.3, C_V0 - 1.5), curb_w=0.08, curb_h=0.35,
         evidence="small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots "
                  "v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone", confidence="low")
-    add(type="tree", name=f"CourtsThuja_{k}", pos=W(u, -0.2), height=2.4, crown_d=0.8, crown_base=0.4, trunk_d=0.08,
+    add(type="tree", name=f"CourtsThuja_{k}", pos=W(u, C_V0 - 1.9), height=2.4, crown_d=0.8, crown_base=0.4, trunk_d=0.08,
         evidence="thuja ~2.4 m (drone d_23, vs the 4.9 m fence)", confidence="low")
 
 # alley beds: 2 rows of elongated hexagonal beds, yellow/white curbs, 2 thujas + a double globe lamp each
