@@ -570,7 +570,8 @@ class Site:
         bm = bmesh.new()
         box(bm, m, -L / 2, L / 2, -D / 2, D / 2, z + sh - 0.05, z + sh)                 # seat
         if el.get("back", True):  # corridor benches in C have no backrest
-            box(bm, m, -L / 2, L / 2, -D / 2 - 0.04, -D / 2, z + sh + 0.1, z + bh)      # back
+            # _frame2(P, left): w = left of `left` = -fwd, so the back (behind the sitter) is on +w
+            box(bm, m, -L / 2, L / 2, D / 2, D / 2 + 0.04, z + sh + 0.1, z + bh)        # back
         for u in (-L / 2 + 0.1, L / 2 - 0.1):                                          # legs / side frames
             box(bm, m, u - 0.03, u + 0.03, -D / 2, D / 2, z, z + sh - 0.05)
         self.emit(el, bm, COL["wood"], (P.x, P.y, z))
