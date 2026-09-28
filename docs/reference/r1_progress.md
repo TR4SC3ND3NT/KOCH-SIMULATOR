@@ -56,11 +56,11 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] C.17 Ground drop plaza → basement-entry corner, kerb step to the granite pad at the brick wall — approx., in the model (terrain pads SITE_CPlaza) | P1 by frames: plaza level 5.35 = FFL - 7 x 0.15; the kerb step to the pad at the Dance Hall corner as specced (081158036 f00439/f00570)
 
 ## 2. Block C, interior (zone `C_base`; F1–F5 zone to add: clips 070704360, 052716931, 080443026, 080011086, 080051708, 074805359, 075725091, 075928860, 075931189)
-- [ ] CI.1 Entrance lobby F1: terrazzo floor, blue accent panels, vending/coffee niche, radiators, ceiling grid with LED panels — approx., in the model (GBS_INT_C_F1) — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
-- [ ] CI.2 F1 corridors west/east: benches, classroom doors (0.99 × 2.05 kit), fire-alarm boxes — approx., in the model (GBS_INT_C_F1) — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
+- [ ] CI.1 Entrance lobby F1: terrazzo floor, blue accent panels, vending/coffee niche, radiators, ceiling grid with LED panels — approx., in the model (GBS_INT_C_F1) — re-opened: P1 by frames 080443026_s1 (0.6 m LED panels in two rows, radiators, benches, banners, CCTV)
+- [ ] CI.2 F1 corridors west/east: benches, classroom doors (0.99 × 2.05 kit), fire-alarm boxes — approx., in the model (GBS_INT_C_F1) — re-opened: P1 by frames 080443026_s1/s2 (benches + radiators on both walls, ceiling panels, CCTV domes)
 - [ ] CI.3 West stair F1–F3: flights, landings, window, white steel balustrade — open: the C_F1 mesh scale is not trustworthy (eye height in a stairwell; its floor-to-floor reads 6.05 m for what is likely 2 x 3.30), so the 0.30 tread from it was reverted to 0.332; needs a tape measure or a known size in the lobby — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
 - [ ] CI.4 East stair F1–F5: flights, landings, windows, balustrade (riser count per flight) — open (see CI.3: C_F1 scale not trustworthy, tread kept 0.332) — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
-- [ ] CI.5 WC pair F1: sinks, stalls with black doors, squat pans, high cisterns, tile to 1.4 m — approx., in the model (GBS_INT_C_F1) — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
+- [ ] CI.5 WC pair F1: sinks, stalls with black doors, squat pans, high cisterns, tile to 1.4 m — approx., in the model (GBS_INT_C_F1) — re-opened: P1 by frames 075931189_s1/s2 (entry vestibule with 2 sinks + mirror + soap + bin, 3 stalls with full-height black doors, tile to 1.4 m, radiator at the aisle end)
 - [ ] CI.6 Prototype classroom 203 (computer lab): desks, chairs, TV, whiteboard, grid ceiling, windows with blinds — approx.: computer-lab furniture in the F2 north room next to door N1 (INT_C_Floors F2_Lab_*); room choice from ROUTE (north windows), not confirmed — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
 - [ ] CI.7 Floors F2–F4: corridors, classrooms, WCs (F4 without the west stair: offices) — approx., in the model (GBS_INT_C_Floors) — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
 - [ ] CI.8 F5 attic offices under the roof, lit by the dormers — approx., in the model (GBS_INT_C_Floors) — BLOCKED: the C interior clips cannot be placed or scaled (C_F1: eye height in a stairwell, floor spacing wrong; C_F2F5 fragmented; FFT plan registration failed); photo request «Интерьер C: рулетка»
@@ -337,36 +337,36 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [x] INV.CX.10 Parked cars at the north end of the C west side : 070629483_s2 — [x] at the Blender cap e8c7646: parked cars are movable game props, not map geometry (the parking surfaces are modelled with their slots)
 ### C interior (lobby, corridors, stairs, classroom, WC)
 - [ ] INV.CIN.1 Water cooler with a blue bottle : 070704360_s1, 080443026_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.2 Double wall socket by the cooler : 070704360_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.3 Pull-up banner stands (blue/yellow), x2 : 070704360_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.4 Red fire-hose cabinets: lobby, stair hall, below the landing [CI.2 lists only fire-alarm boxes] : 070704360_s1, 070704360_s2, 080051708_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [x] INV.CIN.2 Double wall socket by the cooler : 070704360_s1 — at the Blender cap: under 0.10 m, decal/UE prop
+- [ ] INV.CIN.3 Pull-up banner stands (blue/yellow), x2 : 070704360_s1 — P1 by frames (F1_Banner_0/1)
+- [ ] INV.CIN.4 Red fire-hose cabinets: lobby, stair hall, below the landing [CI.2 lists only fire-alarm boxes] : 070704360_s1, 070704360_s2, 080051708_s1 — P1 by frames (F1_FireHose_W/E)
 - [ ] INV.CIN.5 Linear LED wall lights in the stair hall and landings : 070704360_s2, 080051708_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.6 Wall-mounted CCTV in the lobby corridor, CCTV domes on the stair-hall ceiling and a landing corner : 070704360_s1, 052716931_s2, 080051708_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.6 Wall-mounted CCTV in the lobby corridor, CCTV domes on the stair-hall ceiling and a landing corner : 070704360_s1, 052716931_s2, 080051708_s2 — P1 by frames (F1_CCTV_0/1)
 - [ ] INV.CIN.7 White heating pipes along the floor and walls, riser pipes with brass/red valves : 070704360_s2, 080011086_s1, 080051708_s2, 080443026_s2, 052716931_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.8 Potted plants on landing sills and ledges: x3 in the stair hall, x2 in the stairwell, spider plants x3 on the landing ledge : 070704360_s2, 080011086_s1, 080051708_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.9 Potted floor plants (ficus/dracaena), x4, along the rail at the foot of the stair : 052716931_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.9 Potted floor plants (ficus/dracaena), x4, along the rail at the foot of the stair : 052716931_s2 — P1 by frames (F1_Plant_0-3)
 - [ ] INV.CIN.10 Black utility doors at the landings, beside the landing windows : 070704360_s2, 080011086_s2, 080051708_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.11 Red fire box on the upper landing : 080011086_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.12 Light switches in the stairwell : 080011086_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.13 Small black notice frames on the blue panels, x2 : 080443026_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [x] INV.CIN.12 Light switches in the stairwell : 080011086_s1 — at the Blender cap: under 0.10 m, decal/UE prop
+- [x] INV.CIN.13 Small black notice frames on the blue panels, x2 : 080443026_s1 — at the Blender cap: under 0.10 m, decal/UE prop
 - [ ] INV.CIN.14 Black wall-mounted units high on the corridor walls (Wi-Fi APs/speakers), x3 : 080443026_s1, 080443026_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.15 Card reader/electronic lock on a classroom door : 052716931_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.16 Open double glazed doors from the corridor to the stair hall : 052716931_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [x] INV.CIN.15 Card reader/electronic lock on a classroom door : 052716931_s1 — at the Blender cap: under 0.10 m, decal/UE prop
+- [ ] INV.CIN.16 Open double glazed doors from the corridor to the stair hall : 052716931_s2 — P1 by frames (glass2 door kits F1_Door_*)
 - [ ] INV.CIN.17 Black network rack cabinet with a distribution board below it, on the classroom wall : 074805359_s1, 074805359_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.18 Round smoke detector and a CCTV dome in the corner of the classroom ceiling : 074805359_s1, 074805359_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.19 Sloped ceiling bulkhead along one classroom wall : 074805359_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.20 Teal wire waste bin by the classroom door : 074805359_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.21 Light switch by the classroom door : 074805359_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [x] INV.CIN.21 Light switch by the classroom door : 074805359_s2 — at the Blender cap: under 0.10 m, decal/UE prop
 - [ ] INV.CIN.22 Heating pipe along the classroom skirting : 074805359_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.23 WC large frameless mirror : 075931189_s1, 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.24 WC white soap dispenser : 075931189_s1, 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.25 WC waste bin with a black bag between the sinks : 075931189_s1, 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.26 WC radiator, 6-section : 075931189_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.23 WC large frameless mirror : 075931189_s1, 075931189_s2 — P1 by frames (F1_WC*_Mirror)
+- [ ] INV.CIN.24 WC white soap dispenser : 075931189_s1, 075931189_s2 — P1 by frames (F1_WC*_Soap)
+- [ ] INV.CIN.25 WC waste bin with a black bag between the sinks : 075931189_s1, 075931189_s2 — P1 by frames (F1_WC*_Bin)
+- [ ] INV.CIN.26 WC radiator, 6-section : 075931189_s1 — P1 by frames (F1_WC*_Radiator)
 - [ ] INV.CIN.27 WC high narrow window with a transom at the end wall : 075931189_s1, 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.28 WC wall vent grille above the tile, and a socket : 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.29 WC round ceiling light and white cornice moulding : 075931189_s1, 075725091_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.30 Small floor-drain grate in the WC vestibule : 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.31 Aluminium threshold at the black solid WC entry door : 075931189_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [x] INV.CIN.28 WC wall vent grille above the tile, and a socket : 075931189_s2 — at the Blender cap: under 0.10 m, decal/UE prop
+- [ ] INV.CIN.29 WC round ceiling light and white cornice moulding : 075931189_s1, 075725091_s1 — P1 by frames (F1_WC*_CeilLight; cornice at the Blender cap)
+- [x] INV.CIN.30 Small floor-drain grate in the WC vestibule : 075931189_s2 — at the Blender cap: under 0.10 m, decal/UE prop
+- [x] INV.CIN.31 Aluminium threshold at the black solid WC entry door : 075931189_s2 — at the Blender cap: under 0.10 m, decal/UE prop
 - [ ] INV.CIN.32 WC stall: grey gloss stretch ceiling with a round downlight and a round vent diffuser : 075725091_s1, 075725091_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.33 WC stall: cistern pull chain, flexi hose, angle valve, white flush pipe : 075725091_s1, 075725091_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
 - [ ] INV.CIN.34 WC stall: vertical riser pipe in the corner, tiled duct ledge on the back wall : 075725091_s1, 075725091_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
