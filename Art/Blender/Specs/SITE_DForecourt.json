@@ -1,0 +1,684 @@
+{
+ "id": "SITE_DForecourt",
+ "collection": "03_Site",
+ "ground": "terrain",
+ "note": "Session B: furniture and planting of the Block D west forecourt (SITE_WestFront has only the fence, gate, booth and the 2 pavilions). Coordinates world (m), on the terrain.",
+ "elements": [
+  {
+   "type": "bench",
+   "name": "DF_Bench_0",
+   "pos": [
+    -200.2,
+    48.0
+   ],
+   "dir_deg": 0,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_1",
+   "pos": [
+    -196.8,
+    48.0
+   ],
+   "dir_deg": 180,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_2",
+   "pos": [
+    -200.2,
+    33.0
+   ],
+   "dir_deg": 0,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_3",
+   "pos": [
+    -196.8,
+    33.0
+   ],
+   "dir_deg": 180,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_4",
+   "pos": [
+    -193.0,
+    47.0
+   ],
+   "dir_deg": 180,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_5",
+   "pos": [
+    -193.0,
+    32.5
+   ],
+   "dir_deg": 180,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_6",
+   "pos": [
+    -202.0,
+    56.3
+   ],
+   "dir_deg": 90,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "DF_Bench_7",
+   "pos": [
+    -195.5,
+    56.3
+   ],
+   "dir_deg": 90,
+   "length": 1.8,
+   "ue_asset": "bench_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bin",
+   "name": "DF_Bin_Entrance",
+   "pos": [
+    -192.6,
+    55.4
+   ],
+   "size": [
+    0.5,
+    0.5,
+    0.9
+   ],
+   "ue_asset": "bin_generic",
+   "evidence": "blue bin right of the D_W entrance steps (2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "bin",
+   "name": "DF_Bin_Path",
+   "pos": [
+    -198.6,
+    41.2
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.8
+   ],
+   "ue_asset": "bin_generic",
+   "evidence": "2GIS aerial 30258560047688468 (benches along the paths at the lawns, blue bin by the entrance, flags at the N end by the street fence) + pano D_block (rose beds, conifers); positions read off the Google z20 ortho paths/lawns, +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DF_Flagpole_0",
+   "center": [
+    -205.3,
+    82.5
+   ],
+   "size": [
+    0.1,
+    0.1,
+    9.0
+   ],
+   "material": "white",
+   "slot": "M_Steel_Galv",
+   "evidence": "3 flagpoles at the N end of the forecourt by the street fence (2GIS aerial, far left); height ~9 m assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DF_Flag_0",
+   "center": [
+    -205.3,
+    83.28
+   ],
+   "size": [
+    0.02,
+    1.4,
+    0.9
+   ],
+   "z_rel": 7.9,
+   "material": "accent",
+   "slot": "M_Fabric_Flag",
+   "dir_deg": 0,
+   "evidence": "flag cloth (KOCH branding in UE)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DF_Flagpole_1",
+   "center": [
+    -205.3,
+    84.5
+   ],
+   "size": [
+    0.1,
+    0.1,
+    9.0
+   ],
+   "material": "white",
+   "slot": "M_Steel_Galv",
+   "evidence": "3 flagpoles at the N end of the forecourt by the street fence (2GIS aerial, far left); height ~9 m assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DF_Flag_1",
+   "center": [
+    -205.3,
+    85.28
+   ],
+   "size": [
+    0.02,
+    1.4,
+    0.9
+   ],
+   "z_rel": 7.9,
+   "material": "accent",
+   "slot": "M_Fabric_Flag",
+   "dir_deg": 0,
+   "evidence": "flag cloth (KOCH branding in UE)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DF_Flagpole_2",
+   "center": [
+    -205.3,
+    86.5
+   ],
+   "size": [
+    0.1,
+    0.1,
+    9.0
+   ],
+   "material": "white",
+   "slot": "M_Steel_Galv",
+   "evidence": "3 flagpoles at the N end of the forecourt by the street fence (2GIS aerial, far left); height ~9 m assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "DF_Flag_2",
+   "center": [
+    -205.3,
+    87.28
+   ],
+   "size": [
+    0.02,
+    1.4,
+    0.9
+   ],
+   "z_rel": 7.9,
+   "material": "accent",
+   "slot": "M_Fabric_Flag",
+   "dir_deg": 0,
+   "evidence": "flag cloth (KOCH branding in UE)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_00",
+   "pos": [
+    -204.05,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_01",
+   "pos": [
+    -202.95,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_02",
+   "pos": [
+    -201.85,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_03",
+   "pos": [
+    -200.75,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_04",
+   "pos": [
+    -196.65,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_05",
+   "pos": [
+    -195.55,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_06",
+   "pos": [
+    -194.45,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_07",
+   "pos": [
+    -193.35,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_08",
+   "pos": [
+    -192.25,
+    54.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_09",
+   "pos": [
+    -204.05,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_10",
+   "pos": [
+    -202.95,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_11",
+   "pos": [
+    -201.85,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_12",
+   "pos": [
+    -200.75,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_13",
+   "pos": [
+    -196.65,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_14",
+   "pos": [
+    -195.55,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_15",
+   "pos": [
+    -194.45,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_16",
+   "pos": [
+    -193.35,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_17",
+   "pos": [
+    -192.25,
+    39.8
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_18",
+   "pos": [
+    -204.05,
+    37.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_19",
+   "pos": [
+    -202.95,
+    37.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_20",
+   "pos": [
+    -201.85,
+    37.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_21",
+   "pos": [
+    -200.75,
+    37.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_22",
+   "pos": [
+    -196.65,
+    37.2
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_23",
+   "pos": [
+    -195.55,
+    37.2
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_24",
+   "pos": [
+    -194.45,
+    37.2
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_25",
+   "pos": [
+    -193.35,
+    37.2
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "DF_Rose_26",
+   "pos": [
+    -192.25,
+    37.2
+   ],
+   "height": 0.9,
+   "crown_d": 0.8,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "ue_asset": "shrub_rose",
+   "evidence": "rose beds along the lawn edges (pano D_block, 2GIS aerial)",
+   "confidence": "low"
+  }
+ ]
+}
