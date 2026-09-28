@@ -219,12 +219,13 @@ def wall_box(nm, u0, u1, v0, v1, z0, z1, slot="M_Concrete_Precast"):
         material="stone", slot=slot, evidence=ev_ly, confidence="low")
 
 
-wall_box("LowerYard_Retain_Courts", ST_U1, 101.0, C_V1, C_V1 + 0.3, Z_LOW - 0.3, Z_COURT)                # under the N fence, to the E fence
+RW_TOP = 0.8   # owner 2026-09-28: concrete strip between the courts fence and the lower yard a bit wider (was 0.3)
+wall_box("LowerYard_Retain_Courts", ST_U1, 101.0, C_V1, C_V1 + RW_TOP, Z_LOW - 0.3, Z_COURT)             # under the N fence, to the E fence
 wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)  # pitch side
 # the lane behind the pitch is low too (owner 2026-09-28): retaining wall along the N side of the raised bed / west terrace
 wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
 wall_box("LowerYard_Retain_West", -20.0, 0.0, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)
-wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.3, C_V1 + 0.3, ST_V1, Z_LOW - 0.3, Z_PLAZA)          # stair E cheek
+wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.3, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA)       # stair E cheek
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
 # between the basketball court's N fence (v 25.40) and the lane; owner 2026-09-28: only parallel bars and 4 pull-up bars, the
@@ -257,21 +258,24 @@ for su, u in (("W", pu - 0.28), ("E", pu + 0.28)):
     for sv, v in (("S", pv0 + 0.1), ("N", pv1 - 0.1)):
         tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
     tube(f"Workout_Dip_Bar{su}", u, pv0, u, pv1, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
-k = 0
-for vr in (27.4, 29.6):                                                        # 4 pull-up bars: two rows of two, along v (owner: closer to the wall)
-    for uc, h in ((pu + 1.9, 2.4), (pu + 3.7, 2.2)):
-        for s in (-1, 1):
-            tube(f"Workout_PullUp{k}_Post{'S' if s < 0 else 'N'}", uc, vr + 0.6 * s, uc, vr + 0.6 * s, Z_WO, Z_WO + h, d=0.08,
-                 ue="workout_pullup_bar" if s < 0 else None)
-        tube(f"Workout_PullUp{k}_Bar", uc, vr - 0.6, uc, vr + 0.6, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
-        k += 1
-wu0, wb, wh, wv = pu + 5.6, 0.9, 2.6, C_V1 + 0.3 + 0.12                      # wall bars: 3 bays of 0.9 m, 12 cm off the wall
-for j in range(4):
-    u = wu0 + wb * j
-    tube(f"Workout_WallBars_Post{j}", u, wv, u, wv, Z_WO, Z_WO + wh, d=0.07, ue="workout_wall_bars" if j == 0 else None)
-for k in range(8):
-    z = Z_WO + 0.3 + 0.3 * k
-    tube(f"Workout_WallBars_Rung{k}", wu0, wv, wu0 + 3 * wb, wv, z, z, d=0.03)
+# owner 2026-09-28: the pull-ups are two welded units, each a high bar and a low bar on one frame of 3 posts (along v)
+PU_V0, PU_L, PU_H = C_V1 + RW_TOP + 0.6, 1.2, (2.5, 2.2)
+for k, uc in enumerate((pu + 1.9, pu + 3.7)):
+    vs = [PU_V0 + PU_L * j for j in range(3)]
+    for j, v in enumerate(vs):
+        tube(f"Workout_PullUp{k}_Post{j}", uc, v, uc, v, Z_WO, Z_WO + max(PU_H[max(0, j - 1)], PU_H[min(1, j)]), d=0.08,
+             ue="workout_pullup_bar_double" if j == 0 else None)
+    for j, h in enumerate(PU_H):
+        tube(f"Workout_PullUp{k}_Bar{j}", uc, vs[j], uc, vs[j + 1], Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
+# owner 2026-09-28: two wall-bar units, bigger (3 bays of 0.9 m, 3.0 m high, rungs every 0.25 m), 12 cm off the wall
+wb, wh, wv = 0.9, 3.0, C_V1 + RW_TOP + 0.12
+for n, wu0 in enumerate((pu + 5.6, pu + 5.6 + 3 * wb + 0.4)):
+    for j in range(4):
+        u = wu0 + wb * j
+        tube(f"Workout_WallBars{n}_Post{j}", u, wv, u, wv, Z_WO, Z_WO + wh, d=0.07, ue="workout_wall_bars" if j == 0 else None)
+    for k in range(11):
+        z = Z_WO + 0.3 + 0.25 * k
+        tube(f"Workout_WallBars{n}_Rung{k}", wu0, wv, wu0 + 3 * wb, wv, z, z, d=0.03)
 
 # ================================================================= PLAZA strip south of the pitch and courts
 bench_u = [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]   # u 40.0 (Google) absent in 070410255 t=52 s
@@ -404,7 +408,7 @@ pads = [
          confidence="low"),
 ]
 pads += [
-    dict(name="LowerYard", ring=poly([(ST_U0 - 0.1, C_V1), (ST_U1, C_V1), (ST_U1, C_V1 + 0.3), (101.0, C_V1 + 0.3), (101.0, 44.0),
+    dict(name="LowerYard", ring=poly([(ST_U0 - 0.1, C_V1), (ST_U1, C_V1), (ST_U1, C_V1 + RW_TOP), (101.0, C_V1 + RW_TOP), (101.0, 44.0),
                                       (-20.0, 44.0), (-20.0, LANE_V0 + 0.3), (ST_U0 - 0.1, LANE_V0 + 0.3)]), z=Z_LOW, blend=0.0,
          evidence=ev_ly + "; the lane behind the pitch included (owner overview sketch)", confidence="low"),
     dict(name="NorthBedRaised", ring=rect(0.15, 43.75, 27.15, 33.15), z=Z_NORTH + NB_RAISE, blend=0.0,
