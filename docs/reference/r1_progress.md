@@ -336,20 +336,20 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 - [x] INV.CX.9 White painted arrows on the paving west of C, x3 : 070629483_s2, 012436367_s2, photos_p20260925_s2 (012507444) — [x] at the Blender cap e8c7646: surface colour/pattern only, nothing to model in Blender (handoff 4a «Leave to Unreal»: decal/material on the existing M_Paver/M_Paving slot)
 - [x] INV.CX.10 Parked cars at the north end of the C west side : 070629483_s2 — [x] at the Blender cap e8c7646: parked cars are movable game props, not map geometry (the parking surfaces are modelled with their slots)
 ### C interior (lobby, corridors, stairs, classroom, WC)
-- [ ] INV.CIN.1 Water cooler with a blue bottle : 070704360_s1, 080443026_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.1 Water cooler with a blue bottle : 070704360_s1, 080443026_s1 — P1 by frames (F1_WaterCooler; vending + coffee kiosk F1_Vending/F1_CoffeeKiosk)
 - [x] INV.CIN.2 Double wall socket by the cooler : 070704360_s1 — at the Blender cap: under 0.10 m, decal/UE prop
 - [ ] INV.CIN.3 Pull-up banner stands (blue/yellow), x2 : 070704360_s1 — P1 by frames (F1_Banner_0/1)
 - [ ] INV.CIN.4 Red fire-hose cabinets: lobby, stair hall, below the landing [CI.2 lists only fire-alarm boxes] : 070704360_s1, 070704360_s2, 080051708_s1 — P1 by frames (F1_FireHose_W/E)
-- [ ] INV.CIN.5 Linear LED wall lights in the stair hall and landings : 070704360_s2, 080051708_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.5 Linear LED wall lights in the stair hall and landings : 070704360_s2, 080051708_s2 — P1 by frames (F1_Stair*_WallLight)
 - [ ] INV.CIN.6 Wall-mounted CCTV in the lobby corridor, CCTV domes on the stair-hall ceiling and a landing corner : 070704360_s1, 052716931_s2, 080051708_s2 — P1 by frames (F1_CCTV_0/1)
-- [ ] INV.CIN.7 White heating pipes along the floor and walls, riser pipes with brass/red valves : 070704360_s2, 080011086_s1, 080051708_s2, 080443026_s2, 052716931_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.8 Potted plants on landing sills and ledges: x3 in the stair hall, x2 in the stairwell, spider plants x3 on the landing ledge : 070704360_s2, 080011086_s1, 080051708_s1 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.7 White heating pipes along the floor and walls, riser pipes with brass/red valves : 070704360_s2, 080011086_s1, 080051708_s2, 080443026_s2, 052716931_s2 — P1 by frames (F1_HeatPipe_*; riser valves at the Blender cap)
+- [x] INV.CIN.8 Potted plants on landing sills and ledges: x3 in the stair hall, x2 in the stairwell, spider plants x3 on the landing ledge : 070704360_s2, 080011086_s1, 080051708_s1 — at the Blender cap: sill pots under 0.4 m, UE dressing (floor plants: F1_Plant_*)
 - [ ] INV.CIN.9 Potted floor plants (ficus/dracaena), x4, along the rail at the foot of the stair : 052716931_s2 — P1 by frames (F1_Plant_0-3)
-- [ ] INV.CIN.10 Black utility doors at the landings, beside the landing windows : 070704360_s2, 080011086_s2, 080051708_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
-- [ ] INV.CIN.11 Red fire box on the upper landing : 080011086_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [ ] INV.CIN.10 Black utility doors at the landings, beside the landing windows : 070704360_s2, 080011086_s2, 080051708_s2 — P1 by frames (F1_Stair*_LandingDoor)
+- [ ] INV.CIN.11 Red fire box on the upper landing : 080011086_s2 — P1 by frames (F1_Stair*_FireBox)
 - [x] INV.CIN.12 Light switches in the stairwell : 080011086_s1 — at the Blender cap: under 0.10 m, decal/UE prop
 - [x] INV.CIN.13 Small black notice frames on the blue panels, x2 : 080443026_s1 — at the Blender cap: under 0.10 m, decal/UE prop
-- [ ] INV.CIN.14 Black wall-mounted units high on the corridor walls (Wi-Fi APs/speakers), x3 : 080443026_s1, 080443026_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»
+- [x] INV.CIN.14 Black wall-mounted units high on the corridor walls (Wi-Fi APs/speakers), x3 : 080443026_s1, 080443026_s2 — at the Blender cap: 0.25 m wall units, UE prop
 - [x] INV.CIN.15 Card reader/electronic lock on a classroom door : 052716931_s1 — at the Blender cap: under 0.10 m, decal/UE prop
 - [ ] INV.CIN.16 Open double glazed doors from the corridor to the stair hall : 052716931_s2 — P1 by frames (glass2 door kits F1_Door_*)
 - [ ] INV.CIN.17 Black network rack cabinet with a distribution board below it, on the classroom wall : 074805359_s1, 074805359_s2 — BLOCKED: C interior not placeable/scalable (see CI.*); photo request «Интерьер C: рулетка»

@@ -3137,6 +3137,286 @@
    "ue_asset": "ceiling_light_round",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WaterCooler",
+   "center": [
+    186.25,
+    0.55
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.32,
+    0.32,
+    1.35
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Plastic_Grey",
+   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance)",
+   "confidence": "low",
+   "ue_asset": "water_cooler"
+  },
+  {
+   "type": "box",
+   "name": "F1_Vending",
+   "center": [
+    189.7,
+    -1.1
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    1.0,
+    0.8,
+    1.85
+   ],
+   "z0": 6.4,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance)",
+   "confidence": "low",
+   "ue_asset": "vending_machine"
+  },
+  {
+   "type": "box",
+   "name": "F1_CoffeeKiosk",
+   "center": [
+    189.8,
+    0.05
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    1.0,
+    0.6,
+    2.1
+   ],
+   "z0": 6.4,
+   "material": "wood",
+   "slot": "M_Wood_Stained",
+   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance)",
+   "confidence": "low",
+   "ue_asset": "coffee_kiosk"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairW_LandingDoor",
+   "center": [
+    174.75,
+    7.925
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.05,
+    2.05
+   ],
+   "z0": 8.012,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "door_utility_black"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairW_LandingRadiator",
+   "center": [
+    174.0,
+    7.25
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    1.0,
+    0.08,
+    0.55
+   ],
+   "z0": 8.1,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "radiator_section"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairW_WallLight",
+   "center": [
+    173.98,
+    7.25
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.6,
+    0.05,
+    0.08
+   ],
+   "z0": 9.2,
+   "material": "white",
+   "slot": "M_Lamp_Diffuser",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "wall_light_linear"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairW_FireBox",
+   "center": [
+    177.6,
+    7.9
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.5,
+    0.2,
+    0.7
+   ],
+   "z0": 7.4,
+   "material": "brick",
+   "slot": "M_Paint_Maroon",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "fire_hose_cabinet"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_LandingDoor",
+   "center": [
+    201.75,
+    6.848
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.05,
+    2.05
+   ],
+   "z0": 8.012,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "door_utility_black"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_LandingRadiator",
+   "center": [
+    202.47,
+    6.35
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    1.0,
+    0.08,
+    0.55
+   ],
+   "z0": 8.1,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "radiator_section"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_WallLight",
+   "center": [
+    202.49,
+    6.35
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    0.6,
+    0.05,
+    0.08
+   ],
+   "z0": 9.2,
+   "material": "white",
+   "slot": "M_Lamp_Diffuser",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "wall_light_linear"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_FireBox",
+   "center": [
+    198.9,
+    6.8
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.5,
+    0.2,
+    0.7
+   ],
+   "z0": 7.4,
+   "material": "brick",
+   "slot": "M_Paint_Maroon",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "fire_hose_cabinet"
+  },
+  {
+   "type": "box",
+   "name": "F1_HeatPipe_N",
+   "center": [
+    188.4,
+    7.36
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    27.5,
+    0.04,
+    0.04
+   ],
+   "z0": 6.5,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F1_HeatPipe_SW",
+   "center": [
+    179.932,
+    1.703
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    11.8,
+    0.04,
+    0.04
+   ],
+   "z0": 6.5,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F1_HeatPipe_SE",
+   "center": [
+    196.369,
+    1.048
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    11.8,
+    0.04,
+    0.04
+   ],
+   "z0": 6.5,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
   }
  ]
 }
