@@ -1583,6 +1583,25 @@
    "z_base": 3.5
   },
   {
+   "type": "box",
+   "name": "GuardPost_Lintel",
+   "center": [
+    211.555,
+    83.483
+   ],
+   "size": [
+    2.5459016393442653,
+    0.2,
+    0.12
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.970000000000001,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a FaceID terminal and a door (owner sketch), sizes assumed",
+   "confidence": "low"
+  },
+  {
    "type": "tree",
    "name": "NorthLawnTreeW_00",
    "pos": [
@@ -2461,8 +2480,8 @@
    "type": "turnstile",
    "name": "GuardPost_Turnstile",
    "pos": [
-    211.033,
-    83.504
+    212.16,
+    82.56
    ],
    "dir_deg": 87.8,
    "count": 1,
@@ -2475,7 +2494,7 @@
    "confidence": "low"
   },
   {
-   "type": "gate_leaf",
+   "type": "box",
    "name": "GuardPost_Door",
    "line": [
     [
@@ -2491,7 +2510,20 @@
    "panel": "bars",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a FaceID terminal and a door (owner sketch), sizes assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "center": [
+    210.903,
+    83.508
+   ],
+   "size": [
+    1.2,
+    0.06,
+    2.1
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "ue_asset": "door_steel_solid"
   },
   {
    "type": "tree",
@@ -2692,8 +2724,8 @@
    "type": "box",
    "name": "GuardPost_FaceID_Post",
    "center": [
-    211.715,
-    83.027
+    212.693,
+    82.539
    ],
    "size": [
     0.08,
@@ -2711,8 +2743,8 @@
    "type": "box",
    "name": "GuardPost_FaceID",
    "center": [
-    211.715,
-    83.027
+    212.693,
+    82.539
    ],
    "size": [
     0.24,

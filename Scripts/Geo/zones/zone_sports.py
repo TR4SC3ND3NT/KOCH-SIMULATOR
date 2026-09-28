@@ -436,14 +436,20 @@ EV_GB = ("owner 2026-09-28: a small guard post in the NE corner of the lower yar
          "like the gate booth but smaller (BLD_GuardBoothNE); the exit is the wall passage beside it: a tripod turnstile with a "
          "FaceID terminal and a door (owner sketch), sizes assumed")
 g0, g1 = NB_GAP[0] + 0.225, NB_GAP[1] - 0.225                                   # clear passage between the pillars
-add(type="turnstile", name="GuardPost_Turnstile", pos=W(g0 + 0.75, 42.2), dir_deg=DEG_N, count=1, passage_w=0.55, height=1.0,
-    housing_w=0.3, housing_l=0.8, ue_asset="turnstile_tripod", evidence=EV_GB, confidence="low")
-add(type="box", name="GuardPost_FaceID_Post", center=W(g0 + 1.45, 41.75), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
+# owner 2026-09-28 (sketch): a solid steel door in the west half of the passage, the east half (by the booth) an open lane with
+# the turnstile set in front of it so there is room; FaceID beside the turnstile
+DW = 1.2                                                                       # door leaf width
+add(type="box", name="GuardPost_Door", center=W(g0 + 0.02 + DW / 2, 42.2), size=[DW, 0.06, 2.1], dir_deg=ROT, z0=Z_LOW,
+    material="metal", slot="M_Steel_Paint_Dark", ue_asset="door_steel_solid", evidence=EV_GB, confidence="low")
+add(type="box", name="GuardPost_Lintel", center=W((g0 + g1) / 2, 42.2), size=[g1 - g0, 0.2, 0.12], dir_deg=ROT, z0=Z_LOW + 2.12,
     material="metal", slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
-add(type="box", name="GuardPost_FaceID", center=W(g0 + 1.45, 41.75), size=[0.24, 0.1, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
+lane = (g0 + DW + 0.08 + g1) / 2                                               # centre of the open lane
+add(type="turnstile", name="GuardPost_Turnstile", pos=W(lane, 41.3), dir_deg=DEG_N, count=1, passage_w=0.55, height=1.0,
+    housing_w=0.3, housing_l=0.8, ue_asset="turnstile_tripod", evidence=EV_GB, confidence="low")
+add(type="box", name="GuardPost_FaceID_Post", center=W(g1 - 0.1, 41.3), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
+    material="metal", slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
+add(type="box", name="GuardPost_FaceID", center=W(g1 - 0.1, 41.3), size=[0.24, 0.1, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
     material="metal", slot="M_Plastic_Grey", ue_asset="face_terminal", evidence=EV_GB, confidence="low")
-add(type="gate_leaf", name="GuardPost_Door", line=poly([(g0 + 1.6, 42.2), (g1 - 0.05, 42.2)]), height=2.1, panel="bars",
-    slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
 # benches along the back fence (owner marks): between the boundary trees, facing the path; one opposite the yard stair
 for k, u in enumerate((-15.5, 6.05, 22.2, 39.85, (ST_U0 + ST_U1) / 2)):
     add(type="bench", name=f"NorthLawnBench_{k}", pos=W(u, 39.0), dir_deg=DEG_N - 180, length=1.8, depth=0.55, seat_h=0.45,
