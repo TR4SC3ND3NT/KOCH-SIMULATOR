@@ -114,11 +114,11 @@ after the C zone passes P0 and P1 with them unchanged.
 
 ## 7. Sports fields (zone `Sports`)
 - [ ] F.1 Football pitch: turf slab, red plinth, red rubber border, levels — approx., in the model (GBS_Sports_Pitch)
-- [ ] F.2 Pitch fence: posts, mesh panels, X-braced ball-stop sections, gates — approx., in the model (GBS_Sports_PitchFence/PitchGate)
+- [ ] F.2 Pitch fence: posts, mesh panels, X-braced ball-stop sections, gates — approx., in the model (GBS_Sports_PitchFence/PitchGate) | [B] P2 2026-09-28: cage fences split into _Frame (green steel posts/rails) and _Mesh (bay plates, masked green mesh slot for UE), per 070410255 t49-66
 - [ ] F.3 Floodlight masts with ladders and heads — approx., in the model (GBS_Sports_PitchFlood)
 - [ ] F.4 Courts (basketball, volleyball, hard court): slabs, fences between, hoops, net posts — approx., in the model (GBS_Sports_Court(s)/Hoop/VolleyNet/HardNet/CourtsFence)
 - [ ] F.5 Decorated alley along the pitch: planters, thujas, double-ball lamps, garlands — approx., in the model (GBS_Sports_AlleyBed/AlleyThuja/AlleyLamp/AlleyFestoon)
-- [ ] F.6 Flowerbed plaza slope from the path end to the pitch — approx., terrain pads SITE_Sports (4.475 -> 3.45)
+- [ ] F.6 Flowerbed plaza slope from the path end to the pitch — approx., terrain pads SITE_Sports (4.475 -> 3.45) | [B] P1 2026-09-28: full-res 070410255 t41.5-43.2: one kerb step UP ~0.10 from the herringbone lane to the clover plaza (concrete wheel-ramp patch in it), not a series of steps; plaza pad starts at the curb line 0.10 above the lane and falls 0.0603/m to the pitch walkway 3.45 at y 43. Open: the canteen forecourt E of x 171 has no pad (base terrain 0.3-0.8 m low)
 - [ ] F.7 Benches and spectator tiers by the pitch — approx., in the model (GBS_Sports_PitchBench)
 - [ ] F.8 Red square pad west of the pitch — approx., in the model (GBS_Sports_WestRedSquare)
 - [ ] F.9 North boundary fence with brick piers — approx., in the model (GBS_Sports_NorthBoundary)

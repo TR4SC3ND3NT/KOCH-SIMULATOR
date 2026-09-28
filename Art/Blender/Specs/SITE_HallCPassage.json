@@ -84,11 +84,11 @@
     ],
     [
      169.129,
-     21.459
+     23.875
     ],
     [
      152.899,
-     22.282
+     24.524
     ],
     [
      149.321,
@@ -103,29 +103,29 @@
      9.242
     ]
    ],
-   "evidence": "stair foot and the herringbone path N along the hall wing, flat (a_062..a_078); PnP-free check at t=39 s: camera (156.5,20.6) from the pitch/courts door sizes (22.9/26.1 m), horizon from the walkway-edge vanishing point 2.55 m above the pitch walkway -> ground there = walkway + 1.2 = 4.6",
+   "evidence": "stair foot and the herringbone path N along the hall wing, flat (a_062..a_078); PnP-free check at t=39 s: camera (156.5,20.6) from the pitch/courts door sizes (22.9/26.1 m), horizon from the walkway-edge vanishing point 2.55 m above the pitch walkway -> ground there = walkway + 1.2 = 4.6 | [B] 2026-09-28: north edge moved to the plaza curb line (the lane runs to the curb, the plaza is 0.10 above it).",
    "confidence": "medium"
   },
   {
    "name": "PlazaSlope",
-   "z": 4.475,
+   "z": 4.575,
    "grad": [
     0.0,
-    -0.0488
+    -0.0603
    ],
    "ref": [
     157.4,
-    22.0
+    24.35
    ],
    "blend": 1.0,
    "ring": [
     [
      150.9,
-     22.0
+     24.604
     ],
     [
      171.0,
-     21.2
+     23.8
     ],
     [
      171.9,
@@ -136,7 +136,7 @@
      43.1
     ]
    ],
-   "evidence": "clover-paver plaza between the hall wing and the canteen falls ~1.0 m from the path end (y 22, 4.475) to the pitch walkway (3.45): t=39 s horizon (above) and PnP at t=52 s at f 1740 px (camera 1.86 above the walkway at y 28.3 -> ground there ~3.95 +-0.25, slope model 4.13); no steps seen (a_079..a_110)",
+   "evidence": "clover-paver plaza between the hall wing and the canteen falls ~1.0 m from the path end (y 22, 4.475) to the pitch walkway (3.45): t=39 s horizon (above) and PnP at t=52 s at f 1740 px (camera 1.86 above the walkway at y 28.3 -> ground there ~3.95 +-0.25, slope model 4.13); no steps seen (a_079..a_110) | [B] 2026-09-28 full-res 070410255 t41.5-43.2: the yellow/white curb at the path end is a real step UP of ~0.10-0.12 m from the herringbone lane to the clover plaza (the painted face looks at the lane; a concrete wheel ramp patch in the middle), so the plaza starts 0.10 above the lane at the curb line (ref y 24.35) and keeps its fall to the pitch walkway. Blend kept at 1 m (a hard edge would cut 0.3-0.8 m cliffs at the unpadded E/W sides: TODO pad the canteen forecourt E of x 171); fall re-fitted to reach the pitch walkway 3.45 at y 43 (0.0603/m).",
    "confidence": "low"
   }
  ],

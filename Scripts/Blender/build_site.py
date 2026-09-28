@@ -830,12 +830,15 @@ class Site:
 
     def b_cage_fence(self, el):
         """Tall sports fence: square posts every ~post_spacing, horizontal rails at 'rails' heights (m above the base),
-        one thin mesh plate per bay (masked mesh/net material later). Base = absolute 'z_base' or the ground."""
+        one thin mesh plate per bay (masked mesh/net material later). Base = absolute 'z_base' or the ground.
+        Two objects: <name>_Frame (posts + rails, painted green steel) and <name>_Mesh (the bay plates, one masked
+        chain-link/net slot in UE) - owner frames 070410255 t49-t66, 070541257: green posts, see-through green mesh."""
+        el = dict(el, slots={"_Frame": "M_Steel_Paint_Green", "_Mesh": "M_Fence_Mesh_Green", **(el.get("slots") or {})})
         pts = [Vector(p) for p in el["line"]]
         h, sp, ps, rs = el["height"], el.get("post_spacing", 3.0), el.get("post", 0.08), el.get("rail", 0.05)
         zb = el.get("z_base")
         mt = el.get("mesh_thk", 0.01)
-        bm = bmesh.new()
+        bm, bp = bmesh.new(), bmesh.new()
         first = True
         for A, B in zip(pts[:-1], pts[1:]):
             L = (B - A).length
@@ -852,10 +855,12 @@ class Site:
             for zr in el.get("rails", [h - rs / 2]):
                 box(bm, m, ps / 2, L - ps / 2, -rs / 2, rs / 2, z0 + zr - rs / 2, z0 + zr + rs / 2)
             for k in range(n):
-                box(bm, m, L * k / n + ps / 2, L * (k + 1) / n - ps / 2, -mt / 2, mt / 2,
+                box(bp, m, L * k / n + ps / 2, L * (k + 1) / n - ps / 2, -mt / 2, mt / 2,
                     z0 + el.get("bottom_gap", 0.03), z0 + h - rs)
         p = pts[0]
-        self.emit(el, bm, COL["metal"], (p.x, p.y, zb if zb is not None else self.gz(p.x, p.y)))
+        org = (p.x, p.y, zb if zb is not None else self.gz(p.x, p.y))
+        self.emit(dict(el, name=el.get("name", "CageFence") + "_Frame"), bm, COL["metal"], org)
+        self.emit(dict(el, name=el.get("name", "CageFence") + "_Mesh"), bp, COL["metal"], org)
 
     def b_net_roof(self, el):
         """Rope net over a cage: 'ring' (4 corners, world), absolute z, rope grid every 'spacing' m both ways."""
