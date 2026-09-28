@@ -446,9 +446,9 @@ add(type="box", name="GuardPost_Lintel", center=W((g0 + g1) / 2, 42.2), size=[g1
 lane = (g0 + DW + 0.08 + g1) / 2                                               # centre of the open lane
 add(type="turnstile", name="GuardPost_Turnstile", pos=W(lane, 41.3), dir_deg=DEG_N, count=1, passage_w=0.55, height=1.0,
     housing_w=0.3, housing_l=0.8, ue_asset="turnstile_tripod", evidence=EV_GB, confidence="low")
-add(type="box", name="GuardPost_FaceID_Post", center=W(g1 - 0.1, 41.3), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
+add(type="box", name="GuardPost_FaceID_Post", center=W(g1 - 0.1, 40.6), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
     material="metal", slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
-add(type="box", name="GuardPost_FaceID", center=W(g1 - 0.1, 41.3), size=[0.24, 0.1, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
+add(type="box", name="GuardPost_FaceID", center=W(g1 - 0.1, 40.6), size=[0.24, 0.1, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
     material="metal", slot="M_Plastic_Grey", ue_asset="face_terminal", evidence=EV_GB, confidence="low")
 # benches along the back fence (owner marks): between the boundary trees, facing the path; one opposite the yard stair
 for k, u in enumerate((-15.5, 6.05, 22.2, 39.85, (ST_U0 + ST_U1) / 2)):

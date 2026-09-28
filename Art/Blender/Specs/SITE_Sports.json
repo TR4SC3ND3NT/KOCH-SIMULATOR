@@ -2724,8 +2724,8 @@
    "type": "box",
    "name": "GuardPost_FaceID_Post",
    "center": [
-    212.693,
-    82.539
+    212.666,
+    81.84
    ],
    "size": [
     0.08,
@@ -2743,8 +2743,8 @@
    "type": "box",
    "name": "GuardPost_FaceID",
    "center": [
-    212.693,
-    82.539
+    212.666,
+    81.84
    ],
    "size": [
     0.24,
