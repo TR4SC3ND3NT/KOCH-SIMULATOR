@@ -146,6 +146,30 @@
    "z": 6.55,
    "blend": 1.0,
    "evidence": "sweep: path flat within +-0.05 from y 12 to the wide stair, 1.26 above the walkway"
+  },
+  {
+   "name": "BCornerStair_Cut",
+   "ring": [
+    [
+     153.131,
+     -53.002
+    ],
+    [
+     158.495,
+     -53.266
+    ],
+    [
+     158.613,
+     -50.849
+    ],
+    [
+     153.25,
+     -50.586
+    ]
+   ],
+   "z": 5.65,
+   "blend": 0.0,
+   "evidence": "[B] 2026-09-28: terrain under the moved upper flight + half-landing sits below the stair solid (it poked through the treads); hard edge, the stair and bed walls hide the cut faces"
   }
  ],
  "elements": [
@@ -2023,8 +2047,8 @@
    "type": "stairs_run",
    "name": "Steps_BCorner_Upper",
    "top": [
-    155.863,
-    -52.115
+    155.814,
+    -53.114
    ],
    "dir_deg": 87.192,
    "risers": 4,
@@ -2033,9 +2057,41 @@
    "width": 5.33,
    "z_top": 6.63,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | owner 2026-09-28 (screenshot 64): upper flight moved 1.0 m back (up-slope) so the stair starts on the owner's line; the lower steps stay in front of the beds, a granite half-landing joins the two",
    "confidence": "medium",
    "top_flush": true
+  },
+  {
+   "type": "roof_plane",
+   "name": "Steps_BCorner_Landing",
+   "ring": [
+    [
+     153.204,
+     -51.935
+    ],
+    [
+     158.527,
+     -52.196
+    ],
+    [
+     158.594,
+     -50.843
+    ],
+    [
+     153.27,
+     -50.582
+    ]
+   ],
+   "z": [
+    5.898,
+    5.898,
+    5.898,
+    5.898
+   ],
+   "thk": 0.3,
+   "material": "granite",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28: half-landing between the upper flight (moved 1.0 m back, owner screenshot 64) and the lower steps, at the upper flight's foot level, between the bed walls"
   },
   {
    "type": "stairs_run",
