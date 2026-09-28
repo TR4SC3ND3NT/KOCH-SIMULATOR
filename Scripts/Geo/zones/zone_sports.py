@@ -249,19 +249,21 @@ def tube(nm, u0, v0, u1, v1, z0, z1, d=0.05, ue=None):
     return e
 
 
+# owner sketch 2026-09-28: the parallel bars stand right at the foot of the yard stair, facing it; the 4 pull-up bars behind
+# them (east) in two rows of two; all bars run along v (the stair's direction)
+pv0, pv1, ph, pu = C_V1 + ST_N * ST_TR + 0.9, C_V1 + ST_N * ST_TR + 2.9, 1.25, ST_U1 - 0.6   # parallel (dip) bars
+for su, u in (("W", pu - 0.28), ("E", pu + 0.28)):
+    for sv, v in (("S", pv0 + 0.1), ("N", pv1 - 0.1)):
+        tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
+    tube(f"Workout_Dip_Bar{su}", u, pv0, u, pv1, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
 k = 0
-for vr in (28.8, 31.2):                                                        # 4 pull-up bars: two rows of two
+for vr in (28.8, 31.2):                                                        # 4 pull-up bars: two rows of two, along v
     for uc, h in ((55.0, 2.4), (58.2, 2.2)):
         for s in (-1, 1):
-            tube(f"Workout_PullUp{k}_Post{'W' if s < 0 else 'E'}", uc + 0.6 * s, vr, uc + 0.6 * s, vr, Z_WO, Z_WO + h, d=0.08,
+            tube(f"Workout_PullUp{k}_Post{'S' if s < 0 else 'N'}", uc, vr + 0.6 * s, uc, vr + 0.6 * s, Z_WO, Z_WO + h, d=0.08,
                  ue="workout_pullup_bar" if s < 0 else None)
-        tube(f"Workout_PullUp{k}_Bar", uc - 0.6, vr, uc + 0.6, vr, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
+        tube(f"Workout_PullUp{k}_Bar", uc, vr - 0.6, uc, vr + 0.6, Z_WO + h - 0.04, Z_WO + h - 0.04, d=0.035)
         k += 1
-pu0, pu1, ph = 60.4, 62.4, 1.25                                                # parallel (dip) bars beside the rows
-for sv, v in (("S", 30.0 - 0.28), ("N", 30.0 + 0.28)):
-    for su, u in (("W", pu0 + 0.1), ("E", pu1 - 0.1)):
-        tube(f"Workout_Dip_Post{su}{sv}", u, v, u, v, Z_WO, Z_WO + ph, d=0.07, ue="workout_parallel_bars" if su + sv == "WS" else None)
-    tube(f"Workout_Dip_Bar{sv}", pu0, v, pu1, v, Z_WO + ph - 0.02, Z_WO + ph - 0.02, d=0.045)
 
 # ================================================================= PLAZA strip south of the pitch and courts
 bench_u = [7.0, 10.25, 13.1, 16.0, 19.0, 23.5, 26.5, 30.05, 33.9, 37.1]   # u 40.0 (Google) absent in 070410255 t=52 s
