@@ -825,7 +825,14 @@ class Site:
             if k < n - 1:
                 x += tr
                 prof.append((x, z))
-        prof += [(x + el.get("run_out", 0.0), z), (x + el.get("run_out", 0.0), zb - 0.2)]
+        ro = el.get("run_out", 0.0)
+        if ro:   # run-out at the foot sits 4 mm into the floor it joins (a flush top would z-fight with that floor)
+            prof += [(x, z - 0.004), (x + ro, z - 0.004), (x + ro, zb - 0.2)]
+        else:
+            prof += [(x, zb - 0.2)]
+        if el.get("top_flush"):
+            # the flight hangs off a landing/paving whose edge IS the top riser: start 5 mm inside it, no own top riser
+            prof[0:2] = [(-0.005, zb - 0.2), (-0.005, zt - rh)]
         st = el.get("soffit_thk")
         if st:  # sloped waist slab instead of a solid block (headroom under the flight): underside parallel to the
             # pitch line, st (m, normal to the slope) below the inner step corners; flat 0.2 m slab end at the bottom

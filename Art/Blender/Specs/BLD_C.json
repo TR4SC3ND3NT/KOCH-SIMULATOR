@@ -462,14 +462,14 @@
    "u1": 3.75,
    "risers": 7,
    "riser_h": 0.154,
-   "tread": 0.475,
-   "landing": 1.75,
-   "evidence": "2026-09-27 photogrammetry mesh (RealityScan comp. 2 of clips 070647586+081158036, scale 0.4737 m/unit from the 0.20x0.10 paver module, levelled on plaza/treads): landing +1.28 over the plaza, landing edge 2.65 m out from the storefront, upper treads 0.48-0.49; riser count and tread fitted on photo edges through 8 solved cameras (7 risers x 0.154, treads 0.475, bottom nosing 5.50 m out); flight 3.70 wide between the side walls | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
+   "tread": 0.34,
+   "landing": 1.56,
+   "evidence": "2026-09-27 photogrammetry mesh (RealityScan comp. 2 of clips 070647586+081158036, scale 0.4737 m/unit from the 0.20x0.10 paver module, levelled on plaza/treads): landing +1.28 over the plaza, landing edge 2.65 m out from the storefront, upper treads 0.48-0.49; riser count and tread fitted on photo edges through 8 solved cameras (7 risers x 0.154, treads 0.475, bottom nosing 5.50 m out); flight 3.70 wide between the side walls | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | [B] owner 2026-09-28 (photos 14-26-14): treads 0.34 (were 0.475), bottom nosing flush with the outer edge of the west light-well cover (3.6 m from the tower face)",
    "cheeks": [
     {
      "u0": -0.45,
      "u1": 0.05,
-     "w1": 4.6,
+     "w1": 3.65,
      "z_wall": 0.55,
      "z_out": -0.82,
      "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449",
@@ -482,12 +482,12 @@
      "u0": 3.75,
      "u1": 4.25,
      "w0": 0.0,
-     "w_knee": 1.75,
-     "w1": 4.9,
-     "z_wall": -0.06,
-     "z_out": -0.82,
+     "w_knee": 0.6,
+     "w1": 2.5,
+     "z_wall": 0.55,
+     "z_out": 0.05,
      "confidence": "medium",
-     "evidence": "[B] owner 2026-09-28 + 070647586 t6.8/t7.4: brick-tile cheek with a granite cap on the stair's east side too, like the west one but from the tower/east-wing face (base 1.3 m longer at the wall, 0.3 m longer at the plaza); top kept 6 cm under the landing so the steel ramp deck starting over it (Top/Run) stays clear"
+     "evidence": "[B] owner 2026-09-28 + 070647586 t6.8/t7.4: brick-tile cheek with a granite cap on the stair's east side too, like the west one but from the tower/east-wing face (base 1.3 m longer at the wall, 0.3 m longer at the plaza); top kept 6 cm under the landing so the steel ramp deck starting over it (Top/Run) stays clear | [B] owner 2026-09-28 (photo 14-26-14 #1): top level with the west cheek (+0.55) at the wall, sloping out to 2.5 m where the ramp deck passes in front of it"
     }
    ],
    "nosing": 0.02,
@@ -579,10 +579,10 @@
    "edge": 3,
    "u0": 0.3,
    "u1": 12.5,
-   "depth": 1.2,
+   "depth": 2.5,
    "z_wall": -0.1,
    "z_edge": -0.7,
-   "evidence": "red sloped covers along the east wing under the steel ramp, same profile as the south-west covers (frames b05/b07 of 070647586)",
+   "evidence": "red sloped covers along the east wing under the steel ramp, same profile as the south-west covers (frames b05/b07 of 070647586) | [B] owner 2026-09-28: covers reach the ramp (no lawn strip between)",
    "confidence": "low"
   },
   {

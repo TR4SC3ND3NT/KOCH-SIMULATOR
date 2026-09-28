@@ -637,15 +637,15 @@
   },
   {
    "type": "int_wall",
-   "name": "F1_Hall_N",
+   "name": "F1_Hall_N_E",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.658244,
+     6.921992
     ],
     [
-     174.180881,
-     8.057688
+     192.965949,
+     7.308539
     ]
    ],
    "z0": 6.3,
@@ -653,45 +653,110 @@
    "thk": 0.2,
    "openings": [
     {
-     "u0": 22.685,
-     "u1": 23.715,
-     "z0": 6.34,
-     "z1": 8.47
-    },
-    {
-     "u0": 17.035,
-     "u1": 18.065,
-     "z0": 6.34,
-     "z1": 8.47
-    },
-    {
-     "u0": 10.435,
-     "u1": 11.465,
-     "z0": 6.34,
-     "z1": 8.47
-    },
-    {
      "u0": 4.785,
      "u1": 5.815,
-     "z0": 6.34,
-     "z1": 8.47
-    },
-    {
-     "u0": 15.08,
-     "u1": 16.02,
-     "z0": 6.34,
-     "z1": 8.47
-    },
-    {
-     "u0": 12.48,
-     "u1": 13.42,
      "z0": 6.34,
      "z1": 8.47
     }
    ],
    "material": "white",
-   "evidence": "north hall wall, full length; the stair landings meet it (hall photo)",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
    "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F1_Hall_N_W",
+   "line": [
+    [
+     188.619405,
+     7.481888
+    ],
+    [
+     174.180883,
+     8.057723
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 9.32,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 8.635,
+     "u1": 9.665,
+     "z0": 6.34,
+     "z1": 8.47
+    },
+    {
+     "u0": 2.985,
+     "u1": 4.015,
+     "z0": 6.34,
+     "z1": 8.47
+    },
+    {
+     "u0": 1.03,
+     "u1": 1.97,
+     "z0": 6.34,
+     "z1": 8.47
+    }
+   ],
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F1_Hall_N_Recess",
+   "line": [
+    [
+     193.01377,
+     8.507586
+    ],
+    [
+     188.667225,
+     8.680934
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 9.32,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 0.735,
+     "u1": 1.765,
+     "z0": 6.34,
+     "z1": 8.47
+    },
+    {
+     "u0": 2.78,
+     "u1": 3.72,
+     "z0": 6.34,
+     "z1": 8.47
+    }
+   ],
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F1_Hall_N_RecessE",
+   "line": [
+    [
+     193.01377,
+     8.507586
+    ],
+    [
+     192.957979,
+     7.108698
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 9.32,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
   },
   {
    "type": "door",
@@ -749,12 +814,12 @@
    "name": "F1_Door_N2",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.706065,
+     8.121039
     ],
     [
-     174.180881,
-     8.057688
+     174.228703,
+     9.25677
     ]
    ],
    "u0": 10.455,
@@ -766,7 +831,7 @@
    "mid": 1.0,
    "hinge": "left",
    "material": "metal",
-   "evidence": "middle room door near its inner end (estimate) | position_confidence: low (standard C door, position estimated)",
+   "evidence": "middle room door near its inner end (estimate) | position_confidence: low (standard C door, position estimated) | [B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
    "confidence": "medium",
    "position_confidence": "low"
   },
@@ -825,12 +890,12 @@
    "name": "F1_Door_WC5",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.706065,
+     8.121039
     ],
     [
-     174.180881,
-     8.057688
+     174.228703,
+     9.25677
     ]
    ],
    "u0": 12.5,
@@ -842,7 +907,7 @@
    "mid": 1.0,
    "hinge": "left",
    "material": "metal",
-   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5)",
+   "evidence": "WC: solid black leaf with a pictogram, straight ahead of the entrance (map owner, F_2.5) | [B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
    "confidence": "medium"
   },
   {
@@ -917,8 +982,8 @@
      12.415165
     ],
     [
-     190.817561,
-     7.394185
+     190.865477,
+     8.593264
     ]
    ],
    "z0": 6.3,
@@ -1186,24 +1251,6 @@
   },
   {
    "type": "box",
-   "name": "F1_Accent_WC_0",
-   "center": [
-    186.337721,
-    7.362684
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6499,
-    0.02,
-    2.82
-   ],
-   "z0": 6.5,
-   "material": "accent",
-   "evidence": "blue accent wall around the two WC doors (F_2.5)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F1_Accent_WC_1",
    "center": [
     187.112064,
@@ -1216,60 +1263,6 @@
     0.87
    ],
    "z0": 8.45,
-   "material": "accent",
-   "evidence": "blue accent wall around the two WC doors (F_2.5)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F1_Accent_WC_2",
-   "center": [
-    188.411032,
-    7.279996
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.7,
-    0.02,
-    2.82
-   ],
-   "z0": 6.5,
-   "material": "accent",
-   "evidence": "blue accent wall around the two WC doors (F_2.5)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F1_Accent_WC_3",
-   "center": [
-    189.709999,
-    7.228191
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.9,
-    0.02,
-    0.87
-   ],
-   "z0": 8.45,
-   "material": "accent",
-   "evidence": "blue accent wall around the two WC doors (F_2.5)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F1_Accent_WC_4",
-   "center": [
-    190.484424,
-    7.197305
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6501,
-    0.02,
-    2.82
-   ],
-   "z0": 6.5,
    "material": "accent",
    "evidence": "blue accent wall around the two WC doors (F_2.5)",
    "confidence": "medium"
@@ -2604,14 +2597,14 @@
   },
   {
    "type": "box",
-   "name": "F1_HeatPipe_N_3",
+   "name": "F1_HeatPipe_N_3_r0",
    "center": [
-    188.4142,
-    7.359434
+    188.099531,
+    7.371984
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    1.66,
+    1.0302,
     0.04,
     0.04
    ],
@@ -2624,34 +2617,14 @@
   },
   {
    "type": "box",
-   "name": "F1_HeatPipe_N_4",
+   "name": "F1_HeatPipe_N_5_r1",
    "center": [
-    190.689891,
-    7.268675
+    194.901624,
+    7.100703
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    1.015,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_5",
-   "center": [
-    194.534335,
-    7.115351
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    4.62,
+    3.8848,
     0.04,
     0.04
    ],
@@ -2801,6 +2774,132 @@
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
    "confidence": "low",
    "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_0",
+   "center": [
+    188.973606,
+    8.458548
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.63,
+    0.02,
+    2.82
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_1",
+   "center": [
+    190.734706,
+    8.388312
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.015,
+    0.02,
+    2.82
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_2",
+   "center": [
+    192.638193,
+    8.312398
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.735,
+    0.02,
+    2.82
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_HeadWC",
+   "center": [
+    189.757983,
+    8.427266
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.94,
+    0.02,
+    0.85
+   ],
+   "z0": 8.47,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_HeadN2",
+   "center": [
+    191.756394,
+    8.347566
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.85
+   ],
+   "z0": 8.47,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_SideW",
+   "center": [
+    188.644739,
+    7.866183
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    1.17,
+    0.02,
+    2.82
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_Recess_SideE",
+   "center": [
+    192.9713,
+    7.693632
+   ],
+   "dir_deg": 87.71614549541547,
+   "size": [
+    1.17,
+    0.02,
+    2.82
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
   },
   {
    "type": "box",
@@ -3521,8 +3620,8 @@
    "type": "box",
    "name": "F1_WC1_StallWall_0",
    "center": [
-    189.311772,
-    9.16063
+    189.323728,
+    9.460392
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3540,8 +3639,8 @@
    "type": "box",
    "name": "F1_WC1_StallWall_1",
    "center": [
-    189.356405,
-    10.27974
+    189.364375,
+    10.479582
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3559,8 +3658,8 @@
    "type": "box",
    "name": "F1_WC1_StallWall_2",
    "center": [
-    189.40024,
-    11.378867
+    189.404225,
+    11.478787
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3578,8 +3677,8 @@
    "type": "box",
    "name": "F1_WC1_StallDoor_0",
    "center": [
-    189.964072,
-    9.83267
+    189.972042,
+    10.032511
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3598,13 +3697,13 @@
    "type": "box",
    "name": "F1_WC1_StallPanel_0",
    "center": [
-    189.942652,
-    9.295597
+    189.952615,
+    9.545398
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.04,
-    0.27,
+    0.17,
     2.05
    ],
    "z0": 6.4,
@@ -3617,13 +3716,13 @@
    "type": "box",
    "name": "F1_WC1_StallHead_0",
    "center": [
-    189.958592,
-    9.695279
+    189.968555,
+    9.94508
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.04,
-    1.08,
+    0.98,
     0.87
    ],
    "z0": 8.45,
@@ -3636,8 +3735,8 @@
    "type": "box",
    "name": "F1_WC1_StallHandle_0",
    "center": [
-    189.986591,
-    9.519023
+    189.994561,
+    9.718864
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3656,8 +3755,8 @@
    "type": "box",
    "name": "F1_WC1_Pan_0",
    "center": [
-    189.359069,
-    9.719189
+    189.369031,
+    9.96899
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3676,8 +3775,8 @@
    "type": "box",
    "name": "F1_WC1_Cistern_0",
    "center": [
-    188.789522,
-    9.741904
+    188.799484,
+    9.991705
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3696,8 +3795,8 @@
    "type": "box",
    "name": "F1_WC1_FlushPipe_0",
    "center": [
-    188.747055,
-    9.743597
+    188.757018,
+    9.993399
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3715,8 +3814,8 @@
    "type": "box",
    "name": "F1_WC1_StallDoor_1",
    "center": [
-    190.007907,
-    10.931796
+    190.011892,
+    11.031716
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3735,13 +3834,13 @@
    "type": "box",
    "name": "F1_WC1_StallPanel_1",
    "center": [
-    189.986886,
-    10.404715
+    189.992863,
+    10.554596
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.04,
-    0.25,
+    0.15,
     2.05
    ],
    "z0": 6.4,
@@ -3754,13 +3853,13 @@
    "type": "box",
    "name": "F1_WC1_StallHead_1",
    "center": [
-    190.002826,
-    10.804397
+    190.008803,
+    10.954278
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.04,
-    1.06,
+    0.96,
     0.87
    ],
    "z0": 8.45,
@@ -3773,8 +3872,8 @@
    "type": "box",
    "name": "F1_WC1_StallHandle_1",
    "center": [
-    190.030426,
-    10.618149
+    190.034411,
+    10.71807
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3793,8 +3892,8 @@
    "type": "box",
    "name": "F1_WC1_Pan_1",
    "center": [
-    189.403303,
-    10.828307
+    189.40928,
+    10.978188
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3813,8 +3912,8 @@
    "type": "box",
    "name": "F1_WC1_Cistern_1",
    "center": [
-    188.833755,
-    10.851022
+    188.839733,
+    11.000903
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3833,8 +3932,8 @@
    "type": "box",
    "name": "F1_WC1_FlushPipe_1",
    "center": [
-    188.791289,
-    10.852716
+    188.797267,
+    11.002596
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3872,13 +3971,13 @@
    "type": "box",
    "name": "F1_WC1_StallPanel_2",
    "center": [
-    190.03112,
-    11.513833
+    190.033112,
+    11.563793
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.04,
-    0.27,
+    0.17,
     2.05
    ],
    "z0": 6.4,
@@ -3891,13 +3990,13 @@
    "type": "box",
    "name": "F1_WC1_StallHead_2",
    "center": [
-    190.04706,
-    11.913515
+    190.049052,
+    11.963476
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.04,
-    1.08,
+    0.98,
     0.87
    ],
    "z0": 8.45,
@@ -3930,8 +4029,8 @@
    "type": "box",
    "name": "F1_WC1_Pan_2",
    "center": [
-    189.447536,
-    11.937426
+    189.449529,
+    11.987386
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3950,8 +4049,8 @@
    "type": "box",
    "name": "F1_WC1_Cistern_2",
    "center": [
-    188.877989,
-    11.96014
+    188.879982,
+    12.010101
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3970,8 +4069,8 @@
    "type": "box",
    "name": "F1_WC1_FlushPipe_2",
    "center": [
-    188.835523,
-    11.961834
+    188.837515,
+    12.011794
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3989,8 +4088,8 @@
    "type": "sink",
    "name": "F1_WC1_Sink_0",
    "pos": [
-    188.885552,
-    7.984181
+    188.917034,
+    8.773553
    ],
    "dir_deg": -2.2838545045845304,
    "z": 6.4,
@@ -4006,8 +4105,8 @@
    "type": "sink",
    "name": "F1_WC1_Sink_1",
    "pos": [
-    188.911853,
-    8.643656
+    188.940147,
+    9.353092
    ],
    "dir_deg": -2.2838545045845304,
    "z": 6.4,
@@ -4023,13 +4122,13 @@
    "type": "box",
    "name": "F1_WC1_Mirror",
    "center": [
-    188.663889,
-    8.323283
+    188.693777,
+    9.072688
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.24,
+    0.725,
     0.8
    ],
    "z0": 7.6,
@@ -4042,8 +4141,8 @@
    "type": "box",
    "name": "F1_WC1_Soap",
    "center": [
-    188.715848,
-    8.321211
+    188.745736,
+    9.070615
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4062,8 +4161,8 @@
    "type": "box",
    "name": "F1_WC1_TowelDispenser",
    "center": [
-    190.494979,
-    7.46213
+    190.542881,
+    8.661173
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4082,8 +4181,8 @@
    "type": "box",
    "name": "F1_WC1_Bin",
    "center": [
-    190.499562,
-    7.577039
+    190.547463,
+    8.776082
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4160,13 +4259,13 @@
    "type": "box",
    "name": "F1_WC1_Tile_W",
    "center": [
-    188.655896,
-    8.323602
+    188.685783,
+    9.073006
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.685,
+    0.785,
     1.4
    ],
    "z0": 6.4,
@@ -4179,13 +4278,13 @@
    "type": "box",
    "name": "F1_WC1_Tile_E",
    "center": [
-    190.914689,
-    9.904845
+    190.938599,
+    10.504368
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    5.025,
+    3.825,
     1.4
    ],
    "z0": 6.4,
@@ -4217,8 +4316,8 @@
    "type": "box",
    "name": "F1_WC1_CeilLight",
    "center": [
-    190.443071,
-    9.923654
+    190.466981,
+    10.523177
    ],
    "dir_deg": -2.2838545045845304,
    "size": [

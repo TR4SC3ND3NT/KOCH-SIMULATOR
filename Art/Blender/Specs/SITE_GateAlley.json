@@ -198,7 +198,8 @@
    "width": 3.6500000000000004,
    "z_top": 6.75,
    "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.15 m past the north pier (lower treads run further north, staggered, modelled straight): 012227815 (7 treads + top), 012233382, 012305655; 070309303 f04/f09 (flight down to the east between the piers); piers moved with the pavilion (070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays))",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top_flush": true
   },
   {
    "type": "roof_plane",
@@ -533,7 +534,8 @@
    "run_out": 0.02,
    "material": "granite",
    "evidence": "pink granite side stair from the path down east to the walkway: 7 risers x 0.171 (sweep), treads 0.42, nosings x -2.27..0.25, between the two lawn-bed copings (y 29.30-32.64); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top_flush": true
   },
   {
    "type": "roof_plane",
@@ -2028,7 +2030,8 @@
    "z_top": 6.63,
    "material": "granite",
    "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top_flush": true
   },
   {
    "type": "stairs_run",

@@ -196,8 +196,8 @@
      -36.945
     ],
     [
-     126.594,
-     -43.991
+     128.537,
+     -46.303
     ]
    ],
    "width": 1.2,
@@ -220,8 +220,8 @@
      -36.413
     ],
     [
-     127.667,
-     -43.636
+     129.61,
+     -45.948
     ]
    ],
    "width": 0.7,
@@ -243,8 +243,8 @@
      -36.616
     ],
     [
-     127.4,
-     -43.94
+     129.369,
+     -46.283
     ]
    ],
    "height": 0.22,
@@ -268,8 +268,8 @@
      -37.476
     ],
     [
-     124.812,
-     -43.502
+     126.755,
+     -45.814
     ]
    ],
    "width": 0.7,
@@ -291,8 +291,8 @@
      -37.273
     ],
     [
-     125.646,
-     -43.873
+     127.589,
+     -46.185
     ]
    ],
    "height": 0.22,
@@ -312,8 +312,8 @@
      -31.749
     ],
     [
-     109.111,
-     -43.136
+     108.085,
+     -45.306
     ]
    ],
    "width": 1.2,
@@ -332,8 +332,8 @@
      -32.198
     ],
     [
-     110.435,
-     -42.789
+     109.409,
+     -44.959
     ]
    ],
    "width": 0.7,
@@ -351,8 +351,8 @@
      -32.027
     ],
     [
-     109.844,
-     -43.106
+     108.818,
+     -45.276
     ]
    ],
    "height": 0.22,
@@ -372,8 +372,8 @@
      -31.3
     ],
     [
-     108.161,
-     -42.687
+     107.135,
+     -44.857
     ]
    ],
    "width": 0.7,
@@ -391,8 +391,8 @@
      -31.471
     ],
     [
-     108.437,
-     -43.039
+     107.411,
+     -45.209
     ]
    ],
    "height": 0.22,
@@ -511,8 +511,8 @@
      -33.527
     ],
     [
-     153.654,
-     -45.14
+     154.884,
+     -47.408
     ]
    ],
    "width": 1.2,
@@ -531,8 +531,8 @@
      -33.026
     ],
     [
-     154.756,
-     -44.969
+     155.891,
+     -47.061
     ]
    ],
    "width": 0.7,
@@ -550,8 +550,8 @@
      -33.217
     ],
     [
-     154.47,
-     -45.282
+     155.614,
+     -47.392
     ]
    ],
    "height": 0.22,
@@ -571,8 +571,8 @@
      -34.028
     ],
     [
-     152.299,
-     -44.845
+     153.434,
+     -46.937
     ]
    ],
    "width": 0.7,
@@ -590,8 +590,8 @@
      -33.837
     ],
     [
-     152.956,
-     -45.217
+     154.091,
+     -47.309
     ]
    ],
    "height": 0.22,
@@ -611,8 +611,8 @@
      -33.786
     ],
     [
-     139.598,
-     -44.627
+     138.887,
+     -46.814
     ]
    ],
    "width": 1.2,
@@ -631,8 +631,8 @@
      -34.111
     ],
     [
-     140.818,
-     -44.271
+     140.107,
+     -46.458
     ]
    ],
    "width": 0.7,
@@ -650,8 +650,8 @@
      -33.987
     ],
     [
-     140.296,
-     -44.584
+     139.585,
+     -46.771
     ]
    ],
    "height": 0.22,
@@ -671,8 +671,8 @@
      -33.462
     ],
     [
-     138.642,
-     -44.173
+     137.931,
+     -46.36
     ]
    ],
    "width": 0.7,
@@ -690,8 +690,8 @@
      -33.585
     ],
     [
-     138.948,
-     -44.525
+     138.237,
+     -46.712
     ]
    ],
    "height": 0.22,
@@ -711,8 +711,8 @@
      -11.303
     ],
     [
-     130.106,
-     -44.163
+     129.998,
+     -46.38
     ]
    ],
    "width": 1.2,
@@ -1621,18 +1621,18 @@
    "name": "SE_Landing",
    "line": [
     [
-     152.517,
-     -46.537
+     152.41,
+     -48.734
     ],
     [
-     158.509,
-     -46.83
+     158.402,
+     -49.027
     ]
    ],
    "width": 2.9,
    "thk": 0.08,
    "surface": "herringbone_pavers",
-   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path",
+   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
@@ -2136,18 +2136,18 @@
    "name": "Hedge_South_0",
    "line": [
     [
-     100.061,
-     -42.314
+     99.954,
+     -44.511
     ],
     [
-     108.53,
-     -42.728
+     108.423,
+     -44.925
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
-   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2155,18 +2155,18 @@
    "name": "Hedge_South_1",
    "line": [
     [
-     109.728,
-     -42.787
+     109.621,
+     -44.984
     ],
     [
-     126.339,
-     -43.599
+     126.232,
+     -45.796
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
-   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2174,18 +2174,18 @@
    "name": "Hedge_South_2",
    "line": [
     [
-     127.538,
-     -43.658
+     127.431,
+     -45.855
     ],
     [
-     129.525,
-     -43.755
+     129.418,
+     -45.952
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
-   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2193,18 +2193,18 @@
    "name": "Hedge_South_3",
    "line": [
     [
-     130.724,
-     -43.814
+     130.617,
+     -46.011
     ],
     [
-     139.018,
-     -44.219
+     138.911,
+     -46.416
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
-   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2212,18 +2212,18 @@
    "name": "Hedge_South_4",
    "line": [
     [
-     140.216,
-     -44.278
+     140.109,
+     -46.475
     ],
     [
-     153.171,
-     -44.912
+     153.064,
+     -47.109
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
-   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150.",
+   "evidence": "Hedge/lawn edge along the north side of the south pergola walk (081904575 t5-t7: lawn + hedges on the walk's right); Google z20 paved band starts y=-44.0 at x 115 / -45.7 at x 150. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2307,12 +2307,12 @@
    "name": "PergolaWalk_South",
    "line": [
     [
-     99.988,
-     -43.792
+     99.881,
+     -45.989
     ],
     [
-     152.525,
-     -46.362
+     152.418,
+     -48.559
     ]
    ],
    "width": 2.2,
@@ -2324,7 +2324,7 @@
     "color": "maroon",
     "vines": true
    },
-   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner.",
+   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2332,12 +2332,12 @@
    "name": "Pergola_South",
    "line": [
     [
-     100.0,
-     -44.16
+     99.893,
+     -46.357
     ],
     [
-     152.5,
-     -46.76
+     152.393,
+     -48.957
     ]
    ],
    "width": 2.0,
@@ -2345,207 +2345,181 @@
    "post_h": 2.2,
    "apex_h": 2.9,
    "tube": 0.05,
-   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide.",
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium",
-   "gaps": [
-    [
-     126.92,
-     -44.008,
-     1.0
-    ]
-   ]
-  },
-  {
-   "type": "path",
-   "name": "UpperWalk_South",
-   "line": [
-    [
-     100.353,
-     -46.563
-    ],
-    [
-     147.3,
-     -48.86
-    ]
-   ],
-   "width": 1.5,
-   "thk": 0.08,
-   "surface": "concrete_tile",
-   "evidence": "Google z20: second light band y -47.5..-49.0 at x 140-150 just south of the dark wall line = strip on top of the retaining wall (2020 pano: benches standing on the wall top level). Real level ~0.95 m above the pergola walk; the builder puts it on the smooth terrain. | [B] ends at x 147.3 on the upper terrace (beyond it: the wide stair at B's NE corner, stream A).",
-   "confidence": "low",
-   "follow_m": 0.25
+   "gaps": []
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_0",
    "pos": [
-    141.0,
-    -46.9
+    140.893,
+    -49.097
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_1",
    "pos": [
-    145.5,
-    -47.12
+    145.393,
+    -49.317
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_2",
    "pos": [
-    150.0,
-    -47.34
+    149.893,
+    -49.537
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_3",
    "pos": [
-    129.5,
-    -46.338
+    129.393,
+    -48.535
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_4",
    "pos": [
-    134.0,
-    -46.558
+    133.893,
+    -48.755
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_5",
    "pos": [
-    101.5,
-    -44.968
+    101.393,
+    -47.165
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_6",
    "pos": [
-    106.0,
-    -45.189
+    105.893,
+    -47.386
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_7",
    "pos": [
-    110.5,
-    -45.409
+    110.393,
+    -47.606
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_8",
    "pos": [
-    115.0,
-    -45.629
+    114.893,
+    -47.826
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_9",
    "pos": [
-    119.5,
-    -45.849
+    119.393,
+    -48.046
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_10",
    "pos": [
-    124.0,
-    -46.069
+    123.893,
+    -48.266
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_125",
    "pos": [
-    125.2,
-    -46.228
+    125.093,
+    -48.425
    ],
    "size": [
     0.45,
@@ -2555,14 +2529,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_137",
    "pos": [
-    137.3,
-    -46.819
+    137.193,
+    -49.016
    ],
    "size": [
     0.45,
@@ -2572,36 +2546,36 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row"
   },
   {
    "type": "hedge_arch",
    "name": "Arch_G1_SSE",
    "center": [
-    125.923,
-    -42.821
+    127.829,
+    -45.461
    ],
    "dir_deg": -48.51,
    "span": 1.3,
    "height": 2.25,
    "depth": 0.9,
    "thk": 0.8,
-   "evidence": "2020 pano (full-res x 3627-3718, top y 968): topiary arch at bearing 146.7 from the pano camera, outer width 8.0 deg -> ~20 m for a 2.8 m wide arch = on the south hedge line; steps rising behind it. Position +-1.5 m along the hedge line.",
+   "evidence": "2020 pano (full-res x 3627-3718, top y 968): topiary arch at bearing 146.7 from the pano camera, outer width 8.0 deg -> ~20 m for a 2.8 m wide arch = on the south hedge line; steps rising behind it. Position +-1.5 m along the hedge line. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
    "type": "hedge_arch",
    "name": "Arch_G2_SSE",
    "center": [
-    153.132,
-    -44.177
+    154.359,
+    -46.441
    ],
    "dir_deg": -61.52,
    "span": 1.3,
    "height": 2.25,
    "depth": 0.9,
    "thk": 0.8,
-   "evidence": "081918134: topiary arch standing on the herringbone SE landing at the head of the G2 SSE path. Span 1.3 = path + edgings (legs continue the path hedges); clear height 2.2-2.3 m (081918134 t0.3: 457 px/m at the arch base, crown soffit 1040 px above it); outer width 2.8 m and top ~3.3 m (2020 pano: 8.0 deg wide, top 4.9 deg above the horizon at ~20 m, camera 1.55 m); crown thicker than the legs (builder semicircle: top 3.1 m).",
+   "evidence": "081918134: topiary arch standing on the herringbone SE landing at the head of the G2 SSE path. Span 1.3 = path + edgings (legs continue the path hedges); clear height 2.2-2.3 m (081918134 t0.3: 457 px/m at the arch base, crown soffit 1040 px above it); outer width 2.8 m and top ~3.3 m (2020 pano: 8.0 deg wide, top 4.9 deg above the horizon at ~20 m, camera 1.55 m); crown thicker than the legs (builder semicircle: top 3.1 m). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "medium"
   },
   {
@@ -2668,32 +2642,32 @@
    "type": "steps",
    "name": "Steps_G1_SSE",
    "pos": [
-    126.795,
-    -45.456
+    126.688,
+    -47.653
    ],
    "dir_deg": -92.8,
    "width": 1.4,
    "risers": 6,
-   "riser_h": 0.16,
+   "riser_h": 0.1633,
    "tread": 0.32,
    "top_landing": 0.6,
-   "evidence": "2020 pano pz_135/pz_180: pinkish stone steps rising south behind the SSE arch through the boulder wall; 6 x 0.16 = wall height ~0.95 m (count not visible -> assumed). | [B] 2026-09-28: moved so the 5 treads rise from the lower walk through the wall gap and the top landing lands on the upper terrace behind the wall (it used to start at the wall and climb 2 m into the upper ground).",
+   "evidence": "2020 pano pz_135/pz_180: pinkish stone steps rising south behind the SSE arch through the boulder wall; 6 x 0.16 = wall height ~0.95 m (count not visible -> assumed). | [B] 2026-09-28: moved so the 5 treads rise from the lower walk through the wall gap and the top landing lands on the upper terrace behind the wall (it used to start at the wall and climb 2 m into the upper ground). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
    "type": "steps",
    "name": "Steps_G2_SSW",
    "pos": [
-    138.781,
-    -46.041
+    138.674,
+    -48.238
    ],
    "dir_deg": -92.8,
    "width": 1.4,
    "risers": 6,
-   "riser_h": 0.16,
+   "riser_h": 0.1633,
    "tread": 0.32,
    "top_landing": 0.6,
-   "evidence": "081924271 t15-t17: from the gazebo's second (SSW) opening a straight hedged path ends at steps rising to the Block-B level; exact riser count not visible (6 x 0.16 assumed = wall height). | [B] 2026-09-28: moved so the 5 treads rise from the lower walk through the wall gap and the top landing lands on the upper terrace behind the wall (it used to start at the wall and climb 2 m into the upper ground).",
+   "evidence": "081924271 t15-t17: from the gazebo's second (SSW) opening a straight hedged path ends at steps rising to the Block-B level; exact riser count not visible (6 x 0.16 assumed = wall height). | [B] 2026-09-28: moved so the 5 treads rise from the lower walk through the wall gap and the top landing lands on the upper terrace behind the wall (it used to start at the wall and climb 2 m into the upper ground). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2701,12 +2675,12 @@
    "name": "RetainingWall_South_0",
    "line": [
     [
-     99.406,
-     -45.466
+     99.299,
+     -47.663
     ],
     [
-     125.984,
-     -46.766
+     125.877,
+     -48.963
     ]
    ],
    "height": 1.0,
@@ -2714,7 +2688,7 @@
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31).",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2722,12 +2696,12 @@
    "name": "RetainingWall_South_1",
    "line": [
     [
-     127.582,
-     -46.844
+     127.475,
+     -49.041
     ],
     [
-     137.97,
-     -47.352
+     137.863,
+     -49.549
     ]
    ],
    "height": 1.0,
@@ -2735,7 +2709,7 @@
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31).",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -2743,12 +2717,12 @@
    "name": "RetainingWall_South_2",
    "line": [
     [
-     139.568,
-     -47.43
+     139.461,
+     -49.627
     ],
     [
-     152.442,
-     -48.06
+     152.335,
+     -50.257
     ]
    ],
    "height": 1.0,
@@ -2756,7 +2730,7 @@
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31).",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row",
    "confidence": "low"
   },
   {
@@ -3185,11 +3159,11 @@
    "ring": [
     [
      99.3,
-     -49.4
+     -51.7
     ],
     [
      153.0,
-     -49.6
+     -51.9
     ],
     [
      157.2,
@@ -3244,60 +3218,60 @@
      -57.183
     ],
     [
-     147.5,
-     -47.818
+     147.393,
+     -50.015
     ],
     [
-     139.568,
-     -47.43
+     139.461,
+     -49.627
     ],
     [
-     139.55,
-     -47.426
+     139.443,
+     -49.623
     ],
     [
-     139.55,
-     -47.64
+     139.443,
+     -49.837
     ],
     [
-     138.01,
-     -47.64
+     137.903,
+     -49.837
     ],
     [
-     138.01,
-     -47.357
+     137.903,
+     -49.554
     ],
     [
-     137.97,
-     -47.352
+     137.863,
+     -49.549
     ],
     [
-     127.582,
-     -46.844
+     127.475,
+     -49.041
     ],
     [
-     127.57,
-     -46.84
+     127.463,
+     -49.037
     ],
     [
-     127.57,
-     -47.06
+     127.463,
+     -49.257
     ],
     [
-     126.03,
-     -47.06
+     125.923,
+     -49.257
     ],
     [
-     126.03,
-     -46.772
+     125.923,
+     -48.969
     ],
     [
-     125.984,
-     -46.766
+     125.877,
+     -48.963
     ],
     [
-     99.406,
-     -45.466
+     99.299,
+     -47.663
     ]
    ],
    "confidence": "medium",
