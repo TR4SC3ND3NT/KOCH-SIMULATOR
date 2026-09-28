@@ -65,6 +65,19 @@ by the satellite ortho (±0.5 m) until the stitching is done; then only shift wh
 3. Commit + push when the zone passes; update the grid and the item lines; one log line.
 4. While RealityScan runs a queue job, work on another zone; never wait idle, never poll with sleep loops.
 
+## 0c. FAST finish of the Blender job (map owner, 2026-09-28; overrides the P2/P3 tables above)
+The map is close to done. **What already looks right is DONE for Unreal: do not touch it** (facades, windows, doors,
+roofs, stairs, rails, kerbs, props that are in place and match the frames). No re-modelling, no new mesh analysis.
+Stream A fixes only real defects, in this order, one commit each:
+1. `Scripts/Blender/zaudit.py` on its zones: every exact coplanar overlap (C basement first: BH_Ceiling vs
+   StairE_F1_Flight1 4.5 m2, BH_Vestibule floor/steps, Corridor_Floor vs Stair_Lower; then the alley stairs/paving,
+   A_W DoorBay vs GalleryEnds, A_S pilasters vs plinth).
+2. Terrain poking through paving/stairs and floating objects in its zones.
+3. The open measured items only: M11 (C east-wing windows ~0.3 m off), M3 (storefront width).
+4. C basement: clean and walkable (no overlapping walls/floors), no new detail.
+Stream B owns `INT_C_F1.json` / `INT_C_Floors.json` now (fixed from the owner's bug lists): stream A does not edit
+them and does not run `zone_c_f1.py` over them. When 1-4 are done: log line "stream A ready for Unreal" and stop.
+
 ## 0a. Levels from the owner's walks (P0/P1)
 The phone was carried at a near-constant height, so the solved camera centres of a walking clip trace the ground the
 owner walked on. `Scripts/Geo/rs/route_profile.py` turns every walking clip into a level profile: flat levels, every
@@ -89,7 +102,7 @@ Two agents work on the map at the same time, each on its own zones and files:
 | | Stream A (RTX PC) | Stream B (owner laptop) |
 |---|---|---|
 | Zones | Street, bus stop, crossing; Gate + booth + yard; Alley B–A; A_W gallery + plaza; C plaza + exterior; C interior F1-F5; C basement; Blocks A and B; ring (CTX) | Garden (gazebos, hedges, arches, pergola, retaining walls); Hall–C passage; Sports fields; Sports hall + wing + east end; Canteen and the small buildings north of C; West campus (D frontage, E) |
-| Spec files | SITE_StreetFront, SITE_Gate, BLD_GateBooth, SITE_GateAlley (+ zone_gate_alley.py), BLD_A_S/A_N/A_E/A_W, BLD_B, SITE_CPlaza, BLD_C, INT_C_* (+ zone_c_f1.py, zone_c_basement.py), footprints.json, ctx_osm.json | SITE_Garden, SITE_HallCPassage, SITE_Sports (+ zone_sports.py), BLD_Hall, BLD_HallEast, BLD_HallWing, BLD_Canteen, SITE_WestFront, SITE_Barriers (map limit), BLD_D_W, BLD_D_M |
+| Spec files | SITE_StreetFront, SITE_Gate, BLD_GateBooth, SITE_GateAlley (+ zone_gate_alley.py), BLD_A_S/A_N/A_E/A_W, BLD_B, SITE_CPlaza, BLD_C, INT_C_Basement (+ zone_c_basement.py), footprints.json, ctx_osm.json | SITE_Garden, SITE_HallCPassage, SITE_Sports (+ zone_sports.py), BLD_Hall, BLD_HallEast, BLD_HallWing, BLD_Canteen, SITE_WestFront, SITE_Barriers (map limit), BLD_D_W, BLD_D_M, INT_C_F1, INT_C_Floors (+ zone_c_f1.py) |
 | `.blend` | rebuilds and commits it (holds the LFS lock) | never commits it; builds a local scratch copy for its checks |
 
 Rules:
