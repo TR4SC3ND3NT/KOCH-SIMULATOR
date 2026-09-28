@@ -2502,8 +2502,8 @@
    "type": "box",
    "name": "WheelieBin_Pavilion",
    "center": [
-    159.2,
-    -86.1
+    160.042,
+    -85.609
    ],
    "dir_deg": 87.2,
    "size": [
@@ -2532,6 +2532,84 @@
    "shape": "round",
    "ue_asset": "shrub_clipped_round",
    "evidence": "070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1: 3-4 round clipped shrubs in the bed along A_S",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "CirclePaving_AS_0",
+   "line": [
+    [
+     160.422,
+     -70.306
+    ],
+    [
+     159.8,
+     -82.993
+    ]
+   ],
+   "width": 1.6,
+   "top": 0.03,
+   "slot": "M_Paver_Clover_Grey",
+   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_CirclePaving_AS_0",
+   "line": [
+    [
+     159.573,
+     -70.264
+    ],
+    [
+     158.951,
+     -82.952
+    ]
+   ],
+   "height": 0.06,
+   "thk": 0.1,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "CirclePaving_AS_1",
+   "line": [
+    [
+     159.633,
+     -86.39
+    ],
+    [
+     159.486,
+     -89.387
+    ]
+   ],
+   "width": 1.6,
+   "top": 0.03,
+   "slot": "M_Paver_Clover_Grey",
+   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_CirclePaving_AS_1",
+   "line": [
+    [
+     158.784,
+     -86.348
+    ],
+    [
+     158.637,
+     -89.345
+    ]
+   ],
+   "height": 0.06,
+   "thk": 0.1,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
    "confidence": "low"
   }
  ]
