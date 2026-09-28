@@ -43,7 +43,7 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "stairs_run": "M_Granite_Red", "sign": "M_Sign_Panel", "bin": "M_Plastic_Grey", "bike_rack": "M_Steel_Galv",
              "turnstile": "M_Steel_Galv", "gate_leaf": "M_Steel_Paint_Dark", "canopy": "M_Sheet_Brown", "slab": "M_Concrete",
              "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark",
-             "pergola": "M_Steel_Paint_Maroon"}
+             "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White"}
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
@@ -851,6 +851,25 @@ class Site:
         bm.faces.new(list(reversed(A)))
         bm.faces.new(Bv)
         self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
+
+    def b_sink(self, el):
+        """Pedestal wash basin (C WCs, 075931189 t4.4): round pedestal + oval bowl with a flat rim, on the floor
+        against a wall. pos = centre of the bowl in plan, dir_deg = facing direction (away from the wall), z = floor."""
+        P = Vector(el["pos"])
+        fwd, left = rot2(el.get("dir_deg", 0.0))
+        z = el["z"] if "z" in el else self.gz(P.x, P.y)
+        w, dpt, h = el.get("width", 0.55), el.get("depth", 0.45), el.get("height", 0.85)
+        bm = bmesh.new()
+        ped = P - fwd * (dpt * 0.15)
+        _cyl(bm, ped, 0.075, z, z + h - 0.16, 12)
+        seg = 16
+        def ring(zz, sc):
+            return [bm.verts.new((P.x + (left.x * math.cos(a) * w / 2 + fwd.x * math.sin(a) * dpt / 2) * sc,
+                                  P.y + (left.y * math.cos(a) * w / 2 + fwd.y * math.sin(a) * dpt / 2) * sc, zz))
+                    for a in (2 * math.pi * k / seg for k in range(seg))]
+        lo, hi = ring(z + h - 0.18, 0.78), ring(z + h, 1.0)
+        _close_loops(bm, [lo, hi])
+        self.emit(el, bm, COL["white"], (P.x, P.y, z))
 
     def b_box(self, el):
         """Axis box: centre (world xy), size [along dir, across, height], dir_deg, z0 absolute (furniture, cabinets)."""

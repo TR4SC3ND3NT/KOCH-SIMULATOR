@@ -1342,8 +1342,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_0",
    "center": [
-    180.963884,
-    7.49694
+    182.412732,
+    7.439157
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1353,15 +1353,15 @@
    ],
    "z0": 9.85,
    "material": "white",
-   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "F2_Hall_Radiator_1",
    "center": [
-    195.851964,
-    6.903174
+    194.403116,
+    6.960957
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1371,7 +1371,7 @@
    ],
    "z0": 9.85,
    "material": "white",
-   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "medium"
   },
   {
@@ -3059,8 +3059,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_0",
    "center": [
-    180.963884,
-    7.49694
+    182.412732,
+    7.439157
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3070,15 +3070,15 @@
    ],
    "z0": 13.15,
    "material": "white",
-   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "F3_Hall_Radiator_1",
    "center": [
-    195.851964,
-    6.903174
+    194.403116,
+    6.960957
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3088,7 +3088,7 @@
    ],
    "z0": 13.15,
    "material": "white",
-   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "medium"
   },
   {
@@ -4582,8 +4582,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_0",
    "center": [
-    180.963884,
-    7.49694
+    182.412732,
+    7.439157
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4593,15 +4593,15 @@
    ],
    "z0": 16.45,
    "material": "white",
-   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "F4_Hall_Radiator_1",
    "center": [
-    195.851964,
-    6.903174
+    194.403116,
+    6.960957
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4611,7 +4611,7 @@
    ],
    "z0": 16.45,
    "material": "white",
-   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay)",
+   "evidence": "white sectional radiator on the north hall wall 3.5-4.3 m in front of the stair (hall photo overlay) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "medium"
   },
   {
@@ -6876,8 +6876,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_S0",
    "center": [
-    181.433196,
-    1.703976
+    182.882044,
+    1.646193
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -6889,7 +6889,7 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "low"
   },
   {
@@ -6913,8 +6913,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_S1",
    "center": [
-    196.071474,
-    1.119924
+    194.248247,
+    1.192638
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -6926,7 +6926,7 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "low"
   },
   {
@@ -7614,8 +7614,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_S0",
    "center": [
-    181.433196,
-    1.703976
+    182.882044,
+    1.646193
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -7627,7 +7627,7 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "low"
   },
   {
@@ -7651,8 +7651,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_S1",
    "center": [
-    196.071474,
-    1.119924
+    194.248247,
+    1.192638
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -7664,7 +7664,7 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "low"
   },
   {
@@ -8156,8 +8156,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_S0",
    "center": [
-    181.433196,
-    1.703976
+    182.882044,
+    1.646193
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8169,7 +8169,7 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "low"
   },
   {
@@ -8193,8 +8193,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_S1",
    "center": [
-    196.071474,
-    1.119924
+    194.248247,
+    1.192638
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8206,7 +8206,7 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall | [B] owner 2026-09-28: radiator centred behind the bench",
    "confidence": "low"
   },
   {
@@ -8370,8 +8370,8 @@
    "type": "box",
    "name": "F2_WC0_StallWall_0",
    "center": [
-    186.813573,
-    9.255259
+    186.913692,
+    9.25627
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8389,8 +8389,8 @@
    "type": "box",
    "name": "F2_WC0_StallWall_1",
    "center": [
-    186.858205,
-    10.374369
+    186.958325,
+    10.37538
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8408,8 +8408,8 @@
    "type": "box",
    "name": "F2_WC0_StallWall_2",
    "center": [
-    186.90204,
-    11.473496
+    187.00216,
+    11.474507
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8427,8 +8427,8 @@
    "type": "box",
    "name": "F2_WC0_StallDoor_0",
    "center": [
-    187.465872,
-    9.927299
+    187.565992,
+    9.92831
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8447,8 +8447,8 @@
    "type": "box",
    "name": "F2_WC0_StallPanel_0",
    "center": [
-    187.444452,
-    9.390226
+    187.544572,
+    9.391237
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8466,8 +8466,8 @@
    "type": "box",
    "name": "F2_WC0_StallHead_0",
    "center": [
-    187.460392,
-    9.789908
+    187.560512,
+    9.790919
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8485,8 +8485,8 @@
    "type": "box",
    "name": "F2_WC0_StallHandle_0",
    "center": [
-    187.488391,
-    9.613652
+    187.588511,
+    9.614663
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8505,8 +8505,8 @@
    "type": "box",
    "name": "F2_WC0_Pan_0",
    "center": [
-    186.860869,
-    9.813818
+    186.960989,
+    9.814829
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8525,8 +8525,8 @@
    "type": "box",
    "name": "F2_WC0_Cistern_0",
    "center": [
-    186.291322,
-    9.836533
+    186.391442,
+    9.837544
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8545,8 +8545,8 @@
    "type": "box",
    "name": "F2_WC0_FlushPipe_0",
    "center": [
-    186.248855,
-    9.838226
+    186.348975,
+    9.839237
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8564,8 +8564,8 @@
    "type": "box",
    "name": "F2_WC0_StallDoor_1",
    "center": [
-    187.509707,
-    11.026425
+    187.609827,
+    11.027436
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8584,8 +8584,8 @@
    "type": "box",
    "name": "F2_WC0_StallPanel_1",
    "center": [
-    187.488686,
-    10.499344
+    187.588806,
+    10.500355
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8603,8 +8603,8 @@
    "type": "box",
    "name": "F2_WC0_StallHead_1",
    "center": [
-    187.504626,
-    10.899026
+    187.604746,
+    10.900037
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8622,8 +8622,8 @@
    "type": "box",
    "name": "F2_WC0_StallHandle_1",
    "center": [
-    187.532226,
-    10.712778
+    187.632346,
+    10.713789
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8642,8 +8642,8 @@
    "type": "box",
    "name": "F2_WC0_Pan_1",
    "center": [
-    186.905103,
-    10.922936
+    187.005223,
+    10.923947
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8662,8 +8662,8 @@
    "type": "box",
    "name": "F2_WC0_Cistern_1",
    "center": [
-    186.335555,
-    10.945651
+    186.435675,
+    10.946662
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8682,8 +8682,8 @@
    "type": "box",
    "name": "F2_WC0_FlushPipe_1",
    "center": [
-    186.293089,
-    10.947345
+    186.393209,
+    10.948356
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8701,8 +8701,8 @@
    "type": "box",
    "name": "F2_WC0_StallDoor_2",
    "center": [
-    187.554339,
-    12.145535
+    187.654459,
+    12.146546
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8721,8 +8721,8 @@
    "type": "box",
    "name": "F2_WC0_StallPanel_2",
    "center": [
-    187.53292,
-    11.608462
+    187.63304,
+    11.609473
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8740,8 +8740,8 @@
    "type": "box",
    "name": "F2_WC0_StallHead_2",
    "center": [
-    187.54886,
-    12.008144
+    187.64898,
+    12.009155
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8759,8 +8759,8 @@
    "type": "box",
    "name": "F2_WC0_StallHandle_2",
    "center": [
-    187.576858,
-    11.831889
+    187.676978,
+    11.8329
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8779,8 +8779,8 @@
    "type": "box",
    "name": "F2_WC0_Pan_2",
    "center": [
-    186.949336,
-    12.032055
+    187.049456,
+    12.033066
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8799,8 +8799,8 @@
    "type": "box",
    "name": "F2_WC0_Cistern_2",
    "center": [
-    186.379789,
-    12.054769
+    186.479909,
+    12.05578
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8819,8 +8819,8 @@
    "type": "box",
    "name": "F2_WC0_FlushPipe_2",
    "center": [
-    186.337323,
-    12.056463
+    186.437443,
+    12.057474
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8835,39 +8835,53 @@
    "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
-   "type": "box",
-   "name": "F2_WC0_Sinks",
-   "center": [
-    186.381612,
-    8.461843
+   "type": "sink",
+   "name": "F2_WC0_Sink_0",
+   "pos": [
+    186.487472,
+    8.079821
    ],
    "dir_deg": -2.2838545045845304,
-   "size": [
-    0.45,
-    1.3,
-    0.85
-   ],
-   "z0": 9.7,
-   "material": "white",
+   "z": 9.7,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
    "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)",
-   "ue_asset": "sink_pedestal_pair"
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
+  },
+  {
+   "type": "sink",
+   "name": "F2_WC0_Sink_1",
+   "pos": [
+    186.513773,
+    8.739296
+   ],
+   "dir_deg": -2.2838545045845304,
+   "z": 9.7,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
+   "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
    "type": "box",
    "name": "F2_WC0_Mirror",
    "center": [
-    186.167782,
-    8.470371
+    186.265809,
+    8.418923
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.2,
-    0.7
+    1.24,
+    0.8
    ],
-   "z0": 10.95,
+   "z0": 10.9,
    "material": "white",
    "slot": "M_Mirror",
    "confidence": "medium",
@@ -8877,8 +8891,8 @@
    "type": "box",
    "name": "F2_WC0_Soap",
    "center": [
-    186.21974,
-    8.468298
+    186.317768,
+    8.416851
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8886,7 +8900,7 @@
     0.12,
     0.22
    ],
-   "z0": 10.7,
+   "z0": 10.72,
    "material": "white",
    "slot": "M_Plastic_White",
    "confidence": "medium",
@@ -8897,8 +8911,8 @@
    "type": "box",
    "name": "F2_WC0_TowelDispenser",
    "center": [
-    187.085365,
-    9.16936
+    187.996972,
+    7.561755
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8917,8 +8931,8 @@
    "type": "box",
    "name": "F2_WC0_Bin",
    "center": [
-    187.080783,
-    9.054451
+    188.001555,
+    7.676664
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8937,8 +8951,8 @@
    "type": "box",
    "name": "F2_WC0_Radiator",
    "center": [
-    188.431287,
-    11.612665
+    188.531407,
+    11.613676
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8957,8 +8971,8 @@
    "type": "box",
    "name": "F2_WC0_RadiatorPipe_0",
    "center": [
-    188.436313,
-    11.362266
+    188.536433,
+    11.363277
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8976,8 +8990,8 @@
    "type": "box",
    "name": "F2_WC0_RadiatorPipe_1",
    "center": [
-    188.456238,
-    11.861869
+    188.556358,
+    11.86288
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8995,13 +9009,13 @@
    "type": "box",
    "name": "F2_WC0_Tile_W",
    "center": [
-    186.159788,
-    8.470689
+    186.257816,
+    8.419242
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.58,
+    1.685,
     1.4
    ],
    "z0": 9.7,
@@ -9014,13 +9028,13 @@
    "type": "box",
    "name": "F2_WC0_Tile_E",
    "center": [
-    188.418582,
-    10.051932
+    188.516609,
+    10.000485
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    4.92,
+    5.025,
     1.4
    ],
    "z0": 9.7,
@@ -9033,8 +9047,8 @@
    "type": "box",
    "name": "F2_WC0_Tile_N",
    "center": [
-    188.05187,
-    12.52551
+    188.15199,
+    12.526521
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9052,8 +9066,8 @@
    "type": "box",
    "name": "F2_WC0_CeilLight",
    "center": [
-    187.946963,
-    10.070741
+    188.044991,
+    10.019294
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9071,8 +9085,8 @@
    "type": "box",
    "name": "F2_WC1_StallWall_0",
    "center": [
-    189.211653,
-    9.159619
+    189.311772,
+    9.16063
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9090,8 +9104,8 @@
    "type": "box",
    "name": "F2_WC1_StallWall_1",
    "center": [
-    189.256285,
-    10.278729
+    189.356405,
+    10.27974
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9109,8 +9123,8 @@
    "type": "box",
    "name": "F2_WC1_StallWall_2",
    "center": [
-    189.30012,
-    11.377856
+    189.40024,
+    11.378867
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9128,8 +9142,8 @@
    "type": "box",
    "name": "F2_WC1_StallDoor_0",
    "center": [
-    189.863952,
-    9.831659
+    189.964072,
+    9.83267
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9148,8 +9162,8 @@
    "type": "box",
    "name": "F2_WC1_StallPanel_0",
    "center": [
-    189.842532,
-    9.294586
+    189.942652,
+    9.295597
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9167,8 +9181,8 @@
    "type": "box",
    "name": "F2_WC1_StallHead_0",
    "center": [
-    189.858472,
-    9.694268
+    189.958592,
+    9.695279
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9186,8 +9200,8 @@
    "type": "box",
    "name": "F2_WC1_StallHandle_0",
    "center": [
-    189.886471,
-    9.518012
+    189.986591,
+    9.519023
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9206,8 +9220,8 @@
    "type": "box",
    "name": "F2_WC1_Pan_0",
    "center": [
-    189.258949,
-    9.718178
+    189.359069,
+    9.719189
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9226,8 +9240,8 @@
    "type": "box",
    "name": "F2_WC1_Cistern_0",
    "center": [
-    188.689402,
-    9.740893
+    188.789522,
+    9.741904
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9246,8 +9260,8 @@
    "type": "box",
    "name": "F2_WC1_FlushPipe_0",
    "center": [
-    188.646935,
-    9.742586
+    188.747055,
+    9.743597
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9265,8 +9279,8 @@
    "type": "box",
    "name": "F2_WC1_StallDoor_1",
    "center": [
-    189.907787,
-    10.930785
+    190.007907,
+    10.931796
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9285,8 +9299,8 @@
    "type": "box",
    "name": "F2_WC1_StallPanel_1",
    "center": [
-    189.886766,
-    10.403704
+    189.986886,
+    10.404715
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9304,8 +9318,8 @@
    "type": "box",
    "name": "F2_WC1_StallHead_1",
    "center": [
-    189.902706,
-    10.803386
+    190.002826,
+    10.804397
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9323,8 +9337,8 @@
    "type": "box",
    "name": "F2_WC1_StallHandle_1",
    "center": [
-    189.930306,
-    10.617138
+    190.030426,
+    10.618149
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9343,8 +9357,8 @@
    "type": "box",
    "name": "F2_WC1_Pan_1",
    "center": [
-    189.303183,
-    10.827296
+    189.403303,
+    10.828307
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9363,8 +9377,8 @@
    "type": "box",
    "name": "F2_WC1_Cistern_1",
    "center": [
-    188.733635,
-    10.850011
+    188.833755,
+    10.851022
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9383,8 +9397,8 @@
    "type": "box",
    "name": "F2_WC1_FlushPipe_1",
    "center": [
-    188.691169,
-    10.851705
+    188.791289,
+    10.852716
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9402,8 +9416,8 @@
    "type": "box",
    "name": "F2_WC1_StallDoor_2",
    "center": [
-    189.952419,
-    12.049895
+    190.052539,
+    12.050906
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9422,8 +9436,8 @@
    "type": "box",
    "name": "F2_WC1_StallPanel_2",
    "center": [
-    189.931,
-    11.512822
+    190.03112,
+    11.513833
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9441,8 +9455,8 @@
    "type": "box",
    "name": "F2_WC1_StallHead_2",
    "center": [
-    189.94694,
-    11.912504
+    190.04706,
+    11.913515
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9460,8 +9474,8 @@
    "type": "box",
    "name": "F2_WC1_StallHandle_2",
    "center": [
-    189.974938,
-    11.736249
+    190.075058,
+    11.73726
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9480,8 +9494,8 @@
    "type": "box",
    "name": "F2_WC1_Pan_2",
    "center": [
-    189.347416,
-    11.936415
+    189.447536,
+    11.937426
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9500,8 +9514,8 @@
    "type": "box",
    "name": "F2_WC1_Cistern_2",
    "center": [
-    188.777869,
-    11.959129
+    188.877989,
+    11.96014
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9520,8 +9534,8 @@
    "type": "box",
    "name": "F2_WC1_FlushPipe_2",
    "center": [
-    188.735403,
-    11.960823
+    188.835523,
+    11.961834
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9536,39 +9550,53 @@
    "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
-   "type": "box",
-   "name": "F2_WC1_Sinks",
-   "center": [
-    188.779692,
-    8.366203
+   "type": "sink",
+   "name": "F2_WC1_Sink_0",
+   "pos": [
+    188.885552,
+    7.984181
    ],
    "dir_deg": -2.2838545045845304,
-   "size": [
-    0.45,
-    1.3,
-    0.85
-   ],
-   "z0": 9.7,
-   "material": "white",
+   "z": 9.7,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
    "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)",
-   "ue_asset": "sink_pedestal_pair"
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
+  },
+  {
+   "type": "sink",
+   "name": "F2_WC1_Sink_1",
+   "pos": [
+    188.911853,
+    8.643656
+   ],
+   "dir_deg": -2.2838545045845304,
+   "z": 9.7,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
+   "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
    "type": "box",
    "name": "F2_WC1_Mirror",
    "center": [
-    188.565862,
-    8.374731
+    188.663889,
+    8.323283
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.2,
-    0.7
+    1.24,
+    0.8
    ],
-   "z0": 10.95,
+   "z0": 10.9,
    "material": "white",
    "slot": "M_Mirror",
    "confidence": "medium",
@@ -9578,8 +9606,8 @@
    "type": "box",
    "name": "F2_WC1_Soap",
    "center": [
-    188.61782,
-    8.372658
+    188.715848,
+    8.321211
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9587,7 +9615,7 @@
     0.12,
     0.22
    ],
-   "z0": 10.7,
+   "z0": 10.72,
    "material": "white",
    "slot": "M_Plastic_White",
    "confidence": "medium",
@@ -9598,8 +9626,8 @@
    "type": "box",
    "name": "F2_WC1_TowelDispenser",
    "center": [
-    189.483445,
-    9.07372
+    190.494979,
+    7.46213
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9618,8 +9646,8 @@
    "type": "box",
    "name": "F2_WC1_Bin",
    "center": [
-    189.478863,
-    8.958811
+    190.499562,
+    7.577039
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9638,8 +9666,8 @@
    "type": "box",
    "name": "F2_WC1_Radiator",
    "center": [
-    190.829367,
-    11.517025
+    190.929487,
+    11.518036
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9658,8 +9686,8 @@
    "type": "box",
    "name": "F2_WC1_RadiatorPipe_0",
    "center": [
-    190.834393,
-    11.266626
+    190.934513,
+    11.267637
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9677,8 +9705,8 @@
    "type": "box",
    "name": "F2_WC1_RadiatorPipe_1",
    "center": [
-    190.854318,
-    11.766229
+    190.954438,
+    11.76724
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9696,13 +9724,13 @@
    "type": "box",
    "name": "F2_WC1_Tile_W",
    "center": [
-    188.557868,
-    8.375049
+    188.655896,
+    8.323602
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.58,
+    1.685,
     1.4
    ],
    "z0": 9.7,
@@ -9715,13 +9743,13 @@
    "type": "box",
    "name": "F2_WC1_Tile_E",
    "center": [
-    190.816662,
-    9.956292
+    190.914689,
+    9.904845
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    4.92,
+    5.025,
     1.4
    ],
    "z0": 9.7,
@@ -9734,8 +9762,8 @@
    "type": "box",
    "name": "F2_WC1_Tile_N",
    "center": [
-    190.44995,
-    12.42987
+    190.55007,
+    12.430881
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9753,8 +9781,8 @@
    "type": "box",
    "name": "F2_WC1_CeilLight",
    "center": [
-    190.345043,
-    9.975101
+    190.443071,
+    9.923654
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9772,8 +9800,8 @@
    "type": "box",
    "name": "F3_WC0_StallWall_0",
    "center": [
-    186.813573,
-    9.255259
+    186.913692,
+    9.25627
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9791,8 +9819,8 @@
    "type": "box",
    "name": "F3_WC0_StallWall_1",
    "center": [
-    186.858205,
-    10.374369
+    186.958325,
+    10.37538
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9810,8 +9838,8 @@
    "type": "box",
    "name": "F3_WC0_StallWall_2",
    "center": [
-    186.90204,
-    11.473496
+    187.00216,
+    11.474507
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9829,8 +9857,8 @@
    "type": "box",
    "name": "F3_WC0_StallDoor_0",
    "center": [
-    187.465872,
-    9.927299
+    187.565992,
+    9.92831
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9849,8 +9877,8 @@
    "type": "box",
    "name": "F3_WC0_StallPanel_0",
    "center": [
-    187.444452,
-    9.390226
+    187.544572,
+    9.391237
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9868,8 +9896,8 @@
    "type": "box",
    "name": "F3_WC0_StallHead_0",
    "center": [
-    187.460392,
-    9.789908
+    187.560512,
+    9.790919
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9887,8 +9915,8 @@
    "type": "box",
    "name": "F3_WC0_StallHandle_0",
    "center": [
-    187.488391,
-    9.613652
+    187.588511,
+    9.614663
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9907,8 +9935,8 @@
    "type": "box",
    "name": "F3_WC0_Pan_0",
    "center": [
-    186.860869,
-    9.813818
+    186.960989,
+    9.814829
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9927,8 +9955,8 @@
    "type": "box",
    "name": "F3_WC0_Cistern_0",
    "center": [
-    186.291322,
-    9.836533
+    186.391442,
+    9.837544
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9947,8 +9975,8 @@
    "type": "box",
    "name": "F3_WC0_FlushPipe_0",
    "center": [
-    186.248855,
-    9.838226
+    186.348975,
+    9.839237
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9966,8 +9994,8 @@
    "type": "box",
    "name": "F3_WC0_StallDoor_1",
    "center": [
-    187.509707,
-    11.026425
+    187.609827,
+    11.027436
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9986,8 +10014,8 @@
    "type": "box",
    "name": "F3_WC0_StallPanel_1",
    "center": [
-    187.488686,
-    10.499344
+    187.588806,
+    10.500355
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10005,8 +10033,8 @@
    "type": "box",
    "name": "F3_WC0_StallHead_1",
    "center": [
-    187.504626,
-    10.899026
+    187.604746,
+    10.900037
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10024,8 +10052,8 @@
    "type": "box",
    "name": "F3_WC0_StallHandle_1",
    "center": [
-    187.532226,
-    10.712778
+    187.632346,
+    10.713789
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10044,8 +10072,8 @@
    "type": "box",
    "name": "F3_WC0_Pan_1",
    "center": [
-    186.905103,
-    10.922936
+    187.005223,
+    10.923947
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10064,8 +10092,8 @@
    "type": "box",
    "name": "F3_WC0_Cistern_1",
    "center": [
-    186.335555,
-    10.945651
+    186.435675,
+    10.946662
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10084,8 +10112,8 @@
    "type": "box",
    "name": "F3_WC0_FlushPipe_1",
    "center": [
-    186.293089,
-    10.947345
+    186.393209,
+    10.948356
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10103,8 +10131,8 @@
    "type": "box",
    "name": "F3_WC0_StallDoor_2",
    "center": [
-    187.554339,
-    12.145535
+    187.654459,
+    12.146546
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10123,8 +10151,8 @@
    "type": "box",
    "name": "F3_WC0_StallPanel_2",
    "center": [
-    187.53292,
-    11.608462
+    187.63304,
+    11.609473
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10142,8 +10170,8 @@
    "type": "box",
    "name": "F3_WC0_StallHead_2",
    "center": [
-    187.54886,
-    12.008144
+    187.64898,
+    12.009155
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10161,8 +10189,8 @@
    "type": "box",
    "name": "F3_WC0_StallHandle_2",
    "center": [
-    187.576858,
-    11.831889
+    187.676978,
+    11.8329
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10181,8 +10209,8 @@
    "type": "box",
    "name": "F3_WC0_Pan_2",
    "center": [
-    186.949336,
-    12.032055
+    187.049456,
+    12.033066
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10201,8 +10229,8 @@
    "type": "box",
    "name": "F3_WC0_Cistern_2",
    "center": [
-    186.379789,
-    12.054769
+    186.479909,
+    12.05578
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10221,8 +10249,8 @@
    "type": "box",
    "name": "F3_WC0_FlushPipe_2",
    "center": [
-    186.337323,
-    12.056463
+    186.437443,
+    12.057474
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10237,39 +10265,53 @@
    "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
-   "type": "box",
-   "name": "F3_WC0_Sinks",
-   "center": [
-    186.381612,
-    8.461843
+   "type": "sink",
+   "name": "F3_WC0_Sink_0",
+   "pos": [
+    186.487472,
+    8.079821
    ],
    "dir_deg": -2.2838545045845304,
-   "size": [
-    0.45,
-    1.3,
-    0.85
-   ],
-   "z0": 13.0,
-   "material": "white",
+   "z": 13.0,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
    "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)",
-   "ue_asset": "sink_pedestal_pair"
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
+  },
+  {
+   "type": "sink",
+   "name": "F3_WC0_Sink_1",
+   "pos": [
+    186.513773,
+    8.739296
+   ],
+   "dir_deg": -2.2838545045845304,
+   "z": 13.0,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
+   "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
    "type": "box",
    "name": "F3_WC0_Mirror",
    "center": [
-    186.167782,
-    8.470371
+    186.265809,
+    8.418923
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.2,
-    0.7
+    1.24,
+    0.8
    ],
-   "z0": 14.25,
+   "z0": 14.2,
    "material": "white",
    "slot": "M_Mirror",
    "confidence": "medium",
@@ -10279,8 +10321,8 @@
    "type": "box",
    "name": "F3_WC0_Soap",
    "center": [
-    186.21974,
-    8.468298
+    186.317768,
+    8.416851
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10288,7 +10330,7 @@
     0.12,
     0.22
    ],
-   "z0": 14.0,
+   "z0": 14.02,
    "material": "white",
    "slot": "M_Plastic_White",
    "confidence": "medium",
@@ -10299,8 +10341,8 @@
    "type": "box",
    "name": "F3_WC0_TowelDispenser",
    "center": [
-    187.085365,
-    9.16936
+    187.996972,
+    7.561755
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10319,8 +10361,8 @@
    "type": "box",
    "name": "F3_WC0_Bin",
    "center": [
-    187.080783,
-    9.054451
+    188.001555,
+    7.676664
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10339,8 +10381,8 @@
    "type": "box",
    "name": "F3_WC0_Radiator",
    "center": [
-    188.431287,
-    11.612665
+    188.531407,
+    11.613676
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10359,8 +10401,8 @@
    "type": "box",
    "name": "F3_WC0_RadiatorPipe_0",
    "center": [
-    188.436313,
-    11.362266
+    188.536433,
+    11.363277
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10378,8 +10420,8 @@
    "type": "box",
    "name": "F3_WC0_RadiatorPipe_1",
    "center": [
-    188.456238,
-    11.861869
+    188.556358,
+    11.86288
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10397,13 +10439,13 @@
    "type": "box",
    "name": "F3_WC0_Tile_W",
    "center": [
-    186.159788,
-    8.470689
+    186.257816,
+    8.419242
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.58,
+    1.685,
     1.4
    ],
    "z0": 13.0,
@@ -10416,13 +10458,13 @@
    "type": "box",
    "name": "F3_WC0_Tile_E",
    "center": [
-    188.418582,
-    10.051932
+    188.516609,
+    10.000485
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    4.92,
+    5.025,
     1.4
    ],
    "z0": 13.0,
@@ -10435,8 +10477,8 @@
    "type": "box",
    "name": "F3_WC0_Tile_N",
    "center": [
-    188.05187,
-    12.52551
+    188.15199,
+    12.526521
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10454,8 +10496,8 @@
    "type": "box",
    "name": "F3_WC0_CeilLight",
    "center": [
-    187.946963,
-    10.070741
+    188.044991,
+    10.019294
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10473,8 +10515,8 @@
    "type": "box",
    "name": "F3_WC1_StallWall_0",
    "center": [
-    189.211653,
-    9.159619
+    189.311772,
+    9.16063
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10492,8 +10534,8 @@
    "type": "box",
    "name": "F3_WC1_StallWall_1",
    "center": [
-    189.256285,
-    10.278729
+    189.356405,
+    10.27974
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10511,8 +10553,8 @@
    "type": "box",
    "name": "F3_WC1_StallWall_2",
    "center": [
-    189.30012,
-    11.377856
+    189.40024,
+    11.378867
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10530,8 +10572,8 @@
    "type": "box",
    "name": "F3_WC1_StallDoor_0",
    "center": [
-    189.863952,
-    9.831659
+    189.964072,
+    9.83267
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10550,8 +10592,8 @@
    "type": "box",
    "name": "F3_WC1_StallPanel_0",
    "center": [
-    189.842532,
-    9.294586
+    189.942652,
+    9.295597
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10569,8 +10611,8 @@
    "type": "box",
    "name": "F3_WC1_StallHead_0",
    "center": [
-    189.858472,
-    9.694268
+    189.958592,
+    9.695279
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10588,8 +10630,8 @@
    "type": "box",
    "name": "F3_WC1_StallHandle_0",
    "center": [
-    189.886471,
-    9.518012
+    189.986591,
+    9.519023
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10608,8 +10650,8 @@
    "type": "box",
    "name": "F3_WC1_Pan_0",
    "center": [
-    189.258949,
-    9.718178
+    189.359069,
+    9.719189
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10628,8 +10670,8 @@
    "type": "box",
    "name": "F3_WC1_Cistern_0",
    "center": [
-    188.689402,
-    9.740893
+    188.789522,
+    9.741904
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10648,8 +10690,8 @@
    "type": "box",
    "name": "F3_WC1_FlushPipe_0",
    "center": [
-    188.646935,
-    9.742586
+    188.747055,
+    9.743597
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10667,8 +10709,8 @@
    "type": "box",
    "name": "F3_WC1_StallDoor_1",
    "center": [
-    189.907787,
-    10.930785
+    190.007907,
+    10.931796
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10687,8 +10729,8 @@
    "type": "box",
    "name": "F3_WC1_StallPanel_1",
    "center": [
-    189.886766,
-    10.403704
+    189.986886,
+    10.404715
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10706,8 +10748,8 @@
    "type": "box",
    "name": "F3_WC1_StallHead_1",
    "center": [
-    189.902706,
-    10.803386
+    190.002826,
+    10.804397
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10725,8 +10767,8 @@
    "type": "box",
    "name": "F3_WC1_StallHandle_1",
    "center": [
-    189.930306,
-    10.617138
+    190.030426,
+    10.618149
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10745,8 +10787,8 @@
    "type": "box",
    "name": "F3_WC1_Pan_1",
    "center": [
-    189.303183,
-    10.827296
+    189.403303,
+    10.828307
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10765,8 +10807,8 @@
    "type": "box",
    "name": "F3_WC1_Cistern_1",
    "center": [
-    188.733635,
-    10.850011
+    188.833755,
+    10.851022
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10785,8 +10827,8 @@
    "type": "box",
    "name": "F3_WC1_FlushPipe_1",
    "center": [
-    188.691169,
-    10.851705
+    188.791289,
+    10.852716
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10804,8 +10846,8 @@
    "type": "box",
    "name": "F3_WC1_StallDoor_2",
    "center": [
-    189.952419,
-    12.049895
+    190.052539,
+    12.050906
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10824,8 +10866,8 @@
    "type": "box",
    "name": "F3_WC1_StallPanel_2",
    "center": [
-    189.931,
-    11.512822
+    190.03112,
+    11.513833
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10843,8 +10885,8 @@
    "type": "box",
    "name": "F3_WC1_StallHead_2",
    "center": [
-    189.94694,
-    11.912504
+    190.04706,
+    11.913515
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10862,8 +10904,8 @@
    "type": "box",
    "name": "F3_WC1_StallHandle_2",
    "center": [
-    189.974938,
-    11.736249
+    190.075058,
+    11.73726
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10882,8 +10924,8 @@
    "type": "box",
    "name": "F3_WC1_Pan_2",
    "center": [
-    189.347416,
-    11.936415
+    189.447536,
+    11.937426
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10902,8 +10944,8 @@
    "type": "box",
    "name": "F3_WC1_Cistern_2",
    "center": [
-    188.777869,
-    11.959129
+    188.877989,
+    11.96014
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10922,8 +10964,8 @@
    "type": "box",
    "name": "F3_WC1_FlushPipe_2",
    "center": [
-    188.735403,
-    11.960823
+    188.835523,
+    11.961834
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10938,39 +10980,53 @@
    "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
-   "type": "box",
-   "name": "F3_WC1_Sinks",
-   "center": [
-    188.779692,
-    8.366203
+   "type": "sink",
+   "name": "F3_WC1_Sink_0",
+   "pos": [
+    188.885552,
+    7.984181
    ],
    "dir_deg": -2.2838545045845304,
-   "size": [
-    0.45,
-    1.3,
-    0.85
-   ],
-   "z0": 13.0,
-   "material": "white",
+   "z": 13.0,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
    "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)",
-   "ue_asset": "sink_pedestal_pair"
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
+  },
+  {
+   "type": "sink",
+   "name": "F3_WC1_Sink_1",
+   "pos": [
+    188.911853,
+    8.643656
+   ],
+   "dir_deg": -2.2838545045845304,
+   "z": 13.0,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
+   "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
    "type": "box",
    "name": "F3_WC1_Mirror",
    "center": [
-    188.565862,
-    8.374731
+    188.663889,
+    8.323283
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.2,
-    0.7
+    1.24,
+    0.8
    ],
-   "z0": 14.25,
+   "z0": 14.2,
    "material": "white",
    "slot": "M_Mirror",
    "confidence": "medium",
@@ -10980,8 +11036,8 @@
    "type": "box",
    "name": "F3_WC1_Soap",
    "center": [
-    188.61782,
-    8.372658
+    188.715848,
+    8.321211
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -10989,7 +11045,7 @@
     0.12,
     0.22
    ],
-   "z0": 14.0,
+   "z0": 14.02,
    "material": "white",
    "slot": "M_Plastic_White",
    "confidence": "medium",
@@ -11000,8 +11056,8 @@
    "type": "box",
    "name": "F3_WC1_TowelDispenser",
    "center": [
-    189.483445,
-    9.07372
+    190.494979,
+    7.46213
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11020,8 +11076,8 @@
    "type": "box",
    "name": "F3_WC1_Bin",
    "center": [
-    189.478863,
-    8.958811
+    190.499562,
+    7.577039
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11040,8 +11096,8 @@
    "type": "box",
    "name": "F3_WC1_Radiator",
    "center": [
-    190.829367,
-    11.517025
+    190.929487,
+    11.518036
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11060,8 +11116,8 @@
    "type": "box",
    "name": "F3_WC1_RadiatorPipe_0",
    "center": [
-    190.834393,
-    11.266626
+    190.934513,
+    11.267637
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11079,8 +11135,8 @@
    "type": "box",
    "name": "F3_WC1_RadiatorPipe_1",
    "center": [
-    190.854318,
-    11.766229
+    190.954438,
+    11.76724
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11098,13 +11154,13 @@
    "type": "box",
    "name": "F3_WC1_Tile_W",
    "center": [
-    188.557868,
-    8.375049
+    188.655896,
+    8.323602
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.58,
+    1.685,
     1.4
    ],
    "z0": 13.0,
@@ -11117,13 +11173,13 @@
    "type": "box",
    "name": "F3_WC1_Tile_E",
    "center": [
-    190.816662,
-    9.956292
+    190.914689,
+    9.904845
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    4.92,
+    5.025,
     1.4
    ],
    "z0": 13.0,
@@ -11136,8 +11192,8 @@
    "type": "box",
    "name": "F3_WC1_Tile_N",
    "center": [
-    190.44995,
-    12.42987
+    190.55007,
+    12.430881
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11155,8 +11211,8 @@
    "type": "box",
    "name": "F3_WC1_CeilLight",
    "center": [
-    190.345043,
-    9.975101
+    190.443071,
+    9.923654
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11174,8 +11230,8 @@
    "type": "box",
    "name": "F4_WC0_StallWall_0",
    "center": [
-    186.813573,
-    9.255259
+    186.913692,
+    9.25627
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11193,8 +11249,8 @@
    "type": "box",
    "name": "F4_WC0_StallWall_1",
    "center": [
-    186.858205,
-    10.374369
+    186.958325,
+    10.37538
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11212,8 +11268,8 @@
    "type": "box",
    "name": "F4_WC0_StallWall_2",
    "center": [
-    186.90204,
-    11.473496
+    187.00216,
+    11.474507
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11231,8 +11287,8 @@
    "type": "box",
    "name": "F4_WC0_StallDoor_0",
    "center": [
-    187.465872,
-    9.927299
+    187.565992,
+    9.92831
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11251,8 +11307,8 @@
    "type": "box",
    "name": "F4_WC0_StallPanel_0",
    "center": [
-    187.444452,
-    9.390226
+    187.544572,
+    9.391237
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11270,8 +11326,8 @@
    "type": "box",
    "name": "F4_WC0_StallHead_0",
    "center": [
-    187.460392,
-    9.789908
+    187.560512,
+    9.790919
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11289,8 +11345,8 @@
    "type": "box",
    "name": "F4_WC0_StallHandle_0",
    "center": [
-    187.488391,
-    9.613652
+    187.588511,
+    9.614663
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11309,8 +11365,8 @@
    "type": "box",
    "name": "F4_WC0_Pan_0",
    "center": [
-    186.860869,
-    9.813818
+    186.960989,
+    9.814829
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11329,8 +11385,8 @@
    "type": "box",
    "name": "F4_WC0_Cistern_0",
    "center": [
-    186.291322,
-    9.836533
+    186.391442,
+    9.837544
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11349,8 +11405,8 @@
    "type": "box",
    "name": "F4_WC0_FlushPipe_0",
    "center": [
-    186.248855,
-    9.838226
+    186.348975,
+    9.839237
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11368,8 +11424,8 @@
    "type": "box",
    "name": "F4_WC0_StallDoor_1",
    "center": [
-    187.509707,
-    11.026425
+    187.609827,
+    11.027436
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11388,8 +11444,8 @@
    "type": "box",
    "name": "F4_WC0_StallPanel_1",
    "center": [
-    187.488686,
-    10.499344
+    187.588806,
+    10.500355
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11407,8 +11463,8 @@
    "type": "box",
    "name": "F4_WC0_StallHead_1",
    "center": [
-    187.504626,
-    10.899026
+    187.604746,
+    10.900037
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11426,8 +11482,8 @@
    "type": "box",
    "name": "F4_WC0_StallHandle_1",
    "center": [
-    187.532226,
-    10.712778
+    187.632346,
+    10.713789
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11446,8 +11502,8 @@
    "type": "box",
    "name": "F4_WC0_Pan_1",
    "center": [
-    186.905103,
-    10.922936
+    187.005223,
+    10.923947
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11466,8 +11522,8 @@
    "type": "box",
    "name": "F4_WC0_Cistern_1",
    "center": [
-    186.335555,
-    10.945651
+    186.435675,
+    10.946662
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11486,8 +11542,8 @@
    "type": "box",
    "name": "F4_WC0_FlushPipe_1",
    "center": [
-    186.293089,
-    10.947345
+    186.393209,
+    10.948356
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11505,8 +11561,8 @@
    "type": "box",
    "name": "F4_WC0_StallDoor_2",
    "center": [
-    187.554339,
-    12.145535
+    187.654459,
+    12.146546
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11525,8 +11581,8 @@
    "type": "box",
    "name": "F4_WC0_StallPanel_2",
    "center": [
-    187.53292,
-    11.608462
+    187.63304,
+    11.609473
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11544,8 +11600,8 @@
    "type": "box",
    "name": "F4_WC0_StallHead_2",
    "center": [
-    187.54886,
-    12.008144
+    187.64898,
+    12.009155
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11563,8 +11619,8 @@
    "type": "box",
    "name": "F4_WC0_StallHandle_2",
    "center": [
-    187.576858,
-    11.831889
+    187.676978,
+    11.8329
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11583,8 +11639,8 @@
    "type": "box",
    "name": "F4_WC0_Pan_2",
    "center": [
-    186.949336,
-    12.032055
+    187.049456,
+    12.033066
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11603,8 +11659,8 @@
    "type": "box",
    "name": "F4_WC0_Cistern_2",
    "center": [
-    186.379789,
-    12.054769
+    186.479909,
+    12.05578
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11623,8 +11679,8 @@
    "type": "box",
    "name": "F4_WC0_FlushPipe_2",
    "center": [
-    186.337323,
-    12.056463
+    186.437443,
+    12.057474
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11639,39 +11695,53 @@
    "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
-   "type": "box",
-   "name": "F4_WC0_Sinks",
-   "center": [
-    186.381612,
-    8.461843
+   "type": "sink",
+   "name": "F4_WC0_Sink_0",
+   "pos": [
+    186.487472,
+    8.079821
    ],
    "dir_deg": -2.2838545045845304,
-   "size": [
-    0.45,
-    1.3,
-    0.85
-   ],
-   "z0": 16.3,
-   "material": "white",
+   "z": 16.3,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
    "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)",
-   "ue_asset": "sink_pedestal_pair"
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
+  },
+  {
+   "type": "sink",
+   "name": "F4_WC0_Sink_1",
+   "pos": [
+    186.513773,
+    8.739296
+   ],
+   "dir_deg": -2.2838545045845304,
+   "z": 16.3,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
+   "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
    "type": "box",
    "name": "F4_WC0_Mirror",
    "center": [
-    186.167782,
-    8.470371
+    186.265809,
+    8.418923
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.2,
-    0.7
+    1.24,
+    0.8
    ],
-   "z0": 17.55,
+   "z0": 17.5,
    "material": "white",
    "slot": "M_Mirror",
    "confidence": "medium",
@@ -11681,8 +11751,8 @@
    "type": "box",
    "name": "F4_WC0_Soap",
    "center": [
-    186.21974,
-    8.468298
+    186.317768,
+    8.416851
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11690,7 +11760,7 @@
     0.12,
     0.22
    ],
-   "z0": 17.3,
+   "z0": 17.32,
    "material": "white",
    "slot": "M_Plastic_White",
    "confidence": "medium",
@@ -11701,8 +11771,8 @@
    "type": "box",
    "name": "F4_WC0_TowelDispenser",
    "center": [
-    187.085365,
-    9.16936
+    187.996972,
+    7.561755
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11721,8 +11791,8 @@
    "type": "box",
    "name": "F4_WC0_Bin",
    "center": [
-    187.080783,
-    9.054451
+    188.001555,
+    7.676664
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11741,8 +11811,8 @@
    "type": "box",
    "name": "F4_WC0_Radiator",
    "center": [
-    188.431287,
-    11.612665
+    188.531407,
+    11.613676
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11761,8 +11831,8 @@
    "type": "box",
    "name": "F4_WC0_RadiatorPipe_0",
    "center": [
-    188.436313,
-    11.362266
+    188.536433,
+    11.363277
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11780,8 +11850,8 @@
    "type": "box",
    "name": "F4_WC0_RadiatorPipe_1",
    "center": [
-    188.456238,
-    11.861869
+    188.556358,
+    11.86288
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11799,13 +11869,13 @@
    "type": "box",
    "name": "F4_WC0_Tile_W",
    "center": [
-    186.159788,
-    8.470689
+    186.257816,
+    8.419242
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.58,
+    1.685,
     1.4
    ],
    "z0": 16.3,
@@ -11818,13 +11888,13 @@
    "type": "box",
    "name": "F4_WC0_Tile_E",
    "center": [
-    188.418582,
-    10.051932
+    188.516609,
+    10.000485
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    4.92,
+    5.025,
     1.4
    ],
    "z0": 16.3,
@@ -11837,8 +11907,8 @@
    "type": "box",
    "name": "F4_WC0_Tile_N",
    "center": [
-    188.05187,
-    12.52551
+    188.15199,
+    12.526521
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11856,8 +11926,8 @@
    "type": "box",
    "name": "F4_WC0_CeilLight",
    "center": [
-    187.946963,
-    10.070741
+    188.044991,
+    10.019294
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11875,8 +11945,8 @@
    "type": "box",
    "name": "F4_WC1_StallWall_0",
    "center": [
-    189.211653,
-    9.159619
+    189.311772,
+    9.16063
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11894,8 +11964,8 @@
    "type": "box",
    "name": "F4_WC1_StallWall_1",
    "center": [
-    189.256285,
-    10.278729
+    189.356405,
+    10.27974
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11913,8 +11983,8 @@
    "type": "box",
    "name": "F4_WC1_StallWall_2",
    "center": [
-    189.30012,
-    11.377856
+    189.40024,
+    11.378867
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11932,8 +12002,8 @@
    "type": "box",
    "name": "F4_WC1_StallDoor_0",
    "center": [
-    189.863952,
-    9.831659
+    189.964072,
+    9.83267
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11952,8 +12022,8 @@
    "type": "box",
    "name": "F4_WC1_StallPanel_0",
    "center": [
-    189.842532,
-    9.294586
+    189.942652,
+    9.295597
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11971,8 +12041,8 @@
    "type": "box",
    "name": "F4_WC1_StallHead_0",
    "center": [
-    189.858472,
-    9.694268
+    189.958592,
+    9.695279
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11990,8 +12060,8 @@
    "type": "box",
    "name": "F4_WC1_StallHandle_0",
    "center": [
-    189.886471,
-    9.518012
+    189.986591,
+    9.519023
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12010,8 +12080,8 @@
    "type": "box",
    "name": "F4_WC1_Pan_0",
    "center": [
-    189.258949,
-    9.718178
+    189.359069,
+    9.719189
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12030,8 +12100,8 @@
    "type": "box",
    "name": "F4_WC1_Cistern_0",
    "center": [
-    188.689402,
-    9.740893
+    188.789522,
+    9.741904
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12050,8 +12120,8 @@
    "type": "box",
    "name": "F4_WC1_FlushPipe_0",
    "center": [
-    188.646935,
-    9.742586
+    188.747055,
+    9.743597
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12069,8 +12139,8 @@
    "type": "box",
    "name": "F4_WC1_StallDoor_1",
    "center": [
-    189.907787,
-    10.930785
+    190.007907,
+    10.931796
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12089,8 +12159,8 @@
    "type": "box",
    "name": "F4_WC1_StallPanel_1",
    "center": [
-    189.886766,
-    10.403704
+    189.986886,
+    10.404715
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12108,8 +12178,8 @@
    "type": "box",
    "name": "F4_WC1_StallHead_1",
    "center": [
-    189.902706,
-    10.803386
+    190.002826,
+    10.804397
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12127,8 +12197,8 @@
    "type": "box",
    "name": "F4_WC1_StallHandle_1",
    "center": [
-    189.930306,
-    10.617138
+    190.030426,
+    10.618149
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12147,8 +12217,8 @@
    "type": "box",
    "name": "F4_WC1_Pan_1",
    "center": [
-    189.303183,
-    10.827296
+    189.403303,
+    10.828307
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12167,8 +12237,8 @@
    "type": "box",
    "name": "F4_WC1_Cistern_1",
    "center": [
-    188.733635,
-    10.850011
+    188.833755,
+    10.851022
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12187,8 +12257,8 @@
    "type": "box",
    "name": "F4_WC1_FlushPipe_1",
    "center": [
-    188.691169,
-    10.851705
+    188.791289,
+    10.852716
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12206,8 +12276,8 @@
    "type": "box",
    "name": "F4_WC1_StallDoor_2",
    "center": [
-    189.952419,
-    12.049895
+    190.052539,
+    12.050906
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12226,8 +12296,8 @@
    "type": "box",
    "name": "F4_WC1_StallPanel_2",
    "center": [
-    189.931,
-    11.512822
+    190.03112,
+    11.513833
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12245,8 +12315,8 @@
    "type": "box",
    "name": "F4_WC1_StallHead_2",
    "center": [
-    189.94694,
-    11.912504
+    190.04706,
+    11.913515
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12264,8 +12334,8 @@
    "type": "box",
    "name": "F4_WC1_StallHandle_2",
    "center": [
-    189.974938,
-    11.736249
+    190.075058,
+    11.73726
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12284,8 +12354,8 @@
    "type": "box",
    "name": "F4_WC1_Pan_2",
    "center": [
-    189.347416,
-    11.936415
+    189.447536,
+    11.937426
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12304,8 +12374,8 @@
    "type": "box",
    "name": "F4_WC1_Cistern_2",
    "center": [
-    188.777869,
-    11.959129
+    188.877989,
+    11.96014
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12324,8 +12394,8 @@
    "type": "box",
    "name": "F4_WC1_FlushPipe_2",
    "center": [
-    188.735403,
-    11.960823
+    188.835523,
+    11.961834
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12340,39 +12410,53 @@
    "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
-   "type": "box",
-   "name": "F4_WC1_Sinks",
-   "center": [
-    188.779692,
-    8.366203
+   "type": "sink",
+   "name": "F4_WC1_Sink_0",
+   "pos": [
+    188.885552,
+    7.984181
    ],
    "dir_deg": -2.2838545045845304,
-   "size": [
-    0.45,
-    1.3,
-    0.85
-   ],
-   "z0": 16.3,
-   "material": "white",
+   "z": 16.3,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
    "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)",
-   "ue_asset": "sink_pedestal_pair"
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
+  },
+  {
+   "type": "sink",
+   "name": "F4_WC1_Sink_1",
+   "pos": [
+    188.911853,
+    8.643656
+   ],
+   "dir_deg": -2.2838545045845304,
+   "z": 16.3,
+   "width": 0.55,
+   "depth": 0.45,
+   "height": 0.85,
+   "slot": "M_Ceramic_White",
+   "ue_asset": "sink_pedestal",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 WC template (owner bug lists; clips 075931189 vestibule/sinks/radiator, 075928860 stall row, 075725091 stall interior)"
   },
   {
    "type": "box",
    "name": "F4_WC1_Mirror",
    "center": [
-    188.565862,
-    8.374731
+    188.663889,
+    8.323283
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.01,
-    1.2,
-    0.7
+    1.24,
+    0.8
    ],
-   "z0": 17.55,
+   "z0": 17.5,
    "material": "white",
    "slot": "M_Mirror",
    "confidence": "medium",
@@ -12382,8 +12466,8 @@
    "type": "box",
    "name": "F4_WC1_Soap",
    "center": [
-    188.61782,
-    8.372658
+    188.715848,
+    8.321211
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12391,7 +12475,7 @@
     0.12,
     0.22
    ],
-   "z0": 17.3,
+   "z0": 17.32,
    "material": "white",
    "slot": "M_Plastic_White",
    "confidence": "medium",
@@ -12402,8 +12486,8 @@
    "type": "box",
    "name": "F4_WC1_TowelDispenser",
    "center": [
-    189.483445,
-    9.07372
+    190.494979,
+    7.46213
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12422,8 +12506,8 @@
    "type": "box",
    "name": "F4_WC1_Bin",
    "center": [
-    189.478863,
-    8.958811
+    190.499562,
+    7.577039
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12442,8 +12526,8 @@
    "type": "box",
    "name": "F4_WC1_Radiator",
    "center": [
-    190.829367,
-    11.517025
+    190.929487,
+    11.518036
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12462,8 +12546,8 @@
    "type": "box",
    "name": "F4_WC1_RadiatorPipe_0",
    "center": [
-    190.834393,
-    11.266626
+    190.934513,
+    11.267637
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12481,8 +12565,8 @@
    "type": "box",
    "name": "F4_WC1_RadiatorPipe_1",
    "center": [
-    190.854318,
-    11.766229
+    190.954438,
+    11.76724
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12500,13 +12584,13 @@
    "type": "box",
    "name": "F4_WC1_Tile_W",
    "center": [
-    188.557868,
-    8.375049
+    188.655896,
+    8.323602
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    1.58,
+    1.685,
     1.4
    ],
    "z0": 16.3,
@@ -12519,13 +12603,13 @@
    "type": "box",
    "name": "F4_WC1_Tile_E",
    "center": [
-    190.816662,
-    9.956292
+    190.914689,
+    9.904845
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.006,
-    4.92,
+    5.025,
     1.4
    ],
    "z0": 16.3,
@@ -12538,8 +12622,8 @@
    "type": "box",
    "name": "F4_WC1_Tile_N",
    "center": [
-    190.44995,
-    12.42987
+    190.55007,
+    12.430881
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -12557,8 +12641,8 @@
    "type": "box",
    "name": "F4_WC1_CeilLight",
    "center": [
-    190.345043,
-    9.975101
+    190.443071,
+    9.923654
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
