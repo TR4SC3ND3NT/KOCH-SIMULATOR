@@ -338,6 +338,8 @@ class Building:
         e = self.edges[i]
         placed = []   # surround extents on this edge (u_lo, u_hi, z_lo, z_hi): neighbours are trimmed to abut, not overlap
         for k, (o, tname, wt) in enumerate(ops):
+            if wt.get("open"):   # open bay (pavilion between posts): the hole only, no window unit
+                continue
             ident = Matrix.Identity(4)
             w, h = o.u1 - o.u0, o.z1 - o.z0
             if tname == "entrance":

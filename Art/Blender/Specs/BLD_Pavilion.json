@@ -1,0 +1,602 @@
+{
+ "id": "BLD_Pavilion",
+ "collection": "BLD_Other",
+ "status": "uncertain",
+ "note": "Session B: open picnic pavilion W of the sports area (phase-1 closed box before). Hip roof on square posts over a raised terrace reached by a wide stair; pano c_intro1 (2022, 'Picnic zone'); footprint = phase-1 roof outline (OSM way/635534999) inset by the 0.5 m overhang. Heights/post pitch estimated; the 2026 ortho still shows the brown roof next to the construction yard.",
+ "replaces": [
+  "GB_BLD_Pavilion",
+  "GB_BLD_Pavilion_Roof"
+ ],
+ "scale": 1.0,
+ "anchor": {
+  "world_xy": [
+   59.23,
+   42.44
+  ],
+  "x_dir": [
+   0.99978,
+   -0.021
+  ],
+  "status": "phase-1 footprint (OSM + Esri 2020)"
+ },
+ "plinth_m": 1.2,
+ "plinth_note": "raised terrace ~1.2 m over the plaza (pano c_intro1: ~8-9 granite steps)",
+ "wall_thk": 0.35,
+ "storey_m": 3.0,
+ "storeys": 1,
+ "eave_z": 3.0,
+ "ring": [
+  [
+   0,
+   0
+  ],
+  [
+   9.95,
+   0
+  ],
+  [
+   9.95,
+   18.86
+  ],
+  [
+   0,
+   18.86
+  ]
+ ],
+ "cornice": null,
+ "plinth": {
+  "z_top": -0.02,
+  "proj": 0.05,
+  "evidence": "terrace retaining face (brick) round the pavilion floor",
+  "confidence": "low"
+ },
+ "pilasters": [],
+ "window_types": {
+  "O282": {
+   "w": 2.817,
+   "h": 2.5,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.0,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "open": true
+  },
+  "O327": {
+   "w": 3.272,
+   "h": 2.5,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.0,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "open": true
+  },
+  "O347": {
+   "w": 3.472,
+   "h": 2.5,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.0,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "open": true
+  },
+  "O302": {
+   "w": 3.017,
+   "h": 2.5,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.0,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "open": true
+  }
+ },
+ "rows": {},
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south",
+   "windows": [
+    {
+     "type": "O282",
+     "u": [
+      1.758,
+      8.192
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "O302",
+     "u": [
+      4.975
+     ],
+     "sills": [
+      0.02
+     ]
+    }
+   ],
+   "evidence": "open bays between square posts (pano c_intro1 2022: open hip-roofed pavilion on a raised terrace)",
+   "confidence": "low"
+  },
+  {
+   "edge": 1,
+   "name": "east",
+   "windows": [
+    {
+     "type": "O327",
+     "u": [
+      1.986,
+      16.874
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "O347",
+     "u": [
+      5.658,
+      9.43,
+      13.202
+     ],
+     "sills": [
+      0.02
+     ]
+    }
+   ],
+   "evidence": "open bays between square posts (pano c_intro1 2022: open hip-roofed pavilion on a raised terrace)",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north",
+   "windows": [
+    {
+     "type": "O282",
+     "u": [
+      1.758,
+      8.192
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "O302",
+     "u": [
+      4.975
+     ],
+     "sills": [
+      0.02
+     ]
+    }
+   ],
+   "evidence": "open bays between square posts (pano c_intro1 2022: open hip-roofed pavilion on a raised terrace)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "name": "west",
+   "windows": [
+    {
+     "type": "O327",
+     "u": [
+      1.986,
+      16.874
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "O347",
+     "u": [
+      5.658,
+      9.43,
+      13.202
+     ],
+     "sills": [
+      0.02
+     ]
+    }
+   ],
+   "evidence": "open bays between square posts (pano c_intro1 2022: open hip-roofed pavilion on a raised terrace)",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "pitch": 20,
+  "overhang": 0.6,
+  "evidence": "dark hip roof (pano c_intro1; render 2025 dark pitched roof)",
+  "confidence": "low"
+ },
+ "attachments": [
+  {
+   "type": "stairs",
+   "edge": 0,
+   "u0": 3.3,
+   "u1": 6.65,
+   "risers": 8,
+   "riser_h": 0.15,
+   "tread": 0.33,
+   "landing": 0.3,
+   "evidence": "wide granite stair up to the terrace with rose beds each side (pano c_intro1)",
+   "confidence": "low"
+  },
+  {
+   "type": "interior",
+   "edge": 0,
+   "name": "Pavilion",
+   "items": [
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.0,
+      3.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      2.35,
+      3.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.65,
+      3.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.0,
+      3.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      6.35,
+      3.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.65,
+      3.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.0,
+      7.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      2.35,
+      7.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.65,
+      7.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.0,
+      7.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      6.35,
+      7.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.65,
+      7.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.0,
+      11.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      2.35,
+      11.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.65,
+      11.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.0,
+      11.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      6.35,
+      11.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.65,
+      11.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.0,
+      15.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      2.35,
+      15.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      3.65,
+      15.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicTables",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.0,
+      15.5
+     ],
+     "size": [
+      0.8,
+      2.0,
+      0.75
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      6.35,
+      15.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    },
+    {
+     "group": "PicnicBenches",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      7.65,
+      15.5
+     ],
+     "size": [
+      0.3,
+      2.0,
+      0.45
+     ]
+    }
+   ],
+   "evidence": "picnic tables + benches (the tour's 'Picnic zone' hotspot); layout assumed",
+   "confidence": "low"
+  }
+ ],
+ "slots": {
+  "Wall": "M_Paint_White",
+  "Roof": "M_Shingle_Brown",
+  "Plinth": "M_Tile_Brick_Red"
+ }
+}
