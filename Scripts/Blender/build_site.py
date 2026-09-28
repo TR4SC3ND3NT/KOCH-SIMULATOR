@@ -616,7 +616,8 @@ class Site:
     def b_planter(self, el):
         bm = bmesh.new()
         w, h = el.get("curb_w", 0.08), el.get("curb_h", 0.15)
-        sweep_profile(bm, _ccw(el["ring"]), [(0.0, -BURY), (0.0, h), (w, h), (w, -BURY)][::-1], self.gz, closed=True)
+        sweep_profile(bm, _ccw(el["ring"]), [(0.0, -BURY), (0.0, h), (w, h), (w, -BURY)][::-1], self.gz, closed=True,
+                      **_sweep_kw(el, 1.0))   # subdivided every 1 m: long curbs follow the pads, not a chord
         p = el["ring"][0]
         self.emit(el, bm, (0.70, 0.25, 0.20, 1), (p[0], p[1], self.gz(*p)))
 
