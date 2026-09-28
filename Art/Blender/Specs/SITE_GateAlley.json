@@ -2238,6 +2238,86 @@
    "material": "stone",
    "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
    "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "SouthBed_Shrub_0",
+   "pos": [
+    155.9,
+    -89.6
+   ],
+   "height": 0.9,
+   "crown_d": 0.9,
+   "trunk_d": 0.05,
+   "crown_base": 0.0,
+   "shape": "round",
+   "ue_asset": "shrub_clipped_round",
+   "evidence": "P1 by frames: round clipped shrubs in the south bed beside the thuja (070309303 s1 f00117, 061757320 s2, 082537786 s2); spacing by eye, +-0.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "SouthBed_Shrub_1",
+   "pos": [
+    156.1,
+    -88.4
+   ],
+   "height": 0.9,
+   "crown_d": 0.9,
+   "trunk_d": 0.05,
+   "crown_base": 0.0,
+   "shape": "round",
+   "ue_asset": "shrub_clipped_round",
+   "evidence": "P1 by frames: round clipped shrubs in the south bed beside the thuja (070309303 s1 f00117, 061757320 s2, 082537786 s2); spacing by eye, +-0.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "SouthBed_Shrub_2",
+   "pos": [
+    156.5,
+    -86.4
+   ],
+   "height": 0.9,
+   "crown_d": 0.9,
+   "trunk_d": 0.05,
+   "crown_base": 0.0,
+   "shape": "round",
+   "ue_asset": "shrub_clipped_round",
+   "evidence": "P1 by frames: round clipped shrubs in the south bed beside the thuja (070309303 s1 f00117, 061757320 s2, 082537786 s2); spacing by eye, +-0.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_ASCorner_0",
+   "pos": [
+    162.6,
+    -90.1
+   ],
+   "dir_deg": 87.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_ASCorner_1",
+   "pos": [
+    165.1,
+    -90.2
+   ],
+   "dir_deg": 87.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m",
+   "confidence": "low"
   }
  ]
 }
