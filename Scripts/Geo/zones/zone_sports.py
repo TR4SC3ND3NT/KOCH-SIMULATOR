@@ -365,7 +365,7 @@ for k, (u, v) in enumerate([(0.8, 28.9), (5.35, 28.9), (10.75, 28.9), (15.85, 28
         "blue spruces ~2.5 m (drone d_07)", confidence="medium")
 add(type="tree", name="NorthBedTree_Big", pos=W(43.2, 29.5), height=9.0, crown_d=5.0, crown_base=2.5, shape="round",
     evidence="large crown u 41..46, v 27..32 (Google 2026)", confidence="low")
-for nm, (a_, b_) in (("NorthTreeLawn", (-40.0, 78.8)), ("NorthTreeLawn_E", (86.6, 93.8))):   # cut for the bins + the passage (owner)
+for nm, (a_, b_) in (("NorthTreeLawn", (-265.0, 78.8)), ("NorthTreeLawn_E", (86.6, 93.8))):   # cut for the bins + the passage (owner)
     add(type="planter", name=nm, ring=rect(a_, b_, 38.3, 41.5), curb_w=0.12, curb_h=0.12,
         evidence="Google 2026 lawn strip v 38.3..41.5 along the boundary with a row of trees", confidence="medium")
 EV_BIN = "owner 2026-09-28: waste point opposite the guard booth - 3 grey metal containers against the block wall on a concrete pad; sizes assumed"
@@ -374,10 +374,26 @@ add(type="slab", name="WastePoint_Pad", ring=rect(79.3, 86.1, 40.3, 42.0), z0=Z_
 for k, u in enumerate((80.55, 82.7, 84.85)):
     add(type="box", name=f"WastePoint_Container_{k}", center=W(u, 41.25), dir_deg=ROT, size=[1.9, 1.3, 1.35], z0=Z_LOW + 0.05,
         material="metal", slot="M_Steel_Galv", ue_asset="waste_container_metal", evidence=EV_BIN, confidence="low")
+W_END = -265.0
+# owner 2026-09-28: the tree row and the benches go on west with the wall, same rhythm as the existing row (~5.5 m, every
+# third tree big, a bench in every fifth gap)
+for k in range(int((-41.0 - (W_END + 2.0)) / 5.5) + 1):
+    u = -41.0 - 5.5 * k
+    big = k % 3 == 1
+    add(type="tree", name=f"NorthLawnTreeW_{k:02d}", pos=W(u, 39.4), height=7.0 if big else 4.5, crown_d=3.2 if big else 2.0,
+        crown_base=1.5 if big else 0.4, shape="cone", evidence="owner 2026-09-28: the back-fence tree row continued west (rhythm "
+        "copied from the Google 2026 row east of it)", confidence="low")
+    if k % 5 == 2:
+        add(type="bench", name=f"NorthLawnBenchW_{k:02d}", pos=W(u - 2.75, 39.0), dir_deg=DEG_N - 180, length=1.8, depth=0.55,
+            seat_h=0.45, back_h=0.85, ue_asset="bench_generic", evidence="owner 2026-09-28: benches along the continued back "
+            "fence, between the trees", confidence="low")
+for k, u in enumerate((45.1, 50.6, 52.8), start=2):   # owner: a few more spruces by the bench and the manhole opposite the stair
+    add(type="tree", name=f"NorthLawnSpruce_{k}", pos=W(u, 39.6), height=3.8, crown_d=1.7, crown_base=0.3, shape="cone",
+        evidence="owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair", confidence="low")
 for k, u in enumerate((56.0, 62.0)):   # owner 2026-09-28: a pair of spruces in the gap of the tree row east of the stair
     add(type="tree", name=f"NorthLawnSpruce_{k}", pos=W(u, 39.4), height=4.5, crown_d=2.0, crown_base=0.4, shape="cone",
         evidence="owner 2026-09-28 (marks on the overview): two spruces along the back fence", confidence="low")
-add(type="box", name="LowerYard_Manhole", center=W((ST_U0 + ST_U1) / 2 + 2.3, 37.7), dir_deg=ROT, size=[0.7, 0.7, 0.03], z0=Z_LOW,
+add(type="box", name="LowerYard_Manhole", center=W((ST_U0 + ST_U1) / 2 + 1.3, 37.85), dir_deg=ROT, size=[0.7, 0.7, 0.03], z0=Z_LOW,
     material="metal", slot="M_Steel_Paint_Dark", ue_asset="manhole_cover",
     evidence="owner 2026-09-28 (overview): sewer manhole on the lane in front of the bench opposite the yard stair", confidence="low")
 for k, u in enumerate([-35.6, -23.3, -17.5, -12.3, -6.9, -1.7, 4.1, 9.2, 15.0, 20.5, 25.1, 32.6, 37.8, 43.1, 70.3, 75.7, 92.4]):
@@ -386,12 +402,12 @@ for k, u in enumerate([-35.6, -23.3, -17.5, -12.3, -6.9, -1.7, 4.1, 9.2, 15.0, 2
         crown_d=3.2 if big else 2.0, crown_base=1.5 if big else 0.4, shape="cone",
         evidence="Google 2026 crowns 2-5 m along v 39.2-40.1 (lean-corrected); blue spruces along the boundary (drone d_07)",
         confidence="low")
-add(type="path", name="NorthLane_Path_W", line=poly([(-20.0, 36.0), (-112.0, 36.0)]), width=3.0, slot="M_Paving_Generic",
+add(type="path", name="NorthLane_Path_W", line=poly([(-20.0, 36.0), (-265.0, 36.0)]), width=3.0, slot="M_Paving_Generic",
     evidence="owner 2026-09-28 (overview sketch): the low path along the back fence runs from the courts to Block D; west "
     "of the pitch it follows the natural ground (DEM 2.9 at u -30 rising to 3.7 at u -112); width 3.0 assumed", confidence="low")
 # N boundary (owner 2026-09-28): red block pillars with pale-yellow cast sand-concrete panels between them, no openings;
 # E boundary along the neighbour's wall: black steel bar fence (see-through, not cast)
-NB_LINE = [(-112.0, 42.2), (100.5, 42.2)]   # owner 2026-09-28: straight to a square NE corner (was bent to v 40)
+NB_LINE = [(-265.0, 42.2), (100.5, 42.2)]   # owner 2026-09-28: on west along Block D, not to its far end (was -112)   # owner 2026-09-28: straight to a square NE corner (was bent to v 40)
 EV_NB = ("campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: "
          "a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + "
          "brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed")

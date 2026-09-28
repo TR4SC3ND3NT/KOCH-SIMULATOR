@@ -1583,6 +1583,750 @@
    "z_base": 3.5
   },
   {
+   "type": "tree",
+   "name": "NorthLawnTreeW_00",
+   "pos": [
+    74.543,
+    85.945
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_01",
+   "pos": [
+    69.047,
+    86.156
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_02",
+   "pos": [
+    63.551,
+    86.367
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_02",
+   "pos": [
+    60.787,
+    86.073
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_03",
+   "pos": [
+    58.055,
+    86.578
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_04",
+   "pos": [
+    52.559,
+    86.789
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_05",
+   "pos": [
+    47.063,
+    87.001
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_06",
+   "pos": [
+    41.567,
+    87.212
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_07",
+   "pos": [
+    36.071,
+    87.423
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_07",
+   "pos": [
+    33.308,
+    87.129
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_08",
+   "pos": [
+    30.575,
+    87.634
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_09",
+   "pos": [
+    25.079,
+    87.845
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_10",
+   "pos": [
+    19.583,
+    88.056
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_11",
+   "pos": [
+    14.087,
+    88.267
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_12",
+   "pos": [
+    8.591,
+    88.478
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_12",
+   "pos": [
+    5.828,
+    88.184
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_13",
+   "pos": [
+    3.095,
+    88.69
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_14",
+   "pos": [
+    -2.401,
+    88.901
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_15",
+   "pos": [
+    -7.896,
+    89.112
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_16",
+   "pos": [
+    -13.392,
+    89.323
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_17",
+   "pos": [
+    -18.888,
+    89.534
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_17",
+   "pos": [
+    -21.652,
+    89.24
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_18",
+   "pos": [
+    -24.384,
+    89.745
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_19",
+   "pos": [
+    -29.88,
+    89.956
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_20",
+   "pos": [
+    -35.376,
+    90.168
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_21",
+   "pos": [
+    -40.872,
+    90.379
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_22",
+   "pos": [
+    -46.368,
+    90.59
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_22",
+   "pos": [
+    -49.131,
+    90.296
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_23",
+   "pos": [
+    -51.864,
+    90.801
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_24",
+   "pos": [
+    -57.36,
+    91.012
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_25",
+   "pos": [
+    -62.856,
+    91.223
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_26",
+   "pos": [
+    -68.352,
+    91.434
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_27",
+   "pos": [
+    -73.848,
+    91.645
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_27",
+   "pos": [
+    -76.611,
+    91.351
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_28",
+   "pos": [
+    -79.344,
+    91.857
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_29",
+   "pos": [
+    -84.84,
+    92.068
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_30",
+   "pos": [
+    -90.336,
+    92.279
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_31",
+   "pos": [
+    -95.832,
+    92.49
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_32",
+   "pos": [
+    -101.328,
+    92.701
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_32",
+   "pos": [
+    -104.091,
+    92.407
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_33",
+   "pos": [
+    -106.824,
+    92.912
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_34",
+   "pos": [
+    -112.319,
+    93.123
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_35",
+   "pos": [
+    -117.815,
+    93.335
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_36",
+   "pos": [
+    -123.311,
+    93.546
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_37",
+   "pos": [
+    -128.807,
+    93.757
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBenchW_37",
+   "pos": [
+    -131.571,
+    93.463
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28: benches along the continued back fence, between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_38",
+   "pos": [
+    -134.303,
+    93.968
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_39",
+   "pos": [
+    -139.799,
+    94.179
+   ],
+   "height": 4.5,
+   "crown_d": 2.0,
+   "crown_base": 0.4,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnTreeW_40",
+   "pos": [
+    -145.295,
+    94.39
+   ],
+   "height": 7.0,
+   "crown_d": 3.2,
+   "crown_base": 1.5,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28: the back-fence tree row continued west (rhythm copied from the Google 2026 row east of it)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnSpruce_2",
+   "pos": [
+    160.587,
+    82.84
+   ],
+   "height": 3.8,
+   "crown_d": 1.7,
+   "crown_base": 0.3,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnSpruce_3",
+   "pos": [
+    166.083,
+    82.628
+   ],
+   "height": 3.8,
+   "crown_d": 1.7,
+   "crown_base": 0.3,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "NorthLawnSpruce_4",
+   "pos": [
+    168.281,
+    82.544
+   ],
+   "height": 3.8,
+   "crown_d": 1.7,
+   "crown_base": 0.3,
+   "shape": "cone",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair",
+   "confidence": "low"
+  },
+  {
    "type": "slab",
    "name": "LowerYard_SandPit",
    "ring": [
@@ -1717,8 +2461,8 @@
    "type": "turnstile",
    "name": "GuardPost_Turnstile",
    "pos": [
-    211.039,
-    83.503
+    211.033,
+    83.504
    ],
    "dir_deg": 87.8,
    "count": 1,
@@ -1735,11 +2479,11 @@
    "name": "GuardPost_Door",
    "line": [
     [
-     211.888,
+     211.882,
      83.471
     ],
     [
-     212.78,
+     212.777,
      83.436
     ]
    ],
@@ -1781,8 +2525,8 @@
    "type": "box",
    "name": "LowerYard_Manhole",
    "center": [
-    165.385,
-    80.754
+    164.392,
+    80.942
    ],
    "dir_deg": -2.2,
    "size": [
@@ -1948,7 +2692,7 @@
    "type": "box",
    "name": "GuardPost_FaceID_Post",
    "center": [
-    211.721,
+    211.715,
     83.027
    ],
    "size": [
@@ -1967,7 +2711,7 @@
    "type": "box",
    "name": "GuardPost_FaceID",
    "center": [
-    211.721,
+    211.715,
     83.027
    ],
    "size": [
@@ -2933,8 +3677,8 @@
      81.741
     ],
     [
-     3.465,
-     85.273
+     -149.423,
+     91.146
     ]
    ],
    "width": 3.0,
@@ -5411,8 +6155,8 @@
    "name": "NorthTreeLawn",
    "ring": [
     [
-     75.5,
-     84.807
+     -149.334,
+     93.445
     ],
     [
      194.212,
@@ -5423,8 +6167,8 @@
      83.444
     ],
     [
-     75.623,
-     88.005
+     -149.212,
+     96.642
     ]
    ],
    "curb_w": 0.12,
@@ -5715,11 +6459,11 @@
    "name": "NorthBoundary_Wall",
    "line": [
     [
-     3.703,
-     91.468
+     -149.185,
+     97.342
     ],
     [
-     210.064,
+     210.059,
      83.541
     ]
    ],
@@ -5734,8 +6478,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_000",
    "center": [
-    3.703,
-    91.468
+    -149.185,
+    97.342
    ],
    "size": [
     0.45,
@@ -5752,8 +6496,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_000",
    "center": [
-    3.703,
-    91.468
+    -149.185,
+    97.342
    ],
    "size": [
     0.55,
@@ -5771,8 +6515,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_001",
    "center": [
-    6.693,
-    91.353
+    -146.191,
+    97.227
    ],
    "size": [
     0.45,
@@ -5789,8 +6533,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_001",
    "center": [
-    6.693,
-    91.353
+    -146.191,
+    97.227
    ],
    "size": [
     0.55,
@@ -5808,8 +6552,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_002",
    "center": [
-    9.684,
-    91.239
+    -143.197,
+    97.112
    ],
    "size": [
     0.45,
@@ -5826,8 +6570,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_002",
    "center": [
-    9.684,
-    91.239
+    -143.197,
+    97.112
    ],
    "size": [
     0.55,
@@ -5845,8 +6589,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_003",
    "center": [
-    12.675,
-    91.124
+    -140.204,
+    96.997
    ],
    "size": [
     0.45,
@@ -5863,8 +6607,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_003",
    "center": [
-    12.675,
-    91.124
+    -140.204,
+    96.997
    ],
    "size": [
     0.55,
@@ -5882,8 +6626,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_004",
    "center": [
-    15.666,
-    91.009
+    -137.21,
+    96.882
    ],
    "size": [
     0.45,
@@ -5900,8 +6644,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_004",
    "center": [
-    15.666,
-    91.009
+    -137.21,
+    96.882
    ],
    "size": [
     0.55,
@@ -5919,8 +6663,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_005",
    "center": [
-    18.656,
-    90.894
+    -134.216,
+    96.767
    ],
    "size": [
     0.45,
@@ -5937,8 +6681,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_005",
    "center": [
-    18.656,
-    90.894
+    -134.216,
+    96.767
    ],
    "size": [
     0.55,
@@ -5956,8 +6700,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_006",
    "center": [
-    21.647,
-    90.779
+    -131.223,
+    96.652
    ],
    "size": [
     0.45,
@@ -5974,8 +6718,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_006",
    "center": [
-    21.647,
-    90.779
+    -131.223,
+    96.652
    ],
    "size": [
     0.55,
@@ -5993,8 +6737,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_007",
    "center": [
-    24.638,
-    90.664
+    -128.229,
+    96.537
    ],
    "size": [
     0.45,
@@ -6011,8 +6755,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_007",
    "center": [
-    24.638,
-    90.664
+    -128.229,
+    96.537
    ],
    "size": [
     0.55,
@@ -6030,8 +6774,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_008",
    "center": [
-    27.629,
-    90.549
+    -125.235,
+    96.422
    ],
    "size": [
     0.45,
@@ -6048,8 +6792,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_008",
    "center": [
-    27.629,
-    90.549
+    -125.235,
+    96.422
    ],
    "size": [
     0.55,
@@ -6067,8 +6811,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_009",
    "center": [
-    30.619,
-    90.434
+    -122.241,
+    96.307
    ],
    "size": [
     0.45,
@@ -6085,8 +6829,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_009",
    "center": [
-    30.619,
-    90.434
+    -122.241,
+    96.307
    ],
    "size": [
     0.55,
@@ -6104,8 +6848,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_010",
    "center": [
-    33.61,
-    90.319
+    -119.248,
+    96.192
    ],
    "size": [
     0.45,
@@ -6122,8 +6866,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_010",
    "center": [
-    33.61,
-    90.319
+    -119.248,
+    96.192
    ],
    "size": [
     0.55,
@@ -6141,8 +6885,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_011",
    "center": [
-    36.601,
-    90.205
+    -116.254,
+    96.077
    ],
    "size": [
     0.45,
@@ -6159,8 +6903,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_011",
    "center": [
-    36.601,
-    90.205
+    -116.254,
+    96.077
    ],
    "size": [
     0.55,
@@ -6178,8 +6922,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_012",
    "center": [
-    39.592,
-    90.09
+    -113.26,
+    95.962
    ],
    "size": [
     0.45,
@@ -6196,8 +6940,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_012",
    "center": [
-    39.592,
-    90.09
+    -113.26,
+    95.962
    ],
    "size": [
     0.55,
@@ -6215,8 +6959,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_013",
    "center": [
-    42.582,
-    89.975
+    -110.267,
+    95.847
    ],
    "size": [
     0.45,
@@ -6233,8 +6977,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_013",
    "center": [
-    42.582,
-    89.975
+    -110.267,
+    95.847
    ],
    "size": [
     0.55,
@@ -6252,8 +6996,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_014",
    "center": [
-    45.573,
-    89.86
+    -107.273,
+    95.732
    ],
    "size": [
     0.45,
@@ -6270,8 +7014,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_014",
    "center": [
-    45.573,
-    89.86
+    -107.273,
+    95.732
    ],
    "size": [
     0.55,
@@ -6289,8 +7033,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_015",
    "center": [
-    48.564,
-    89.745
+    -104.279,
+    95.617
    ],
    "size": [
     0.45,
@@ -6307,8 +7051,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_015",
    "center": [
-    48.564,
-    89.745
+    -104.279,
+    95.617
    ],
    "size": [
     0.55,
@@ -6326,8 +7070,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_016",
    "center": [
-    51.555,
-    89.63
+    -101.286,
+    95.502
    ],
    "size": [
     0.45,
@@ -6344,8 +7088,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_016",
    "center": [
-    51.555,
-    89.63
+    -101.286,
+    95.502
    ],
    "size": [
     0.55,
@@ -6363,8 +7107,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_017",
    "center": [
-    54.545,
-    89.515
+    -98.292,
+    95.387
    ],
    "size": [
     0.45,
@@ -6381,8 +7125,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_017",
    "center": [
-    54.545,
-    89.515
+    -98.292,
+    95.387
    ],
    "size": [
     0.55,
@@ -6400,8 +7144,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_018",
    "center": [
-    57.536,
-    89.4
+    -95.298,
+    95.272
    ],
    "size": [
     0.45,
@@ -6418,8 +7162,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_018",
    "center": [
-    57.536,
-    89.4
+    -95.298,
+    95.272
    ],
    "size": [
     0.55,
@@ -6437,8 +7181,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_019",
    "center": [
-    60.527,
-    89.285
+    -92.305,
+    95.157
    ],
    "size": [
     0.45,
@@ -6455,8 +7199,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_019",
    "center": [
-    60.527,
-    89.285
+    -92.305,
+    95.157
    ],
    "size": [
     0.55,
@@ -6474,8 +7218,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_020",
    "center": [
-    63.518,
-    89.17
+    -89.311,
+    95.042
    ],
    "size": [
     0.45,
@@ -6492,8 +7236,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_020",
    "center": [
-    63.518,
-    89.17
+    -89.311,
+    95.042
    ],
    "size": [
     0.55,
@@ -6511,8 +7255,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_021",
    "center": [
-    66.508,
-    89.056
+    -86.317,
+    94.927
    ],
    "size": [
     0.45,
@@ -6529,8 +7273,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_021",
    "center": [
-    66.508,
-    89.056
+    -86.317,
+    94.927
    ],
    "size": [
     0.55,
@@ -6548,8 +7292,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_022",
    "center": [
-    69.499,
-    88.941
+    -83.323,
+    94.812
    ],
    "size": [
     0.45,
@@ -6566,8 +7310,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_022",
    "center": [
-    69.499,
-    88.941
+    -83.323,
+    94.812
    ],
    "size": [
     0.55,
@@ -6585,8 +7329,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_023",
    "center": [
-    72.49,
-    88.826
+    -80.33,
+    94.697
    ],
    "size": [
     0.45,
@@ -6603,8 +7347,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_023",
    "center": [
-    72.49,
-    88.826
+    -80.33,
+    94.697
    ],
    "size": [
     0.55,
@@ -6622,8 +7366,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_024",
    "center": [
-    75.481,
-    88.711
+    -77.336,
+    94.582
    ],
    "size": [
     0.45,
@@ -6640,8 +7384,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_024",
    "center": [
-    75.481,
-    88.711
+    -77.336,
+    94.582
    ],
    "size": [
     0.55,
@@ -6659,8 +7403,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_025",
    "center": [
-    78.471,
-    88.596
+    -74.342,
+    94.467
    ],
    "size": [
     0.45,
@@ -6677,8 +7421,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_025",
    "center": [
-    78.471,
-    88.596
+    -74.342,
+    94.467
    ],
    "size": [
     0.55,
@@ -6696,8 +7440,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_026",
    "center": [
-    81.462,
-    88.481
+    -71.349,
+    94.352
    ],
    "size": [
     0.45,
@@ -6714,8 +7458,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_026",
    "center": [
-    81.462,
-    88.481
+    -71.349,
+    94.352
    ],
    "size": [
     0.55,
@@ -6733,8 +7477,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_027",
    "center": [
-    84.453,
-    88.366
+    -68.355,
+    94.236
    ],
    "size": [
     0.45,
@@ -6751,8 +7495,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_027",
    "center": [
-    84.453,
-    88.366
+    -68.355,
+    94.236
    ],
    "size": [
     0.55,
@@ -6770,8 +7514,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_028",
    "center": [
-    87.444,
-    88.251
+    -65.361,
+    94.121
    ],
    "size": [
     0.45,
@@ -6788,8 +7532,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_028",
    "center": [
-    87.444,
-    88.251
+    -65.361,
+    94.121
    ],
    "size": [
     0.55,
@@ -6807,8 +7551,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_029",
    "center": [
-    90.434,
-    88.136
+    -62.368,
+    94.006
    ],
    "size": [
     0.45,
@@ -6825,8 +7569,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_029",
    "center": [
-    90.434,
-    88.136
+    -62.368,
+    94.006
    ],
    "size": [
     0.55,
@@ -6844,8 +7588,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_030",
    "center": [
-    93.425,
-    88.022
+    -59.374,
+    93.891
    ],
    "size": [
     0.45,
@@ -6862,8 +7606,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_030",
    "center": [
-    93.425,
-    88.022
+    -59.374,
+    93.891
    ],
    "size": [
     0.55,
@@ -6881,8 +7625,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_031",
    "center": [
-    96.416,
-    87.907
+    -56.38,
+    93.776
    ],
    "size": [
     0.45,
@@ -6899,8 +7643,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_031",
    "center": [
-    96.416,
-    87.907
+    -56.38,
+    93.776
    ],
    "size": [
     0.55,
@@ -6918,8 +7662,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_032",
    "center": [
-    99.407,
-    87.792
+    -53.387,
+    93.661
    ],
    "size": [
     0.45,
@@ -6936,8 +7680,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_032",
    "center": [
-    99.407,
-    87.792
+    -53.387,
+    93.661
    ],
    "size": [
     0.55,
@@ -6955,8 +7699,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_033",
    "center": [
-    102.397,
-    87.677
+    -50.393,
+    93.546
    ],
    "size": [
     0.45,
@@ -6973,8 +7717,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_033",
    "center": [
-    102.397,
-    87.677
+    -50.393,
+    93.546
    ],
    "size": [
     0.55,
@@ -6992,8 +7736,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_034",
    "center": [
-    105.388,
-    87.562
+    -47.399,
+    93.431
    ],
    "size": [
     0.45,
@@ -7010,8 +7754,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_034",
    "center": [
-    105.388,
-    87.562
+    -47.399,
+    93.431
    ],
    "size": [
     0.55,
@@ -7029,8 +7773,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_035",
    "center": [
-    108.379,
-    87.447
+    -44.405,
+    93.316
    ],
    "size": [
     0.45,
@@ -7047,8 +7791,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_035",
    "center": [
-    108.379,
-    87.447
+    -44.405,
+    93.316
    ],
    "size": [
     0.55,
@@ -7066,8 +7810,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_036",
    "center": [
-    111.37,
-    87.332
+    -41.412,
+    93.201
    ],
    "size": [
     0.45,
@@ -7084,8 +7828,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_036",
    "center": [
-    111.37,
-    87.332
+    -41.412,
+    93.201
    ],
    "size": [
     0.55,
@@ -7103,8 +7847,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_037",
    "center": [
-    114.36,
-    87.217
+    -38.418,
+    93.086
    ],
    "size": [
     0.45,
@@ -7121,8 +7865,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_037",
    "center": [
-    114.36,
-    87.217
+    -38.418,
+    93.086
    ],
    "size": [
     0.55,
@@ -7140,8 +7884,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_038",
    "center": [
-    117.351,
-    87.102
+    -35.424,
+    92.971
    ],
    "size": [
     0.45,
@@ -7158,8 +7902,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_038",
    "center": [
-    117.351,
-    87.102
+    -35.424,
+    92.971
    ],
    "size": [
     0.55,
@@ -7177,8 +7921,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_039",
    "center": [
-    120.342,
-    86.987
+    -32.431,
+    92.856
    ],
    "size": [
     0.45,
@@ -7195,8 +7939,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_039",
    "center": [
-    120.342,
-    86.987
+    -32.431,
+    92.856
    ],
    "size": [
     0.55,
@@ -7214,8 +7958,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_040",
    "center": [
-    123.333,
-    86.873
+    -29.437,
+    92.741
    ],
    "size": [
     0.45,
@@ -7232,8 +7976,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_040",
    "center": [
-    123.333,
-    86.873
+    -29.437,
+    92.741
    ],
    "size": [
     0.55,
@@ -7251,8 +7995,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_041",
    "center": [
-    126.323,
-    86.758
+    -26.443,
+    92.626
    ],
    "size": [
     0.45,
@@ -7269,8 +8013,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_041",
    "center": [
-    126.323,
-    86.758
+    -26.443,
+    92.626
    ],
    "size": [
     0.55,
@@ -7288,8 +8032,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_042",
    "center": [
-    129.314,
-    86.643
+    -23.45,
+    92.511
    ],
    "size": [
     0.45,
@@ -7306,8 +8050,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_042",
    "center": [
-    129.314,
-    86.643
+    -23.45,
+    92.511
    ],
    "size": [
     0.55,
@@ -7325,8 +8069,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_043",
    "center": [
-    132.305,
-    86.528
+    -20.456,
+    92.396
    ],
    "size": [
     0.45,
@@ -7343,8 +8087,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_043",
    "center": [
-    132.305,
-    86.528
+    -20.456,
+    92.396
    ],
    "size": [
     0.55,
@@ -7362,8 +8106,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_044",
    "center": [
-    135.296,
-    86.413
+    -17.462,
+    92.281
    ],
    "size": [
     0.45,
@@ -7380,8 +8124,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_044",
    "center": [
-    135.296,
-    86.413
+    -17.462,
+    92.281
    ],
    "size": [
     0.55,
@@ -7399,8 +8143,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_045",
    "center": [
-    138.286,
-    86.298
+    -14.469,
+    92.166
    ],
    "size": [
     0.45,
@@ -7417,8 +8161,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_045",
    "center": [
-    138.286,
-    86.298
+    -14.469,
+    92.166
    ],
    "size": [
     0.55,
@@ -7436,8 +8180,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_046",
    "center": [
-    141.277,
-    86.183
+    -11.475,
+    92.051
    ],
    "size": [
     0.45,
@@ -7454,8 +8198,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_046",
    "center": [
-    141.277,
-    86.183
+    -11.475,
+    92.051
    ],
    "size": [
     0.55,
@@ -7473,8 +8217,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_047",
    "center": [
-    144.268,
-    86.068
+    -8.481,
+    91.936
    ],
    "size": [
     0.45,
@@ -7491,8 +8235,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_047",
    "center": [
-    144.268,
-    86.068
+    -8.481,
+    91.936
    ],
    "size": [
     0.55,
@@ -7510,8 +8254,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_048",
    "center": [
-    147.259,
-    85.953
+    -5.487,
+    91.821
    ],
    "size": [
     0.45,
@@ -7528,8 +8272,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_048",
    "center": [
-    147.259,
-    85.953
+    -5.487,
+    91.821
    ],
    "size": [
     0.55,
@@ -7547,8 +8291,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_049",
    "center": [
-    150.249,
-    85.839
+    -2.494,
+    91.706
    ],
    "size": [
     0.45,
@@ -7565,8 +8309,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_049",
    "center": [
-    150.249,
-    85.839
+    -2.494,
+    91.706
    ],
    "size": [
     0.55,
@@ -7584,8 +8328,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_050",
    "center": [
-    153.24,
-    85.724
+    0.5,
+    91.591
    ],
    "size": [
     0.45,
@@ -7602,8 +8346,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_050",
    "center": [
-    153.24,
-    85.724
+    0.5,
+    91.591
    ],
    "size": [
     0.55,
@@ -7621,8 +8365,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_051",
    "center": [
-    156.231,
-    85.609
+    3.494,
+    91.476
    ],
    "size": [
     0.45,
@@ -7639,8 +8383,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_051",
    "center": [
-    156.231,
-    85.609
+    3.494,
+    91.476
    ],
    "size": [
     0.55,
@@ -7658,8 +8402,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_052",
    "center": [
-    159.222,
-    85.494
+    6.487,
+    91.361
    ],
    "size": [
     0.45,
@@ -7676,8 +8420,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_052",
    "center": [
-    159.222,
-    85.494
+    6.487,
+    91.361
    ],
    "size": [
     0.55,
@@ -7695,8 +8439,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_053",
    "center": [
-    162.212,
-    85.379
+    9.481,
+    91.246
    ],
    "size": [
     0.45,
@@ -7713,8 +8457,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_053",
    "center": [
-    162.212,
-    85.379
+    9.481,
+    91.246
    ],
    "size": [
     0.55,
@@ -7732,8 +8476,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_054",
    "center": [
-    165.203,
-    85.264
+    12.475,
+    91.131
    ],
    "size": [
     0.45,
@@ -7750,8 +8494,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_054",
    "center": [
-    165.203,
-    85.264
+    12.475,
+    91.131
    ],
    "size": [
     0.55,
@@ -7769,8 +8513,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_055",
    "center": [
-    168.194,
-    85.149
+    15.468,
+    91.016
    ],
    "size": [
     0.45,
@@ -7787,8 +8531,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_055",
    "center": [
-    168.194,
-    85.149
+    15.468,
+    91.016
    ],
    "size": [
     0.55,
@@ -7806,8 +8550,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_056",
    "center": [
-    171.185,
-    85.034
+    18.462,
+    90.901
    ],
    "size": [
     0.45,
@@ -7824,8 +8568,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_056",
    "center": [
-    171.185,
-    85.034
+    18.462,
+    90.901
    ],
    "size": [
     0.55,
@@ -7843,8 +8587,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_057",
    "center": [
-    174.175,
-    84.919
+    21.456,
+    90.786
    ],
    "size": [
     0.45,
@@ -7861,8 +8605,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_057",
    "center": [
-    174.175,
-    84.919
+    21.456,
+    90.786
    ],
    "size": [
     0.55,
@@ -7880,8 +8624,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_058",
    "center": [
-    177.166,
-    84.805
+    24.45,
+    90.671
    ],
    "size": [
     0.45,
@@ -7898,8 +8642,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_058",
    "center": [
-    177.166,
-    84.805
+    24.45,
+    90.671
    ],
    "size": [
     0.55,
@@ -7917,8 +8661,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_059",
    "center": [
-    180.157,
-    84.69
+    27.443,
+    90.556
    ],
    "size": [
     0.45,
@@ -7935,8 +8679,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_059",
    "center": [
-    180.157,
-    84.69
+    27.443,
+    90.556
    ],
    "size": [
     0.55,
@@ -7954,8 +8698,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_060",
    "center": [
-    183.148,
-    84.575
+    30.437,
+    90.441
    ],
    "size": [
     0.45,
@@ -7972,8 +8716,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_060",
    "center": [
-    183.148,
-    84.575
+    30.437,
+    90.441
    ],
    "size": [
     0.55,
@@ -7991,8 +8735,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_061",
    "center": [
-    186.138,
-    84.46
+    33.431,
+    90.326
    ],
    "size": [
     0.45,
@@ -8009,8 +8753,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_061",
    "center": [
-    186.138,
-    84.46
+    33.431,
+    90.326
    ],
    "size": [
     0.55,
@@ -8028,8 +8772,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_062",
    "center": [
-    189.129,
-    84.345
+    36.424,
+    90.211
    ],
    "size": [
     0.45,
@@ -8046,8 +8790,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_062",
    "center": [
-    189.129,
-    84.345
+    36.424,
+    90.211
    ],
    "size": [
     0.55,
@@ -8065,8 +8809,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_063",
    "center": [
-    192.12,
-    84.23
+    39.418,
+    90.096
    ],
    "size": [
     0.45,
@@ -8083,8 +8827,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_063",
    "center": [
-    192.12,
-    84.23
+    39.418,
+    90.096
    ],
    "size": [
     0.55,
@@ -8102,8 +8846,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_064",
    "center": [
-    195.111,
-    84.115
+    42.412,
+    89.981
    ],
    "size": [
     0.45,
@@ -8120,8 +8864,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_064",
    "center": [
-    195.111,
-    84.115
+    42.412,
+    89.981
    ],
    "size": [
     0.55,
@@ -8139,8 +8883,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_065",
    "center": [
-    198.101,
-    84.0
+    45.405,
+    89.866
    ],
    "size": [
     0.45,
@@ -8157,8 +8901,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_065",
    "center": [
-    198.101,
-    84.0
+    45.405,
+    89.866
    ],
    "size": [
     0.55,
@@ -8176,8 +8920,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_066",
    "center": [
-    201.092,
-    83.885
+    48.399,
+    89.751
    ],
    "size": [
     0.45,
@@ -8194,8 +8938,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_066",
    "center": [
-    201.092,
-    83.885
+    48.399,
+    89.751
    ],
    "size": [
     0.55,
@@ -8213,8 +8957,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_067",
    "center": [
-    204.083,
-    83.77
+    51.393,
+    89.636
    ],
    "size": [
     0.45,
@@ -8231,8 +8975,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_067",
    "center": [
-    204.083,
-    83.77
+    51.393,
+    89.636
    ],
    "size": [
     0.55,
@@ -8250,8 +8994,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_068",
    "center": [
-    207.074,
-    83.656
+    54.386,
+    89.521
    ],
    "size": [
     0.45,
@@ -8268,8 +9012,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_068",
    "center": [
-    207.074,
-    83.656
+    54.386,
+    89.521
    ],
    "size": [
     0.55,
@@ -8287,8 +9031,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_069",
    "center": [
-    210.064,
-    83.541
+    57.38,
+    89.406
    ],
    "size": [
     0.45,
@@ -8305,8 +9049,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_069",
    "center": [
-    210.064,
-    83.541
+    57.38,
+    89.406
    ],
    "size": [
     0.55,
@@ -8324,8 +9068,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_070",
    "center": [
-    213.055,
-    83.426
+    60.374,
+    89.291
    ],
    "size": [
     0.45,
@@ -8342,8 +9086,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_070",
    "center": [
-    213.055,
-    83.426
+    60.374,
+    89.291
    ],
    "size": [
     0.55,
@@ -8361,8 +9105,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_071",
    "center": [
-    216.046,
-    83.311
+    63.368,
+    89.176
    ],
    "size": [
     0.45,
@@ -8379,8 +9123,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_071",
    "center": [
-    216.046,
-    83.311
+    63.368,
+    89.176
    ],
    "size": [
     0.55,
@@ -8399,7 +9143,7 @@
    "name": "NorthBoundary_Wall_E",
    "line": [
     [
-     213.055,
+     213.052,
      83.426
     ],
     [
@@ -8413,6 +9157,1893 @@
    "slot": "M_Block_PaleYellow",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed; passage in the wall between the last two pillars west of the booth",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_072",
+   "center": [
+    66.361,
+    89.061
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_072",
+   "center": [
+    66.361,
+    89.061
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_073",
+   "center": [
+    69.355,
+    88.946
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_073",
+   "center": [
+    69.355,
+    88.946
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_074",
+   "center": [
+    72.349,
+    88.831
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_074",
+   "center": [
+    72.349,
+    88.831
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_075",
+   "center": [
+    75.342,
+    88.716
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_075",
+   "center": [
+    75.342,
+    88.716
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_076",
+   "center": [
+    78.336,
+    88.601
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_076",
+   "center": [
+    78.336,
+    88.601
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_077",
+   "center": [
+    81.33,
+    88.486
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_077",
+   "center": [
+    81.33,
+    88.486
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_078",
+   "center": [
+    84.323,
+    88.371
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_078",
+   "center": [
+    84.323,
+    88.371
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_079",
+   "center": [
+    87.317,
+    88.256
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_079",
+   "center": [
+    87.317,
+    88.256
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_080",
+   "center": [
+    90.311,
+    88.141
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_080",
+   "center": [
+    90.311,
+    88.141
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_081",
+   "center": [
+    93.304,
+    88.026
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_081",
+   "center": [
+    93.304,
+    88.026
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_082",
+   "center": [
+    96.298,
+    87.911
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_082",
+   "center": [
+    96.298,
+    87.911
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_083",
+   "center": [
+    99.292,
+    87.796
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_083",
+   "center": [
+    99.292,
+    87.796
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_084",
+   "center": [
+    102.286,
+    87.681
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_084",
+   "center": [
+    102.286,
+    87.681
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_085",
+   "center": [
+    105.279,
+    87.566
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_085",
+   "center": [
+    105.279,
+    87.566
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_086",
+   "center": [
+    108.273,
+    87.451
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_086",
+   "center": [
+    108.273,
+    87.451
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_087",
+   "center": [
+    111.267,
+    87.336
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_087",
+   "center": [
+    111.267,
+    87.336
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_088",
+   "center": [
+    114.26,
+    87.221
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_088",
+   "center": [
+    114.26,
+    87.221
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_089",
+   "center": [
+    117.254,
+    87.106
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_089",
+   "center": [
+    117.254,
+    87.106
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_090",
+   "center": [
+    120.248,
+    86.991
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_090",
+   "center": [
+    120.248,
+    86.991
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_091",
+   "center": [
+    123.241,
+    86.876
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_091",
+   "center": [
+    123.241,
+    86.876
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_092",
+   "center": [
+    126.235,
+    86.761
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_092",
+   "center": [
+    126.235,
+    86.761
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_093",
+   "center": [
+    129.229,
+    86.646
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_093",
+   "center": [
+    129.229,
+    86.646
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_094",
+   "center": [
+    132.222,
+    86.531
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_094",
+   "center": [
+    132.222,
+    86.531
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_095",
+   "center": [
+    135.216,
+    86.416
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_095",
+   "center": [
+    135.216,
+    86.416
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_096",
+   "center": [
+    138.21,
+    86.301
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_096",
+   "center": [
+    138.21,
+    86.301
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_097",
+   "center": [
+    141.204,
+    86.186
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_097",
+   "center": [
+    141.204,
+    86.186
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_098",
+   "center": [
+    144.197,
+    86.071
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_098",
+   "center": [
+    144.197,
+    86.071
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_099",
+   "center": [
+    147.191,
+    85.956
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_099",
+   "center": [
+    147.191,
+    85.956
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_100",
+   "center": [
+    150.185,
+    85.841
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_100",
+   "center": [
+    150.185,
+    85.841
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_101",
+   "center": [
+    153.178,
+    85.726
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_101",
+   "center": [
+    153.178,
+    85.726
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_102",
+   "center": [
+    156.172,
+    85.611
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_102",
+   "center": [
+    156.172,
+    85.611
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_103",
+   "center": [
+    159.166,
+    85.496
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_103",
+   "center": [
+    159.166,
+    85.496
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_104",
+   "center": [
+    162.159,
+    85.381
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_104",
+   "center": [
+    162.159,
+    85.381
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_105",
+   "center": [
+    165.153,
+    85.266
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_105",
+   "center": [
+    165.153,
+    85.266
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_106",
+   "center": [
+    168.147,
+    85.151
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_106",
+   "center": [
+    168.147,
+    85.151
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_107",
+   "center": [
+    171.14,
+    85.036
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_107",
+   "center": [
+    171.14,
+    85.036
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_108",
+   "center": [
+    174.134,
+    84.921
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_108",
+   "center": [
+    174.134,
+    84.921
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_109",
+   "center": [
+    177.128,
+    84.806
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_109",
+   "center": [
+    177.128,
+    84.806
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_110",
+   "center": [
+    180.122,
+    84.691
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_110",
+   "center": [
+    180.122,
+    84.691
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_111",
+   "center": [
+    183.115,
+    84.576
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_111",
+   "center": [
+    183.115,
+    84.576
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_112",
+   "center": [
+    186.109,
+    84.461
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_112",
+   "center": [
+    186.109,
+    84.461
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_113",
+   "center": [
+    189.103,
+    84.346
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_113",
+   "center": [
+    189.103,
+    84.346
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_114",
+   "center": [
+    192.096,
+    84.231
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_114",
+   "center": [
+    192.096,
+    84.231
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_115",
+   "center": [
+    195.09,
+    84.116
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_115",
+   "center": [
+    195.09,
+    84.116
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_116",
+   "center": [
+    198.084,
+    84.001
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_116",
+   "center": [
+    198.084,
+    84.001
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_117",
+   "center": [
+    201.077,
+    83.886
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_117",
+   "center": [
+    201.077,
+    83.886
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_118",
+   "center": [
+    204.071,
+    83.771
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_118",
+   "center": [
+    204.071,
+    83.771
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_119",
+   "center": [
+    207.065,
+    83.656
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_119",
+   "center": [
+    207.065,
+    83.656
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_120",
+   "center": [
+    210.059,
+    83.541
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_120",
+   "center": [
+    210.059,
+    83.541
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_121",
+   "center": [
+    213.052,
+    83.426
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_121",
+   "center": [
+    213.052,
+    83.426
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_Pillar_122",
+   "center": [
+    216.046,
+    83.311
+   ],
+   "size": [
+    0.45,
+    0.45,
+    2.5
+   ],
+   "dir_deg": -2.2,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "NorthBoundary_PillarCap_122",
+   "center": [
+    216.046,
+    83.311
+   ],
+   "size": [
+    0.55,
+    0.55,
+    0.08
+   ],
+   "dir_deg": -2.2,
+   "z_rel": 2.5,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "confidence": "low"
   }
  ]
 }
