@@ -5375,44 +5375,44 @@
    "type": "box",
    "name": "F2_Lab_DeskWindow",
    "center": [
-    184.288,
-    12.023
+    183.25,
+    12.064
    ],
    "dir_deg": -2.2838545,
    "size": [
-    6.6000000000000005,
+    5.0,
     0.7,
     0.75
    ],
    "z0": 9.7,
    "material": "white",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_Lab_DeskRow0",
    "center": [
-    184.476,
-    9.214
+    183.25,
+    9.263
    ],
    "dir_deg": -2.2838545,
    "size": [
-    4.6,
+    4.2,
     0.7,
     0.75
    ],
    "z0": 9.7,
    "material": "white",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_Lab_Chair00",
    "center": [
-    182.653,
-    8.686
+    181.45,
+    8.734
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5429,8 +5429,8 @@
    "type": "box",
    "name": "F2_Lab_Chair01",
    "center": [
-    183.553,
-    8.65
+    182.35,
+    8.698
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5447,8 +5447,8 @@
    "type": "box",
    "name": "F2_Lab_Chair02",
    "center": [
-    184.452,
-    8.614
+    183.25,
+    8.662
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5465,8 +5465,8 @@
    "type": "box",
    "name": "F2_Lab_Chair03",
    "center": [
-    185.351,
-    8.578
+    184.15,
+    8.626
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5483,8 +5483,8 @@
    "type": "box",
    "name": "F2_Lab_Chair04",
    "center": [
-    186.25,
-    8.542
+    185.05,
+    8.59
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5501,26 +5501,26 @@
    "type": "box",
    "name": "F2_Lab_DeskRow1",
    "center": [
-    184.52,
-    10.313
+    183.25,
+    10.364
    ],
    "dir_deg": -2.2838545,
    "size": [
-    4.6,
+    4.2,
     0.7,
     0.75
    ],
    "z0": 9.7,
    "material": "white",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_Lab_Chair10",
    "center": [
-    182.697,
-    9.785
+    181.45,
+    9.835
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5537,8 +5537,8 @@
    "type": "box",
    "name": "F2_Lab_Chair11",
    "center": [
-    183.596,
-    9.749
+    182.35,
+    9.799
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5555,8 +5555,8 @@
    "type": "box",
    "name": "F2_Lab_Chair12",
    "center": [
-    184.496,
-    9.713
+    183.25,
+    9.763
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5573,8 +5573,8 @@
    "type": "box",
    "name": "F2_Lab_Chair13",
    "center": [
-    185.395,
-    9.677
+    184.15,
+    9.727
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5591,8 +5591,8 @@
    "type": "box",
    "name": "F2_Lab_Chair14",
    "center": [
-    186.294,
-    9.641
+    185.05,
+    9.691
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5609,26 +5609,26 @@
    "type": "box",
    "name": "F2_Lab_DeskRow2",
    "center": [
-    184.553,
-    11.162
+    183.25,
+    11.214
    ],
    "dir_deg": -2.2838545,
    "size": [
-    4.6,
+    4.2,
     0.7,
     0.75
    ],
    "z0": 9.7,
    "material": "white",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_Lab_Chair20",
    "center": [
-    182.731,
-    10.634
+    181.45,
+    10.685
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5645,8 +5645,8 @@
    "type": "box",
    "name": "F2_Lab_Chair21",
    "center": [
-    183.63,
-    10.598
+    182.35,
+    10.649
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5663,8 +5663,8 @@
    "type": "box",
    "name": "F2_Lab_Chair22",
    "center": [
-    184.529,
-    10.562
+    183.25,
+    10.613
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5681,8 +5681,8 @@
    "type": "box",
    "name": "F2_Lab_Chair23",
    "center": [
-    185.429,
-    10.527
+    184.15,
+    10.578
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5699,8 +5699,8 @@
    "type": "box",
    "name": "F2_Lab_Chair24",
    "center": [
-    186.328,
-    10.491
+    185.05,
+    10.542
    ],
    "dir_deg": -2.2838545,
    "size": [
@@ -5717,8 +5717,8 @@
    "type": "box",
    "name": "F2_Lab_TV",
    "center": [
-    180.761,
-    10.413
+    185.978,
+    8.85
    ],
    "dir_deg": 87.7161455,
    "size": [
@@ -5728,15 +5728,15 @@
    ],
    "z0": 10.899999999999999,
    "material": "metal",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_Lab_Whiteboard",
    "center": [
-    187.685,
-    10.136
+    185.998,
+    10.9
    ],
    "dir_deg": 87.7161455,
    "size": [
@@ -5746,46 +5746,520 @@
    ],
    "z0": 10.6,
    "material": "white",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_Lab_WallAccent",
    "center": [
-    180.727,
-    10.314
+    183.3,
+    7.804
    ],
-   "dir_deg": 87.7161455,
+   "dir_deg": -2.2838545,
    "size": [
-    4.4,
+    5.3,
     0.02,
     2.8
    ],
    "z0": 9.7,
    "material": "accent",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   },
   {
-   "type": "int_wall",
-   "name": "F2_Room_N_Lab_E",
-   "line": [
-    [
-     187.719,
-     7.733
-    ],
-    [
-     187.911,
-     12.529
-    ]
+   "type": "box",
+   "name": "F2_Lab_PC00",
+   "center": [
+    181.45,
+    9.455
    ],
-   "z0": 9.6,
-   "z1": 12.62,
-   "thk": 0.2,
-   "openings": [],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC01",
+   "center": [
+    182.35,
+    9.419
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC02",
+   "center": [
+    183.25,
+    9.383
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC03",
+   "center": [
+    184.15,
+    9.347
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC04",
+   "center": [
+    185.05,
+    9.311
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC10",
+   "center": [
+    181.45,
+    10.556
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC11",
+   "center": [
+    182.35,
+    10.52
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC12",
+   "center": [
+    183.25,
+    10.484
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC13",
+   "center": [
+    184.15,
+    10.448
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC14",
+   "center": [
+    185.05,
+    10.412
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC20",
+   "center": [
+    181.45,
+    11.406
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC21",
+   "center": [
+    182.35,
+    11.37
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC22",
+   "center": [
+    183.25,
+    11.334
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC23",
+   "center": [
+    184.15,
+    11.298
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_PC24",
+   "center": [
+    185.05,
+    11.262
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.55,
+    0.05,
+    0.35
+   ],
+   "z0": 10.55,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "pc_monitor",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Rack",
+   "center": [
+    180.931,
+    12.05
+   ],
+   "dir_deg": 87.7161455,
+   "size": [
+    0.6,
+    0.45,
+    0.6
+   ],
+   "z0": 11.55,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "network_rack_wall",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_DistBoard",
+   "center": [
+    180.751,
+    12.05
+   ],
+   "dir_deg": 87.7161455,
+   "size": [
+    0.35,
+    0.1,
+    0.45
+   ],
+   "z0": 10.85,
    "material": "white",
-   "evidence": "2026-09-27 approx.: prototype computer lab (ROUTE 074805359, photos 0923_1010xx-1014xx, 081045/081048): white desks along the window wall and in rows, black chairs, TV at the front, whiteboard on the side wall; room and door from INT_C_Floors (F2 north, door N1); sizes not measured",
+   "slot": "M_Plastic_White",
+   "ue_asset": "distribution_board",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Bulkhead",
+   "center": [
+    183.3,
+    12.37
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    5.3,
+    0.5,
+    0.4
+   ],
+   "z0": 12.22,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_CCTV",
+   "center": [
+    185.718,
+    12.1
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.12,
+    0.12,
+    0.1
+   ],
+   "z0": 12.52,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cctv_dome",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_Bin",
+   "center": [
+    184.4,
+    7.95
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.3,
+    0.3,
+    0.4
+   ],
+   "z0": 9.7,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Green",
+   "ue_asset": "bin_generic",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_HeatPipe",
+   "center": [
+    183.3,
+    12.47
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    5.2,
+    0.04,
+    0.04
+   ],
+   "z0": 9.8,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "ue_asset": "heating_pipe",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_CeilPanel_0",
+   "center": [
+    182.0,
+    9.7
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.6,
+    0.6,
+    0.03
+   ],
+   "z0": 12.59,
+   "material": "white",
+   "slot": "M_Lamp_Diffuser",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_CeilPanel_1",
+   "center": [
+    184.5,
+    9.6
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.6,
+    0.6,
+    0.03
+   ],
+   "z0": 12.59,
+   "material": "white",
+   "slot": "M_Lamp_Diffuser",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_CeilPanel_2",
+   "center": [
+    182.0,
+    11.5
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.6,
+    0.6,
+    0.03
+   ],
+   "z0": 12.59,
+   "material": "white",
+   "slot": "M_Lamp_Diffuser",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Lab_CeilPanel_3",
+   "center": [
+    184.5,
+    11.4
+   ],
+   "dir_deg": -2.2838545,
+   "size": [
+    0.6,
+    0.6,
+    0.03
+   ],
+   "z0": 12.59,
+   "material": "white",
+   "slot": "M_Lamp_Diffuser",
+   "evidence": "classroom frames 20260924_074805359 f00011/f00225/f00498/f00673 (whiteboard + TV on the front wall, green accent wall, network rack + board, sloped bulkhead on the window wall, PCs on the desks)",
    "confidence": "low"
   }
  ]
