@@ -101,8 +101,8 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] H.6 Path along the sports hall from the garden to C's west side (benches, plinth, trees) — approx., in the model (SITE_Sports HallRowTree, HallCPassage)
 
 ## 6. Garden (zone `Garden`)
-- [ ] GD.1 West gazebo: posts, brick parapet, openings, roof and finial — approx., in the model (GBS_Garden_Gazebo)
-- [ ] GD.2 East gazebo — approx., in the model (GBS_Garden_Gazebo)
+- [ ] GD.1 West gazebo: posts, brick parapet, openings, roof and finial — approx., in the model (GBS_Garden_Gazebo) | [B] P2 2026-09-28: parts with their own slots (red brick-tile parapet, timber bench, white posts, white fascia with the dark triangular shingle tabs, flat timber ceiling, shingle roof), eave (fascia bottom) 2.77 m from the spec notes; plan within ~0.3 m of the Google z20 ortho; checked against 081924271 t1-t18 frames by eye
+- [ ] GD.2 East gazebo — approx., in the model (GBS_Garden_Gazebo) | [B] P2 2026-09-28: parts with their own slots (red brick-tile parapet, timber bench, white posts, white fascia with the dark triangular shingle tabs, flat timber ceiling, shingle roof), eave (fascia bottom) 2.77 m from the spec notes; plan within ~0.3 m of the Google z20 ortho; checked against 081924271 t1-t18 frames by eye
 - [ ] GD.3 Hedge maze: hedge blocks and paths — approx., in the model (GBS_Garden_Hedge)
 - [ ] GD.4 Hedge arches — approx., in the model (GBS_Garden_Arch)
 - [ ] GD.5 South pergola alley: arches, radial paths, the red wall with a stair at its end — approx., in the model (GBS_Garden_PergolaWalk)

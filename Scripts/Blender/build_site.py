@@ -268,6 +268,9 @@ class Site:
         self.emit(el, bm, COL["hedge"], (c.x, c.y, z0))
 
     def b_gazebo(self, el):
+        """Octagonal garden gazebo (SITE_Garden Gazebo_1/2): floor, white posts + ring beam, red brick-tile parapet
+        with the timber bench inside, white fascia with the dark triangular shingle tabs (owner frames 081924271 t1-t18,
+        081946180), shingle pyramid roof. `eave_h`: fascia bottom above the floor (m); parts get their own slots."""
         c = Vector(el["center"])
         N = int(el.get("sides", 8))
         R = el["across_flats"] / 2 / math.cos(math.pi / N)
@@ -276,22 +279,22 @@ class Site:
         fh, ph, pw = el.get("floor_h", 0.15), el.get("post_h", 2.4), el.get("post_w", 0.25)
         par_h, par_t = el.get("parapet_h", 0.8), el.get("parapet_t", 0.25)
         open_sides = set(el.get("open_sides", []))
+        el = dict(el, slots={"_Floor": "M_Paving_Diamond_Tile", "_Parapet": "M_Tile_Brick_Red", "_Bench": "M_Wood_Stained",
+                             "_Frame": "M_Paint_White", "_Ceiling": "M_Wood_Stained", "_FasciaTabs": "M_Shingle_Brown", "_Fascia": "M_Paint_White",
+                             "_Roof": "M_Shingle_Brown", **(el.get("slots") or {})})
 
         def poly(r, z, extra=0.0):
             return [Vector((c.x + r * math.cos(rot + math.pi / N + 2 * math.pi * k / N + extra),
                             c.y + r * math.sin(rot + math.pi / N + 2 * math.pi * k / N + extra), z)) for k in range(N)]
+        nm = el.get("name", "Gazebo")
         bm = bmesh.new()   # floor platform
         lo, hi = [bm.verts.new(v) for v in poly(R + 0.1, z0 - BURY)], [bm.verts.new(v) for v in poly(R + 0.1, z0 + fh)]
         _close_loops(bm, [lo, hi])
-        self.emit(dict(el, name=el.get("name", "Gazebo") + "_Floor"), bm, COL["stone"], (c.x, c.y, z0))
-        bm = bmesh.new()   # posts + parapets + ring beam
+        self.emit(dict(el, name=nm + "_Floor"), bm, COL["stone"], (c.x, c.y, z0))
         corners = poly(R, 0)
         zf = z0 + fh
-        for k in range(N):
-            p = corners[k]
-            m = _frame2(Vector((p.x, p.y)), (Vector((c.x, c.y)) - Vector((p.x, p.y))).normalized())
-            box(bm, m, -pw / 2, pw / 2, -pw / 2, pw / 2, zf, zf + ph)
         cw = el.get("opening_clear_w")      # clear opening in an open side (the rest is parapet stubs)
+        bm, bb = bmesh.new(), bmesh.new()   # parapet, bench
         for k in range(N):
             a, b = corners[k], corners[(k + 1) % N]
             A, B = Vector((a.x, a.y)), Vector((b.x, b.y))
@@ -307,25 +310,60 @@ class Site:
             else:
                 box(bm, m, pw / 2, L - pw / 2, -par_t / 2, par_t / 2, zf, zf + par_h)
                 # timber bench inside the parapet (seat 0.45 m, 0.4 m deep); w+ is toward the centre
-                box(bm, m, pw / 2 + 0.05, L - pw / 2 - 0.05, par_t / 2 + 0.01, par_t / 2 + 0.41, zf + 0.40, zf + 0.45)
+                box(bb, m, pw / 2 + 0.05, L - pw / 2 - 0.05, par_t / 2 + 0.01, par_t / 2 + 0.41, zf + 0.40, zf + 0.45)
+        self.emit(dict(el, name=nm + "_Parapet"), bm, COL["brick"], (c.x, c.y, z0))
+        self.emit(dict(el, name=nm + "_Bench"), bb, COL["wood"], (c.x, c.y, z0))
+        bm = bmesh.new()   # posts + ring beam + centre column
+        for k in range(N):
+            p = corners[k]
+            m = _frame2(Vector((p.x, p.y)), (Vector((c.x, c.y)) - Vector((p.x, p.y))).normalized())
+            box(bm, m, -pw / 2, pw / 2, -pw / 2, pw / 2, zf, zf + ph)
         cc = el.get("center_column")
         if cc:
             _cyl(bm, Vector((c.x, c.y)), cc.get("d", 0.2) / 2, zf, zf + ph, 12)
-        rb = 0.22
+        zt = zf + el["eave_h"] if el.get("eave_h") else zf + ph + 0.22     # fascia bottom
+        rb = max(0.05, zt - (zf + ph))
         _ring_band(bm, poly(R + pw / 2 + 0.02, 0), poly(R - pw / 2 - 0.02, 0), zf + ph, zf + ph + rb)
-        self.emit(dict(el, name=el.get("name", "Gazebo") + "_Frame"), bm, COL["white"], (c.x, c.y, z0))
-        bm = bmesh.new()   # pyramid roof with fascia
-        zt = zf + ph + rb
+        self.emit(dict(el, name=nm + "_Frame"), bm, COL["white"], (c.x, c.y, z0))
         ro = (el["roof_across_flats"] / 2 / math.cos(math.pi / N)) if el.get("roof_across_flats") else R + el.get("overhang", 0.4)
+        fas = el.get("fascia_h", 0.15)
+        bm = bmesh.new()   # white fascia band (a ring, so it never overlaps the roof soffit)
+        _ring_band(bm, poly(ro, 0), poly(ro - 0.03, 0), zt, zt + fas)
+        self.emit(dict(el, name=nm + "_Fascia"), bm, COL["white"], (c.x, c.y, z0))
+        bm = bmesh.new()   # flat slatted timber ceiling on the ring beam (pano: ceiling = post-top level)
+        _close_loops(bm, [[bm.verts.new(v) for v in poly(ro - 0.031, zt)],
+                          [bm.verts.new(v) for v in poly(ro - 0.031, zt + 0.02)]])
+        self.emit(dict(el, name=nm + "_Ceiling"), bm, COL["wood"], (c.x, c.y, z0))
+        bm = bmesh.new()   # shingle tabs: dark triangles over the fascia, points down (~0.3 m pitch, ~0.12 m deep)
+        tp, td, tt = el.get("tab_pitch", 0.3), min(el.get("tab_depth", 0.12), fas), 0.012
+        cr = poly(ro, 0)
+        for k in range(N):
+            A, B = Vector((cr[k].x, cr[k].y)), Vector((cr[(k + 1) % N].x, cr[(k + 1) % N].y))
+            L = (B - A).length
+            d = (B - A) / L
+            m = _frame2(A, d)                  # w+ = left of d = toward the centre for this CCW ring
+            n = max(1, round(L / tp))
+            for j in range(n):
+                u0, u1 = L * j / n, L * (j + 1) / n
+                tri = [(u0, zt + fas), (u1, zt + fas), ((u0 + u1) / 2, zt + fas - td)]
+                fr = [bm.verts.new(m @ Vector((u, -0.003 - tt, 0.0)) + Vector((0, 0, z))) for u, z in tri]
+                bk = [bm.verts.new(m @ Vector((u, -0.003, 0.0)) + Vector((0, 0, z))) for u, z in tri]
+                bm.faces.new(fr)
+                bm.faces.new(list(reversed(bk)))
+                for i in range(3):
+                    bm.faces.new((fr[(i + 1) % 3], fr[i], bk[i], bk[(i + 1) % 3]))
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+        self.emit(dict(el, name=nm + "_FasciaTabs"), bm, COL["roof"], (c.x, c.y, z0))
+        bm = bmesh.new()   # pyramid roof above the fascia
+        zr = zt + fas
         apo = ro * math.cos(math.pi / N)
-        apex = Vector((c.x, c.y, zt + 0.15 + apo * math.tan(math.radians(el.get("roof_pitch", 30)))))
-        bot = [bm.verts.new(v) for v in poly(ro, zt)]
-        top = [bm.verts.new(v) for v in poly(ro, zt + 0.15)]
-        _close_loops(bm, [bot, top], cap_top=False)
+        apex = Vector((c.x, c.y, zr + apo * math.tan(math.radians(el.get("roof_pitch", 30)))))
+        rim = [bm.verts.new(v) for v in poly(ro, zr)]
         av = bm.verts.new(apex)
         for k in range(N):
-            bm.faces.new((top[k], top[(k + 1) % N], av))
-        self.emit(dict(el, name=el.get("name", "Gazebo") + "_Roof"), bm, COL["roof"], (c.x, c.y, z0))
+            bm.faces.new((rim[k], rim[(k + 1) % N], av))
+        bm.faces.new(list(reversed(rim)))     # flat soffit/ceiling under the roof
+        self.emit(dict(el, name=nm + "_Roof"), bm, COL["roof"], (c.x, c.y, z0))
 
     def b_canopy(self, el):
         o = [Vector(p) for p in el["outline"]]
