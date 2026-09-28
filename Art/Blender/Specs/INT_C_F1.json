@@ -644,8 +644,8 @@
      6.921992
     ],
     [
-     192.965949,
-     7.308539
+     196.313288,
+     7.175041
     ]
    ],
    "z0": 6.3,
@@ -660,8 +660,63 @@
     }
    ],
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15)",
    "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F1_Hall_N_Recess",
+   "line": [
+    [
+     196.361109,
+     8.374088
+    ],
+    [
+     188.667225,
+     8.680934
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 9.32,
+   "thk": 0.2,
+   "openings": [
+    {
+     "u0": 4.085,
+     "u1": 5.115,
+     "z0": 6.34,
+     "z1": 8.47
+    },
+    {
+     "u0": 6.13,
+     "u1": 7.07,
+     "z0": 6.34,
+     "z1": 8.47
+    }
+   ],
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15)",
+   "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "F1_Hall_N_RecessE",
+   "line": [
+    [
+     196.361109,
+     8.374088
+    ],
+    [
+     196.305318,
+     6.9752
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 9.32,
+   "thk": 0.2,
+   "openings": [],
+   "material": "white",
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out') | [B] owner 2026-09-28 (screenshot 44 + photo 081119755): only the left part (women's WC + white pier) is on the corridor line; from the blue side wall eastward the wall is one straight face on the back line up to the next room wall (s 22.15)"
   },
   {
    "type": "int_wall",
@@ -704,71 +759,16 @@
    "confidence": "medium"
   },
   {
-   "type": "int_wall",
-   "name": "F1_Hall_N_Recess",
-   "line": [
-    [
-     193.01377,
-     8.507586
-    ],
-    [
-     188.667225,
-     8.680934
-    ]
-   ],
-   "z0": 6.3,
-   "z1": 9.32,
-   "thk": 0.2,
-   "openings": [
-    {
-     "u0": 0.735,
-     "u1": 1.765,
-     "z0": 6.34,
-     "z1": 8.47
-    },
-    {
-     "u0": 2.78,
-     "u1": 3.72,
-     "z0": 6.34,
-     "z1": 8.47
-    }
-   ],
-   "material": "white",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')",
-   "confidence": "medium"
-  },
-  {
-   "type": "int_wall",
-   "name": "F1_Hall_N_RecessE",
-   "line": [
-    [
-     193.01377,
-     8.507586
-    ],
-    [
-     192.957979,
-     7.108698
-    ]
-   ],
-   "z0": 6.3,
-   "z1": 9.32,
-   "thk": 0.2,
-   "openings": [],
-   "material": "white",
-   "confidence": "medium",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
-  },
-  {
    "type": "door",
    "name": "F1_Door_N0",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.658244,
+     6.921992
     ],
     [
-     174.180881,
-     8.057688
+     174.180883,
+     8.057723
     ]
    ],
    "u0": 22.705,
@@ -788,12 +788,12 @@
    "name": "F1_Door_N1",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.658244,
+     6.921992
     ],
     [
-     174.180881,
-     8.057688
+     174.180883,
+     8.057723
     ]
    ],
    "u0": 17.055,
@@ -840,12 +840,12 @@
    "name": "F1_Door_N3",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.658244,
+     6.921992
     ],
     [
-     174.180881,
-     8.057688
+     174.180883,
+     8.057723
     ]
    ],
    "u0": 4.805,
@@ -865,12 +865,12 @@
    "name": "F1_Door_WC4",
    "line": [
     [
-     202.658081,
-     6.921962
+     202.658244,
+     6.921992
     ],
     [
-     174.180881,
-     8.057688
+     174.180883,
+     8.057723
     ]
    ],
    "u0": 15.1,
@@ -999,12 +999,12 @@
    "name": "F1_Room_N_E12",
    "line": [
     [
-     196.513408,
-     12.19599
+     196.513337,
+     12.191053
     ],
     [
-     196.313161,
-     7.17501
+     196.361109,
+     8.374088
     ]
    ],
    "z0": 6.3,
@@ -1289,8 +1289,8 @@
    "type": "box",
    "name": "F1_Hall_Radiator_1",
    "center": [
-    194.403116,
-    6.960957
+    194.450936,
+    8.160004
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1323,8 +1323,8 @@
    "type": "bench",
    "name": "F1_Hall_Bench_N1",
    "pos": [
-    194.39674,
-    6.801085
+    194.44456,
+    8.000132
    ],
    "dir_deg": 267.7161454954155,
    "length": 1.8,
@@ -2619,12 +2619,32 @@
    "type": "box",
    "name": "F1_HeatPipe_N_5_r1",
    "center": [
-    194.901624,
-    7.100703
+    194.677885,
+    8.201027
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    3.8848,
+    3.35,
+    0.04,
+    0.04
+   ],
+   "z0": 6.5,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F1_HeatPipe_N_5_r2",
+   "center": [
+    196.675204,
+    7.029969
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3348,
     0.04,
     0.04
    ],
@@ -2871,24 +2891,6 @@
    "center": [
     188.644739,
     7.866183
-   ],
-   "dir_deg": 87.71614549541547,
-   "size": [
-    1.17,
-    0.02,
-    2.82
-   ],
-   "z0": 6.5,
-   "material": "accent",
-   "confidence": "medium",
-   "evidence": "[B] 2026-09-28 owner + photo 081119755 (F1 WC wall): the men's WC door and the next glazed classroom door sit in a blue alcove ~1 m behind the corridor line; the women's WC door and the white pier stay on the line (the left part 'sticks out')"
-  },
-  {
-   "type": "box",
-   "name": "F1_Accent_Recess_SideE",
-   "center": [
-    192.9713,
-    7.693632
    ],
    "dir_deg": 87.71614549541547,
    "size": [
