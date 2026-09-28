@@ -403,8 +403,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "upper lawn E of the path with yellow/white painted curbs and three blue spruces (a_038..a_061); Google z20 bed x 159.5..167.5, y 0..9 (dirt inside the cheek L at its N end)",
-   "confidence": "medium"
+   "evidence": "upper lawn E of the path with yellow/white painted curbs and three blue spruces (a_038..a_061); Google z20 bed x 159.5..167.5, y 0..9 (dirt inside the cheek L at its N end) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "planter",
@@ -429,8 +439,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "lower lawn with roses, blue spruces and a deciduous tree between the path and the C shed, yellow/white curbs on its W side (a_065..a_078); Google z20 x 160.5..167.8, y 11..19.5",
-   "confidence": "medium"
+   "evidence": "lower lawn with roses, blue spruces and a deciduous tree between the path and the C shed, yellow/white curbs on its W side (a_065..a_078); Google z20 x 160.5..167.8, y 11..19.5 | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -532,8 +552,18 @@
    "height": 0.1,
    "thk": 0.15,
    "material": "stone",
-   "evidence": "yellow-painted curb where the herringbone path meets the clover-paver plaza, ~0.1 m reveal (a_083..a_087)",
-   "confidence": "low"
+   "evidence": "yellow-painted curb where the herringbone path meets the clover-paver plaza, ~0.1 m reveal (a_083..a_087) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44).",
+   "confidence": "low",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   }
  ]
 }

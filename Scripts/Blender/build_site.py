@@ -157,6 +157,9 @@ class Site:
     def b_wall(self, el):
         if el.get("kind") == "scalloped_edging":
             return self.b_scalloped_edging(el)
+        if self._painted(el, el["line"], el.get("closed", False),
+                         rect_profile(el.get("thk", 0.3), el["height"], el.get("bury", BURY)), COL["stone"]):
+            return
         bm = bmesh.new()
         cap = el.get("cap_proj", 0.0)
         # "bury": depth below the ground line (retaining walls reaching down to a lower terrace level)
@@ -613,9 +616,45 @@ class Site:
         bm.faces.new(B)
         self.emit(el, bm, COL["stone"], (P.x, P.y, z0))
 
+    def _painted(self, el, pts, closed, profile, color):
+        """Curb swept in painted pieces (el["paint"] = [[slot, length m], ...] cycled along the line, e.g. the campus'
+        yellow 1.0 / white 0.5 kerbs): one object per slot, <name>_<Slot> (owner frames 070410255 t20-t44,
+        070541257). Returns False when the element has no paint pattern."""
+        pat = el.get("paint")
+        if not pat:
+            return False
+        P = [Vector(p) for p in pts] + ([Vector(pts[0])] if closed else [])
+        seg = [(P[i], P[i + 1]) for i in range(len(P) - 1) if (P[i + 1] - P[i]).length > 1e-6]
+        pieces, cur, k, left = [], [seg[0][0]], 0, pat[0][1]
+        for A, B in seg:
+            L, s = (B - A).length, 0.0
+            while L - s > left + 1e-6:
+                s += left
+                q = A + (B - A) * (s / L)
+                cur.append(q)
+                pieces.append((pat[k % len(pat)][0], cur))
+                k += 1
+                cur, left = [q], pat[k % len(pat)][1]
+            left -= L - s
+            cur.append(B)
+        if len(cur) > 1:
+            pieces.append((pat[k % len(pat)][0], cur))
+        by = {}
+        for slot, pl in pieces:
+            bm = by.setdefault(slot, bmesh.new())
+            sweep_profile(bm, [(v.x, v.y) for v in pl], profile, self.gz, False, max_seg=1.0)
+        p = pts[0]
+        for slot, bm in by.items():
+            self.emit(dict(el, name=el.get("name", el["type"]) + "_" + slot.replace("M_", "").replace("_", ""),
+                           slot=slot), bm, color, (p[0], p[1], self.gz(*p)))
+        return True
+
     def b_planter(self, el):
-        bm = bmesh.new()
         w, h = el.get("curb_w", 0.08), el.get("curb_h", 0.15)
+        if self._painted(el, _ccw(el["ring"]), True, [(0.0, -BURY), (0.0, h), (w, h), (w, -BURY)][::-1],
+                         (0.70, 0.25, 0.20, 1)):
+            return
+        bm = bmesh.new()
         sweep_profile(bm, _ccw(el["ring"]), [(0.0, -BURY), (0.0, h), (w, h), (w, -BURY)][::-1], self.gz, closed=True,
                       **_sweep_kw(el, 1.0))   # subdivided every 1 m: long curbs follow the pads, not a chord
         p = el["ring"][0]

@@ -1918,8 +1918,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -1995,8 +2005,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2072,8 +2092,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2149,8 +2179,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2226,8 +2266,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2303,8 +2353,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2380,8 +2440,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2457,8 +2527,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2534,8 +2614,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2611,8 +2701,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
@@ -2688,8 +2788,18 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s)",
-   "confidence": "medium"
+   "evidence": "Google 2026 bed outlines ~5.8 x 3.2 m (rows at v -8.1 and -15.0; row N: u -14.0, 1.4, 9.4, 25.7, 34.0; row S: u -14.1, 1.5, 9.6, 17.6, 25.5, 33.7); pointed-end hexagon curbs painted yellow/white, lawn, roses (070541257, 070410255 t=54-58 s) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070541257 t2-t9.5).",
+   "confidence": "medium",
+   "paint": [
+    [
+     "M_Paint_Yellow",
+     1.0
+    ],
+    [
+     "M_Paint_White",
+     0.5
+    ]
+   ]
   },
   {
    "type": "tree",
