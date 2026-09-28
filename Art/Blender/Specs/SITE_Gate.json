@@ -529,8 +529,8 @@
    "type": "bin",
    "name": "WheelieBin_West",
    "pos": [
-    149.2,
-    -94.3
+    148.3,
+    -93.4
    ],
    "dir_deg": 87.1,
    "size": [
@@ -538,7 +538,7 @@
     0.72,
     1.07
    ],
-   "evidence": "blue 240 l wheelie bin at the hedge beside the column (012258813, 012218760, 070021774 f10)",
+   "evidence": "P1 by frames: base projected in 070021774 f00407 with the rescaled Gate c8 (148.3,-93.4), on the walk between the fence bed and the yard bed; blue 240 l wheelie bin at the hedge beside the column (012258813, 012218760, 070021774 f10)",
    "confidence": "medium"
   },
   {
@@ -999,6 +999,83 @@
    "ue_asset": "soffit_light_square",
    "evidence": "P1 by frames: square recessed lights in the canopy soffit over the lane, 4 in a row (065910461 s1/s2, 061757320 s3)",
    "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "Bed_YardWest",
+   "ring": [
+    [
+     141.0,
+     -94.4
+    ],
+    [
+     148.3,
+     -94.75
+    ],
+    [
+     148.1,
+     -90.4
+    ],
+    [
+     146.6,
+     -86.6
+    ],
+    [
+     141.0,
+     -86.3
+    ]
+   ],
+   "curb_h": 0.15,
+   "curb_w": 0.12,
+   "slot": "M_Concrete_Precast",
+   "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "sign",
+   "name": "InfoBoard_Yard",
+   "pos": [
+    147.2,
+    -88.4
+   ],
+   "dir_deg": 0.0,
+   "w": 1.2,
+   "h": 1.4,
+   "t": 0.08,
+   "z0": 0.6,
+   "slot": "M_Sign_Panel",
+   "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m; white campus info board on two posts facing the yard (east), blank KOCH face",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Spruce_YardW_0",
+   "pos": [
+    145.2,
+    -91.8
+   ],
+   "height": 6.5,
+   "crown_d": 3.2,
+   "trunk_d": 0.3,
+   "crown_base": 0.8,
+   "shape": "cone",
+   "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m; blue spruce in the bed",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Spruce_YardW_1",
+   "pos": [
+    143.0,
+    -88.6
+   ],
+   "height": 7.5,
+   "crown_d": 3.6,
+   "trunk_d": 0.3,
+   "crown_base": 0.8,
+   "shape": "cone",
+   "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m; blue spruce in the bed",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [
