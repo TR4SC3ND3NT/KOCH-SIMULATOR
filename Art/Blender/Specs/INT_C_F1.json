@@ -1793,12 +1793,12 @@
    "size": [
     1.3,
     0.05,
-    2.4
+    2.92
    ],
    "z0": 6.4,
    "material": "white",
-   "slot": "M_Plastic_Grey",
-   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator) | stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
    "confidence": "low"
   },
   {
@@ -1851,12 +1851,12 @@
    "size": [
     1.3,
     0.05,
-    2.4
+    2.92
    ],
    "z0": 6.4,
    "material": "white",
-   "slot": "M_Plastic_Grey",
-   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator) | stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
    "confidence": "low"
   },
   {
@@ -1909,12 +1909,12 @@
    "size": [
     1.3,
     0.05,
-    2.4
+    2.92
    ],
    "z0": 6.4,
    "material": "white",
-   "slot": "M_Plastic_Grey",
-   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator) | stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
    "confidence": "low"
   },
   {
@@ -2027,12 +2027,12 @@
    "size": [
     1.3,
     0.05,
-    2.4
+    2.92
    ],
    "z0": 6.4,
    "material": "white",
-   "slot": "M_Plastic_Grey",
-   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator) | stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
    "confidence": "low"
   },
   {
@@ -2085,12 +2085,12 @@
    "size": [
     1.3,
     0.05,
-    2.4
+    2.92
    ],
    "z0": 6.4,
    "material": "white",
-   "slot": "M_Plastic_Grey",
-   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator) | stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
    "confidence": "low"
   },
   {
@@ -2143,12 +2143,12 @@
    "size": [
     1.3,
     0.05,
-    2.4
+    2.92
    ],
    "z0": 6.4,
    "material": "white",
-   "slot": "M_Plastic_Grey",
-   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator) | stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
    "confidence": "low"
   },
   {
@@ -3417,6 +3417,240 @@
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes)",
    "confidence": "low",
    "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_Cistern_0",
+   "center": [
+    186.3,
+    11.925
+   ],
+   "dir_deg": -2.2838316721856735,
+   "size": [
+    0.16,
+    0.45,
+    0.35
+   ],
+   "z0": 8.15,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cistern_high",
+   "evidence": "stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_Cistern_1",
+   "center": [
+    186.3,
+    10.775
+   ],
+   "dir_deg": -2.2838316721856735,
+   "size": [
+    0.16,
+    0.45,
+    0.35
+   ],
+   "z0": 8.15,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cistern_high",
+   "evidence": "stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_Cistern_2",
+   "center": [
+    186.3,
+    9.625
+   ],
+   "dir_deg": -2.2838316721856735,
+   "size": [
+    0.16,
+    0.45,
+    0.35
+   ],
+   "z0": 8.15,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cistern_high",
+   "evidence": "stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_Cistern_0",
+   "center": [
+    188.7,
+    11.925
+   ],
+   "dir_deg": -2.2838316721856735,
+   "size": [
+    0.16,
+    0.45,
+    0.35
+   ],
+   "z0": 8.15,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cistern_high",
+   "evidence": "stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_Cistern_1",
+   "center": [
+    188.7,
+    10.775
+   ],
+   "dir_deg": -2.2838316721856735,
+   "size": [
+    0.16,
+    0.45,
+    0.35
+   ],
+   "z0": 8.15,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cistern_high",
+   "evidence": "stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_Cistern_2",
+   "center": [
+    188.7,
+    9.625
+   ],
+   "dir_deg": -2.2838316721856735,
+   "size": [
+    0.16,
+    0.45,
+    0.35
+   ],
+   "z0": 8.15,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cistern_high",
+   "evidence": "stall frames 075725091_s1 f00163/f00312, 075928860_s1: stall walls to the ceiling, tiled floor-to-ceiling, high cistern + riser pipe, squat pan",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallHead_0",
+   "center": [
+    187.52,
+    11.925
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    1.15,
+    0.06,
+    0.9
+   ],
+   "z0": 8.42,
+   "material": "white",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallHead_1",
+   "center": [
+    187.52,
+    10.775
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    1.15,
+    0.06,
+    0.9
+   ],
+   "z0": 8.42,
+   "material": "white",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallHead_2",
+   "center": [
+    187.52,
+    9.625
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    1.15,
+    0.06,
+    0.9
+   ],
+   "z0": 8.42,
+   "material": "white",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallHead_0",
+   "center": [
+    189.92,
+    11.925
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    1.15,
+    0.06,
+    0.9
+   ],
+   "z0": 8.42,
+   "material": "white",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallHead_1",
+   "center": [
+    189.92,
+    10.775
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    1.15,
+    0.06,
+    0.9
+   ],
+   "z0": 8.42,
+   "material": "white",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallHead_2",
+   "center": [
+    189.92,
+    9.625
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    1.15,
+    0.06,
+    0.9
+   ],
+   "z0": 8.42,
+   "material": "white",
+   "slot": "M_Tile_Beige",
+   "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
+   "confidence": "low"
   }
  ]
 }
