@@ -65,3 +65,6 @@ __pycache__/
 /*.png
 /*.mp4
 Art/Blender/Reference/
+
+# Owner request log (personal, R1 stream B)
+/OWNER_LOG.md
