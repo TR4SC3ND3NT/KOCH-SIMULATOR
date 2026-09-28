@@ -109,7 +109,7 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] GD.6 Retaining walls (rubble stone) and steps between B's side and the garden — approx., in the model (GBS_Garden_RetainingWall/Steps)
 - [ ] GD.7 East edge toward the alley: retaining wall, hedge, lamps — approx., in the model (Garden RetainingWall/Hedge/Lamp)
 - [ ] GD.8 Garden furniture: wrought-iron benches with slats, bins, lamp posts — approx., in the model (GBS_Garden_Bench/Lamp)
-- [ ] GD.9 Ground: diamond tiles, scalloped concrete edging, levels — approx., in the model (GBS_Garden_Edging)
+- [ ] GD.9 Ground: diamond tiles, scalloped concrete edging, levels — P2 edging: separate round-topped blocks 0.20 pitch / 0.22 h / 0.10 thk on the ground under each block (build_site b_scalloped_edging), overlay 081924271 f00741 median 1.0 px, block size and pitch match the frame; tile module 0.40 confirmed (rectified ground, f00741); levels not re-measured yet — approx., in the model (GBS_Garden_Edging)
 - [ ] GD.10 Small red-brick hut with a pitched roof by the garden alley; timber gazebo (second type, check location) — BLOCKED: only in 2024-12-26/2025-10-18 web clips, location unknown; not modelled
 
 ## 7. Sports fields (zone `Sports`)
@@ -503,6 +503,7 @@ Rebuild: `blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/bu
 | M9 | Масштаб меша входа (плитка) | 0.20 × 0.10 → 0.4737 м/ед. | C:/koch/work/world_ce/xf_c2.json | один «кирпичик» |
 
 ## Log
+- [B] 2026-09-28: stream-B tools: cpu_sfm.py (pycolmap CPU SfM, per-clip cameras, sub-model export), sfm_plan_register.py (level + scale by eye/tile + yaw/shift by plan match to a greybox slab section + walkable paths), sfm_icp_refine.py (4-DoF point-to-surface ICP), Blender/plan_overlay.py (greybox over the satellite ortho, slab masks). Owner garden clips 081856-082013 (453 frames) -> 11 sub-models; gazebo walk (081924271 t5-19, 82 cams) registered to Gazebo_1 by plan + ICP (in-gazebo frames still ~0.5-1 m off; shapes checked). Garden and sports plans match the Google z20 ortho within ~0.3 m. The friend's drop 'Garden' = alley/A_W/gate (stream A), 'C_sw' = C plaza (stream A): only Sports c2/c9 are stream-B data.
 - [A] 2026-09-28: 061913764 f00589 confirms the bike rack with bicycles outside the fence west of the gate along the sidewalk (spec BikeRack_Gate) and the billboard beyond it.
 - [A] 2026-09-28: Gate c8 scale conflict: after the gap-based rescale (x0.798) the A_S west facade rows in its mesh are ~4.0 m apart (spec storey 3.06 from two independent rects) - either the spec storey or the satellite gap is off, or the mesh is distorted along the alley; B.8 BLOCKED with a tape request, c8 kept at the rescaled value for placement only (overlays 4.0-4.4 px).
 - [A] 2026-09-28: Gate c8 RESCALED x0.798: inside that one mesh the B east wall (x 145.3) and the A_S west wall (x 162.1), both at 4-9 m height, are 16.8 m apart vs 13.0-13.4 m (spec + satellite): the eye-height scale was 25 % high (phone held low in 070309303). After the rescale f00034/f00550 overlay 4.4/4.0 px. Nothing in the specs came from c8 distances. The same caveat applies to AW c8 (paver check clamps at the search limit, scale unverified): the planter positions sent to [B] for the A_W gallery are +-1 m.

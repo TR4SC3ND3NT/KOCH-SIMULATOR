@@ -154,6 +154,8 @@ class Site:
         self.emit(el, bm, COL["metal"], (pts[0][0], pts[0][1], self.gz(*pts[0])))
 
     def b_wall(self, el):
+        if el.get("kind") == "scalloped_edging":
+            return self.b_scalloped_edging(el)
         bm = bmesh.new()
         cap = el.get("cap_proj", 0.0)
         # "bury": depth below the ground line (retaining walls reaching down to a lower terrace level)
@@ -164,6 +166,47 @@ class Site:
             sweep_profile(bm, el["line"], [(el["thk"] / 2 + cap, el["height"]), (el["thk"] / 2 + cap, el["height"] + 0.06),
                                            (-el["thk"] / 2 - cap, el["height"] + 0.06), (-el["thk"] / 2 - cap, el["height"])],
                           self.gz, el.get("closed", False), **kw)
+        p = el["line"][0]
+        self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (p[0], p[1], self.gz(*p)))
+
+    def b_scalloped_edging(self, el):
+        """Precast garden edging as separate round-topped blocks (owner footage 081856511, 081924271: ~0.2 m pitch,
+        ~0.22 m high, ~0.1 m thick, ~1 cm joints). Each block: rectangle + semicircle top, sat on the ground under
+        its own centre, so the row follows the paving levels. `pitch`, `joint`, `height`, `thk` in metres."""
+        bm = bmesh.new()
+        pitch, joint = el.get("pitch", 0.20), el.get("joint", 0.01)
+        h, thk, segs = el["height"], el.get("thk", 0.1), 8
+        pts = el["line"] + ([el["line"][0]] if el.get("closed") else [])
+        for a, b in zip(pts[:-1], pts[1:]):
+            A, B = Vector(a), Vector(b)
+            L = (B - A).length
+            if L < pitch * 0.5:
+                continue
+            d = (B - A) / L
+            m = _frame2(A, d)
+            n = max(1, round(L / pitch))
+            pe = L / n
+            r = max(0.02, (pe - joint) / 2)
+            for k in range(n):
+                uc = pe * (k + 0.5)
+                c = A + d * uc
+                z = self.gz(c.x, c.y)
+                zs = z + max(h - r, 0.02)
+                prof = [(uc - r, z - BURY), (uc + r, z - BURY), (uc + r, zs)]
+                prof += [(uc + r * math.cos(math.pi * i / segs), zs + r * math.sin(math.pi * i / segs))
+                         for i in range(1, segs)]
+                prof.append((uc - r, zs))
+                sides = []
+                for w in (-thk / 2, thk / 2):
+                    sides.append([bm.verts.new((m @ Vector((u, w, 0.0))).xy.to_3d() + Vector((0, 0, zz)))
+                                  for u, zz in prof])
+                fr, bk = sides
+                bm.faces.new(fr)
+                bm.faces.new(list(reversed(bk)))
+                for i in range(len(prof)):
+                    j = (i + 1) % len(prof)
+                    bm.faces.new((fr[j], fr[i], bk[i], bk[j]))
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
         p = el["line"][0]
         self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (p[0], p[1], self.gz(*p)))
 
