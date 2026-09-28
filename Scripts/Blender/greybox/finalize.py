@@ -140,6 +140,31 @@ def fix_collections():
             if p != tp:
                 p.children.unlink(col)
                 moved.append(col.name)
+    # site specs that build straight into a numbered group collection (03_Site, 04_Garden, ...): one sub-collection per
+    # spec, so each zone exports as its own FBX (koch_gen "site:<spec id>")
+    filed = 0
+    par = _parents()
+
+    def group_of(c):   # nearest numbered ancestor (the collection itself if numbered)
+        seen = set()
+        while c is not None and not c.name[:2].isdigit() and c.name not in seen:
+            seen.add(c.name)
+            c = next((p for p in par.get(c.name, []) if p != root), None)
+        return c
+    for o in bpy.data.objects:
+        g = o.get("koch_gen", "")
+        if not g.startswith("site:"):
+            continue
+        for c in list(o.users_collection):
+            top = group_of(c)
+            if c.name != g[5:] and top is not None:
+                sub = bpy.data.collections.get(g[5:]) or bpy.data.collections.new(g[5:])
+                if not any(sub.name in x.children for x in bpy.data.collections):
+                    top.children.link(sub)
+                if o.name not in sub.objects:
+                    sub.objects.link(o)
+                c.objects.unlink(o)
+                filed += 1
     # phase-1 massing hidden by a detailed spec ("replaces"): out of the export, kept for review
     rep = [o for o in bpy.data.objects if o.name.startswith("GB_") and o.hide_render]
     if rep:
@@ -171,7 +196,7 @@ def fix_collections():
                     bpy.data.collections.remove(ch)
                 n += 1
         return n
-    return dict(reparented=sorted(set(moved)), replaced=len(rep), empty_removed=prune(root))
+    return dict(reparented=sorted(set(moved)), site_filed=filed, replaced=len(rep), empty_removed=prune(root))
 
 
 def run():
