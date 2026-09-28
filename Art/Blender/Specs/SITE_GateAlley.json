@@ -39,12 +39,12 @@
      -88.488
     ],
     [
-     163.319,
-     -52.481
+     163.155,
+     -55.827
     ],
     [
-     158.731,
-     -52.256
+     158.414,
+     -55.595
     ],
     [
      155.918,
@@ -65,7 +65,7 @@
    ],
    "z": 5.0,
    "blend": 0.0,
-   "evidence": "lower walkway zone at A_S's west/south side (see note)"
+   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end"
   },
   {
    "name": "Alley_Flat_S",
@@ -135,17 +135,67 @@
      -77.618
     ],
     [
-     158.731,
-     -52.256
+     158.442,
+     -55.296
     ],
     [
-     149.515,
-     -52.3
+     149.388,
+     -54.801
     ]
    ],
    "z": 6.55,
    "blend": 1.0,
-   "evidence": "sweep: path flat within +-0.05 from y 12 to the wide stair, 1.26 above the walkway"
+   "evidence": "sweep: path flat within +-0.05 from y 12 to the wide stair, 1.26 above the walkway | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)"
+  },
+  {
+   "name": "WS_FrontE",
+   "z": 5.35,
+   "blend": 0.0,
+   "ring": [
+    [
+     158.808,
+     -53.611
+    ],
+    [
+     160.905,
+     -53.714
+    ],
+    [
+     160.969,
+     -52.416
+    ],
+    [
+     158.872,
+     -52.313
+    ]
+   ],
+   "evidence": "2026-09-28 stair move (owner 64/65) collision fix: strip in front of the stair's east bed = lower terrace level (it was the removed lawn-strip bank)",
+   "confidence": "medium"
+  },
+  {
+   "name": "WS_UnderStair",
+   "z": 5.3,
+   "blend": 0.0,
+   "ring": [
+    [
+     152.332,
+     -55.016
+    ],
+    [
+     159.124,
+     -55.349
+    ],
+    [
+     159.242,
+     -52.932
+    ],
+    [
+     152.45,
+     -52.599
+    ]
+   ],
+   "evidence": "2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): ground held at the lower level under the solid flights (the smooth field ramped above the lower treads)",
+   "confidence": "medium"
   }
  ],
  "elements": [
@@ -806,12 +856,12 @@
      -59.815
     ],
     [
-     159.908,
-     -52.614
+     159.759,
+     -55.66
     ],
     [
-     158.703,
-     -52.555
+     158.414,
+     -55.595
     ]
    ],
    "z": [
@@ -822,39 +872,7 @@
    ],
    "thk": 1.83,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "LawnCoping_N",
-   "ring": [
-    [
-     159.764,
-     -55.561
-    ],
-    [
-     160.063,
-     -55.575
-    ],
-    [
-     160.208,
-     -52.629
-    ],
-    [
-     159.908,
-     -52.614
-    ]
-   ],
-   "z": [
-    6.375,
-    6.32,
-    6.32,
-    6.38
-   ],
-   "thk": 1.83,
-   "material": "stone",
-   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23)",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -862,8 +880,8 @@
    "name": "Curb_Path_N",
    "ring": [
     [
-     158.703,
-     -52.555
+     158.414,
+     -55.595
     ],
     [
      158.02,
@@ -874,8 +892,8 @@
      -59.731
     ],
     [
-     158.603,
-     -52.546
+     158.314,
+     -55.59
     ]
    ],
    "z": [
@@ -886,7 +904,7 @@
    ],
    "thk": 1.84,
    "material": "brick",
-   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -955,70 +973,6 @@
   },
   {
    "type": "roof_plane",
-   "name": "Bank_N",
-   "ring": [
-    [
-     160.063,
-     -55.575
-    ],
-    [
-     160.812,
-     -55.612
-    ],
-    [
-     160.957,
-     -52.666
-    ],
-    [
-     160.208,
-     -52.629
-    ]
-   ],
-   "z": [
-    6.27,
-    5.47,
-    5.47,
-    6.27
-   ],
-   "thk": 1.83,
-   "material": "hedge",
-   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "Curb_Walkway_N",
-   "ring": [
-    [
-     160.812,
-     -55.612
-    ],
-    [
-     160.957,
-     -52.666
-    ],
-    [
-     161.077,
-     -52.671
-    ],
-    [
-     160.932,
-     -55.618
-    ]
-   ],
-   "z": [
-    5.47,
-    5.47,
-    5.47,
-    5.47
-   ],
-   "thk": 0.67,
-   "material": "brick",
-   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
    "name": "RampBay_Wall",
    "ring": [
     [
@@ -1030,12 +984,12 @@
      -59.83
     ],
     [
-     160.063,
-     -55.575
+     160.058,
+     -55.675
     ],
     [
-     159.764,
-     -55.561
+     159.759,
+     -55.66
     ]
    ],
    "z": [
@@ -1046,7 +1000,7 @@
    ],
    "thk": 1.52,
    "material": "stone",
-   "evidence": "lawn edge retained by a wall with the pink coping where ramp run 2 replaces the bank (070309303 f66/f67: grating directly below the coping edge); foot bay length to the bank restart assumed 1.0 m",
+   "evidence": "lawn edge retained by a wall with the pink coping where ramp run 2 replaces the bank (070309303 f66/f67: grating directly below the coping edge); foot bay length to the bank restart assumed 1.0 m | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -1062,12 +1016,12 @@
      -59.873
     ],
     [
-     160.932,
-     -55.618
+     160.927,
+     -55.718
     ],
     [
-     160.063,
-     -55.575
+     160.058,
+     -55.675
     ]
    ],
    "z": [
@@ -1078,7 +1032,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "walkway-level paving under ramp run 2 and at its foot (bank cut); foot bay extent low confidence",
+   "evidence": "walkway-level paving under ramp run 2 and at its foot (bank cut); foot bay extent low confidence | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "low"
   },
   {
@@ -1376,20 +1330,20 @@
    "name": "LawnEnd_Coping",
    "ring": [
     [
-     158.703,
-     -52.555
+     158.414,
+     -55.594
     ],
     [
-     160.957,
-     -52.666
+     160.808,
+     -55.712
     ],
     [
-     160.971,
-     -52.366
+     160.822,
+     -55.412
     ],
     [
-     158.731,
-     -52.256
+     158.442,
+     -55.295
     ]
    ],
    "z": [
@@ -1400,7 +1354,7 @@
    ],
    "thk": 1.83,
    "material": "stone",
-   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74)",
+   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -1792,12 +1746,12 @@
      -77.613
     ],
     [
-     158.407,
-     -54.61
+     158.118,
+     -57.65
     ],
     [
-     151.967,
-     -54.274
+     151.818,
+     -57.32
     ],
     [
      150.967,
@@ -1812,7 +1766,7 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end) | 2026-09-28: west edge follows the moved B-bed curb",
+   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end) | 2026-09-28: west edge follows the moved B-bed curb | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium",
    "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)"
   },
@@ -1825,14 +1779,14 @@
      -74.55
     ],
     [
-     151.912,
-     -54.175
+     151.858,
+     -55.273
     ]
    ],
    "height": 0.12,
    "thk": 0.12,
    "material": "stone",
-   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs) | owner 2026-09-28 (screenshot 56): bed slightly narrower: curb moved 0.95 m toward B",
+   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs) | owner 2026-09-28 (screenshot 56): bed slightly narrower: curb moved 0.95 m toward B | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -1952,8 +1906,9 @@
    "shape": "cone",
    "trunk_d": 0.3,
    "crown_base": 1.0,
-   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb",
-   "confidence": "low"
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb | 2026-09-28 stair move (owner 64/65) collision fix: planted in the stair's west raised bed (soil top 6.78)",
+   "confidence": "low",
+   "z": 6.78
   },
   {
    "type": "tree",
@@ -2023,8 +1978,8 @@
    "type": "stairs_run",
    "name": "Steps_BCorner_Upper",
    "top": [
-    155.863,
-    -52.115
+    155.714,
+    -55.161
    ],
    "dir_deg": 87.192,
    "risers": 4,
@@ -2033,7 +1988,7 @@
    "width": 5.33,
    "z_top": 6.63,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium",
    "top_flush": true
   },
@@ -2041,8 +1996,8 @@
    "type": "stairs_run",
    "name": "Steps_BCorner_Lower",
    "top": [
-    155.946,
-    -50.718
+    155.797,
+    -53.764
    ],
    "dir_deg": 87.192,
    "risers": 3,
@@ -2051,7 +2006,7 @@
    "width": 6.9,
    "z_top": 5.899,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -2059,20 +2014,20 @@
    "name": "WS_BedWall_E",
    "ring": [
     [
-     158.51,
-     -52.546
+     158.376,
+     -55.292
     ],
     [
-     158.859,
-     -52.563
+     158.725,
+     -55.309
     ],
     [
-     158.943,
-     -50.865
+     158.794,
+     -53.911
     ],
     [
-     158.593,
-     -50.848
+     158.444,
+     -53.894
     ]
    ],
    "z": [
@@ -2083,7 +2038,7 @@
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
    "confidence": "medium"
   },
   {
@@ -2091,20 +2046,20 @@
    "name": "WS_BedWall_W",
    "ring": [
     [
-     152.837,
-     -52.267
+     152.688,
+     -55.313
     ],
     [
-     153.186,
-     -52.284
+     153.037,
+     -55.33
     ],
     [
-     153.269,
-     -50.586
+     153.12,
+     -53.632
     ],
     [
-     152.92,
-     -50.569
+     152.771,
+     -53.615
     ]
    ],
    "z": [
@@ -2115,7 +2070,7 @@
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -2123,20 +2078,20 @@
    "name": "WS_Bed_E",
    "ring": [
     [
-     158.859,
-     -52.543
+     158.724,
+     -55.309
     ],
     [
-     160.957,
-     -52.646
+     160.822,
+     -55.412
     ],
     [
-     161.04,
-     -50.968
+     160.891,
+     -54.014
     ],
     [
-     158.943,
-     -50.865
+     158.794,
+     -53.911
     ]
    ],
    "z": [
@@ -2147,7 +2102,7 @@
    ],
    "thk": 1.98,
    "material": "hedge",
-   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
    "confidence": "medium"
   },
   {
@@ -2155,20 +2110,20 @@
    "name": "WS_Bed_E_Front",
    "ring": [
     [
-     158.943,
-     -50.865
+     159.243,
+     -53.933
     ],
     [
-     161.04,
-     -50.968
+     160.891,
+     -54.014
     ],
     [
-     161.055,
-     -50.668
+     160.906,
+     -53.714
     ],
     [
-     158.957,
-     -50.565
+     159.257,
+     -53.633
     ]
    ],
    "z": [
@@ -2179,7 +2134,7 @@
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
    "confidence": "medium"
   },
   {
@@ -2187,20 +2142,20 @@
    "name": "WS_Bed_W",
    "ring": [
     [
-     151.388,
-     -52.196
+     151.239,
+     -55.242
     ],
     [
-     152.837,
-     -52.267
+     152.688,
+     -55.313
     ],
     [
-     152.92,
-     -50.569
+     152.771,
+     -53.615
     ],
     [
-     151.472,
-     -50.498
+     151.323,
+     -53.544
     ]
    ],
    "z": [
@@ -2211,7 +2166,7 @@
    ],
    "thk": 1.98,
    "material": "hedge",
-   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
    "confidence": "medium"
   },
   {
@@ -2219,20 +2174,20 @@
    "name": "WS_Bed_W_Front",
    "ring": [
     [
-     151.472,
-     -50.498
+     151.323,
+     -53.544
     ],
     [
-     152.92,
-     -50.569
+     152.351,
+     -53.594
     ],
     [
-     152.935,
-     -50.27
+     152.366,
+     -53.295
     ],
     [
-     151.486,
-     -50.199
+     151.337,
+     -53.245
     ]
    ],
    "z": [
@@ -2243,7 +2198,7 @@
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53))",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
    "confidence": "medium"
   },
   {

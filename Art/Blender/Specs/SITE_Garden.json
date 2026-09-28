@@ -2862,18 +2862,37 @@
    "name": "SE_Landing",
    "line": [
     [
-     152.21,
-     -52.829
+     152.038,
+     -56.303
     ],
     [
-     158.202,
-     -53.122
+     158.031,
+     -56.597
     ]
    ],
-   "width": 2.9,
+   "width": 2.04,
    "thk": 0.08,
    "surface": "herringbone_pavers",
-   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B",
+   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line); landing ends exactly at the top nosing (it used to cover 0.56 m of the top tread)",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "SE_Landing_Top",
+   "line": [
+    [
+     153.044,
+     -55.181
+    ],
+    [
+     158.368,
+     -55.442
+    ]
+   ],
+   "width": 0.3,
+   "thk": 0.08,
+   "surface": "herringbone_pavers",
+   "evidence": "2026-09-28 stair move (owner 64/65) collision fix: top strip between the bed walls, flush with the top nosing",
    "confidence": "medium"
   },
   {
@@ -2910,8 +2929,8 @@
      -49.903
     ],
     [
-     152.22,
-     -52.503
+     151.305,
+     -52.458
     ]
    ],
    "width": 2.0,
@@ -2919,7 +2938,7 @@
    "post_h": 2.2,
    "apex_h": 2.9,
    "tube": 0.05,
-   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed",
    "confidence": "medium",
    "gaps": []
   },
@@ -3131,8 +3150,8 @@
      -51.209
     ],
     [
-     152.162,
-     -53.803
+     151.312,
+     -53.761
     ]
    ],
    "height": 1.0,
@@ -3140,7 +3159,7 @@
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): east end stops at the stair's west bed",
    "confidence": "low"
   },
   {
@@ -3192,15 +3211,15 @@
    "type": "tree",
    "name": "AW_Thuja_1",
    "pos": [
-    159.564,
-    -53.498
+    159.576,
+    -53.248
    ],
    "height": 1.4,
    "crown_d": 0.7,
    "trunk_d": 0.05,
    "crown_base": 0.15,
    "shape": "cone",
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs | 2026-09-26: sweep crown blob at A-local (-1.2, 39.25), last thuja before the wide stair",
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): small thujas/junipers on the lawn bank (070309303 t20-36); spacing ~4 m from Google z20 blobs | 2026-09-26: sweep crown blob at A-local (-1.2, 39.25), last thuja before the wide stair | 2026-09-28 stair move (owner 64/65) collision fix: 0.25 m north, clear of the east bed front",
    "confidence": "low",
    "z": 6.337
   },
@@ -3417,16 +3436,17 @@
    "type": "tree",
    "name": "AW_Bush_0",
    "pos": [
-    159.195,
-    -55.933
+    159.173,
+    -56.382
    ],
    "height": 0.7,
    "crown_d": 0.8,
    "shape": "round",
    "trunk_d": 0.05,
    "crown_base": 0.05,
-   "evidence": "low bush on the upper lawn strip (fixAW SfM)",
-   "confidence": "medium"
+   "evidence": "low bush on the upper lawn strip (fixAW SfM) | 2026-09-28 stair move (owner 64/65) collision fix: on the lawn strip (it was buried inside it), 0.45 m south of the new lawn-end coping",
+   "confidence": "medium",
+   "z": 6.42
   },
   {
    "type": "slab",
