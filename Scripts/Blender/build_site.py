@@ -350,7 +350,7 @@ class Site:
         par_h, par_t = el.get("parapet_h", 0.8), el.get("parapet_t", 0.25)
         open_sides = set(el.get("open_sides", []))
         el = dict(el, slots={"_Floor": "M_Paving_Diamond_Tile", "_Parapet": "M_Tile_Brick_Red", "_Bench": "M_Wood_Stained",
-                             "_Frame": "M_Paint_White", "_Ceiling": "M_Wood_Stained", "_FasciaTabs": "M_Shingle_Brown", "_Fascia": "M_Paint_White",
+                             "_Frame": "M_Paint_White", "_Posts": "M_Render_White", "_Capitals": "M_Paint_Brown", "_Ceiling": "M_Wood_Stained", "_FasciaTabs": "M_Shingle_Brown", "_Fascia": "M_Paint_White",
                              "_Roof": "M_Shingle_Brown", **(el.get("slots") or {})})
 
         def poly(r, z, extra=0.0):
@@ -391,6 +391,15 @@ class Site:
         cc = el.get("center_column")
         if cc:
             _cyl(bm, Vector((c.x, c.y)), cc.get("d", 0.2) / 2, zf, zf + ph, 12)
+        self.emit(dict(el, name=nm + "_Posts"), bm, COL["white"], (c.x, c.y, z0))
+        bm = bmesh.new()   # dark-brown capital band at the post tops (spec notes: ~0.12 m), 1 cm proud of the post
+        cap = el.get("capital_h", 0.12)
+        for k in range(N):
+            p = corners[k]
+            m = _frame2(Vector((p.x, p.y)), (Vector((c.x, c.y)) - Vector((p.x, p.y))).normalized())
+            box(bm, m, -pw / 2 - 0.01, pw / 2 + 0.01, -pw / 2 - 0.01, pw / 2 + 0.01, zf + ph - cap, zf + ph - 0.003)
+        self.emit(dict(el, name=nm + "_Capitals"), bm, COL["wood"], (c.x, c.y, z0))
+        bm = bmesh.new()   # ring beam
         zt = zf + el["eave_h"] if el.get("eave_h") else zf + ph + 0.22     # fascia bottom
         rb = max(0.05, zt - (zf + ph))
         _ring_band(bm, poly(R + pw / 2 + 0.02, 0), poly(R - pw / 2 - 0.02, 0), zf + ph, zf + ph + rb)

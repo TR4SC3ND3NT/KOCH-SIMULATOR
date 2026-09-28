@@ -1967,61 +1967,200 @@
    "type": "bench",
    "name": "Bench_Pergola_0",
    "pos": [
-    147.977,
-    -47.241
+    141.0,
+    -46.9
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_1",
    "pos": [
-    143.482,
-    -47.021
+    145.5,
+    -47.12
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_2",
    "pos": [
-    138.988,
-    -46.801
+    150.0,
+    -47.34
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_3",
    "pos": [
-    134.493,
-    -46.581
+    129.5,
+    -46.338
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5-t7: wrought-iron benches with wooden slats against the boulder wall facing the walk, ~4.5 m apart (count 4 visible); 1.5 m standard length (bench spans ~3.7 path tiles in 081946180).",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_4",
+   "pos": [
+    134.0,
+    -46.558
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_5",
+   "pos": [
+    101.5,
+    -44.968
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
    "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_6",
+   "pos": [
+    106.0,
+    -45.189
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_7",
+   "pos": [
+    110.5,
+    -45.409
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_8",
+   "pos": [
+    115.0,
+    -45.629
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_9",
+   "pos": [
+    119.5,
+    -45.849
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_Pergola_10",
+   "pos": [
+    124.0,
+    -46.069
+   ],
+   "dir_deg": 87.2,
+   "length": 1.5,
+   "depth": 0.5,
+   "seat_h": 0.43,
+   "back_h": 0.85,
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "bin",
+   "name": "Bin_Pergola_125",
+   "pos": [
+    125.2,
+    -46.228
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.8
+   ],
+   "dir_deg": 87.2,
+   "ue_asset": "bin_wrought_iron",
+   "confidence": "medium",
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps"
+  },
+  {
+   "type": "bin",
+   "name": "Bin_Pergola_137",
+   "pos": [
+    137.3,
+    -46.819
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.8
+   ],
+   "dir_deg": 87.2,
+   "ue_asset": "bin_wrought_iron",
+   "confidence": "medium",
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps"
   },
   {
    "type": "hedge_arch",
@@ -2209,7 +2348,7 @@
    "confidence": "low"
   },
   {
-   "type": "lamp",
+   "type": "lamp_orn",
    "name": "Lamp_G2_Apron",
    "pos": [
     138.867,
@@ -2217,11 +2356,14 @@
    ],
    "height": 3.2,
    "head": "ball",
-   "evidence": "081946180 t6-t9: black cast pole on a tapered black pedestal (~0.3 m sq on a 0.45 m concrete pad) at a path junction by a gazebo corner; white globe. Position approximate (west side of the G2 apron).",
-   "confidence": "low"
+   "evidence": "081946180 t6-t9: black cast pole on a tapered black pedestal (~0.3 m sq on a 0.45 m concrete pad) at a path junction by a gazebo corner; white globe. Position approximate (west side of the G2 apron). | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9)",
+   "confidence": "low",
+   "globes": 2,
+   "globe_d": 0.35,
+   "arm_span": 0.8
   },
   {
-   "type": "lamp",
+   "type": "lamp_orn",
    "name": "Lamp_EastWalk_0",
    "pos": [
     153.438,
@@ -2229,11 +2371,14 @@
    ],
    "height": 3.2,
    "head": "ball",
-   "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders.",
-   "confidence": "low"
+   "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders. | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9)",
+   "confidence": "low",
+   "globes": 2,
+   "globe_d": 0.35,
+   "arm_span": 0.8
   },
   {
-   "type": "lamp",
+   "type": "lamp_orn",
    "name": "Lamp_EastWalk_1",
    "pos": [
     154.221,
@@ -2241,8 +2386,11 @@
    ],
    "height": 3.2,
    "head": "ball",
-   "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders.",
-   "confidence": "low"
+   "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders. | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9)",
+   "confidence": "low",
+   "globes": 2,
+   "globe_d": 0.35,
+   "arm_span": 0.8
   },
   {
    "type": "tree",
