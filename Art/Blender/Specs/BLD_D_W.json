@@ -1,0 +1,324 @@
+{
+ "id": "BLD_D_W",
+ "collection": "BLD_D",
+ "status": "probable",
+ "note": "Block D west wing (the 5-storey maroon/beige block behind the second street gate). Stream B (handoff 0b). P1 by web photos: storey count and colour fields from the 2GIS photos, footprint from footprints.json (re-traced on the imagery).",
+ "replaces": [
+  "GB_BLD_D_W",
+  "GB_BLD_D_W_Roof"
+ ],
+ "scale": 1.0,
+ "anchor": {
+  "world_xy": [
+   -192.5,
+   15.5
+  ],
+  "x_dir": [
+   0.99881,
+   -0.04885
+  ],
+  "status": "footprints.json BLD_D_W ring (Google/Bing re-trace, OSM way/129705662 was ~8 m off)"
+ },
+ "plinth_m": 0.0,
+ "wall_thk": 0.45,
+ "storey_m": 3.3,
+ "storeys": 5,
+ "ring": [
+  [
+   0,
+   0
+  ],
+  [
+   32.0,
+   0
+  ],
+  [
+   32.0,
+   59.1
+  ],
+  [
+   0,
+   59.1
+  ]
+ ],
+ "cornice": {
+  "z0": 16.2,
+  "z1": 16.5,
+  "proj": 0.05
+ },
+ "eave_z": 16.5,
+ "plinth": {
+  "z_top": 0.6,
+  "proj": 0.03
+ },
+ "pilasters": [],
+ "window_types": {
+  "W": {
+   "w": 1.3,
+   "h": 1.5,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "white PVC two-light windows (web photos)"
+  }
+ },
+ "rows": {
+  "F1": 0.9,
+  "F2": 4.2,
+  "F3": 7.5,
+  "F4": 10.8,
+  "F5": 14.1
+ },
+ "rows_note": "sills 0.9 above each floor; 5 storeys x 3.3 from the photos (4 window rows in the maroon/beige fields + the lighter top storey under the roof overhang)",
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.5,
+      5.5,
+      8.5,
+      11.5,
+      14.5,
+      17.5,
+      20.5,
+      23.5,
+      26.5,
+      29.5
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+     ]
+    }
+   ],
+   "evidence": "2GIS/web photos 15762598714008448, 30258560047688468, 30258560087073330, 30258560092273593/603, 15762598728797450: regular grid of white PVC windows ~1.3 x 1.5 on every storey, ~3 m pitch (count from the photos, u +-0.5 m)",
+   "confidence": "low"
+  },
+  {
+   "edge": 1,
+   "name": "east",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.55,
+      5.55,
+      8.55,
+      11.55,
+      14.55,
+      17.55,
+      20.55,
+      23.55,
+      26.55,
+      29.55,
+      32.55,
+      35.55,
+      38.55,
+      41.55,
+      44.55,
+      47.55,
+      50.55,
+      53.55,
+      56.55
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+     ]
+    }
+   ],
+   "evidence": "2GIS/web photos 15762598714008448, 30258560047688468, 30258560087073330, 30258560092273593/603, 15762598728797450: regular grid of white PVC windows ~1.3 x 1.5 on every storey, ~3 m pitch (count from the photos, u +-0.5 m)",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.5,
+      5.5,
+      8.5,
+      11.5,
+      14.5,
+      17.5,
+      20.5,
+      23.5,
+      26.5,
+      29.5
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+     ]
+    }
+   ],
+   "evidence": "2GIS/web photos 15762598714008448, 30258560047688468, 30258560087073330, 30258560092273593/603, 15762598728797450: regular grid of white PVC windows ~1.3 x 1.5 on every storey, ~3 m pitch (count from the photos, u +-0.5 m)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "name": "west_street",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.55,
+      5.55,
+      8.55,
+      11.55,
+      14.55,
+      17.55,
+      20.55,
+      23.55,
+      26.55,
+      29.55,
+      32.55,
+      35.55,
+      38.55,
+      41.55,
+      44.55,
+      47.55,
+      50.55,
+      53.55,
+      56.55
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+     ]
+    }
+   ],
+   "evidence": "2GIS/web photos 15762598714008448, 30258560047688468, 30258560087073330, 30258560092273593/603, 15762598728797450: regular grid of white PVC windows ~1.3 x 1.5 on every storey, ~3 m pitch (count from the photos, u +-0.5 m)",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "pitch": 12,
+  "overhang": 0.9,
+  "note": "dark low-pitched hip roof with a deep overhang over the light top storey (2GIS 30258560092273593); ridge along the wing (Google z20)"
+ },
+ "wall_material": "M_Paint_Maroon",
+ "slots": {
+  "Roof": "M_Sheet_DarkGrey",
+  "Eave": "M_Sheet_DarkGrey",
+  "Cornice": "M_Sheet_DarkGrey"
+ },
+ "cladding": [
+  {
+   "edge": 0,
+   "u0": 9.6,
+   "u1": 22.4,
+   "z0": 0.6,
+   "z1": 13.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "light composite-panel field in the middle of the facade over storeys 1-4, maroon around it (2GIS 30258560092273593/603, 30258560047688468)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 0.05,
+   "u1": 31.95,
+   "z0": 13.2,
+   "z1": 16.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
+   "confidence": "low"
+  },
+  {
+   "edge": 1,
+   "u0": 17.73,
+   "u1": 41.32,
+   "z0": 0.6,
+   "z1": 13.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "light composite-panel field in the middle of the facade over storeys 1-4, maroon around it (2GIS 30258560092273593/603, 30258560047688468)",
+   "confidence": "low"
+  },
+  {
+   "edge": 1,
+   "u0": 0.05,
+   "u1": 59.050000000000004,
+   "z0": 13.2,
+   "z1": 16.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "u0": 9.6,
+   "u1": 22.4,
+   "z0": 0.6,
+   "z1": 13.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "light composite-panel field in the middle of the facade over storeys 1-4, maroon around it (2GIS 30258560092273593/603, 30258560047688468)",
+   "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "u0": 0.05,
+   "u1": 31.95,
+   "z0": 13.2,
+   "z1": 16.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "u0": 17.73,
+   "u1": 41.32,
+   "z0": 0.6,
+   "z1": 13.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "light composite-panel field in the middle of the facade over storeys 1-4, maroon around it (2GIS 30258560092273593/603, 30258560047688468)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "u0": 0.05,
+   "u1": 59.050000000000004,
+   "z0": 13.2,
+   "z1": 16.2,
+   "proj": 0.03,
+   "slot": "M_Render_Beige",
+   "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
+   "confidence": "low"
+  }
+ ]
+}

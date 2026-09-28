@@ -61,9 +61,9 @@ def scale_spec(v, k, key=None):
 
 
 # part keyword (in the object name) -> default material slot; order matters (first match wins)
-PART_KEYS = ["Glass", "Win", "Sur", "Pilaster", "Plinth", "Slabs", "Roof", "Eave", "Gutter", "Downpipe", "Cornice",
+PART_KEYS = ["Glass", "Win", "Sur", "Pilaster", "Cladding", "Plinth", "Slabs", "Roof", "Eave", "Gutter", "Downpipe", "Cornice",
              "Entrance", "Door", "GalleryPosts", "Gallery", "Wall"]
-PART_SLOT = {"Glass": "M_Glass", "Win": "M_PVC_White", "Sur": "M_Paint_Maroon", "Pilaster": "M_Paint_Maroon",
+PART_SLOT = {"Glass": "M_Glass", "Win": "M_PVC_White", "Sur": "M_Paint_Maroon", "Pilaster": "M_Paint_Maroon", "Cladding": "M_Render_Beige",
              "Plinth": "M_Tile_Brick_Red", "Slabs": "M_Concrete", "Roof": "M_Sheet_Red", "Eave": "M_PVC_Gutter_White",
              "Gutter": "M_PVC_Gutter_White", "Downpipe": "M_PVC_Gutter_White", "Cornice": "M_Paint_Maroon",
              "Entrance": "M_Alu_Black", "Door": "M_Alu_Black", "GalleryPosts": "M_Steel_Paint_Dark",
@@ -270,6 +270,21 @@ class Building:
                     ob.data.materials[0] = mat("M_Paint_Maroon" if maroon_face else
                                                self.s.get("wall_material", self.s.get("slots", {}).get("Wall", "M_Render_Beige")))
             self.build_windows(i, ops)
+            # optional colour fields of cladding panels (e.g. Block D's maroon/light composite panels): a thin slab
+            # `proj` proud of the wall over u0..u1 x z0..z1 with the edge's window openings cut through it
+            for ci, c in enumerate(self.s.get("cladding", [])):
+                if c["edge"] != i:
+                    continue
+                cu0, cu1, cz0, cz1, pj = c["u0"], c["u1"], c["z0"], c["z1"], c.get("proj", 0.02)
+                holes = [Opening(max(o.u0, cu0) - cu0, min(o.u1, cu1) - cu0, max(o.z0, cz0), min(o.z1, cz1))
+                         for o, _, _ in ops if o.u1 > cu0 + 0.05 and o.u0 < cu1 - 0.05 and o.z1 > cz0 + 0.05 and o.z0 < cz1 - 0.05]
+                # an opening cut by the field edge would leave a sliver: keep holes strictly inside
+                holes = [h for h in holes if h.u0 > 0.02 and h.u1 < cu1 - cu0 - 0.02 and h.z0 > cz0 + 0.02 and h.z1 < cz1 - 0.02]
+                bm = bmesh.new()
+                wall_piece(bm, e["frame"] @ Matrix.Translation((cu0, pj, 0)), cu1 - cu0, cz0, cz1, pj, holes,
+                           cut_start=0.0, cut_end=0.0)
+                ob = self.obj(f"Cladding_E{i}_{ci:02d}", bm, COL["wall"], c.get("evidence"), c.get("confidence"))
+                ob.data.materials[0] = mat(c.get("slot", "M_Render_Beige"))
 
     @staticmethod
     def _split_points(ops, L, cut0, cut1):
