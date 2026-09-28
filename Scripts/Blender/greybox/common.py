@@ -25,18 +25,50 @@ def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as fh:
         return json.load(fh)
 
+_FIELD_CACHE = {}
+
+
 class Terrain:
-    """Base quadratic surface (hectometre coords) plus lowered carriageways."""
+    """Campus ground: DEM quadratic (hectometre coords) + the harmonic pad correction of terrain_field, lowered
+    carriageways. base() = ground outside hard pads, before the curb; ground() = the final surface everywhere."""
 
     def __init__(self, spec):
         self.c = np.array(spec["base"]["coef"])
         self.curb = spec["curb_reveal_m"]
         self.streets = [(np.array(s["centerline"], float), s["width_m"] / 2) for s in spec["streets"]]
+        self.grid = spec["grid"]
+        self.influence = spec.get("pad_influence_m")   # screening length of the pad correction (terrain_field)
 
-    def base(self, x, y):
+    def dem(self, x, y):
         X, Y = np.asarray(x) / 100.0, np.asarray(y) / 100.0
         c = self.c
         return c[0] + c[1] * X + c[2] * Y + c[3] * X * X + c[4] * X * Y + c[5] * Y * Y
+
+    @property
+    def field(self):
+        """Solved once per process for the current specs (the pads change while zones are edited)."""
+        from .terrain_field import TerrainField, all_pads
+        pads = all_pads()
+        key = (json.dumps(pads, sort_keys=True), tuple(self.c), json.dumps(self.grid, sort_keys=True), self.influence)
+        if key not in _FIELD_CACHE:
+            _FIELD_CACHE.clear()
+            _FIELD_CACHE[key] = TerrainField(self.dem, self.grid, pads, screen_m=self.influence)
+        return _FIELD_CACHE[key]
+
+    def base(self, x, y, side=None):
+        """Ground before the curb, on the point's side of the hard pad edges (side: see TerrainField.residual)."""
+        return self.dem(x, y) + self.field.residual(x, y, side)
+
+    def ground(self, x, y):
+        """Final ground z: base, minus the curb on carriageways outside pads (a pad's level overrides the curb, as it
+        always has); inside a hard pad its plane (the step side)."""
+        from .terrain_field import pad_plane_z
+        f = self.field
+        z = np.asarray(self.base(x, y) - np.where(self.carriageway_mask(x, y) & (f.owner(x, y) < 0), self.curb, 0.0), float)
+        own = f.hard_owner(x, y)
+        for k in set(np.unique(own).tolist()) - {-1}:
+            z = np.where(own == k, pad_plane_z(f.pads[k], x, y), z)
+        return z
 
     def carriageway_mask(self, x, y):
         """True where (x, y) lies on any carriageway (distance to centreline < half width)."""

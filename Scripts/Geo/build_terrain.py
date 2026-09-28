@@ -26,6 +26,7 @@ MASK_BUFFER_M = 18.0  # 30 m posts average ~30x30 m: drop posts whose cell touch
 LANE_W, GUTTER_W = 3.5, 0.5
 SERVICE_W = {"service": 5.0, "residential": 6.0, "tertiary": 8.0}
 CURB_REVEAL_M = 0.15
+PAD_INFLUENCE_M = 30.0   # terrain_field screening: pad corrections fade back to the DEM over ~30 m (2026-09-28)
 # Measured corrections per OSM street: (dx, dy) shift of the centreline (m) and carriageway width (m).
 STREET_FIX = {
     # Curbs at the zebra in front of the gate: north y=-110.8, south y=-125.6 at x=153 (Google z20, 2026-09-24)
@@ -120,6 +121,7 @@ def main():
                     "coef": [round(float(c), 4) for c in coef], "rms_m": round(rms, 2), "inliers": n_in},
            "grid": GRID,
            "curb_reveal_m": CURB_REVEAL_M,
+           "pad_influence_m": PAD_INFLUENCE_M,
            "streets": streets}
     with open(os.path.join(DATA, "terrain.json"), "w") as fh:
         json.dump(out, fh, indent=1)

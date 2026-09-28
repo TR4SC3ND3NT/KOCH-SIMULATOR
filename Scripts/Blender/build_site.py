@@ -80,16 +80,17 @@ class Site:
         self.ter = ter
         self.col = ensure_collection(spec.get("collection", "03_Site"))
         self.names = set()
-        # opt-in ("ground": "pads"): gz follows the terrain_pads of all specs like TER_Ground does
-        self.pads = _all_pads() if spec.get("ground") == "pads" else None
+        # opt-in ("ground": "pads"): gz is the final TER_Ground surface, hard pad planes included
+        self.pads = spec.get("ground") == "pads"
 
     def gz(self, x, y):
-        """Ground z: terrain base, minus the curb reveal on carriageways (+ terrain pads if the spec opts in)."""
+        """Ground z: Terrain.ground (smooth pad field + hard pad planes + curb) if the spec opts in, else the field
+        outside hard pads minus the curb reveal on carriageways."""
+        if self.pads:
+            return float(self.ter.ground(x, y))
         z = float(self.ter.base(x, y))
         if self.ter.carriageway_mask(x, y):
             z -= self.ter.curb
-        if self.pads:
-            z = _pad_z(self.pads, x, y, z)
         return z
 
     def name(self, el):
@@ -1199,38 +1200,6 @@ def _slab_with_holes(bm, ring, holes, z0, z1):
             j = (i + 1) % n
             bm.faces.new((lo[k + i], lo[k + j], hi[k + j], hi[k + i]))
         k += n
-
-
-def _all_pads():
-    """terrain_pads of every spec, in the order build_greybox.apply_terrain_pads applies them."""
-    pads = []
-    for fn in sorted(os.listdir(SPECS)):
-        if fn.endswith(".json"):
-            try:
-                pads += json.load(open(os.path.join(SPECS, fn), encoding="utf-8")).get("terrain_pads", [])
-            except ValueError:   # a half-written spec of another zone: its pads are skipped here too
-                pass
-    return pads
-
-
-def _pad_z(pads, x, y, z):
-    """Same blend as build_greybox.apply_terrain_pads for one point (inside -> pad z, linear over 'blend' m)."""
-    for pad in pads:
-        ring, blend = pad["ring"], float(pad.get("blend", 0.0))
-        n, inside, d = len(ring), False, float("inf")
-        for i in range(n):
-            (x1, y1), (x2, y2) = ring[i], ring[(i + 1) % n]
-            if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
-                inside = not inside
-            ax, ay = x2 - x1, y2 - y1
-            t = min(1.0, max(0.0, ((x - x1) * ax + (y - y1) * ay) / (ax * ax + ay * ay)))
-            d = min(d, math.hypot(x - x1 - t * ax, y - y1 - t * ay))
-        w = 1.0 if inside else (max(0.0, 1.0 - d / blend) if blend > 0 else 0.0)
-        zp = pad["z"]
-        if "grad" in pad:  # sloped pad plane, same as build_greybox.pad_plane_z
-            zp += pad["grad"][0] * (x - pad["ref"][0]) + pad["grad"][1] * (y - pad["ref"][1])
-        z = z * (1 - w) + zp * w
-    return z
 
 
 def _ccw(r):

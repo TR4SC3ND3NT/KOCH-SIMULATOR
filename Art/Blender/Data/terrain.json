@@ -28,6 +28,7 @@
   "spacing_m": 1.0
  },
  "curb_reveal_m": 0.15,
+ "pad_influence_m": 30.0,
  "streets": [
   {
    "osm": "way/50434041",

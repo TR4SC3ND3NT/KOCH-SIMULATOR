@@ -144,7 +144,7 @@ def build_reference():
 
 def pad_plane_z(pad, x, y):
     """Pad target z: flat 'z', or a sloped plane when 'grad' [dz/dx, dz/dy] (m/m) is given about 'ref' [x, y]
-    (ramps, sloping paths and lawn banks). Works on scalars and numpy arrays; mirrored in build_site._pad_z."""
+    (ramps, sloping paths and lawn banks). Works on scalars and numpy arrays; same as terrain_field.pad_plane_z."""
     if "grad" not in pad:
         return pad["z"]
     (gx, gy), (x0, y0) = pad["grad"], pad["ref"]
@@ -252,9 +252,9 @@ def _conform_hard_edges(ob, hard):
     return xyz, new_faces, np.array(side, np.int64), skirts
 
 
-def apply_terrain_pads(ter=None):
-    """Set terrain z inside 'terrain_pads' rings of Specs/*.json to their z, blending linearly over 'blend' m outside.
-    For measured ground levels the smooth DEM fit misses (e.g. the lower ground west of Block C).
+def apply_terrain_pads(ter):
+    """Put TER_Ground on the smooth field of Terrain (greybox/terrain_field.py): every 'terrain_pads' ring of
+    Specs/*.json is met at its z/plane and the ground between pads is harmonic (even slopes, no bumps or creases).
     Pads with blend 0 are hard edges: the ring becomes mesh edges with a vertical step (see _conform_hard_edges),
     so a flat plaza is exactly flat up to its outline and the level beside it is untouched."""
     specs = os.path.join(REPO, "Art", "Blender", "Specs")
@@ -268,28 +268,30 @@ def apply_terrain_pads(ter=None):
     hard = [p for p in pads if float(p.get("blend", 0.0)) <= 0.0]
     skirts, side, faces = [], None, None
     if hard:
-        co, faces, side, skirts = _conform_hard_edges(ob, hard)
-        nan = np.isnan(co[:, 2])
-        if nan.any():  # vertices the CDT added: base terrain (smooth quadratic, same as the grid samples)
-            x, y = co[nan, 0], co[nan, 1]
-            co[nan, 2] = ter.base(x, y) - np.where(ter.carriageway_mask(x, y), ter.curb, 0.0)
+        co, faces, side, skirts = _conform_hard_edges(ob, hard)   # z of the added vertices is set below
     else:
         me = ob.data
         co = np.empty(len(me.vertices) * 3)
         me.vertices.foreach_get("co", co)
         co = co.reshape(-1, 3)
+    # z = the smooth field (terrain_field: pads met exactly, harmonic between them, no per-pad blends), except on
+    # the pad side of a hard edge, which takes its pad's plane (the last pad holding the vertex copy wins)
     x, y = co[:, 0], co[:, 1]
+    owner = np.full(len(co), -1)
     hk = 0
-    for pad in pads:
-        ring = np.array(pad["ring"], float)
-        blend = float(pad.get("blend", 0.0))
-        if blend <= 0.0:
-            w = ((side >> hk) & 1).astype(float)   # the side of the hard edge each vertex copy belongs to
+    for k, pad in enumerate(pads):
+        if float(pad.get("blend", 0.0)) <= 0.0:
+            owner[((side >> hk) & 1).astype(bool) if hard else _in_ring(np.array(pad["ring"], float), x, y)] = k
             hk += 1
         else:
-            inside = _in_ring(ring, x, y)
-            w = np.where(inside, 1.0, np.clip(1.0 - _ring_dist(ring, x, y) / blend, 0.0, 1.0))
-        co[:, 2] = co[:, 2] * (1 - w) + pad_plane_z(pad, x, y) * w
+            owner[_in_ring(np.array(pad["ring"], float), x, y)] = k
+    co[:, 2] = ter.base(x, y, side) - np.where(ter.carriageway_mask(x, y) & (owner < 0), ter.curb, 0.0)  # pads override the curb
+    if hard:   # released by a later soft pad's blend band (a bank ramping into the hard pad): the field holds them
+        owner = ter.field.plane_owner(owner, x, y, side)
+    for k, pad in enumerate(pads):
+        m = owner == k
+        if m.any() and float(pad.get("blend", 0.0)) <= 0.0:
+            co[m, 2] = pad_plane_z(pad, x[m], y[m])
     if hard:
         bm = bmesh.new()
         bv = [bm.verts.new(p) for p in co]
