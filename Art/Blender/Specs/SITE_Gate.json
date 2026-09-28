@@ -703,6 +703,59 @@
    "ue_asset": "sign_aframe",
    "evidence": "P2 placeholder: two blue-faced A-frame sandwich boards at the base of the concrete pole at the NW corner of the zebra (crossing clip 065856484 f00158/f00209, pole = StreetLamp_ZebraN); movable, +-0.5 m",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "TreeGuard_0",
+   "center": [
+    152.9,
+    -109.3
+   ],
+   "size": [
+    0.6,
+    0.6,
+    1.1
+   ],
+   "dir_deg": 0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "tree_guard_pyramid",
+   "evidence": "P1 by frames: 061913764 f00734/f00859 (walking to the NW end of the zebra, looking south): two steel rebar pyramid tree guards ~1.1 m high, ~0.6 m base, on the forecourt 1-2 m either side of the walk line near the kerb; +-1 m (clip not placed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "TreeGuard_1",
+   "center": [
+    155.6,
+    -109.2
+   ],
+   "size": [
+    0.6,
+    0.6,
+    1.1
+   ],
+   "dir_deg": 0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "tree_guard_pyramid",
+   "evidence": "P1 by frames: 061913764 f00734/f00859 (walking to the NW end of the zebra, looking south): two steel rebar pyramid tree guards ~1.1 m high, ~0.6 m base, on the forecourt 1-2 m either side of the walk line near the kerb; +-1 m (clip not placed)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "CrossingSign_N",
+   "pos": [
+    156.7,
+    -110.2
+   ],
+   "height": 2.4,
+   "head": "box",
+   "pole_r": 0.03,
+   "slot": "M_Sign_Panel",
+   "ue_asset": "sign_pedestrian_crossing",
+   "evidence": "P1 by frames: blue pedestrian-crossing sign on a post at the NE corner of the zebra (061913764 f00734, 012108212 s1); post height 2.4 m standard, +-1 m",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [
