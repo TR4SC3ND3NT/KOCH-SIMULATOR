@@ -1583,34 +1583,49 @@
    "z_base": 3.5
   },
   {
-   "type": "stairs_run",
-   "name": "LowerYard_StairE",
-   "top": [
-    213.577,
-    66.593
+   "type": "roof_plane",
+   "name": "LowerYard_RampE",
+   "ring": [
+    [
+     212.053,
+     66.652
+    ],
+    [
+     215.101,
+     66.535
+    ],
+    [
+     215.293,
+     71.531
+    ],
+    [
+     212.245,
+     71.648
+    ]
    ],
-   "dir_deg": 87.8,
-   "width": 3.029999999999997,
-   "risers": 5,
-   "riser_h": 0.12,
-   "tread": 0.5,
-   "z_top": 3.45,
+   "z": [
+    3.45,
+    3.45,
+    2.85,
+    2.85
+   ],
+   "thk": 0.6,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); owner 2026-09-28: a proper way down at the east end too (the drop by the last court was bare)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps)",
    "confidence": "low"
   },
   {
    "type": "box",
-   "name": "LowerYard_StairE_CheekW",
+   "name": "LowerYard_RampE_CheekW",
    "center": [
-    211.927,
-    68.558
+    211.975,
+    69.807
    ],
    "dir_deg": -2.2,
    "size": [
     0.4000000000000057,
-    1.1999999999999993,
+    3.6999999999999993,
     1.25
    ],
    "z0": 2.5500000000000003,
@@ -1621,21 +1636,135 @@
   },
   {
    "type": "box",
-   "name": "LowerYard_StairE_CheekE",
+   "name": "LowerYard_RampE_CheekE",
    "center": [
-    215.274,
-    67.779
+    215.322,
+    69.028
    ],
    "dir_deg": -2.2,
    "size": [
     0.25,
-    2.5,
+    5.0,
     1.25
    ],
    "z0": 2.5500000000000003,
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "NorthTreeLawn_E",
+   "ring": [
+    [
+     202.006,
+     79.947
+    ],
+    [
+     209.201,
+     79.671
+    ],
+    [
+     209.324,
+     82.869
+    ],
+    [
+     202.129,
+     83.145
+    ]
+   ],
+   "curb_w": 0.12,
+   "curb_h": 0.12,
+   "evidence": "Google 2026 lawn strip v 38.3..41.5 along the boundary with a row of trees",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "WastePoint_Pad",
+   "ring": [
+    [
+     194.789,
+     82.226
+    ],
+    [
+     201.584,
+     81.965
+    ],
+    [
+     201.649,
+     83.664
+    ],
+    [
+     194.854,
+     83.925
+    ]
+   ],
+   "z0": 2.75,
+   "z1": 2.9,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28: waste point opposite the guard booth - 3 grey metal containers against the block wall on a concrete pad; sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "WastePoint_Container_0",
+   "center": [
+    196.074,
+    83.127
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    1.9,
+    1.3,
+    1.35
+   ],
+   "z0": 2.9,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "waste_container_metal",
+   "evidence": "owner 2026-09-28: waste point opposite the guard booth - 3 grey metal containers against the block wall on a concrete pad; sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "WastePoint_Container_1",
+   "center": [
+    198.223,
+    83.045
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    1.9,
+    1.3,
+    1.35
+   ],
+   "z0": 2.9,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "waste_container_metal",
+   "evidence": "owner 2026-09-28: waste point opposite the guard booth - 3 grey metal containers against the block wall on a concrete pad; sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "WastePoint_Container_2",
+   "center": [
+    200.371,
+    82.962
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    1.9,
+    1.3,
+    1.35
+   ],
+   "z0": 2.9,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "waste_container_metal",
+   "evidence": "owner 2026-09-28: waste point opposite the guard booth - 3 grey metal containers against the block wall on a concrete pad; sizes assumed",
    "confidence": "low"
   },
   {
@@ -5149,12 +5278,12 @@
      84.807
     ],
     [
-     212.399,
-     79.548
+     194.212,
+     80.247
     ],
     [
-     212.522,
-     82.746
+     194.335,
+     83.444
     ],
     [
      75.623,
@@ -5453,8 +5582,8 @@
      91.468
     ],
     [
-     216.046,
-     83.311
+     210.064,
+     83.541
     ]
    ],
    "height": 2.2,
@@ -8127,6 +8256,26 @@
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
    "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "NorthBoundary_Wall_E",
+   "line": [
+    [
+     213.055,
+     83.426
+    ],
+    [
+     216.046,
+     83.311
+    ]
+   ],
+   "height": 2.2,
+   "thk": 0.2,
+   "material": "stone",
+   "slot": "M_Block_PaleYellow",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed; passage in the wall between the last two pillars west of the booth",
+   "confidence": "medium"
   }
  ]
 }

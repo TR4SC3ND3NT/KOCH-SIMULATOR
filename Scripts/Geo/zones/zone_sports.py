@@ -227,11 +227,12 @@ wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0
 wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
 wall_box("LowerYard_Retain_West", -20.0, 0.0, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)
 wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.4, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)  # stair E cheek (owner: bigger)
-add(type="stairs_run", name="LowerYard_StairE", top=W((SE_U0 + SE_U1) / 2, C_V1), dir_deg=DEG_N, width=SE_U1 - SE_U0 - 0.02,
-    risers=ST_N, riser_h=ST_RH, tread=ST_TR, z_top=Z_PLAZA, material="stone", slot="M_Concrete_Precast",
-    evidence=ev_ly + "; owner 2026-09-28: a proper way down at the east end too (the drop by the last court was bare)", confidence="low")
-wall_box("LowerYard_StairE_CheekW", C_U1 - 0.25, SE_U0, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)
-wall_box("LowerYard_StairE_CheekE", SE_U1, SE_U1 + 0.25, C_V1, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)
+RE_L = 5.0   # owner 2026-09-28: the east way down is a plain ramp, no steps (0.6 m over 5 m, ~7 deg)
+add(type="roof_plane", name="LowerYard_RampE", ring=rect(SE_U0, SE_U1, C_V1, C_V1 + RE_L), z=[Z_PLAZA, Z_PLAZA, Z_LOW, Z_LOW],
+    thk=0.6, material="stone", slot="M_Concrete_Precast",
+    evidence=ev_ly + "; owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps)", confidence="low")
+wall_box("LowerYard_RampE_CheekW", C_U1 - 0.25, SE_U0, C_V1 + RW_TOP, C_V1 + RE_L, Z_LOW - 0.3, Z_PLAZA + 0.35)
+wall_box("LowerYard_RampE_CheekE", SE_U1, SE_U1 + 0.25, C_V1, C_V1 + RE_L, Z_LOW - 0.3, Z_PLAZA + 0.35)
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
 # between the basketball court's N fence (v 25.40) and the lane; owner 2026-09-28: only parallel bars and 4 pull-up bars, the
@@ -360,8 +361,15 @@ for k, (u, v) in enumerate([(0.8, 28.9), (5.35, 28.9), (10.75, 28.9), (15.85, 28
         "blue spruces ~2.5 m (drone d_07)", confidence="medium")
 add(type="tree", name="NorthBedTree_Big", pos=W(43.2, 29.5), height=9.0, crown_d=5.0, crown_base=2.5, shape="round",
     evidence="large crown u 41..46, v 27..32 (Google 2026)", confidence="low")
-add(type="planter", name="NorthTreeLawn", ring=rect(-40.0, 97.0, 38.3, 41.5), curb_w=0.12, curb_h=0.12,
-    evidence="Google 2026 lawn strip v 38.3..41.5 along the boundary with a row of trees", confidence="medium")
+for nm, (a_, b_) in (("NorthTreeLawn", (-40.0, 78.8)), ("NorthTreeLawn_E", (86.6, 93.8))):   # cut for the bins + the passage (owner)
+    add(type="planter", name=nm, ring=rect(a_, b_, 38.3, 41.5), curb_w=0.12, curb_h=0.12,
+        evidence="Google 2026 lawn strip v 38.3..41.5 along the boundary with a row of trees", confidence="medium")
+EV_BIN = "owner 2026-09-28: waste point opposite the guard booth - 3 grey metal containers against the block wall on a concrete pad; sizes assumed"
+add(type="slab", name="WastePoint_Pad", ring=rect(79.3, 86.1, 40.3, 42.0), z0=Z_LOW - 0.1, z1=Z_LOW + 0.05, material="stone",
+    slot="M_Concrete_Precast", evidence=EV_BIN, confidence="low")
+for k, u in enumerate((80.55, 82.7, 84.85)):
+    add(type="box", name=f"WastePoint_Container_{k}", center=W(u, 41.25), dir_deg=ROT, size=[1.9, 1.3, 1.35], z0=Z_LOW + 0.05,
+        material="metal", slot="M_Steel_Galv", ue_asset="waste_container_metal", evidence=EV_BIN, confidence="low")
 for k, u in enumerate([-35.6, -23.3, -17.5, -12.3, -6.9, -1.7, 4.1, 9.2, 15.0, 20.5, 25.1, 32.6, 37.8, 43.1, 70.3, 75.7, 92.4]):
     big = u in (9.2, 15.0, 25.1, 37.8, 43.1, 70.3, 75.7, 92.4)
     add(type="tree", name=f"NorthLawnTree_{k:02d}", pos=W(u - 0.6, 39.4), height=7.0 if big else 4.5,
@@ -377,8 +385,12 @@ NB_LINE = [(-112.0, 42.2), (100.5, 42.2)]   # owner 2026-09-28: straight to a sq
 EV_NB = ("campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: "
          "a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + "
          "brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed")
-add(type="wall", name="NorthBoundary_Wall", line=poly(NB_LINE), height=2.2, thk=0.2, material="stone", slot="M_Block_PaleYellow",
-    evidence=EV_NB, confidence="medium")
+NB_PITCH = (NB_LINE[-1][0] - NB_LINE[0][0]) / round((NB_LINE[-1][0] - NB_LINE[0][0]) / 3.0)
+NB_GAP = (NB_LINE[-1][0] - 2 * NB_PITCH, NB_LINE[-1][0] - NB_PITCH)   # owner 2026-09-28: a passage next to the guard booth
+for nm, (a_, b_) in (("NorthBoundary_Wall", (NB_LINE[0][0], NB_GAP[0])), ("NorthBoundary_Wall_E", (NB_GAP[1], NB_LINE[-1][0]))):
+    add(type="wall", name=nm, line=poly([(a_, 42.2), (b_, 42.2)]), height=2.2, thk=0.2, material="stone", slot="M_Block_PaleYellow",
+        evidence=EV_NB + ("" if nm == "NorthBoundary_Wall" else "; passage in the wall between the last two pillars west of the booth"),
+        confidence="medium")
 _k = 0
 for (ua, va), (ub, vb) in zip(NB_LINE[:-1], NB_LINE[1:]):
     L = float(np.hypot(ub - ua, vb - va)); hd = ROT + float(np.degrees(np.arctan2(vb - va, ub - ua)))
