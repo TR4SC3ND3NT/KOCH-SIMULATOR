@@ -176,6 +176,10 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
                 "points": [c_to_w(x_front - sgn * 0.05, y_bot + TREAD) + [z(zb + BOTTOM_RISER + RISER_H)],
                            c_to_w(x_front - sgn * 0.05, y_land) + [z(h1)],
                            c_to_w(x_front - sgn * 0.05, HALL_Y1 - 0.05) + [z(h1)]]})
+    # flight 1: well side too (map owner 2026-09-28: the open edge between the flights needs a balustrade)
+    els.append({"type": "rail3d", "name": f"{prefix}_Rail1W", **rail, **rev,
+                "points": [c_to_w(x_in1 - sgn * 0.05, y_bot + TREAD) + [z(zb + BOTTOM_RISER + RISER_H)],
+                           c_to_w(x_in1 - sgn * 0.05, y_land) + [z(h1)]]})
     # flight 2: well side, from the landing up to the next floor; flight 1 well side (upper floors: void next to it)
     els.append({"type": "rail3d", "name": f"{prefix}_Rail2", **rail, **rev,
                 "points": [c_to_w(x_in2 + sgn * 0.05, y_land) + [z(h1)],
@@ -367,9 +371,9 @@ def f5(zb):
 
 def fittings_f1():
     els = []
-    for nm, (x, y), size in (("Vending", (LOB0 + 0.45, 3.4), [0.90, 0.85, 1.83]),
-                             ("Coffee", (LOB0 + 0.40, 4.5), [0.75, 0.70, 1.90]),
-                             ("WaterCooler", (LOB1 - 0.25, 3.0), [0.32, 0.32, 1.10])):
+    # the lobby vending machine, coffee kiosk and water cooler are placed by frames in INT_C_F1.json (F1_Vending,
+    # F1_CoffeeKiosk, F1_WaterCooler); the generator's old copies duplicated them (map owner 2026-09-28)
+    for nm, (x, y), size in ():
         els.append({"type": "box", "name": nm, "center": c_to_w(x, y), "dir_deg": NORTH, "size": size,
                     "z0": z(0.0), "material": "metal",
                     **ev("vending machine + bean-to-cup coffee machine + water cooler next to the entrance (070704360)",

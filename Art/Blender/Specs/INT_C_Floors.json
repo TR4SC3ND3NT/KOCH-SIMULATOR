@@ -1250,14 +1250,86 @@
   },
   {
    "type": "box",
-   "name": "F2_Accent_WC",
+   "name": "F2_Accent_WC_0",
    "center": [
-    188.411113,
-    7.279993
+    186.337721,
+    7.362684
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    4.800000000000001,
+    0.6499,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_WC_1",
+   "center": [
+    187.112064,
+    7.331802
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.02,
+    0.87
+   ],
+   "z0": 11.75,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_WC_2",
+   "center": [
+    188.411032,
+    7.279996
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.7,
+    0.02,
+    2.82
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_WC_3",
+   "center": [
+    189.709999,
+    7.228191
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.02,
+    0.87
+   ],
+   "z0": 11.75,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_WC_4",
+   "center": [
+    190.484424,
+    7.197305
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.6501,
     0.02,
     2.82
    ],
@@ -1270,8 +1342,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_0",
    "center": [
-    180.96508,
-    7.526916
+    180.963884,
+    7.49694
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1288,8 +1360,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_1",
    "center": [
-    195.85316,
-    6.93315
+    195.851964,
+    6.903174
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1421,6 +1493,28 @@
     [
      177.018639,
      7.694315,
+     11.312
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairW_F2_Rail1W",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays)",
+   "confidence": "medium",
+   "points": [
+    [
+     175.606333,
+     3.649405,
+     9.93
+    ],
+    [
+     175.725405,
+     6.635015,
      11.312
     ]
    ]
@@ -1566,6 +1660,28 @@
     [
      199.800399,
      6.785735,
+     11.312
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F2_Rail1W",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays)",
+   "confidence": "medium",
+   "points": [
+    [
+     200.886093,
+     2.6412,
+     9.93
+    ],
+    [
+     201.005165,
+     5.626811,
      11.312
     ]
    ]
@@ -2871,14 +2987,86 @@
   },
   {
    "type": "box",
-   "name": "F3_Accent_WC",
+   "name": "F3_Accent_WC_0",
    "center": [
-    188.411113,
-    7.279993
+    186.337721,
+    7.362684
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    4.800000000000001,
+    0.6499,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_WC_1",
+   "center": [
+    187.112064,
+    7.331802
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.02,
+    0.87
+   ],
+   "z0": 15.05,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_WC_2",
+   "center": [
+    188.411032,
+    7.279996
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.7,
+    0.02,
+    2.82
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_WC_3",
+   "center": [
+    189.709999,
+    7.228191
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.02,
+    0.87
+   ],
+   "z0": 15.05,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_WC_4",
+   "center": [
+    190.484424,
+    7.197305
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.6501,
     0.02,
     2.82
    ],
@@ -2891,8 +3079,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_0",
    "center": [
-    180.96508,
-    7.526916
+    180.963884,
+    7.49694
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -2909,8 +3097,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_1",
    "center": [
-    195.85316,
-    6.93315
+    195.851964,
+    6.903174
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3042,6 +3230,28 @@
     [
      199.800399,
      6.785735,
+     14.612
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F3_Rail1W",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays)",
+   "confidence": "medium",
+   "points": [
+    [
+     200.886093,
+     2.6412,
+     13.23
+    ],
+    [
+     201.005165,
+     5.626811,
      14.612
     ]
    ]
@@ -4310,14 +4520,86 @@
   },
   {
    "type": "box",
-   "name": "F4_Accent_WC",
+   "name": "F4_Accent_WC_0",
    "center": [
-    188.411113,
-    7.279993
+    186.337721,
+    7.362684
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    4.800000000000001,
+    0.6499,
+    0.02,
+    2.82
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_WC_1",
+   "center": [
+    187.112064,
+    7.331802
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.02,
+    0.87
+   ],
+   "z0": 18.35,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_WC_2",
+   "center": [
+    188.411032,
+    7.279996
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.7,
+    0.02,
+    2.82
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_WC_3",
+   "center": [
+    189.709999,
+    7.228191
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.9,
+    0.02,
+    0.87
+   ],
+   "z0": 18.35,
+   "material": "accent",
+   "evidence": "blue accent wall around the two WC doors (F_2.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_WC_4",
+   "center": [
+    190.484424,
+    7.197305
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.6501,
     0.02,
     2.82
    ],
@@ -4330,8 +4612,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_0",
    "center": [
-    180.96508,
-    7.526916
+    180.963884,
+    7.49694
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4348,8 +4630,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_1",
    "center": [
-    195.85316,
-    6.93315
+    195.851964,
+    6.903174
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -4481,6 +4763,28 @@
     [
      199.800399,
      6.785735,
+     17.912
+    ]
+   ]
+  },
+  {
+   "type": "rail3d",
+   "name": "StairE_F4_Rail1W",
+   "height": 0.95,
+   "spacing": 0.12,
+   "mid_rails": 0,
+   "material": "white",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays)",
+   "confidence": "medium",
+   "points": [
+    [
+     200.886093,
+     2.6412,
+     16.53
+    ],
+    [
+     201.005165,
+     5.626811,
      17.912
     ]
    ]
@@ -6734,8 +7038,8 @@
    "type": "box",
    "name": "F2_FireHose_W",
    "center": [
-    178.9,
-    1.65
+    178.250516,
+    1.675903
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -6747,15 +7051,15 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.65 m along the wall",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F2_FireHose_E",
    "center": [
-    197.0,
-    0.95
+    196.150675,
+    0.983873
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -6767,46 +7071,8 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.85 m along the wall",
    "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "F2_CeilPanel_0_00",
-   "center": [
-    175.516,
-    3.901
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 12.59,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_CeilPanel_1_00",
-   "center": [
-    175.596,
-    5.9
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 12.59,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
   },
   {
    "type": "box",
@@ -7076,82 +7342,6 @@
   },
   {
    "type": "box",
-   "name": "F2_CeilPanel_0_08",
-   "center": [
-    199.497,
-    2.945
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 12.59,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_CeilPanel_1_08",
-   "center": [
-    199.577,
-    4.943
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 12.59,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_CeilPanel_0_09",
-   "center": [
-    202.495,
-    2.825
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 12.59,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_CeilPanel_1_09",
-   "center": [
-    202.575,
-    4.824
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 12.59,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F2_CCTV_0",
    "center": [
     180.162,
@@ -7194,8 +7384,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_S0",
    "center": [
-    181.432,
-    1.674
+    181.433196,
+    1.703976
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -7231,8 +7421,8 @@
    "type": "box",
    "name": "F2_Hall_Radiator_S1",
    "center": [
-    196.42,
-    1.076
+    196.071474,
+    1.119924
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -7244,15 +7434,15 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "F2_Hall_Bench_S1",
    "pos": [
-    197.827,
-    1.21
+    198.676325,
+    1.176127
    ],
    "dir_deg": 87.7161454954155,
    "length": 1.8,
@@ -7261,7 +7451,7 @@
    "back": false,
    "z": 9.7,
    "ue_asset": "bench_generic",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid +0.85 m along the wall",
    "confidence": "low"
   },
   {
@@ -7325,7 +7515,7 @@
    "type": "box",
    "name": "F2_WC0_Bin",
    "center": [
-    188.25,
+    188.37,
     9.35
    ],
    "dir_deg": 0,
@@ -7442,7 +7632,7 @@
    "type": "box",
    "name": "F2_WC1_Bin",
    "center": [
-    190.65,
+    190.77,
     9.35
    ],
    "dir_deg": 0,
@@ -7660,14 +7850,14 @@
   },
   {
    "type": "box",
-   "name": "F2_HeatPipe_SW",
+   "name": "F2_HeatPipe_SW_0",
    "center": [
-    179.932,
-    1.703
+    176.377433,
+    1.844763
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    11.8,
+    4.6852,
     0.04,
     0.04
    ],
@@ -7680,14 +7870,94 @@
   },
   {
    "type": "box",
-   "name": "F2_HeatPipe_SE",
+   "name": "F2_HeatPipe_SW_1",
    "center": [
-    196.369,
-    1.048
+    182.105486,
+    1.616317
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    11.8,
+    4.72,
+    0.04,
+    0.04
+   ],
+   "z0": 9.8,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F2_HeatPipe_SW_2",
+   "center": [
+    185.660053,
+    1.474554
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3348,
+    0.04,
+    0.04
+   ],
+   "z0": 9.8,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F2_HeatPipe_SE_0",
+   "center": [
+    190.666118,
+    1.275442
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3852,
+    0.04,
+    0.04
+   ],
+   "z0": 9.8,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F2_HeatPipe_SE_1",
+   "center": [
+    194.245856,
+    1.132675
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.72,
+    0.04,
+    0.04
+   ],
+   "z0": 9.8,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F2_HeatPipe_SE_2",
+   "center": [
+    199.948739,
+    0.905233
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.6348,
     0.04,
     0.04
    ],
@@ -8170,8 +8440,8 @@
    "type": "box",
    "name": "F3_FireHose_W",
    "center": [
-    178.9,
-    1.65
+    178.250516,
+    1.675903
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -8183,15 +8453,15 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.65 m along the wall",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "F3_FireHose_E",
    "center": [
-    197.0,
-    0.95
+    196.150675,
+    0.983873
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -8203,46 +8473,8 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.85 m along the wall",
    "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "F3_CeilPanel_0_00",
-   "center": [
-    175.516,
-    3.901
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 15.89,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_CeilPanel_1_00",
-   "center": [
-    175.596,
-    5.9
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 15.89,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
   },
   {
    "type": "box",
@@ -8512,10 +8744,10 @@
   },
   {
    "type": "box",
-   "name": "F3_CeilPanel_0_08",
+   "name": "F3_CeilPanel_0_00",
    "center": [
-    199.497,
-    2.945
+    175.516,
+    3.901
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8531,48 +8763,10 @@
   },
   {
    "type": "box",
-   "name": "F3_CeilPanel_1_08",
+   "name": "F3_CeilPanel_1_00",
    "center": [
-    199.577,
-    4.943
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 15.89,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_CeilPanel_0_09",
-   "center": [
-    202.495,
-    2.825
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 15.89,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_CeilPanel_1_09",
-   "center": [
-    202.575,
-    4.824
+    175.596,
+    5.9
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8630,8 +8824,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_S0",
    "center": [
-    181.432,
-    1.674
+    181.433196,
+    1.703976
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8667,8 +8861,8 @@
    "type": "box",
    "name": "F3_Hall_Radiator_S1",
    "center": [
-    196.42,
-    1.076
+    196.071474,
+    1.119924
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8680,15 +8874,15 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "F3_Hall_Bench_S1",
    "pos": [
-    197.827,
-    1.21
+    198.676325,
+    1.176127
    ],
    "dir_deg": 87.7161454954155,
    "length": 1.8,
@@ -8697,7 +8891,7 @@
    "back": false,
    "z": 13.0,
    "ue_asset": "bench_generic",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid +0.85 m along the wall",
    "confidence": "low"
   },
   {
@@ -8761,7 +8955,7 @@
    "type": "box",
    "name": "F3_WC0_Bin",
    "center": [
-    188.25,
+    188.37,
     9.35
    ],
    "dir_deg": 0,
@@ -8878,7 +9072,7 @@
    "type": "box",
    "name": "F3_WC1_Bin",
    "center": [
-    190.65,
+    190.77,
     9.35
    ],
    "dir_deg": 0,
@@ -9016,14 +9210,14 @@
   },
   {
    "type": "box",
-   "name": "F3_HeatPipe_SW",
+   "name": "F3_HeatPipe_SW_0",
    "center": [
-    179.932,
-    1.703
+    176.377433,
+    1.844763
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    11.8,
+    4.6852,
     0.04,
     0.04
    ],
@@ -9036,14 +9230,94 @@
   },
   {
    "type": "box",
-   "name": "F3_HeatPipe_SE",
+   "name": "F3_HeatPipe_SW_1",
    "center": [
-    196.369,
-    1.048
+    182.105486,
+    1.616317
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    11.8,
+    4.72,
+    0.04,
+    0.04
+   ],
+   "z0": 13.1,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F3_HeatPipe_SW_2",
+   "center": [
+    185.660053,
+    1.474554
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3348,
+    0.04,
+    0.04
+   ],
+   "z0": 13.1,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F3_HeatPipe_SE_0",
+   "center": [
+    190.666118,
+    1.275442
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3852,
+    0.04,
+    0.04
+   ],
+   "z0": 13.1,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F3_HeatPipe_SE_1",
+   "center": [
+    194.245856,
+    1.132675
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.72,
+    0.04,
+    0.04
+   ],
+   "z0": 13.1,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F3_HeatPipe_SE_2",
+   "center": [
+    199.948739,
+    0.905233
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.6348,
     0.04,
     0.04
    ],
@@ -9526,8 +9800,8 @@
    "type": "box",
    "name": "F4_FireHose_E",
    "center": [
-    197.0,
-    0.95
+    196.150675,
+    0.983873
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -9539,7 +9813,7 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "P1 by frames (lobby/stair-hall frames 070704360 s1, 052716931, 080443026): red fire-hose cabinet on the corridor wall | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.85 m along the wall",
    "confidence": "low"
   },
   {
@@ -9772,82 +10046,6 @@
   },
   {
    "type": "box",
-   "name": "F4_CeilPanel_0_08",
-   "center": [
-    199.497,
-    2.945
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 19.19,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_CeilPanel_1_08",
-   "center": [
-    199.577,
-    4.943
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 19.19,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_CeilPanel_0_09",
-   "center": [
-    202.495,
-    2.825
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 19.19,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_CeilPanel_1_09",
-   "center": [
-    202.575,
-    4.824
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.6,
-    0.6,
-    0.03
-   ],
-   "z0": 19.19,
-   "material": "white",
-   "slot": "M_Lamp_Diffuser",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_CCTV_1",
    "center": [
     194.651,
@@ -9870,8 +10068,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_S0",
    "center": [
-    181.432,
-    1.674
+    181.433196,
+    1.703976
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9907,8 +10105,8 @@
    "type": "box",
    "name": "F4_Hall_Radiator_S1",
    "center": [
-    196.42,
-    1.076
+    196.071474,
+    1.119924
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9920,15 +10118,15 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "radiator_section",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid -0.35 m along the wall",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "F4_Hall_Bench_S1",
    "pos": [
-    197.827,
-    1.21
+    198.676325,
+    1.176127
    ],
    "dir_deg": 87.7161454954155,
    "length": 1.8,
@@ -9937,7 +10135,7 @@
    "back": false,
    "z": 16.3,
    "ue_asset": "bench_generic",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | [B] 2026-09-28 owner bug: stood in a door, slid +0.85 m along the wall",
    "confidence": "low"
   },
   {
@@ -10001,7 +10199,7 @@
    "type": "box",
    "name": "F4_WC0_Bin",
    "center": [
-    188.25,
+    188.37,
     9.35
    ],
    "dir_deg": 0,
@@ -10118,7 +10316,7 @@
    "type": "box",
    "name": "F4_WC1_Bin",
    "center": [
-    190.65,
+    190.77,
     9.35
    ],
    "dir_deg": 0,
@@ -10256,14 +10454,54 @@
   },
   {
    "type": "box",
-   "name": "F4_HeatPipe_SE",
+   "name": "F4_HeatPipe_SE_0",
    "center": [
-    196.369,
-    1.048
+    190.666118,
+    1.275442
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    11.8,
+    0.3852,
+    0.04,
+    0.04
+   ],
+   "z0": 16.4,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F4_HeatPipe_SE_1",
+   "center": [
+    194.245856,
+    1.132675
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.72,
+    0.04,
+    0.04
+   ],
+   "z0": 16.4,
+   "material": "white",
+   "slot": "M_PVC_White",
+   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged)",
+   "confidence": "low",
+   "ue_asset": "heating_pipe"
+  },
+  {
+   "type": "box",
+   "name": "F4_HeatPipe_SE_2",
+   "center": [
+    199.948739,
+    0.905233
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    4.6348,
     0.04,
     0.04
    ],
