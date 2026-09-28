@@ -1,0 +1,474 @@
+{
+ "id": "BLD_Hall",
+ "note": "Session B overlay (merged by build_facades.merge_overlay; the main spec belongs to the metrology session): the sports hall had no door; gym fit-out.",
+ "facades": [
+  {
+   "edge": 0,
+   "entrances": [
+    {
+     "u0": 45.5,
+     "u1": 47.3,
+     "z1": 2.6,
+     "transom_z": 2.1,
+     "reveal": 0.2,
+     "frame_w": 0.06,
+     "frame_d": 0.08,
+     "bays": [
+      [
+       0.9,
+       "door"
+      ],
+      [
+       0.9,
+       "door"
+      ]
+     ],
+     "evidence": "main double door (brown frame, glazed leaves + transom) under the gallery right of the hall's middle (pano dinning 2022); bay 8 of 10 from the W end, u +-3 m",
+     "confidence": "low"
+    },
+    {
+     "u0": 57.9,
+     "u1": 58.9,
+     "z1": 2.2,
+     "transom_z": 2.2,
+     "reveal": 0.15,
+     "frame_w": 0.06,
+     "frame_d": 0.08,
+     "bays": [
+      [
+       1.0,
+       "door"
+      ]
+     ],
+     "evidence": "single grey door at the E end of the gallery (pano dinning 2022)",
+     "confidence": "low"
+    }
+   ]
+  },
+  {
+   "edge": 2,
+   "windows": [
+    {
+     "type": "H",
+     "u": [
+      57.1,
+      51.1,
+      45.1,
+      39.1,
+      33.1,
+      27.1
+     ],
+     "sills": [
+      2.0
+     ]
+    }
+   ]
+  }
+ ],
+ "attachments": [
+  {
+   "type": "interior",
+   "edge": 0,
+   "name": "Gym",
+   "items": [
+    {
+     "group": "GymFloor",
+     "slot": "M_Sport_Floor",
+     "kind": "box",
+     "c": [
+      18.3,
+      5.63
+     ],
+     "size": [
+      35.8,
+      10.46,
+      0.04
+     ],
+     "z0": -0.02
+    },
+    {
+     "group": "Ceiling",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      30.1,
+      5.63
+     ],
+     "size": [
+      59.4,
+      10.46,
+      0.05
+     ],
+     "z0": 5.0
+    },
+    {
+     "group": "Trusses",
+     "slot": "M_Concrete",
+     "kind": "box",
+     "c": [
+      6.1,
+      5.63
+     ],
+     "size": [
+      0.3,
+      10.46,
+      0.9
+     ],
+     "z0": 4.1
+    },
+    {
+     "group": "Trusses",
+     "slot": "M_Concrete",
+     "kind": "box",
+     "c": [
+      12.1,
+      5.63
+     ],
+     "size": [
+      0.3,
+      10.46,
+      0.9
+     ],
+     "z0": 4.1
+    },
+    {
+     "group": "Trusses",
+     "slot": "M_Concrete",
+     "kind": "box",
+     "c": [
+      18.1,
+      5.63
+     ],
+     "size": [
+      0.3,
+      10.46,
+      0.9
+     ],
+     "z0": 4.1
+    },
+    {
+     "group": "Trusses",
+     "slot": "M_Concrete",
+     "kind": "box",
+     "c": [
+      24.1,
+      5.63
+     ],
+     "size": [
+      0.3,
+      10.46,
+      0.9
+     ],
+     "z0": 4.1
+    },
+    {
+     "group": "Trusses",
+     "slot": "M_Concrete",
+     "kind": "box",
+     "c": [
+      30.1,
+      5.63
+     ],
+     "size": [
+      0.3,
+      10.46,
+      0.9
+     ],
+     "z0": 4.1
+    },
+    {
+     "group": "Partition",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      36.3,
+      2.65
+     ],
+     "size": [
+      0.2,
+      4.5,
+      5.0
+     ]
+    },
+    {
+     "group": "Partition",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      36.3,
+      8.48
+     ],
+     "size": [
+      0.2,
+      4.76,
+      5.0
+     ]
+    },
+    {
+     "group": "Partition",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      36.3,
+      5.5
+     ],
+     "size": [
+      0.2,
+      1.2,
+      2.8
+     ],
+     "z0": 2.2
+    },
+    {
+     "group": "PartitionDoor",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      36.3,
+      5.5
+     ],
+     "size": [
+      0.05,
+      1.1,
+      2.15
+     ],
+     "z0": 0.02
+    },
+    {
+     "group": "Backboards",
+     "slot": "M_Plastic_White",
+     "kind": "box",
+     "c": [
+      5.6,
+      5.63
+     ],
+     "size": [
+      0.05,
+      1.8,
+      1.05
+     ],
+     "z0": 2.9
+    },
+    {
+     "group": "Hoops",
+     "slot": "M_Steel_Paint_Dark",
+     "kind": "box",
+     "c": [
+      5.85,
+      5.63
+     ],
+     "size": [
+      0.45,
+      0.45,
+      0.02
+     ],
+     "z0": 3.05
+    },
+    {
+     "group": "HoopFrames",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      4.6,
+      5.63
+     ],
+     "size": [
+      0.2,
+      0.2,
+      4.0
+     ],
+     "z0": 0.0
+    },
+    {
+     "group": "HoopFrames",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      5.05,
+      5.63
+     ],
+     "size": [
+      0.9,
+      0.15,
+      0.15
+     ],
+     "z0": 3.6
+    },
+    {
+     "group": "Backboards",
+     "slot": "M_Plastic_White",
+     "kind": "box",
+     "c": [
+      31.0,
+      5.63
+     ],
+     "size": [
+      0.05,
+      1.8,
+      1.05
+     ],
+     "z0": 2.9
+    },
+    {
+     "group": "Hoops",
+     "slot": "M_Steel_Paint_Dark",
+     "kind": "box",
+     "c": [
+      30.75,
+      5.63
+     ],
+     "size": [
+      0.45,
+      0.45,
+      0.02
+     ],
+     "z0": 3.05
+    },
+    {
+     "group": "HoopFrames",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      32.0,
+      5.63
+     ],
+     "size": [
+      0.2,
+      0.2,
+      4.0
+     ],
+     "z0": 0.0
+    },
+    {
+     "group": "HoopFrames",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      31.55,
+      5.63
+     ],
+     "size": [
+      0.9,
+      0.15,
+      0.15
+     ],
+     "z0": 3.6
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      9.0,
+      0.62
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      9.0,
+      10.64
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      15.0,
+      0.62
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      15.0,
+      10.64
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      21.5,
+      0.62
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      21.5,
+      10.64
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      27.5,
+      0.62
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    },
+    {
+     "group": "Benches",
+     "slot": "M_Paint_Blue",
+     "kind": "box",
+     "c": [
+      27.5,
+      10.64
+     ],
+     "size": [
+      2.0,
+      0.35,
+      0.45
+     ]
+    }
+   ],
+   "evidence": "2GIS 30258560058266093: gym with a painted basketball court, windows high on both long walls, concrete lattice trusses under a boarded wooden ceiling, backboards on blue steel frames at both ends, blue benches along the walls; W 36 m of the hall assumed to be the gym (court 28 m), the E part (lobby/changing rooms) not photographed: partition + door only",
+   "confidence": "low"
+  }
+ ]
+}
