@@ -246,10 +246,7 @@ def main():
         along = (ny != 0)                                     # N/S sides run along u and own the corners
         hr, er = P + 0.35, P - 0.05                           # hedge / edging centre lines
         hl, el_ = (sq if along else P), (P if along else P - 0.1)
-        ga = gh if along else gh + ARCH_T                     # W/E: the link entrances carry an arch in the hedge line
-        if not along:
-            arch(f"Arch_Square_{side}", (nx * hr, 0.0), 0.0, 2 * gh)
-        for k, (a0, a1) in enumerate(((-hl, -ga), (ga, hl))):
+        for k, (a0, a1) in enumerate(((-hl, -gh), (gh, hl))):   # no arches inside the garden (owner 2026-09-28)
             pts = [(a0, ny * hr), (a1, ny * hr)] if along else [(nx * hr, a0), (nx * hr, a1)]
             new.append({"type": "hedge", "name": f"CentreSquare_Hedge_{side}{k}", "line": [W(*q) for q in pts],
                         "width": HEDGE_W, "height": 1.05, "top": "flat", "confidence": "medium", "evidence": EV})
