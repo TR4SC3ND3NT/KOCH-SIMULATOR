@@ -80,7 +80,8 @@
    "z_top": 4.246,
    "run_out": 0.5,
    "evidence": "photo 012543364: 2 steps from the mid landing down to the corridor floor; riser as upper flight",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top_flush": true
   },
   {
    "type": "slab",
@@ -103,7 +104,7 @@
      -3.655
     ]
    ],
-   "z0": 3.7700000000000005,
+   "z0": 3.72,
    "z1": 3.9700000000000006,
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; floor -1.38 m below the plaza (10 risers) | extended east to the tower at x 185.9 by basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697",
    "confidence": "medium"
@@ -203,7 +204,7 @@
    ],
    "z0": 3.9700000000000006,
    "z1": 5.718260869565218,
-   "thk": 0.3,
+   "thk": 0.26,
    "material": "brick",
    "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile parapet under the sloped covers (map owner photo 10:55) | extended east to the tower at x 185.9 by basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697",
    "confidence": "medium"
@@ -328,7 +329,7 @@
    "name": "EntryRoof_Post1",
    "center": [
     171.915,
-    -5.588
+    -5.638
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -385,8 +386,8 @@
    "type": "box",
    "name": "Piano_Upright_0",
    "center": [
-    183.359,
-    -4.613
+    183.309,
+    -4.611
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -405,8 +406,8 @@
    "type": "box",
    "name": "Piano_Upright_1",
    "center": [
-    184.558,
-    -4.661
+    184.758,
+    -4.669
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -425,8 +426,8 @@
    "type": "box",
    "name": "Piano_Upright_2",
    "center": [
-    185.416,
-    -5.726
+    185.414,
+    -5.776
    ],
    "dir_deg": 87.7161455,
    "size": [
@@ -970,20 +971,20 @@
    "name": "BH_Vestibule_Floor",
    "ring": [
     [
-     176.929,
-     1.693
+     176.979,
+     1.691
     ],
     [
-     179.927,
-     1.574
+     179.877,
+     1.576
     ],
     [
-     180.176,
-     7.809
+     180.126,
+     7.811
     ],
     [
-     177.178,
-     7.928
+     177.228,
+     7.926
     ]
    ],
    "z0": 3.77,
@@ -1032,8 +1033,8 @@
      7.928
     ]
    ],
-   "z0": 6.2,
-   "z1": 6.25,
+   "z0": 6.14,
+   "z1": 6.19,
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1091,7 +1092,7 @@
     ]
    ],
    "z0": 3.73,
-   "z1": 6.2,
+   "z1": 6.14,
    "thk": 0.25,
    "material": "white",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1111,7 +1112,7 @@
     ]
    ],
    "z0": 3.3,
-   "z1": 6.2,
+   "z1": 6.14,
    "thk": 0.25,
    "material": "white",
    "openings": [
@@ -1145,7 +1146,7 @@
     ]
    ],
    "z0": 3.73,
-   "z1": 6.2,
+   "z1": 6.14,
    "thk": 0.35,
    "material": "white",
    "openings": [
@@ -1211,7 +1212,7 @@
     ]
    ],
    "z0": 3.73,
-   "z1": 6.2,
+   "z1": 6.14,
    "thk": 0.25,
    "material": "white",
    "openings": [
@@ -1260,8 +1261,8 @@
    "type": "box",
    "name": "BH_Vestibule_Vent0",
    "center": [
-    177.252,
-    6.274
+    177.294,
+    7.323
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1304,8 +1305,8 @@
    "type": "box",
    "name": "BH_Vestibule_Vent1",
    "center": [
-    177.137,
-    3.376
+    177.093,
+    2.287
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1368,7 +1369,7 @@
    "size": [
     0.02,
     1.0,
-    2.1
+    2.0
    ],
    "z0": 3.97,
    "material": "metal",
@@ -1381,8 +1382,8 @@
    "type": "box",
    "name": "BH_Exit_Sign",
    "center": [
-    201.994,
-    3.816
+    202.032,
+    4.765
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1390,7 +1391,7 @@
     0.45,
     0.15
    ],
-   "z0": 5.92,
+   "z0": 5.6,
    "material": "white",
    "slot": "M_Sign_Panel",
    "ue_asset": "sign_board",
@@ -1408,9 +1409,9 @@
    "size": [
     0.03,
     0.8,
-    0.45
+    0.14
    ],
-   "z0": 5.65,
+   "z0": 5.99,
    "material": "metal",
    "slot": "M_Wrought_Iron",
    "ue_asset": "window_barred",
@@ -1428,9 +1429,9 @@
    "size": [
     0.03,
     0.8,
-    0.45
+    0.14
    ],
-   "z0": 5.65,
+   "z0": 5.99,
    "material": "metal",
    "slot": "M_Wrought_Iron",
    "ue_asset": "window_barred",
@@ -1448,9 +1449,9 @@
    "size": [
     0.03,
     0.8,
-    0.45
+    0.14
    ],
-   "z0": 5.65,
+   "z0": 5.99,
    "material": "metal",
    "slot": "M_Wrought_Iron",
    "ue_asset": "window_barred",
@@ -1730,7 +1731,7 @@
     0.04,
     0.04
    ],
-   "z0": 6.14,
+   "z0": 6.08,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1749,7 +1750,7 @@
     0.12,
     0.1
    ],
-   "z0": 6.1,
+   "z0": 6.04,
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "cctv_dome",
@@ -1769,7 +1770,7 @@
     0.12,
     0.1
    ],
-   "z0": 6.1,
+   "z0": 6.04,
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "cctv_dome",
@@ -1789,7 +1790,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1808,7 +1809,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1827,7 +1828,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1846,7 +1847,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1865,7 +1866,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1884,7 +1885,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1903,7 +1904,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1922,7 +1923,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1941,7 +1942,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1960,7 +1961,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1979,7 +1980,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -1998,7 +1999,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2017,7 +2018,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2036,7 +2037,7 @@
     0.6,
     0.03
    ],
-   "z0": 6.17,
+   "z0": 6.11,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2155,7 +2156,7 @@
     0.6,
     0.02
    ],
-   "z0": 6.18,
+   "z0": 6.12,
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2174,7 +2175,7 @@
     0.6,
     0.02
    ],
-   "z0": 6.18,
+   "z0": 6.12,
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2243,7 +2244,7 @@
     0.02,
     0.12
    ],
-   "z0": 5.0,
+   "z0": 5.15,
    "material": "white",
    "slot": "M_Paint_Maroon",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2253,8 +2254,8 @@
    "type": "box",
    "name": "BH_Door_Black",
    "center": [
-    196.157,
-    7.031
+    196.155,
+    6.981
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -2318,8 +2319,8 @@
      12.441
     ]
    ],
-   "z0": 6.2,
-   "z1": 6.25,
+   "z0": 6.14,
+   "z1": 6.19,
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2334,12 +2335,12 @@
      12.441
     ],
     [
-     180.775,
-     7.785
+     180.779,
+     7.885
     ]
    ],
    "z0": 3.73,
-   "z1": 6.2,
+   "z1": 6.14,
    "thk": 0.2,
    "material": "white",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2350,8 +2351,8 @@
    "name": "BH_Art_Wall_E",
    "line": [
     [
-     186.271,
-     7.566
+     186.275,
+     7.665
     ],
     [
      186.457,
@@ -2359,7 +2360,7 @@
     ]
    ],
    "z0": 3.73,
-   "z1": 6.2,
+   "z1": 6.14,
    "thk": 0.2,
    "material": "white",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2376,7 +2377,7 @@
    "size": [
     0.01,
     4.2,
-    1.6
+    1.5
    ],
    "z0": 4.6,
    "material": "white",
@@ -2558,7 +2559,7 @@
     0.6,
     0.04
    ],
-   "z0": 6.16,
+   "z0": 6.1,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2577,7 +2578,7 @@
     0.6,
     0.04
    ],
-   "z0": 6.16,
+   "z0": 6.1,
    "material": "white",
    "slot": "M_Lamp_Diffuser",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
@@ -2596,7 +2597,7 @@
     0.12,
     0.1
    ],
-   "z0": 6.1,
+   "z0": 6.04,
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "cctv_dome",

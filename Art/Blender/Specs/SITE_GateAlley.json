@@ -206,19 +206,19 @@
    "name": "PavilionStair_TopLanding",
    "ring": [
     [
-     155.018,
+     154.988,
      -85.965
     ],
     [
-     155.518,
+     155.548,
      -85.989
     ],
     [
-     155.721,
+     155.751,
      -81.844
     ],
     [
-     155.222,
+     155.192,
      -81.82
     ]
    ],
@@ -1792,12 +1792,12 @@
      -77.613
     ],
     [
-     158.631,
-     -52.251
+     158.407,
+     -54.61
     ],
     [
-     153.031,
-     -51.976
+     152.916,
+     -54.32
     ]
    ],
    "z": [
@@ -1808,7 +1808,7 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end)",
    "confidence": "medium",
    "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)"
   },
@@ -2120,11 +2120,11 @@
    "ring": [
     [
      158.859,
-     -52.563
+     -52.543
     ],
     [
      160.957,
-     -52.666
+     -52.646
     ],
     [
      161.04,

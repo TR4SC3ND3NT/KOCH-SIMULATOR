@@ -337,6 +337,7 @@ class Building:
 
     def build_windows(self, i, ops):
         e = self.edges[i]
+        placed = []   # surround extents on this edge (u_lo, u_hi, z_lo, z_hi): neighbours are trimmed to abut, not overlap
         for k, (o, tname, wt) in enumerate(ops):
             ident = Matrix.Identity(4)
             w, h = o.u1 - o.u0, o.z1 - o.z0
@@ -374,7 +375,15 @@ class Building:
             if sw and any(sw) and wt.get("surround_proj", 0.04) > 0:
                 l, r, b, t = sw
                 proj = wt.get("surround_proj", 0.04)
-                me2 = self.kit_mesh(f"Surround_{tname}", lambda bm: _surround(bm, w, h, l, r, b, t, proj))
+                for a0, a1, z0_, z1_ in placed:   # adjacent surrounds of one row overlapped: coplanar fronts (z-fight)
+                    if z0_ < o.z1 + t and z1_ > o.z0 - b:
+                        if a0 < o.u0 - l < a1 <= o.u0:
+                            l = o.u0 - a1
+                        if o.u1 <= a0 < o.u1 + r < a1:
+                            r = a0 - o.u1
+                placed.append((o.u0 - l, o.u1 + r, o.z0 - b, o.z1 + t))
+                me2 = self.kit_mesh(f"Surround_{tname}" + ("" if [l, r] == list(sw[:2]) else f"_{round(l * 1000)}_{round(r * 1000)}"),
+                                    lambda bm: _surround(bm, w, h, l, r, b, t, proj))
                 if self.s.get("detail") and not me2.materials:
                     me2.materials.append(mat(wt.get("reveal_paint", "M_Paint_Maroon")))
                 self._link(f"Sur_E{i}_{k:02d}", me2, place, COL["maroon"])
@@ -477,6 +486,8 @@ class Building:
             z0 = p["z0"]
             if pl and p["proj"] < pl["proj"] + 0.016:  # plinth as proud as the pilaster: start on its top (no coplanar fronts)
                 z0 = max(z0, pl["z_top"])
+            elif pl and abs(z0 - pl["z_top"]) < 0.002:  # prouder pilaster standing on the plinth top: sink 2 cm into it
+                z0 = pl["z_top"] - 0.02
             bm_p = bmesh.new()
             box(bm_p, e["frame"], p["u0"], p["u1"], 0.0, p["proj"], z0, p["z1"])
             self.obj(f"Pilaster_E{p['edge']}_{k:02d}", bm_p, COL["maroon"], p.get("evidence", "pilaster"), p.get("confidence"))

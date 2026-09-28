@@ -688,49 +688,49 @@
    "edge": 0,
    "items": [
     [
-     4.0,
-     5.0,
+     10.87,
+     3.9,
      0.8,
      0.6,
      0.3
     ],
     [
-     12.5,
-     5.0,
+     14.04,
+     3.9,
      0.8,
      0.6,
      0.3
     ],
     [
-     16.0,
-     5.0,
+     19.99,
+     3.9,
      0.8,
      0.6,
      0.3
     ],
     [
-     24.3,
-     5.0,
+     22.69,
+     3.9,
      0.8,
      0.6,
      0.3
     ],
     [
-     30.4,
-     5.0,
+     25.86,
+     3.9,
      0.8,
      0.6,
      0.3
     ],
     [
-     36.5,
-     5.0,
+     34.51,
+     3.9,
      0.8,
      0.6,
      0.3
     ]
    ],
-   "evidence": "065934318_s1/s2 f00864/f00983/f01032: 5-6 AC outdoor units between the upper-floor windows of the south facade; u by eye between the window columns",
+   "evidence": "065934318_s1/s2 f00864/f00983/f01032: 5-6 AC outdoor units between the upper-floor windows of the south facade; u by eye between the window columns; moved under the WU windows (sill 4.65) - they sat on pilasters / surrounds (zaudit)",
    "confidence": "low"
   }
  ],
