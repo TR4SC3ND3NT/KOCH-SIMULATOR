@@ -448,7 +448,7 @@
      43.447
     ]
    ],
-   "evidence": "PnP camera on 070410255 t=52 s (5 ground points, rms 2 px; checks: wheelie bin 1.09 m, courts gate 2.0 m, person 1.86 m): S fence top rail level at z 11.85-11.92 = 8.2-8.3 m above the plinth top, mid rail z 7.47 = 3.8 m; posts ~3 m (15 bays x 2.96 m on the S side, drone 2022 d_19); rope-net roof (drone d_19, 2GIS night photo 2025)",
+   "evidence": "PnP camera on 070410255 t=52 s (5 ground points, rms 2 px; checks: wheelie bin 1.09 m, courts gate 2.0 m, person 1.86 m): S fence top rail level at z 11.85-11.92 = 8.2-8.3 m above the plinth top, mid rail z 7.47 = 3.8 m; posts ~3 m (15 bays x 2.96 m on the S side, drone 2022 d_19); rope-net roof (drone d_19, 2GIS night photo 2025) | [B] 2026-09-28: X-braced upper section (mid rail to top rail) in the bays, 070410255 t49.5-t51 / 070541257 t8-9.5.",
    "confidence": "medium",
    "height": 8.2,
    "post_spacing": 3.0,
@@ -459,7 +459,11 @@
     3.8,
     8.17
    ],
-   "z_base": 3.79
+   "z_base": 3.79,
+   "xbrace": [
+    3.8,
+    8.17
+   ]
   },
   {
    "type": "cage_fence",
@@ -474,7 +478,7 @@
      43.455
     ]
    ],
-   "evidence": "PnP camera on 070410255 t=52 s (5 ground points, rms 2 px; checks: wheelie bin 1.09 m, courts gate 2.0 m, person 1.86 m): S fence top rail level at z 11.85-11.92 = 8.2-8.3 m above the plinth top, mid rail z 7.47 = 3.8 m; posts ~3 m (15 bays x 2.96 m on the S side, drone 2022 d_19); rope-net roof (drone d_19, 2GIS night photo 2025)",
+   "evidence": "PnP camera on 070410255 t=52 s (5 ground points, rms 2 px; checks: wheelie bin 1.09 m, courts gate 2.0 m, person 1.86 m): S fence top rail level at z 11.85-11.92 = 8.2-8.3 m above the plinth top, mid rail z 7.47 = 3.8 m; posts ~3 m (15 bays x 2.96 m on the S side, drone 2022 d_19); rope-net roof (drone d_19, 2GIS night photo 2025) | [B] 2026-09-28: X-braced upper section (mid rail to top rail) in the bays, 070410255 t49.5-t51 / 070541257 t8-9.5.",
    "confidence": "medium",
    "height": 8.2,
    "post_spacing": 9.0,
@@ -485,7 +489,11 @@
     3.8,
     8.17
    ],
-   "z_base": 3.79
+   "z_base": 3.79,
+   "xbrace": [
+    3.8,
+    8.17
+   ]
   },
   {
    "type": "cage_fence",

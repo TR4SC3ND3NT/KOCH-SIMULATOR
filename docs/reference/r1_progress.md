@@ -114,7 +114,7 @@ after the C zone passes P0 and P1 with them unchanged.
 
 ## 7. Sports fields (zone `Sports`)
 - [ ] F.1 Football pitch: turf slab, red plinth, red rubber border, levels — approx., in the model (GBS_Sports_Pitch)
-- [ ] F.2 Pitch fence: posts, mesh panels, X-braced ball-stop sections, gates — approx., in the model (GBS_Sports_PitchFence/PitchGate) | [B] P2 2026-09-28: cage fences split into _Frame (green steel posts/rails) and _Mesh (bay plates, masked green mesh slot for UE), per 070410255 t49-66
+- [ ] F.2 Pitch fence: posts, mesh panels, X-braced ball-stop sections, gates — approx., in the model (GBS_Sports_PitchFence/PitchGate) | [B] P2 2026-09-28: cage fences split into _Frame (green steel posts/rails) and _Mesh (bay plates, masked green mesh slot for UE), per 070410255 t49-66; X-braced upper section in every bay (070410255 t49.5-51, 070541257 t8-9.5)
 - [ ] F.3 Floodlight masts with ladders and heads — approx., in the model (GBS_Sports_PitchFlood)
 - [ ] F.4 Courts (basketball, volleyball, hard court): slabs, fences between, hoops, net posts — approx., in the model (GBS_Sports_Court(s)/Hoop/VolleyNet/HardNet/CourtsFence)
 - [ ] F.5 Decorated alley along the pitch: planters, thujas, double-ball lamps, garlands — approx., in the model (GBS_Sports_AlleyBed/AlleyThuja/AlleyLamp/AlleyFestoon)

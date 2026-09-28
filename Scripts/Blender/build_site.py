@@ -877,6 +877,13 @@ class Site:
             first = False
             for zr in el.get("rails", [h - rs / 2]):
                 box(bm, m, ps / 2, L - ps / 2, -rs / 2, rs / 2, z0 + zr - rs / 2, z0 + zr + rs / 2)
+            xb = el.get("xbrace")          # [z0, z1] above the base: diagonal X in every bay (ball-stop section)
+            if xb:
+                for k in range(n):
+                    for a0, a1 in ((0, 1), (1, 0)):
+                        p0 = m @ Vector((L * (k + a0) / n, 0.0, 0.0))
+                        p1 = m @ Vector((L * (k + a1) / n, 0.0, 0.0))
+                        _rod(bm, Vector((p0.x, p0.y, z0 + xb[0])), Vector((p1.x, p1.y, z0 + xb[1])), rs * 0.8)
             for k in range(n):
                 box(bp, m, L * k / n + ps / 2, L * (k + 1) / n - ps / 2, -mt / 2, mt / 2,
                     z0 + el.get("bottom_gap", 0.03), z0 + h - rs)
@@ -1028,6 +1035,21 @@ def _cyl(bm, p, r, z0, z1, seg):
     lo = [bm.verts.new((p.x + r * math.cos(2 * math.pi * k / seg), p.y + r * math.sin(2 * math.pi * k / seg), z0)) for k in range(seg)]
     hi = [bm.verts.new((v.co.x, v.co.y, z1)) for v in lo]
     _close_loops(bm, [lo, hi])
+
+
+def _rod(bm, p0, p1, tube):
+    """Square tube of side `tube` from p0 to p1 (closed box)."""
+    v = p1 - p0
+    ln = v.length
+    if ln < 1e-4:
+        return
+    u = v / ln
+    s = u.cross(Vector((0, 0, 1)))
+    s = (s if s.length > 1e-6 else Vector((1, 0, 0))).normalized() * (tube / 2)
+    w = u.cross(s).normalized() * (tube / 2)
+    r0 = [bm.verts.new(p0 + a * s + b * w) for a, b in ((1, 1), (-1, 1), (-1, -1), (1, -1))]
+    r1 = [bm.verts.new(p1 + a * s + b * w) for a, b in ((1, 1), (-1, 1), (-1, -1), (1, -1))]
+    _close_loops(bm, [r0, r1])
 
 
 def _close_loops(bm, loops, cap_top=True):
