@@ -89,7 +89,7 @@ Two agents work on the map at the same time, each on its own zones and files:
 | | Stream A (RTX PC) | Stream B (owner laptop) |
 |---|---|---|
 | Zones | Street, bus stop, crossing; Gate + booth + yard; Alley B–A; A_W gallery + plaza; C plaza + exterior; C interior F1-F5; C basement; Blocks A and B; ring (CTX) | Garden (gazebos, hedges, arches, pergola, retaining walls); Hall–C passage; Sports fields; Sports hall + wing + east end; Canteen and the small buildings north of C; West campus (D frontage, E) |
-| Spec files | SITE_StreetFront, SITE_Gate, BLD_GateBooth, SITE_GateAlley (+ zone_gate_alley.py), BLD_A_S/A_N/A_E/A_W, BLD_B, SITE_CPlaza, BLD_C, INT_C_* (+ zone_c_f1.py, zone_c_basement.py), footprints.json, ctx_osm.json | SITE_Garden, SITE_HallCPassage, SITE_Sports (+ zone_sports.py), BLD_Hall, BLD_HallEast, BLD_HallWing, BLD_Canteen, SITE_WestFront |
+| Spec files | SITE_StreetFront, SITE_Gate, BLD_GateBooth, SITE_GateAlley (+ zone_gate_alley.py), BLD_A_S/A_N/A_E/A_W, BLD_B, SITE_CPlaza, BLD_C, INT_C_* (+ zone_c_f1.py, zone_c_basement.py), footprints.json, ctx_osm.json | SITE_Garden, SITE_HallCPassage, SITE_Sports (+ zone_sports.py), BLD_Hall, BLD_HallEast, BLD_HallWing, BLD_Canteen, SITE_WestFront, SITE_Barriers (map limit) |
 | `.blend` | rebuilds and commits it (holds the LFS lock) | never commits it; builds a local scratch copy for its checks |
 
 Rules:

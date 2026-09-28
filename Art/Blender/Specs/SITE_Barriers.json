@@ -1,0 +1,54 @@
+{
+ "id": "SITE_Barriers",
+ "collection": "09_Barriers",
+ "note": "Map limit for the game (R1, 2026-09-28): invisible walls where the player must stop. Stream B file. UE turns each BARRIER object into a Blocking Volume (koch_ue_asset blocking_volume); it never renders.",
+ "elements": [
+  {
+   "type": "barrier",
+   "name": "MapLimit",
+   "line": [
+    [
+     -50.7,
+     -143.27
+    ],
+    [
+     -216.95,
+     -134.4
+    ],
+    [
+     -246.04,
+     -129.97
+    ],
+    [
+     -286.66,
+     -112.94
+    ],
+    [
+     -320.58,
+     -84.86
+    ],
+    [
+     -335.0,
+     -65.69
+    ],
+    [
+     -335.0,
+     155.0
+    ],
+    [
+     235.0,
+     155.0
+    ],
+    [
+     235.0,
+     -145.0
+    ]
+   ],
+   "closed": true,
+   "height": 40.0,
+   "thk": 0.3,
+   "evidence": "OSM campus boundary (site_osm.json) buffered by 150 m (the near ring with facades; farther blocks are massing only) and clipped 5 m inside the terrain extent (-340..240 x -150..160). The E side is only ~20 m past the campus because the terrain ends there: widen the terrain first to move it.",
+   "confidence": "medium"
+  }
+ ]
+}

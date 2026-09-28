@@ -268,6 +268,18 @@ class Site:
         bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
         self.emit(el, bm, COL["metal"], (A.x, A.y, self.gz(A.x, A.y)))
 
+    def b_barrier(self, el):
+        """Invisible map-limit wall (SITE_Barriers): a closed/open polyline swept `thk` wide from 2 m below the ground
+        to `height` above it. Never rendered (wire in the viewport); UE converts it to a Blocking Volume."""
+        bm = bmesh.new()
+        h, t = el.get("height", 40.0), el.get("thk", 0.3)
+        sweep_profile(bm, el["line"], rect_profile(t, h, 2.0), self.gz, el.get("closed", False), **_sweep_kw(el, 5.0))
+        p = el["line"][0]
+        ob = self.emit(dict(el, ue_asset="blocking_volume", slot="M_Invisible"), bm, COL["accent"], (p[0], p[1], self.gz(*p)))
+        ob.hide_render = True
+        ob.display_type = "WIRE"
+        ob["koch_collision_only"] = True
+
     def b_hedge(self, el):
         bm = bmesh.new()
         rt = el.get("top", "round") == "round"
