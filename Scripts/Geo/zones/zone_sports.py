@@ -205,7 +205,7 @@ ev_ly = ("owner 2026-09-28 (screenshots + sketch): the workout zone is lower tha
          "down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the "
          "path; drop 0.6 m = 4 risers assumed (not measured)")
 ST_U0, ST_U1 = 44.45, 50.90                   # stair over the full walkway width, pitch NE corner -> courts NW corner (owner)
-ST_N, ST_RH, ST_TR = 4, 0.15, 0.45
+ST_N, ST_RH, ST_TR = 5, 0.12, 0.50   # owner 2026-09-28: more, bigger steps (was 4 x 0.15 / 0.45)
 LANE_V0 = 33.30                                # S edge of the low lane behind the pitch (N curb of the tree bed)
 NB_RAISE = 0.40   # owner 2026-09-28: the tree bed behind the pitch stands higher than the path (raised bed, 0.4 assumed)
 add(type="stairs_run", name="LowerYard_Stair", top=W((ST_U0 + ST_U1) / 2, C_V1), dir_deg=DEG_N, width=ST_U1 - ST_U0 - 0.02,
@@ -219,13 +219,19 @@ def wall_box(nm, u0, u1, v0, v1, z0, z1, slot="M_Concrete_Precast"):
         material="stone", slot=slot, evidence=ev_ly, confidence="low")
 
 
-RW_TOP = 0.8   # owner 2026-09-28: concrete strip between the courts fence and the lower yard a bit wider (was 0.3)
-wall_box("LowerYard_Retain_Courts", ST_U1, 101.0, C_V1, C_V1 + RW_TOP, Z_LOW - 0.3, Z_COURT)             # under the N fence, to the E fence
+RW_TOP = 1.3   # owner 2026-09-28: concrete strip between the courts fence and the lower yard wider again (0.3 -> 0.8 -> 1.3)
+SE_U0, SE_U1 = 97.15, 100.2   # second stair down at the E end, between the courts' E fence and the E bar fence (owner)
+wall_box("LowerYard_Retain_Courts", ST_U1, C_U1, C_V1, C_V1 + RW_TOP, Z_LOW - 0.3, Z_COURT)              # under the N fence, to the E stair
 wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)  # pitch side
 # the lane behind the pitch is low too (owner 2026-09-28): retaining wall along the N side of the raised bed / west terrace
 wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
 wall_box("LowerYard_Retain_West", -20.0, 0.0, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)
-wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.3, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA)       # stair E cheek
+wall_box("LowerYard_Stair_CheekE", ST_U1, ST_U1 + 0.4, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)  # stair E cheek (owner: bigger)
+add(type="stairs_run", name="LowerYard_StairE", top=W((SE_U0 + SE_U1) / 2, C_V1), dir_deg=DEG_N, width=SE_U1 - SE_U0 - 0.02,
+    risers=ST_N, riser_h=ST_RH, tread=ST_TR, z_top=Z_PLAZA, material="stone", slot="M_Concrete_Precast",
+    evidence=ev_ly + "; owner 2026-09-28: a proper way down at the east end too (the drop by the last court was bare)", confidence="low")
+wall_box("LowerYard_StairE_CheekW", C_U1 - 0.25, SE_U0, C_V1 + RW_TOP, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)
+wall_box("LowerYard_StairE_CheekE", SE_U1, SE_U1 + 0.25, C_V1, ST_V1, Z_LOW - 0.3, Z_PLAZA + 0.35)
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
 # between the basketball court's N fence (v 25.40) and the lane; owner 2026-09-28: only parallel bars and 4 pull-up bars, the
@@ -367,7 +373,7 @@ add(type="path", name="NorthLane_Path_W", line=poly([(-20.0, 36.0), (-112.0, 36.
     "of the pitch it follows the natural ground (DEM 2.9 at u -30 rising to 3.7 at u -112); width 3.0 assumed", confidence="low")
 # N boundary (owner 2026-09-28): red block pillars with pale-yellow cast sand-concrete panels between them, no openings;
 # E boundary along the neighbour's wall: black steel bar fence (see-through, not cast)
-NB_LINE = [(-112.0, 42.2), (93.0, 42.2), (100.5, 40.0)]
+NB_LINE = [(-112.0, 42.2), (100.5, 42.2)]   # owner 2026-09-28: straight to a square NE corner (was bent to v 40)
 EV_NB = ("campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: "
          "a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + "
          "brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed")
@@ -384,10 +390,25 @@ for (ua, va), (ub, vb) in zip(NB_LINE[:-1], NB_LINE[1:]):
         add(type="box", name=f"NorthBoundary_PillarCap_{_k:03d}", center=W(u, v), size=[0.55, 0.55, 0.08], dir_deg=hd,
             z_rel=2.5, material="brick", slot="M_Tile_Brick_Red", evidence=EV_NB, confidence="low")
         _k += 1
-add(type="fence", name="EastBoundary_Fence", line=poly([(100.5, 40.0), (100.5, -35.0)]), height=2.0, post_spacing=2.5,
-    post=0.06, panel="bars", slot="M_Steel_Paint_Dark",
-    evidence="owner 2026-09-28 (overview sketch): black steel bar fence along the east edge from the N boundary corner south "
-    "to the level of Block C, beside the neighbour's west wall (x ~215.6); height 2.0 assumed", confidence="low")
+EV_EB = ("owner 2026-09-28 (overview sketch): black steel bar fence along the east edge from the N boundary corner south "
+         "to the level of Block C, beside the neighbour's west wall (x ~215.6); height 2.0 assumed")
+EG0, EG1 = 37.6, 38.6   # exit wicket in the E fence beside the guard booth (owner)
+for k, (a_, b_) in enumerate(((41.95, EG1), (EG0, -35.0))):   # N piece starts clear of the corner pillar
+    add(type="fence", name=f"EastBoundary_Fence{'' if k else '_N'}", line=poly([(100.5, a_), (100.5, b_)]), height=2.0,
+        post_spacing=2.5, post=0.06, panel="bars", slot="M_Steel_Paint_Dark", evidence=EV_EB, confidence="low")
+EV_GB = ("owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, "
+         "like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed")
+add(type="gate_leaf", name="EastBoundary_ExitGate", line=poly([(100.5, EG0 + 0.06), (100.5, EG1 - 0.06)]), height=2.0, panel="bars",
+    slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
+add(type="box", name="GuardPost_FaceID_Post", center=W(99.95, EG1 + 0.25), size=[0.08, 0.08, 1.25], dir_deg=ROT, z0=Z_LOW,
+    material="metal", slot="M_Steel_Paint_Dark", evidence=EV_GB, confidence="low")
+add(type="box", name="GuardPost_FaceID", center=W(99.95, EG1 + 0.25), size=[0.1, 0.24, 0.32], dir_deg=ROT, z0=Z_LOW + 1.2,
+    material="metal", slot="M_Plastic_Grey", ue_asset="face_terminal", evidence=EV_GB, confidence="low")
+# benches along the back fence (owner marks): between the boundary trees, facing the path; one opposite the yard stair
+for k, u in enumerate((-15.5, 6.05, 22.2, 39.85, (ST_U0 + ST_U1) / 2)):
+    add(type="bench", name=f"NorthLawnBench_{k}", pos=W(u, 39.0), dir_deg=DEG_N - 180, length=1.8, depth=0.55, seat_h=0.45,
+        back_h=0.85, ue_asset="bench_generic", evidence="owner 2026-09-28 (marks on the overview): benches along the back "
+        "fence between the trees" + ("; this one opposite the stair down to the lower yard" if k == 4 else ""), confidence="low")
 # west of the pitch
 add(type="slab", name="WestRedSquare", ring=rect(-16.5, -5.5, 17.5, 23.9), z0=Z_PLAZA - 0.05, z1=Z_PLAZA + 0.03,
     material="brick", evidence="Google 2026: mauve-red 11.0 x 6.4 m surface (not in Bing 2021/Esri 2020, which show a round "
@@ -408,7 +429,7 @@ pads = [
          confidence="low"),
 ]
 pads += [
-    dict(name="LowerYard", ring=poly([(ST_U0 - 0.1, C_V1), (ST_U1, C_V1), (ST_U1, C_V1 + RW_TOP), (101.0, C_V1 + RW_TOP), (101.0, 44.0),
+    dict(name="LowerYard", ring=poly([(ST_U0 - 0.1, C_V1), (ST_U1, C_V1), (ST_U1, C_V1 + RW_TOP), (C_U1, C_V1 + RW_TOP), (C_U1, C_V1), (101.0, C_V1), (101.0, 44.0),
                                       (-20.0, 44.0), (-20.0, LANE_V0 + 0.3), (ST_U0 - 0.1, LANE_V0 + 0.3)]), z=Z_LOW, blend=0.0,
          evidence=ev_ly + "; the lane behind the pitch included (owner overview sketch)", confidence="low"),
     dict(name="NorthBedRaised", ring=rect(0.15, 43.75, 27.15, 33.15), z=Z_NORTH + NB_RAISE, blend=0.0,

@@ -79,12 +79,20 @@
      68.427
     ],
     [
-     165.868,
-     69.227
+     165.887,
+     69.726
     ],
     [
-     215.931,
-     67.304
+     211.953,
+     67.957
+    ],
+    [
+     211.904,
+     66.658
+    ],
+    [
+     215.901,
+     66.504
     ],
     [
      216.615,
@@ -1575,11 +1583,226 @@
    "z_base": 3.5
   },
   {
+   "type": "stairs_run",
+   "name": "LowerYard_StairE",
+   "top": [
+    213.577,
+    66.593
+   ],
+   "dir_deg": 87.8,
+   "width": 3.029999999999997,
+   "risers": 5,
+   "riser_h": 0.12,
+   "tread": 0.5,
+   "z_top": 3.45,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); owner 2026-09-28: a proper way down at the east end too (the drop by the last court was bare)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_StairE_CheekW",
+   "center": [
+    211.927,
+    68.558
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.4000000000000057,
+    1.1999999999999993,
+    1.25
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "LowerYard_StairE_CheekE",
+   "center": [
+    215.274,
+    67.779
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.25,
+    2.5,
+    1.25
+   ],
+   "z0": 2.5500000000000003,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "confidence": "low"
+  },
+  {
+   "type": "fence",
+   "name": "EastBoundary_Fence_N",
+   "line": [
+    [
+     216.036,
+     83.061
+    ],
+    [
+     215.908,
+     79.714
+    ]
+   ],
+   "height": 2.0,
+   "post_spacing": 2.5,
+   "post": 0.06,
+   "panel": "bars",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28 (overview sketch): black steel bar fence along the east edge from the N boundary corner south to the level of Block C, beside the neighbour's west wall (x ~215.6); height 2.0 assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "gate_leaf",
+   "name": "EastBoundary_ExitGate",
+   "line": [
+    [
+     215.872,
+     78.774
+    ],
+    [
+     215.905,
+     79.654
+    ]
+   ],
+   "height": 2.0,
+   "panel": "bars",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "GuardPost_FaceID_Post",
+   "center": [
+    215.368,
+    79.985
+   ],
+   "size": [
+    0.08,
+    0.08,
+    1.25
+   ],
+   "dir_deg": -2.2,
+   "z0": 2.85,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "GuardPost_FaceID",
+   "center": [
+    215.368,
+    79.985
+   ],
+   "size": [
+    0.1,
+    0.24,
+    0.32
+   ],
+   "dir_deg": -2.2,
+   "z0": 4.05,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "face_terminal",
+   "evidence": "owner 2026-09-28: a small guard post in the NE corner of the lower yard by the workout area, against the bar fence, like the gate booth but smaller (BLD_GuardBoothNE), with a FaceID check and an exit wicket in the bar fence; sizes assumed",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBench_0",
+   "pos": [
+    100.009,
+    84.566
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBench_1",
+   "pos": [
+    121.543,
+    83.739
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBench_2",
+   "pos": [
+    137.681,
+    83.119
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBench_3",
+   "pos": [
+    155.318,
+    82.441
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "NorthLawnBench_4",
+   "pos": [
+    163.137,
+    82.141
+   ],
+   "dir_deg": -92.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees; this one opposite the stair down to the lower yard",
+   "confidence": "low"
+  },
+  {
    "type": "box",
    "name": "Workout_PullUp0_Post0",
    "center": [
-    169.189,
-    69.7
+    169.208,
+    70.199
    ],
    "size": [
     0.08,
@@ -1598,8 +1821,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Post1",
    "center": [
-    169.235,
-    70.899
+    169.254,
+    71.398
    ],
    "size": [
     0.08,
@@ -1617,8 +1840,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Post2",
    "center": [
-    169.281,
-    72.098
+    169.3,
+    72.597
    ],
    "size": [
     0.08,
@@ -1636,8 +1859,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Bar0",
    "center": [
-    169.212,
-    70.299
+    169.231,
+    70.799
    ],
    "size": [
     1.1999999999999993,
@@ -1655,8 +1878,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Bar1",
    "center": [
-    169.258,
-    71.498
+    169.277,
+    71.998
    ],
    "size": [
     1.1999999999999993,
@@ -1674,8 +1897,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Post0",
    "center": [
-    170.988,
-    69.631
+    171.007,
+    70.13
    ],
    "size": [
     0.08,
@@ -1694,8 +1917,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Post1",
    "center": [
-    171.034,
-    70.83
+    171.053,
+    71.329
    ],
    "size": [
     0.08,
@@ -1713,8 +1936,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Post2",
    "center": [
-    171.08,
-    72.029
+    171.099,
+    72.528
    ],
    "size": [
     0.08,
@@ -1732,8 +1955,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Bar0",
    "center": [
-    171.011,
-    70.23
+    171.03,
+    70.73
    ],
    "size": [
     1.1999999999999993,
@@ -1751,8 +1974,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Bar1",
    "center": [
-    171.057,
-    71.429
+    171.076,
+    71.929
    ],
    "size": [
     1.1999999999999993,
@@ -1770,8 +1993,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Post0",
    "center": [
-    172.868,
-    69.078
+    172.887,
+    69.578
    ],
    "size": [
     0.07,
@@ -1790,8 +2013,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Post1",
    "center": [
-    173.767,
-    69.043
+    173.786,
+    69.543
    ],
    "size": [
     0.07,
@@ -1809,8 +2032,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Post2",
    "center": [
-    174.666,
-    69.009
+    174.686,
+    69.508
    ],
    "size": [
     0.07,
@@ -1828,8 +2051,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Post3",
    "center": [
-    175.566,
-    68.974
+    175.585,
+    69.474
    ],
    "size": [
     0.07,
@@ -1847,8 +2070,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung0",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1866,8 +2089,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung1",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1885,8 +2108,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung2",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1904,8 +2127,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung3",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1923,8 +2146,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung4",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1942,8 +2165,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung5",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1961,8 +2184,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung6",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1980,8 +2203,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung7",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -1999,8 +2222,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung8",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -2018,8 +2241,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung9",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -2037,8 +2260,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Rung10",
    "center": [
-    174.217,
-    69.026
+    174.236,
+    69.526
    ],
    "size": [
     2.700000000000003,
@@ -2056,8 +2279,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Post0",
    "center": [
-    175.965,
-    68.959
+    175.985,
+    69.459
    ],
    "size": [
     0.07,
@@ -2076,8 +2299,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Post1",
    "center": [
-    176.865,
-    68.924
+    176.884,
+    69.424
    ],
    "size": [
     0.07,
@@ -2095,8 +2318,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Post2",
    "center": [
-    177.764,
-    68.89
+    177.783,
+    69.389
    ],
    "size": [
     0.07,
@@ -2114,8 +2337,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Post3",
    "center": [
-    178.663,
-    68.855
+    178.683,
+    69.355
    ],
    "size": [
     0.07,
@@ -2133,8 +2356,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung0",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2152,8 +2375,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung1",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2171,8 +2394,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung2",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2190,8 +2413,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung3",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2209,8 +2432,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung4",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2228,8 +2451,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung5",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2247,8 +2470,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung6",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2266,8 +2489,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung7",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2285,8 +2508,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung8",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2304,8 +2527,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung9",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2323,8 +2546,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Rung10",
    "center": [
-    177.314,
-    68.907
+    177.334,
+    69.407
    ],
    "size": [
     2.700000000000003,
@@ -2342,8 +2565,8 @@
    "type": "box",
    "name": "Workout_Dip_BarW",
    "center": [
-    167.099,
-    72.082
+    167.126,
+    72.781
    ],
    "size": [
     2.0,
@@ -2361,8 +2584,8 @@
    "type": "box",
    "name": "Workout_Dip_BarE",
    "center": [
-    167.658,
-    72.06
+    167.685,
+    72.76
    ],
    "size": [
     2.0,
@@ -2381,8 +2604,8 @@
    "name": "EastBoundary_Fence",
    "line": [
     [
-     215.961,
-     81.113
+     215.869,
+     78.714
     ],
     [
      213.082,
@@ -2594,9 +2817,9 @@
    ],
    "dir_deg": 87.8,
    "width": 6.429999999999996,
-   "risers": 4,
-   "riser_h": 0.15,
-   "tread": 0.45,
+   "risers": 5,
+   "riser_h": 0.12,
+   "tread": 0.5,
    "z_top": 3.45,
    "material": "stone",
    "slot": "M_Concrete_Precast",
@@ -2607,13 +2830,13 @@
    "type": "box",
    "name": "LowerYard_Retain_Courts",
    "center": [
-    190.884,
-    67.865
+    188.895,
+    68.192
    ],
    "dir_deg": -2.2,
    "size": [
-    50.1,
-    0.8000000000000007,
+    46.1,
+    1.3000000000000007,
     0.9499999999999997
    ],
    "z0": 2.5500000000000003,
@@ -2645,14 +2868,14 @@
    "type": "box",
    "name": "LowerYard_Stair_CheekE",
    "center": [
-    166.037,
-    69.721
+    166.11,
+    70.318
    ],
    "dir_deg": -2.2,
    "size": [
-    0.29999999999999716,
-    1.0,
-    0.8999999999999999
+    0.3999999999999986,
+    1.1999999999999993,
+    1.25
    ],
    "z0": 2.5500000000000003,
    "material": "stone",
@@ -2664,8 +2887,8 @@
    "type": "box",
    "name": "Workout_Dip_PostWS",
    "center": [
-    167.064,
-    71.182
+    167.091,
+    71.882
    ],
    "size": [
     0.07,
@@ -2684,8 +2907,8 @@
    "type": "box",
    "name": "Workout_Dip_PostES",
    "center": [
-    167.624,
-    71.161
+    167.651,
+    71.86
    ],
    "size": [
     0.07,
@@ -2703,8 +2926,8 @@
    "type": "box",
    "name": "Workout_Dip_PostWN",
    "center": [
-    167.133,
-    72.981
+    167.16,
+    73.68
    ],
    "size": [
     0.07,
@@ -2722,8 +2945,8 @@
    "type": "box",
    "name": "Workout_Dip_PostEN",
    "center": [
-    167.693,
-    72.959
+    167.72,
+    73.659
    ],
    "size": [
     0.07,
@@ -5230,12 +5453,8 @@
      91.468
     ],
     [
-     208.551,
-     83.599
-    ],
-    [
-     215.961,
-     81.113
+     216.046,
+     83.311
     ]
    ],
    "height": 2.2,
@@ -5286,7 +5505,7 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_001",
    "center": [
-    6.715,
+    6.693,
     91.353
    ],
    "size": [
@@ -5304,7 +5523,7 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_001",
    "center": [
-    6.715,
+    6.693,
     91.353
    ],
    "size": [
@@ -5323,8 +5542,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_002",
    "center": [
-    9.727,
-    91.237
+    9.684,
+    91.239
    ],
    "size": [
     0.45,
@@ -5341,8 +5560,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_002",
    "center": [
-    9.727,
-    91.237
+    9.684,
+    91.239
    ],
    "size": [
     0.55,
@@ -5360,8 +5579,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_003",
    "center": [
-    12.74,
-    91.121
+    12.675,
+    91.124
    ],
    "size": [
     0.45,
@@ -5378,8 +5597,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_003",
    "center": [
-    12.74,
-    91.121
+    12.675,
+    91.124
    ],
    "size": [
     0.55,
@@ -5397,8 +5616,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_004",
    "center": [
-    15.752,
-    91.005
+    15.666,
+    91.009
    ],
    "size": [
     0.45,
@@ -5415,8 +5634,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_004",
    "center": [
-    15.752,
-    91.005
+    15.666,
+    91.009
    ],
    "size": [
     0.55,
@@ -5434,8 +5653,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_005",
    "center": [
-    18.765,
-    90.89
+    18.656,
+    90.894
    ],
    "size": [
     0.45,
@@ -5452,8 +5671,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_005",
    "center": [
-    18.765,
-    90.89
+    18.656,
+    90.894
    ],
    "size": [
     0.55,
@@ -5471,8 +5690,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_006",
    "center": [
-    21.777,
-    90.774
+    21.647,
+    90.779
    ],
    "size": [
     0.45,
@@ -5489,8 +5708,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_006",
    "center": [
-    21.777,
-    90.774
+    21.647,
+    90.779
    ],
    "size": [
     0.55,
@@ -5508,8 +5727,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_007",
    "center": [
-    24.79,
-    90.658
+    24.638,
+    90.664
    ],
    "size": [
     0.45,
@@ -5526,8 +5745,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_007",
    "center": [
-    24.79,
-    90.658
+    24.638,
+    90.664
    ],
    "size": [
     0.55,
@@ -5545,8 +5764,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_008",
    "center": [
-    27.802,
-    90.543
+    27.629,
+    90.549
    ],
    "size": [
     0.45,
@@ -5563,8 +5782,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_008",
    "center": [
-    27.802,
-    90.543
+    27.629,
+    90.549
    ],
    "size": [
     0.55,
@@ -5582,8 +5801,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_009",
    "center": [
-    30.815,
-    90.427
+    30.619,
+    90.434
    ],
    "size": [
     0.45,
@@ -5600,8 +5819,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_009",
    "center": [
-    30.815,
-    90.427
+    30.619,
+    90.434
    ],
    "size": [
     0.55,
@@ -5619,8 +5838,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_010",
    "center": [
-    33.827,
-    90.311
+    33.61,
+    90.319
    ],
    "size": [
     0.45,
@@ -5637,8 +5856,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_010",
    "center": [
-    33.827,
-    90.311
+    33.61,
+    90.319
    ],
    "size": [
     0.55,
@@ -5656,8 +5875,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_011",
    "center": [
-    36.84,
-    90.195
+    36.601,
+    90.205
    ],
    "size": [
     0.45,
@@ -5674,8 +5893,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_011",
    "center": [
-    36.84,
-    90.195
+    36.601,
+    90.205
    ],
    "size": [
     0.55,
@@ -5693,8 +5912,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_012",
    "center": [
-    39.852,
-    90.08
+    39.592,
+    90.09
    ],
    "size": [
     0.45,
@@ -5711,8 +5930,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_012",
    "center": [
-    39.852,
-    90.08
+    39.592,
+    90.09
    ],
    "size": [
     0.55,
@@ -5730,8 +5949,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_013",
    "center": [
-    42.865,
-    89.964
+    42.582,
+    89.975
    ],
    "size": [
     0.45,
@@ -5748,8 +5967,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_013",
    "center": [
-    42.865,
-    89.964
+    42.582,
+    89.975
    ],
    "size": [
     0.55,
@@ -5767,8 +5986,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_014",
    "center": [
-    45.877,
-    89.848
+    45.573,
+    89.86
    ],
    "size": [
     0.45,
@@ -5785,8 +6004,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_014",
    "center": [
-    45.877,
-    89.848
+    45.573,
+    89.86
    ],
    "size": [
     0.55,
@@ -5804,8 +6023,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_015",
    "center": [
-    48.89,
-    89.732
+    48.564,
+    89.745
    ],
    "size": [
     0.45,
@@ -5822,8 +6041,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_015",
    "center": [
-    48.89,
-    89.732
+    48.564,
+    89.745
    ],
    "size": [
     0.55,
@@ -5841,8 +6060,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_016",
    "center": [
-    51.902,
-    89.617
+    51.555,
+    89.63
    ],
    "size": [
     0.45,
@@ -5859,8 +6078,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_016",
    "center": [
-    51.902,
-    89.617
+    51.555,
+    89.63
    ],
    "size": [
     0.55,
@@ -5878,8 +6097,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_017",
    "center": [
-    54.915,
-    89.501
+    54.545,
+    89.515
    ],
    "size": [
     0.45,
@@ -5896,8 +6115,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_017",
    "center": [
-    54.915,
-    89.501
+    54.545,
+    89.515
    ],
    "size": [
     0.55,
@@ -5915,8 +6134,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_018",
    "center": [
-    57.927,
-    89.385
+    57.536,
+    89.4
    ],
    "size": [
     0.45,
@@ -5933,8 +6152,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_018",
    "center": [
-    57.927,
-    89.385
+    57.536,
+    89.4
    ],
    "size": [
     0.55,
@@ -5952,8 +6171,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_019",
    "center": [
-    60.94,
-    89.269
+    60.527,
+    89.285
    ],
    "size": [
     0.45,
@@ -5970,8 +6189,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_019",
    "center": [
-    60.94,
-    89.269
+    60.527,
+    89.285
    ],
    "size": [
     0.55,
@@ -5989,8 +6208,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_020",
    "center": [
-    63.952,
-    89.154
+    63.518,
+    89.17
    ],
    "size": [
     0.45,
@@ -6007,8 +6226,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_020",
    "center": [
-    63.952,
-    89.154
+    63.518,
+    89.17
    ],
    "size": [
     0.55,
@@ -6026,8 +6245,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_021",
    "center": [
-    66.965,
-    89.038
+    66.508,
+    89.056
    ],
    "size": [
     0.45,
@@ -6044,8 +6263,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_021",
    "center": [
-    66.965,
-    89.038
+    66.508,
+    89.056
    ],
    "size": [
     0.55,
@@ -6063,8 +6282,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_022",
    "center": [
-    69.977,
-    88.922
+    69.499,
+    88.941
    ],
    "size": [
     0.45,
@@ -6081,8 +6300,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_022",
    "center": [
-    69.977,
-    88.922
+    69.499,
+    88.941
    ],
    "size": [
     0.55,
@@ -6100,8 +6319,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_023",
    "center": [
-    72.99,
-    88.807
+    72.49,
+    88.826
    ],
    "size": [
     0.45,
@@ -6118,8 +6337,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_023",
    "center": [
-    72.99,
-    88.807
+    72.49,
+    88.826
    ],
    "size": [
     0.55,
@@ -6137,8 +6356,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_024",
    "center": [
-    76.002,
-    88.691
+    75.481,
+    88.711
    ],
    "size": [
     0.45,
@@ -6155,8 +6374,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_024",
    "center": [
-    76.002,
-    88.691
+    75.481,
+    88.711
    ],
    "size": [
     0.55,
@@ -6174,8 +6393,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_025",
    "center": [
-    79.015,
-    88.575
+    78.471,
+    88.596
    ],
    "size": [
     0.45,
@@ -6192,8 +6411,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_025",
    "center": [
-    79.015,
-    88.575
+    78.471,
+    88.596
    ],
    "size": [
     0.55,
@@ -6211,8 +6430,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_026",
    "center": [
-    82.027,
-    88.459
+    81.462,
+    88.481
    ],
    "size": [
     0.45,
@@ -6229,8 +6448,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_026",
    "center": [
-    82.027,
-    88.459
+    81.462,
+    88.481
    ],
    "size": [
     0.55,
@@ -6248,8 +6467,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_027",
    "center": [
-    85.04,
-    88.344
+    84.453,
+    88.366
    ],
    "size": [
     0.45,
@@ -6266,8 +6485,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_027",
    "center": [
-    85.04,
-    88.344
+    84.453,
+    88.366
    ],
    "size": [
     0.55,
@@ -6285,8 +6504,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_028",
    "center": [
-    88.052,
-    88.228
+    87.444,
+    88.251
    ],
    "size": [
     0.45,
@@ -6303,8 +6522,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_028",
    "center": [
-    88.052,
-    88.228
+    87.444,
+    88.251
    ],
    "size": [
     0.55,
@@ -6322,8 +6541,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_029",
    "center": [
-    91.065,
-    88.112
+    90.434,
+    88.136
    ],
    "size": [
     0.45,
@@ -6340,8 +6559,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_029",
    "center": [
-    91.065,
-    88.112
+    90.434,
+    88.136
    ],
    "size": [
     0.55,
@@ -6359,8 +6578,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_030",
    "center": [
-    94.077,
-    87.996
+    93.425,
+    88.022
    ],
    "size": [
     0.45,
@@ -6377,8 +6596,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_030",
    "center": [
-    94.077,
-    87.996
+    93.425,
+    88.022
    ],
    "size": [
     0.55,
@@ -6396,8 +6615,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_031",
    "center": [
-    97.09,
-    87.881
+    96.416,
+    87.907
    ],
    "size": [
     0.45,
@@ -6414,8 +6633,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_031",
    "center": [
-    97.09,
-    87.881
+    96.416,
+    87.907
    ],
    "size": [
     0.55,
@@ -6433,8 +6652,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_032",
    "center": [
-    100.102,
-    87.765
+    99.407,
+    87.792
    ],
    "size": [
     0.45,
@@ -6451,8 +6670,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_032",
    "center": [
-    100.102,
-    87.765
+    99.407,
+    87.792
    ],
    "size": [
     0.55,
@@ -6470,8 +6689,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_033",
    "center": [
-    103.114,
-    87.649
+    102.397,
+    87.677
    ],
    "size": [
     0.45,
@@ -6488,8 +6707,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_033",
    "center": [
-    103.114,
-    87.649
+    102.397,
+    87.677
    ],
    "size": [
     0.55,
@@ -6507,8 +6726,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_034",
    "center": [
-    106.127,
-    87.534
+    105.388,
+    87.562
    ],
    "size": [
     0.45,
@@ -6525,8 +6744,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_034",
    "center": [
-    106.127,
-    87.534
+    105.388,
+    87.562
    ],
    "size": [
     0.55,
@@ -6544,8 +6763,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_035",
    "center": [
-    109.139,
-    87.418
+    108.379,
+    87.447
    ],
    "size": [
     0.45,
@@ -6562,8 +6781,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_035",
    "center": [
-    109.139,
-    87.418
+    108.379,
+    87.447
    ],
    "size": [
     0.55,
@@ -6581,8 +6800,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_036",
    "center": [
-    112.152,
-    87.302
+    111.37,
+    87.332
    ],
    "size": [
     0.45,
@@ -6599,8 +6818,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_036",
    "center": [
-    112.152,
-    87.302
+    111.37,
+    87.332
    ],
    "size": [
     0.55,
@@ -6618,8 +6837,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_037",
    "center": [
-    115.164,
-    87.186
+    114.36,
+    87.217
    ],
    "size": [
     0.45,
@@ -6636,8 +6855,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_037",
    "center": [
-    115.164,
-    87.186
+    114.36,
+    87.217
    ],
    "size": [
     0.55,
@@ -6655,8 +6874,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_038",
    "center": [
-    118.177,
-    87.071
+    117.351,
+    87.102
    ],
    "size": [
     0.45,
@@ -6673,8 +6892,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_038",
    "center": [
-    118.177,
-    87.071
+    117.351,
+    87.102
    ],
    "size": [
     0.55,
@@ -6692,8 +6911,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_039",
    "center": [
-    121.189,
-    86.955
+    120.342,
+    86.987
    ],
    "size": [
     0.45,
@@ -6710,8 +6929,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_039",
    "center": [
-    121.189,
-    86.955
+    120.342,
+    86.987
    ],
    "size": [
     0.55,
@@ -6729,8 +6948,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_040",
    "center": [
-    124.202,
-    86.839
+    123.333,
+    86.873
    ],
    "size": [
     0.45,
@@ -6747,8 +6966,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_040",
    "center": [
-    124.202,
-    86.839
+    123.333,
+    86.873
    ],
    "size": [
     0.55,
@@ -6766,8 +6985,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_041",
    "center": [
-    127.214,
-    86.723
+    126.323,
+    86.758
    ],
    "size": [
     0.45,
@@ -6784,8 +7003,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_041",
    "center": [
-    127.214,
-    86.723
+    126.323,
+    86.758
    ],
    "size": [
     0.55,
@@ -6803,8 +7022,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_042",
    "center": [
-    130.227,
-    86.608
+    129.314,
+    86.643
    ],
    "size": [
     0.45,
@@ -6821,8 +7040,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_042",
    "center": [
-    130.227,
-    86.608
+    129.314,
+    86.643
    ],
    "size": [
     0.55,
@@ -6840,8 +7059,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_043",
    "center": [
-    133.239,
-    86.492
+    132.305,
+    86.528
    ],
    "size": [
     0.45,
@@ -6858,8 +7077,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_043",
    "center": [
-    133.239,
-    86.492
+    132.305,
+    86.528
    ],
    "size": [
     0.55,
@@ -6877,8 +7096,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_044",
    "center": [
-    136.252,
-    86.376
+    135.296,
+    86.413
    ],
    "size": [
     0.45,
@@ -6895,8 +7114,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_044",
    "center": [
-    136.252,
-    86.376
+    135.296,
+    86.413
    ],
    "size": [
     0.55,
@@ -6914,8 +7133,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_045",
    "center": [
-    139.264,
-    86.261
+    138.286,
+    86.298
    ],
    "size": [
     0.45,
@@ -6932,8 +7151,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_045",
    "center": [
-    139.264,
-    86.261
+    138.286,
+    86.298
    ],
    "size": [
     0.55,
@@ -6951,8 +7170,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_046",
    "center": [
-    142.277,
-    86.145
+    141.277,
+    86.183
    ],
    "size": [
     0.45,
@@ -6969,8 +7188,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_046",
    "center": [
-    142.277,
-    86.145
+    141.277,
+    86.183
    ],
    "size": [
     0.55,
@@ -6988,8 +7207,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_047",
    "center": [
-    145.289,
-    86.029
+    144.268,
+    86.068
    ],
    "size": [
     0.45,
@@ -7006,8 +7225,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_047",
    "center": [
-    145.289,
-    86.029
+    144.268,
+    86.068
    ],
    "size": [
     0.55,
@@ -7025,8 +7244,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_048",
    "center": [
-    148.302,
-    85.913
+    147.259,
+    85.953
    ],
    "size": [
     0.45,
@@ -7043,8 +7262,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_048",
    "center": [
-    148.302,
-    85.913
+    147.259,
+    85.953
    ],
    "size": [
     0.55,
@@ -7062,8 +7281,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_049",
    "center": [
-    151.314,
-    85.798
+    150.249,
+    85.839
    ],
    "size": [
     0.45,
@@ -7080,8 +7299,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_049",
    "center": [
-    151.314,
-    85.798
+    150.249,
+    85.839
    ],
    "size": [
     0.55,
@@ -7099,8 +7318,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_050",
    "center": [
-    154.327,
-    85.682
+    153.24,
+    85.724
    ],
    "size": [
     0.45,
@@ -7117,8 +7336,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_050",
    "center": [
-    154.327,
-    85.682
+    153.24,
+    85.724
    ],
    "size": [
     0.55,
@@ -7136,8 +7355,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_051",
    "center": [
-    157.339,
-    85.566
+    156.231,
+    85.609
    ],
    "size": [
     0.45,
@@ -7154,8 +7373,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_051",
    "center": [
-    157.339,
-    85.566
+    156.231,
+    85.609
    ],
    "size": [
     0.55,
@@ -7173,8 +7392,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_052",
    "center": [
-    160.352,
-    85.45
+    159.222,
+    85.494
    ],
    "size": [
     0.45,
@@ -7191,8 +7410,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_052",
    "center": [
-    160.352,
-    85.45
+    159.222,
+    85.494
    ],
    "size": [
     0.55,
@@ -7210,8 +7429,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_053",
    "center": [
-    163.364,
-    85.335
+    162.212,
+    85.379
    ],
    "size": [
     0.45,
@@ -7228,8 +7447,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_053",
    "center": [
-    163.364,
-    85.335
+    162.212,
+    85.379
    ],
    "size": [
     0.55,
@@ -7247,8 +7466,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_054",
    "center": [
-    166.377,
-    85.219
+    165.203,
+    85.264
    ],
    "size": [
     0.45,
@@ -7265,8 +7484,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_054",
    "center": [
-    166.377,
-    85.219
+    165.203,
+    85.264
    ],
    "size": [
     0.55,
@@ -7284,8 +7503,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_055",
    "center": [
-    169.389,
-    85.103
+    168.194,
+    85.149
    ],
    "size": [
     0.45,
@@ -7302,8 +7521,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_055",
    "center": [
-    169.389,
-    85.103
+    168.194,
+    85.149
    ],
    "size": [
     0.55,
@@ -7321,8 +7540,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_056",
    "center": [
-    172.402,
-    84.988
+    171.185,
+    85.034
    ],
    "size": [
     0.45,
@@ -7339,8 +7558,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_056",
    "center": [
-    172.402,
-    84.988
+    171.185,
+    85.034
    ],
    "size": [
     0.55,
@@ -7358,8 +7577,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_057",
    "center": [
-    175.414,
-    84.872
+    174.175,
+    84.919
    ],
    "size": [
     0.45,
@@ -7376,8 +7595,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_057",
    "center": [
-    175.414,
-    84.872
+    174.175,
+    84.919
    ],
    "size": [
     0.55,
@@ -7395,8 +7614,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_058",
    "center": [
-    178.427,
-    84.756
+    177.166,
+    84.805
    ],
    "size": [
     0.45,
@@ -7413,8 +7632,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_058",
    "center": [
-    178.427,
-    84.756
+    177.166,
+    84.805
    ],
    "size": [
     0.55,
@@ -7432,8 +7651,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_059",
    "center": [
-    181.439,
-    84.64
+    180.157,
+    84.69
    ],
    "size": [
     0.45,
@@ -7450,8 +7669,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_059",
    "center": [
-    181.439,
-    84.64
+    180.157,
+    84.69
    ],
    "size": [
     0.55,
@@ -7469,8 +7688,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_060",
    "center": [
-    184.452,
-    84.525
+    183.148,
+    84.575
    ],
    "size": [
     0.45,
@@ -7487,8 +7706,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_060",
    "center": [
-    184.452,
-    84.525
+    183.148,
+    84.575
    ],
    "size": [
     0.55,
@@ -7506,8 +7725,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_061",
    "center": [
-    187.464,
-    84.409
+    186.138,
+    84.46
    ],
    "size": [
     0.45,
@@ -7524,8 +7743,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_061",
    "center": [
-    187.464,
-    84.409
+    186.138,
+    84.46
    ],
    "size": [
     0.55,
@@ -7543,8 +7762,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_062",
    "center": [
-    190.477,
-    84.293
+    189.129,
+    84.345
    ],
    "size": [
     0.45,
@@ -7561,8 +7780,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_062",
    "center": [
-    190.477,
-    84.293
+    189.129,
+    84.345
    ],
    "size": [
     0.55,
@@ -7580,8 +7799,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_063",
    "center": [
-    193.489,
-    84.177
+    192.12,
+    84.23
    ],
    "size": [
     0.45,
@@ -7598,8 +7817,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_063",
    "center": [
-    193.489,
-    84.177
+    192.12,
+    84.23
    ],
    "size": [
     0.55,
@@ -7617,8 +7836,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_064",
    "center": [
-    196.501,
-    84.062
+    195.111,
+    84.115
    ],
    "size": [
     0.45,
@@ -7635,8 +7854,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_064",
    "center": [
-    196.501,
-    84.062
+    195.111,
+    84.115
    ],
    "size": [
     0.55,
@@ -7654,8 +7873,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_065",
    "center": [
-    199.514,
-    83.946
+    198.101,
+    84.0
    ],
    "size": [
     0.45,
@@ -7672,8 +7891,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_065",
    "center": [
-    199.514,
-    83.946
+    198.101,
+    84.0
    ],
    "size": [
     0.55,
@@ -7691,8 +7910,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_066",
    "center": [
-    202.526,
-    83.83
+    201.092,
+    83.885
    ],
    "size": [
     0.45,
@@ -7709,8 +7928,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_066",
    "center": [
-    202.526,
-    83.83
+    201.092,
+    83.885
    ],
    "size": [
     0.55,
@@ -7728,8 +7947,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_067",
    "center": [
-    205.539,
-    83.715
+    204.083,
+    83.77
    ],
    "size": [
     0.45,
@@ -7746,8 +7965,8 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_067",
    "center": [
-    205.539,
-    83.715
+    204.083,
+    83.77
    ],
    "size": [
     0.55,
@@ -7765,15 +7984,15 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_068",
    "center": [
-    208.551,
-    83.599
+    207.074,
+    83.656
    ],
    "size": [
     0.45,
     0.45,
     2.5
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
@@ -7783,15 +8002,15 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_068",
    "center": [
-    208.551,
-    83.599
+    207.074,
+    83.656
    ],
    "size": [
     0.55,
     0.55,
     0.08
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "z_rel": 2.5,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
@@ -7802,15 +8021,15 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_069",
    "center": [
-    211.021,
-    82.77
+    210.064,
+    83.541
    ],
    "size": [
     0.45,
     0.45,
     2.5
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
@@ -7820,15 +8039,15 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_069",
    "center": [
-    211.021,
-    82.77
+    210.064,
+    83.541
    ],
    "size": [
     0.55,
     0.55,
     0.08
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "z_rel": 2.5,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
@@ -7839,15 +8058,15 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_070",
    "center": [
-    213.491,
-    81.941
+    213.055,
+    83.426
    ],
    "size": [
     0.45,
     0.45,
     2.5
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
@@ -7857,15 +8076,15 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_070",
    "center": [
-    213.491,
-    81.941
+    213.055,
+    83.426
    ],
    "size": [
     0.55,
     0.55,
     0.08
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "z_rel": 2.5,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
@@ -7876,15 +8095,15 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_071",
    "center": [
-    215.961,
-    81.113
+    216.046,
+    83.311
    ],
    "size": [
     0.45,
     0.45,
     2.5
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
@@ -7894,15 +8113,15 @@
    "type": "box",
    "name": "NorthBoundary_PillarCap_071",
    "center": [
-    215.961,
-    81.113
+    216.046,
+    83.311
    ],
    "size": [
     0.55,
     0.55,
     0.08
    ],
-   "dir_deg": -18.548171547351266,
+   "dir_deg": -2.2,
    "z_rel": 2.5,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",

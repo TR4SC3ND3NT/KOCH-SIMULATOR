@@ -1,0 +1,151 @@
+{
+ "id": "BLD_GuardBoothNE",
+ "collection": "SITE_Sport",
+ "scale": 1.0,
+ "status": "owner 2026-09-28: small guard post like the gate booth (cream brick-look tiles, red tile band, white PVC), sizes assumed",
+ "anchor": {
+  "world_xy": [
+   213.409,
+   81.111
+  ],
+  "x_dir": [
+   0.99926,
+   -0.03839
+  ],
+  "status": "SW corner in the NE corner of the lower yard, E face 0.15 m inside the bar fence (u 100.5), N face 0.3 m off the block wall"
+ },
+ "plinth_m": 0.1,
+ "wall_thk": 0.25,
+ "storey_m": 2.6,
+ "storeys": 1,
+ "eave_z": 2.6,
+ "ring": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   2.4,
+   0.0
+  ],
+  [
+   2.4,
+   2.0
+  ],
+  [
+   0.0,
+   2.0
+  ]
+ ],
+ "plinth": {
+  "z_top": 0.8,
+  "proj": 0.02,
+  "evidence": "red brick-look tile band as on the gate booth, lower",
+  "confidence": "low"
+ },
+ "cornice": {
+  "z0": 2.58,
+  "z1": 2.6,
+  "proj": 0.0
+ },
+ "window_types": {
+  "W": {
+   "w": 1.12,
+   "h": 1.4,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.33
+   ],
+   "reveal": 0.1,
+   "surround": [
+    0,
+    0,
+    0.06,
+    0
+   ],
+   "surround_proj": 0.06,
+   "evidence": "white PVC, 2 casements over a fixed lower pane; rect 065910461 f9.3 (35.7 px/course): 7.1 x 8.6 courses, sill top 4.9 courses above ground; tiled sill projects ~6 cm",
+   "confidence": "medium"
+  },
+  "D": {
+   "w": 0.8,
+   "h": 2.08,
+   "mullions": [],
+   "transoms": [
+    0.62
+   ],
+   "reveal": 0.08,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "white PVC door (glazed upper 2/3, solid lower), opens outward; opening 13.1 courses high (counted, 065934318 f1)",
+   "confidence": "medium"
+  }
+ },
+ "rows": {},
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south_gate",
+   "windows": [
+    {
+     "type": "D",
+     "u": [
+      0.65
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      1.7
+     ],
+     "sills": [
+      0.8
+     ]
+    }
+   ],
+   "evidence": "door and window toward the exit wicket (owner: guard post watching the FaceID gate)",
+   "confidence": "low"
+  },
+  {
+   "edge": 3,
+   "name": "west_yard",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      1.0
+     ],
+     "sills": [
+      0.8
+     ]
+    }
+   ],
+   "evidence": "window toward the workout area",
+   "confidence": "low"
+  }
+ ],
+ "roof": {
+  "type": "flat",
+  "parapet_h": 0.0,
+  "parapet_t": 0.0,
+  "evidence": "flat roof, no parapet (a parapet on the thin walls doubled their faces)",
+  "confidence": "low"
+ },
+ "attachments": [],
+ "wall_material": "M_Tile_Beige",
+ "slots": {
+  "Plinth": "M_Tile_Brick_Red"
+ },
+ "ffl_z": 2.9,
+ "ffl_note": "lower-yard level 2.85 + 5 cm step (sports frame Z_LOW)"
+}
