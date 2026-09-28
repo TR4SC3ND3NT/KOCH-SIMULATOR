@@ -1,6 +1,6 @@
 # Garden layout generator (R1 stream B, SITE_Garden.json): the hedged path network between the two gazebos, laid out
 # in one garden frame (u along the pergola walk, v north) and MIRROR-symmetric about the centre axis between the
-# gazebos: per gazebo a north path, an outer side path, a link to the centre bench square (8 benches) and a straight
+# gazebos: per gazebo a north path, an outer side path, a link to the centre bench square (4 benches) and a straight
 # south path; a north-south spine through the square (owner 2026-09-28: no diagonal paths); boundary hedges on
 # one rectangle (west/east/north hedge lines + the row along the pergola walk) with gaps where paths cross; ring hedges
 # and edging around each gazebo apron with gaps at the paths; hedge arches inside the rectangle. Everything is clipped
@@ -16,7 +16,7 @@ OWN = re.compile(r"^(G[12]_(N|W|E|S|D|Link)|Centre_NS(_[NS])?|(Hedge|Edging)_(G[
                  r"Arch_G[12]_.*|G[12]_(SSE|SSW|W_Link|E_Link)|Hedge_G[12]_Ring_\d+|Edging_G[12]_Ring_\d+|CentreSquare_.*)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W = 1.2, 0.65, 1.05, 0.7
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
-SQ_P = 4.0       # centre bench square: paving half size (m); 8 benches, one each side of the 4 entrances
+SQ_P = 4.0       # centre bench square: paving half size (m); 4 benches on its W/E sides
 EV = "[B] zone_garden.py 2026-09-28: mirror-symmetric garden layout on one rectangle (owner: same paths at both gazebos, diagonals to the centre, nothing outside the garden boundary)"
 
 
@@ -233,7 +233,8 @@ def main():
         arch(f"Arch_{gname}_N", (s * ug, v_n - 0.35 - 1.2), math.pi / 2)
         arch(f"Arch_{gname}_Link", (s * (sq + 0.9), 0.0), 0.0)
     # centre bench square (owner 2026-09-28): paving 2*SQ_P, hedge + scalloped edging on 4 sides with the 4 entrances
-    # (gap = path width), 8 benches (one each side of every entrance) facing the middle, drain grate
+    # (gap = path width), 4 benches on the W/E sides (one each side of the link entrance) facing the middle, drain
+    # grate (owner 2026-09-28: 4 benches, none on the N/S sides; the 8 m size stays)
     P, gh = SQ_P, PATH_W / 2
     hd = math.degrees(math.atan2(T[1], T[0]))                 # world heading of +u
     new.append({"type": "path", "name": "CentreSquare_Paving", "line": [W(-P, 0.0), W(P, 0.0)], "width": 2 * P,
@@ -253,7 +254,7 @@ def main():
                         "confidence": "medium", "evidence": EV})
         bu = (gh + 0.1 + P) / 2                               # bench centre along the side (mid of each half)
         face = math.degrees(math.atan2(-ny, -nx)) + hd        # sitter faces the middle of the square
-        for k, sgn in enumerate((-1, 1)):
+        for k, sgn in enumerate((-1, 1) if not along else ()):
             q = (sgn * bu, ny * (P - 0.4)) if along else (nx * (P - 0.4), sgn * bu)
             new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": W(*q), "dir_deg": round(face, 2),
                         "length": 1.5, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium", "evidence": EV})
