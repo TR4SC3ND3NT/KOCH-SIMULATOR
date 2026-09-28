@@ -199,11 +199,14 @@
     {
      "type": "BW",
      "u": [
-      2.5
+      2.5,
+      8.13,
+      10.69
      ],
      "sills": [
       -2.36
-     ]
+     ],
+     "evidence": "barred basement windows seen on the left of the basement corridor (012547860 f01268/f01493/f01697); columns under the W windows"
     }
    ],
    "evidence": "3 columns mirrored from the east wing; centres 3.52/8.13/10.69 from the SW corner (rect 061624280: 2.37-4.67, 7.01-9.26, 9.57-11.80)"
