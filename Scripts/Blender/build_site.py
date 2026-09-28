@@ -404,8 +404,8 @@ class Site:
             for j in range(n):
                 u0, u1 = L * j / n, L * (j + 1) / n
                 tri = [(u0, zt + fas), (u1, zt + fas), ((u0 + u1) / 2, zt + fas - td)]
-                fr = [bm.verts.new(m @ Vector((u, -0.003 - tt, 0.0)) + Vector((0, 0, z))) for u, z in tri]
-                bk = [bm.verts.new(m @ Vector((u, -0.003, 0.0)) + Vector((0, 0, z))) for u, z in tri]
+                fr = [bm.verts.new(m @ Vector((u, -0.01 - tt, 0.0)) + Vector((0, 0, z))) for u, z in tri]
+                bk = [bm.verts.new(m @ Vector((u, -0.01, 0.0)) + Vector((0, 0, z))) for u, z in tri]
                 bm.faces.new(fr)
                 bm.faces.new(list(reversed(bk)))
                 for i in range(3):
@@ -610,10 +610,11 @@ class Site:
     def b_path(self, el):
         """Paved path strip: thin slab following the ground (surface texture comes later in UE)."""
         bm = bmesh.new()
-        w, t = el.get("width", 1.5), el.get("thk", 0.08)
+        w, t, top = el.get("width", 1.5), el.get("thk", 0.08), el.get("top", 0.02)
+        # "top": 2 cm above the terrain by default; a joining path gets a few mm less so the two tops never coincide
         # top 2 cm above the terrain so it reads over the heightfield; slab reaches t below it. Subdivided every
         # 0.5 m so it follows pad blends/edges instead of bridging them (terrain poking through or a floating strip)
-        sweep_profile(bm, el["line"], [(w / 2, 0.02 - t), (w / 2, 0.02), (-w / 2, 0.02), (-w / 2, 0.02 - t)],
+        sweep_profile(bm, el["line"], [(w / 2, top - t), (w / 2, top), (-w / 2, top), (-w / 2, top - t)],
                       self.gz, el.get("closed", False), **_sweep_kw(el, 0.5))
         p = el["line"][0]
         self.emit(el, bm, COL["stone"], (p[0], p[1], self.gz(*p)))
@@ -811,7 +812,8 @@ class Site:
 
     # ------------------------------------------------------------------ sports area (SITE_Sports)
     def b_paint(self, el):
-        """Line markings 5 mm proud of an absolute surface z: 'lines' (polylines) and 'arcs' {c, r, a0, a1 deg}."""
+        """Line markings 5 mm proud of an absolute surface z: 'lines' (polylines) and 'arcs' {c, r, a0, a1 deg}.
+        The strips start 2 mm above z, so their undersides are never coplanar with the field (z-fight audit)."""
         w, z = el.get("width", 0.05), el["z"]
         polys = [[Vector(p) for p in ln] for ln in el.get("lines", [])]
         for a in el.get("arcs", []):
@@ -824,7 +826,7 @@ class Site:
             for A, B in zip(pl[:-1], pl[1:]):
                 L = (B - A).length
                 if L > 1e-4:   # segments overlap by w/2 at joints: each piece stays a closed box
-                    box(bm, _frame2(A, B - A), -w / 2, L + w / 2, -w / 2, w / 2, z, z + 0.005)
+                    box(bm, _frame2(A, B - A), -w / 2, L + w / 2, -w / 2, w / 2, z + 0.002, z + 0.007)
         p = polys[0][0]
         self.emit(el, bm, COL["paint"], (p.x, p.y, z))
 

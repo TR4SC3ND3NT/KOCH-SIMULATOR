@@ -197,7 +197,7 @@
    "name": "Passage_Cheek_Return",
    "ring": [
     [
-     159.487,
+     159.8,
      8.82
     ],
     [
@@ -209,7 +209,7 @@
      8.799
     ],
     [
-     159.498,
+     159.8,
      9.119
     ]
    ],
@@ -469,7 +469,7 @@
    ],
    "height": 6.0,
    "crown_d": 3.5,
-   "crown_base": 0.3,
+   "crown_base": 0.4,
    "trunk_d": 0.3,
    "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065)",
    "confidence": "medium"

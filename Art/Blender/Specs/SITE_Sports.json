@@ -717,7 +717,7 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.504,
    "material": "hedge",
    "evidence": "green basketball field u 52.9..67.4, v 3.04..26.8 (Google profiles, rms 0.03-0.06 m; N edge 26.4..27.3 blurred)",
    "confidence": "medium"
@@ -744,7 +744,7 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.504,
    "material": "hedge",
    "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06)",
    "confidence": "medium"
@@ -771,7 +771,7 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.504,
    "material": "brick",
    "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green)",
    "confidence": "medium"
@@ -937,7 +937,7 @@
     }
    ],
    "width": 0.05,
-   "z": 3.5,
+   "z": 3.504,
    "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field",
    "confidence": "medium"
   },
@@ -1089,7 +1089,7 @@
    "type": "paint",
    "name": "Court_Volley_Lines",
    "width": 0.05,
-   "z": 3.5,
+   "z": 3.504,
    "lines": [
     [
      [
@@ -1279,7 +1279,7 @@
     ]
    ],
    "width": 0.05,
-   "z": 3.5,
+   "z": 3.504,
    "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred",
    "confidence": "low"
   },
