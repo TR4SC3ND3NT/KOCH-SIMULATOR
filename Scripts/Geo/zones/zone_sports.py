@@ -219,7 +219,7 @@ def wall_box(nm, u0, u1, v0, v1, z0, z1, slot="M_Concrete_Precast"):
         material="stone", slot=slot, evidence=ev_ly, confidence="low")
 
 
-wall_box("LowerYard_Retain_Courts", ST_U1, C_U1 + 0.3, C_V1, C_V1 + 0.3, Z_LOW - 0.3, Z_COURT)           # under the N fence
+wall_box("LowerYard_Retain_Courts", ST_U1, 101.0, C_V1, C_V1 + 0.3, Z_LOW - 0.3, Z_COURT)                # under the N fence, to the E fence
 wall_box("LowerYard_Retain_Terrace", ST_U0 - 0.4, ST_U0 - 0.1, C_V1, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + 0.05)  # pitch side
 # the lane behind the pitch is low too (owner 2026-09-28): retaining wall along the N side of the raised bed / west terrace
 wall_box("LowerYard_Retain_Bed", 0.0, ST_U0 - 0.4, LANE_V0, LANE_V0 + 0.3, Z_LOW - 0.3, Z_NORTH + NB_RAISE + 0.1)
@@ -367,11 +367,29 @@ for k, u in enumerate([-35.6, -23.3, -17.5, -12.3, -6.9, -1.7, 4.1, 9.2, 15.0, 2
 add(type="path", name="NorthLane_Path_W", line=poly([(-20.0, 36.0), (-112.0, 36.0)]), width=3.0, slot="M_Paving_Generic",
     evidence="owner 2026-09-28 (overview sketch): the low path along the back fence runs from the courts to Block D; west "
     "of the pitch it follows the natural ground (DEM 2.9 at u -30 rising to 3.7 at u -112); width 3.0 assumed", confidence="low")
-add(type="wall", name="NorthBoundary_Wall", line=poly([(-112.0, 42.2), (93.0, 42.2), (100.5, 40.0)]), height=2.5, thk=0.25,
-    material="stone", slot="M_Concrete_Precast",
-    evidence="campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; 2026-09-28 "
-    "owner: a solid sand-concrete block wall without openings (replaces the bar fence + brick piers read from drone 2022 d_07); "
-    "height 2.5 kept from the old plinth + fence", confidence="medium")
+# N boundary (owner 2026-09-28): red block pillars with pale-yellow cast sand-concrete panels between them, no openings;
+# E boundary along the neighbour's wall: black steel bar fence (see-through, not cast)
+NB_LINE = [(-112.0, 42.2), (93.0, 42.2), (100.5, 40.0)]
+EV_NB = ("campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: "
+         "a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + "
+         "brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed")
+add(type="wall", name="NorthBoundary_Wall", line=poly(NB_LINE), height=2.2, thk=0.2, material="stone", slot="M_Block_PaleYellow",
+    evidence=EV_NB, confidence="medium")
+_k = 0
+for (ua, va), (ub, vb) in zip(NB_LINE[:-1], NB_LINE[1:]):
+    L = float(np.hypot(ub - ua, vb - va)); hd = ROT + float(np.degrees(np.arctan2(vb - va, ub - ua)))
+    n = max(1, int(round(L / 3.0)))
+    for j in range(n + (1 if (ub, vb) == NB_LINE[-1] else 0)):
+        f = j / n; u, v = ua + (ub - ua) * f, va + (vb - va) * f
+        add(type="box", name=f"NorthBoundary_Pillar_{_k:03d}", center=W(u, v), size=[0.45, 0.45, 2.5], dir_deg=hd,
+            material="brick", slot="M_Tile_Brick_Red", evidence=EV_NB, confidence="low")
+        add(type="box", name=f"NorthBoundary_PillarCap_{_k:03d}", center=W(u, v), size=[0.55, 0.55, 0.08], dir_deg=hd,
+            z_rel=2.5, material="brick", slot="M_Tile_Brick_Red", evidence=EV_NB, confidence="low")
+        _k += 1
+add(type="fence", name="EastBoundary_Fence", line=poly([(100.5, 40.0), (100.5, -35.0)]), height=2.0, post_spacing=2.5,
+    post=0.06, panel="bars", slot="M_Steel_Paint_Dark",
+    evidence="owner 2026-09-28 (overview sketch): black steel bar fence along the east edge from the N boundary corner south "
+    "to the level of Block C, beside the neighbour's west wall (x ~215.6); height 2.0 assumed", confidence="low")
 # west of the pitch
 add(type="slab", name="WestRedSquare", ring=rect(-16.5, -5.5, 17.5, 23.9), z0=Z_PLAZA - 0.05, z1=Z_PLAZA + 0.03,
     material="brick", evidence="Google 2026: mauve-red 11.0 x 6.4 m surface (not in Bing 2021/Esri 2020, which show a round "
