@@ -146,6 +146,6 @@
  "slots": {
   "Plinth": "M_Tile_Brick_Red"
  },
- "ffl_z": 2.9,
- "ffl_note": "lower-yard level 2.85 + 5 cm step (sports frame Z_LOW)"
+ "ffl_z": 2.225,
+ "ffl_note": "lower-yard level 2.85 + 5 cm step (sports frame Z_LOW) | 2026-09-29: yard lowered to 2.175 -> FFL 2.225"
 }
