@@ -1,0 +1,62 @@
+{
+ "id": "SITE_CPlaza_Props",
+ "collection": "03_Site",
+ "ground": "terrain",
+ "note": "Session B: small props of the C plaza that SITE_CPlaza lacks (bins).",
+ "elements": [
+  {
+   "type": "bin",
+   "name": "CP_Bin_AN_1",
+   "pos": [
+    177.33,
+    -19.56
+   ],
+   "size": [
+    0.4,
+    0.4,
+    0.7
+   ],
+   "dir_deg": 87.2,
+   "slot": "M_Plastic_Black",
+   "ue_asset": "bin_generic",
+   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bin",
+   "name": "CP_Bin_AN_3",
+   "pos": [
+    183.2,
+    -19.847
+   ],
+   "size": [
+    0.4,
+    0.4,
+    0.7
+   ],
+   "dir_deg": 87.2,
+   "slot": "M_Plastic_Black",
+   "ue_asset": "bin_generic",
+   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19)",
+   "confidence": "medium"
+  },
+  {
+   "type": "bin",
+   "name": "CP_Bin_AN_5",
+   "pos": [
+    189.06,
+    -20.133
+   ],
+   "size": [
+    0.4,
+    0.4,
+    0.7
+   ],
+   "dir_deg": 87.2,
+   "slot": "M_Plastic_Black",
+   "ue_asset": "bin_generic",
+   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19)",
+   "confidence": "medium"
+  }
+ ]
+}
