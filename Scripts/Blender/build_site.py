@@ -773,7 +773,7 @@ class Site:
         fwd, _ = rot2(el.get("dir_deg", 0.0))
         a, b, h = el["size"]
         bm = bmesh.new()
-        z0 = el["z0"] if "z0" in el else self.gz(P.x, P.y)   # no z0: standing on the ground
+        z0 = el["z0"] if "z0" in el else self.gz(P.x, P.y) + el.get("z_rel", 0.0)   # no z0: on the ground (+ z_rel)
         box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, z0, z0 + h)
         self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, z0))
 
