@@ -216,8 +216,7 @@ class Building:
             for u in grp["u"]:
                 for z in sills:
                     out.append((Opening(u - wt["w"] / 2, u + wt["w"] / 2, z, z + wt["h"]), grp["type"], wt))
-        ent = f.get("entrance")
-        if ent:
+        for ent in ([f["entrance"]] if f.get("entrance") else []) + list(f.get("entrances", [])):
             out.append((Opening(ent["u0"], ent["u1"], 0.02, ent["z1"]), "entrance", ent))
         return out, f
 
@@ -479,7 +478,15 @@ class Building:
             for i, e in enumerate(self.edges):
                 p0 = self.trim_ext(i, False, pl["proj"])
                 p1 = self.trim_ext(i, True, pl["proj"])
-                box(bm_pl, e["frame"], -p0, e["L"] + p1, 0.0, pl["proj"], e["zg"] - 0.05, pl["z_top"])
+                # the band stops at door openings (a continuous band walled up every entrance up to z_top)
+                cuts = sorted((o.u0, o.u1) for o, tn, _w in self.openings_for(i)[0] if tn == "entrance" or o.z0 < pl["z_top"])
+                a = -p0
+                for c0, c1 in cuts + [(e["L"] + p1, e["L"] + p1)]:
+                    if c0 - a > 0.01:
+                        box(bm_pl, e["frame"], a, c0, 0.0, pl["proj"], e["zg"] - 0.05, pl["z_top"])
+                    if c1 - c0 > 0.01 and e["zg"] < -0.07:   # under a door: band up to 2 cm below the threshold
+                        box(bm_pl, e["frame"], c0, c1, 0.0, pl["proj"], e["zg"] - 0.05, min(-0.02, pl["z_top"]))
+                    a = max(a, c1)
             self.obj("Plinth", bm_pl, COL["plinth"], pl.get("evidence", "brick-tile plinth"), pl.get("confidence"))
         for k, p in enumerate(self.s.get("pilasters", [])):
             e = self.edges[p["edge"]]
@@ -855,6 +862,15 @@ class Building:
                 self.build_stair_well(a, e, fr)
             elif t == "porch":
                 self.build_porch(a, e, fr)
+            elif t == "interior":
+                self.build_interior(a)
+                bm.free()
+            elif t == "glazed_porch":
+                self.build_glazed_porch(a, e, fr)
+                bm.free()
+            elif t == "post_canopy":
+                self.build_post_canopy(a, e, fr)
+                bm.free()
             elif t == "canopy":
                 box(bm, fr, a["u0"], a["u1"], 0.0, a["depth"], a["z0"], a["z1"])
                 s = a.get("sign")
@@ -1049,6 +1065,121 @@ class Building:
                 height=a.get("rail_h", 1.0) - 0.1, spacing=1.2, mid_rails=2)
         self.obj(a["name"] + "_Rail", bm, COL["metal"], a.get("evidence"), a.get("confidence"))
 
+    def build_interior(self, a):
+        """Basic fit-out of a hall that is seen through its glazing (mockup level, one object per group so UE can
+        split them later). Items in building-local metres (x along ring edge 0, y inward/north), z above FFL:
+        box {c, size [x, y, h], z0, rot}, table {c, top [x, y], h, pedestal} (café table), chair {c, rot} (seat + back
+        + legs, 0.45 m seat), column {c, size [x, y], z1}. Every item: 'group' (object name part) and 'slot'."""
+        groups = {}
+        for it in a["items"]:
+            key = (it.get("group", "Fitout"), it.get("slot", "M_Wood_Stained"))
+            bm = groups.setdefault(key, bmesh.new())
+            fr = Matrix.Translation((it["c"][0], it["c"][1], 0.0)) @ Matrix.Rotation(math.radians(it.get("rot", 0.0)), 4, "Z")
+            k = it.get("kind", "box")
+            if k == "box":
+                sx, sy, h = it["size"]
+                z0 = it.get("z0", 0.0)
+                box(bm, fr, -sx / 2, sx / 2, -sy / 2, sy / 2, z0, z0 + h)
+            elif k == "column":
+                sx, sy = it["size"]
+                box(bm, fr, -sx / 2, sx / 2, -sy / 2, sy / 2, -0.05, it["z1"])
+            elif k == "table":
+                tx, ty = it.get("top", [0.7, 0.7])
+                h, pd = it.get("h", 0.75), it.get("pedestal", 0.08)
+                box(bm, fr, -tx / 2, tx / 2, -ty / 2, ty / 2, h - 0.03, h)
+                box(bm, fr, -pd / 2, pd / 2, -pd / 2, pd / 2, 0.02, h - 0.03)
+                box(bm, fr, -0.22, 0.22, -0.22, 0.22, 0.0, 0.02)
+            elif k == "chair":   # faces +y of its own frame; seat 0.42 x 0.42 at 0.45 m
+                box(bm, fr, -0.21, 0.21, -0.21, 0.21, 0.42, 0.46)
+                box(bm, fr, -0.21, 0.21, -0.25, -0.21, 0.46, 0.86)
+                for lx, ly in ((-0.18, -0.18), (0.18, -0.18), (-0.18, 0.18), (0.18, 0.18)):
+                    box(bm, fr, lx - 0.015, lx + 0.015, ly - 0.015, ly + 0.015, 0.0, 0.42)
+        for (g, slot), bm in groups.items():
+            self.obj_parts(f"Int_{a.get('name', 'Hall')}_{g}", {slot: bm}, a.get("evidence"), a.get("confidence"))
+
+    def build_glazed_porch(self, a, e, fr):
+        """Glazed entrance vestibule against the wall (Canteen NW porch, 070410255 t=46 s): floor slab at FFL, black
+        aluminium corner posts + mullions (<= pane_w apart) on the 3 free faces, glass panes, one glazed door leaf
+        (own object, UE swaps a hinged actor) and a flat roof slab with an overhang. u0..u1 along the wall, depth
+        outward, z_top = roof underside (rel FFL). door: {"face": "front"|"u0"|"u1", "c": centre along that face, "w", "h"}."""
+        u0, u1, dep, zt = a["u0"], a["u1"], a["depth"], a["z_top"]
+        pw, pane = a.get("post_w", 0.08), a.get("pane_w", 1.2)
+        dr = a.get("door", {"face": "front", "c": (u0 + u1) / 2, "w": 1.0, "h": 2.1})
+        floor, alu, glass, roof, leaf, leaf_g = (bmesh.new() for _ in range(6))
+        box(floor, fr, u0, u1, 0.0, dep, -0.3, -0.005)             # 5 mm under FFL: no coplanar floor with the hall slab
+        # faces as (start, end) points in (u, w) and the along-face door span
+        faces = {"u0": ((u0, 0.0), (u0, dep)), "front": ((u0, dep), (u1, dep)), "u1": ((u1, 0.0), (u1, dep))}
+        for name, (pa, pb) in faces.items():
+            L = math.dist(pa, pb)
+            d = ((pb[0] - pa[0]) / L, (pb[1] - pa[1]) / L)
+            at = lambda t: (pa[0] + d[0] * t, pa[1] + d[1] * t)
+            # door span along this face; 'c' is measured from the face start (u0 face: from the wall, front: u0 side)
+            dspan = (dr["c"] - dr["w"] / 2, dr["c"] + dr["w"] / 2) if dr["face"] == name else None
+            cuts = [0.0, L] + ([dspan[0], dspan[1]] if dspan else [])
+            n = max(1, int(math.ceil(L / pane)))
+            cuts += [L * k / n for k in range(1, n) if not (dspan and dspan[0] - 0.3 < L * k / n < dspan[1] + 0.3)]
+            cuts = sorted(set(round(c, 4) for c in cuts))
+            for c in cuts:                                          # posts / mullions (square, on the face line)
+                x, y = at(c)
+                box(alu, fr, x - pw / 2, x + pw / 2, y - pw / 2, y + pw / 2, 0.0, zt)
+            for c0, c1 in zip(cuts[:-1], cuts[1:]):
+                is_door = dspan and abs(c0 - dspan[0]) < 1e-3 and abs(c1 - dspan[1]) < 1e-3
+                z0 = dr["h"] if is_door else 0.1
+                (xa, ya), (xb, yb) = at(c0 + pw / 2), at(c1 - pw / 2)
+                if is_door:   # transom bar over the door + the door leaf (frame ring + glass)
+                    (xa2, ya2), (xb2, yb2) = at(c0 + pw / 2 + 0.005), at(c1 - pw / 2 - 0.005)
+                    lo_u, hi_u = min(xa2, xb2), max(xa2, xb2)
+                    lo_w, hi_w = min(ya2, yb2), max(ya2, yb2)
+                    th = 0.025
+                    if hi_u - lo_u < hi_w - lo_w:
+                        lo_u, hi_u = lo_u - th, lo_u + th
+                        box(leaf, fr, lo_u, hi_u, lo_w, lo_w + 0.06, 0.01, dr["h"] - 0.01)
+                        box(leaf, fr, lo_u, hi_u, hi_w - 0.06, hi_w, 0.01, dr["h"] - 0.01)
+                        box(leaf, fr, lo_u, hi_u, lo_w + 0.06, hi_w - 0.06, 0.01, 0.12)
+                        box(leaf, fr, lo_u, hi_u, lo_w + 0.06, hi_w - 0.06, dr["h"] - 0.07, dr["h"] - 0.01)
+                        box(leaf_g, fr, lo_u + 0.019, hi_u - 0.019, lo_w + 0.06, hi_w - 0.06, 0.12, dr["h"] - 0.07)
+                    else:
+                        lo_w, hi_w = lo_w - th, lo_w + th
+                        box(leaf, fr, lo_u, lo_u + 0.06, lo_w, hi_w, 0.01, dr["h"] - 0.01)
+                        box(leaf, fr, hi_u - 0.06, hi_u, lo_w, hi_w, 0.01, dr["h"] - 0.01)
+                        box(leaf, fr, lo_u + 0.06, hi_u - 0.06, lo_w, hi_w, 0.01, 0.12)
+                        box(leaf, fr, lo_u + 0.06, hi_u - 0.06, lo_w, hi_w, dr["h"] - 0.07, dr["h"] - 0.01)
+                        box(leaf_g, fr, lo_u + 0.06, hi_u - 0.06, lo_w + 0.019, hi_w - 0.019, 0.12, dr["h"] - 0.07)
+                    box(alu, fr, min(xa, xb) - (0 if xa != xb else pw / 2), max(xa, xb) + (0 if xa != xb else pw / 2),
+                        min(ya, yb) - (0 if ya != yb else pw / 2), max(ya, yb) + (0 if ya != yb else pw / 2),
+                        dr["h"], dr["h"] + 0.06)
+                    z0 = dr["h"] + 0.06
+                g = 0.006
+                box(glass, fr, min(xa, xb) - (g if xa == xb else 0), max(xa, xb) + (g if xa == xb else 0),
+                    min(ya, yb) - (g if ya == yb else 0), max(ya, yb) + (g if ya == yb else 0), z0, zt - 0.02)
+        oh = a.get("roof_overhang", 0.15)
+        box(roof, fr, u0 - oh, u1 + oh, 0.0, dep + oh, zt, zt + a.get("roof_t", 0.15))
+        cf, ev = a.get("confidence"), a.get("evidence")
+        nm = a.get("name", f"GlazedPorch_E{a['edge']}")
+        self.obj_parts(nm, {"M_Alu_Black": alu, "M_Glass": glass, "M_Concrete": floor, "M_Sheet_Brown": roof}, ev, cf)
+        self.obj_parts(nm + "_Door", {"M_Alu_Black": leaf, "M_Glass": leaf_g}, ev, cf)
+
+    def build_post_canopy(self, a, e, fr):
+        """Flat entrance canopy slab cantilevered from the wall and carried by posts near its front edge (D_W west
+        entrance, 2GIS aerial 30258560047688468): slab u0..u1 x 0..depth, soffit z0, top z1 (rel FFL), a fascia band of
+        fascia_h round the free edges, posts (post_w square, from the ground to the soffit) at posts_u, set post_in
+        behind the front edge. Frame: u along the wall, w outward (m)."""
+        u0, u1, dep, z0, z1 = a["u0"], a["u1"], a["depth"], a["z0"], a["z1"]
+        fh, ft, pw = a.get("fascia_h", 0.35), a.get("fascia_t", 0.06), a.get("post_w", 0.3)
+        slab, fascia, posts = bmesh.new(), bmesh.new(), bmesh.new()
+        box(slab, fr, u0 + ft, u1 - ft, 0.0, dep - ft, z0, z1 - 0.02)
+        box(fascia, fr, u0, u1, dep - ft, dep, z1 - fh, z1)                  # front band
+        for ua, ub in ((u0, u0 + ft), (u1 - ft, u1)):                        # side bands
+            box(fascia, fr, ua, ub, 0.0, dep - ft, z1 - fh, z1)
+        pin = a.get("post_in", 0.35)
+        for u in a.get("posts_u", [u0 + pin, u1 - pin]):
+            box(posts, fr, u - pw / 2, u + pw / 2, dep - pin - pw / 2, dep - pin + pw / 2, e["zg"] - BURY_M, z0)
+        cf, ev = a.get("confidence"), a.get("evidence")
+        tag = f"E{a['edge']}_{u0:.0f}"
+        self.obj_parts(f"PostCanopy_{tag}", {a.get("slot", "M_Paint_Maroon"): fascia, a.get("soffit_slot", "M_Render_White"): slab},
+                       ev, cf)
+        self.obj_parts(f"PostCanopyPosts_{tag}", {a.get("post_slot", "M_Paint_Maroon"): posts}, ev, cf)
+
     def build_porch(self, a, e, fr):
         """Entrance pavilion: gable roof with its ridge perpendicular to the wall, on piers, with a pediment."""
         u0, u1, dep = a["u0"], a["u1"], a["depth"]
@@ -1171,12 +1302,52 @@ def clear(gen):
             bpy.data.meshes.remove(me)
 
 
+def merge_overlay(spec, ov):
+    """Specs/Overlays/<id>.json: additions kept apart from the main spec (another session owns it). facades[]:
+    {edge, windows[], entrances[], remove_windows[{u[], rows[]}]}; window_types{}, attachments[], cladding[] added."""
+    spec = json.loads(json.dumps(spec))
+    for k in ("window_types",):
+        for name, wt in ov.get(k, {}).items():
+            spec.setdefault(k, {}).setdefault(name, wt)
+    drop = set(ov.get("remove_attachments", []))   # e.g. a placeholder box replaced by a detailed attachment
+    spec["attachments"] = [a for a in spec.get("attachments", []) if a.get("name") not in drop]
+    for k in ("attachments", "cladding"):
+        spec.setdefault(k, []).extend(ov.get(k, []))
+    for fo in ov.get("facades", []):
+        f = next((f for f in spec["facades"] if f["edge"] == fo["edge"]), None)
+        if f is None:
+            f = {"edge": fo["edge"], "windows": []}
+            spec["facades"].append(f)
+        for rm in fo.get("remove_windows", []):   # e.g. the ground-floor window where a door goes in
+            out = []
+            for g in f.get("windows", []):
+                hit_rows = [r for r in g.get("rows", []) if r in rm["rows"]]
+                cut = [u for u in g["u"] if any(abs(u - x) < 0.05 for x in rm["u"])]
+                if not hit_rows or not cut:
+                    out.append(g)
+                    continue
+                keep_rows = [r for r in g["rows"] if r not in hit_rows]
+                if keep_rows or g.get("sills"):
+                    out.append({**g, "rows": keep_rows})
+                rest = [u for u in g["u"] if u not in cut]
+                if rest:
+                    out.append({**g, "rows": hit_rows, "u": rest, "sills": []})
+            f["windows"] = out
+        f.setdefault("windows", []).extend(fo.get("windows", []))
+        f.setdefault("entrances", []).extend(fo.get("entrances", []))
+    spec["overlay_note"] = ov.get("note", "")
+    return spec
+
+
 def main():
     ids = [s for s in os.environ.get("KOCH_SPECS", "BLD_C").split(",") if s]
     ter = Terrain(load("terrain.json"))
     for bid in ids:
         try:  # one broken or half-written spec must not stop the others
             spec = json.load(open(os.path.join(SPECS, bid + ".json"), encoding="utf-8"))
+            ovp = os.path.join(SPECS, "Overlays", bid + ".json")
+            if os.path.exists(ovp):
+                spec = merge_overlay(spec, json.load(open(ovp, encoding="utf-8")))
             b = Building(spec, ter)
             clear(b.gen)
             for name in spec.get("replaces", []):  # phase-1 massing stays in the file, hidden

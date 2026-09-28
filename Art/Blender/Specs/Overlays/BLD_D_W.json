@@ -1,0 +1,32 @@
+{
+ "id": "BLD_D_W",
+ "note": "Session B overlay (merged into BLD_D_W by build_facades.merge_overlay; the main spec belongs to the metrology session). West (forecourt) entrance of the D west wing: the model had no entrance at all.",
+ "facades": [
+  {
+   "edge": 3,
+   "remove_windows": [{"u": [14.55, 17.55], "rows": ["F1"]}],
+   "entrances": [
+    {
+     "u0": 14.75, "u1": 17.45, "z1": 2.9, "transom_z": 2.3, "reveal": 0.2, "frame_w": 0.06, "frame_d": 0.08,
+     "bays": [[0.45, "fixed"], [0.9, "door"], [0.9, "door"], [0.45, "fixed"]],
+     "evidence": "pano D_block (2022 tour, hotspot 'Block D entrance'): glazed aluminium double door with a transom and glazed side lights under a flat canopy, 2 steps + landing in front, doormat grate; 2GIS aerial 30258560047688468: door in the maroon bay 3 window columns from the N end of the west (forecourt) facade, between the two pyramid-roofed pavilions and the S corner; u +-2 m (column count, no survey)",
+     "confidence": "low"
+    }
+   ]
+  }
+ ],
+ "attachments": [
+  {
+   "type": "stairs", "edge": 3, "u0": 14.6, "u1": 17.6, "risers": 5, "riser_h": 0.168, "tread": 0.33, "landing": 1.8,
+   "evidence": "steps + landing under the canopy (pano D_block); 5 risers because the model has FFL 7.64 vs ground 6.80 here (the pano shows ~2 steps: FFL/ground level to check in the metrology pass)",
+   "confidence": "low"
+  },
+  {
+   "type": "post_canopy", "edge": 3, "u0": 13.5, "u1": 18.7, "depth": 3.0, "z0": 3.2, "z1": 3.6, "fascia_h": 0.4,
+   "posts_u": [13.85, 18.35], "post_w": 0.3, "post_in": 0.35,
+   "slot": "M_Paint_Maroon", "soffit_slot": "M_Render_White", "post_slot": "M_Paint_Maroon",
+   "evidence": "flat canopy slab with a maroon fascia on two maroon posts at its front corners (2GIS aerial 30258560047688468; pano D_block: red post with a stone-clad base), under the F2 windows; width ~2 bays, depth ~3 m estimated",
+   "confidence": "low"
+  }
+ ]
+}

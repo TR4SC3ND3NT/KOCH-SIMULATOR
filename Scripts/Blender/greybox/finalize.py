@@ -6,7 +6,7 @@
 #  - unused / out-of-range material slots removed
 #  - pivots at the local bounding-box bottom centre (UE static-mesh pivot), rotation kept
 #  - collections: every zone collection under its numbered parent (never twice), empty ones removed, the phase-1
-#    massing replaced by detailed buildings moved to the excluded 99_Replaced_Phase1
+#    massing replaced by detailed buildings moved to the hidden, non-rendering 99_Replaced_Phase1
 #  - orphan data purged
 import bmesh
 import bpy
@@ -16,7 +16,7 @@ from mathutils import Matrix
 SKIP = ("TER_", "REF_", "CAM_")
 FLIP_W = Matrix.Diagonal((1.0, -1.0, 1.0, 1.0))   # facade frames are (u, w_out, z): flipping w makes them right-handed
 PARENT = (("BLD_", "02_Buildings"), ("SITE_", "03_Site"), ("GRD_", "04_Garden"), ("STR_", "05_Street"),
-          ("VEG_", "06_Vegetation"), ("INT_", "07_BlockC_Interior"), ("CTX_", "08_Context"), ("REF_", "00_Reference"))
+          ("VEG_", "06_Vegetation"), ("INT_C_", "07_BlockC_Interior"), ("INT_", "07_Interiors"), ("CTX_", "08_Context"), ("REF_", "00_Reference"))
 REPLACED = "99_Replaced_Phase1"
 
 
@@ -110,7 +110,6 @@ def fix_meshes():
                 o.matrix_world = o.matrix_world @ Matrix.Translation(c.tolist())
             st["pivots"] += len(obs)
         me.update()
-    bpy.context.view_layer.update()   # bake the new matrices before objects move into the excluded collection
     return st
 
 
@@ -130,7 +129,7 @@ def fix_collections():
         if col.name[:2].isdigit() or col.name == REPLACED:
             continue
         target = next((p for k, p in PARENT if col.name.startswith(k)), None)
-        tp = bpy.data.collections.get(target) if target else None
+        tp = (bpy.data.collections.get(target) or bpy.data.collections.new(target)) if target else None
         if tp is None or col.name == target:
             continue
         if tp.name not in root.children and not any(tp.name in c.children for c in bpy.data.collections):
@@ -154,13 +153,13 @@ def fix_collections():
             if rc not in o.users_collection:
                 rc.objects.link(o)
 
-        def exclude(lc):
-            for ch in lc.children:
-                if ch.collection == rc:
-                    ch.exclude = True
-                exclude(ch)
+        # hidden, NOT excluded: builders re-run on this file call ob.hide_set() on them, which needs view-layer objects
+        rc.hide_render = True
         for vl in bpy.context.scene.view_layers:
-            exclude(vl.layer_collection)
+            for ch in vl.layer_collection.children:
+                if ch.collection == rc:
+                    ch.exclude = False
+                    ch.hide_viewport = True
 
     def prune(col):
         n = 0

@@ -1,0 +1,1257 @@
+{
+ "id": "BLD_Canteen",
+ "note": "Session B overlay (merged by build_facades.merge_overlay; the main spec belongs to the metrology session): the canteen had no door and no window. North wall = glazed curtain wall on the courts, NW glazed entrance vestibule with a landing, steps and a ramp.",
+ "window_types": {
+  "CW": {
+   "w": 1.35,
+   "h": 2.45,
+   "mullions": [],
+   "transoms": [
+    0.8
+   ],
+   "reveal": 0.08,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "floor-to-ceiling dark-framed glazing with top-hung vent lights over the courts (pano kanteen 2022: ~10 bays between the serving counter (W) and the TV/fridge wall (E), low sill); 070410255 t=46 s: dark glazing along the N side from the NW porch",
+   "confidence": "low"
+  }
+ },
+ "facades": [
+  {
+   "edge": 2,
+   "windows": [
+    {
+     "type": "CW",
+     "u": [
+      8.9,
+      10.35,
+      11.8,
+      13.25,
+      14.7,
+      16.15,
+      17.6,
+      19.05,
+      20.5,
+      21.95
+     ],
+     "sills": [
+      0.55
+     ]
+    }
+   ]
+  },
+  {
+   "edge": 3,
+   "entrances": [
+    {
+     "u0": 1.0,
+     "u1": 2.4,
+     "z1": 2.4,
+     "transom_z": 2.1,
+     "reveal": 0.15,
+     "frame_w": 0.06,
+     "frame_d": 0.08,
+     "bays": [
+      [
+       0.7,
+       "door"
+      ],
+      [
+       0.7,
+       "door"
+      ]
+     ],
+     "evidence": "door from the glazed NW vestibule into the canteen hall (pano kanteen: the entrance is at the W end by the serving counter); size assumed",
+     "confidence": "low"
+    }
+   ]
+  }
+ ],
+ "remove_attachments": [
+  "WestGlazedPorch"
+ ],
+ "attachments": [
+  {
+   "type": "stairs",
+   "edge": 3,
+   "u0": 0.3,
+   "u1": 3.1,
+   "risers": 4,
+   "riser_h": 0.163,
+   "tread": 0.32,
+   "landing": 3.0,
+   "evidence": "landing in front of the vestibule door + steps down to the paving (070410255 t=46 s); 4 risers because the model has FFL 4.35 vs paving 3.70 here (the owner's gable reading says FFL = paving + 0.35: level to check in the metrology pass)",
+   "confidence": "low"
+  },
+  {
+   "type": "glazed_porch",
+   "edge": 3,
+   "name": "WestGlazedPorch",
+   "u0": 0.3,
+   "u1": 3.1,
+   "depth": 1.8,
+   "z_top": 2.9,
+   "post_w": 0.08,
+   "pane_w": 1.0,
+   "door": {
+    "face": "front",
+    "c": 1.4,
+    "w": 1.0,
+    "h": 2.15
+   },
+   "roof_overhang": 0.2,
+   "evidence": "dark glazed vestibule with its own low flat roof at the N end of the W gable (070410255 t=46 s); door on its W face toward the steps; size and position from the old placeholder (estimated)",
+   "confidence": "low"
+  },
+  {
+   "type": "ramp",
+   "edge": 3,
+   "u0": 3.1,
+   "u1": 7.3,
+   "w0": 1.8,
+   "w1": 3.0,
+   "z_high": 0.0,
+   "z_low": -0.45,
+   "evidence": "ramp with a handrail beside the vestibule steps (070410255 t=46 s), run along the W gable to the south, 1:9 (drop from the landing to the paving at u 7.3); handrail not modelled yet",
+   "confidence": "low"
+  },
+  {
+   "type": "interior",
+   "edge": 0,
+   "name": "Canteen",
+   "items": [
+    {
+     "group": "Ceiling",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      12.05,
+      4.55
+     ],
+     "size": [
+      23.4,
+      8.4,
+      0.05
+     ],
+     "z0": 3.3
+    },
+    {
+     "group": "Columns",
+     "slot": "M_Render_Beige",
+     "kind": "column",
+     "c": [
+      8.3,
+      5.3
+     ],
+     "size": [
+      0.45,
+      0.45
+     ],
+     "z1": 3.3
+    },
+    {
+     "group": "Columns",
+     "slot": "M_Render_Beige",
+     "kind": "column",
+     "c": [
+      15.8,
+      5.3
+     ],
+     "size": [
+      0.45,
+      0.45
+     ],
+     "z1": 3.3
+    },
+    {
+     "group": "CounterWest",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      1.3,
+      3.2
+     ],
+     "size": [
+      0.7,
+      4.5,
+      1.0
+     ]
+    },
+    {
+     "group": "CounterWest",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      0.55,
+      3.2
+     ],
+     "size": [
+      0.45,
+      4.5,
+      2.0
+     ]
+    },
+    {
+     "group": "CounterWestGlass",
+     "slot": "M_Glass",
+     "kind": "box",
+     "c": [
+      1.3,
+      3.2
+     ],
+     "size": [
+      0.6,
+      2.0,
+      0.35
+     ],
+     "z0": 1.0
+    },
+    {
+     "group": "CounterEast",
+     "slot": "M_Wood_Stained",
+     "kind": "box",
+     "c": [
+      23.2,
+      4.0
+     ],
+     "size": [
+      0.7,
+      3.5,
+      1.0
+     ]
+    },
+    {
+     "group": "AC",
+     "slot": "M_AC_Casing",
+     "kind": "box",
+     "c": [
+      22.0,
+      8.45
+     ],
+     "size": [
+      0.5,
+      0.35,
+      1.8
+     ]
+    },
+    {
+     "group": "Fridges",
+     "slot": "M_Plastic_White",
+     "kind": "box",
+     "c": [
+      17.4,
+      8.4
+     ],
+     "size": [
+      0.8,
+      0.7,
+      2.0
+     ]
+    },
+    {
+     "group": "Fridges",
+     "slot": "M_Plastic_White",
+     "kind": "box",
+     "c": [
+      18.299999999999997,
+      8.4
+     ],
+     "size": [
+      0.8,
+      0.7,
+      2.0
+     ]
+    },
+    {
+     "group": "Fridges",
+     "slot": "M_Plastic_White",
+     "kind": "box",
+     "c": [
+      19.2,
+      8.4
+     ],
+     "size": [
+      0.8,
+      0.7,
+      2.0
+     ]
+    },
+    {
+     "group": "Fridges",
+     "slot": "M_Plastic_White",
+     "kind": "box",
+     "c": [
+      20.099999999999998,
+      8.4
+     ],
+     "size": [
+      0.8,
+      0.7,
+      2.0
+     ]
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      3.5,
+      1.8
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      3.5,
+      1.15
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      3.5,
+      2.45
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      2.85,
+      1.8
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      4.15,
+      1.8
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      3.5,
+      4.0
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      3.5,
+      3.35
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      3.5,
+      4.65
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      2.85,
+      4.0
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      4.15,
+      4.0
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      3.5,
+      6.6
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      3.5,
+      5.949999999999999
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      3.5,
+      7.25
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      2.85,
+      6.6
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      4.15,
+      6.6
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      6.0,
+      1.8
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.0,
+      1.15
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.0,
+      2.45
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      5.35,
+      1.8
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.65,
+      1.8
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      6.0,
+      4.0
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.0,
+      3.35
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.0,
+      4.65
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      5.35,
+      4.0
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.65,
+      4.0
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      6.0,
+      6.6
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.0,
+      5.949999999999999
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.0,
+      7.25
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      5.35,
+      6.6
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      6.65,
+      6.6
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      8.5,
+      1.8
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      8.5,
+      1.15
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      8.5,
+      2.45
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      7.85,
+      1.8
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      9.15,
+      1.8
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      8.5,
+      4.0
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      8.5,
+      3.35
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      8.5,
+      4.65
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      7.85,
+      4.0
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      9.15,
+      4.0
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      8.5,
+      6.6
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      8.5,
+      5.949999999999999
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      8.5,
+      7.25
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      7.85,
+      6.6
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      9.15,
+      6.6
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      11.0,
+      1.8
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.0,
+      1.15
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.0,
+      2.45
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      10.35,
+      1.8
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.65,
+      1.8
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      11.0,
+      4.0
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.0,
+      3.35
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.0,
+      4.65
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      10.35,
+      4.0
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.65,
+      4.0
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      11.0,
+      6.6
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.0,
+      5.949999999999999
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.0,
+      7.25
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      10.35,
+      6.6
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      11.65,
+      6.6
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      13.5,
+      1.8
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      13.5,
+      1.15
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      13.5,
+      2.45
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      12.85,
+      1.8
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      14.15,
+      1.8
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      13.5,
+      4.0
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      13.5,
+      3.35
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      13.5,
+      4.65
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      12.85,
+      4.0
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      14.15,
+      4.0
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      13.5,
+      6.6
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      13.5,
+      5.949999999999999
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      13.5,
+      7.25
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      12.85,
+      6.6
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      14.15,
+      6.6
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      16.0,
+      1.8
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.0,
+      1.15
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.0,
+      2.45
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      15.35,
+      1.8
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.65,
+      1.8
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      16.0,
+      4.0
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.0,
+      3.35
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.0,
+      4.65
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      15.35,
+      4.0
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.65,
+      4.0
+     ],
+     "rot": 90
+    },
+    {
+     "group": "Tables",
+     "slot": "M_Wood_Stained",
+     "kind": "table",
+     "c": [
+      16.0,
+      6.6
+     ],
+     "top": [
+      0.8,
+      0.8
+     ]
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.0,
+      5.949999999999999
+     ],
+     "rot": 0
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.0,
+      7.25
+     ],
+     "rot": 180
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      15.35,
+      6.6
+     ],
+     "rot": -90
+    },
+    {
+     "group": "Chairs",
+     "slot": "M_Plastic_Red",
+     "kind": "chair",
+     "c": [
+      16.65,
+      6.6
+     ],
+     "rot": 90
+    }
+   ],
+   "evidence": "pano kanteen 2022: one open hall, boarded wooden ceiling, 2 clad columns on the glazing side, serving counter with a display case at the W end, a second counter at the E end, drinks fridges and a floor AC unit on the E part of the N wall, ~18 caf\u00e9 tables with red plastic chairs; layout approximate (no plan)",
+   "confidence": "low"
+  }
+ ]
+}
