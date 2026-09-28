@@ -125,7 +125,15 @@
     ],
     [
      171.0,
-     23.8
+     23.816
+    ],
+    [
+     180.3,
+     22.2
+    ],
+    [
+     180.3,
+     42.0
     ],
     [
      171.9,
@@ -136,7 +144,7 @@
      43.1
     ]
    ],
-   "evidence": "clover-paver plaza between the hall wing and the canteen falls ~1.0 m from the path end (y 22, 4.475) to the pitch walkway (3.45): t=39 s horizon (above) and PnP at t=52 s at f 1740 px (camera 1.86 above the walkway at y 28.3 -> ground there ~3.95 +-0.25, slope model 4.13); no steps seen (a_079..a_110) | [B] 2026-09-28 full-res 070410255 t41.5-43.2: the yellow/white curb at the path end is a real step UP of ~0.10-0.12 m from the herringbone lane to the clover plaza (the painted face looks at the lane; a concrete wheel ramp patch in the middle), so the plaza starts 0.10 above the lane at the curb line (ref y 24.35) and keeps its fall to the pitch walkway. Blend kept at 1 m (a hard edge would cut 0.3-0.8 m cliffs at the unpadded E/W sides: TODO pad the canteen forecourt E of x 171); fall re-fitted to reach the pitch walkway 3.45 at y 43 (0.0603/m).",
+   "evidence": "clover-paver plaza between the hall wing and the canteen falls ~1.0 m from the path end (y 22, 4.475) to the pitch walkway (3.45): t=39 s horizon (above) and PnP at t=52 s at f 1740 px (camera 1.86 above the walkway at y 28.3 -> ground there ~3.95 +-0.25, slope model 4.13); no steps seen (a_079..a_110) | [B] 2026-09-28 full-res 070410255 t41.5-43.2: the yellow/white curb at the path end is a real step UP of ~0.10-0.12 m from the herringbone lane to the clover plaza (the painted face looks at the lane; a concrete wheel ramp patch in the middle), so the plaza starts 0.10 above the lane at the curb line (ref y 24.35) and keeps its fall to the pitch walkway. Blend kept at 1 m; fall re-fitted to reach the pitch walkway 3.45 at y 43 (0.0603/m). Extended E to the canteen porch (x 180.3): 070410255 t44-t48 show one continuous clover plaza with the round bed up to the canteen (the base terrain there was 0.3-0.8 m low).",
    "confidence": "low"
   }
  ],
