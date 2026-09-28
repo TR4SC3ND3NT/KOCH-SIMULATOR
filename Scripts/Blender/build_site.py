@@ -832,6 +832,12 @@ class Site:
             k = math.hypot(tr, rh) / tr                      # normal -> vertical thickness
             prof[0] = (0.0, zt - rh - st * k)
             prof[-1] = (prof[-1][0], zb - 0.2)
+            ts = el.get("top_slab_t")
+            if ts and ts > rh:
+                # hung from a landing / floor slab of thickness ts: the top riser IS the slab edge, so the flight
+                # starts 5 mm inside the slab (no face coplanar with the slab edge) and its waist underside starts at
+                # the slab underside (no notch under the top nosing; map owner 2026-09-28)
+                prof[0:2] = [(-0.005, zt - ts), (-0.005, zt - rh)]
         m = Matrix.Identity(4)
         m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = left.to_3d(), fwd.to_3d(), Vector((0, 0, 1))
         m.col[3].xyz = Vector((P.x, P.y, 0))

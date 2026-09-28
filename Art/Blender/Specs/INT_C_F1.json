@@ -1314,8 +1314,8 @@
    "type": "bench",
    "name": "F1_Hall_Bench_N0",
    "pos": [
-    183.005869,
-    7.255375
+    182.406356,
+    7.279285
    ],
    "dir_deg": 267.7161454954155,
    "length": 1.8,
@@ -1323,15 +1323,15 @@
    "seat_h": 0.45,
    "back": false,
    "z": 6.4,
-   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12) | [B] owner 2026-09-28: benches stand between two classroom doors",
    "confidence": "low"
   },
   {
    "type": "bench",
    "name": "F1_Hall_Bench_N1",
    "pos": [
-    193.797229,
-    6.824995
+    194.39674,
+    6.801085
    ],
    "dir_deg": 267.7161454954155,
    "length": 1.8,
@@ -1339,7 +1339,7 @@
    "seat_h": 0.45,
    "back": false,
    "z": 6.4,
-   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12)",
+   "evidence": "wooden bench with 3 black cushions, no backrest, ~1.8 m (lobby frames F_8.5, F_12) | [B] owner 2026-09-28: benches stand between two classroom doors",
    "confidence": "low"
   },
   {
@@ -1403,7 +1403,8 @@
    "material": "granite",
    "soffit_thk": 0.18,
    "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top_slab_t": 0.25
   },
   {
    "type": "rail3d",
@@ -1439,7 +1440,7 @@
    "spacing": 0.12,
    "mid_rails": 0,
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays)",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side",
    "confidence": "medium",
    "points": [
     [
@@ -1451,19 +1452,7 @@
      175.725405,
      6.635015,
      8.012
-    ]
-   ]
-  },
-  {
-   "type": "rail3d",
-   "name": "StairW_F1_Rail2",
-   "height": 0.95,
-   "spacing": 0.12,
-   "mid_rails": 0,
-   "material": "white",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
-   "confidence": "medium",
-   "points": [
+    ],
     [
      175.525565,
      6.642985,
@@ -1712,7 +1701,8 @@
    "material": "granite",
    "soffit_thk": 0.18,
    "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: flight 2 returns south along the end wall to the next floor; sloped soffit with the exit door (east) / window + closet door (west, c38) under it",
-   "confidence": "medium"
+   "confidence": "medium",
+   "top_slab_t": 0.25
   },
   {
    "type": "rail3d",
@@ -1748,7 +1738,7 @@
    "spacing": 0.12,
    "mid_rails": 0,
    "material": "white",
-   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays)",
+   "evidence": "[B] 2026-09-28 owner bug (screenshots): the well side of flight 1 had no balustrade; added here (the hall-side one stays) | one continuous balustrade: flight 1 well side, across the well at the landing, flight 2 well side",
    "confidence": "medium",
    "points": [
     [
@@ -1760,19 +1750,7 @@
      201.005165,
      5.626811,
      8.012
-    ]
-   ]
-  },
-  {
-   "type": "rail3d",
-   "name": "StairE_F1_Rail2",
-   "height": 0.95,
-   "spacing": 0.12,
-   "mid_rails": 0,
-   "material": "white",
-   "evidence": "hall photo 2026-09-25 21:35 (map owner) + frames 070704360 t 13-28 s: white steel balustrade, vertical bars ~0.12 m, curled handrail end at the bottom",
-   "confidence": "medium",
-   "points": [
+    ],
     [
      201.205005,
      5.61884,
@@ -1867,18 +1845,18 @@
    "type": "box",
    "name": "F1_WC0_StallDoor_0",
    "center": [
-    187.52,
-    11.925
+    187.514022,
+    11.775119
    ],
    "dir_deg": 87.71616832781433,
    "size": [
-    0.75,
+    0.8,
     0.04,
     2.0
    ],
    "z0": 6.42,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
+   "slot": "M_HPL_Black",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
   },
@@ -1925,18 +1903,18 @@
    "type": "box",
    "name": "F1_WC0_StallDoor_1",
    "center": [
-    187.52,
-    10.775
+    187.514022,
+    10.625119
    ],
    "dir_deg": 87.71616832781433,
    "size": [
-    0.75,
+    0.8,
     0.04,
     2.0
    ],
    "z0": 6.42,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
+   "slot": "M_HPL_Black",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
   },
@@ -1983,18 +1961,18 @@
    "type": "box",
    "name": "F1_WC0_StallDoor_2",
    "center": [
-    187.52,
-    9.625
+    187.514022,
+    9.475119
    ],
    "dir_deg": 87.71616832781433,
    "size": [
-    0.75,
+    0.8,
     0.04,
     2.0
    ],
    "z0": 6.42,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
+   "slot": "M_HPL_Black",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
   },
@@ -2022,12 +2000,12 @@
    "type": "box",
    "name": "F1_WC0_Sinks",
    "center": [
-    188.19,
-    8.35
+    186.37747,
+    8.358001
    ],
-   "dir_deg": 87.71616832781433,
+   "dir_deg": 87.71614549541547,
    "size": [
-    1.4,
+    1.3,
     0.45,
     0.85
    ],
@@ -2043,10 +2021,10 @@
    "type": "box",
    "name": "F1_WC0_Mirror",
    "center": [
-    188.41,
-    8.35
+    186.17663,
+    8.366012
    ],
-   "dir_deg": 87.71616832781433,
+   "dir_deg": 87.71614549541547,
    "size": [
     1.2,
     0.02,
@@ -2062,10 +2040,10 @@
    "type": "box",
    "name": "F1_WC0_Radiator",
    "center": [
-    187.745,
-    12.35
+    188.417786,
+    11.713283
    ],
-   "dir_deg": -2.2838316721856735,
+   "dir_deg": 87.71614549541547,
    "size": [
     0.6,
     0.08,
@@ -2101,18 +2079,18 @@
    "type": "box",
    "name": "F1_WC1_StallDoor_0",
    "center": [
-    189.92,
-    11.925
+    189.914022,
+    11.775119
    ],
    "dir_deg": 87.71616832781433,
    "size": [
-    0.75,
+    0.8,
     0.04,
     2.0
    ],
    "z0": 6.42,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
+   "slot": "M_HPL_Black",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
   },
@@ -2159,18 +2137,18 @@
    "type": "box",
    "name": "F1_WC1_StallDoor_1",
    "center": [
-    189.92,
-    10.775
+    189.914022,
+    10.625119
    ],
    "dir_deg": 87.71616832781433,
    "size": [
-    0.75,
+    0.8,
     0.04,
     2.0
    ],
    "z0": 6.42,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
+   "slot": "M_HPL_Black",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
   },
@@ -2217,18 +2195,18 @@
    "type": "box",
    "name": "F1_WC1_StallDoor_2",
    "center": [
-    189.92,
-    9.625
+    189.914022,
+    9.475119
    ],
    "dir_deg": 87.71616832781433,
    "size": [
-    0.75,
+    0.8,
     0.04,
     2.0
    ],
    "z0": 6.42,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
+   "slot": "M_HPL_Black",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
   },
@@ -2256,12 +2234,12 @@
    "type": "box",
    "name": "F1_WC1_Sinks",
    "center": [
-    190.59,
-    8.35
+    188.777456,
+    8.310144
    ],
-   "dir_deg": 87.71616832781433,
+   "dir_deg": 87.71614549541547,
    "size": [
-    1.4,
+    1.3,
     0.45,
     0.85
    ],
@@ -2277,10 +2255,10 @@
    "type": "box",
    "name": "F1_WC1_Mirror",
    "center": [
-    190.81,
-    8.35
+    188.576615,
+    8.318154
    ],
-   "dir_deg": 87.71616832781433,
+   "dir_deg": 87.71614549541547,
    "size": [
     1.2,
     0.02,
@@ -2296,10 +2274,10 @@
    "type": "box",
    "name": "F1_WC1_Radiator",
    "center": [
-    190.145,
-    12.35
+    190.815866,
+    11.617643
    ],
-   "dir_deg": -2.2838316721856735,
+   "dir_deg": 87.71614549541547,
    "size": [
     0.6,
     0.08,
@@ -2802,8 +2780,8 @@
    "type": "bench",
    "name": "F1_Hall_Bench_S0",
    "pos": [
-    182.839,
-    1.808
+    182.888419,
+    1.806029
    ],
    "dir_deg": 87.7161454954155,
    "length": 1.8,
@@ -2812,7 +2790,7 @@
    "back": false,
    "z": 6.4,
    "ue_asset": "bench_generic",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls)",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | [B] owner 2026-09-28: benches stand between two classroom doors",
    "confidence": "low"
   },
   {
@@ -2839,8 +2817,8 @@
    "type": "bench",
    "name": "F1_Hall_Bench_S1",
    "pos": [
-    198.676325,
-    1.176127
+    194.254529,
+    1.352477
    ],
    "dir_deg": 87.7161454954155,
    "length": 1.8,
@@ -2849,7 +2827,7 @@
    "back": false,
    "z": 6.4,
    "ue_asset": "bench_generic",
-   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | [B] 2026-09-28 owner bug: stood in a door, slid +0.85 m along the wall",
+   "evidence": "frames 20260924_080443026 f00018-00245 (corridor: 0.6 m LED panels in two rows, dome cameras, radiators + benches on both walls) | [B] 2026-09-28 owner bug: stood in a door, slid +0.85 m along the wall | [B] owner 2026-09-28: benches stand between two classroom doors",
    "confidence": "low"
   },
   {
@@ -2913,14 +2891,14 @@
    "type": "box",
    "name": "F1_WC0_Bin",
    "center": [
-    188.37,
-    9.35
+    187.06207,
+    8.847185
    ],
-   "dir_deg": 0,
+   "dir_deg": -2.2838545045845304,
    "size": [
+    0.32,
     0.3,
-    0.3,
-    0.45
+    0.5
    ],
    "z0": 6.4,
    "material": "metal",
@@ -2933,8 +2911,8 @@
    "type": "box",
    "name": "F1_WC0_Soap",
    "center": [
-    188.36,
-    8.35
+    186.212601,
+    8.364577
    ],
    "dir_deg": 87.7161683,
    "size": [
@@ -3030,14 +3008,14 @@
    "type": "box",
    "name": "F1_WC1_Bin",
    "center": [
-    190.77,
-    9.35
+    189.46207,
+    8.847185
    ],
-   "dir_deg": 0,
+   "dir_deg": -2.2838545045845304,
    "size": [
+    0.32,
     0.3,
-    0.3,
-    0.45
+    0.5
    ],
    "z0": 6.4,
    "material": "metal",
@@ -3050,8 +3028,8 @@
    "type": "box",
    "name": "F1_WC1_Soap",
    "center": [
-    190.76,
-    8.35
+    188.612587,
+    8.316719
    ],
    "dir_deg": 87.7161683,
    "size": [
@@ -3799,6 +3777,280 @@
    "slot": "M_Tile_Beige",
    "evidence": "WC frames 20260924_075931189 f00003/f00239/f00332 (black full-height stall doors, tile to 1.4 m, pedestal sinks + bin + soap dispenser, 6-section radiator)",
    "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_TowelDispenser",
+   "center": [
+    187.066454,
+    8.957097
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3,
+    0.11,
+    0.4
+   ],
+   "z0": 7.55,
+   "material": "white",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "paper_towel_dispenser",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28 + 075931189 t0.3: grey towel dispenser on the wall facing the entrance, black bin under it"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallPanel_0",
+   "center": [
+    187.53594,
+    12.324682
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.3,
+    0.04,
+    2.0
+   ],
+   "z0": 6.42,
+   "material": "metal",
+   "slot": "M_HPL_Black",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28: stall fronts closed full width (door + fixed panel), 075928860"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallHandle_0",
+   "center": [
+    187.561747,
+    12.09347
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.13,
+    0.03,
+    0.025
+   ],
+   "z0": 7.42,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "door_lever",
+   "confidence": "medium",
+   "evidence": "[B] 075725091 t13.2: lever handle + lock on the stall door"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallPanel_1",
+   "center": [
+    187.53594,
+    11.174682
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.3,
+    0.04,
+    2.0
+   ],
+   "z0": 6.42,
+   "material": "metal",
+   "slot": "M_HPL_Black",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28: stall fronts closed full width (door + fixed panel), 075928860"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallHandle_1",
+   "center": [
+    187.561747,
+    10.94347
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.13,
+    0.03,
+    0.025
+   ],
+   "z0": 7.42,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "door_lever",
+   "confidence": "medium",
+   "evidence": "[B] 075725091 t13.2: lever handle + lock on the stall door"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallPanel_2",
+   "center": [
+    187.53594,
+    10.024682
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.3,
+    0.04,
+    2.0
+   ],
+   "z0": 6.42,
+   "material": "metal",
+   "slot": "M_HPL_Black",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28: stall fronts closed full width (door + fixed panel), 075928860"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC0_StallHandle_2",
+   "center": [
+    187.561747,
+    9.79347
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.13,
+    0.03,
+    0.025
+   ],
+   "z0": 7.42,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "door_lever",
+   "confidence": "medium",
+   "evidence": "[B] 075725091 t13.2: lever handle + lock on the stall door"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_TowelDispenser",
+   "center": [
+    189.466454,
+    8.957097
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.3,
+    0.11,
+    0.4
+   ],
+   "z0": 7.55,
+   "material": "white",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "paper_towel_dispenser",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28 + 075931189 t0.3: grey towel dispenser on the wall facing the entrance, black bin under it"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallPanel_0",
+   "center": [
+    189.93594,
+    12.324682
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.3,
+    0.04,
+    2.0
+   ],
+   "z0": 6.42,
+   "material": "metal",
+   "slot": "M_HPL_Black",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28: stall fronts closed full width (door + fixed panel), 075928860"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallHandle_0",
+   "center": [
+    189.961747,
+    12.09347
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.13,
+    0.03,
+    0.025
+   ],
+   "z0": 7.42,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "door_lever",
+   "confidence": "medium",
+   "evidence": "[B] 075725091 t13.2: lever handle + lock on the stall door"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallPanel_1",
+   "center": [
+    189.93594,
+    11.174682
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.3,
+    0.04,
+    2.0
+   ],
+   "z0": 6.42,
+   "material": "metal",
+   "slot": "M_HPL_Black",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28: stall fronts closed full width (door + fixed panel), 075928860"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallHandle_1",
+   "center": [
+    189.961747,
+    10.94347
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.13,
+    0.03,
+    0.025
+   ],
+   "z0": 7.42,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "door_lever",
+   "confidence": "medium",
+   "evidence": "[B] 075725091 t13.2: lever handle + lock on the stall door"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallPanel_2",
+   "center": [
+    189.93594,
+    10.024682
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.3,
+    0.04,
+    2.0
+   ],
+   "z0": 6.42,
+   "material": "metal",
+   "slot": "M_HPL_Black",
+   "confidence": "medium",
+   "evidence": "[B] owner 2026-09-28: stall fronts closed full width (door + fixed panel), 075928860"
+  },
+  {
+   "type": "box",
+   "name": "F1_WC1_StallHandle_2",
+   "center": [
+    189.961747,
+    9.79347
+   ],
+   "dir_deg": 87.71616832781433,
+   "size": [
+    0.13,
+    0.03,
+    0.025
+   ],
+   "z0": 7.42,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "ue_asset": "door_lever",
+   "confidence": "medium",
+   "evidence": "[B] 075725091 t13.2: lever handle + lock on the stall door"
   }
  ]
 }

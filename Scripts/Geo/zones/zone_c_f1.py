@@ -177,12 +177,11 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
                            c_to_w(x_front - sgn * 0.05, y_land) + [z(h1)],
                            c_to_w(x_front - sgn * 0.05, HALL_Y1 - 0.05) + [z(h1)]]})
     # flight 1: well side too (map owner 2026-09-28: the open edge between the flights needs a balustrade)
+    # one continuous well balustrade: flight 1 well side, across the well end at the landing, flight 2 well side
     els.append({"type": "rail3d", "name": f"{prefix}_Rail1W", **rail, **rev,
                 "points": [c_to_w(x_in1 - sgn * 0.05, y_bot + TREAD) + [z(zb + BOTTOM_RISER + RISER_H)],
-                           c_to_w(x_in1 - sgn * 0.05, y_land) + [z(h1)]]})
-    # flight 2: well side, from the landing up to the next floor; flight 1 well side (upper floors: void next to it)
-    els.append({"type": "rail3d", "name": f"{prefix}_Rail2", **rail, **rev,
-                "points": [c_to_w(x_in2 + sgn * 0.05, y_land) + [z(h1)],
+                           c_to_w(x_in1 - sgn * 0.05, y_land) + [z(h1)],
+                           c_to_w(x_in2 + sgn * 0.05, y_land) + [z(h1)],
                            c_to_w(x_in2 + sgn * 0.05, y_bot) + [z(zb + STOREY)],
                            c_to_w(x_in2 + sgn * 0.05, y_bot - 0.30) + [z(zb + STOREY)]]})
     if top_floor:  # guard round the stair opening on the last floor the stair reaches
