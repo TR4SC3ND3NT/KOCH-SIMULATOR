@@ -756,6 +756,249 @@
    "ue_asset": "sign_pedestrian_crossing",
    "evidence": "P1 by frames: blue pedestrian-crossing sign on a post at the NE corner of the zebra (061913764 f00734, 012108212 s1); post height 2.4 m standard, +-1 m",
    "confidence": "low"
+  },
+  {
+   "type": "sign",
+   "name": "TestCentrePlate",
+   "pos": [
+    158.51,
+    -100.29
+   ],
+   "dir_deg": 267.1,
+   "w": 0.4,
+   "h": 0.3,
+   "t": 0.02,
+   "z0": 2.4,
+   "slot": "M_Steel_Galv",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): steel 'test centre' plate right of the brass plaque on the south face, same height band (blank KOCH text)",
+   "confidence": "medium"
+  },
+  {
+   "type": "sign",
+   "name": "BulkheadLamp_SW",
+   "pos": [
+    157.46,
+    -100.26
+   ],
+   "dir_deg": 267.1,
+   "w": 0.18,
+   "h": 0.18,
+   "t": 0.08,
+   "z0": 2.85,
+   "slot": "M_Lamp_Diffuser",
+   "ue_asset": "bulkhead_lamp",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): white round bulkhead lamp near the SW corner under the eave",
+   "confidence": "medium"
+  },
+  {
+   "type": "sign",
+   "name": "BulkheadLamp_SE",
+   "pos": [
+    160.58,
+    -100.42
+   ],
+   "dir_deg": 267.1,
+   "w": 0.18,
+   "h": 0.18,
+   "t": 0.08,
+   "z0": 2.85,
+   "slot": "M_Lamp_Diffuser",
+   "ue_asset": "bulkhead_lamp",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): white round bulkhead lamp near the SE corner under the eave",
+   "confidence": "medium"
+  },
+  {
+   "type": "sign",
+   "name": "CardReader_Booth",
+   "pos": [
+    157.42,
+    -97.43
+   ],
+   "dir_deg": 177.1,
+   "w": 0.12,
+   "h": 0.2,
+   "t": 0.06,
+   "z0": 1.1,
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "card_reader",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): small grey card-reader box on the booth's west wall by the turnstile",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp",
+   "name": "MeterPost_Booth",
+   "pos": [
+    156.9,
+    -100.8
+   ],
+   "height": 1.6,
+   "head": "box",
+   "pole_r": 0.04,
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "meter_post",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): brown steel pipe post with an electric meter box and cable west of the booth (065934318 s1); +-1 m",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "CCTV_Canopy",
+   "center": [
+    157.4,
+    -97.05
+   ],
+   "size": [
+    0.28,
+    0.1,
+    0.1
+   ],
+   "dir_deg": 267.1,
+   "z_rel": 3.2,
+   "slot": "M_Plastic_White",
+   "ue_asset": "cctv_bullet",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): CCTV bullet camera under the canopy at the booth NW corner (065910461 s2, 061913764 s1)",
+   "confidence": "medium"
+  },
+  {
+   "type": "sign",
+   "name": "InfoPlate_Gate",
+   "pos": [
+    152.7,
+    -96.95
+   ],
+   "dir_deg": 267.1,
+   "w": 0.4,
+   "h": 0.3,
+   "t": 0.02,
+   "z0": 1.3,
+   "slot": "M_Sign_Panel",
+   "evidence": "P1 by frames: blue info plate on the sliding gate (065856484 s1, 065910461 s2)",
+   "confidence": "medium"
+  },
+  {
+   "type": "sign",
+   "name": "InfoPlate_Fence",
+   "pos": [
+    147.5,
+    -96.7
+   ],
+   "dir_deg": 267.1,
+   "w": 0.4,
+   "h": 0.3,
+   "t": 0.02,
+   "z0": 1.3,
+   "slot": "M_Sign_Panel",
+   "evidence": "P1 by frames: blue info plate on the west fence (061757320 s3, 012136583 s1); +-1 m along",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Container_Outside",
+   "center": [
+    163.6,
+    -101.3
+   ],
+   "size": [
+    1.2,
+    0.8,
+    1.2
+   ],
+   "dir_deg": 267.1,
+   "material": "metal",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "bin_container",
+   "evidence": "P1 by frames: green waste container on the street side just east of the booth, seen through the fence from the yard (082337333 f00096/f00104, right of the booth); +-1.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Poplar_Booth",
+   "pos": [
+    163.3,
+    -99.2
+   ],
+   "height": 16.0,
+   "crown_d": 10.0,
+   "trunk_d": 0.6,
+   "crown_base": 4.0,
+   "shape": "round",
+   "evidence": "P1 by frames: big poplar/elm crown over the booth on Google z20 (dark crown x 158-170, y -92..-104) and in 061913764 s1/012136583 s1",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "SoffitLight_0",
+   "center": [
+    151.5,
+    -98.468
+   ],
+   "size": [
+    0.3,
+    0.3,
+    0.03
+   ],
+   "dir_deg": 87.1,
+   "z_rel": 3.37,
+   "slot": "M_Lamp_Diffuser",
+   "ue_asset": "soffit_light_square",
+   "evidence": "P1 by frames: square recessed lights in the canopy soffit over the lane, 4 in a row (065910461 s1/s2, 061757320 s3)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "SoffitLight_1",
+   "center": [
+    153.3,
+    -98.55
+   ],
+   "size": [
+    0.3,
+    0.3,
+    0.03
+   ],
+   "dir_deg": 87.1,
+   "z_rel": 3.37,
+   "slot": "M_Lamp_Diffuser",
+   "ue_asset": "soffit_light_square",
+   "evidence": "P1 by frames: square recessed lights in the canopy soffit over the lane, 4 in a row (065910461 s1/s2, 061757320 s3)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "SoffitLight_2",
+   "center": [
+    155.1,
+    -98.632
+   ],
+   "size": [
+    0.3,
+    0.3,
+    0.03
+   ],
+   "dir_deg": 87.1,
+   "z_rel": 3.37,
+   "slot": "M_Lamp_Diffuser",
+   "ue_asset": "soffit_light_square",
+   "evidence": "P1 by frames: square recessed lights in the canopy soffit over the lane, 4 in a row (065910461 s1/s2, 061757320 s3)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "SoffitLight_3",
+   "center": [
+    156.9,
+    -98.714
+   ],
+   "size": [
+    0.3,
+    0.3,
+    0.03
+   ],
+   "dir_deg": 87.1,
+   "z_rel": 3.37,
+   "slot": "M_Lamp_Diffuser",
+   "ue_asset": "soffit_light_square",
+   "evidence": "P1 by frames: square recessed lights in the canopy soffit over the lane, 4 in a row (065910461 s1/s2, 061757320 s3)",
+   "confidence": "medium"
   }
  ],
  "ground_surfaces": [
