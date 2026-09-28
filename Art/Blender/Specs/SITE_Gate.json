@@ -1076,6 +1076,247 @@
    "shape": "cone",
    "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m; blue spruce in the bed",
    "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "Path_BFront",
+   "line": [
+    [
+     139.021,
+     -90.464
+    ],
+    [
+     100.567,
+     -88.581
+    ]
+   ],
+   "width": 2.4,
+   "slot": "M_Paving_Diamond_Tile",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Upstand_BFront",
+   "line": [
+    [
+     138.09,
+     -89.017
+    ],
+    [
+     101.634,
+     -87.232
+    ]
+   ],
+   "height": 0.45,
+   "thk": 0.2,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_BFront",
+   "line": [
+    [
+     138.12,
+     -88.418
+    ],
+    [
+     101.664,
+     -86.633
+    ]
+   ],
+   "width": 0.9,
+   "height": 1.15,
+   "top": "flat",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "bin",
+   "name": "Bin_BFront",
+   "pos": [
+    128.577,
+    -89.052
+   ],
+   "dir_deg": 87.2,
+   "size": [
+    0.45,
+    0.45,
+    0.8
+   ],
+   "slot": "M_Wrought_Iron",
+   "ue_asset": "bin_wrought_iron",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Drain_BFront_W",
+   "center": [
+    101.166,
+    -88.611
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.5,
+    1.2,
+    0.02
+   ],
+   "z_rel": 0.02,
+   "material": "metal",
+   "slot": "M_Steel_Grating",
+   "ue_asset": "drain_grating",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "Step_BoothApron",
+   "center": [
+    139.52,
+    -90.489
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.35,
+    2.4,
+    0.15
+   ],
+   "z_rel": 0.0,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_0",
+   "pos": [
+    134.578,
+    -89.196
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_1",
+   "pos": [
+    123.591,
+    -88.658
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_2",
+   "pos": [
+    112.604,
+    -88.12
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_3",
+   "pos": [
+    102.616,
+    -87.63
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BFront_0_pine",
+   "pos": [
+    132.416,
+    -92.444
+   ],
+   "height": 9.0,
+   "crown_d": 3.4,
+   "shape": "cone",
+   "trunk_d": 0.3,
+   "crown_base": 1.5,
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BFront_1_poplar",
+   "pos": [
+    125.424,
+    -92.101
+   ],
+   "height": 14.0,
+   "crown_d": 2.4,
+   "shape": "cone",
+   "trunk_d": 0.35,
+   "crown_base": 2.5,
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BFront_2_pine",
+   "pos": [
+    118.433,
+    -91.759
+   ],
+   "height": 9.0,
+   "crown_d": 3.4,
+   "shape": "cone",
+   "trunk_d": 0.3,
+   "crown_base": 1.5,
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BFront_3_poplar",
+   "pos": [
+    111.441,
+    -91.417
+   ],
+   "height": 14.0,
+   "crown_d": 2.4,
+   "shape": "cone",
+   "trunk_d": 0.35,
+   "crown_base": 2.5,
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BFront_4_pine",
+   "pos": [
+    104.45,
+    -91.074
+   ],
+   "height": 9.0,
+   "crown_d": 3.4,
+   "shape": "cone",
+   "trunk_d": 0.3,
+   "crown_base": 1.5,
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [

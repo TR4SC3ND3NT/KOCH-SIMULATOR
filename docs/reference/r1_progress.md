@@ -143,18 +143,18 @@ after the C zone passes P0 and P1 with them unchanged.
 - [ ] B.3 West end — approx., in the model (GBF_BLD_B Wall) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 - [ ] B.4 East facade: entrance canopy, door and threshold, maroon sloped covers — approx., in the model (GBF_BLD_B Entrance/LightwellCover) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 - [ ] B.5 Low red-roofed annex at the NE corner — not confirmed: no annex visible on Bing z19 at B's NE corner (trees); not modelled — BLOCKED: the NE corner of B is in no placed frame; photo request «Корпуса A и B: фасады»
-- [ ] B.6 Roof: slopes, hatch on the north slope — approx., in the model (GBF_BLD_B Roof) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
+- [ ] B.6 Roof: slopes, hatch on the north slope — approx., in the model (GBF_BLD_B Roof) — re-opened: P1 by frames (web aerials 2022-10-30 0:45.4/0:48.5): long hip roof with an E-W ridge over B agrees by eye; pitch 19 kept
 - [ ] B.7 Front gallery on brick piers with terracotta soffit, white low railing and planters along the front path — approx., in the model (GBF_BLD_B GalleryPosts/GalleryRoof) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 - [ ] B.8 Position: B–A gap settled on the mesh — approx.: Bing z19 roof edges B 147.0 / A gallery roof 157.6 (+2.2 m gallery) give a wall gap ≈13.0 m, close to the spec (13.4); B not moved (the Gate mesh is too hole-filled here; see M12) — BLOCKED: the Gate c8 mesh gives two scales that disagree (B-A wall gap 16.8 m at the eye-height scale vs 13.0-13.4 satellite; A_S window rows every 4.0 m after a gap-based rescale vs the 3.06 m storey of the spec) - the gap cannot be settled from this footage; photo request «Аллея B–A: ширина» (tape/laser)
 
 ## 11. Block A (zones `AW`, `Gate`)
 - [ ] A.1 Main facade on the square: lettering band + round panel (blank KOCH), pilasters, windows, notice-board stands — approx., in the model (GBF_BLD_A_S/A_N) — P1✓ 3e8ba38 (obj_test GBF_BLD_A_S: Street c3 4.2/1.4 px, Gate c13 3.0/4.0 px; own look Gate c8 f00034/f00550: lettering panel, round panel, window rows, porch)
-- [ ] A.2 A_S south facade (street) — approx., in the model (GBF_BLD_A_S) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
+- [ ] A.2 A_S south facade (street) — approx., in the model (GBF_BLD_A_S) — re-opened: P1 by frames (web aerial 2022-10-30 0:45.4/0:48.5, low res): 3 storeys, regular window rows over the street, trees in front; window pitch 2.78 kept
 - [ ] A.3 A_S and A_N east facades (parking side) — approx., in the model (GBF_BLD_A_S/A_N) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 - [ ] A.4 A_N north end (cut gable) — approx., in the model (GBF_BLD_A_N) — P1 partly: overlay 081158036 f00006/f00194 (C_entr c2): wall, roof line and windows of the N end match by eye (median 20/29 px from trees/people)
 - [ ] A.5 A_E and the NE annex between A_N and A_S — approx., in the model (GBF_BLD_A_E) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 - [ ] A.6 Two-storey part (hall + library) and the roof junctions — approx., in the model (GBF_BLD_A_W) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
-- [ ] A.7 Roofs of A — approx., in the model (GBF_BLD_A_* Roof) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
+- [ ] A.7 Roofs of A — approx., in the model (GBF_BLD_A_* Roof) — re-opened: P1 by frames (web aerials 2020-05-16 0:04.1, 2022-10-30 0:36.0/0:45.4): hip roofs over A_S/A_N/A_E and the low strip between agree by eye; pitch 13 kept (not measurable)
 - [ ] A.8 Junction A_S / gallery block — approx., in the model (A_S / A_W junction) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 - [ ] A.9 Circle-pattern paving, red-tile retaining wall with steps and planting in front of the entrance pavilion — approx., in the model (GateAlley PavilionStair; circle paving = material) — BLOCKED: no placed frame shows it at P1 (the street/alley clips see B and A_S only from the south/east ends; Gate c8 scale is inconsistent, see B.8); photo request «Корпуса A и B: фасады»
 
@@ -465,10 +465,10 @@ Each building: footprint from OSM, height from OSM `building:levels`/`height`, e
 ### Block B
 - [ ] INV.BB.1 White-column gallery on the B north side, seen beyond the hedge : 082006491_s1, 082006491_s2
 - [ ] INV.BB.2 Blue-roofed sheds and corrugated structures at B's rear : 081904575_s1, 081904575_s2
-- [ ] INV.BB.3 AC outdoor units on the B south facade upper floors, x5–6 : 065934318_s1, 065934318_s2
-- [ ] INV.BB.4 Drain grating at the far end of the front path : 065934318_s1
-- [ ] INV.BB.5 Step down from the booth apron to the front path : 065934318_s1
-- [ ] INV.BB.6 Pines and poplars along the front path : 065934318_s1, 065934318_s2
+- [ ] INV.BB.3 AC outdoor units on the B south facade upper floors, x5–6 : 065934318_s1, 065934318_s2 — P1 by frames (BLD_B AC_South x6)
+- [ ] INV.BB.4 Drain grating at the far end of the front path : 065934318_s1 — P1 by frames (SITE_Gate Drain_BFront_W)
+- [ ] INV.BB.5 Step down from the booth apron to the front path : 065934318_s1 — P1 by frames (Step_BoothApron)
+- [ ] INV.BB.6 Pines and poplars along the front path : 065934318_s1, 065934318_s2 — P1 by frames (Tree_BFront_0-4: pines + poplars; with Path_BFront, Upstand_BFront, Hedge_BFront, PathLamp_B_0-3, Bin_BFront)
 ### Block A
 - [ ] INV.BA.1 Benches (black), x3, along the path in front of A : 082248481_s1 — P1 by frames (Bench_ASCorner_0-2)
 - [ ] INV.BA.2 Small ground spot lamps on short posts in the lawn, x2 : 082248481_s1, 082606037_s1 — P1 by frames (SpotLamp_Lawn_0/1)
