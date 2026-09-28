@@ -1961,7 +1961,8 @@
    "thk": 0.08,
    "surface": "concrete_tile",
    "evidence": "Google z20: second light band y -47.5..-49.0 at x 140-150 just south of the dark wall line = strip on top of the retaining wall (2020 pano: benches standing on the wall top level). Real level ~0.95 m above the pergola walk; the builder puts it on the smooth terrain.",
-   "confidence": "low"
+   "confidence": "low",
+   "follow_m": 0.25
   },
   {
    "type": "bench",
@@ -2257,7 +2258,7 @@
    "name": "Steps_G1_SSE",
    "pos": [
     126.795,
-    -46.555
+    -45.456
    ],
    "dir_deg": -92.8,
    "width": 1.4,
@@ -2265,7 +2266,7 @@
    "riser_h": 0.16,
    "tread": 0.32,
    "top_landing": 0.6,
-   "evidence": "2020 pano pz_135/pz_180: pinkish stone steps rising south behind the SSE arch through the boulder wall; 6 x 0.16 = wall height ~0.95 m (count not visible -> assumed).",
+   "evidence": "2020 pano pz_135/pz_180: pinkish stone steps rising south behind the SSE arch through the boulder wall; 6 x 0.16 = wall height ~0.95 m (count not visible -> assumed). | [B] 2026-09-28: moved so the 5 treads rise from the lower walk through the wall gap and the top landing lands on the upper terrace behind the wall (it used to start at the wall and climb 2 m into the upper ground).",
    "confidence": "low"
   },
   {
@@ -2273,7 +2274,7 @@
    "name": "Steps_G2_SSW",
    "pos": [
     138.781,
-    -47.141
+    -46.041
    ],
    "dir_deg": -92.8,
    "width": 1.4,
@@ -2281,7 +2282,7 @@
    "riser_h": 0.16,
    "tread": 0.32,
    "top_landing": 0.6,
-   "evidence": "081924271 t15-t17: from the gazebo's second (SSW) opening a straight hedged path ends at steps rising to the Block-B level; exact riser count not visible (6 x 0.16 assumed = wall height).",
+   "evidence": "081924271 t15-t17: from the gazebo's second (SSW) opening a straight hedged path ends at steps rising to the Block-B level; exact riser count not visible (6 x 0.16 assumed = wall height). | [B] 2026-09-28: moved so the 5 treads rise from the lower walk through the wall gap and the top landing lands on the upper terrace behind the wall (it used to start at the wall and climb 2 m into the upper ground).",
    "confidence": "low"
   },
   {
@@ -2817,6 +2818,79 @@
     ]
    ],
    "evidence": "map owner 2026-09-25 + video 012404116 (2 fps): below the wide granite stair north of B's NE corner one flat level: lower plaza along A_W with thujas in pits, the garden (arches, gazebos) and C's entrance plaza | south edge moved to y -49.5 so UpperWalk_South (B north side) sits on it"
+  },
+  {
+   "name": "UpperTerraceSouth",
+   "z": 6.31,
+   "blend": 0.0,
+   "ring": [
+    [
+     100.23,
+     -54.86
+    ],
+    [
+     147.5,
+     -57.183
+    ],
+    [
+     147.5,
+     -47.818
+    ],
+    [
+     139.568,
+     -47.43
+    ],
+    [
+     139.55,
+     -47.426
+    ],
+    [
+     139.55,
+     -47.64
+    ],
+    [
+     138.01,
+     -47.64
+    ],
+    [
+     138.01,
+     -47.357
+    ],
+    [
+     137.97,
+     -47.352
+    ],
+    [
+     127.582,
+     -46.844
+    ],
+    [
+     127.57,
+     -46.84
+    ],
+    [
+     127.57,
+     -47.06
+    ],
+    [
+     126.03,
+     -47.06
+    ],
+    [
+     126.03,
+     -46.772
+    ],
+    [
+     125.984,
+     -46.766
+    ],
+    [
+     99.406,
+     -45.466
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing)."
   },
   {
    "name": "AW_SquareN",
