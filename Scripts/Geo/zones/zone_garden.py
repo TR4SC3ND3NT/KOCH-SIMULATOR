@@ -16,7 +16,7 @@ from shapely.geometry import LineString, MultiLineString, Point, Polygon
 from shapely.ops import unary_union
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
-OWN = re.compile(r"^(G[12]_\w+|Centre_NS_\w+|Hedge_\w+|Edging_\w+|Arch_\w+|CentreSquare_\w+)$")
+OWN = re.compile(r"^(Apron_Fill_\w+|G[12]_\w+|Centre_NS_\w+|Hedge_\w+|Edging_\w+|Arch_\w+|CentreSquare_\w+)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W, HEDGE_H = 1.2, 0.65, 1.05, 0.7, 1.05
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
 ARCH_T, ARCH_H = 0.35, 2.25                      # topiary arch leg thickness / height (m)
@@ -262,6 +262,23 @@ def main():
                 "cross": True, "arm_span": 0.8, "globe_d": 0.35, "base_box": [0.3, 0.3, 0.6], "confidence": "low",
                 "evidence": EV + " | owner: lamp post in the exact middle, 4 lamps (maybe 2)"})
 
+    # --- gazebo surrounds: paving from the parapet to the ring edging (no lawn sliver between the octagonal apron and
+    # the round edging, owner 2026-09-29 screenshot 53); it sits 8 mm under the apron tiles so the two never coincide ---
+    for g in C:
+        r0 = by["Gazebo_1" if g == "G1" else "Gazebo_2"].get("across_flats", 7.7) / 2
+        rm, w = (r0 + R_EDGE) / 2, R_EDGE - r0 + 0.1
+        new.append({"type": "path", "name": f"Apron_Fill_{g}", "line": [_r((C[g][0] + rm * math.cos(2 * math.pi * k / 48),
+                    C[g][1] + rm * math.sin(2 * math.pi * k / 48))) for k in range(48)], "closed": True, "width": round(w, 3),
+                    "thk": 0.08, "top": 0.012, "confidence": "medium", "evidence": EV + " | paving between parapet and ring edging"})
+    # apron lamp (081946180: black cast post at a path junction by a gazebo corner): on the apron beside the G2 link
+    # mouth, next to the edging - not in the walking line
+    if "Lamp_G2_Apron" in by:
+        a_, b_ = cl["G2_Link"][0], cl["G2_Link"][1]
+        ux, uy = (b_[0] - a_[0]) / math.dist(a_, b_), (b_[1] - a_[1]) / math.dist(a_, b_)
+        c2 = C["G2"]
+        by["Lamp_G2_Apron"]["pos"] = _r((c2[0] + ux * 5.45 - uy * 1.25, c2[1] + uy * 5.45 + ux * 1.25))
+        by["Lamp_G2_Apron"]["evidence"] = by["Lamp_G2_Apron"]["evidence"].split(" | 2026-09-29")[0] + \
+            " | 2026-09-29 (owner screenshot 53): on the apron beside the link path mouth, by the edging, not in the path"
     # --- props that hang on the boundary: east walk lamps, SE arch map board ---
     def outside(p, dist):
         q = outer.exterior.interpolate(outer.exterior.project(Point(p)))
