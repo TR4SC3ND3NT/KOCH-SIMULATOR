@@ -3684,16 +3684,16 @@
      -49.903
     ],
     [
-     151.305,
-     -52.458
+     149.978,
+     -52.392
     ]
    ],
    "width": 2.0,
-   "pitch": 2.5,
+   "pitch": 2.4,
    "post_h": 2.2,
    "apex_h": 2.9,
    "tube": 0.05,
-   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed",
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: 22 arches, 2.396 m apart",
    "confidence": "medium",
    "gaps": []
   },
@@ -3701,173 +3701,175 @@
    "type": "bench",
    "name": "Bench_Pergola_0",
    "pos": [
-    140.72,
-    -52.643
+    146.354,
+    -52.914
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_1",
    "pos": [
-    145.22,
-    -52.863
+    141.567,
+    -52.677
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_2",
    "pos": [
-    149.72,
-    -53.083
+    136.781,
+    -52.439
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_3",
    "pos": [
-    129.22,
-    -52.081
+    131.994,
+    -52.202
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_4",
    "pos": [
-    133.72,
-    -52.301
+    127.208,
+    -51.965
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_5",
    "pos": [
-    101.22,
-    -50.711
+    122.421,
+    -51.728
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_6",
    "pos": [
-    105.72,
-    -50.932
+    117.635,
+    -51.491
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_7",
    "pos": [
-    110.22,
-    -51.152
+    112.848,
+    -51.254
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_8",
    "pos": [
-    114.72,
-    -51.372
+    108.062,
+    -51.017
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "Bench_Pergola_9",
    "pos": [
-    119.22,
-    -51.592
+    103.275,
+    -50.78
    ],
    "dir_deg": 87.2,
    "length": 1.5,
    "depth": 0.5,
    "seat_h": 0.43,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
-   "confidence": "low"
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "confidence": "medium"
   },
   {
-   "type": "bench",
-   "name": "Bench_Pergola_10",
+   "type": "bin",
+   "name": "Bin_Pergola_East",
    "pos": [
-    123.72,
-    -51.812
+    149.138,
+    -53.172
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.8
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
-   "depth": 0.5,
-   "seat_h": 0.43,
-   "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6); W segment not filmed close, row assumed | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
-   "confidence": "low"
+   "ue_asset": "bin_wrought_iron",
+   "confidence": "medium",
+   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: bin just west of the first arch (t7.0)"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_125",
    "pos": [
-    124.92,
-    -51.971
+    124.808,
+    -51.967
    ],
    "size": [
     0.45,
@@ -3877,14 +3879,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_137",
    "pos": [
-    137.02,
-    -52.562
+    139.168,
+    -52.678
    ],
    "size": [
     0.45,
@@ -3894,7 +3896,7 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay"
   },
   {
    "type": "wall",
