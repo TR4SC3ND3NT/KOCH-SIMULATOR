@@ -78,8 +78,9 @@
      9.52725
     ]
    ],
-   "z": 5.33,
-   "blend": 1.0
+   "z": 5.35,
+   "blend": 1.0,
+   "evidence": " | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py)"
   }
  ],
  "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall (zone reconstruction 2026-09-25, direction corrected by the map owner). | 2026-09-29: whole basement shifted 5.0 m west with C's grown west wing (kept relative to the west face; basement parked by the owner)",

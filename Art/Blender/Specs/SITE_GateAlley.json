@@ -174,7 +174,7 @@
   },
   {
    "name": "WS_UnderStair",
-   "z": 5.3,
+   "z": 5.35,
    "blend": 0.0,
    "ring": [
     [
@@ -194,7 +194,7 @@
      -52.919
     ]
    ],
-   "evidence": "2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): ground held at the lower level under the solid flights (the smooth field ramped above the lower treads) | 2026-09-29 zone loop (alley): check_stairs.py: north edge cut to the lower foot (it showed a 0.2 m x 5 cm dip strip in front of the stair)",
+   "evidence": "2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): ground held at the lower level under the solid flights (the smooth field ramped above the lower treads) | 2026-09-29 zone loop (alley): check_stairs.py: north edge cut to the lower foot (it showed a 0.2 m x 5 cm dip strip in front of the stair) | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py)",
    "confidence": "medium"
   },
   {

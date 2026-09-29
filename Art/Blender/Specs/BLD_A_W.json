@@ -612,7 +612,7 @@
   },
   {
    "name": "AW_Walkway",
-   "z": 5.32,
+   "z": 5.35,
    "blend": 0.0,
    "ring": [
     [
@@ -632,7 +632,7 @@
      -16.459
     ]
    ],
-   "evidence": "lower walkway + gallery deck zone along A_W, flat 5.35 (drone SfM, 070309303 photo-match): pad reaches the A_W wall so the terrain never pokes through the deck"
+   "evidence": "lower walkway + gallery deck zone along A_W, flat 5.35 (drone SfM, 070309303 photo-match): pad reaches the A_W wall so the terrain never pokes through the deck | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py)"
   },
   {
    "name": "A_W_Inside",

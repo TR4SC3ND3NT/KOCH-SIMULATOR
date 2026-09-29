@@ -24,10 +24,11 @@ RES = 0.2                  # working resolution, m/px
 EXG_T, DARK_T = 5.0, 70.0  # excess-green threshold (0..255 units), shadow brightness threshold
 MEDIAN_PX = 7              # label median filter (1.4 m) against speckle between tree shadows and paving joints
 LEAN = (0.29, 0.20)        # Google z20 roof displacement per metre of height (x east, y north); docs/reference/campus.md
-MIN_LAWN, MIN_PAVE = 4.0, 3.0   # m2: smaller islands are merged into the surrounding class
+MIN_LAWN, MIN_PAVE = 15.0, 10.0  # m2: smaller islands are merged into the surrounding class (owner 2026-09-29: no
+                                 # green specks on paving, no paved specks on lawns; real small beds come from the specs)
 PAVE_SLOT, LAWN_SLOT = "M_Paver_Clover_Grey", "M_Ground_Grass"
 # garden inside its boundary hedge (SITE_Garden: lawns + path/hedge objects; tree shadows make the ortho unreliable)
-LAWN_ONLY = [[(104.0, -56.5), (151.5, -58.5), (153.5, -9.0), (104.5, -7.5)],
+LAWN_ONLY = [[(104.0, -56.5), (151.5, -58.5), (151.3, -53.8), (99.1, -51.2)],   # strip between Block B and the boulder wall
              # measured 7-sided garden outline (zone_garden.py v2), 0.1 m outside the boundary hedge
              [(100.5, -9.73), (158.39, -13.66), (156.99, -39.03), (153.55, -44.69), (150.4, -46.76), (103.02, -45.08),
               (98.7, -36.9)]]
@@ -106,13 +107,32 @@ def main():
     label = cv2.medianBlur(label, MEDIAN_PX)
     lawn = (label == 2).astype(np.uint8)
     lawn[burn([Polygon(r) for r in LAWN_ONLY]) > 0] = 1   # zones modelled as lawn + path objects: no paving rings
-    k = np.ones((3, 3), np.uint8)
+    k = np.ones((5, 5), np.uint8)                          # 1 m close/open
     lawn = cv2.morphologyEx(cv2.morphologyEx(lawn, cv2.MORPH_CLOSE, k), cv2.MORPH_OPEN, k)
     for val, amin in ((1, MIN_LAWN), (0, MIN_PAVE)):    # small lawn blobs -> paved, small paved blobs -> lawn
         m = (lawn == val).astype(np.uint8)
         n, cc, st, _ = cv2.connectedComponentsWithStats(m, connectivity=4)
         small = np.isin(cc, [i for i in range(1, n) if st[i, cv2.CC_STAT_AREA] * RES * RES < amin])
         lawn[small] = 1 - val
+    # modelled beds are lawn, modelled paths/stairs are paving, whatever the ortho shows (spec planters, grass surfaces)
+    beds, hard = [], []
+    for fn in glob.glob(os.path.join(SPECS, "SITE_*.json")) + glob.glob(os.path.join(SPECS, "BLD_*.json")):
+        if os.path.basename(fn) == os.path.basename(OUT):
+            continue
+        s = json.load(open(fn))
+        for e in s.get("elements", []):
+            if e.get("type") == "planter" and len(e.get("ring", [])) >= 3:
+                beds.append(Polygon(e["ring"]).buffer(0))
+            elif e.get("type") == "path" and len(e.get("line", [])) >= 2 and not e.get("closed"):
+                from shapely.geometry import LineString
+                hard.append(LineString(e["line"]).buffer(e.get("width", 1.5) / 2, cap_style=2))
+        for g in s.get("ground_surfaces", []) or []:
+            if len(g.get("ring", [])) >= 3:
+                (beds if "Grass" in g.get("slot", "") else hard).append(Polygon(g["ring"]).buffer(0))
+    if hard:
+        lawn[(burn(hard) > 0) & ~(burn([Polygon(r) for r in LAWN_ONLY]) > 0)] = 0
+    if beds:
+        lawn[burn(beds) > 0] = 1
     site = json.load(open(os.path.join(REPO, "Art", "Blender", "Data", "site_osm.json")))
     campus = Polygon(site["campus_boundary"])
     inside = burn([campus]) > 0
