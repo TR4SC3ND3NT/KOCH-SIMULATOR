@@ -1108,7 +1108,8 @@ class Building:
         pw, pane = a.get("post_w", 0.08), a.get("pane_w", 1.2)
         dr = a.get("door", {"face": "front", "c": (u0 + u1) / 2, "w": 1.0, "h": 2.1})
         floor, alu, glass, roof, leaf, leaf_g = (bmesh.new() for _ in range(6))
-        box(floor, fr, u0, u1, 0.0, dep, -0.3, -0.005)             # 5 mm under FFL: no coplanar floor with the hall slab
+        if a.get("floor", True):   # false when a stairs landing under the vestibule is its floor (no double deck)
+            box(floor, fr, u0, u1, 0.0, dep, -0.3, -0.005)         # 5 mm under FFL: no coplanar floor with the hall slab
         # faces as (start, end) points in (u, w) and the along-face door span
         faces = {"u0": ((u0, 0.0), (u0, dep)), "front": ((u0, dep), (u1, dep)), "u1": ((u1, 0.0), (u1, dep))}
         for name, (pa, pb) in faces.items():

@@ -106,7 +106,8 @@
    },
    "roof_overhang": 0.2,
    "evidence": "dark glazed vestibule with its own low flat roof at the N end of the W gable (070410255 t=46 s); door on its W face toward the steps; size and position from the old placeholder (estimated)",
-   "confidence": "low"
+   "confidence": "low",
+   "floor": false
   },
   {
    "type": "ramp",

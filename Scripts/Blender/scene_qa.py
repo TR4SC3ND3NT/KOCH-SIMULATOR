@@ -19,6 +19,7 @@ FORBIDDEN = re.compile(r"ala.?too|\baiu\b|iaau|university|универ", re.I)
 PROP = re.compile(r"_(bench|bin|lamp|tree|planter|sign|bike|floodlight|sink|chair|desk|table|cabinet|locker|"
                   r"shelf|stool|piano|board|bed|pot)", re.I)
 AREA_EPS = 1e-8
+HUNG = re.compile(r"sign|plate|letter|board|flood|cctv|string|lamp_head|garland", re.I)   # wall/arm-hung by design
 
 sc = bpy.context.scene
 dg = bpy.context.evaluated_depsgraph_get()
@@ -156,16 +157,23 @@ for ob in meshes:
     W = wverts(ob)
     lo, hi = W.min(0), W.max(0)
     c = (lo + hi) / 2
-    # support: first surface under the lowest point (start 2 cm above it so a flush floor is found)
+    if HUNG.search(ob.name):
+        continue
+    # support: highest other surface under the footprint (rays from above the object, own faces skipped); a prop
+    # floats when that surface is more than 5 cm below its lowest point at every probe
     gaps = []
     for dx, dy in ((0, 0), (-.3, -.3), (.3, .3), (-.3, .3), (.3, -.3)):
-        px = np.clip(c[0] + dx * (hi[0] - lo[0]), lo[0], hi[0])
-        py = np.clip(c[1] + dy * (hi[1] - lo[1]), lo[1], hi[1])
-        p = Vector((px, py, lo[2] + 0.02))
-        hit, loc, n, _, hob, _ = sc.ray_cast(dg, p, DOWN, distance=5.0)
-        while hit and hob == ob:  # skip self
-            hit, loc, n, _, hob, _ = sc.ray_cast(dg, loc + DOWN * 1e-3, DOWN, distance=5.0)
-        gaps.append(lo[2] - loc.z if hit else 99.0)
+        p = Vector((c[0] + dx * (hi[0] - lo[0]), c[1] + dy * (hi[1] - lo[1]), hi[2] + 0.05))
+        z = None
+        for _ in range(12):
+            hit, loc, n, _i, hob, _m = sc.ray_cast(dg, p, DOWN, distance=hi[2] - lo[2] + 5.0)
+            if not hit:
+                break
+            if hob != ob and not hob.name.startswith("REF_") and loc.z <= lo[2] + max(0.3, 0.5 * (hi[2] - lo[2])):
+                z = loc.z
+                break
+            p = loc + DOWN * 1e-3
+        gaps.append(lo[2] - z if z is not None else 99.0)
     g = min(gaps)
     if g > 0.05:
         rep["floating_prop"].append((ob.name, round(g, 2)))
@@ -175,7 +183,7 @@ for ob in meshes:
             tz = hit[0].z
             if tz > hi[2] - 0.01:
                 rep["hidden_in_terrain"].append((ob.name, round(tz - hi[2], 2)))
-            elif tz - lo[2] > 0.35 and not re.search(r"tree|lamp|floodlight|sign|planter", ob.name, re.I):
+            elif tz - lo[2] > 0.35 and not re.search(r"tree|lamp|floodlight|sign|planter|bed|curb|wall|retain", ob.name, re.I):
                 rep["buried_prop"].append((ob.name, round(tz - lo[2], 2)))
 
 # ------------------------------------------------------------------ inventory
