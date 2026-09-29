@@ -4374,286 +4374,167 @@
   },
   {
    "type": "planter",
-   "name": "AWBed_Kerb",
+   "name": "AW_Pit_0",
    "ring": [
     [
-     159.672,
-     -48.0
+     161.485,
+     -43.931
     ],
     [
-     162.072,
-     -48.0
+     162.384,
+     -43.975
     ],
     [
-     163.243,
-     -24.0
+     162.443,
+     -42.776
     ],
     [
-     160.843,
-     -24.0
+     161.544,
+     -42.732
     ]
    ],
-   "curb_h": 0.12,
-   "curb_w": 0.12,
-   "slot": "M_Tile_Brick_Red",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
    "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "AWBed_Thuja_0",
+   "name": "AW_PitThuja_0",
    "pos": [
-    161.089,
-    -46.0
+    161.964,
+    -43.354
    ],
-   "height": 2.6,
-   "crown_d": 0.9,
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "shape": "cone",
-   "species": "thuja",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_Pit_1",
+   "ring": [
+    [
+     161.706,
+     -39.436
+    ],
+    [
+     162.605,
+     -39.48
+    ],
+    [
+     162.663,
+     -38.282
+    ],
+    [
+     161.765,
+     -38.238
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
    "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "AWBed_Thuja_1",
+   "name": "AW_PitThuja_1",
    "pos": [
-    161.218,
-    -43.35
+    162.185,
+    -38.859
    ],
-   "height": 2.6,
-   "crown_d": 0.9,
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "shape": "cone",
-   "species": "thuja",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "AW_Pit_2",
+   "ring": [
+    [
+     161.924,
+     -34.992
+    ],
+    [
+     162.823,
+     -35.036
+    ],
+    [
+     162.881,
+     -33.837
+    ],
+    [
+     161.983,
+     -33.793
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
    "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "AWBed_Thuja_2",
+   "name": "AW_PitThuja_2",
    "pos": [
-    161.438,
-    -38.86
+    162.403,
+    -34.414
    ],
-   "height": 2.6,
-   "crown_d": 0.9,
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "shape": "cone",
-   "species": "thuja",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
    "confidence": "medium"
   },
   {
-   "type": "tree",
-   "name": "AWBed_Thuja_3",
-   "pos": [
-    161.655,
-    -34.41
+   "type": "planter",
+   "name": "AW_Pit_3",
+   "ring": [
+    [
+     162.142,
+     -30.547
+    ],
+    [
+     163.041,
+     -30.591
+    ],
+    [
+     163.099,
+     -29.393
+    ],
+    [
+     162.201,
+     -29.348
+    ]
    ],
-   "height": 2.6,
-   "crown_d": 0.9,
-   "trunk_d": 0.08,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "species": "thuja",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
+   "curb_h": 0.1,
+   "curb_w": 0.08,
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
    "confidence": "medium"
   },
   {
    "type": "tree",
-   "name": "AWBed_Thuja_4",
+   "name": "AW_PitThuja_3",
    "pos": [
-    161.871,
+    162.621,
     -29.97
    ],
-   "height": 2.6,
-   "crown_d": 0.9,
+   "height": 2.8,
+   "crown_d": 0.7,
+   "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "shape": "cone",
-   "species": "thuja",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
    "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Thuja_5",
-   "pos": [
-    162.085,
-    -25.6
-   ],
-   "height": 2.6,
-   "crown_d": 0.9,
-   "trunk_d": 0.08,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "species": "thuja",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Shrub_0",
-   "pos": [
-    160.734,
-    -44.67
-   ],
-   "height": 0.8,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "shrub",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Flowers_0",
-   "pos": [
-    161.587,
-    -43.57
-   ],
-   "height": 0.45,
-   "crown_d": 0.6,
-   "trunk_d": 0.03,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "flowers",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Shrub_1",
-   "pos": [
-    160.908,
-    -41.11
-   ],
-   "height": 0.8,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "shrub",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Flowers_1",
-   "pos": [
-    161.762,
-    -40.01
-   ],
-   "height": 0.45,
-   "crown_d": 0.6,
-   "trunk_d": 0.03,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "flowers",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Shrub_2",
-   "pos": [
-    161.126,
-    -36.63
-   ],
-   "height": 0.8,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "shrub",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Flowers_2",
-   "pos": [
-    161.98,
-    -35.53
-   ],
-   "height": 0.45,
-   "crown_d": 0.6,
-   "trunk_d": 0.03,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "flowers",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Shrub_3",
-   "pos": [
-    161.343,
-    -32.19
-   ],
-   "height": 0.8,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "shrub",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Flowers_3",
-   "pos": [
-    162.197,
-    -31.09
-   ],
-   "height": 0.45,
-   "crown_d": 0.6,
-   "trunk_d": 0.03,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "flowers",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Shrub_4",
-   "pos": [
-    161.558,
-    -27.79
-   ],
-   "height": 0.8,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "shrub",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "AWBed_Flowers_4",
-   "pos": [
-    162.412,
-    -26.68
-   ],
-   "height": 0.45,
-   "crown_d": 0.6,
-   "trunk_d": 0.03,
-   "crown_base": 0.05,
-   "shape": "round",
-   "species": "flowers",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py",
-   "confidence": "low"
   },
   {
    "type": "tree",
@@ -4675,7 +4556,7 @@
    "type": "bin",
    "name": "AW_Bin_0",
    "pos": [
-    163.174,
+    162.642,
     -36.679
    ],
    "size": [
@@ -4862,6 +4743,481 @@
    "unique_posts": true,
    "evidence": "ramp rail | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
    "confidence": "medium"
+  },
+  {
+   "type": "planter",
+   "name": "HallBed_Kerb",
+   "ring": [
+    [
+     89.575,
+     -1.193
+    ],
+    [
+     147.752,
+     -2.848
+    ],
+    [
+     147.678,
+     -5.447
+    ],
+    [
+     89.501,
+     -3.792
+    ]
+   ],
+   "curb_h": 0.12,
+   "curb_w": 0.12,
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Thuja_0",
+   "pos": [
+    92.637,
+    -2.58
+   ],
+   "height": 3.0,
+   "crown_d": 1.1,
+   "trunk_d": 0.1,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Spruce_1",
+   "pos": [
+    97.635,
+    -2.722
+   ],
+   "height": 7.5,
+   "crown_d": 2.6,
+   "trunk_d": 0.22,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "species": "spruce",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Thuja_2",
+   "pos": [
+    103.632,
+    -2.893
+   ],
+   "height": 3.0,
+   "crown_d": 1.1,
+   "trunk_d": 0.1,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Spruce_3",
+   "pos": [
+    109.63,
+    -3.064
+   ],
+   "height": 7.5,
+   "crown_d": 2.6,
+   "trunk_d": 0.22,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "species": "spruce",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Thuja_4",
+   "pos": [
+    115.628,
+    -3.235
+   ],
+   "height": 3.0,
+   "crown_d": 1.1,
+   "trunk_d": 0.1,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Spruce_5",
+   "pos": [
+    121.625,
+    -3.405
+   ],
+   "height": 7.5,
+   "crown_d": 2.6,
+   "trunk_d": 0.22,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "species": "spruce",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Thuja_6",
+   "pos": [
+    127.623,
+    -3.576
+   ],
+   "height": 3.0,
+   "crown_d": 1.1,
+   "trunk_d": 0.1,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Spruce_7",
+   "pos": [
+    133.62,
+    -3.747
+   ],
+   "height": 7.5,
+   "crown_d": 2.6,
+   "trunk_d": 0.22,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "species": "spruce",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Thuja_8",
+   "pos": [
+    139.618,
+    -3.917
+   ],
+   "height": 3.0,
+   "crown_d": 1.1,
+   "trunk_d": 0.1,
+   "crown_base": 0.2,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Spruce_9",
+   "pos": [
+    145.316,
+    -4.08
+   ],
+   "height": 7.5,
+   "crown_d": 2.6,
+   "trunk_d": 0.22,
+   "crown_base": 0.6,
+   "shape": "cone",
+   "species": "spruce",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_0",
+   "pos": [
+    94.15,
+    -2.123
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_0",
+   "pos": [
+    96.124,
+    -3.08
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_1",
+   "pos": [
+    99.648,
+    -2.28
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_1",
+   "pos": [
+    101.622,
+    -3.236
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_2",
+   "pos": [
+    105.646,
+    -2.45
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_2",
+   "pos": [
+    107.619,
+    -3.407
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_3",
+   "pos": [
+    111.643,
+    -2.621
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_3",
+   "pos": [
+    113.617,
+    -3.578
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_4",
+   "pos": [
+    117.641,
+    -2.792
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_4",
+   "pos": [
+    119.615,
+    -3.748
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_5",
+   "pos": [
+    123.639,
+    -2.962
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_5",
+   "pos": [
+    125.612,
+    -3.919
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_6",
+   "pos": [
+    129.636,
+    -3.133
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_6",
+   "pos": [
+    131.61,
+    -4.09
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_7",
+   "pos": [
+    135.634,
+    -3.304
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_7",
+   "pos": [
+    137.607,
+    -4.26
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Flowers_8",
+   "pos": [
+    141.481,
+    -3.47
+   ],
+   "height": 0.5,
+   "crown_d": 0.7,
+   "trunk_d": 0.03,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "flowers",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_Shrub_8",
+   "pos": [
+    143.455,
+    -4.427
+   ],
+   "height": 0.9,
+   "crown_d": 1.0,
+   "trunk_d": 0.05,
+   "crown_base": 0.05,
+   "shape": "round",
+   "species": "shrub",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py",
+   "confidence": "low"
   }
  ],
  "ground": "pads",
@@ -4970,73 +5326,50 @@
  ],
  "ground_surfaces": [
   {
-   "name": "AWBed_Walk",
+   "name": "HallBed_Strip",
    "ring": [
     [
-     156.476,
-     -52.0
+     88.138,
+     1.049
     ],
     [
-     159.476,
-     -52.0
+     149.314,
+     -0.692
     ],
     [
-     161.331,
-     -14.0
+     149.251,
+     -2.891
     ],
     [
-     158.331,
-     -14.0
+     88.076,
+     -1.15
     ]
    ],
    "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py: herringbone walk between the garden hedge and the bed"
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py: paved strip at the wall"
   },
   {
-   "name": "AWBed_LowerWalk",
+   "name": "HallBed_Lawn",
    "ring": [
     [
-     161.876,
-     -52.0
+     89.575,
+     -1.193
     ],
     [
-     165.376,
-     -52.0
+     147.752,
+     -2.848
     ],
     [
-     167.231,
-     -14.0
+     147.678,
+     -5.447
     ],
     [
-     163.731,
-     -14.0
-    ]
-   ],
-   "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py: lower walkway between the bed and the gallery deck (under the deck too)"
-  },
-  {
-   "name": "AWBed_Lawn",
-   "ring": [
-    [
-     159.672,
-     -48.0
-    ],
-    [
-     162.072,
-     -48.0
-    ],
-    [
-     163.243,
-     -24.0
-    ],
-    [
-     160.843,
-     -24.0
+     89.501,
+     -3.792
     ]
    ],
    "slot": "M_Ground_Grass",
-   "evidence": "owner 2026-09-29 (screenshot 54: bed along almost the whole gallery) + video 070309303 t33-37 (red brick kerb, thujas, shrubs, flowers) + Google z20 plan (thuja row x 161.5-162.5); aw_bed.py"
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57: no canopy on the Hall's south side, a bed with trees along almost the whole length) + 081946180 t0-3 (lawn with thujas/spruces, benches at the wall, no gallery); hall_bed.py"
   }
  ]
 }

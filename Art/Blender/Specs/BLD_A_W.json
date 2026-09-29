@@ -566,49 +566,49 @@
    "name": "AW_PathN",
    "ring": [
     [
-     156.447,
+     153.093,
      -52.6
     ],
     [
-     159.447,
+     156.788,
      -52.6
     ],
     [
-     160.75,
-     -25.9
+     158.817,
+     -25.879
     ],
     [
-     157.75,
-     -25.9
+     155.121,
+     -25.697
     ]
    ],
    "z": 5.35,
    "blend": 1.5,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5) | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM) | 2026-09-25 map owner: after the steps at B's NE corner the path, lawn strip and garden are on the lower level -> flat 5.40 | 2026-09-29 aw_bed.py: moved onto the walk east of the measured garden hedge (x 157.55) | 2026-09-29 aw_bed.py: moved onto the walk east of the measured garden hedge (x 157.55) | 2026-09-29 aw_bed.py: moved onto the walk east of the measured garden hedge (x 157.55)"
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): raised terrace path: 5 granite risers (~0.15) down to the walkway at the mid stairs (070309303 t28-30), 6 risers down to the square at the north steps (012404116 t0-2); boulder retaining wall on the garden side (081856511 t3.5) | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM) | 2026-09-25 map owner: after the steps at B's NE corner the path, lawn strip and garden are on the lower level -> flat 5.40"
   },
   {
    "name": "AW_LawnN",
    "ring": [
     [
-     159.447,
+     156.788,
      -52.6
     ],
     [
-     161.847,
+     158.586,
      -52.6
     ],
     [
-     163.15,
-     -25.9
+     160.614,
+     -25.967
     ],
     [
-     160.75,
-     -25.9
+     158.817,
+     -25.879
     ]
    ],
    "z": 5.35,
    "blend": 1.5,
-   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM) | 2026-09-25 map owner: after the steps at B's NE corner the path, lawn strip and garden are on the lower level -> flat 5.40 | 2026-09-29 aw_bed.py: = the kerbed lawn bed along the gallery | 2026-09-29 aw_bed.py: = the kerbed lawn bed along the gallery | 2026-09-29 aw_bed.py: = the kerbed lawn bed along the gallery"
+   "evidence": "A_W gallery zone 2026-09-25 (videos 070309303 t17-36, 012327726 t20-30, 012404116, 012429784, 061757320 t14-22): lawn bank north of the mid stairs | 2026-09-25: starts at the descent steps north of B (y -52.6); south of it the alley is flat at B level (drone SfM) | 2026-09-25 map owner: after the steps at B's NE corner the path, lawn strip and garden are on the lower level -> flat 5.40"
   },
   {
    "name": "AW_Walkway",

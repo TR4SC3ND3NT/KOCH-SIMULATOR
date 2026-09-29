@@ -217,7 +217,7 @@
      ]
     }
    ],
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification",
+   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification | 2026-09-29 owner: no gallery on this face (hall_bed.py)",
    "confidence": "low"
   },
   {
@@ -239,36 +239,5 @@
   "evidence": "render 2025: long gable, ridge E-W; Google z20: ridge line ~mid-depth; pitch estimated",
   "confidence": "low"
  },
- "attachments": [
-  {
-   "type": "gallery",
-   "edge": 0,
-   "u0": -0.2,
-   "u1": 60.400000000000006,
-   "depth": 2.2,
-   "posts_u": [
-    0.1,
-    6.1,
-    12.1,
-    18.1,
-    24.1,
-    30.1,
-    36.1,
-    42.1,
-    48.1,
-    54.1,
-    60.1
-   ],
-   "post_w": 0.16,
-   "post_d": 0.16,
-   "z_underside": 2.85,
-   "roof_fall": 0.25,
-   "roof_thk": 0.15,
-   "beam_h": 0.45,
-   "floor_z": 0.0,
-   "roof_overhang": 0.2,
-   "evidence": "061757320 t=14-20 s: thin red steel posts at the structural piers, deep white fascia beam, terracotta-brown soffit sloping to the wall, deck raised ~0.3 m above the paving with a red edge; depth 2.2-2.4 m (Google light strip)",
-   "confidence": "low"
-  }
- ]
+ "attachments": []
 }
