@@ -20,7 +20,8 @@ OWN = re.compile(r"^(G[12]_\w+|Centre_NS_\w+|Hedge_\w+|Edging_\w+|Arch_\w+|Centr
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W, HEDGE_H = 1.2, 0.65, 1.05, 0.7, 1.05
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
 ARCH_T, ARCH_H = 0.35, 2.25                      # topiary arch leg thickness / height (m)
-SQ_P = 2.7                                       # centre square paving half size: sketch outline 6.1 m = hedge centre line
+SQ_PU, SQ_PV = 2.7, 4.0                          # centre square paving half sizes: E-W 5.4 m (sketch outline 6.1 m = hedge
+                                                 # centre line), N-S 8.0 m (owner 2026-09-29: rectangular, longer N-S; 2026-09-28: 8 m)
 THETA = -3.0                                     # square / spine frame heading (deg; sketch N/S lines and gazebo axis)
 SQ_C = (130.00, -27.55)                          # square centre: the sketch square (corners +-0.1 m)
 # gazebo centres (owner 2026-09-29 "ставь как верно"): G1 = N x W path lines (116.98, -26.56) ~ roof octagon fit
@@ -142,11 +143,11 @@ def main():
         cl[name] = ((s0.x, s0.y), (f.x, f.y), st)
     for name, st, s in (("G1_Link", "G1", -1), ("G2_Link", "G2", 1)):
         c = C[st]
-        e_ = sq(s * SQ_P, 0.0)
+        e_ = sq(s * SQ_PU, 0.0)
         dx, dy = e_[0] - c[0], e_[1] - c[1]
         n = math.hypot(dx, dy)
         cl[name] = ((c[0] + dx / n * R_APRON, c[1] + dy / n * R_APRON), e_, st)
-    for name, v0, sgn in (("Centre_NS_N", SQ_P, 1), ("Centre_NS_S", -SQ_P, -1)):
+    for name, v0, sgn in (("Centre_NS_N", SQ_PV, 1), ("Centre_NS_S", -SQ_PV, -1)):
         line = LineString([sq(0, v0), sq(0, sgn * 60)])
         far = line.intersection(outer.exterior)
         fp = [far] if isinstance(far, Point) else list(far.geoms)
@@ -174,10 +175,11 @@ def main():
         mass.append(corridor(a, b, HEDGE_OFF + HEDGE_W / 2, back=0.0, fwd=1.0).difference(corridor(a, b, HEDGE_OFF - HEDGE_W / 2, back=0.0, fwd=1.0)))
     for g in C:
         mass.append(Point(C[g]).buffer(R_HEDGE + HEDGE_W / 2, 96).difference(Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96)))
-    sqp = lambda h_: Polygon([sq(-h_, -h_), sq(h_, -h_), sq(h_, h_), sq(-h_, h_)])
-    mass.append(sqp(SQ_P + HEDGE_W).difference(sqp(SQ_P)))
+    sqp = lambda d_: Polygon([sq(-SQ_PU - d_, -SQ_PV - d_), sq(SQ_PU + d_, -SQ_PV - d_), sq(SQ_PU + d_, SQ_PV + d_),
+                              sq(-SQ_PU - d_, SQ_PV + d_)])                # square grown by d_ on every side
+    mass.append(sqp(HEDGE_W).difference(sqp(0.0)))
     solid = unary_union(mass).intersection(outer)
-    cut = [open_h, sqp(SQ_P)] + [Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96) for g in C]
+    cut = [open_h, sqp(0.0)] + [Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96) for g in C]
     # arches: in the boundary line (legs along the boundary, opening across it), clear span = the path opening measured
     # along the boundary; the slot they stand in is cut from the mass so arch legs and hedge meet face to face
     hg = HEDGE_OFF - HEDGE_W / 2 + 0.02
@@ -223,7 +225,7 @@ def main():
         n = math.hypot(dx, dy)
         nx, ny = -dy / n, dx / n
         others = unary_union([corridor(a2, b2, EDGE_OFF - 0.05, fwd=1.0) for k2, (a2, b2, _) in cl.items() if k2 != name]
-                             + [Point(C[g]).buffer(R_EDGE, 96) for g in C] + [sqp(SQ_P - 0.1)])
+                             + [Point(C[g]).buffer(R_EDGE, 96) for g in C] + [sqp(-0.1)])
         for side, sg in (("L", 1), ("R", -1)):
             ln = LineString([(a[0] - dx / n * 3 + sg * nx * EDGE_OFF, a[1] - dy / n * 3 + sg * ny * EDGE_OFF),
                              (b[0] + dx / n * 3 + sg * nx * EDGE_OFF, b[1] + dy / n * 3 + sg * ny * EDGE_OFF)])
@@ -241,15 +243,15 @@ def main():
     for g in C:
         loop_pieces([(C[g][0] + R_EDGE * math.cos(2 * math.pi * k / 96), C[g][1] + R_EDGE * math.sin(2 * math.pi * k / 96))
                      for k in range(97)], f"Edging_{g}_Ring")
-    er = SQ_P - 0.05
-    loop_pieces([sq(-er, -er), sq(er, -er), sq(er, er), sq(-er, er), sq(-er, -er)], "CentreSquare_Edging")
+    eu, ev_ = SQ_PU - 0.05, SQ_PV - 0.05
+    loop_pieces([sq(-eu, -ev_), sq(eu, -ev_), sq(eu, ev_), sq(-eu, ev_), sq(-eu, -ev_)], "CentreSquare_Edging")
     # --- centre square: paving, 4 benches (W/E sides, one each side of the link), lamp in the middle ---
-    P = SQ_P
-    new.append({"type": "path", "name": "CentreSquare_Paving", "line": [_r(sq(-P, 0.0)), _r(sq(P, 0.0))], "width": 2 * P,
+    P = SQ_PU
+    new.append({"type": "path", "name": "CentreSquare_Paving", "line": [_r(sq(-P, 0.0)), _r(sq(P, 0.0))], "width": 2 * SQ_PV,
                 "thk": 0.08, "top": 0.022, "confidence": "medium", "evidence": EV})
     hdg = math.degrees(th)
-    bu = (PATH_W / 2 + 0.1 + P) / 2
-    blen = round(min(1.5, P - PATH_W / 2 - 0.3), 2)
+    bu = (PATH_W / 2 + 0.1 + SQ_PV) / 2
+    blen = round(min(1.5, SQ_PV - PATH_W / 2 - 0.3), 2)
     for side, nx_ in (("E", 1), ("W", -1)):
         face = hdg + (180.0 if nx_ > 0 else 0.0)
         for k, sgn in enumerate((-1, 1)):
@@ -289,7 +291,7 @@ def main():
           f"arches {len(arches)}; outer area {outer.area:.0f} m2")
     for n, (a, b, st) in cl.items():
         print(f"  {n:12s} {_r(a)} -> {_r(b)}  hd {math.degrees(math.atan2(b[1] - a[1], b[0] - a[0])):7.2f}  len {math.dist(a, b):5.2f}")
-    json.dump({"outline": [_r(p) for p in ring], "gazebos": C, "square": [SQ_C, SQ_P, THETA],
+    json.dump({"outline": [_r(p) for p in ring], "gazebos": C, "square": [SQ_C, SQ_PU, SQ_PV, THETA],
                "paths": {n: [_r(a), _r(b)] for n, (a, b, _) in cl.items()}},
               open(os.path.join(os.path.dirname(SPEC), "..", "Audit", "garden_v2_layout.json"), "w"), indent=1)
 
