@@ -28,8 +28,9 @@ EV = ("crown on the Google z20 ortho 2026 (dark canopy/shadow mass, r %.1f m); s
 # path/hedge/wall/gazebo/pergola elements keep trunks and crowns clear, and what the zone looks like on the footage
 ZONES = {
     "garden": dict(out="SITE_Garden_Trees", collection="04_Garden", dark=72.0, min_r=1.1, min_sep=3.2, clear_spec="SITE_Garden",
-                   # inside the boundary hedge, north of the pergola (the strip south of it is in Block B's shadow)
-                   poly=[(104.3, -48.3), (151.8, -50.6), (153.3, -9.0), (104.5, -7.8)],
+                   # inside the measured 7-sided boundary hedge (zone_garden.py v2 outline, 0.7 m in)
+                   poly=[(99.5, -36.9), (103.5, -44.3), (150.2, -45.95), (153.0, -44.0), (156.2, -38.8), (157.55, -14.4),
+                         (101.2, -10.5)],
                    note="formal garden: thujas, pines, acacias, poplars (garden videos 081856-082013)"),
     "west_strip": dict(out="SITE_Trees_WestStrip", collection="06_Vegetation", dark=85.0, min_r=0.7, min_sep=2.4,
                        clear_spec=None, poly=[(79.2, 25.0), (89.0, 24.6), (90.2, 78.5), (80.4, 79.0)],

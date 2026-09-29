@@ -7,7 +7,7 @@
   "GB_GRD_Gazebo_2",
   "GB_GRD_Gazebo_2_Roof"
  ],
- "note": "Formal garden between Hall (N), Block B (S) and Block A (E). Garden frame: origin M=(131.07,-28.03) = midpoint of the gazebo centres, u along the campus grid (0.99881,-0.04885), v grid-north. Paths are 1.2 m (3 x 0.40 m diamond concrete tiles) with scalloped concrete edging and ~1.05 m clipped hedges both sides; 'path' elements are paving data (builder skips them; terrain = paving). The garden floor is ~1 m below the Block-B side (boulder retaining wall along the south); the smooth terrain model does not carry that step.",
+ "note": "Formal garden between Hall (N), Block B (S) and Block A (E). Garden frame: origin M=(131.07,-28.03) = midpoint of the gazebo centres, u along the campus grid (0.99881,-0.04885), v grid-north. Paths are 1.2 m (3 x 0.40 m diamond concrete tiles) with scalloped concrete edging and ~1.05 m clipped hedges both sides; 'path' elements are paving data (builder skips them; terrain = paving). The garden floor is ~1 m below the Block-B side (boulder retaining wall along the south); the smooth terrain model does not carry that step. | boundary v2: measured 7-sided outline [[100.553, -9.827], [158.297, -13.759], [156.9, -39.0], [153.482, -44.603], [150.38, -46.662], [103.076, -44.977], [98.8, -36.9]]",
  "elements": [
   {
    "type": "gazebo",
@@ -89,50 +89,50 @@
    "name": "G1_N",
    "line": [
     [
-     117.199,
+     117.186,
      -21.456
     ],
     [
-     117.729,
-     -10.619
+     117.61,
+     -10.989
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_N_L",
    "line": [
     [
-     116.21,
-     -20.191
+     116.186,
+     -20.193
     ],
     [
-     116.68,
-     -10.568
+     116.534,
+     -11.617
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_N_L",
    "line": [
     [
-     116.57,
-     -21.012
+     116.553,
+     -21.013
     ],
     [
-     117.08,
-     -10.587
+     116.933,
+     -11.644
     ]
    ],
    "height": 0.22,
@@ -141,38 +141,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_N_R",
    "line": [
     [
-     118.307,
-     -20.293
+     118.284,
+     -20.289
     ],
     [
-     118.778,
-     -10.67
+     118.63,
+     -11.76
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_N_R",
    "line": [
     [
-     117.868,
-     -21.075
+     117.852,
+     -21.073
     ],
     [
-     118.378,
-     -10.651
+     118.231,
+     -11.733
     ]
    ],
    "height": 0.22,
@@ -181,57 +181,156 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "path",
+   "name": "G1_W",
+   "line": [
+    [
+     111.74,
+     -25.724
+    ],
+    [
+     99.649,
+     -23.795
+    ]
+   ],
+   "width": 1.2,
+   "thk": 0.08,
+   "top": 0.016,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_W_L",
+   "line": [
+    [
+     110.343,
+     -26.564
+    ],
+    [
+     100.275,
+     -24.958
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_W_L",
+   "line": [
+    [
+     111.208,
+     -26.297
+    ],
+    [
+     100.301,
+     -24.557
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_W_R",
+   "line": [
+    [
+     110.735,
+     -24.501
+    ],
+    [
+     100.411,
+     -22.853
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G1_W_R",
+   "line": [
+    [
+     111.456,
+     -25.021
+    ],
+    [
+     100.385,
+     -23.254
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
    "name": "G1_SW",
    "line": [
     [
-     113.11,
-     -30.414
+     114.794,
+     -31.596
     ],
     [
-     100.45,
-     -42.526
+     101.761,
+     -42.493
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_SW_L",
    "line": [
     [
-     112.958,
-     -32.013
+     114.772,
+     -32.983
     ],
     [
-     100.376,
-     -44.051
+     102.812,
+     -42.983
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_SW_L",
    "line": [
     [
-     113.261,
-     -31.169
+     115.091,
+     -32.195
     ],
     [
-     100.404,
-     -43.47
+     102.621,
+     -42.621
     ]
    ],
    "height": 0.22,
@@ -240,38 +339,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_SW_R",
    "line": [
     [
-     111.506,
-     -30.496
+     112.803,
+     -31.892
     ],
     [
-     100.525,
-     -41.002
+     101.808,
+     -41.085
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_SW_R",
    "line": [
     [
-     112.362,
-     -30.23
+     113.809,
+     -31.573
     ],
     [
-     100.496,
-     -41.582
+     101.999,
+     -41.447
     ]
    ],
    "height": 0.22,
@@ -280,57 +379,57 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
    "name": "G1_SSE",
    "line": [
     [
-     118.617,
-     -31.778
+     119.661,
+     -31.298
     ],
     [
-     124.326,
-     -48.887
+     122.374,
+     -45.664
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_SSE_L",
    "line": [
     [
-     119.998,
-     -32.599
+     120.872,
+     -32.051
     ],
     [
-     125.451,
-     -48.942
+     123.317,
+     -44.997
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_SSE_L",
    "line": [
     [
-     119.365,
-     -31.964
+     120.339,
+     -31.387
     ],
     [
-     125.023,
-     -48.921
+     122.907,
+     -44.983
     ]
    ],
    "height": 0.22,
@@ -339,38 +438,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_SSE_R",
    "line": [
     [
-     118.006,
-     -33.263
+     118.922,
+     -33.045
     ],
     [
-     123.201,
-     -48.832
+     121.165,
+     -44.921
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_SSE_R",
    "line": [
     [
-     118.132,
-     -32.375
+     119.143,
+     -32.061
     ],
     [
-     123.629,
-     -48.853
+     121.575,
+     -44.935
     ]
    ],
    "height": 0.22,
@@ -379,156 +478,57 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "path",
-   "name": "G2_N",
-   "line": [
-    [
-     146.166,
-     -22.873
-    ],
-    [
-     146.696,
-     -12.036
-    ]
-   ],
-   "width": 1.2,
-   "thk": 0.08,
-   "top": 0.016,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_N_L",
-   "line": [
-    [
-     145.177,
-     -21.608
-    ],
-    [
-     145.647,
-     -11.985
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_N_L",
-   "line": [
-    [
-     145.537,
-     -22.429
-    ],
-    [
-     146.047,
-     -12.004
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_N_R",
-   "line": [
-    [
-     147.274,
-     -21.71
-    ],
-    [
-     147.745,
-     -12.087
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_N_R",
-   "line": [
-    [
-     146.835,
-     -22.492
-    ],
-    [
-     147.345,
-     -12.068
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
    "name": "G2_E",
    "line": [
     [
-     151.201,
-     -28.426
+     151.182,
+     -28.68
     ],
     [
-     154.129,
-     -28.569
+     157.437,
+     -29.288
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_E_L",
    "line": [
     [
-     152.466,
-     -27.437
+     152.494,
+     -27.752
     ],
     [
-     154.181,
-     -27.52
+     156.798,
+     -28.17
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G2_E_L",
    "line": [
     [
-     151.645,
-     -27.797
+     151.656,
+     -28.073
     ],
     [
-     154.161,
-     -27.92
+     156.776,
+     -28.57
     ]
    ],
    "height": 0.22,
@@ -537,38 +537,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_E_R",
    "line": [
     [
-     152.364,
-     -29.534
+     152.291,
+     -29.842
     ],
     [
-     154.078,
-     -29.618
+     156.682,
+     -30.269
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G2_E_R",
    "line": [
     [
-     151.582,
-     -29.095
+     151.53,
+     -29.367
     ],
     [
-     154.098,
-     -29.218
+     156.704,
+     -29.869
     ]
    ],
    "height": 0.22,
@@ -577,57 +577,156 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
-   "name": "G2_SE",
+   "name": "G2_SSW",
    "line": [
     [
-     148.322,
-     -32.885
+     142.945,
+     -32.562
     ],
     [
-     153.43,
-     -42.863
+     137.415,
+     -46.2
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_SSW_L",
+   "line": [
+    [
+     143.386,
+     -34.267
+    ],
+    [
+     138.811,
+     -45.549
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_SSW_L",
+   "line": [
+    [
+     143.341,
+     -33.313
+    ],
+    [
+     138.386,
+     -45.534
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_SSW_R",
+   "line": [
+    [
+     141.575,
+     -33.146
+    ],
+    [
+     136.578,
+     -45.47
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_SSW_R",
+   "line": [
+    [
+     142.232,
+     -32.589
+    ],
+    [
+     137.003,
+     -45.485
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "path",
+   "name": "G2_SE",
+   "line": [
+    [
+     147.151,
+     -33.318
+    ],
+    [
+     153.482,
+     -44.603
+    ]
+   ],
+   "width": 1.2,
+   "thk": 0.08,
+   "top": 0.016,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_SE_L",
    "line": [
     [
-     149.811,
-     -33.489
+     148.795,
+     -34.102
     ],
     [
-     153.533,
-     -40.76
+     153.716,
+     -42.875
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G2_SE_L",
    "line": [
     [
-     149.089,
-     -32.956
+     148.009,
+     -33.519
     ],
     [
-     153.494,
-     -41.561
+     153.477,
+     -43.266
     ]
    ],
    "height": 0.22,
@@ -636,38 +735,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_SE_R",
    "line": [
     [
-     147.941,
-     -34.446
+     146.731,
+     -34.715
     ],
     [
-     153.327,
-     -44.967
+     152.261,
+     -44.573
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G2_SE_R",
    "line": [
     [
-     147.932,
-     -33.549
+     146.71,
+     -33.86
     ],
     [
-     153.366,
-     -44.165
+     152.595,
+     -44.351
     ]
    ],
    "height": 0.22,
@@ -676,7 +775,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
@@ -684,18 +783,18 @@
    "line": [
     [
      122.234,
-     -27.009
+     -27.006
     ],
     [
-     126.729,
-     -27.229
+     126.055,
+     -27.191
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
@@ -703,18 +802,18 @@
    "line": [
     [
      123.499,
-     -26.02
+     -26.016
     ],
     [
-     126.78,
-     -26.18
+     125.511,
+     -26.113
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
@@ -722,11 +821,11 @@
    "line": [
     [
      122.678,
-     -26.38
+     -26.377
     ],
     [
-     126.761,
-     -26.58
+     126.189,
+     -26.546
     ]
    ],
    "height": 0.22,
@@ -735,7 +834,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
@@ -743,18 +842,18 @@
    "line": [
     [
      123.397,
-     -28.117
+     -28.113
     ],
     [
-     126.678,
-     -28.278
+     125.401,
+     -28.21
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
@@ -762,11 +861,11 @@
    "line": [
     [
      122.615,
-     -27.678
+     -27.675
     ],
     [
-     126.697,
-     -27.878
+     126.121,
+     -27.845
     ]
    ],
    "height": 0.22,
@@ -775,7 +874,7 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
@@ -783,49 +882,49 @@
    "line": [
     [
      140.613,
-     -27.908
+     -27.918
     ],
     [
-     136.118,
-     -27.688
+     134.045,
+     -27.609
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_Link_L",
    "line": [
     [
-     139.348,
-     -28.897
+     139.349,
+     -28.91
     ],
     [
-     136.067,
-     -28.737
+     134.589,
+     -28.686
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G2_Link_L",
    "line": [
     [
-     140.169,
-     -28.537
+     140.17,
+     -28.548
     ],
     [
-     136.086,
-     -28.337
+     133.911,
+     -28.254
     ]
    ],
    "height": 0.22,
@@ -834,38 +933,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G2_Link_R",
    "line": [
     [
-     139.45,
-     -26.8
+     139.448,
+     -26.812
     ],
     [
-     136.169,
-     -26.639
+     134.699,
+     -26.589
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G2_Link_R",
    "line": [
     [
-     140.232,
-     -27.239
+     140.231,
+     -27.249
     ],
     [
-     136.15,
-     -27.039
+     133.979,
+     -26.956
     ]
    ],
    "height": 0.22,
@@ -874,57 +973,57 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
    "name": "Centre_NS_N",
    "line": [
     [
-     131.619,
-     -23.463
+     130.259,
+     -23.405
     ],
     [
-     132.213,
-     -11.328
+     130.863,
+     -11.891
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_Centre_NS_N_L",
    "line": [
     [
-     130.604,
-     -22.713
+     129.242,
+     -22.751
     ],
     [
-     131.164,
-     -11.276
+     129.778,
+     -12.519
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_Centre_NS_N_L",
    "line": [
     [
-     130.984,
-     -23.142
+     129.605,
+     -23.471
     ],
     [
-     131.563,
-     -11.296
+     130.178,
+     -12.546
     ]
    ],
    "height": 0.22,
@@ -933,38 +1032,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_Centre_NS_N_R",
    "line": [
     [
-     132.702,
-     -22.815
+     131.339,
+     -22.861
     ],
     [
-     133.261,
-     -11.379
+     131.874,
+     -12.661
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_Centre_NS_N_R",
    "line": [
     [
-     132.282,
-     -23.205
+     130.903,
+     -23.539
     ],
     [
-     132.862,
-     -11.359
+     131.475,
+     -12.634
     ]
    ],
    "height": 0.22,
@@ -973,57 +1072,57 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "path",
    "name": "Centre_NS_S",
    "line": [
     [
-     131.228,
-     -31.454
+     129.841,
+     -31.395
     ],
     [
-     130.361,
-     -49.182
+     129.08,
+     -45.903
     ]
    ],
    "width": 1.2,
    "thk": 0.08,
    "top": 0.016,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_Centre_NS_S_L",
    "line": [
     [
-     132.243,
-     -32.204
+     130.858,
+     -32.049
     ],
     [
-     131.41,
-     -49.234
+     130.166,
+     -45.241
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_Centre_NS_S_L",
    "line": [
     [
-     131.863,
-     -31.775
+     130.495,
+     -31.329
     ],
     [
-     131.01,
-     -49.214
+     129.767,
+     -45.227
     ]
    ],
    "height": 0.22,
@@ -1032,38 +1131,38 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_Centre_NS_S_R",
    "line": [
     [
-     130.145,
-     -32.102
+     128.761,
+     -31.939
     ],
     [
-     129.312,
-     -49.131
+     128.067,
+     -45.167
     ]
    ],
    "width": 0.7,
    "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_Centre_NS_S_R",
    "line": [
     [
-     130.565,
-     -31.712
+     129.197,
+     -31.261
     ],
     [
-     129.712,
-     -49.151
+     128.467,
+     -45.181
     ]
    ],
    "height": 0.22,
@@ -1072,343 +1171,844 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
-   "name": "Hedge_Bnd_N0",
+   "name": "Hedge_Bnd_0",
    "line": [
     [
-     101.716,
-     -9.485
+     100.065,
+     -22.778
     ],
     [
-     155.285,
-     -12.106
+     100.879,
+     -10.2
+    ],
+    [
+     116.528,
+     -11.266
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
-   "name": "Hedge_Bnd_S0",
+   "name": "Hedge_Bnd_1",
    "line": [
     [
-     99.83,
-     -48.039
+     118.664,
+     -11.411
     ],
     [
-     153.399,
-     -50.66
+     129.777,
+     -12.168
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
-   "name": "Hedge_Bnd_W0",
+   "name": "Hedge_Bnd_2",
    "line": [
     [
-     99.847,
-     -47.69
+     131.912,
+     -12.313
     ],
     [
-     101.699,
-     -9.835
+     157.928,
+     -14.085
+    ],
+    [
+     157.148,
+     -28.184
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
-   "name": "Hedge_Bnd_E0",
+   "name": "Hedge_Bnd_3",
    "line": [
     [
-     153.416,
-     -50.31
+     157.03,
+     -30.323
     ],
     [
-     155.268,
-     -12.455
+     156.555,
+     -38.893
+    ],
+    [
+     153.925,
+     -43.205
     ]
    ],
    "width": 0.7,
    "height": 1.04,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_4",
+   "line": [
+    [
+     152.416,
+     -44.89
+    ],
+    [
+     150.28,
+     -46.308
+    ],
+    [
+     138.693,
+     -45.895
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_5",
+   "line": [
+    [
+     136.468,
+     -45.816
+    ],
+    [
+     130.168,
+     -45.592
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_6",
+   "line": [
+    [
+     128.029,
+     -45.515
+    ],
+    [
+     123.404,
+     -45.351
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_7",
+   "line": [
+    [
+     121.212,
+     -45.273
+    ],
+    [
+     103.291,
+     -44.634
+    ],
+    [
+     102.547,
+     -43.23
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Bnd_8",
+   "line": [
+    [
+     101.524,
+     -41.297
+    ],
+    [
+     99.156,
+     -36.824
+    ],
+    [
+     99.926,
+     -24.923
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.04,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G1_N",
+   "center": [
+    117.596,
+    -11.338
+   ],
+   "dir_deg": 87.68,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G1_W",
+   "center": [
+    99.996,
+    -23.85
+   ],
+   "dir_deg": 170.93,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G1_SW",
+   "center": [
+    102.036,
+    -42.264
+   ],
+   "dir_deg": -140.1,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G1_SSE",
+   "center": [
+    122.308,
+    -45.312
+   ],
+   "dir_deg": -79.3,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G2_E",
+   "center": [
+    157.089,
+    -29.254
+   ],
+   "dir_deg": -5.55,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G2_SSW",
+   "center": [
+    137.555,
+    -45.855
+   ],
+   "dir_deg": -112.07,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G2_SE",
+   "center": [
+    153.286,
+    -44.253
+   ],
+   "dir_deg": -60.71,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_Centre_NS_N",
+   "center": [
+    130.844,
+    -12.241
+   ],
+   "dir_deg": 87.0,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_Centre_NS_S",
+   "center": [
+    129.099,
+    -45.553
+   ],
+   "dir_deg": -93.0,
+   "span": 1.44,
+   "thk": 0.35,
+   "depth": 0.7,
+   "height": 2.25,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_Ring_0",
    "line": [
     [
-     123.269,
-     -26.23
+     123.277,
+     -26.356
     ],
     [
-     123.147,
-     -25.408
+     123.276,
+     -26.335
     ],
     [
-     122.918,
-     -24.61
+     123.236,
+     -25.921
     ],
     [
-     122.588,
-     -23.847
+     123.168,
+     -25.511
     ],
     [
-     122.161,
-     -23.135
+     123.074,
+     -25.106
     ],
     [
-     121.644,
-     -22.485
+     122.953,
+     -24.709
     ],
     [
-     121.047,
-     -21.907
+     122.807,
+     -24.32
     ],
     [
-     120.38,
-     -21.412
+     122.635,
+     -23.941
     ],
     [
-     119.654,
-     -21.009
+     122.439,
+     -23.575
     ],
     [
-     118.881,
-     -20.704
+     122.22,
+     -23.222
     ],
     [
-     118.075,
-     -20.502
+     121.978,
+     -22.884
+    ],
+    [
+     121.714,
+     -22.563
+    ],
+    [
+     121.43,
+     -22.26
+    ],
+    [
+     121.127,
+     -21.976
+    ],
+    [
+     120.806,
+     -21.712
+    ],
+    [
+     120.468,
+     -21.47
+    ],
+    [
+     120.115,
+     -21.251
+    ],
+    [
+     119.749,
+     -21.055
+    ],
+    [
+     119.37,
+     -20.883
+    ],
+    [
+     118.981,
+     -20.737
+    ],
+    [
+     118.584,
+     -20.616
+    ],
+    [
+     118.179,
+     -20.522
+    ],
+    [
+     117.926,
+     -20.48
     ]
    ],
    "width": 0.7,
-   "height": 1.06,
+   "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_Ring_1",
    "line": [
     [
-     116.42,
-     -20.421
+     116.528,
+     -20.413
     ],
     [
-     115.598,
-     -20.543
+     116.525,
+     -20.414
     ],
     [
-     114.8,
-     -20.772
+     116.111,
+     -20.454
     ],
     [
-     114.037,
-     -21.102
+     115.701,
+     -20.522
     ],
     [
-     113.325,
-     -21.529
+     115.296,
+     -20.616
     ],
     [
-     112.675,
-     -22.046
+     114.899,
+     -20.737
     ],
     [
-     112.097,
-     -22.643
+     114.51,
+     -20.883
     ],
     [
-     111.602,
-     -23.31
+     114.131,
+     -21.055
     ],
     [
-     111.199,
-     -24.036
+     113.765,
+     -21.251
     ],
     [
-     110.894,
-     -24.809
+     113.412,
+     -21.47
     ],
     [
-     110.692,
-     -25.615
+     113.074,
+     -21.712
     ],
     [
-     110.598,
-     -26.44
+     112.753,
+     -21.976
     ],
     [
-     110.611,
-     -27.27
+     112.45,
+     -22.26
     ],
     [
-     110.733,
-     -28.092
+     112.166,
+     -22.563
     ],
     [
-     110.962,
-     -28.89
+     111.902,
+     -22.884
     ],
     [
-     111.292,
-     -29.653
+     111.66,
+     -23.222
     ],
     [
-     111.719,
-     -30.365
+     111.441,
+     -23.575
+    ],
+    [
+     111.245,
+     -23.941
+    ],
+    [
+     111.073,
+     -24.32
+    ],
+    [
+     110.927,
+     -24.709
+    ],
+    [
+     110.876,
+     -24.877
     ]
    ],
    "width": 0.7,
-   "height": 1.06,
+   "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_Ring_2",
    "line": [
     [
-     113.5,
-     -32.088
+     110.612,
+     -26.253
     ],
     [
-     114.226,
-     -32.491
+     110.604,
+     -26.335
     ],
     [
-     114.999,
-     -32.796
+     110.59,
+     -26.75
     ],
     [
-     115.805,
-     -32.998
+     110.604,
+     -27.165
     ],
     [
-     116.63,
-     -33.092
+     110.644,
+     -27.579
     ],
     [
-     117.46,
-     -33.079
+     110.712,
+     -27.989
+    ],
+    [
+     110.806,
+     -28.394
+    ],
+    [
+     110.927,
+     -28.791
+    ],
+    [
+     111.073,
+     -29.18
+    ],
+    [
+     111.245,
+     -29.559
+    ],
+    [
+     111.441,
+     -29.925
+    ],
+    [
+     111.66,
+     -30.278
+    ],
+    [
+     111.902,
+     -30.616
+    ],
+    [
+     112.166,
+     -30.937
+    ],
+    [
+     112.45,
+     -31.24
+    ],
+    [
+     112.753,
+     -31.524
+    ],
+    [
+     113.074,
+     -31.788
+    ],
+    [
+     113.289,
+     -31.942
     ]
    ],
    "width": 0.7,
-   "height": 1.06,
+   "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "hedge",
    "name": "Hedge_G1_Ring_3",
    "line": [
     [
-     119.843,
-     -32.398
+     114.617,
+     -32.657
     ],
     [
-     120.555,
-     -31.971
+     114.899,
+     -32.763
     ],
     [
-     121.205,
-     -31.454
+     115.296,
+     -32.884
     ],
     [
-     121.783,
-     -30.857
+     115.701,
+     -32.978
     ],
     [
-     122.278,
-     -30.19
+     116.111,
+     -33.046
     ],
     [
-     122.681,
-     -29.464
+     116.525,
+     -33.086
     ],
     [
-     122.986,
-     -28.691
+     116.94,
+     -33.1
     ],
     [
-     123.188,
-     -27.885
+     117.355,
+     -33.086
+    ],
+    [
+     117.769,
+     -33.046
+    ],
+    [
+     118.179,
+     -32.978
+    ],
+    [
+     118.584,
+     -32.884
+    ],
+    [
+     118.981,
+     -32.763
+    ],
+    [
+     119.209,
+     -32.677
     ]
    ],
    "width": 0.7,
-   "height": 1.06,
+   "height": 1.05,
    "top": "flat",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G1_Ring_4",
+   "line": [
+    [
+     120.506,
+     -32.002
+    ],
+    [
+     120.806,
+     -31.788
+    ],
+    [
+     121.127,
+     -31.524
+    ],
+    [
+     121.43,
+     -31.24
+    ],
+    [
+     121.714,
+     -30.937
+    ],
+    [
+     121.978,
+     -30.616
+    ],
+    [
+     122.22,
+     -30.278
+    ],
+    [
+     122.439,
+     -29.925
+    ],
+    [
+     122.635,
+     -29.559
+    ],
+    [
+     122.807,
+     -29.18
+    ],
+    [
+     122.953,
+     -28.791
+    ],
+    [
+     123.074,
+     -28.394
+    ],
+    [
+     123.168,
+     -27.989
+    ],
+    [
+     123.207,
+     -27.754
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_Ring_0",
    "line": [
     [
-     122.671,
-     -26.279
+     122.679,
+     -26.427
     ],
     [
-     122.56,
-     -25.535
+     122.678,
+     -26.374
     ],
     [
-     122.353,
-     -24.812
+     122.641,
+     -25.999
     ],
     [
-     122.054,
-     -24.122
+     122.58,
+     -25.628
     ],
     [
-     121.667,
-     -23.477
+     122.494,
+     -25.262
     ],
     [
-     121.2,
-     -22.888
+     122.385,
+     -24.902
     ],
     [
-     120.659,
-     -22.365
+     122.252,
+     -24.55
     ],
     [
-     120.055,
-     -21.917
+     122.097,
+     -24.207
     ],
     [
-     119.397,
-     -21.552
+     121.92,
+     -23.875
     ],
     [
-     118.698,
-     -21.275
+     121.721,
+     -23.555
     ],
     [
-     117.968,
-     -21.093
+     121.502,
+     -23.25
+    ],
+    [
+     121.263,
+     -22.959
+    ],
+    [
+     121.006,
+     -22.684
+    ],
+    [
+     120.731,
+     -22.427
+    ],
+    [
+     120.44,
+     -22.188
+    ],
+    [
+     120.135,
+     -21.969
+    ],
+    [
+     119.815,
+     -21.77
+    ],
+    [
+     119.483,
+     -21.593
+    ],
+    [
+     119.14,
+     -21.438
+    ],
+    [
+     118.788,
+     -21.305
+    ],
+    [
+     118.428,
+     -21.196
+    ],
+    [
+     118.062,
+     -21.11
+    ],
+    [
+     117.802,
+     -21.068
     ]
    ],
    "height": 0.22,
@@ -1417,79 +2017,95 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_Ring_1",
    "line": [
     [
-     116.469,
-     -21.019
+     116.604,
+     -21.011
     ],
     [
-     115.725,
-     -21.13
+     116.564,
+     -21.012
     ],
     [
-     115.002,
-     -21.337
+     116.189,
+     -21.049
     ],
     [
-     114.312,
-     -21.636
+     115.818,
+     -21.11
     ],
     [
-     113.667,
-     -22.023
+     115.452,
+     -21.196
     ],
     [
-     113.078,
-     -22.49
+     115.092,
+     -21.305
     ],
     [
-     112.555,
-     -23.031
+     114.74,
+     -21.438
     ],
     [
-     112.107,
-     -23.635
+     114.397,
+     -21.593
     ],
     [
-     111.742,
-     -24.293
+     114.065,
+     -21.77
     ],
     [
-     111.465,
-     -24.992
+     113.745,
+     -21.969
     ],
     [
-     111.283,
-     -25.722
+     113.44,
+     -22.188
     ],
     [
-     111.197,
-     -26.469
+     113.149,
+     -22.427
     ],
     [
-     111.209,
-     -27.221
+     112.874,
+     -22.684
     ],
     [
-     111.32,
-     -27.965
+     112.617,
+     -22.959
     ],
     [
-     111.527,
-     -28.688
+     112.378,
+     -23.25
     ],
     [
-     111.826,
-     -29.378
+     112.159,
+     -23.555
     ],
     [
-     112.213,
-     -30.023
+     111.96,
+     -23.875
+    ],
+    [
+     111.783,
+     -24.207
+    ],
+    [
+     111.628,
+     -24.55
+    ],
+    [
+     111.495,
+     -24.902
+    ],
+    [
+     111.444,
+     -25.069
     ]
    ],
    "height": 0.22,
@@ -1498,710 +2114,86 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
    "name": "Edging_G1_Ring_2",
    "line": [
     [
-     113.825,
-     -31.583
+     111.215,
+     -26.248
     ],
     [
-     114.483,
-     -31.948
+     111.202,
+     -26.374
     ],
     [
-     115.182,
-     -32.225
+     111.19,
+     -26.75
     ],
     [
-     115.912,
-     -32.407
+     111.202,
+     -27.126
     ],
     [
-     116.659,
-     -32.493
+     111.239,
+     -27.501
     ],
     [
-     117.411,
-     -32.481
+     111.3,
+     -27.872
     ],
     [
-     118.155,
-     -32.37
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G1_Ring_3",
-   "line": [
-    [
-     119.568,
-     -31.864
-    ],
-    [
-     120.213,
-     -31.477
-    ],
-    [
-     120.802,
-     -31.01
-    ],
-    [
-     121.325,
-     -30.469
-    ],
-    [
-     121.773,
-     -29.865
-    ],
-    [
-     122.138,
-     -29.207
-    ],
-    [
-     122.415,
-     -28.508
-    ],
-    [
-     122.597,
-     -27.778
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_Ring_0",
-   "line": [
-    [
-     152.236,
-     -27.647
-    ],
-    [
-     152.114,
-     -26.825
-    ],
-    [
-     151.885,
-     -26.027
-    ],
-    [
-     151.555,
-     -25.264
-    ],
-    [
-     151.128,
-     -24.552
-    ],
-    [
-     150.611,
-     -23.902
-    ],
-    [
-     150.014,
-     -23.324
-    ],
-    [
-     149.347,
-     -22.829
-    ],
-    [
-     148.621,
-     -22.426
-    ],
-    [
-     147.848,
-     -22.121
-    ],
-    [
-     147.042,
-     -21.919
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.06,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_Ring_1",
-   "line": [
-    [
-     145.387,
-     -21.838
-    ],
-    [
-     144.565,
-     -21.96
-    ],
-    [
-     143.767,
-     -22.189
-    ],
-    [
-     143.004,
-     -22.519
-    ],
-    [
-     142.292,
-     -22.946
-    ],
-    [
-     141.642,
-     -23.463
-    ],
-    [
-     141.064,
-     -24.06
-    ],
-    [
-     140.569,
-     -24.727
-    ],
-    [
-     140.166,
-     -25.453
-    ],
-    [
-     139.861,
-     -26.226
-    ],
-    [
-     139.659,
-     -27.032
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.06,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_Ring_2",
-   "line": [
-    [
-     139.578,
-     -28.687
-    ],
-    [
-     139.7,
-     -29.509
-    ],
-    [
-     139.929,
-     -30.307
-    ],
-    [
-     140.259,
-     -31.07
-    ],
-    [
-     140.686,
-     -31.782
-    ],
-    [
-     141.203,
-     -32.432
-    ],
-    [
-     141.8,
-     -33.01
-    ],
-    [
-     142.467,
-     -33.505
-    ],
-    [
-     143.193,
-     -33.908
-    ],
-    [
-     143.966,
-     -34.213
-    ],
-    [
-     144.772,
-     -34.415
-    ],
-    [
-     145.597,
-     -34.509
-    ],
-    [
-     146.427,
-     -34.496
-    ],
-    [
-     147.249,
-     -34.374
-    ],
-    [
-     148.047,
-     -34.145
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.06,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_G2_Ring_3",
-   "line": [
-    [
-     149.522,
-     -33.388
-    ],
-    [
-     150.172,
-     -32.871
-    ],
-    [
-     150.75,
-     -32.274
-    ],
-    [
-     151.245,
-     -31.607
+     111.386,
+     -28.238
     ],
     [
-     151.648,
-     -30.881
+     111.495,
+     -28.598
     ],
     [
-     151.953,
-     -30.108
+     111.628,
+     -28.95
     ],
     [
-     152.155,
-     -29.302
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.06,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_Ring_0",
-   "line": [
-    [
-     151.638,
-     -27.696
-    ],
-    [
-     151.527,
-     -26.952
-    ],
-    [
-     151.32,
-     -26.229
-    ],
-    [
-     151.021,
-     -25.539
-    ],
-    [
-     150.634,
-     -24.894
-    ],
-    [
-     150.167,
-     -24.305
-    ],
-    [
-     149.626,
-     -23.782
-    ],
-    [
-     149.022,
-     -23.334
-    ],
-    [
-     148.364,
-     -22.969
-    ],
-    [
-     147.665,
-     -22.692
-    ],
-    [
-     146.935,
-     -22.51
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_Ring_1",
-   "line": [
-    [
-     145.436,
-     -22.436
-    ],
-    [
-     144.692,
-     -22.547
-    ],
-    [
-     143.969,
-     -22.754
-    ],
-    [
-     143.279,
-     -23.053
-    ],
-    [
-     142.634,
-     -23.44
-    ],
-    [
-     142.045,
-     -23.907
-    ],
-    [
-     141.522,
-     -24.448
-    ],
-    [
-     141.074,
-     -25.052
-    ],
-    [
-     140.709,
-     -25.71
-    ],
-    [
-     140.432,
-     -26.409
-    ],
-    [
-     140.25,
-     -27.139
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_Ring_2",
-   "line": [
-    [
-     140.176,
-     -28.638
-    ],
-    [
-     140.287,
-     -29.382
-    ],
-    [
-     140.494,
-     -30.105
-    ],
-    [
-     140.793,
-     -30.795
-    ],
-    [
-     141.18,
-     -31.44
-    ],
-    [
-     141.647,
-     -32.029
-    ],
-    [
-     142.188,
-     -32.552
-    ],
-    [
-     142.792,
-     -33.0
-    ],
-    [
-     143.45,
-     -33.365
-    ],
-    [
-     144.149,
-     -33.642
-    ],
-    [
-     144.879,
-     -33.824
-    ],
-    [
-     145.626,
-     -33.91
-    ],
-    [
-     146.378,
-     -33.898
-    ],
-    [
-     147.122,
-     -33.787
+     111.783,
+     -29.293
     ],
     [
-     147.845,
-     -33.58
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "Edging_G2_Ring_3",
-   "line": [
-    [
-     149.18,
-     -32.894
-    ],
-    [
-     149.769,
-     -32.427
-    ],
-    [
-     150.292,
-     -31.886
-    ],
-    [
-     150.74,
-     -31.282
-    ],
-    [
-     151.105,
-     -30.624
-    ],
-    [
-     151.382,
-     -29.925
-    ],
-    [
-     151.564,
-     -29.195
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "path",
-   "name": "CentreSquare_Paving",
-   "line": [
-    [
-     127.428,
-     -27.263
-    ],
-    [
-     135.419,
-     -27.654
-    ]
-   ],
-   "width": 8.0,
-   "thk": 0.08,
-   "top": 0.022,
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_N0",
-   "line": [
-    [
-     126.942,
-     -22.884
+     111.96,
+     -29.625
     ],
-    [
-     131.037,
-     -23.084
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_N1",
-   "line": [
     [
-     132.235,
-     -23.143
+     112.159,
+     -29.945
     ],
     [
-     136.33,
-     -23.343
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "CentreSquare_Edging_N0",
-   "line": [
-    [
-     127.621,
-     -23.318
+     112.378,
+     -30.25
     ],
     [
-     131.017,
-     -23.484
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "CentreSquare_Edging_N1",
-   "line": [
-    [
-     132.216,
-     -23.543
+     112.617,
+     -30.541
     ],
-    [
-     135.612,
-     -23.709
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_S0",
-   "line": [
     [
-     126.517,
-     -31.574
+     112.874,
+     -30.816
     ],
     [
-     130.612,
-     -31.774
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_S1",
-   "line": [
-    [
-     131.81,
-     -31.833
+     113.149,
+     -31.073
     ],
     [
-     135.905,
-     -32.033
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "CentreSquare_Edging_S0",
-   "line": [
-    [
-     127.235,
-     -31.208
+     113.44,
+     -31.312
     ],
-    [
-     130.631,
-     -31.374
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "CentreSquare_Edging_S1",
-   "line": [
     [
-     131.83,
-     -31.433
+     113.745,
+     -31.531
     ],
     [
-     135.226,
+     113.855,
      -31.599
     ]
    ],
@@ -2211,57 +2203,67 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_E0",
-   "line": [
-    [
-     135.573,
-     -31.666
-    ],
-    [
-     135.739,
-     -28.27
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_E1",
-   "line": [
-    [
-     135.798,
-     -27.072
-    ],
-    [
-     135.964,
-     -23.676
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
-   "name": "CentreSquare_Edging_E0",
+   "name": "Edging_G1_Ring_3",
    "line": [
     [
-     135.178,
-     -31.547
+     115.038,
+     -32.174
     ],
     [
-     135.339,
-     -28.251
+     115.092,
+     -32.195
+    ],
+    [
+     115.452,
+     -32.304
+    ],
+    [
+     115.818,
+     -32.39
+    ],
+    [
+     116.189,
+     -32.451
+    ],
+    [
+     116.564,
+     -32.488
+    ],
+    [
+     116.94,
+     -32.5
+    ],
+    [
+     117.316,
+     -32.488
+    ],
+    [
+     117.691,
+     -32.451
+    ],
+    [
+     118.062,
+     -32.39
+    ],
+    [
+     118.428,
+     -32.304
+    ],
+    [
+     118.788,
+     -32.195
+    ],
+    [
+     119.14,
+     -32.062
+    ],
+    [
+     119.19,
+     -32.04
     ]
    ],
    "height": 0.22,
@@ -2270,19 +2272,67 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "wall",
-   "name": "CentreSquare_Edging_E1",
+   "name": "Edging_G1_Ring_4",
    "line": [
     [
-     135.398,
-     -27.052
+     120.294,
+     -31.417
     ],
     [
-     135.559,
-     -23.756
+     120.44,
+     -31.312
+    ],
+    [
+     120.731,
+     -31.073
+    ],
+    [
+     121.006,
+     -30.816
+    ],
+    [
+     121.263,
+     -30.541
+    ],
+    [
+     121.502,
+     -30.25
+    ],
+    [
+     121.721,
+     -29.945
+    ],
+    [
+     121.92,
+     -29.625
+    ],
+    [
+     122.097,
+     -29.293
+    ],
+    [
+     122.252,
+     -28.95
+    ],
+    [
+     122.385,
+     -28.598
+    ],
+    [
+     122.494,
+     -28.238
+    ],
+    [
+     122.58,
+     -27.872
+    ],
+    [
+     122.62,
+     -27.625
     ]
    ],
    "height": 0.22,
@@ -2291,148 +2341,1028 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_0",
+   "line": [
+    [
+     152.254,
+     -28.081
+    ],
+    [
+     152.243,
+     -27.752
+    ],
+    [
+     152.203,
+     -27.338
+    ],
+    [
+     152.135,
+     -26.928
+    ],
+    [
+     152.041,
+     -26.523
+    ],
+    [
+     151.92,
+     -26.126
+    ],
+    [
+     151.774,
+     -25.737
+    ],
+    [
+     151.602,
+     -25.358
+    ],
+    [
+     151.406,
+     -24.992
+    ],
+    [
+     151.187,
+     -24.639
+    ],
+    [
+     150.945,
+     -24.301
+    ],
+    [
+     150.681,
+     -23.98
+    ],
+    [
+     150.397,
+     -23.677
+    ],
+    [
+     150.094,
+     -23.393
+    ],
+    [
+     149.773,
+     -23.129
+    ],
+    [
+     149.435,
+     -22.887
+    ],
+    [
+     149.082,
+     -22.668
+    ],
+    [
+     148.716,
+     -22.472
+    ],
+    [
+     148.337,
+     -22.3
+    ],
+    [
+     147.948,
+     -22.154
+    ],
+    [
+     147.551,
+     -22.033
+    ],
+    [
+     147.146,
+     -21.939
+    ],
+    [
+     146.736,
+     -21.871
+    ],
+    [
+     146.322,
+     -21.831
+    ],
+    [
+     145.907,
+     -21.817
+    ],
+    [
+     145.492,
+     -21.831
+    ],
+    [
+     145.078,
+     -21.871
+    ],
+    [
+     144.668,
+     -21.939
+    ],
+    [
+     144.263,
+     -22.033
+    ],
+    [
+     143.866,
+     -22.154
+    ],
+    [
+     143.477,
+     -22.3
+    ],
+    [
+     143.098,
+     -22.472
+    ],
+    [
+     142.732,
+     -22.668
+    ],
+    [
+     142.379,
+     -22.887
+    ],
+    [
+     142.041,
+     -23.129
+    ],
+    [
+     141.72,
+     -23.393
+    ],
+    [
+     141.417,
+     -23.677
+    ],
+    [
+     141.133,
+     -23.98
+    ],
+    [
+     140.869,
+     -24.301
+    ],
+    [
+     140.627,
+     -24.639
+    ],
+    [
+     140.408,
+     -24.992
+    ],
+    [
+     140.212,
+     -25.358
+    ],
+    [
+     140.04,
+     -25.737
+    ],
+    [
+     139.894,
+     -26.126
+    ],
+    [
+     139.773,
+     -26.523
+    ],
+    [
+     139.679,
+     -26.928
+    ],
+    [
+     139.639,
+     -27.172
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_1",
+   "line": [
+    [
+     139.57,
+     -28.57
+    ],
+    [
+     139.571,
+     -28.582
+    ],
+    [
+     139.611,
+     -28.996
+    ],
+    [
+     139.679,
+     -29.406
+    ],
+    [
+     139.773,
+     -29.811
+    ],
+    [
+     139.894,
+     -30.208
+    ],
+    [
+     140.04,
+     -30.597
+    ],
+    [
+     140.212,
+     -30.976
+    ],
+    [
+     140.408,
+     -31.342
+    ],
+    [
+     140.627,
+     -31.695
+    ],
+    [
+     140.869,
+     -32.033
+    ],
+    [
+     141.133,
+     -32.354
+    ],
+    [
+     141.417,
+     -32.657
+    ],
+    [
+     141.72,
+     -32.941
+    ],
+    [
+     141.957,
+     -33.135
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_2",
+   "line": [
+    [
+     143.161,
+     -33.891
+    ],
+    [
+     143.477,
+     -34.034
+    ],
+    [
+     143.866,
+     -34.18
+    ],
+    [
+     144.263,
+     -34.301
+    ],
+    [
+     144.668,
+     -34.395
+    ],
+    [
+     145.078,
+     -34.463
+    ],
+    [
+     145.492,
+     -34.503
+    ],
+    [
+     145.907,
+     -34.517
+    ],
+    [
+     146.322,
+     -34.503
+    ],
+    [
+     146.736,
+     -34.463
+    ],
+    [
+     146.969,
+     -34.424
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_G2_Ring_3",
+   "line": [
+    [
+     148.352,
+     -34.027
+    ],
+    [
+     148.716,
+     -33.862
+    ],
+    [
+     149.082,
+     -33.666
+    ],
+    [
+     149.435,
+     -33.447
+    ],
+    [
+     149.773,
+     -33.205
+    ],
+    [
+     150.094,
+     -32.941
+    ],
+    [
+     150.397,
+     -32.657
+    ],
+    [
+     150.681,
+     -32.354
+    ],
+    [
+     150.945,
+     -32.033
+    ],
+    [
+     151.187,
+     -31.695
+    ],
+    [
+     151.406,
+     -31.342
+    ],
+    [
+     151.602,
+     -30.976
+    ],
+    [
+     151.774,
+     -30.597
+    ],
+    [
+     151.92,
+     -30.208
+    ],
+    [
+     152.041,
+     -29.811
+    ],
+    [
+     152.119,
+     -29.474
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_0",
+   "line": [
+    [
+     151.656,
+     -28.123
+    ],
+    [
+     151.645,
+     -27.791
+    ],
+    [
+     151.608,
+     -27.416
+    ],
+    [
+     151.547,
+     -27.045
+    ],
+    [
+     151.461,
+     -26.679
+    ],
+    [
+     151.352,
+     -26.319
+    ],
+    [
+     151.219,
+     -25.967
+    ],
+    [
+     151.064,
+     -25.624
+    ],
+    [
+     150.887,
+     -25.292
+    ],
+    [
+     150.688,
+     -24.972
+    ],
+    [
+     150.469,
+     -24.667
+    ],
+    [
+     150.23,
+     -24.376
+    ],
+    [
+     149.973,
+     -24.101
+    ],
+    [
+     149.698,
+     -23.844
+    ],
+    [
+     149.407,
+     -23.605
+    ],
+    [
+     149.102,
+     -23.386
+    ],
+    [
+     148.782,
+     -23.187
+    ],
+    [
+     148.45,
+     -23.01
+    ],
+    [
+     148.107,
+     -22.855
+    ],
+    [
+     147.755,
+     -22.722
+    ],
+    [
+     147.395,
+     -22.613
+    ],
+    [
+     147.029,
+     -22.527
+    ],
+    [
+     146.658,
+     -22.466
+    ],
+    [
+     146.283,
+     -22.429
+    ],
+    [
+     145.907,
+     -22.417
+    ],
+    [
+     145.531,
+     -22.429
+    ],
+    [
+     145.156,
+     -22.466
+    ],
+    [
+     144.785,
+     -22.527
+    ],
+    [
+     144.419,
+     -22.613
+    ],
+    [
+     144.059,
+     -22.722
+    ],
+    [
+     143.707,
+     -22.855
+    ],
+    [
+     143.364,
+     -23.01
+    ],
+    [
+     143.032,
+     -23.187
+    ],
+    [
+     142.712,
+     -23.386
+    ],
+    [
+     142.407,
+     -23.605
+    ],
+    [
+     142.116,
+     -23.844
+    ],
+    [
+     141.841,
+     -24.101
+    ],
+    [
+     141.584,
+     -24.376
+    ],
+    [
+     141.345,
+     -24.667
+    ],
+    [
+     141.126,
+     -24.972
+    ],
+    [
+     140.927,
+     -25.292
+    ],
+    [
+     140.75,
+     -25.624
+    ],
+    [
+     140.595,
+     -25.967
+    ],
+    [
+     140.462,
+     -26.319
+    ],
+    [
+     140.353,
+     -26.679
+    ],
+    [
+     140.267,
+     -27.045
+    ],
+    [
+     140.226,
+     -27.299
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_1",
+   "line": [
+    [
+     140.168,
+     -28.498
+    ],
+    [
+     140.169,
+     -28.543
+    ],
+    [
+     140.206,
+     -28.918
+    ],
+    [
+     140.267,
+     -29.289
+    ],
+    [
+     140.353,
+     -29.655
+    ],
+    [
+     140.462,
+     -30.015
+    ],
+    [
+     140.595,
+     -30.367
+    ],
+    [
+     140.75,
+     -30.71
+    ],
+    [
+     140.927,
+     -31.042
+    ],
+    [
+     141.126,
+     -31.362
+    ],
+    [
+     141.345,
+     -31.667
+    ],
+    [
+     141.584,
+     -31.958
+    ],
+    [
+     141.841,
+     -32.233
+    ],
+    [
+     142.116,
+     -32.49
+    ],
+    [
+     142.274,
+     -32.62
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_2",
+   "line": [
+    [
+     143.297,
+     -33.288
+    ],
+    [
+     143.364,
+     -33.324
+    ],
+    [
+     143.707,
+     -33.479
+    ],
+    [
+     144.059,
+     -33.612
+    ],
+    [
+     144.419,
+     -33.721
+    ],
+    [
+     144.785,
+     -33.807
+    ],
+    [
+     145.156,
+     -33.868
+    ],
+    [
+     145.531,
+     -33.905
+    ],
+    [
+     145.907,
+     -33.917
+    ],
+    [
+     146.283,
+     -33.905
+    ],
+    [
+     146.658,
+     -33.868
+    ],
+    [
+     146.762,
+     -33.851
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_3",
+   "line": [
+    [
+     147.961,
+     -33.535
+    ],
+    [
+     148.107,
+     -33.479
+    ],
+    [
+     148.45,
+     -33.324
+    ],
+    [
+     148.782,
+     -33.147
+    ],
+    [
+     149.102,
+     -32.948
+    ],
+    [
+     149.407,
+     -32.729
+    ],
+    [
+     149.698,
+     -32.49
+    ],
+    [
+     149.973,
+     -32.233
+    ],
+    [
+     150.23,
+     -31.958
+    ],
+    [
+     150.469,
+     -31.667
+    ],
+    [
+     150.688,
+     -31.362
+    ],
+    [
+     150.887,
+     -31.042
+    ],
+    [
+     151.064,
+     -30.71
+    ],
+    [
+     151.219,
+     -30.367
+    ],
+    [
+     151.352,
+     -30.015
+    ],
+    [
+     151.461,
+     -29.655
+    ],
+    [
+     151.54,
+     -29.317
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "path",
+   "name": "CentreSquare_Paving",
+   "line": [
+    [
+     126.055,
+     -27.191
+    ],
+    [
+     134.045,
+     -27.609
+    ]
+   ],
+   "width": 8.0,
+   "thk": 0.08,
+   "top": 0.022,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "CentreSquare_Hedge_0",
+   "line": [
+    [
+     125.669,
+     -27.873
+    ],
+    [
+     125.478,
+     -31.516
+    ],
+    [
+     129.123,
+     -31.707
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "CentreSquare_Hedge_1",
+   "line": [
+    [
+     130.521,
+     -31.781
+    ],
+    [
+     134.166,
+     -31.972
+    ],
+    [
+     134.358,
+     -28.325
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "CentreSquare_Hedge_2",
+   "line": [
+    [
+     134.431,
+     -26.927
+    ],
+    [
+     134.622,
+     -23.284
+    ],
+    [
+     130.977,
+     -23.093
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "hedge",
+   "name": "CentreSquare_Hedge_3",
+   "line": [
+    [
+     129.579,
+     -23.019
+    ],
+    [
+     125.934,
+     -22.828
+    ],
+    [
+     125.743,
+     -26.475
+    ]
+   ],
+   "width": 0.7,
+   "height": 1.05,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+  },
+  {
+   "type": "wall",
+   "name": "CentreSquare_Edging_0",
+   "line": [
+    [
+     125.899,
+     -31.138
+    ],
+    [
+     133.788,
+     -31.551
+    ],
+    [
+     134.201,
+     -23.662
+    ],
+    [
+     126.312,
+     -23.249
+    ],
+    [
+     125.899,
+     -31.138
+    ]
+   ],
+   "height": 0.22,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_E0",
    "pos": [
-    134.904,
-    -29.982
+    133.522,
+    -29.935
    ],
-   "dir_deg": 177.2,
+   "dir_deg": 177.0,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_E1",
    "pos": [
-    135.134,
-    -25.287
+    133.768,
+    -25.242
    ],
-   "dir_deg": 177.2,
+   "dir_deg": 177.0,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_W0",
-   "line": [
-    [
-     126.883,
-     -31.241
-    ],
-    [
-     127.049,
-     -27.845
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "hedge",
-   "name": "CentreSquare_Hedge_W1",
-   "line": [
-    [
-     127.108,
-     -26.647
-    ],
-    [
-     127.274,
-     -23.251
-    ]
-   ],
-   "width": 0.7,
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "CentreSquare_Edging_W0",
-   "line": [
-    [
-     127.288,
-     -31.161
-    ],
-    [
-     127.449,
-     -27.865
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
-  },
-  {
-   "type": "wall",
-   "name": "CentreSquare_Edging_W1",
-   "line": [
-    [
-     127.508,
-     -26.666
-    ],
-    [
-     127.669,
-     -23.37
-    ]
-   ],
-   "height": 0.22,
-   "thk": 0.1,
-   "cap_proj": 0.0,
-   "material": "stone",
-   "kind": "scalloped_edging",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_W0",
    "pos": [
-    127.713,
-    -29.63
+    126.332,
+    -29.558
    ],
-   "dir_deg": -2.8,
+   "dir_deg": -3.0,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "bench",
    "name": "CentreSquare_Bench_W1",
    "pos": [
-    127.943,
-    -24.935
+    126.578,
+    -24.865
    ],
-   "dir_deg": -2.8,
+   "dir_deg": -3.0,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
   },
   {
    "type": "lamp_orn",
    "name": "CentreSquare_Lamp",
    "pos": [
-    131.423,
-    -27.459
+    130.05,
+    -27.4
    ],
-   "dir_deg": -2.8,
+   "dir_deg": -3.0,
    "height": 3.2,
    "cross": true,
    "arm_span": 0.8,
@@ -2443,7 +3373,7 @@
     0.6
    ],
    "confidence": "low",
-   "evidence": "[B] zone_garden.py 2026-09-29: paths per the owner satellite sketch + Google z20 ortho (G1: N, SW diagonal, SSE; square: N, S, links; G2: N, E, SE diagonal); boundary hedge continuous, no openings or arches (owner) | owner: lamp post in the exact middle, 4 lamps (maybe 2)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge | owner: lamp post in the exact middle, 4 lamps (maybe 2)"
   },
   {
    "type": "path",
@@ -2842,12 +3772,12 @@
    "type": "lamp_orn",
    "name": "Lamp_G2_Apron",
    "pos": [
-    139.866,
-    -29.874
+    141.047,
+    -29.54
    ],
    "height": 3.2,
    "head": "ball",
-   "evidence": "081946180 t6-t9: black cast pole on a tapered black pedestal (~0.3 m sq on a 0.45 m concrete pad) at a path junction by a gazebo corner; white globe. Position approximate (west side of the G2 apron). | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9) | owner 2026-09-28 (screenshot 60): east gazebo 1.0 m further east",
+   "evidence": "081946180 t6-t9: black cast pole on a tapered black pedestal (~0.3 m sq on a 0.45 m concrete pad) at a path junction by a gazebo corner; white globe. Position approximate (west side of the G2 apron). | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9) | owner 2026-09-28 (screenshot 60): east gazebo 1.0 m further east | 2026-09-29: on the apron (r 5.05 m), it stood in the ring hedge (r 6.28)",
    "confidence": "low",
    "globes": 2,
    "globe_d": 0.35,
@@ -2857,8 +3787,8 @@
    "type": "lamp_orn",
    "name": "Lamp_EastWalk_0",
    "pos": [
-    153.438,
-    -36.544
+    157.524,
+    -36.77
    ],
    "height": 3.2,
    "head": "ball",
@@ -2872,8 +3802,8 @@
    "type": "lamp_orn",
    "name": "Lamp_EastWalk_1",
    "pos": [
-    154.221,
-    -20.563
+    158.408,
+    -20.795
    ],
    "height": 3.2,
    "head": "ball",
@@ -2919,8 +3849,8 @@
    "type": "sign",
    "name": "Signboard_Arch",
    "pos": [
-    154.3,
-    -42.9
+    154.93,
+    -43.382
    ],
    "dir_deg": 0.0,
    "w": 1.0,
