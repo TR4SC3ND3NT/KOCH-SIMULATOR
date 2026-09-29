@@ -246,7 +246,27 @@
    "tread": 0.33,
    "landing": 0.3,
    "evidence": "wide granite stair up to the terrace with rose beds each side (pano c_intro1)",
-   "confidence": "low"
+   "confidence": "low",
+   "cheeks": [
+    {
+     "u0": 3.0,
+     "u1": 3.3,
+     "w1": 2.61,
+     "z_wall": 0.45,
+     "z_out": -0.75,
+     "evidence": "brick cheek walls both sides of the terrace stair (pano c_intro1: rose beds and a low wall beside the flight); height assumed",
+     "confidence": "low"
+    },
+    {
+     "u0": 6.65,
+     "u1": 6.95,
+     "w1": 2.61,
+     "z_wall": 0.45,
+     "z_out": -0.75,
+     "evidence": "see the other cheek",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "type": "interior",

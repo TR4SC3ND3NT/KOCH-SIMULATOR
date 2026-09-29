@@ -198,10 +198,13 @@ def main():
         for o in doors:
             W3 = np.array([o.matrix_world @ v.co for v in o.data.vertices])
             c = W3.mean(0)
-            d = Vector((cx - c[0], cy - c[1], 0))
-            if d.length < 1e-6:
-                continue
-            d.normalize()
+            # inward = the door frame's thin horizontal axis, signed toward the building centre (a long narrow block's
+            # centre direction runs nearly along the facade)
+            ev, evec = np.linalg.eigh(np.cov((W3[:, :2] - W3[:, :2].mean(0)).T) + np.eye(2) * 1e-9)
+            n2 = evec[:, 0]
+            if n2[0] * (cx - c[0]) + n2[1] * (cy - c[1]) < 0:
+                n2 = -n2
+            d = Vector((float(n2[0]), float(n2[1]), 0))
             p = Vector((c[0], c[1], W3[:, 2].min() + 1.2)) + d * 1.2      # 1.2 m inside the door
             hit, loc, _n, _x, ob, _m = sc.ray_cast(dg, p, DOWN, distance=4.0)
             if not hit or abs(loc.z - W3[:, 2].min()) > 0.35:
