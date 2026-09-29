@@ -20,9 +20,13 @@ OWN = re.compile(r"^(G[12]_\w+|Centre_NS_\w+|Hedge_\w+|Edging_\w+|Arch_\w+|Centr
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W, HEDGE_H = 1.2, 0.65, 1.05, 0.7, 1.05
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
 ARCH_T, ARCH_H = 0.35, 2.25                      # topiary arch leg thickness / height (m)
-SQ_P = 4.0                                       # centre square paving half size (owner 2026-09-28: the 8 m size stays)
+SQ_P = 2.7                                       # centre square paving half size: sketch outline 6.1 m = hedge centre line
 THETA = -3.0                                     # square / spine frame heading (deg; sketch N/S lines and gazebo axis)
-SQ_C = (130.05, -27.40)                          # square centre: on the gazebo axis at the sketch spine (x 130.0-130.1)
+SQ_C = (130.00, -27.55)                          # square centre: the sketch square (corners +-0.1 m)
+# gazebo centres (owner 2026-09-29 "ставь как верно"): G1 = N x W path lines (116.98, -26.56) ~ roof octagon fit
+# (117.4, -26.9) less the ~0.4 m east/north lean of a 4 m roof on this ortho; G2 = SSW x SE path lines (144.53, -28.65),
+# sketch disc (144.57, -28.13), roof fit (145.1, -28.3) less the lean -> 1.3 m west of the 2026-09-28 position
+GAZ = {"G1": (116.96, -26.65), "G2": (144.60, -28.35)}
 EV = "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
 # outer face of the boundary hedge (lawn/paving edge), in order N, E, SE1, SE2, S, SW, W (world m); corners = intersections
 OUTER = [((100.74, -9.84), (158.02, -13.74)),    # N: ortho paving edge, inner envelope (sketch -8.8..-13.8)
@@ -83,7 +87,23 @@ def main():
     E = d["elements"]
     by = {e["name"]: e for e in E}
     old = {n for n in by if OWN.match(n)}
-    C = {"G1": tuple(by["Gazebo_1"]["center"]), "G2": tuple(by["Gazebo_2"]["center"])}
+    # gazebos to the measured centres; their aprons and apron lamps move with them
+    for g, gname, extra in (("G1", "Gazebo_1", ("Apron_G1", "Lamp_G1_Apron")), ("G2", "Gazebo_2", ("Apron_G2", "Lamp_G2_Apron"))):
+        cur = by[gname]["center"]
+        dx, dy = GAZ[g][0] - cur[0], GAZ[g][1] - cur[1]
+        if abs(dx) + abs(dy) < 1e-4:
+            continue
+        by[gname]["center"] = list(GAZ[g])
+        by[gname]["evidence"] = by[gname].get("evidence", "") + f" | 2026-09-29 measured centre {list(GAZ[g])} (zone_garden.py v2)"
+        for n in extra:
+            e = by.get(n)
+            if not e:
+                continue
+            if "line" in e:
+                e["line"] = [[round(q[0] + dx, 3), round(q[1] + dy, 3)] for q in e["line"]]
+            if "pos" in e:
+                e["pos"] = [round(e["pos"][0] + dx, 3), round(e["pos"][1] + dy, 3)]
+    C = dict(GAZ)
     th = math.radians(THETA)
     U, V = (math.cos(th), math.sin(th)), (-math.sin(th), math.cos(th))
     sq = lambda u, v: (SQ_C[0] + u * U[0] + v * V[0], SQ_C[1] + u * U[1] + v * V[1])
@@ -100,35 +120,26 @@ def main():
     outer_lines[3] = (vse, OUTER[3][1])
     ring = [_isect(outer_lines[k - 1], outer_lines[k]) for k in range(len(outer_lines))]
     outer = Polygon(ring)
-    hedge_c = outer.buffer(-HEDGE_W / 2, join_style=2)          # boundary hedge centre line
     inner = outer.buffer(-HEDGE_W, join_style=2)                # inner face of the boundary hedge
+    hedge_c = outer.buffer(-HEDGE_W / 2, join_style=2)          # its centre line
     new = []
-
-    def hedge(name, pts, h=HEDGE_H, closed=False):
-        new.append({"type": "hedge", "name": name, "line": [_r(p) for p in pts], "width": HEDGE_W, "height": h,
-                    "top": "flat", **({"closed": True} if closed else {}), "confidence": "medium", "evidence": EV})
 
     def edging(name, pts):
         new.append({"type": "wall", "name": name, "line": [_r(p) for p in pts], "height": 0.22, "thk": 0.1,
                     "cap_proj": 0.0, "material": "stone", "kind": "scalloped_edging", "confidence": "medium", "evidence": EV})
 
-    # --- path centre lines (start point, far end) ---
+    # --- path centre lines (start, far end) ---
     cl = {}
     for name, st, pa, pb, end in PATHS:
         c = C[st]
-        if pa is None:                                          # radial from the gazebo centre
-            pa = c
-        line = _ext(pa, pb)
-        # start: where the line enters the apron circle (from the gazebo side)
-        circ = Point(c).buffer(R_APRON, 64).exterior
-        hits = line.intersection(circ)
+        line = _ext(c if pa is None else pa, pb)
+        hits = line.intersection(Point(c).buffer(R_APRON, 64).exterior)
         pts = [hits] if isinstance(hits, Point) else list(getattr(hits, "geoms", []))
-        s0 = min(pts, key=lambda q: math.dist((q.x, q.y), pb) if False else line.project(q))  # first hit along the line
+        s0 = min(pts, key=line.project)
         far = line.intersection(outer.exterior)
         fp = [far] if isinstance(far, Point) else list(getattr(far, "geoms", []))
-        f = max(fp, key=lambda q: line.project(q))
+        f = max(fp, key=line.project)
         cl[name] = ((s0.x, s0.y), (f.x, f.y), st)
-    # links gazebo <-> square (on the gazebo-square line) and the square spine
     for name, st, s in (("G1_Link", "G1", -1), ("G2_Link", "G2", 1)):
         c = C[st]
         e_ = sq(s * SQ_P, 0.0)
@@ -139,105 +150,124 @@ def main():
         line = LineString([sq(0, v0), sq(0, sgn * 60)])
         far = line.intersection(outer.exterior)
         fp = [far] if isinstance(far, Point) else list(far.geoms)
-        f = min(fp, key=lambda q: line.project(q))
+        f = min(fp, key=line.project)
         cl[name] = (sq(0, v0), (f.x, f.y), "SQ")
-    # --- corridors: nothing hedge-like may cross a path ---
-    corr_h = {n: LineString([a, b]).buffer(HEDGE_OFF - HEDGE_W / 2 - 0.0, cap_style=2) for n, (a, b, _) in cl.items()}
-    corr_e = {n: LineString([a, b]).buffer(EDGE_OFF - 0.05, cap_style=2) for n, (a, b, _) in cl.items()}
-    rings_h = {g: Point(C[g]).buffer(R_HEDGE + HEDGE_W / 2 - 0.1, 96) for g in C}
-    rings_e = {g: Point(C[g]).buffer(R_EDGE, 96) for g in C}
-    sq_h = Polygon([sq(-SQ_P - HEDGE_W + 0.1, -SQ_P - HEDGE_W + 0.1), sq(SQ_P + HEDGE_W - 0.1, -SQ_P - HEDGE_W + 0.1),
-                    sq(SQ_P + HEDGE_W - 0.1, SQ_P + HEDGE_W - 0.1), sq(-SQ_P - HEDGE_W + 0.1, SQ_P + HEDGE_W - 0.1)])
-    sq_e = Polygon([sq(-SQ_P + 0.1, -SQ_P + 0.1), sq(SQ_P - 0.1, -SQ_P + 0.1), sq(SQ_P - 0.1, SQ_P - 0.1), sq(-SQ_P + 0.1, SQ_P - 0.1)])
-    # --- paths + their hedges and edging ---
+
+    def corridor(a, b, half, back=1.5, fwd=0.0):
+        """Strip of half width `half` along a->b, reaching `back` m behind a (into the apron / square) and fwd past b."""
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        n = math.hypot(dx, dy)
+        ux, uy = dx / n, dy / n
+        return LineString([(a[0] - ux * back, a[1] - uy * back), (b[0] + ux * fwd, b[1] + uy * fwd)]).buffer(half, cap_style=2)
+
+    open_h = unary_union([corridor(a, b, HEDGE_OFF - HEDGE_W / 2, fwd=1.0) for a, b, _ in cl.values()])   # hedge-free
+    open_e = unary_union([corridor(a, b, EDGE_OFF - 0.05, fwd=1.0) for a, b, _ in cl.values()])           # edging-free
+    # --- paths ---
     for name, (a, b, st) in cl.items():
         new.append({"type": "path", "name": name, "line": [_r(a), _r(b)], "width": PATH_W, "thk": 0.08, "top": 0.016,
                     "confidence": "medium", "evidence": EV})
-        dx, dy = b[0] - a[0], b[1] - a[1]
-        n = math.hypot(dx, dy)
-        nx, ny = -dy / n, dx / n
-        others_h = unary_union([g for k, g in corr_h.items() if k != name])
-        others_e = unary_union([g for k, g in corr_e.items() if k != name])
-        block_h = unary_union([others_h, sq_h] + list(rings_h.values()))
-        block_e = unary_union([others_e, sq_e] + list(rings_e.values()))
-        for side, sg in (("L", 1), ("R", -1)):
-            for kind, off, keep, block, fn in (("Hedge", HEDGE_OFF, inner, block_h, hedge), ("Edging", EDGE_OFF, inner, block_e, edging)):
-                ln = LineString([(a[0] - dx / n * 3 + sg * nx * off, a[1] - dy / n * 3 + sg * ny * off),
-                                 (b[0] + dx / n * 3 + sg * nx * off, b[1] + dy / n * 3 + sg * ny * off)])
-                pieces = [q for q in _xy(ln.intersection(keep).difference(block)) if LineString(q).length > 0.3]
-                for k, q in enumerate(pieces):
-                    fn(f"{kind}_{name}_{side}" + (f"_{k}" if len(pieces) > 1 else ""), q)
-    # --- boundary: hedge - arch - hedge ---
-    hg = HEDGE_OFF - HEDGE_W / 2 + 0.02                         # half clear gap of an arch (path hedges butt onto its legs)
-    bl = LineString(list(hedge_c.exterior.coords))
-    cuts, arches = [], []
+    # --- ONE solid hedge mass (owner 2026-09-29: "сплошное везде"): boundary band + path hedge strips + gazebo ring
+    # bands + square frame, unioned, minus the path openings / aprons / square paving / arch slots; every connected piece
+    # (the hedge round one lawn bed) is one hedge element = footprint polygon with its bed as the hole ---
+    mass = [outer.difference(inner)]
     for name, (a, b, st) in cl.items():
-        if name.startswith(("G1_Link", "G2_Link")):
+        mass.append(corridor(a, b, HEDGE_OFF + HEDGE_W / 2, back=0.0, fwd=1.0).difference(corridor(a, b, HEDGE_OFF - HEDGE_W / 2, back=0.0, fwd=1.0)))
+    for g in C:
+        mass.append(Point(C[g]).buffer(R_HEDGE + HEDGE_W / 2, 96).difference(Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96)))
+    sqp = lambda h_: Polygon([sq(-h_, -h_), sq(h_, -h_), sq(h_, h_), sq(-h_, h_)])
+    mass.append(sqp(SQ_P + HEDGE_W).difference(sqp(SQ_P)))
+    solid = unary_union(mass).intersection(outer)
+    cut = [open_h, sqp(SQ_P)] + [Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96) for g in C]
+    # arches: in the boundary line (legs along the boundary, opening across it), clear span = the path opening measured
+    # along the boundary; the slot they stand in is cut from the mass so arch legs and hedge meet face to face
+    hg = HEDGE_OFF - HEDGE_W / 2 + 0.02
+    bl = LineString(list(hedge_c.exterior.coords))
+    arches = []
+    for name, (a, b, st) in cl.items():
+        if name.endswith("_Link"):
             continue
         x = LineString([a, b]).intersection(bl)
         if x.is_empty:
             continue
         x = x if isinstance(x, Point) else list(x.geoms)[0]
-        hd = math.atan2(b[1] - a[1], b[0] - a[0])
-        cuts.append(LineString([a, b]).buffer(hg + ARCH_T, cap_style=2))
+        sp = bl.project(x)
+        p0, p1 = bl.interpolate(max(0.0, sp - 0.5)), bl.interpolate(min(bl.length, sp + 0.5))
+        tx, ty = p1.x - p0.x, p1.y - p0.y
+        tl = math.hypot(tx, ty)
+        tx, ty = tx / tl, ty / tl                               # boundary tangent at the crossing
+        px, py = (b[0] - a[0]) / math.dist(a, b), (b[1] - a[1]) / math.dist(a, b)
+        sin = abs(tx * py - ty * px)
+        span = 2 * hg / max(sin, 0.5)
+        nx, ny = -ty, tx
+        if nx * px + ny * py < 0:
+            nx, ny = -nx, -ny                                   # opening axis = boundary normal, pointing outward
+        hw, hd_ = span / 2 + ARCH_T, HEDGE_W / 2 + 0.02
+        cut.append(Polygon([(x.x + tx * hw + nx * hd_, x.y + ty * hw + ny * hd_), (x.x - tx * hw + nx * hd_, x.y - ty * hw + ny * hd_),
+                            (x.x - tx * hw - nx * hd_, x.y - ty * hw - ny * hd_), (x.x + tx * hw - nx * hd_, x.y + ty * hw - ny * hd_)]))
         arches.append({"type": "hedge_arch", "name": f"Arch_Bnd_{name}", "center": _r((x.x, x.y)),
-                       "dir_deg": round(math.degrees(hd), 2), "span": round(2 * hg, 3), "thk": ARCH_T, "depth": HEDGE_W,
-                       "height": ARCH_H, "confidence": "medium", "evidence": EV})
-    pieces = _xy(bl.difference(unary_union(cuts)))
-    # merge the piece that wraps over the ring's start point
-    if len(pieces) > 1 and math.dist(pieces[0][0], pieces[-1][-1]) < 1e-6:
-        pieces = [pieces[-1] + pieces[0][1:]] + pieces[1:-1]
-    for k, q in enumerate(pieces):
-        if LineString(q).length > 0.2:
-            hedge(f"Hedge_Bnd_{k}", q, 1.04)
+                       "dir_deg": round(math.degrees(math.atan2(ny, nx)), 2), "span": round(span, 3), "thk": ARCH_T,
+                       "depth": HEDGE_W, "height": ARCH_H, "confidence": "medium", "evidence": EV})
+    solid = solid.difference(unary_union(cut)).buffer(0)
+    parts = [q for q in getattr(solid, "geoms", [solid]) if q.area > 0.05]
+    parts.sort(key=lambda q: (-q.centroid.y, q.centroid.x))
+    for k, q in enumerate(parts):
+        q = q.simplify(0.01)
+        new.append({"type": "hedge", "name": f"Hedge_Mass_{k}", "ring": [_r(c) for c in q.exterior.coords[:-1]],
+                    "holes": [[_r(c) for c in h_.coords[:-1]] for h_ in q.interiors], "height": HEDGE_H, "top": "flat",
+                    "confidence": "medium", "evidence": EV})
     new += arches
-    # --- gazebo ring hedge + edging, open only at the paths ---
-    for g in C:
-        for kind, r, block, fn in (("Hedge", R_HEDGE, unary_union(list(corr_h.values())), hedge),
-                                   ("Edging", R_EDGE, unary_union(list(corr_e.values())), edging)):
-            circle = LineString([(C[g][0] + r * math.cos(2 * math.pi * k / 96), C[g][1] + r * math.sin(2 * math.pi * k / 96)) for k in range(97)])
-            pieces = _xy(circle.difference(block))
-            if len(pieces) > 1 and math.dist(pieces[0][0], pieces[-1][-1]) < 1e-6:
-                pieces = [pieces[-1] + pieces[0][1:]] + pieces[1:-1]
+    # --- scalloped edging: both sides of every path, the gazebo rings and the square, open at every path mouth ---
+    edge_keep = inner.buffer(-0.05)
+    for name, (a, b, st) in cl.items():
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        n = math.hypot(dx, dy)
+        nx, ny = -dy / n, dx / n
+        others = unary_union([corridor(a2, b2, EDGE_OFF - 0.05, fwd=1.0) for k2, (a2, b2, _) in cl.items() if k2 != name]
+                             + [Point(C[g]).buffer(R_EDGE, 96) for g in C] + [sqp(SQ_P - 0.1)])
+        for side, sg in (("L", 1), ("R", -1)):
+            ln = LineString([(a[0] - dx / n * 3 + sg * nx * EDGE_OFF, a[1] - dy / n * 3 + sg * ny * EDGE_OFF),
+                             (b[0] + dx / n * 3 + sg * nx * EDGE_OFF, b[1] + dy / n * 3 + sg * ny * EDGE_OFF)])
+            pieces = [q for q in _xy(ln.intersection(edge_keep).difference(others)) if LineString(q).length > 0.3]
             for k, q in enumerate(pieces):
-                if LineString(q).length > 0.3:
-                    fn(f"{kind}_{g}_Ring_{k}", q)
-    # --- centre bench square: paving, hedge + edging open at the 4 paths, 4 benches (W/E sides), lamp in the middle ---
-    P = SQ_P
-    new.append({"type": "path", "name": "CentreSquare_Paving", "line": [_r(sq(-P, 0.0)), _r(sq(P, 0.0))], "width": 2 * P,
-                "thk": 0.08, "top": 0.022, "confidence": "medium", "evidence": EV})
-    hr, er = P + HEDGE_W / 2, P - 0.05
-    for kind, r, block, fn in (("Hedge", hr, unary_union(list(corr_h.values())), hedge), ("Edging", er, unary_union(list(corr_e.values())), edging)):
-        loop = LineString([sq(-r, -r), sq(r, -r), sq(r, r), sq(-r, r), sq(-r, -r)])
-        pieces = _xy(loop.difference(block))
+                edging(f"Edging_{name}_{side}" + (f"_{k}" if len(pieces) > 1 else ""), q)
+
+    def loop_pieces(coords, prefix):
+        pieces = _xy(LineString(coords).difference(open_e))
         if len(pieces) > 1 and math.dist(pieces[0][0], pieces[-1][-1]) < 1e-6:
             pieces = [pieces[-1] + pieces[0][1:]] + pieces[1:-1]
         for k, q in enumerate(pieces):
             if LineString(q).length > 0.3:
-                fn(f"CentreSquare_{kind}_{k}", q)
+                edging(f"{prefix}_{k}", q)
+    for g in C:
+        loop_pieces([(C[g][0] + R_EDGE * math.cos(2 * math.pi * k / 96), C[g][1] + R_EDGE * math.sin(2 * math.pi * k / 96))
+                     for k in range(97)], f"Edging_{g}_Ring")
+    er = SQ_P - 0.05
+    loop_pieces([sq(-er, -er), sq(er, -er), sq(er, er), sq(-er, er), sq(-er, -er)], "CentreSquare_Edging")
+    # --- centre square: paving, 4 benches (W/E sides, one each side of the link), lamp in the middle ---
+    P = SQ_P
+    new.append({"type": "path", "name": "CentreSquare_Paving", "line": [_r(sq(-P, 0.0)), _r(sq(P, 0.0))], "width": 2 * P,
+                "thk": 0.08, "top": 0.022, "confidence": "medium", "evidence": EV})
     hdg = math.degrees(th)
     bu = (PATH_W / 2 + 0.1 + P) / 2
+    blen = round(min(1.5, P - PATH_W / 2 - 0.3), 2)
     for side, nx_ in (("E", 1), ("W", -1)):
-        face = hdg + (180.0 if nx_ > 0 else 0.0)            # sitter faces the middle
+        face = hdg + (180.0 if nx_ > 0 else 0.0)
         for k, sgn in enumerate((-1, 1)):
             new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": _r(sq(nx_ * (P - 0.4), sgn * bu)),
-                        "dir_deg": round(face, 2), "length": 1.5, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium",
+                        "dir_deg": round(face, 2), "length": blen, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium",
                         "evidence": EV})
     new.append({"type": "lamp_orn", "name": "CentreSquare_Lamp", "pos": _r(SQ_C), "dir_deg": round(hdg, 2), "height": 3.2,
                 "cross": True, "arm_span": 0.8, "globe_d": 0.35, "base_box": [0.3, 0.3, 0.6], "confidence": "low",
                 "evidence": EV + " | owner: lamp post in the exact middle, 4 lamps (maybe 2)"})
-    # --- props outside the garden that hang on the boundary: east walk lamps, SE arch map board ---
+
+    # --- props that hang on the boundary: east walk lamps, SE arch map board ---
     def outside(p, dist):
-        """Point p pushed to `dist` m outside the boundary hedge's outer face (nearest point on it)."""
         q = outer.exterior.interpolate(outer.exterior.project(Point(p)))
-        cx, cy = outer.centroid.x, outer.centroid.y
-        vx, vy = q.x - cx, q.y - cy
-        seg = [c for c in zip(outer.exterior.coords[:-1], outer.exterior.coords[1:])
-               if LineString(c).distance(q) < 1e-6][0]
+        seg = [c for c in zip(outer.exterior.coords[:-1], outer.exterior.coords[1:]) if LineString(c).distance(q) < 1e-6][0]
         tx, ty = seg[1][0] - seg[0][0], seg[1][1] - seg[0][1]
         tl = math.hypot(tx, ty)
         nx_, ny_ = ty / tl, -tx / tl
-        if nx_ * vx + ny_ * vy < 0:
+        if nx_ * (q.x - outer.centroid.x) + ny_ * (q.y - outer.centroid.y) < 0:
             nx_, ny_ = -nx_, -ny_
         return [round(q.x + nx_ * dist, 3), round(q.y + ny_ * dist, 3)]
     for n in ("Lamp_EastWalk_0", "Lamp_EastWalk_1"):
@@ -247,7 +277,7 @@ def main():
         se = next(a_ for a_ in arches if a_["name"] == "Arch_Bnd_G2_SE")
         tx, ty = outer_lines[2][0][0] - vse[0], outer_lines[2][0][1] - vse[1]
         tl = math.hypot(tx, ty)
-        by["Signboard_Arch"]["pos"] = outside((se["center"][0] + tx / tl * 1.6, se["center"][1] + ty / tl * 1.6), 0.6)
+        by["Signboard_Arch"]["pos"] = outside((se["center"][0] + tx / tl * (se["span"] / 2 + 1.2), se["center"][1] + ty / tl * (se["span"] / 2 + 1.2)), 0.6)
     keep = [e for e in E if e["name"] not in old]
     i = next(k for k, e in enumerate(keep) if e["name"] == "Gazebo_2") + 1
     keep[i:i] = new
@@ -255,10 +285,13 @@ def main():
     d["note"] = re.sub(r" \| boundary v2:.*$", "", d.get("note", "")) + " | boundary v2: measured 7-sided outline " + \
         str([_r(p) for p in ring])
     json.dump(d, open(SPEC, "w"), indent=1, ensure_ascii=False)
-    print(f"garden v2: removed {len(old)}, wrote {len(new)}; outline {[_r(p) for p in ring]}; arches {len(arches)}; "
-          f"outer area {outer.area:.0f} m2")
+    print(f"garden v2: removed {len(old)}, wrote {len(new)}; hedge masses {len(parts)} (holes {sum(len(q.interiors) for q in parts)}); "
+          f"arches {len(arches)}; outer area {outer.area:.0f} m2")
     for n, (a, b, st) in cl.items():
         print(f"  {n:12s} {_r(a)} -> {_r(b)}  hd {math.degrees(math.atan2(b[1] - a[1], b[0] - a[0])):7.2f}  len {math.dist(a, b):5.2f}")
+    json.dump({"outline": [_r(p) for p in ring], "gazebos": C, "square": [SQ_C, SQ_P, THETA],
+               "paths": {n: [_r(a), _r(b)] for n, (a, b, _) in cl.items()}},
+              open(os.path.join(os.path.dirname(SPEC), "..", "Audit", "garden_v2_layout.json"), "w"), indent=1)
 
 
 if __name__ == "__main__":

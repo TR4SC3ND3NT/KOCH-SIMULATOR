@@ -287,7 +287,29 @@ class Site:
     def b_hedge(self, el):
         bm = bmesh.new()
         rt = el.get("top", "round") == "round"
-        if "ring" in el:
+        if "ring" in el and "holes" in el:
+            # one solid hedge mass: footprint polygon with holes (a lawn bed), flat top h over the ground at every
+            # vertex; rings are densified to 0.5 m so the base follows the terrain (garden, zone_garden.py v2)
+            h = el["height"]
+            loops = [_dense(_ccw(el["ring"]), 0.5)] + [_dense(_ccw(q)[::-1], 0.5) for q in el["holes"]]
+            from mathutils.geometry import tessellate_polygon
+            flat = [q for lp in loops for q in lp]
+            tris = tessellate_polygon([[(x, y, 0.0) for x, y in lp] for lp in loops])
+            lo = [bm.verts.new((x, y, self.gz(x, y) - BURY)) for x, y in flat]
+            hi = [bm.verts.new((x, y, self.gz(x, y) + h)) for x, y in flat]
+            for i, j, k in tris:
+                bm.faces.new((hi[i], hi[j], hi[k]))
+                bm.faces.new((lo[k], lo[j], lo[i]))
+            k0 = 0
+            for lp in loops:
+                n = len(lp)
+                for i in range(n):
+                    j = (i + 1) % n
+                    bm.faces.new((lo[k0 + i], lo[k0 + j], hi[k0 + j], hi[k0 + i]))
+                k0 += n
+            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+            p = el["ring"][0]
+        elif "ring" in el:
             ring = _ccw(el["ring"])
             h = el["height"]
             inset = 0.12 if rt else 0.0
@@ -1209,6 +1231,16 @@ def _slab_with_holes(bm, ring, holes, z0, z1):
             j = (i + 1) % n
             bm.faces.new((lo[k + i], lo[k + j], hi[k + j], hi[k + i]))
         k += n
+
+
+def _dense(ring, step):
+    """Closed ring with extra points so no edge is longer than step (m)."""
+    out = []
+    for i in range(len(ring)):
+        (x0, y0), (x1, y1) = ring[i], ring[(i + 1) % len(ring)]
+        n = max(1, int(math.ceil(math.hypot(x1 - x0, y1 - y0) / step)))
+        out += [[x0 + (x1 - x0) * t / n, y0 + (y1 - y0) * t / n] for t in range(n)]
+    return out
 
 
 def _ccw(r):

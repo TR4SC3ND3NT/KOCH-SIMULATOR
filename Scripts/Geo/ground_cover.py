@@ -27,7 +27,10 @@ LEAN = (0.29, 0.20)        # Google z20 roof displacement per metre of height (x
 MIN_LAWN, MIN_PAVE = 4.0, 3.0   # m2: smaller islands are merged into the surrounding class
 PAVE_SLOT, LAWN_SLOT = "M_Paver_Clover_Grey", "M_Ground_Grass"
 # garden inside its boundary hedge (SITE_Garden: lawns + path/hedge objects; tree shadows make the ortho unreliable)
-LAWN_ONLY = [[(104.0, -56.5), (151.5, -58.5), (153.5, -9.0), (104.5, -7.5)]]
+LAWN_ONLY = [[(104.0, -56.5), (151.5, -58.5), (153.5, -9.0), (104.5, -7.5)],
+             # measured 7-sided garden outline (zone_garden.py v2), 0.1 m outside the boundary hedge
+             [(100.5, -9.73), (158.39, -13.66), (156.99, -39.03), (153.55, -44.69), (150.4, -46.76), (103.02, -45.08),
+              (98.7, -36.9)]]
 # construction yard east of Block D (bare earth and rubble on the 2026 ortho): its own dirt ring, not paving
 DIRT = [[(1.0, 21.0), (50.0, 23.5), (49.0, 80.0), (0.0, 77.0)]]
 DIRT_SLOT = "M_Ground_Dirt"

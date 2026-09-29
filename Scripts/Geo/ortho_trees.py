@@ -78,6 +78,8 @@ def run_zone(name, z, img_full, meta, debug_dir):
         for e in json.load(open(os.path.join(SPECS, z["clear_spec"] + ".json")))["elements"]:
             if e["type"] in ("path", "hedge", "wall") and e.get("line"):
                 lines.append(LineString(e["line"]).buffer(CLEAR + e.get("width", 0.3) / 2))
+            elif e["type"] == "hedge" and e.get("ring"):   # solid hedge mass (footprint polygon, lawn beds as holes)
+                lines.append(Polygon(e["ring"], e.get("holes", [])).buffer(CLEAR - 0.3))
             elif e["type"] == "gazebo":
                 blocks.append(Point(e["center"]).buffer(e.get("across_flats", 7.7) / 2 + 1.0))
                 roofs.append(Point(e["center"]).buffer(e.get("across_flats", 7.7) / 2 + e.get("overhang", 0.8)))
