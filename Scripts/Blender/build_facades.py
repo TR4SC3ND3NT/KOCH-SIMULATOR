@@ -1225,6 +1225,20 @@ class Building:
         bsm = self.s.get("basement")
         if bsm and not bsm.get("slab_by_interior"):   # an INT_* spec models the basement floors itself (no coplanar double)
             slabs.append((bsm["floor_z"] - bsm["slab_t"], bsm["floor_z"]))
+        # upper floor plates of a shell without an interior spec: without them every upper window looks into a void
+        # down to the ground floor. A plate that would cut a window/door opening is skipped (reported).
+        if not self.s.get("interior_floors") and self.s.get("storey_slabs", True):
+            ops = [o for i in range(len(self.edges)) for o, _t, _w in self.openings_for(i)[0]]
+            st = self.s["storey_m"]
+            for k in range(1, int(self.s["storeys"])):
+                z1 = st * k
+                z0 = z1 - self.s.get("floor_slab_t", 0.25)
+                if z1 > self.s["eave_z"] - 0.3:
+                    break
+                if any(o.z0 < z1 and o.z1 > z0 for o in ops):
+                    print(f"  {self.id}: storey {k + 1} floor plate skipped (cuts an opening)")
+                    continue
+                slabs.append((z0, z1))
         for z0, z1 in slabs:
             lo = [bm.verts.new((x, y, z0)) for x, y in inner]
             hi = [bm.verts.new((x, y, z1)) for x, y in inner]
@@ -1233,7 +1247,9 @@ class Building:
                 bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
             bm.faces.new(list(reversed(lo)))
             bm.faces.new(hi)
-        self.obj("Slabs", bm, (0.6, 0.6, 0.6, 1), "closing slabs; floor plates come with the interior")
+        ob = self.obj("Slabs", bm, (0.6, 0.6, 0.6, 1), "closing slabs; floor plates come with the interior")
+        if ob is not None:
+            ob["koch_ffl"] = self.ffl   # ground floor level (campus z), read by walk_qa / UE placement
 
 
 def _box_kind(name):
