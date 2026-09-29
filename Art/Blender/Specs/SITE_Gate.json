@@ -129,8 +129,8 @@
      -97.01
     ],
     [
-     156.102,
-     -97.06
+     155.28,
+     -97.018
     ]
    ],
    "height": 1.1,
@@ -138,24 +138,42 @@
    "post": 0.04,
    "panel": "bars",
    "bottom_gap": 0.08,
-   "evidence": "short railing on the gate line between the gate post and the turnstile so all walkers pass the tripod (061913764 f2.5; exact run not seen straight on) | starts one post (4 cm) east of LaneRail_West's corner post (no doubled post)",
+   "evidence": "short railing on the gate line between the gate post and the turnstile so all walkers pass the tripod (061913764 f2.5; exact run not seen straight on) | starts one post (4 cm) east of LaneRail_West's corner post (no doubled post) | 2026-09-29 shortened to the west turnstile unit (2 units now)",
    "confidence": "low"
   },
   {
    "type": "turnstile",
-   "name": "Turnstile",
+   "name": "Turnstile_In",
    "pos": [
-    156.664,
-    -97.239
+    156.875,
+    -97.269
    ],
    "dir_deg": 87.1,
    "count": 1,
    "passage_w": 0.55,
    "height": 1.0,
-   "housing_w": 0.3,
+   "housing_w": 0.25,
    "housing_l": 0.8,
-   "evidence": "stainless tripod turnstile with green arrow indicators + 2 face-recognition terminals on poles (065910461 f5.5/f7.5, 070021774 f0.3); one passage, housing near the booth NW corner (pano 2022); black steel bag rest on the booth wall beside it. Standard tripod: body 1.0 m, arm 0.5-0.55 m",
-   "confidence": "medium"
+   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; IN lane = the east one, next to the guard's service window (assumed, lane sides not seen)",
+   "confidence": "medium",
+   "ue_logic": "turnstile_in"
+  },
+  {
+   "type": "turnstile",
+   "name": "Turnstile_Out",
+   "pos": [
+    155.805,
+    -97.215
+   ],
+   "dir_deg": 87.1,
+   "count": 1,
+   "passage_w": 0.55,
+   "height": 1.0,
+   "housing_w": 0.25,
+   "housing_l": 0.8,
+   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; OUT lane = the west one, beside the sliding gate",
+   "confidence": "medium",
+   "ue_logic": "turnstile_out"
   },
   {
    "type": "fence",
@@ -576,19 +594,52 @@
    "confidence": "low"
   },
   {
-   "type": "sign",
-   "name": "FaceTerminal_Turnstile",
-   "pos": [
-    156.4,
-    -96.75
+   "type": "wall",
+   "name": "FaceTerminal_In",
+   "line": [
+    [
+     158.6,
+     -101.2
+    ],
+    [
+     160.4,
+     -101.3
+    ]
    ],
-   "dir_deg": 87.1,
-   "w": 0.25,
-   "h": 0.4,
-   "t": 0.05,
-   "z0": 1.25,
-   "evidence": "face-recognition terminal on a pole at the turnstile entry (070021774 f0, 065910461); pole omitted",
-   "confidence": "low"
+   "height": 0.45,
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street)",
+   "confidence": "medium",
+   "pos": [
+    157.275,
+    -97.819
+   ],
+   "dir_deg": 267.1
+  },
+  {
+   "type": "wall",
+   "name": "FaceTerminal_Out",
+   "line": [
+    [
+     158.6,
+     -101.2
+    ],
+    [
+     160.4,
+     -101.3
+    ]
+   ],
+   "height": 0.45,
+   "thk": 0.06,
+   "material": "metal",
+   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus)",
+   "confidence": "medium",
+   "pos": [
+    155.405,
+    -96.665
+   ],
+   "dir_deg": 87.1
   },
   {
    "type": "wall",
@@ -1343,6 +1394,34 @@
    "slot": "M_Steel_Paint_Dark",
    "evidence": "owner 2026-09-28 (overview sketch): the black bar fence of the east edge runs on straight from the sports east fence (SITE_Sports EastBoundary_Fence, u 100.5) south past the A east lot to the street, then west along the street to the gate's east fence (Fence_East end); the OSM neighbour 169915330 moved 1.6 m east to clear it; height 2.0 as the sports part",
    "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "FaceTerminal_In_Pole",
+   "pos": [
+    157.275,
+    -97.819
+   ],
+   "height": 1.2,
+   "head": "none",
+   "pole_r": 0.03,
+   "slot": "M_Steel_Galv",
+   "evidence": "pole of FaceTerminal_In",
+   "confidence": "medium"
+  },
+  {
+   "type": "lamp",
+   "name": "FaceTerminal_Out_Pole",
+   "pos": [
+    155.405,
+    -96.665
+   ],
+   "height": 1.2,
+   "head": "none",
+   "pole_r": 0.03,
+   "slot": "M_Steel_Galv",
+   "evidence": "pole of FaceTerminal_Out",
+   "confidence": "medium"
   }
  ],
  "ground_surfaces": [

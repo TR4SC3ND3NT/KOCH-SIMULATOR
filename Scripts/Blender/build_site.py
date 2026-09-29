@@ -589,7 +589,7 @@ class Site:
         if el.get("head", "ball") == "ball":
             bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=0.18,
                                       matrix=Matrix.Translation((P.x, P.y, z + h + 0.16)))
-        else:
+        elif el["head"] != "none":  # "none": a bare pole (e.g. under a face terminal)
             box(bm, Matrix.Translation((P.x, P.y, 0)), -0.15, 0.15, -0.15, 0.15, z + h, z + h + 0.35)
         self.emit(el, bm, COL["metal"], (P.x, P.y, z))
 

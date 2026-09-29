@@ -667,6 +667,86 @@
    "back_h": 0.85,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
    "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "CEast_Landing",
+   "ring": [
+    [
+     205.223,
+     3.492
+    ],
+    [
+     206.522,
+     3.44
+    ],
+    [
+     206.618,
+     5.838
+    ],
+    [
+     205.319,
+     5.89
+    ]
+   ],
+   "z0": 4.5,
+   "z1": 6.4,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured",
+   "confidence": "medium"
+  },
+  {
+   "type": "stairs_run",
+   "name": "CEast_Stair",
+   "top": [
+    205.923,
+    3.464
+   ],
+   "dir_deg": -92.284,
+   "width": 1.2,
+   "risers": 10,
+   "riser_h": 0.17,
+   "tread": 0.3,
+   "z_top": 6.4,
+   "top_flush": true,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured",
+   "confidence": "medium"
+  },
+  {
+   "type": "rail3d",
+   "name": "CEast_Rail",
+   "unique_posts": true,
+   "height": 0.9,
+   "spacing": 1.2,
+   "mid_rails": 1,
+   "material": "metal",
+   "points": [
+    [
+     205.417,
+     5.846,
+     6.4
+    ],
+    [
+     206.576,
+     5.8,
+     6.4
+    ],
+    [
+     206.482,
+     3.442,
+     6.4
+    ],
+    [
+     206.375,
+     0.744,
+     4.87
+    ]
+   ],
+   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight)",
+   "confidence": "medium"
   }
  ],
  "ground_surfaces": [

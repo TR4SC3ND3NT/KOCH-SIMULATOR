@@ -33,6 +33,9 @@ for fn in sorted(os.listdir(SPECS)):
         continue
     spec = json.load(open(os.path.join(SPECS, fn)))
     pref = "GBS_" + spec["id"].replace("SITE_", "").replace("INT_", "") + "_"
+    # a flight whose foot is the top of the next flight (chained flights): the probe lands on that flight's treads
+    tops = {e["name"]: e["z_top"] for e in spec.get("elements", []) if e.get("type") == "stairs_run" and "z_top" in e}
+    chained = lambda o, zf: any(o and o.endswith(n) and abs(zt - zf) <= TOL for n, zt in tops.items())
     for el in spec.get("elements", []):
         if el.get("type") not in ("stairs_run",) or "z_top" not in el:
             continue
@@ -49,7 +52,7 @@ for fn in sorted(os.listdir(SPECS)):
         for tag, zexp, z, o in (("foot", z_foot, zf, of), ("top", z_top, zt, ot)):
             if z is None:
                 rows.append((fn[:-5], nm, tag, zexp, None, None, "NO SURFACE"))
-            elif abs(z - zexp) > TOL:
+            elif abs(z - zexp) > TOL and not (tag == "foot" and chained(o, zexp)):
                 rows.append((fn[:-5], nm, tag, round(zexp, 3), round(z, 3), round(z - zexp, 3), o))
 print("STAIRS checked; mismatches > %.2f m: %d" % (TOL, len(rows)))
 for r in rows:
