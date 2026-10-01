@@ -171,8 +171,8 @@ def ceilings(k, zb, open_bays):
             for i, (c0, c1) in enumerate(zip(cuts, cuts[1:])):
                 h0, h1 = hall((c0 + c1) / 2)
                 sub = f"{pn}{'' if len(cuts) == 2 else '_' + str(i)}"
-                for nm, ya, yb, zc in ((sub + "_S", a, min(b, h0), CEIL), (sub + "_Hall", max(a, h0), min(b, h1), cor_ceil_of(k)),
-                                       (sub + "_N", max(a, h1), b, CEIL)):
+                for nm, ya, yb, zc in ((sub + "_S", a, min(b, h0 - PART), CEIL), (sub + "_Hall", max(a, h0), min(b, h1), cor_ceil_of(k)),
+                                       (sub + "_N", max(a, h1 + PART), b, CEIL)):
                     if yb - ya > 0.01:
                         els.append(slab(f"F{k}_Ceiling_{nm}", c0, c1, ya, yb, zb + zc, zb + zc + 0.02, "white", slot="M_Ceiling_Tile_600",
                                         **ev(f"600x600 lay-in grid ceiling at {zc:.2f} m ({'corridor' if 'Hall' in nm else 'reference room'})")))
@@ -740,16 +740,17 @@ def extra_rooms(k, zb):
     els = []
     dk = ev("owner room list 2026-10-01; layout assumed (not photographed)", "low")
 
-    def frame(x0, y0, ux, vy):
-        return lambda u, v: (x0 + ux * u, y0 + vy * v)
+    def frame(x0, y0, du, dv):
+        return lambda u, v: (x0 + du[0] * u + dv[0] * v, y0 + du[1] * u + dv[1] * v)
 
     def ang(dx, dy):
         return math.degrees(math.atan2(dx * C_X[1] + dy * C_Y[1], dx * C_X[0] + dy * C_Y[0]))
     rooms = []
+    cw = (HW0 + HW1) / 2
     # over the lobby: u east from the P2 partition face, v south from the door (hall) wall face; board on the east wall
-    rooms.append((f"{k}09", frame(P2 + PART / 2, HW0 - PART, 1, -1), (1, 0), (0, -1), LOBBY_W, HW0 - PART - Y_SE, "director" if k == 4 else "class"))
+    rooms.append((f"{k}09", frame(P2 + PART / 2, HW0 - PART, (1, 0), (0, -1)), (1, 0), (0, -1), LOBBY_W, HW0 - PART - Y_SE, "director" if k == 4 else "class"))
     if k == 4:   # west-end room: u north from the south hall wall, v west from its front wall; board on the north wall
-        rooms.append(("410", frame(FRONT_W + 0.4 - PART, HW0, 0, 1), (0, 1), (-1, 0), COR, FRONT_W + 0.4 - PART - X_W, "class"))
+        rooms.append(("410", frame(FRONT_W + 0.4 - PART, HW0, (0, 1), (-1, 0)), (0, 1), (-1, 0), COR, FRONT_W + 0.4 - PART - X_W, "class"))
     for num, to_c, du, dv, L, D, kind in rooms:
         R = f"F{k}_R{num}_"
         d_u, d_v = ang(*du), ang(*dv)
@@ -760,6 +761,36 @@ def extra_rooms(k, zb):
         W = lambda u, v: c_to_w(*to_c(u, v))
         els.append({"type": "box", "name": R + "Floor_Laminate", "center": W(L / 2, D / 2), "dir_deg": ang(*du), "size": [L, D, 0.01],
                     "z0": z(zb), "material": "white", "slot": "M_Laminate_Oak_Grey", **dk})
+        # outer wall (v = D) finish: white paint with the facade window openings, white reveals + boards; 600 lay-in grid
+        # with 2 LED panels (as the standard rooms). Windows: tower landing windows T 1.0 x 1.4 (BLD_C edge 2, sills
+        # 4.2 / 7.5 / 10.75 above the F1 FFL) over the lobby; west-end room: facade type W 1.85 x 1.40 at row F4 (1.05)
+        C = ceil_of(k)
+        if num == "410":
+            wins, ww, wsill, wh = [(cw - 0.9) - HW0, (cw + 1.4) - HW0], WIN_W, WIN_SILL, WIN_H
+        else:
+            wins, ww, wsill, wh = [X_TOWER0 + 0.92 - P2 - PART / 2, X_TOWER0 + 2.86 - P2 - PART / 2], 1.0, (4.2, 7.5, 10.75)[k - 2] - (k - 1) * STOREY, 1.40
+        rv = round(X_W - 0.16 - 0.07, 3)
+        it_ = lambda u0, u1, v0, v1, z0, z1: [*W((u0 + u1) / 2, (v0 + v1) / 2), d_u, round(u1 - u0, 4), round(abs(v1 - v0), 4), round(z1 - z0, 4), z(zb + z0)]
+        paint, trim, a_ = [], [], (0.0 if num == "410" else X_TOWER0 - P2 - PART / 2)   # over the lobby: the west 0.35 m notch has no wall at v = D
+        for wc in sorted(wins) + [None]:
+            o0, o1 = (L, L) if wc is None else (wc - ww / 2, wc + ww / 2)
+            if o0 - a_ > 0.005:
+                paint.append(it_(a_, o0, D - 0.006, D, 0.0, C + 0.01))
+            if wc is not None:
+                paint += [it_(o0, o1, D - 0.006, D, 0.0, wsill), it_(o0, o1, D - 0.006, D, wsill + wh, C + 0.01)]
+                trim += [it_(o0, o0 + 0.006, D, D + rv, wsill + 0.02, wsill + wh), it_(o1 - 0.006, o1, D, D + rv, wsill + 0.02, wsill + wh),
+                         it_(o0 + 0.006, o1 - 0.006, D, D + rv, wsill + wh - 0.006, wsill + wh), it_(o0, o1, D - 0.04, D + rv, wsill, wsill + 0.02)]
+            a_ = o1
+        els.append({"type": "boxes", "name": R + "OuterWall_Paint", "items": paint, "material": "white", "slot": "M_Paint_White", **dk})
+        els.append({"type": "boxes", "name": R + "Window_Trim", "items": trim, "material": "white", "slot": "M_PVC_White", **dk})
+        us = [0.30 + 0.60 * i for i in range(int((L - 0.3) / 0.6) + 1)]
+        vs = [0.30 + 0.60 * j for j in range(int((D - 0.3) / 0.6) + 1)]
+        seg = [[W(u, 0.0), W(u, D)] for u in us] + [[W(0.0, v), W(L, v)] for v in vs]
+        els.append({"type": "rails", "name": R + "CeilingGrid", "segments": seg, "width": 0.024, "height": 0.012, "z0": z(zb + C - 0.012), **dk})
+        for i, uc in enumerate((us[1] + 0.3, us[-3] + 0.3)):
+            vc = vs[len(vs) // 2 - 1] + 0.3
+            els.append({"type": "box", "name": R + f"LED_{i}", "center": W(uc, vc), "dir_deg": d_u, "size": [0.576, 0.576, 0.015],
+                        "z0": z(zb + C - 0.015), "material": "white", "slot": "M_LED_Panel_600", "ue_asset": "led_panel_600", **dk})
         if kind == "class":
             cols = [D * 0.27, D * 0.73] if D < 5.5 else [1.25, 3.15, 5.05]
             for r, uc in enumerate([1.00, 1.95, 2.90, 3.85][: max(2, int((L - 1.6) / 0.95))]):
