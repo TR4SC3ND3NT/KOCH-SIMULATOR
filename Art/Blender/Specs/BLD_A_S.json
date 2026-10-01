@@ -418,8 +418,9 @@
    "z0": 4.15,
    "z1": 4.45,
    "t": 0.03,
-   "evidence": "blue block name plate on the SW pilaster (pano intro, 2020)",
-   "confidence": "medium"
+   "evidence": "blue block name plate on the SW pilaster (pano intro, 2020) | 2026-10-01 QA: w0 0.06, on the pilaster face (it was buried in the 0.06 m pilaster)",
+   "confidence": "medium",
+   "w0": 0.06
   },
   {
    "type": "wall_boxes",
