@@ -12,18 +12,19 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 
 T = 0.60
-L, W = 5.77, 6.34          # back wall -> board wall (151: 5.765, 150: 5.74), window -> door wall (153: 6.338)
-# along x (back -> board wall): back bulkhead, cut, 8 full, cut (151/150 seams; 152 agrees on the board end)
-B_BACK, CUT_BACK, N_X, CUT_FRONT = 0.18, 0.27, 8, 0.52
-# along y (door -> window wall): door-wall bulkhead (151 0.275, 150 0.26, 153 0.287), cut 0.16, 9 full, window beam 0.50
-B_DOOR, CUT_DOOR, N_Y, B_WIN = 0.28, 0.16, 9, 0.50
-H_GRID, H_DOORBOX, H_BEAM = 2.89, 2.66, 2.69   # grid (151 2.90, 153 2.90, 150 2.87); undersides of the door box / window beam
-DOOR_X0, DOOR_W, DOOR_H = L - 0.45 - 0.92, 0.92, 1.98   # opening (wall face) 0.45 m from the board-wall corner (151)
-WINDOWS = [(0.63, 2.60), (3.24, 5.25)]          # wall-face reveal edges (152, referenced to the board wall)
-WIN_SILL, WIN_HEAD = 1.12, 2.54
-PILASTERS = [(0, 0, 0.15, 0.25, "0.15×0.25"),                    # back/door corner (150/151)
-             (0, W - 0.50, 0.25, 0.50, "0.25×0.50"),             # back/window corner, flush with the beam (152)
-             (L - 0.09, W - 0.58, 0.09, 0.58, "0.09×0.58")]      # board/window corner (153)
+# Reference (rounded) values for Blender/UE, all inside the measurement error; measured v6 values in comments.
+L, W = 5.80, 6.35          # back -> board wall (measured 5.74-5.85), window -> door wall (6.338)
+# along x (back -> board wall): back box, cut, 8 full, cut (measured 0.18 + 0.27 + 4.80 + 0.52)
+B_BACK, CUT_BACK, N_X, CUT_FRONT = 0.20, 0.28, 8, 0.52
+# along y (door -> window wall): door box, cut, 9 full, window beam (measured 0.28 + 0.16 + 5.40 + 0.50)
+B_DOOR, CUT_DOOR, N_Y, B_WIN = 0.30, 0.15, 9, 0.50
+H_GRID, H_DOORBOX, H_BEAM = 2.90, 2.65, 2.70   # grid (2.87-2.90); box / beam undersides (2.66 / 2.69)
+DOOR_X0, DOOR_W, DOOR_H = L - 0.45 - 0.90, 0.90, 2.00   # opening (wall face), 0.45 m from the board-wall corner (measured 1.98 x 0.92)
+WINDOWS = [(0.65, 2.65), (3.25, 5.25)]          # wall-face reveal edges (measured 0.63-2.60, 3.24-5.25)
+WIN_SILL, WIN_HEAD = 1.10, 2.55                 # measured 1.12 / 2.54; 0.15 m of wall up to the beam
+PILASTERS = [(0, 0, 0.15, 0.25, "0.15×0.25"),                    # back/door corner
+             (0, W - 0.50, 0.25, 0.50, "0.25×0.50"),             # back/window corner, flush with the beam
+             (L - 0.10, W - 0.60, 0.10, 0.60, "0.10×0.60")]      # board/window corner (measured 0.09 x 0.58)
 
 
 def main(out):
@@ -72,7 +73,7 @@ def main(out):
             ha="center", va="center", fontsize=9, color="#6a4a10")
     ax.text(B_BACK / 2, W / 2, f"короб сзади {B_BACK:.2f} м (низ ≈{H_DOORBOX:.2f})", rotation=90, ha="center", va="center",
             fontsize=9, color="#6a4a10")
-    ax.text(L - 0.06, W / 2 - 0.4, "стена с доской: короба нет\nТВ 70″ 1.58×0.87, доска 1.8×1.2", rotation=90, ha="right",
+    ax.text(L - 0.06, W / 2 - 0.4, "стена с доской: короба нет\nТВ 70″ 1.57×0.87, доска 1.8×1.2", rotation=90, ha="right",
             va="center", fontsize=9)
     area = L * W - sum(p[2] * p[3] for p in PILASTERS)
     vol = area * H_GRID - (B_DOOR * (H_GRID - H_DOORBOX) * L + B_BACK * (H_GRID - H_DOORBOX) * (W - B_DOOR - B_WIN)
@@ -95,7 +96,7 @@ def main(out):
     ia.text(DOOR_W + 0.16, DOOR_H / 2, f"{DOOR_H:.2f}", rotation=90, va="center", fontsize=9)
     ia.text(DOOR_W / 2, -0.12, "проём: пол → белый верх", ha="center", va="top", fontsize=8)
     ia.set_xlim(-0.3, DOOR_W + 0.4); ia.set_ylim(-0.35, 2.5)
-    ax.set_title("C105 — план сверху, v6: масштаб по проёму 1.98 (рост 185) = плитка 0.600 = ТВ 70″; длины ±3 см, высоты ±2 см",
+    ax.set_title("C105 — план сверху, v6 эталон (округлено в пределах точности замера)",
                  fontsize=13)
     ax.set_xlim(-1.7, L + 0.8); ax.set_ylim(-1.7, W + 0.6); ax.set_aspect("equal"); ax.axis("off")
     fig.savefig(out, dpi=110, bbox_inches="tight")

@@ -666,3 +666,4 @@ Every owner message goes here verbatim, with its time, before any work starts.
    - door 0.45 m from the board-wall corner; windows 1.97 and 2.01 wide, sill 1.12, head 2.54.
    - v3/v5 errors: width 6.13 (window beam taken as 0.28, it is 0.50), heights ~0.10 low.
 3. [ ] C204 room: only the door wall is measurable (door 1.98 × 0.92, box 0.28 deep, underside 2.63, grid 2.785); the rest needs straight-on wall photos.
+4. [x] Owner: round to real construction numbers, one reference for every standard classroom. C105 reference = 5.80 × 6.35, grid 2.90; door opening 0.90 × 2.00 (0.45 from the board corner); window beam 0.50 deep, underside 2.70; door box 0.30 / back box 0.20, undersides 2.65; windows 2 × 2.00 wide, sill 1.10, head 2.55, wall strip above 0.15; piers 0.40 / 0.60 / 0.45; pilasters 0.15×0.25, 0.25×0.50, 0.10×0.60. docs/reference/C105_etalon.png + C105_plan_v6.png.
