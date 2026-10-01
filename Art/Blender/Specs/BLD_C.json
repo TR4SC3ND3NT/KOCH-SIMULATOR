@@ -47,19 +47,19 @@
   ],
   [
    29.4,
-   20.3
+   21.1
   ],
   [
    14.7,
-   20.3
+   21.1
   ],
   [
    14.7,
-   19.0
+   19.8
   ],
   [
    0.0,
-   19.0
+   19.8
   ]
  ],
  "ring_notes": "west wing front y=0 projects 1.3 m before the tower and the east wing, which are FLUSH (y 1.3, collinear ring vertex at the tower/east-wing junction). 2026-09-26 photo match: 061621646 PnP (6.0 px, 26 window corners of both wings; scan of the west-wing offset: rms 6.0 px at 1.3 m, 25.9 px if the west wing were flush with the east wing, 47.6 px if flush with a 1.9 m tower) + the east corner line at y 1.3 lands on the maroon/beige edge at z 8 and 13.4 (a 0.6 m tower recess would put it 15-17 px off with a visible west-facing return, none seen); 061428331: one straight gutter over tower + east wing, the west wing eave and its maroon east return come forward; drone 2022 (mjF_12): eave step, west part ~1.4 m further south. The older 'tower recessed 0.6 m' (SfM -0.52) was wrong. North wall position from the west facade width (5.22 storeys). | 2026-10-01 plan v6 (c_shell_v6.py): reference classrooms 5.80 x 6.35, corridor 5.0: depth 19.0 / 20.3 m from the interior (2 x 6.35 rooms + 5.0 corridor + walls); the north front steps 1.3 m at the WC mid wall (rooms 6.35 deep on both sides). The west facade read 5.22 storeys (17.2 m); the interior wins (owner 2026-09-29: interior sizes over satellite/facade)",
@@ -96,8 +96,8 @@
   },
   {
    "edge": 8,
-   "u0": 17.8,
-   "u1": 19.0,
+   "u0": 18.6,
+   "u1": 19.8,
    "proj": 0.03,
    "z0": -0.05,
    "z1": 13.4,
@@ -301,7 +301,7 @@
      "type": "W",
      "u": [
       3.625,
-      15.375,
+      16.175,
       10.95
      ],
      "rows": [
@@ -425,8 +425,8 @@
      "type": "W",
      "u": [
       3.625,
-      10.4,
-      15.375
+      10.8,
+      16.175
      ],
      "rows": [
       "F1",
@@ -438,7 +438,7 @@
     {
      "type": "W",
      "u": [
-      8.1
+      8.5
      ],
      "rows": [
       "F3",
@@ -488,8 +488,8 @@
    {
     "edge": 4,
     "u": [
-     7.53,
-     14.1
+     7.85,
+     14.69
     ]
    }
   ],
@@ -638,7 +638,7 @@
    "name": "WestShed",
    "edge": 8,
    "u0": 0.0,
-   "u1": 18.55,
+   "u1": 19.35,
    "depth": 5.8,
    "z_high": 1.0,
    "z_low": -0.15,
@@ -713,8 +713,8 @@
    "type": "downpipe",
    "edge": 8,
    "u": [
-    18.13,
-    18.88
+    18.93,
+    19.68
    ],
    "z0": 1.2,
    "z1": 13.3,
@@ -728,7 +728,7 @@
    "edge": 8,
    "items": [
     [
-     18.0,
+     18.8,
      2.95,
      0.12,
      0.12,

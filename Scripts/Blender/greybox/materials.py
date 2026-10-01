@@ -28,7 +28,8 @@ PALETTE = {
     "M_Ground_Grass": (0.36, 0.45, 0.27, 1), "M_Tile_Beige": (0.86, 0.80, 0.68, 1),
     "M_Laminate_White": (0.94, 0.94, 0.93, 1), "M_Ceiling_Tile_600": (0.95, 0.95, 0.94, 1),
     "M_Ceiling_Grid_White": (0.90, 0.90, 0.90, 1), "M_LED_Panel_600": (1.0, 1.0, 0.97, 1),
-    "M_Tile_Floor_600": (0.74, 0.72, 0.68, 1), "M_Tile_Grout": (0.82, 0.81, 0.78, 1), "M_Paint_Sage": (0.58, 0.69, 0.55, 1), "M_PVC_Ceiling_Panel": (0.95, 0.95, 0.95, 1),
+    "M_Tile_Floor_600": (0.74, 0.72, 0.68, 1), "M_Tile_Grout": (0.82, 0.81, 0.78, 1), "M_Paint_Sage": (0.58, 0.69, 0.55, 1), "M_Laminate_Oak_Grey": (0.55, 0.50, 0.45, 1), "M_Laminate_Beech_Orange": (0.80, 0.42, 0.20, 1),
+    "M_Plastic_Orange": (0.78, 0.40, 0.18, 1), "M_Wood_Oak_Light": (0.66, 0.52, 0.36, 1), "M_Fabric_Curtain_Brown": (0.33, 0.25, 0.22, 1), "M_PVC_Ceiling_Panel": (0.95, 0.95, 0.95, 1),
     "M_PVC_Anthracite": (0.21, 0.22, 0.24, 1), "M_Chrome": (0.80, 0.81, 0.83, 1), "M_Radiator_White": (0.95, 0.95, 0.94, 1),
 }
 
