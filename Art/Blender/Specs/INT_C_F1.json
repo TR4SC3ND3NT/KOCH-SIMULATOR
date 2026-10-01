@@ -2199,278 +2199,508 @@
   },
   {
    "type": "desk_row",
-   "name": "F1_R107_Desks_0",
-   "depth": 0.6,
+   "name": "F1_R107_Desk_00",
    "pos": [
-    176.369948,
-    2.721243
+    174.934008,
+    1.847777
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R107_PCs_0",
-   "pos": [
-    176.369948,
-    2.721243
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R107_Chairs_0",
+   "name": "F1_R107_Chair_00",
    "pos": [
-    176.345241,
-    2.101739
+    174.514344,
+    1.864514
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R107_Desks_1",
-   "depth": 0.6,
+   "name": "F1_R107_Desk_01",
    "pos": [
-    176.29503,
-    0.842747
+    174.858292,
+    -0.050703
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R107_PCs_1",
-   "pos": [
-    176.29503,
-    0.842747
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R107_Chairs_1",
+   "name": "F1_R107_Chair_01",
    "pos": [
-    176.319737,
-    1.462251
+    174.438629,
+    -0.033966
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R107_Desks_2",
-   "depth": 0.6,
+   "name": "F1_R107_Desk_02",
    "pos": [
-    176.27112,
-    0.243227
+    174.782578,
+    -1.949183
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R107_PCs_2",
-   "pos": [
-    176.27112,
-    0.243227
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R107_Chairs_2",
+   "name": "F1_R107_Chair_02",
    "pos": [
-    176.246413,
-    -0.376277
+    174.362914,
+    -1.932446
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R107_Desks_3",
-   "depth": 0.6,
+   "name": "F1_R107_Desk_10",
    "pos": [
-    176.197398,
-    -1.605293
+    175.883248,
+    1.80992
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R107_PCs_3",
-   "pos": [
-    176.197398,
-    -1.605293
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R107_Chairs_3",
+   "name": "F1_R107_Chair_10",
    "pos": [
-    176.222105,
-    -0.985789
+    175.463584,
+    1.826657
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R107_Desks_4",
-   "depth": 0.6,
+   "name": "F1_R107_Desk_11",
    "pos": [
-    176.173488,
-    -2.204813
+    175.807532,
+    -0.08856
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R107_PCs_4",
-   "pos": [
-    176.173488,
-    -2.204813
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R107_Chairs_4",
+   "name": "F1_R107_Chair_11",
    "pos": [
-    176.148781,
-    -2.824317
+    175.387869,
+    -0.071823
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_12",
+   "pos": [
+    175.731818,
+    -1.98704
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_12",
+   "pos": [
+    175.312154,
+    -1.970303
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_20",
+   "pos": [
+    176.832488,
+    1.772062
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_20",
+   "pos": [
+    176.412824,
+    1.7888
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_21",
+   "pos": [
+    176.756772,
+    -0.126418
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_21",
+   "pos": [
+    176.337109,
+    -0.109681
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_22",
+   "pos": [
+    176.681058,
+    -2.024897
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_22",
+   "pos": [
+    176.261394,
+    -2.00816
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_30",
+   "pos": [
+    177.781728,
+    1.734205
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_30",
+   "pos": [
+    177.362064,
+    1.750942
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_31",
+   "pos": [
+    177.706012,
+    -0.164275
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_31",
+   "pos": [
+    177.286348,
+    -0.147538
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R107_Desk_32",
+   "pos": [
+    177.630298,
+    -2.062755
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R107_Chair_32",
+   "pos": [
+    177.210634,
+    -2.046018
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
    "name": "F1_R107_TeacherDesk",
    "pos": [
-    178.871328,
-    -2.312408
+    178.57356,
+    -2.250492
    ],
    "depth": 0.6,
-   "dir_deg": -2.2838545045845304,
-   "face": -1,
+   "slot": "M_Wood_Oak_Light",
+   "ue_asset": "teacher_desk_oak_steel_1200",
+   "dir_deg": 267.7161454954155,
+   "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R107_TeacherPC",
-   "pos": [
-    178.871328,
-    -2.312408
-   ],
-   "dir_deg": -2.2838545045845304,
-   "face": -1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
    "name": "F1_R107_TeacherChair",
    "pos": [
-    178.84662,
-    -2.931912
+    179.12312,
+    -2.27241
+   ],
+   "ue_asset": "office_chair_iso_black",
+   "dir_deg": 267.7161454954155,
+   "face": 1,
+   "n": 1,
+   "pitch": 1.2,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R107_Curtain_0L",
+   "center": [
+    175.830077,
+    -3.161882
    ],
    "dir_deg": -2.2838545045845304,
-   "face": -1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R107_Curtain_0R",
+   "center": [
+    177.778517,
+    -3.23959
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
@@ -3193,278 +3423,548 @@
   },
   {
    "type": "desk_row",
-   "name": "F1_R108_Desks_0",
-   "depth": 0.6,
+   "name": "F1_R108_Desk_00",
    "pos": [
-    182.365148,
-    2.482143
+    180.929208,
+    1.608677
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R108_PCs_0",
-   "pos": [
-    182.365148,
-    2.482143
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R108_Chairs_0",
+   "name": "F1_R108_Chair_00",
    "pos": [
-    182.340441,
-    1.862639
+    180.509544,
+    1.625414
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R108_Desks_1",
-   "depth": 0.6,
+   "name": "F1_R108_Desk_01",
    "pos": [
-    182.29023,
-    0.603647
+    180.853493,
+    -0.289803
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R108_PCs_1",
-   "pos": [
-    182.29023,
-    0.603647
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R108_Chairs_1",
+   "name": "F1_R108_Chair_01",
    "pos": [
-    182.314937,
-    1.223151
+    180.433828,
+    -0.273066
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R108_Desks_2",
-   "depth": 0.6,
+   "name": "F1_R108_Desk_02",
    "pos": [
-    182.26632,
-    0.004127
+    180.777778,
+    -2.188283
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R108_PCs_2",
-   "pos": [
-    182.26632,
-    0.004127
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R108_Chairs_2",
+   "name": "F1_R108_Chair_02",
    "pos": [
-    182.241613,
-    -0.615377
+    180.358114,
+    -2.171546
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R108_Desks_3",
-   "depth": 0.6,
+   "name": "F1_R108_Desk_10",
    "pos": [
-    182.192598,
-    -1.844393
+    181.878448,
+    1.57082
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R108_PCs_3",
-   "pos": [
-    182.192598,
-    -1.844393
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R108_Chairs_3",
+   "name": "F1_R108_Chair_10",
    "pos": [
-    182.217304,
-    -1.224889
+    181.458784,
+    1.587557
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R108_Desks_4",
-   "depth": 0.6,
+   "name": "F1_R108_Desk_11",
    "pos": [
-    182.168688,
-    -2.443913
+    181.802733,
+    -0.32766
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R108_PCs_4",
-   "pos": [
-    182.168688,
-    -2.443913
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R108_Chairs_4",
+   "name": "F1_R108_Chair_11",
    "pos": [
-    182.14398,
-    -3.063417
+    181.383068,
+    -0.310923
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_12",
+   "pos": [
+    181.727018,
+    -2.22614
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_12",
+   "pos": [
+    181.307354,
+    -2.209403
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_20",
+   "pos": [
+    182.827688,
+    1.532962
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_20",
+   "pos": [
+    182.408024,
+    1.5497
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_21",
+   "pos": [
+    182.751973,
+    -0.365518
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_21",
+   "pos": [
+    182.332308,
+    -0.348781
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_22",
+   "pos": [
+    182.676258,
+    -2.263998
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_22",
+   "pos": [
+    182.256594,
+    -2.247261
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_30",
+   "pos": [
+    183.776928,
+    1.495105
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_30",
+   "pos": [
+    183.357264,
+    1.511842
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_31",
+   "pos": [
+    183.701213,
+    -0.403375
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_31",
+   "pos": [
+    183.281548,
+    -0.386638
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R108_Desk_32",
+   "pos": [
+    183.625498,
+    -2.301855
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R108_Chair_32",
+   "pos": [
+    183.205834,
+    -2.285118
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
    "name": "F1_R108_TeacherDesk",
    "pos": [
-    184.866528,
-    -2.551508
+    184.56876,
+    -2.489592
    ],
    "depth": 0.6,
-   "dir_deg": -2.2838545045845304,
-   "face": -1,
+   "slot": "M_Wood_Oak_Light",
+   "ue_asset": "teacher_desk_oak_steel_1200",
+   "dir_deg": 267.7161454954155,
+   "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R108_TeacherPC",
-   "pos": [
-    184.866528,
-    -2.551508
-   ],
-   "dir_deg": -2.2838545045845304,
-   "face": -1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
    "name": "F1_R108_TeacherChair",
    "pos": [
-    184.84182,
-    -3.171012
+    185.11832,
+    -2.51151
+   ],
+   "ue_asset": "office_chair_iso_black",
+   "dir_deg": 267.7161454954155,
+   "face": 1,
+   "n": 1,
+   "pitch": 1.2,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R108_Curtain_0L",
+   "center": [
+    180.406413,
+    -3.344395
    ],
    "dir_deg": -2.2838545045845304,
-   "face": -1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R108_Curtain_0R",
+   "center": [
+    182.354853,
+    -3.422103
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R108_Curtain_1L",
+   "center": [
+    183.004333,
+    -3.448005
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R108_Curtain_1R",
+   "center": [
+    184.952773,
+    -3.525713
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
@@ -4187,278 +4687,548 @@
   },
   {
    "type": "desk_row",
-   "name": "F1_R101_Desks_0",
-   "depth": 0.6,
+   "name": "F1_R101_Desk_00",
    "pos": [
-    194.107593,
-    3.314859
+    195.469413,
+    2.329813
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R101_PCs_0",
-   "pos": [
-    194.107593,
-    3.314859
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R101_Chairs_0",
+   "name": "F1_R101_Chair_00",
    "pos": [
-    194.082886,
-    2.695355
+    195.889077,
+    2.313076
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R101_Desks_1",
-   "depth": 0.6,
+   "name": "F1_R101_Desk_01",
    "pos": [
-    194.032675,
-    1.436363
+    195.393698,
+    0.431333
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R101_PCs_1",
-   "pos": [
-    194.032675,
-    1.436363
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R101_Chairs_1",
+   "name": "F1_R101_Chair_01",
    "pos": [
-    194.057382,
-    2.055867
+    195.813362,
+    0.414596
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R101_Desks_2",
-   "depth": 0.6,
+   "name": "F1_R101_Desk_02",
    "pos": [
-    194.008765,
-    0.836843
+    195.317983,
+    -1.467147
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R101_PCs_2",
-   "pos": [
-    194.008765,
-    0.836843
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R101_Chairs_2",
+   "name": "F1_R101_Chair_02",
    "pos": [
-    193.984058,
-    0.217339
+    195.737646,
+    -1.483884
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R101_Desks_3",
-   "depth": 0.6,
+   "name": "F1_R101_Desk_10",
    "pos": [
-    193.935042,
-    -1.011677
+    194.520173,
+    2.36767
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R101_PCs_3",
-   "pos": [
-    193.935042,
-    -1.011677
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R101_Chairs_3",
+   "name": "F1_R101_Chair_10",
    "pos": [
-    193.95975,
-    -0.392173
+    194.939836,
+    2.350933
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R101_Desks_4",
-   "depth": 0.6,
+   "name": "F1_R101_Desk_11",
    "pos": [
-    193.911132,
-    -1.611197
+    194.444458,
+    0.46919
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R101_PCs_4",
-   "pos": [
-    193.911132,
-    -1.611197
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R101_Chairs_4",
+   "name": "F1_R101_Chair_11",
    "pos": [
-    193.886426,
-    -2.230701
+    194.864122,
+    0.452453
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_12",
+   "pos": [
+    194.368743,
+    -1.42929
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_12",
+   "pos": [
+    194.788406,
+    -1.446027
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_20",
+   "pos": [
+    193.570933,
+    2.405528
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_20",
+   "pos": [
+    193.990596,
+    2.388791
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_21",
+   "pos": [
+    193.495218,
+    0.507048
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_21",
+   "pos": [
+    193.914882,
+    0.490311
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_22",
+   "pos": [
+    193.419503,
+    -1.391432
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_22",
+   "pos": [
+    193.839166,
+    -1.408169
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_30",
+   "pos": [
+    192.621693,
+    2.443385
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_30",
+   "pos": [
+    193.041357,
+    2.426648
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_31",
+   "pos": [
+    192.545978,
+    0.544905
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_31",
+   "pos": [
+    192.965642,
+    0.528168
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R101_Desk_32",
+   "pos": [
+    192.470263,
+    -1.353575
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R101_Chair_32",
+   "pos": [
+    192.889927,
+    -1.370312
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
    "name": "F1_R101_TeacherDesk",
    "pos": [
-    191.213293,
-    -1.503602
+    191.51106,
+    -1.565517
    ],
    "depth": 0.6,
+   "slot": "M_Wood_Oak_Light",
+   "ue_asset": "teacher_desk_oak_steel_1200",
    "dir_deg": 177.71614549541547,
    "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R101_TeacherPC",
-   "pos": [
-    191.213293,
-    -1.503602
-   ],
-   "dir_deg": 177.71614549541547,
-   "face": 1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
    "name": "F1_R101_TeacherChair",
    "pos": [
-    191.188586,
-    -2.123106
+    191.486353,
+    -2.185021
    ],
+   "ue_asset": "office_chair_iso_black",
    "dir_deg": 177.71614549541547,
    "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R101_Curtain_0L",
+   "center": [
+    192.998178,
+    -2.545553
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R101_Curtain_0R",
+   "center": [
+    191.049738,
+    -2.467845
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R101_Curtain_1L",
+   "center": [
+    195.596098,
+    -2.649163
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R101_Curtain_1R",
+   "center": [
+    193.647658,
+    -2.571455
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
@@ -5161,278 +5931,508 @@
   },
   {
    "type": "desk_row",
-   "name": "F1_R102_Desks_0",
-   "depth": 0.6,
+   "name": "F1_R102_Desk_00",
    "pos": [
-    200.102793,
-    3.075759
+    201.464613,
+    2.090713
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R102_PCs_0",
-   "pos": [
-    200.102793,
-    3.075759
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R102_Chairs_0",
+   "name": "F1_R102_Chair_00",
    "pos": [
-    200.078086,
-    2.456255
+    201.884277,
+    2.073976
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R102_Desks_1",
-   "depth": 0.6,
+   "name": "F1_R102_Desk_01",
    "pos": [
-    200.027875,
-    1.197263
+    201.388898,
+    0.192233
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R102_PCs_1",
-   "pos": [
-    200.027875,
-    1.197263
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R102_Chairs_1",
+   "name": "F1_R102_Chair_01",
    "pos": [
-    200.052582,
-    1.816767
+    201.808562,
+    0.175496
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R102_Desks_2",
-   "depth": 0.6,
+   "name": "F1_R102_Desk_02",
    "pos": [
-    200.003965,
-    0.597743
+    201.313182,
+    -1.706247
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R102_PCs_2",
-   "pos": [
-    200.003965,
-    0.597743
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R102_Chairs_2",
+   "name": "F1_R102_Chair_02",
    "pos": [
-    199.979258,
-    -0.021761
+    201.732847,
+    -1.722984
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R102_Desks_3",
-   "depth": 0.6,
+   "name": "F1_R102_Desk_10",
    "pos": [
-    199.930243,
-    -1.250777
+    200.515372,
+    2.12857
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R102_PCs_3",
-   "pos": [
-    199.930243,
-    -1.250777
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R102_Chairs_3",
+   "name": "F1_R102_Chair_10",
    "pos": [
-    199.95495,
-    -0.631273
+    200.935037,
+    2.111833
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R102_Desks_4",
-   "depth": 0.6,
+   "name": "F1_R102_Desk_11",
    "pos": [
-    199.906333,
-    -1.850297
+    200.439658,
+    0.23009
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R102_PCs_4",
-   "pos": [
-    199.906333,
-    -1.850297
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R102_Chairs_4",
+   "name": "F1_R102_Chair_11",
    "pos": [
-    199.881626,
-    -2.469801
+    200.859322,
+    0.213353
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_12",
+   "pos": [
+    200.363942,
+    -1.66839
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_12",
+   "pos": [
+    200.783607,
+    -1.685127
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_20",
+   "pos": [
+    199.566132,
+    2.166428
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_20",
+   "pos": [
+    199.985797,
+    2.149691
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_21",
+   "pos": [
+    199.490418,
+    0.267948
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_21",
+   "pos": [
+    199.910082,
+    0.251211
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_22",
+   "pos": [
+    199.414702,
+    -1.630532
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_22",
+   "pos": [
+    199.834367,
+    -1.647269
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_30",
+   "pos": [
+    198.616892,
+    2.204285
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_30",
+   "pos": [
+    199.036557,
+    2.187548
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_31",
+   "pos": [
+    198.541178,
+    0.305805
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_31",
+   "pos": [
+    198.960842,
+    0.289068
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R102_Desk_32",
+   "pos": [
+    198.465462,
+    -1.592675
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R102_Chair_32",
+   "pos": [
+    198.885126,
+    -1.609412
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 267.7161454954155,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
    "name": "F1_R102_TeacherDesk",
    "pos": [
-    197.208492,
-    -1.742702
+    197.50626,
+    -1.804617
    ],
    "depth": 0.6,
+   "slot": "M_Wood_Oak_Light",
+   "ue_asset": "teacher_desk_oak_steel_1200",
    "dir_deg": 177.71614549541547,
    "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R102_TeacherPC",
-   "pos": [
-    197.208492,
-    -1.742702
-   ],
-   "dir_deg": 177.71614549541547,
-   "face": 1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
    "name": "F1_R102_TeacherChair",
    "pos": [
-    197.183786,
-    -2.362206
+    197.481553,
+    -2.424121
    ],
+   "ue_asset": "office_chair_iso_black",
    "dir_deg": 177.71614549541547,
    "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R102_Curtain_0L",
+   "center": [
+    200.192418,
+    -2.832473
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R102_Curtain_0R",
+   "center": [
+    198.243978,
+    -2.754765
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
@@ -6135,278 +7135,508 @@
   },
   {
    "type": "desk_row",
-   "name": "F1_R106_Desks_0",
-   "depth": 0.6,
+   "name": "F1_R106_Desk_00",
    "pos": [
-    176.642522,
-    9.555771
+    175.280702,
+    10.540818
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R106_PCs_0",
-   "pos": [
-    176.642522,
-    9.555771
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R106_Chairs_0",
+   "name": "F1_R106_Chair_00",
    "pos": [
-    176.667229,
-    10.175275
+    174.861038,
+    10.557554
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R106_Desks_1",
-   "depth": 0.6,
+   "name": "F1_R106_Desk_01",
    "pos": [
-    176.71744,
-    11.434267
+    175.356418,
+    12.439297
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R106_PCs_1",
-   "pos": [
-    176.71744,
-    11.434267
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R106_Chairs_1",
+   "name": "F1_R106_Chair_01",
    "pos": [
-    176.692733,
-    10.814764
+    174.936754,
+    12.456034
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R106_Desks_2",
-   "depth": 0.6,
+   "name": "F1_R106_Desk_02",
    "pos": [
-    176.74135,
-    12.033787
+    175.432132,
+    14.337778
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R106_PCs_2",
-   "pos": [
-    176.74135,
-    12.033787
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R106_Chairs_2",
+   "name": "F1_R106_Chair_02",
    "pos": [
-    176.766057,
-    12.653292
+    175.012468,
+    14.354514
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R106_Desks_3",
-   "depth": 0.6,
+   "name": "F1_R106_Desk_10",
    "pos": [
-    176.815072,
-    13.882307
+    176.229942,
+    10.50296
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R106_PCs_3",
-   "pos": [
-    176.815072,
-    13.882307
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R106_Chairs_3",
+   "name": "F1_R106_Chair_10",
    "pos": [
-    176.790366,
-    13.262804
+    175.810278,
+    10.519697
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R106_Desks_4",
-   "depth": 0.6,
+   "name": "F1_R106_Desk_11",
    "pos": [
-    176.838982,
-    14.481827
+    176.305658,
+    12.40144
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R106_PCs_4",
-   "pos": [
-    176.838982,
-    14.481827
-   ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R106_Chairs_4",
+   "name": "F1_R106_Chair_11",
    "pos": [
-    176.86369,
-    15.101332
+    175.885994,
+    12.418177
    ],
-   "dir_deg": -2.2838545045845304,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": 1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_12",
+   "pos": [
+    176.381372,
+    14.29992
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_12",
+   "pos": [
+    175.961708,
+    14.316657
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_20",
+   "pos": [
+    177.179182,
+    10.465102
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_20",
+   "pos": [
+    176.759518,
+    10.48184
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_21",
+   "pos": [
+    177.254898,
+    12.363582
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_21",
+   "pos": [
+    176.835234,
+    12.380319
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_22",
+   "pos": [
+    177.330612,
+    14.262062
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_22",
+   "pos": [
+    176.910949,
+    14.2788
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_30",
+   "pos": [
+    178.128422,
+    10.427245
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_30",
+   "pos": [
+    177.708758,
+    10.443982
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_31",
+   "pos": [
+    178.204138,
+    12.325725
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_31",
+   "pos": [
+    177.784474,
+    12.342462
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R106_Desk_32",
+   "pos": [
+    178.279852,
+    14.224205
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R106_Chair_32",
+   "pos": [
+    177.860188,
+    14.240942
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": 1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
    "name": "F1_R106_TeacherDesk",
    "pos": [
-    179.536822,
-    14.374232
+    179.239055,
+    14.436148
    ],
    "depth": 0.6,
+   "slot": "M_Wood_Oak_Light",
+   "ue_asset": "teacher_desk_oak_steel_1200",
    "dir_deg": -2.2838545045845304,
    "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R106_TeacherPC",
-   "pos": [
-    179.536822,
-    14.374232
-   ],
-   "dir_deg": -2.2838545045845304,
-   "face": 1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
    "name": "F1_R106_TeacherChair",
    "pos": [
-    179.56153,
-    14.993736
+    179.263762,
+    15.055652
    ],
+   "ue_asset": "office_chair_iso_black",
    "dir_deg": -2.2838545045845304,
    "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R106_Curtain_0L",
+   "center": [
+    176.552897,
+    15.464003
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R106_Curtain_0R",
+   "center": [
+    178.501337,
+    15.386295
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
@@ -8123,278 +9353,548 @@
   },
   {
    "type": "desk_row",
-   "name": "F1_R104_Desks_0",
-   "depth": 0.6,
+   "name": "F1_R104_Desk_00",
    "pos": [
-    194.380167,
-    10.149386
+    195.816108,
+    11.022852
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R104_PCs_0",
-   "pos": [
-    194.380167,
-    10.149386
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R104_Chairs_0",
+   "name": "F1_R104_Chair_00",
    "pos": [
-    194.404874,
-    10.76889
+    196.235772,
+    11.006116
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R104_Desks_1",
-   "depth": 0.6,
+   "name": "F1_R104_Desk_01",
    "pos": [
-    194.455085,
-    12.027882
+    195.891823,
+    12.921332
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R104_PCs_1",
-   "pos": [
-    194.455085,
-    12.027882
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R104_Chairs_1",
+   "name": "F1_R104_Chair_01",
    "pos": [
-    194.430378,
-    11.408378
+    196.311486,
+    12.904596
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R104_Desks_2",
-   "depth": 0.6,
+   "name": "F1_R104_Desk_02",
    "pos": [
-    194.478995,
-    12.627402
+    195.967538,
+    14.819813
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R104_PCs_2",
-   "pos": [
-    194.478995,
-    12.627402
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R104_Chairs_2",
+   "name": "F1_R104_Chair_02",
    "pos": [
-    194.503702,
-    13.246906
+    196.387202,
+    14.803076
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R104_Desks_3",
-   "depth": 0.6,
+   "name": "F1_R104_Desk_10",
    "pos": [
-    194.552718,
-    14.475923
+    194.866868,
+    11.06071
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R104_PCs_3",
-   "pos": [
-    194.552718,
-    14.475923
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R104_Chairs_3",
+   "name": "F1_R104_Chair_10",
    "pos": [
-    194.52801,
-    13.856419
+    195.286532,
+    11.043973
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": 1,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
-   "name": "F1_R104_Desks_4",
-   "depth": 0.6,
+   "name": "F1_R104_Desk_11",
    "pos": [
-    194.576628,
-    15.075442
+    194.942582,
+    12.95919
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R104_PCs_4",
-   "pos": [
-    194.576628,
-    15.075442
-   ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
-   "face": -1,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
-   "name": "F1_R104_Chairs_4",
+   "name": "F1_R104_Chair_11",
    "pos": [
-    194.601334,
-    15.694947
+    195.362246,
+    12.942453
    ],
-   "dir_deg": 177.71614549541547,
-   "n": 5,
-   "pitch": 0.8,
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
    "face": -1,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_12",
+   "pos": [
+    195.018298,
+    14.85767
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_12",
+   "pos": [
+    195.437962,
+    14.840933
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_20",
+   "pos": [
+    193.917628,
+    11.098568
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_20",
+   "pos": [
+    194.337292,
+    11.08183
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_21",
+   "pos": [
+    193.993342,
+    12.997047
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_21",
+   "pos": [
+    194.413006,
+    12.98031
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_22",
+   "pos": [
+    194.069058,
+    14.895528
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_22",
+   "pos": [
+    194.488722,
+    14.87879
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_30",
+   "pos": [
+    192.968388,
+    11.136425
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_30",
+   "pos": [
+    193.388052,
+    11.119688
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_31",
+   "pos": [
+    193.044102,
+    13.034905
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_31",
+   "pos": [
+    193.463767,
+    13.018168
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "desk_row",
+   "name": "F1_R104_Desk_32",
+   "pos": [
+    193.119818,
+    14.933385
+   ],
+   "depth": 0.45,
+   "height": 0.76,
+   "slot": "M_Laminate_Beech_Orange",
+   "ue_asset": "school_desk_single_600",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "chair_row",
+   "name": "F1_R104_Chair_32",
+   "pos": [
+    193.539482,
+    14.916648
+   ],
+   "slot": "M_Plastic_Orange",
+   "ue_asset": "school_chair_beech_tube",
+   "dir_deg": 87.71614549541547,
+   "n": 2,
+   "pitch": 0.6,
+   "face": -1,
+   "z": 6.4,
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "desk_row",
    "name": "F1_R104_TeacherDesk",
    "pos": [
-    191.878788,
-    15.183038
+    192.176555,
+    15.121122
    ],
    "depth": 0.6,
-   "dir_deg": 177.71614549541547,
-   "face": -1,
+   "slot": "M_Wood_Oak_Light",
+   "ue_asset": "teacher_desk_oak_steel_1200",
+   "dir_deg": 87.71614549541547,
+   "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
-   "confidence": "medium"
-  },
-  {
-   "type": "monitor_row",
-   "name": "F1_R104_TeacherPC",
-   "pos": [
-    191.878788,
-    15.183038
-   ],
-   "dir_deg": 177.71614549541547,
-   "face": -1,
-   "n": 1,
-   "pitch": 1.4,
-   "z": 7.15,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
    "type": "chair_row",
    "name": "F1_R104_TeacherChair",
    "pos": [
-    191.903495,
-    15.802542
+    191.626995,
+    15.14304
    ],
-   "dir_deg": 177.71614549541547,
-   "face": -1,
+   "ue_asset": "office_chair_iso_black",
+   "dir_deg": 87.71614549541547,
+   "face": 1,
    "n": 1,
-   "pitch": 1.4,
+   "pitch": 1.2,
    "z": 6.4,
-   "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R104_Curtain_0L",
+   "center": [
+    193.740982,
+    16.079535
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R104_Curtain_0R",
+   "center": [
+    191.792542,
+    16.157243
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R104_Curtain_1L",
+   "center": [
+    196.338902,
+    15.975925
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R104_Curtain_1R",
+   "center": [
+    194.390462,
+    16.053633
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.06,
+    2.43
+   ],
+   "z0": 6.65,
+   "material": "white",
+   "slot": "M_Fabric_Curtain_Brown",
+   "ue_asset": "curtain_panel_blackout",
+   "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
   {
@@ -17879,8 +19379,8 @@
    "type": "box",
    "name": "F1_FireHose_W",
    "center": [
-    178.154908,
-    3.005625
+    178.166002,
+    3.285115
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -17899,8 +19399,8 @@
    "type": "box",
    "name": "F1_FireHose_E",
    "center": [
-    196.693489,
-    3.589144
+    196.703504,
+    3.84683
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
@@ -18305,8 +19805,8 @@
    "type": "box",
    "name": "F1_Hall_Radiator_S0",
    "center": [
-    182.677929,
-    2.980239
+    182.680011,
+    3.035032
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -18342,8 +19842,8 @@
    "type": "box",
    "name": "F1_Hall_Radiator_S1",
    "center": [
-    194.70594,
-    3.8013
+    194.707896,
+    3.856363
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -18459,8 +19959,8 @@
    "type": "box",
    "name": "F1_StairW_LandingRadiator",
    "center": [
-    174.199231,
-    8.517797
+    174.24419,
+    8.515866
    ],
    "dir_deg": 87.71614549541547,
    "size": [
@@ -18539,8 +20039,8 @@
    "type": "box",
    "name": "F1_StairE_LandingRadiator",
    "center": [
-    202.571867,
-    8.922679
+    202.571535,
+    8.922537
    ],
    "dir_deg": 87.71614549541547,
    "size": [
