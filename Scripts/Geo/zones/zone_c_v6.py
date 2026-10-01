@@ -293,6 +293,7 @@ def plan(k, zb, lobby, west_stair):
 ROOM_X = {"1": (X_W, P1 - PART / 2), "2": (P1 + PART / 2, P2 - PART / 2), "4": (P3 + PART / 2, P4 - PART / 2), "5": (P4 + PART / 2, X_E)}
 BOARD_EAST = {"1": True, "2": True, "4": False, "5": False}
 WIN_PAIR = (1.65, 4.25)        # window centres from the back wall (C105; facade pairs 2.59 m apart)
+WIN_W, WIN_SILL, WIN_H = 1.85, 1.05, 1.40   # facade window opening (BLD_C window type W, row F1 1.05 above the FFL)
 CORNER_WIN = {"S1": 3.52, "S5": 25.90, "N1": 3.50, "N5": 25.88}   # one long-facade window in the corner rooms (facade fit)
 
 
@@ -367,20 +368,60 @@ def fitout(k, zb, num):
         for n, xw in enumerate(facade_windows(key)):
             uw = (xw - to_c(0, 0)[0]) * su
             bx(f"Radiator_{n}", uw - 0.50, uw + 0.50, D - 0.14, D - 0.06, 0.15, 0.70, slot="M_Paint_White", ue_asset="radiator_sectional", **ref)
-        # 3 rows of lab desks (0.80 x 0.60) along the windows from 0.40 m off the back wall, users on the window side of
-        # each row (151/152: 5 PCs per row); the window row has 4 so the teacher's corner keeps a 0.6 m passage
-        lab = ev("lab layout from C105 151-153: rows of 5/5/4 PCs, users facing the door wall", "medium")
-        for r, (vc, n) in enumerate(((0.70, 5), (3.00, 5), (5.30, 4))):
-            p = c_to_w(*to_c(0.40 + n * 0.40, vc))
-            row = {"pos": p, "dir_deg": d_u, "n": n, "pitch": 0.80, "face": f_v, "z": z(zb), **lab}
+        # interior finish of the outer walls (the shell's inner face carries the facade render and the maroon reveals):
+        # window wall white with white reveals and PVC window boards, back wall sage green (C105 150/152, labs
+        # 2026-10-01); the back wall of the end rooms is the outer end wall with one window at its middle
+        sk, rv = [], round(X_W - 0.16 - 0.07, 3)
+
+        def itm(u0, u1, v0, v1, z0, z1):
+            cx, cy = to_c((u0 + u1) / 2, (v0 + v1) / 2)
+            return [*c_to_w(cx, cy), EAST, round(abs(u1 - u0), 4), round(abs(v1 - v0), 4), round(z1 - z0, 4), z(zb + z0)]
+
+        def face_skin(along, at, depth_dir, lo, hi, ops):
+            """Skin boxes on a wall face: along = 'u' (face v = at) or 'v' (face u = at); depth_dir = +1/-1 into the room;
+            ops = [(a0, a1)] window openings along the face (sill WIN_SILL, head WIN_SILL + WIN_H). Returns paint + trim."""
+            paint, trim = [], []
+            w0, w1 = sorted((at, at + depth_dir * 0.006))
+            r0, r1 = sorted((at, at - depth_dir * rv))            # reveal, into the wall
+            box_ = (lambda a0, a1, q0, q1, z0, z1: itm(a0, a1, q0, q1, z0, z1)) if along == "u" else \
+                   (lambda a0, a1, q0, q1, z0, z1: itm(q0, q1, a0, a1, z0, z1))
+            zt, zs, zh = C + 0.01, WIN_SILL, WIN_SILL + WIN_H
+            a = lo
+            for o0, o1 in sorted(ops) + [(hi, hi)]:
+                if o0 - a > 0.005:
+                    paint.append(box_(a, o0, w0, w1, 0.0, zt))
+                if o1 > o0:
+                    paint += [box_(o0, o1, w0, w1, 0.0, zs), box_(o0, o1, w0, w1, zh, zt)]
+                    trim += [box_(o0 - 0.006, o0, r0, r1, zs, zh), box_(o1, o1 + 0.006, r0, r1, zs, zh), box_(o0, o1, r0, r1, zh - 0.006, zh),
+                             box_(o0 - 0.03, o1 + 0.03, *sorted((at + depth_dir * 0.04, at - depth_dir * rv)), zs - 0.02, zs)]
+                a = max(a, o1)
+            return paint, trim
+        x0 = to_c(0, 0)[0]
+        wops = [((xw - x0) * su - WIN_W / 2, (xw - x0) * su + WIN_W / 2) for xw in facade_windows(key)]
+        p_w, t_w = face_skin("u", D, -1, 0.0, L, wops)
+        end_room = key[1] in "15"
+        p_b, t_b = face_skin("v", 0.0, 1, 0.0, D, [(D / 2 - WIN_W / 2, D / 2 + WIN_W / 2)] if end_room else [])
+        els.append({"type": "boxes", "name": R + "WindowWall_Paint", "items": p_w, "material": "white", "slot": "M_Paint_White", **ref})
+        els.append({"type": "boxes", "name": R + "BackWall_Paint", "items": p_b, "material": "white", "slot": "M_Paint_Sage", **ref})
+        els.append({"type": "boxes", "name": R + "Window_Trim", "items": t_w + t_b, "material": "white", "slot": "M_PVC_White",
+                    **ev("white reveals and PVC window boards (C105 152, labs 2026-10-01)")})
+        # 25 PCs (owner 2026-10-01, C105 150-153): one row of 5 against the door wall (users face the wall) + two
+        # islands of 2 rows back to back (users on the outer sides); desks 0.80 x 0.60 from 0.40 m off the back wall.
+        # Island axes 2.50 / 4.95 m from the door wall: ~0.62 m between back-to-back chair rows, 1.1 m to the window wall.
+        lab = ev("lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60", "medium")
+        rows = [(0.32, f_v)] + [(c + d, f_v if d > 0 else -f_v) for c in (2.50, 4.95) for d in (-0.30, 0.30)]
+        for r, (vc, face) in enumerate(rows):
+            p = c_to_w(*to_c(0.40 + 5 * 0.40, vc))
+            row = {"pos": p, "dir_deg": d_u, "n": 5, "pitch": 0.80, "face": face, "z": z(zb), **lab}
             els.append({"type": "desk_row", "name": R + f"Desks_{r}", "depth": 0.60, **row})
             els.append({"type": "monitor_row", "name": R + f"PCs_{r}", **dict(row, z=z(zb + 0.75))})
-            els.append({"type": "chair_row", "name": R + f"Chairs_{r}", **dict(row, pos=c_to_w(*to_c(0.40 + n * 0.40, vc + 0.62)))})
-        # teacher's desk by the board on the window side, the teacher faces the class (153)
+            sv_off = 0.62 if face == f_v else -0.62
+            els.append({"type": "chair_row", "name": R + f"Chairs_{r}", **dict(row, pos=c_to_w(*to_c(2.40, vc + sv_off)))})
+        # teacher's desk in the board / window corner, the teacher sits between it and the board wall facing the class (153)
         t = {"dir_deg": d_v, "face": f_u, "n": 1, "z": z(zb), **lab}
-        els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(4.50, 5.20)), "pitch": 1.20, "depth": 0.60, **t})
-        els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(4.50, 5.20)), "pitch": 1.20, **dict(t, z=z(zb + 0.75))})
-        els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(5.10, 5.20)), "pitch": 1.20, **t})
+        els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(4.95, 5.55)), "pitch": 1.20, "depth": 0.60, **t})
+        els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(4.95, 5.55)), "pitch": 1.20, **dict(t, z=z(zb + 0.75))})
+        els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(5.45, 5.55)), "pitch": 1.20, **t})
     return els
 
 
