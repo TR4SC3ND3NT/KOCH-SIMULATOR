@@ -689,7 +689,7 @@
      6.232
     ]
    ],
-   "z0": 4.5,
+   "z0": 4.7,
    "z1": 6.4,
    "material": "stone",
    "slot": "M_Concrete_Precast",
@@ -705,8 +705,8 @@
    ],
    "dir_deg": -92.284,
    "width": 1.2,
-   "risers": 10,
-   "riser_h": 0.17,
+   "risers": 9,
+   "riser_h": 0.1667,
    "tread": 0.3,
    "z_top": 6.4,
    "top_flush": true,
@@ -740,9 +740,9 @@
      6.4
     ],
     [
-     204.087,
-     1.085,
-     4.87
+     204.099,
+     1.385,
+     5.066
     ]
    ],
    "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight)",

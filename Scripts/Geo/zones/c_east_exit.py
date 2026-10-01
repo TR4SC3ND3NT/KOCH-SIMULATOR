@@ -10,8 +10,8 @@ import zone_c_v6 as N   # noqa: E402   plan v6 (2026-10-01)
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 P = os.path.join(REPO, "Art", "Blender", "Specs", "SITE_CPlaza.json")
-Z_GROUND = 4.70          # sidewalk east of C (terrain grid z7_garden2 at x 205.3-206.5, y 3-6: 4.65-4.72)
-RISERS, TREAD = 10, 0.30 # 10 x 0.170 = 1.70 = FFL 6.40 - 4.70 (owner: "about 9 steps"; 9 would give 0.19 risers); 2R+T 0.64
+Z_GROUND = 4.90          # ground at the foot east of the v6 east face (check_stairs on the v6 build: 4.86-4.90)
+RISERS, TREAD = 9, 0.30  # 9 x 0.167 = 1.50 = FFL 6.40 - 4.90 (owner: "about 9 steps"); 2R+T 0.63
 W_FLIGHT, LAND_D = 1.2, 1.25
 EV = "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); " \
      "flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured"
