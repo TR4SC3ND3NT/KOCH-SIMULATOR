@@ -9,7 +9,7 @@ from matplotlib.patches import Rectangle
 
 # Door scale (owner 2026-10-01): the 187 cm person gives the C204 door frame 2.12 m; the tile-scaled door is 1.88 (C105
 # photo 151 and C204 photo 014 alike) -> every length x K. The grid module is then 0.60 * K = 0.677 m (to verify on site).
-K = 2.12 / 1.88
+K = 1.0   # v5: the owner phone-measured door profile (13.3-14.3 cm = 167 px) confirms the 0.60 tile scale (predicts 13.9 cm); the person-based K = 2.12 / 1.88 was wrong
 T = 0.60 * K
 # v2 (single-view metrology, room_svm.py: vanishing points + 0.60 m grid crossings on 3 photos, floor check at the door)
 CUT_BACK, CUT_FRONT, N_ALONG = 0.25 * K, 0.50 * K, 8          # along the windows: back wall -> front (board) wall (photo 151: steps 0.600±0.002)
@@ -65,10 +65,10 @@ def main(out):
             ha="center", va="center", fontsize=13, color="#1b4f8a",
             bbox=dict(fc="white", ec="#1b4f8a", alpha=0.9))
     ax.text(X1 / 2, Y1 + 0.2, f"ОКНА (2 шт, {1.83 * K:.2f} и {1.88 * K:.2f} м)", ha="center", fontsize=11)
-    ax.text(X1 / 2, Y0 - 1.25, "СТЕНА С ДВЕРЬЮ (коридор); дверь по раме 1.11 × 2.12, проём 0.98 × 2.01 м", ha="center", fontsize=11)
+    ax.text(X1 / 2, Y0 - 1.25, "СТЕНА С ДВЕРЬЮ (коридор); дверь по раме ≈0.9 × 1.88 м", ha="center", fontsize=11)
     ax.text(X0 - 1.25, Y1 / 2, "ЗАДНЯЯ\nСТЕНА", ha="center", va="center", fontsize=11)
     ax.text(X1 + 1.0, Y1 / 2, "ДОСКА", ha="center", va="center", fontsize=11, rotation=90)
-    ax.set_title("C105 — потолок сверху, v4: масштаб по ДВЕРИ (человек 187 см → рама 2.12 м), форма по плиткам; ±8 см", fontsize=13)
+    ax.set_title("C105 — потолок сверху, v5: плитка 0.60 подтверждена замером двери телефоном (профиль 13.3–14.3 см); ±6 см", fontsize=13)
     ax.set_xlim(X0 - 1.6, X1 + 1.5); ax.set_ylim(Y0 - 1.5, Y1 + 0.9); ax.set_aspect("equal"); ax.axis("off")
     fig.savefig(out, dpi=110, bbox_inches="tight")
     print(out, f"grid {gx:.3f} x {gy:.3f}, room {X1 - X0:.2f} x {Y1 - Y0:.2f}")
