@@ -6,7 +6,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-import zone_c_std as N   # noqa: E402
+import zone_c_v6 as N   # noqa: E402   plan v6 (2026-10-01)
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 P = os.path.join(REPO, "Art", "Blender", "Specs", "SITE_CPlaza.json")
