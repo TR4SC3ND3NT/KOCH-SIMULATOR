@@ -237,7 +237,7 @@ for k in (2, 3, 4):
 
 def plan(k, zb, lobby, west_stair):
     P, els, CEIL = f"F{k}_", [], ceil_of(k)
-    CC = cor_ceil_of(k)                       # hall walls run up to the (higher) corridor grid
+    CC = cor_ceil_of(k)                       # hall walls run 3 cm into the (higher) corridor grid slab (its top is +0.02)
     num = NUMBERS[k]
     # south hall wall: west part (to the lobby's east wall), jog, east part; F1 leaves the lobby front open
     sw = [(DOOR_S["S1"], "S1"), (DOOR_S["S2"], "S2")] + ([] if lobby else [(DOOR_TEACH, "T")])
@@ -245,23 +245,23 @@ def plan(k, zb, lobby, west_stair):
     segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 - PART / 2) if lobby else X_JS, HW0 - PART), sw),
             ("Hall_S_East", (X_JS, HE0 - PART), (X_E, HE0 - PART), se)]
     for nm, a, b, dd in segs:
-        els.append(wall(P + nm, a, b, zb, doors=[(x - a[0], DOOR_W) for x, _ in dd], h=CC + 0.02, **ev("south hall wall")))
+        els.append(wall(P + nm, a, b, zb, doors=[(x - a[0], DOOR_W) for x, _ in dd], h=CC + 0.03, **ev("south hall wall")))
         for x, key in dd:
             lab = "teachers' room over the lobby" if key == "T" else f"room {num[key]}"
             els.append(door(f"{P}Door_{key}", a, b, x - a[0], zb, **ev(f"door of {lab}")))
     # int_wall lines are a FACE with the thickness to their left: partitions/jogs are offset by PART / 2 so they sit
     # centred on their plan lines (the room / WC frames and the asserts assume centred walls)
-    els.append(wall(P + "Hall_S_Jog", (X_JS + PART / 2, HW0 - PART), (X_JS + PART / 2, HE0 - PART), zb, thk=PART, h=CC + 0.02, **ev("south hall wall jog 1.3 m (mirrors the facade step)")))
+    els.append(wall(P + "Hall_S_Jog", (X_JS + PART / 2, HW0 - PART), (X_JS + PART / 2, HE0 - PART), zb, thk=PART, h=CC + 0.03, **ev("south hall wall jog 1.3 m (mirrors the facade step)")))
     # north hall wall: west part to the WC mid wall, jog, east part (east->west so the thickness goes north)
     nw = [(DOOR_N["N1"], "N1", DOOR_W), (DOOR_N["N2"], "N2", DOOR_W), (WC_DOORS[0][0], WC_DOORS[0][1], WC_DOOR_W)]
     ne = [(WC_DOORS[1][0], WC_DOORS[1][1], WC_DOOR_W), (DOOR_N["N4"], "N4", DOOR_W), (DOOR_N["N5"], "N5", DOOR_W)]
     for nm, a, b, dd in (("Hall_N_West", (X_JN, HW1 + PART), (X_W, HW1 + PART), nw), ("Hall_N_East", (X_E, HE1 + PART), (X_JN, HE1 + PART), ne)):
-        els.append(wall(P + nm, a, b, zb, doors=[(a[0] - x, w) for x, _, w in dd], h=CC + 0.02, **ev("north hall wall; one WC stands forward of the other (owner)")))
+        els.append(wall(P + nm, a, b, zb, doors=[(a[0] - x, w) for x, _, w in dd], h=CC + 0.03, **ev("north hall wall; one WC stands forward of the other (owner)")))
         for x, key, w in dd:
             wc = key.startswith("WC")
             els.append(door(f"{P}Door_{key}", a, b, a[0] - x, zb, width=w, leaf="solid" if wc else "glass2",
                             **ev("WC door, solid black leaf" if wc else f"door of room {num[key]}")))
-    els.append(wall(P + "Hall_N_Jog", (X_JN - PART / 2, HE1 + PART), (X_JN - PART / 2, HW1 + PART), zb, h=CC + 0.02, **ev("north hall wall jog at the WC mid wall (owner)")))
+    els.append(wall(P + "Hall_N_Jog", (X_JN - PART / 2, HE1 + PART), (X_JN - PART / 2, HW1 + PART), zb, h=CC + 0.03, **ev("north hall wall jog at the WC mid wall (owner)")))
     # partitions
     for x in (P1, P2, P3, P4):
         if lobby or x not in (P2, P3) or True:
