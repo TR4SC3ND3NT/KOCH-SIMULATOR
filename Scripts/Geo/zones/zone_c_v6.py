@@ -230,7 +230,9 @@ def plan(k, zb, lobby, west_stair):
         for x, key in dd:
             lab = "teachers' room over the lobby" if key == "T" else f"room {num[key]}"
             els.append(door(f"{P}Door_{key}", a, b, x - a[0], zb, **ev(f"door of {lab}")))
-    els.append(wall(P + "Hall_S_Jog", (X_JS, HW0 - PART), (X_JS, HE0 - PART), zb, thk=PART, **ev("south hall wall jog 1.3 m (mirrors the facade step)")))
+    # int_wall lines are a FACE with the thickness to their left: partitions/jogs are offset by PART / 2 so they sit
+    # centred on their plan lines (the room / WC frames and the asserts assume centred walls)
+    els.append(wall(P + "Hall_S_Jog", (X_JS + PART / 2, HW0 - PART), (X_JS + PART / 2, HE0 - PART), zb, thk=PART, **ev("south hall wall jog 1.3 m (mirrors the facade step)")))
     # north hall wall: west part to the WC mid wall, jog, east part (east->west so the thickness goes north)
     nw = [(DOOR_N["N1"], "N1", DOOR_W), (DOOR_N["N2"], "N2", DOOR_W), (WC_DOORS[0][0], WC_DOORS[0][1], WC_DOOR_W)]
     ne = [(WC_DOORS[1][0], WC_DOORS[1][1], WC_DOOR_W), (DOOR_N["N4"], "N4", DOOR_W), (DOOR_N["N5"], "N5", DOOR_W)]
@@ -240,16 +242,16 @@ def plan(k, zb, lobby, west_stair):
             wc = key.startswith("WC")
             els.append(door(f"{P}Door_{key}", a, b, a[0] - x, zb, width=w, leaf="solid" if wc else "glass2",
                             **ev("WC door, solid black leaf" if wc else f"door of room {num[key]}")))
-    els.append(wall(P + "Hall_N_Jog", (X_JN, HE1 + PART), (X_JN, HW1 + PART), zb, **ev("north hall wall jog at the WC mid wall (owner)")))
+    els.append(wall(P + "Hall_N_Jog", (X_JN - PART / 2, HE1 + PART), (X_JN - PART / 2, HW1 + PART), zb, **ev("north hall wall jog at the WC mid wall (owner)")))
     # partitions
     for x in (P1, P2, P3, P4):
         if lobby or x not in (P2, P3) or True:
             h0 = hall(x - 0.01)[0] if x != P3 else HE0
-            els.append(wall(f"{P}Room_S_{x:.2f}", (x, south_in(x)), (x, (HW0 if x < X_JS else HE0) - PART), zb,
+            els.append(wall(f"{P}Room_S_{x:.2f}", (x + PART / 2, south_in(x)), (x + PART / 2, (HW0 if x < X_JS else HE0) - PART), zb,
                             **ev("room partition, reference 5.80 m rooms / lobby 4.5 m")))
     for x in (P1, P2, P_WCM, P3, P4):
         yh = (HW1 if x < X_JN else HE1) + PART
-        els.append(wall(f"{P}Room_N_{x:.2f}", (x, north_in(x + (0.01 if x == P_WCM else 0))), (x, yh), zb,
+        els.append(wall(f"{P}Room_N_{x:.2f}", (x - PART / 2, north_in(x + (0.01 if x == P_WCM else 0))), (x - PART / 2, yh), zb,
                         **ev("room / WC partition")))
     # F4: west hall end holds a teachers' room with 2 end-wall windows instead of the stair (owner)
     if not west_stair:
