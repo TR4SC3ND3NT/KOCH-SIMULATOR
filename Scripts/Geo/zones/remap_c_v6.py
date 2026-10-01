@@ -53,20 +53,26 @@ def floor_of(name):
     return int(m.group(1)) if m else 1
 
 
-def remap_z(zw, k):
+def remap_z(zw, k, hall=False):
     rel = zw - S.FFL - (k - 1) * S.STOREY
-    if 2.4 < rel < S.STOREY and k <= 4:
-        rel += N.ceil_of(k) - S.CEIL
+    if 2.4 < rel < S.STOREY and k <= 4:            # ceiling-mounted: follow the grid (the corridor grid sits higher)
+        rel += (N.cor_ceil_of(k) if hall else N.ceil_of(k)) - S.CEIL
     return round(N.FFL + (k - 1) * N.STOREY + rel, 3)
 
 
 def remap_el(e):
     k = floor_of(e.get("name", ""))
     e = json.loads(json.dumps(e))
+    p0 = next((e[f] if f in ("center", "pos", "top") else e[f][0] for f in ("center", "pos", "top", "line", "ring", "points") if f in e), None)
+    hall = False
+    if p0 is not None:
+        xo, yo = s_local(p0)
+        hs_o, hn_o = S.hall(xo)
+        hall = hs_o <= yo <= hn_o
 
     def P(p):
         w = N.c_to_w(*remap_xy(*s_local(p)))
-        return w + ([remap_z(p[2], k)] if len(p) > 2 else [])
+        return w + ([remap_z(p[2], k, hall)] if len(p) > 2 else [])
     for f in ("center", "pos", "top"):
         if f in e:
             e[f] = P(e[f])
@@ -75,12 +81,12 @@ def remap_el(e):
             e[f] = [P(p) for p in e[f]]
     for f in ("z0", "z1", "z_top"):
         if f in e and isinstance(e[f], (int, float)):
-            e[f] = remap_z(e[f], k)
+            e[f] = remap_z(e[f], k, hall)
     if "z" in e:
-        e["z"] = [remap_z(v, k) for v in e["z"]] if isinstance(e["z"], list) else remap_z(e["z"], k)
+        e["z"] = [remap_z(v, k, hall) for v in e["z"]] if isinstance(e["z"], list) else remap_z(e["z"], k, hall)
     if "openings" in e:
         for o in e["openings"]:
-            o["z0"], o["z1"] = remap_z(o["z0"], k), remap_z(o["z1"], k)
+            o["z0"], o["z1"] = remap_z(o["z0"], k, hall), remap_z(o["z1"], k, hall)
     e["evidence"] = (e.get("evidence", "") + " | " if e.get("evidence") else "") + "2026-10-01 remapped onto plan v6 (remap_c_v6.py)"
     return e
 
