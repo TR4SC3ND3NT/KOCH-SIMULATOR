@@ -2160,14 +2160,14 @@
    "type": "desk_row",
    "name": "F1_R107_TeacherDesk",
    "pos": [
-    178.709492,
-    -2.60619
+    178.871328,
+    -2.312408
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 267.7161454954155,
-   "face": 1,
+   "dir_deg": -2.2838545045845304,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -2176,13 +2176,13 @@
    "type": "monitor_row",
    "name": "F1_R107_TeacherPC",
    "pos": [
-    178.709492,
-    -2.60619
+    178.871328,
+    -2.312408
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": 1,
+   "dir_deg": -2.2838545045845304,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -2191,13 +2191,13 @@
    "type": "chair_row",
    "name": "F1_R107_TeacherChair",
    "pos": [
-    179.209093,
-    -2.626115
+    178.84662,
+    -2.931912
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": 1,
+   "dir_deg": -2.2838545045845304,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -3135,14 +3135,14 @@
    "type": "desk_row",
    "name": "F1_R108_TeacherDesk",
    "pos": [
-    184.704693,
-    -2.84529
+    184.866528,
+    -2.551508
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 267.7161454954155,
-   "face": 1,
+   "dir_deg": -2.2838545045845304,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -3151,13 +3151,13 @@
    "type": "monitor_row",
    "name": "F1_R108_TeacherPC",
    "pos": [
-    184.704693,
-    -2.84529
+    184.866528,
+    -2.551508
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": 1,
+   "dir_deg": -2.2838545045845304,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -3166,13 +3166,13 @@
    "type": "chair_row",
    "name": "F1_R108_TeacherChair",
    "pos": [
-    185.204292,
-    -2.865215
+    184.84182,
+    -3.171012
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": 1,
+   "dir_deg": -2.2838545045845304,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -4110,14 +4110,14 @@
    "type": "desk_row",
    "name": "F1_R101_TeacherDesk",
    "pos": [
-    191.351218,
-    -1.80934
+    191.213293,
+    -1.503602
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 267.7161454954155,
-   "face": -1,
+   "dir_deg": 177.71614549541547,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -4126,13 +4126,13 @@
    "type": "monitor_row",
    "name": "F1_R101_TeacherPC",
    "pos": [
-    191.351218,
-    -1.80934
+    191.213293,
+    -1.503602
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": -1,
+   "dir_deg": 177.71614549541547,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -4141,13 +4141,13 @@
    "type": "chair_row",
    "name": "F1_R101_TeacherChair",
    "pos": [
-    190.851618,
-    -1.789415
+    191.188586,
+    -2.123106
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": -1,
+   "dir_deg": 177.71614549541547,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -5065,14 +5065,14 @@
    "type": "desk_row",
    "name": "F1_R102_TeacherDesk",
    "pos": [
-    197.346418,
-    -2.04844
+    197.208492,
+    -1.742702
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 267.7161454954155,
-   "face": -1,
+   "dir_deg": 177.71614549541547,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -5081,13 +5081,13 @@
    "type": "monitor_row",
    "name": "F1_R102_TeacherPC",
    "pos": [
-    197.346418,
-    -2.04844
+    197.208492,
+    -1.742702
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": -1,
+   "dir_deg": 177.71614549541547,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -5096,13 +5096,13 @@
    "type": "chair_row",
    "name": "F1_R102_TeacherChair",
    "pos": [
-    196.846818,
-    -2.028515
+    197.183786,
+    -2.362206
    ],
-   "pitch": 1.2,
-   "dir_deg": 267.7161454954155,
-   "face": -1,
+   "dir_deg": 177.71614549541547,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -6020,14 +6020,14 @@
    "type": "desk_row",
    "name": "F1_R106_TeacherDesk",
    "pos": [
-    179.367018,
-    13.88061
+    179.504942,
+    13.574872
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 87.71614549541547,
-   "face": -1,
+   "dir_deg": -2.2838545045845304,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -6036,13 +6036,13 @@
    "type": "monitor_row",
    "name": "F1_R106_TeacherPC",
    "pos": [
-    179.367018,
-    13.88061
+    179.504942,
+    13.574872
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": -1,
+   "dir_deg": -2.2838545045845304,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -6051,13 +6051,13 @@
    "type": "chair_row",
    "name": "F1_R106_TeacherChair",
    "pos": [
-    179.866618,
-    13.860685
+    179.52965,
+    14.194376
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": -1,
+   "dir_deg": -2.2838545045845304,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -6995,14 +6995,14 @@
    "type": "desk_row",
    "name": "F1_R105_TeacherDesk",
    "pos": [
-    185.362218,
-    13.64151
+    185.500142,
+    13.335772
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 87.71614549541547,
-   "face": -1,
+   "dir_deg": -2.2838545045845304,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -7011,13 +7011,13 @@
    "type": "monitor_row",
    "name": "F1_R105_TeacherPC",
    "pos": [
-    185.362218,
-    13.64151
+    185.500142,
+    13.335772
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": -1,
+   "dir_deg": -2.2838545045845304,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -7026,13 +7026,13 @@
    "type": "chair_row",
    "name": "F1_R105_TeacherChair",
    "pos": [
-    185.861818,
-    13.621585
+    185.52485,
+    13.955276
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": -1,
+   "dir_deg": -2.2838545045845304,
+   "face": 1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -7970,14 +7970,14 @@
    "type": "desk_row",
    "name": "F1_R104_TeacherDesk",
    "pos": [
-    192.008742,
-    14.67746
+    191.846908,
+    14.383678
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 87.71614549541547,
-   "face": 1,
+   "dir_deg": 177.71614549541547,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -7986,13 +7986,13 @@
    "type": "monitor_row",
    "name": "F1_R104_TeacherPC",
    "pos": [
-    192.008742,
-    14.67746
+    191.846908,
+    14.383678
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": 1,
+   "dir_deg": 177.71614549541547,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -8001,13 +8001,13 @@
    "type": "chair_row",
    "name": "F1_R104_TeacherChair",
    "pos": [
-    191.509142,
-    14.697385
+    191.871615,
+    15.003182
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": 1,
+   "dir_deg": 177.71614549541547,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -8925,14 +8925,14 @@
    "type": "desk_row",
    "name": "F1_R103_TeacherDesk",
    "pos": [
-    198.003942,
-    14.43836
+    197.842108,
+    14.144578
    ],
-   "pitch": 1.2,
    "depth": 0.6,
-   "dir_deg": 87.71614549541547,
-   "face": 1,
+   "dir_deg": 177.71614549541547,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -8941,13 +8941,13 @@
    "type": "monitor_row",
    "name": "F1_R103_TeacherPC",
    "pos": [
-    198.003942,
-    14.43836
+    197.842108,
+    14.144578
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": 1,
+   "dir_deg": 177.71614549541547,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 7.15,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
@@ -8956,13 +8956,13 @@
    "type": "chair_row",
    "name": "F1_R103_TeacherChair",
    "pos": [
-    197.504342,
-    14.458285
+    197.866814,
+    14.764082
    ],
-   "pitch": 1.2,
-   "dir_deg": 87.71614549541547,
-   "face": 1,
+   "dir_deg": 177.71614549541547,
+   "face": -1,
    "n": 1,
+   "pitch": 1.4,
    "z": 6.4,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
