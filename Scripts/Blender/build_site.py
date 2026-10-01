@@ -44,7 +44,8 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "turnstile": "M_Steel_Galv", "gate_leaf": "M_Steel_Paint_Dark", "canopy": "M_Sheet_Brown", "slab": "M_Concrete",
              "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark",
              "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White", "hedge_arch": "M_Hedge_Foliage",
-             "desk_row": "M_Laminate_White", "monitor_row": "M_Plastic_Black", "chair_row": "M_Plastic_Black"}
+             "desk_row": "M_Laminate_White", "monitor_row": "M_Plastic_Black", "chair_row": "M_Plastic_Black",
+             "rails": "M_Ceiling_Grid_White"}
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
@@ -64,7 +65,7 @@ def site_slot(el):
     for key, slot in SURFACE_SLOT:
         if key in srf:
             return slot
-    if el.get("type") in ("desk_row", "monitor_row", "chair_row"):
+    if el.get("type") in ("desk_row", "monitor_row", "chair_row", "rails"):
         return TYPE_SLOT[el["type"]]
     if el.get("material") in MATERIAL_SLOT:
         return MATERIAL_SLOT[el["material"]]
@@ -924,6 +925,18 @@ class Site:
         z0 = el["z0"] if "z0" in el else self.gz(P.x, P.y) + el.get("z_rel", 0.0)   # no z0: on the ground (+ z_rel)
         box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, z0, z0 + h)
         self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, z0))
+
+    def b_rails(self, el):
+        """Straight rails in one object (lay-in ceiling T-grid): segments [[p0, p1], ...] world xy, width x height (m),
+        z0 = bottom (abs)."""
+        bw, bh, z0 = el.get("width", 0.024), el.get("height", 0.012), el["z0"]
+        bm = bmesh.new()
+        for p0, p1 in el["segments"]:
+            a, b = Vector(p0[:2]), Vector(p1[:2])
+            L = (b - a).length
+            box(bm, _frame2(a, b - a), -bw / 2, L + bw / 2, -bw / 2, bw / 2, z0, z0 + bh)
+        p = el["segments"][0][0]
+        self.emit(el, bm, COL["white"], (p[0], p[1], z0))
 
     # Classroom furniture rows (C labs, C105 photos 150-153): one object per row so a 30-room block stays light.
     # pos = row centre (world xy), dir_deg = row direction, z = floor (abs), n units at pitch along the row;

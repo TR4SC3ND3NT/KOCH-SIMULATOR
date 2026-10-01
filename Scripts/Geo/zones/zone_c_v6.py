@@ -347,6 +347,19 @@ def fitout(k, zb, num):
         bx("Pilaster_BackDoor", 0.0, 0.15, 0.0, 0.25, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         bx("Column_BackWin", 0.0, 0.25, D - 0.50, D, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         bx("Pilaster_BoardWin", L - 0.10, L, D - 0.60, D, 0.0, C + 0.01, slot="M_Paint_White", **ref)
+        # lay-in ceiling (C105 tile metrology): T-grid on the measured seams - along u back box 0.20 + cut 0.28 + 8 x 0.60
+        # + cut 0.52, along v door box 0.30 + cut 0.15 + 9 x 0.60 + window beam 0.50 - plus the wall angle on the box/beam
+        # faces; 4 LED panels 600 x 600 in tiles u #1/#6 x v #2/#6 (153: front pair at u 4.08-4.68, v 1.65-2.25 / 4.05-4.65)
+        us = [0.48 + 0.60 * i for i in range(9)] + [0.20, L]
+        vs = [0.45 + 0.60 * j for j in range(9)] + [0.30, D - 0.50]
+        seg = [[c_to_w(*to_c(u, 0.30)), c_to_w(*to_c(u, D - 0.50))] for u in us] + \
+              [[c_to_w(*to_c(0.20, v)), c_to_w(*to_c(L, v))] for v in vs]
+        els.append({"type": "rails", "name": R + "CeilingGrid", "segments": seg, "width": 0.024, "height": 0.012,
+                    "z0": z(zb + C - 0.012), **ev("600 mm lay-in T-grid on the C105 seam layout")})
+        for i, u0 in enumerate((1.08, 4.08)):
+            for j, v0 in enumerate((1.65, 4.05)):
+                bx(f"LED_{i}{j}", u0 + 0.012, u0 + 0.588, v0 + 0.012, v0 + 0.588, C - 0.015, C, mat="white",
+                   slot="M_LED_Panel_600", ue_asset="led_panel_600", **ev("600 x 600 LED panel in a grid cell (C105 153/034-037)"))
         # board wall: 70-inch TV, 1.8 x 1.2 whiteboard, split AC (153)
         bx("TV", L - 0.055, L - 0.005, 4.30 - 0.785, 4.30 + 0.785, 1.06, 1.93, mat="metal", slot="M_Plastic_Black", ue_asset="tv_70in", **ref)
         bx("Whiteboard", L - 0.025, L - 0.005, 1.85 - 0.90, 1.85 + 0.90, 0.75, 1.95, slot="M_Plastic_White", ue_asset="whiteboard_180x120", **ref)
