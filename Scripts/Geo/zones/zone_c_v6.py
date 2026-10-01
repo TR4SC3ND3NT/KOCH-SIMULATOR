@@ -398,7 +398,7 @@ def build():
     for side, xw, sg in (("W", X_W, +1), ("E", X_E, -1)):
         h0, h1 = hall(xw + sg * 1.0)
         y_b = h0 + (COR - LANDING - (RISERS - 1) * TREAD)
-        y_c = h0 + 2.97
+        y_c = y_b + 1.20                          # closet front 1.2 m up the flight: the 2.0 m door fits under the soffit
         y_l = y_b + (RISERS - 1) * TREAD
         soff = lambda y: STOREY - RISER_H - SOFFIT * (TREAD ** 2 + RISER_H ** 2) ** 0.5 / TREAD - (y - y_b) * RISER_H / TREAD
         xo = xw + sg * FLIGHT_W
