@@ -900,22 +900,41 @@ class Site:
         self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
 
     def b_sink(self, el):
-        """Pedestal wash basin (C WCs, 075931189 t4.4): round pedestal + oval bowl with a flat rim, on the floor
-        against a wall. pos = centre of the bowl in plan, dir_deg = facing direction (away from the wall), z = floor."""
-        P = Vector(el["pos"])
+        """Pedestal wash basin (C WCs, photos 2026-10-01_WC 031/040): D-shaped basin (flat back on the wall, round
+        front), 20-30 mm rim round a sunk bowl, tap deck at the back, lathe-turned pedestal. pos = basin centre in plan,
+        dir_deg = facing (away from the wall), z = floor. Loops run CCW so the normals face out."""
+        P = Vector(el["pos"][:2])
         fwd, left = rot2(el.get("dir_deg", 0.0))
         z = el["z"] if "z" in el else self.gz(P.x, P.y)
         w, dpt, h = el.get("width", 0.55), el.get("depth", 0.45), el.get("height", 0.85)
-        bm = bmesh.new()
-        ped = P - fwd * (dpt * 0.15)
-        _cyl(bm, ped, 0.075, z, z + h - 0.16, 12)
-        seg = 16
-        def ring(zz, sc):
-            return [bm.verts.new((P.x + (left.x * math.cos(a) * w / 2 + fwd.x * math.sin(a) * dpt / 2) * sc,
-                                  P.y + (left.y * math.cos(a) * w / 2 + fwd.y * math.sin(a) * dpt / 2) * sc, zz))
-                    for a in (2 * math.pi * k / seg for k in range(seg))]
-        lo, hi = ring(z + h - 0.18, 0.78), ring(z + h, 1.0)
-        _close_loops(bm, [lo, hi])
+        bm, seg = bmesh.new(), 64
+
+        def loop(c, ax, ay, zz, back_n):
+            """Superellipse loop: front half (towards fwd) elliptic, back half squarer (exponent back_n)."""
+            out = []
+            for k in range(seg):
+                t = 2 * math.pi * k / seg
+                cx, sy = math.cos(t), math.sin(t)
+                e = 1.0 if cx > 0 else 2.0 / back_n
+                q = c + fwd * (math.copysign(abs(cx) ** e, cx) * ay) + left * (math.copysign(abs(sy) ** e, sy) * ax)
+                out.append(bm.verts.new((q.x, q.y, zz)))
+            return out
+        ci = P + fwd * 0.035                                   # bowl sits forward of the tap deck
+        loops = [loop(P - fwd * 0.03, w / 2 * 0.86, dpt / 2 * 0.80, z + h - 0.17, 4.0),   # underside
+                 loop(P, w / 2 - 0.004, dpt / 2 - 0.004, z + h - 0.035, 5.0),           # rim edge, rounded
+                 loop(P, w / 2, dpt / 2, z + h - 0.012, 5.0),
+                 loop(P, w / 2 - 0.006, dpt / 2 - 0.006, z + h, 5.0),                  # rim top
+                 loop(ci, w / 2 - 0.035, dpt / 2 - 0.075, z + h, 2.0),                 # bowl edge
+                 loop(ci, (w / 2 - 0.035) * 0.86, (dpt / 2 - 0.075) * 0.86, z + h - 0.05, 2.0),
+                 loop(ci, (w / 2 - 0.035) * 0.55, (dpt / 2 - 0.075) * 0.55, z + h - 0.12, 2.0),
+                 loop(ci, 0.03, 0.03, z + h - 0.145, 2.0)]                              # waste
+        _close_loops(bm, loops)
+        # pedestal: lathe profile (z, r) from the floor to inside the basin underside (031: flared foot and head)
+        pc = P - fwd * (dpt / 2 - 0.16)
+        prof = [(0.0, 0.085), (0.015, 0.088), (0.05, 0.078), (0.25, 0.064), (0.45, 0.060), (h - 0.32, 0.066), (h - 0.22, 0.090), (h - 0.165, 0.115)]
+        rings = [[bm.verts.new((pc.x + r * math.cos(2 * math.pi * k / 48), pc.y + r * math.sin(2 * math.pi * k / 48), z + zz)) for k in range(48)]
+                 for zz, r in prof]
+        _close_loops(bm, rings)
         self.emit(el, bm, COL["white"], (P.x, P.y, z))
 
     def b_box(self, el):
@@ -957,24 +976,35 @@ class Site:
         self.emit(el, bm, COL["white"], (P.x, P.y, el["z0"]))
 
     def b_toilet(self, el):
-        """Close-coupled floor WC (C WCs, photos 2026-10-01_WC): tapered pedestal, oval bowl + seat, cistern on the
-        back against the wall. pos = wall contact point at the WC axis, dir_deg = facing (away from the wall), z = floor."""
+        """Close-coupled floor WC (C WCs; cubicle interiors not photographed, standard 0.36 x 0.65 compact): egg-shaped
+        pedestal and bowl with a sunk pan, seat ring, cistern + lid against the wall. pos = wall contact point on the
+        WC axis, dir_deg = facing (away from the wall), z = floor. Loops CCW (normals out)."""
         P, (fwd, left) = Vector(el["pos"][:2]), rot2(el.get("dir_deg", 0.0))
         z, L, W = el["z"], el.get("length", 0.65), el.get("width", 0.36)
-        bm, seg = bmesh.new(), 16
-        def oval(c, a, b, zz):
-            return [bm.verts.new((c.x + left.x * math.cos(t) * a + fwd.x * math.sin(t) * b,
-                                  c.y + left.y * math.cos(t) * a + fwd.y * math.sin(t) * b, zz))
-                    for t in (2 * math.pi * k / seg for k in range(seg))]
-        cb = P + fwd * (L - 0.24)                                    # bowl centre, 0.24 m behind the front rim
-        cp = P + fwd * (L - 0.30)
-        _close_loops(bm, [oval(cp, 0.10, 0.17, z), oval(cp, 0.13, 0.20, z + 0.25)])     # pedestal
-        _close_loops(bm, [oval(cb, 0.15, 0.20, z + 0.24), oval(cb, W / 2, 0.24, z + 0.39)])  # bowl
-        _close_loops(bm, [oval(cb, W / 2 - 0.005, 0.235, z + 0.395), oval(cb, W / 2 - 0.005, 0.235, z + 0.42)])  # seat
+        bm, seg = bmesh.new(), 64
+
+        def egg(c, a, b, zz, taper=0.18, verts=True):
+            """Egg loop: semi-axes a (across) / b (along fwd), narrower at the back by taper."""
+            out = []
+            for k in range(seg):
+                t = 2 * math.pi * k / seg
+                cx, sy = math.cos(t), math.sin(t)
+                q = c + fwd * (cx * b) + left * (sy * a * (1 - taper * max(0.0, -cx)))
+                out.append(bm.verts.new((q.x, q.y, zz)) if verts else q)
+            return out
+        cb = P + fwd * (L - 0.25)                                  # bowl centre 0.25 m behind the front rim
+        cp = P + fwd * (L - 0.33)
+        _close_loops(bm, [egg(cp, 0.105, 0.17, z), egg(cp, 0.10, 0.165, z + 0.02), egg(cp, 0.088, 0.15, z + 0.14),
+                          egg(cb, 0.13, 0.20, z + 0.27), egg(cb, W / 2 - 0.01, 0.24, z + 0.36), egg(cb, W / 2, 0.25, z + 0.385),
+                          egg(cb, W / 2 - 0.03, 0.215, z + 0.39), egg(cb, W / 2 - 0.06, 0.17, z + 0.32),
+                          egg(cb + fwd * 0.03, 0.07, 0.09, z + 0.22), egg(cb + fwd * 0.03, 0.03, 0.04, z + 0.20)])
+        _ring_band(bm, egg(cb, W / 2 - 0.002, 0.245, 0, verts=False), egg(cb, W / 2 - 0.075, 0.165, 0, verts=False),
+                   z + 0.392, z + 0.412)                           # seat ring (lid up is left to UE)
         m = _frame2(P, fwd)
-        box(bm, m, 0.0, 0.18, -0.19, 0.19, z + 0.39, z + 0.78)       # cistern 0.38 x 0.18, top at 0.78
-        box(bm, m, 0.0, 0.22, -0.205, 0.205, z + 0.78, z + 0.80)     # cistern lid
-        box(bm, m, 0.12, 0.26, -0.17, 0.17, z + 0.30, z + 0.40)      # bowl neck to the cistern
+        box(bm, m, 0.0, 0.17, -0.18, 0.18, z + 0.40, z + 0.77)        # cistern 0.36 x 0.17, top 0.79
+        box(bm, m, -0.0, 0.185, -0.19, 0.19, z + 0.77, z + 0.79)        # cistern lid
+        box(bm, m, 0.06, 0.20, -0.15, 0.15, z + 0.33, z + 0.40)         # bowl neck under the cistern
+        _cyl(bm, P + fwd * 0.10, 0.025, z + 0.79, z + 0.797, 32)       # dual flush button
         self.emit(el, bm, COL["white"], (P.x, P.y, z))
 
     def b_radiator(self, el):
