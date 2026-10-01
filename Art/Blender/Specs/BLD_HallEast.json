@@ -43,8 +43,8 @@
  ],
  "plinth": {
   "z_top": 0.6,
-  "proj": 0.03,
-  "evidence": "red brick-tile plinth (a_052)",
+  "proj": 0.035,
+  "evidence": "red brick-tile plinth (a_052) | 2026-10-01 QA: 0.035 (5 mm off the hall plinth it meets; the faces were coplanar)",
   "confidence": "medium"
  },
  "pilasters": [],

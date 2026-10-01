@@ -147,8 +147,8 @@ def floor_slabs(k, zb, holes):
         if side and holes.get(side):
             h0, h1 = hall((x0 + x1) / 2)
             yb = h0 + (COR - LANDING - (RISERS - 1) * TREAD)
-            els.append(slab(f"F{k}_Slab_{nm}_S", x0, x1, y0, yb, z0, zb, t))
-            els.append(slab(f"F{k}_Slab_{nm}_N", x0, x1, h1, y1, z0, zb, t))
+            els.append(slab(f"F{k}_Slab_{nm}_S", x0, x1, y0, yb + 0.02, z0, zb, t))
+            els.append(slab(f"F{k}_Slab_{nm}_N", x0, x1, h1 + 0.02, y1, z0, zb, t))
         else:
             els.append(slab(f"F{k}_Slab_{nm}", x0, x1, y0, y1, z0, zb, t))
     for e in els:
@@ -266,7 +266,7 @@ def plan(k, zb, lobby, west_stair):
     for x in (P1, P2, P3, P4):
         if lobby or x not in (P2, P3) or True:
             h0 = hall(x - 0.01)[0] if x != P3 else HE0
-            els.append(wall(f"{P}Room_S_{x:.2f}", (x + PART / 2, south_in(x)), (x + PART / 2, (HW0 if x < X_JS else HE0) - PART), zb,
+            els.append(wall(f"{P}Room_S_{x:.2f}", (x + PART / 2, south_in(x)), (x + PART / 2, HW0 - PART if x <= X_JS else HE0 - PART), zb,
                             **ev("room partition, reference 5.80 m rooms / lobby 4.5 m")))
     for x in (P1, P2, P_WCM, P3, P4):
         yh = (HW1 if x < X_JN else HE1) + PART
@@ -363,12 +363,13 @@ def fitout(k, zb, num):
                         "size": [round(abs(u1 - u0), 3), round(abs(v1 - v0), 3), round(z1 - z0, 3)], "z0": z(zb + z0),
                         "material": mat, **kw})
         ref = ev("reference classroom C105 (150-153, plan v6)")
-        bx("WindowBeam", 0.25, L, D - 0.50, D, C - 0.20, C + 0.01, slot="M_Paint_White", **ref)
+        PK = 0.006                                    # paint skin on the back / window walls (below): bulkheads sit on it
+        bx("WindowBeam", 0.25, L, D - 0.50, D - PK, C - 0.20, C + 0.01, slot="M_Paint_White", **ref)
         bx("DoorBox", 0.15, L, 0.0, 0.30, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
-        bx("BackBox", 0.0, 0.20, 0.30, D - 0.50, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
-        bx("Pilaster_BackDoor", 0.0, 0.15, 0.0, 0.25, 0.0, C + 0.01, slot="M_Paint_White", **ref)
-        bx("Column_BackWin", 0.0, 0.25, D - 0.50, D, 0.0, C + 0.01, slot="M_Paint_White", **ref)
-        bx("Pilaster_BoardWin", L - 0.10, L, D - 0.60, D, 0.0, C + 0.01, slot="M_Paint_White", **ref)
+        bx("BackBox", PK, 0.20, 0.30, D - 0.50, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
+        bx("Pilaster_BackDoor", PK, 0.15, 0.0, 0.25, 0.0, C + 0.01, slot="M_Paint_White", **ref)
+        bx("Column_BackWin", PK, 0.25, D - 0.50, D - PK, 0.0, C + 0.01, slot="M_Paint_White", **ref)
+        bx("Pilaster_BoardWin", L - 0.10, L, D - 0.60, D - PK, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         # lay-in ceiling (C105 tile metrology): T-grid on the measured seams - along u back box 0.20 + cut 0.28 + 8 x 0.60
         # + cut 0.52, along v door box 0.30 + cut 0.15 + 9 x 0.60 + window beam 0.50 - plus the wall angle on the box/beam
         # faces; 4 LED panels 600 x 600 in tiles u #1/#6 x v #2/#6 (153: front pair at u 4.08-4.68, v 1.65-2.25 / 4.05-4.65)
@@ -414,8 +415,10 @@ def fitout(k, zb, num):
                     paint.append(box_(a, o0, w0, w1, 0.0, zt))
                 if o1 > o0:
                     paint += [box_(o0, o1, w0, w1, 0.0, zs), box_(o0, o1, w0, w1, zh, zt)]
-                    trim += [box_(o0 - 0.006, o0, r0, r1, zs, zh), box_(o1, o1 + 0.006, r0, r1, zs, zh), box_(o0, o1, r0, r1, zh - 0.006, zh),
-                             box_(o0 - 0.03, o1 + 0.03, *sorted((at + depth_dir * 0.04, at - depth_dir * rv)), zs - 0.02, zs)]
+                    # lining inside the opening (on the shell's reveal faces, never coplanar with them), board on the sill
+                    trim += [box_(o0, o0 + 0.006, r0, r1, zs + 0.02, zh), box_(o1 - 0.006, o1, r0, r1, zs + 0.02, zh),
+                             box_(o0 + 0.006, o1 - 0.006, r0, r1, zh - 0.006, zh),
+                             box_(o0, o1, *sorted((at + depth_dir * 0.04, at - depth_dir * rv)), zs, zs + 0.02)]
                 a = max(a, o1)
             return paint, trim
         x0 = to_c(0, 0)[0]
@@ -641,11 +644,11 @@ def wc_fitout(k, zb):
         hd = WC_WIN_SILL + WC_WIN_H
         rv = round(X_W - 0.16 - 0.07, 3)                        # inner reveal depth (outer wall X_W = 0.45, frame at 0.16 + 0.07)
         pw = [it(0.0, win[0], D - 0.006, D, WC_BAND, C), it(win[1], WC_W, D - 0.006, D, WC_BAND, C), it(win[0], win[1], D - 0.006, D, hd, C),
-              it(win[0] - 0.006, win[0], D, D + rv, WC_WIN_SILL, hd), it(win[1], win[1] + 0.006, D, D + rv, WC_WIN_SILL, hd),
-              it(win[0], win[1], D, D + rv, hd - 0.006, hd)]
+              it(win[0], win[0] + 0.006, D, D + rv, WC_WIN_SILL + 0.02, hd), it(win[1] - 0.006, win[1], D, D + rv, WC_WIN_SILL + 0.02, hd),
+              it(win[0] + 0.006, win[1] - 0.006, D, D + rv, hd - 0.006, hd)]
         els.append({"type": "boxes", "name": R + "North_Paint", "items": pw, "material": "white", "slot": "M_Paint_White",
                     **wev("white paint above the tiles and in the window reveal (029)")})
-        bx("Window_Sill", win[0] - 0.02, win[1] + 0.02, D - 0.03, D + rv, WC_WIN_SILL - 0.02, WC_WIN_SILL, "M_PVC_White",
+        bx("Window_Sill", win[0], win[1], D - 0.03, D + rv, WC_WIN_SILL, WC_WIN_SILL + 0.02, "M_PVC_White",
            **wev("white PVC window board at the sill (029)"))
         els.append({"type": "boxes", "name": R + "Cornice", "items": corn, "material": "white", "slot": "M_PVC_White",
                     **wev("PVC ceiling cornice 50 x 50 (029/032)")})
