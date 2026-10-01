@@ -68,7 +68,7 @@ def remap_el(e):
     if p0 is not None:
         xo, yo = s_local(p0)
         hs_o, hn_o = S.hall(xo)
-        hall = hs_o <= yo <= hn_o
+        hall = hs_o - S.PART <= yo <= hn_o + S.PART      # hall side, incl. fittings that sat inside the hall walls
 
     def P(p):
         w = N.c_to_w(*remap_xy(*s_local(p)))
@@ -87,8 +87,38 @@ def remap_el(e):
     if "openings" in e:
         for o in e["openings"]:
             o["z0"], o["z1"] = remap_z(o["z0"], k, hall), remap_z(o["z1"], k, hall)
+    if e.get("type") == "box" and WALL_MOUNTED.search(e.get("name", "")):
+        snap_to_face(e, hall)
     e["evidence"] = (e.get("evidence", "") + " | " if e.get("evidence") else "") + "2026-10-01 remapped onto plan v6 (remap_c_v6.py)"
     return e
+
+
+WALL_MOUNTED = re.compile(r"Radiator|FireHose|Hose|Extinguisher|Cabinet|Clock|Notice")
+
+
+def snap_to_face(e, hall):
+    """Wall-mounted fittings sat inside the hall / end walls in the source plan (overlap_qa 2026-10-01): put them on
+    the face (5 mm off it). Depth = size[1] (across dir_deg)."""
+    x, y = s_local_n(e["center"])
+    hd = e["size"][1] / 2 + 0.005
+    along_x = abs(((e.get("dir_deg", N.EAST) - N.EAST + 90) % 180) - 90) < 45     # long side along C-local x
+    if along_x and hall:
+        hs, hn = N.hall(x)
+        if y - hd < hs:
+            y = hs + hd
+        elif y + hd > hn:
+            y = hn - hd
+    elif not along_x:
+        if x - hd < N.X_W:
+            x = N.X_W + hd
+        elif x + hd > N.X_E:
+            x = N.X_E - hd
+    e["center"] = N.c_to_w(x, y)
+
+
+def s_local_n(p):
+    d = np.asarray(p[:2], float) - N.C_ORIGIN
+    return float(d @ N.C_X), float(d @ N.C_Y)
 
 
 def main(v6_dir):
