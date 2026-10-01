@@ -654,3 +654,15 @@ Every owner message goes here verbatim, with its time, before any work starts.
 > ой сука вот ты мне мозги выебал , ну вот я сфотал того чела я подрубил телефон по проводу новые фотки того чела уже там , он скащал что он с обувтю около 185-6см ну короче бляь доставай с телефона фотки и считай точно скаолько весь дверной проем (не просто дверь саму а вот именно проем блять этот от поля до белого верха нахуй ты меня понял ? епта сам смотри и прям попиксельно ебашь блять точно нахуй ты меня понял ? ебана врот скачай их  ивсе фотки что внтури класса я делал только вниту класса нахуй вот блтяь там c105 кабинет и там c204 блть все что я тебе давал именно внтури класса нахуй загрузи на ебаный гитхаб чтобы там тот блять кложд все расщитал сам точно , я ему просто дам блять ебаный замер того чела и чтобы он все сам нахуй расщитывал без подсказок нахуй понял ? файлы не пши ипросто блтяь залей фотки све с тем челом и все вутрикласовые фотки нахер
 > я тебе не говорил его считать я сказал залитиь на гитхаб и я буду с агентом в клауде сам считать нахуй
 > а ты можешь залить и наш мой разговорор в гитхаб типа ну я просто хочу чтобы та сессия claude in cloude session видел что я писал (убери файл из гитигнора) и этот что я тебе дал текст щас тоже залей туда , ну файл весь
+
+### 2026-10-01 (cloud session: door + C105 recount)
+> ты видел чела который в дверном проеме стоит? так вот он около 185см ... попиксельно вычислить ... дверной проем (от пола до белого верха) ... потом весь класс, высоту потолка, периметр, площадь, неровности ... выдашь мне файл как на фото план только с верными размерами
+1. [x] Door opening (wall face, floor -> white top), 3 independent scales agree: person 185 (heels at the threshold, C204 021/025/026/027) 1.968 × 0.923; tiles 0.600 (C204 014) 1.982 × 0.920; tiles (C105 151) 1.983 × 0.925 -> **1.98 × 0.92**. TV 70" (1.575 × 0.870) and laminate 0.19 confirm the scale. Earlier 1.88 (tiles) and 2.12 (person) were both errors.
+2. [x] C105 v6 plan: docs/reference/C105_plan_v6.png (Scripts/Geo/photo/c105_ceiling_plan.py, metrology in Scripts/Geo/photo/v6/):
+   - 5.77 (back -> board wall) × 6.34 (door -> window wall); grid 2.89 m; area 36.4 m², perimeter 24.22 m, volume ≈104 m³.
+   - along: back box 0.18 + cut 0.27 + 8 × 0.60 + cut 0.52; across: door box 0.28 + cut 0.16 + 9 × 0.60 + window beam 0.50.
+   - window beam 0.50 deep, underside 2.69; door-wall box 0.28, underside 2.66; board wall no box.
+   - corner pilasters: back/door 0.15 × 0.25, back/window 0.25 × 0.50, board/window 0.09 × 0.58.
+   - door 0.45 m from the board-wall corner; windows 1.97 and 2.01 wide, sill 1.12, head 2.54.
+   - v3/v5 errors: width 6.13 (window beam taken as 0.28, it is 0.50), heights ~0.10 low.
+3. [ ] C204 room: only the door wall is measurable (door 1.98 × 0.92, box 0.28 deep, underside 2.63, grid 2.785); the rest needs straight-on wall photos.
