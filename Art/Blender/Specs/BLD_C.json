@@ -162,8 +162,8 @@
    "evidence": "grilled basement window of C's south wall seen from the basement corridor (SfM 012547860, overlay frames 41/101/121)"
   },
   "WC": {
-   "w": 0.55,
-   "h": 1.1,
+   "w": 0.6,
+   "h": 1.13,
    "mullions": [],
    "transoms": [
     0.72
@@ -366,13 +366,13 @@
     {
      "type": "WC",
      "u": [
-      13.225
+      13.2
      ],
      "sills": [
-      1.45,
-      4.75,
-      8.05,
-      11.35
+      1.42,
+      4.72,
+      8.02,
+      11.32
      ]
     }
    ]
@@ -404,13 +404,13 @@
     {
      "type": "WC",
      "u": [
-      1.475
+      1.5
      ],
      "sills": [
-      1.45,
-      4.75,
-      8.05,
-      11.35
+      1.42,
+      4.72,
+      8.02,
+      11.32
      ]
     }
    ]
