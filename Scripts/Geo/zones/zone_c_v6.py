@@ -419,11 +419,13 @@ def fitout(k, zb, num):
             els.append({"type": "monitor_row", "name": R + f"PCs_{r}", **dict(row, z=z(zb + 0.75))})
             sv_off = 0.62 if face == f_v else -0.62
             els.append({"type": "chair_row", "name": R + f"Chairs_{r}", **dict(row, pos=c_to_w(*to_c(2.40, vc + sv_off)))})
-        # teacher's desk in the board / window corner, the teacher sits between it and the board wall facing the class (153)
-        t = {"dir_deg": d_v, "face": f_u, "n": 1, "z": z(zb), **lab}
-        els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(4.95, 5.55)), "pitch": 1.20, "depth": 0.60, **t})
-        els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(4.95, 5.55)), "pitch": 1.20, **dict(t, z=z(zb + 0.75))})
-        els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(5.45, 5.55)), "pitch": 1.20, **t})
+        # teacher's desk (owner 2026-10-01): longer (1.40 x 0.60), it continues the window-side row of the second island
+        # up to the board wall (end against the wall); the teacher sits with his back to the windows, PC in front
+        tv = 4.95 + 0.30
+        t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.40, "z": z(zb), **lab}
+        els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(L - 0.70, tv)), "depth": 0.60, **t})
+        els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(L - 0.70, tv)), **dict(t, z=z(zb + 0.75))})
+        els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(L - 0.70, tv + 0.62)), **t})
     return els
 
 
