@@ -45,12 +45,14 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark",
              "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White", "hedge_arch": "M_Hedge_Foliage",
              "desk_row": "M_Laminate_White", "monitor_row": "M_Plastic_Black", "chair_row": "M_Plastic_Black",
-             "rails": "M_Ceiling_Grid_White"}
+             "rails": "M_Ceiling_Grid_White", "boxes": "M_Paint_White", "disc": "M_Lamp_Diffuser",
+             "toilet": "M_Ceramic_White", "radiator": "M_Radiator_White"}
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
            "bike_rack": "bike_rack", "tree": "tree", "hedge": "hedge", "sign": "sign_board",
-           "desk_row": "desk_lab_row", "monitor_row": "pc_monitor_24", "chair_row": "chair_stacking_black"}
+           "desk_row": "desk_lab_row", "monitor_row": "pc_monitor_24", "chair_row": "chair_stacking_black",
+           "toilet": "toilet_close_coupled", "radiator": "radiator_sectional_500"}
 
 
 def site_slot(el):
@@ -65,7 +67,7 @@ def site_slot(el):
     for key, slot in SURFACE_SLOT:
         if key in srf:
             return slot
-    if el.get("type") in ("desk_row", "monitor_row", "chair_row", "rails"):
+    if el.get("type") in ("desk_row", "monitor_row", "chair_row", "rails", "toilet", "radiator"):
         return TYPE_SLOT[el["type"]]
     if el.get("material") in MATERIAL_SLOT:
         return MATERIAL_SLOT[el["material"]]
@@ -937,6 +939,58 @@ class Site:
             box(bm, _frame2(a, b - a), -bw / 2, L + bw / 2, -bw / 2, bw / 2, z0, z0 + bh)
         p = el["segments"][0][0]
         self.emit(el, bm, COL["white"], (p[0], p[1], z0))
+
+    def b_boxes(self, el):
+        """Many boxes of one material in one object (WC tile skins, cornices, small fittings):
+        items [[cx, cy, dir_deg, a, b, h, z0], ...] world xy / abs z0, a along dir_deg, b across (m)."""
+        bm = bmesh.new()
+        for cx, cy, dd, a, b, h, z0 in el["items"]:
+            box(bm, _frame2(Vector((cx, cy)), rot2(dd)[0]), -a / 2, a / 2, -b / 2, b / 2, z0, z0 + h)
+        p = el["items"][0]
+        self.emit(el, bm, COL.get(el.get("material", "white"), COL["white"]), (p[0], p[1], p[6]))
+
+    def b_disc(self, el):
+        """Round ceiling fitting (LED luminaire, air diffuser): cylinder radius r at pos, z0..z1 abs."""
+        P = Vector(el["pos"][:2])
+        bm = bmesh.new()
+        _cyl(bm, P, el["r"], el["z0"], el["z1"], el.get("seg", 24))
+        self.emit(el, bm, COL["white"], (P.x, P.y, el["z0"]))
+
+    def b_toilet(self, el):
+        """Close-coupled floor WC (C WCs, photos 2026-10-01_WC): tapered pedestal, oval bowl + seat, cistern on the
+        back against the wall. pos = wall contact point at the WC axis, dir_deg = facing (away from the wall), z = floor."""
+        P, (fwd, left) = Vector(el["pos"][:2]), rot2(el.get("dir_deg", 0.0))
+        z, L, W = el["z"], el.get("length", 0.65), el.get("width", 0.36)
+        bm, seg = bmesh.new(), 16
+        def oval(c, a, b, zz):
+            return [bm.verts.new((c.x + left.x * math.cos(t) * a + fwd.x * math.sin(t) * b,
+                                  c.y + left.y * math.cos(t) * a + fwd.y * math.sin(t) * b, zz))
+                    for t in (2 * math.pi * k / seg for k in range(seg))]
+        cb = P + fwd * (L - 0.24)                                    # bowl centre, 0.24 m behind the front rim
+        cp = P + fwd * (L - 0.30)
+        _close_loops(bm, [oval(cp, 0.10, 0.17, z), oval(cp, 0.13, 0.20, z + 0.25)])     # pedestal
+        _close_loops(bm, [oval(cb, 0.15, 0.20, z + 0.24), oval(cb, W / 2, 0.24, z + 0.39)])  # bowl
+        _close_loops(bm, [oval(cb, W / 2 - 0.005, 0.235, z + 0.395), oval(cb, W / 2 - 0.005, 0.235, z + 0.42)])  # seat
+        m = _frame2(P, fwd)
+        box(bm, m, 0.0, 0.18, -0.19, 0.19, z + 0.39, z + 0.78)       # cistern 0.38 x 0.18, top at 0.78
+        box(bm, m, 0.0, 0.22, -0.205, 0.205, z + 0.78, z + 0.80)     # cistern lid
+        box(bm, m, 0.12, 0.26, -0.17, 0.17, z + 0.30, z + 0.40)      # bowl neck to the cistern
+        self.emit(el, bm, COL["white"], (P.x, P.y, z))
+
+    def b_radiator(self, el):
+        """Sectional radiator (C WC/rooms): n sections at pitch, height h, depth d, gap from the wall, pipes below.
+        pos = wall point under the radiator centre, dir_deg = facing (away from the wall), z0 = bottom (abs)."""
+        P, (fwd, _) = Vector(el["pos"][:2]), rot2(el.get("dir_deg", 0.0))
+        n, p, h, d, g, z0 = el.get("n", 7), el.get("pitch", 0.07), el.get("height", 0.58), el.get("depth", 0.08), el.get("gap", 0.04), el["z0"]
+        m = _frame2(P, fwd)
+        bm = bmesh.new()
+        L = n * p
+        for k in range(n):                                            # sections, 6 mm air gap between them
+            u = -L / 2 + k * p
+            box(bm, m, g, g + d, -(u + p - 0.003), -(u + 0.003), z0, z0 + h)
+        for zz in (z0 + 0.03, z0 + h - 0.05):                         # top/bottom headers through the sections
+            box(bm, m, g + 0.02, g + d - 0.02, -L / 2 + 0.003, L / 2 - 0.003, zz, zz + 0.02)
+        self.emit(el, bm, COL["white"], (P.x, P.y, z0))
 
     # Classroom furniture rows (C labs, C105 photos 150-153): one object per row so a 30-room block stays light.
     # pos = row centre (world xy), dir_deg = row direction, z = floor (abs), n units at pitch along the row;

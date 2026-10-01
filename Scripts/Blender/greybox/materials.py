@@ -28,6 +28,8 @@ PALETTE = {
     "M_Ground_Grass": (0.36, 0.45, 0.27, 1), "M_Tile_Beige": (0.86, 0.80, 0.68, 1),
     "M_Laminate_White": (0.94, 0.94, 0.93, 1), "M_Ceiling_Tile_600": (0.95, 0.95, 0.94, 1),
     "M_Ceiling_Grid_White": (0.90, 0.90, 0.90, 1), "M_LED_Panel_600": (1.0, 1.0, 0.97, 1),
+    "M_Tile_Floor_600": (0.74, 0.72, 0.68, 1), "M_PVC_Ceiling_Panel": (0.95, 0.95, 0.95, 1),
+    "M_PVC_Anthracite": (0.21, 0.22, 0.24, 1), "M_Chrome": (0.80, 0.81, 0.83, 1), "M_Radiator_White": (0.95, 0.95, 0.94, 1),
 }
 
 # object-name keyword -> slot for parts still on a plain review colour after all builders ran (attachments, P0/P1

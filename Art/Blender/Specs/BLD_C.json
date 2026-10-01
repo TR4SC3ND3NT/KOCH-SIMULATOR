@@ -162,7 +162,7 @@
    "evidence": "grilled basement window of C's south wall seen from the basement corridor (SfM 012547860, overlay frames 41/101/121)"
   },
   "WC": {
-   "w": 0.6,
+   "w": 0.55,
    "h": 1.1,
    "mullions": [],
    "transoms": [
@@ -176,7 +176,7 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "WC end-wall window, high and narrow with a transom, above the radiator at the aisle end (075931189_s1 f00003; tile band 1.4 m under the sill); size by eye from the door 0.99 x 2.05 beside it"
+   "evidence": "WC end-wall window, high and narrow with a transom, above the radiator at the aisle end (075931189_s1 f00003; tile band 1.4 m under the sill); size by eye from the door 0.99 x 2.05 beside it | 2026-10-01 WC photos 029/030 (tile metrology): opening 0.52-0.55 x 1.10, sill 1.45, axis 0.775 m off the aisle wall"
   }
  },
  "rows": {
@@ -366,13 +366,13 @@
     {
      "type": "WC",
      "u": [
-      13.525
+      13.225
      ],
      "sills": [
-      1.55,
-      4.85,
-      8.15,
-      11.45
+      1.45,
+      4.75,
+      8.05,
+      11.35
      ]
     }
    ]
@@ -404,13 +404,13 @@
     {
      "type": "WC",
      "u": [
-      1.175
+      1.475
      ],
      "sills": [
-      1.55,
-      4.85,
-      8.15,
-      11.45
+      1.45,
+      4.75,
+      8.05,
+      11.35
      ]
     }
    ]

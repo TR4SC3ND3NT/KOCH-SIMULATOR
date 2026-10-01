@@ -21,7 +21,7 @@ KN_S = ["X_W", "FRONT_W", "P1", "P2", "P3", "P4", "FRONT_E", "X_E"]
 KN_N = ["X_W", "FRONT_W", "P1", "P2", "P_WCM", "P3", "P4", "FRONT_E", "X_E"]
 XK_S = ([getattr(S, k) for k in KN_S], [getattr(N, k) for k in KN_S])
 XK_N = ([getattr(S, k) for k in KN_N], [getattr(N, k) for k in KN_N])
-DROP = re.compile(r"^(F\d_)?(Lab_|Accent_Recess_)")      # old F2 lab; accents of the old F1 WC recess (no recess in v6)
+DROP = re.compile(r"^(F\d_)?(Lab_|Accent_Recess_|WC\d_)")   # old F2 lab; old F1 WC recess accents; old WC fit-out (v6 wc_fitout)
 
 
 def s_local(p):
