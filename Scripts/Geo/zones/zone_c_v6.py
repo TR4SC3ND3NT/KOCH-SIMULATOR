@@ -397,8 +397,10 @@ WC_PASS, WC_FRONT_T, WC_PT = 1.05, 0.10, 0.10
 WC_CUB_D = round(WC_W - WC_PASS - WC_FRONT_T, 3)
 WC_CUBS = (1.05, 1.05, 1.00)            # clear widths from the alcove to the north wall (b ascending)
 WC_ALCOVE, WC_ANTE = 1.20, 1.65         # sink alcove clear width; anteroom (lock) depth from the hall wall
-WC_CEIL, WC_BAND, WC_TILE_T = 2.60, 1.55, 0.01
-WC_WIN_W, WC_WIN_SILL, WC_WIN_H = 0.55, 1.45, 1.10
+WC_CEIL, WC_BAND, WC_TILE_T = 2.60, 1.56, 0.01
+WC_ROWS = (0.36, 0.96)            # wall tile seams above the floor (bottom row cut 0.35; 029 end wall 0.355 / 0.96 / 1.56)
+WC_TILE, WC_GROUT, WC_FLOOR_CUT = 0.60, 0.003, 0.34   # tile, joint (m); floor row at the north wall cut to 0.34 (029)
+WC_WIN_W, WC_WIN_SILL, WC_WIN_H = 0.60, 1.42, 1.13   # opening at the wall face; head 2.55 under the cornice
 WC_WIN_A = WC_CUB_D + WC_FRONT_T + WC_WIN_W / 2    # window axis: its jamb on the cubicle front line (0.775 off the aisle wall)
 WC_CUB_DOOR, WC_IN_DOOR, WC_IN_DOOR_A0 = 0.70, 0.78, 0.55
 WC_HALL_DOOR_A = WC_W / 2
@@ -456,11 +458,25 @@ def wc_fitout(k, zb):
                         "material": "white", "slot": slot, **kw})
         it = lambda a0, a1, b0, b1, z0, z1: [*c_to_w(*pt((a0 + a1) / 2, (b0 + b1) / 2)), EAST, round(abs(a1 - a0), 4),
                                                 round(abs(b1 - b0), 4), round(z1 - z0, 4), z(zb + z0)]
+        def lamp(nm, a_, b_, r, ue):
+            els.append({"type": "disc", "name": R + nm, "pos": W(a_, b_), "r": r, "z0": z(zb + C - 0.065), "z1": z(zb + C), "seg": 64,
+                        "slot": "M_Plastic_White", "ue_asset": ue, **wev(f"round LED ceiling lamp {2 * r:.2f} (029/032)")})
+            els.append({"type": "disc", "name": R + nm + "_Diffuser", "pos": W(a_, b_), "r": r - 0.012, "z0": z(zb + C - 0.068),
+                        "z1": z(zb + C - 0.02), "seg": 64, "slot": "M_Lamp_Diffuser", **wev("opal diffuser")})
         # floor tiles, PVC ceiling
         xa, xb = sorted((pt(0, 0)[0], pt(WC_W, 0)[0]))
         y0, y1 = pt(0, 0)[1], pt(0, D)[1]
-        els.append(slab(R + "Floor_Tile", xa, xb, y0, y1, zb + 0.002, zb + WC_FLOOR_T, "white", slot="M_Tile_Floor_600",
-                        **wev("porcelain floor tiles 600 x 600, grid from the aisle (outer) wall")))
+        G = WC_GROUT / 2
+        els.append(slab(R + "Floor_Grout", xa, xb, y0, y1, zb + 0.002, zb + WC_FLOOR_T - 0.006, "white", slot="M_Tile_Grout",
+                        **wev("tile adhesive / grout bed under the floor tiles")))
+        fl = []
+        a_seams = sorted({WC_W} | {round(WC_W - WC_TILE * n, 4) for n in range(1, 5) if WC_W - WC_TILE * n > 0} | {0.0})
+        b_seams = sorted({0.0, D} | {round(D - WC_FLOOR_CUT - WC_TILE * n, 4) for n in range(11) if D - WC_FLOOR_CUT - WC_TILE * n > 0})
+        for a0, a1 in zip(a_seams, a_seams[1:]):
+            for b0, b1 in zip(b_seams, b_seams[1:]):
+                fl.append(it(a0 + G, a1 - G, b0 + G, b1 - G, WC_FLOOR_T - 0.006, WC_FLOOR_T))
+        els.append({"type": "boxes", "name": R + "Floor_Tile", "items": fl, "material": "white", "slot": "M_Tile_Floor_600",
+                    **wev("porcelain floor tiles 600 x 600, 3 mm joints, grid from the aisle wall, 0.34 cut row at the north wall (029)")})
         els.append(slab(R + "Ceiling_PVC", xa, xb, y0, y1, zb + C, zb + C + 0.01, "white", slot="M_PVC_Ceiling_Panel",
                         **wev("white PVC strip ceiling at 2.60, strips along the aisle (029/032)")))
         # walls: inner (lock) partition with its door, block end wall, cubicle front with 3 doors, cubicle partitions
@@ -497,25 +513,49 @@ def wc_fitout(k, zb):
         for (b0, b1), c in zip(cub, cub_c):                                                   # cubicle interiors
             faces += [("a", 0.0, 1, b0, b1, []), ("a", a_fr, -1, b0, b1, [(c - WC_CUB_DOOR / 2 - 0.02, c + WC_CUB_DOOR / 2 + 0.02)]),
                       ("b", b0, 1, 0.0, a_fr, []), ("b", b1, -1, 0.0, a_fr, [])]
-        tiles, corn = [], []
+        tiles, grout, corn = [], [], []
+        z_rows = [WC_FLOOR_T, *WC_ROWS, WC_BAND]
         for ax, pos, sd, lo, hi, ops in faces:
-            q0, q1 = sorted((pos, pos + sd * T))
-            c0, c1 = sorted((pos, pos + sd * 0.05))
             span = lambda u0, u1, w0, w1, z0, z1: it(w0, w1, u0, u1, z0, z1) if ax == "a" else it(u0, u1, w0, w1, z0, z1)
+            g0, g1 = sorted((pos, pos + sd * 0.004))                 # grout / adhesive layer
+            t0, t1 = sorted((pos + sd * 0.004, pos + sd * T))       # tile body
+            c0, c1 = sorted((pos, pos + sd * 0.05))
             corn.append(span(lo, hi, c0, c1, C - 0.05, C))
-            cuts = sorted(o for o in ops if o[1] > lo and o[0] < hi)
-            u = lo
-            for o0, o1 in cuts + [(hi, hi)]:
+            # columns: from the north wall along b, from the aisle wall along a (029 end wall: aligned with the floor)
+            if ax == "a":
+                cols = sorted({lo, hi} | {round(D - WC_TILE * n, 4) for n in range(12) if lo < D - WC_TILE * n < hi})
+            else:
+                cols = sorted({lo, hi} | {round(WC_W - WC_TILE * n, 4) for n in range(5) if lo < WC_W - WC_TILE * n < hi})
+            pieces, u = [], lo
+            for o0, o1 in sorted(o for o in ops if o[1] > lo and o[0] < hi) + [(hi, hi)]:
                 if o0 - u > 0.005:
                     if ax == "b" and pos == D and u < win[1] and o0 > win[0]:                 # under the window: to the sill
-                        for s0, s1, zt in ((u, win[0], WC_BAND), (win[0], win[1], WC_WIN_SILL), (win[1], o0, WC_BAND)):
-                            if s1 - s0 > 0.005:
-                                tiles.append(span(s0, s1, q0, q1, WC_FLOOR_T, zt))
+                        pieces += [(s0, s1, zt) for s0, s1, zt in ((u, win[0], WC_BAND), (win[0], win[1], WC_WIN_SILL), (win[1], o0, WC_BAND)) if s1 - s0 > 0.005]
                     else:
-                        tiles.append(span(u, o0, q0, q1, WC_FLOOR_T, WC_BAND))
+                        pieces.append((u, o0, WC_BAND))
                 u = max(u, o1)
+            for p0, p1, zt in pieces:
+                grout.append(span(p0, p1, g0, g1, WC_FLOOR_T, zt))
+                cc = sorted({p0, p1} | {c for c in cols if p0 < c < p1})
+                zz = sorted({WC_FLOOR_T, zt} | {r for r in z_rows if WC_FLOOR_T < r < zt})
+                for u0, u1 in zip(cc, cc[1:]):
+                    for z0_, z1_ in zip(zz, zz[1:]):
+                        if u1 - u0 > 0.01 and z1_ - z0_ > 0.01:
+                            tiles.append(span(u0 + G, u1 - G, t0, t1, z0_ + G, z1_ - G))
         els.append({"type": "boxes", "name": R + "Wall_Tile", "items": tiles, "material": "white", "slot": "M_Tile_Wall_Grey",
-                    **wev("porcelain wall tiles 600 x 600, bottom row cut 0.35, top 1.55 (029 end wall: seams 0.355 / 0.96 / 1.56)")})
+                    **wev("porcelain wall tiles 600 x 600, 3 mm joints, rows 0.35 (cut) / 0.60 / 0.60 to 1.56 (029 end wall)")})
+        els.append({"type": "boxes", "name": R + "Wall_Grout", "items": grout, "material": "white", "slot": "M_Tile_Grout",
+                    **wev("tile adhesive / grout behind the wall tiles")})
+        # north (outer) wall above the band: white paint skin and the window reveal lining (the shell's inner face is facade render)
+        hd = WC_WIN_SILL + WC_WIN_H
+        rv = round(X_W - 0.16 - 0.07, 3)                        # inner reveal depth (outer wall X_W = 0.45, frame at 0.16 + 0.07)
+        pw = [it(0.0, win[0], D - 0.006, D, WC_BAND, C), it(win[1], WC_W, D - 0.006, D, WC_BAND, C), it(win[0], win[1], D - 0.006, D, hd, C),
+              it(win[0] - 0.006, win[0], D, D + rv, WC_WIN_SILL, hd), it(win[1], win[1] + 0.006, D, D + rv, WC_WIN_SILL, hd),
+              it(win[0], win[1], D, D + rv, hd - 0.006, hd)]
+        els.append({"type": "boxes", "name": R + "North_Paint", "items": pw, "material": "white", "slot": "M_Paint_White",
+                    **wev("white paint above the tiles and in the window reveal (029)")})
+        bx("Window_Sill", win[0] - 0.02, win[1] + 0.02, D - 0.03, D + rv, WC_WIN_SILL - 0.02, WC_WIN_SILL, "M_PVC_White",
+           **wev("white PVC window board at the sill (029)"))
         els.append({"type": "boxes", "name": R + "Cornice", "items": corn, "material": "white", "slot": "M_PVC_White",
                     **wev("PVC ceiling cornice 50 x 50 (029/032)")})
         # sink alcove: 2 pedestal basins, taps, mirror, soap dispenser, bin, floor drain (031/040/043)
@@ -524,8 +564,10 @@ def wc_fitout(k, zb):
             els.append({"type": "sink", "name": f"{R}Sink_{n}", "pos": W(T + 0.235, bc + db), "dir_deg": d_a, "width": 0.52,
                         "depth": 0.45, "height": 0.85, "z": z(zb + WC_FLOOR_T), "ue_asset": "washbasin_pedestal_520",
                         **wev("pedestal basin 0.52 wide, rim 0.85 (031)")})
-            bx(f"Tap_{n}", T + 0.03, T + 0.09, bc + db - 0.025, bc + db + 0.025, 0.85, 1.02, "M_Chrome", ue_asset="tap_monolever", **wev("monolever tap"))
-            bx(f"TapSpout_{n}", T + 0.09, T + 0.17, bc + db - 0.012, bc + db + 0.012, 0.985, 1.005, "M_Chrome", **wev("tap spout"))
+            els.append({"type": "disc", "name": f"{R}Tap_{n}", "pos": W(T + 0.07, bc + db), "r": 0.022, "z0": z(zb + 0.85), "z1": z(zb + 0.99),
+                        "seg": 32, "slot": "M_Chrome", "ue_asset": "tap_monolever", **wev("monolever basin tap (031)")})
+            bx(f"TapSpout_{n}", T + 0.07, T + 0.16, bc + db - 0.012, bc + db + 0.012, 0.955, 0.975, "M_Chrome", **wev("tap spout"))
+            bx(f"TapLever_{n}", T + 0.05, T + 0.14, bc + db - 0.008, bc + db + 0.008, 1.00, 1.015, "M_Chrome", **wev("tap lever"))
         bx("Mirror", T, T + 0.006, bc - 0.55, bc + 0.55, 1.21, 1.81, "M_Mirror", **wev("frameless mirror 1.10 x 0.60, bottom 1.21 (031)"))
         bx("Soap", T, T + 0.10, bc - 0.05, bc + 0.05, 0.95, 1.20, "M_Plastic_White", ue_asset="soap_dispenser_wall", **wev("wall soap dispenser between the basins (031)"))
         bx("Bin", T + 0.06, T + 0.40, bc - 0.16, bc + 0.16, WC_FLOOR_T, 0.50, "M_Plastic_Black", ue_asset="bin_bag_black", **wev("bin with a black bag between the pedestals (031/040)"))
@@ -539,14 +581,11 @@ def wc_fitout(k, zb):
             bx(f"CubBin_{n}", a_fr - 0.26, a_fr - 0.04, b0 + T + 0.03, b0 + T + 0.25, WC_FLOOR_T, 0.32, "M_Plastic_Grey", **wev("small bin (039)", "low"))
             bx(f"Switch_{n}", a_ps + T, a_ps + T + 0.015, c - WC_CUB_DOOR / 2 - 0.16, c - WC_CUB_DOOR / 2 - 0.08, 1.00, 1.08,
                "M_Plastic_White", **wev("light switch beside each cubicle door, handle side (029)"))
-            els.append({"type": "disc", "name": f"{R}CubLamp_{n}", "pos": W(a_fr / 2, c), "r": 0.11, "z0": z(zb + C - 0.06),
-                        "z1": z(zb + C), "slot": "M_Lamp_Diffuser", "ue_asset": "ceiling_lamp_round_led_220",
-                        **wev("cubicle lamp on its own switch (029 switches)", "low")})
+            lamp(f"CubLamp_{n}", a_fr / 2, c, 0.11, "ceiling_lamp_round_led_220")
         # lamps: aisle, alcove (+ air diffuser), lock; window radiator with pipes
         for nm, a_, b_, r in (("Lamp_Aisle", a_ps + WC_PASS / 2, (cub[1][0] + cub[2][1]) / 2, 0.165), ("Lamp_Alcove", 1.20, bc, 0.165),
                               ("Lamp_Lock", WC_W / 2, WC_ANTE / 2, 0.165)):
-            els.append({"type": "disc", "name": R + nm, "pos": W(a_, b_), "r": r, "z0": z(zb + C - 0.07), "z1": z(zb + C),
-                        "slot": "M_Lamp_Diffuser", "ue_asset": "ceiling_lamp_round_led_330", **wev("round LED ceiling lamp 0.33 (029/032)")})
+            lamp(nm, a_, b_, r, "ceiling_lamp_round_led_330")
         els.append({"type": "disc", "name": R + "Diffuser", "pos": W(0.60, bc), "r": 0.08, "z0": z(zb + C - 0.025), "z1": z(zb + C),
                     "slot": "M_Plastic_White", **wev("round extract air diffuser 0.16 (032)")})
         a_rad = a_ps + WC_PASS / 2
