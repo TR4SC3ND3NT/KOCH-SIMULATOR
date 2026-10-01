@@ -43,11 +43,13 @@ TYPE_SLOT = {"tree": "M_Tree", "hedge": "M_Hedge_Foliage", "planter": "M_Concret
              "stairs_run": "M_Granite_Red", "sign": "M_Sign_Panel", "bin": "M_Plastic_Grey", "bike_rack": "M_Steel_Galv",
              "turnstile": "M_Steel_Galv", "gate_leaf": "M_Steel_Paint_Dark", "canopy": "M_Sheet_Brown", "slab": "M_Concrete",
              "box": "M_Concrete", "rail3d": "M_Steel_Paint_Dark",
-             "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White", "hedge_arch": "M_Hedge_Foliage"}
+             "pergola": "M_Steel_Paint_Maroon", "sink": "M_Ceramic_White", "hedge_arch": "M_Hedge_Foliage",
+             "desk_row": "M_Laminate_White", "monitor_row": "M_Plastic_Black", "chair_row": "M_Plastic_Black"}
 
 
 TYPE_UE = {"bench": "bench_generic", "bin": "bin_generic", "lamp": "street_lamp", "lamp_orn": "lamp_ornamental",
-           "bike_rack": "bike_rack", "tree": "tree", "hedge": "hedge", "sign": "sign_board"}
+           "bike_rack": "bike_rack", "tree": "tree", "hedge": "hedge", "sign": "sign_board",
+           "desk_row": "desk_lab_row", "monitor_row": "pc_monitor_24", "chair_row": "chair_stacking_black"}
 
 
 def site_slot(el):
@@ -62,6 +64,8 @@ def site_slot(el):
     for key, slot in SURFACE_SLOT:
         if key in srf:
             return slot
+    if el.get("type") in ("desk_row", "monitor_row", "chair_row"):
+        return TYPE_SLOT[el["type"]]
     if el.get("material") in MATERIAL_SLOT:
         return MATERIAL_SLOT[el["material"]]
     return TYPE_SLOT.get(el.get("type"), "M_Concrete")
@@ -920,6 +924,56 @@ class Site:
         z0 = el["z0"] if "z0" in el else self.gz(P.x, P.y) + el.get("z_rel", 0.0)   # no z0: on the ground (+ z_rel)
         box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, z0, z0 + h)
         self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, z0))
+
+    # Classroom furniture rows (C labs, C105 photos 150-153): one object per row so a 30-room block stays light.
+    # pos = row centre (world xy), dir_deg = row direction, z = floor (abs), n units at pitch along the row;
+    # "face" = +1/-1: the side (left/right of dir) the user sits on.
+    def b_desk_row(self, el):
+        """n desks in a row: shared top, side panels at every joint, modesty panel on the far side of the user."""
+        P, (fwd, _) = Vector(el["pos"]), rot2(el.get("dir_deg", 0.0))
+        n, p, D, H = el.get("n", 5), el.get("pitch", 0.80), el.get("depth", 0.60), el.get("height", 0.75)
+        z, f, L = el["z"], el.get("face", 1), el.get("n", 5) * el.get("pitch", 0.80)
+        m, bm = _frame2(P, fwd), bmesh.new()
+        box(bm, m, -L / 2, L / 2, -D / 2, D / 2, z + H - 0.025, z + H)                            # top, 25 mm
+        for k in range(n + 1):                                                                 # 18 mm side panels
+            u = -L / 2 + k * p
+            box(bm, m, max(u - 0.009, -L / 2), min(u + 0.009, L / 2), -D / 2 + 0.02, D / 2 - 0.02, z, z + H - 0.025)
+        w = -f * (D / 2 - 0.03)                                                                # modesty panel
+        box(bm, m, -L / 2 + 0.009, L / 2 - 0.009, min(w, w - f * 0.016), max(w, w - f * 0.016), z + 0.30, z + H - 0.025)
+        self.emit(el, bm, COL.get(el.get("material", "white"), COL["white"]), (P.x, P.y, z))
+
+    def b_monitor_row(self, el):
+        """n monitors (24-inch: 0.54 x 0.32 panel on a neck + base) and keyboards on a desk top at z, facing the user."""
+        P, (fwd, _) = Vector(el["pos"]), rot2(el.get("dir_deg", 0.0))
+        n, p, z, f = el.get("n", 5), el.get("pitch", 0.80), el["z"], el.get("face", 1)
+        sw, sh = el.get("screen_w", 0.54), el.get("screen_h", 0.32)
+        off = el.get("offset", 0.12)       # monitor plane from the row axis, away from the user (m)
+        m, bm = _frame2(P, fwd), bmesh.new()
+        for k in range(n):
+            u = (k - (n - 1) / 2) * p
+            w = -f * off
+            box(bm, m, u - sw / 2, u + sw / 2, min(w, w - f * 0.03), max(w, w - f * 0.03), z + 0.11, z + 0.11 + sh)   # panel
+            box(bm, m, u - 0.025, u + 0.025, min(w - f * 0.04, w - f * 0.07), max(w - f * 0.04, w - f * 0.07), z, z + 0.13)  # neck
+            box(bm, m, u - 0.11, u + 0.11, min(w - f * 0.12, w + f * 0.03), max(w - f * 0.12, w + f * 0.03), z, z + 0.012)  # base
+            kw = f * 0.12                                                                       # keyboard
+            box(bm, m, u - 0.22, u + 0.22, min(kw - 0.07, kw + 0.07), max(kw - 0.07, kw + 0.07), z, z + 0.022)
+        self.emit(el, bm, COL["metal"], (P.x, P.y, z))
+
+    def b_chair_row(self, el):
+        """n stacking chairs (seat 0.46, black frame) at pitch, seat centres on the row axis; backrest on the face side."""
+        P, (fwd, _) = Vector(el["pos"]), rot2(el.get("dir_deg", 0.0))
+        n, p, z, f = el.get("n", 5), el.get("pitch", 0.80), el["z"], el.get("face", 1)
+        m, bm = _frame2(P, fwd), bmesh.new()
+        for k in range(n):
+            u = (k - (n - 1) / 2) * p
+            box(bm, m, u - 0.22, u + 0.22, -0.21, 0.21, z + 0.44, z + 0.47)                           # seat
+            wb = f * 0.21                                                                        # back on the far side
+            box(bm, m, u - 0.21, u + 0.21, min(wb, wb + f * 0.025), max(wb, wb + f * 0.025), z + 0.62, z + 0.88)
+            for du in (-0.19, 0.19):
+                for dw in (-0.18, 0.18):
+                    box(bm, m, u + du - 0.012, u + du + 0.012, dw - 0.012, dw + 0.012, z, z + 0.44)
+                box(bm, m, u + du - 0.012, u + du + 0.012, min(wb, wb + f * 0.024), max(wb, wb + f * 0.024), z + 0.47, z + 0.62)
+        self.emit(el, bm, COL["metal"], (P.x, P.y, z))
 
     def b_zebra(self, el):
         A, B = Vector(el["line"][0]), Vector(el["line"][-1])
