@@ -16,6 +16,7 @@ P = os.path.join(REPO, "Art", "Blender", "Specs", "BLD_C.json")
 EV = "2026-10-01 plan v6 (c_shell_v6.py): reference classrooms 5.80 x 6.35, corridor 5.0"
 L, YW, YE, J, XJN = N.L_OUT, N.Y_OUT_W, N.Y_OUT_E, N.JOG, N.X_JN
 OLD_W = 17.2                      # pre-v6 north front y (straight)
+WC_SILLS = [round(N.WC_WIN_SILL + k * N.STOREY, 3) for k in range(4)]   # WC end windows, F1-F4 (029: sill 1.45)
 
 
 def north_u(u_old):
@@ -45,14 +46,16 @@ def main(src):
                                  win([(door_u0 + door_u1) / 2], ("F2", "F3", "F4"))],                    # over the F1 exit door
                 entrance=dict(old[4]["entrance"], u0=door_u0, u1=door_u1), status=EV + " | " + old[4].get("status", "")),
            {"edge": 5, "name": "north_east", "status": EV,
-            "windows": [win([L - x for x in xs("N4") + xs("N5")]), {"type": "WC", "u": [round(L - N.WC_WIN_N[1], 3)], "sills": old[5]["windows"][1]["sills"]}]},
+            "windows": [win([L - x for x in xs("N4") + xs("N5")]), {"type": "WC", "u": [round(L - N.WC_WIN_N[1], 3)], "sills": WC_SILLS}]},
            {"edge": 6, "name": "north_step", "windows": []},
            {"edge": 7, "name": "north_west", "status": EV,
-            "windows": [win(sorted(XJN - x for x in xs("N1") + xs("N2"))), {"type": "WC", "u": [round(XJN - N.WC_WIN_N[0], 3)], "sills": old[5]["windows"][1]["sills"]}]},
+            "windows": [win(sorted(XJN - x for x in xs("N1") + xs("N2"))), {"type": "WC", "u": [round(XJN - N.WC_WIN_N[0], 3)], "sills": WC_SILLS}]},
            {"edge": 8, "name": "west", "status": EV, "confidence": "medium",
             "windows": [win([YW - (hnw + N.PART + N.Y_NW) / 2, YW - (cw - 0.9), YW - (N.Y_SW + hsw - N.PART) / 2]),
                         win([YW - (cw + 1.4)], ("F3", "F4"))]}]
     C["facades"] = fac
+    C["window_types"]["WC"].update(w=N.WC_WIN_W, h=N.WC_WIN_H, evidence=C["window_types"]["WC"]["evidence"] +
+                                   " | 2026-10-01 WC photos 029/030 (tile metrology): opening 0.52-0.55 x 1.10, sill 1.45, axis 0.775 m off the aisle wall")
     for p in C["pilasters"]:
         if p["edge"] == 6:
             p.update(edge=8, u0=round(p["u0"] + YW - OLD_W, 3), u1=round(p["u1"] + YW - OLD_W, 3))

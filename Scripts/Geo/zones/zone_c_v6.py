@@ -294,7 +294,6 @@ ROOM_X = {"1": (X_W, P1 - PART / 2), "2": (P1 + PART / 2, P2 - PART / 2), "4": (
 BOARD_EAST = {"1": True, "2": True, "4": False, "5": False}
 WIN_PAIR = (1.65, 4.25)        # window centres from the back wall (C105; facade pairs 2.59 m apart)
 CORNER_WIN = {"S1": 3.52, "S5": 25.90, "N1": 3.50, "N5": 25.88}   # one long-facade window in the corner rooms (facade fit)
-WC_WIN_N = (P2 + PART / 2 + WC_W / 2, P_WCM + PART / 2 + WC_W / 2)
 
 
 def room_frame(key):
@@ -385,6 +384,181 @@ def fitout(k, zb, num):
     return els
 
 
+# --- WC fit-out (photos docs/reference/photos/2026-10-01_WC 029-045; single-view metrology on the 600 x 600 floor tiles,
+# camera height 1.51 m, f 2850 px checked by VP orthogonality 89.2-89.8 deg). Frame per WC: a from the shared mid wall
+# (wet wall: cubicles + sinks on it, back to back) towards its outer partition, b from the hall wall face to the north
+# wall. Measured: aisle 1.04 (tile 0.60 from the outer wall + 0.455 cut), 3 cubicles to the north wall at a 1.10 m
+# pitch (door frames 0.66-0.68 x ~2.0, outward, handle south / hinges north), wall tiles 600 x 600 (bottom row cut 0.35,
+# band top 1.55, up to the sill under the window), white PVC strip ceiling 2.60 with a cornice, end window 0.52 x 1.10
+# (sill 1.45, 0.80 m from the aisle wall to its axis), 7-section radiator 0.49 x 0.60 centred on the aisle, two pedestal
+# basins in a 1.20 m alcove (031/040), mirror 1.10 x 0.60 at 1.21, inner door 0.76 frame (045) 0.55 m off the wet wall.
+# Cubicle depth = what the 2.15 m WC leaves (1.00 m, outward doors): not visible in the photos.
+WC_PASS, WC_FRONT_T, WC_PT = 1.05, 0.10, 0.10
+WC_CUB_D = round(WC_W - WC_PASS - WC_FRONT_T, 3)
+WC_CUBS = (1.05, 1.05, 1.00)            # clear widths from the alcove to the north wall (b ascending)
+WC_ALCOVE, WC_ANTE = 1.20, 1.65         # sink alcove clear width; anteroom (lock) depth from the hall wall
+WC_CEIL, WC_BAND, WC_TILE_T = 2.60, 1.55, 0.01
+WC_WIN_W, WC_WIN_SILL, WC_WIN_H = 0.55, 1.45, 1.10
+WC_WIN_A = WC_CUB_D + WC_FRONT_T + WC_WIN_W / 2    # window axis: its jamb on the cubicle front line (0.775 off the aisle wall)
+WC_CUB_DOOR, WC_IN_DOOR, WC_IN_DOOR_A0 = 0.70, 0.78, 0.55
+WC_HALL_DOOR_A = WC_W / 2
+WC_FLOOR_T = 0.012
+WC_WIN_N = (P_WCM - PART / 2 - WC_WIN_A, P_WCM + PART / 2 + WC_WIN_A)   # C-local x of the WC4 / WC5 end windows
+
+
+def wc_frame(i):
+    """(pt(a, b) -> C-local xy, sa): WC i (0 = west / WC4, 1 = east / WC5)."""
+    sa = -1 if i == 0 else 1
+    xm = P_WCM + sa * PART / 2
+    yh = (HW1 if i == 0 else HE1) + PART
+    assert abs((Y_NW if i == 0 else Y_NE) - yh - STD_D) < 1e-6
+    return (lambda a, b: (xm + sa * a, yh + b)), sa
+
+
+def wc_fitout(k, zb):
+    els = []
+    D, C = STD_D, WC_CEIL
+    b_alc0 = WC_ANTE + WC_PT
+    b_blk = b_alc0 + WC_ALCOVE                          # block end wall south face
+    cub = []                                            # (b0, b1) clear spans
+    b = b_blk + WC_PT
+    for n, w in enumerate(WC_CUBS):
+        cub.append((b, b + w))
+        b += w + (WC_PT if n < len(WC_CUBS) - 1 else 0.0)
+    assert abs(b - D) < 1e-6 and WC_CUB_D > 0.95, (b, WC_CUB_D)
+    a_fr = WC_CUB_D                                     # front wall: a_fr .. a_fr + WC_FRONT_T
+    a_ps = a_fr + WC_FRONT_T                            # aisle starts
+    wev = lambda t, c="medium": ev("WC (2026-10-01_WC photos): " + t, c)
+    for i in (0, 1):
+        pt, sa = wc_frame(i)
+        W = lambda a, b_: c_to_w(*pt(a, b_))
+        R = f"F{k}_WC{'WE'[i]}_"
+        d_a = EAST if sa > 0 else EAST + 180
+
+        def wall_ab(nm, p, q, side, h=C + 0.02, doors=(), thk=WC_PT, **kw):
+            """Wall p->q (a, b), thickness towards +a/+b (side = (da, db) unit); doors [(centre along p->q from p, width)]."""
+            A, B = np.array(pt(*p)), np.array(pt(*q))
+            dvec = (B - A) / np.linalg.norm(B - A)
+            want = np.array(pt(p[0] + side[0], p[1] + side[1])) - A
+            left = np.array([-dvec[1], dvec[0]])
+            L = float(np.linalg.norm(B - A))
+            dd = list(doors)
+            if left @ want < 0:                          # thickness must go to the left of the line: reverse it
+                A, B, dd = B, A, [(L - u, w) for u, w in dd]
+            line = (tuple(A), tuple(B))
+            els.append(wall(R + nm, line[0], line[1], zb, doors=dd, thk=thk, h=h, **kw))
+            return line, dd
+
+        def bx(nm, a0, a1, b0, b1, z0, z1, slot, **kw):
+            cx, cy = pt((a0 + a1) / 2, (b0 + b1) / 2)
+            els.append({"type": "box", "name": R + nm, "center": c_to_w(cx, cy), "dir_deg": EAST,
+                        "size": [round(abs(a1 - a0), 4), round(abs(b1 - b0), 4), round(z1 - z0, 4)], "z0": z(zb + z0),
+                        "material": "white", "slot": slot, **kw})
+        it = lambda a0, a1, b0, b1, z0, z1: [*c_to_w(*pt((a0 + a1) / 2, (b0 + b1) / 2)), EAST, round(abs(a1 - a0), 4),
+                                                round(abs(b1 - b0), 4), round(z1 - z0, 4), z(zb + z0)]
+        # floor tiles, PVC ceiling
+        xa, xb = sorted((pt(0, 0)[0], pt(WC_W, 0)[0]))
+        y0, y1 = pt(0, 0)[1], pt(0, D)[1]
+        els.append(slab(R + "Floor_Tile", xa, xb, y0, y1, zb + 0.002, zb + WC_FLOOR_T, "white", slot="M_Tile_Floor_600",
+                        **wev("porcelain floor tiles 600 x 600, grid from the aisle (outer) wall")))
+        els.append(slab(R + "Ceiling_PVC", xa, xb, y0, y1, zb + C, zb + C + 0.01, "white", slot="M_PVC_Ceiling_Panel",
+                        **wev("white PVC strip ceiling at 2.60, strips along the aisle (029/032)")))
+        # walls: inner (lock) partition with its door, block end wall, cubicle front with 3 doors, cubicle partitions
+        evw = wev("masonry partition, tiled to 1.55, painted above")
+        in_u = WC_IN_DOOR_A0 + WC_IN_DOOR / 2
+        ln_in, dd_in = wall_ab("Lock_Wall", (0, WC_ANTE), (WC_W, WC_ANTE), (0, 1), doors=[(in_u, WC_IN_DOOR)], **evw)
+        wall_ab("Block_End", (0, b_blk), (a_ps, b_blk), (0, 1), **evw)
+        cub_c = [(b0 + b1) / 2 for b0, b1 in cub]
+        ln_fr, dd_fr = wall_ab("Cubicle_Front", (a_fr, b_blk + WC_PT), (a_fr, D), (1, 0),
+                               doors=[(c - b_blk - WC_PT, WC_CUB_DOOR) for c in cub_c], thk=WC_FRONT_T, **evw)
+        for n in range(len(cub) - 1):
+            wall_ab(f"Cubicle_Part_{n}", (0, cub[n][1]), (a_fr, cub[n][1]), (0, 1), **evw)
+        for n, (u, w) in enumerate(dd_fr):
+            hinge = "left" if ln_fr[0][1] > ln_fr[1][1] else "right"         # hinges on the north jamb (029/037)
+            els.append(door(f"{R}Cubicle_Door_{n}", ln_fr[0], ln_fr[1], u, zb, width=w, leaf="solid", hinge=hinge,
+                            wall_thk=WC_FRONT_T, slot="M_PVC_Anthracite", frame_w=0.05,
+                            **wev("anthracite PVC door, frame 0.70 x 2.00, opens out into the aisle (029/037/039)")))
+        u, w = dd_in[0]
+        els.append(door(f"{R}Lock_Door", ln_in[0], ln_in[1], u, zb, width=w, leaf="solid", slot="M_PVC_Anthracite",
+                        wall_thk=WC_PT, **wev("anthracite PVC door, frame 0.76-0.78 (045), 0.55 m off the wet wall (040)")))
+        # wall faces (a or b constant), room side, span, tile openings (along the span), under-window band
+        T = WC_TILE_T
+        o_hall = [(WC_HALL_DOOR_A - WC_DOOR_W / 2 - 0.02, WC_HALL_DOOR_A + WC_DOOR_W / 2 + 0.02)]
+        o_in = [(WC_IN_DOOR_A0 - 0.02, WC_IN_DOOR_A0 + WC_IN_DOOR + 0.02)]
+        o_fr = [(c - WC_CUB_DOOR / 2 - 0.02, c + WC_CUB_DOOR / 2 + 0.02) for c in cub_c]
+        win = (WC_WIN_A - WC_WIN_W / 2, WC_WIN_A + WC_WIN_W / 2)
+        faces = [("a", WC_W, -1, 0.0, WC_ANTE, []), ("a", WC_W, -1, b_alc0, D, []),          # aisle (outer) wall
+                 ("a", 0.0, 1, 0.0, WC_ANTE, []), ("a", 0.0, 1, b_alc0, b_blk, []),           # wet wall
+                 ("b", 0.0, 1, 0.0, WC_W, o_hall),                                            # hall wall
+                 ("b", WC_ANTE, -1, 0.0, WC_W, o_in), ("b", b_alc0, 1, 0.0, WC_W, o_in),      # lock wall
+                 ("b", b_blk, -1, 0.0, a_ps, []),                                             # block end (alcove side)
+                 ("a", a_ps, 1, b_blk, D, o_fr),                                              # cubicle fronts, aisle side
+                 ("b", D, -1, a_ps, WC_W, [])]                                                # north wall, aisle
+        for (b0, b1), c in zip(cub, cub_c):                                                   # cubicle interiors
+            faces += [("a", 0.0, 1, b0, b1, []), ("a", a_fr, -1, b0, b1, [(c - WC_CUB_DOOR / 2 - 0.02, c + WC_CUB_DOOR / 2 + 0.02)]),
+                      ("b", b0, 1, 0.0, a_fr, []), ("b", b1, -1, 0.0, a_fr, [])]
+        tiles, corn = [], []
+        for ax, pos, sd, lo, hi, ops in faces:
+            q0, q1 = sorted((pos, pos + sd * T))
+            c0, c1 = sorted((pos, pos + sd * 0.05))
+            span = lambda u0, u1, w0, w1, z0, z1: it(w0, w1, u0, u1, z0, z1) if ax == "a" else it(u0, u1, w0, w1, z0, z1)
+            corn.append(span(lo, hi, c0, c1, C - 0.05, C))
+            cuts = sorted(o for o in ops if o[1] > lo and o[0] < hi)
+            u = lo
+            for o0, o1 in cuts + [(hi, hi)]:
+                if o0 - u > 0.005:
+                    if ax == "b" and pos == D and u < win[1] and o0 > win[0]:                 # under the window: to the sill
+                        for s0, s1, zt in ((u, win[0], WC_BAND), (win[0], win[1], WC_WIN_SILL), (win[1], o0, WC_BAND)):
+                            if s1 - s0 > 0.005:
+                                tiles.append(span(s0, s1, q0, q1, WC_FLOOR_T, zt))
+                    else:
+                        tiles.append(span(u, o0, q0, q1, WC_FLOOR_T, WC_BAND))
+                u = max(u, o1)
+        els.append({"type": "boxes", "name": R + "Wall_Tile", "items": tiles, "material": "white", "slot": "M_Tile_Wall_Grey",
+                    **wev("porcelain wall tiles 600 x 600, bottom row cut 0.35, top 1.55 (029 end wall: seams 0.355 / 0.96 / 1.56)")})
+        els.append({"type": "boxes", "name": R + "Cornice", "items": corn, "material": "white", "slot": "M_PVC_White",
+                    **wev("PVC ceiling cornice 50 x 50 (029/032)")})
+        # sink alcove: 2 pedestal basins, taps, mirror, soap dispenser, bin, floor drain (031/040/043)
+        bc = (b_alc0 + b_blk) / 2
+        for n, db in enumerate((-0.29, 0.29)):
+            els.append({"type": "sink", "name": f"{R}Sink_{n}", "pos": W(T + 0.235, bc + db), "dir_deg": d_a, "width": 0.52,
+                        "depth": 0.45, "height": 0.85, "z": z(zb + WC_FLOOR_T), "ue_asset": "washbasin_pedestal_520",
+                        **wev("pedestal basin 0.52 wide, rim 0.85 (031)")})
+            bx(f"Tap_{n}", T + 0.03, T + 0.09, bc + db - 0.025, bc + db + 0.025, 0.85, 1.02, "M_Chrome", ue_asset="tap_monolever", **wev("monolever tap"))
+            bx(f"TapSpout_{n}", T + 0.09, T + 0.17, bc + db - 0.012, bc + db + 0.012, 0.985, 1.005, "M_Chrome", **wev("tap spout"))
+        bx("Mirror", T, T + 0.006, bc - 0.55, bc + 0.55, 1.21, 1.81, "M_Mirror", **wev("frameless mirror 1.10 x 0.60, bottom 1.21 (031)"))
+        bx("Soap", T, T + 0.10, bc - 0.05, bc + 0.05, 0.95, 1.20, "M_Plastic_White", ue_asset="soap_dispenser_wall", **wev("wall soap dispenser between the basins (031)"))
+        bx("Bin", T + 0.06, T + 0.40, bc - 0.16, bc + 0.16, WC_FLOOR_T, 0.50, "M_Plastic_Black", ue_asset="bin_bag_black", **wev("bin with a black bag between the pedestals (031/040)"))
+        bx("Drain", T + 0.04, T + 0.19, bc + 0.12, bc + 0.27, WC_FLOOR_T, WC_FLOOR_T + 0.003, "M_Steel_Galv", **wev("floor drain grate by the right pedestal (040)"))
+        bx("Socket", WC_W - T - 0.02, WC_W - T, bc - 0.04, bc + 0.04, 1.58, 1.66, "M_Plastic_White", **wev("socket above the tile band opposite the basins (031/033)"))
+        # cubicles: close-coupled WC on the wet wall, paper holder, small bin, light switch outside by the handle
+        for n, ((b0, b1), c) in enumerate(zip(cub, cub_c)):
+            els.append({"type": "toilet", "name": f"{R}Toilet_{n}", "pos": W(T, c), "dir_deg": d_a, "z": z(zb + WC_FLOOR_T),
+                        **wev("close-coupled floor WC on the wet wall (cubicle interior not photographed)", "low")})
+            bx(f"PaperHolder_{n}", 0.62, 0.76, b1 - T - 0.07, b1 - T, 0.68, 0.76, "M_Chrome", **wev("paper holder", "low"))
+            bx(f"CubBin_{n}", a_fr - 0.26, a_fr - 0.04, b0 + T + 0.03, b0 + T + 0.25, WC_FLOOR_T, 0.32, "M_Plastic_Grey", **wev("small bin (039)", "low"))
+            bx(f"Switch_{n}", a_ps + T, a_ps + T + 0.015, c - WC_CUB_DOOR / 2 - 0.16, c - WC_CUB_DOOR / 2 - 0.08, 1.00, 1.08,
+               "M_Plastic_White", **wev("light switch beside each cubicle door, handle side (029)"))
+            els.append({"type": "disc", "name": f"{R}CubLamp_{n}", "pos": W(a_fr / 2, c), "r": 0.11, "z0": z(zb + C - 0.06),
+                        "z1": z(zb + C), "slot": "M_Lamp_Diffuser", "ue_asset": "ceiling_lamp_round_led_220",
+                        **wev("cubicle lamp on its own switch (029 switches)", "low")})
+        # lamps: aisle, alcove (+ air diffuser), lock; window radiator with pipes
+        for nm, a_, b_, r in (("Lamp_Aisle", a_ps + WC_PASS / 2, (cub[1][0] + cub[2][1]) / 2, 0.165), ("Lamp_Alcove", 1.20, bc, 0.165),
+                              ("Lamp_Lock", WC_W / 2, WC_ANTE / 2, 0.165)):
+            els.append({"type": "disc", "name": R + nm, "pos": W(a_, b_), "r": r, "z0": z(zb + C - 0.07), "z1": z(zb + C),
+                        "slot": "M_Lamp_Diffuser", "ue_asset": "ceiling_lamp_round_led_330", **wev("round LED ceiling lamp 0.33 (029/032)")})
+        els.append({"type": "disc", "name": R + "Diffuser", "pos": W(0.60, bc), "r": 0.08, "z0": z(zb + C - 0.025), "z1": z(zb + C),
+                    "slot": "M_Plastic_White", **wev("round extract air diffuser 0.16 (032)")})
+        a_rad = a_ps + WC_PASS / 2
+        els.append({"type": "radiator", "name": R + "Radiator", "pos": W(a_rad, D - T), "dir_deg": NORTH + 180, "n": 7, "pitch": 0.07,
+                    "height": 0.58, "depth": 0.08, "gap": 0.04, "z0": z(zb + 0.16), **wev("7-section radiator 0.49 x 0.58, bottom 0.16, centred on the aisle (029)")})
+        pipes = [it(a_rad - 0.29, WC_W - T, D - T - 0.09, D - T - 0.07, zz, zz + 0.02) for zz in (0.06, 0.10)] + \
+                [it(a_rad + sg * 0.27, a_rad + sg * 0.25, D - T - 0.09, D - T - 0.07, 0.06, 0.24 if sg < 0 else 0.68) for sg in (-1, 1)]
+        els.append({"type": "boxes", "name": R + "Radiator_Pipes", "items": pipes, "material": "white", "slot": "M_PVC_White",
+                    **wev("radiator flow/return pipes along the end wall from the aisle wall (029)")})
+    return els
+
+
 def f5(zb):
     P, els = "F5_", []
     lo = ev("F5 offices inside the roof, layout estimate", "low")
@@ -403,7 +577,7 @@ def f5(zb):
 
 def build():
     f1 = floor_slabs(1, 0.0, {}) + ceilings(1, 0.0, {"W": True, "E": True}) + plan(1, 0.0, lobby=True, west_stair=True)
-    f1 += fitout(1, 0.0, NUMBERS[1])
+    f1 += fitout(1, 0.0, NUMBERS[1]) + wc_fitout(1, 0.0)
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
     # janitor's closets under flight 2 of both F1 stairs (map owner), brown door, north of the east exit door
@@ -426,7 +600,7 @@ def build():
         zb = (k - 1) * STOREY
         west = k <= 3
         up += floor_slabs(k, zb, {"W": west, "E": True}) + ceilings(k, zb, {"W": k < 3, "E": True})
-        up += plan(k, zb, lobby=False, west_stair=west) + fitout(k, zb, NUMBERS[k])
+        up += plan(k, zb, lobby=False, west_stair=west) + fitout(k, zb, NUMBERS[k]) + wc_fitout(k, zb)
         if k < 3:
             up += stair_storey(f"StairW_F{k}", X_W, +1, zb, solid=False, top_floor=(k == 2))
         up += stair_storey(f"StairE_F{k}", X_E, -1, zb, solid=False, top_floor=(k == 4))
