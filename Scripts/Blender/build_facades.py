@@ -654,8 +654,13 @@ class Building:
             bm.faces.new(top)
             # wall infill from the eave slab up to the sloped roof underside
             bm2 = bmesh.new()
-            lo = [bm2.verts.new((x, y, z0)) for x, y in self.ring]   # starts on the wall top: no coplanar overlap band
-            up = [bm2.verts.new((x, y, zt((x, y)) - FASCIA_M + 0.01)) for x, y in self.ring]
+            # starts on the wall top (no coplanar overlap band) and sits 1 cm inside the outer faces: where a wall rises
+            # above the eave (gable/parapet bays) its face and the infill face were coplanar (zaudit 2026-10-01)
+            cx, cy = sum(p[0] for p in self.ring) / len(self.ring), sum(p[1] for p in self.ring) / len(self.ring)
+            ins = [(x + 0.01 * (cx - x) / max(math.hypot(cx - x, cy - y), 1e-6) * 1.4142,
+                    y + 0.01 * (cy - y) / max(math.hypot(cx - x, cy - y), 1e-6) * 1.4142) for x, y in self.ring]
+            lo = [bm2.verts.new((x, y, z0)) for x, y in ins]
+            up = [bm2.verts.new((x, y, zt((x, y)) - FASCIA_M + 0.01)) for x, y in ins]
             for i in range(4):
                 j = (i + 1) % 4
                 bm2.faces.new((lo[i], lo[j], up[j], up[i]))

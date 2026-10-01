@@ -14,7 +14,8 @@ import zone_c_v6 as N   # noqa: E402
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 P = os.path.join(REPO, "Art", "Blender", "Specs", "BLD_C.json")
 EV = "2026-10-01 plan v6 (c_shell_v6.py): reference classrooms 5.80 x 6.35, corridor 5.0"
-L, YW, YE, J, XJN = N.L_OUT, N.Y_OUT_W, N.Y_OUT_E, N.JOG, N.X_JN
+L, YW, YE, J = N.L_OUT, N.Y_OUT_W, N.Y_OUT_E, N.JOG
+XJN = N.X_JN - N.PART / 2 - N.T  # north front step: its wall stands west of the WC mid wall, so WC-E keeps its corner
 OLD_W = 17.2                      # pre-v6 north front y (straight)
 WC_SILLS = [round(N.WC_WIN_SILL + k * N.STOREY, 3) for k in range(4)]   # WC end windows, F1-F4 (029: sill 1.45)
 

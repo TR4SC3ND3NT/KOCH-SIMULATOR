@@ -594,52 +594,82 @@
    "confidence": "low"
   },
   {
-   "type": "wall",
-   "name": "FaceTerminal_In",
-   "line": [
-    [
-     158.6,
-     -101.2
-    ],
-    [
-     160.4,
-     -101.3
-    ]
-   ],
-   "height": 0.45,
-   "thk": 0.06,
-   "material": "metal",
-   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street)",
-   "confidence": "medium",
-   "pos": [
+   "type": "box",
+   "name": "FaceTerminal_In_Pole",
+   "center": [
     157.275,
     -97.819
    ],
-   "dir_deg": 267.1
+   "dir_deg": 267.1,
+   "size": [
+    0.06,
+    0.06,
+    1.4
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
+   "confidence": "medium"
   },
   {
-   "type": "wall",
-   "name": "FaceTerminal_Out",
-   "line": [
-    [
-     158.6,
-     -101.2
-    ],
-    [
-     160.4,
-     -101.3
-    ]
+   "type": "box",
+   "name": "FaceTerminal_In",
+   "center": [
+    157.275,
+    -97.819
    ],
-   "height": 0.45,
-   "thk": 0.06,
+   "dir_deg": 267.1,
+   "size": [
+    0.06,
+    0.24,
+    0.32
+   ],
+   "z_rel": 1.35,
    "material": "metal",
-   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus)",
-   "confidence": "medium",
-   "pos": [
+   "slot": "M_Plastic_Black",
+   "ue_asset": "face_recognition_terminal",
+   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "FaceTerminal_Out_Pole",
+   "center": [
     155.405,
     -96.665
    ],
-   "dir_deg": 87.1
+   "dir_deg": 87.1,
+   "size": [
+    0.06,
+    0.06,
+    1.4
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "FaceTerminal_Out",
+   "center": [
+    155.405,
+    -96.665
+   ],
+   "dir_deg": 87.1,
+   "size": [
+    0.06,
+    0.24,
+    0.32
+   ],
+   "z_rel": 1.35,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "face_recognition_terminal",
+   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
+   "confidence": "medium"
   },
   {
    "type": "wall",

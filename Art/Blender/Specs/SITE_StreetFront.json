@@ -1459,11 +1459,11 @@
      -100.274
     ]
    ],
-   "height": 0.08,
+   "height": 0.1,
    "thk": 0.1,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "P2 by frames: low grey precast kerb strip in front of the planter wall, ~0.45 m of paving between them (Street c3 f00166/f00460; kerb stones ~1.0 m long, 0.08 high)",
+   "evidence": "P2 by frames: low grey precast kerb strip in front of the planter wall, ~0.45 m of paving between them (Street c3 f00166/f00460; kerb stones ~1.0 m long, 0.08 high) | 2026-10-01 QA: 0.10 (2 cm proud of the 0.08 sidewalk; their tops were coplanar)",
    "confidence": "medium"
   }
  ]

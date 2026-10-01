@@ -6,6 +6,7 @@
 # Coordinates: world local XY (m); z relative to the local ground at each point unless the element has "z_abs": true.
 import json
 import math
+import zlib
 import os
 import re
 import sys
@@ -738,6 +739,9 @@ class Site:
         h, cd = el.get("height", 5.0), el.get("crown_d", 2.5)
         td = el.get("trunk_d", 0.25)
         cb = el.get("crown_base", h * 0.3)
+        # 0-24 mm per-tree jitter of the crown base: neighbours with equal sizes otherwise get coplanar overlapping
+        # crown bottoms (z-fight seen from below, zaudit 2026-10-01)
+        cb += (zlib.crc32(str(el.get("name", "")).encode()) % 7) * 0.004
         bm = bmesh.new()
         _cyl(bm, P, td / 2, z - BURY, z + cb + 0.2, 8)
         seg = 10
