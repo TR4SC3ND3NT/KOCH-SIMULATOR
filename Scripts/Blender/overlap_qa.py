@@ -85,8 +85,9 @@ def main():
                 continue
             if m.startswith(own) or n.startswith(m.rsplit("_", 1)[0] + "_"):   # parts of one prop (seat / legs, frame / leaf)
                 continue
+            # inside = ray parity AND > 1 cm from the container surface (skins / boards mounted on a face are not "in" it)
             ins = sum(1 for p in pts if mlo.x <= p.x <= mhi.x and mlo.y <= p.y <= mhi.y and mlo.z <= p.z <= mhi.z
-                      and inside(data[m][0], p))
+                      and inside(data[m][0], p) and (data[m][0].find_nearest(p)[3] or 0.0) > 0.01)
             if ins >= 0.30 * len(pts):
                 res.append({"prop": n, "in": m, "frac": round(ins / len(pts), 2), "at": [round(v, 2) for v in (lo + hi) / 2]})
     res.sort(key=lambda r: -r["frac"])
