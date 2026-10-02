@@ -222,12 +222,12 @@
    "name": "G1_Link",
    "line": [
     [
-     122.246,
-     -27.038
+     122.245,
+     -27.051
     ],
     [
-     127.304,
-     -27.409
+     126.155,
+     -27.349
     ]
    ],
    "width": 1.2,
@@ -242,11 +242,11 @@
    "line": [
     [
      139.308,
-     -28.057
+     -28.056
     ],
     [
-     132.696,
-     -27.691
+     133.845,
+     -27.751
     ]
    ],
    "width": 1.2,
@@ -260,8 +260,8 @@
    "name": "Centre_NS_N",
    "line": [
     [
-     130.209,
-     -23.555
+     130.201,
+     -23.705
     ],
     [
      130.821,
@@ -279,8 +279,8 @@
    "name": "Centre_NS_S",
    "line": [
     [
-     129.791,
-     -31.545
+     129.799,
+     -31.395
     ],
     [
      129.038,
@@ -302,12 +302,12 @@
      -20.727
     ],
     [
-     118.27,
-     -12.006
+     118.274,
+     -11.906
     ],
     [
-     118.968,
-     -12.053
+     118.972,
+     -11.953
     ],
     [
      118.64,
@@ -374,44 +374,44 @@
      -25.236
     ],
     [
-     123.597,
-     -25.733
+     123.599,
+     -25.75
     ],
     [
-     126.679,
-     -25.959
+     125.53,
+     -25.897
     ],
     [
-     126.851,
-     -22.678
+     125.694,
+     -22.768
     ],
     [
-     128.848,
-     -22.783
+     128.84,
+     -22.933
     ],
     [
-     129.373,
-     -12.762
+     129.378,
+     -12.662
     ],
     [
-     130.072,
-     -12.809
+     130.077,
+     -12.709
     ],
     [
-     129.51,
-     -23.519
+     129.502,
+     -23.669
     ],
     [
-     127.513,
-     -23.414
+     126.357,
+     -23.504
     ],
     [
-     127.34,
-     -26.71
+     126.192,
+     -26.649
     ],
     [
-     122.954,
-     -26.388
+     122.955,
+     -26.403
     ],
     [
      122.909,
@@ -475,7 +475,7 @@
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -489,12 +489,12 @@
      -24.931
     ],
     [
-     100.656,
-     -23.247
+     100.557,
+     -23.231
     ],
     [
-     100.701,
-     -22.545
+     100.602,
+     -22.529
     ],
     [
      110.745,
@@ -565,76 +565,80 @@
      -20.044
     ],
     [
-     116.174,
-     -11.863
+     116.178,
+     -11.763
     ],
     [
-     116.872,
-     -11.911
+     116.877,
+     -11.811
     ],
     [
      116.517,
      -20.667
     ],
     [
-     116.177,
-     -20.701
+     116.08,
+     -20.715
     ],
     [
-     115.789,
-     -20.765
+     115.598,
+     -20.807
     ],
     [
-     115.407,
-     -20.854
+     115.125,
+     -20.938
     ],
     [
-     115.031,
-     -20.968
-    ],
-    [
-     114.664,
-     -21.107
+     114.755,
+     -21.07
     ],
     [
      114.306,
      -21.269
     ],
     [
-     113.709,
-     -21.607
+     113.96,
+     -21.454
+    ],
+    [
+     113.627,
+     -21.661
     ],
     [
      113.23,
      -21.95
     ],
     [
-     112.858,
-     -22.271
+     112.931,
+     -22.204
     ],
     [
-     112.449,
-     -22.694
+     112.581,
+     -22.548
     ],
     [
-     112.141,
-     -23.076
+     112.26,
+     -22.92
     ],
     [
-     111.814,
-     -23.565
+     111.971,
+     -23.317
     ],
     [
-     111.579,
-     -23.996
+     111.715,
+     -23.735
     ],
     [
-     111.38,
-     -24.445
+     111.536,
+     -24.085
+    ],
+    [
+     111.345,
+     -24.536
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -644,28 +648,32 @@
    "name": "Hedge_Mass_2",
    "ring": [
     [
-     131.469,
-     -12.904
+     130.901,
+     -23.742
     ],
     [
-     132.167,
-     -12.952
+     131.474,
+     -12.805
     ],
     [
-     131.644,
-     -22.93
+     132.172,
+     -12.852
     ],
     [
-     133.641,
-     -23.034
+     131.636,
+     -23.08
     ],
     [
-     133.469,
-     -26.332
+     134.782,
+     -23.244
     ],
     [
-     138.135,
-     -26.59
+     134.617,
+     -26.392
+    ],
+    [
+     138.136,
+     -26.588
     ],
     [
      138.329,
@@ -796,12 +804,12 @@
      -27.441
     ],
     [
-     156.546,
-     -27.837
+     156.646,
+     -27.845
     ],
     [
-     156.508,
-     -28.536
+     156.607,
+     -28.544
     ],
     [
      150.594,
@@ -933,23 +941,19 @@
     ],
     [
      138.689,
-     -27.322
+     -27.32
     ],
     [
-     132.733,
-     -26.992
+     133.881,
+     -27.052
     ],
     [
-     132.906,
-     -23.697
-    ],
-    [
-     130.908,
-     -23.592
+     134.046,
+     -23.907
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -959,12 +963,16 @@
    "name": "Hedge_Mass_3",
    "ring": [
     [
-     102.187,
-     -41.224
+     113.641,
+     -31.648
     ],
     [
-     101.852,
-     -40.592
+     102.109,
+     -41.29
+    ],
+    [
+     101.774,
+     -40.658
     ],
     [
      112.523,
@@ -1007,12 +1015,12 @@
      -26.907
     ],
     [
-     100.52,
-     -25.352
+     100.421,
+     -25.336
     ],
     [
-     100.565,
-     -24.65
+     100.466,
+     -24.634
     ],
     [
      110.97,
@@ -1077,14 +1085,10 @@
     [
      113.307,
      -31.41
-    ],
-    [
-     113.641,
-     -31.648
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -1094,12 +1098,16 @@
    "name": "Hedge_Mass_4",
    "ring": [
     [
-     156.43,
-     -29.934
+     150.49,
+     -29.491
     ],
     [
-     156.391,
-     -30.634
+     156.53,
+     -29.942
+    ],
+    [
+     156.491,
+     -30.641
     ],
     [
      151.03,
@@ -1138,12 +1146,16 @@
      -33.515
     ],
     [
-     153.937,
-     -42.553
+     154.091,
+     -42.827
     ],
     [
-     153.45,
-     -43.115
+     153.943,
+     -42.699
+    ],
+    [
+     153.502,
+     -43.208
     ],
     [
      147.957,
@@ -1176,14 +1188,10 @@
     [
      150.342,
      -30.092
-    ],
-    [
-     150.49,
-     -29.491
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -1193,175 +1201,16 @@
    "name": "Hedge_Mass_5",
    "ring": [
     [
-     137.058,
-     -45.217
+     125.218,
+     -31.856
     ],
     [
-     136.313,
-     -45.19
+     125.384,
+     -28.694
     ],
     [
-     140.882,
-     -33.923
-    ],
-    [
-     140.35,
-     -33.529
-    ],
-    [
-     139.862,
-     -33.088
-    ],
-    [
-     139.563,
-     -32.768
-    ],
-    [
-     139.352,
-     -32.515
-    ],
-    [
-     138.969,
-     -31.981
-    ],
-    [
-     138.798,
-     -31.7
-    ],
-    [
-     138.591,
-     -31.313
-    ],
-    [
-     138.329,
-     -30.71
-    ],
-    [
-     138.128,
-     -30.084
-    ],
-    [
-     137.981,
-     -29.386
-    ],
-    [
-     133.322,
-     -29.128
-    ],
-    [
-     133.149,
-     -32.422
-    ],
-    [
-     131.152,
-     -32.317
-    ],
-    [
-     130.438,
-     -45.951
-    ],
-    [
-     129.738,
-     -45.926
-    ],
-    [
-     130.49,
-     -31.581
-    ],
-    [
-     132.487,
-     -31.686
-    ],
-    [
-     132.66,
-     -28.39
-    ],
-    [
-     138.612,
-     -28.72
-    ],
-    [
-     138.639,
-     -29.036
-    ],
-    [
-     138.697,
-     -29.424
-    ],
-    [
-     138.78,
-     -29.808
-    ],
-    [
-     138.888,
-     -30.185
-    ],
-    [
-     139.02,
-     -30.555
-    ],
-    [
-     139.176,
-     -30.915
-    ],
-    [
-     139.355,
-     -31.265
-    ],
-    [
-     139.557,
-     -31.601
-    ],
-    [
-     139.781,
-     -31.924
-    ],
-    [
-     140.025,
-     -32.232
-    ],
-    [
-     140.498,
-     -32.729
-    ],
-    [
-     140.794,
-     -32.988
-    ],
-    [
-     141.105,
-     -33.227
-    ],
-    [
-     141.432,
-     -33.445
-    ],
-    [
-     141.755,
-     -33.632
-    ]
-   ],
-   "holes": [],
-   "height": 1.05,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Mass_6",
-   "ring": [
-    [
-     126.359,
-     -32.066
-    ],
-    [
-     126.532,
-     -28.756
-    ],
-    [
-     123.392,
-     -28.526
+     123.387,
+     -28.542
     ],
     [
      123.231,
@@ -1436,20 +1285,20 @@
      -28.298
     ],
     [
-     122.852,
-     -27.784
+     122.849,
+     -27.799
     ],
     [
-     127.267,
-     -28.108
+     126.119,
+     -28.048
     ],
     [
-     127.094,
-     -31.403
+     125.954,
+     -31.193
     ],
     [
-     129.092,
-     -31.508
+     129.099,
+     -31.358
     ],
     [
      128.339,
@@ -1460,12 +1309,171 @@
      -45.852
     ],
     [
-     128.356,
-     -32.17
+     128.364,
+     -32.02
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Mass_6",
+   "ring": [
+    [
+     141.755,
+     -33.632
+    ],
+    [
+     137.018,
+     -45.315
+    ],
+    [
+     136.273,
+     -45.289
+    ],
+    [
+     140.882,
+     -33.923
+    ],
+    [
+     140.35,
+     -33.529
+    ],
+    [
+     139.862,
+     -33.088
+    ],
+    [
+     139.563,
+     -32.768
+    ],
+    [
+     139.352,
+     -32.515
+    ],
+    [
+     138.969,
+     -31.981
+    ],
+    [
+     138.798,
+     -31.7
+    ],
+    [
+     138.591,
+     -31.313
+    ],
+    [
+     138.329,
+     -30.71
+    ],
+    [
+     138.128,
+     -30.084
+    ],
+    [
+     137.98,
+     -29.384
+    ],
+    [
+     134.47,
+     -29.188
+    ],
+    [
+     134.306,
+     -32.332
+    ],
+    [
+     131.16,
+     -32.167
+    ],
+    [
+     130.438,
+     -45.951
+    ],
+    [
+     129.738,
+     -45.926
+    ],
+    [
+     130.498,
+     -31.431
+    ],
+    [
+     133.643,
+     -31.596
+    ],
+    [
+     133.808,
+     -28.451
+    ],
+    [
+     138.611,
+     -28.718
+    ],
+    [
+     138.639,
+     -29.036
+    ],
+    [
+     138.697,
+     -29.424
+    ],
+    [
+     138.78,
+     -29.808
+    ],
+    [
+     138.888,
+     -30.185
+    ],
+    [
+     139.02,
+     -30.555
+    ],
+    [
+     139.176,
+     -30.915
+    ],
+    [
+     139.355,
+     -31.265
+    ],
+    [
+     139.557,
+     -31.601
+    ],
+    [
+     139.781,
+     -31.924
+    ],
+    [
+     140.025,
+     -32.232
+    ],
+    [
+     140.498,
+     -32.729
+    ],
+    [
+     140.794,
+     -32.988
+    ],
+    [
+     141.105,
+     -33.227
+    ],
+    [
+     141.432,
+     -33.445
+    ]
+   ],
+   "holes": [],
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -1511,12 +1519,12 @@
      -33.106
     ],
     [
-     103.191,
-     -43.122
+     103.113,
+     -43.187
     ],
     [
-     102.857,
-     -42.489
+     102.778,
+     -42.555
     ],
     [
      115.013,
@@ -1556,7 +1564,7 @@
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -1566,12 +1574,12 @@
    "name": "Hedge_Mass_8",
    "ring": [
     [
-     152.476,
-     -44.241
+     152.528,
+     -44.333
     ],
     [
-     151.989,
-     -44.803
+     152.041,
+     -44.896
     ],
     [
      146.382,
@@ -1602,12 +1610,16 @@
      -34.956
     ],
     [
-     139.292,
-     -45.296
+     139.17,
+     -45.595
     ],
     [
-     138.547,
-     -45.27
+     139.178,
+     -45.392
+    ],
+    [
+     138.507,
+     -45.368
     ],
     [
      143.057,
@@ -1647,7 +1659,7 @@
     ]
    ],
    "holes": [],
-   "height": 1.05,
+   "height": 1.25,
    "top": "flat",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
@@ -1660,12 +1672,12 @@
     -11.338
    ],
    "dir_deg": 86.1,
-   "span": 1.441,
-   "thk": 1.75,
-   "depth": 1.2,
-   "height": 2.9,
+   "span": 0.95,
+   "thk": 1.34,
+   "depth": 1.0,
+   "height": 2.2,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "hedge_arch",
@@ -1675,12 +1687,12 @@
     -23.85
    ],
    "dir_deg": 176.3,
-   "span": 1.446,
-   "thk": 1.6,
-   "depth": 1.2,
-   "height": 2.7,
+   "span": 0.954,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 2.05,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "hedge_arch",
@@ -1690,12 +1702,12 @@
     -42.264
    ],
    "dir_deg": -152.1,
-   "span": 1.472,
-   "thk": 1.6,
-   "depth": 1.2,
-   "height": 2.7,
+   "span": 0.971,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 2.05,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "hedge_arch",
@@ -1705,12 +1717,12 @@
     -29.282
    ],
    "dir_deg": -3.17,
-   "span": 1.44,
-   "thk": 1.6,
-   "depth": 1.2,
-   "height": 2.7,
+   "span": 0.95,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 2.05,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "hedge_arch",
@@ -1720,12 +1732,12 @@
     -45.855
    ],
    "dir_deg": -92.04,
-   "span": 1.533,
-   "thk": 1.6,
-   "depth": 1.2,
-   "height": 2.7,
+   "span": 1.011,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 2.05,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "hedge_arch",
@@ -1735,12 +1747,12 @@
     -44.253
    ],
    "dir_deg": -40.88,
-   "span": 1.531,
-   "thk": 1.6,
-   "depth": 1.2,
-   "height": 2.35,
+   "span": 1.01,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 1.8,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "hedge_arch",
@@ -1750,12 +1762,12 @@
     -12.238
    ],
    "dir_deg": 86.1,
-   "span": 1.44,
-   "thk": 1.6,
-   "depth": 1.2,
-   "height": 2.7,
+   "span": 0.95,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 2.05,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing, ~2x the old size"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
   {
    "type": "wall",
@@ -1770,8 +1782,9 @@
      -11.094
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1791,8 +1804,9 @@
      -11.183
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1812,8 +1826,9 @@
      -24.47
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1833,8 +1848,9 @@
      -23.167
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1854,8 +1870,9 @@
      -42.982
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1875,8 +1892,9 @@
      -41.807
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1896,8 +1914,9 @@
      -45.537
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1917,8 +1936,9 @@
      -45.489
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1938,8 +1958,9 @@
      -28.647
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1959,8 +1980,9 @@
      -29.946
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -1980,8 +2002,9 @@
      -46.077
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2001,8 +2024,9 @@
      -46.027
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2022,8 +2046,9 @@
      -43.816
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2043,8 +2068,9 @@
      -44.832
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2056,16 +2082,17 @@
    "name": "Edging_G1_Link_L",
    "line": [
     [
-     122.705,
-     -26.42
+     122.706,
+     -26.435
     ],
     [
-     127.437,
-     -26.767
+     126.289,
+     -26.707
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2077,16 +2104,17 @@
    "name": "Edging_G1_Link_R",
    "line": [
     [
-     122.61,
-     -27.716
+     122.607,
+     -27.731
     ],
     [
-     127.369,
-     -28.065
+     126.221,
+     -28.005
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2099,15 +2127,16 @@
    "line": [
     [
      138.86,
-     -28.683
+     -28.682
     ],
     [
-     132.562,
-     -28.335
+     133.711,
+     -28.395
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2120,15 +2149,16 @@
    "line": [
     [
      138.932,
-     -27.385
+     -27.384
     ],
     [
-     132.63,
-     -27.037
+     133.779,
+     -27.097
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2140,16 +2170,17 @@
    "name": "Edging_Centre_NS_N_L",
    "line": [
     [
-     129.555,
-     -23.621
+     129.547,
+     -23.771
     ],
     [
      130.164,
      -11.994
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2161,16 +2192,17 @@
    "name": "Edging_Centre_NS_N_R",
    "line": [
     [
-     130.853,
-     -23.689
+     130.845,
+     -23.839
     ],
     [
      131.462,
      -12.082
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2182,16 +2214,17 @@
    "name": "Edging_Centre_NS_S_L",
    "line": [
     [
-     130.445,
-     -31.479
+     130.453,
+     -31.329
     ],
     [
      129.696,
      -45.775
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2203,16 +2236,17 @@
    "name": "Edging_Centre_NS_S_R",
    "line": [
     [
-     129.147,
-     -31.411
+     129.155,
+     -31.261
     ],
     [
      128.396,
      -45.729
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2224,8 +2258,8 @@
    "name": "Edging_G1_Ring_0",
    "line": [
     [
-     122.704,
-     -26.47
+     122.705,
+     -26.485
     ],
     [
      122.698,
@@ -2316,8 +2350,9 @@
      -20.965
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2413,8 +2448,9 @@
      -25.068
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2502,8 +2538,9 @@
      -31.535
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2567,8 +2604,9 @@
      -31.956
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2632,12 +2670,13 @@
      -27.772
     ],
     [
-     122.617,
-     -27.667
+     122.614,
+     -27.681
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2833,12 +2872,13 @@
      -27.228
     ],
     [
-     138.926,
-     -27.435
+     138.927,
+     -27.433
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2851,7 +2891,7 @@
    "line": [
     [
      138.859,
-     -28.633
+     -28.631
     ],
     [
      138.862,
@@ -2922,8 +2962,9 @@
      -33.444
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -2983,8 +3024,9 @@
      -33.707
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3056,8 +3098,9 @@
      -29.374
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3073,12 +3116,13 @@
      -9.913
     ],
     [
-     115.15,
-     -10.901
+     115.804,
+     -10.946
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3090,16 +3134,17 @@
    "name": "Edging_Bnd_1",
    "line": [
     [
-     120.079,
-     -11.237
+     119.426,
+     -11.192
     ],
     [
-     128.506,
-     -11.811
+     129.249,
+     -11.861
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3111,20 +3156,21 @@
    "name": "Edging_Bnd_2",
    "line": [
     [
-     133.136,
-     -12.126
+     132.392,
+     -12.075
     ],
     [
      158.213,
      -13.833
     ],
     [
-     157.485,
-     -26.98
+     157.444,
+     -27.724
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3136,20 +3182,21 @@
    "name": "Edging_Bnd_3",
    "line": [
     [
-     157.229,
-     -31.613
+     157.27,
+     -30.869
     ],
     [
      156.821,
      -38.976
     ],
     [
-     154.741,
-     -42.385
+     154.34,
+     -43.043
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3161,20 +3208,21 @@
    "name": "Edging_Bnd_4",
    "line": [
     [
-     151.491,
-     -45.828
+     152.149,
+     -45.392
     ],
     [
      150.357,
      -46.581
     ],
     [
-     139.91,
-     -46.209
+     139.15,
+     -46.182
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3186,16 +3234,17 @@
    "name": "Edging_Bnd_5",
    "line": [
     [
-     135.18,
-     -46.04
+     135.94,
+     -46.067
     ],
     [
      129.642,
      -45.843
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3215,8 +3264,9 @@
      -45.605
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3236,12 +3286,13 @@
      -44.898
     ],
     [
-     102.89,
-     -44.454
+     102.539,
+     -43.791
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3253,20 +3304,21 @@
    "name": "Edging_Bnd_8",
    "line": [
     [
-     100.704,
-     -40.325
+     101.055,
+     -40.989
     ],
     [
      98.881,
      -36.883
     ],
     [
-     99.576,
-     -26.151
+     99.624,
+     -25.407
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3278,16 +3330,17 @@
    "name": "Edging_Bnd_9",
    "line": [
     [
-     99.876,
-     -21.514
+     99.828,
+     -22.259
     ],
     [
      100.628,
      -9.913
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3299,20 +3352,21 @@
    "name": "CentreSquare_Edging_0",
    "line": [
     [
-     127.322,
-     -28.012
+     126.174,
+     -27.952
     ],
     [
-     127.147,
-     -31.356
+     126.006,
+     -31.146
     ],
     [
-     129.194,
-     -31.463
+     129.202,
+     -31.313
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3324,20 +3378,21 @@
    "name": "CentreSquare_Edging_1",
    "line": [
     [
-     130.392,
-     -31.526
+     130.4,
+     -31.376
     ],
     [
-     132.44,
-     -31.633
+     133.596,
+     -31.544
     ],
     [
-     132.615,
-     -28.288
+     133.763,
+     -28.348
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3349,20 +3404,21 @@
    "name": "CentreSquare_Edging_2",
    "line": [
     [
-     132.678,
-     -27.089
+     133.826,
+     -27.15
     ],
     [
-     132.853,
-     -23.744
+     133.994,
+     -23.954
     ],
     [
-     130.806,
-     -23.637
+     130.798,
+     -23.787
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3374,20 +3430,21 @@
    "name": "CentreSquare_Edging_3",
    "line": [
     [
-     129.608,
-     -23.574
+     129.6,
+     -23.724
     ],
     [
-     127.56,
-     -23.467
+     126.404,
+     -23.556
     ],
     [
-     127.385,
-     -26.813
+     126.237,
+     -26.753
     ]
    ],
-   "height": 0.27,
-   "thk": 0.1,
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.153,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "scalloped_edging",
@@ -3399,15 +3456,15 @@
    "name": "CentreSquare_Paving",
    "line": [
     [
-     127.304,
-     -27.409
+     126.155,
+     -27.349
     ],
     [
-     132.696,
-     -27.691
+     133.845,
+     -27.751
     ]
    ],
-   "width": 8.0,
+   "width": 7.7,
    "thk": 0.08,
    "top": 0.022,
    "confidence": "medium",
@@ -3417,8 +3474,8 @@
    "type": "bench",
    "name": "CentreSquare_Bench_E0",
    "pos": [
-    132.174,
-    -30.017
+    133.326,
+    -30.002
    ],
    "dir_deg": 177.0,
    "length": 1.5,
@@ -3430,8 +3487,8 @@
    "type": "bench",
    "name": "CentreSquare_Bench_E1",
    "pos": [
-    132.42,
-    -25.324
+    133.564,
+    -25.459
    ],
    "dir_deg": 177.0,
    "length": 1.5,
@@ -3443,8 +3500,8 @@
    "type": "bench",
    "name": "CentreSquare_Bench_W0",
    "pos": [
-    127.58,
-    -29.776
+    126.436,
+    -29.641
    ],
    "dir_deg": -3.0,
    "length": 1.5,
@@ -3456,14 +3513,44 @@
    "type": "bench",
    "name": "CentreSquare_Bench_W1",
    "pos": [
-    127.826,
-    -25.083
+    126.674,
+    -25.098
    ],
    "dir_deg": -3.0,
    "length": 1.5,
    "ue_asset": "bench_wrought_iron_slats",
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "bench",
+   "name": "CentreSquare_Bench_S0",
+   "pos": [
+    132.091,
+    -31.114
+   ],
+   "dir_deg": 87.0,
+   "length": 1.5,
+   "ue_asset": "bench_wrought_iron_slats",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 garden photo diff (A100/A101): bench on the S side's east run"
+  },
+  {
+   "type": "bin",
+   "name": "CentreSquare_Bin_SE",
+   "pos": [
+    133.217,
+    -31.123
+   ],
+   "size": [
+    0.4,
+    0.4,
+    0.75
+   ],
+   "dir_deg": -3.0,
+   "ue_asset": "bin_wrought_iron",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 garden photo diff (A100/A101): wrought-iron bin in the SE corner"
   },
   {
    "type": "lamp_orn",
@@ -3484,12 +3571,12 @@
     1.0
    ],
    "pad": [
-    0.75,
-    0.75,
-    0.05
+    0.95,
+    0.95,
+    0.1
    ],
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes (top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a 0.75 pad"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes (top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a ~0.95 x 0.10 m pad (A108-A111)"
   },
   {
    "type": "slab",
@@ -3560,12 +3647,12 @@
      -30.9
     ],
     [
-     122.351,
-     -27.647
+     122.345,
+     -27.66
     ],
     [
-     122.667,
-     -27.67
+     122.665,
+     -27.685
     ]
    ],
    "holes": [],
@@ -3960,12 +4047,12 @@
      -26.271
     ],
     [
-     122.754,
-     -26.474
+     122.755,
+     -26.488
     ],
     [
-     122.52,
-     -26.457
+     122.525,
+     -26.471
     ],
     [
      121.21,
@@ -4217,11 +4304,11 @@
     ],
     [
      138.809,
-     -28.63
+     -28.629
     ],
     [
      139.076,
-     -28.645
+     -28.644
     ],
     [
      140.35,
@@ -4452,12 +4539,12 @@
      -24.1
     ],
     [
-     139.164,
-     -27.448
+     139.165,
+     -27.447
     ],
     [
      138.876,
-     -27.432
+     -27.431
     ]
    ],
    "holes": [],
@@ -4598,24 +4685,35 @@
    "name": "PergolaWalk_South",
    "line": [
     [
-     99.708,
-     -49.535
+     99.728,
+     -49.135
     ],
     [
-     152.245,
-     -52.105
+     152.265,
+     -51.705
     ]
    ],
    "width": 2.2,
    "surface": "diamond_tile_0.4",
-   "pergola": {
-    "hoop_spacing": 2.0,
-    "hoop_h": 2.7,
-    "pipe_d": 0.06,
-    "color": "maroon",
-    "vines": true
-   },
-   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py)",
+   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-10-02 garden photo diff (A152, A190, A191, A148): walk 2.6 m = 6.5 tile columns incl. a 0.40 m octagon-tile strip along the wall foot; widened to the garden side",
+   "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "PergolaWalk_South_Border",
+   "line": [
+    [
+     99.664,
+     -50.434
+    ],
+    [
+     152.201,
+     -53.004
+    ]
+   ],
+   "width": 0.4,
+   "surface": "octagon_tile_0.4",
+   "evidence": "2026-10-02 garden photo diff (A152, A190, A191, A148): walk 2.6 m = 6.5 tile columns incl. a 0.40 m octagon-tile strip along the wall foot; widened to the garden side",
    "confidence": "low"
   },
   {
@@ -4623,20 +4721,20 @@
    "name": "Pergola_South",
    "line": [
     [
-     99.72,
-     -49.903
+     99.748,
+     -49.337
     ],
     [
-     149.978,
-     -52.392
+     150.006,
+     -51.826
     ]
    ],
-   "width": 2.2,
-   "pitch": 2.4,
-   "post_h": 2.2,
+   "width": 2.45,
+   "pitch": 3.1,
+   "post_h": 2.3,
    "apex_h": 2.9,
    "tube": 0.05,
-   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: 22 arches, 2.396 m apart | 2026-10-02 (GD-11): walk ~2.2 m, legs on the walk edges",
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay: 17 arches, 3.145 m apart",
    "confidence": "medium",
    "gaps": []
   },
@@ -4644,15 +4742,15 @@
    "type": "bench",
    "name": "Bench_Pergola_0",
    "pos": [
-    146.354,
-    -52.914
+    145.26,
+    -52.292
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4660,15 +4758,15 @@
    "type": "bench",
    "name": "Bench_Pergola_1",
    "pos": [
-    141.567,
-    -52.677
+    138.978,
+    -51.981
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4676,15 +4774,15 @@
    "type": "bench",
    "name": "Bench_Pergola_2",
    "pos": [
-    136.781,
-    -52.439
+    132.695,
+    -51.67
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4692,15 +4790,15 @@
    "type": "bench",
    "name": "Bench_Pergola_3",
    "pos": [
-    131.994,
-    -52.202
+    126.413,
+    -51.358
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4708,15 +4806,15 @@
    "type": "bench",
    "name": "Bench_Pergola_4",
    "pos": [
-    127.208,
-    -51.965
+    120.131,
+    -51.047
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4724,15 +4822,15 @@
    "type": "bench",
    "name": "Bench_Pergola_5",
    "pos": [
-    122.421,
-    -51.728
+    113.849,
+    -50.736
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4740,15 +4838,15 @@
    "type": "bench",
    "name": "Bench_Pergola_6",
    "pos": [
-    117.635,
-    -51.491
+    107.566,
+    -50.425
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4756,47 +4854,15 @@
    "type": "bench",
    "name": "Bench_Pergola_7",
    "pos": [
-    112.848,
-    -51.254
+    101.284,
+    -50.114
    ],
    "dir_deg": 87.2,
-   "length": 1.5,
+   "length": 1.9,
    "depth": 0.5,
-   "seat_h": 0.43,
+   "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
-   "confidence": "medium",
-   "ue_asset": "bench_slats_steel_frame"
-  },
-  {
-   "type": "bench",
-   "name": "Bench_Pergola_8",
-   "pos": [
-    108.062,
-    -51.017
-   ],
-   "dir_deg": 87.2,
-   "length": 1.5,
-   "depth": 0.5,
-   "seat_h": 0.43,
-   "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
-   "confidence": "medium",
-   "ue_asset": "bench_slats_steel_frame"
-  },
-  {
-   "type": "bench",
-   "name": "Bench_Pergola_9",
-   "pos": [
-    103.275,
-    -50.78
-   ],
-   "dir_deg": 87.2,
-   "length": 1.5,
-   "depth": 0.5,
-   "seat_h": 0.43,
-   "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4804,8 +4870,8 @@
    "type": "bin",
    "name": "Bin_Pergola_East",
    "pos": [
-    149.138,
-    -53.172
+    149.167,
+    -52.605
    ],
    "size": [
     0.45,
@@ -4815,14 +4881,31 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: bin just west of the first arch (t7.0)"
+   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay: bin just west of the first arch (t7.0)"
+  },
+  {
+   "type": "bin",
+   "name": "Bin_Pergola_East",
+   "pos": [
+    142.113,
+    -52.256
+   ],
+   "size": [
+    0.45,
+    0.45,
+    0.8
+   ],
+   "dir_deg": 87.2,
+   "ue_asset": "bin_wrought_iron",
+   "confidence": "medium",
+   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: bin just west of the first arch (t7.0) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_125",
    "pos": [
-    124.808,
-    -51.967
+    123.266,
+    -51.323
    ],
    "size": [
     0.45,
@@ -4832,14 +4915,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_137",
    "pos": [
-    139.168,
-    -52.678
+    135.831,
+    -51.945
    ],
    "size": [
     0.45,
@@ -4849,7 +4932,7 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay"
   },
   {
    "type": "wall",
@@ -4864,12 +4947,12 @@
      -53.761
     ]
    ],
-   "height": 1.0,
+   "height": 1.1,
    "thk": 0.5,
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): east end stops at the stair's west bed",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): east end stops at the stair's west bed | 2026-10-02: ~1.1 m above the walk (A190 pitched-camera metrology)",
    "confidence": "low"
   },
   {
@@ -4877,7 +4960,7 @@
    "name": "Lamp_G2_Apron",
    "pos": [
     139.089,
-    -29.297
+    -29.295
    ],
    "height": 3.2,
    "head": "ball",
@@ -5117,8 +5200,8 @@
    "type": "sign",
    "name": "Signboard_Arch",
    "pos": [
-    155.12,
-    -43.07
+    154.984,
+    -43.292
    ],
    "dir_deg": 0.0,
    "w": 1.0,
@@ -5683,12 +5766,12 @@
     -9.613
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   },
   {
@@ -5699,12 +5782,12 @@
     -10.021
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   },
   {
@@ -5715,12 +5798,12 @@
     -10.941
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   },
   {
@@ -5731,12 +5814,12 @@
     -11.86
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   },
   {
@@ -5747,12 +5830,12 @@
     -12.268
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   },
   {
@@ -5763,12 +5846,12 @@
     -12.677
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   },
   {
@@ -5779,12 +5862,12 @@
     -13.051
    ],
    "dir_deg": 86.1,
-   "length": 3.0,
+   "length": 2.2,
    "depth": 0.55,
-   "seat_h": 0.47,
+   "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame (A139-A150)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
   }
  ],

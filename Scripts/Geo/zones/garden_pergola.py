@@ -10,9 +10,10 @@ import os
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
 FIRST_ARCH = 2.25      # m west of the walk's east end (diamond-tile start)
-PITCH = 2.4            # m between arches
+PITCH = 3.1            # m between arches: 2026-10-02 tile-row metrology A152/A172/A190 (2.95-3.2 m), 17 arches
 BENCH_OFF, BIN_OFF = 0.70, 0.82   # m from the pergola centre line toward the boulder wall (kept from the 2026-09-28 layout)
-EV = "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay"
+EV = ("owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch "
+      "3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay")
 
 
 def main():

@@ -17,20 +17,23 @@ from shapely.ops import unary_union
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
 OWN = re.compile(r"^(Apron_Fill_\w+|G[12]_\w+|Centre_NS_\w+|Hedge_\w+|Edging_\w+|Arch_\w+|CentreSquare_\w+)$")
-PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W, HEDGE_H = 1.2, 0.65, 1.05, 0.7, 1.05
+PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W, HEDGE_H = 1.2, 0.65, 1.05, 0.7, 1.25   # hedge 1.24-1.30 m (A099, A105)
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
-# topiary arches (2026-10-02 photo diff, A019-A022 / A217 single-view metrology on the 0.20 m edging blocks): free-standing
-# doughnut-shaped arches ~4.6-5.0 m wide outside, legs ~1.6 m, clear opening ~1.3 m x 2.7 m, ~1.2 m deep along the path
-ARCH_T, ARCH_H, ARCH_D = 1.6, 2.7, 1.2           # leg thickness / clear height / depth along the path (m)
-ARCH_OVR = {"G1_N": {"thk": 1.75, "height": 2.9}, "G2_SE": {"height": 2.35}}   # per-arch measured differences
+# topiary arches (2026-10-02 photo diff): free-standing doughnut-shaped arches. Scale from a person standing at the arch
+# (A019/A022, 1.71-1.76 m by the 0.40 m tiles): clear 0.95 x 2.05 m, outer ~3.2-3.5 wide x 3.0 high, ~1.0 m deep. (A first
+# pass scaled them on 0.20 m edging blocks; the blocks are 0.153 m, so it came out 1.31x too big.)
+ARCH_T, ARCH_H, ARCH_D, ARCH_SPAN = 1.1, 2.05, 1.0, 0.95   # leg/crown thickness, clear height, depth, clear span (m)
+ARCH_OVR = {"G1_N": {"thk": 1.34, "height": 2.2}, "G2_SE": {"height": 1.8}}   # per-arch measured differences
 NO_ARCH = {"G1_SSE", "Centre_NS_S"}              # A157-A160, A103: these two exits to the pergola walk have no arch
 # 2026-09-30 photos (A019-A022, A217, A155, A165-A169): no hedge on the garden boundary - scalloped edging and lawn,
 # the arches stand alone on the edging line (the owner's 2026-09-28 "hedge everywhere" predates the photos)
 BOUNDARY_HEDGE = False
 HEDGE_ONE_SIDE = {"G1_SSE": "L"}                 # A157-A160: G1_SSE has its hedge on the east (left, going out) side only
-EDGE_H = 0.27                                    # edging block height above the paving (A113 h/w 1.36 at 0.20 pitch)
-SQ_PU, SQ_PV = 2.7, 4.0                          # centre square paving half sizes: E-W 5.4 m (sketch outline 6.1 m = hedge
-                                                 # centre line), N-S 8.0 m (owner 2026-09-29: rectangular, longer N-S; 2026-09-28: 8 m)
+# scalloped edging blocks: pitch 0.153 +-0.008 (block/tile ratio 0.38-0.40 on the 0.40 m tiles in A019, A021, A099, A157,
+# A015), height 0.19-0.21 (A019, A113), ~0.08 thick
+EDGE_H, EDGE_PITCH, EDGE_T = 0.20, 0.153, 0.08
+SQ_PU, SQ_PV = 3.85, 3.85                        # centre square half sizes: square, edging line 7.6 x 7.6 m = 2 runs of 21
+                                                 # blocks (owner: 21 per side) + a 1.07 m mid-side opening (A099, A100, A105, A109)
 THETA = -3.0                                     # square / spine frame heading (deg; sketch N/S lines and gazebo axis)
 SQ_C = (130.00, -27.55)                          # square centre: the sketch square (corners +-0.1 m)
 # gazebo centres (owner 2026-09-29 "ставь как верно"): G1 = N x W path lines (116.98, -26.56) ~ roof octagon fit
@@ -135,8 +138,9 @@ def main():
     new = []
 
     def edging(name, pts):
-        new.append({"type": "wall", "name": name, "line": [_r(p) for p in pts], "height": EDGE_H, "thk": 0.1,
-                    "cap_proj": 0.0, "material": "stone", "kind": "scalloped_edging", "confidence": "medium", "evidence": EV})
+        new.append({"type": "wall", "name": name, "line": [_r(p) for p in pts], "height": EDGE_H, "thk": EDGE_T,
+                    "pitch": EDGE_PITCH, "cap_proj": 0.0, "material": "stone", "kind": "scalloped_edging", "confidence": "medium",
+                    "evidence": EV})
 
     # --- path centre lines (start, far end) ---
     cl = {}
@@ -197,7 +201,6 @@ def main():
     cut = [open_h, sqp(0.0)] + [Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96) for g in C]
     # arches: in the boundary line (legs along the boundary, opening across it), clear span = the path opening measured
     # along the boundary; the slot they stand in is cut from the mass so arch legs and hedge meet face to face
-    hg = HEDGE_OFF - HEDGE_W / 2 + 0.02
     bl = LineString(list(hedge_c.exterior.coords))
     arches = []
     for name, (a, b, st) in cl.items():
@@ -214,7 +217,7 @@ def main():
         tx, ty = tx / tl, ty / tl                               # boundary tangent at the crossing
         px, py = (b[0] - a[0]) / math.dist(a, b), (b[1] - a[1]) / math.dist(a, b)
         sin = abs(tx * py - ty * px)
-        span = 2 * hg / max(sin, 0.5)
+        span = ARCH_SPAN / max(sin, 0.5)                        # clear span measured along the boundary
         nx, ny = -ty, tx
         if nx * px + ny * py < 0:
             nx, ny = -nx, -ny                                   # opening axis = boundary normal, pointing outward
@@ -225,7 +228,8 @@ def main():
         arches.append({"type": "hedge_arch", "name": f"Arch_Bnd_{name}", "center": _r((x.x, x.y)),
                        "dir_deg": round(math.degrees(math.atan2(ny, nx)), 2), "span": round(span, 3),
                        "thk": ov.get("thk", ARCH_T), "depth": ARCH_D, "height": ov.get("height", ARCH_H),
-                       "confidence": "medium", "evidence": EV + " | 2026-10-02 photo diff: free-standing, ~2x the old size"})
+                       "confidence": "medium", "evidence": EV + " | 2026-10-02 photo diff: free-standing; person-scaled "
+                       "(A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"})
     solid = solid.difference(unary_union(cut)).buffer(0)
     parts = [q for q in getattr(solid, "geoms", [solid]) if q.area > 0.05]
     parts.sort(key=lambda q: (-q.centroid.y, q.centroid.x))
@@ -268,7 +272,8 @@ def main():
             edging(f"Edging_Bnd_{k}", q)
     eu, ev_ = SQ_PU - 0.05, SQ_PV - 0.05
     loop_pieces([sq(-eu, -ev_), sq(eu, -ev_), sq(eu, ev_), sq(-eu, ev_), sq(-eu, -ev_)], "CentreSquare_Edging")
-    # --- centre square: paving, 4 benches (W/E sides, one each side of the link), lamp in the middle ---
+    # --- centre square: paving, 4 benches (W/E sides, one each side of the link) + 1 on the S side's east run with a bin
+    # in the SE corner between them (A100/A101), lamp in the middle ---
     P = SQ_PU
     new.append({"type": "path", "name": "CentreSquare_Paving", "line": [_r(sq(-P, 0.0)), _r(sq(P, 0.0))], "width": 2 * SQ_PV,
                 "thk": 0.08, "top": 0.022, "confidence": "medium", "evidence": EV})
@@ -281,11 +286,17 @@ def main():
             new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": _r(sq(nx_ * (P - 0.4), sgn * bu)),
                         "dir_deg": round(face, 2), "length": blen, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium",
                         "evidence": EV})
+    new.append({"type": "bench", "name": "CentreSquare_Bench_S0", "pos": _r(sq(bu, -(SQ_PV - 0.4))), "dir_deg": round(hdg + 90.0, 2),
+                "length": blen, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium",
+                "evidence": EV + " | 2026-10-02 garden photo diff (A100/A101): bench on the S side's east run"})
+    new.append({"type": "bin", "name": "CentreSquare_Bin_SE", "pos": _r(sq(SQ_PU - 0.45, -(SQ_PV - 0.45))), "size": [0.4, 0.4, 0.75],
+                "dir_deg": round(hdg, 2), "ue_asset": "bin_wrought_iron", "confidence": "medium",
+                "evidence": EV + " | 2026-10-02 garden photo diff (A100/A101): wrought-iron bin in the SE corner"})
     new.append({"type": "lamp_orn", "name": "CentreSquare_Lamp", "pos": _r(SQ_C), "dir_deg": round(hdg, 2), "height": 3.8,
                 "globes": 2, "arm_span": 1.3, "globe_d": 0.38, "top_globe": True, "base_box": [0.35, 0.35, 1.0],
-                "pad": [0.75, 0.75, 0.05], "confidence": "medium",
+                "pad": [0.95, 0.95, 0.10], "confidence": "medium",
                 "evidence": EV + " | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes "
-                            "(top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a 0.75 pad"})
+                            "(top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a ~0.95 x 0.10 m pad (A108-A111)"})
 
     # --- gazebo surrounds: octagonal tiled apron from the parapet face to R_APRON, concentric with the gazebo (it was
     # 0.2 m off-centre and G2 7 deg off the gazebo: parapet inside the tiles on one side, a lawn sliver on the other);

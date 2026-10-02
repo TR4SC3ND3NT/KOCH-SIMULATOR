@@ -34,7 +34,8 @@ COL = {
 
 
 SURFACE_SLOT = (("clover", "M_Paver_Clover_Grey"), ("herringbone", "M_Paver_Herringbone_Grey"), ("asphalt", "M_Asphalt"),
-                ("granite", "M_Granite_Red"), ("grating", "M_Steel_Grating"), ("terrazzo", "M_Terrazzo"))
+                ("granite", "M_Granite_Red"), ("grating", "M_Steel_Grating"), ("terrazzo", "M_Terrazzo"),
+                ("diamond", "M_Paving_Diamond_Tile"), ("octagon", "M_Paving_Octagon_Tile"))
 MATERIAL_SLOT = {"metal": "M_Steel_Paint_Dark", "stone": "M_Concrete_Precast", "brick": "M_Tile_Brick_Red",
                  "granite": "M_Granite_Red", "hedge": "M_Hedge_Foliage", "wood": "M_Wood_Stained", "white": "M_Paint_White",
                  "paint": "M_Paint_White", "glass": "M_Glass", "terrazzo": "M_Terrazzo", "accent": "M_Paint_Blue",
@@ -188,12 +189,12 @@ class Site:
         self.emit(el, bm, COL.get(el.get("material", "stone"), COL["stone"]), (p[0], p[1], self.gz(*p)))
 
     def b_scalloped_edging(self, el):
-        """Precast garden edging as separate round-topped blocks (owner footage 081856511, 081924271: ~0.2 m pitch,
-        ~0.22 m high, ~0.1 m thick, ~1 cm joints). Each block: rectangle + semicircle top, sat on the ground under
+        """Precast garden edging as separate round-topped blocks (2026-10-02 photo metrology on the 0.40 m tiles: 0.153 m
+        pitch, ~0.20 m high, ~0.08 m thick, ~1 cm joints). Each block: rectangle + semicircle top, sat on the ground under
         its own centre, so the row follows the paving levels. `pitch`, `joint`, `height`, `thk` in metres."""
         bm = bmesh.new()
-        pitch, joint = el.get("pitch", 0.20), el.get("joint", 0.01)
-        h, thk, segs = el["height"], el.get("thk", 0.1), 8
+        pitch, joint = el.get("pitch", 0.153), el.get("joint", 0.01)
+        h, thk, segs = el["height"], el.get("thk", 0.08), 8
         pts = el["line"] + ([el["line"][0]] if el.get("closed") else [])
         for a, b in zip(pts[:-1], pts[1:]):
             A, B = Vector(a), Vector(b)
