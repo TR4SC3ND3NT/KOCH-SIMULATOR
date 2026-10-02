@@ -76,10 +76,13 @@ def main(src):
                 # roof with a brass-coloured edge flashing. Edge 8 runs north -> south: u0 is the north end (clad), u1
                 # the south end, hidden by the basement-stair brick pier
                 a.update(body_slot="M_Tile_Brick_Red", roof_slot="M_Sheet_Grey", trim_slot="M_Brass_Trim", band_ends=["u0"],
-                         bands=[{"z0": -2.10, "z1": -0.58, "slot": "M_Tile_Brick_Red", "proj": 0.02},
-                                {"z0": -0.58, "z1": -0.15, "slot": "M_Stone_Rubble_Dark", "proj": 0.04}],
-                         bands_evidence="2026-09-30 photos 181/182/188: ~0.45 m dark split-stone band under the roof edge over "
-                                        "brick-effect tile (shares of the 0.9 m front wall by eye, +-5 cm)")
+                         # [at u0 = north, at u1 = south]: the shingle band is ~0.7 m at the south end, ~0.25 m at the north
+                         bands=[{"z0": -2.10, "z1": [-0.40, -0.75], "slot": "M_Tile_Brick_Red", "proj": 0.02},
+                                {"z0": [-0.40, -0.75], "z1": -0.15, "slot": "M_Shingle_Hex_Dark", "proj": 0.03}],
+                         bands_evidence="2026-09-30 photos 181/182/188 + 2026-09-25 012456/012459 (photo diff 2026-10-02, "
+                                        "ray-cast in 166): dark granulated hexagonal bitumen shingle band (~0.33 m tabs) under "
+                                        "the brass flashing, ~0.7 m at the south end thinning to ~0.25 m at the north end, over "
+                                        "brick-effect tile (~0.10 m courses)")
                 # the Dance Hall door on the basement-stair landing opens into this box: hollow (room in INT_C_Basement),
                 # floor at the basement level (3.97); the stair's wall (Stair_Wall_N, w 0-4.37) closes most of the south end
                 a.update(hollow=True, z_floor=-2.70, wall_t=0.3,
@@ -95,8 +98,28 @@ def main(src):
             if "items" in a:
                 e, _ = north_u(a["items"][0][0])
                 a["edge"], a["items"] = e, [[north_u(it[0])[1]] + it[1:] for it in a["items"]]
-        if a.get("type") == "ramp" and a.get("name") == "Top" and "rail_ends" not in a:
-            a["rail_ends"] = ["u1"]                                     # walk QA 2026-10-02: open outer end 1.05 m over the plaza
+        # 2026-10-02 photo diff (agent, matched camera of 061631264 + 006/007/005/158/173/061624280/061621646):
+        EVD = " | 2026-10-02 photo diff: "
+        if a.get("type") == "ramp" and a.get("name") == "Top":
+            # the grating leaves the landing and slopes down over the east treads to a level corner platform on posts
+            a.pop("rail_ends", None)
+            a.update(u0=1.56, u1=3.0, w0=-3.30, w1=-2.36, z_high=0.0, z_low=-0.25, rail_sides="both",
+                     evidence=a.get("evidence", "") + EVD + "top flight slopes to a corner platform (006/007, 061631264 posts at u 2.39/3.22)")
+            att.append(a)
+            a = dict(a, name="Platform", u0=3.0, u1=4.0, z_high=-0.25, z_low=-0.25, rail_sides="w1", rail_ends=["u1"])
+        elif a.get("type") == "ramp" and a.get("name") == "Run":
+            a.update(u0=3.30, w0=3.0, w1=4.0, z_high=-0.25,
+                     evidence=a.get("evidence", "") + EVD + "run starts at the corner platform, 0.4 m further out (12 % slope)")
+        elif a.get("type") == "stairs" and a.get("edge") == 2:
+            a["cheeks"] = [dict(c) for c in a["cheeks"]]
+            a["cheeks"][0].update(z_out=-0.40, evidence=a["cheeks"][0].get("evidence", "") + EVD +
+                                  "west cheek cap parallel to the flight ~0.5 m over the nosings (061631264, 173, 007)")
+        elif a.get("type") == "floodlight" and a.get("edge") == 2:
+            a["u"] = [-0.1, 1.9, 3.9]                                   # 158, 061624280, 061621646: three lamps
+        elif a.get("type") == "downpipe" and a.get("edge") == 0 and a.get("u") == [12.55]:
+            a.update(z0=-0.10, jog={"z": 0.72, "du": -0.30})            # 005, 061631264: steps west round the west cheek
+        elif a.get("type") == "downpipe" and a.get("edge") == 3 and a.get("u") == [0.25]:
+            a["z0"] = 0.60                                               # ends with its shoe on the east cheek's cap
         att.append(a)
     C["attachments"] = att
     # F5 offices are inside the hip roof: the roof is a shell with a sloped underside, not a solid (2026-10-02)

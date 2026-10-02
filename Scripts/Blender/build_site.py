@@ -1273,6 +1273,25 @@ class Site:
         from greybox.kit import railing
         pts = [Vector(p) for p in el["points"]]
         bm = bmesh.new()
+        if el.get("panel") == "forged":
+            # scroll panels along each segment in a sheared frame: u horizontal along the segment, z up, the rails
+            # follow the slope (sloped guard over a light-well cover), posts at the joints
+            h, post = el.get("height", 0.9), el.get("post", 0.05)
+            for k, (A, B) in enumerate(zip(pts[:-1], pts[1:])):
+                hz = Vector((B.x - A.x, B.y - A.y, 0.0))
+                L = hz.length
+                if L < 0.2:
+                    continue
+                m = Matrix.Identity(4)
+                m.col[0].xyz = Vector((hz.x / L, hz.y / L, (B.z - A.z) / L))
+                m.col[1].xyz = Vector((-hz.y / L, hz.x / L, 0.0))
+                m.col[2].xyz = Vector((0.0, 0.0, 1.0))
+                m.col[3].xyz = A
+                for u in ([0.0] if k == 0 else []) + [L]:
+                    box(bm, m, u - post / 2, u + post / 2, -post / 2, post / 2, -0.05, h)
+                _forged_bay(bm, m, post / 2, L - post / 2, 0.05, h - 0.05)
+            self.emit(el, bm, COL.get(el.get("material", "metal"), COL["metal"]), tuple(pts[0]))
+            return
         if el.get("unique_posts"):   # opt-in: one post per joint (kit.railing doubles them -> coincident faces)
             _railing_unique(bm, pts, el.get("height", 1.0), el.get("post", 0.05), el.get("rail", 0.05),
                             el.get("spacing", 1.2), el.get("mid_rails", 1))

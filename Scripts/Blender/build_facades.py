@@ -603,17 +603,17 @@ class Building:
                 # cut 5 cm above it so the dormer cap stays inside the shell (not coplanar with the lining)
                 dormers.data.materials[0] = mat(r.get("dormer_slot", "M_Sheet_Red"))
                 apply_boolean(dormers, roof_cutter(roof, lift=0.05), "INTERSECT")
-                if bm_cut is not None:   # glazed openings: one cutter through dormer fronts and the roof shell
-                    cut = temp_object(roof.name + "_TMPDormerCut", bm_cut, roof.matrix_world, "M_Paint_White")
-                    apply_boolean(dormers, cut)
-                    apply_boolean(roof, cut)
-                    drop(cut)
+                if bm_cut is not None:   # glazed openings: cutters through the dormer fronts and the roof shell
+                    for target, b_ in ((dormers, bm_cut[0]), (roof, bm_cut[1])):
+                        cut = temp_object(roof.name + "_TMPDormerCut", b_, roof.matrix_world, "M_Paint_White")
+                        apply_boolean(target, cut)
+                        drop(cut)
                     bm_cut = None
                     self.obj("Dormer_Glass", bm_gl, COL["glass"], "dormer windows: F5 attic offices are lit by the dormers "
                              "(campus.md); pane 3 cm behind the dormer face", r.get("confidence"))
                     bm_gl = None
             clear_cutters()
-        for b_ in (bm_cut, bm_gl):
+        for b_ in list(bm_cut or ()) + [bm_gl]:
             if b_ is not None:
                 b_.free()
 
@@ -730,7 +730,7 @@ class Building:
         d = r["dormer"]
         bm = bmesh.new()
         win = d.get("window")
-        bm_cut, bm_gl = (bmesh.new(), bmesh.new()) if win else (None, None)
+        bm_cut, bm_cut_roof, bm_gl = (bmesh.new(), bmesh.new(), bmesh.new()) if win else (None, None, None)
         z0 = self.s["eave_z"]
         if r["type"] == "mansard":
             run = r["lower_h"] / math.tan(math.radians(r["lower_pitch"]))
@@ -760,18 +760,23 @@ class Building:
                     la, lb, lc = (B - C).length, (C - A).length, (A - B).length
                     inc = (A * la + B * lb + C * lc) / (la + lb + lc)
                     r_in = abs((B - A).x * (C - A).y - (B - A).y * (C - A).x) / (la + lb + lc)
-                    k = (r_in - fw) / r_in
-                    hole = [inc + (Vector(p) - inc) * k for p in tri]
-                    # the roof surface meets the dormer front at zf: the opening starts 8 cm above it (no notch)
-                    zb_new, (ha, hb, hc) = zf + 0.08, hole
-                    if ha.y < zb_new < hc.y:
-                        t = (zb_new - ha.y) / (hc.y - ha.y)
-                        ha, hb = ha.lerp(hc, t), hb.lerp(hc, t)
-                    hole = [(ha.x, ha.y), (hb.x, hb.y), (hc.x, hc.y)]
+                    def opening(grow):
+                        k = (r_in - fw + grow) / r_in
+                        ha, hb, hc = (inc + (Vector(p) - inc) * k for p in tri)
+                        # the roof surface meets the dormer front at zf: the opening starts 8 cm above it (no notch)
+                        zb_new = zf + 0.08 - grow
+                        if ha.y < zb_new < hc.y:
+                            t = (zb_new - ha.y) / (hc.y - ha.y)
+                            ha, hb = ha.lerp(hc, t), hb.lerp(hc, t)
+                        return [(ha.x, ha.y), (hb.x, hb.y), (hc.x, hc.y)]
+                    hole = opening(0.0)
                     prism(bm_cut, hole, w_front + 0.1, back + 0.05)            # through the front, into the attic
+                    # the roof's tunnel is 1 cm wider: its walls stay inside the dormer body, not on the dormer's
+                    # tunnel walls (zaudit: 29.6 m2 coplanar with one shared cutter)
+                    prism(bm_cut_roof, opening(0.01), w_front - 0.02, back + 0.05)
                     prism(bm_gl, hole, w_front - 0.03, w_front - 0.042)        # 12 mm pane, 3 cm behind the face
         ob = self.obj("Dormers", bm, COL["roof"], "pointed dormers on the roof slopes (render 2025, Esri 2020)")
-        return ob, bm_cut, bm_gl
+        return ob, (bm_cut, bm_cut_roof) if win else None, bm_gl
 
     # ------------------------------------------------------------------ attachments
     def build_attachment_detail(self, a, e, fr):
@@ -793,14 +798,22 @@ class Building:
                 else:
                     pts.append(fr @ Vector((u, w_wall, a["z1"])))
                 foot = a["z0"]
-                pts += [fr @ Vector((u, w_wall, foot + 0.3)), fr @ Vector((u, w_wall + 0.18, foot + 0.1))]
+                # optional "jog" {z, du}: offset of the lower leg along the wall around an obstacle (a stair cheek)
+                jog = a.get("jog")
+                ul = u + (jog["du"] if jog else 0.0)
+                if jog:
+                    pts += [fr @ Vector((u, w_wall, jog["z"] + 0.12)), fr @ Vector((ul, w_wall, jog["z"] - 0.12))]
+                pts += [fr @ Vector((ul, w_wall, foot + 0.3)), fr @ Vector((ul, w_wall + 0.18, foot + 0.1))]
                 D.tube(steel, pts, r, seg=16, bend_r=0.1)
-                z_top = pts[-3].z if len(pts) >= 3 else a["z1"]
+                z_top = pts[-3 - 2 * bool(jog)].z if len(pts) >= 3 + 2 * bool(jog) else a["z1"]
                 n = max(1, int((z_top - foot - 0.6) / 1.5))
                 for k in range(n + 1):
                     zc = foot + 0.5 + (z_top - foot - 1.0) * k / max(n, 1)
-                    D.ring_clamp(steel, fr @ Vector((u, w_wall, zc)), fr.to_3x3() @ Vector((0, 0, 1)), r)
-                    box(steel, fr, u - 0.01, u + 0.01, 0.0, w_wall - r, zc - 0.012, zc + 0.012)  # clamp stem to the wall
+                    if jog and abs(zc - jog["z"]) < 0.25:   # no clamp on the bend
+                        continue
+                    uc = ul if jog and zc < jog["z"] else u
+                    D.ring_clamp(steel, fr @ Vector((uc, w_wall, zc)), fr.to_3x3() @ Vector((0, 0, 1)), r)
+                    box(steel, fr, uc - 0.01, uc + 0.01, 0.0, w_wall - r, zc - 0.012, zc + 0.012)  # clamp stem to the wall
             self.obj_parts(f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}", {a.get("material", "M_PVC_Gutter_White"): steel}, ev, cf)
             return True
         if t == "stairs":
@@ -899,7 +912,7 @@ class Building:
                     "cctv": {"M_Plastic_White": p["body"]},
                     "lamp": {"M_Alu_Black": p["body"], "M_Lamp_Diffuser": p["diffuser"]},
                     "vent": {"M_Alu_Grey": p["frame"], "M_Alu_Grey_Slats": p["slats"]},
-                    "sign": {"M_Sign_Panel": p["plate"], "M_Steel_Galv": p["pins"]}}[kind]
+                    "sign": {a.get("slot", "M_Sign_Panel"): p["plate"], "M_Steel_Galv": p["pins"]}}[kind]   # slot: KOCH plates
             self.obj_parts(f"{a.get('name', kind)}_E{a['edge']}", mats, ev, cf)
             return True
         if t == "lightwell":
@@ -1087,34 +1100,41 @@ class Building:
                 print(f"  {self.id}: skip unsupported attachment type {t!r}")
 
     def shed_cladding(self, a, fr):
-        """Shed front + end walls clad in horizontal bands (e.g. brick tile under a rough-stone band): "bands"
-        [{z0, z1, slot, proj}] with z relative to FFL like z_low. Ends follow the roof slope, clipped to each band;
-        "band_ends" picks the clad ends (default both)."""
+        """Shed front + end walls clad in horizontal bands (e.g. brick tile under a shingle band): "bands"
+        [{z0, z1, slot, proj}] with z relative to FFL like z_low; z0/z1 may be [at u0, at u1] for a band that tapers
+        along the front. Ends follow the roof slope, clipped to each band; "band_ends" picks the clad ends (default both)."""
         bands = a.get("bands")
         if not bands:
             return
-        d, zl, zh = a["depth"], a["z_low"], a["z_high"]
+        d, zl, zh, U0, U1 = a["depth"], a["z_low"], a["z_high"], a["u0"], a["u1"]
         zr = lambda w: zh + (zl - zh) * w / d          # roof underside line over the end walls
+        at = lambda v, u: v if not isinstance(v, (list, tuple)) else v[0] + (v[1] - v[0]) * (u - U0) / (U1 - U0)
+        ends = a.get("band_ends", ["u0", "u1"])
         parts = {}
         for b in bands:
             bm = parts.setdefault(b["slot"], bmesh.new())
-            pj, z0 = b.get("proj", 0.02), b["z0"]
-            z1 = min(b["z1"], zl)
-            ends = a.get("band_ends", ["u0", "u1"])
-            if z1 - z0 > 0.01:   # front face, wrapping the clad corners by the projection
-                box(bm, fr, a["u0"] - pj * ("u0" in ends), a["u1"] + pj * ("u1" in ends), d - 0.005, d + pj, z0, z1)
-            # an end against a neighbour (pier, wall) stays bare
-            for u_a, u_b in [(a["u0"] - pj, a["u0"] + 0.005)] * ("u0" in ends) + [(a["u1"] - 0.005, a["u1"] + pj)] * ("u1" in ends):
-                # end wall band: from where the roof line drops below the band top out to the front corner
-                if b["z1"] <= zl:
-                    w0 = 0.0
-                else:
-                    w0 = max(0.0, d * (zh - b["z1"]) / (zh - zl)) if zh > zl else 0.0
-                top = [(w, min(b["z1"], zr(w))) for w in (w0, d)]
+            pj = b.get("proj", 0.02)
+            ua, ub = U0 - pj * ("u0" in ends), U1 + pj * ("u1" in ends)
+            za0, zb0 = at(b["z0"], U0), at(b["z0"], U1)
+            za1, zb1 = min(at(b["z1"], U0), zl), min(at(b["z1"], U1), zl)
+            if min(za1 - za0, zb1 - zb0) > 0.01:   # front face (u-z quad, possibly tapered) extruded over d-0.005..d+pj
+                q = [(ua, za0), (ub, zb0), (ub, zb1), (ua, za1)]
+                vs = [bm.verts.new(fr @ Vector((u, w, z))) for w in (d - 0.005, d + pj) for u, z in q]
+                for f in ((0, 3, 2, 1), (4, 5, 6, 7), (0, 1, 5, 4), (1, 2, 6, 5), (2, 3, 7, 6), (3, 0, 4, 7)):
+                    bm.faces.new([vs[k] for k in f])
+            # end walls: from where the roof line drops below the band top out to the front corner
+            for end, u_a, u_b in (("u0", U0 - pj, U0 + 0.005), ("u1", U1 - 0.005, U1 + pj)):
+                if end not in ends:   # an end against a neighbour (pier, wall) stays bare
+                    continue
+                uu = U0 if end == "u0" else U1
+                z0, z1 = at(b["z0"], uu), at(b["z1"], uu)
+                w0 = 0.0 if z1 <= zl else (max(0.0, d * (zh - z1) / (zh - zl)) if zh > zl else 0.0)
+                top = [(w, min(z1, zr(w))) for w in (w0, d)]
                 prof = [(w0, top[0][1]), (d - 0.005, top[1][1]), (d - 0.005, z0), (w0, z0)]   # clockwise like shed/lightwell
                 if all(zt - z0 > 0.01 for _w, zt in top) and d - 0.005 - w0 > 0.05:
                     prism_profile(bm, fr, prof, u_a, u_b)
         for slot, bm in parts.items():
+            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
             self.obj_parts(f"{a['name']}_Clad_{slot[2:]}", {slot: bm}, a.get("bands_evidence", a.get("evidence")),
                            a.get("confidence"))
 

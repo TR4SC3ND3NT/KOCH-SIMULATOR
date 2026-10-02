@@ -59,12 +59,20 @@
   ],
   [
    [
-    167.634,
-    -3.015
+    167.642,
+    -2.815
    ],
    [
-    173.38,
-    -3.244
+    168.991,
+    -2.869
+   ],
+   [
+    168.981,
+    -3.139
+   ],
+   [
+    173.377,
+    -3.314
    ],
    [
     174.147,
@@ -2744,6 +2752,51 @@
    "slot": "M_Wood_Oak_Light",
    "evidence": "Dance Hall room inside the C west shed (the door on the basement-stair landing opens into it): floor at the basement level, 2 risers down from the door (landing 4.246); interior not photographed - empty room, layout and finish estimated (2026-10-02)",
    "confidence": "low"
+  },
+  {
+   "type": "int_wall",
+   "name": "DanceHall_Wall_W",
+   "line": [
+    [
+     167.304,
+     -3.272
+    ],
+    [
+     168.903,
+     -3.336
+    ]
+   ],
+   "z0": 5.15,
+   "z1": 7.45,
+   "thk": 0.4,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166/164, photos 160, q012507/q012511, 013/014/181/182/q012459): the tall brick Dance Hall wall (pier) runs on west of the stair head to the shed front plane (corner at C-local x -5.97), same line/side as Stair_Wall_N, from the landing up to the canopy"
+  },
+  {
+   "type": "rail3d",
+   "name": "Lightwell_Railing_W",
+   "points": [
+    [
+     173.784,
+     -5.662,
+     5.78
+    ],
+    [
+     173.862,
+     -3.714,
+     6.3
+    ]
+   ],
+   "height": 0.9,
+   "post": 0.05,
+   "panel": "forged",
+   "material": "metal",
+   "slot": "M_Steel_Paint_Grey",
+   "ue_asset": "railing_forged_scroll",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166/164, photos 160, q012507/q012511, 013/014/181/182/q012459): sloped forged panel on the west edge of the south light-well cover, from the east canopy post up to C's south wall (010, 011, 160, 161, 166, q012520, q012543)"
   }
  ],
  "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35)"

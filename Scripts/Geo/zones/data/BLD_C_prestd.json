@@ -739,6 +739,58 @@
    ],
    "evidence": "P1 by frames: NW end of the north facade seen from the canteen yard (070410255 f03942): two outdoor AC units standing at the foot of the north wall by the parking",
    "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Sign_DanceHall",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -5.56,
+     0.6,
+     0.38,
+     0.2,
+     0.02
+    ]
+   ],
+   "slot": "M_Sign_KOCH",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): small navy plate 0.12 m from the corner above the landing; in game a KOCH plate only (the real text is never used)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Lamp_DanceHall",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -3.2,
+     0.75,
+     0.16,
+     0.22,
+     0.12
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): dome wall lamp just under the canopy soffit"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Vent_DanceHall",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -0.78,
+     -0.1,
+     0.38,
+     0.6,
+     0.03
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): tall louvred vent grille near C's corner (160, q012520)"
   }
  ],
  "basement": {

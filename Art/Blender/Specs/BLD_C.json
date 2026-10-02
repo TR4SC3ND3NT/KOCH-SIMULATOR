@@ -524,8 +524,8 @@
      "u1": 0.05,
      "w1": 3.65,
      "z_wall": 0.55,
-     "z_out": -0.82,
-     "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449",
+     "z_out": -0.4,
+     "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449 | 2026-10-02 photo diff: west cheek cap parallel to the flight ~0.5 m over the nosings (061631264, 173, 007)",
      "confidence": "medium",
      "w_knee": 1.75,
      "w0": 1.3
@@ -575,16 +575,38 @@
    ],
    "post_pitch": 1.2,
    "confidence": "medium",
-   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-10-02 photo diff: top flight slopes to a corner platform (006/007, 061631264 posts at u 2.39/3.22)",
    "name": "Top",
    "along": "w",
    "over_stairs": true,
-   "u0": 1.75,
-   "u1": 3.6,
-   "w0": -3.75,
-   "w1": -2.75,
+   "u0": 1.56,
+   "u1": 3.0,
+   "w0": -3.3,
+   "w1": -2.36,
    "z_high": 0.0,
-   "z_low": 0.0,
+   "z_low": -0.25,
+   "rail_sides": "both"
+  },
+  {
+   "type": "ramp",
+   "edge": 2,
+   "rails": true,
+   "rail_h": 0.9,
+   "mid_rails": [
+    0.45
+   ],
+   "post_pitch": 1.2,
+   "confidence": "medium",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-10-02 photo diff: top flight slopes to a corner platform (006/007, 061631264 posts at u 2.39/3.22)",
+   "name": "Platform",
+   "along": "w",
+   "over_stairs": true,
+   "u0": 3.0,
+   "u1": 4.0,
+   "w0": -3.3,
+   "w1": -2.36,
+   "z_high": -0.25,
+   "z_low": -0.25,
    "rail_sides": "w1",
    "rail_ends": [
     "u1"
@@ -600,13 +622,13 @@
    ],
    "post_pitch": 1.2,
    "confidence": "medium",
-   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-09-28 0c: low end -1.078 -> -1.04 so it meets the plaza (FFL-1.05 + 1 cm) instead of sitting 6 cm under the ground | 2026-09-28 terrain audit: -1.02 - the plaza under the foot runs 2-4 cm above the old low end, the grating foot sat 2 cm under it",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-09-28 0c: low end -1.078 -> -1.04 so it meets the plaza (FFL-1.05 + 1 cm) instead of sitting 6 cm under the ground | 2026-09-28 terrain audit: -1.02 - the plaza under the foot runs 2-4 cm above the old low end, the grating foot sat 2 cm under it | 2026-10-02 photo diff: run starts at the corner platform, 0.4 m further out (12 % slope)",
    "name": "Run",
-   "u0": 3.75,
+   "u0": 3.3,
    "u1": 9.5,
-   "w0": 2.6,
-   "w1": 3.6,
-   "z_high": 0.0,
+   "w0": 3.0,
+   "w1": 4.0,
+   "z_high": -0.25,
    "z_low": -1.02,
    "z_ground": -1.04
   },
@@ -664,18 +686,24 @@
    "bands": [
     {
      "z0": -2.1,
-     "z1": -0.58,
+     "z1": [
+      -0.4,
+      -0.75
+     ],
      "slot": "M_Tile_Brick_Red",
      "proj": 0.02
     },
     {
-     "z0": -0.58,
+     "z0": [
+      -0.4,
+      -0.75
+     ],
      "z1": -0.15,
-     "slot": "M_Stone_Rubble_Dark",
-     "proj": 0.04
+     "slot": "M_Shingle_Hex_Dark",
+     "proj": 0.03
     }
    ],
-   "bands_evidence": "2026-09-30 photos 181/182/188: ~0.45 m dark split-stone band under the roof edge over brick-effect tile (shares of the 0.9 m front wall by eye, +-5 cm)",
+   "bands_evidence": "2026-09-30 photos 181/182/188 + 2026-09-25 012456/012459 (photo diff 2026-10-02, ray-cast in 166): dark granulated hexagonal bitumen shingle band (~0.33 m tabs) under the brass flashing, ~0.7 m at the south end thinning to ~0.25 m at the north end, over brick-effect tile (~0.10 m courses)",
    "hollow": true,
    "z_floor": -2.7,
    "wall_t": 0.3,
@@ -696,10 +724,14 @@
    "u": [
     12.55
    ],
-   "z0": -0.5,
+   "z0": -0.1,
    "z1": 13.3,
    "d": 0.1,
-   "evidence": "white PVC downpipe at the west wing / tower junction (061621646, 061631264), ends on the light-well cover"
+   "evidence": "white PVC downpipe at the west wing / tower junction (061621646, 061631264), ends on the light-well cover",
+   "jog": {
+    "z": 0.72,
+    "du": -0.3
+   }
   },
   {
    "type": "downpipe",
@@ -707,7 +739,7 @@
    "u": [
     0.25
    ],
-   "z0": -0.3,
+   "z0": 0.6,
    "z1": 13.3,
    "d": 0.1,
    "evidence": "white PVC downpipe at the tower / east wing junction (061621646 tile 1360 px, 061631264)"
@@ -717,6 +749,7 @@
    "edge": 2,
    "u": [
     -0.1,
+    1.9,
     3.9
    ],
    "z": 4.65,
@@ -831,6 +864,58 @@
    ],
    "evidence": "P1 by frames: NW end of the north facade seen from the canteen yard (070410255 f03942): two outdoor AC units standing at the foot of the north wall by the parking",
    "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Sign_DanceHall",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -5.56,
+     0.6,
+     0.38,
+     0.2,
+     0.02
+    ]
+   ],
+   "slot": "M_Sign_KOCH",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): small navy plate 0.12 m from the corner above the landing; in game a KOCH plate only (the real text is never used)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Lamp_DanceHall",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -3.2,
+     0.75,
+     0.16,
+     0.22,
+     0.12
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): dome wall lamp just under the canopy soffit"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Vent_DanceHall",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -0.78,
+     -0.1,
+     0.38,
+     0.6,
+     0.03
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): tall louvred vent grille near C's corner (160, q012520)"
   }
  ],
  "basement": {
