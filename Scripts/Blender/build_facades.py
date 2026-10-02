@@ -851,7 +851,9 @@ class Building:
                 w0 = a.get("w0", 0.0)  # face offset along the outward normal (m; <0 = on a wall behind this edge)
                 for u, zb, bw, bh, bd in a["items"]:
                     box(bm, fr, u - bw / 2, u + bw / 2, w0, w0 + bd, zb, zb + bh)
-                self.obj(f"{a.get('name', 'WallBoxes')}_E{a['edge']}", bm, COL["frame"], a.get("evidence"), cf)
+                ob = self.obj(f"{a.get('name', 'WallBoxes')}_E{a['edge']}", bm, COL["frame"], a.get("evidence"), cf)
+                if a.get("slot"):                      # explicit material slot (AHU, ladders, ...)
+                    ob.data.materials[0] = mat(a["slot"])
             elif t == "downpipe":  # rainwater downpipe: square-ish section d, off the wall by `off`, z0..z1 rel FFL
                 d, off = a.get("d", 0.1), a.get("off", 0.04)
                 for u in a["u"]:

@@ -179,6 +179,9 @@ def ceilings(k, zb, open_bays):
     return els
 
 
+STAIR_FINISH = {"slot": "M_Granite_Beige", "side_slot": "M_Paint_White"}   # beige stone treads, white painted strings (003/138)
+
+
 def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
     """U-stair storey at a hall end (x_wall = inner face of the end wall, sgn +1 west end / -1 east end)."""
     h0, h1 = hall(x_wall + sgn * 1.0)
@@ -194,7 +197,7 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
     top1 = zb + BOTTOM_RISER + (RISERS - 1) * RISER_H
     f1 = {"type": "stairs_run", "name": f"{prefix}_Flight1", "top": c_to_w(xa, y_land), "dir_deg": NORTH + 180,
           "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD, "z_top": z(top1),
-          "bottom_riser_h": round(BOTTOM_RISER, 4), "material": "granite", **ev("U-stair flight 1 (hall photo layout, 3.45 m storey)")}
+          "bottom_riser_h": round(BOTTOM_RISER, 4), "material": "granite", **STAIR_FINISH, **ev("U-stair flight 1 (hall photo layout, 3.45 m storey)")}
     if not solid:
         f1["soffit_thk"] = SOFFIT
     els.append(f1)
@@ -203,7 +206,7 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
                     **ev("half-landing against the north hall wall")))
     els.append({"type": "stairs_run", "name": f"{prefix}_Flight2", "top": c_to_w(xb, y_bot), "dir_deg": NORTH,
                 "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD,
-                "z_top": z(zb + STOREY), "material": "granite", "soffit_thk": SOFFIT, **ev("U-stair flight 2")})
+                "z_top": z(zb + STOREY), "material": "granite", **STAIR_FINISH, "soffit_thk": SOFFIT, **ev("U-stair flight 2")})
     rail = {"height": 0.95, "spacing": 0.12, "mid_rails": 0, "material": "white"}
     rev = ev("white steel balustrade")
     els.append({"type": "rail3d", "name": f"{prefix}_Rail1", **rail, **rev,
@@ -771,7 +774,7 @@ def extra_rooms(k, zb):
             wins, ww, wsill, wh = [X_TOWER0 + 0.92 - P2 - PART / 2, X_TOWER0 + 2.86 - P2 - PART / 2], 1.0, (4.2, 7.5, 10.75)[k - 2] - (k - 1) * STOREY, 1.40
         rv = round(X_W - 0.16 - 0.07, 3)
         it_ = lambda u0, u1, v0, v1, z0, z1: [*W((u0 + u1) / 2, (v0 + v1) / 2), d_u, round(u1 - u0, 4), round(abs(v1 - v0), 4), round(z1 - z0, 4), z(zb + z0)]
-        paint, trim, a_ = [], [], (0.0 if num == "410" else X_TOWER0 - P2 - PART / 2)   # over the lobby: the west 0.35 m notch has no wall at v = D
+        paint, trim, a_ = [], [], 0.0      # the shell wall face at v = D runs the full width (the tower wall's corner fills the west 0.35 m)
         for wc in sorted(wins) + [None]:
             o0, o1 = (L, L) if wc is None else (wc - ww / 2, wc + ww / 2)
             if o0 - a_ > 0.005:
@@ -847,6 +850,10 @@ def f5(zb):
 def build():
     f1 = floor_slabs(1, 0.0, {}) + ceilings(1, 0.0, {"W": True, "E": True}) + plan(1, 0.0, lobby=True, west_stair=True)
     f1 += fitout(1, 0.0, NUMBERS[1]) + wc_fitout(1, 0.0)
+    # lobby: free-standing power-bank kiosk next to the coffee kiosk on the west wall (002; brand-neutral in game)
+    f1.append({"type": "box", "name": "F1_ChargeKiosk", "center": c_to_w(P2 + PART / 2 + 0.25, HW0 - 0.75), "dir_deg": EAST,
+               "size": [0.40, 0.40, 1.45], "z0": z(0.0), "material": "white", "slot": "M_Plastic_White", "ue_asset": "powerbank_kiosk",
+               **ev("power-bank rental kiosk by the coffee kiosk (002)")})
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
     # janitor's closets under flight 2 of both F1 stairs (map owner), brown door, north of the east exit door
