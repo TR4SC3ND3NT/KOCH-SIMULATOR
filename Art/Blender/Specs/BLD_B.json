@@ -788,7 +788,7 @@
    "u1": 1.65,
    "z0": 0.0,
    "z1": 0.9,
-   "proj": 0.03,
+   "proj": 0.04,
    "slot": "M_Tile_Brick_Red",
    "confidence": "medium",
    "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): red tile dado of the storefront piers"
@@ -810,7 +810,7 @@
    "u1": 7.5,
    "z0": 0.0,
    "z1": 0.9,
-   "proj": 0.03,
+   "proj": 0.04,
    "slot": "M_Tile_Brick_Red",
    "confidence": "medium",
    "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): red tile dado of the storefront piers"

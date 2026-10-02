@@ -331,7 +331,7 @@ els.append({"type": "wall", "name": "PathParapet_S", "line": ring(PAR), "height"
             "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public "
                         "sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; " + EV_SW + "continuous up "
                         "to the lane fence); line ~2.3 m north of the gate line, estimated", "confidence": "medium"})
-els.append({"type": "wall", "name": "Kerb_PathParapet_S", "line": ring([(p[0], p[1] - 0.15) for p in PAR]), "height": 0.10,
+els.append({"type": "wall", "name": "Kerb_PathParapet_S", "line": ring([(p[0], p[1] - 0.17) for p in PAR]), "height": 0.10,
             "thk": 0.10, "material": "stone", "slot": "M_Concrete_Precast",
             "evidence": "gutter kerb at the foot of the parapet on the sidewalk side, as at the street front west of the gate "
                         "(" + EV_SW + "A260-A263)", "confidence": "medium"})

@@ -735,8 +735,9 @@ class Building:
         ze, h = self.s["eave_z"], rs.get("h", 2.0)
         bm = bmesh.new()
         n = len(self.ring)
-        lo = [bm.verts.new((x, y, ze - 0.25)) for x, y in self.ring]
-        hi = [bm.verts.new((x, y, ze + 0.02)) for x, y in self.ring]
+        # deck ON the wall head (ze .. ze + 0.05): reaching down past ze put its sides on the wall faces (z-fight)
+        lo = [bm.verts.new((x, y, ze)) for x, y in self.ring]
+        hi = [bm.verts.new((x, y, ze + 0.05)) for x, y in self.ring]
         for i in range(n):
             j = (i + 1) % n
             bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
