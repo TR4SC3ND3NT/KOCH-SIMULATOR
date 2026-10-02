@@ -1,0 +1,760 @@
+{
+ "id": "BLD_C",
+ "note": "Block C facade spec (phase 2). Local frame: x along the south facade from the SW corner of the west wing (wall face), y north, z above FFL (ground floor finished level). Metres. Measured by single-view metrology (Scripts/Geo/facade_rectify.py) on photos 061428331/061621646/061624280 and video 070629483; storey height 3.30 m fixed by the facade length (8.88 storeys = 29.4 m vs roof 30.6 m, Bing/OSM) and checked by sills (+0.88), tower landing windows (+8.2/+11.4) and cornice (+13.4).",
+ "replaces": [
+  "GB_BLD_C",
+  "GB_BLD_C_Roof",
+  "GB_BLD_C_Annex"
+ ],
+ "scale": 1.0,
+ "detail": true,
+ "scale_note": "All spec metres were measured with a 3.30 m storey (facade length from the satellite outline; paver lattice and Bing eave length agree within 3.1-3.57 / 3.2-3.4 m). Interior evidence (corridor ceiling 3.1-3.2 m from a 2.10 m door frame, map owner) points to 3.45-3.5 m. After the riser count set scale = storey/3.30 (3.50 -> 1.0606); the builder scales every metric value about the ring centroid, so the block stays centred on the satellite outline. Night check 2026-09-24: (1) person anchor â€” the woman stepping out of the entrance (rect of 061621646, 155.7 px) stands 1.55 m in front of the door plane (from her foot offset below the threshold with the recovered 0.56 m eye height); corrected height 1.62 m at 3.30 (1.72 m at 3.50; mean for young women here â‰ˆ1.60-1.64 with shoes); (2) vestibule door opening 2.20 m at 3.30 (2.33 at 3.50; typical 2.1-2.2); (3) Bing eave length 30.0-31.7 m -> 3.2-3.4. Exterior evidence favours 3.30-3.40; the interior 2.10 m door-frame reading favours â‰¥3.45. Kept 3.30 until the riser count. | 2026-09-25 facade_fit on 061621646 (0.5x ultrawide, EXIF 12 mm; focal+k1 solved, 13.6 mm-eq, rms 10.8 px, scale from the 12.8 m east-wing length): floor-to-floor 3.24-3.38, mean 3.29 m -> 3.30 kept; F1 sill 1.05 (gauge), window 1.78-1.93 x 1.35-1.40, E columns 1.99/4.61/9.27 (spec 2.02/4.61/9.30), pilaster 11.68 (11.78), cornice underside 13.29 (13.4).",
+ "anchor": {
+  "world_xy": [
+   173.264,
+   -3.64
+  ],
+  "x_dir": [
+   0.9992,
+   -0.03985
+  ],
+  "status": "walls centred in the OSM/Bing roof outline (0.62 m end overhang, 0.88 m side); Google z20 shows the C roof 2.3-3.6 m further north: explained by Google's roof lean (measured +4.0 m N / +7.0 m E at C roof height vs near-nadir Bing), so the Bing-based placement is kept"
+ },
+ "plinth_m": 1.05,
+ "wall_thk": 0.45,
+ "storey_m": 3.3,
+ "storeys": 4,
+ "ring": [
+  [
+   0.0,
+   0.0
+  ],
+  [
+   12.8,
+   0.0
+  ],
+  [
+   12.8,
+   1.3
+  ],
+  [
+   16.6,
+   1.3
+  ],
+  [
+   29.4,
+   1.3
+  ],
+  [
+   29.4,
+   17.2
+  ],
+  [
+   0.0,
+   17.2
+  ]
+ ],
+ "ring_notes": "west wing front y=0 projects 1.3 m before the tower and the east wing, which are FLUSH (y 1.3, collinear ring vertex at the tower/east-wing junction). 2026-09-26 photo match: 061621646 PnP (6.0 px, 26 window corners of both wings; scan of the west-wing offset: rms 6.0 px at 1.3 m, 25.9 px if the west wing were flush with the east wing, 47.6 px if flush with a 1.9 m tower) + the east corner line at y 1.3 lands on the maroon/beige edge at z 8 and 13.4 (a 0.6 m tower recess would put it 15-17 px off with a visible west-facing return, none seen); 061428331: one straight gutter over tower + east wing, the west wing eave and its maroon east return come forward; drone 2022 (mjF_12): eave step, west part ~1.4 m further south. The older 'tower recessed 0.6 m' (SfM -0.52) was wrong. North wall position from the west facade width (5.22 storeys).",
+ "cornice": {
+  "z0": 13.4,
+  "z1": 13.9,
+  "proj": 0.12
+ },
+ "eave_z": 13.9,
+ "plinth": {
+  "z_top": -0.05,
+  "proj": 0.03,
+  "evidence": "plinth height = 7 granite risers x 0.15 m at the entrance (061428331, 061431726) -> FFL 1.05 m above the plaza; brick-tile band visible in 061621646/061624280. (Photo 061638726 shows Block A's north wall, not C.)",
+  "confidence": "medium"
+ },
+ "pilasters": [
+  {
+   "edge": 0,
+   "u0": 0.0,
+   "u1": 1.1,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "SW corner maroon pilaster, 061624280 rect"
+  },
+  {
+   "edge": 3,
+   "u0": 11.78,
+   "u1": 12.8,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "SE corner maroon pilaster, 061621646 rect | 2026-09-26: was on the east facade (edge index slip, it overlapped window surrounds there); it is the east wing's SE corner strip on the south face (u 11.78-12.8 = x 28.38-29.4), 061621646"
+  },
+  {
+   "edge": 6,
+   "u0": 16.0,
+   "u1": 17.2,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "double maroon strip at the SW corner of the west facade (070629483 rect: 1.2-1.3 m)"
+  }
+ ],
+ "window_types": {
+  "W": {
+   "w": 1.85,
+   "h": 1.4,
+   "mullions": [
+    0.35,
+    0.65
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0.2,
+    0.2,
+    0.18,
+    0.26
+   ],
+   "surround_proj": 0.04,
+   "evidence": "east/west wing windows: opening 1.85 x 1.35-1.40, maroon surround 2.28 x 1.82 (rect 061621646, 087.9 px/m) | 2026-09-26 crops of 061621646 (F2/F3 west wing): 3 lights, impost centres at 0.35/0.65 of the frame width, the middle light is the opening sash (seen open inward, hinged on its left), side lights fixed; the reveals are painted maroon like the surround",
+   "sashes": [
+    1
+   ]
+  },
+  "T": {
+   "w": 1.0,
+   "h": 1.4,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "stair-tower landing windows 1.0 x 1.4 at +4.2/+7.5/+10.7 (behind the sign box at +4.2)"
+  },
+  "BW": {
+   "w": 2.4,
+   "h": 1.4,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "grilled basement window of C's south wall seen from the basement corridor (SfM 012547860, overlay frames 41/101/121)"
+  },
+  "WC": {
+   "w": 0.6,
+   "h": 1.1,
+   "mullions": [],
+   "transoms": [
+    0.72
+   ],
+   "reveal": 0.16,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "WC end-wall window, high and narrow with a transom, above the radiator at the aisle end (075931189_s1 f00003; tile band 1.4 m under the sill); size by eye from the door 0.99 x 2.05 beside it"
+  }
+ },
+ "rows": {
+  "F1": 1.05,
+  "F2": 4.35,
+  "F3": 7.65,
+  "F4": 10.95
+ },
+ "facades": [
+  {
+   "edge": 0,
+   "name": "south_west_wing",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.52,
+      8.13,
+      10.69
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    },
+    {
+     "type": "BW",
+     "u": [
+      2.5,
+      8.13,
+      10.69
+     ],
+     "sills": [
+      -2.36
+     ],
+     "evidence": "barred basement windows seen on the left of the basement corridor (012547860 f01268/f01493/f01697); columns under the W windows"
+    }
+   ],
+   "evidence": "3 columns mirrored from the east wing; centres 3.52/8.13/10.69 from the SW corner (rect 061624280: 2.37-4.67, 7.01-9.26, 9.57-11.80)"
+  },
+  {
+   "edge": 1,
+   "name": "west_wing_return",
+   "windows": []
+  },
+  {
+   "edge": 2,
+   "name": "south_tower",
+   "windows": [
+    {
+     "type": "T",
+     "u": [
+      0.92,
+      2.86
+     ],
+     "sills": [
+      4.2,
+      7.5,
+      10.75
+     ]
+    }
+   ],
+   "entrance": {
+    "u0": 0.02,
+    "u1": 3.78,
+    "z1": 3.29,
+    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera) | 2026-09-27: head +3.29, transom underside +2.65, sill on the landing (rays of 070647586 f00449 cut on the storefront plane of the photogrammetry mesh); the frame measured u -0.35..4.43 is wider than the tower of the ring (3.8): width limited to the tower until the tower width is settled (C.5)",
+    "bays": [
+     [
+      0.9,
+      "fixed"
+     ],
+     [
+      0.76,
+      "door"
+     ],
+     [
+      0.78,
+      "door"
+     ],
+     [
+      0.86,
+      "fixed"
+     ]
+    ],
+    "transom_z": 2.65,
+    "reveal": 0.9,
+    "confidence": "medium"
+   },
+   "evidence": "maroon stair tower, 2 landing windows per half-level"
+  },
+  {
+   "edge": 3,
+   "name": "south_east_wing",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.02,
+      4.61,
+      9.3
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "evidence": "rect 061621646: surrounds 0.88-3.15, 3.49-5.73, 8.16-10.43 from the tower edge"
+  },
+  {
+   "edge": 4,
+   "name": "east",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      2.2,
+      9.0,
+      13.0
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      6.6
+     ],
+     "rows": [
+      "F2",
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "status": "assumed: mirror of the west facade (no photo of the east facade) | F1 exit door from the hall photo (2026-09-25)",
+   "entrance": {
+    "u0": 5.0,
+    "u1": 6.86,
+    "z1": 2.5,
+    "bays": [
+     [
+      0.93,
+      "door"
+     ],
+     [
+      0.93,
+      "door"
+     ]
+    ],
+    "transom_z": 2.05,
+    "reveal": 0.15,
+    "evidence": "2026-09-25 map owner's hall photo (east hall end, solved camera + 0.6 m ceiling grid): brown double exit door with a 3-light transom in the east end wall under the stair's second flight, 1.86 m wide, head ~2.5-2.6 m, 3.4-5.2 m south of the north hall wall (y 6.3-8.2); greenery outside. Replaces the assumed F1 window of column u 6.6 (the west end has a window in the same column, frame c38). Outside steps/landing unknown.",
+    "confidence": "medium"
+   }
+  },
+  {
+   "edge": 5,
+   "name": "north",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.52,
+      8.13,
+      10.69,
+      18.71,
+      21.3,
+      25.9
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    },
+    {
+     "type": "WC",
+     "u": [
+      13.5,
+      15.9
+     ],
+     "sills": [
+      1.55,
+      4.85,
+      8.15,
+      11.45
+     ],
+     "evidence": "u at the WC1/WC0 aisle centres of INT_C_F1 (x 190.3 / 187.95), F1-F4 | [B] owner 2026-09-28: centred on each WC room's north wall (rooms s 11.85-14.25 / 14.25-16.65 of the corridor frame = C x 12.3-14.7 / 14.7-17.1) and 0.2 m lower"
+    }
+   ],
+   "status": "assumed: same columns as the south facade (no photo of the north facade)"
+  },
+  {
+   "edge": 6,
+   "name": "west",
+   "windows": [
+    {
+     "type": "W",
+     "u": [
+      3.1,
+      9.5,
+      13.6
+     ],
+     "rows": [
+      "F1",
+      "F2",
+      "F3",
+      "F4"
+     ]
+    },
+    {
+     "type": "W",
+     "u": [
+      7.2
+     ],
+     "rows": [
+      "F3",
+      "F4"
+     ]
+    }
+   ],
+   "evidence": "rect of video 070629483 f_3.4 (solved focal 13.5 mm-eq, 54.2 px/m from the 3.3 m storey): width 17.0 m; from the NW corner 3.1, 7.2 (F3-F4 only, blank wall on F1-F2), 9.5, 13.6; SW double maroon strip 15.7-16.9; CONFIRMED by still 081836969 (24 mm main camera, from the SW): single column at the NW corner on all floors, a pair on F3-F4 whose south member continues on F1-F2, then the next column toward the SW corner",
+   "confidence": "medium"
+  }
+ ],
+ "roof": {
+  "type": "hip",
+  "overhang": 0.55,
+  "pitch": 25,
+  "dormers": [
+   {
+    "edge": 0,
+    "u": [
+     9.2,
+     12.2
+    ]
+   },
+   {
+    "edge": 3,
+    "u": [
+     1.45,
+     4.5,
+     8.6
+    ]
+   },
+   {
+    "edge": 5,
+    "u": [
+     4.7,
+     6.4,
+     8.3,
+     10.1,
+     13.1,
+     16.4,
+     20.1
+    ]
+   },
+   {
+    "edge": 4,
+    "u": [
+     6.3,
+     11.8
+    ]
+   }
+  ],
+  "dormer": {
+   "w": 1.3,
+   "h": 1.5,
+   "inset": 1.3
+  },
+  "evidence": "Google z20 (0.1 m/px): 5 pointed dormers on the south slope, 5 (6?) on the north slope, 2 on the east hip; positions corrected for Google roof lean measured by phase correlation vs near-nadir Bing (ground +1.5/+0.25 m, C roof ~19 m: +7.0/+4.0 m -> 0.29 m/m E, 0.20 m/m N); pitch ~25 deg (only sky above the cornice from the plaza) | 2026-09-25 recount on the near-top-down drone frame (web video mjkCUJhlPN8 t=12 s, 2022, ~34 px/m on the roof): south slope 2 dormers over the west wing (x 9.2, 12.5 -> 12.2 kept) + 3 over the east wing (x 18.05, 21.1, 25.2), north slope 7 (x 24.7, 23.0, 21.1, 19.3 small; 16.3, 13.0, 9.3), east hip 2 big crowned dormers; the tower slope has none. Positions +-0.5 m (drone slightly off-nadir).",
+  "status": "probable (pitch estimated)",
+  "confidence": "medium"
+ },
+ "attachments": [
+  {
+   "type": "stairs",
+   "edge": 2,
+   "u0": 0.05,
+   "u1": 3.75,
+   "risers": 7,
+   "riser_h": 0.154,
+   "tread": 0.34,
+   "landing": 1.56,
+   "evidence": "2026-09-27 photogrammetry mesh (RealityScan comp. 2 of clips 070647586+081158036, scale 0.4737 m/unit from the 0.20x0.10 paver module, levelled on plaza/treads): landing +1.28 over the plaza, landing edge 2.65 m out from the storefront, upper treads 0.48-0.49; riser count and tread fitted on photo edges through 8 solved cameras (7 risers x 0.154, treads 0.475, bottom nosing 5.50 m out); flight 3.70 wide between the side walls | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | [B] owner 2026-09-28 (photos 14-26-14): treads 0.34 (were 0.475), bottom nosing flush with the outer edge of the west light-well cover (3.6 m from the tower face)",
+   "cheeks": [
+    {
+     "u0": -0.45,
+     "u1": 0.05,
+     "w1": 3.65,
+     "z_wall": 0.55,
+     "z_out": -0.82,
+     "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449",
+     "confidence": "medium",
+     "w_knee": 1.75,
+     "w0": 1.3
+    },
+    {
+     "name": "EastCheek",
+     "u0": 3.75,
+     "u1": 4.25,
+     "w0": 0.0,
+     "w_knee": 0.6,
+     "w1": 2.5,
+     "z_wall": 0.55,
+     "z_out": 0.05,
+     "confidence": "medium",
+     "evidence": "[B] owner 2026-09-28 + 070647586 t6.8/t7.4: brick-tile cheek with a granite cap on the stair's east side too, like the west one but from the tower/east-wing face (base 1.3 m longer at the wall, 0.3 m longer at the plaza); top kept 6 cm under the landing so the steel ramp deck starting over it (Top/Run) stays clear | [B] owner 2026-09-28 (photo 14-26-14 #1): top level with the west cheek (+0.55) at the wall, sloping out to 2.5 m where the ramp deck passes in front of it"
+    }
+   ],
+   "nosing": 0.02,
+   "confidence": "high"
+  },
+  {
+   "type": "canopy",
+   "edge": 2,
+   "u0": -0.2,
+   "u1": 4.0,
+   "depth": 4.7,
+   "z0": 3.1,
+   "z1": 3.4,
+   "sign": {
+    "z1": 4.65,
+    "t": 0.35
+   },
+   "evidence": "2026-09-27: sign-box front, top edge and side edges fitted on photo edges through 6 solved cameras of 070647586 (depth 5.55, bottom +3.10, top +4.60, u -0.2..4.0), agreeing with the photogrammetry mesh section on the flight axis (front 5.8 out, bottom +3.02, top +4.6-4.8, soffit rising to ~+3.8 at the wall); soffit of 0.6 m cassettes (f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
+   "confidence": "high",
+   "z_soffit_wall": 3.6,
+   "panel": 0.6
+  },
+  {
+   "type": "ramp",
+   "edge": 2,
+   "rails": true,
+   "rail_h": 0.9,
+   "mid_rails": [
+    0.45
+   ],
+   "post_pitch": 1.2,
+   "confidence": "medium",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
+   "name": "Top",
+   "along": "w",
+   "over_stairs": true,
+   "u0": 1.75,
+   "u1": 3.6,
+   "w0": -3.75,
+   "w1": -2.75,
+   "z_high": 0.0,
+   "z_low": 0.0,
+   "rail_sides": "w1"
+  },
+  {
+   "type": "ramp",
+   "edge": 2,
+   "rails": true,
+   "rail_h": 0.9,
+   "mid_rails": [
+    0.45
+   ],
+   "post_pitch": 1.2,
+   "confidence": "medium",
+   "evidence": "2026-09-27: steel grating ramp fitted on photo edges (deck edges + rail tops) through 6 solved cameras of 070647586 (f00023, f00090, f00128, f00209, f00255, f00302; score 0.32 vs 0.17 for a ramp along the E wing): run 1.0 wide, 3.5-4.5 m out from the tower face, from the E end of the flight (u 3.75) at landing level down to the plaza at u 9.5; top plate at landing level over the E part of the flight joins it to the landing (f00255, f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-09-28 0c: low end -1.078 -> -1.04 so it meets the plaza (FFL-1.05 + 1 cm) instead of sitting 6 cm under the ground | 2026-09-28 terrain audit: -1.02 - the plaza under the foot runs 2-4 cm above the old low end, the grating foot sat 2 cm under it",
+   "name": "Run",
+   "u0": 3.75,
+   "u1": 9.5,
+   "w0": 2.6,
+   "w1": 3.6,
+   "z_high": 0.0,
+   "z_low": -1.02,
+   "z_ground": -1.04
+  },
+  {
+   "type": "lightwell",
+   "edge": 0,
+   "u0": 0.6,
+   "u1": 12.3,
+   "depth": 2.3,
+   "z_wall": -0.1,
+   "z_edge": -0.7,
+   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated | 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band and fall to a low fascia ~0.35 m above the paving (012526070, 061624280); they roof the basement corridor, whose floor is now plaza-1.38 (INT_C_Basement) | [B] owner 2026-09-28: starts after the basement stair's foot (the stair descends east along this line; the cover began over its last steps) | [B] ends at the stair's west cheek (ribs ran into the cheek)",
+   "confidence": "medium",
+   "parapet": {
+    "spans": [
+     [
+      6.85,
+      12.3
+     ]
+    ],
+    "t": 0.25,
+    "z0": -1.25,
+    "evidence": "dark red tile parapet ~0.3 m high on the paving carrying the outer edge of the red sloped covers along the whole west-wing south face (061624280, 061621646); west part (u 0.37-6.8) is the basement corridor's own south wall (INT_C_Basement Corridor_Wall_S)"
+   }
+  },
+  {
+   "type": "lightwell",
+   "edge": 3,
+   "u0": 0.3,
+   "u1": 12.5,
+   "depth": 2.5,
+   "z_wall": -0.1,
+   "z_edge": -0.7,
+   "evidence": "red sloped covers along the east wing under the steel ramp, same profile as the south-west covers (frames b05/b07 of 070647586) | [B] owner 2026-09-28: covers reach the ramp (no lawn strip between)",
+   "confidence": "low"
+  },
+  {
+   "type": "shed",
+   "name": "WestShed",
+   "edge": 6,
+   "u0": 0.0,
+   "u1": 16.75,
+   "depth": 5.8,
+   "z_high": 1.0,
+   "z_low": -0.15,
+   "wall_h_from_ground": true,
+   "evidence": "semi-sunken Dance Hall block along C's west wall: front wall (dark stone band on red tile) 1.3 m above the west-side grade, grey profiled roof rising to C's wall just under the F1 sills (012456258, 012459414, photo 10:55); plan from Google z20 (grey roof x -6.0..0, y 3.5..22.8 in C local, lean-corrected): depth 5.8 m, runs 5.2 m past C's NW corner 2026-09-25 photo-match 012459414 (PnP camera): front wall 0.87 m above grade (vs the 2.25 m Dance Hall box in the same plane), roof meets C's wall at the F1 sill line. | 2026-09-25 frames a04-a08 of 070629483: the shed roof and front wall continue south to the brick wall at the stair (u 16.75) | 2026-09-26: north end to C-local y 22.8 (Google z20 grey roof end); overlay of 070410255 t17 (fixC/ovl/ovl_sh17.jpg): front edge and south end match, north end hidden by the spruce | 2026-09-26: the ground in front of the shed is the plaza terrace (FFL-1.05, not the old -1.78): front wall 0.9 m above it (hex-tile band over a brick band, 012459414), roof low edge at FFL-0.15; the old -0.91 left the roof almost on the ground (map owner: 'the lower roof continues') | [B] owner 2026-09-28: the shed ends where the college ends (no run past C's NW corner)",
+   "z_base": -2.08
+  },
+  {
+   "type": "downpipe",
+   "edge": 0,
+   "u": [
+    12.55
+   ],
+   "z0": -0.5,
+   "z1": 13.3,
+   "d": 0.1,
+   "evidence": "white PVC downpipe at the west wing / tower junction (061621646, 061631264), ends on the light-well cover"
+  },
+  {
+   "type": "downpipe",
+   "edge": 3,
+   "u": [
+    0.25
+   ],
+   "z0": -0.3,
+   "z1": 13.3,
+   "d": 0.1,
+   "evidence": "white PVC downpipe at the tower / east wing junction (061621646 tile 1360 px, 061631264)"
+  },
+  {
+   "type": "floodlight",
+   "edge": 2,
+   "u": [
+    -0.1,
+    3.9
+   ],
+   "z": 4.65,
+   "w": 4.45,
+   "evidence": "two black flood lamps on top of the sign box ends (061621646) | on the sign-box top ends after the 2026-09-27 canopy fit"
+  },
+  {
+   "type": "wall_sign",
+   "name": "EntranceFascia",
+   "edge": 2,
+   "u0": 0.02,
+   "u1": 3.78,
+   "z0": 3.29,
+   "z1": 3.6,
+   "t": 0.03,
+   "color": "canopy",
+   "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726) | 2026-09-27: between the frame head +3.29 and the soffit +3.6 at the wall (f00449 on the storefront plane)",
+   "confidence": "medium",
+   "w0": -0.9
+  },
+  {
+   "type": "wall_boxes",
+   "name": "ACUnits",
+   "edge": 0,
+   "items": [
+    [
+     4.7,
+     3.7,
+     0.8,
+     0.55,
+     0.3
+    ]
+   ],
+   "evidence": "AC outdoor unit hanging under the F2 sill at the east jamb of window column u 3.52, pipe up to the window (frames a06/a08/a10 of 070629483; ray-cast u 4.3-5.2, z 3.9-4.2)",
+   "confidence": "medium"
+  },
+  {
+   "type": "downpipe",
+   "edge": 6,
+   "u": [
+    16.33,
+    17.08
+   ],
+   "z0": 1.2,
+   "z1": 13.3,
+   "d": 0.1,
+   "evidence": "two white downpipes on the west face at the SW corner, one splitting the maroon strip into the 'double strip', both ending on the entry roof (frame a06 of 070629483, ray-cast y 0.87 / 0.12)",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "CCTV_W",
+   "edge": 6,
+   "items": [
+    [
+     16.2,
+     2.95,
+     0.12,
+     0.12,
+     0.22
+    ]
+   ],
+   "evidence": "small CCTV camera on the SW maroon strip of the west face (frames a06/a07 of 070629483, ray-cast y 0.81-1.11, z 2.8-3.0)",
+   "confidence": "low"
+  },
+  {
+   "type": "wall_sign",
+   "name": "CPlate",
+   "edge": 2,
+   "u0": 1.65,
+   "u1": 2.15,
+   "z0": 3.33,
+   "z1": 3.56,
+   "t": 0.02,
+   "color": "sign",
+   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH",
+   "confidence": "medium"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_NW",
+   "edge": 5,
+   "u": [
+    29.0
+   ],
+   "z0": -0.3,
+   "z1": 13.2,
+   "d": 0.1,
+   "off": 0.04,
+   "evidence": "P1 by frames: NW end of the north facade seen from the canteen yard (070410255 f03942): white downpipe on the maroon corner strip",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "AC_North",
+   "edge": 5,
+   "items": [
+    [
+     27.2,
+     0.1,
+     0.8,
+     0.6,
+     0.3
+    ],
+    [
+     25.9,
+     0.1,
+     0.8,
+     0.6,
+     0.3
+    ]
+   ],
+   "evidence": "P1 by frames: NW end of the north facade seen from the canteen yard (070410255 f03942): two outdoor AC units standing at the foot of the north wall by the parking",
+   "confidence": "low"
+  }
+ ],
+ "basement": {
+  "floor_z": -2.43,
+  "slab_t": 0.25,
+  "status": "probable",
+  "evidence": "map owner: C has a basement; west basement entry under a canopy (video 070629483); sloped light-well covers along the south facade. Floor level assumed one storey below FFL. West entry sign reads 'Dance Hall' (070629483). 2026-09-25: basement corridor floor 1.38 m below the plaza = -2.43 rel FFL (SfM, 10 risers x 0.138); corridor runs east along the south wall. | 2026-09-25 photo match of 070629483: the stair head is on the south plaza (FFL-1.05), not the lower west grade, so the corridor floor is -2.43 (10 x 0.138 below the plaza) and floor_z follows it.",
+  "pending": [
+   "entry stair/ramp geometry and door position (west side)",
+   "basement windows behind the light wells",
+   "room layout"
+  ],
+  "later": "gameplay: 2 playable pianos in the basement (R3/R4, not now)",
+  "slab_by_interior": true
+ },
+ "ffl_z": 6.4,
+ "ffl_note": "2026-09-25 map owner: the C entrance plaza, the garden with the gazebos and the lower plaza along A_W (below the wide stair north of B) are one level; that level = A_W walkway 5.35 (drone SfM + 8 risers from the alley). C FFL = plaza + 7 risers x 0.15 = 6.40 (DEM rule gave 5.53).",
+ "interior_floors": true
+}
