@@ -102,6 +102,51 @@
    "z0": -0.05,
    "z1": 13.4,
    "evidence": "double maroon strip at the SW corner of the west facade (070629483 rect: 1.2-1.3 m)"
+  },
+  {
+   "edge": 8,
+   "u0": 0.0,
+   "u1": 1.2,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "2026-10-02 photo diff: maroon corner strip (A031 west NW ~1.2 m; drone wa_005/014/016/023)"
+  },
+  {
+   "edge": 7,
+   "u0": 13.05,
+   "u1": 14.15,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "2026-10-02 photo diff: maroon corner strip (A031 west NW ~1.2 m; drone wa_005/014/016/023)"
+  },
+  {
+   "edge": 5,
+   "u0": 0.0,
+   "u1": 1.1,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "2026-10-02 photo diff: maroon corner strip (A031 west NW ~1.2 m; drone wa_005/014/016/023)"
+  },
+  {
+   "edge": 4,
+   "u0": 0.0,
+   "u1": 1.1,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "2026-10-02 photo diff: maroon corner strip (A031 west NW ~1.2 m; drone wa_005/014/016/023)"
+  },
+  {
+   "edge": 4,
+   "u0": 18.7,
+   "u1": 19.8,
+   "proj": 0.03,
+   "z0": -0.05,
+   "z1": 13.4,
+   "evidence": "2026-10-02 photo diff: maroon corner strip (A031 west NW ~1.2 m; drone wa_005/014/016/023)"
   }
  ],
  "window_types": {
@@ -301,8 +346,7 @@
      "type": "W",
      "u": [
       3.625,
-      16.175,
-      10.95
+      16.175
      ],
      "rows": [
       "F1",
@@ -920,6 +964,19 @@
    "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): tall louvred vent grille near C's corner (160, q012520)"
   },
   {
+   "type": "downpipe",
+   "name": "DP_W_NW",
+   "edge": 8,
+   "u": [
+    0.35
+   ],
+   "z0": 1.2,
+   "z1": 13.3,
+   "d": 0.1,
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: downpipe on the west face's NW corner strip (A031)"
+  },
+  {
    "type": "wall_boxes",
    "name": "CCTV_S",
    "edge": 2,
@@ -952,5 +1009,40 @@
  },
  "ffl_z": 6.4,
  "ffl_note": "2026-09-25 map owner: the C entrance plaza, the garden with the gazebos and the lower plaza along A_W (below the wide stair north of B) are one level; that level = A_W walkway 5.35 (drone SfM + 8 risers from the alley). C FFL = plaza + 7 risers x 0.15 = 6.40 (DEM rule gave 5.53).",
- "interior_floors": true
+ "interior_floors": true,
+ "cladding": [
+  {
+   "edge": 5,
+   "u0": 12.65,
+   "u1": 15.25,
+   "z0": -0.05,
+   "z1": 13.4,
+   "proj": 0.02,
+   "slot": "M_Paint_Maroon",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: full-height maroon band at the north step round the WC windows, mirrors the south tower (drone wa_014/016/017/018, +-0.5 m)"
+  },
+  {
+   "edge": 6,
+   "u0": 0.02,
+   "u1": 1.28,
+   "z0": -0.05,
+   "z1": 13.4,
+   "proj": 0.02,
+   "slot": "M_Paint_Maroon",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: full-height maroon band at the north step round the WC windows, mirrors the south tower (drone wa_014/016/017/018, +-0.5 m)"
+  },
+  {
+   "edge": 7,
+   "u0": 0.0,
+   "u1": 1.55,
+   "z0": -0.05,
+   "z1": 13.4,
+   "proj": 0.02,
+   "slot": "M_Paint_Maroon",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: full-height maroon band at the north step round the WC windows, mirrors the south tower (drone wa_014/016/017/018, +-0.5 m)"
+  }
+ ]
 }

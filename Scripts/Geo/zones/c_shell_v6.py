@@ -43,7 +43,9 @@ def main(src):
     fac = [dict(old[0], windows=[win(xs("S1") + xs("S2")), dict(old[0]["windows"][1])], status=EV),
            dict(old[1]), dict(old[2]),
            dict(old[3], windows=[win([x - N.X_TOWER1 for x in xs("S4") + xs("S5")])], status=EV),
-           dict(old[4], windows=[win([s5_c - J, n5_c - J, (door_u0 + door_u1) / 2 + 2.4]),       # rooms 102/103 + corridor window 2.4 m north of the door axis
+           # rooms 102/103 only: the assumed corridor window 2.4 m north of the door axis is blank wall on the drone
+           # model (wa_022/023) and the owner sees windows only over the exit door (stair, F2-F4) (2026-10-02)
+           dict(old[4], windows=[win([s5_c - J, n5_c - J]),
                                  win([(door_u0 + door_u1) / 2], ("F2", "F3", "F4"))],                    # over the F1 exit door
                 # 138: brown timber double door, 3-light transom (not the aluminium storefront of the main entrance)
                 entrance=dict(old[4]["entrance"], u0=door_u0, u1=door_u1, leaf="solid", transom_lights=3, slot="M_Wood_Stained"),
@@ -59,6 +61,15 @@ def main(src):
     C["facades"] = fac
     C["window_types"]["WC"].update(w=N.WC_WIN_W, h=N.WC_WIN_H, evidence=C["window_types"]["WC"]["evidence"] +
                                    " | 2026-10-01 WC photos 029/030 (tile metrology): opening 0.52-0.55 x 1.10, sill 1.45, axis 0.775 m off the aisle wall")
+    # 2026-10-02 photo diff (drone model wa_005/014/016/018/023, A031): maroon corner strips at the NW, NE and east
+    # corners (DP_NW already stood "on the maroon corner strip") and the full-height maroon band of the north WC stack
+    EVP = "2026-10-02 photo diff: maroon corner strip (A031 west NW ~1.2 m; drone wa_005/014/016/023)"
+    C["pilasters"] = C["pilasters"] + [dict(edge=e, u0=a, u1=b, proj=0.03, z0=-0.05, z1=13.4, evidence=EVP)
+                                       for e, a, b in ((8, 0.0, 1.2), (7, 13.05, 14.15), (5, 0.0, 1.1), (4, 0.0, 1.1), (4, 18.7, 19.8))]
+    C["cladding"] = [dict(edge=e, u0=a, u1=b, z0=-0.05, z1=13.4, proj=0.02, slot="M_Paint_Maroon", confidence="medium",
+                          evidence="2026-10-02 photo diff: full-height maroon band at the north step round the WC windows, "
+                                   "mirrors the south tower (drone wa_014/016/017/018, +-0.5 m)")
+                     for e, a, b in ((5, 12.65, 15.25), (6, 0.02, 1.28), (7, 0.0, 1.55))]
     for p in C["pilasters"]:
         if p["edge"] == 6:
             p.update(edge=8, u0=round(p["u0"] + YW - OLD_W, 3), u1=round(p["u1"] + YW - OLD_W, 3))
@@ -124,6 +135,9 @@ def main(src):
         elif a.get("type") == "downpipe" and a.get("edge") == 3 and a.get("u") == [0.25]:
             a["z0"] = 0.60                                               # ends with its shoe on the east cheek's cap
         att.append(a)
+    if not any(a.get("name") == "DP_W_NW" for a in att):   # A031: white downpipe on the NW strip, down to the shed roof
+        att.append({"type": "downpipe", "name": "DP_W_NW", "edge": 8, "u": [0.35], "z0": 1.2, "z1": 13.3, "d": 0.1,
+                    "confidence": "medium", "evidence": "2026-10-02 photo diff: downpipe on the west face's NW corner strip (A031)"})
     if not any(a.get("name") == "CCTV_S" for a in att):   # 061631264, 159: bullet camera on the recess's east reveal
         att.append({"type": "wall_boxes", "name": "CCTV_S", "edge": 2, "w0": -0.30, "items": [[3.66, 3.25, 0.12, 0.12, 0.2]],
                     "confidence": "low", "evidence": "2026-10-02 photo diff: white bullet camera under the soffit at the "

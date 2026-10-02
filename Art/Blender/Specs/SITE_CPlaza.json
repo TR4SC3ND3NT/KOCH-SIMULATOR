@@ -684,6 +684,83 @@
    "confidence": "medium"
   },
   {
+   "type": "tree",
+   "name": "TreeAN_7",
+   "pos": [
+    194.964,
+    -18.225
+   ],
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it; a young tree in the east-end pit (061643243: ~3.5-4 m, 1.6 m crown)",
+   "confidence": "medium",
+   "height": 4.0,
+   "crown_d": 1.8,
+   "trunk_d": 0.12,
+   "crown_base": 1.5,
+   "shape": "ellipsoid"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_7",
+   "ring": [
+    [
+     195.534,
+     -18.854
+    ],
+    [
+     194.336,
+     -18.795
+    ],
+    [
+     194.394,
+     -17.597
+    ],
+    [
+     195.593,
+     -17.655
+    ]
+   ],
+   "curb_h": 0.08,
+   "curb_w": 0.08,
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_6",
+   "pos": [
+    192.98,
+    -19.279
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "CPlaza_EastEdge",
+   "line": [
+    [
+     195.9,
+     -21.27
+    ],
+    [
+     195.9,
+     -5.9
+    ]
+   ],
+   "width": 0.1,
+   "top": 0.005,
+   "thk": 0.06,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: flush red edge line between the herringbone and the gravel (061643243)"
+  },
+  {
    "type": "slab",
    "name": "CEast_Landing",
    "ring": [
@@ -762,83 +839,6 @@
    ],
    "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight)",
    "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "TreeAN_7",
-   "pos": [
-    194.964,
-    -18.225
-   ],
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it; a young tree in the east-end pit (061643243: ~3.5-4 m, 1.6 m crown)",
-   "confidence": "medium",
-   "height": 4.0,
-   "crown_d": 1.8,
-   "trunk_d": 0.12,
-   "crown_base": 1.5,
-   "shape": "ellipsoid"
-  },
-  {
-   "type": "planter",
-   "name": "PlanterAN_7",
-   "ring": [
-    [
-     195.534,
-     -18.854
-    ],
-    [
-     194.336,
-     -18.795
-    ],
-    [
-     194.394,
-     -17.597
-    ],
-    [
-     195.593,
-     -17.655
-    ]
-   ],
-   "curb_h": 0.08,
-   "curb_w": 0.08,
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium",
-   "slot": "M_Tile_Brick_Red"
-  },
-  {
-   "type": "bench",
-   "name": "BenchAN_6",
-   "pos": [
-    192.98,
-    -19.279
-   ],
-   "dir_deg": 87.2,
-   "length": 2.0,
-   "depth": 0.55,
-   "seat_h": 0.45,
-   "back_h": 0.85,
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
-  },
-  {
-   "type": "path",
-   "name": "CPlaza_EastEdge",
-   "line": [
-    [
-     195.9,
-     -21.27
-    ],
-    [
-     195.9,
-     -5.9
-    ]
-   ],
-   "width": 0.1,
-   "top": 0.005,
-   "thk": 0.06,
-   "slot": "M_Tile_Brick_Red",
-   "confidence": "medium",
-   "evidence": "2026-10-02 photo diff: flush red edge line between the herringbone and the gravel (061643243)"
   }
  ],
  "ground_surfaces": [

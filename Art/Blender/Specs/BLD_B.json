@@ -448,7 +448,6 @@
     {
      "type": "WG",
      "u": [
-      5.9,
       8.55,
       11.5,
       14.1
@@ -486,30 +485,31 @@
     }
    ],
    "entrance": {
-    "u0": 1.5,
-    "u1": 3.4,
-    "z1": 2.6,
-    "evidence": "glazed vestibule door between the SE corner pilaster and the first pier (070309303 t1.6; 061757320 t34 rect 1.8-3.35); dark aluminium glazed double door with side lights + transom (012249348, 012205046, drone 2022 36-39 s)",
-    "transom_z": 2.15,
+    "u0": 1.65,
+    "u1": 6.88,
+    "z1": 2.73,
+    "transom_z": 2.25,
     "reveal": 0.25,
     "bays": [
      [
-      0.45,
+      1.68,
       "fixed"
      ],
      [
-      0.5,
+      0.91,
       "door"
      ],
      [
-      0.5,
+      0.91,
       "door"
      ],
      [
-      0.45,
+      1.73,
       "fixed"
      ]
-    ]
+    ],
+    "confidence": "medium",
+    "evidence": "glazed vestibule door between the SE corner pilaster and the first pier (070309303 t1.6; 061757320 t34 rect 1.8-3.35); dark aluminium glazed double door with side lights + transom (012249348, 012205046, drone 2022 36-39 s) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): full-width aluminium storefront between two tile piers (u 1.0-1.65, 6.88-7.5): fixed | door | door | fixed, transom at 2.25, head 2.73"
    },
    "evidence": "pano intro2 2020 elevation (eave fit psi -89.4; d 6.45 from matching the street-facade heights; the SE-corner pilaster then falls at 24.9 vs 24.46): window north edges exact under reveal occlusion (camera at the NE corner); widths 1.9-1.95 where seen frontally; columns 5.9/8.55/11.5/14.1/16.4, blank pier 17.4-20, one more column at 21.0 near the NE corner; blank wall with an AC unit above the porch (u 1-5). 2026 061757320 t34 rect: double maroon box around the upper pair 5.9/8.55, box around the ground window 16.4; ground windows under the upper ones.",
    "confidence": "medium-low (positions +-0.4)"
@@ -638,23 +638,23 @@
    "type": "gallery",
    "name": "EntrancePorch",
    "edge": 1,
-   "u0": 1.0,
-   "u1": 6.8,
+   "u0": 0.65,
+   "u1": 7.65,
    "depth": 2.4,
    "posts_u": [
-    1.6,
-    6.2
+    0.7,
+    7.4
    ],
-   "post_w": 0.6,
-   "post_d": 0.6,
-   "z_underside": 3.0,
+   "post_w": 0.48,
+   "post_d": 0.48,
+   "z_underside": 2.9,
    "roof_type": "flat",
    "roof_thk": 0.3,
    "roof_fall": 0.8,
    "beam_h": 0.0,
    "roof_overhang": 0.25,
-   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley)",
-   "confidence": "medium-low",
+   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses)",
+   "confidence": "medium",
    "wedge": true
   },
   {
@@ -666,7 +666,10 @@
    "z_wall": 0.5,
    "z_edge": -0.6,
    "box": true,
-   "wrap": {"edge": 2, "u1": 48.25},
+   "wrap": {
+    "edge": 2,
+    "u1": 48.25
+   },
    "evidence": "maroon light-well cover, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36) | owner 2026-09-28 (screenshots 56-57): a box (vertical front, flat top), not a slope, and it runs round the NE corner along the whole north face with the same width and height",
    "confidence": "medium"
   },
@@ -775,6 +778,52 @@
    "field": false,
    "evidence": "2026-09-28 terrain audit: ground inside the walls held 0.3 m under the basement floor (FFL 6.757 - 3.0), hard edge 5 cm inside the outer wall face (the basement walls run down to the slab underside and hide the step) - the DEM filled the basement 2.66 m above its floor",
    "confidence": "medium"
+  }
+ ],
+ "cladding": [
+  {
+   "edge": 1,
+   "u0": 1.0,
+   "u1": 1.65,
+   "z0": 0.0,
+   "z1": 0.9,
+   "proj": 0.03,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "medium",
+   "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): red tile dado of the storefront piers"
+  },
+  {
+   "edge": 1,
+   "u0": 1.0,
+   "u1": 1.65,
+   "z0": 0.9,
+   "z1": 2.9,
+   "proj": 0.03,
+   "slot": "M_Tile_Beige",
+   "confidence": "medium",
+   "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): beige tile on the storefront piers"
+  },
+  {
+   "edge": 1,
+   "u0": 6.88,
+   "u1": 7.5,
+   "z0": 0.0,
+   "z1": 0.9,
+   "proj": 0.03,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "medium",
+   "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): red tile dado of the storefront piers"
+  },
+  {
+   "edge": 1,
+   "u0": 6.88,
+   "u1": 7.5,
+   "z0": 0.9,
+   "z1": 2.9,
+   "proj": 0.03,
+   "slot": "M_Tile_Beige",
+   "confidence": "medium",
+   "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): beige tile on the storefront piers"
   }
  ]
 }
