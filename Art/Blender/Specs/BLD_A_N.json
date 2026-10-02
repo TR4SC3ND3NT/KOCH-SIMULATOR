@@ -52,8 +52,9 @@
   "proj": 0.03
  },
  "plinth": {
-  "z_top": 0.5,
-  "proj": 0.03
+  "z_top": 0.92,
+  "proj": 0.03,
+  "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red brick-tile plinth ~1.65 m above the paving (bench backs 0.85 for scale)"
  },
  "pilasters": [
   {
@@ -204,7 +205,252 @@
    "0": -0.02
   }
  },
- "attachments": [],
+ "attachments": [
+  {
+   "type": "wall_boxes",
+   "name": "AHU_North",
+   "edge": 2,
+   "items": [
+    [
+     18.2,
+     -0.729,
+     2.6,
+     0.75,
+     0.8
+    ],
+    [
+     19.75,
+     -0.579,
+     0.55,
+     1.25,
+     0.5
+    ]
+   ],
+   "slot": "M_Steel_Galv",
+   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): galvanised air-handling unit on the paving against the plinth + duct into the wall; position along the wall estimated",
+   "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "FireLadder_North",
+   "edge": 2,
+   "items": [
+    [
+     16.48,
+     1.0,
+     0.04,
+     8.2,
+     0.16
+    ],
+    [
+     16.92,
+     1.0,
+     0.04,
+     8.2,
+     0.16
+    ],
+    [
+     16.7,
+     1.0,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     1.3,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     1.6,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     1.9,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     2.2,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     2.5,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     2.8,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     3.1,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     3.4,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     3.6999999999999997,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     4.0,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     4.3,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     4.6,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     4.9,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     5.2,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     5.5,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     5.8,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     6.1,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     6.3999999999999995,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     6.7,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     7.0,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     7.3,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     7.6,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     7.8999999999999995,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     8.2,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     8.5,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     8.8,
+     0.44,
+     0.025,
+     0.16
+    ],
+    [
+     16.7,
+     9.1,
+     0.44,
+     0.025,
+     0.16
+    ]
+   ],
+   "slot": "M_Steel_Paint_Maroon",
+   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red steel roof-access ladder from ~1.0 m above the FFL to the eave, left of the AHU; position estimated",
+   "confidence": "low"
+  }
+ ],
  "ffl_z": 5.47,
  "ffl_note": "2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace).",
  "walls_to_ffl": true,
@@ -266,5 +512,9 @@
    "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows | 2026-09-28 terrain audit: grown 0.10 m across the walls shared with the other A blocks (clipped to the block outline inset 0.05) - the 0.1 m strip of free ground left between two inside pads rose to the DEM (6.1-6.3) above the plinths inside the shared walls",
    "confidence": "low"
   }
- ]
+ ],
+ "slots": {
+  "Wall": "M_Render_Shuba_Grey"
+ },
+ "slots_note": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): grey textured (shuba) render, not the beige of A_S"
 }

@@ -901,7 +901,12 @@ class Site:
             bm.faces.new((A[i], A[j], Bv[j], Bv[i]))
         bm.faces.new(list(reversed(A)))
         bm.faces.new(Bv)
-        self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
+        ob = self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
+        if el.get("side_slot"):     # painted strings: the two profile faces (created last) get their own slot
+            me = ob.data
+            me.materials.append(mat(el["side_slot"]))
+            for i in (len(me.polygons) - 2, len(me.polygons) - 1):
+                me.polygons[i].material_index = 1
 
     def b_sink(self, el):
         """Pedestal wash basin (C WCs, photos 2026-10-01_WC 031/040): D-shaped basin (flat back on the wall, round

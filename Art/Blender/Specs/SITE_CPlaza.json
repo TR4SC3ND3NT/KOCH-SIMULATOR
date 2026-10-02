@@ -28,7 +28,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -69,7 +70,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured)",
-   "confidence": "low"
+   "confidence": "low",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -110,7 +112,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -151,7 +154,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -192,7 +196,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -233,7 +238,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -274,7 +280,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -330,7 +337,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -371,7 +379,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -412,7 +421,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -453,7 +463,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -494,7 +505,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -535,7 +547,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "tree",
@@ -576,7 +589,8 @@
    "curb_h": 0.12,
    "curb_w": 0.08,
    "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
   },
   {
    "type": "bench",
