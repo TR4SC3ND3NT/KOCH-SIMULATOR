@@ -557,6 +557,9 @@ class Building:
         if kind == "hip" and r.get("ridge_len") and len(self.ring) == 4:
             return self.build_rect_hip(r)
         z0 = self.s["eave_z"]
+        if r.get("raised"):
+            # open roof canopy on posts over a flat roof (D_W): deck + guard rail at the wall head, the hip lifted
+            z0 = self.build_raised_base(r["raised"])
         ov = r["overhang"]
         if r.get("overhang_edges"):  # per-edge overrides {"edge": m}, e.g. 0 against a taller neighbour's wall
             ov = [float(r["overhang_edges"].get(str(i), ov)) for i in range(len(self.ring))]
@@ -722,6 +725,50 @@ class Building:
             bm2.faces.new(up)
             self.obj("RoofInfill", bm2, COL["wall"], r.get("evidence"), r.get("confidence"))
         self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
+
+    def build_raised_base(self, rs):
+        """Flat roof deck on the wall head, a guard rail round its edge and posts carrying a lifted hip roof:
+        rs {"h": eave of the canopy above eave_z, "post_inset", "post_pitch", "post_w", "rail_h"}. Returns the canopy
+        eave z (the hip is built on it with the usual overhang)."""
+        ze, h = self.s["eave_z"], rs.get("h", 2.0)
+        bm = bmesh.new()
+        n = len(self.ring)
+        lo = [bm.verts.new((x, y, ze - 0.25)) for x, y in self.ring]
+        hi = [bm.verts.new((x, y, ze + 0.02)) for x, y in self.ring]
+        for i in range(n):
+            j = (i + 1) % n
+            bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
+        bm.faces.new(list(reversed(lo)))
+        bm.faces.new(hi)
+        self.obj_parts("RoofDeck", {rs.get("deck_slot", "M_Roof_Membrane"): bm}, rs.get("evidence"), rs.get("confidence"))
+        st = bmesh.new()
+        pw = rs.get("post_w", 0.15)
+        inner = offset_ring(self.ring, rs.get("post_inset", 1.0))
+        for i in range(n):   # posts along the inset ring, at its corners and every post_pitch between
+            a, b = Vector(inner[i]), Vector(inner[(i + 1) % n])
+            L = (b - a).length
+            k = max(1, round(L / rs.get("post_pitch", 6.0)))
+            for t in range(k):
+                c = a + (b - a) * (t / k)
+                bmesh.ops.create_cube(st, size=1.0, matrix=Matrix.Translation((c.x, c.y, ze + 0.02 + (h - 0.02 - FASCIA_M) / 2))
+                                      @ Matrix.Diagonal((pw, pw, h - 0.02 - FASCIA_M, 1)))
+        # guard rail 0.12 m inside the wall face: one post per position (corners once), top + 2 mid rails per edge
+        rh, rr = rs.get("rail_h", 1.0), 0.05
+        rg = [Vector((x, y, 0.0)) for x, y in offset_ring(self.ring, 0.12)]
+        for i in range(n):
+            a, b = rg[i], rg[(i + 1) % n]
+            d = (b - a)
+            L = d.length
+            fr_ = Matrix.Identity(4)
+            fr_.col[0].xyz, fr_.col[1].xyz, fr_.col[3].xyz = d / L, Vector((-d.y / L, d.x / L, 0.0)), a
+            k = max(1, round(L / 1.5))
+            for t in range(k):   # the post at t = 0 is this edge's corner; the far corner belongs to the next edge
+                u = L * t / k
+                box(st, fr_, u - rr / 2, u + rr / 2, -rr / 2, rr / 2, ze + 0.02, ze + rh)
+            for zr in (ze + rh - rr, ze + 0.35, ze + 0.65):
+                box(st, fr_, rr / 2, L - rr / 2, -rr / 4, rr / 4, zr - rr / 2, zr + rr / 2)
+        self.obj_parts("RoofPosts", {rs.get("post_slot", "M_Steel_Paint_Dark"): st}, rs.get("evidence"), rs.get("confidence"))
+        return ze + h
 
     def build_dormers(self, outline, r):
         """Pointed (triangular) dormers standing on the roof slope, bodies buried in the roof solid. With

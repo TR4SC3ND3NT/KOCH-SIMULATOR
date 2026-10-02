@@ -2,7 +2,7 @@
  "id": "BLD_D_W",
  "collection": "BLD_D",
  "status": "probable",
- "note": "Block D west wing (the 5-storey maroon/beige block behind the second street gate). Stream B (handoff 0b). P1 by web photos: storey count and colour fields from the 2GIS photos, footprint from footprints.json (re-traced on the imagery).",
+ "note": "Block D west wing (the 4-storey (+ frieze + rooftop canopy) maroon/beige block behind the second street gate). Stream B (handoff 0b). P1 by web photos: storey count and colour fields from the 2GIS photos, footprint from footprints.json (re-traced on the imagery).",
  "replaces": [
   "GB_BLD_D_W",
   "GB_BLD_D_W_Roof"
@@ -22,7 +22,7 @@
  "plinth_m": 0.0,
  "wall_thk": 0.45,
  "storey_m": 3.3,
- "storeys": 5,
+ "storeys": 4,
  "ring": [
   [
    0,
@@ -42,11 +42,11 @@
   ]
  ],
  "cornice": {
-  "z0": 16.2,
-  "z1": 16.5,
+  "z0": 14.75,
+  "z1": 14.95,
   "proj": 0.05
  },
- "eave_z": 16.5,
+ "eave_z": 14.9,
  "plinth": {
   "z_top": 0.6,
   "proj": 0.03
@@ -75,10 +75,9 @@
   "F1": 0.9,
   "F2": 4.2,
   "F3": 7.5,
-  "F4": 10.8,
-  "F5": 14.1
+  "F4": 10.8
  },
- "rows_note": "sills 0.9 above each floor; 5 storeys x 3.3 from the photos (4 window rows in the maroon/beige fields + the lighter top storey under the roof overhang)",
+ "rows_note": "sills 0.9 above each floor; 5 storeys x 3.3 from the photos (4 window rows in the maroon/beige fields + the lighter top storey under the roof overhang) | 2026-10-02 photo diff (G047 row metrology 53 px/m, G020 near-level drone, G027, G068, G009, G006, brochure aerial): 4 window storeys (F1-F4), a windowless light panel frieze above (~1.5 m), a flat roof with a guard rail and an open low hip canopy (~12 deg, silver sheet) on steel posts ~2 m above the parapet; +-0.3 m",
  "facades": [
   {
    "edge": 0,
@@ -102,8 +101,7 @@
       "F1",
       "F2",
       "F3",
-      "F4",
-      "F5"
+      "F4"
      ]
     }
    ],
@@ -141,8 +139,7 @@
       "F1",
       "F2",
       "F3",
-      "F4",
-      "F5"
+      "F4"
      ]
     }
    ],
@@ -171,8 +168,7 @@
       "F1",
       "F2",
       "F3",
-      "F4",
-      "F5"
+      "F4"
      ]
     }
    ],
@@ -210,8 +206,7 @@
       "F1",
       "F2",
       "F3",
-      "F4",
-      "F5"
+      "F4"
      ]
     }
    ],
@@ -222,12 +217,21 @@
  "roof": {
   "type": "hip",
   "pitch": 12,
-  "overhang": 0.9,
-  "note": "dark low-pitched hip roof with a deep overhang over the light top storey (2GIS 30258560092273593); ridge along the wing (Google z20)"
+  "overhang": 1.0,
+  "note": "dark low-pitched hip roof with a deep overhang over the light top storey (2GIS 30258560092273593); ridge along the wing (Google z20) | 2026-10-02 photo diff (G047 row metrology 53 px/m, G020 near-level drone, G027, G068, G009, G006, brochure aerial): 4 window storeys (F1-F4), a windowless light panel frieze above (~1.5 m), a flat roof with a guard rail and an open low hip canopy (~12 deg, silver sheet) on steel posts ~2 m above the parapet; +-0.3 m",
+  "raised": {
+   "h": 2.0,
+   "post_inset": 1.0,
+   "post_pitch": 6.0,
+   "post_w": 0.15,
+   "rail_h": 1.0,
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff (G047 row metrology 53 px/m, G020 near-level drone, G027, G068, G009, G006, brochure aerial): 4 window storeys (F1-F4), a windowless light panel frieze above (~1.5 m), a flat roof with a guard rail and an open low hip canopy (~12 deg, silver sheet) on steel posts ~2 m above the parapet; +-0.3 m"
+  }
  },
  "wall_material": "M_Paint_Maroon",
  "slots": {
-  "Roof": "M_Sheet_DarkGrey",
+  "Roof": "M_Steel_Galv",
   "Eave": "M_Sheet_DarkGrey",
   "Cornice": "M_Sheet_DarkGrey"
  },
@@ -248,7 +252,7 @@
    "u0": 0.05,
    "u1": 31.95,
    "z0": 13.2,
-   "z1": 16.2,
+   "z1": 14.75,
    "proj": 0.03,
    "slot": "M_Render_Beige",
    "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
@@ -270,7 +274,7 @@
    "u0": 0.05,
    "u1": 59.050000000000004,
    "z0": 13.2,
-   "z1": 16.2,
+   "z1": 14.75,
    "proj": 0.03,
    "slot": "M_Render_Beige",
    "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
@@ -292,7 +296,7 @@
    "u0": 0.05,
    "u1": 31.95,
    "z0": 13.2,
-   "z1": 16.2,
+   "z1": 14.75,
    "proj": 0.03,
    "slot": "M_Render_Beige",
    "evidence": "top storey clad light all round under the dark roof overhang (same photos)",
@@ -314,7 +318,7 @@
    "u0": 0.05,
    "u1": 59.050000000000004,
    "z0": 13.2,
-   "z1": 16.2,
+   "z1": 14.75,
    "proj": 0.03,
    "slot": "M_Render_Beige",
    "evidence": "top storey clad light all round under the dark roof overhang (same photos)",

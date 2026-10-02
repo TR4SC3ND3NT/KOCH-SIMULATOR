@@ -33,6 +33,7 @@ PALETTE = {
     "M_Shingle_Hex_Dark": (0.25, 0.23, 0.22, 1),   # granulated hexagonal bitumen shingle on a wall (C west shed band)
     "M_Sheet_Grey": (0.45, 0.46, 0.48, 1), "M_Brass_Trim": (0.72, 0.58, 0.30, 1),
     "M_Sign_KOCH": (0.16, 0.24, 0.55, 1),   # KOCH-branded sign face (logo + lettering in UE; never real names)
+    "M_Roof_Membrane": (0.35, 0.35, 0.36, 1),   # bituminous flat-roof membrane
     "M_Gravel_Compacted": (0.50, 0.46, 0.41, 1),   # compacted grey-brown gravel (parking east of the C plaza)
     "M_Fascia_Beige": (0.78, 0.75, 0.69, 1), "M_Steel_Paint_Grey": (0.62, 0.63, 0.64, 1),
     "M_PVC_Anthracite": (0.21, 0.22, 0.24, 1), "M_Chrome": (0.80, 0.81, 0.83, 1), "M_Radiator_White": (0.95, 0.95, 0.94, 1),
