@@ -1,0 +1,399 @@
+{
+ "summary": "No hidden downscale anywhere. Imagery scale, checked against standard markings, is 1.004 ± 0.004. Ratios measured/standard: tennis service box 0.998, singles 1.010, doubles 0.991, baselines 0.990; basketball key 1.006; volleyball attack lines 0.990; zebra pitch 0.991 ± 0.012. Local TM frame vs geodesic: ratio 1.00000000. Blend: METRIC, scale_length 1.0, 0 of 6509 objects with scale != 1, 0 parented. Every spec has scale 1.0. A 10 m Blender cube becomes 1000 uu in UE: the FBX writes UnitScaleFactor 1 (cm), vertices ±5 m, node scale ×100.\nThe real skew is in the sports courts. The courts block and all court markings sit too far south in the model, by 1.4 to 2.1 m along the local 'v' axis (≈north). The cause is the 2026-09-28 'flush with the pitch' owner note. Google 2026, Bing 2021 and Esri 2020 all put the courts' south edge 1.2-1.45 m north of the pitch's south edge, and the block is 26.0 m deep (model 25.25). Measured court centres are tennis v 14.41, volleyball 14.47, basketball 14.86; the model has 12.78 for all three. Basketball is 14.34 wide (model 14.50). Volleyball is 8.78 x 17.75 (model 8.70 x 17.65).\nOK: pitch size (44.56 ± 0.15 x 25.2 ± 0.15 vs 44.45 x 25.25), gazebos (roof 9.150 across flats, centres within 0.4 m), garden path network (0.24/0.44 m), carriageway 14.78, zebra 4.30 m with 0.4/0.6 stripes, stairs, benches.\nFix: the C classroom door frame is built 0.90 x 2.00 m; the reference frame is 0.99 x 2.05 m.\nOpen: the frame registration between site and buildings. Site specs were drawn on Google z20, buildings and C on Bing. Google minus Bing ground offset is +1.4 ± 0.3 E, +0.47 ± 0.1 N at sports/courts/hall/alley, about 0 in the garden. So the site may sit about 1.4 m east of C. That depends on Bing being lean-free, so it is marked unsure.",
+ "global_checks": [
+  {
+   "check": "Local frame (campus_frame.py tmerc) vs WGS84 geodesic distances, 10 point pairs up to 604 m",
+   "result": "ratio 1.00000000 for every pair; grid north = true north (north vector has 0.0 px easting in the tile grid)",
+   "ok": true
+  },
+  {
+   "check": "fetch_ortho.py resampling (Web Mercator to local)",
+   "result": "Uses the same lon/lat to pixel formula as the tile servers. z20 m/px is 0.10961 E and 0.10921 N, the true ellipsoidal anisotropy of Web Mercator, and it is resampled exactly. No scale error introduced.",
+   "ok": true
+  },
+  {
+   "check": "Absolute imagery scale (Google z20) from standard markings",
+   "result": "Measured/standard (centre-to-centre of line, with line widths allowed for): service lines 12.72±0.03/12.75; singles 8.26±0.06/8.18; doubles 10.82±0.03/10.92; baselines 23.43±0.03/23.67; basketball key 4.88±0.02/4.85; volleyball attack lines 5.89±0.04/5.95; zebra pitch 0.991±0.012/1.00 (site). Mean 0.996±0.004, so true = image x 1.004±0.004. No downscale (<0.5%).",
+   "ok": true
+  },
+  {
+   "check": "Cross-source scale (pitch outline)",
+   "result": "Pitch outline widths: Google 44.66 x 25.23, Bing 44.56 x 25.16, Esri 44.37 x 24.93. Bing/Google 0.998 / 0.997, Esri/Google 0.993 / 0.988 (within edge error ±0.15-0.3 m).",
+   "ok": true
+  },
+  {
+   "check": "Ground offset between imagery sources (lean-free ground windows; edge profiles + NCC)",
+   "result": "Google-Bing: pitch edges (+1.2, +0.45); NCC pitch (+1.62, +0.48) ncc 0.87; courts (+1.62, +0.45); hall yard (+1.60, +0.63); C plaza (+0.85, +0.37); alley south of the garden (+1.04, +0.61); street lane line dy +0.28; garden about (-0.3, -0.3) (low NCC; path fits agree within 0.1). Google-Esri: (+0.35, -0.31) pitch, (0.0, -0.41) courts. The offset is not uniform, so each zone needs its own registration.",
+   "ok": false
+  },
+  {
+   "check": "Google lean uniformity",
+   "result": "Google is a mosaic with non-uniform lean. The C roof vs the Bing-centred model is (+3.67, +1.10), fit rms 0.19 m, h 15.4 m. The A_N roof in Google is about 4.3 m north of Bing's at only h 9.4 m. The '0.29 E / 0.20 N m/m' figure and the BLD_C anchor note (+7.0 E / +4.0 N at the C roof) are NOT reproduced; at C the lean relative to Bing is ≈(0.15, 0.04) m/m.",
+   "ok": false
+  },
+  {
+   "check": "Blend scene units",
+   "result": "unit_settings METRIC, scale_length 1.0, length_unit METERS",
+   "ok": true
+  },
+  {
+   "check": "Object transforms in KOCH_Campus_Greybox.blend",
+   "result": "6509 objects: 0 with scale != 1, 0 with world scale != 1, 0 parented, 0 negative determinant",
+   "ok": true
+  },
+  {
+   "check": "Spec scale fields",
+   "result": "All 15 BLD_*.json have scale 1.0 (the builder's scale_spec is therefore an identity); SITE/INT specs have none",
+   "ok": true
+  },
+  {
+   "check": "Built geometry equals specs",
+   "result": "C walls in local frame 0..29.400 x 0..21.100 (spec 29.4 x 21.1). Sports objects equal the spec rings to the mm, e.g. Pitch_Plinth u -0.100..44.350, v 0.150..25.400.",
+   "ok": true
+  },
+  {
+   "check": "Export chain (export_ue.py: global_scale 1, apply_unit_scale True, FBX_SCALE_NONE, -Y/Z axes; tested on a 10 m cube with the identical call)",
+   "result": "FBX UnitScaleFactor 1.0 (cm), node Lcl Scaling 100, Lcl Translation (300,400,500) cm, vertices ±5. In UE the 10 m object = 1000 uu (1 uu = 1 cm, AGENTS.md rule met). The ×100 lives in the node transform. With 'Import Into Level', check once that actor scale = 1 (baked); FBX_SCALE_ALL would give UnitScaleFactor 100 and node scale 1 if needed. UE MCP is down, so this was not verified in the editor.",
+   "ok": true
+  }
+ ],
+ "items": [
+  {
+   "name": "Imagery absolute scale (no downscale)",
+   "kind": "scale",
+   "model": "1 BU = 1 m",
+   "measured": "image scale 1.004 ± 0.004 (7 standard markings + zebra)",
+   "delta": "-0.4% ± 0.4% (not significant)",
+   "verdict": "ok",
+   "fix": "",
+   "method": "Sub-pixel line-centre profiles on Google z20 (0.109 m native) in the rotated sports/street frames; ratio vs standard centre-to-centre distances",
+   "confidence": "high",
+   "sources": [
+    "ortho_google_z20",
+    "m_tennis.py",
+    "m_sports.py",
+    "m_zebra.py"
+   ]
+  },
+  {
+   "name": "Tennis court (3rd court) size",
+   "kind": "court",
+   "model": "standard 10.97 x 23.77 (singles 8.23, service 6.40)",
+   "measured": "line c-c: doubles 10.82±0.03, singles 8.26±0.06, baselines 23.43±0.03, service lines 12.72±0.03 (Google)",
+   "delta": "vs standard c-c: -0.10, +0.08, -0.24, -0.03 m (-0.9%, +1.0%, -1.0%, -0.2%)",
+   "verdict": "ok",
+   "fix": "",
+   "method": "line peaks, 6 chunks per line",
+   "confidence": "medium",
+   "sources": [
+    "r_tennis_g.jpg"
+   ]
+  },
+  {
+   "name": "Tennis court position",
+   "kind": "court position",
+   "model": "centre u 90.675, v 12.775 (sports frame)",
+   "measured": "centre u 90.77±0.03, v 14.41±0.02 (Google)",
+   "delta": "+0.10 m u, +1.64 m v (world +0.15 E, +1.63 N)",
+   "verdict": "fix",
+   "fix": "SITE_Sports.json Court_Hard_Lines.lines: translate every point by world (+0.153, +1.630) (ready values in fixes_sports.json 'Court_Hard_Lines.lines')",
+   "method": "line profiles",
+   "confidence": "high",
+   "sources": [
+    "ovl_courts_model_red_fix_green.jpg"
+   ]
+  },
+  {
+   "name": "Volleyball court",
+   "kind": "court",
+   "model": "8.70 x 17.65, u 72.40..81.10, v 3.95..21.60",
+   "measured": "green field u 72.24..81.02 (8.78±0.07), v 5.62..23.37 (17.75±0.08); net 14.45, attack lines 11.60/17.49",
+   "delta": "size +0.08/+0.10; position +1.70 m v, -0.12 m u",
+   "verdict": "fix",
+   "fix": "SITE_Sports.json Court_Volley_Field.ring = [[186.402,47.843],[195.176,47.506],[195.857,65.243],[187.084,65.58]]; Court_Volley_Lines.lines = fixes_sports.json 'Court_Volley_Lines.lines' (boundary + net v 14.495 + attack lines ±3.0); Courts_Slab hole 2 = same ring",
+   "method": "G-channel step + line peaks",
+   "confidence": "high",
+   "sources": [
+    "r_bv_g.jpg"
+   ]
+  },
+  {
+   "name": "Basketball court",
+   "kind": "court",
+   "model": "14.50 x 23.76, u 52.90..67.40, v 0.90..24.66 (centre 12.78)",
+   "measured": "green field u 52.99..67.33 (14.34±0.04); halfway line v 14.84±0.02; centre circle centre ~14.9; key c-c 4.88 (FIBA); length 23.4-23.8 (ends ±0.3)",
+   "delta": "width -0.16 m; position +2.08 m v",
+   "verdict": "fix",
+   "fix": "SITE_Sports.json Court_Basket_Field.ring = [[167.065,45.944],[181.395,45.393],[182.307,69.136],[167.977,69.686]] (u 52.99..67.33, v 2.98..26.74); Court_Basket_Lines lines/arcs translate world (+0.087, +2.078) (fixes_sports.json); Courts_Slab hole 1 = same ring",
+   "method": "line profiles",
+   "confidence": "high",
+   "sources": [
+    "r_basket_g.jpg"
+   ]
+  },
+  {
+   "name": "Courts block slab + S/N fences",
+   "kind": "layout",
+   "model": "v 0.15..25.40 (flush with the pitch, owner 2026-09-28), 46.10 x 25.25",
+   "measured": "S edge v 1.45-1.59 (Google), 1.57-1.62 (Bing reg.), 1.62-1.75 (Esri reg.); N edge 27.57 (Google), 27.2-27.6; W 50.92±0.02, E 97.0-97.2",
+   "delta": "S +1.40 m, N +2.1 m; depth 26.0 vs 25.25",
+   "verdict": "fix",
+   "fix": "SITE_Sports.json Courts_Slab.ring = [[164.922,44.595],[210.988,42.825],[211.984,68.756],[165.918,70.526]]; Court_Hard_Field.ring = [[198.397,43.309],[210.938,42.827],[211.934,68.758],[199.393,69.24]]; CourtsFence_Perimeter/Div1/Div2/S0/S1/CourtsGate_*.line per fixes_sports.json (v 1.55 / 27.50). CONFLICTS with the owner 'flush' note: one tape measurement settles it (offset of the courts S fence vs the pitch S fence across the 6.5 m walkway; imagery says 1.3-1.45 m)",
+   "method": "luminance step profiles in 3 independent sources",
+   "confidence": "medium-high",
+   "sources": [
+    "r_sports_bing_z19.jpg",
+    "r_sports_esri_z19.jpg",
+    "r_sports_google.jpg"
+   ]
+  },
+  {
+   "name": "Football pitch outline (plinth/turf)",
+   "kind": "pitch",
+   "model": "44.45 x 25.25 (u -0.10..44.35, v 0.15..25.40)",
+   "measured": "G 44.66 x 25.23, B 44.56 x 25.16, E 44.37 x 24.93 (edge ±0.15; G east edge fence-shadow ±0.3)",
+   "delta": "+0.11 ± 0.15 m / -0.06 ± 0.15 m",
+   "verdict": "ok",
+   "fix": "",
+   "method": "step profiles",
+   "confidence": "medium",
+   "sources": [
+    "r_pitch_g.jpg"
+   ]
+  },
+  {
+   "name": "Pitch markings",
+   "kind": "marking",
+   "model": "centre circle r 3.0 at u 22.13; D arcs r 6 at u 6.25/38.0",
+   "measured": "centre circle W/E 18.10/25.45, S/N 9.73/16.13 (faint); E arc tip 37.95±0.01; halfway 22.3±0.3",
+   "delta": "circle r ≈3.4±0.3 (+0.4?), arc tip -0.05",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "line peaks on faint paint",
+   "confidence": "low",
+   "sources": []
+  },
+  {
+   "name": "Courts division fence Div2",
+   "kind": "fence",
+   "model": "u 84.35",
+   "measured": "darkest fence line u 84.87±0.01 (includes lean smear of a 4.9 m fence; red surface W edge 85.20)",
+   "delta": "+0.5 m (lean-biased)",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "valley profile",
+   "confidence": "low",
+   "sources": []
+  },
+  {
+   "name": "Zebra size",
+   "kind": "marking",
+   "model": "4.30 wide, 14 stripes 0.40 @ 1.00 pitch",
+   "measured": "pitch 0.991±0.012 (7 stripes, Google); painted length 3.99 (ends worn); site 4.3 / 0.4+0.6",
+   "delta": "0",
+   "verdict": "ok",
+   "fix": "",
+   "method": "stripe peak fit",
+   "confidence": "high",
+   "sources": [
+    "r_street_g.jpg"
+   ]
+  },
+  {
+   "name": "Zebra position",
+   "kind": "position",
+   "model": "centre x 154.20",
+   "measured": "painted stripe centre x 153.58±0.10 (Google frame)",
+   "delta": "-0.62 m (E-W)",
+   "verdict": "unsure",
+   "fix": "if accepted: SITE_Gate.json Zebra.line x 154.2 -> 153.6 and Crossing_SouthLink x 154.2 -> 153.6; check on site: distance from the canopy post (150.20,-98.31) to the zebra's west stripe ends",
+   "method": "half-gradient extent of stripes",
+   "confidence": "medium",
+   "sources": [
+    "v_street_google_z20.jpg"
+   ]
+  },
+  {
+   "name": "Carriageway width",
+   "kind": "street",
+   "model": "14.78 (Curb_North v 6.84, Curb_South v -7.94 in the street frame)",
+   "measured": "site 14.8; Google kerbs coincide visually within ~0.3 (auto profiles disturbed by cars)",
+   "delta": "-0.02",
+   "verdict": "ok",
+   "fix": "",
+   "method": "site value + overlay",
+   "confidence": "medium",
+   "sources": [
+    "r_street_g.jpg"
+   ]
+  },
+  {
+   "name": "Gazebos (built)",
+   "kind": "garden",
+   "model": "roof 9.150 across flats (built 9.904 across corners), posts on a 7.7 across-flats octagon",
+   "measured": "site 9.15 / 7.7; Google roof centres (117.06,-27.05), (144.80,-28.45); centre distance 27.75 vs model 27.69",
+   "delta": "centres (+0.10,-0.40), (+0.20,-0.10); size 0",
+   "verdict": "ok",
+   "fix": "",
+   "method": "bpy mesh measurement + octagon template fit",
+   "confidence": "medium",
+   "sources": [
+    "v_gazebo_google_z20.jpg"
+   ]
+  },
+  {
+   "name": "Garden path network",
+   "kind": "garden",
+   "model": "SITE_Garden paths (Google frame)",
+   "measured": "LSQ translation over 9 path centre lines: Google (-0.24,-0.44) rms 0.56; Bing (-0.14,-0.42) rms 0.69",
+   "delta": "0.5 m ± 0.2",
+   "verdict": "ok",
+   "fix": "",
+   "method": "path centre-line peaks between hedges",
+   "confidence": "medium",
+   "sources": [
+    "v_garden_google_z20.jpg"
+   ]
+  },
+  {
+   "name": "Parking stalls (N sidewalk)",
+   "kind": "scale/parking",
+   "model": "wheel stops E pitch 2.60, W pitch 4.256",
+   "measured": "car pitch E row 2.68, W row 2.82 (autocorrelation; informal parking)",
+   "delta": "E +0.08; W: cars 2.82 vs stops 4.26",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "profile autocorrelation",
+   "confidence": "low",
+   "sources": [
+    "v_cars_raw.jpg"
+   ]
+  },
+  {
+   "name": "Gate canopy",
+   "kind": "gate",
+   "model": "11.87 x 3.45",
+   "measured": "site 11.9 x 3.45; hidden by tree crowns in Google/Bing",
+   "delta": "-0.03",
+   "verdict": "ok",
+   "fix": "",
+   "method": "spec vs site value",
+   "confidence": "medium",
+   "sources": [
+    "v_gate_google_z20.jpg"
+   ]
+  },
+  {
+   "name": "Site (Google frame) vs C (Bing frame) registration",
+   "kind": "global registration",
+   "model": "site specs drawn on Google z20 ground; BLD_C centred on the Bing roof",
+   "measured": "Google-Bing ground +1.4±0.3 E, +0.47±0.1 N (sports/courts/hall/alley); ≈0 in the garden",
+   "delta": "site may sit ~1.4 m E / 0.5 N relative to C",
+   "verdict": "unsure",
+   "fix": "if Bing is confirmed lean-free: translate SITE_Sports/SITE_HallCPassage by (-1.4,-0.47); garden none",
+   "method": "edge profiles + NCC on ground windows",
+   "confidence": "medium",
+   "sources": [
+    "reg_ncc.py"
+   ]
+  },
+  {
+   "name": "C classroom door",
+   "kind": "photo etalon",
+   "model": "F1 doors built 0.90 x 2.00 frame (leaf 0.77 x 1.93); spec u1-u0 0.90, z1-z0 2.00",
+   "measured": "0.99 x 2.05 frame, clear 0.87 x 2.00 (campus.md metrology)",
+   "delta": "-0.09 m width, -0.05 m height",
+   "verdict": "fix",
+   "fix": "INT_C_F1.json doors F1_Door_S1,S2,S4,S5,N1,N2,N4,N5 (leaf glass2): u0 -= 0.045, u1 += 0.045 (width 0.99), z1 = z0 + 2.05; same for the classroom doors in INT_C_Floors.json",
+   "method": "bpy bbox of GBS_INT_C_F1_F1_Door_*_Frame",
+   "confidence": "medium",
+   "sources": [
+    "blend_meas.json"
+   ]
+  },
+  {
+   "name": "C entrance stair risers",
+   "kind": "photo etalon",
+   "model": "7 risers of 0.154 (terrain 5.322 to FFL 6.40)",
+   "measured": "7 granite risers x 0.15",
+   "delta": "+0.004/riser",
+   "verdict": "ok",
+   "fix": "",
+   "method": "top-face z levels",
+   "confidence": "high",
+   "sources": [
+    "blend_meas.json"
+   ]
+  },
+  {
+   "name": "C basement stair risers",
+   "kind": "photo etalon",
+   "model": "0.138 (first 0.142)",
+   "measured": "~0.138 (SfM)",
+   "delta": "0",
+   "verdict": "ok",
+   "fix": "",
+   "method": "top-face z levels",
+   "confidence": "high",
+   "sources": [
+    "blend_meas.json"
+   ]
+  },
+  {
+   "name": "Benches seat height",
+   "kind": "photo etalon",
+   "model": "seat top 0.43-0.48 above the leg base, back 0.85-0.88",
+   "measured": "standard 0.45 / 0.85",
+   "delta": "≈0",
+   "verdict": "ok",
+   "fix": "",
+   "method": "top-face z levels",
+   "confidence": "medium",
+   "sources": [
+    "blend_meas.json"
+   ]
+  },
+  {
+   "name": "Outdoor stairs (alley, passage, C east)",
+   "kind": "photo etalon",
+   "model": "0.175 / 0.174 / 0.167 risers, uniform",
+   "measured": "spec values reproduced exactly",
+   "delta": "0",
+   "verdict": "ok",
+   "fix": "",
+   "method": "top-face z levels",
+   "confidence": "medium",
+   "sources": [
+    "blend_meas.json"
+   ]
+  }
+ ],
+ "artifacts": [
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/ovl_courts_model_red_fix_green.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/fixes_sports.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_tennis_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_bv_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_basket_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_pitch_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_sports_google.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_sports_bing_z19.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_sports_esri_z19.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_street_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/v_street_google_z20.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/v_gazebo_google_z20.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/v_garden_google_z20.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/r_C_google.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/v_cplaza_google_z20.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/blend_audit.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/blend_meas.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/cube10.fbx",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_site_scale/ortho/ortho_google_z20.png"
+ ],
+ "open_questions": [
+  "Is Bing lean-free at C and the sports area? If yes, the Google-drawn sports and passage specs sit about (+1.4 E, +0.47 N) relative to C. One laser measurement settles it: C's NE wall corner (model 203.48, 16.27) to the courts' east fence line (model x ≈ 211.0 at y 42-68).",
+  "Courts 'flush with the pitch' (owner, 2026-09-28) vs imagery (1.2-1.45 m north offset in 3 sources): tape the courts' S fence vs the pitch's S fence offset along the walkway.",
+  "Not measured (out of scope or not visible from above): D forecourt, campus boundary fences, alley stairs/ramps footprints, tree rows (crowns lean in Google), the gate canopy (under crowns), C plaza planters.",
+  "UE import: check once that FBX 'Import Into Level' actors show scale 1.0 (node scale 100 baked into the mesh). If they show 100, switch export_ue.py to apply_scale_options='FBX_SCALE_ALL' (tested: UnitScaleFactor 100, node scale 1). The size is correct either way.",
+  "Pitch centre circle radius looks ≈3.4 ± 0.3 vs 3.0 in the model (faint paint); a site tape or drone frame would settle it."
+ ]
+}

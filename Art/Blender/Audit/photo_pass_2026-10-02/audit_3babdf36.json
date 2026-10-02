@@ -1,0 +1,378 @@
+{
+ "summary": "I measured every building's roof outline from above and checked the main ones against the ground. There is no hidden downscale: one common scale fitted over all campus buildings is 1.003 ± 0.006, rotation -0.45 ± 0.35°, so there is no single global skew either. The real skew is per building and it is a model error. Long edges from three image sources put every real campus block on one grid of about -2.8 to -3.4°. The model's orientations are spread from -1.2 to -2.8°: Hall/HallWing are 1.5° off, the Pavilion 2.2°, A and C 0.5°.\n- **Main cause: Bing was wrongly assumed to be straight-down.** It is not. Bing and Esri both lean strongly west: on the 28-30 m towers their whole east facades are visible, about -0.4 and -0.5 m of shift per metre of height. Google 2026 shows no facades on those same towers, so it is near straight-down (lean about -0.05 E / +0.03 N). It also matches the football pitch to 0.2 m, so it can be trusted for absolute positions.\n- **The earlier note had the lean backwards.** \"Google leans 0.29 E / 0.20 N relative to Bing\" is really Bing leaning about -0.29 / -0.20.\n- **Block C is the right size but in the wrong place.** Its length is within 0.2 m, but it sits 4.3 E / 1.1 N (± 0.7 m) away from the rest of the campus, and its 0.55° turn is within measuring error. Its entrance canopy, at only 3.4 m high, is also offset 4 m east, so this is a real offset, not lean. \"Register on C\" would therefore shift everything else by about -3.9 / -1.0 m. I report absolute positions (checked against the pitch) as the main frame.\n- **Other buildings placed from Bing are shifted too:**\n  - D_W is +8.1 E / +5.3 N and only about 56 m long, not 61.\n  - The Hall group is +2.0 N, and the Hall plus its east block is 2.8 m shorter than modelled.\n  - The A_N north end really sits 3.6 m further north: the 09-27 move south followed Bing's lean.\n  - The Pavilion and Canteen are +1.1 to 1.4 E.\n- **Gaps between buildings are mostly 1-3.5 m off** for the same reasons.\n- **B is undersized**: its roof edge is 50.66 × 26.42 m against the model's 49.28 × 25.46.\n- Context buildings (OSM outlines) mostly line up within about 1 m. 13 are flagged, and one (206623867) wrongly includes a car park.",
+ "global_checks": [
+  {
+   "check": "Common scale model->measured (similarity fit over all campus eave-edge stations, Google z20, D excluded)",
+   "result": "scale 1.0026 +-0.0060, residual rms 1.51 m (residuals are per-building errors, not a common factor). With D_W/D_M: 0.9911 +-0.0036, pulled down by the 5 m too-long D_W. Per-building eave size ratios run from -4.3 % (Hall + HallEast length) to +5 % (Pavilion); B +2.8 %/+3.8 %, Canteen +2.2 %, C -0.7 % (length). No downscale.",
+   "ok": true
+  },
+  {
+   "check": "Common rotation (skew)",
+   "result": "Global similarity rot -0.45 +-0.35 deg (absolute), +0.34 deg relative to C. Per building (Google, CW negative): A_S -0.46, A_N -0.57, A_W -0.46, B -0.16, C -0.55, Canteen -0.59, D_W -0.38, D_M +0.18, Hall -1.53, HallWing -1.57, Pavilion -2.17. Same sign in Esri (median -0.73) and Bing (median -0.95). Ground control: pitch -0.02/-0.03 deg, so the imagery is not rotated. Measured real orientations cluster at -2.8..-3.4 deg; the model's x_dir values are spread over -1.2..-2.8 deg.",
+   "ok": false
+  },
+  {
+   "check": "Lean vectors (m of roof shift per m of height)",
+   "result": "Google z20 (2026): x -0.051 +-0.023 (Huber fit on 23 OSM context outlines); y +0.03 +-0.03 (tower facade bands <=0.8 m at 28-30 m). Bing z19: about (-0.41, -0.23) at C (roof edges vs Google) and about -0.4 in x at tower 635535022 (11 m of east facade visible). Esri z19: about (-0.47 +-0.06, -0.1 +-0.15) at C and about -0.6 in x at the tower. Bing and Esri are not straight-down.",
+   "ok": false
+  },
+  {
+   "check": "Source registration on the ground",
+   "result": "Google z20 vs model pitch slab (h = 0): t = (+0.22, -0.03) m, rot -0.03 deg. Model courts (SITE_Sports slabs 2-5) are 1.4-2.3 m south of Google and rotated -0.3 to -0.6 deg (outside this task's scope).",
+   "ok": true
+  },
+  {
+   "check": "Gaps between neighbours, eave-to-eave, model vs measured (m)",
+   "result": "B-A_S 12.46 vs 11.16; A_N-C 15.52 vs 14.31; A_W-C 16.11 vs 14.12; C-HallWing 19.22 vs 21.85; C-Hall 23.49 vs 24.25; Hall-Pavilion 34.35 vs 31.77; C-Canteen 8.90 vs 7.77; HallWing-Canteen 28.08 vs 27.40; A_N-Canteen 46.68 vs 43.55; Hall-A_N 29.99 vs 26.43; B-C 57.41 vs 59.31; B-Hall 54.24 vs 54.72. Error about +-0.3. B-A_S walls: 12.1 measured vs the 13.43 m the model uses as a scale reference.",
+   "ok": false
+  },
+  {
+   "check": "Measurement method and errors",
+   "result": "Directional Lab-gradient profiles every 0.5 m across each model edge; translation-consistent peak vote, then manual pick wherever the overlay showed a shadow or internal line; RANSAC + least-squares line per edge (inlier threshold 0.15 m). Per-edge error = fit se (+-0.01-0.03) combined with a 0.10 m edge-definition floor; curve-only edges +-0.15-0.18. Positions also carry the pitch offset (+-0.15) and Google lean (+-0.03 x h). Esri/Bing sizes agree with Google only to +-1-1.5 m (blur, trees, visible facades), so they serve as checks on rotation and lean, not as precise sizes.",
+   "ok": true
+  }
+ ],
+ "items": [
+  {
+   "name": "BLD_C (etalon) position/rotation",
+   "kind": "campus building",
+   "model": "anchor [173.264,-3.64], x_dir [0.9992,-0.03985] (-2.28 deg); eave E-W 30.50",
+   "measured": "Google z20 edges, outward offsets: W -3.76, E +3.57, N(W part) +1.37, N(E part) +1.09, S(E part) -2.03, S(W wing) -2.15 (all +-0.10, S(W) +-0.18). Rotation -0.55 +-0.38 deg. Translation corrected for ground offset and lean: (+4.28, +1.06) +-0.68. Entrance canopy (z 3.4) seen at x 190-193.7 vs model 185.9-190.1.",
+   "delta": "+4.28 m E, +1.06 m N; length -0.20 m (-0.7 %)",
+   "verdict": "fix",
+   "fix": "BLD_C.json anchor.world_xy [173.264,-3.64] -> [177.45,-2.43]; anchor.x_dir -> [0.99878,-0.04938]; ring unchanged. Apply the same rigid move to every spec placed relative to C (SITE_CPlaza, the C attachments, INT_C_*) or they come apart.",
+   "method": "edge profiles + RANSAC lines on Google z20 (near-nadir: no facades visible on 28-30 m towers); ground offset from the pitch; canopy check",
+   "confidence": "high (position), medium (rotation)",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_bing_z19",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_C N-S depth",
+   "kind": "campus building size",
+   "model": "eave depth 20.90 (walls 19.80) for both parts; south step 1.30, north step 1.30",
+   "measured": "Eave depth E part 19.96 +-0.15, W part 20.12 +-0.2 (lean-free: N and S eaves are at the same height). South step about 1.1 m, north step about 1.0 m. Pink band south of the eave = lightwell covers (canopy occlusion test).",
+   "delta": "-0.94 / -0.78 m (-4 %)",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "opposite eave edges, Google z20",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_A group (A_S frame)",
+   "kind": "campus building",
+   "model": "anchor [158.84,-92.76], x_dir [0.999,-0.049] (-2.81 deg)",
+   "measured": "A_S edges S +0.40, E +0.19, N -0.29, W -0.01 (+-0.10); rotation -0.46 +-0.31; t corrected (+0.35, -0.57) +-0.44; A_S eave 37.99 x 20.65",
+   "delta": "A_S size +0.17 / +0.20; position (+0.35, -0.57); rotation moves the north end 0.6 m E",
+   "verdict": "fix",
+   "fix": "BLD_A_S/A_N/A_W/A_E.json anchor.world_xy -> [159.09,-93.17]; anchor.x_dir -> [0.99837,-0.05706]",
+   "method": "Google z20 edge fits; A_S used as the reference for the shared frame",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_esri_z19",
+    "ortho_bing_z19"
+   ]
+  },
+  {
+   "name": "BLD_A_N north end",
+   "kind": "campus building",
+   "model": "ring y_max 73.2 (eave 73.65); world eave about -20.4",
+   "measured": "North eave +3.26 raw (+3.59 in the new A frame) +-0.10, world eave about -17.07. Bing roof edge -19.6 = Google plus Bing lean (-0.23 x 9.4 m) plus offset (-0.5), so Bing agrees once lean is applied. E/W edges +0.35/-0.11.",
+   "delta": "+3.59 m (A_N too short)",
+   "verdict": "fix",
+   "fix": "BLD_A_N.json ring y 73.2 -> 76.79 (vertices [35.2,73.2],[10.9,73.2] -> y 76.79). This reverses the 09-27 move south, which was caused by Bing's lean. It contradicts photo 081158036 (-22.5 +-1.5); a tape measurement from the A_N north wall to the C south wall settles it.",
+   "method": "Google z20 edge fit, Bing lean cross-check",
+   "confidence": "high",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_bing_z19"
+   ]
+  },
+  {
+   "name": "BLD_A_W strip and gallery roof",
+   "kind": "campus building",
+   "model": "A_W ring x 4.5..10.9, y 22.75..72.95; gallery roof outer edge x 2.15",
+   "measured": "Low-roof west edge 3.62 m west of the A_W eave (new frame) = local x 0.78 +-0.15, flush with the A_S west eave (0.74). North end +5.38 = local y 78.4 (1.2 m beyond the A_N north eave; 6 of 10 stations).",
+   "delta": "west edge 1.37 m further west than the model gallery roof; north end +5.38",
+   "verdict": "fix",
+   "fix": "BLD_A_W.json ring y 72.95 -> 78.23 (both north vertices); gallery attachment: roof outer edge to local x 0.8 (roof_overhang 0.15 -> 1.5, or depth 2.2 -> 3.55 if the posts move).",
+   "method": "Google z20 edge fits",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_A_E",
+   "kind": "campus building",
+   "model": "ring 35.2..41.2 x 22.75..35.6",
+   "measured": "E edge +0.13 +-0.18 (curve-only); N edge -1.63 raw (-1.18 in the A frame) +-0.10; roof-to-own-shadow edge",
+   "delta": "north wall -1.18",
+   "verdict": "fix",
+   "fix": "BLD_A_E.json ring y 35.6 -> 34.42",
+   "method": "Google z20",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_B",
+   "kind": "campus building",
+   "model": "walls 48.28 x 24.46 (eave 49.28 x 25.46), anchor [99.034,-78.995], x_dir -2.80 deg",
+   "measured": "Edges S -0.23, E +1.29, N +1.18, W +0.10 (+-0.10). Eave 50.66 x 26.42 (+-0.15). Rotation -0.16 +-0.23. t corrected (+0.82, +0.45) +-0.39.",
+   "delta": "L +1.38 (+2.8 %), W +0.96 (+3.8 %); position +0.8 E / +0.45 N",
+   "verdict": "fix",
+   "fix": "BLD_B.json ring -> [[0,0],[49.66,0],[49.66,25.42],[0,25.42]] (keeping overhang 0.5); anchor.world_xy -> [99.11,-78.92]; x_dir -> [0.99866,-0.05172]. The pano metric scale was taken from the OSM length 48.28, so B heights and bays scale x1.0286 too: check.",
+   "method": "Google z20 edge fits; Esri length 49.2 is unreliable (trees over the W eave)",
+   "confidence": "high",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_Canteen",
+   "kind": "campus building",
+   "model": "walls 24.1 x 9.1, anchor [182.258,26.966], -2.20 deg",
+   "measured": "Edges S -0.07, E +1.34, N +0.39, W -0.79 (+-0.10). Eave 25.45 x 10.22. Rotation -0.59 +-0.46. t corrected (+1.09, +0.07) +-0.26.",
+   "delta": "+1.09 m E; size +0.55/+0.32 (+0.27/+0.16 per side, below threshold)",
+   "verdict": "fix",
+   "fix": "BLD_Canteen.json anchor.world_xy -> [183.31,27.16]; x_dir -> [0.99882,-0.04863]; ring unchanged",
+   "method": "Google z20",
+   "confidence": "high",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_Pavilion",
+   "kind": "campus building",
+   "model": "walls 9.95 x 18.86, anchor [59.23,42.44], -1.20 deg",
+   "measured": "Edges S +0.18, E +1.68, N +0.63, W -1.10 (+-0.10); eave 11.72 x 20.88; rotation -2.17 +-0.58; t corrected (+1.40, +0.09) +-0.25",
+   "delta": "+1.40 m E; W +0.82 (+4 %); L +0.57; rotation -2.17 deg",
+   "verdict": "fix",
+   "fix": "BLD_Pavilion.json ring y 18.86 -> 19.68; anchor.world_xy -> [60.26,42.32]; x_dir -> [0.99826,-0.05891]",
+   "method": "Google z20 (W and N edges are roof-to-shadow)",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_Hall + HallEast (length, position, rotation)",
+   "kind": "campus building",
+   "model": "one frame: anchor [88.638,1.035], x_dir -1.63 deg; Hall ring x 0..60.2, y 0..11.26; HallEast to x 64.6",
+   "measured": "W eave +1.61 inward; the whole roof ends at the HallEast line (-1.17 raw, = Hall e1 +2.93). N +2.89, S -1.52 (Hall eave N-S 13.63). Rotation -1.53 +-0.19. y-shift +2.04 after correction.",
+   "delta": "length -2.78 (walls 61.8 vs 64.6); N-S +1.37; +2.0 N; rotation -1.53 deg",
+   "verdict": "fix",
+   "fix": "BLD_Hall/HallEast/HallWing.json anchor.world_xy -> [88.61,3.89]; x_dir -> [0.99848,-0.05504]; Hall ring x0 0 -> 1.52 and y -0.68..11.95; HallEast ring x1 64.6 -> 63.34",
+   "method": "Google z20 edge fits",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_bing_z19"
+   ]
+  },
+  {
+   "name": "BLD_HallWing",
+   "kind": "campus building",
+   "model": "ring x 45.8..64.6, y 11.26..21.3; flush with the hall's east end",
+   "measured": "E +1.21, W -1.32 (=> +1.0 m east of the rotated frame), N +1.29 (-0.22 residual). Wing east eave about 2.7 m east of the hall's roof end (152.7 vs 155.3 world).",
+   "delta": "+1.0 m E relative to the hall; sticks out 2.7 m past the hall end",
+   "verdict": "fix",
+   "fix": "BLD_HallWing.json ring x 45.8..64.6 -> 46.8..65.6 (in the new Hall frame)",
+   "method": "Google z20",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_D_W",
+   "kind": "campus building (backdrop block)",
+   "model": "walls 32.0 x 59.1, anchor [-192.5,15.5], eave x -193.5..-159.5, y 14.5..75.6",
+   "measured": "Google hip roof x -185.3..-151.4, y 22.8..78.3 (edges W -8.08, E +6.38, N +3.56, S -8.58); length 56.1. Esri about 56 m (y 21..77). Bing 59 m (older image, flat roof plus parapet?). Rotation -0.38 +-0.19. t corrected (+8.11, +5.28) +-0.69.",
+   "delta": "+8.1 E, +5.3 N; length -5.0 m",
+   "verdict": "fix",
+   "fix": "BLD_D_W.json ring -> 30.38 x 54.08; anchor.world_xy -> [-183.64,23.36]; x_dir -> [0.99846,-0.05554]. The length is unsure because the Bing outline differs: tape the D_W east facade.",
+   "method": "Google z20 + Esri/Bing comparison",
+   "confidence": "high (x), medium (length)",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_esri_z19",
+    "ortho_bing_z19"
+   ]
+  },
+  {
+   "name": "BLD_D_M",
+   "kind": "campus building (backdrop block)",
+   "model": "8-vertex ring incl. a 9 m west strip (local x 0..9.1, y 0..24)",
+   "measured": "East edge -1.10, SE block south +0.64, courtyard E -0.13, courtyard N +0.38 (curve), north +2.60 (curve) +-0.15. The west strip is not a building: D_W's roof and paving occupy it, and the D_W/D_M joint is at x -151.4. Rotation +0.18 +-0.08.",
+   "delta": "N +2.6, E -1.1, S +0.6",
+   "verdict": "fix",
+   "fix": "BLD_D_M.json ring: north edge +2.6 (y 63.7/59.06 -> 66.3/61.66), east x 158.83/158.81 -> 157.7, SE-block south y 12.9/12.96 -> 12.3; drop the west strip (vertices (0,0),(9.14,0.01) -> start the ring at the D_W east wall, local x about 8.7).",
+   "method": "Google z20",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_GateBooth",
+   "kind": "campus building",
+   "model": "3.42 x 3.10 under the gate canopy",
+   "measured": "not visible from above (under the canopy)",
+   "delta": "n/a",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "n/a",
+   "confidence": "n/a",
+   "sources": []
+  },
+  {
+   "name": "BLD_GuardBoothNE",
+   "kind": "campus building",
+   "model": "2.4 x 2.0",
+   "measured": "too small for a reliable edge fit at 0.1 m/px",
+   "delta": "n/a",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "n/a",
+   "confidence": "n/a",
+   "sources": []
+  },
+  {
+   "name": "Lean: Google z20",
+   "kind": "source lean",
+   "model": "assumed 0.29 E / 0.20 N in the specs",
+   "measured": "(-0.05 +-0.03, +0.03 +-0.03) m/m",
+   "delta": "the spec assumption is wrong by about 0.34 / 0.17 m/m",
+   "verdict": "ok",
+   "fix": "",
+   "method": "tower facade visibility + Huber fit on context outlines",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_googleN_z20",
+    "ortho_googleS_z20",
+    "ortho_google_z19"
+   ]
+  },
+  {
+   "name": "Lean: Bing z19",
+   "kind": "source lean",
+   "model": "assumed near-nadir",
+   "measured": "about (-0.41, -0.23) m/m at C; about -0.4 x at the N towers",
+   "delta": "not nadir",
+   "verdict": "fix",
+   "fix": "stop using Bing as a position reference (C, D_W, A_N north end were placed from it)",
+   "method": "manual edge peaks vs Google at C and tower 635535022",
+   "confidence": "medium",
+   "sources": [
+    "ortho_bing_z19"
+   ]
+  },
+  {
+   "name": "Lean: Esri z19",
+   "kind": "source lean",
+   "model": "-",
+   "measured": "about (-0.5 +-0.1, -0.1 +-0.15) m/m",
+   "delta": "-",
+   "verdict": "ok",
+   "fix": "",
+   "method": "manual edge peaks vs Google",
+   "confidence": "low",
+   "sources": [
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "Context buildings OK within about 1 m",
+   "kind": "context",
+   "model": "OSM outlines (ctx_osm / footprints Context)",
+   "measured": "Visually checked on Google z19 contact sheets: 742042612, 635535021-24, 635535018, 632728361-3, 169915330, 1529424629, 206623783, 206623848, 255081513, 635535016, 761341970, 206614083, 168164292, 169915381, 169915344, 341105719, 635535009/017/019/020/013/014, 897518010, 877560915, 129705598, 1555086426, 206623782/793/816/827, 394617087, 635535008, 168164264, 1529424567, 169916490 (+3.75 x auto, unverified)",
+   "delta": "<=1 m typical; auto-fit translations on the N rows are biased by an internal roof band",
+   "verdict": "ok",
+   "fix": "",
+   "method": "Google z19 edge fits + visual check",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z19"
+   ]
+  },
+  {
+   "name": "CTX 206623867 (E neighbour)",
+   "kind": "context",
+   "model": "OSM L-polygon about 68 x 52",
+   "measured": "The real building is only the west wing plus the north strip; the polygon's interior is a car park",
+   "delta": "shape wrong",
+   "verdict": "fix",
+   "fix": "footprints.json CTX_206623867 ring: re-trace on Google z19 (west wing about 10 m wide + north strip), drop the car park area",
+   "method": "visual, Google z19",
+   "confidence": "high",
+   "sources": [
+    "ortho_google_z19"
+   ]
+  },
+  {
+   "name": "GB_BLD_W1 / W1_Ext (block west of the hall)",
+   "kind": "phase-1",
+   "model": "footprints.json BLD_W1 ring x 51.4..71.0",
+   "measured": "Red hip roof +4.74 E, +0.98 N, rotation -2.05, size +1.44/+0.50 (W1); W1_Ext auto (+3.7, +5.9) unverified",
+   "delta": "+4.7 m E",
+   "verdict": "fix",
+   "fix": "footprints.json BLD_W1 ring: translate +4.74 E, +0.98 N (and BLD_W1_Ext about +3.7 E, to be checked)",
+   "method": "Google z19",
+   "confidence": "medium",
+   "sources": [
+    "ortho_google_z19"
+   ]
+  },
+  {
+   "name": "Context with large auto offsets (unverified)",
+   "kind": "context",
+   "model": "OSM",
+   "measured": "206613116 (+6.2, +1.0), 206613712 (+4.9, +1.9), 761341971 (+4.6, -3.2), 761341972 (-1.4, +4.8), 761345513 (+3.7, +3.4), 169828217 (+2.9), 1529424569 (-1.95), 407836680 (-1.7, -2.6), 761350988, SouthComplex (+0.3, -6.6)",
+   "delta": "2-7 m (may be wrong picks)",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "Google z19 auto picks",
+   "confidence": "low",
+   "sources": [
+    "ortho_google_z19"
+   ]
+  }
+ ],
+ "artifacts": [
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/overview_google.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/fit/",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/resp/",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/towers_N4.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/towers_S3.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/z_t22.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/z_C_canopy_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/z_DW_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/z_hallE_g.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/ctx_sheet_0.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/fixes.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/final2.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/ana_google_z20.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/gaps.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_plan_buildings/pick_fit.py"
+ ],
+ "open_questions": [
+  "C N-S depth: the roof says about 19.0 m walls for both parts; the interior plan says 19.0 / 20.3 and the ring has 19.8. One tape measurement along the C east facade settles it.",
+  "A_N north wall: Google and lean-corrected Bing put it about 5 m north of the photo estimate (-22.5 +-1.5). One tape measurement from the A_N north wall to the C south wall settles it.",
+  "D_W length: Google 56.1 / Esri 56 vs Bing 59 (Bing may show a flat roof with parapet before the canopy was added). Tape the D_W east facade.",
+  "Do the coordinator and owner accept moving C (the etalon) by about +4.3 / +1.1 m, together with every spec placed relative to C? The alternative is to keep C fixed and shift everything else by about -3.9 / -1.0 m, which breaks the ground (pitch) match.",
+  "Hall east end: the map owner says the wing and hall are flush; Google shows the wing about 2.7 m past the hall roof end.",
+  "13 context buildings flagged: 206623867 needs a re-trace, W1 should move about +4.7 E, and 11 large auto offsets are unverified and need a visual re-pick."
+ ]
+}

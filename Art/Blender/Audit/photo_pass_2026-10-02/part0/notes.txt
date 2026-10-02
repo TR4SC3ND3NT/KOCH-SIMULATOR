@@ -1,0 +1,47 @@
+A000 herringbone plaza E of hall -> looking W/SW into garden: scalloped edging, yellow wheelie bin, globe lamp(s), benches along N walk receding right, gazebo dark hip roof left, unfinished brick tower far right.
+A001 herringbone plaza looking N: passage upper lawn bed w/ spruces, yellow/white kerbs, pitch fence + apartment towers behind, C west shed (grey roof, brass trim, hex shingle band, red brick tile) at right. globe lamp right.
+A002 plaza looking W: HallEast tall beige block (right) + hall S wall pink/beige panels, gutter, downpipe; thujas in lawn bed; dark chimney stack behind hall W part; garden walk + benches left.
+A003 plaza looking N: 3 spruces in passage bed; pink wall left (hall wing/HallEast E face), pitch fence, towers; C shed roof right.
+A004/A005 hall S facade E end close: HallEast tall beige block w/ pink strip at W corner; hall pink panel w/ low small window + high tall window; downpipe, CCTV; maroon sloped base cover on red tile upstand; thujas in lawn bed, kerbs; steel pipes on ground.
+A052/A053 workout strip from stair foot looking E: dip bars + pull-up bars (3 posts double height), concrete low wall (stair cheek/terrace) foreground, courts retaining block wall right with concrete top strip, lane left with yellow/white kerb, guard booth far, block wall/fence, towers.
+A054 courts S fence base: kerb red-painted 1.0 m stones along walkway, fence bottom rail, red rubber border.
+A055-A057 through S fence: basketball court (green, red border), volleyball beyond; buildings behind (C N facade at left).
+A058/A059 courts NW corner from walkway/stair top: wall bars outside behind fence on lower strip, pull-up bars, lane, block wall with red brick pillar, guard booth; basketball hoop pole inside.
+A060 bench niche off the lane: bench between 2 spruces in kerbed niche, boundary block wall + red brick pillar w/ cap; lane w/ painted kerb strips (yellow/white) and a white painted line.
+A061 same niche with person 1.77 m: bench ~1.6 m wide, block wall ~2 m w/ concrete coping, plinth.
+A062 stair from side (looking S?): 5 painted risers, concrete cheek, lawn with birch + rose; pitch fence (green, red plinth) far, pink hall/canteen? roofs.
+A063 stair top/cheek from above: sloped concrete cheek wall, lawn bank w/ birch, spruces, rose; path along lawn right; pitch (green fence) left.
+A064 stair frontal from the yard: 5 rows of painted kerbs (each 4 stones), concrete cheeks, courts block wall left w/ dip bars; C N facade behind; pitch fence right.
+A065 lane+workout strip looking E/NE: kerb line with zig-zag jog; wall bars, pull-ups, dip bars; courts block retaining wall right.
+A066/A067 person in front of wall bars: wall bars height ~1.9x person; block retaining wall ~0.9 m with concrete top; courts behind.
+A068 lane looking W from the workout strip: wall bars left, pull-up bars mid, stair cheeks beyond, kerb zig-zag, walnut trees right.
+A069 walkway along pitch looking N?: pitch fence green posts on pink-red concrete plinth ~0.6 m, nets; canteen/hall pink roofs + towers behind (so looking S/SW).
+A006 HallEast SE corner from SW (plaza): tall block E face = beige|pink band|beige, shed roof falling N; maroon sloped base cover wraps SE corner; low part N with brown flat canopy, glazed door + blue plate, black railing at ramp/stair head; pitch fence + towers beyond. Pink-shirt man (not scale man).
+A007 plaza looking N into the Hall-C passage: HallEast E face left, low part + canopy + door; black railings (stair/ramp) with people coming up; pitch fence/court beyond; spruce bed right with yellow/white kerb.
+A008/A009 garden N walk looking W: diamond-relief 0.40 slabs, benches (3 back slats, dark steel) on S side along scalloped edging, hedge arch; far W end: block wall + red brick wall, overhead pipe, cargo tricycle; right edge a red strip/plain paving toward hall.
+A010 from N-walk kerb looking NW over lawn bed (spruce, thuja) at hall S facade W part: pink/beige panels, 2 tall windows; red block-wall enclosure left w/ stacked radiators, festival-box frames; pipes on supports, 3-storey white block red roof far W; chimney top behind spruce.
+A011 N-walk W end looking W: diamond walk L, plain concrete apron R; RED BLOCK WALL ENCLOSURE ~8 courses (~1.6 m) in front of hall W end, radiators stacked, colourful festival boxes/pillar; overhead insulated pipes on posts, lower boiler-house roof, grey block wall + gate far W, cargo tricycle, LPG tank; tall dark chimney w/ guy wire behind hall; 3-storey white block red hip roof + steel stair.
+A012 N walk looking W (W end): hedge arch, benches (back to lawn), bin; red block enclosure right (radiators), grey block wall + red brick low wall far W, overhead insulated pipe bridge crossing walk end, white 3-storey block (W of hall), LPG tank, tricycle. Unfinished tower behind.
+A013/A014 bench (3 back slats) + scalloped edging + diamond 0.40 slabs (first slab row pink). Lawn with roses, small thuja, boulder; gazebo column top-left (A014).
+A015 bench frontal: back length ~14.3 edging pitches = 2.2 m; gazebo behind lawn (square light columns, dark shingle roof), hedge with red brick behind.
+A016 hall S facade middle (from lawn bed N of the walk, looking N): alternating pink/beige 6 m panels, 2 windows per panel low; maroon sloped base cover only on E part (starts mid-image), W part: concrete apron + manholes, festival boxes, radiator stacks; spruce + thuja in bed.
+A017 N walk looking W along hall S facade: concrete apron, red block enclosure near hall W part; hall W end continues lower w/ pipes; chimney rises behind hall W part; 3-storey white block red hip roof + steel stair to roof beyond W; grey block wall + gate + tricycle at walk end; benches left.
+A018 N walk E part looking E/NE: HallBed lawn bed = row of COLUMNAR THUJAS (~4-5 m, some double) + ONE blue spruce at E end (+1 behind); hall E part pink wall w/ window + low part maroon sloped cover; Block C (4 st., maroon strips, hip) behind right; plaza with people/car. Model has 7 x 8.3 m spruces in this bed -> mismatch.
+A019 scale man (1.77) under hedge arch at N walk edge, side path S toward gazebo; arch outer ~3.4 w x ~3.05 h, opening ~2.1 h (rough, display px).
+A020/A021 same arch, man reaching up: hand top (= clear top) 2.20 m, outer top 2.94 m, outer width 3.34 m (person plane), clear at shoulder ~0.72, path between edging rows ~1.04-1.21. Model GBS_Garden_Arch_Bnd_G1_N bbox 3.69 w x 3.84 h (builder: outer = height + thk = 2.2+1.34).
+A022 full res: heel y 2885, hair top 1175 -> 1710 px = 1.77 m (966 px/m, person plane). fingertip 790 -> clear 2.17; outer crown ~60 -> 2.92; outer width 408..3628 -> 3.33; legs 1.1-1.3; path between edging 1.07.
+A023 N walk W end looking W (same as A012): enclosure, chimney, white 3-st block, pipe bridge over the walk end, tricycle, grey block wall.
+A024 HallEast E face S part from E (plaza), man at right: beige field + pink field (right), CCTV top-left corner, maroon sloped cover (4 sheet panels) on a red block upstand, steel pipes lying; thujas left (HallBed).
+A025 man standing on granite landing at HallEast E face low part (pink) by glazed window/door; brick-tile plinth (red, ~0.1 courses) right; maroon cover end left; dark railings; ramp/granite step below.
+ORTHO: chimney shadow/line on hall roof: Google line (102.7,14.2)->(106.8,7.0) + spot (108.3,9.7); Esri vertex (106.5,9.5) lines to (102.5,15.5) and (99.5,8); Bing (100.5,11)->(104,8) + spot (105.3,8.7). Dark-walled rectangles at x84.5-98.5 y-4.5..1.6 and x113.5-118.5 y-5..0.5 (Google) = HallBed_BoxW / BoxE.
+A026 ground at HallEast E face low part (looking down): herringbone, granite slab landing (right, red granite), steel plate over a pit/trench at wall foot, maroon cover end + pipes left, railing; plinth tiles. Ground detail.
+A027 HallEast E face window (E1) frontal: plinth 6 courses (display 695..1003 = 51.3 px/course -> 513 px/m); frame 528x560 px -> 1.03 x 1.09 m (reveal 1.09 x 1.12); sill on plinth top 0.6 above paving; beige field, pink field left. Model E1 1.1 x 1.3 -> h too big.
+A024 HallEast S face from S (scale man 1.77 at right): beige field + pink band at E; maroon sloped sheet cover on a red-tile upstand along the base; steel pipes on the paving; thujas left. Matches applied lightwell.
+A025 scale man on the granite landing at the HallEast E side: pink field, red brick-tile plinth (~4 courses above landing), window in beige field right, dark steel railings, maroon cover + steel plate at left. Matches applied plinth.
+MEASURED (scripts: grid.py/prof.py in this dir):
+ - A022 arch: person heel y2885, hair top y1175 = 1710 px for 1.77 m (966 px/m); clear top (fingertip) y790 -> 2.17 m; outer crown y~60 -> 2.92 m; outer width x408..3628 -> 3.33 m; edging-to-edging path ~1.07 m.
+ - Model GBS_Garden_Arch_Bnd_G1_N: span 0.95 thk 1.34 h 2.2 -> outer 3.63 w x 3.54 h (builder outer top = h + thk).
+ - A011 enclosure: block courses ~48 px, blocks ~95 px (2:1, 390x190 block), wall y1610..2000 at x1100 = ~8 courses -> ~1.6 m.
+ - Orthos (chim_google/bing/esri.jpg): thin dark stack shadow on the hall N roof, base end ~(107.5,8.3) Google, ~(107.8,10.4) Esri; dark/white dot (cap) at ~(108,10.5); length ~7 m on the roof.
+ - A064 paint-run profile (prof.py) inconclusive; riser/tread count by eye only (5 painted rows, 4 stones each).
+NOT REVIEWED (images dropped from context before notes were taken): A026-A051.

@@ -1,0 +1,318 @@
+{
+ "key": "heights",
+ "summary": "I found no hidden global downscale. On the buildings I could measure, the model height divided by the measured height comes out at 0.96 to 1.04, which is within the errors. The skew is per building, not global.\n- Fix with high confidence. HallWing is too low by 1.24 m (eave above the north ground: model 3.02, measured 4.26 ± 0.38). Canteen is too high by 1.75 m (model 5.02, measured 3.27 ± 0.23). Both come from shadows in Bing, Google and Esri, calibrated on C. The current specs look roughly swapped between these two: Canteen eave 4.3, HallWing 2.4.\n- Fix with low-medium confidence:\n  - B wall top is +0.36 ± 0.21 m above the model (photo camera solve). The window rows match.\n  - A_S south face does have 4 window rows. But the spec squeezes them under a 9.45 eave: with the A271 photo scale, the F3 sill is +1.0 and the top-row head +0.95 above the spec, and a scale-free row-spacing ratio is 0.78 against the spec's 0.56. So the A_S eave needs to be about +1.0 m.\n- OK:\n  - C (self-consistent).\n  - Hall: model higher than measured by 0.25 ± 0.46 m.\n  - A_E: model lower by 0.04 ± 0.21 m.\n  - A_N: wall top at 14.75 ± 0.5 m against 14.77 in the model, from a photo with C in the same frame.\n- Unsure, with no reliable method: D_M and D_W (shadows fall on dark ground in all 3 orthos), HallEast, Pavilion (+0.32 ± 0.29 from one source), A_W, GateBooth (−0.25 to −0.3), and the context towers (shadows cut off by the next block).\n- The specs changed while I was auditing (Hall, HallEast, HallWing, Canteen). All model numbers use the specs as of 2026-10-02.",
+ "global_checks": [
+  {
+   "check": "Global vertical downscale/skew across buildings",
+   "result": "Model/measured on independently measured buildings: Hall 1.04, A_E 0.99, B 0.96, A_N(photo) 1.00; C kappa Bing e7 0.611 vs e5 0.600 (1.8%). No common factor; deviations are building-specific (HallWing 0.71, Canteen 1.54).",
+   "ok": true
+  },
+  {
+   "check": "Shadow kappa calibration on C (per ortho, north faces, s=T-E on the roof-edge-to-tip, lean included)",
+   "result": "Bing 0.605+-0.010 (C e7 9.71 m / H 15.89; e5 9.61 / 16.03); Google z20 0.434+-0.036 (C e7 6.92/15.97; e5 8.13 judged contaminated, used as bound); Esri 1.086+-0.055 (C west part 17.74/16.33, tip west of canteen)",
+   "ok": true
+  },
+  {
+   "check": "Cross-source consistency of shadow heights (Esri/Bing ratio)",
+   "result": "Hall 1.19, HallWing 1.19, Canteen 1.13, A_E 1.03 -> +-7% source scatter, carried into the per-building errors",
+   "ok": true
+  },
+  {
+   "check": "Plan-scale sanity of photo PnP (camera height comes out physical)",
+   "result": "B Kodak photo: camera 1.68-1.74 m above the SE grade (eye height), focal fit 34.3 mm vs EXIF 35; A212: camera z 7.4-8.8 abs (alley ~6.5-7 + eye), rms 3.6-4.1 px on 52 C window-surround corners",
+   "ok": true
+  },
+  {
+   "check": "Bing near-nadir / uniform capture",
+   "result": "On campus the shadows point due N (HallWing E-end shadow flush with the roof edge +-0.2 m). Over the NE towers Bing is a different strongly leaning capture, so kappa is NOT valid there",
+   "ok": false
+  },
+  {
+   "check": "Shadow tips on clear ground",
+   "result": "Rejected after visual check: A_N/B north (hedge/trees in Bing), Pavilion (Bing/Google hedge), all D north faces (dark strip in Bing/Esri, suspect band in Google), towers (tip on the next block's facade), A_S north (covered)",
+   "ok": false
+  },
+  {
+   "check": "Specs stable during audit",
+   "result": "Hall (eave 5.5->5.9, FFL 5.8->5.4), HallEast (3.3->3.7), HallWing (2.5->2.4), Canteen (3.05->4.3, pitch 18) changed today while the audit ran; all model numbers here use the specs as of 2026-10-02 ~14:00 (built .blend is older)",
+   "ok": false
+  }
+ ],
+ "items": [
+  {
+   "name": "BLD_C (etalon) self-consistency",
+   "kind": "eave + storey lines",
+   "model": "eave tip 20.04 abs (FFL 6.40 + 13.90 - 0.55*tan25); H above N ground 15.89 (e7) / 16.03 (e5); 4 x 3.30 storeys",
+   "measured": "Bing kappa e7 0.611 vs e5 0.600 (+-0.01); A212 PnP using C window corners F2-F4 (W face 4 columns + S face) rms 3.6-4.1 px; 166 legacy picks show column-x residuals (+20/-30/+15 px) only",
+   "delta": "0 (reference); internal inconsistency <= 1.8%",
+   "verdict": "ok",
+   "fix": "",
+   "method": "(b) shadow length on two north faces of different ground height; (a) PnP of 52 window-surround corners against spec rows F2-F4",
+   "confidence": "high",
+   "sources": [
+    "ortho_bing_z19",
+    "PXL_20260930_113303744 (A212)"
+   ]
+  },
+  {
+   "name": "BLD_Hall eave (north face)",
+   "kind": "eave height above ground",
+   "model": "eave tip 11.17 abs; H above N ground 6.72 m (ratio to C 0.423)",
+   "measured": "6.47 +- 0.46 m (Bing 5.93+-0.42, Google 6.52+-1.07, Esri 7.06+-0.45); ratio to C 0.407",
+   "delta": "+0.25 m (+3.9%)",
+   "verdict": "ok",
+   "fix": "",
+   "method": "(b) shadow T-E on 42 m of the north face, 3 orthos, kappa from C",
+   "confidence": "medium",
+   "sources": [
+    "ortho_bing_z19",
+    "ortho_google_z20",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_HallWing eave",
+   "kind": "eave height above ground",
+   "model": "eave_z 2.4, FFL 4.95 -> eave tip 7.19 abs; H above N ground 3.02 m (ratio to C 0.19)",
+   "measured": "4.26 +- 0.38 m (Bing 4.15+-0.26, Google 4.08+-0.39, Esri 4.92+-0.48); ratio to C 0.27",
+   "delta": "-1.24 m (-29%)",
+   "verdict": "fix",
+   "fix": "Art/Blender/Specs/BLD_HallWing.json: eave_z 2.4 -> 3.7, storey_m 2.4 -> 3.7 (eave tip -> 8.49 abs = N ground 4.23 + 4.26)",
+   "method": "(b) shadow T-E along 15 m of the north face (clean pavement, verified on crops), 3 orthos",
+   "confidence": "high",
+   "sources": [
+    "ortho_bing_z19",
+    "ortho_google_z20",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_Canteen eave",
+   "kind": "eave height above ground",
+   "model": "eave_z 4.3 (today's spec), FFL 4.35 -> eave tip 8.52 abs; H above N ground 5.02 m (above S ground 4.56)",
+   "measured": "3.27 +- 0.23 m above the N paving (Bing 3.17+-0.17, Google 3.02+-0.31, Esri 3.57+-0.23)",
+   "delta": "+1.75 m (+54%) on the N face",
+   "verdict": "fix",
+   "fix": "Art/Blender/Specs/BLD_Canteen.json: eave_z 4.3 -> 2.8, storey_m 4.3 -> 2.8, cornice z0 4.1 -> 2.6, z1 4.3 -> 2.8 (gives H 3.48 N / 3.06 S). Note: the model terrain falls 0.42 m S->N under the canteen; the 'eave 4.75 above paving' evidence in roof.evidence contradicts all 3 orthos",
+   "method": "(b) shadow T-E along 20 m of the north face (clean yard paving, verified on crops), 3 orthos, kappa from C",
+   "confidence": "high",
+   "sources": [
+    "ortho_bing_z19",
+    "ortho_google_z20",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_A_E eave",
+   "kind": "eave height above ground",
+   "model": "eave tip 9.21 abs; H above N ground 3.46 m",
+   "measured": "3.49 +- 0.21 m (Bing 3.44, Google 3.76, Esri 3.53)",
+   "delta": "-0.03 m (-1%)",
+   "verdict": "ok",
+   "fix": "",
+   "method": "(b) shadow on the 6 m north face, 3 orthos",
+   "confidence": "medium",
+   "sources": [
+    "ortho_bing_z19",
+    "ortho_google_z20",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_Pavilion eave",
+   "kind": "eave height above ground",
+   "model": "eave tip 8.13 abs; H above N ground 4.65 m",
+   "measured": "4.97 +- 0.29 m (Esri only; Bing/Google tips on hedge)",
+   "delta": "-0.32 m (-6%)",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(b) Esri shadow, kappa from C",
+   "confidence": "low",
+   "sources": [
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_A_N eave / wall top",
+   "kind": "eave height",
+   "model": "wall top 14.77 abs (FFL 5.47 + 9.30); H above N ground 9.32",
+   "measured": "Photo A212 (camera solved from C windows, f 24-29 mm): NW-corner wall top 14.71-14.80 abs (+-0.5; ray misses the spec corner line by 2.6-3.0 m). Shadows (tips partly in hedge/trees): Google 10.67+-1.45, Esri 10.11+-0.9 above ground",
+   "delta": "photo 0.0 +-0.5 m; shadows -0.95 +-0.76 m",
+   "verdict": "ok",
+   "fix": "",
+   "method": "(a) PnP on C + ray to the A_N NW corner vertical; (b) shadows (contaminated)",
+   "confidence": "medium-low",
+   "sources": [
+    "PXL_20260930_113303744 (A212)",
+    "ortho_google_z20",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_A_S south/east rows + eave (today's 9.45 / 4-row edit)",
+   "kind": "eave, row sills, storey",
+   "model": "eave_z 9.45 (fascia 9.30-9.45), south sills 0.9/3.75/6.1/8.4, heads ~2.2/5.05/7.4/9.25 rel FFL; above the walk (+0.47): F2 sill 4.22, F3 sill 6.57, F4 sill 8.87, F4 head 9.72",
+   "measured": "A271 near-frontal 24 mm, 304 px/m (door leaf 0.8 m; column pitch 2.64 m gives 307): above the walk: storefront head 2.60, F2 sill 4.25, F3 sill 7.57, F4 sill 9.94, F4 head 10.67 (+-0.6; a storefront-width scale of 339 px/m would give -10%). Scale-free (F3-F2 sill)/(F2 sill-walk) = 0.78 vs spec 0.56. Rows: 4 on S/E (strip windows under the eave) and 3 on W confirmed (G056, G067, A271, A278). South F3 sill 7.1 rel FFL matches west F3 7.04",
+   "delta": "F3 sill -1.0 m, F4 sill -1.07 m, F4 head/eave -0.95 m (~-10%)",
+   "verdict": "fix",
+   "fix": "Art/Blender/Specs/BLD_A_S.json: eave_z 9.45 -> 10.45; cornice z0 9.30 -> 10.30, z1 9.45 -> 10.45; facades edge 0 and edge 1 sills [0.9,3.75,6.1,8.4] -> [0.9,3.75,7.1,9.45] (WST stays h 0.75); west face rows unchanged",
+   "method": "(a)/(c) single-view metrology on A271 (row pixel heights, px/m from two independent horizontal references, 2% per-row tilt correction from window widths) + row counts on 4 photos; ortho N-S profiles across the A_S/A_N junction show no step band (roofs meet in valleys)",
+   "confidence": "low-medium",
+   "sources": [
+    "PXL_20260930_114736922 (A271)",
+    "2gis_30258560148469244 (G056)",
+    "2gis_30258560192975423 (G067)",
+    "PXL_20260930_114816722 (A278)"
+   ]
+  },
+  {
+   "name": "BLD_A_W gallery roof at the A_N wall",
+   "kind": "roof high edge",
+   "model": "high edge ~4.0 above FFL 5.65 = ~9.65 abs",
+   "measured": "A_W roof/A_N wall junction 10.05-10.31 abs (A212 PnP, +-0.4; flashing sits above the roof skin)",
+   "delta": "-0.4..-0.65 m",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(a) ray to the A_N NW-corner vertical",
+   "confidence": "low",
+   "sources": [
+    "PXL_20260930_113303744 (A212)"
+   ]
+  },
+  {
+   "name": "BLD_B wall top / rows",
+   "kind": "eave + rows",
+   "model": "above the SE grade (FFL-0.15): wall top 8.15, G sill 0.95, G head 2.50, U sill 4.80, U head 6.25, sill-to-sill 3.85",
+   "measured": "wall top 8.51 +-0.21; G sill 0.84+-0.11, G head 2.47+-0.13, U sill 4.88+-0.16, U head 6.43+-0.20; sill-to-sill 4.04+-0.2 (fixed f 35 mm: 8.55+-0.23)",
+   "delta": "wall top -0.36 m (-4%); rows within error",
+   "verdict": "fix",
+   "fix": "Art/Blender/Specs/BLD_B.json: eave_z 8.0 -> 8.35; cornice z0 7.8 -> 8.15, z1 8.0 -> 8.35 (pilasters z1 8.0 -> 8.35)",
+   "method": "(a) joint PnP + unknown z (world-frame facade_fit) on 39 picks over the S+E planes; scale from pilaster spacing 11.82/23.64 m and the corner pilaster 1.0 m; focal free 34.3 mm, rms 9.4 px",
+   "confidence": "low-medium (photo ~2009, compact-camera distortion)",
+   "sources": [
+    "commons_building_b_iaau.jpg (G100)"
+   ]
+  },
+  {
+   "name": "BLD_HallEast tall block",
+   "kind": "shed high/low edge",
+   "model": "high edge 3.7+11.26*tan18 = 7.36 above FFL 5.4; low edge 3.7",
+   "measured": "not measured: PnP on 081838636 degenerate (single known plan length, rms 1.4 px but zS 2.1 m, physically wrong); shadow covered by HallWing",
+   "delta": "n/a",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "attempted (a)",
+   "confidence": "none",
+   "sources": [
+    "PXL_20260924_081838636"
+   ]
+  },
+  {
+   "name": "BLD_D_M eave",
+   "kind": "eave height",
+   "model": "eave tip 20.27 abs; H above N ground ~15.8",
+   "measured": "only Google north shadow is plausible: s 7.51 +-0.20 -> 17.3 +-1.5 m (kappa 0.434) / 16.0 (kappa 0.47); Bing/Esri tips land on a dark strip",
+   "delta": "-1.5..-0.2 m if valid",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(b)",
+   "confidence": "low",
+   "sources": [
+    "ortho_google_z20"
+   ]
+  },
+  {
+   "name": "BLD_D_W eave/canopy",
+   "kind": "eave height",
+   "model": "eave 14.9 above FFL 7.64; H above N ground ~16.6 (canopy eave ~18.3 per B_D_C report)",
+   "measured": "Google shadow 12.0 m (-> ~27 m), 1.6x D_M; implausible for 4 storeys + frieze, likely dark ground or annex; Bing/Esri dark everywhere north of D",
+   "delta": "n/a",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(b) rejected",
+   "confidence": "none",
+   "sources": [
+    "ortho_google_z20",
+    "ortho_bing_z19",
+    "ortho_esri_z19"
+   ]
+  },
+  {
+   "name": "BLD_GateBooth wall height",
+   "kind": "wall top",
+   "model": "eave_z 3.3 above FFL 7.13 -> 3.35 above the S/E/W ground, 4.06 above the N ground (terrain falls 0.7 under the booth)",
+   "measured": "19.4 +-0.6 tile courses x 0.16 = 3.10 +-0.15 m paving->soffit at the photographed corner (course pitch 113-116 px; the person's 760 px/m agrees)",
+   "delta": "+0.25 m (S side)",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(c) course counting on A257",
+   "confidence": "low-medium",
+   "sources": [
+    "PXL_20260930_114631011 (A257)"
+   ]
+  },
+  {
+   "name": "Context tower NE (GB_CTX_742042612, OSM way/742042612, 9 levels)",
+   "kind": "top height",
+   "model": "28.2 m above ground (flat top 29.76 abs)",
+   "measured": "Esri N shadow 22.5 m truncated at the facade of way/635535018 (y~130); Bing here is a different leaning capture",
+   "delta": "n/a",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(b) rejected",
+   "confidence": "none",
+   "sources": [
+    "ortho_esri_z19",
+    "ortho_bing_z19"
+   ]
+  },
+  {
+   "name": "Context towers N (way/635535018, 635535021-024)",
+   "kind": "top height / roof form",
+   "model": "28.3-29.1 m flat boxes",
+   "measured": "photos 081838636/166/164 show 9-storey towers with red hip roofs (not modelled); no metric height",
+   "delta": "n/a",
+   "verdict": "unsure",
+   "fix": "",
+   "method": "(c) visual storey count only",
+   "confidence": "low",
+   "sources": [
+    "PXL_20260924_081838636",
+    "166_PXL_20260930_110614336"
+   ]
+  }
+ ],
+ "artifacts": [
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/heights_summary.png",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/summary_shadows.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/pr_bing.png",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/pr_g.png",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/pr_e.png",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/pr_d.png",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/m1.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/m2.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/m4.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/ov_esri_A_s.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/m9.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/estrip.png",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/fB.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/fB.out.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/p212.json",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/a271.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/am1.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/btm.jpg",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/avgprof.py",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/ffit.py",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/summary.py",
+  "/tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/audit_heights/wallhit.py"
+ ],
+ "open_questions": [
+  "A_S: tape/laser the top-row (strip window) sill height on the south face above the storefront threshold. 9.45 confirms the spec; ~9.9-10.0 confirms the +1 m fix. Also check whether A_N's eave matches it.",
+  "Canteen: measure the north eave (gutter) height above the paving. The spec's 'eave 4.75 above paving' (070410255 t=46 s) contradicts three orthos (3.0-3.6 m). It may show the HallWing, which the orthos put at ~4.3 m.",
+  "HallEast: laser the SE corner top (high edge of the shed roof) above the plaza paving; no reliable photo or shadow measurement exists.",
+  "B: one laser reading from the paving to the soffit at the SE corner. The ~2009 photo gives 8.51 +- 0.21 above the SE grade; the 2020 pano gave 8.15.",
+  "D_W / D_M: one eave height (and the D_W canopy eave), because every ortho shadow north of D lands on dark ground.",
+  "GateBooth: tape from the paving to the canopy soffit at all four corners. The model terrain falls 0.7 m under the booth; the photographed corner is 3.10 m.",
+  "Pavilion: tape the north eave above the walkway (Esri alone gives 4.97 +- 0.29 m against 4.65)."
+ ]
+}

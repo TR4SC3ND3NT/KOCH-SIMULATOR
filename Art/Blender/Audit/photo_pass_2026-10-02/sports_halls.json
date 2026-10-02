@@ -1,0 +1,378 @@
+[
+ {
+  "zone": "sports_halls (SITE_Sports, BLD_Hall/HallEast/HallWing/Canteen/Pavilion, SITE_HallCPassage, SITE_DForecourt, SITE_Trees_EastBelt/WestStrip)",
+  "findings": [
+   {
+    "title": "Hall NE wing is ONE storey (wall top ~3.0 m above paving), not 2 storeys",
+    "element": "BLD_HallWing (whole mass)",
+    "spec_file": "Art/Blender/Specs/BLD_HallWing.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_HallWing.json (hand-written spec)",
+    "current": "storeys 2, storey_m 3.3, eave_z 6.3 above FFL 4.95 (wall top z 11.25 = ~7 m above the N paving at z 4.3), rows {G 1.0, U 4.3}",
+    "proposed": "{\"storeys\": 1, \"storey_m\": 3.0, \"eave_z\": 2.5, \"rows\": {\"G\": 1.0}}: wall top z ~7.45, ~3.15 m above the N paving. Keep the hip roof (pitch 22, overhang 0.5). The E-face windows go to the G row only. Remove the U row, or the windows float above the eave.",
+    "evidence": "A074, A075, A076, A077: the wing's NW corner seen from the N yard. It has one row of windows, an eave just above them, a bin and a bench at the corner, and the taller hall N wall set back behind it to the right. C's 4 storeys show above its roof on the left. Metrology in A075 at column x=2950: the maroon brick-tile plinth is 6 courses = 382 px (0.60-0.66 m at the 0.10 m course measured in A025/A067). Ground is at y 2088, the soffit at y 125. A pinhole solve (camera height 1.35-1.6 m, two plinth points) gives a wall top of 2.8-3.2 m above the paving; constant scale gives 3.27 m. Error bar ±0.3 m. Sat screenshot sat_labeled_east_campus: separate small red hip roof, consistent with a low block.",
+    "confidence": "high",
+    "priority": 1,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Canteen walls ~1.2 m too tall: the eave is ~3.4 m above the S paving, not 4.65 m. The 0.15 m tile course behind the old reading is really 0.10 m",
+    "element": "BLD_Canteen (eave, plinth, cornice, roof pitch, cladding band)",
+    "spec_file": "Art/Blender/Specs/BLD_Canteen.json (+ Art/Blender/Specs/Overlays/BLD_Canteen.json)",
+    "where_to_edit": "Art/Blender/Specs/BLD_Canteen.json; the CW window height is in Overlays/BLD_Canteen.json",
+    "current": "FFL 4.35 (ground 4.0 + plinth_m 0.35), eave_z 4.3 (wall top z 8.65 = 4.65 above the S paving), plinth z_top 0.53, cornice 4.1-4.3, roof pitch 18. Cladding band 2.95-3.4. Overlay CW glazing h 2.45 at sill 0.55. All heights were scaled from '6 courses of ~0.15 m = 0.88 m'.",
+    "proposed": "{\"storey_m\": 3.05, \"eave_z\": 3.05, \"plinth\": {\"z_top\": 0.45}, \"cornice\": {\"z0\": 2.85, \"z1\": 3.05}, \"roof\": {\"pitch\": 12}}. Cladding band (if it is kept) z0 2.0 / z1 2.3. Overlay CW: h 2.1 (top 2.65 < eave). Interior ceiling down to ~FFL+2.75.",
+    "evidence": "A071 (S wall seen from the SW), vertical profile at x=1250: the plinth is 8 courses of ~36 px (y 1903→2195), the soffit is at y 960, so the wall is 34 courses. Course size 0.10 m: A025 shows the same person (taken as 1.75 m) right at the HallEast plinth, 77 px per course against a 1345 px person, so 0.098-0.108 m. The A027 tile aspect is 2.44:1 (~0.25×0.10). The same person scale reproduces the owner's 3.4 m wall-bar height in A067. Wall top = 3.4 ±0.25 m above the paving. Pitch: the spec's own pixel ratios rescaled by 0.10/0.15 give apex ~4.3 m and eave ~3.2 m over the 4.95 m half-span, so ~12° (±4).",
+    "confidence": "medium",
+    "priority": 1,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Lower-yard stair (walkway N end → workout yard) is ~4.0 m wide with ~1.0 m treads; the yard is ~0.15 m lower",
+    "element": "SITE_Sports LowerYard_Stair, LowerYard pad, LowerYard_Retain_Courts, Z_LOW",
+    "spec_file": "Art/Blender/Specs/SITE_Sports.json",
+    "where_to_edit": "Scripts/Geo/zones/zone_sports.py (ST_U0/ST_U1, ST_RH, ST_TR, Z_LOW), then regenerate SITE_Sports.json",
+    "current": "ST_U0..ST_U1 = 44.45..50.90 (6.45 m, full walkway), 5 risers × 0.12, tread 0.50 (run 2.5 m), Z_LOW = Z_PLAZA-0.60 = 2.85 (courts 3.50 → 0.65 m wall)",
+    "proposed": "ST_U0, ST_U1 = 44.45, 48.45 (4.0 m between the cheeks). The E cheek 48.45-48.85 follows from ST_U1. The concrete strip/Retain_Courts then starts at ST_U1 automatically. ST_N 5, ST_RH 0.15, ST_TR 1.0. Z_LOW = Z_PLAZA - 0.75 = 2.70, so the retaining wall under the courts' N fence is 0.80 m. Check the dip bars (pu = ST_U1+1.4) still sit beside, not on, the longer run (stair foot then at v ≈ 30.4).",
+    "evidence": "A064, frontal from the yard. 5 curb rows; every row is exactly 4 painted curb stones (bottom row 490/520/560/580 px segments; face/length 7.4:1, i.e., 1.0 m stones), so the width is 4.0 ±0.3 m. Depth per row from px/m (537, 447, 400, 340, 300) gives Z 5.07/6.09/6.8/8.0/9.07 m, so treads are 1.0 ±0.2 m. Riser from curb face 70 px vs 520 px/m = 0.13-0.15. A062/A065: same stair from the side, low concrete cheeks, lawn on its W side. A067 (frontal): the block retaining wall at the wall bars is 585 px against the person's 1304 px, about 0.3 m in front, so 0.89 ±0.1 m to the court level.",
+    "confidence": "medium",
+    "priority": 1,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Hall wing sticks out ~8.3 m north of the hall's N wall, not 10.0 m",
+    "element": "BLD_HallWing ring",
+    "spec_file": "Art/Blender/Specs/BLD_HallWing.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_HallWing.json ring",
+    "current": "ring [[45.8,11.26],[64.6,11.26],[64.6,21.3],[45.8,21.3]] (N wall 10.04 m beyond the hall N wall)",
+    "proposed": "ring [[45.8,11.26],[64.6,11.26],[64.6,19.6],[45.8,19.6]]",
+    "evidence": "sat_labeled_east_campus.png (Google, 0.23 m/px per the SITE_Sports georef): the wing's N roof edge is 33 px = 7.6 m beyond the hall's N roof edge. Lean correction: the hall eave sits ~3.5 m higher than the wing eave; at ~0.2 m/m that adds ~0.7 m, so 8.3 ±0.8 m. The A077 set-back of the hall wall behind the wing corner agrees roughly. Re-check on the Google z20 ortho before moving.",
+    "confidence": "low",
+    "priority": 2,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Canteen W entrance is an open porch under the extended main roof on one maroon round post, with a timber soffit",
+    "element": "BLD_Canteen W gable (overlay entrance + stairs)",
+    "spec_file": "Art/Blender/Specs/Overlays/BLD_Canteen.json",
+    "where_to_edit": "Art/Blender/Specs/Overlays/BLD_Canteen.json (attachments), BLD_Canteen.json slots",
+    "current": "Overlay: NW glazed vestibule, entrance u 1.0-2.4 on edge 3, 4-riser stair + 3.0 m landing; no canopy or post",
+    "proposed": "Add {\"type\": \"post_canopy\", \"edge\": 3, \"u0\": 5.6, \"u1\": 9.1, \"depth\": 3.0, \"z0\": 2.9, \"z1\": 3.1, \"fascia_h\": 0.25, \"posts_u\": [8.95], \"post_w\": 0.15, \"post_in\": 0.15, \"slot\": \"M_Paint_White\", \"soffit_slot\": \"M_Wood_Stained\", \"post_slot\": \"M_Paint_Maroon\"}. The post goes at the S-W corner of the porch (u along edge 3 measured from its start; flip if edge 3 runs N→S). Inner gable wall under the porch: pink render with a red fire board. The glazed black-framed door is in that wall. The eave line is continuous with the main roof. Approximation: a pitched continuation needs builder support.",
+    "evidence": "A071 (S wall from the SW): roof and gutter run on past the W corner over the porch, and one maroon round post stands at the outer corner. A072 (from the porch, looking W toward the hall/passage stair): timber-lined soffit, post, pink inner wall with a fire board, bench, people for scale. Depth ~3 m, ±1 m (no metric anchor).",
+    "confidence": "low",
+    "priority": 2,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Hall S facade: alternating pink/beige render panels per 6 m bay with 2 windows each, no maroon piers",
+    "element": "BLD_Hall edge 0 (south) pilasters, windows, finish",
+    "spec_file": "Art/Blender/Specs/BLD_Hall.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_Hall.json (pilasters, window_types.H, facades[edge 0], rows)",
+    "current": "11 maroon pilasters 0.31 m every 6 m, 1 window H (1.65×1.25) per bay at u 6k+2.1, rows G 1.15; uniform beige",
+    "proposed": "\"pilasters\": []. window_types.H w 1.45, h 1.55. facades[0].windows u = [1.9, 4.2, 7.9, 10.2, … 6k+1.9, 6k+4.2 for k 0..9]. rows {\"G\": 0.4} (sill ~0.85 above the garden walk). Alternating colour fields, one per 6 m bay: 'cladding' entries on edge 0, odd bays slot M_Render_Pink. That slot is new and must be added to the materials.",
+    "evidence": "A016, A017 (from the garden north edge), A002-A006: tall wall in alternating pink/beige vertical panels, two windows per panel low on the wall, no piers. The window bottoms sit ~0.2 m above the maroon base cover. Per-bay positions are by eye from perspective views (±0.5 m), sizes ±0.2 m.",
+    "confidence": "low",
+    "priority": 2,
+    "needs_builder_change": true
+   },
+   {
+    "title": "Tall boiler chimney (~25 m stack) west of the hall is missing; it is a skyline landmark",
+    "element": "new (SITE_Sports or west-campus site spec)",
+    "spec_file": "Art/Blender/Specs/SITE_Sports.json",
+    "where_to_edit": "Scripts/Geo/zones/zone_sports.py (add a box element), or the west-campus site spec if the owner places it there",
+    "current": "not modelled (INV.KN.8 open)",
+    "proposed": "{\"type\": \"box\", \"name\": \"BoilerChimney\", \"center\": [~78, ~10], \"size\": [0.8, 0.8, 25.0], \"material\": \"metal\", \"slot\": \"M_Steel_Paint_Dark\", \"confidence\": \"low\"}. Fix the position on the Google z20 ortho (long thin shadow). Ladder/bracket rings as UE dressing.",
+    "evidence": "A017 (beyond the hall's W end, next to the 3-storey white block with the steel external stair), A079/A081 (from the hall's N yard, looking W), G044, web_beyond_pitch_winter2014. Height ~25 m by eye against the 3-storey block (±7 m). Position ±10 m (no triangulation).",
+    "confidence": "low",
+    "priority": 2,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Maroon sloped base covers along the hall's S wall (E part) and around the HallEast SE corner",
+    "element": "BLD_Hall edge 0, BLD_HallEast edges 0/1",
+    "spec_file": "Art/Blender/Specs/BLD_Hall.json, Art/Blender/Specs/BLD_HallEast.json",
+    "where_to_edit": "the attachments lists of both specs",
+    "current": "none (only HallBed brick boxes at x 88.6-98 / 113-118.8 and the lawn bed from x 134)",
+    "proposed": "BLD_Hall: {\"type\": \"lightwell\", \"edge\": 0, \"u0\": 31.0, \"u1\": 60.2, \"depth\": 1.1, \"z_wall\": 0.20, \"z_edge\": -0.15}. BLD_HallEast: same on edge 0 u 60.2-64.6 and on edge 1 u 0-6.5. z is relative to FFL 5.8: top 0.65, outer edge 0.30 above the 5.35 walk on a low brick upstand.",
+    "evidence": "A006 (wraps the SE corner of the tall HallEast block, lawn in front of it), A016/A017 (along the hall base behind the spruce/thujas), A090 (close-up: maroon sheet, ~1 m deep, on a brick kerb). Heights are scaled against the tile courses/plinth by eye, ±0.1 m; the W limit u 31 is ±3 m.",
+    "confidence": "low",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Hall N facade: windows sit ~1.3 m above the N paving (not 2.0 above FFL); maroon door bay toward the W",
+    "element": "BLD_Hall edge 2 (north) windows/entrances",
+    "spec_file": "Art/Blender/Specs/Overlays/BLD_Hall.json",
+    "where_to_edit": "Art/Blender/Specs/Overlays/BLD_Hall.json facades[edge 2]",
+    "current": "H windows (1.65×1.25) at u 27.1-57.1, sills 2.0 (rel FFL 5.8); no doors",
+    "proposed": "new type HN {w 1.9, h 1.5, mullions [0.33, 0.67]}. Sills 0.4 rel FFL (≈1.3 above the N paving at z ~4.6-4.9). Add a maroon-painted bay (cladding, slot M_Paint_Maroon, ~4 m wide) with a dark 2-leaf steel door (entrance ~1.8×2.4) at u ≈ 25 ±6. Positions need a placed frame.",
+    "evidence": "A082 (looking W along the N wall): the 8-course plinth (0.8 m) tops out at y 1948; the big triple window bottom is ~0.5 m above it; the person is 1110 px tall for 1.75 m. A079/A081/A084/A085: maroon bay with a dark door, louvred vent, barred window.",
+    "confidence": "low",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Canteen S wall is rough-cast beige render with 2 windows and a downpipe (spec says horizontal siding, no windows)",
+    "element": "BLD_Canteen edge 0 (south)",
+    "spec_file": "Art/Blender/Specs/BLD_Canteen.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_Canteen.json facades[edge 0], window_types, note",
+    "current": "edge 0 windows [] ('not photographed'); note: beige horizontal siding",
+    "proposed": "window_types {\"S1\": {w 1.2, h 1.4, mullions [0.5]}, \"S2\": {w 0.6, h 0.9}}. facades[0].windows [{type S1, u [4.0], sills [0.9]}, {type S2, u [15.0], sills [1.3]}] (u ±1.5 / ±3). Downpipe at u ≈ 2.5. Wall slot M_Render_Beige (rough cast). No siding on S.",
+    "evidence": "A071, A072 (2026-09-30). Window size against the 0.10 m plinth courses at x 1340-1580 (±0.2 m). Positions by eye along a receding wall.",
+    "confidence": "medium",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Wall-bar rungs at ~0.30 m pitch (11 rungs), not 0.25 (13)",
+    "element": "SITE_Sports Workout_WallBars0/1_Rung_*",
+    "spec_file": "Art/Blender/Specs/SITE_Sports.json",
+    "where_to_edit": "Scripts/Geo/zones/zone_sports.py (wall-bar loop: range(13), 0.25*k)",
+    "current": "13 rungs, z = Z_WO + 0.3 + 0.25k; 3 bays × 1.0 m, 3.4 m tall",
+    "proposed": "range(11), z = Z_WO + 0.3 + 0.30*k (top rung 3.3, top rail 3.4). Bays 1.0 / height 3.4 are confirmed.",
+    "evidence": "A066/A067 (frontal, person in front): post 2341 px tall for the owner's 3.4 m; rung pitch ~200 px, so 0.29 m. Bays 655-735 px, so ~1.0 m. ±0.02 m.",
+    "confidence": "medium",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Trees along the hall's N side are columnar thujas ~4.5 m (some paired) in square kerbed pits",
+    "element": "SITE_Sports HallRowTree_0..7",
+    "spec_file": "Art/Blender/Specs/SITE_Sports.json",
+    "where_to_edit": "Scripts/Geo/zones/zone_sports.py (HallRowTree loop)",
+    "current": "height 3.5, crown_d 1.6, crown_base 0.6, default shape",
+    "proposed": "height 4.5, crown_d 1.3, crown_base 0.3, shape 'cone', trunk_d 0.12. Add a 1.2×1.2 m concrete pit kerb (planter, curb_h 0.1) per tree.",
+    "evidence": "A074, A077 (pair in one pit), A079, A081 (row along the N wall). Height against the 3.0 m wing wall and the hall windows, ±1 m.",
+    "confidence": "low",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "Walkway between the pitch and the courts falls ~0.25 m toward its N end (pitch plinth 0.35 at the S gate → ~0.6 m at the N end)",
+    "element": "SITE_Sports SportsPlatform pad / NorthTerrace",
+    "spec_file": "Art/Blender/Specs/SITE_Sports.json",
+    "where_to_edit": "Scripts/Geo/zones/zone_sports.py (terrain pads)",
+    "current": "walkway flat at 3.45; pitch plinth 0.35 everywhere",
+    "proposed": "Ramp the walkway pad from 3.45 at v 0 to ~3.20 at v 25.4 (stair top). The stair then lands the yard at ~2.45-2.50; re-check this against the 0.8 m courts wall before applying.",
+    "evidence": "A042 (looking S along the walkway from the stair top): the red pitch plinth on the right is visibly taller at the near (N) end. A054/A056: courts curb ~0.12 m at their S side. Estimate by eye ±0.15 m.",
+    "confidence": "low",
+    "priority": 3,
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "HallEast entrance at the ramp head (A006, A089): blue rectangular name plate ~0.35 × 0.5 m on the wall left of the glazed door, centre ~1.8 m above the landing → KOCH plate slot on BLD_HallEast edge 1 (u ≈ 9.0)",
+   "Hall NW part (A084, A085): vertical blue/white banner with a triangle-logo motif on a pipe/pole at the wall, ~0.35 m wide × ~2.5 m, top near the eave (~4 m) → KOCH banner slot",
+   "Canteen interior (tour360 kanteen.jpg, 2022): branded drink fridges (Bonaqua, Coca-Cola) and a counter sign → generic/KOCH branding if the interior is dressed",
+   "Hall S side (A016, A017): colourful painted festival boxes and a pillar with a campus-event livery; temporary, but if kept they need KOCH livery"
+  ],
+  "handoff": [
+   "A008-A015, A019-A022: garden (wrought-iron/slat benches on the scalloped edging, diamond tiles, hedge arch with a person for scale) → Garden zone",
+   "A001, A003: Block C west shed (dark low roof) behind the passage spruces → C exterior zone",
+   "A042, A064, A067 backgrounds: Block C north facade (4 storeys + dormers) seen from the sports yard → C exterior zone",
+   "A023, A017 left: boiler yard behind the hall's W end (block wall, steel pipes, brick box) and the 3-storey white block with the steel external stair (BLD_W1/E?) → west campus zone",
+   "A084, A085 right: the building with the external steel frame and a block wall → west campus zone",
+   "G023, G045, G066 (2021-22): canteen exterior/interior, older state; G044: aerial of the pitch with the chimney → reference only",
+   "No 2026 owner photo covers SITE_DForecourt, SITE_Trees_EastBelt or SITE_Trees_WestStrip; G041/G042/G046/G047/G068 show the D west forecourt fence/booth (web, older) → west-front/D zone"
+  ],
+  "open_questions": [
+   "Hall levels: on the N side the 8-course plinth top (~0.8 m above the paving) and window sills ~1.3 m above the paving (A082) suggest the hall floor is ~0.8 m above the N yard. With FFL 5.8 that puts the N paving at ~5.0 vs TER 4.6-4.9 west of the wing. Needs one walked profile or a riser count at a N door.",
+   "Person-height assumption 1.75 m (same person in A025/A066/A067/A082). It reproduces the owner's 3.4 m wall bars, but a taped tile course (expected 0.10 m) or a door height would remove the main scale uncertainty in the canteen and wing findings.",
+   "Canteen W gable: does the brown band / dark siding from the 070410255 t=46 s video still exist in 2026? The S wall is plain rough-cast render (A071).",
+   "Lower-yard stair: is the 4 m flight at the W side of the walkway end, with the remaining ~2.4 m a concrete strip along the courts? (A064 shows a concrete strip at walkway level left of the stair.)",
+   "Canteen porch: does it project W beyond the gable (roof extension), or is it recessed into the SW corner? A071/A072 favour a projection; a photo along the W gable would settle it.",
+   "Chimney position and height: locate the stack and its shadow on the Google z20 ortho."
+  ]
+ },
+ {
+  "zone": "Block B (BLD_B), Block D (BLD_D_M, BLD_D_W), remaining Block C exteriors (west face above the shed, roof/dormers; north/east faces have no new photos)",
+  "findings": [
+   {
+    "title": "C is ~2 m too deep: the west facade measures 17.7 m on today's photos, but the ring (plan v6) has 19.8 m",
+    "element": "BLD_C ring, edge 8 'west' (and the north fronts, edges 5-7)",
+    "spec_file": "Art/Blender/Specs/BLD_C.json",
+    "where_to_edit": "GENERATED. Change Y_OUT_W / Y_OUT_E (and the room/corridor depths behind them: Y_NW, Y_NE) in Scripts/Geo/zones/zone_c_v6.py, then run c_shell_v6.py and remap_c_v6.py (INT_C_F1 / INT_C_Floors follow)",
+    "current": "ring west edge y 0..19.8 (Y_OUT_W 19.8), east part 21.1 (Y_OUT_E, JOG 1.3); the west windows W at u 3.625 / 8.5 (F3-F4) / 10.8 / 16.175 from the N end. c_shell_v6 note: 'west facade read 17.2 m; interior wins (owner 2026-09-29)'",
+    "proposed": "West facade 17.7 m (+-0.6), so Y_OUT_W ~17.7 and Y_OUT_E ~19.0 if the 1.3 m north step stays (the step itself is unverified). Keep the window ratios measured on the photo (0.171 / 0.429 / 0.569 / 0.821 of the length; the spec ratios agree within 0.02), i.e. u ~3.0 / 7.6 (F3-F4 only) / 10.1 / 14.5 from the N end. The interior must shrink by ~2.1 m (classroom 6.35 -> ~5.4 m, or corridor 5.0 -> ~3.6-4.0). This needs the owner's decision, because he chose the interior over the facade on 09-29.",
+    "evidence": "A031 and A032: main lens, 24 mm, nearly frontal (window widths left/right 140/147 px). The face measures 1108 px between the outer edges of the corner strips, which is 7.75 window-surround widths; at the spec surround of 2.28 m (rect 061621646) that is 17.7 m. Scaling on the window pair instead (2.3 m apart in the spec) gives 16.4 m. Getting 19.8 m would need 2.55 m surrounds. Independent check: the Google 2026 screenshot owner_screens/sat_labeled_east_campus.png, scaled on the B roof (49.28 x 25.46 m = 216 x 114 px, 4.4 px/m), gives the C red roof N-S 82 px = 18.5 +-0.7 m including the 2 x 0.55 m overhangs, so walls ~17.4 m. Both match the pre-v6 facade value of 17.2 m (OLD_W in c_shell_v6.py). Error +-0.6 m.",
+    "confidence": "medium",
+    "priority": 1,
+    "needs_builder_change": false
+   },
+   {
+    "title": "D_W has 4 window storeys plus a windowless light attic band, not 5 storeys",
+    "element": "BLD_D_W storeys / rows / windows / cladding top band / eave",
+    "spec_file": "Art/Blender/Specs/BLD_D_W.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_D_W.json (hand-written, stream B)",
+    "current": "storeys 5 x 3.3, rows F1-F5 (F5 sill 14.1) with windows on all 4 faces, cornice 16.2-16.5, eave_z 16.5, cladding 'top storey clad light all round' z 13.2-16.2",
+    "proposed": "\"storeys\": 4, \"rows\": {\"F1\":0.9,\"F2\":4.2,\"F3\":7.5,\"F4\":10.8}, drop \"F5\" from every window 'rows' list, \"eave_z\": 13.9 (roof slab = F4 window head 13.2 + ~0.7 m of maroon wall), \"roof\": {\"type\":\"flat\",\"parapet_h\":1.3,\"parapet_t\":0.25}. Replace the 4 top-band cladding items with an attic band on every edge: {\"edge\":k,\"u0\":0.05,\"u1\":L-0.05,\"z0\":13.9,\"z1\":15.2,\"proj\":0.03,\"slot\":\"M_Render_Beige\"} (light composite panels, no windows). For the rooftop canopy above it, see the next finding.",
+    "evidence": "G020 (2GIS drone, close), G027 (drone), G046/G047 (from the gate), G068 (from the street), G009/G041 (booth views): 4 window rows on every face, then a plain light panel band with no openings. Height by storey ratio on G020 (storey ~155 px, band 73 px, gap from the F4 head to the band 35 px) and G068 (storey 170 px, band 58 px, gap 30 px): band 1.1-1.55 m, gap 0.6-0.75 m. So band ~13.9-15.2 above FFL, +-0.3 m.",
+    "confidence": "high",
+    "priority": 1,
+    "needs_builder_change": false
+   },
+   {
+    "title": "D_M: one 160 x 55 m hip roof rising 9.5 m (higher than D_W) should be separate wing roofs with glazed atria",
+    "element": "BLD_D_M roof",
+    "spec_file": "Art/Blender/Specs/BLD_D_M.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_D_M.json; the builder needs multi-part roofs (or D_M split into wing specs plus a glazed-roof spec)",
+    "current": "roof hip 20 deg over the whole ring, overhang 0.5. The model roof reaches z 29.74, 9.5 m above the eave at 20.2, which is the highest point of D (the D_W roof tops at 27.7).",
+    "proposed": "World xy, Esri corrected by the documented lean (+6.7 E, -3.0 N at roof height), +-3 m. EAST PART (x -99..-2): N wing hip on y 52..71 (19 m deep, pitch 20, ridge ~3.5 m above the eave) with a ~30 x 5.5 m light skylight/panel field at x -47..-17, y 63..69; a flat glazed atrium roof on y 42..52 (~9 m wide, dark segmented glass, full length x -99..-10, top at about the eave); S wing hip on y 18..45 (pitch 20) with 2 pointed gabled dormers/fronts on its south slope at x ~-64 and ~-28. WEST PART (x -158..-97): a row of short N-S gabled roofs with 4 white rooflight strips on y 58..73; a square glazed atrium skylight ~12.5 x 11.5 m at x -131..-119, y 47..59; 2 long white barrel-vault rooflights at y 50..53 (x -148..-131 and -118..-102); S block hip on y 33..47. All wing ridges must stay below the D_W attic band (~22.6 world z).",
+    "evidence": "Esri z19 ortho built by the parallel B_D_C session (agent_scratch/B_D_C/ortho_D.png, 0.2 m/px, crop w2/ortho_DM.jpg); G027 and the brochure drone (plans/brochure2023_aerial_drone_blockD_partial.jpg) show the D_M wings with low red pitched roofs, dormer vents, white barrel skylights and the glass atrium, with the light D_W block standing clearly above them; signboard render B042 agrees. Footprint check: ortho edges y 71 / 18 match the ring (world 71.7 / 21.0).",
+    "confidence": "medium",
+    "priority": 1,
+    "needs_builder_change": true
+   },
+   {
+    "title": "D_W roof is an open steel canopy with a light-grey hip on posts over a flat roof behind the parapet",
+    "element": "BLD_D_W roof",
+    "spec_file": "Art/Blender/Specs/BLD_D_W.json",
+    "where_to_edit": "Scripts/Blender/build_facades.py (new roof option), then BLD_D_W.json roof",
+    "current": "roof hip pitch 12, overhang 0.9, slots Roof/Eave/Cornice M_Sheet_DarkGrey, solid",
+    "proposed": "\"roof\": {\"type\":\"canopy_hip\",\"on\":\"parapet\",\"post_h\":1.3,\"post_pitch\":3.0,\"post\":0.12,\"pitch\":10,\"overhang\":0.5,\"railing_h\":1.0,\"slot\":\"M_Sheet_Grey\",\"frame_slot\":\"M_Steel_Paint_Maroon\"}. Under it a flat roof slab at eave_z with the 1.3 m parapet (previous finding). Canopy eave ~16.5, ridge ~19 above FFL. Top sheet is light grey/silver, not dark grey.",
+    "evidence": "G020 (posts ~3 m apart on the parapet top, railing between them, maroon-brown steel frame, canopy edge ~0.5 m past the band), G027 and the brochure drone (silver/light-grey low hip with a ridge vent), G068/G046/G047 (dark eave edge seen from below). Post height from the G020/G068 storey ratio is 1.0-1.3 m, +-0.4.",
+    "confidence": "high",
+    "priority": 2,
+    "needs_builder_change": true
+   },
+   {
+    "title": "B east entrance storefront is ~4.9 m wide (4 bays), not a 1.9 m door",
+    "element": "BLD_B facades[edge 1].entrance (+ ground window WG u 5.9)",
+    "spec_file": "Art/Blender/Specs/BLD_B.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_B.json",
+    "current": "entrance u0 1.5, u1 3.4, z1 2.6, transom 2.15, bays [0.45 fixed, 0.5 door, 0.5 door, 0.45 fixed]; ground window WG at u 5.9 sits under the porch",
+    "proposed": "\"entrance\": {\"u0\":1.65,\"u1\":6.65,\"z1\":2.6,\"transom_z\":2.13,\"reveal\":0.1,\"bays\":[[1.6,\"fixed\"],[0.85,\"door\"],[0.85,\"door\"],[1.7,\"fixed\"]], \"transom_lights\":3}. Remove u 5.9 from the edge-1 ground-floor WG list. The upper WUB at 5.9 / 8.55 and the ground WG at 8.55 stay.",
+    "evidence": "A234 (main lens, frontal). Front-pier plane scale comes from the brick-effect tile courses (18 courses = 0.16 m each, same tile as the gate booth). The wall-plane scale is 141 px/m from the rear-pier courses, and it reproduces the spec head 2.60 and transom 2.13 exactly. On that scale the storefront is 710 px = 5.0 m, bays 1.63 / 0.85 / 0.85 / 1.70. A233 (UW, frontal, scale from the 3.85 m storey or the 5.45 m double box) gives 4.6-4.8 m. Corner at u 0: storefront u 1.65-6.7. Error +-0.3 m.",
+    "confidence": "high",
+    "priority": 2,
+    "needs_builder_change": false
+   },
+   {
+    "title": "B east porch: 4 masonry piers (beige brick-tile over a red base), front piers ~5.9 m apart",
+    "element": "BLD_B attachments[EntrancePorch] (gallery kit)",
+    "spec_file": "Art/Blender/Specs/BLD_B.json",
+    "where_to_edit": "BLD_B.json; plus Scripts/Blender/build_facades.py build_gallery (post material/base band, engaged wall piers)",
+    "current": "posts_u [1.6, 6.2], post 0.6 x 0.6 in COL post (grey steel look), u0 1.0, u1 6.8, depth 2.4, z_underside 3.0, roof_fall 0.8",
+    "proposed": "{\"u0\":0.6,\"u1\":7.2,\"depth\":2.2,\"posts_u\":[0.9,6.85],\"post_w\":0.5,\"post_d\":0.5,\"z_underside\":2.9,\"soffit_z\":2.9,\"roof_fall\":1.0,\"roof_overhang\":0.15,\"wedge\":true,\"gutter\":true,\"downpipes_u\":[7.0],\"post_slot\":\"M_Tile_Beige\",\"post_base\":{\"h\":0.96,\"slot\":\"M_Tile_Brick_Red\"},\"wall_piers\":[[1.1,1.65],[6.65,7.2]]} (the last 3 keys are new builder options). The left front pier stands in front of the maroon SE corner pilaster. The pine-board soffit is visible from below.",
+    "evidence": "A234 pier: 12 beige + 6 red courses of 0.16 m, so 2.9 m to the soffit with a 0.96 m red base; face 95 px = 0.5 m. Pier centres projected to the wall are 6.2 m apart on A234 and 5.5 m on A233. Canopy 6.6-7.2 m wide; lean-to top 2.8 m at the fascia, 3.9 m at the wall (A233); depth 1.7-2.5 m from the front/rear pier scale ratio 1.33-1.43; downpipe on the north front pier. Model check render: agent_scratch/B_D_C/r/B_a233.png and B_a234.png.",
+    "confidence": "medium",
+    "priority": 2,
+    "needs_builder_change": true
+   },
+   {
+    "title": "B north (garden) facade is white with blue strips and box surrounds, and has barred ground-floor windows",
+    "element": "BLD_B facades[edge 2] colours, pilasters, window surrounds, grilles",
+    "spec_file": "Art/Blender/Specs/BLD_B.json",
+    "where_to_edit": "BLD_B.json (cladding field); build_facades.py for pilaster/surround slots and window grilles",
+    "current": "edge 2 'assumed: same 4 x 4 bay rhythm as the street facade': beige wall, maroon corner pilasters, WG/WU without surrounds",
+    "proposed": "cladding [{\"edge\":2,\"u0\":1.0,\"u1\":47.28,\"z0\":0.78,\"z1\":7.8,\"proj\":0.01,\"slot\":\"M_Render_White\"}]. Pilasters on edge 2 painted blue (new pilaster \"slot\":\"M_Paint_Blue\"), at least at the bay lines u ~12.3/24.1/36.0, ~0.5-0.9 m wide. Upper windows in blue box surrounds (WUB geometry with a surround slot M_Paint_Blue). Ground windows (G row) get white steel security grilles (new window option \"grille\":true). The light-well along the face is a maroon vertical corrugated sheet ~1.2-1.5 m above the garden lawn (the existing box keeps).",
+    "evidence": "A180, A183, A188, A192, A194, A196, A198 (2026-09-30), shot across the cobble retaining wall from the garden pergola walk 3-5 m from the wall (SITE_Garden Pergola_South y -50..-52; B north wall y ~-54.6), so the building is certainly B. Positions are not measurable through the vines; colours and parts are clear.",
+    "confidence": "medium",
+    "priority": 2,
+    "needs_builder_change": true
+   },
+   {
+    "title": "D_W light panel fields stop at the F4 floor; the end faces have 2 fields each",
+    "element": "BLD_D_W cladding (field items)",
+    "spec_file": "Art/Blender/Specs/BLD_D_W.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_D_W.json",
+    "current": "one central field per face: edge 0/2 u 9.6-22.4, edge 1/3 u 17.73-41.32, z 0.6-13.2",
+    "proposed": "z1 10.6 for all field items (the F4 window row sits entirely in maroon). On the 32 m faces use 2 fields: u ~4.7-16.6 and ~19.9-30.4 (as on the G068 face; G020 shows the mirror order: narrow field near the entrance end, wide field in the middle). The long faces need a frontal photo.",
+    "evidence": "G068 (near-frontal; face 1220 px = 32 m, ~38 px/m): fields at x 410-860 and 985-1385, top just above the F3 heads. G020 / G027 / G046 / G047 show the same pattern. +-1 m in u, +-0.4 m in z.",
+    "confidence": "medium",
+    "priority": 2,
+    "needs_builder_change": false
+   },
+   {
+    "title": "B roof: missing raised box on the north slope near the east end",
+    "element": "BLD_B roof (open item 'hatch on the north slope')",
+    "spec_file": "Art/Blender/Specs/BLD_B.json",
+    "where_to_edit": "Art/Blender/Specs/BLD_B.json roof.dormers (dormer kit, no window)",
+    "current": "roof hip pitch 19, ridge_len 35.5, no roof features (B.6 says 'hatch on the north slope')",
+    "proposed": "\"dormers\": [{\"edge\":2,\"u\":[9.9]}] (edge 2 runs from the NE corner) with \"dormer\": {\"w\":2.8,\"h\":1.0,\"inset\":6.0,\"window\":false}. This is a box ~2.8 x 6.5 m running from the ridge down the north slope at B-local x 36.9-39.7, y 11.8-18.5. Height unknown (~1 m).",
+    "evidence": "Google 2026 screenshot owner_screens/sat_labeled_east_campus.png (crop agent_scratch/B_D_C/sat_b.jpg): B roof 216 x 114 px = 49.28 x 25.46 m, 4.4 px/m; box at px x 207-219, y 614-644. Ridge 35 m and end hips 7.0/7.5 m on the same image confirm ridge_len 35.5. Error +-0.5 m.",
+    "confidence": "medium",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "C west face: north-end maroon corner strip and downpipe missing",
+    "element": "BLD_C pilasters / downpipe on edge 8 (north end)",
+    "spec_file": "Art/Blender/Specs/BLD_C.json",
+    "where_to_edit": "GENERATED: add to the c_shell_v6 input Scripts/Geo/zones/data/BLD_C_prestd.json (edge-8 items keep their world position through c_shell_v6.py), then rerun c_shell_v6.py",
+    "current": "edge 8 has the SW double strip u 18.6-19.8 and downpipes u 18.93/19.68 only; DP_NW is on the north face (edge 7)",
+    "proposed": "pilaster {\"edge\":8,\"u0\":0.0,\"u1\":0.95,\"proj\":0.03,\"z0\":-0.05,\"z1\":13.4}; downpipe {\"edge\":8,\"u\":[0.45],\"z0\":1.2,\"z1\":13.3,\"d\":0.1} (white PVC from the eave gutter down to the Dance Hall shed roof)",
+    "evidence": "A031 / A032: maroon full-height strip ~55 px = 0.9-1.0 m at the north (left) end, the same as the south-end strip, with a white downpipe on it running from the gutter to the shed roof. A030 agrees. Window rows and the F3-F4-only column u 8.5 match the spec pattern.",
+    "confidence": "medium",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "D_W window surrounds: beige frames in maroon fields, maroon frames in light fields",
+    "element": "BLD_D_W window_types W",
+    "spec_file": "Art/Blender/Specs/BLD_D_W.json",
+    "where_to_edit": "BLD_D_W.json window_types + build_facades.py (surround colour slot)",
+    "current": "W 1.3 x 1.5, surround [0,0,0,0]",
+    "proposed": "two types: \"WR\" (windows in maroon areas) surround [0.15,0.15,0.15,0.15], surround_proj 0.03, \"surround_slot\":\"M_Render_Beige\"; \"WL\" (windows in light fields) the same with \"surround_slot\":\"M_Paint_Maroon\". Window ~1.35 wide x 1.25-1.3 high (3-light PVC).",
+    "evidence": "G068 zoom: F4-row windows have light box frames, F1-F3 windows inside the light fields have maroon frames. Same on G020 / G027 / G046 / G047. Window 70 x 65 px against a 170 px storey on G068.",
+    "confidence": "medium",
+    "priority": 3,
+    "needs_builder_change": true
+   },
+   {
+    "title": "D west street booth is beige brick-tile on a red base with a signed fascia band, not a stone box",
+    "element": "SITE_WestFront DFront_Booth / DFront_BoothRoof",
+    "spec_file": "Art/Blender/Specs/SITE_WestFront.json",
+    "where_to_edit": "Art/Blender/Specs/SITE_WestFront.json",
+    "current": "box 3.0 x 3.0 x 2.8 material 'stone', roof box 3.6 x 3.6 x 0.3 wood",
+    "proposed": "walls slot M_Tile_Beige above a 1.0 m M_Tile_Brick_Red base (split into 2 boxes: z0..z0+1.0 brick, then beige to 2.8); roof slab 3.6 x 3.6 x 0.3 plus a 0.45 m blue fascia sign band on the street side (slot M_Sign_KOCH); door + 1 window on the gate side",
+    "evidence": "G009, G041, G046, G047: brick-effect beige tile over a red tile base (same kit as the main gate booth), flat roof with a deep blue lettered fascia",
+    "confidence": "medium",
+    "priority": 3,
+    "needs_builder_change": false
+   },
+   {
+    "title": "D_M north facade: 6-column flat-roof portico near the D_W junction not modelled",
+    "element": "new (BLD_D_M attachment on the north edge)",
+    "spec_file": "Art/Blender/Specs/BLD_D_M.json",
+    "where_to_edit": "BLD_D_M.json attachments (gallery or post_canopy kit on the north edge 7)",
+    "current": "no attachments on D_M",
+    "proposed": "{\"type\":\"post_canopy\",\"edge\":7,\"u0\":~150,\"u1\":~158,\"depth\":4.0,\"z0\":4.0,\"z1\":4.4,\"posts_u\":[6 posts evenly over u0..u1],\"post_w\":0.4,\"slot\":\"M_Render_Beige\",\"post_slot\":\"M_Render_Beige\"} (edge 7 runs from (158.81,63.7) to (-0.15,59.06) local, so u ~150-158 is the west end, about x -152..-160 world). Position +-5 m.",
+    "evidence": "G027 (crop agent_scratch/B_D_C/g027_wing.jpg): portico with ~6 light square columns and a flat slab, standing at the west end of the long north wing beside a dirt road and fence; brochure drone confirms",
+    "confidence": "low",
+    "priority": 3,
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "B south (street) facade, SE bay: 2026 lettering 'ALA-TOO INTERNATIONAL UNIVERSITY' (3 lines, blue) + round university logo above + a Kyrgyz 3-line block. Already slot BLD_B LetteringLogo u 42.3-46.7, z 3.1-7.5; confirmed by A238 (oblique) and G059. Older web photos G000/G001/G022/G100 show 'INTERNATIONAL ATATURK-ALATOO UNIVERSITY'.",
+   "B east entrance storefront glass: round 'db' brand decal ~0.4 m diameter on the left fixed pane, centre ~0.8-0.9 m above the floor at u ~2.3 on edge 1 (A233, A234). Make it a KOCH decal or blank.",
+   "B lobby, visible through the B east doors: wall lettering '...FACULTY OF ENGINEERING AND INFORMATICS' + circuit graphic (A234, A235, A246; interior, ~3 m wide at ~2.5 m height)",
+   "D_W upper corner of a light-field face (G020: right end, F3-F4 level): 3-line lettering 'INTERNATIONAL ATATURK-ALATOO UNIVERSITY' ~3.5 m wide x 2.5 m tall + round logo ~1.3 m diameter above it; the same spot in 2023+ photos (G009, G041, G005 lit at night) reads 'ALA-TOO INTERNATIONAL UNIVERSITY'",
+   "D west street booth (SITE_WestFront DFront_Booth): blue fascia band 'СЕЙТЕК МЕКТЕБИ' with a round yellow logo, ~3 x 0.45 m on the roof edge (G009, G041); a white plate 'ALA-TOO ...' on the booth wall (G068)",
+   "D entrance (position unknown, west campus): blue sign box 'ТИЛДЕР ИНСТИТУТУ / INSTITUTE OF LANGUAGES' with logo, ~3 x 1 m above a stepped entrance, F1 head level (G007)",
+   "Campus signboard (B041/B042, on a lawn, 2026-09-24): full university name, logo, the block list in 3 languages and a 3D campus map. The whole board face must become a KOCH directory board.",
+   "C entrance: 'IT & BUSINESS COLLEGE' blue sign box with the college logo (G057). Already a KOCH-only slot (canopy sign).",
+   "Not my zone, for the A/alley agent: A_W gallery 'GATEWAY TO THE WORLD!' band (A137-A139, G083, G094); door plate 'КАТТОО БӨЛҮМҮ / REGISTRATION OFFICE' (A230)"
+  ],
+  "handoff": [
+   "A220, A221: steel stair and the red-post gallery along a 3-storey block, alley B-A north end (A / alley zone)",
+   "A222-A227: 6-riser granite stair with a steel ramp and raised red-brick planters in front of a 3-storey block, plus a manhole; probably the wide stair at B's NE corner / alley north end (alley zone)",
+   "A228-A232: timber-soffit gallery along a brick-tile plinth wall, the 'REGISTRATION OFFICE' door under a grey corrugated canopy, a walk along a 3-storey wall with a retaining wall (alley / A_S zone)",
+   "A235-A240, A238: A_S west entrance pavilion (porch) with a wide 7-riser granite stair and beige/red brick-tile piers. From under it, A238 looks west at B's SE corner and lettering (A / alley zone; matches GBF_BLD_A_S_PorchPiers_E3_13).",
+   "A137-A144: A_W red-post gallery with the slogan band, steel stair (A zone)",
+   "A145-A150: wide granite stairs with a cobblestone retaining wall, garden SE landing (garden zone)",
+   "A080-A096: canteen yard, sports hall / hall wing walls (pink/white with maroon sloped base covers), Dance Hall shed front A094 (already fixed today) (sports/garden zones)",
+   "G052, G054, G056, G059: alley B-A and A_S views. G052 also shows B's east face from the north (maroon box windows), usable for a B.4 P2 check.",
+   "B044-B054 (2026-09-25): B east side and alley, already used for B.4 / G.* by earlier sessions",
+   "Parallel session: a second B_D_C agent writes into the same scratch folder (renders C_east/C_north_hi/C_south_top/C_west_hi, Esri tiles, ortho_D.png). I read its ortho_D.png for the D findings; merge its D/C findings with these rather than duplicating them."
+  ],
+  "open_questions": [
+   "C depth: today's exterior evidence (A031/A032 west facade 17.7 +-0.6 m; Google 2026 roof 18.5 m incl. overhangs; pre-v6 facade 17.2 m) contradicts the interior plan v6 (19.8 / 21.1 m). The owner chose the interior on 09-29. Re-decide, or tape the west facade (outer corner strips at F1) and one classroom depth.",
+   "D_W orientation: Google z20 put the two forecourt gazebos and the flags at the N end of the west face (y 58.8-87) with the street booth south of them (y 47.8). G027 (drone from the NW) and G068 (from the street) show gazebos, flags and the main canopy on the right part of a 10-column face, with the booth at its left. Every D_W face seen in the photos has ~10 window columns at ~3 m, but the Esri roof is 37 x 58 m (the model's 32 x 59 is consistent with it), so the 59 m west face should show ~19 columns. A frontal photo of the D_W west (street) face is needed to fix the gazebo/booth order and the west-face window count.",
+   "C north and east facades (C.7, C.8): still no 2026 photo. The Google 2026 screenshot only confirms 5 dormers on the south slope and 2 on the east hip; the north slope shows >=3, the rest are hidden under the map label. Photo request 'Корпус C: остальные фасады' stays open.",
+   "B west end (edge 3) and the small box at B's NW roof corner seen on the Google 2026 screenshot (~3.5 x 2.2 m, B-local x -0.9..2.7, y 22.7..24.9): no photo; chimney, vent box or a low annex?",
+   "D_M wing depths and atria are from a single leaning Esri image (+-3 m). A near-nadir Bing check of the D_M roof breaks (y ~42, 45, 47, 52) would firm up the split.",
+   "Rendering note: Workbench fails in this container (no libEGL); all review renders used Cycles CPU (render_multi.py)."
+  ]
+ }
+]
