@@ -6,56 +6,20 @@
  "elements": [
   {
    "type": "bin",
-   "name": "CP_Bin_AN_1",
-   "pos": [
-    177.33,
-    -19.56
-   ],
-   "size": [
-    0.4,
-    0.4,
-    0.7
-   ],
-   "dir_deg": 87.2,
-   "slot": "M_Plastic_Black",
-   "ue_asset": "bin_generic",
-   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19)",
-   "confidence": "medium"
-  },
-  {
-   "type": "bin",
    "name": "CP_Bin_AN_3",
    "pos": [
-    183.2,
-    -19.847
+    182.9,
+    -18.79
    ],
    "size": [
-    0.4,
-    0.4,
-    0.7
+    0.45,
+    0.45,
+    0.8
    ],
    "dir_deg": 87.2,
-   "slot": "M_Plastic_Black",
-   "ue_asset": "bin_generic",
-   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19)",
-   "confidence": "medium"
-  },
-  {
-   "type": "bin",
-   "name": "CP_Bin_AN_5",
-   "pos": [
-    189.06,
-    -20.133
-   ],
-   "size": [
-    0.4,
-    0.4,
-    0.7
-   ],
-   "dir_deg": 87.2,
-   "slot": "M_Plastic_Black",
-   "ue_asset": "bin_generic",
-   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19)",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "bin_wrought_iron",
+   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19) | 2026-10-02 photo diff (agent): the only bin of the row: a black bucket on a forged scroll stand beside the rose (157, 167)",
    "confidence": "medium"
   }
  ]

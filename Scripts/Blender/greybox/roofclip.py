@@ -68,16 +68,32 @@ def drop(ob):
         bpy.data.meshes.remove(me)
 
 
-def hollow_roof(roof, t_v, lining_slot="M_Paint_White"):
+def hollow_roof(roof, t_v, lining_slot="M_Paint_White", inner_ring=None):
     """Turn a closed roof solid (flat bottom at the eave) into a shell: subtract the same solid moved down by t_v
-    (vertical thickness). The shell keeps the eave band/soffit where the moved top is under the old bottom; its
-    sloped underside (the attic ceiling) gets `lining_slot`. Stores t_v on the object for clip_under_roof()."""
+    (vertical thickness), limited to `inner_ring` (object-local xy, e.g. the walls' inner faces pushed 2 cm into the
+    walls) so the roof stays solid over the walls and the overhang (no new cavity over the cornice/soffit). The sloped
+    underside (the attic ceiling) gets `lining_slot`. Stores t_v on the object for clip_under_roof()."""
     bm = bmesh.new()
     bm.from_mesh(roof.data)
     bmesh.ops.translate(bm, verts=bm.verts, vec=Vector((0, 0, -t_v)))
     for f in bm.faces:
         f.material_index = 0
     inner = temp_object(roof.name + "_TMPInner", bm, roof.matrix_world, lining_slot)
+    if inner_ring:
+        zs = [v.co.z for v in roof.data.vertices]
+        pb = bmesh.new()
+        lo = [pb.verts.new((x, y, min(zs) - t_v - 1.0)) for x, y in inner_ring]
+        hi = [pb.verts.new((x, y, max(zs) + 1.0)) for x, y in inner_ring]
+        n = len(inner_ring)
+        for i in range(n):
+            j = (i + 1) % n
+            pb.faces.new((lo[i], lo[j], hi[j], hi[i]))
+        pb.faces.new(list(reversed(lo)))
+        pb.faces.new(hi)
+        bmesh.ops.recalc_face_normals(pb, faces=pb.faces)
+        prism = temp_object(roof.name + "_TMPRing", pb, roof.matrix_world)
+        apply_boolean(inner, prism, "INTERSECT")
+        drop(prism)
     apply_boolean(roof, inner)
     drop(inner)
     roof["koch_shell_tv"] = round(t_v, 4)

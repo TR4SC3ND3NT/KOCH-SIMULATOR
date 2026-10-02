@@ -19,7 +19,7 @@ FORBIDDEN = re.compile(r"ala.?too|\baiu\b|iaau|university|универ", re.I)
 PROP = re.compile(r"_(bench|bin|lamp|tree|planter|sign|bike|floodlight|sink|chair|desk|table|cabinet|locker|"
                   r"shelf|stool|piano|board|bed|pot)", re.I)
 AREA_EPS = 1e-8
-HUNG = re.compile(r"sign|plate|letter|board|flood|cctv|string|lamp_head|garland", re.I)   # wall/arm-hung by design
+HUNG = re.compile(r"sign|plate|letter|board|flood|cctv|string|lamp_head|garland|lamp_\w+_e\d+$", re.I)   # wall/arm-hung by design (lamp_*_E<n>: facade wall lamps)
 
 sc = bpy.context.scene
 dg = bpy.context.evaluated_depsgraph_get()

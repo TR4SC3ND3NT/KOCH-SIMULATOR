@@ -598,7 +598,7 @@ class Building:
             # attic storey inside the roof (C F5): hollow the solid so its underside slopes like the rafters. Vertical
             # thickness chosen so that underside meets the wall's inner face at the wall top (no crevice above it)
             t_v = max(0.25, (r["overhang"] + self.s.get("wall_thk", 0.3)) * math.tan(math.radians(pitch)))
-            hollow_roof(roof, t_v)
+            hollow_roof(roof, t_v, inner_ring=offset_ring(self.ring, self.s.get("wall_thk", 0.3) - 0.02))
             if dormers is not None:   # keep only the dormer parts above the underside (none hanging in the attic);
                 # cut 5 cm above it so the dormer cap stays inside the shell (not coplanar with the lining)
                 dormers.data.materials[0] = mat(r.get("dormer_slot", "M_Sheet_Red"))
@@ -771,9 +771,10 @@ class Building:
                         return [(ha.x, ha.y), (hb.x, hb.y), (hc.x, hc.y)]
                     hole = opening(0.0)
                     prism(bm_cut, hole, w_front + 0.1, back + 0.05)            # through the front, into the attic
-                    # the roof's tunnel is 1 cm wider: its walls stay inside the dormer body, not on the dormer's
-                    # tunnel walls (zaudit: 29.6 m2 coplanar with one shared cutter)
-                    prism(bm_cut_roof, opening(0.01), w_front - 0.02, back + 0.05)
+                    # the roof's tunnel is 4 cm wider (inside the 10 cm dormer walls) and 4 cm deeper: its faces stay
+                    # in the dormer body, clear of the dormer's tunnel faces (one shared cutter: 29.6 m2 coplanar;
+                    # 1 cm: zaudit "layered")
+                    prism(bm_cut_roof, opening(0.04), w_front - 0.02, back + 0.01)
                     prism(bm_gl, hole, w_front - 0.03, w_front - 0.042)        # 12 mm pane, 3 cm behind the face
         ob = self.obj("Dormers", bm, COL["roof"], "pointed dormers on the roof slopes (render 2025, Esri 2020)")
         return ob, (bm_cut, bm_cut_roof) if win else None, bm_gl
@@ -833,12 +834,21 @@ class Building:
                 wk = max(c.get("w_knee", 0.0), w0)
                 sl = (c["z_wall"] - c["z_out"]) / (c["w1"] - wk)
                 top = [(w0, c["z_wall"])] + ([(wk, c["z_wall"])] if wk > w0 else []) + [(c["w1"], c["z_out"])]
-                prism_profile(body, fr, [(w0, zb)] + [(w, z - ct) for w, z in top] + [(c["w1"], zb)], c["u0"], c["u1"])
+                prof = [(w0, zb)] + [(w, z - ct) for w, z in top] + [(c["w1"], zb)]
+                prism_profile(body, fr, prof, c["u0"], c["u1"])
                 capb = [(w, z - ct) for w, z in top[:-1]] + [(c["w1"] + ov, c["z_out"] - ct - ov * sl)]
                 capt = [(c["w1"] + ov, c["z_out"] - ov * sl)] + top[-2::-1]
                 prism_profile(cap, fr, capb + capt, c["u0"] - ov, c["u1"] + ov)
-                self.obj_parts(f"StairCheek_E{a['edge']}_{n}", {c.get("material", "M_Tile_Brick_Red"): body, "M_Granite_Red": cap},
-                               c.get("evidence", ev), c.get("confidence", cf))
+                parts_ = {c.get("material", "M_Tile_Brick_Red"): body, "M_Granite_Red": cap}
+                if c.get("outer_material"):
+                    # the face away from the flight (u0) has its own finish (C west cheek: beige render), a 1 cm skin
+                    # under the cap, 5 mm short of the end faces (no faces on the body's end planes)
+                    skin = bmesh.new()
+                    sp = [(max(w, w0 + 0.005), z) for w, z in prof]
+                    sp = [(min(w, c["w1"] - 0.005), z) for w, z in sp]
+                    prism_profile(skin, fr, sp, c["u0"] - 0.01, c["u0"])
+                    parts_[c["outer_material"]] = skin
+                self.obj_parts(f"StairCheek_E{a['edge']}_{n}", parts_, c.get("evidence", ev), c.get("confidence", cf))
             return True
         if t == "ramp":
             parts = {"frame": bmesh.new(), "deck": bmesh.new()}
@@ -858,8 +868,11 @@ class Building:
             rails = bmesh.new()
             if a.get("rails"):
                 sides = {"both": (a["w0"] + 0.03, a["w1"] - 0.03), "w0": (a["w0"] + 0.03,), "w1": (a["w1"] - 0.03,)}
+                # "rail_inset_u0": start the rails a little in, where they continue from the previous section's end post
+                ui = a.get("rail_inset_u0", 0.0)
+                zi = a["z_high"] + (a["z_low"] - a["z_high"]) * ui / max(a["u1"] - a["u0"], 1e-6)
                 for w in sides[a.get("rail_sides", "both")]:
-                    pts = [fr @ Vector((a["u0"], w, a["z_high"])), fr @ Vector((a["u1"], w, a["z_low"]))]
+                    pts = [fr @ Vector((a["u0"] + ui, w, zi)), fr @ Vector((a["u1"], w, a["z_low"]))]
                     D.railing_detailed(rails, pts, height=a.get("rail_h", 0.9), post=0.04, spacing=a.get("post_pitch", 1.5),
                                        mid=tuple(a.get("mid_rails", [0.45])), base_plate=0.0, plate_t=0.0)
                 for ue in a.get("rail_ends", []):   # guard across an open end ("u0"/"u1"), e.g. the top plate's outer edge

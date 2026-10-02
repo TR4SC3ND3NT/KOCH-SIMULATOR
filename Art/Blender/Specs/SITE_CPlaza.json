@@ -302,10 +302,10 @@
    "type": "tree",
    "name": "TreeAN_0",
    "pos": [
-    174.4,
-    -18.026
+    174.43,
+    -17.218
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -318,25 +318,25 @@
    "name": "PlanterAN_0",
    "ring": [
     [
-     173.8,
-     -18.626
-    ],
-    [
      175.0,
-     -18.626
+     -17.847
     ],
     [
-     175.0,
-     -17.426
+     173.802,
+     -17.788
     ],
     [
-     173.8,
-     -17.426
+     173.86,
+     -16.59
+    ],
+    [
+     175.059,
+     -16.648
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -344,10 +344,10 @@
    "type": "tree",
    "name": "TreeAN_1",
    "pos": [
-    177.33,
-    -18.17
+    177.361,
+    -17.362
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -360,25 +360,25 @@
    "name": "PlanterAN_1",
    "ring": [
     [
-     176.73,
-     -18.77
+     177.931,
+     -17.991
     ],
     [
-     177.93,
-     -18.77
+     176.733,
+     -17.932
     ],
     [
-     177.93,
-     -17.57
+     176.791,
+     -16.734
     ],
     [
-     176.73,
-     -17.57
+     177.99,
+     -16.792
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -386,10 +386,10 @@
    "type": "tree",
    "name": "TreeAN_2",
    "pos": [
-    180.27,
-    -18.314
+    180.303,
+    -17.506
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -402,25 +402,25 @@
    "name": "PlanterAN_2",
    "ring": [
     [
-     179.67,
-     -18.914
+     180.873,
+     -18.135
     ],
     [
-     180.87,
-     -18.914
+     179.675,
+     -18.076
     ],
     [
-     180.87,
-     -17.714
+     179.733,
+     -16.878
     ],
     [
-     179.67,
-     -17.714
+     180.932,
+     -16.936
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -428,10 +428,10 @@
    "type": "tree",
    "name": "TreeAN_3",
    "pos": [
-    183.2,
-    -18.457
+    183.234,
+    -17.65
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): this pit holds a rose bush, not a tree",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): this pit holds a rose bush, not a tree | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 1.1,
    "crown_d": 0.9,
@@ -445,25 +445,25 @@
    "name": "PlanterAN_3",
    "ring": [
     [
-     182.6,
-     -19.057
+     183.804,
+     -18.279
     ],
     [
-     183.8,
-     -19.057
+     182.606,
+     -18.22
     ],
     [
-     183.8,
-     -17.857
+     182.664,
+     -17.022
     ],
     [
-     182.6,
-     -17.857
+     183.863,
+     -17.08
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -471,10 +471,10 @@
    "type": "tree",
    "name": "TreeAN_4",
    "pos": [
-    186.13,
-    -18.601
+    186.165,
+    -17.793
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -487,25 +487,25 @@
    "name": "PlanterAN_4",
    "ring": [
     [
-     185.53,
-     -19.201
+     186.735,
+     -18.422
     ],
     [
-     186.73,
-     -19.201
+     185.537,
+     -18.363
     ],
     [
-     186.73,
-     -18.001
+     185.595,
+     -17.165
     ],
     [
-     185.53,
-     -18.001
+     186.794,
+     -17.223
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -513,10 +513,10 @@
    "type": "tree",
    "name": "TreeAN_5",
    "pos": [
-    189.06,
-    -18.745
+    189.096,
+    -17.937
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -529,25 +529,25 @@
    "name": "PlanterAN_5",
    "ring": [
     [
-     188.46,
-     -19.345
+     189.666,
+     -18.566
     ],
     [
-     189.66,
-     -19.345
+     188.468,
+     -18.507
     ],
     [
-     189.66,
-     -18.145
+     188.526,
+     -17.309
     ],
     [
-     188.46,
-     -18.145
+     189.725,
+     -17.367
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -555,10 +555,10 @@
    "type": "tree",
    "name": "TreeAN_6",
    "pos": [
-    192.0,
-    -18.889
+    192.037,
+    -18.081
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -571,25 +571,25 @@
    "name": "PlanterAN_6",
    "ring": [
     [
-     191.4,
-     -19.489
+     192.607,
+     -18.71
     ],
     [
-     192.6,
-     -19.489
+     191.409,
+     -18.651
     ],
     [
-     192.6,
-     -18.289
+     191.467,
+     -17.453
     ],
     [
-     191.4,
-     -18.289
+     192.666,
+     -17.511
     ]
    ],
-   "curb_h": 0.12,
+   "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -597,90 +597,90 @@
    "type": "bench",
    "name": "BenchAN_0",
    "pos": [
-    175.865,
-    -19.638
+    175.373,
+    -18.416
    ],
    "dir_deg": 87.2,
-   "length": 1.8,
+   "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_1",
    "pos": [
-    178.8,
-    -19.782
+    178.304,
+    -18.559
    ],
    "dir_deg": 87.2,
-   "length": 1.8,
+   "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_2",
    "pos": [
-    181.735,
-    -19.926
+    181.245,
+    -18.704
    ],
    "dir_deg": 87.2,
-   "length": 1.8,
+   "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_3",
    "pos": [
-    184.665,
-    -20.069
+    184.176,
+    -18.847
    ],
    "dir_deg": 87.2,
-   "length": 1.8,
+   "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_4",
    "pos": [
-    187.595,
-    -20.213
+    187.108,
+    -18.991
    ],
    "dir_deg": 87.2,
-   "length": 1.8,
+   "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium"
   },
   {
    "type": "bench",
    "name": "BenchAN_5",
    "pos": [
-    190.53,
-    -20.357
+    190.039,
+    -19.135
    ],
    "dir_deg": 87.2,
-   "length": 1.8,
+   "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
    "confidence": "medium"
   },
   {
@@ -762,6 +762,83 @@
    ],
    "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight)",
    "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_7",
+   "pos": [
+    194.964,
+    -18.225
+   ],
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it; a young tree in the east-end pit (061643243: ~3.5-4 m, 1.6 m crown)",
+   "confidence": "medium",
+   "height": 4.0,
+   "crown_d": 1.8,
+   "trunk_d": 0.12,
+   "crown_base": 1.5,
+   "shape": "ellipsoid"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_7",
+   "ring": [
+    [
+     195.534,
+     -18.854
+    ],
+    [
+     194.336,
+     -18.795
+    ],
+    [
+     194.394,
+     -17.597
+    ],
+    [
+     195.593,
+     -17.655
+    ]
+   ],
+   "curb_h": 0.08,
+   "curb_w": 0.08,
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_6",
+   "pos": [
+    192.98,
+    -19.279
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "confidence": "medium"
+  },
+  {
+   "type": "path",
+   "name": "CPlaza_EastEdge",
+   "line": [
+    [
+     195.9,
+     -21.27
+    ],
+    [
+     195.9,
+     -5.9
+    ]
+   ],
+   "width": 0.1,
+   "top": 0.005,
+   "thk": 0.06,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: flush red edge line between the herringbone and the gravel (061643243)"
   }
  ],
  "ground_surfaces": [
@@ -773,12 +850,12 @@
      -4.2
     ],
     [
-     205,
-     -5.6
+     195.9,
+     -5.21
     ],
     [
-     205,
-     -20.6
+     195.9,
+     -21.27
     ],
     [
      172,
@@ -786,7 +863,46 @@
     ]
    ],
    "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "plaza between C (south face y -4) and A_N (north face y -20.2), herringbone pavers (C_sw frames 061707849, 012436367; Google z20 paved light area); west edge x 172 (the Hall-C passage west of C is stream B)"
+   "evidence": "plaza between C (south face y -4) and A_N (north face y -20.2), herringbone pavers (C_sw frames 061707849, 012436367; Google z20 paved light area); west edge x 172 (the Hall-C passage west of C is stream B) | 2026-10-02 photo diff (agent): herringbone ends at a flush red line at x ~195.9 (061643243, 061648727)"
+  },
+  {
+   "name": "CEast_Lot",
+   "ring": [
+    [
+     195.9,
+     -5.21
+    ],
+    [
+     202.7,
+     -5.5
+    ],
+    [
+     202.7,
+     -3.5
+    ],
+    [
+     212.7,
+     -3.5
+    ],
+    [
+     212.1,
+     -19.0
+    ],
+    [
+     198.5,
+     -19.0
+    ],
+    [
+     198.5,
+     -21.4
+    ],
+    [
+     195.9,
+     -21.27
+    ]
+   ],
+   "slot": "M_Gravel_Compacted",
+   "evidence": "2026-10-02 photo diff: compacted grey-brown gravel parking east of the red line, cars up to C's SE pilaster (061643243, 061648727, 167); x of the line +-0.7 m"
   }
  ]
 }

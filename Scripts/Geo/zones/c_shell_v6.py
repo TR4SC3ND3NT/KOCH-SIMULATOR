@@ -106,14 +106,17 @@ def main(src):
             a.update(u0=1.56, u1=3.0, w0=-3.30, w1=-2.36, z_high=0.0, z_low=-0.25, rail_sides="both",
                      evidence=a.get("evidence", "") + EVD + "top flight slopes to a corner platform (006/007, 061631264 posts at u 2.39/3.22)")
             att.append(a)
-            a = dict(a, name="Platform", u0=3.0, u1=4.0, z_high=-0.25, z_low=-0.25, rail_sides="w1", rail_ends=["u1"])
+            a = dict(a, name="Platform", u0=3.0, u1=4.0, z_high=-0.25, z_low=-0.25, rail_sides="w1", rail_ends=["u1"],
+                     rail_inset_u0=0.05)                                 # the Top's end post already stands at u 3.0
         elif a.get("type") == "ramp" and a.get("name") == "Run":
             a.update(u0=3.30, w0=3.0, w1=4.0, z_high=-0.25,
                      evidence=a.get("evidence", "") + EVD + "run starts at the corner platform, 0.4 m further out (12 % slope)")
         elif a.get("type") == "stairs" and a.get("edge") == 2:
             a["cheeks"] = [dict(c) for c in a["cheeks"]]
-            a["cheeks"][0].update(z_out=-0.40, evidence=a["cheeks"][0].get("evidence", "") + EVD +
-                                  "west cheek cap parallel to the flight ~0.5 m over the nosings (061631264, 173, 007)")
+            a["cheeks"][0].update(z_out=-0.40, outer_material="M_Render_Beige",
+                                  evidence=a["cheeks"][0].get("evidence", "") + EVD +
+                                  "west cheek cap parallel to the flight ~0.5 m over the nosings (061631264, 173, 007); its "
+                                  "west face is beige render (005, 173/175), the stair face and south end brick tile")
         elif a.get("type") == "floodlight" and a.get("edge") == 2:
             a["u"] = [-0.1, 1.9, 3.9]                                   # 158, 061624280, 061621646: three lamps
         elif a.get("type") == "downpipe" and a.get("edge") == 0 and a.get("u") == [12.55]:
@@ -121,6 +124,10 @@ def main(src):
         elif a.get("type") == "downpipe" and a.get("edge") == 3 and a.get("u") == [0.25]:
             a["z0"] = 0.60                                               # ends with its shoe on the east cheek's cap
         att.append(a)
+    if not any(a.get("name") == "CCTV_S" for a in att):   # 061631264, 159: bullet camera on the recess's east reveal
+        att.append({"type": "wall_boxes", "name": "CCTV_S", "edge": 2, "w0": -0.30, "items": [[3.66, 3.25, 0.12, 0.12, 0.2]],
+                    "confidence": "low", "evidence": "2026-10-02 photo diff: white bullet camera under the soffit at the "
+                    "east reveal of the entrance recess (061631264, 159)"})
     C["attachments"] = att
     # F5 offices are inside the hip roof: the roof is a shell with a sloped underside, not a solid (2026-10-02)
     C["roof"]["shell"] = True

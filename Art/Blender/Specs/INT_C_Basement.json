@@ -315,33 +315,33 @@
   {
    "type": "roof_plane",
    "name": "EntryRoof",
-   "thk": 0.2,
+   "thk": 0.17,
    "material": "metal",
    "ring": [
     [
-     167.133,
-     -5.547
+     166.947,
+     -6.44
     ],
     [
-     173.178,
-     -5.788
+     173.142,
+     -6.688
     ],
     [
-     173.352,
-     -1.442
+     173.286,
+     -3.09
     ],
     [
-     167.307,
-     -1.201
+     167.091,
+     -2.843
     ]
    ],
    "z": [
-    7.5200000000000005,
-    7.5200000000000005,
-    7.75,
-    7.75
+    7.32,
+    7.32,
+    7.72,
+    7.72
    ],
-   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts | 2026-10-02 photo diff (agent): 166 ray-casts: the canopy reaches 0.9 m further south (fascia front at C-local y -3.05, bottom +0.75) and ends over the Dance Hall wall",
    "confidence": "medium",
    "slot": "M_Fascia_Beige"
   },
@@ -352,27 +352,27 @@
    "material": "metal",
    "ring": [
     [
-     167.133,
-     -5.547
+     166.947,
+     -6.44
     ],
     [
-     173.178,
-     -5.788
+     173.142,
+     -6.688
     ],
     [
-     173.352,
-     -1.442
+     173.286,
+     -3.09
     ],
     [
-     167.307,
-     -1.201
+     167.091,
+     -2.843
     ]
    ],
    "z": [
-    7.55,
-    7.55,
-    7.78,
-    7.78
+    7.35,
+    7.35,
+    7.75,
+    7.75
    ],
    "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
    "confidence": "medium",
@@ -408,18 +408,18 @@
    "type": "box",
    "name": "EntryRoof_Post0",
    "center": [
-    169.018,
-    -5.472
+    168.982,
+    -6.372
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.1,
     0.1,
-    2.27
+    1.88
    ],
-   "z0": 5.050000000000001,
+   "z0": 5.27,
    "material": "metal",
-   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts | 2026-10-02 photo diff (agent): post foot on the plaza 0.9 m south of the stair wall (166)",
    "confidence": "medium",
    "slot": "M_Alu_Grey"
   },
@@ -427,18 +427,18 @@
    "type": "box",
    "name": "EntryRoof_Post1",
    "center": [
-    171.915,
-    -5.638
+    172.849,
+    -6.526
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.1,
     0.1,
-    2.27
+    1.88
    ],
-   "z0": 5.050000000000001,
+   "z0": 5.27,
    "material": "metal",
-   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts | 2026-10-02 photo diff (agent): east post at the pit's east end (166)",
    "confidence": "medium",
    "slot": "M_Alu_Grey"
   },
@@ -2797,6 +2797,27 @@
    "ue_asset": "railing_forged_scroll",
    "confidence": "medium",
    "evidence": "2026-10-02 photo diff (agent ray-casts in 166/164, photos 160, q012507/q012511, 013/014/181/182/q012459): sloped forged panel on the west edge of the south light-well cover, from the east canopy post up to C's south wall (010, 011, 160, 161, 166, q012520, q012543)"
+  },
+  {
+   "type": "fence",
+   "name": "Stair_Railing_Return",
+   "line": [
+    [
+     169.028,
+     -5.473
+    ],
+    [
+     168.994,
+     -6.322
+    ]
+   ],
+   "height": 0.95,
+   "post_spacing": 1.0,
+   "post": 0.05,
+   "panel": "bars",
+   "slot": "M_Steel_Paint_Grey",
+   "confidence": "medium",
+   "evidence": "2026-10-02 photo diff: short plain-bar return from the forged railing's stair-head end to the moved west post (166)"
   }
  ],
  "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35)"

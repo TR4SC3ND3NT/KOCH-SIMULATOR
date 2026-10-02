@@ -525,10 +525,11 @@
      "w1": 3.65,
      "z_wall": 0.55,
      "z_out": -0.4,
-     "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449 | 2026-10-02 photo diff: west cheek cap parallel to the flight ~0.5 m over the nosings (061631264, 173, 007)",
+     "evidence": "brick-tile cheek, granite cap: level +0.55 along the landing, sloping to +0.26 over the plaza at the bottom nosing (mesh top line 0.48 m/m, x=-0.4 section); photos 070647586 f00023/f00090 | starts at the W wing face (1.3 in front of the tower face); overlay 070647586 f00023/f00449 | 2026-10-02 photo diff: west cheek cap parallel to the flight ~0.5 m over the nosings (061631264, 173, 007); its west face is beige render (005, 173/175), the stair face and south end brick tile",
      "confidence": "medium",
      "w_knee": 1.75,
-     "w0": 1.3
+     "w0": 1.3,
+     "outer_material": "M_Render_Beige"
     },
     {
      "name": "EastCheek",
@@ -610,7 +611,8 @@
    "rail_sides": "w1",
    "rail_ends": [
     "u1"
-   ]
+   ],
+   "rail_inset_u0": 0.05
   },
   {
    "type": "ramp",
@@ -916,6 +918,23 @@
    ],
    "confidence": "medium",
    "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): tall louvred vent grille near C's corner (160, q012520)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "CCTV_S",
+   "edge": 2,
+   "w0": -0.3,
+   "items": [
+    [
+     3.66,
+     3.25,
+     0.12,
+     0.12,
+     0.2
+    ]
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-02 photo diff: white bullet camera under the soffit at the east reveal of the entrance recess (061631264, 159)"
   }
  ],
  "basement": {
