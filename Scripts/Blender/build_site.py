@@ -395,7 +395,8 @@ class Site:
         open_sides = set(el.get("open_sides", []))
         el = dict(el, slots={"_Floor": "M_Paving_Diamond_Tile", "_Parapet": "M_Tile_Brick_Red", "_BenchLegs": "M_Steel_Paint_Dark", "_Bench": "M_Wood_Stained",
                              "_Frame": "M_Paint_White", "_Posts": "M_Render_White", "_Capitals": "M_Paint_Brown", "_Ceiling": "M_Wood_Stained", "_Downlights": "M_Lamp_Diffuser", "_Sign": "M_Sign_Panel", "_FasciaTabs": "M_Shingle_Brown", "_Fascia": "M_Paint_White",
-                             "_Roof": "M_Shingle_Brown", **(el.get("slots") or {})})
+                             "_Roof": "M_Shingle_Brown", "_ParapetInner": "M_Paint_Maroon", "_Column": "M_Paint_Maroon",
+                             **(el.get("slots") or {})})
 
         def poly(r, z, extra=0.0):
             return [Vector((c.x + r * math.cos(rot + math.pi / N + 2 * math.pi * k / N + extra),
@@ -430,7 +431,16 @@ class Site:
                 for j in range(nl):
                     ul = pw / 2 + 0.12 + (L - pw - 0.24) * j / (nl - 1)
                     box(bl, m, ul - 0.02, ul + 0.02, par_t / 2 + 0.3, par_t / 2 + 0.34, zf, zf + 0.40)
-        self.emit(dict(el, name=nm + "_Parapet"), bm, COL["brick"], (c.x, c.y, z0))
+        ob = self.emit(dict(el, name=nm + "_Parapet"), bm, COL["brick"], (c.x, c.y, z0))
+        # inner faces (normal through the centre) are painted maroon, the outside is brick tile (garden photo diff GD-9)
+        me, mw = ob.data, ob.matrix_world
+        me.materials.append(mat(el["slots"]["_ParapetInner"]))
+        ki, m3 = len(me.materials) - 1, mw.to_3x3()
+        for f in me.polygons:
+            fc, nw = mw @ f.center, (m3 @ f.normal).normalized()
+            tc = Vector((c.x - fc.x, c.y - fc.y, 0.0))
+            if tc.length > 1e-6 and nw.dot(tc.normalized()) > 0.99:
+                f.material_index = ki
         self.emit(dict(el, name=nm + "_Bench"), bb, COL["wood"], (c.x, c.y, z0))
         self.emit(dict(el, name=nm + "_BenchLegs"), bl, COL["metal"], (c.x, c.y, z0))
         bm = bmesh.new()   # posts + ring beam + centre column
@@ -438,10 +448,12 @@ class Site:
             p = corners[k]
             m = _frame2(Vector((p.x, p.y)), (Vector((c.x, c.y)) - Vector((p.x, p.y))).normalized())
             box(bm, m, -pw / 2, pw / 2, -pw / 2, pw / 2, zf, zf + ph)
-        cc = el.get("center_column")
-        if cc:
-            _cyl(bm, Vector((c.x, c.y)), cc.get("d", 0.2) / 2, zf, zf + ph, 12)
         self.emit(dict(el, name=nm + "_Posts"), bm, COL["white"], (c.x, c.y, z0))
+        cc = el.get("center_column")
+        if cc:   # own object: painted maroon, the posts are white render
+            bm = bmesh.new()
+            _cyl(bm, Vector((c.x, c.y)), cc.get("d", 0.2) / 2, zf, zf + ph, 12)
+            self.emit(dict(el, name=nm + "_Column"), bm, COL["metal"], (c.x, c.y, z0))
         bm = bmesh.new()   # dark-brown capital band at the post tops (spec notes: ~0.12 m), 1 cm proud of the post
         cap = el.get("capital_h", 0.12)
         for k in range(N):
@@ -1227,11 +1239,20 @@ class Site:
         fwd, left = rot2(el.get("dir_deg", 0.0))
         bm = bmesh.new()
         bb = el.get("base_box")                               # [w, d, h] m: rectangular plinth instead of the round base
+        pad = el.get("pad")                                   # [w, d, h] m: square slab under the plinth
+        zb = z - 0.05
+        if pad:
+            box(bm, _frame2(P, fwd), -pad[0] / 2, pad[0] / 2, -pad[1] / 2, pad[1] / 2, z - 0.05, z + pad[2])
+            zb = z + pad[2] - 0.01                            # plinth starts inside the pad: no shared bottom face
         if bb:
-            box(bm, _frame2(P, fwd), -bb[0] / 2, bb[0] / 2, -bb[1] / 2, bb[1] / 2, z - 0.05, z + bb[2])
+            box(bm, _frame2(P, fwd), -bb[0] / 2, bb[0] / 2, -bb[1] / 2, bb[1] / 2, zb, z + bb[2])
         else:
             _cyl(bm, P, 0.11, z, z + 0.5, 10)                 # cast base
-        _cyl(bm, P, 0.045, z + 0.5, z + h + 0.35, 10)         # pole + finial
+        tg = el.get("top_globe")                              # globe on the pole top instead of the finial
+        _cyl(bm, P, 0.045, z + 0.5, z + h + (0.25 if tg else 0.35), 10)   # pole + finial
+        if tg:
+            bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=r,
+                                      matrix=Matrix.Translation((P.x, P.y, z + h + 0.25 + r - 0.02)))
         m = _frame2(P, left)
         box(bm, m, -span / 2, span / 2, -0.02, 0.02, z + h - 0.22, z + h - 0.18)   # arm bar
         ends = [left * (-span / 2 + span * k / max(1, n - 1)) for k in range(n)]

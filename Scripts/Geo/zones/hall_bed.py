@@ -79,8 +79,10 @@ def main():
     for k, x in enumerate(BENCH_X):
         t = (x - ax) / tx
         p = [round(ax + tx * t + nx * 0.45, 3), round(ay + ty * t + ny * 0.45, 3)]
-        new.append({"type": "bench", "name": f"HallBed_Bench_{k}", "pos": p, "dir_deg": round(face, 2), "length": 1.8, "depth": 0.5,
-                    "seat_h": 0.43, "back_h": 0.85, "ue_asset": "bench_wrought_iron_slats", "evidence": EV, "confidence": "low"})
+        new.append({"type": "bench", "name": f"HallBed_Bench_{k}", "pos": p, "dir_deg": round(face, 2), "length": 3.0, "depth": 0.55,
+                    "seat_h": 0.47, "back_h": 0.85, "ue_asset": "bench_slats_steel_frame",
+                    "evidence": EV + " | 2026-10-02 garden photo diff (GD-6): 3.0 m slatted benches on a black steel frame",
+                    "confidence": "low"})
     E += new
     g["elements"] = E
     g["ground_surfaces"] = gs

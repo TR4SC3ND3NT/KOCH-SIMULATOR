@@ -281,9 +281,11 @@ def main():
             new.append({"type": "bench", "name": f"CentreSquare_Bench_{side}{k}", "pos": _r(sq(nx_ * (P - 0.4), sgn * bu)),
                         "dir_deg": round(face, 2), "length": blen, "ue_asset": "bench_wrought_iron_slats", "confidence": "medium",
                         "evidence": EV})
-    new.append({"type": "lamp_orn", "name": "CentreSquare_Lamp", "pos": _r(SQ_C), "dir_deg": round(hdg, 2), "height": 3.2,
-                "cross": True, "arm_span": 0.8, "globe_d": 0.35, "base_box": [0.3, 0.3, 0.6], "confidence": "low",
-                "evidence": EV + " | owner: lamp post in the exact middle, 4 lamps (maybe 2)"})
+    new.append({"type": "lamp_orn", "name": "CentreSquare_Lamp", "pos": _r(SQ_C), "dir_deg": round(hdg, 2), "height": 3.8,
+                "globes": 2, "arm_span": 1.3, "globe_d": 0.38, "top_globe": True, "base_box": [0.35, 0.35, 1.0],
+                "pad": [0.75, 0.75, 0.05], "confidence": "medium",
+                "evidence": EV + " | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes "
+                            "(top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a 0.75 pad"})
 
     # --- gazebo surrounds: octagonal tiled apron from the parapet face to R_APRON, concentric with the gazebo (it was
     # 0.2 m off-centre and G2 7 deg off the gazebo: parapet inside the tiles on one side, a lawn sliver on the other);
