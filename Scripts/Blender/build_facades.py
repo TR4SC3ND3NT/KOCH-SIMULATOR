@@ -345,14 +345,21 @@ class Building:
             if tname == "entrance":
                 bays = wt.get("bays")  # [[width_m, "fixed"|"door"], ...] left to right, frame included
                 if bays and self.s.get("detail"):
+                    # optional: "leaf": "solid" (opaque timber/steel leaves), "transom_lights": n equal transom panes,
+                    # "slot": frame + leaf material (default black aluminium)
+                    alu = dict(wt.get("alu", {}))
+                    if wt.get("transom_lights"):
+                        n = int(wt["transom_lights"])
+                        alu.setdefault("top_splits", [j / n for j in range(1, n)])
                     sf = D.AluStorefront(reveal=wt.get("reveal", 0.25), bays=bays, transom_z=wt.get("transom_z", h - 0.6),
-                                         leaf_mid=wt.get("door_mid_z", 0.0), **wt.get("alu", {}))
+                                         leaf_mid=wt.get("door_mid_z", 0.0), leaf_solid=wt.get("leaf") == "solid", **alu)
                     parts = {k: bmesh.new() for k in ("alu", "glass", "steel", "leaf", "leaf_glass", "leaf_steel")}
                     D.alu_storefront(parts, e["frame"], o, sf)
                     ev, cf = wt.get("evidence"), wt.get("confidence")
-                    self.obj_parts(f"Entrance_E{i}_{k:02d}_Frame", {"M_Alu_Black": parts["alu"], "M_Glass": parts["glass"]}, ev, cf)
+                    fm = wt.get("slot", "M_Alu_Black")
+                    self.obj_parts(f"Entrance_E{i}_{k:02d}_Frame", {fm: parts["alu"], "M_Glass": parts["glass"]}, ev, cf)
                     # door leaves: own object so UE can swap them for hinged door actors
-                    self.obj_parts(f"Entrance_E{i}_{k:02d}_Doors", {"M_Alu_Black": parts["leaf"], "M_Glass": parts["leaf_glass"],
+                    self.obj_parts(f"Entrance_E{i}_{k:02d}_Doors", {fm: parts["leaf"], "M_Glass": parts["leaf_glass"],
                                                                     "M_Steel_Galv": parts["leaf_steel"]}, ev, cf)
                     for b in (parts["steel"],):
                         b.free()
@@ -413,7 +420,8 @@ class Building:
 
     def build_entrance_doors(self, i, k, o, ent):
         """Aluminium glazed entrance: outer frame, bay mullions, transom, glass, and per door bay a leaf frame,
-        optional mid rail and a pull bar (doors are separate objects so UE can swap in hinged actors)."""
+        optional mid rail and a pull bar (doors are separate objects so UE can swap in hinged actors).
+        Options as the detail path: "leaf": "solid" (opaque leaves), "transom_lights": n, "slot": frame/leaf material."""
         fr = self.edges[i]["frame"]  # obj() applies self.M
         rev = ent.get("reveal", 0.25)
         fw, fd = ent.get("frame_w", 0.06), ent.get("frame_d", 0.08)
@@ -422,6 +430,11 @@ class Building:
         bm = bmesh.new()
         ring_box(bm, fr, o.u0 + fw, o.u1 - fw, o.z0 + fw, o.z1 - fw, fw, w0, w1)
         box(bm, fr, o.u0 + fw, o.u1 - fw, w0, w1, zt, zt + fw)
+        nt = int(ent.get("transom_lights", 0))
+        for j in range(1, nt):   # transom mullions
+            ut = o.u0 + (o.u1 - o.u0) * j / nt
+            box(bm, fr, ut - fw / 2, ut + fw / 2, w0, w1, zt + fw, o.z1 - fw)
+        solid = ent.get("leaf") == "solid"
         u = o.u0
         widths = [b[0] for b in ent["bays"]]
         sc = (o.u1 - o.u0) / sum(widths)  # bays are measured widths: rescale so they fill the opening exactly
@@ -437,14 +450,20 @@ class Building:
                 zm = ent.get("door_mid_z")  # optional leaf mid rail (only where a photo shows one)
                 if zm:
                     box(bm_d, fr, ua + fw / 2 + 0.01, ub - fw / 2 - 0.01, w0 + 0.01, w1 - 0.01, zm - 0.05, zm + 0.05)
+                if solid:   # leaf infill flush with the leaf frame's centre
+                    box(bm_d, fr, ua + fw / 2 + lw + 0.005, ub - fw / 2 - lw - 0.005, w0 + 0.025, w1 - 0.025,
+                        o.z0 + 0.01 + lw, zt - 0.01 - lw)
                 hu = ub - fw / 2 - 0.12 if ent.get("hinge", "left") == "left" else ua + fw / 2 + 0.12
                 box(bm_d, fr, hu - 0.015, hu + 0.015, w1 - 0.01, w1 + 0.05, 0.8, 1.6)  # vertical pull bar
             gm = (w0 + w1) / 2
-            box(bm_g, fr, ua + fw / 2, ub - fw / 2, gm - 0.006, gm + 0.006, o.z0 + fw, zt)
+            if not (solid and kind == "door"):
+                box(bm_g, fr, ua + fw / 2, ub - fw / 2, gm - 0.006, gm + 0.006, o.z0 + fw, zt)
             u = ub
         box(bm_g, fr, o.u0 + fw, o.u1 - fw, (w0 + w1) / 2 - 0.006, (w0 + w1) / 2 + 0.006, zt + fw, o.z1 - fw)
-        self.obj(f"Entrance_E{i}_{k:02d}_Frame", bm, COL["frame"], ent.get("evidence"), ent.get("confidence"))
-        self.obj(f"Entrance_E{i}_{k:02d}_Doors", bm_d, COL["frame"], ent.get("evidence"), ent.get("confidence"))
+        for nm, b in (("Frame", bm), ("Doors", bm_d)):
+            ob = self.obj(f"Entrance_E{i}_{k:02d}_{nm}", b, COL["frame"], ent.get("evidence"), ent.get("confidence"))
+            if ent.get("slot"):
+                ob.data.materials[0] = mat(ent["slot"])
         self.obj(f"Entrance_E{i}_{k:02d}_Glass", bm_g, COL.get("glass", COL["frame"]), ent.get("evidence"), ent.get("confidence"))
 
     def _link(self, name, me, matrix, color):

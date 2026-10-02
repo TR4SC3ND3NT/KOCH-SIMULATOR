@@ -341,7 +341,10 @@
     "transom_z": 2.05,
     "reveal": 0.15,
     "evidence": "2026-09-25 map owner's hall photo (east hall end, solved camera + 0.6 m ceiling grid): brown double exit door with a 3-light transom in the east end wall under the stair's second flight, 1.86 m wide, head ~2.5-2.6 m, 3.4-5.2 m south of the north hall wall (y 6.3-8.2); greenery outside. Replaces the assumed F1 window of column u 6.6 (the west end has a window in the same column, frame c38). Outside steps/landing unknown.",
-    "confidence": "medium"
+    "confidence": "medium",
+    "leaf": "solid",
+    "transom_lights": 3,
+    "slot": "M_Wood_Stained"
    }
   },
   {

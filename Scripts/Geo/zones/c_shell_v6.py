@@ -45,7 +45,9 @@ def main(src):
            dict(old[3], windows=[win([x - N.X_TOWER1 for x in xs("S4") + xs("S5")])], status=EV),
            dict(old[4], windows=[win([s5_c - J, n5_c - J, (door_u0 + door_u1) / 2 + 2.4]),       # rooms 102/103 + corridor window 2.4 m north of the door axis
                                  win([(door_u0 + door_u1) / 2], ("F2", "F3", "F4"))],                    # over the F1 exit door
-                entrance=dict(old[4]["entrance"], u0=door_u0, u1=door_u1), status=EV + " | " + old[4].get("status", "")),
+                # 138: brown timber double door, 3-light transom (not the aluminium storefront of the main entrance)
+                entrance=dict(old[4]["entrance"], u0=door_u0, u1=door_u1, leaf="solid", transom_lights=3, slot="M_Wood_Stained"),
+                status=EV + " | " + old[4].get("status", "")),
            {"edge": 5, "name": "north_east", "status": EV,
             "windows": [win([L - x for x in xs("N4") + xs("N5")]), {"type": "WC", "u": [round(L - N.WC_WIN_N[1], 3)], "sills": WC_SILLS}]},
            {"edge": 6, "name": "north_step", "windows": []},

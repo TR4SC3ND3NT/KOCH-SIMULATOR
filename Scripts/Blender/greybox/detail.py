@@ -111,6 +111,7 @@ class AluStorefront:
     leaf_stile: float = 0.09     # door leaf profile face width
     leaf_bottom: float = 0.16    # door bottom rail
     leaf_mid: float = 0.0        # door mid rail centre height (0 = none)
+    leaf_solid: bool = False     # opaque leaves (timber/steel door): no pane, two shallow raised panels per leaf
     leaf_depth: float = 0.07
     glass_t: float = 0.024
     threshold: float = 0.02
@@ -160,12 +161,21 @@ def alu_storefront(parts, frame, o, s):
         la, lc, lz0, lz1 = a + g, c - g, s.threshold + g, zt - g
         st, bt = s.leaf_stile, s.leaf_bottom
         lfr = fr @ Matrix.Translation((la, -0.015, lz0))
-        panes = [Opening(st, lc - la - st, bt, lz1 - lz0 - st)]
-        if s.leaf_mid > 0:
-            zm = s.leaf_mid - lz0
-            panes = [Opening(st, lc - la - st, bt, zm - st / 2), Opening(st, lc - la - st, zm + st / 2, lz1 - lz0 - st)]
-        wall_piece(parts.get("leaf", parts["alu"]), lfr, lc - la, 0.0, lz1 - lz0, s.leaf_depth, panes, cut_start=0.0,
-                   cut_end=0.0)
+        lw, lh = lc - la, lz1 - lz0
+        lb = parts.get("leaf", parts["alu"])
+        panes = [Opening(st, lw - st, bt, lh - st)]
+        if s.leaf_solid:
+            panes = []
+            wall_piece(lb, lfr, lw, 0.0, lh, s.leaf_depth, [], cut_start=0.0, cut_end=0.0)
+            # lower / upper raised panel (8 cm lock rail between), 12 mm proud on both faces, 2 mm sunk into the slab
+            for z0p, z1p in ((bt + 0.04, lh * 0.45), (lh * 0.45 + 0.08, lh - st - 0.04)):
+                box(lb, lfr, st + 0.04, lw - st - 0.04, -0.002, 0.012, z0p, z1p)
+                box(lb, lfr, st + 0.04, lw - st - 0.04, -s.leaf_depth - 0.012, -s.leaf_depth + 0.002, z0p, z1p)
+        else:
+            if s.leaf_mid > 0:
+                zm = s.leaf_mid - lz0
+                panes = [Opening(st, lw - st, bt, zm - st / 2), Opening(st, lw - st, zm + st / 2, lh - st)]
+            wall_piece(lb, lfr, lw, 0.0, lh, s.leaf_depth, panes, cut_start=0.0, cut_end=0.0)
         for p in panes:
             box(parts.get("leaf_glass", parts["glass"]), lfr, p.u0 - 0.01, p.u1 + 0.01, -s.leaf_depth / 2 - s.glass_t / 2,
                 -s.leaf_depth / 2 + s.glass_t / 2, p.z0 - 0.01, p.z1 + 0.01)
