@@ -405,8 +405,16 @@
      -94.052
     ],
     [
-     161.594,
-     -89.691
+     161.496,
+     -91.689
+    ],
+    [
+     197.253,
+     -93.443
+    ],
+    [
+     197.351,
+     -91.445
     ],
     [
      160.395,
@@ -428,11 +436,13 @@
     5.35,
     5.35,
     5.35,
+    5.35,
+    5.35,
     5.35
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway",
+   "evidence": "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway; continues east as the 2.0 m paved walkway along the whole south face to the east lane (A266-A273: storefront threshold at walkway level, 4-5 rows of ~0.5 m slabs)",
    "confidence": "medium"
   },
   {
@@ -1470,19 +1480,19 @@
      -95.344
     ],
     [
-     172.982,
-     -90.2
+     172.876,
+     -92.367
     ],
     [
-     161.596,
-     -89.641
+     161.49,
+     -91.809
     ]
    ],
    "z": [
     7.42,
     7.386,
-    5.65,
-    5.65
+    5.45,
+    5.45
    ],
    "thk": 2.72,
    "material": "hedge",
@@ -1502,24 +1512,56 @@
      -96.539
     ],
     [
-     197.353,
-     -91.395
+     197.247,
+     -93.563
     ],
     [
-     172.982,
-     -90.2
+     172.876,
+     -92.367
     ]
    ],
    "z": [
     7.386,
     7.324,
-    5.65,
-    5.65
+    5.45,
+    5.45
    ],
    "thk": 2.686,
    "material": "hedge",
    "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed",
    "confidence": "low"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Curb_SouthWalk",
+   "ring": [
+    [
+     161.496,
+     -91.689
+    ],
+    [
+     197.253,
+     -93.443
+    ],
+    [
+     197.247,
+     -93.563
+    ],
+    [
+     161.49,
+     -91.809
+    ]
+   ],
+   "z": [
+    5.5,
+    5.5,
+    5.5,
+    5.5
+   ],
+   "thk": 0.7,
+   "material": "stone",
+   "evidence": "0.15 m concrete kerb between the south bank and the walkway along A_S's south face (A266, A271)",
+   "confidence": "medium"
   },
   {
    "type": "wall",
@@ -1530,15 +1572,35 @@
      -95.375
     ],
     [
-     178.175,
-     -96.612
+     198.231,
+     -97.996
     ]
    ],
-   "height": 0.45,
-   "thk": 0.2,
+   "height": 0.4,
+   "thk": 0.15,
    "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~0.45 m, stepped at joints) on the north edge of the clover path from the booth's NE corner east along A_S (065934318 t2-t17); line ~2.3 m north of the gate fence, estimated",
-   "confidence": "low"
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_PathParapet_S",
+   "line": [
+    [
+     161.107,
+     -95.524
+    ],
+    [
+     198.223,
+     -98.146
+    ]
+   ],
+   "height": 0.1,
+   "thk": 0.1,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "gutter kerb at the foot of the parapet on the sidewalk side, as at the street front west of the gate (2026-09-30 sidewalk walk A259-A275 (booth to the east lane): A260-A263)",
+   "confidence": "medium"
   },
   {
    "type": "hedge",
@@ -1549,15 +1611,15 @@
      -94.825
     ],
     [
-     178.201,
-     -96.062
+     198.258,
+     -97.447
     ]
    ],
-   "width": 0.8,
-   "height": 1.1,
+   "width": 0.9,
+   "height": 1.15,
    "top": "flat",
-   "evidence": "clipped hedge directly behind the parapet, top ~1.0-1.2 m above the path (065934318)",
-   "confidence": "low"
+   "evidence": "clipped hedge directly behind the parapet, top ~1.0-1.2 m above the path (065934318; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): A_S's ground floor seen straight over it, no fence)",
+   "confidence": "medium"
   },
   {
    "type": "tree",
@@ -1623,24 +1685,48 @@
    "type": "lamp",
    "name": "PathLamp_00",
    "pos": [
-    162.691,
-    -95.902
+    162.694,
+    -95.837
    ],
-   "height": 4.5,
+   "height": 5.0,
    "head": "box",
-   "evidence": "grey steel lamp posts standing at the parapet (065934318 t5-t8)",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
    "confidence": "low"
   },
   {
    "type": "lamp",
    "name": "PathLamp_01",
    "pos": [
-    171.68,
-    -96.343
+    171.674,
+    -96.471
    ],
-   "height": 4.5,
+   "height": 5.0,
    "head": "box",
-   "evidence": "grey steel lamp posts standing at the parapet (065934318 t5-t8)",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_02",
+   "pos": [
+    181.152,
+    -97.14
+   ],
+   "height": 5.0,
+   "head": "box",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_03",
+   "pos": [
+    190.631,
+    -97.81
+   ],
+   "height": 5.0,
+   "head": "box",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
    "confidence": "low"
   },
   {
@@ -1663,18 +1749,18 @@
    "name": "PathClover_S",
    "line": [
     [
-     161.066,
-     -96.373
+     161.012,
+     -97.472
     ],
     [
-     178.126,
-     -97.611
+     198.128,
+     -100.094
     ]
    ],
-   "width": 1.6,
+   "width": 4.0,
    "thk": 0.08,
    "surface": "clover_paver_267x218",
-   "evidence": "clover-paver path between the gate fence and the parapet, from the booth's east side east along A_S (065934318, 070021774 f7 bench)",
+   "evidence": "public clover-paver sidewalk south of the parapet from the booth's east door to the east lane (065934318, 070021774 f7 bench; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): no fence: the old gate-line fence was removed); width to the street parking unmeasured",
    "confidence": "low"
   },
   {
@@ -2330,9 +2416,9 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed)",
+   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
    "confidence": "low",
-   "z": 5.79
+   "z": 5.35
   },
   {
    "type": "bench",
@@ -2347,9 +2433,9 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed)",
+   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
    "confidence": "low",
-   "z": 5.79
+   "z": 5.35
   },
   {
    "type": "sign",
@@ -2419,9 +2505,9 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "082248481_s1 f00095-00188: 3 black benches under the trees along the path in front of A (2 were placed, the third by eye) | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed)",
+   "evidence": "082248481_s1 f00095-00188: 3 black benches under the trees along the path in front of A (2 were placed, the third by eye) | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
    "confidence": "low",
-   "z": 5.79
+   "z": 5.35
   },
   {
    "type": "box",

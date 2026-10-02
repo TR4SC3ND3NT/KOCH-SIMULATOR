@@ -5,7 +5,9 @@
 # plane-sweep ground heights of every frame -> levels and plan positions below (A-local, m). The 2022 drone numbers
 # were scaled by the model's B-A gap (13.43), which the SfM measures at ~12.6 (B's east wall ~0.8 m further east).
 # Run: python3 Scripts/Geo/zones/zone_gate_alley.py
-import json, math, sys
+# NOTE: the committed JSON carries later hand edits (QA passes, owner fixes: B-corner stairs, A_S corner props, pads);
+# a full regeneration drops them. Port changed elements into the JSON by name instead (2026-10-02).
+import json, math, os, sys
 
 # phase-1 terrain quadratic (build_greybox fit), only for the gate plaza / south bank that really follow the ground
 C = [5.7533, -0.9585, -2.3901, 0.0941, -0.2237, 0.0117]
@@ -143,10 +145,14 @@ slab("Walkway_South", [(X_RW, Y_WS), (X_WALL + 0.12, Y_WS - 0.6), (X_WALL + 0.12
                        (X_RW, S2_S)], lowtop, 1.3, "stone",
      "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it "
      "(070309303 f05/f06). " + EV_DROP, "medium")
-slab("Landing_SW", [BNW, BSE, (2.6, BSE[1] + 0.55), (2.6, 3.2), (X_WALL + 0.12, 3.2), (X_WALL + 0.12, Y_WS - 0.6), (X_RW, Y_WS)],
+Y_SWALK = 1.2         # north edge of the south bank = kerb line of the walkway along A_S's south face (wall y 3.2)
+slab("Landing_SW", [BNW, BSE, (2.6, BSE[1] + 0.55), (2.6, Y_SWALK), (38.4, Y_SWALK), (38.4, 3.2), (X_WALL + 0.12, 3.2),
+                    (X_WALL + 0.12, Y_WS - 0.6), (X_RW, Y_WS)],
      lowtop, 1.3, "stone",
      "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 "
-     "f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway", "medium")
+     "f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway; continues east as the 2.0 m paved "
+     "walkway along the whole south face to the east lane (A266-A273: storefront threshold at walkway level, 4-5 rows of "
+     "~0.5 m slabs)", "medium")
 X_WC = X_BB + 0.12     # walkway (lower) edge behind the curb
 slab("Walkway_North", [(X_WC, S2_N), (X_WALL + 0.12, S2_N), (X_WALL + 0.12, Y_AW), (X_DECK + 0.05, Y_AW),
                        (X_DECK + 0.05, Y1 + 0.5), (X_WC, Y1 + 0.5)], lowtop, 1.3, "stone",
@@ -309,37 +315,47 @@ slab("SouthBed_Cheek", [TSE, BSE, (2.6, BSE[1] + 0.55), (2.6, -3.9), (-1.2, -3.9
      "the top of the flight, 012258813; ~0.3 above the landing at the foot, 012208814)", "medium",
      {"thk": r3(up(0.5, -1.5) + 0.35 - PAD_Z + 0.3)})
 for name, x0, x1 in (("SouthBank_W", 2.6, 14.0), ("SouthBank_E", 14.0, 38.4)):
-    slab(name, [(x0, -1.9), (x1, -1.9), (x1, 3.25), (x0, 3.25)],
-         lambda x, y: (up(x, -1.9) + 0.35) if y < 0 else (Z_LAND + 0.3), 0.0, "hedge",
+    slab(name, [(x0, -1.9), (x1, -1.9), (x1, Y_SWALK - 0.12), (x0, Y_SWALK - 0.12)],
+         lambda x, y: (up(x, -1.9) + 0.35) if y < 0 else (Z_LAND + 0.10), 0.0, "hedge",
          "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling "
          "from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the "
          "path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed",
          "low", {"thk": r3(up(x0, -1.9) + 0.35 - PAD_Z + 0.3)})
+strip("Curb_SouthWalk", (2.6, Y_SWALK), (38.4, Y_SWALK), 0.12, lambda x, y: zw(y) + 0.15, PAD_Z - 0.2, "stone",
+      "0.15 m concrete kerb between the south bank and the walkway along A_S's south face (A266, A271)", "medium")
 
-# parapet + hedge along the path (upper level, outside the pad)
-PAR = [(2.4, -2.5), (19.5, -2.9)]
-els.append({"type": "wall", "name": "PathParapet_S", "line": ring(PAR), "height": 0.45, "thk": 0.2, "material": "stone",
-            "evidence": "fluted precast concrete parapet segments (~0.45 m, stepped at joints) on the north edge of the clover "
-                        "path from the booth's NE corner east along A_S (065934318 t2-t17); line ~2.3 m north of the gate "
-                        "fence, estimated", "confidence": "low"})
-els.append({"type": "hedge", "name": "PathHedge_S", "line": ring([(p[0], p[1] + 0.55) for p in PAR]), "width": 0.8,
-            "height": 1.1, "top": "flat",
-            "evidence": "clipped hedge directly behind the parapet, top ~1.0-1.2 m above the path (065934318)", "confidence": "low"})
+# parapet + hedge along the public sidewalk (upper level, outside the pad); no fence east of the booth in 2026
+PAR = [(2.4, -2.5), (39.6, -3.3)]
+EV_SW = "2026-09-30 sidewalk walk A259-A275 (booth to the east lane): "
+els.append({"type": "wall", "name": "PathParapet_S", "line": ring(PAR), "height": 0.40, "thk": 0.15, "material": "stone",
+            "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public "
+                        "sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; " + EV_SW + "continuous up "
+                        "to the lane fence); line ~2.3 m north of the gate line, estimated", "confidence": "medium"})
+els.append({"type": "wall", "name": "Kerb_PathParapet_S", "line": ring([(p[0], p[1] - 0.15) for p in PAR]), "height": 0.10,
+            "thk": 0.10, "material": "stone", "slot": "M_Concrete_Precast",
+            "evidence": "gutter kerb at the foot of the parapet on the sidewalk side, as at the street front west of the gate "
+                        "(" + EV_SW + "A260-A263)", "confidence": "medium"})
+els.append({"type": "hedge", "name": "PathHedge_S", "line": ring([(p[0], p[1] + 0.55) for p in PAR]), "width": 0.9,
+            "height": 1.15, "top": "flat",
+            "evidence": "clipped hedge directly behind the parapet, top ~1.0-1.2 m above the path (065934318; " + EV_SW +
+                        "A_S's ground floor seen straight over it, no fence)", "confidence": "medium"})
 for k, (x, y, h, cd, shape) in enumerate([(3.6, -1.5, 9.0, 4.5, "cone"), (8.5, -1.6, 11.0, 6.0, "round"),
                                           (13.8, -1.6, 8.0, 4.0, "cone"), (-0.8, -2.0, 10.0, 6.5, "round")]):
     els.append({"type": "tree", "name": f"BankTree_{k:02d}", "pos": W(x, y), "height": h, "crown_d": cd, "shape": shape,
                 "trunk_d": 0.35, "crown_base": 2.2,
                 "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: "
                             "whitewashed elm trunk at the bench east of the booth)", "confidence": "low"})
-for k, x in enumerate((4.0, 13.0)):
-    els.append({"type": "lamp", "name": f"PathLamp_{k:02d}", "pos": W(x, -2.95), "height": 4.5, "head": "box",
-                "evidence": "grey steel lamp posts standing at the parapet (065934318 t5-t8)", "confidence": "low"})
+for k, x in enumerate((4.0, 13.0, 22.5, 32.0)):
+    els.append({"type": "lamp", "name": f"PathLamp_{k:02d}", "pos": W(x, -2.85 - 0.0215 * (x - 2.4)), "height": 5.0,
+                "head": "box", "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet "
+                "(065934318 t5-t8; " + EV_SW + "4 posts booth -> lane)", "confidence": "low"})
 els.append({"type": "bin", "name": "PathBin", "pos": W(6.0, -3.05), "size": [0.4, 0.4, 0.75],
             "evidence": "ornamental black steel litter bin on scroll legs in front of the parapet (065934318 t5)", "confidence": "low"})
 
-els.append({"type": "path", "name": "PathClover_S", "line": [W(2.4, -3.5), W(19.5, -3.9)], "width": 1.6, "thk": 0.08,
-            "surface": "clover_paver_267x218", "evidence": "clover-paver path between the gate fence and the parapet, from "
-            "the booth's east side east along A_S (065934318, 070021774 f7 bench)", "confidence": "low"})
+els.append({"type": "path", "name": "PathClover_S", "line": [W(2.4, -4.6), W(39.6, -5.4)], "width": 4.0, "thk": 0.08,
+            "surface": "clover_paver_267x218", "evidence": "public clover-paver sidewalk south of the parapet from the booth's "
+            "east door to the east lane (065934318, 070021774 f7 bench; " + EV_SW + "no fence: the old gate-line fence was "
+            "removed); width to the street parking unmeasured", "confidence": "low"})
 
 # ---------------------------------------------------------------- upper alley paving + B-side shrub bed
 bpt_B0, bdir = (147.256, -81.356), (0.04891, 0.9988)
@@ -471,7 +487,7 @@ spec = {
                       "evidence": "sweep: path flat within +-0.05 from y 12 to the wide stair, 1.26 above the walkway"}],
     "elements": els,
 }
-out = sys.argv[1] if len(sys.argv) > 1 else '/home/faust/KOCH-SIMULATOR/Art/Blender/Specs/SITE_GateAlley.json'
+out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "Art", "Blender", "Specs", "SITE_GateAlley.json")
 json.dump(spec, open(out, 'w'), indent=1, ensure_ascii=False)
 print("wrote", out, len(els), "elements; PAD_Z", PAD_Z, "alley", ALLEY_S, ALLEY_N, "S1 top", r3(zt1), "bottom", r3(zb1),
       "rh", r3((zt1 - zb1) / 8), "TNW", TNW, "BNW", tuple(round(v, 2) for v in BNW))

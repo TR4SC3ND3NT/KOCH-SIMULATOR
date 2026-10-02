@@ -197,27 +197,6 @@
    "confidence": "medium"
   },
   {
-   "type": "fence",
-   "name": "Fence_East",
-   "line": [
-    [
-     162.683,
-     -97.394
-    ],
-    [
-     176.865,
-     -98.112
-    ]
-   ],
-   "height": 1.7,
-   "post_spacing": 2.5,
-   "post": 0.08,
-   "panel": "bars",
-   "bottom_gap": 0.08,
-   "evidence": "black bar fence east of the booth, cars of the forecourt parking behind it (pano 2022 left); starts after the ~1.8 m path along the booth east face (people walk north there in 065910461 f1.5 / 061913764 f4.5)",
-   "confidence": "low"
-  },
-  {
    "type": "bike_rack",
    "name": "BikeRack_Gate",
    "line": [
@@ -247,7 +226,8 @@
    "t": 0.12,
    "z0": 0.8,
    "evidence": "P1: bearings from Street c2 frames f02711/f02830/f02947 cut with the planter-wall face: posts at x 128.5-131 on the sidewalk edge; range from its 2.0 m height in f02947 (1030 px at f 3463 -> 6.7 m) agrees; was x 143.6. freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster",
-   "confidence": "medium"
+   "confidence": "medium",
+   "ue_note": "KOCH notice/rules only (no real text)"
   },
   {
    "type": "sign",
@@ -262,7 +242,9 @@
    "t": 0.03,
    "z0": 2.33,
    "evidence": "brass name plaque on the booth south face (rect 065910461 f9.3): u 0.2-0.9 m from the SW corner, 2.33-2.80 m above ground -> KOCH plaque",
-   "confidence": "high"
+   "confidence": "high",
+   "slot": "M_Sign_KOCH",
+   "ue_note": "KOCH brass plaque + round KOCH logo (real name/logo never used)"
   },
   {
    "type": "lamp",
@@ -851,9 +833,10 @@
    "h": 0.3,
    "t": 0.02,
    "z0": 2.4,
-   "slot": "M_Steel_Galv",
+   "slot": "M_Sign_KOCH",
    "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): steel 'test centre' plate right of the brass plaque on the south face, same height band (blank KOCH text)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "ue_note": "KOCH plate (the real one is a third-party test-centre brand: not reproduced)"
   },
   {
    "type": "sign",
@@ -954,7 +937,8 @@
    "z0": 1.3,
    "slot": "M_Sign_Panel",
    "evidence": "P1 by frames: blue info plate on the sliding gate (065856484 s1, 065910461 s2)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "ue_note": "KOCH notice/rules only (no real text)"
   },
   {
    "type": "sign",
@@ -970,7 +954,8 @@
    "z0": 1.3,
    "slot": "M_Sign_Panel",
    "evidence": "P1 by frames: blue info plate on the west fence (061757320 s3, 012136583 s1); +-1 m along",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "KOCH notice/rules only (no real text)"
   },
   {
    "type": "box",
@@ -1127,7 +1112,8 @@
    "z0": 0.6,
    "slot": "M_Sign_Panel",
    "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m; white campus info board on two posts facing the yard (east), blank KOCH face",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "KOCH notice/rules only (no real text)"
   },
   {
    "type": "tree",
@@ -1413,8 +1399,8 @@
      -99.89
     ],
     [
-     176.865,
-     -98.112
+     205.45,
+     -99.693
     ]
    ],
    "height": 2.0,
@@ -1422,7 +1408,7 @@
    "post": 0.06,
    "panel": "bars",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28 (overview sketch): the black bar fence of the east edge runs on straight from the sports east fence (SITE_Sports EastBoundary_Fence, u 100.5) south past the A east lot to the street, then west along the street to the gate's east fence (Fence_East end); the OSM neighbour 169915330 moved 1.6 m east to clear it; height 2.0 as the sports part",
+   "evidence": "owner 2026-09-28 (overview sketch): the black bar fence of the east edge runs on straight from the sports east fence (SITE_Sports EastBoundary_Fence, u 100.5) south past the A east lot to the street, then west along the street to the gate's east fence (Fence_East end); the OSM neighbour 169915330 moved 1.6 m east to clear it; height 2.0 as the sports part | 2026-10-02: the street leg now stops at the east-lane gate posts (x 205.3); west of the lane there is no fence along the sidewalk any more (A259-A275: parapet + hedge only)",
    "confidence": "low"
   },
   {
@@ -1452,6 +1438,194 @@
    "slot": "M_Steel_Galv",
    "evidence": "pole of FaceTerminal_Out",
    "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "EastLane_Plinth",
+   "line": [
+    [
+     198.23,
+     -99.294
+    ],
+    [
+     201.22,
+     -99.459
+    ]
+   ],
+   "height": 0.32,
+   "thk": 0.2,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): fluted precast plinth under the short bar fence west of the lane gate (A275-A278)",
+   "confidence": "medium"
+  },
+  {
+   "type": "fence",
+   "name": "EastLane_Fence",
+   "line": [
+    [
+     198.23,
+     -99.294
+    ],
+    [
+     201.22,
+     -99.459
+    ]
+   ],
+   "height": 1.87,
+   "post_spacing": 1.5,
+   "post": 0.06,
+   "panel": "bars",
+   "bottom_gap": 0.34,
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): bar fence 1.55 m with spear tops on the 0.32 plinth, 3.0 m between A_S's SE corner and the lane gate (person 1.72-1.75 m at the gate plane for scale)",
+   "confidence": "medium"
+  },
+  {
+   "type": "gate_leaf",
+   "name": "EastLane_SlidingGate",
+   "line": [
+    [
+     201.3,
+     -99.464
+    ],
+    [
+     205.01,
+     -99.669
+    ]
+   ],
+   "height": 1.6,
+   "bottom_gap": 0.08,
+   "slot": "M_Steel_Paint_Dark",
+   "ue_logic": "sliding_gate",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): sliding gate across the east lane, vertical bars with small ring ornaments, opening 3.7-3.9 m (A275-A278)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "EastLane_GatePost_0",
+   "center": [
+    205.15,
+    -99.677
+   ],
+   "dir_deg": -3.17,
+   "size": [
+    0.12,
+    0.12,
+    2.2
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Brass_Trim",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): two bronze-painted box posts at the gate's east end",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "EastLane_GatePost_1",
+   "center": [
+    205.3,
+    -99.685
+   ],
+   "dir_deg": -3.17,
+   "size": [
+    0.12,
+    0.12,
+    2.2
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Brass_Trim",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): two bronze-painted box posts at the gate's east end",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "EastLane_GateMotor",
+   "center": [
+    205.22,
+    -99.631
+   ],
+   "dir_deg": -3.17,
+   "size": [
+    0.4,
+    0.25,
+    0.28
+   ],
+   "z_rel": 2.2,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Grey",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): motor box on top of the gate posts",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "EastLane_Floodlight",
+   "pos": [
+    201.0,
+    -98.797
+   ],
+   "height": 2.6,
+   "head": "box",
+   "pole_r": 0.04,
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): short floodlight pole just inside the lane fence (A276)",
+   "confidence": "low"
+  },
+  {
+   "type": "sign",
+   "name": "EastLane_NoticeBoard",
+   "pos": [
+    199.7,
+    -98.775
+   ],
+   "dir_deg": -93.17,
+   "w": 0.8,
+   "h": 0.6,
+   "t": 0.04,
+   "z0": 1.0,
+   "slot": "M_Sign_Panel",
+   "ue_note": "KOCH notice only (real text not reproduced)",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): white framed notice board on 2 posts behind the lane fence (A275/A276)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "EastLane_NoticePost_0",
+   "center": [
+    199.35,
+    -98.73599999999999
+   ],
+   "dir_deg": -3.17,
+   "size": [
+    0.05,
+    0.05,
+    1.6
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): notice board posts",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "EastLane_NoticePost_1",
+   "center": [
+    200.04999999999998,
+    -98.77499999999999
+   ],
+   "dir_deg": -3.17,
+   "size": [
+    0.05,
+    0.05,
+    1.6
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): notice board posts",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [

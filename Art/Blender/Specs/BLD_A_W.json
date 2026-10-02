@@ -85,62 +85,62 @@
   },
   {
    "edge": 3,
-   "u0": 35.53,
-   "u1": 35.93,
+   "u0": 36.1,
+   "u1": 36.5,
    "proj": 0.05,
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
    "confidence": "medium"
   },
   {
    "edge": 3,
-   "u0": 29.63,
-   "u1": 30.03,
+   "u0": 30.2,
+   "u1": 30.6,
    "proj": 0.05,
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
    "confidence": "medium"
   },
   {
    "edge": 3,
-   "u0": 23.73,
-   "u1": 24.13,
+   "u0": 24.3,
+   "u1": 24.7,
    "proj": 0.05,
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
    "confidence": "medium"
   },
   {
    "edge": 3,
-   "u0": 17.83,
-   "u1": 18.23,
+   "u0": 18.4,
+   "u1": 18.8,
    "proj": 0.05,
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
    "confidence": "medium"
   },
   {
    "edge": 3,
-   "u0": 11.93,
-   "u1": 12.33,
+   "u0": 12.5,
+   "u1": 12.9,
    "proj": 0.05,
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
    "confidence": "medium"
   },
   {
    "edge": 3,
-   "u0": 6.03,
-   "u1": 6.43,
+   "u0": 6.6,
+   "u1": 7.0,
    "proj": 0.05,
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
    "confidence": "medium"
   },
   {
@@ -276,27 +276,19 @@
     {
      "type": "G",
      "u": [
-      40.5,
-      34.9,
-      30.0,
-      24.4,
-      20.3
-     ],
-     "rows": [
-      "G1"
-     ]
-    },
-    {
-     "type": "G",
-     "u": [
-      5.88,
-      11.78,
-      17.68
+      3.85,
+      9.75,
+      15.65,
+      21.55,
+      27.45,
+      33.35,
+      39.25
      ],
      "rows": [
       "G1"
      ],
-     "status": "one window per bay, centred between the wall columns (012327726 t28.5, 061757320 t15-17 frontal: window centre 2.7-2.9 m from the column)"
+     "evidence": "one window behind each gallery post, wall pilaster midway between windows (A137 frontal: wall scale from the 5-course plinth 0.72 m = 145 px/m, post scale from the 2.25 m soffit; posts within 0.2-0.75 m of the window centres; A228, A229, A151, G083)",
+     "confidence": "high (topology), medium (u)"
     },
     {
      "type": "DD",
@@ -430,7 +422,9 @@
    "t": 0.06,
    "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: letters on the A_N west wall x 10.9-11.4 (SfM keypoints, tracks 5-66), '!' at y 38.0, 'G' at y 56.1, z_rel 6.35-7.37 (~1 m letters); kept in this spec (w0 = A_N face) until the A_N owner moves it; content -> KOCH slogan (R4)",
    "confidence": "medium",
-   "w0": -6.4
+   "w0": -6.4,
+   "slot": "M_Sign_KOCH",
+   "content": "TODO_LORE: KOCH slogan in 3D letters (~0.55-0.6 m); the real slogan must not be used"
   },
   {
    "type": "wall_boxes",

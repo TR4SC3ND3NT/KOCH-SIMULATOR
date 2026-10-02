@@ -684,7 +684,8 @@
    "t": 0.08,
    "content": "TODO_LORE: KOCH lettering (2 blocks of 3 lines) + round logo; the real text must not be used",
    "evidence": "bay A blank east part: 2026 3-line block (top ~7.5), round logo, 3-line block (bottom ~3.1) (082606037 t1.0 rect, interpolated between eave/sill/head lines); 2020 terracotta panel 4.4-6.4 + logo above (pano)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "slot": "M_Sign_KOCH"
   },
   {
    "type": "wall_boxes",

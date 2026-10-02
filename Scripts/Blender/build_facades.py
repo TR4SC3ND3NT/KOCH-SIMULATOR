@@ -1025,7 +1025,9 @@ class Building:
             elif t == "wall_sign":  # lettering/logo panel on the wall face (content = KOCH branding later)
                 w0 = a.get("w0", 0.0)  # face offset along the outward normal (m; <0 = on a wall behind this edge)
                 box(bm, fr, a["u0"], a["u1"], w0, w0 + a.get("t", 0.08), a["z0"], a["z1"])
-                self.obj(f"Sign_{a.get('name', a['u0'])}", bm, COL[a.get("color", "sign")], a.get("evidence"), cf)
+                ob = self.obj(f"Sign_{a.get('name', a['u0'])}", bm, COL[a.get("color", "sign")], a.get("evidence"), cf)
+                if a.get("slot"):                      # e.g. M_Sign_KOCH: face carries KOCH branding in UE
+                    ob.data.materials[0] = mat(a["slot"])
             elif t == "stair_well":
                 self.build_stair_well(a, e, fr)
             elif t == "porch":
@@ -1246,7 +1248,7 @@ class Building:
             box(bm, fr, u0, u1, 0.0, dd, a.get("deck_bottom", e["zg"] - BURY_M), zt)
             self.obj(f"GalleryDeck_{tag}", bm, COL["brick"] if cp else COL["granite"], ev, cf)
             if cp:
-                t, pr, cw = cp["t"], cp.get("proj", 0.03), cp.get("w", 0.3)
+                pr, cw = cp.get("proj", 0.03), cp.get("w", 0.3)
                 bm = bmesh.new()
                 box(bm, fr, u0 - pr, u1 + pr, dd - cw, dd + pr, zt, a["floor_z"])
                 box(bm, fr, u0 - pr, u0 + cw, 0.0, dd - cw, zt, a["floor_z"])

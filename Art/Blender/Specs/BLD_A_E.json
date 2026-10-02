@@ -23,9 +23,9 @@
  },
  "plinth_m": 0.806,
  "wall_thk": 0.4,
- "storey_m": 3.6,
+ "storey_m": 3.85,
  "storeys": 1,
- "eave_z": 3.6,
+ "eave_z": 3.85,
  "ring": [
   [
    35.2,
@@ -46,8 +46,8 @@
  ],
  "ring_notes": "Google z20 red roof x 35.6..41.6, y ~23..36; A_S shadow on it 2.5 m wide (height step ~5-6 m -> 1 storey); Bing shows it too",
  "cornice": {
-  "z0": 3.4,
-  "z1": 3.6,
+  "z0": 3.65,
+  "z1": 3.85,
   "proj": 0.03
  },
  "plinth": {
@@ -141,7 +141,31 @@
   "evidence": "Google z20 (plan only)",
   "confidence": "low"
  },
- "attachments": [],
+ "attachments": [
+  {
+   "type": "post_canopy",
+   "edge": 1,
+   "u0": 0.3,
+   "u1": 7.5,
+   "depth": 2.4,
+   "z0": 2.3,
+   "z1": 2.45,
+   "fascia_h": 0.15,
+   "fascia_t": 0.04,
+   "post_w": 0.1,
+   "post_in": 0.1,
+   "posts_u": [
+    0.6,
+    3.9,
+    7.2
+   ],
+   "slot": "M_Paint_Maroon",
+   "soffit_slot": "M_Sheet_Brown",
+   "post_slot": "M_Steel_Paint_Dark",
+   "evidence": "lean-to storage canopy of maroon profiled sheet on black steel posts along the east face (A278, A274; by eye against A_S's rows and a parked car 1.52 m); wall top about at A_S's 2nd-row sill -> eave 3.85",
+   "confidence": "low-medium"
+  }
+ ],
  "ffl_z": 5.47,
  "ffl_note": "2026-09-25 zone merge: one shared A floor level. Gate-alley zone: 2022 drone SfM (scaled by the 13.43 m B-A gap) + riser counts put A's west door 1.35 m below the alley (8 risers x 0.169-0.173 from the alley stairs); A_S/A_W floors are equal at their junction (A_W gallery zone). Matches C FFL 5.53 (map owner: A, garden, gazebos and C are on one terrace).",
  "walls_to_ffl": true,
