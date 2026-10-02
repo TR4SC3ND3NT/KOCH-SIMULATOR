@@ -1,0 +1,14 @@
+PASS1 PART0 (A000-A069) final report, 2026-10-02 (stopped early: owner token limit).
+NOT REVIEWED (re-run tomorrow): A026-A051 (opened, but dropped from context before notes).
+Coverage: A000-A025, A052-A069 -> see part0/notes.txt (per-photo observations).
+FINDINGS:
+P0-01 Garden hedge arch Arch_Bnd_G1_N too big: model outer 3.63 x 3.54; measured (A022, man 1.77 m = 966 px/m) fingertip 2.17, crown 2.92, outer width 3.33, path 1.07. Proposed span 0.95, height 2.17, thk 1.19 + new builder option crown_thk 0.75 (thick legs, thin crown). +-0.15. medium.
+P0-02 HallBed lawn north of the walk = row of columnar thujas (some double) + 1 blue spruce at the E end, not 7 tall spruces: Spruce_0..5 -> cone thuja h 5.0 crown 1.2 base 0.3 same pos; Spruce_6 stays blue spruce (A018, A002, A004, A005, A016). low.
+P0-03 HallBed_BoxW = red concrete-block service enclosure ~1.6 m (8 courses of 390x190 blocks, A011), pipes/valves/manhole inside, radiators stacked against it; not a 0.85 m rose planter: wall h 1.6 thk 0.2 red block, drop soil + shrubs (A011, A012, A023, A017, A010). BoxE not checked. low-medium.
+P0-04 Boiler chimney at about (107, 9) world +-2 m (stack shadow ~7 m on the hall N roof in Google/Esri/Bing, base (107.5,8.3)/(107.8,10.4)), box 0.8x0.8x25 + guy wire; contradicts the earlier (78,10). low.
+P0-05 Lower-yard stair: 5 risers x 4 kerb stones (1.0 m) = ~4.0 m wide (A064 frontal, A062, A063), not 7 x 6.43 m; drop/foot level to re-decide (1.125/5 too tall). medium-low.
+P0-06 Overhead insulated pipe bridge (d ~0.3, ~3.5 m high) across the north walk's west end near x 99-101 + pipe runs along the hall S wall west of x ~100; not modelled (A008, A009, A011, A012, A017, A023). low.
+P0-07 Pitch plinth along the east walkway = pink-red painted concrete, not brick tile (A069): slot M_Paint_Red, h 0.35-0.45. low.
+Also: A060/A061 bench niche off the lane (painted kerbs) not modelled; A054 kerbs 1.0 m red along the courts S fence (26-stone count not done); A019-A022 path between edging rows 1.07 m.
+Signs: festival boxes/pillar need KOCH livery if kept.
+Open: 1) anything below the 5 kerb steps / how much lower is the pull-up strip; 2) red block enclosure W of the hall = service yard ~head height? second one further E the same?; 3) chimney beside the hall N wall or behind the W end; 4) courts vs pitch offset -> photos A026-A051.
