@@ -53,7 +53,16 @@
  },
  "plinth": {
   "z_top": 0.75,
-  "proj": 0.03
+  "proj": 0.03,
+  "skip": {
+   "2": [
+    [
+     -1.0,
+     27.3
+    ]
+   ]
+  },
+  "evidence": " | 2026-10-02 zaudit: no plinth band along the party walls with the other A blocks"
  },
  "pilasters": [
   {
