@@ -4,6 +4,7 @@
 #      or exec() it inside a live Blender (then save manually).
 # Units: metres, local campus frame (Scripts/Geo/campus_frame.py): X east, Y north, Z = ASL - 800 m.
 import json
+import math
 import os
 import sys
 
@@ -351,11 +352,30 @@ def cut_terrain_holes():
             if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
                 c = not c
         return c
+    # Cut the mesh exactly along each ring edge first (vertical planes, limited to the faces around that edge), so the
+    # hole follows the ring instead of whole 1 m quads: deleting by quad centre left up to 0.5 m of open ground (walk_qa
+    # HOLE) or terrain lips over the light wells.
+    for r in rings:
+        n = len(r)
+        for i in range(n):
+            (x1, y1), (x2, y2) = r[i], r[(i + 1) % n]
+            ln = math.hypot(x2 - x1, y2 - y1)
+            if ln < 1e-6:
+                continue
+            lo_x, hi_x, lo_y, hi_y = min(x1, x2) - 1.5, max(x1, x2) + 1.5, min(y1, y2) - 1.5, max(y1, y2) + 1.5
+            geom = [f for f in bm.faces if any(lo_x <= v.co.x <= hi_x and lo_y <= v.co.y <= hi_y for v in f.verts)]
+            if not geom:
+                continue
+            gv = {v for f in geom for v in f.verts}
+            ge = {e for f in geom for e in f.edges}
+            bmesh.ops.bisect_plane(bm, geom=list(gv) + list(ge) + geom, dist=1e-4, plane_co=(x1, y1, 0.0),
+                                   plane_no=((y2 - y1) / ln, (x1 - x2) / ln, 0.0))
+    bm.faces.ensure_lookup_table()
     dead = [f for f in bm.faces if any(inside(f.calc_center_median().x, f.calc_center_median().y, r) for r in rings)]
     bmesh.ops.delete(bm, geom=dead, context="FACES")
     bm.to_mesh(ob.data)
     bm.free()
-    print(f"terrain: cut {len(dead)} quads for {len(rings)} holes")
+    print(f"terrain: cut {len(dead)} faces for {len(rings)} holes")
 
 
 def hide_replaced():

@@ -38,10 +38,11 @@ def main():
     for nm, x0, x1, dep in BOXES:
         u0, u1 = max(0.0, u_of(x0)), min(L, u_of(x1))
         ring = [W(u0, 0.0), W(u1, 0.0), W(u1, dep), W(u0, dep)]
-        # 3 brick walls (the 4th side is the Hall wall) + the raised soil inside
-        for k, (p, q) in enumerate(((W(u0, 0.05), W(u0, dep)), (W(u0, dep), W(u1, dep)), (W(u1, dep), W(u1, 0.05)))):
-            new.append({"type": "wall", "name": f"HallBed_Box{nm}_Wall_{k}", "line": [p, q], "height": BOX_H, "thk": BOX_T,
-                        "cap_proj": 0.03, "material": "brick", "slot": "M_Tile_Brick_Red", "evidence": EV, "confidence": "low"})
+        # 3 brick walls as one mitred run (the 4th side is the Hall wall; separate pieces overlapped at the corners and
+        # left a notch outside them) + the raised soil inside
+        new.append({"type": "wall", "name": f"HallBed_Box{nm}_Wall", "line": [W(u0, 0.05), W(u0, dep), W(u1, dep), W(u1, 0.05)],
+                    "height": BOX_H, "thk": BOX_T, "cap_proj": 0.03, "material": "brick", "slot": "M_Tile_Brick_Red", "evidence": EV,
+                    "confidence": "low"})
         new.append({"type": "slab", "name": f"HallBed_Box{nm}_Soil", "ring": [W(u0 + BOX_T / 2, 0.05), W(u1 - BOX_T / 2, 0.05),
                     W(u1 - BOX_T / 2, dep - BOX_T / 2), W(u0 + BOX_T / 2, dep - BOX_T / 2)], "z0": Z_G - 0.1,
                     "z1": round(Z_G + BOX_H - 0.1, 3), "material": "stone", "slot": "M_Ground_Grass", "evidence": EV,

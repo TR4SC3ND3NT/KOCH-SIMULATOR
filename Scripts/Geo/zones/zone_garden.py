@@ -262,14 +262,32 @@ def main():
                 "cross": True, "arm_span": 0.8, "globe_d": 0.35, "base_box": [0.3, 0.3, 0.6], "confidence": "low",
                 "evidence": EV + " | owner: lamp post in the exact middle, 4 lamps (maybe 2)"})
 
-    # --- gazebo surrounds: paving from the parapet to the ring edging (no lawn sliver between the octagonal apron and
-    # the round edging, owner 2026-09-29 screenshot 53); it sits 8 mm under the apron tiles so the two never coincide ---
+    # --- gazebo surrounds: octagonal tiled apron from the parapet face to R_APRON, concentric with the gazebo (it was
+    # 0.2 m off-centre and G2 7 deg off the gazebo: parapet inside the tiles on one side, a lawn sliver on the other);
+    # paving fill from the apron to the ring edging (owner 2026-09-29 screenshot 53) as flat slabs with the apron and
+    # the path strips cut out, so no surface lies under another (zaudit 2026-10-02: 40 m2 hidden per gazebo) ---
+    z_lt = next(p_["z"] for p_ in d.get("terrain_pads", []) if p_.get("name") == "LowerTerrace")
     for g in C:
-        r0 = by["Gazebo_1" if g == "G1" else "Gazebo_2"].get("across_flats", 7.7) / 2
-        rm, w = (r0 + R_EDGE) / 2, R_EDGE - r0 + 0.1
-        new.append({"type": "path", "name": f"Apron_Fill_{g}", "line": [_r((C[g][0] + rm * math.cos(2 * math.pi * k / 48),
-                    C[g][1] + rm * math.sin(2 * math.pi * k / 48))) for k in range(48)], "closed": True, "width": round(w, 3),
-                    "thk": 0.08, "top": 0.012, "confidence": "medium", "evidence": EV + " | paving between parapet and ring edging"})
+        gz_ = by["Gazebo_1" if g == "G1" else "Gazebo_2"]
+        n8, rot = gz_.get("sides", 8), math.radians(gz_.get("rot_deg", 0.0))
+        r_par = gz_.get("across_flats", 7.7) / 2 + gz_.get("parapet_t", 0.3) / 2      # parapet outer face (apothem, m)
+
+        def octagon(ap):   # gazebo builder's vertex convention (build_site.b_gazebo): rot + pi/N + k 2pi/N
+            rc = ap / math.cos(math.pi / n8)
+            return [(C[g][0] + rc * math.cos(rot + math.pi / n8 + 2 * math.pi * k / n8),
+                     C[g][1] + rc * math.sin(rot + math.pi / n8 + 2 * math.pi * k / n8)) for k in range(n8)]
+        apron = by.get("Apron_" + g)
+        if apron:
+            apron["line"] = [_r(q) for q in octagon((r_par + R_APRON) / 2)]
+            apron["width"] = round(R_APRON - r_par, 3)
+        cut = unary_union([Polygon(octagon(R_APRON))] + [LineString(e["line"]).buffer(e["width"] / 2, cap_style=2)
+                                                          for e in new if e["type"] == "path" and e["name"].startswith(g + "_")])
+        fill = Point(C[g]).buffer(R_EDGE + 0.05, 24).difference(cut)
+        for k, q in enumerate(q_ for q_ in getattr(fill, "geoms", [fill]) if q_.area > 0.01):
+            new.append({"type": "slab", "name": f"Apron_Fill_{g}_{k}", "ring": [_r(c) for c in q.exterior.coords[:-1]],
+                        "holes": [[_r(c) for c in h_.coords[:-1]] for h_ in q.interiors],
+                        "z0": round(z_lt - 0.068, 3), "z1": round(z_lt + 0.012, 3), "material": "stone", "confidence": "medium",
+                        "evidence": EV + " | paving between the apron and the ring edging"})
     # apron lamp (081946180: black cast post at a path junction by a gazebo corner): on the apron beside the G2 link
     # mouth, next to the edging - not in the walking line
     if "Lamp_G2_Apron" in by:
@@ -308,9 +326,12 @@ def main():
           f"arches {len(arches)}; outer area {outer.area:.0f} m2")
     for n, (a, b, st) in cl.items():
         print(f"  {n:12s} {_r(a)} -> {_r(b)}  hd {math.degrees(math.atan2(b[1] - a[1], b[0] - a[0])):7.2f}  len {math.dist(a, b):5.2f}")
+    audit = os.path.join(os.path.dirname(SPEC), "..", "Audit")
+    if not os.path.isdir(audit):
+        return
     json.dump({"outline": [_r(p) for p in ring], "gazebos": C, "square": [SQ_C, SQ_PU, SQ_PV, THETA],
                "paths": {n: [_r(a), _r(b)] for n, (a, b, _) in cl.items()}},
-              open(os.path.join(os.path.dirname(SPEC), "..", "Audit", "garden_v2_layout.json"), "w"), indent=1)
+              open(os.path.join(audit, "garden_v2_layout.json"), "w"), indent=1)
 
 
 if __name__ == "__main__":

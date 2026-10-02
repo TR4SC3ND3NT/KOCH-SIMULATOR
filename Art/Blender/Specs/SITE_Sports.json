@@ -3974,33 +3974,49 @@
    "name": "LowerYard_Retain_Terrace",
    "ring": [
     [
-     159.15,
+     158.992,
      68.682
     ],
     [
-     159.45,
+     159.292,
      68.682
     ],
     [
-     159.45,
+     159.427,
+     72.18
+    ],
+    [
+     159.607,
      76.882
     ],
     [
-     159.15,
+     159.307,
      76.882
+    ],
+    [
+     159.127,
+     72.18
     ]
    ],
    "z": [
     3.8,
     3.8,
-    2.775,
-    2.775
+    3.8,
+    2.65,
+    2.65,
+    3.8
    ],
-   "thk": 1.775,
+   "thk": 1.95,
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "confidence": "medium",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top slopes 3.8 -> 2.775 with the bank"
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top slopes 3.8 -> 2.775 with the bank | 2026-10-02 walk QA: on the terrain step line (rotated with the pads, was world-aligned and up to 0.15 m off it) and 5 cm over the terrace/bank top (the old linear top sat up to 0.4 m under the 3.75 terrace, terrain hung over the drop)",
+   "folds": [
+    [
+     2,
+     5
+    ]
+   ]
   },
   {
    "type": "box",

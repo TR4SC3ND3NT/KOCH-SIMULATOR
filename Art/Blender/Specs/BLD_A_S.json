@@ -540,25 +540,26 @@
      0.0,
      2.2,
      0.45,
-     0.35
+     0.36
     ],
     [
      9.2,
      0.0,
      2.2,
      0.45,
-     0.35
+     0.36
     ],
     [
      11.9,
      0.0,
      0.5,
      0.55,
-     0.4
+     0.41
     ]
    ],
-   "evidence": "012327726_s1, 012404116_s1: maroon ledge/plinth boxes at the foot of the west face, plus a small maroon box",
-   "confidence": "low"
+   "evidence": "012327726_s1, 012404116_s1: maroon ledge/plinth boxes at the foot of the west face, plus a small maroon box | 2026-10-02 zaudit: back 1 cm into the wall (its back face lay on the plinth's)",
+   "confidence": "low",
+   "w0": -0.01
   }
  ],
  "sign_notes": "blue block plate on the SW pilaster at z ~4.3 (KOCH text later, R4).",

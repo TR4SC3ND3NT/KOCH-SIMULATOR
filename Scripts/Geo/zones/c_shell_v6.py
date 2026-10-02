@@ -78,6 +78,8 @@ def main(src):
             if "items" in a:
                 e, _ = north_u(a["items"][0][0])
                 a["edge"], a["items"] = e, [[north_u(it[0])[1]] + it[1:] for it in a["items"]]
+        if a.get("type") == "ramp" and a.get("name") == "Top" and "rail_ends" not in a:
+            a["rail_ends"] = ["u1"]                                     # walk QA 2026-10-02: open outer end 1.05 m over the plaza
         att.append(a)
     C["attachments"] = att
     dorm = []
