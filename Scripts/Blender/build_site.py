@@ -315,6 +315,11 @@ class Site:
                     j = (i + 1) % n
                     bm.faces.new((lo[k0 + i], lo[k0 + j], hi[k0 + j], hi[k0 + i]))
                 k0 += n
+            # the 0.5 m densified rings put collinear points on every edge: ear clipping leaves zero-area slivers there;
+            # flip them away (top and bottom caps only - the side quads keep their edges)
+            caps = [f for f in bm.faces if len(f.verts) == 3]
+            bmesh.ops.beautify_fill(bm, faces=caps, edges=list({e for f in caps for e in f.edges if len(e.link_faces) == 2
+                                                                and all(len(g.verts) == 3 for g in e.link_faces)}))
             bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
             p = el["ring"][0]
         elif "ring" in el:
@@ -1268,7 +1273,8 @@ class Site:
                             el.get("spacing", 1.2), el.get("mid_rails", 1))
         else:
             railing(bm, pts, height=el.get("height", 1.0), post=el.get("post", 0.05), rail=el.get("rail", 0.05),
-                    spacing=el.get("spacing", 1.2), mid_rails=el.get("mid_rails", 1))
+                    spacing=el.get("spacing", 1.2), mid_rails=el.get("mid_rails", 1), bottom_rail=el.get("bottom_rail"),
+                    bar=el.get("bar"))
         self.emit(el, bm, COL.get(el.get("material", "metal"), COL["metal"]), tuple(pts[0]))
 
     def build(self):

@@ -204,12 +204,19 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
         f1["z_base"] = z(zb)
     els.append(f1)
     xs = sorted([x_wall, x_front])
-    els.append(slab(f"{prefix}_Landing", xs[0], xs[1], y_land, h1, zb if solid else top1 - 0.2, top1, "granite",
-                    **ev("half-landing against the north hall wall")))
+    # half-landing: white plastered body, beige granite top like the treads (138: the landing side under the flight is
+    # white, not stone)
+    els.append(slab(f"{prefix}_Landing", xs[0], xs[1], y_land, h1, zb if solid else top1 - 0.2, top1 - 0.03, "white",
+                    slot="M_Paint_White", **ev("half-landing against the north hall wall")))
+    els.append(slab(f"{prefix}_LandingTop", xs[0], xs[1], y_land, h1, top1 - 0.03, top1, "granite", slot=STAIR_FINISH["slot"],
+                    **ev("granite landing finish (138)")))
     els.append({"type": "stairs_run", "name": f"{prefix}_Flight2", "top": c_to_w(xb, y_bot), "dir_deg": NORTH,
                 "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD,
                 "z_top": z(zb + STOREY), "material": "granite", **STAIR_FINISH, "soffit_thk": SOFFIT, **ev("U-stair flight 2")})
-    rail = {"height": 0.95, "spacing": 0.12, "mid_rails": 0, "material": "white"}
+    # white steel balustrade (138): 40 mm posts at the ends / joints, round-ish 40 mm handrail, a bottom rail 0.10 over
+    # the nosing line and 20 mm bars at ~0.20 m standing on it
+    rail = {"height": 0.95, "spacing": 0.20, "mid_rails": 0, "post": 0.04, "bar": 0.02, "rail": 0.04, "bottom_rail": 0.10,
+            "material": "white"}
     rev = ev("white steel balustrade")
     els.append({"type": "rail3d", "name": f"{prefix}_Rail1", **rail, **rev,
                 "points": [c_to_w(x_front - sgn * 0.05, y_bot + TREAD) + [z(zb + BOTTOM_RISER + RISER_H)],
@@ -298,11 +305,20 @@ def plan(k, zb, lobby, west_stair):
         els.append(slab(f"{P}Hall_Beam_{x:.1f}", x - 0.2, x + 0.2, min(hall(x - 0.01)[0], h0), max(hall(x - 0.01)[1], h1),
                         zb + COR_BEAM_Z, zb + CC, "white", **ev("bulkheads crossing the hall at the lobby sides, underside 2.66 (003)")))
     # blue accent panels at the end-room doors and around the WC doors
+    # the paint runs round the door opening (a box over it hid the door); on F1 north it runs on to the stair-bay corner
+    # with the fire-hose cabinet on it (135/138: blue from ~0.1 m beside the frame to the flight-1 side wall)
     for key, x in (("N1", DOOR_N["N1"]), ("N5", DOOR_N["N5"]), ("S1", DOOR_S["S1"]), ("S5", DOOR_S["S5"])):
-        yy = (hall(x)[1] - 0.01) if key[0] == "N" else (hall(x)[0] + 0.01)
-        els.append({"type": "box", "name": f"{P}Accent_{key}", "center": c_to_w(x, yy), "dir_deg": EAST,
-                    "size": [DOOR_W + 1.2, 0.02, CC - 0.1], "z0": z(zb + 0.1), "material": "accent",
-                    **ev("periwinkle-blue panel at the end-room door (hall photo)")})
+        north = key[0] == "N"
+        yy = (hall(x)[1] - 0.01) if north else (hall(x)[0] + 0.01)
+        o0, o1 = x - DOOR_W / 2 - 0.02, x + DOOR_W / 2 + 0.02          # wall opening (wall() adds 2 cm a side)
+        a0, a1 = x - DOOR_W / 2 - 0.6, x + DOOR_W / 2 + 0.6
+        if north and k == 1:
+            a0, a1 = (a0, X_E - STAIR_X) if key == "N5" else (X_W + STAIR_X, a1)
+        zt = DOOR_H + 0.02
+        for nm, u0, u1, z0_, z1_ in (("L", a0, o0, 0.1, CC - 0.1), ("R", o1, a1, 0.1, CC - 0.1), ("T", o0, o1, zt, CC - 0.1)):
+            els.append({"type": "box", "name": f"{P}Accent_{key}_{nm}", "center": c_to_w((u0 + u1) / 2, yy), "dir_deg": EAST,
+                        "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_), "material": "accent",
+                        **ev("periwinkle-blue paint round the end-room door (hall photos 135/138)")})
     for x0, x1, yy in ((P2 + 0.1, P_WCM, HW1 - 0.01), (P_WCM, P3 - 0.1, HE1 - 0.01)):
         els.append({"type": "box", "name": f"{P}Accent_WC_{x0:.1f}", "center": c_to_w((x0 + x1) / 2, yy), "dir_deg": EAST,
                     "size": [x1 - x0, 0.02, CC - 0.1], "z0": z(zb + 0.1), "material": "accent", **ev("blue accent wall at the WC doors")})
@@ -863,6 +879,24 @@ def build():
                **ev("power-bank rental kiosk by the coffee kiosk (002)")})
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
+    # east stair hall (138): the end wall steps back at the F2 floor over flight 2 - a white ledge with a row of potted
+    # plants (clay / grey / pink pots, succulents); it ends where flight 2 climbs to within ~1 m of it
+    h0e, h1e = hall(X_E - 1.0)
+    y_lnd = h0e + (COR - LANDING - (RISERS - 1) * TREAD) + (RISERS - 1) * TREAD
+    top1 = BOTTOM_RISER + (RISERS - 1) * RISER_H
+    y_end = y_lnd - ((STOREY - 1.0) - top1) / RISER_H * TREAD
+    evp = ev("ledge with potted plants on the east end wall over flight 2 (138)", "medium")
+    f1.append(slab("F1_StairE_PlantLedge", X_E - 0.22, X_E, y_end, h1e, STOREY - 0.12, STOREY, "white", slot="M_Paint_White", **evp))
+    pots = [(0.30, 0.24, "M_Clay_Pot"), (0.16, 0.14, "M_Plastic_Grey"), (0.30, 0.22, "M_Clay_Pot"), (0.18, 0.16, "M_Plastic_Pot_Pink"),
+            (0.26, 0.22, "M_Clay_Pot"), (0.16, 0.14, "M_Plastic_Grey")]
+    n_p = len(pots)
+    for i, (d_, h_, sl) in enumerate(pots):
+        yp = h1e - 0.35 - i * (h1e - 0.35 - y_end - 0.25) / (n_p - 1)
+        pw = c_to_w(X_E - 0.11, yp)
+        f1.append({"type": "disc", "name": f"F1_StairE_Pot_{i}", "pos": pw, "r": round(d_ / 2, 3), "z0": z(STOREY),
+                   "z1": z(STOREY + h_), "seg": 20, "material": "white", "slot": sl, "ue_asset": "flower_pot", **evp})
+        f1.append({"type": "disc", "name": f"F1_StairE_PotPlant_{i}", "pos": pw, "r": round(d_ / 2 * 0.8, 3), "z0": z(STOREY + h_),
+                   "z1": z(STOREY + h_ + 0.18), "seg": 12, "material": "white", "slot": "M_Hedge_Foliage", "ue_asset": "houseplant_small", **evp})
     # janitor's closets under flight 2 of both F1 stairs (map owner), brown door, north of the east exit door
     evc = ev("janitor's closet under flight 2, ordinary brown door (map owner)")
     for side, xw, sg in (("W", X_W, +1), ("E", X_E, -1)):

@@ -177,8 +177,10 @@ def ramp(bm, frame, u0, u1, w0, w1, z_low, z_high, thk=0.25):
     prism_profile(bm, frame, [(w0, z_high), (w1, z_low), (w1, z_low - thk), (w0, z_low - thk)], u0, u1)
 
 
-def railing(bm, points, height=0.9, post=0.05, rail=0.05, spacing=1.2, mid_rails=1):
-    """Posts + top rail + mid rails along a world-space polyline of Vector (z = walking surface)."""
+def railing(bm, points, height=0.9, post=0.05, rail=0.05, spacing=1.2, mid_rails=1, bottom_rail=None, bar=None):
+    """Posts + top rail + mid rails along a world-space polyline of Vector (z = walking surface).
+    bottom_rail (m over the surface): balustrade style - a rail parallel to the pitch, the in-between bars (section
+    bar, default post) stand on it; only the end/joint posts run down to the surface."""
     for si, (p, q) in enumerate(zip(points[:-1], points[1:])):
         seg = q - p
         d = seg.normalized()
@@ -192,8 +194,14 @@ def railing(bm, points, height=0.9, post=0.05, rail=0.05, spacing=1.2, mid_rails
         for k in range(0 if si == 0 else 1, n + 1):  # joint post once (the previous segment placed it)
             u = run * k / n
             z = slope * u
-            box(bm, m, u - post / 2, u + post / 2, -post / 2, post / 2, z, z + height)
-        for zr in [height] + [height * (i + 1) / (mid_rails + 1) for i in range(mid_rails)]:
+            end = k in (0, n)
+            if bottom_rail is None or end:
+                box(bm, m, u - post / 2, u + post / 2, -post / 2, post / 2, z, z + height)
+            else:
+                b = bar or post
+                box(bm, m, u - b / 2, u + b / 2, -b / 2, b / 2, z + bottom_rail, z + height)   # ends welded into the rails
+        zs = [height] + [height * (i + 1) / (mid_rails + 1) for i in range(mid_rails)]
+        for zr in zs + ([bottom_rail] if bottom_rail is not None else []):
             _sloped_bar(bm, m, run, slope, zr, rail)
 
 
