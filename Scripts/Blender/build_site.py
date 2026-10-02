@@ -434,7 +434,7 @@ class Site:
                     box(bl, m, ul - 0.02, ul + 0.02, par_t / 2 + 0.3, par_t / 2 + 0.34, zf, zf + 0.40)
         ob = self.emit(dict(el, name=nm + "_Parapet"), bm, COL["brick"], (c.x, c.y, z0))
         # inner faces (normal through the centre) are painted maroon, the outside is brick tile (garden photo diff GD-9)
-        me, mw = ob.data, ob.matrix_world
+        me, mw = ob.data, ob.matrix_basis      # matrix_world is stale until the depsgraph runs
         me.materials.append(mat(el["slots"]["_ParapetInner"]))
         ki, m3 = len(me.materials) - 1, mw.to_3x3()
         for f in me.polygons:

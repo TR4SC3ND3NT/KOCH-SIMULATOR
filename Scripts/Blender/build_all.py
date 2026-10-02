@@ -11,6 +11,7 @@ import sys
 
 import bmesh
 import bpy
+from mathutils import Vector
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SPECS = os.path.abspath(os.path.join(HERE, "..", "..", "Art", "Blender", "Specs"))
@@ -41,6 +42,18 @@ def validate():
     print(f"validate: {len(seen)} meshes, {len(bad_names)} dotted names {bad_names[:5]}, "
           f"{len(open_meshes)} non-manifold {open_meshes[:5]}")
     return not bad_names and not open_meshes
+
+
+def _centres():
+    """World bbox centre of every mesh object (after a depsgraph update)."""
+    bpy.context.view_layer.update()
+    out = {}
+    for o in bpy.data.objects:
+        if o.type == "MESH":
+            mw = o.matrix_world
+            cs = [mw @ Vector(c) for c in o.bound_box]
+            out[o.name] = sum(cs, Vector()) / 8.0
+    return out
 
 
 def clear_startup_scene():
@@ -107,7 +120,12 @@ def main():
     print("material slots by name:", assign_name_slots(bpy.data.objects))
     print("ground surfaces:", assign_ground_surfaces(bpy.data.objects.get("TER_Ground"), SPECS))
     from greybox.finalize import run as finalize
+    before = _centres()
     print("finalize:", {k: (v if not isinstance(v, list) else (len(v), v[:4])) for k, v in finalize().items()})
+    after = _centres()
+    moved = [n for n, c in before.items() if n in after and (after[n] - c).length > 0.01]
+    if moved:   # finalize must never move geometry (pivots/mirror fixes keep the world shape)
+        bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"finalize moved {len(moved)} objects: {moved[:5]}")
     ok = validate()
     fails = bpy.app.driver_namespace.get("koch_build_failures", [])
     if fails:   # a failed building/element must not be saved silently (a missing Block C was committed once)

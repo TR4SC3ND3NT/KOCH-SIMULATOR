@@ -200,6 +200,9 @@ def fix_collections():
 
 
 def run():
+    # objects built with ob.location keep a stale (identity) matrix_world until the depsgraph runs; without this the
+    # pivot pass below would drop their location (a build that skips intermediate saves moved slabs to the origin)
+    bpy.context.view_layer.update()
     st = fix_meshes()
     st.update(fix_collections())
     st["orphans_purged"] = bpy.data.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)
