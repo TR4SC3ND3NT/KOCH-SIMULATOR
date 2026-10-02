@@ -24,9 +24,9 @@
  "walls_to_ffl": true,
  "plinth_m": 0.3,
  "wall_thk": 0.4,
- "storey_m": 2.4,
+ "storey_m": 3.6,
  "storeys": 1,
- "eave_z": 2.4,
+ "eave_z": 3.6,
  "ring": [
   [
    45.8,
@@ -38,14 +38,6 @@
   ],
   [
    64.6,
-   18.8
-  ],
-  [
-   61.6,
-   18.8
-  ],
-  [
-   61.6,
    21.3
   ],
   [
@@ -54,16 +46,16 @@
   ]
  ],
  "plinth": {
-  "z_top": 0.05,
+  "z_top": 0.6,
   "proj": 0.04,
-  "evidence": "red brick-tile plinth (070410255 a_030-a_034) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 6 courses = 0.60-0.66 m above the N paving (A075) = about the FFL",
+  "evidence": "red brick-tile plinth (070410255 a_030-a_034)",
   "confidence": "low"
  },
  "pilasters": [],
  "window_types": {
   "W": {
-   "w": 0.7,
-   "h": 0.9,
+   "w": 1.2,
+   "h": 1.3,
    "mullions": [
     0.5
    ],
@@ -79,7 +71,7 @@
   }
  },
  "rows": {
-  "G": 0.95
+  "G": 1.0
  },
  "facades": [
   {
@@ -90,80 +82,25 @@
      "type": "W",
      "u": [
       2.5,
-      5.0
+      5.0,
+      7.5
      ],
      "rows": [
       "G"
      ]
     }
-   ]
-  },
-  {
-   "edge": 2,
-   "name": "porch_back",
-   "entrances": [
-    {
-     "u0": 1.0,
-     "u1": 2.0,
-     "z1": 2.1,
-     "transom_z": 2.1,
-     "reveal": 0.12,
-     "frame_w": 0.06,
-     "frame_d": 0.08,
-     "bays": [
-      [
-       1.0,
-       "door"
-      ]
-     ],
-     "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): door at the back of the porch (A072); position assumed",
-     "confidence": "low"
-    }
-   ]
+   ],
+   "evidence": "gable-end building with a lean-to annex, windows (070410255 a_030-a_034)",
+   "confidence": "low"
   }
  ],
  "roof": {
   "type": "hip",
-  "pitch": 18,
+  "pitch": 22,
   "overhang": 0.5,
   "evidence": "red hipped roof at the hall NE end in Bing 2021 / Esri 2020 / Google z20 (x 135-153, y 12-22)",
   "confidence": "medium"
  },
- "attachments": [
-  {
-   "type": "post_canopy",
-   "edge": 2,
-   "u0": 0.0,
-   "u1": 3.0,
-   "depth": 2.5,
-   "z0": 2.25,
-   "z1": 2.36,
-   "fascia_h": 0.15,
-   "fascia_t": 0.04,
-   "post_w": 0.12,
-   "post_in": 0.15,
-   "posts_u": [
-    0.15
-   ],
-   "slot": "M_Paint_White",
-   "soffit_slot": "M_Wood_Stained",
-   "post_slot": "M_Paint_Maroon",
-   "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): the main hip roof continues over the porch on one red steel post at the outer corner, timber-board soffit ~2.3 m (A070-A072); modelled as a flat canopy",
-   "confidence": "medium (identification), low (sizes)"
-  },
-  {
-   "type": "stairs",
-   "edge": 2,
-   "u0": 0.3,
-   "u1": 2.7,
-   "risers": 4,
-   "riser_h": 0.163,
-   "tread": 0.3,
-   "landing": 1.3,
-   "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): red steps up from the clover plaza into the porch (A070, A075); count from the 0.65 m level difference",
-   "confidence": "low"
-  }
- ],
- "storey_note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): ONE storey: one row of small windows (~0.7 x 0.9, sill ~0.95), eave ~2.9 m above the plaza (A075 pinhole solve 2.95-3.2, A070 2.6), ridge ~4.5",
- "ring_notes": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): recessed porch at the NE corner, ~3 m along the N face x ~2.5 m deep (A070-A072, A075)"
+ "attachments": [],
+ "storey_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): eave ~4.26 +-0.38 m above the N plaza (3 sources); one window row; the porch / low-wall photos belong to the canteen"
 }

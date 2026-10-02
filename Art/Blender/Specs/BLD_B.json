@@ -7,7 +7,7 @@
   "GB_BLD_B",
   "GB_BLD_B_Roof"
  ],
- "scale": 1.0,
+ "scale": 1.0286,
  "anchor": {
   "world_xy": [
    99.034,
@@ -758,26 +758,26 @@
    "name": "B_Inside",
    "ring": [
     [
-     147.209,
-     -81.304
+     147.88,
+     -81.686
     ],
     [
-     148.4,
-     -56.973
+     149.105,
+     -56.659
     ],
     [
-     100.278,
-     -54.617
+     99.607,
+     -54.235
     ],
     [
-     99.086,
-     -78.948
+     98.381,
+     -79.262
     ]
    ],
-   "z": 3.457,
+   "z": 3.367,
    "blend": 0.0,
    "field": false,
-   "evidence": "2026-09-28 terrain audit: ground inside the walls held 0.3 m under the basement floor (FFL 6.757 - 3.0), hard edge 5 cm inside the outer wall face (the basement walls run down to the slab underside and hide the step) - the DEM filled the basement 2.66 m above its floor",
+   "evidence": "2026-09-28 terrain audit: ground inside the walls held 0.3 m under the basement floor (FFL 6.757 - 3.0), hard edge 5 cm inside the outer wall face (the basement walls run down to the slab underside and hide the step) - the DEM filled the basement 2.66 m above its floor | 2026-10-02: scaled with the block (scale 1.0286) about its centre; basement floor -3.0 x 1.0286",
    "confidence": "medium"
   }
  ],
@@ -826,5 +826,6 @@
    "confidence": "medium",
    "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): beige tile on the storefront piers"
   }
- ]
+ ],
+ "scale_note": "2026-10-02 audit: Google z20 eave 50.66 x 26.42 (lean-free, model 49.28 x 25.46); B-A gap from the alley SfM 12.6 vs 13.43 (B's east wall further east); photo wall top 8.51 +-0.21 vs 8.15. The pano metrics were scaled on the OSM length 48.28, so the whole block (plan, bays, heights) scales by 49.66 / 48.28"
 }

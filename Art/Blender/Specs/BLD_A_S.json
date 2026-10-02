@@ -26,7 +26,7 @@
  "wall_thk": 0.45,
  "storey_m": 3.06,
  "storeys": 3,
- "eave_z": 9.45,
+ "eave_z": 9.93,
  "ring": [
   [
    1.28,
@@ -47,10 +47,10 @@
  ],
  "ring_notes": "Google z20 roof: x 0.83..38.65, y 2.75..23.2 (edge profiles, crisp straight eaves); OSM y 0..22.2 is 2 m off in y. NW corner pilaster of A_S projects 0.9 m west of the strip A_W (070309303 f17-f20).",
  "cornice": {
-  "z0": 9.3,
-  "z1": 9.45,
+  "z0": 9.78,
+  "z1": 9.93,
   "proj": 0.04,
-  "evidence": "fascia bottom ~0.6 above the west F3 heads (G002) and ~9.36 at the SW corner (G056); a view from below overstates it, so 9.93 (2020 pano rect, FFL-dependent) was too high",
+  "evidence": "2020 pano rect 9.93; 2026 estimates 9.36 (G056) and 10.45 (A271 frontal, height audit) bracket it",
   "confidence": "medium-low"
  },
  "plinth": {
@@ -73,7 +73,7 @@
    "u1": 1.88,
    "proj": 0.06,
    "z0": 0.75,
-   "z1": 9.3,
+   "z1": 9.78,
    "evidence": "NW corner maroon pilaster 82 px in the pano rect (1.88 m); 2026 frame 1.6-1.7 m",
    "confidence": "medium"
   },
@@ -83,7 +83,7 @@
    "u1": 19.55,
    "proj": 0.06,
    "z0": 0.75,
-   "z1": 9.3,
+   "z1": 9.78,
    "evidence": "SW corner pilaster 57 px (1.30 m), carries the block plate",
    "confidence": "medium"
   },
@@ -93,7 +93,7 @@
    "u1": 1.3,
    "proj": 0.06,
    "z0": 0.75,
-   "z1": 9.3,
+   "z1": 9.78,
    "evidence": "SW pilaster return on the south face (pano intro, oblique)",
    "confidence": "low"
   },
@@ -103,7 +103,7 @@
    "u1": 36.92,
    "proj": 0.06,
    "z0": 0.75,
-   "z1": 9.3,
+   "z1": 9.78,
    "status": "assumed: mirror of SW corner"
   },
   {
@@ -112,7 +112,7 @@
    "u1": 1.3,
    "proj": 0.06,
    "z0": 0.75,
-   "z1": 9.3,
+   "z1": 9.78,
    "status": "assumed: mirror of SW corner"
   },
   {
@@ -257,7 +257,7 @@
   },
   "WST": {
    "w": 1.5,
-   "h": 0.75,
+   "h": 0.65,
    "mullions": [
     0.5
    ],
@@ -458,7 +458,7 @@
       34.32
      ],
      "sills": [
-      6.1
+      6.7
      ]
     },
     {
@@ -469,7 +469,7 @@
       29.03
      ],
      "sills": [
-      6.1
+      6.7
      ]
     },
     {
@@ -490,7 +490,7 @@
       34.32
      ],
      "sills": [
-      8.4
+      9.1
      ]
     }
    ],
@@ -544,7 +544,7 @@
      "sills": [
       0.9,
       3.75,
-      6.1
+      6.7
      ]
     },
     {
@@ -557,7 +557,7 @@
       16.55
      ],
      "sills": [
-      8.4
+      9.1
      ]
     }
    ],
