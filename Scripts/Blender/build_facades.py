@@ -286,8 +286,15 @@ class Building:
                 if c["edge"] != i:
                     continue
                 cu0, cu1, cz0, cz1, pj = c["u0"], c["u1"], c["z0"], c["z1"], c.get("proj", 0.02)
-                holes = [Opening(max(o.u0, cu0) - cu0, min(o.u1, cu1) - cu0, max(o.z0, cz0), min(o.z1, cz1))
-                         for o, _, _ in ops if o.u1 > cu0 + 0.05 and o.u0 < cu1 - 0.05 and o.z1 > cz0 + 0.05 and o.z0 < cz1 - 0.05]
+                holes = []
+                for o, _, wt in ops:
+                    # a window surround prouder than the field goes through it: cut round the surround (else its faces
+                    # lie on the hole faces)
+                    sl, sr, sb, stp = (wt.get("surround") or [0, 0, 0, 0]) if (isinstance(wt, dict) and
+                                       wt.get("surround_proj", 0.0) >= pj) else (0, 0, 0, 0)
+                    ou0, ou1, oz0, oz1 = o.u0 - sl, o.u1 + sr, o.z0 - sb, o.z1 + stp
+                    if ou1 > cu0 + 0.05 and ou0 < cu1 - 0.05 and oz1 > cz0 + 0.05 and oz0 < cz1 - 0.05:
+                        holes.append(Opening(max(ou0, cu0) - cu0, min(ou1, cu1) - cu0, max(oz0, cz0), min(oz1, cz1)))
                 # an opening cut by the field edge would leave a sliver: keep holes strictly inside
                 holes = [h for h in holes if h.u0 > 0.02 and h.u1 < cu1 - cu0 - 0.02 and h.z0 > cz0 + 0.02 and h.z1 < cz1 - 0.02]
                 bm = bmesh.new()
