@@ -58,122 +58,11 @@
   "evidence": "red brick-tile plinth, top 0.84 m above the deck (A_16 rect, 6 m bay scale)",
   "confidence": "low"
  },
- "pilasters": [
-  {
-   "edge": 0,
-   "u0": -0.05499999999999999,
-   "u1": 0.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 5.944999999999999,
-   "u1": 6.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 11.945,
-   "u1": 12.254999999999999,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 17.945,
-   "u1": 18.255000000000003,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 23.945,
-   "u1": 24.255000000000003,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 29.945,
-   "u1": 30.255000000000003,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 35.945,
-   "u1": 36.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 41.945,
-   "u1": 42.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 47.945,
-   "u1": 48.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 53.945,
-   "u1": 54.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  },
-  {
-   "edge": 0,
-   "u0": 59.945,
-   "u1": 60.255,
-   "proj": 0.03,
-   "z0": 0.0,
-   "z1": 2.6,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; pier 0.31 m wide",
-   "confidence": "low"
-  }
- ],
+ "pilasters": [],
  "window_types": {
   "H": {
-   "w": 1.65,
-   "h": 1.25,
+   "w": 1.45,
+   "h": 1.55,
    "mullions": [
     0.5
    ],
@@ -188,10 +77,29 @@
    "surround_proj": 0.03,
    "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; window incl. maroon surround 1.94 x 1.53 m, sill ~1.1 m above the deck",
    "confidence": "low"
+  },
+  "HN": {
+   "w": 1.9,
+   "h": 1.5,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): N facade windows (A082)",
+   "confidence": "low"
   }
  },
  "rows": {
-  "G": 1.15
+  "G": 0.4
  },
  "facades": [
   {
@@ -201,23 +109,31 @@
     {
      "type": "H",
      "u": [
-      2.1,
-      8.1,
-      14.1,
-      20.1,
-      26.1,
-      32.1,
-      38.1,
-      44.1,
-      50.1,
-      56.1
+      1.9,
+      4.2,
+      7.9,
+      10.2,
+      13.9,
+      16.2,
+      19.9,
+      22.2,
+      25.9,
+      28.2,
+      31.9,
+      34.2,
+      37.9,
+      40.2,
+      43.9,
+      49.9,
+      52.2,
+      55.9
      ],
      "rows": [
       "G"
      ]
     }
    ],
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification | 2026-09-29 owner: no gallery on this face (hall_bed.py)",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): S facade: alternating pink/beige render fields per 6 m bay, 2 windows each, no maroon piers, sill ~0.85 above the garden walk (A016, A017)",
    "confidence": "low"
   },
   {
@@ -239,5 +155,84 @@
   "evidence": "render 2025: long gable, ridge E-W; Google z20: ridge line ~mid-depth; pitch estimated",
   "confidence": "low"
  },
- "attachments": []
+ "attachments": [],
+ "cladding": [
+  {
+   "edge": 0,
+   "u0": 6,
+   "u1": 12,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 18,
+   "u1": 24,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 30,
+   "u1": 36,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 42,
+   "u1": 45.45,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 47.35,
+   "u1": 48,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 54,
+   "u1": 57.85,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 58.95,
+   "u1": 60,
+   "z0": 0.86,
+   "z1": 5.24,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): pink render field on every 2nd 6 m bay (A016, A017)",
+   "confidence": "low"
+  }
+ ]
 }

@@ -2483,82 +2483,6 @@
    "confidence": "low"
   },
   {
-   "type": "box",
-   "name": "Workout_WallBars0_Rung11",
-   "center": [
-    174.386,
-    69.52
-   ],
-   "size": [
-    3.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.375,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars0_Rung12",
-   "center": [
-    174.386,
-    69.52
-   ],
-   "size": [
-    3.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.625,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars1_Rung11",
-   "center": [
-    177.783,
-    69.389
-   ],
-   "size": [
-    3.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.375,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "Workout_WallBars1_Rung12",
-   "center": [
-    177.783,
-    69.389
-   ],
-   "size": [
-    3.0,
-    0.03,
-    0.03
-   ],
-   "dir_deg": -2.2,
-   "z0": 5.625,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
-   "confidence": "low"
-  },
-  {
    "type": "turnstile",
    "name": "GuardPost_Turnstile",
    "pos": [
@@ -3206,7 +3130,7 @@
    "z0": 2.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3222,10 +3146,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 2.875,
+   "z0": 2.925,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3241,10 +3165,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.125,
+   "z0": 3.225,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3260,10 +3184,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.375,
+   "z0": 3.525,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3279,10 +3203,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.625,
+   "z0": 3.825,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3298,10 +3222,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.875,
+   "z0": 4.125,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3317,10 +3241,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.125,
+   "z0": 4.425,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3336,10 +3260,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.375,
+   "z0": 4.725,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3355,10 +3279,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.625,
+   "z0": 5.025,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3374,10 +3298,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.875,
+   "z0": 5.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3393,10 +3317,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 5.125,
+   "z0": 5.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3492,7 +3416,7 @@
    "z0": 2.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3508,10 +3432,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 2.875,
+   "z0": 2.925,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3527,10 +3451,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.125,
+   "z0": 3.225,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3546,10 +3470,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.375,
+   "z0": 3.525,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3565,10 +3489,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.625,
+   "z0": 3.825,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3584,10 +3508,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 3.875,
+   "z0": 4.125,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3603,10 +3527,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.125,
+   "z0": 4.425,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3622,10 +3546,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.375,
+   "z0": 4.725,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3641,10 +3565,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.625,
+   "z0": 5.025,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3660,10 +3584,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 4.875,
+   "z0": 5.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -3679,10 +3603,10 @@
     0.03
    ],
    "dir_deg": -2.2,
-   "z0": 5.125,
+   "z0": 5.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
    "confidence": "low"
   },
   {
@@ -5905,11 +5829,13 @@
     91.585,
     21.593
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5918,11 +5844,13 @@
     97.78,
     21.355
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5931,11 +5859,13 @@
     103.276,
     21.144
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5944,11 +5874,13 @@
     108.872,
     20.929
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5957,11 +5889,13 @@
     116.217,
     20.647
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5970,11 +5904,13 @@
     121.863,
     20.43
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5983,11 +5919,13 @@
     127.359,
     20.219
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
-   "confidence": "low"
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
   },
   {
    "type": "tree",
@@ -5996,10 +5934,228 @@
     132.655,
     20.015
    ],
-   "height": 3.5,
-   "crown_d": 1.6,
-   "crown_base": 0.6,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18)",
+   "height": 4.5,
+   "crown_d": 1.3,
+   "crown_base": 0.3,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "confidence": "low",
+   "shape": "cone",
+   "trunk_d": 0.12
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_0",
+   "ring": [
+    [
+     90.962,
+     21.016
+    ],
+    [
+     92.162,
+     20.97
+    ],
+    [
+     92.208,
+     22.17
+    ],
+    [
+     91.008,
+     22.216
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_1",
+   "ring": [
+    [
+     97.157,
+     20.778
+    ],
+    [
+     98.357,
+     20.732
+    ],
+    [
+     98.403,
+     21.932
+    ],
+    [
+     97.203,
+     21.978
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_2",
+   "ring": [
+    [
+     102.653,
+     20.567
+    ],
+    [
+     103.853,
+     20.521
+    ],
+    [
+     103.899,
+     21.721
+    ],
+    [
+     102.699,
+     21.767
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_3",
+   "ring": [
+    [
+     108.249,
+     20.352
+    ],
+    [
+     109.449,
+     20.306
+    ],
+    [
+     109.495,
+     21.506
+    ],
+    [
+     108.295,
+     21.552
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_4",
+   "ring": [
+    [
+     115.594,
+     20.07
+    ],
+    [
+     116.794,
+     20.024
+    ],
+    [
+     116.84,
+     21.224
+    ],
+    [
+     115.64,
+     21.27
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_5",
+   "ring": [
+    [
+     121.24,
+     19.853
+    ],
+    [
+     122.44,
+     19.807
+    ],
+    [
+     122.486,
+     21.007
+    ],
+    [
+     121.286,
+     21.053
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_6",
+   "ring": [
+    [
+     126.736,
+     19.642
+    ],
+    [
+     127.936,
+     19.596
+    ],
+    [
+     127.982,
+     20.796
+    ],
+    [
+     126.782,
+     20.842
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
+   "confidence": "low"
+  },
+  {
+   "type": "planter",
+   "name": "HallRowPit_7",
+   "ring": [
+    [
+     132.032,
+     19.438
+    ],
+    [
+     133.232,
+     19.392
+    ],
+    [
+     133.278,
+     20.592
+    ],
+    [
+     132.078,
+     20.638
+    ]
+   ],
+   "curb_h": 0.1,
+   "curb_w": 0.1,
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 1.2 x 1.2 m concrete pit kerb per thuja",
    "confidence": "low"
   },
   {

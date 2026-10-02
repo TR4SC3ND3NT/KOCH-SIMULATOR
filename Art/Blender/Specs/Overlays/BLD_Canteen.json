@@ -4,7 +4,7 @@
  "window_types": {
   "CW": {
    "w": 1.35,
-   "h": 2.45,
+   "h": 2.1,
    "mullions": [],
    "transoms": [
     0.8
@@ -1251,7 +1251,7 @@
      "rot": 90
     }
    ],
-   "evidence": "pano kanteen 2022: one open hall, boarded wooden ceiling, 2 clad columns on the glazing side, serving counter with a display case at the W end, a second counter at the E end, drinks fridges and a floor AC unit on the E part of the N wall, ~18 caf\u00e9 tables with red plastic chairs; layout approximate (no plan)",
+   "evidence": "pano kanteen 2022: one open hall, boarded wooden ceiling, 2 clad columns on the glazing side, serving counter with a display case at the W end, a second counter at the E end, drinks fridges and a floor AC unit on the E part of the N wall, ~18 café tables with red plastic chairs; layout approximate (no plan)",
    "confidence": "low"
   }
  ]

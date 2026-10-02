@@ -2,6 +2,8 @@
 # bed, north strip) and SITE_HallCPassage.json (terrace -> stair -> lower path between the hall and Block C). Measurements
 # live in the local sports frame (origin world (114,45), u along -2.2 deg = campus grid, v 'local north').
 # Run: python3 Scripts/Geo/zones/zone_sports.py
+# NOTE: both JSONs carry later hand edits (owner levels of the lower yard, QA passes); a full regeneration drops them.
+# Port changed elements into the JSON by name instead (2026-10-02).
 import json, math
 import numpy as np
 
@@ -284,8 +286,8 @@ for n, wu0 in enumerate((pu + 5.6, pu + 5.6 + 3 * wb + 0.4)):
     for j in range(4):
         u = wu0 + wb * j
         tube(f"Workout_WallBars{n}_Post{j}", u, wv, u, wv, Z_WO, Z_WO + wh, d=0.07, ue="workout_wall_bars" if j == 0 else None)
-    for k in range(13):
-        z = Z_WO + 0.3 + 0.25 * k
+    for k in range(11):                       # 2026-10-02 photo diff (A067): 11 rungs at 0.30 m, top rung 3.3
+        z = Z_WO + 0.3 + 0.30 * k
         tube(f"Workout_WallBars{n}_Rung{k}", wu0, wv, wu0 + 3 * wb, wv, z, z, d=0.03)
 
 # ================================================================= PLAZA strip south of the pitch and courts
@@ -349,7 +351,8 @@ for k, (du, dv) in enumerate(((-1.2, 0.8), (1.1, -0.9))):
         confidence="low")
 # young trees along the hall's north side
 for k, u in enumerate([-21.2, -15.0, -9.5, -3.9, 3.45, 9.1, 14.6, 19.9]):
-    add(type="tree", name=f"HallRowTree_{k}", pos=W(u - 0.3, -24.25), height=3.5, crown_d=1.6, crown_base=0.6,
+    add(type="tree", name=f"HallRowTree_{k}", pos=W(u - 0.3, -24.25), height=4.5, crown_d=1.3, crown_base=0.3, shape="cone",
+        trunk_d=0.12,   # 2026-10-02 photo diff (A081-A085): columnar thujas ~4.5 m; their 1.2 m pit kerbs are HallRowPit_* (JSON)
         evidence="Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall "
         "(drone 2022 row f 0:15-0:18)", confidence="low")
 
