@@ -6,7 +6,7 @@ import bpy
 # name -> viewport RGBA (review aid; the look comes from UE materials)
 PALETTE = {
     "M_Render_Beige": (0.83, 0.78, 0.66, 1), "M_Paint_Maroon": (0.50, 0.16, 0.14, 1),
-    "M_Block_PaleYellow": (0.87, 0.81, 0.60, 1),
+    "M_Block_PaleYellow": (0.87, 0.81, 0.60, 1), "M_Block_Grey": (0.55, 0.55, 0.53, 1),
     "M_Sand": (0.84, 0.75, 0.55, 1),   # jump pit sand (sports lower yard)   # pale yellow cast sand-concrete fence panels (N boundary)
     "M_PVC_White": (0.94, 0.94, 0.92, 1), "M_Glass": (0.30, 0.40, 0.48, 1), "M_Steel_Galv": (0.72, 0.72, 0.74, 1),
     "M_Steel_Paint_Dark": (0.22, 0.24, 0.26, 1), "M_Granite_Red": (0.52, 0.36, 0.33, 1),

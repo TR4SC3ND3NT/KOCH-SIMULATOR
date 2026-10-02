@@ -5576,12 +5576,12 @@
    "name": "HallBed_Kerb",
    "ring": [
     [
-     133.999,
-     -0.306
+     133.965,
+     -1.506
     ],
     [
-     148.812,
-     -0.728
+     148.778,
+     -1.927
     ],
     [
      148.62,
@@ -5595,7 +5595,7 @@
    "curb_h": 0.12,
    "curb_w": 0.12,
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02: wall side behind the hall's light-well covers (1.2 m)",
    "confidence": "medium"
   },
   {
@@ -6003,12 +6003,12 @@
    "name": "HallBed_Lawn",
    "ring": [
     [
-     133.999,
-     -0.306
+     133.965,
+     -1.506
     ],
     [
-     148.812,
-     -0.728
+     148.778,
+     -1.927
     ],
     [
      148.62,

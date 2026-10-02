@@ -56,7 +56,7 @@ def main():
                         "evidence": EV, "confidence": "low"})
     x0, _, dep = BED
     u0, u1 = u_of(x0), L
-    ring = [W(u0, 0.05), W(u1, 0.05), W(u1, dep), W(u0, dep)]
+    ring = [W(u0, 1.25), W(u1, 1.25), W(u1, dep), W(u0, dep)]   # wall side behind the hall's 1.2 m light-well covers
     new.append({"type": "planter", "name": "HallBed_Kerb", "ring": ring, "curb_h": 0.12, "curb_w": 0.12, "slot": "M_Concrete_Precast",
                 "evidence": EV, "confidence": "medium"})
     gs.append({"name": "HallBed_Lawn", "ring": ring, "slot": "M_Ground_Grass", "evidence": EV})

@@ -2386,17 +2386,35 @@
    "confidence": "low"
   },
   {
+   "type": "steps",
+   "name": "NorthPath_Steps",
+   "pos": [
+    159.473,
+    69.472
+   ],
+   "dir_deg": 177.8,
+   "width": 1.7,
+   "risers": 3,
+   "riser_h": 0.1,
+   "tread": 0.6,
+   "top_landing": 0.02,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): 3 painted-kerb risers from the pitch-courts walkway up to the north path at the pitch's NE corner (A038, A041); position +-0.7 m",
+   "confidence": "low"
+  },
+  {
    "type": "tree",
    "name": "NorthLawnSpruce_2",
    "pos": [
     160.587,
     82.84
    ],
-   "height": 3.8,
-   "crown_d": 1.7,
+   "height": 6.0,
+   "crown_d": 3.5,
    "crown_base": 0.3,
    "shape": "cone",
-   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): two large blue spruces flanking the bench niche (A060, A061)",
    "confidence": "low"
   },
   {
@@ -2406,11 +2424,11 @@
     166.083,
     82.628
    ],
-   "height": 3.8,
-   "crown_d": 1.7,
+   "height": 6.0,
+   "crown_d": 3.5,
    "crown_base": 0.3,
    "shape": "cone",
-   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): two large blue spruces flanking the bench niche (A060, A061)",
    "confidence": "low"
   },
   {
@@ -5484,7 +5502,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "warm bulbs on wires strung between the thujas along the alley at ~3-3.6 m (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "string_lights",
@@ -5555,7 +5574,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "warm bulbs on wires strung between the thujas along the alley at ~3-3.6 m (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "string_lights",
@@ -5576,7 +5596,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "cross strings over the alley (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "string_lights",
@@ -5597,7 +5618,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "cross strings over the alley (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "string_lights",
@@ -5618,7 +5640,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "cross strings over the alley (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "string_lights",
@@ -5639,7 +5662,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "cross strings over the alley (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "string_lights",
@@ -5660,7 +5684,8 @@
    "spacing": 0.9,
    "bulb_d": 0.08,
    "evidence": "cross strings over the alley (070541257 t=0-5 s)",
-   "confidence": "low"
+   "confidence": "low",
+   "ue_note": "event dressing: absent on 2026-09-30 (A073, A083); keep optional"
   },
   {
    "type": "planter",
@@ -6770,8 +6795,8 @@
    "height": 2.2,
    "thk": 0.2,
    "material": "stone",
-   "slot": "M_Block_PaleYellow",
-   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "slot": "M_Block_Grey",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): grey split-face concrete blocks, 0.19 m courses (A061)",
    "confidence": "medium"
   },
   {
@@ -9454,8 +9479,8 @@
    "height": 2.2,
    "thk": 0.2,
    "material": "stone",
-   "slot": "M_Block_PaleYellow",
-   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed; passage in the wall between the last two pillars west of the booth",
+   "slot": "M_Block_Grey",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed; passage in the wall between the last two pillars west of the booth | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): grey split-face concrete blocks, 0.19 m courses (A061)",
    "confidence": "medium"
   },
   {

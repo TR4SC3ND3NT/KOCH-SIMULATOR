@@ -510,17 +510,19 @@ class Building:
             for i, e in enumerate(self.edges):
                 p0 = self.trim_ext(i, False, pl["proj"])
                 p1 = self.trim_ext(i, True, pl["proj"])
+                # "edge_z_top": {edge: z} where the ground on that side is far below the FFL (sports hall N face)
+                zt = pl.get("edge_z_top", {}).get(str(i), pl["z_top"])
                 # the band stops at door openings (a continuous band walled up every entrance up to z_top)
-                cuts = sorted((o.u0, o.u1, False) for o, tn, _w in self.openings_for(i)[0] if tn == "entrance" or o.z0 < pl["z_top"])
+                cuts = sorted((o.u0, o.u1, False) for o, tn, _w in self.openings_for(i)[0] if tn == "entrance" or o.z0 < zt)
                 # "skip": {edge: [[u0, u1], ...]} spans against a neighbouring building (party walls): no band there,
                 # it would run inside the neighbour with its faces on the neighbour's wall faces
                 cuts = sorted(cuts + [(u0, u1, True) for u0, u1 in pl.get("skip", {}).get(str(i), [])])
                 a = -p0
                 for c0, c1, party in cuts + [(e["L"] + p1, e["L"] + p1, False)]:
-                    if c0 - a > 0.01:
-                        box(bm_pl, e["frame"], a, c0, 0.0, pl["proj"], e["zg"] - 0.05, pl["z_top"])
+                    if c0 - a > 0.01 and zt > e["zg"] + 0.05:
+                        box(bm_pl, e["frame"], a, c0, 0.0, pl["proj"], e["zg"] - 0.05, zt)
                     if c1 - c0 > 0.01 and e["zg"] < -0.07 and not party:   # under a door: band up to 2 cm below the threshold
-                        box(bm_pl, e["frame"], c0, c1, 0.0, pl["proj"], e["zg"] - 0.05, min(-0.02, pl["z_top"]))
+                        box(bm_pl, e["frame"], c0, c1, 0.0, pl["proj"], e["zg"] - 0.05, min(-0.02, zt))
                     a = max(a, c1)
             self.obj("Plinth", bm_pl, COL["plinth"], pl.get("evidence", "brick-tile plinth"), pl.get("confidence"))
         for k, p in enumerate(self.s.get("pilasters", [])):
