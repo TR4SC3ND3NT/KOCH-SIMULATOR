@@ -27,12 +27,8 @@ def ensure_collection(name, parent):
     return col
 
 
-def main():
-    if os.path.exists(OUT):
-        bpy.ops.wm.open_mainfile(filepath=OUT)
-    else:
-        bpy.ops.wm.read_homefile(use_empty=True)
-
+def setup_scene():
+    """Units, collection tree, viewport clipping, MCP auto-start on the open file (also used by build_all.py)."""
     scene = bpy.context.scene
     us = scene.unit_settings
     us.system, us.scale_length, us.length_unit = "METRIC", 1.0, "METERS"  # 1 BU = 1 m; FBX export converts to UE cm
@@ -53,9 +49,17 @@ def main():
     if hasattr(scene, "blendermcp_auto_start_server"):
         scene.blendermcp_auto_start_server = True  # Claude connects on port 9876 as soon as the file opens
 
+
+def main():
+    if os.path.exists(OUT):
+        bpy.ops.wm.open_mainfile(filepath=OUT)
+    else:
+        bpy.ops.wm.read_homefile(use_empty=True)
+    setup_scene()
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     bpy.ops.wm.save_as_mainfile(filepath=OUT, compress=True)
     print("SAVED", OUT)
 
 
-main()
+if __name__ == "__main__":
+    main()

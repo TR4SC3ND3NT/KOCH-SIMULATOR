@@ -52,6 +52,9 @@ def clear_startup_scene():
     col = bpy.data.collections.get("Collection")
     if col is not None and not col.objects and not col.children:
         bpy.data.collections.remove(col)
+    sys.path.insert(0, HERE)
+    from init_campus_file import setup_scene   # metric units, collection tree, viewport clipping
+    setup_scene()
 
 
 def build_review_cameras():
@@ -82,6 +85,7 @@ def build_review_cameras():
 
 def main():
     background = bpy.app.background
+    os.environ["KOCH_BUILD_ALL"] = "1"   # sub-builders skip their own save: no half-built file on disk
     clear_startup_scene()
     # a live Blender session keeps imported helper modules: drop them so edited kit/common/sweep code is used
     for m in [m for m in sys.modules if m == "greybox" or m.startswith("greybox.")]:

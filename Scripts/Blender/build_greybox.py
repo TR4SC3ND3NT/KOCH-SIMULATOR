@@ -417,7 +417,7 @@ def main():
     sc["koch_origin_lat"], sc["koch_origin_lon"] = 42.8566, 74.6790
     sc["koch_z_datum_asl"] = ter_spec["frame"]["z_datum_asl"]
     print(f"phase1 greybox: terrain + {n} objects from {len(items)} items")
-    if bpy.app.background:
+    if bpy.app.background and not os.environ.get("KOCH_BUILD_ALL"):   # build_all saves once, at the end
         bpy.ops.wm.save_mainfile(compress=True)
 
 

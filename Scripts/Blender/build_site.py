@@ -1540,7 +1540,7 @@ def main():
             continue
         print(f"{sid}: {n} elements built")
     clear_cutters()
-    if bpy.app.background:
+    if bpy.app.background and not os.environ.get("KOCH_BUILD_ALL"):   # build_all saves once, at the end
         bpy.ops.wm.save_mainfile(compress=True)
 
 
