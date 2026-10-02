@@ -324,12 +324,13 @@
    "size": [
     6.4,
     0.8,
-    0.42
+    0.45
    ],
    "z0": 5.35,
-   "material": "brick",
-   "evidence": "low maroon bench/ledge along the hall's E wall on the upper landing, x 153.4-154.2 (070410255 f55 overlay, fixG/st/ortho_stair.jpg); length estimated",
-   "confidence": "low"
+   "material": "metal",
+   "evidence": "low maroon bench/ledge along the hall's E wall on the upper landing, x 153.4-154.2 (070410255 f55 overlay, fixG/st/ortho_stair.jpg); length estimated | 2026-10-02 garden photo diff (GD-10): red sheet-metal sloped cover box, ~0.45 m at the wall (slope not modelled)",
+   "confidence": "low",
+   "slot": "M_Sheet_Red"
   },
   {
    "type": "planter",
