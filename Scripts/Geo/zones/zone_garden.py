@@ -19,7 +19,16 @@ SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender
 OWN = re.compile(r"^(Apron_Fill_\w+|G[12]_\w+|Centre_NS_\w+|Hedge_\w+|Edging_\w+|Arch_\w+|CentreSquare_\w+)$")
 PATH_W, EDGE_OFF, HEDGE_OFF, HEDGE_W, HEDGE_H = 1.2, 0.65, 1.05, 0.7, 1.05
 R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron), ring edging, ring hedge centre (m)
-ARCH_T, ARCH_H = 0.35, 2.25                      # topiary arch leg thickness / height (m)
+# topiary arches (2026-10-02 photo diff, A019-A022 / A217 single-view metrology on the 0.20 m edging blocks): free-standing
+# doughnut-shaped arches ~4.6-5.0 m wide outside, legs ~1.6 m, clear opening ~1.3 m x 2.7 m, ~1.2 m deep along the path
+ARCH_T, ARCH_H, ARCH_D = 1.6, 2.7, 1.2           # leg thickness / clear height / depth along the path (m)
+ARCH_OVR = {"G1_N": {"thk": 1.75, "height": 2.9}, "G2_SE": {"height": 2.35}}   # per-arch measured differences
+NO_ARCH = {"G1_SSE", "Centre_NS_S"}              # A157-A160, A103: these two exits to the pergola walk have no arch
+# 2026-09-30 photos (A019-A022, A217, A155, A165-A169): no hedge on the garden boundary - scalloped edging and lawn,
+# the arches stand alone on the edging line (the owner's 2026-09-28 "hedge everywhere" predates the photos)
+BOUNDARY_HEDGE = False
+HEDGE_ONE_SIDE = {"G1_SSE": "L"}                 # A157-A160: G1_SSE has its hedge on the east (left, going out) side only
+EDGE_H = 0.27                                    # edging block height above the paving (A113 h/w 1.36 at 0.20 pitch)
 SQ_PU, SQ_PV = 2.7, 4.0                          # centre square paving half sizes: E-W 5.4 m (sketch outline 6.1 m = hedge
                                                  # centre line), N-S 8.0 m (owner 2026-09-29: rectangular, longer N-S; 2026-09-28: 8 m)
 THETA = -3.0                                     # square / spine frame heading (deg; sketch N/S lines and gazebo axis)
@@ -28,7 +37,7 @@ SQ_C = (130.00, -27.55)                          # square centre: the sketch squ
 # (117.4, -26.9) less the ~0.4 m east/north lean of a 4 m roof on this ortho; G2 = SSW x SE path lines (144.53, -28.65),
 # sketch disc (144.57, -28.13), roof fit (145.1, -28.3) less the lean -> 1.3 m west of the 2026-09-28 position
 GAZ = {"G1": (116.96, -26.65), "G2": (144.60, -28.35)}
-EV = "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips; boundary hedge continuous: hedge-arch-hedge"
+EV = "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
 # outer face of the boundary hedge (lawn/paving edge), in order N, E, SE1, SE2, S, SW, W (world m); corners = intersections
 OUTER = [((100.74, -9.84), (158.02, -13.74)),    # N: ortho paving edge, inner envelope (sketch -8.8..-13.8)
          ((158.30, -13.70), (156.90, -39.00)),   # E: ortho lawn edge x 157.0 at y -36 (sketch 158.0..159.0)
@@ -126,7 +135,7 @@ def main():
     new = []
 
     def edging(name, pts):
-        new.append({"type": "wall", "name": name, "line": [_r(p) for p in pts], "height": 0.22, "thk": 0.1,
+        new.append({"type": "wall", "name": name, "line": [_r(p) for p in pts], "height": EDGE_H, "thk": 0.1,
                     "cap_proj": 0.0, "material": "stone", "kind": "scalloped_edging", "confidence": "medium", "evidence": EV})
 
     # --- path centre lines (start, far end) ---
@@ -170,8 +179,14 @@ def main():
     # --- ONE solid hedge mass (owner 2026-09-29: "сплошное везде"): boundary band + path hedge strips + gazebo ring
     # bands + square frame, unioned, minus the path openings / aprons / square paving / arch slots; every connected piece
     # (the hedge round one lawn bed) is one hedge element = footprint polygon with its bed as the hole ---
-    mass = [outer.difference(inner)]
+    mass = [outer.difference(inner)] if BOUNDARY_HEDGE else []
     for name, (a, b, st) in cl.items():
+        if name in HEDGE_ONE_SIDE:   # one-sided strip: shapely single-sided buffer, + = left of a->b
+            ln = LineString([a, (b[0] + (b[0] - a[0]) / math.dist(a, b), b[1] + (b[1] - a[1]) / math.dist(a, b))])
+            sg = 1 if HEDGE_ONE_SIDE[name] == "L" else -1
+            mass.append(ln.buffer(sg * (HEDGE_OFF + HEDGE_W / 2), single_sided=True, cap_style=2).difference(
+                ln.buffer(sg * (HEDGE_OFF - HEDGE_W / 2), single_sided=True, cap_style=2)))
+            continue
         mass.append(corridor(a, b, HEDGE_OFF + HEDGE_W / 2, back=0.0, fwd=1.0).difference(corridor(a, b, HEDGE_OFF - HEDGE_W / 2, back=0.0, fwd=1.0)))
     for g in C:
         mass.append(Point(C[g]).buffer(R_HEDGE + HEDGE_W / 2, 96).difference(Point(C[g]).buffer(R_HEDGE - HEDGE_W / 2, 96)))
@@ -186,7 +201,7 @@ def main():
     bl = LineString(list(hedge_c.exterior.coords))
     arches = []
     for name, (a, b, st) in cl.items():
-        if name.endswith("_Link"):
+        if name.endswith("_Link") or name in NO_ARCH:
             continue
         x = LineString([a, b]).intersection(bl)
         if x.is_empty:
@@ -203,12 +218,14 @@ def main():
         nx, ny = -ty, tx
         if nx * px + ny * py < 0:
             nx, ny = -nx, -ny                                   # opening axis = boundary normal, pointing outward
-        hw, hd_ = span / 2 + ARCH_T, HEDGE_W / 2 + 0.02
+        ov = ARCH_OVR.get(name, {})
+        hw, hd_ = span / 2 + ov.get("thk", ARCH_T), ARCH_D / 2 + 0.02
         cut.append(Polygon([(x.x + tx * hw + nx * hd_, x.y + ty * hw + ny * hd_), (x.x - tx * hw + nx * hd_, x.y - ty * hw + ny * hd_),
                             (x.x - tx * hw - nx * hd_, x.y - ty * hw - ny * hd_), (x.x + tx * hw - nx * hd_, x.y + ty * hw - ny * hd_)]))
         arches.append({"type": "hedge_arch", "name": f"Arch_Bnd_{name}", "center": _r((x.x, x.y)),
-                       "dir_deg": round(math.degrees(math.atan2(ny, nx)), 2), "span": round(span, 3), "thk": ARCH_T,
-                       "depth": HEDGE_W, "height": ARCH_H, "confidence": "medium", "evidence": EV})
+                       "dir_deg": round(math.degrees(math.atan2(ny, nx)), 2), "span": round(span, 3),
+                       "thk": ov.get("thk", ARCH_T), "depth": ARCH_D, "height": ov.get("height", ARCH_H),
+                       "confidence": "medium", "evidence": EV + " | 2026-10-02 photo diff: free-standing, ~2x the old size"})
     solid = solid.difference(unary_union(cut)).buffer(0)
     parts = [q for q in getattr(solid, "geoms", [solid]) if q.area > 0.05]
     parts.sort(key=lambda q: (-q.centroid.y, q.centroid.x))
@@ -219,7 +236,7 @@ def main():
                     "confidence": "medium", "evidence": EV})
     new += arches
     # --- scalloped edging: both sides of every path, the gazebo rings and the square, open at every path mouth ---
-    edge_keep = inner.buffer(-0.05)
+    edge_keep = inner.buffer(-0.05) if BOUNDARY_HEDGE else outer.buffer(-0.15, join_style=2)
     for name, (a, b, st) in cl.items():
         dx, dy = b[0] - a[0], b[1] - a[1]
         n = math.hypot(dx, dy)
@@ -243,6 +260,12 @@ def main():
     for g in C:
         loop_pieces([(C[g][0] + R_EDGE * math.cos(2 * math.pi * k / 96), C[g][1] + R_EDGE * math.sin(2 * math.pi * k / 96))
                      for k in range(97)], f"Edging_{g}_Ring")
+    if not BOUNDARY_HEDGE:   # boundary edging on the lawn edge, open at the path mouths and under the arch legs
+        arch_fp = unary_union(cut[-len(arches):]) if arches else Polygon()
+        ring_e = list(outer.buffer(-0.08, join_style=2).exterior.coords)
+        pieces = _xy(LineString(ring_e).difference(open_e).difference(arch_fp))
+        for k, q in enumerate(q_ for q_ in pieces if LineString(q_).length > 0.3):
+            edging(f"Edging_Bnd_{k}", q)
     eu, ev_ = SQ_PU - 0.05, SQ_PV - 0.05
     loop_pieces([sq(-eu, -ev_), sq(eu, -ev_), sq(eu, ev_), sq(-eu, ev_), sq(-eu, -ev_)], "CentreSquare_Edging")
     # --- centre square: paving, 4 benches (W/E sides, one each side of the link), lamp in the middle ---
