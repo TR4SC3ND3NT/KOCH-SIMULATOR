@@ -41,12 +41,12 @@
   ],
   [
    [
-    173.45,
-    -6.05
+    173.554,
+    -5.913
    ],
    [
     186.05,
-    -6.55
+    -6.411
    ],
    [
     186.078,
@@ -89,34 +89,34 @@
    "type": "stairs_run",
    "name": "Stair_Upper",
    "top": [
-    169.162,
-    -4.352
+    169.164,
+    -4.312
    ],
    "dir_deg": -2.2838545045845304,
-   "width": 1.85,
+   "width": 1.93,
    "risers": 8,
    "riser_h": 0.138,
    "tread": 0.36,
    "z_top": 5.3500000000000005,
    "run_out": 1.2,
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910)",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910) | 2026-10-02 walk QA: 8 cm wider to the north wall face (an 8 cm slot ran along it)",
    "confidence": "medium"
   },
   {
    "type": "stairs_run",
    "name": "Stair_Lower",
    "top": [
-    172.879,
-    -4.5
+    172.881,
+    -4.46
    ],
    "dir_deg": -2.2838545045845304,
-   "width": 1.85,
+   "width": 1.93,
    "risers": 2,
    "riser_h": 0.138,
    "tread": 0.36,
    "z_top": 4.246,
    "run_out": 0.5,
-   "evidence": "photo 012543364: 2 steps from the mid landing down to the corridor floor; riser as upper flight",
+   "evidence": "photo 012543364: 2 steps from the mid landing down to the corridor floor; riser as upper flight | 2026-10-02 walk QA: 8 cm wider to the north wall face (an 8 cm slot ran along it)",
    "confidence": "medium",
    "top_flush": true
   },

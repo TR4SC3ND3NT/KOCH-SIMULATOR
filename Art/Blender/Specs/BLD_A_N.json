@@ -54,7 +54,21 @@
  "plinth": {
   "z_top": 0.92,
   "proj": 0.03,
-  "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red brick-tile plinth ~1.65 m above the paving (bench backs 0.85 for scale)"
+  "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red brick-tile plinth ~1.65 m above the paving (bench backs 0.85 for scale) | 2026-10-02 zaudit: no plinth band along the party walls with the other A blocks",
+  "skip": {
+   "0": [
+    [
+     -1.0,
+     25.3
+    ]
+   ],
+   "1": [
+    [
+     -1.0,
+     12.85
+    ]
+   ]
+  }
  },
  "pilasters": [
   {
