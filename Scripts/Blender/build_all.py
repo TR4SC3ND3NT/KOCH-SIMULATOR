@@ -48,12 +48,10 @@ def clear_startup_scene():
     if bpy.data.filepath:
         return
     for ob in [o for o in bpy.data.objects if not o.get("koch_gen") and o.name.split(".")[0] in ("Cube", "Light", "Camera")]:
-        data = ob.data
-        bpy.data.objects.remove(ob, do_unlink=True)
-        if data is not None and data.users == 0:
-            for coll in (bpy.data.meshes, bpy.data.lights, bpy.data.cameras):
-                if data.name in coll and coll[data.name] == data:
-                    coll.remove(data)
+        bpy.data.objects.remove(ob, do_unlink=True)   # their orphaned mesh/light/camera data is not saved
+    col = bpy.data.collections.get("Collection")
+    if col is not None and not col.objects and not col.children:
+        bpy.data.collections.remove(col)
 
 
 def build_review_cameras():
