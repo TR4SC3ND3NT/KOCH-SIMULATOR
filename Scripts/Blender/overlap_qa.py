@@ -71,6 +71,11 @@ def main():
         a, b = lo + sh, hi - sh
         pts = [Vector((a.x + (b.x - a.x) * i / 4, a.y + (b.y - a.y) * j / 4, a.z + (b.z - a.z) * k / 4))
                for i in range(5) for j in range(5) for k in range(5)]
+        # keep the lattice points inside the prop itself: the world bbox of a rotated thin part (a paint skin on a 2 deg
+        # wall) is mostly empty space, and those points sat in the wall behind it (false hits)
+        pts = [q for q in pts if inside(data[n][0], q)]
+        if len(pts) < 8:          # too thin to sample (skins, boards): zaudit covers their faces
+            continue
         cands = set()
         for i in range(int(lo.x // cell), int(hi.x // cell) + 1):
             for j in range(int(lo.y // cell), int(hi.y // cell) + 1):
@@ -88,7 +93,7 @@ def main():
             # inside = ray parity AND > 1 cm from the container surface (skins / boards mounted on a face are not "in" it)
             ins = sum(1 for p in pts if mlo.x <= p.x <= mhi.x and mlo.y <= p.y <= mhi.y and mlo.z <= p.z <= mhi.z
                       and inside(data[m][0], p) and (data[m][0].find_nearest(p)[3] or 0.0) > 0.01)
-            if ins >= 0.30 * len(pts):
+            if ins >= 0.30 * len(pts):   # fraction of the prop's own volume samples
                 res.append({"prop": n, "in": m, "frac": round(ins / len(pts), 2), "at": [round(v, 2) for v in (lo + hi) / 2]})
     res.sort(key=lambda r: -r["frac"])
     print("props", len(props), "solids", len(solids), "interpenetrations", len(res))

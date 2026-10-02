@@ -90,6 +90,9 @@ def remap_el(e):
     if e.get("name") in LOBBY_SIDE:
         x_, y_ = s_local_n(e["center"])
         e["center"] = N.c_to_w(LOBBY_SIDE[e["name"]], y_)
+    if e.get("type") == "box" and FIRE_CAB.search(e.get("name", "")):
+        # standard hose cabinet 540 x 650 x 230 (135/138: red, bottom ~1.1 m over the floor, not the maroon facade paint)
+        e.update(slot="M_Sheet_Red", size=[0.54, 0.23, 0.65], z0=round(e["z0"] + 0.10, 3))
     if e.get("type") == "box" and WALL_MOUNTED.search(e.get("name", "")):
         snap_to_face(e, hall)
     e["evidence"] = (e.get("evidence", "") + " | " if e.get("evidence") else "") + "2026-10-01 remapped onto plan v6 (remap_c_v6.py)"
@@ -99,8 +102,10 @@ def remap_el(e):
 # F1 lobby machines (2026-09-30_C_interior 002/133/134, facing the entrance): vending + coffee kiosk on the WEST wall,
 # water cooler on the EAST wall; the source plan had them mirrored (and the cooler inside the P2 partition). C-local x.
 LOBBY_SIDE = {"F1_Vending": N.P2 + N.PART / 2 + 0.40 + 0.05, "F1_CoffeeKiosk": N.P2 + N.PART / 2 + 0.30 + 0.05,
-              "F1_WaterCooler": N.P3 - N.PART / 2 - 0.16 - 0.05}
-WALL_MOUNTED = re.compile(r"Radiator|FireHose|Hose|Extinguisher|Cabinet|Clock|Notice")
+              "F1_WaterCooler": N.P3 - N.PART / 2 - 0.16 - 0.05,
+              "F1_StairE_FireBox": N.X_E - N.STAIR_X - 0.15 - 0.27}     # 135: on the blue wall by the flight-1 corner
+WALL_MOUNTED = re.compile(r"Radiator|FireHose|FireBox|Hose|Extinguisher|Cabinet|Clock|Notice")
+FIRE_CAB = re.compile(r"FireBox|FireHose")
 
 
 def snap_to_face(e, hall):
