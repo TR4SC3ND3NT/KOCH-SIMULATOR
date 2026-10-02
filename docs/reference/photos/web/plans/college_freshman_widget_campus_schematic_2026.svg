@@ -1,0 +1,350 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="freshman-search-widget" class="fsw-campus-map" width="1840" height="800" viewBox="0 0 920 400"><style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			
+
+    {
+      max-width: 680px;
+      margin: 20px auto;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+    }
+    .fsw-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+      border: 1px solid #e2e8f0;
+    }
+    .fsw-badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0 0 6px 0;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+    p.fsw-sub {
+      font-size: 13.5px;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    /* Поле ввода */
+    input.fsw-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px 16px;
+      font-size: 15px;
+      border: 2px solid #cbd5e1;
+      border-radius: 12px;
+      outline: none;
+      transition: all 0.2s ease;
+      background: #ffffff;
+    }
+    input.fsw-input:focus {
+      border-color: #12385f;
+      box-shadow: 0 0 0 3px rgba(18, 56, 95, 0.15);
+    }
+    .fsw-results {
+      margin: 10px 0 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .fsw-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: left;
+    }
+    .fsw-name { font-size: 17px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+    .fsw-id { font-size: 13px; color: #64748b; margin-bottom: 10px; }
+    .fsw-meta {
+      background: #ffffff;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 10px;
+      font-size: 13.5px;
+    }
+    .fsw-room-box {
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+    .fsw-room-label { font-size: 11.5px; font-weight: 600; color: #1d4ed8; text-transform: uppercase; }
+    .fsw-room-val { font-size: 21px; font-weight: 800; color: #1d4ed8; }
+    .fsw-empty { text-align: center; padding: 10px; color: #64748b; font-size: 13.5px; }
+
+    /* Схема кампуса */
+    .fsw-map-section {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .fsw-map-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .fsw-map-header span.title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .fsw-map-header span.tag-c {
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    svg.fsw-campus-map {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      background: #e2e8f0;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Стандартные здания */
+    .bldg {
+      fill: #e06d6d;
+      stroke: #b91c1c;
+      stroke-width: 1.5;
+    }
+    .bldg-txt {
+      fill: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      text-anchor: middle;
+      dominant-baseline: central;
+      pointer-events: none;
+    }
+
+    /* 1. ГАРАНТИРОВАННОЕ МИГАНИЕ КОЛЛЕДЖА (С-БЛОК) */
+    .bldg-c {
+      animation: fsw-flash-blue 1.2s infinite ease-in-out !important;
+    }
+    @keyframes fsw-flash-blue {
+      0%, 100% {
+        fill: #1d4ed8;
+        stroke: #1e3a8a;
+        stroke-width: 2px;
+      }
+      50% {
+        fill: #60a5fa;
+        stroke: #93c5fd;
+        stroke-width: 4px;
+      }
+    }
+
+    /* 2. ГАРАНТИРОВАННОЕ МИГАНИЕ ШАТРА КОНЦЕРТА */
+    .bldg-concert {
+      animation: fsw-flash-yellow 1.2s infinite ease-in-out !important;
+    }
+    @keyframes fsw-flash-yellow {
+      0%, 100% {
+        fill: #fef08a;
+        stroke: #ca8a04;
+        stroke-width: 2px;
+      }
+      50% {
+        fill: #f97316;
+        stroke: #c2410c;
+        stroke-width: 3.5px;
+      }
+    }
+
+    /* Радарные пульсирующие кольца */
+    .fsw-pulse-ring {
+      animation: fsw-ring-grow 1.8s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform-origin: center;
+      pointer-events: none;
+    }
+    @keyframes fsw-ring-grow {
+      0% {
+        r: 6;
+        opacity: 0.9;
+      }
+      100% {
+        r: 28;
+        opacity: 0;
+      }
+    }
+
+    /* Блоки */
+    .fsw-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .fsw-info-col {
+      background: #1e293b;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 7px 6px;
+      font-size: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .fsw-info-col.active-c {
+      background: #1d4ed8;
+      border: 1.5px solid #60a5fa;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+    }
+    .fsw-info-col .col-title {
+      font-weight: 800;
+      font-size: 11px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 3px;
+      margin-bottom: 2px;
+    }
+    .fsw-info-col span {
+      opacity: 0.9;
+      line-height: 1.2;
+    }
+
+    /* Таблица */
+    .fsw-table-wrap {
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      margin-bottom: 18px;
+    }
+    .fsw-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      text-align: left;
+    }
+    .fsw-table th {
+      background-color: #12385f;
+      color: #ffffff;
+      padding: 10px 12px;
+      font-weight: 700;
+      text-align: center;
+      border: 1px solid #0d2a47;
+      white-space: nowrap;
+    }
+    .fsw-table td {
+      padding: 10px 12px;
+      border: 1px solid #e2e8f0;
+      color: #1e293b;
+      vertical-align: middle;
+    }
+    .fsw-table tr:nth-child(even) td { background-color: #f8fafc; }
+    .fsw-table tr:nth-child(odd) td { background-color: #ffffff; }
+    .fsw-table tr.highlight-day td {
+      background-color: #eff6ff !important;
+      font-weight: 600;
+      color: #1d4ed8;
+    }
+    .fsw-center { text-align: center; white-space: nowrap; }
+  </style>
+        <!-- Дорожки -->
+        <rect x="0" y="0" width="920" height="400" fill="#d5dde5"/>
+        
+        <!-- Газоны -->
+        <rect x="15" y="15" width="890" height="20" fill="#68bb76" rx="3"/>
+        <rect x="680" y="190" width="120" height="70" fill="#68bb76" rx="6"/>
+        <circle cx="720" cy="225" r="14" fill="#e06d6d" stroke="#b91c1c"/>
+        <circle cx="780" cy="225" r="14" fill="#e06d6d" stroke="#b91c1c"/>
+
+        <!-- Левое крыло: Д и Е блоки -->
+        <path class="bldg" d="M 45,55 L 90,55 L 90,135 L 440,135 L 440,175 L 115,175 L 115,150 L 45,150 Z" />
+        <text x="68" y="100" class="bldg-txt" transform="rotate(-90 68 100)">Д &#8212; блок</text>
+        <text x="240" y="155" class="bldg-txt">Е &#8212; блок</text>
+
+        <!-- Олимп -->
+        <rect x="560" y="65" width="35" height="45" fill="#e06d6d" stroke="#b91c1c" rx="2"/>
+        <text x="577" y="87" font-size="8.5" font-weight="700" fill="#fff" text-anchor="middle" transform="rotate(-90 577 87)">Олимп</text>
+
+        <!-- МИГАЮЩИЙ ШАТЕР (Welcome Day) + ВОЛНА -->
+        <circle class="fsw-pulse-ring" cx="637" cy="77" r="15" fill="none" stroke="#f97316" stroke-width="2.5" />
+        <rect class="bldg-concert" x="610" y="50" width="55" height="55" rx="6" />
+        <text x="637" y="66" font-size="7.5" font-weight="900" fill="#78350f" text-anchor="middle">Официальное</text>
+        <text x="637" y="76" font-size="7.5" font-weight="900" fill="#78350f" text-anchor="middle">открытие и</text>
+        <text x="637" y="86" font-size="7.5" font-weight="900" fill="#78350f" text-anchor="middle">концертная</text>
+        <text x="637" y="96" font-size="7.5" font-weight="900" fill="#78350f" text-anchor="middle">программа</text>
+
+        <!-- Футбольное поле -->
+        <rect x="680" y="48" width="95" height="60" fill="#22c55e" stroke="#15803d" stroke-width="1.5" rx="3"/>
+        <line x1="727" y1="48" x2="727" y2="108" stroke="#ffffff" stroke-width="1" stroke-dasharray="2,2"/>
+        <circle cx="727" cy="78" r="8" fill="none" stroke="#ffffff" stroke-width="1"/>
+        <text x="727" y="65" font-size="8.5" font-weight="800" fill="#ffffff" text-anchor="middle">Футбольное</text>
+        <text x="727" y="93" font-size="8.5" font-weight="800" fill="#ffffff" text-anchor="middle">поле</text>
+        
+        <!-- Спортплощадка -->
+        <rect x="790" y="45" width="95" height="65" fill="#78716c" stroke="#44403c" rx="3"/>
+        <text x="837" y="78" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle">Спортплощадка</text>
+
+        <!-- Кантин -->
+        <rect x="825" y="125" width="60" height="25" fill="#e06d6d" stroke="#b91c1c" rx="3"/>
+        <text x="855" y="138" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Кантин</text>
+
+        <!-- Спортзал -->
+        <rect class="bldg" x="635" y="145" width="145" height="42" rx="3"/>
+        <text x="707" y="166" class="bldg-txt">Спортзал</text>
+
+        <!-- МИГАЮЩИЙ С - БЛОК (КОЛЛЕДЖ) + ВОЛНА -->
+        <circle class="fsw-pulse-ring" cx="852" cy="185" r="18" fill="none" stroke="#2563eb" stroke-width="3" />
+        <rect class="bldg-c" x="815" y="160" width="75" height="50" rx="6" />
+        <text x="852" y="180" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">С &#8212; блок</text>
+        <text x="852" y="196" font-size="9.5" font-weight="900" fill="#fef08a" text-anchor="middle">КОЛЛЕДЖ</text>
+        
+        <!-- Красный восклицательный маркер -->
+        <circle cx="815" cy="160" r="8" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+        <text x="815" y="163" font-size="10" font-weight="900" fill="#ffffff" text-anchor="middle">!</text>
+
+        <!-- Б - Блок -->
+        <rect class="bldg" x="680" y="275" width="110" height="55" rx="4"/>
+        <text x="735" y="302" class="bldg-txt">Б &#8212; блок</text>
+
+        <!-- А - Блок и Столовая -->
+        <path class="bldg" d="M 810,215 L 885,215 L 885,370 L 810,370 L 810,340 L 830,340 L 830,265 L 810,265 Z"/>
+        <text x="848" y="235" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Столовая</text>
+        <text x="848" y="355" class="bldg-txt">А &#8212; блок</text>
+
+        <!-- Вход -->
+        <g transform="translate(800, 385)">
+          <text x="0" y="0" font-size="11" font-weight="800" fill="#1e293b">Вход ➔</text>
+        </g>
+      </svg>
