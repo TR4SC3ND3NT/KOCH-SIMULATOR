@@ -23,6 +23,7 @@ from greybox.kit import (Opening, WindowSpec, box, facade_frame, offset_ring, pr
                          railing, ring_box, stair_flight, wall_piece, window_unit)
 from greybox import detail as D  # noqa: E402
 from greybox.materials import ensure_slot, mat, parts_to_mesh  # noqa: E402
+from greybox.roofclip import apply_boolean, clear_cutters, drop, hollow_roof, roof_cutter, temp_object  # noqa: E402
 
 MAX_PIECE_M = 12.0   # Lumen SW: keep wall pieces well under ~15 m (distance field / card quality)
 BURY_M = 0.3         # walls reach this far below the lowest ground along a facade
@@ -263,7 +264,17 @@ class Building:
                         base = "M_Paint_Maroon" if maroon_face else self.s.get("wall_material", "M_Render_Beige")
                         for f in reveals:
                             f.material_index = 1 if paint else 0
-                        self.obj_mat(f"Wall_E{i}_B{bi}_{ci}", bm, [base, paint or base], ev)
+                        slots = [base, paint or base]
+                        if self.s.get("interior_floors"):
+                            # modelled interior: the wall's inner face is plaster, not the facade finish (C F5 showed
+                            # the maroon tower paint from inside)
+                            inward = -fr.col[1].xyz.normalized()
+                            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)   # outward, as obj_mat makes them
+                            for f in bm.faces:
+                                if f.normal.dot(inward) > 0.99:
+                                    f.material_index = 2
+                            slots.append("M_Paint_White")
+                        self.obj_mat(f"Wall_E{i}_B{bi}_{ci}", bm, slots, ev)
                         continue
                     ob = self.obj(f"Wall_E{i}_B{bi}_{ci}", bm, COL["maroon"] if maroon_face else COL["wall"], ev)
                     ob.data.materials[0] = mat("M_Paint_Maroon" if maroon_face else
@@ -581,9 +592,30 @@ class Building:
                     bm.faces.new([allv[k] for k in f])
                 except ValueError:
                     pass
-        self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
-        if r.get("dormers"):
-            self.build_dormers(outline, r)
+        roof = self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
+        dormers, bm_cut, bm_gl = self.build_dormers(outline, r) if r.get("dormers") else (None, None, None)
+        if r.get("shell"):
+            # attic storey inside the roof (C F5): hollow the solid so its underside slopes like the rafters. Vertical
+            # thickness chosen so that underside meets the wall's inner face at the wall top (no crevice above it)
+            t_v = max(0.25, (r["overhang"] + self.s.get("wall_thk", 0.3)) * math.tan(math.radians(pitch)))
+            hollow_roof(roof, t_v)
+            if dormers is not None:   # keep only the dormer parts above the underside (none hanging in the attic);
+                # cut 5 cm above it so the dormer cap stays inside the shell (not coplanar with the lining)
+                dormers.data.materials[0] = mat(r.get("dormer_slot", "M_Sheet_Red"))
+                apply_boolean(dormers, roof_cutter(roof, lift=0.05), "INTERSECT")
+                if bm_cut is not None:   # glazed openings: one cutter through dormer fronts and the roof shell
+                    cut = temp_object(roof.name + "_TMPDormerCut", bm_cut, roof.matrix_world, "M_Paint_White")
+                    apply_boolean(dormers, cut)
+                    apply_boolean(roof, cut)
+                    drop(cut)
+                    bm_cut = None
+                    self.obj("Dormer_Glass", bm_gl, COL["glass"], "dormer windows: F5 attic offices are lit by the dormers "
+                             "(campus.md); pane 3 cm behind the dormer face", r.get("confidence"))
+                    bm_gl = None
+            clear_cutters()
+        for b_ in (bm_cut, bm_gl):
+            if b_ is not None:
+                b_.free()
 
     def build_rect_hip(self, r):
         """Hip roof on a rectangle with a given ridge length: long slopes at `pitch`, ends as steep as needed."""
@@ -692,9 +724,13 @@ class Building:
         self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
 
     def build_dormers(self, outline, r):
-        """Pointed (triangular) dormers standing on the roof slope, bodies buried in the roof solid."""
+        """Pointed (triangular) dormers standing on the roof slope, bodies buried in the roof solid. With
+        r["dormer"]["window"] each also gets a glazed triangular opening (10 cm frame) whose cutter runs back through
+        the roof into the attic; returns (dormers object, cutter bmesh or None, glass bmesh or None)."""
         d = r["dormer"]
         bm = bmesh.new()
+        win = d.get("window")
+        bm_cut, bm_gl = (bmesh.new(), bmesh.new()) if win else (None, None)
         z0 = self.s["eave_z"]
         if r["type"] == "mansard":
             run = r["lower_h"] / math.tan(math.radians(r["lower_pitch"]))
@@ -705,17 +741,37 @@ class Building:
         w_front = r["overhang"] - inset          # w is outward from the wall face; the eave is at +overhang
         zf = z0 + rise
         back = w_front - d["h"] / math.tan(math.radians(max(r.get("pitch", 20), 10))) - 0.5
+        fw = d.get("frame", 0.10)
+
+        def prism(b_, tri, w0, w1):
+            c = [b_.verts.new(fr @ Vector((uu, w, zz))) for w in (w0, w1) for uu, zz in tri]
+            for f in ((0, 1, 2), (5, 4, 3), (0, 3, 4, 1), (1, 4, 5, 2), (2, 5, 3, 0)):
+                b_.faces.new([c[k] for k in f])
+
         for grp in r["dormers"]:
             fr = self.edges[grp["edge"]]["frame"]
             hw = d["w"] / 2
             for u in grp["u"]:
-                c = []
-                for w in (w_front, back):
-                    c += [bm.verts.new(fr @ Vector((u - hw, w, zf - 0.3))), bm.verts.new(fr @ Vector((u + hw, w, zf - 0.3))),
-                          bm.verts.new(fr @ Vector((u, w, zf + d["h"])))]
-                for f in ((0, 1, 2), (5, 4, 3), (0, 3, 4, 1), (1, 4, 5, 2), (2, 5, 3, 0)):
-                    bm.faces.new([c[k] for k in f])
-        self.obj("Dormers", bm, COL["roof"], "pointed dormers on the roof slopes (render 2025, Esri 2020)")
+                tri = [(u - hw, zf - 0.3), (u + hw, zf - 0.3), (u, zf + d["h"])]
+                prism(bm, tri, w_front, back)
+                if win:
+                    # opening = the triangle inset by the frame width: scaled about the incentre by (r_in - fw) / r_in
+                    A, B, C = (Vector(p) for p in tri)
+                    la, lb, lc = (B - C).length, (C - A).length, (A - B).length
+                    inc = (A * la + B * lb + C * lc) / (la + lb + lc)
+                    r_in = abs((B - A).x * (C - A).y - (B - A).y * (C - A).x) / (la + lb + lc)
+                    k = (r_in - fw) / r_in
+                    hole = [inc + (Vector(p) - inc) * k for p in tri]
+                    # the roof surface meets the dormer front at zf: the opening starts 8 cm above it (no notch)
+                    zb_new, (ha, hb, hc) = zf + 0.08, hole
+                    if ha.y < zb_new < hc.y:
+                        t = (zb_new - ha.y) / (hc.y - ha.y)
+                        ha, hb = ha.lerp(hc, t), hb.lerp(hc, t)
+                    hole = [(ha.x, ha.y), (hb.x, hb.y), (hc.x, hc.y)]
+                    prism(bm_cut, hole, w_front + 0.1, back + 0.05)            # through the front, into the attic
+                    prism(bm_gl, hole, w_front - 0.03, w_front - 0.042)        # 12 mm pane, 3 cm behind the face
+        ob = self.obj("Dormers", bm, COL["roof"], "pointed dormers on the roof slopes (render 2025, Esri 2020)")
+        return ob, bm_cut, bm_gl
 
     # ------------------------------------------------------------------ attachments
     def build_attachment_detail(self, a, e, fr):
@@ -977,6 +1033,13 @@ class Building:
                                            (a["depth"], a["z_low"] - 0.02), (a["depth"], zb)], a["u0"], a["u1"])
                     prism_profile(bm, fr, [(0.0, a["z_high"] - 0.3), (0.0, a["z_high"]), (a["depth"], a["z_low"]),
                                            (a["depth"], a["z_low"] - 0.3)], a["u0"], a["u1"])  # roof deck under the sheet
+                    # end walls up into the deck: "hollow_ends" [{end: "u0"|"u1", w0, w1}] (a span where a neighbour,
+                    # e.g. a stair wall, does not already close the end)
+                    deck = lambda w: a["z_high"] - 0.3 + (a["z_low"] - a["z_high"]) * w / a["depth"] + 0.05
+                    for he in a.get("hollow_ends", []):
+                        w0, w1 = he.get("w0", 0.0), he.get("w1", a["depth"])
+                        ua = a["u0"] if he["end"] == "u0" else a["u1"] - wt
+                        prism_profile(bm, fr, [(w0, zb), (w0, deck(w0)), (w1, deck(w1)), (w1, zb)], ua, ua + wt)
                 else:
                     prof = [(0.0, zg - BURY_M), (0.0, a["z_high"]), (a["depth"], a["z_low"]), (a["depth"], zg - BURY_M)]
                     prism_profile(bm, fr, prof, a["u0"], a["u1"])
@@ -984,7 +1047,22 @@ class Building:
                 prism_profile(bm2, fr, [(0.0, a["z_high"] + 0.01), (a["depth"] + 0.15, a["z_low"] - 0.01),
                                         (a["depth"] + 0.15, a["z_low"] + 0.05), (0.0, a["z_high"] + 0.07)],
                               a["u0"] - 0.15, a["u1"] + 0.15)
-                if not a.get("roof_only"):
+                if not a.get("roof_only") and a.get("hollow"):
+                    # faces towards the room (deck underside, inner faces of the front and end walls) are plaster
+                    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+                    du, dw = fr.col[0].xyz.normalized(), fr.col[1].xyz.normalized()
+                    for f in bm.faces:
+                        n_ = f.normal
+                        c_ = f.calc_center_median()
+                        w_c = (c_ - fr.col[3].xyz).dot(dw)
+                        u_c = (c_ - fr.col[3].xyz).dot(du)
+                        if (n_.z < -0.5 or (n_.dot(dw) < -0.99 and w_c > a["depth"] / 2)
+                                or (n_.dot(du) < -0.99 and u_c > (a["u0"] + a["u1"]) / 2)
+                                or (n_.dot(du) > 0.99 and u_c < (a["u0"] + a["u1"]) / 2)):
+                            f.material_index = 1
+                    self.obj_mat(a["name"], bm, [a.get("body_slot", "M_Tile_Brick_Red"), "M_Paint_White"], a.get("evidence"))
+                    self.shed_cladding(a, fr)
+                elif not a.get("roof_only"):
                     ob = self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
                     if a.get("body_slot"):
                         ob.data.materials[0] = mat(a["body_slot"])

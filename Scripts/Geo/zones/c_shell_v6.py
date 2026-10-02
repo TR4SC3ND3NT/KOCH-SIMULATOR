@@ -73,12 +73,17 @@ def main(src):
             if a.get("name") == "WestShed":                             # runs from the NW corner (owner) to its old south end
                 a["u1"] = round(a["u1"] + YW - OLD_W, 3)
                 # 2026-09-30 photos 181/182/188 (+013/014): brick-tile wall under a dark split-stone band, grey profiled
-                # roof with a brass-coloured edge flashing; the south end is hidden by the basement-stair brick pier
-                a.update(body_slot="M_Tile_Brick_Red", roof_slot="M_Sheet_Grey", trim_slot="M_Brass_Trim", band_ends=["u1"],
+                # roof with a brass-coloured edge flashing. Edge 8 runs north -> south: u0 is the north end (clad), u1
+                # the south end, hidden by the basement-stair brick pier
+                a.update(body_slot="M_Tile_Brick_Red", roof_slot="M_Sheet_Grey", trim_slot="M_Brass_Trim", band_ends=["u0"],
                          bands=[{"z0": -2.10, "z1": -0.58, "slot": "M_Tile_Brick_Red", "proj": 0.02},
                                 {"z0": -0.58, "z1": -0.15, "slot": "M_Stone_Rubble_Dark", "proj": 0.04}],
                          bands_evidence="2026-09-30 photos 181/182/188: ~0.45 m dark split-stone band under the roof edge over "
                                         "brick-effect tile (shares of the 0.9 m front wall by eye, +-5 cm)")
+                # the Dance Hall door on the basement-stair landing opens into this box: hollow (room in INT_C_Basement),
+                # floor at the basement level (3.97); the stair's wall (Stair_Wall_N, w 0-4.37) closes most of the south end
+                a.update(hollow=True, z_floor=-2.70, wall_t=0.3,
+                         hollow_ends=[{"end": "u0"}, {"end": "u1", "w0": 4.27, "w1": a["depth"]}])
             if "u" in a:
                 a["u"] = [round(v + YW - OLD_W, 3) for v in a["u"]]
             if "items" in a:
@@ -94,6 +99,9 @@ def main(src):
             a["rail_ends"] = ["u1"]                                     # walk QA 2026-10-02: open outer end 1.05 m over the plaza
         att.append(a)
     C["attachments"] = att
+    # F5 offices are inside the hip roof: the roof is a shell with a sloped underside, not a solid (2026-10-02)
+    C["roof"]["shell"] = True
+    C["roof"]["dormer"] = dict(C["roof"]["dormer"], window=True)   # campus.md: F5 offices are lit by the dormers
     dorm = []
     for d in C["roof"]["dormers"]:
         if d["edge"] == 5:

@@ -60333,7 +60333,8 @@
    ],
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "int_wall",
@@ -60379,7 +60380,8 @@
    ],
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60404,7 +60406,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60429,7 +60432,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60454,7 +60458,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60479,7 +60484,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60504,7 +60510,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60529,7 +60536,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60554,7 +60562,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "door",
@@ -60579,7 +60588,8 @@
    "hinge": "left",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "slab",
@@ -60606,7 +60616,8 @@
    "z1": 22.03,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
-   "confidence": "low"
+   "confidence": "low",
+   "clip_roof": "BLD_C"
   },
   {
    "type": "box",

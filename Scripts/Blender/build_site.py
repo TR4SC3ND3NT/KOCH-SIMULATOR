@@ -19,6 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from greybox.common import SPECS, Terrain, ensure_collection, load, make_object  # noqa: E402
 from greybox.materials import mat  # noqa: E402
+from greybox.roofclip import clear_cutters, clip_under_roof  # noqa: E402
 from greybox.kit import Opening, box, wall_piece  # noqa: E402
 from greybox.sweep import hedge_profile, rect_profile, sweep_profile  # noqa: E402
 
@@ -126,6 +127,8 @@ class Site:
         if len(me.materials) == 1 and me.materials[0] and me.materials[0].name.startswith("VC_"):
             me.materials[0] = mat(site_slot(el))
             ob["koch_slot"] = me.materials[0].name
+        if el.get("clip_roof"):   # attic storey: cut away what rises above the roof underside (after the slot)
+            clip_under_roof(ob, el["clip_roof"])
         return ob
 
     # ------------------------------------------------------------------ element builders
@@ -1496,6 +1499,7 @@ def main():
             bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"{sid}: FAILED {ex!r}")
             continue
         print(f"{sid}: {n} elements built")
+    clear_cutters()
     if bpy.app.background:
         bpy.ops.wm.save_mainfile(compress=True)
 

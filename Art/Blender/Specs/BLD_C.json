@@ -499,11 +499,13 @@
   "dormer": {
    "w": 1.3,
    "h": 1.5,
-   "inset": 1.3
+   "inset": 1.3,
+   "window": true
   },
   "evidence": "Google z20 (0.1 m/px): 5 pointed dormers on the south slope, 5 (6?) on the north slope, 2 on the east hip; positions corrected for Google roof lean measured by phase correlation vs near-nadir Bing (ground +1.5/+0.25 m, C roof ~19 m: +7.0/+4.0 m -> 0.29 m/m E, 0.20 m/m N); pitch ~25 deg (only sky above the cornice from the plaza) | 2026-09-25 recount on the near-top-down drone frame (web video mjkCUJhlPN8 t=12 s, 2022, ~34 px/m on the roof): south slope 2 dormers over the west wing (x 9.2, 12.5 -> 12.2 kept) + 3 over the east wing (x 18.05, 21.1, 25.2), north slope 7 (x 24.7, 23.0, 21.1, 19.3 small; 16.3, 13.0, 9.3), east hip 2 big crowned dormers; the tower slope has none. Positions +-0.5 m (drone slightly off-nadir).",
   "status": "probable (pitch estimated)",
-  "confidence": "medium"
+  "confidence": "medium",
+  "shell": true
  },
  "attachments": [
   {
@@ -657,7 +659,7 @@
    "roof_slot": "M_Sheet_Grey",
    "trim_slot": "M_Brass_Trim",
    "band_ends": [
-    "u1"
+    "u0"
    ],
    "bands": [
     {
@@ -673,7 +675,20 @@
      "proj": 0.04
     }
    ],
-   "bands_evidence": "2026-09-30 photos 181/182/188: ~0.45 m dark split-stone band under the roof edge over brick-effect tile (shares of the 0.9 m front wall by eye, +-5 cm)"
+   "bands_evidence": "2026-09-30 photos 181/182/188: ~0.45 m dark split-stone band under the roof edge over brick-effect tile (shares of the 0.9 m front wall by eye, +-5 cm)",
+   "hollow": true,
+   "z_floor": -2.7,
+   "wall_t": 0.3,
+   "hollow_ends": [
+    {
+     "end": "u0"
+    },
+    {
+     "end": "u1",
+     "w0": 4.27,
+     "w1": 5.8
+    }
+   ]
   },
   {
    "type": "downpipe",

@@ -867,6 +867,8 @@ def f5(zb):
         els.append(door(f"{P}Door_S{n}", (x0, y0c - PART), (x1, y0c - PART), u - x0, zb, **lo))
         els.append(door(f"{P}Door_N{n}", (x1, y1c + PART), (x0, y1c + PART), x1 - u, zb, **lo))
     els.append(slab(P + "Ceiling_Flat", x0, X_E, y0c - 2.0, y1c + 2.0, zb + 2.40, zb + 2.43, "white", **lo))
+    for e in els:   # the storey is inside the hip roof: build_site cuts all of it to the roof shell's underside
+        e["clip_roof"] = "BLD_C"
     return els
 
 

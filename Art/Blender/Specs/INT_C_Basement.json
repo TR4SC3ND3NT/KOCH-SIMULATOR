@@ -56,6 +56,24 @@
     173.588,
     -1.801
    ]
+  ],
+  [
+   [
+    167.634,
+    -3.015
+   ],
+   [
+    173.38,
+    -3.244
+   ],
+   [
+    174.147,
+    15.99
+   ],
+   [
+    168.402,
+    16.219
+   ]
   ]
  ],
  "terrain_pads": [
@@ -2679,7 +2697,54 @@
    "ue_asset": "cctv_dome",
    "evidence": "basement hall clips 20260925_012714931_s1/s2, 012744144_s1/s2, 012800431_s1/s2 (door plate 'C001 LAB' = C basement): beige 60x60 porcelain with dark border strips, grey dado 1.1 m, LED 600 panels, arched vestibule 3 risers up with 2 wooden doors + louvred vents, beam seating, white wardrobes, C001 door 3 risers down, art room with the line-art mural and easels, exit end wall with steel door, 3 barred transoms, 2 barred windows, 2 radiators; plan by eye under the F1 corridor (the clips are not placed)",
    "confidence": "low"
+  },
+  {
+   "type": "slab",
+   "name": "DanceHall_Floor",
+   "ring": [
+    [
+     167.79,
+     -2.891
+    ],
+    [
+     173.285,
+     -3.11
+    ],
+    [
+     174.041,
+     15.844
+    ],
+    [
+     168.545,
+     16.064
+    ]
+   ],
+   "z0": 3.72,
+   "z1": 3.97,
+   "material": "wood",
+   "slot": "M_Wood_Oak_Light",
+   "evidence": "Dance Hall room inside the C west shed (the door on the basement-stair landing opens into it): floor at the basement level, 2 risers down from the door (landing 4.246); interior not photographed - empty room, layout and finish estimated (2026-10-02)",
+   "confidence": "low"
+  },
+  {
+   "type": "stairs_run",
+   "name": "DanceHall_Steps",
+   "top": [
+    172.336,
+    -3.073
+   ],
+   "dir_deg": 87.7161455,
+   "width": 1.0,
+   "risers": 2,
+   "riser_h": 0.138,
+   "tread": 0.36,
+   "z_top": 4.246,
+   "top_flush": true,
+   "material": "wood",
+   "slot": "M_Wood_Oak_Light",
+   "evidence": "Dance Hall room inside the C west shed (the door on the basement-stair landing opens into it): floor at the basement level, 2 risers down from the door (landing 4.246); interior not photographed - empty room, layout and finish estimated (2026-10-02)",
+   "confidence": "low"
   }
  ],
- "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor"
+ "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35)"
 }
