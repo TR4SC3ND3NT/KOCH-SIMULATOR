@@ -31,9 +31,10 @@ BOUNDARY_HEDGE = False
 HEDGE_ONE_SIDE = {"G1_SSE": "L"}                 # A157-A160: G1_SSE has its hedge on the east (left, going out) side only
 # scalloped edging blocks: pitch 0.153 +-0.008 (block/tile ratio 0.38-0.40 on the 0.40 m tiles in A019, A021, A099, A157,
 # A015), height 0.19-0.21 (A019, A113), ~0.08 thick
-EDGE_H, EDGE_PITCH, EDGE_T = 0.20, 0.153, 0.08
-SQ_PU, SQ_PV = 3.80, 3.80                        # centre square paving half sizes: 19 x 19 tiles of 0.40 m = 7.6 x 7.6 m (owner
-                                                 # 2026-10-02: 19 x 19 tiles, 21 edging blocks = 8 tiles); edging runs of 21 blocks
+EDGE_H, EDGE_PITCH, EDGE_T = 0.20, 0.154, 0.08   # owner: 21 blocks = 8 tiles -> 8 x 0.405 / 21
+SQ_PU, SQ_PV = 3.85, 3.85                        # centre square paving half sizes: 19 x 19 tiles (owner 2026-10-02) at a 0.405 m
+                                                 # period (400 mm slab + joint; the 1.77 m scale person in A019/A022 gives 0.402-0.414)
+                                                 # = 7.7 x 7.7 m; 21 edging blocks = 8 tiles (owner); edging runs of 21 blocks
                                                  # + a 1.07 m mid-side opening (A099, A100, A105, A109)
 THETA = -3.0                                     # square / spine frame heading (deg; sketch N/S lines and gazebo axis)
 SQ_C = (130.00, -27.55)                          # square centre: the sketch square (corners +-0.1 m)
