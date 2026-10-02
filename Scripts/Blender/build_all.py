@@ -1,6 +1,10 @@
 # Rebuilds the whole campus greybox in order: phase-1 terrain/massing, every building spec (Specs/BLD_*.json),
 # every site spec (Specs/SITE_*.json), the clean-up pass (greybox/finalize.py), then validates (unique dot-free names, closed manifold meshes). Used by R1.
 # Run: blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py   (saves the file)
+#  or, without the LFS .blend: blender -b -P Scripts/Blender/build_all.py   (builds from an empty scene and saves to
+#  Art/Blender/KOCH_Campus_Greybox.blend, or to $KOCH_BLEND_OUT). Everything comes from Specs/, Data/ and these scripts.
+import json
+import math
 import os
 import runpy
 import sys
@@ -10,6 +14,8 @@ import bpy
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SPECS = os.path.abspath(os.path.join(HERE, "..", "..", "Art", "Blender", "Specs"))
+DATA = os.path.join(os.path.dirname(SPECS), "Data")
+DEFAULT_BLEND = os.path.join(os.path.dirname(SPECS), "KOCH_Campus_Greybox.blend")
 
 
 def run(script, env_key=None, ids=()):
@@ -37,8 +43,48 @@ def validate():
     return not bad_names and not open_meshes
 
 
+def clear_startup_scene():
+    """New (unsaved) file: drop the factory startup objects (cube, light, camera) so the build starts empty."""
+    if bpy.data.filepath:
+        return
+    for ob in [o for o in bpy.data.objects if not o.get("koch_gen") and o.name.split(".")[0] in ("Cube", "Light", "Camera")]:
+        data = ob.data
+        bpy.data.objects.remove(ob, do_unlink=True)
+        if data is not None and data.users == 0:
+            for coll in (bpy.data.meshes, bpy.data.lights, bpy.data.cameras):
+                if data.name in coll and coll[data.name] == data:
+                    coll.remove(data)
+
+
+def build_review_cameras():
+    """Review cameras (00_Reference) from Data/review_cameras.json: created or updated in place, never duplicated."""
+    path = os.path.join(DATA, "review_cameras.json")
+    if not os.path.exists(path):
+        return 0
+    from greybox.common import ensure_collection
+    spec = json.load(open(path))
+    col = ensure_collection("00_Reference")
+    for c in spec["cameras"]:
+        ob = bpy.data.objects.get(c["name"])
+        if ob is None or ob.type != "CAMERA":
+            ob = bpy.data.objects.new(c["name"], bpy.data.cameras.new(c["name"]))
+            col.objects.link(ob)
+        ob.location = c["location"]
+        ob.rotation_mode = "XYZ"
+        ob.rotation_euler = [math.radians(a) for a in c["rotation_deg"]]
+        ob.data.lens, ob.data.sensor_width = c["lens"], c.get("sensor_width", 36.0)
+        ob.data.clip_start, ob.data.clip_end = 0.1, c.get("clip_end", 1000.0)
+        if c.get("notes"):
+            ob["koch_notes"] = c["notes"]
+    act = bpy.data.objects.get(spec.get("active", ""))
+    if act is not None:
+        bpy.context.scene.camera = act
+    return len(spec["cameras"])
+
+
 def main():
     background = bpy.app.background
+    clear_startup_scene()
     # a live Blender session keeps imported helper modules: drop them so edited kit/common/sweep code is used
     for m in [m for m in sys.modules if m == "greybox" or m.startswith("greybox.")]:
         del sys.modules[m]
@@ -54,6 +100,7 @@ def main():
     if site:
         run("build_site.py", "KOCH_SITE", site)
     sys.path.insert(0, HERE)
+    print("review cameras:", build_review_cameras())
     from greybox.materials import assign_ground_surfaces, assign_name_slots
     print("material slots by name:", assign_name_slots(bpy.data.objects))
     print("ground surfaces:", assign_ground_surfaces(bpy.data.objects.get("TER_Ground"), SPECS))
@@ -72,7 +119,9 @@ def main():
                     sp.shading.color_type = "MATERIAL"
     bpy.context.scene.display.shading.color_type = "MATERIAL"
     if background and ok:
-        bpy.ops.wm.save_mainfile(compress=True)
+        out = os.environ.get("KOCH_BLEND_OUT") or bpy.data.filepath or DEFAULT_BLEND
+        bpy.ops.wm.save_as_mainfile(filepath=out, compress=True)
+        print("saved", out)
     elif background:
         print("build_all: NOT SAVED (fix the failures above)")
     print("build_all:", "OK" if ok else "CHECK FAILED", "| buildings:", bld, "| site:", site)

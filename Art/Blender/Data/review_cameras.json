@@ -1,0 +1,137 @@
+{
+ "note": "Review cameras of the greybox (00_Reference), rebuilt by build_all.py. Local frame metres, XYZ Euler degrees, lens mm on a 36 mm sensor. 'active' = scene camera.",
+ "active": "CAM_Ref_C_SW",
+ "cameras": [
+  {
+   "name": "CAM_Overview_A",
+   "location": [
+    215.0,
+    -120.0,
+    30.0
+   ],
+   "rotation_deg": [
+    72.2093,
+    -0.0,
+    29.6499
+   ],
+   "lens": 24.0,
+   "sensor_width": 36.0,
+   "clip_end": 3000.0
+  },
+  {
+   "name": "CAM_Overview_C",
+   "location": [
+    160.0,
+    -32.0,
+    30.0
+   ],
+   "rotation_deg": [
+    67.7319,
+    -0.0,
+    -37.1169
+   ],
+   "lens": 28.0,
+   "sensor_width": 36.0,
+   "clip_end": 1000.0
+  },
+  {
+   "name": "CAM_Overview_East",
+   "location": [
+    95.0,
+    -150.0,
+    70.0
+   ],
+   "rotation_deg": [
+    63.0362,
+    0.0,
+    -30.5792
+   ],
+   "lens": 26.0,
+   "sensor_width": 36.0,
+   "clip_end": 3000.0
+  },
+  {
+   "name": "CAM_Overview_Garden",
+   "location": [
+    104.0,
+    -44.0,
+    15.0
+   ],
+   "rotation_deg": [
+    72.0935,
+    -0.0,
+    -46.6366
+   ],
+   "lens": 26.0,
+   "sensor_width": 36.0,
+   "clip_end": 1000.0
+  },
+  {
+   "name": "CAM_Ref_C_SE",
+   "location": [
+    186.9686,
+    -14.0844,
+    6.04
+   ],
+   "rotation_deg": [
+    95.8553,
+    -0.0,
+    23.8432
+   ],
+   "lens": 12.494,
+   "sensor_width": 36.0,
+   "clip_end": 2000.0,
+   "notes": "pose from the rectification of photo 061624280 (plaza in front of block C, looking west)"
+  },
+  {
+   "name": "CAM_Ref_C_SW",
+   "location": [
+    188.5805,
+    -13.8184,
+    6.08
+   ],
+   "rotation_deg": [
+    95.7451,
+    -0.0,
+    -18.0774
+   ],
+   "lens": 12.494,
+   "sensor_width": 36.0,
+   "clip_end": 2000.0,
+   "notes": "pose recovered from the single-view rectification of photo 061621646 (SW of block C entrance): 10.86 m from the east-wing plane, eye 0.55 m above FFL"
+  },
+  {
+   "name": "CAM_Ref_C_W",
+   "location": [
+    163.5743,
+    -4.4445,
+    5.76
+   ],
+   "rotation_deg": [
+    87.4784,
+    0.0,
+    -54.439
+   ],
+   "lens": 12.769,
+   "sensor_width": 36.0,
+   "clip_end": 2000.0,
+   "notes": "pose from the rectification of video 070629483 t=3.4 s (west side of block C, shed)"
+  },
+  {
+   "name": "CAM_Ref_Hall",
+   "location": [
+    98.0,
+    -9.0,
+    6.8
+   ],
+   "rotation_deg": [
+    90.5175,
+    -0.0,
+    -64.5923
+   ],
+   "lens": 27.544,
+   "sensor_width": 36.0,
+   "clip_end": 1000.0
+  }
+ ]
+}
