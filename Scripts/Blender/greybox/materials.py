@@ -30,6 +30,10 @@ PALETTE = {
     "M_Ceiling_Grid_White": (0.90, 0.90, 0.90, 1), "M_LED_Panel_600": (1.0, 1.0, 0.97, 1),
     "M_Tile_Floor_600": (0.74, 0.72, 0.68, 1), "M_Tile_Grout": (0.82, 0.81, 0.78, 1), "M_Paint_Sage": (0.58, 0.69, 0.55, 1), "M_Granite_Beige": (0.74, 0.66, 0.58, 1), "M_Render_Shuba_Grey": (0.74, 0.72, 0.68, 1), "M_Clay_Pot": (0.55, 0.33, 0.25, 1), "M_Plastic_Pot_Pink": (0.85, 0.66, 0.66, 1), "M_Laminate_Oak_Grey": (0.55, 0.50, 0.45, 1), "M_Laminate_Beech_Orange": (0.80, 0.42, 0.20, 1),
     "M_Plastic_Orange": (0.78, 0.40, 0.18, 1), "M_Wood_Oak_Light": (0.66, 0.52, 0.36, 1), "M_Fabric_Curtain_Brown": (0.33, 0.25, 0.22, 1), "M_PVC_Ceiling_Panel": (0.95, 0.95, 0.95, 1),
+    "M_Stone_Rubble_Dark": (0.27, 0.24, 0.22, 1),   # split-face dark stone cladding (C west shed band)
+    "M_Sheet_Grey": (0.45, 0.46, 0.48, 1), "M_Brass_Trim": (0.72, 0.58, 0.30, 1),
+    "M_Sign_KOCH": (0.16, 0.24, 0.55, 1),   # KOCH-branded sign face (logo + lettering in UE; never real names)
+    "M_Fascia_Beige": (0.78, 0.75, 0.69, 1), "M_Steel_Paint_Grey": (0.62, 0.63, 0.64, 1),
     "M_PVC_Anthracite": (0.21, 0.22, 0.24, 1), "M_Chrome": (0.80, 0.81, 0.83, 1), "M_Radiator_White": (0.95, 0.95, 0.94, 1),
 }
 

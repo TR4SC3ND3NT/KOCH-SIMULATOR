@@ -278,12 +278,13 @@
     ]
    ],
    "height": 0.95,
-   "post_spacing": 1.3,
+   "post_spacing": 5.0,
    "post": 0.05,
-   "panel": "bars",
-   "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
+   "panel": "forged",
+   "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444) | 2026-09-30 photos 010/160: light-grey painted forged panel, C-scroll lyres, small hanging scrolls and a rosette, flat top/bottom rails, posts only at the ends",
    "confidence": "medium",
-   "slot": "M_Wrought_Iron"
+   "slot": "M_Steel_Paint_Grey",
+   "ue_asset": "railing_forged_scroll"
   },
   {
    "type": "roof_plane",
@@ -314,8 +315,42 @@
     7.75,
     7.75
    ],
-   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140)",
-   "confidence": "medium"
+   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "confidence": "medium",
+   "slot": "M_Fascia_Beige"
+  },
+  {
+   "type": "roof_plane",
+   "name": "EntryRoof_Sheet",
+   "thk": 0.03,
+   "material": "metal",
+   "ring": [
+    [
+     167.133,
+     -5.547
+    ],
+    [
+     173.178,
+     -5.788
+    ],
+    [
+     173.352,
+     -1.442
+    ],
+    [
+     167.307,
+     -1.201
+    ]
+   ],
+   "z": [
+    7.55,
+    7.55,
+    7.78,
+    7.78
+   ],
+   "evidence": "frames a06-a08 of 070629483 (window-PnP cameras, 3-view triangulation): post tops +0.87..+0.91, front edge top +1.17, west verge over the box +1.28; flat grey sheet, white soffit (012507444, 012520140) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "confidence": "medium",
+   "slot": "M_Sheet_Red"
   },
   {
    "type": "slab",
@@ -358,8 +393,9 @@
    ],
    "z0": 5.050000000000001,
    "material": "metal",
-   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150)",
-   "confidence": "medium"
+   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "confidence": "medium",
+   "slot": "M_Alu_Grey"
   },
   {
    "type": "box",
@@ -376,8 +412,9 @@
    ],
    "z0": 5.050000000000001,
    "material": "metal",
-   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150)",
-   "confidence": "medium"
+   "evidence": "steel posts at the front of the entry roof: one by the stair head, one further east (frames a06-a08 of 070629483, 012507444, 012536150) | 2026-09-30 photos 010/160: light beige fascia + soffit under a red-brown profiled sheet, light-grey steel posts",
+   "confidence": "medium",
+   "slot": "M_Alu_Grey"
   },
   {
    "type": "box",

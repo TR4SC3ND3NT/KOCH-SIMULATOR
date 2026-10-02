@@ -810,7 +810,10 @@ class Building:
                          s.get("z1", a["z1"]), sign_frame=s.get("frame", 0.05), panel=a.get("panel", 0.6))
             self.obj_parts(f"Canopy_E{a['edge']}", {"M_Sign_Frame_White": parts["frame"], "M_Terracotta_Soffit": parts["soffit"],
                                                     "M_Sheet_Brown": parts["roof"]}, ev, cf)
-            self.obj_parts(f"CanopySign_E{a['edge']}", {"M_Sign_Panel": parts["panel"]}, ev, cf)
+            # sign "slot": branded face (in-game branding is KOCH only, never the real institution's name or logo)
+            ob = self.obj_parts(f"CanopySign_E{a['edge']}", {s.get("slot", "M_Sign_Panel"): parts["panel"]}, ev, cf)
+            if ob and s.get("ue_note"):
+                ob["koch_ue_note"] = s["ue_note"]
             return True
         if t == "floodlight":
             bm = bmesh.new()
@@ -982,8 +985,15 @@ class Building:
                                         (a["depth"] + 0.15, a["z_low"] + 0.05), (0.0, a["z_high"] + 0.07)],
                               a["u0"] - 0.15, a["u1"] + 0.15)
                 if not a.get("roof_only"):
-                    self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
-                self.obj(a["name"] + "_Roof", bm2, COL["roof"] if a.get("roof_only") else COL["metal"], a.get("evidence"))
+                    ob = self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
+                    if a.get("body_slot"):
+                        ob.data.materials[0] = mat(a["body_slot"])
+                    self.shed_cladding(a, fr)
+                ob = self.obj(a["name"] + "_Roof", bm2, COL["roof"] if a.get("roof_only") else COL["metal"], a.get("evidence"))
+                if a.get("roof_slot"):
+                    ob.data.materials[0] = mat(a["roof_slot"])
+                if a.get("trim_slot"):
+                    self.shed_trim(a, fr)
             elif t == "stair_box":
                 zg = a.get("z_base", e["zg"] - BURY_M) + BURY_M
                 box(bm, fr, a["u0"], a["u1"], a.get("w0", 0.0), a["depth"], zg - BURY_M, a["z_top"])
@@ -997,6 +1007,48 @@ class Building:
                 self.obj(a["name"] + "_Canopy", bm2, COL["metal"], a.get("evidence"))
             else:
                 print(f"  {self.id}: skip unsupported attachment type {t!r}")
+
+    def shed_cladding(self, a, fr):
+        """Shed front + end walls clad in horizontal bands (e.g. brick tile under a rough-stone band): "bands"
+        [{z0, z1, slot, proj}] with z relative to FFL like z_low. Ends follow the roof slope, clipped to each band;
+        "band_ends" picks the clad ends (default both)."""
+        bands = a.get("bands")
+        if not bands:
+            return
+        d, zl, zh = a["depth"], a["z_low"], a["z_high"]
+        zr = lambda w: zh + (zl - zh) * w / d          # roof underside line over the end walls
+        parts = {}
+        for b in bands:
+            bm = parts.setdefault(b["slot"], bmesh.new())
+            pj, z0 = b.get("proj", 0.02), b["z0"]
+            z1 = min(b["z1"], zl)
+            ends = a.get("band_ends", ["u0", "u1"])
+            if z1 - z0 > 0.01:   # front face, wrapping the clad corners by the projection
+                box(bm, fr, a["u0"] - pj * ("u0" in ends), a["u1"] + pj * ("u1" in ends), d - 0.005, d + pj, z0, z1)
+            # an end against a neighbour (pier, wall) stays bare
+            for u_a, u_b in [(a["u0"] - pj, a["u0"] + 0.005)] * ("u0" in ends) + [(a["u1"] - 0.005, a["u1"] + pj)] * ("u1" in ends):
+                # end wall band: from where the roof line drops below the band top out to the front corner
+                if b["z1"] <= zl:
+                    w0 = 0.0
+                else:
+                    w0 = max(0.0, d * (zh - b["z1"]) / (zh - zl)) if zh > zl else 0.0
+                top = [(w, min(b["z1"], zr(w))) for w in (w0, d)]
+                prof = [(w0, top[0][1]), (d - 0.005, top[1][1]), (d - 0.005, z0), (w0, z0)]   # clockwise like shed/lightwell
+                if all(zt - z0 > 0.01 for _w, zt in top) and d - 0.005 - w0 > 0.05:
+                    prism_profile(bm, fr, prof, u_a, u_b)
+        for slot, bm in parts.items():
+            self.obj_parts(f"{a['name']}_Clad_{slot[2:]}", {slot: bm}, a.get("bands_evidence", a.get("evidence")),
+                           a.get("confidence"))
+
+    def shed_trim(self, a, fr):
+        """Metal edge flashing round the shed roof sheet: front drip edge + both rakes (sheet: 0.15 m overhang)."""
+        d, zl, zh, o = a["depth"], a["z_low"], a["z_high"], 0.15
+        bm = bmesh.new()
+        # front: 9 cm face over the sheet edge (sheet zl-0.01..zl+0.05), 2 cm proud of it
+        box(bm, fr, a["u0"] - o - 0.02, a["u1"] + o + 0.02, d + o, d + o + 0.02, zl - 0.03, zl + 0.06)
+        for u_a, u_b in ((a["u0"] - o - 0.02, a["u0"] - o), (a["u1"] + o, a["u1"] + o + 0.02)):
+            prism_profile(bm, fr, [(0.0, zh + 0.09), (d + o, zl + 0.06), (d + o, zl - 0.03), (0.0, zh - 0.01)], u_a, u_b)
+        self.obj_parts(f"{a['name']}_Trim", {a["trim_slot"]: bm}, a.get("trim_evidence", a.get("evidence")), a.get("confidence"))
 
     def build_gallery(self, a, e, fr):
         """Covered colonnade along a wall: posts on the outer line, edge beam, sloped/flat roof slab, optional deck."""

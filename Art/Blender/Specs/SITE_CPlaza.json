@@ -38,13 +38,13 @@
     170.009,
     -8.681
    ],
-   "height": 4.6,
-   "crown_d": 2.2,
-   "trunk_d": 0.18,
-   "crown_base": 1.2,
-   "shape": "cone",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base)",
-   "confidence": "low"
+   "height": 6.5,
+   "crown_d": 3.4,
+   "trunk_d": 0.2,
+   "crown_base": 2.6,
+   "shape": "ellipsoid",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-30 photos 160/161/010: the tree in front of the basement-entry canopy has a ~2.6 m clear (slightly leaning) trunk to about the canopy roof and a loose ~3.4 m crown topping out near the F2 sills",
+   "confidence": "medium"
   },
   {
    "type": "planter",
@@ -714,11 +714,11 @@
    "type": "stairs_run",
    "name": "CEast_Stair",
    "top": [
-    203.635,
-    3.806
+    203.61,
+    3.807
    ],
    "dir_deg": -92.284,
-   "width": 1.2,
+   "width": 1.25,
    "risers": 9,
    "riser_h": 0.1667,
    "tread": 0.3,

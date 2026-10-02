@@ -65,10 +65,20 @@ def main(src):
     att = []
     for a in C["attachments"]:
         a = dict(a)
+        if a.get("type") == "canopy" and a.get("edge") == 2:          # main entrance sign box (photos 158/159)
+            a["sign"] = dict(a.get("sign", {}), slot="M_Sign_KOCH",
+                             ue_note="blue sign box: KOCH emblem + 'KOCH' lettering only (the real sign's text/logo never in game)")
         if a.get("edge") == 6:                                          # west front: keep world y
             a["edge"] = 8
             if a.get("name") == "WestShed":                             # runs from the NW corner (owner) to its old south end
                 a["u1"] = round(a["u1"] + YW - OLD_W, 3)
+                # 2026-09-30 photos 181/182/188 (+013/014): brick-tile wall under a dark split-stone band, grey profiled
+                # roof with a brass-coloured edge flashing; the south end is hidden by the basement-stair brick pier
+                a.update(body_slot="M_Tile_Brick_Red", roof_slot="M_Sheet_Grey", trim_slot="M_Brass_Trim", band_ends=["u1"],
+                         bands=[{"z0": -2.10, "z1": -0.58, "slot": "M_Tile_Brick_Red", "proj": 0.02},
+                                {"z0": -0.58, "z1": -0.15, "slot": "M_Stone_Rubble_Dark", "proj": 0.04}],
+                         bands_evidence="2026-09-30 photos 181/182/188: ~0.45 m dark split-stone band under the roof edge over "
+                                        "brick-effect tile (shares of the 0.9 m front wall by eye, +-5 cm)")
             if "u" in a:
                 a["u"] = [round(v + YW - OLD_W, 3) for v in a["u"]]
             if "items" in a:

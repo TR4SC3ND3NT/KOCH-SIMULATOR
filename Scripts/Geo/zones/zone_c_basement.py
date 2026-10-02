@@ -143,7 +143,7 @@ def build():
                 "evidence": "brown wooden door at the mid landing in the Dance Hall wall (012543364, frames 1-10); leaf on the "
                             "wall face (the BLD_C box has no opening yet)", "confidence": "medium"})
     els.append({"type": "fence", "name": "Stair_Railing_S", "line": [c_to_w((x0 - 0.2, Y_S - 0.12)), c_to_w((x_corr0, Y_S - 0.12))],
-                "height": 0.95, "post_spacing": 1.3, "post": 0.05, "panel": "bars",
+                "height": 0.95, "post_spacing": 5.0, "post": 0.05, "panel": "forged", "slot": "M_Steel_Paint_Grey",
                 "evidence": "wrought-iron railing along the plaza side of the stairwell (map owner photo 10:55, 012507444)",
                 "confidence": "medium"})
     # Entry roof: grey profiled-sheet canopy with a white soffit over the landing, the box and the stair head (frames

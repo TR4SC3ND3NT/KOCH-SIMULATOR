@@ -152,7 +152,9 @@ class Site:
                 u0, u1 = L * k / n + post / 2, L * (k + 1) / n - post / 2
                 pm = A + d * ((u0 + u1) / 2)
                 z = self.gz(pm.x, pm.y)
-                if panel == "bars":
+                if panel == "forged":
+                    _forged_bay(bm, m, u0, u1, z + gap, z + h - 0.05)
+                elif panel == "bars":
                     nb = max(2, int((u1 - u0) / 0.12))
                     for j in range(nb):
                         uc = u0 + (u1 - u0) * (j + 0.5) / nb
@@ -1295,6 +1297,49 @@ class Site:
 
 
 # ---------------------------------------------------------------------- small geometry helpers
+def _scroll(cx, cz, r0, a0, ccw=True, turns=1.6, n=28):
+    """Flat-bar scroll as a (u, z) polyline: logarithmic spiral around (cx, cz) from radius r0 at angle a0 (rad),
+    curling inwards to r0 / 4 over `turns` turns, counter-clockwise or clockwise."""
+    k = math.log(4.0) / (turns * 2 * math.pi)
+    sg = 1.0 if ccw else -1.0
+    pts = []
+    for i in range(n + 1):
+        t = turns * 2 * math.pi * i / n
+        r = r0 * math.exp(-k * t)
+        pts.append((cx + r * math.cos(a0 + sg * t), cz + r * math.sin(a0 + sg * t)))
+    return pts
+
+
+def _forged_bay(bm, m, u0, u1, zb, zt):
+    """Wrought-iron scroll panel between two posts in the fence frame m (u along, z up): flat top/bottom rails, per
+    ~0.55 m module a mirrored pair of C-scrolls rising from the bottom rail (lyre) and a smaller pair hanging from the
+    top rail, a rosette at the bay centre (C basement entry, photos 010/160). Bars 12 mm, rails 40 x 12 mm."""
+    from greybox.detail import tube
+    for zr in (zb + 0.03, zt - 0.02):
+        box(bm, m, u0, u1, -0.006, 0.006, zr - 0.02, zr + 0.02)
+    lo, hi = zb + 0.05, zt - 0.04          # clear height between the rails
+    H = hi - lo
+    nm = max(1, round((u1 - u0) / 0.55))
+    mw = (u1 - u0) / nm
+    for k in range(nm):
+        uc = u0 + (k + 0.5) * mw
+        R, r2 = min(mw * 0.25, H * 0.31), min(mw * 0.15, H * 0.19)
+        cx, cz = uc + mw * 0.24, lo + H * 0.42          # right-hand scrolls; the left ones mirror about uc
+        cx2, cz2 = uc + mw * 0.2, hi - H * 0.2
+        low = [(uc, lo - 0.005), (uc + mw * 0.05, lo + H * 0.12)] + _scroll(cx, cz, R, math.pi, ccw=True)
+        up = [(uc, hi + 0.005), (cx2 - r2, cz2 + r2 * 0.6)] + _scroll(cx2, cz2, r2, math.pi, ccw=False)
+        for sx in (1, -1):
+            for poly in (low, up):
+                tube(bm, [m @ Vector((uc + sx * (u - uc), 0.0, z)) for u, z in poly], 0.006, seg=6)
+    # rosette at the bay centre: ring + six spokes
+    uc, zc = (u0 + u1) / 2, lo + H * 0.62
+    tube(bm, [m @ Vector((uc + 0.07 * math.cos(2 * math.pi * i / 16), 0.0, zc + 0.07 * math.sin(2 * math.pi * i / 16)))
+              for i in range(17)], 0.006, seg=6)
+    for i in range(6):
+        t = 2 * math.pi * i / 6
+        tube(bm, [m @ Vector((uc, 0.0, zc)), m @ Vector((uc + 0.065 * math.cos(t), 0.0, zc + 0.065 * math.sin(t)))], 0.008, seg=6)
+
+
 def _frame2(p, d):
     """Matrix: u along 2D unit d, w to its left, z up, origin at 2D point p (z = 0)."""
     d = Vector((d.x, d.y)).normalized()

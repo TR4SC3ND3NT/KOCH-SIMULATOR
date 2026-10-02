@@ -25,14 +25,14 @@ def main():
     x0, x1 = N.L_OUT, N.L_OUT + LAND_D
     w = lambda x, y: [round(v, 3) for v in N.c_to_w(x, y)]
     run = (RISERS - 1) * TREAD
-    xc = x1 - W_FLIGHT / 2
+    xc = x1 - (W_FLIGHT + 0.05) / 2                       # flight 5 cm into the wall like the landing: no gap to the ground
     dir_s = (N.C_X[0] * 0 - N.C_Y[0], -N.C_Y[1])          # downhill = C-local -y (south)
     import math
     dir_deg = round(math.degrees(math.atan2(dir_s[1], dir_s[0])), 3)
     els = [
         {"type": "slab", "name": "CEast_Landing", "ring": [w(x0 - 0.05, y_l0), w(x1, y_l0), w(x1, y_l1), w(x0 - 0.05, y_l1)],
          "z0": round(Z_GROUND - 0.2, 3), "z1": N.FFL, "material": "stone", "slot": "M_Concrete_Precast", "evidence": EV, "confidence": "medium"},
-        {"type": "stairs_run", "name": "CEast_Stair", "top": w(xc, y_l0), "dir_deg": dir_deg, "width": W_FLIGHT, "risers": RISERS,
+        {"type": "stairs_run", "name": "CEast_Stair", "top": w(xc, y_l0), "dir_deg": dir_deg, "width": round(W_FLIGHT + 0.05, 3), "risers": RISERS,
          "riser_h": rh, "tread": TREAD, "z_top": N.FFL, "top_flush": True, "material": "stone", "slot": "M_Concrete_Precast",
          "evidence": EV, "confidence": "medium"},
         {"type": "rail3d", "name": "CEast_Rail", "unique_posts": True, "height": 1.0, "spacing": 1.2, "mid_rails": 4, "material": "metal",
