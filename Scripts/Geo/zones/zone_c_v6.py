@@ -49,7 +49,8 @@ Y_OUT_W, Y_OUT_E = Y_NW + T, Y_NE + T
 STOREY = 3.30        # facade fit (061621646 PnP: 29.4 m : 3.29 m), BLD_C storey_m
 SLAB = 0.25
 CEIL = 2.90          # F1 lay-in grid (C105 150/151/153); F2+ 2.80 (C204 014), see ceil_of()
-DOOR_H, DOOR_W, WC_DOOR_W = 2.00, 0.90, 0.90  # classroom opening at the wall face (C204 person + tiles, C105 tiles)
+DOOR_H, DOOR_W, WC_DOOR_W = 2.05, 0.99, 0.90  # classroom door frame (outer): campus.md metrology 2.05 x 0.99, re-checked
+                                                # 2026-10-02 on C204 (1.87 m person in the doorway: 2.02-2.04 x ~1.0)
 RISERS = 11
 RISER_H = STOREY / 21.5                       # 21.5 risers per storey (half bottom riser), as before
 TREAD, BOTTOM_RISER = 0.332, 0.5 * STOREY / 21.5

@@ -147,7 +147,8 @@ def main(v6_dir):
             if nm in std_gen[sid] or nm in gen_names or DROP.match(nm):
                 dropped.append(nm)
                 continue
-            kept.append(remap_el(e))
+            # already on plan v6 (a later regeneration of the generated part): carry it as is, never remap twice
+            kept.append(e if "remapped onto plan v6" in e.get("evidence", "") else remap_el(e))
         new["elements"] += kept
         json.dump(new, open(spec_p, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
         print(f"{sid}: generated {len(gen_names)}, carried over {len(kept)}, dropped {len(dropped)} (old generated / lab)")
