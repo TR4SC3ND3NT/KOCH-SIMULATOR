@@ -80,12 +80,12 @@
     172.807,
     -8.793
    ],
-   "height": 4.6,
-   "crown_d": 2.2,
+   "height": 6.5,
+   "crown_d": 3.2,
    "trunk_d": 0.18,
-   "crown_base": 1.2,
-   "shape": "cone",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base)",
+   "crown_base": 2.2,
+   "shape": "ellipsoid",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
    "confidence": "low"
   },
   {
@@ -122,12 +122,12 @@
     175.605,
     -8.904
    ],
-   "height": 4.6,
-   "crown_d": 2.2,
+   "height": 6.5,
+   "crown_d": 3.2,
    "trunk_d": 0.18,
-   "crown_base": 1.2,
-   "shape": "cone",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base)",
+   "crown_base": 2.2,
+   "shape": "ellipsoid",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
    "confidence": "medium"
   },
   {
@@ -164,12 +164,12 @@
     178.097,
     -9.096
    ],
-   "height": 5.5,
-   "crown_d": 2.2,
+   "height": 6.5,
+   "crown_d": 3.2,
    "trunk_d": 0.18,
-   "crown_base": 1.2,
-   "shape": "cone",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy",
+   "crown_base": 2.2,
+   "shape": "ellipsoid",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
    "confidence": "medium"
   },
   {
@@ -206,12 +206,12 @@
     180.8,
     -9.201
    ],
-   "height": 5.5,
-   "crown_d": 2.2,
+   "height": 6.5,
+   "crown_d": 3.2,
    "trunk_d": 0.18,
-   "crown_base": 1.2,
-   "shape": "cone",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy",
+   "crown_base": 2.2,
+   "shape": "ellipsoid",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
    "confidence": "medium"
   },
   {
@@ -248,12 +248,12 @@
     183.903,
     -8.801
    ],
-   "height": 5.5,
-   "crown_d": 2.2,
+   "height": 6.5,
+   "crown_d": 3.2,
    "trunk_d": 0.18,
-   "crown_base": 1.2,
-   "shape": "cone",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
+   "crown_base": 2.2,
+   "shape": "ellipsoid",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
    "confidence": "medium"
   },
   {

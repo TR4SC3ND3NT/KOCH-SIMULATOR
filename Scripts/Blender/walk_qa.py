@@ -137,11 +137,11 @@ def main():
                 continue
             if BARRIER.search(names[OBJ[hi_j, hi_i]]) or BARRIER.search(names[OBJ[lo_j, lo_i]]):
                 continue
-            # a barrier on the high side within 0.6 m toward the drop protects it; several heights, since one ray
-            # can pass between the bars / mid rails of a railing
+            # a barrier on the high side within 0.6 m toward the drop protects it; rays every 5 cm from 0.1 to 1.0 m,
+            # since a few rays pass between the rails of a 2-rail guard (mid rail 0.45, top 0.9) or the bars
             d = Vector((xs[lo_i] - xs[hi_i], ys[lo_j] - ys[hi_j], 0)).normalized()
             guarded = False
-            for hz in (0.15, 0.4, 0.65, 0.9):
+            for hz in [0.1 + 0.05 * k for k in range(19)]:
                 ph = Vector((xs[hi_i], ys[hi_j], Z[hi_j, hi_i] + hz))
                 hit, _l, _n, _x, ob, _m = sc.ray_cast(dg, ph - d * 0.3, d, distance=0.9)
                 if hit and BARRIER.search(ob.name):
