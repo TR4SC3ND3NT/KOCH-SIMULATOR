@@ -481,12 +481,12 @@
    "type": "shed",
    "name": "DoorBay_S",
    "edge": 3,
-   "u0": 47.6,
+   "u0": 47.73,
    "u1": 50.2,
    "depth": 2.3,
    "z_high": 3.2,
    "z_low": 3.05,
-   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: closed south bay between the brick pier (u 50.9) and the A_S pilaster: door wall + yellow sign at A-local x 2.11-2.16 (SfM keypoints, f38), flush with the posts line; the loggia starts north of the pier",
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: closed south bay between the brick pier (u 50.9) and the A_S pilaster: door wall + yellow sign at A-local x 2.11-2.16 (SfM keypoints, f38), flush with the posts line; the loggia starts north of the pier | 2026-10-02 zaudit: starts on the gallery pilaster's face (it swallowed 0.13 m of the pilaster)",
    "confidence": "medium"
   },
   {

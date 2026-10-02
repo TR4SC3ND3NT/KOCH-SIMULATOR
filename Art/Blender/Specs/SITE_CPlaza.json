@@ -733,9 +733,9 @@
    "type": "rail3d",
    "name": "CEast_Rail",
    "unique_posts": true,
-   "height": 0.9,
+   "height": 1.0,
    "spacing": 1.2,
-   "mid_rails": 1,
+   "mid_rails": 4,
    "material": "metal",
    "points": [
     [

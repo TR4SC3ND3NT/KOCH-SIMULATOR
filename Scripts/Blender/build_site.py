@@ -776,6 +776,9 @@ class Site:
         lo = [bm.verts.new((x, y, z - t)) for (x, y), z in zip(ring, zs)]
         hi = [bm.verts.new((x, y, z)) for (x, y), z in zip(ring, zs)]
         _close_loops(bm, [lo, hi])
+        for i, j in el.get("folds", []):   # >4-corner rings: crease the top/bottom n-gons along corner pairs (i, j)
+            bmesh.ops.connect_verts(bm, verts=[hi[i], hi[j]])
+            bmesh.ops.connect_verts(bm, verts=[lo[i], lo[j]])
         self.emit(el, bm, COL.get(el.get("material", "roof"), COL["roof"]), (ring[0][0], ring[0][1], zs[0]))
 
     def b_int_wall(self, el):
@@ -860,6 +863,8 @@ class Site:
         # (upper floors) keeps its own underside
         g = min(self.gz(*(P + fwd * (run * i / 5) + left * (W * (j / 4 - 0.5)))) for i in range(6) for j in range(5))
         zu = zb - 0.2 if not (g < zb - 0.2 < g + 1.0) else g - BURY
+        if "z_base" in el:   # standing on a floor slab: underside on its top (not 0.2 m into it, coplanar with its edges)
+            zu = el["z_base"]
         prof = [(0.0, zu), (0.0, zt)]
         x = 0.0
         z = zt

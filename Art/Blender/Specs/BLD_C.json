@@ -578,7 +578,10 @@
    "w1": -2.75,
    "z_high": 0.0,
    "z_low": 0.0,
-   "rail_sides": "w1"
+   "rail_sides": "w1",
+   "rail_ends": [
+    "u1"
+   ]
   },
   {
    "type": "ramp",

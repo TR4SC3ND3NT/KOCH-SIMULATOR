@@ -200,9 +200,11 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
           "bottom_riser_h": round(BOTTOM_RISER, 4), "material": "granite", **STAIR_FINISH, **ev("U-stair flight 1 (hall photo layout, 3.45 m storey)")}
     if not solid:
         f1["soffit_thk"] = SOFFIT
+    else:   # ground-floor flight and landing stand on the slab top (sunk into it their faces lay on the slab edges)
+        f1["z_base"] = z(zb)
     els.append(f1)
     xs = sorted([x_wall, x_front])
-    els.append(slab(f"{prefix}_Landing", xs[0], xs[1], y_land, h1, zb - 0.1 if solid else top1 - 0.2, top1, "granite",
+    els.append(slab(f"{prefix}_Landing", xs[0], xs[1], y_land, h1, zb if solid else top1 - 0.2, top1, "granite",
                     **ev("half-landing against the north hall wall")))
     els.append({"type": "stairs_run", "name": f"{prefix}_Flight2", "top": c_to_w(xb, y_bot), "dir_deg": NORTH,
                 "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD,
@@ -245,8 +247,10 @@ def plan(k, zb, lobby, west_stair):
     # south hall wall: west part (to the lobby's east wall), jog, east part; F1 leaves the lobby front open
     sw = [(DOOR_S["S1"], "S1"), (DOOR_S["S2"], "S2")] + ([] if lobby else [(DOOR_TEACH, "T")])
     se = [(DOOR_S["S4"], "S4"), (DOOR_S["S5"], "S5")]
-    segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 - PART / 2) if lobby else X_JS, HW0 - PART), sw),
-            ("Hall_S_East", (X_JS, HE0 - PART), (X_E, HE0 - PART), se)]
+    # the jogs are centred on X_JS / X_JN: each straight part ends on the jog's face where it would run into the jog,
+    # and runs over the jog's width where it closes the outer corner (no overlaps, no notch)
+    segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 - PART / 2) if lobby else X_JS - PART / 2, HW0 - PART), sw),
+            ("Hall_S_East", (X_JS - PART / 2, HE0 - PART), (X_E, HE0 - PART), se)]
     for nm, a, b, dd in segs:
         els.append(wall(P + nm, a, b, zb, doors=[(x - a[0], DOOR_W) for x, _ in dd], h=CC + 0.03, **ev("south hall wall")))
         for x, key in dd:
@@ -258,7 +262,7 @@ def plan(k, zb, lobby, west_stair):
     # north hall wall: west part to the WC mid wall, jog, east part (east->west so the thickness goes north)
     nw = [(DOOR_N["N1"], "N1", DOOR_W), (DOOR_N["N2"], "N2", DOOR_W), (WC_DOORS[0][0], WC_DOORS[0][1], WC_DOOR_W)]
     ne = [(WC_DOORS[1][0], WC_DOORS[1][1], WC_DOOR_W), (DOOR_N["N4"], "N4", DOOR_W), (DOOR_N["N5"], "N5", DOOR_W)]
-    for nm, a, b, dd in (("Hall_N_West", (X_JN, HW1 + PART), (X_W, HW1 + PART), nw), ("Hall_N_East", (X_E, HE1 + PART), (X_JN, HE1 + PART), ne)):
+    for nm, a, b, dd in (("Hall_N_West", (X_JN + PART / 2, HW1 + PART), (X_W, HW1 + PART), nw), ("Hall_N_East", (X_E, HE1 + PART), (X_JN + PART / 2, HE1 + PART), ne)):
         els.append(wall(P + nm, a, b, zb, doors=[(a[0] - x, w) for x, _, w in dd], h=CC + 0.03, **ev("north hall wall; one WC stands forward of the other (owner)")))
         for x, key, w in dd:
             wc = key.startswith("WC")
@@ -318,6 +322,7 @@ ROOM_X = {"1": (X_W, P1 - PART / 2), "2": (P1 + PART / 2, P2 - PART / 2), "4": (
 BOARD_EAST = {"1": True, "2": True, "4": False, "5": False}
 WIN_PAIR = (1.65, 4.25)        # window centres from the back wall (C105; facade pairs 2.59 m apart)
 WIN_W, WIN_SILL, WIN_H = 1.85, 1.05, 1.40   # facade window opening (BLD_C window type W, row F1 1.05 above the FFL)
+LAM = 0.010      # laminate floor finish on the slab (m): wall skins and furniture stand on it, not in it
 # room use (owner 2026-10-01, the timetable room list): PC labs 103 105 201 204 205; 207 vice principal; 307 405 408
 # teachers' offices; 409 director (over the lobby); every other room is a plain classroom (24 pupils + teacher)
 LABS = {1: ("N5", "N2"), 2: ("S1", "S5", "N5")}
@@ -376,10 +381,12 @@ def fitout(k, zb, num):
                         "material": mat, **kw})
         ref = ev("reference classroom C105 (150-153, plan v6)")
         PK = 0.006                                    # paint skin on the back / window walls (below): bulkheads sit on it
-        bx("WindowBeam", 0.25, L, D - 0.50, D - PK, C - 0.20, C + 0.01, slot="M_Paint_White", **ref)
+        # bulkheads and pilasters meet face to face (no overlaps, no gap at the back-door corner): the window beam ends on
+        # the board-side pilaster, the back-door pilaster is as deep as the door-wall box (0.30)
+        bx("WindowBeam", 0.25, L - 0.10, D - 0.50, D - PK, C - 0.20, C + 0.01, slot="M_Paint_White", **ref)
         bx("DoorBox", 0.15, L, 0.0, 0.30, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
         bx("BackBox", PK, 0.20, 0.30, D - 0.50, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
-        bx("Pilaster_BackDoor", PK, 0.15, 0.0, 0.25, 0.0, C + 0.01, slot="M_Paint_White", **ref)
+        bx("Pilaster_BackDoor", PK, 0.15, 0.0, 0.30, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         bx("Column_BackWin", PK, 0.25, D - 0.50, D - PK, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         bx("Pilaster_BoardWin", L - 0.10, L, D - 0.60, D - PK, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         # lay-in ceiling (C105 tile metrology): T-grid on the measured seams - along u back box 0.20 + cut 0.28 + 8 x 0.60
@@ -424,9 +431,9 @@ def fitout(k, zb, num):
             a = lo
             for o0, o1 in sorted(ops) + [(hi, hi)]:
                 if o0 - a > 0.005:
-                    paint.append(box_(a, o0, w0, w1, 0.0, zt))
+                    paint.append(box_(a, o0, w0, w1, LAM, zt))
                 if o1 > o0:
-                    paint += [box_(o0, o1, w0, w1, 0.0, zs), box_(o0, o1, w0, w1, zh, zt)]
+                    paint += [box_(o0, o1, w0, w1, LAM, zs), box_(o0, o1, w0, w1, zh, zt)]
                     # lining inside the opening (on the shell's reveal faces, never coplanar with them), board on the sill
                     trim += [box_(o0, o0 + 0.006, r0, r1, zs + 0.02, zh), box_(o1 - 0.006, o1, r0, r1, zs + 0.02, zh),
                              box_(o0 + 0.006, o1 - 0.006, r0, r1, zh - 0.006, zh),
@@ -443,7 +450,7 @@ def fitout(k, zb, num):
         els.append({"type": "boxes", "name": R + "Window_Trim", "items": t_w + t_b, "material": "white", "slot": "M_PVC_White",
                     **ev("white reveals and PVC window boards (C105 152, labs 2026-10-01)")})
         # laminate floor (C105 152/153, C204, desk room 140-149)
-        bx("Floor_Laminate", 0.0, L, 0.0, D, 0.0, 0.010, slot="M_Laminate_Oak_Grey", **ref)
+        bx("Floor_Laminate", 0.0, L, 0.0, D, 0.0, LAM, slot="M_Laminate_Oak_Grey", **ref)
         kind = room_kind(k, key)
         door_left = su * sv < 0          # facing the board (+u) the door wall (v = 0) is on the left
         if kind == "class":
@@ -454,16 +461,16 @@ def fitout(k, zb, num):
             dk = ev("plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats", "medium")
             for r, uc in enumerate((1.00, 1.95, 2.90, 3.85)):
                 for c, vc in enumerate((1.25, 3.15, 5.05)):
-                    row = {"dir_deg": d_v, "n": 2, "pitch": 0.60, "face": -f_u, "z": z(zb), **dk}
+                    row = {"dir_deg": d_v, "n": 2, "pitch": 0.60, "face": -f_u, "z": z(zb + LAM), **dk}
                     els.append({"type": "desk_row", "name": R + f"Desk_{r}{c}", "pos": c_to_w(*to_c(uc, vc)), "depth": 0.45, "height": 0.76,
                                 "slot": "M_Laminate_Beech_Orange", "ue_asset": "school_desk_single_600", **row})
                     els.append({"type": "chair_row", "name": R + f"Chair_{r}{c}", "pos": c_to_w(*to_c(uc - 0.42, vc)),
                                 "slot": "M_Plastic_Orange", "ue_asset": "school_chair_beech_tube", **row})
             if door_left:
-                t = {"dir_deg": d_v, "face": f_u, "n": 1, "pitch": 1.20, "z": z(zb), **dk}
+                t = {"dir_deg": d_v, "face": f_u, "n": 1, "pitch": 1.20, "z": z(zb + LAM), **dk}
                 tp, cp = to_c(L - 1.00, D - 1.15), to_c(L - 0.45, D - 1.15)
             else:
-                t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.20, "z": z(zb), **dk}
+                t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.20, "z": z(zb + LAM), **dk}
                 tp, cp = to_c(L - 1.00, D - 1.05), to_c(L - 1.00, D - 0.43)
             els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*tp), "depth": 0.60,
                         "slot": "M_Wood_Oak_Light", "ue_asset": "teacher_desk_oak_steel_1200", **t})
@@ -484,15 +491,15 @@ def fitout(k, zb, num):
             else:
                 desks = [("Desk_Head", (L - 1.20, D - 1.40), d_v, f_u, 1)]
             for nm, (uu, vv), dd, fc, n in desks:
-                o = {"dir_deg": dd, "n": n, "pitch": 1.40 if kind == "teachers" else 1.80, "face": fc, "z": z(zb), **of}
+                o = {"dir_deg": dd, "n": n, "pitch": 1.40 if kind == "teachers" else 1.80, "face": fc, "z": z(zb + LAM), **of}
                 els.append({"type": "desk_row", "name": R + nm, "pos": c_to_w(*to_c(uu, vv)), "depth": 0.70 if kind == "teachers" else 0.85,
                             "slot": "M_Wood_Oak_Light", "ue_asset": "office_desk_1400", **o})
-                els.append({"type": "monitor_row", "name": R + nm + "_PC", "pos": c_to_w(*to_c(uu, vv)), **dict(o, z=z(zb + 0.75))})
+                els.append({"type": "monitor_row", "name": R + nm + "_PC", "pos": c_to_w(*to_c(uu, vv)), **dict(o, z=z(zb + LAM + 0.75))})
                 off = 0.62
                 cp_ = (uu + off, vv) if dd == d_v else (uu, vv - off)
                 els.append({"type": "chair_row", "name": R + nm + "_Chair", "pos": c_to_w(*to_c(*cp_)), "ue_asset": "office_chair_swivel", **o})
-            bx("Cabinets", 0.40, 3.20, 0.04, 0.49, 0.0, 1.95, slot="M_Laminate_White", ue_asset="office_cabinet_row", **of)
-            mt = {"dir_deg": d_u, "n": 1, "pitch": 1.80, "face": f_v, "z": z(zb), **of}
+            bx("Cabinets", 0.40, 3.20, 0.04, 0.49, LAM, 1.95, slot="M_Laminate_White", ue_asset="office_cabinet_row", **of)
+            mt = {"dir_deg": d_u, "n": 1, "pitch": 1.80, "face": f_v, "z": z(zb + LAM), **of}
             els.append({"type": "desk_row", "name": R + "MeetingTable", "pos": c_to_w(*to_c(2.60, 3.30)), "depth": 0.90,
                         "slot": "M_Wood_Oak_Light", "ue_asset": "meeting_table_1800", **mt})
             for sd in (-1, 1):
@@ -506,17 +513,17 @@ def fitout(k, zb, num):
             rows = [(0.32, f_v)] + [(c + d, f_v if d > 0 else -f_v) for c in (2.50, 4.95) for d in (-0.30, 0.30)]
             for r, (vc, face) in enumerate(rows):
                 p = c_to_w(*to_c(0.40 + 5 * 0.40, vc))
-                row = {"pos": p, "dir_deg": d_u, "n": 5, "pitch": 0.80, "face": face, "z": z(zb), **lab}
+                row = {"pos": p, "dir_deg": d_u, "n": 5, "pitch": 0.80, "face": face, "z": z(zb + LAM), **lab}
                 els.append({"type": "desk_row", "name": R + f"Desks_{r}", "depth": 0.60, **row})
-                els.append({"type": "monitor_row", "name": R + f"PCs_{r}", **dict(row, z=z(zb + 0.75))})
+                els.append({"type": "monitor_row", "name": R + f"PCs_{r}", **dict(row, z=z(zb + LAM + 0.75))})
                 sv_off = 0.62 if face == f_v else -0.62
                 els.append({"type": "chair_row", "name": R + f"Chairs_{r}", **dict(row, pos=c_to_w(*to_c(2.40, vc + sv_off)))})
             # teacher's desk (owner 2026-10-01): longer (1.40 x 0.60), it continues the window-side row of the second island
             # up to the board wall (end against the wall); the teacher sits with his back to the windows, PC in front
             tv = 4.95 + 0.30
-            t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.40, "z": z(zb), **lab}
+            t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.40, "z": z(zb + LAM), **lab}
             els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(L - 0.70, tv)), "depth": 0.60, **t})
-            els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(L - 0.70, tv)), **dict(t, z=z(zb + 0.75))})
+            els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(L - 0.70, tv)), **dict(t, z=z(zb + LAM + 0.75))})
             els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(L - 0.70, tv + 0.62)), **t})
     return els
 
@@ -778,9 +785,9 @@ def extra_rooms(k, zb):
         for wc in sorted(wins) + [None]:
             o0, o1 = (L, L) if wc is None else (wc - ww / 2, wc + ww / 2)
             if o0 - a_ > 0.005:
-                paint.append(it_(a_, o0, D - 0.006, D, 0.0, C + 0.01))
+                paint.append(it_(a_, o0, D - 0.006, D, LAM, C + 0.01))
             if wc is not None:
-                paint += [it_(o0, o1, D - 0.006, D, 0.0, wsill), it_(o0, o1, D - 0.006, D, wsill + wh, C + 0.01)]
+                paint += [it_(o0, o1, D - 0.006, D, LAM, wsill), it_(o0, o1, D - 0.006, D, wsill + wh, C + 0.01)]
                 trim += [it_(o0, o0 + 0.006, D, D + rv, wsill + 0.02, wsill + wh), it_(o1 - 0.006, o1, D, D + rv, wsill + 0.02, wsill + wh),
                          it_(o0 + 0.006, o1 - 0.006, D, D + rv, wsill + wh - 0.006, wsill + wh), it_(o0, o1, D - 0.04, D + rv, wsill, wsill + 0.02)]
             a_ = o1
@@ -798,28 +805,28 @@ def extra_rooms(k, zb):
             cols = [D * 0.27, D * 0.73] if D < 5.5 else [1.25, 3.15, 5.05]
             for r, uc in enumerate([1.00, 1.95, 2.90, 3.85][: max(2, int((L - 1.6) / 0.95))]):
                 for c, vc in enumerate(cols):
-                    row = {"dir_deg": d_v, "n": 2, "pitch": 0.60, "face": -f_u, "z": z(zb), **dk}
+                    row = {"dir_deg": d_v, "n": 2, "pitch": 0.60, "face": -f_u, "z": z(zb + LAM), **dk}
                     els.append({"type": "desk_row", "name": R + f"Desk_{r}{c}", "pos": W(uc, vc), "depth": 0.45, "height": 0.76,
                                 "slot": "M_Laminate_Beech_Orange", "ue_asset": "school_desk_single_600", **row})
                     els.append({"type": "chair_row", "name": R + f"Chair_{r}{c}", "pos": W(uc - 0.42, vc),
                                 "slot": "M_Plastic_Orange", "ue_asset": "school_chair_beech_tube", **row})
             door_left = left_of(du, (-dv[0], -dv[1]))  # facing the board (+u), is the door wall (-v side) on the left?
             if door_left:
-                t = {"dir_deg": d_v, "face": f_u, "n": 1, "pitch": 1.20, "z": z(zb), **dk}
+                t = {"dir_deg": d_v, "face": f_u, "n": 1, "pitch": 1.20, "z": z(zb + LAM), **dk}
                 tp, cp = W(L - 1.00, D - 1.10), W(L - 0.45, D - 1.10)
             else:
-                t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.20, "z": z(zb), **dk}
+                t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.20, "z": z(zb + LAM), **dk}
                 tp, cp = W(L - 1.00, D - 0.95), W(L - 1.00, D - 0.35)
             els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": tp, "depth": 0.60, "slot": "M_Wood_Oak_Light",
                         "ue_asset": "teacher_desk_oak_steel_1200", **t})
             els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": cp, "ue_asset": "office_chair_iso_black", **t})
         else:   # director: executive desk facing the door, meeting table, cabinets on the door wall
-            t = {"dir_deg": d_v, "face": f_u, "n": 1, "pitch": 1.80, "z": z(zb), **dk}
+            t = {"dir_deg": d_v, "face": f_u, "n": 1, "pitch": 1.80, "z": z(zb + LAM), **dk}
             els.append({"type": "desk_row", "name": R + "DirectorDesk", "pos": W(L - 1.20, D * 0.62), "depth": 0.85,
                         "slot": "M_Wood_Oak_Light", "ue_asset": "executive_desk_1800", **t})
-            els.append({"type": "monitor_row", "name": R + "DirectorPC", "pos": W(L - 1.20, D * 0.62), **dict(t, z=z(zb + 0.75))})
+            els.append({"type": "monitor_row", "name": R + "DirectorPC", "pos": W(L - 1.20, D * 0.62), **dict(t, z=z(zb + LAM + 0.75))})
             els.append({"type": "chair_row", "name": R + "DirectorChair", "pos": W(L - 0.55, D * 0.62), "ue_asset": "office_chair_executive", **t})
-            mt = {"dir_deg": d_u, "n": 1, "pitch": 2.40, "face": f_v, "z": z(zb), **dk}
+            mt = {"dir_deg": d_u, "n": 1, "pitch": 2.40, "face": f_v, "z": z(zb + LAM), **dk}
             els.append({"type": "desk_row", "name": R + "MeetingTable", "pos": W(1.45, D * 0.45), "depth": 1.00,
                         "slot": "M_Wood_Oak_Light", "ue_asset": "meeting_table_2400", **mt})
             for sd in (-1, 1):
@@ -827,7 +834,7 @@ def extra_rooms(k, zb):
                             **dict(mt, n=3, pitch=0.70, face=sd * f_v), "ue_asset": "chair_visitor_black"})
             c0, c1 = sorted((to_c(0.05, 0.04), to_c(1.60, 0.49)))
             els.append({"type": "box", "name": R + "Cabinets", "center": W(0.825, 0.265), "dir_deg": ang(*du), "size": [1.55, 0.45, 1.95],
-                        "z0": z(zb), "material": "white", "slot": "M_Laminate_White", "ue_asset": "office_cabinet_row", **dk})
+                        "z0": z(zb + LAM), "material": "white", "slot": "M_Laminate_White", "ue_asset": "office_cabinet_row", **dk})
     return els
 
 

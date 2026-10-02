@@ -35,7 +35,7 @@ def main():
         {"type": "stairs_run", "name": "CEast_Stair", "top": w(xc, y_l0), "dir_deg": dir_deg, "width": W_FLIGHT, "risers": RISERS,
          "riser_h": rh, "tread": TREAD, "z_top": N.FFL, "top_flush": True, "material": "stone", "slot": "M_Concrete_Precast",
          "evidence": EV, "confidence": "medium"},
-        {"type": "rail3d", "name": "CEast_Rail", "unique_posts": True, "height": 0.9, "spacing": 1.2, "mid_rails": 1, "material": "metal",
+        {"type": "rail3d", "name": "CEast_Rail", "unique_posts": True, "height": 1.0, "spacing": 1.2, "mid_rails": 4, "material": "metal",
          "points": [w(x0 + 0.05, y_l1 - 0.04) + [N.FFL], w(x1 - 0.04, y_l1 - 0.04) + [N.FFL], w(x1 - 0.04, y_l0) + [N.FFL],
                     w(x1 - 0.04, y_l0 - run) + [round(N.FFL - (RISERS - 1) * rh, 3)]],
          "evidence": EV + "; rail on the open sides (north edge of the landing, road side of landing + flight)", "confidence": "medium"},

@@ -220,10 +220,10 @@
     ]
    ],
    "z0": 3.9700000000000006,
-   "z1": 5.4,
+   "z1": 5.43,
    "thk": 0.25,
    "material": "brick",
-   "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80)",
+   "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80) | 2026-10-02 QA: top 3 cm over the landing (it was coplanar with it where the landing laps over its west end)",
    "confidence": "medium"
   },
   {
@@ -423,8 +423,8 @@
    "type": "box",
    "name": "Piano_Upright_0",
    "center": [
-    183.309,
-    -4.611
+    183.387,
+    -4.644
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -435,7 +435,7 @@
    "z0": 4.108,
    "material": "wood",
    "slot": "M_Wood_Stained",
-   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs)",
+   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-02 QA: re-laid inside the clear corridor (wainscot faces), the third upright along the south wall at the end (rotated it ran 0.3 m into the wall), 2 cm gaps between pianos",
    "confidence": "low",
    "ue_asset": "piano_upright"
   },
@@ -443,8 +443,8 @@
    "type": "box",
    "name": "Piano_Upright_1",
    "center": [
-    184.758,
-    -4.669
+    184.856,
+    -4.703
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -455,7 +455,7 @@
    "z0": 4.108,
    "material": "wood",
    "slot": "M_Wood_Stained",
-   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs)",
+   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-02 QA: re-laid inside the clear corridor (wainscot faces), the third upright along the south wall at the end (rotated it ran 0.3 m into the wall), 2 cm gaps between pianos",
    "confidence": "low",
    "ue_asset": "piano_upright"
   },
@@ -463,10 +463,10 @@
    "type": "box",
    "name": "Piano_Upright_2",
    "center": [
-    185.6,
-    -5.7
+    185.17,
+    -5.766
    ],
-   "dir_deg": 87.7161455,
+   "dir_deg": -2.2838545045845304,
    "size": [
     1.45,
     0.6,
@@ -475,7 +475,7 @@
    "z0": 4.108,
    "material": "wood",
    "slot": "M_Wood_Stained",
-   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-01 QA: was 0.14 m over the floor past the step edge",
+   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-01 QA: was 0.14 m over the floor past the step edge | 2026-10-02 QA: re-laid inside the clear corridor (wainscot faces), the third upright along the south wall at the end (rotated it ran 0.3 m into the wall), 2 cm gaps between pianos",
    "confidence": "low",
    "ue_asset": "piano_upright"
   },
@@ -483,8 +483,8 @@
    "type": "box",
    "name": "Piano_Chair_0",
    "center": [
-    183.334,
-    -5.242
+    183.366,
+    -5.174
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -495,7 +495,7 @@
    "z0": 4.108,
    "material": "wood",
    "slot": "M_Wood_Stained",
-   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs)",
+   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-02 QA: re-laid inside the clear corridor (wainscot faces), the third upright along the south wall at the end (rotated it ran 0.3 m into the wall), 2 cm gaps between pianos",
    "confidence": "low",
    "ue_asset": "chair_bentwood"
   },
@@ -503,8 +503,8 @@
    "type": "box",
    "name": "Piano_Chair_1",
    "center": [
-    184.533,
-    -5.29
+    184.236,
+    -5.208
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -515,7 +515,7 @@
    "z0": 4.108,
    "material": "wood",
    "slot": "M_Wood_Stained",
-   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs)",
+   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-02 QA: re-laid inside the clear corridor (wainscot faces), the third upright along the south wall at the end (rotated it ran 0.3 m into the wall), 2 cm gaps between pianos",
    "confidence": "low",
    "ue_asset": "chair_bentwood"
   },
@@ -822,27 +822,27 @@
    "name": "Piano_Step",
    "ring": [
     [
-     182.463,
-     -6.288
+     182.475,
+     -5.979
     ],
     [
-     185.9,
-     -6.425
+     185.912,
+     -6.116
     ],
     [
-     185.97,
-     -4.397
+     185.969,
+     -4.427
     ],
     [
-     182.532,
-     -4.26
+     182.53,
+     -4.29
     ]
    ],
    "z0": 3.97,
    "z1": 4.11,
    "material": "concrete",
    "slot": "M_Terrazzo",
-   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-01 QA: step 0.30 m deeper so the third piano stands on it",
+   "evidence": "basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697/f02084/f02305/f02773 (corridor under the south light-well: barred windows in C's south wall on the left, grey brick-slip wainscot ~1 m, textured white plaster, a row of round downlights, 2 duct fans high on the wall, orange wardrobes + stored desks; at the east end one step up into the piano room with a sloped ceiling (the east end of the corridor under the light-well slope; the entrance porch above x 186 is solid), 3 uprights, bentwood chairs) | 2026-10-02 QA: between the wainscot faces (it ran 0.28 m into the south wall)",
    "confidence": "low"
   },
   {

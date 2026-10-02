@@ -675,8 +675,8 @@
    "name": "F1_Hall_S_East",
    "line": [
     [
-     190.623145,
-     3.774078
+     190.523225,
+     3.778063
     ],
     [
      202.513625,
@@ -688,14 +688,14 @@
    "thk": 0.2,
    "openings": [
     {
-     "u0": 0.53,
-     "u1": 1.47,
+     "u0": 0.63,
+     "u1": 1.57,
      "z0": 6.34,
      "z1": 8.42
     },
     {
-     "u0": 6.53,
-     "u1": 7.47,
+     "u0": 6.63,
+     "u1": 7.57,
      "z0": 6.34,
      "z1": 8.42
     }
@@ -709,16 +709,16 @@
    "name": "F1_Door_S4",
    "line": [
     [
-     190.623145,
-     3.774078
+     190.523225,
+     3.778063
     ],
     [
      202.513625,
      3.299863
     ]
    ],
-   "u0": 0.55,
-   "u1": 1.45,
+   "u0": 0.65,
+   "u1": 1.55,
    "z0": 6.4,
    "z1": 8.4,
    "wall_thk": 0.2,
@@ -734,16 +734,16 @@
    "name": "F1_Door_S5",
    "line": [
     [
-     190.623145,
-     3.774078
+     190.523225,
+     3.778063
     ],
     [
      202.513625,
      3.299863
     ]
    ],
-   "u0": 6.55,
-   "u1": 7.45,
+   "u0": 6.65,
+   "u1": 7.55,
    "z0": 6.4,
    "z1": 8.4,
    "wall_thk": 0.2,
@@ -780,8 +780,8 @@
    "name": "F1_Hall_N_West",
    "line": [
     [
-     188.47029,
-     8.763805
+     188.57021,
+     8.75982
     ],
     [
      174.23169,
@@ -793,20 +793,20 @@
    "thk": 0.2,
    "openings": [
     {
-     "u0": 8.88,
-     "u1": 9.82,
+     "u0": 8.98,
+     "u1": 9.92,
      "z0": 6.34,
      "z1": 8.42
     },
     {
-     "u0": 2.88,
-     "u1": 3.82,
+     "u0": 2.98,
+     "u1": 3.92,
      "z0": 6.34,
      "z1": 8.42
     },
     {
-     "u0": 0.705,
-     "u1": 1.645,
+     "u0": 0.805,
+     "u1": 1.745,
      "z0": 6.34,
      "z1": 8.42
     }
@@ -820,16 +820,16 @@
    "name": "F1_Door_N1",
    "line": [
     [
-     188.47029,
-     8.763805
+     188.57021,
+     8.75982
     ],
     [
      174.23169,
      9.331667
     ]
    ],
-   "u0": 8.9,
-   "u1": 9.8,
+   "u0": 9.0,
+   "u1": 9.9,
    "z0": 6.4,
    "z1": 8.4,
    "wall_thk": 0.2,
@@ -845,16 +845,16 @@
    "name": "F1_Door_N2",
    "line": [
     [
-     188.47029,
-     8.763805
+     188.57021,
+     8.75982
     ],
     [
      174.23169,
      9.331667
     ]
    ],
-   "u0": 2.9,
-   "u1": 3.8,
+   "u0": 3.0,
+   "u1": 3.9,
    "z0": 6.4,
    "z1": 8.4,
    "wall_thk": 0.2,
@@ -870,16 +870,16 @@
    "name": "F1_Door_WC4",
    "line": [
     [
-     188.47029,
-     8.763805
+     188.57021,
+     8.75982
     ],
     [
      174.23169,
      9.331667
     ]
    ],
-   "u0": 0.725,
-   "u1": 1.625,
+   "u0": 0.825,
+   "u1": 1.725,
    "z0": 6.4,
    "z1": 8.4,
    "wall_thk": 0.2,
@@ -899,8 +899,8 @@
      9.494902
     ],
     [
-     188.522095,
-     10.062765
+     188.622015,
+     10.05878
     ]
    ],
    "z0": 6.3,
@@ -939,8 +939,8 @@
      9.494902
     ],
     [
-     188.522095,
-     10.062765
+     188.622015,
+     10.05878
     ]
    ],
    "u0": 12.625,
@@ -964,8 +964,8 @@
      9.494902
     ],
     [
-     188.522095,
-     10.062765
+     188.622015,
+     10.05878
     ]
    ],
    "u0": 10.45,
@@ -989,8 +989,8 @@
      9.494902
     ],
     [
-     188.522095,
-     10.062765
+     188.622015,
+     10.05878
     ]
    ],
    "u0": 4.45,
@@ -1503,12 +1503,12 @@
    "type": "box",
    "name": "F1_R107_WindowBeam",
    "center": [
-    176.764235,
-    -3.076041
+    176.714275,
+    -3.074049
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -1560,13 +1560,13 @@
    "type": "box",
    "name": "F1_R107_Pilaster_BackDoor",
    "center": [
-    174.057576,
-    3.008619
+    174.05658,
+    2.983639
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -2014,8 +2014,8 @@
      -2.2838545045845304,
      2.145,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      176.799236,
@@ -2023,8 +2023,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      176.799236,
@@ -2041,8 +2041,8 @@
      -2.2838545045845304,
      1.805,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -2060,8 +2060,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      173.861094,
@@ -2069,8 +2069,8 @@
      -2.2838545045845304,
      0.006,
      1.85,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      173.861094,
@@ -2087,8 +2087,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -2212,7 +2212,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2229,7 +2229,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2248,7 +2248,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2265,7 +2265,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2284,7 +2284,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2301,7 +2301,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2320,7 +2320,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2337,7 +2337,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2356,7 +2356,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2373,7 +2373,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2392,7 +2392,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2409,7 +2409,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2428,7 +2428,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2445,7 +2445,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2464,7 +2464,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2481,7 +2481,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2500,7 +2500,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2517,7 +2517,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2536,7 +2536,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2553,7 +2553,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2572,7 +2572,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2589,7 +2589,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2608,7 +2608,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2625,7 +2625,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2643,7 +2643,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2659,7 +2659,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -2707,12 +2707,12 @@
    "type": "box",
    "name": "F1_R108_WindowBeam",
    "center": [
-    182.759435,
-    -3.315141
+    182.709475,
+    -3.313149
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -2764,13 +2764,13 @@
    "type": "box",
    "name": "F1_R108_Pilaster_BackDoor",
    "center": [
-    180.052776,
-    2.769519
+    180.05178,
+    2.744539
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -3238,8 +3238,8 @@
      -2.2838545045845304,
      0.725,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      181.375572,
@@ -3247,8 +3247,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      181.375572,
@@ -3265,8 +3265,8 @@
      -2.2838545045845304,
      0.75,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      183.973492,
@@ -3274,8 +3274,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      183.973492,
@@ -3292,8 +3292,8 @@
      -2.2838545045845304,
      0.625,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -3311,8 +3311,8 @@
      -2.2838545045845304,
      0.006,
      6.35,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -3436,7 +3436,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3453,7 +3453,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3472,7 +3472,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3489,7 +3489,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3508,7 +3508,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3525,7 +3525,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3544,7 +3544,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3561,7 +3561,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3580,7 +3580,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3597,7 +3597,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3616,7 +3616,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3633,7 +3633,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3652,7 +3652,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3669,7 +3669,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3688,7 +3688,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3705,7 +3705,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3724,7 +3724,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3741,7 +3741,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3760,7 +3760,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3777,7 +3777,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3796,7 +3796,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3813,7 +3813,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3832,7 +3832,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3849,7 +3849,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3867,7 +3867,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3883,7 +3883,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -3971,12 +3971,12 @@
    "type": "box",
    "name": "F1_R101_WindowBeam",
    "center": [
-    193.25288,
-    -2.432614
+    193.30284,
+    -2.434606
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -4028,13 +4028,13 @@
    "type": "box",
    "name": "F1_R101_Pilaster_BackDoor",
    "center": [
-    196.435506,
-    3.417171
+    196.43451,
+    3.392191
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -4502,8 +4502,8 @@
      -2.2838545045845304,
      0.725,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      194.616817,
@@ -4511,8 +4511,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      194.616817,
@@ -4529,8 +4529,8 @@
      -2.2838545045845304,
      0.75,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      192.018897,
@@ -4538,8 +4538,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      192.018897,
@@ -4556,8 +4556,8 @@
      -2.2838545045845304,
      0.625,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -4575,8 +4575,8 @@
      -2.2838545045845304,
      0.006,
      6.35,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -4700,7 +4700,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4717,7 +4717,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4736,7 +4736,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4753,7 +4753,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4772,7 +4772,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4789,7 +4789,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4808,7 +4808,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4825,7 +4825,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4844,7 +4844,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4861,7 +4861,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4880,7 +4880,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4897,7 +4897,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4916,7 +4916,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4933,7 +4933,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4952,7 +4952,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4969,7 +4969,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -4988,7 +4988,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5005,7 +5005,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5024,7 +5024,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5041,7 +5041,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5060,7 +5060,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5077,7 +5077,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5096,7 +5096,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5113,7 +5113,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5131,7 +5131,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5147,7 +5147,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5235,12 +5235,12 @@
    "type": "box",
    "name": "F1_R102_WindowBeam",
    "center": [
-    199.24808,
-    -2.671714
+    199.29804,
+    -2.673706
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -5292,13 +5292,13 @@
    "type": "box",
    "name": "F1_R102_Pilaster_BackDoor",
    "center": [
-    202.430706,
-    3.178071
+    202.42971,
+    3.153091
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -5746,8 +5746,8 @@
      -2.2838545045845304,
      2.125,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      199.213137,
@@ -5755,8 +5755,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      199.213137,
@@ -5773,8 +5773,8 @@
      -2.2838545045845304,
      1.825,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -5792,8 +5792,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      202.384104,
@@ -5801,8 +5801,8 @@
      -2.2838545045845304,
      0.006,
      1.85,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      202.384104,
@@ -5819,8 +5819,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -5944,7 +5944,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5961,7 +5961,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5980,7 +5980,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -5997,7 +5997,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6016,7 +6016,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6033,7 +6033,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6052,7 +6052,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6069,7 +6069,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6088,7 +6088,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6105,7 +6105,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6124,7 +6124,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6141,7 +6141,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6160,7 +6160,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6177,7 +6177,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6196,7 +6196,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6213,7 +6213,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6232,7 +6232,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6249,7 +6249,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6268,7 +6268,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6285,7 +6285,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6304,7 +6304,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6321,7 +6321,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6340,7 +6340,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6357,7 +6357,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6375,7 +6375,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6391,7 +6391,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -6439,12 +6439,12 @@
    "type": "box",
    "name": "F1_R106_WindowBeam",
    "center": [
-    177.497235,
-    15.303244
+    177.447275,
+    15.305236
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -6496,13 +6496,13 @@
    "type": "box",
    "name": "F1_R106_Pilaster_BackDoor",
    "center": [
-    174.314609,
-    9.453459
+    174.315605,
+    9.478439
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -6950,8 +6950,8 @@
      -2.2838545045845304,
      2.125,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      177.532178,
@@ -6959,8 +6959,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      177.532178,
@@ -6977,8 +6977,8 @@
      -2.2838545045845304,
      1.825,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -6996,8 +6996,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      174.361211,
@@ -7005,8 +7005,8 @@
      -2.2838545045845304,
      0.006,
      1.85,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      174.361211,
@@ -7023,8 +7023,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -7148,7 +7148,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7165,7 +7165,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7184,7 +7184,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7201,7 +7201,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7220,7 +7220,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7237,7 +7237,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7256,7 +7256,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7273,7 +7273,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7292,7 +7292,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7309,7 +7309,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7328,7 +7328,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7345,7 +7345,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7364,7 +7364,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7381,7 +7381,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7400,7 +7400,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7417,7 +7417,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7436,7 +7436,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7453,7 +7453,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7472,7 +7472,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7489,7 +7489,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7508,7 +7508,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7525,7 +7525,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7544,7 +7544,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7561,7 +7561,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7579,7 +7579,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7595,7 +7595,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -7643,12 +7643,12 @@
    "type": "box",
    "name": "F1_R105_WindowBeam",
    "center": [
-    183.492435,
-    15.064144
+    183.442475,
+    15.066136
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -7700,13 +7700,13 @@
    "type": "box",
    "name": "F1_R105_Pilaster_BackDoor",
    "center": [
-    180.309809,
-    9.214359
+    180.310805,
+    9.239339
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -8174,8 +8174,8 @@
      -2.2838545045845304,
      0.725,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      182.128498,
@@ -8183,8 +8183,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      182.128498,
@@ -8201,8 +8201,8 @@
      -2.2838545045845304,
      0.75,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      184.726418,
@@ -8210,8 +8210,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      184.726418,
@@ -8228,8 +8228,8 @@
      -2.2838545045845304,
      0.625,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -8247,8 +8247,8 @@
      -2.2838545045845304,
      0.006,
      6.35,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -8369,7 +8369,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8384,7 +8384,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8399,7 +8399,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8415,7 +8415,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8430,7 +8430,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8445,7 +8445,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8461,7 +8461,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8476,7 +8476,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8491,7 +8491,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8507,7 +8507,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8522,7 +8522,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8537,7 +8537,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8553,7 +8553,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8568,7 +8568,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8583,7 +8583,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8599,7 +8599,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.4,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8614,7 +8614,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.4,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8629,7 +8629,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.4,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -8637,12 +8637,12 @@
    "type": "box",
    "name": "F1_R104_WindowBeam",
    "center": [
-    193.98588,
-    15.946671
+    194.03584,
+    15.944679
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -8694,13 +8694,13 @@
    "type": "box",
    "name": "F1_R104_Pilaster_BackDoor",
    "center": [
-    196.692539,
-    9.862011
+    196.693535,
+    9.886991
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -9168,8 +9168,8 @@
      -2.2838545045845304,
      0.725,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      195.369743,
@@ -9177,8 +9177,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      195.369743,
@@ -9195,8 +9195,8 @@
      -2.2838545045845304,
      0.75,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      192.771823,
@@ -9204,8 +9204,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      192.771823,
@@ -9222,8 +9222,8 @@
      -2.2838545045845304,
      0.625,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -9241,8 +9241,8 @@
      -2.2838545045845304,
      0.006,
      6.35,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -9366,7 +9366,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9383,7 +9383,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9402,7 +9402,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9419,7 +9419,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9438,7 +9438,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9455,7 +9455,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9474,7 +9474,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9491,7 +9491,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9510,7 +9510,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9527,7 +9527,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9546,7 +9546,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9563,7 +9563,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9582,7 +9582,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9599,7 +9599,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9618,7 +9618,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9635,7 +9635,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9654,7 +9654,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9671,7 +9671,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9690,7 +9690,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9707,7 +9707,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9726,7 +9726,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9743,7 +9743,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9762,7 +9762,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9779,7 +9779,7 @@
    "n": 2,
    "pitch": 0.6,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9797,7 +9797,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9813,7 +9813,7 @@
    "face": 1,
    "n": 1,
    "pitch": 1.2,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: plain classroom (photos 140-149, owner 2026-10-01): 4 rows x 3 pairs of single desks = 24 seats",
    "confidence": "medium"
   },
@@ -9901,12 +9901,12 @@
    "type": "box",
    "name": "F1_R103_WindowBeam",
    "center": [
-    199.98108,
-    15.707571
+    200.03104,
+    15.705579
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.55,
+    5.45,
     0.494,
     0.21
    ],
@@ -9958,13 +9958,13 @@
    "type": "box",
    "name": "F1_R103_Pilaster_BackDoor",
    "center": [
-    202.687739,
-    9.622911
+    202.688735,
+    9.647891
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
     0.144,
-    0.25,
+    0.3,
     2.91
    ],
    "z0": 6.4,
@@ -10412,8 +10412,8 @@
      -2.2838545045845304,
      2.145,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      199.946079,
@@ -10421,8 +10421,8 @@
      -2.2838545045845304,
      1.85,
      0.006,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      199.946079,
@@ -10439,8 +10439,8 @@
      -2.2838545045845304,
      1.805,
      0.006,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -10458,8 +10458,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ],
     [
      202.884221,
@@ -10467,8 +10467,8 @@
      -2.2838545045845304,
      0.006,
      1.85,
-     1.05,
-     6.4
+     1.04,
+     6.41
     ],
     [
      202.884221,
@@ -10485,8 +10485,8 @@
      -2.2838545045845304,
      0.006,
      2.25,
-     2.91,
-     6.4
+     2.9,
+     6.41
     ]
    ],
    "material": "white",
@@ -10607,7 +10607,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10622,7 +10622,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10637,7 +10637,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10653,7 +10653,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10668,7 +10668,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10683,7 +10683,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10699,7 +10699,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10714,7 +10714,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10729,7 +10729,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10745,7 +10745,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10760,7 +10760,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10775,7 +10775,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": 1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10791,7 +10791,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10806,7 +10806,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10821,7 +10821,7 @@
    "n": 5,
    "pitch": 0.8,
    "face": -1,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10837,7 +10837,7 @@
    "face": -1,
    "n": 1,
    "pitch": 1.4,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10852,7 +10852,7 @@
    "face": -1,
    "n": 1,
    "pitch": 1.4,
-   "z": 7.15,
+   "z": 7.16,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -10867,7 +10867,7 @@
    "face": -1,
    "n": 1,
    "pitch": 1.4,
-   "z": 6.4,
+   "z": 6.41,
    "evidence": "2026-10-01 reference classroom plan v6: lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60",
    "confidence": "medium"
   },
@@ -18952,6 +18952,26 @@
    "confidence": "medium"
   },
   {
+   "type": "box",
+   "name": "F1_ChargeKiosk",
+   "center": [
+    186.202903,
+    2.098905
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.4,
+    0.4,
+    1.45
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "powerbank_kiosk",
+   "evidence": "2026-10-01 reference classroom plan v6: power-bank rental kiosk by the coffee kiosk (002)",
+   "confidence": "medium"
+  },
+  {
    "type": "stairs_run",
    "name": "StairW_F1_Flight1",
    "top": [
@@ -18966,6 +18986,8 @@
    "z_top": 8.012,
    "bottom_riser_h": 0.0767,
    "material": "granite",
+   "slot": "M_Granite_Beige",
+   "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
    "confidence": "medium"
   },
@@ -19010,6 +19032,8 @@
    "tread": 0.332,
    "z_top": 9.7,
    "material": "granite",
+   "slot": "M_Granite_Beige",
+   "side_slot": "M_Paint_White",
    "soffit_thk": 0.18,
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 2",
    "confidence": "medium"
@@ -19093,6 +19117,8 @@
    "z_top": 8.012,
    "bottom_riser_h": 0.0767,
    "material": "granite",
+   "slot": "M_Granite_Beige",
+   "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
    "confidence": "medium"
   },
@@ -19137,6 +19163,8 @@
    "tread": 0.332,
    "z_top": 9.7,
    "material": "granite",
+   "slot": "M_Granite_Beige",
+   "side_slot": "M_Paint_White",
    "soffit_thk": 0.18,
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 2",
    "confidence": "medium"
@@ -19879,8 +19907,8 @@
    "type": "box",
    "name": "F1_WaterCooler",
    "center": [
-    185.690026,
-    1.694838
+    190.222764,
+    1.513998
    ],
    "dir_deg": 87.71614549541547,
    "size": [
@@ -19899,8 +19927,8 @@
    "type": "box",
    "name": "F1_Vending",
    "center": [
-    189.830535,
-    -0.591619
+    186.301369,
+    -0.450911
    ],
    "dir_deg": 87.71614549541547,
    "size": [
@@ -19919,8 +19947,8 @@
    "type": "box",
    "name": "F1_CoffeeKiosk",
    "center": [
-    189.950562,
-    0.968026
+    186.263742,
+    1.115004
    ],
    "dir_deg": 87.71614549541547,
    "size": [

@@ -771,6 +771,11 @@ class Building:
                     pts = [fr @ Vector((a["u0"], w, a["z_high"])), fr @ Vector((a["u1"], w, a["z_low"]))]
                     D.railing_detailed(rails, pts, height=a.get("rail_h", 0.9), post=0.04, spacing=a.get("post_pitch", 1.5),
                                        mid=tuple(a.get("mid_rails", [0.45])), base_plate=0.0, plate_t=0.0)
+                for ue in a.get("rail_ends", []):   # guard across an open end ("u0"/"u1"), e.g. the top plate's outer edge
+                    u_, z_ = (a["u0"] + 0.03, a["z_high"]) if ue == "u0" else (a["u1"] - 0.03, a["z_low"])
+                    pts = [fr @ Vector((u_, a["w0"] + 0.03, z_)), fr @ Vector((u_, a["w1"] - 0.03, z_))]
+                    D.railing_detailed(rails, pts, height=a.get("rail_h", 0.9), post=0.04, spacing=a.get("post_pitch", 1.5),
+                                       mid=tuple(a.get("mid_rails", [0.45])), base_plate=0.0, plate_t=0.0)
             nm = a.get("name", "")
             self.obj_parts(f"Ramp{nm}_E{a['edge']}", {"M_Steel_Paint_Dark": parts["frame"], "M_Steel_Grating": parts["deck"]}, ev, cf)
             if a.get("rails"):
