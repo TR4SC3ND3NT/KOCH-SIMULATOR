@@ -1410,74 +1410,218 @@
   },
   {
    "type": "box",
-   "name": "F2_Accent_N1",
+   "name": "F2_Accent_N1_L",
+   "center": [
+    178.36001,
+    8.956856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N1_R",
+   "center": [
+    179.878794,
+    8.896284
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N1_T",
    "center": [
     179.119402,
     8.92657
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 9.8,
+   "z0": 11.72,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F2_Accent_N5",
+   "name": "F2_Accent_N5_L",
+   "center": [
+    197.096854,
+    9.510622
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N5_R",
+   "center": [
+    198.615639,
+    9.45005
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N5_T",
    "center": [
     197.856247,
     9.480336
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 9.8,
+   "z0": 11.72,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F2_Accent_S1",
+   "name": "F2_Accent_S1_L",
+   "center": [
+    178.129677,
+    3.18148
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_S1_R",
+   "center": [
+    179.64846,
+    3.120908
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_S1_T",
    "center": [
     178.889068,
     3.151194
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 9.8,
+   "z0": 11.72,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F2_Accent_S5",
+   "name": "F2_Accent_S5_L",
+   "center": [
+    196.866522,
+    3.735245
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_S5_R",
+   "center": [
+    198.385306,
+    3.674674
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 9.8,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_S5_T",
    "center": [
     197.625914,
     3.70496
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 9.8,
+   "z0": 11.72,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
@@ -19097,9 +19241,38 @@
     ]
    ],
    "z0": 11.112,
+   "z1": 11.282,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairW_F2_LandingTop",
+   "ring": [
+    [
+     174.177494,
+     7.972756
+    ],
+    [
+     177.075174,
+     7.857191
+    ],
+    [
+     177.1214,
+     9.016263
+    ],
+    [
+     174.22372,
+     9.131828
+    ]
+   ],
+   "z0": 11.282,
    "z1": 11.312,
    "material": "granite",
-   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "slot": "M_Granite_Beige",
+   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
    "confidence": "medium"
   },
   {
@@ -19126,8 +19299,12 @@
    "type": "rail3d",
    "name": "StairW_F2_Rail1",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19153,8 +19330,12 @@
    "type": "rail3d",
    "name": "StairW_F2_Rail1W",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19190,8 +19371,12 @@
    "type": "rail3d",
    "name": "StairW_F2_TopGuard",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19256,9 +19441,38 @@
     ]
    ],
    "z0": 11.112,
+   "z1": 11.282,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F2_LandingTop",
+   "ring": [
+    [
+     199.808819,
+     8.251556
+    ],
+    [
+     202.706499,
+     8.13599
+    ],
+    [
+     202.752725,
+     9.295062
+    ],
+    [
+     199.855045,
+     9.410628
+    ]
+   ],
+   "z0": 11.282,
    "z1": 11.312,
    "material": "granite",
-   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "slot": "M_Granite_Beige",
+   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
    "confidence": "medium"
   },
   {
@@ -19285,8 +19499,12 @@
    "type": "rail3d",
    "name": "StairE_F2_Rail1",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19312,8 +19530,12 @@
    "type": "rail3d",
    "name": "StairE_F2_Rail1W",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -20780,74 +21002,218 @@
   },
   {
    "type": "box",
-   "name": "F3_Accent_N1",
+   "name": "F3_Accent_N1_L",
+   "center": [
+    178.36001,
+    8.956856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N1_R",
+   "center": [
+    179.878794,
+    8.896284
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N1_T",
    "center": [
     179.119402,
     8.92657
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 13.1,
+   "z0": 15.02,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F3_Accent_N5",
+   "name": "F3_Accent_N5_L",
+   "center": [
+    197.096854,
+    9.510622
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N5_R",
+   "center": [
+    198.615639,
+    9.45005
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N5_T",
    "center": [
     197.856247,
     9.480336
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 13.1,
+   "z0": 15.02,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F3_Accent_S1",
+   "name": "F3_Accent_S1_L",
+   "center": [
+    178.129677,
+    3.18148
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_S1_R",
+   "center": [
+    179.64846,
+    3.120908
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_S1_T",
    "center": [
     178.889068,
     3.151194
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 13.1,
+   "z0": 15.02,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F3_Accent_S5",
+   "name": "F3_Accent_S5_L",
+   "center": [
+    196.866522,
+    3.735245
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_S5_R",
+   "center": [
+    198.385306,
+    3.674674
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 13.1,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_S5_T",
    "center": [
     197.625914,
     3.70496
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 13.1,
+   "z0": 15.02,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
@@ -39206,9 +39572,38 @@
     ]
    ],
    "z0": 14.412,
+   "z1": 14.582,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F3_LandingTop",
+   "ring": [
+    [
+     199.808819,
+     8.251556
+    ],
+    [
+     202.706499,
+     8.13599
+    ],
+    [
+     202.752725,
+     9.295062
+    ],
+    [
+     199.855045,
+     9.410628
+    ]
+   ],
+   "z0": 14.582,
    "z1": 14.612,
    "material": "granite",
-   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "slot": "M_Granite_Beige",
+   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
    "confidence": "medium"
   },
   {
@@ -39235,8 +39630,12 @@
    "type": "rail3d",
    "name": "StairE_F3_Rail1",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -39262,8 +39661,12 @@
    "type": "rail3d",
    "name": "StairE_F3_Rail1W",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -40729,74 +41132,218 @@
   },
   {
    "type": "box",
-   "name": "F4_Accent_N1",
+   "name": "F4_Accent_N1_L",
+   "center": [
+    178.36001,
+    8.956856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N1_R",
+   "center": [
+    179.878794,
+    8.896284
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N1_T",
    "center": [
     179.119402,
     8.92657
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 16.4,
+   "z0": 18.32,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F4_Accent_N5",
+   "name": "F4_Accent_N5_L",
+   "center": [
+    197.096854,
+    9.510622
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N5_R",
+   "center": [
+    198.615639,
+    9.45005
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N5_T",
    "center": [
     197.856247,
     9.480336
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 16.4,
+   "z0": 18.32,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F4_Accent_S1",
+   "name": "F4_Accent_S1_L",
+   "center": [
+    178.129677,
+    3.18148
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_S1_R",
+   "center": [
+    179.64846,
+    3.120908
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_S1_T",
    "center": [
     178.889068,
     3.151194
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 16.4,
+   "z0": 18.32,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F4_Accent_S5",
+   "name": "F4_Accent_S5_L",
+   "center": [
+    196.866522,
+    3.735245
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_S5_R",
+   "center": [
+    198.385306,
+    3.674674
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 16.4,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_S5_T",
    "center": [
     197.625914,
     3.70496
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 16.4,
+   "z0": 18.32,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
@@ -59423,9 +59970,38 @@
     ]
    ],
    "z0": 17.712,
+   "z1": 17.882,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F4_LandingTop",
+   "ring": [
+    [
+     199.808819,
+     8.251556
+    ],
+    [
+     202.706499,
+     8.13599
+    ],
+    [
+     202.752725,
+     9.295062
+    ],
+    [
+     199.855045,
+     9.410628
+    ]
+   ],
+   "z0": 17.882,
    "z1": 17.912,
    "material": "granite",
-   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "slot": "M_Granite_Beige",
+   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
    "confidence": "medium"
   },
   {
@@ -59452,8 +60028,12 @@
    "type": "rail3d",
    "name": "StairE_F4_Rail1",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -59479,8 +60059,12 @@
    "type": "rail3d",
    "name": "StairE_F4_Rail1W",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -59516,8 +60100,12 @@
    "type": "rail3d",
    "name": "StairE_F4_TopGuard",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -60024,16 +60612,16 @@
    "type": "box",
    "name": "F2_FireHose_W",
    "center": [
-    178.166002,
-    3.285115
+    178.166201,
+    3.290111
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 10.7,
+   "z0": 10.8,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -60044,16 +60632,16 @@
    "type": "box",
    "name": "F2_FireHose_E",
    "center": [
-    196.703504,
-    3.84683
+    196.703703,
+    3.851826
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 10.7,
+   "z0": 10.8,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -60504,18 +61092,18 @@
    "type": "box",
    "name": "F2_StairW_FireBox",
    "center": [
-    177.597016,
-    9.197302
+    177.584227,
+    8.877709
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.5,
-    0.2,
-    0.7
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 10.7,
+   "z0": 10.8,
    "material": "brick",
-   "slot": "M_Paint_Maroon",
+   "slot": "M_Sheet_Red",
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "fire_hose_cabinet"
@@ -60584,18 +61172,18 @@
    "type": "box",
    "name": "F2_StairE_FireBox",
    "center": [
-    199.112936,
-    9.368249
+    199.110733,
+    9.320217
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.5,
-    0.2,
-    0.7
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 10.7,
+   "z0": 10.8,
    "material": "brick",
-   "slot": "M_Paint_Maroon",
+   "slot": "M_Sheet_Red",
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F2 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "fire_hose_cabinet"
@@ -60724,16 +61312,16 @@
    "type": "box",
    "name": "F3_FireHose_W",
    "center": [
-    178.166002,
-    3.285115
+    178.166201,
+    3.290111
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 14.0,
+   "z0": 14.1,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -60744,16 +61332,16 @@
    "type": "box",
    "name": "F3_FireHose_E",
    "center": [
-    196.703504,
-    3.84683
+    196.703703,
+    3.851826
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 14.0,
+   "z0": 14.1,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -61242,18 +61830,18 @@
    "type": "box",
    "name": "F3_StairE_FireBox",
    "center": [
-    199.112936,
-    9.368249
+    199.110733,
+    9.320217
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.5,
-    0.2,
-    0.7
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 14.0,
+   "z0": 14.1,
    "material": "brick",
-   "slot": "M_Paint_Maroon",
+   "slot": "M_Sheet_Red",
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F3 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "fire_hose_cabinet"
@@ -61382,16 +61970,16 @@
    "type": "box",
    "name": "F4_FireHose_E",
    "center": [
-    196.703504,
-    3.84683
+    196.703703,
+    3.851826
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 17.3,
+   "z0": 17.4,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -61784,18 +62372,18 @@
    "type": "box",
    "name": "F4_StairE_FireBox",
    "center": [
-    199.112936,
-    9.368249
+    199.110733,
+    9.320217
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.5,
-    0.2,
-    0.7
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 17.3,
+   "z0": 17.4,
    "material": "brick",
-   "slot": "M_Paint_Maroon",
+   "slot": "M_Sheet_Red",
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | copied to F4 (F2-F4 repeat the F1 plan; corridor/WC/stair-hall frames 080443026, 075931189, 070704360_s2 are not floor-tagged) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "fire_hose_cabinet"

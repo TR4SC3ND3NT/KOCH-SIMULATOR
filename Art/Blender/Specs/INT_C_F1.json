@@ -1325,74 +1325,218 @@
   },
   {
    "type": "box",
-   "name": "F1_Accent_N1",
+   "name": "F1_Accent_N1_L",
+   "center": [
+    177.88539,
+    8.975785
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.53,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_N1_R",
+   "center": [
+    179.878794,
+    8.896284
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_N1_T",
    "center": [
     179.119402,
     8.92657
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 6.5,
+   "z0": 8.42,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F1_Accent_N5",
+   "name": "F1_Accent_N5_L",
+   "center": [
+    197.096854,
+    9.510622
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_N5_R",
+   "center": [
+    199.090258,
+    9.431121
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.53,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_N5_T",
    "center": [
     197.856247,
     9.480336
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 6.5,
+   "z0": 8.42,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F1_Accent_S1",
+   "name": "F1_Accent_S1_L",
+   "center": [
+    178.129677,
+    3.18148
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_S1_R",
+   "center": [
+    179.64846,
+    3.120908
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_S1_T",
    "center": [
     178.889068,
     3.151194
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 6.5,
+   "z0": 8.42,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F1_Accent_S5",
+   "name": "F1_Accent_S5_L",
+   "center": [
+    196.866522,
+    3.735245
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_S5_R",
+   "center": [
+    198.385306,
+    3.674674
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    2.8
+   ],
+   "z0": 6.5,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_Accent_S5_T",
    "center": [
     197.625914,
     3.70496
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    2.1,
+    0.94,
     0.02,
-    2.9
+    0.88
    ],
-   "z0": 6.5,
+   "z0": 8.42,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel at the end-room door (hall photo)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
    "confidence": "medium"
   },
   {
@@ -18989,7 +19133,8 @@
    "slot": "M_Granite_Beige",
    "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "z_base": 6.4
   },
   {
    "type": "slab",
@@ -19012,10 +19157,39 @@
      9.131828
     ]
    ],
-   "z0": 6.3,
+   "z0": 6.4,
+   "z1": 7.982,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairW_F1_LandingTop",
+   "ring": [
+    [
+     174.177494,
+     7.972756
+    ],
+    [
+     177.075174,
+     7.857191
+    ],
+    [
+     177.1214,
+     9.016263
+    ],
+    [
+     174.22372,
+     9.131828
+    ]
+   ],
+   "z0": 7.982,
    "z1": 8.012,
    "material": "granite",
-   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "slot": "M_Granite_Beige",
+   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
    "confidence": "medium"
   },
   {
@@ -19042,8 +19216,12 @@
    "type": "rail3d",
    "name": "StairW_F1_Rail1",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19069,8 +19247,12 @@
    "type": "rail3d",
    "name": "StairW_F1_Rail1W",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19120,7 +19302,8 @@
    "slot": "M_Granite_Beige",
    "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "z_base": 6.4
   },
   {
    "type": "slab",
@@ -19143,10 +19326,39 @@
      9.410628
     ]
    ],
-   "z0": 6.3,
+   "z0": 6.4,
+   "z1": 7.982,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "confidence": "medium"
+  },
+  {
+   "type": "slab",
+   "name": "StairE_F1_LandingTop",
+   "ring": [
+    [
+     199.808819,
+     8.251556
+    ],
+    [
+     202.706499,
+     8.13599
+    ],
+    [
+     202.752725,
+     9.295062
+    ],
+    [
+     199.855045,
+     9.410628
+    ]
+   ],
+   "z0": 7.982,
    "z1": 8.012,
    "material": "granite",
-   "evidence": "2026-10-01 reference classroom plan v6: half-landing against the north hall wall",
+   "slot": "M_Granite_Beige",
+   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
    "confidence": "medium"
   },
   {
@@ -19173,8 +19385,12 @@
    "type": "rail3d",
    "name": "StairE_F1_Rail1",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19200,8 +19416,12 @@
    "type": "rail3d",
    "name": "StairE_F1_Rail1W",
    "height": 0.95,
-   "spacing": 0.12,
+   "spacing": 0.2,
    "mid_rails": 0,
+   "post": 0.04,
+   "bar": 0.02,
+   "rail": 0.04,
+   "bottom_rail": 0.1,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: white steel balustrade",
    "confidence": "medium",
@@ -19232,6 +19452,238 @@
      9.7
     ]
    ]
+  },
+  {
+   "type": "slab",
+   "name": "F1_StairE_PlantLedge",
+   "ring": [
+    [
+     202.42734,
+     6.656979
+    ],
+    [
+     202.647164,
+     6.648212
+    ],
+    [
+     202.752725,
+     9.295062
+    ],
+    [
+     202.532901,
+     9.30383
+    ]
+   ],
+   "z0": 9.58,
+   "z1": 9.7,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_Pot_0",
+   "pos": [
+    202.628866,
+    8.949726
+   ],
+   "r": 0.15,
+   "z0": 9.7,
+   "z1": 9.94,
+   "seg": 20,
+   "material": "white",
+   "slot": "M_Clay_Pot",
+   "ue_asset": "flower_pot",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_PotPlant_0",
+   "pos": [
+    202.628866,
+    8.949726
+   ],
+   "r": 0.12,
+   "z0": 9.94,
+   "z1": 10.12,
+   "seg": 12,
+   "material": "white",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "houseplant_small",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_Pot_1",
+   "pos": [
+    202.612535,
+    8.54026
+   ],
+   "r": 0.08,
+   "z0": 9.7,
+   "z1": 9.84,
+   "seg": 20,
+   "material": "white",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "flower_pot",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_PotPlant_1",
+   "pos": [
+    202.612535,
+    8.54026
+   ],
+   "r": 0.064,
+   "z0": 9.84,
+   "z1": 10.02,
+   "seg": 12,
+   "material": "white",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "houseplant_small",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_Pot_2",
+   "pos": [
+    202.596205,
+    8.130794
+   ],
+   "r": 0.15,
+   "z0": 9.7,
+   "z1": 9.92,
+   "seg": 20,
+   "material": "white",
+   "slot": "M_Clay_Pot",
+   "ue_asset": "flower_pot",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_PotPlant_2",
+   "pos": [
+    202.596205,
+    8.130794
+   ],
+   "r": 0.12,
+   "z0": 9.92,
+   "z1": 10.1,
+   "seg": 12,
+   "material": "white",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "houseplant_small",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_Pot_3",
+   "pos": [
+    202.579875,
+    7.721328
+   ],
+   "r": 0.09,
+   "z0": 9.7,
+   "z1": 9.86,
+   "seg": 20,
+   "material": "white",
+   "slot": "M_Plastic_Pot_Pink",
+   "ue_asset": "flower_pot",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_PotPlant_3",
+   "pos": [
+    202.579875,
+    7.721328
+   ],
+   "r": 0.072,
+   "z0": 9.86,
+   "z1": 10.04,
+   "seg": 12,
+   "material": "white",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "houseplant_small",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_Pot_4",
+   "pos": [
+    202.563544,
+    7.311862
+   ],
+   "r": 0.13,
+   "z0": 9.7,
+   "z1": 9.92,
+   "seg": 20,
+   "material": "white",
+   "slot": "M_Clay_Pot",
+   "ue_asset": "flower_pot",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_PotPlant_4",
+   "pos": [
+    202.563544,
+    7.311862
+   ],
+   "r": 0.104,
+   "z0": 9.92,
+   "z1": 10.1,
+   "seg": 12,
+   "material": "white",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "houseplant_small",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_Pot_5",
+   "pos": [
+    202.547214,
+    6.902395
+   ],
+   "r": 0.08,
+   "z0": 9.7,
+   "z1": 9.84,
+   "seg": 20,
+   "material": "white",
+   "slot": "M_Plastic_Grey",
+   "ue_asset": "flower_pot",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "F1_StairE_PotPlant_5",
+   "pos": [
+    202.547214,
+    6.902395
+   ],
+   "r": 0.064,
+   "z0": 9.84,
+   "z1": 10.02,
+   "seg": 12,
+   "material": "white",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "houseplant_small",
+   "evidence": "2026-10-01 reference classroom plan v6: ledge with potted plants on the east end wall over flight 2 (138)",
+   "confidence": "medium"
   },
   {
    "type": "int_wall",
@@ -19407,16 +19859,16 @@
    "type": "box",
    "name": "F1_FireHose_W",
    "center": [
-    178.166002,
-    3.285115
+    178.166201,
+    3.290111
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 7.4,
+   "z0": 7.5,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -19427,16 +19879,16 @@
    "type": "box",
    "name": "F1_FireHose_E",
    "center": [
-    196.703504,
-    3.84683
+    196.703703,
+    3.851826
    ],
    "dir_deg": -2.2838316721856735,
    "size": [
-    0.65,
-    0.22,
-    0.8
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 7.4,
+   "z0": 7.5,
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
@@ -20027,18 +20479,18 @@
    "type": "box",
    "name": "F1_StairW_FireBox",
    "center": [
-    177.597016,
-    9.197302
+    177.584227,
+    8.877709
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.5,
-    0.2,
-    0.7
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 7.4,
+   "z0": 7.5,
    "material": "brick",
-   "slot": "M_Paint_Maroon",
+   "slot": "M_Sheet_Red",
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "fire_hose_cabinet"
@@ -20107,18 +20559,18 @@
    "type": "box",
    "name": "F1_StairE_FireBox",
    "center": [
-    199.112935,
-    9.368243
+    199.430308,
+    9.307472
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.5,
-    0.2,
-    0.7
+    0.54,
+    0.23,
+    0.65
    ],
-   "z0": 7.4,
+   "z0": 7.5,
    "material": "brick",
-   "slot": "M_Paint_Maroon",
+   "slot": "M_Sheet_Red",
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "fire_hose_cabinet"
