@@ -11512,6 +11512,44 @@
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
    "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "BoilerChimney",
+   "center": [
+    107.15,
+    8.8
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.36,
+    0.36,
+    16.5
+   ],
+   "z0": 4.5,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q0-10 (TG/B photos + Google shadow): steel stack rising through the hall roof at x 107.2; settles P0-04. DISPUTED: Q1-04 bearing from G044 gives x 113-116"
+  },
+  {
+   "type": "box",
+   "name": "BoilerChimney_Bracket",
+   "center": [
+    107.15,
+    8.8
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.7,
+    0.7,
+    0.08
+   ],
+   "z0": 16.2,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q0-10"
   }
  ],
  "ground_surfaces": [

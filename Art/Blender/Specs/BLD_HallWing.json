@@ -140,6 +140,31 @@
    ],
    "evidence": "2026-10-03 photo+video pass V1-03: white rough-render E face with ONE slit window (the 3 x 1.2 x 1.3 windows were not seen); 2-leaf glazed door with a blue plate at its S end in the recessed pink bay (HallEast ED)",
    "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "name": "north",
+   "windows": [
+    {
+     "type": "WN1",
+     "u": [
+      3.3
+     ],
+     "sills": [
+      1.65
+     ]
+    },
+    {
+     "type": "WN2",
+     "u": [
+      8.4
+     ],
+     "sills": [
+      1.65
+     ]
+    }
+   ],
+   "evidence": "2026-10-03 photo batch 2 Q1-02 + R1-01/V3-10: N face windows (types existed, facade entry was missing)"
   }
  ],
  "roof": {
@@ -187,7 +212,32 @@
    ],
    "confidence": "low",
    "evidence": "2026-10-03 photo+video pass R1-01: round vent d 0.25 on the N face at u 7.3, ~3.4 above the paving"
+  },
+  {
+   "type": "downpipe",
+   "edge": 2,
+   "u": [
+    1.9
+   ],
+   "z0": -0.3,
+   "z1": 3.5,
+   "d": 0.1,
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q1-02"
   }
  ],
- "storey_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): eave ~4.26 +-0.38 m above the N plaza (3 sources); one window row; the porch / low-wall photos belong to the canteen"
+ "storey_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): eave ~4.26 +-0.38 m above the N plaza (3 sources); one window row; the porch / low-wall photos belong to the canteen",
+ "cladding": [
+  {
+   "edge": 2,
+   "u0": 6.0,
+   "u1": 9.5,
+   "z0": 0.6,
+   "z1": 3.55,
+   "proj": 0.01,
+   "slot": "M_Render_Beige",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-02: beige band round the vent; pink E and W of it"
+  }
+ ]
 }

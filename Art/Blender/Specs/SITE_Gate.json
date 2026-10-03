@@ -771,16 +771,16 @@
    "type": "sign",
    "name": "TestCentrePlate",
    "pos": [
-    158.51,
-    -100.29
+    157.701,
+    -100.266
    ],
    "dir_deg": 267.1,
-   "w": 0.4,
-   "h": 0.3,
+   "w": 0.38,
+   "h": 0.27,
    "t": 0.02,
-   "z0": 2.4,
+   "z0": 1.8,
    "slot": "M_Sign_KOCH",
-   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): steel 'test centre' plate right of the brass plaque on the south face, same height band (blank KOCH text)",
+   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): steel 'test centre' plate right of the brass plaque on the south face, same height band (blank KOCH text) | 2026-10-03 photo batch 2 Q1-05: below the plaque, left-aligned",
    "confidence": "medium",
    "ue_note": "KOCH plate (the real one is a third-party test-centre brand: not reproduced)"
   },

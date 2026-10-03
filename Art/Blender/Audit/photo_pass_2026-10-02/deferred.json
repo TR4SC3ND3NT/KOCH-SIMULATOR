@@ -75,6 +75,16 @@
    "id": "V2-09",
    "what": "window + downpipe on the S wall W of the HallEast block",
    "status": "open"
+  },
+  {
+   "id": "Q1-D1..D7",
+   "what": "Block D facades/entrance/lettering/stair tower, D forecourt booths, D fence, SW courts + dormer building",
+   "status": "not applied (owner: block D does not matter)"
+  },
+  {
+   "id": "Q0-10/Q1-04",
+   "what": "boiler chimney x 107.2 (applied) vs G044 bearing x 113-116",
+   "status": "disputed, applied Q0-10"
   }
  ]
 }

@@ -707,13 +707,13 @@
    "type": "wall_sign",
    "name": "LetteringLogo",
    "edge": 0,
-   "u0": 42.3,
-   "u1": 46.7,
-   "z0": 3.1,
-   "z1": 7.5,
+   "u0": 43.1,
+   "u1": 46.8,
+   "z0": 3.7,
+   "z1": 7.1,
    "t": 0.08,
    "content": "TODO_LORE: KOCH lettering (2 blocks of 3 lines) + round logo; the real text must not be used",
-   "evidence": "bay A blank east part: 2026 3-line block (top ~7.5), round logo, 3-line block (bottom ~3.1) (082606037 t1.0 rect, interpolated between eave/sill/head lines); 2020 terracotta panel 4.4-6.4 + logo above (pano)",
+   "evidence": "bay A blank east part: 2026 3-line block (top ~7.5), round logo, 3-line block (bottom ~3.1) (082606037 t1.0 rect, interpolated between eave/sill/head lines); 2020 terracotta panel 4.4-6.4 + logo above (pano) | 2026-10-03 photo batch 2 Q1-06",
    "confidence": "medium",
    "slot": "M_Sign_KOCH"
   },
@@ -768,6 +768,85 @@
    ],
    "evidence": "065934318_s1/s2 f00864/f00983/f01032: 5-6 AC outdoor units between the upper-floor windows of the south facade; u by eye between the window columns; moved under the WU windows (sill 4.65) - they sat on pilasters / surrounds (zaudit)",
    "confidence": "low"
+  },
+  {
+   "type": "wall_sign",
+   "name": "BlockPlate_B",
+   "edge": 0,
+   "u0": 47.5,
+   "u1": 48.0,
+   "z0": 3.06,
+   "z1": 3.32,
+   "t": 0.02,
+   "w0": 0.14,
+   "slot": "M_Sign_KOCH",
+   "content": "KOCH block plate B",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q1-01"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "CCTV_SE",
+   "kind": "cctv",
+   "edge": 0,
+   "w0": 0.14,
+   "items": [
+    [
+     47.75,
+     3.69,
+     0.1,
+     0.1,
+     0.25
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q1-01"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "JBox_SE",
+   "edge": 0,
+   "w0": 0.14,
+   "items": [
+    [
+     47.75,
+     3.55,
+     0.2,
+     0.09,
+     0.08
+    ]
+   ],
+   "slot": "M_Plastic_White",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q1-01"
+  },
+  {
+   "type": "downpipe",
+   "edge": 0,
+   "u": [
+    11.6,
+    23.4,
+    35.2
+   ],
+   "z0": -0.3,
+   "z1": 7.9,
+   "d": 0.1,
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-08 (2010 photos)"
+  },
+  {
+   "type": "downpipe",
+   "edge": 2,
+   "u": [
+    12.3,
+    24.1,
+    35.9
+   ],
+   "z0": -0.3,
+   "z1": 7.9,
+   "d": 0.1,
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-08"
   }
  ],
  "basement": {

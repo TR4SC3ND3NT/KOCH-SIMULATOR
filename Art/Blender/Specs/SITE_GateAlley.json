@@ -518,15 +518,15 @@
    ],
    "z": [
     6.55,
-    5.849,
-    5.8,
-    5.8,
+    6.15,
+    6.15,
+    6.15,
     6.5,
     6.5
    ],
    "thk": 1.95,
    "material": "hedge",
-   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09",
    "confidence": "medium"
   },
   {
@@ -567,14 +567,14 @@
     ]
    ],
    "z": [
-    5.82,
-    5.82,
-    5.82,
-    5.82
+    6.18,
+    6.18,
+    6.18,
+    6.18
    ],
-   "thk": 1.02,
+   "thk": 1.38,
    "material": "brick",
-   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping",
+   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping | 2026-10-03 photo batch 2 Q0-09: walkway-side wall ~0.9 m high",
    "confidence": "medium"
   },
   {
@@ -599,10 +599,10 @@
     ]
    ],
    "z": [
-    5.87,
-    5.87,
-    5.87,
-    5.87
+    6.23,
+    6.23,
+    6.23,
+    6.23
    ],
    "thk": 0.06,
    "material": "stone",

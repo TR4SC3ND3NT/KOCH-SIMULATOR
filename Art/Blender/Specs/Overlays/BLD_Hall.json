@@ -12,18 +12,70 @@
     {
      "type": "HN",
      "u": [
-      57.1,
-      51.1,
-      45.1,
-      39.1,
-      33.1,
+      18.6,
+      21.8,
       27.1
      ],
      "sills": [
       1.25
      ]
+    },
+    {
+     "type": "HS",
+     "u": [
+      44.8,
+      46.9
+     ],
+     "sills": [
+      2.2
+     ]
     }
-   ]
+   ],
+   "entrances": [
+    {
+     "u0": 33.9,
+     "u1": 36.3,
+     "z1": 2.6,
+     "reveal": 0.15,
+     "frame_w": 0.06,
+     "frame_d": 0.08,
+     "bays": [
+      [
+       1.2,
+       "door"
+      ],
+      [
+       1.2,
+       "door"
+      ]
+     ],
+     "slot": "M_Steel_Paint_Dark",
+     "evidence": "2026-10-03 photo batch 2 Q1-03/R1-05: rusty 2-leaf steel door in the maroon tile bay",
+     "confidence": "low"
+    },
+    {
+     "u0": 49.6,
+     "u1": 52.4,
+     "z1": 2.7,
+     "reveal": 0.15,
+     "frame_w": 0.06,
+     "frame_d": 0.08,
+     "bays": [
+      [
+       1.4,
+       "door"
+      ],
+      [
+       1.4,
+       "door"
+      ]
+     ],
+     "slot": "M_Steel_Paint_Dark",
+     "evidence": "2026-10-03 photo batch 2 Q1-03/R1-05: 2-leaf steel door near the W end",
+     "confidence": "low"
+    }
+   ],
+   "evidence": "2026-10-03 photo batch 2 Q1-03 (web photos + A081-A086): windows only at u 18.6-27.1 and 2 small high ones; 2 steel double doors; the evenly spaced 6 HN list was wrong"
   }
  ],
  "attachments": [
@@ -430,6 +482,50 @@
    ],
    "evidence": "2GIS 30258560058266093: gym with a painted basketball court, windows high on both long walls, concrete lattice trusses under a boarded wooden ceiling, backboards on blue steel frames at both ends, blue benches along the walls; W 36 m of the hall assumed to be the gym (court 28 m), the E part (lobby/changing rooms) not photographed: partition + door only",
    "confidence": "low"
+  },
+  {
+   "type": "downpipe",
+   "edge": 2,
+   "u": [
+    43.5
+   ],
+   "z0": -0.3,
+   "z1": 5.6,
+   "d": 0.1,
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-03"
+  },
+  {
+   "type": "downpipe",
+   "name": "Flue_N",
+   "edge": 2,
+   "u": [
+    35.9
+   ],
+   "z0": 2.5,
+   "z1": 5.6,
+   "d": 0.2,
+   "top": "free",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-03: white flue pipe d 0.2 from the eave down to ~2.5"
   }
- ]
+ ],
+ "window_types": {
+  "HS": {
+   "w": 1.0,
+   "h": 0.8,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-03 photo batch 2 Q1-03: small high windows W of the door bay",
+   "confidence": "low"
+  }
+ }
 }

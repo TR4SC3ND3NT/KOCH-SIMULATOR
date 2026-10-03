@@ -239,6 +239,39 @@
    "slot": "M_Render_Pink",
    "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): pink/salmon render field on every 2nd 6 m bay (A016, A017); field edges approximate",
    "confidence": "low"
+  },
+  {
+   "edge": 2,
+   "u0": 31.7,
+   "u1": 40.6,
+   "z0": 0.35,
+   "z1": 5.64,
+   "proj": 0.02,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-03: maroon brick-tile door bay"
+  },
+  {
+   "edge": 2,
+   "u0": 16.5,
+   "u1": 23.7,
+   "z0": 0.45,
+   "z1": 5.6,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-03: pink render field"
+  },
+  {
+   "edge": 2,
+   "u0": 46.9,
+   "u1": 60.2,
+   "z0": 0.45,
+   "z1": 5.6,
+   "proj": 0.01,
+   "slot": "M_Render_Pink",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo batch 2 Q1-03: pink render field"
   }
  ],
  "ffl_note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): floor at the HallEast landing level (glazed E door at 5.35, A006); eave/ridge kept at their absolute height"

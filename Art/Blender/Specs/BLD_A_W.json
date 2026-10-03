@@ -569,6 +569,21 @@
    ],
    "confidence": "medium",
    "evidence": "2026-10-03 video pass V2-10: floor-standing twin-fan AC outdoor unit on the gallery deck in front of the pilaster u 24.3-24.7, on a black base frame, pipe up the pilaster"
+  },
+  {
+   "type": "wall_sign",
+   "name": "Plate_DD",
+   "edge": 3,
+   "u0": 43.45,
+   "u1": 43.85,
+   "z0": 2.15,
+   "z1": 2.41,
+   "t": 0.01,
+   "w0": -0.05,
+   "slot": "M_Sign_KOCH",
+   "content": "TODO_LORE: KOCH door plate",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo batch 2 Q1-07: blue plate in the double-door transom"
   }
  ],
  "ffl_z": 5.65,
