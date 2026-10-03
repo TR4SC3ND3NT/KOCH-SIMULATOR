@@ -668,10 +668,40 @@
    "box": true,
    "wrap": {
     "edge": 2,
-    "u1": 48.25
+    "u1": 2.2
    },
-   "evidence": "maroon light-well cover, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36) | owner 2026-09-28 (screenshots 56-57): a box (vertical front, flat top), not a slope, and it runs round the NE corner along the whole north face with the same width and height",
+   "evidence": "maroon light-well cover, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36) | owner 2026-09-28 (screenshots 56-57): a box (vertical front, flat top), not a slope, and it runs round the NE corner along the whole north face with the same width and height | 2026-10-03 owner msg 62 + A204/A205: the box only turns the NE corner (~2.2 m along the north face, loose sheets on its lid); the long maroon run along the north face is a separate gas-pipe cover standing off the wall (GasPipeCover_North)",
    "confidence": "medium"
+  },
+  {
+   "type": "pipe_cover",
+   "name": "GasPipeCover_North",
+   "edge": 2,
+   "u0": 2.2,
+   "u1": 47.28,
+   "w0": 0.4,
+   "depth": 1.2,
+   "z_back": 0.92,
+   "z_front": 0.6,
+   "skirt_gap": 0.08,
+   "post_pitch": 2.0,
+   "gap_boards": true,
+   "pipes": [
+    {
+     "w": 0.8,
+     "z": 0.45,
+     "d": 0.25,
+     "slot": "M_Alu_Grey"
+    },
+    {
+     "w": 0.55,
+     "z": 0.75,
+     "d": 0.08,
+     "slot": "M_Paint_Yellow"
+    }
+   ],
+   "confidence": "low",
+   "evidence": "owner 2026-10-03 msg 62: the red run along B's north side is gas pipes hidden under a special roof, not flush with the wall. A204/A205 (NE end, open/damaged): maroon corrugated roof on a timber frame falling away from the wall with a raised maroon back edge, boards over the ~0.4 m gap to the wall, foil-insulated pipe (~0.25 m) + yellow gas pipe inside, maroon corrugated front skirt on short posts. A183 (walk, pitch 5.9 deg from the window verticals, B wall at 8.2 m): roof meets the wall line just under the ground-window sill (FFL+0.9..1.0), front top ~FFL+0.6, front face ~1.2 m off the wall, ~0.1 m gap under the skirt; video 250 f0044-0050 + A171-A189: the cover runs the whole north face. Sizes +-0.2 m, pipe positions by eye"
   },
   {
    "type": "wall_sign",

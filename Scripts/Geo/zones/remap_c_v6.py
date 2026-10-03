@@ -21,7 +21,9 @@ KN_S = ["X_W", "FRONT_W", "P1", "P2", "P3", "P4", "FRONT_E", "X_E"]
 KN_N = ["X_W", "FRONT_W", "P1", "P2", "P_WCM", "P3", "P4", "FRONT_E", "X_E"]
 XK_S = ([getattr(S, k) for k in KN_S], [getattr(N, k) for k in KN_S])
 XK_N = ([getattr(S, k) for k in KN_N], [getattr(N, k) for k in KN_N])
-DROP = re.compile(r"^(F\d_)?(Lab_|Accent_Recess_|WC\d_)")   # old F2 lab; old F1 WC recess accents; old WC fit-out (v6 wc_fitout)
+# old F2 lab; old F1 WC recess accents; old WC fit-out (v6 wc_fitout); retired v6 one-piece WC accent panels (they hid the
+# WC doors; now _L/_R/_T round the opening, 2026-10-03)
+DROP = re.compile(r"^(F\d_)?(Lab_|Accent_Recess_|WC\d_|Accent_WC_[\d.]+$)")
 
 
 def s_local(p):
@@ -133,6 +135,11 @@ def s_local_n(p):
     return float(d @ N.C_X), float(d @ N.C_Y)
 
 
+def _was_generated(e):
+    """Generated v6 elements start with zone_c_v6.ev()'s prefix; hand-placed fittings carry the remap tag instead."""
+    return e.get("evidence", "").startswith("2026-10-01 reference classroom plan v6:")
+
+
 def main(v6_dir):
     std_specs, _ = S.build()
     std_gen = {sp["id"]: {x["name"] for x in sp["elements"]} for sp in std_specs}
@@ -144,7 +151,9 @@ def main(v6_dir):
         kept, dropped = [], []
         for e in old["elements"]:
             nm = e.get("name", "")
-            if nm in std_gen[sid] or nm in gen_names or DROP.match(nm):
+            # an element the generator no longer writes (never carried, so no remap tag) is a retired generated one
+            retired = nm not in gen_names and _was_generated(e)
+            if nm in std_gen[sid] or nm in gen_names or DROP.match(nm) or retired:
                 dropped.append(nm)
                 continue
             # already on plan v6 (a later regeneration of the generated part): carry it as is, never remap twice

@@ -1070,6 +1070,31 @@ class Building:
                         pts = [fr @ Vector((a["u0"], w, a["z_high"])), fr @ Vector((a["u1"], w, a["z_low"]))]
                         railing(bm2, pts, height=0.9, spacing=1.5, mid_rails=1)
                     self.obj(f"RampRail_E{a['edge']}", bm2, COL["metal"], a.get("evidence"))
+            elif t == "pipe_cover":
+                # free-standing lean-to over pipes along a wall: roof sheet falling from the back (w0, z_back) to the
+                # front (depth, z_front), corrugated front skirt down to skirt_gap above the ground, timber posts, an
+                # optional board strip over the gap to the wall; pipes [{w, z (above ground), d, slot}]; ends open
+                u0, u1, w0, dd, zb_, zf_ = a["u0"], a["u1"], a["w0"], a["depth"], a["z_back"], a["z_front"]
+                zg = e["zg"]
+                sheet, posts = bmesh.new(), bmesh.new()
+                D.corrugated_sheet(sheet, fr, u0, u1, w0 - 0.05, zb_ + 0.03, dd + 0.1, zf_ - 0.02, pitch=0.115, rib_h=0.015)
+                D.corrugated_sheet(sheet, fr, u0, u1, dd, zg + a.get("skirt_gap", 0.08), dd, zf_ - 0.04, pitch=0.115, rib_h=0.015)
+                box(sheet, fr, u0, u1, w0 - 0.07, w0 - 0.05, zb_ - 0.2, zb_ + 0.05)   # back flashing (raised maroon edge)
+                n_p = max(1, round((u1 - u0) / a.get("post_pitch", 2.0)))
+                for k in range(n_p + 1):
+                    u = min(u1 - 0.04, max(u0 + 0.04, u0 + k * (u1 - u0) / n_p))
+                    for w, zt in ((dd - 0.06, zf_ - 0.02), (w0 + 0.04, zb_)):
+                        box(posts, fr, u - 0.04, u + 0.04, w - 0.04, w + 0.04, zg - BURY_M, zt)
+                if a.get("gap_boards"):
+                    box(posts, fr, u0, u1, 0.02, w0 - 0.05, zb_ - 0.02, zb_ + 0.005)
+                parts = {a.get("sheet_slot", "M_Sheet_Red"): sheet, "M_Wood_Stained": posts}
+                for p_ in a.get("pipes", []):
+                    tb = parts.setdefault(p_.get("slot", "M_Steel_Galv"), bmesh.new())
+                    z_ = zg + p_["z"]
+                    D.tube(tb, [fr @ Vector((u0 + 0.05, p_["w"], z_)), fr @ Vector((u1 - 0.05, p_["w"], z_))], p_["d"] / 2)
+                for bm_ in parts.values():
+                    bmesh.ops.recalc_face_normals(bm_, faces=bm_.faces)
+                self.obj_parts(f"{a.get('name', 'PipeCover')}_E{a['edge']}", parts, a.get("evidence"), cf)
             elif t == "lightwell" and a.get("box"):
                 # box cover (vertical front, flat top at z_wall) down to the ground; "wrap" {edge, u1} continues it
                 # round the corner at this edge's u1 as ONE L solid (no shared/coplanar faces at the corner)

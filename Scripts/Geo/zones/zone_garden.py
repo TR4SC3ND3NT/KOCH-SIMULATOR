@@ -48,7 +48,9 @@ OUTER = [((100.74, -9.84), (158.02, -13.74)),    # N: ortho paving edge, inner e
          ((158.30, -13.70), (156.90, -39.00)),   # E: ortho lawn edge x 157.0 at y -36 (sketch 158.0..159.0)
          ((156.90, -39.00), (154.20, -44.20)),   # SE chamfer, steep part (sketch, moved onto the ortho edge)
          ((154.20, -44.20), (150.85, -46.35)),   # SE chamfer, flat part
-         ((150.89, -46.68), (103.45, -44.99)),   # S: sketch = lawn edge north of the light strip / pergola
+         ((150.89, -46.68), (103.45, -44.36)),   # S: lawn edge on the pergola walk's north edge: Google z20 paving band
+                                                 # v -17.5..-19.7 parallel to the grid over x 104-150 (2026-10-03; the
+                                                 # sketch's west end -44.99 cut 0.6 m into the walk)
          ((103.30, -45.40), (98.80, -36.90)),    # SW chamfer: NE side of the light sidewalk strip
          ((98.80, -36.90), (100.60, -9.10))]     # W: ortho lawn edge (sketch 97.1..100.5)
 # path centre lines: (name, start, a, b, end) - start 'G1'/'G2' (gazebo ring) or 'SQ' (square paving edge); a-b = the

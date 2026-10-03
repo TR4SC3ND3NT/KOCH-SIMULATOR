@@ -320,9 +320,15 @@ def plan(k, zb, lobby, west_stair):
             els.append({"type": "box", "name": f"{P}Accent_{key}_{nm}", "center": c_to_w((u0 + u1) / 2, yy), "dir_deg": EAST,
                         "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_), "material": "accent",
                         **ev("periwinkle-blue paint round the end-room door (hall photos 135/138)")})
-    for x0, x1, yy in ((P2 + 0.1, P_WCM, HW1 - 0.01), (P_WCM, P3 - 0.1, HE1 - 0.01)):
-        els.append({"type": "box", "name": f"{P}Accent_WC_{x0:.1f}", "center": c_to_w((x0 + x1) / 2, yy), "dir_deg": EAST,
-                    "size": [x1 - x0, 0.02, CC - 0.1], "z0": z(zb + 0.1), "material": "accent", **ev("blue accent wall at the WC doors")})
+    # WC accent walls: same paint-round-the-opening rule (a full panel hid both WC doors, owner 2026-10-03)
+    for (x0, x1, yy), (xd, _wc) in zip(((P2 + 0.1, P_WCM, HW1 - 0.01), (P_WCM, P3 - 0.1, HE1 - 0.01)), WC_DOORS):
+        o0, o1, zt = xd - WC_DOOR_W / 2 - 0.02, xd + WC_DOOR_W / 2 + 0.02, DOOR_H + 0.02
+        for nm, u0, u1, z0_, z1_ in (("L", x0, o0, 0.1, CC - 0.1), ("R", o1, x1, 0.1, CC - 0.1), ("T", o0, o1, zt, CC - 0.1)):
+            if u1 - u0 < 0.02:
+                continue
+            els.append({"type": "box", "name": f"{P}Accent_WC_{x0:.1f}_{nm}", "center": c_to_w((u0 + u1) / 2, yy),
+                        "dir_deg": EAST, "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_),
+                        "material": "accent", **ev("blue accent wall at the WC doors, painted round the door opening")})
     for n, x in enumerate((FRONT_W + 3.9, FRONT_E - 3.9)):
         els.append({"type": "box", "name": f"{P}Hall_Radiator_{n}", "center": c_to_w(x, hall(x)[1] - 0.06), "dir_deg": EAST,
                     "size": [0.8, 0.08, 0.55], "z0": z(zb + 0.15), "material": "white", **ev("sectional radiator on the north hall wall")})
@@ -529,12 +535,15 @@ def fitout(k, zb, num):
             lab = ev("lab layout C105 (owner 2026-10-01): wall row + 2 back-to-back islands, 5 x 5 PCs, desks 0.80 x 0.60", "medium")
             rows = [(0.32, f_v)] + [(c + d, f_v if d > 0 else -f_v) for c in (2.50, 4.95) for d in (-0.30, 0.30)]
             for r, (vc, face) in enumerate(rows):
-                p = c_to_w(*to_c(0.40 + 5 * 0.40, vc))
+                # the wall row starts 0.25 off the back wall (on the back-door pilaster): from 0.40 its 5th desk ran 0.14 m
+                # into the door opening (door_qa 2026-10-03; door 0.45 m off the board-wall corner, C105)
+                p = c_to_w(*to_c((0.25 if r == 0 else 0.40) + 5 * 0.40, vc))
                 row = {"pos": p, "dir_deg": d_u, "n": 5, "pitch": 0.80, "face": face, "z": z(zb + LAM), **lab}
                 els.append({"type": "desk_row", "name": R + f"Desks_{r}", "depth": 0.60, **row})
                 els.append({"type": "monitor_row", "name": R + f"PCs_{r}", **dict(row, z=z(zb + LAM + 0.75))})
                 sv_off = 0.62 if face == f_v else -0.62
-                els.append({"type": "chair_row", "name": R + f"Chairs_{r}", **dict(row, pos=c_to_w(*to_c(2.40, vc + sv_off)))})
+                els.append({"type": "chair_row", "name": R + f"Chairs_{r}",
+                            **dict(row, pos=c_to_w(*to_c((0.25 if r == 0 else 0.40) + 2.0, vc + sv_off)))})
             # teacher's desk (owner 2026-10-01): longer (1.40 x 0.60), it continues the window-side row of the second island
             # up to the board wall (end against the wall); the teacher sits with his back to the windows, PC in front
             tv = 4.95 + 0.30
@@ -778,6 +787,8 @@ def extra_rooms(k, zb):
     rooms.append((f"{k}09", frame(P2 + PART / 2, HW0 - PART, (1, 0), (0, -1)), (1, 0), (0, -1), LOBBY_W, HW0 - PART - Y_SE, "director" if k == 4 else "class"))
     if k == 4:   # west-end room: u north from the south hall wall, v west from its front wall; board on the north wall
         rooms.append(("410", frame(FRONT_W + 0.4 - PART, HW0, (0, 1), (-1, 0)), (0, 1), (-1, 0), COR, FRONT_W + 0.4 - PART - X_W, "class"))
+    # door centre along u on the v = 0 (door) wall: x09 = the teachers' door on the south hall wall, 410 = mid front wall
+    door_u = {f"{k}09": DOOR_TEACH - (P2 + PART / 2), "410": COR / 2}
     for num, to_c, du, dv, L, D, kind in rooms:
         R = f"F{k}_R{num}_"
         d_u, d_v = ang(*du), ang(*dv)
@@ -822,6 +833,12 @@ def extra_rooms(k, zb):
             cols = [D * 0.27, D * 0.73] if D < 5.5 else [1.25, 3.15, 5.05]
             for r, uc in enumerate([1.00, 1.95, 2.90, 3.85][: max(2, int((L - 1.6) / 0.95))]):
                 for c, vc in enumerate(cols):
+                    # keep the walk-in zone free (door_qa 2026-10-03: R410 desks stood 0.24 m in front of its door): no
+                    # desk pair (desk u +-0.23, chair 0.42 behind it) nearer than 0.6 m to the door wall within 0.15 m of
+                    # the door edges
+                    du_ = door_u[num]
+                    if vc - 0.6 < 0.6 and uc + 0.23 > du_ - DOOR_W / 2 - 0.15 and uc - 0.64 < du_ + DOOR_W / 2 + 0.15:
+                        continue
                     row = {"dir_deg": d_v, "n": 2, "pitch": 0.60, "face": -f_u, "z": z(zb + LAM), **dk}
                     els.append({"type": "desk_row", "name": R + f"Desk_{r}{c}", "pos": W(uc, vc), "depth": 0.45, "height": 0.76,
                                 "slot": "M_Laminate_Beech_Orange", "ue_asset": "school_desk_single_600", **row})
