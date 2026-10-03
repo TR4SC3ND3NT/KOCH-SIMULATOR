@@ -983,6 +983,10 @@ class Site:
         bm = bmesh.new()
         z0 = el["z0"] if "z0" in el else self.gz(P.x, P.y) + el.get("z_rel", 0.0)   # no z0: on the ground (+ z_rel)
         box(bm, _frame2(P, fwd), -a / 2, a / 2, -b / 2, b / 2, z0, z0 + h)
+        if el.get("tilt_deg"):   # roll about the across axis through the centre: + moves the top towards +dir (wall stripes)
+            ax = Vector((-fwd.y, fwd.x, 0.0))
+            bmesh.ops.rotate(bm, verts=bm.verts, cent=Vector((P.x, P.y, z0 + h / 2)),
+                             matrix=Matrix.Rotation(math.radians(el["tilt_deg"]), 3, ax))
         self.emit(el, bm, COL.get(el.get("material", "wood"), COL["wood"]), (P.x, P.y, z0))
 
     def b_rails(self, el):

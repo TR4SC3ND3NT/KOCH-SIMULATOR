@@ -37,6 +37,8 @@ PALETTE = {
     "M_Gravel_Compacted": (0.50, 0.46, 0.41, 1),   # compacted grey-brown gravel (parking east of the C plaza)
     "M_Fascia_Beige": (0.78, 0.75, 0.69, 1), "M_Steel_Paint_Grey": (0.62, 0.63, 0.64, 1),
     "M_PVC_Anthracite": (0.21, 0.22, 0.24, 1), "M_Chrome": (0.80, 0.81, 0.83, 1), "M_Radiator_White": (0.95, 0.95, 0.94, 1),
+    "M_Fabric_Pleated_Cream": (0.90, 0.86, 0.76, 1), "M_Terrazzo_Grey_Tile": (0.74, 0.74, 0.72, 1),
+    "M_Terrazzo_Grey": (0.58, 0.58, 0.57, 1), "M_Paint_Orange": (0.90, 0.45, 0.15, 1),
 }
 
 # object-name keyword -> slot for parts still on a plain review colour after all builders ran (attachments, P0/P1

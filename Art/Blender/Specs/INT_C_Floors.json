@@ -1410,150 +1410,6 @@
   },
   {
    "type": "box",
-   "name": "F2_Accent_N1_L",
-   "center": [
-    178.270082,
-    8.960443
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 9.8,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_N1_R",
-   "center": [
-    179.878794,
-    8.896284
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 9.8,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_N1_T",
-   "center": [
-    179.074438,
-    8.928364
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.03,
-    0.02,
-    0.83
-   ],
-   "z0": 11.77,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_N5_L",
-   "center": [
-    197.096854,
-    9.510622
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 9.8,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_N5_R",
-   "center": [
-    198.705567,
-    9.446463
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 9.8,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_N5_T",
-   "center": [
-    197.901211,
-    9.478542
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.03,
-    0.02,
-    0.83
-   ],
-   "z0": 11.77,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_S1_L",
-   "center": [
-    178.039748,
-    3.185067
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 9.8,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_Accent_S1_R",
-   "center": [
-    179.64846,
-    3.120908
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 9.8,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F2_Accent_S1_T",
    "center": [
     178.844104,
@@ -1567,44 +1423,44 @@
    ],
    "z0": 11.77,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
   },
   {
    "type": "box",
-   "name": "F2_Accent_S5_L",
+   "name": "F2_Accent_S2_T",
    "center": [
-    196.866522,
-    3.735245
+    184.839304,
+    2.913888
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.58,
+    1.03,
     0.02,
-    2.8
+    0.83
    ],
-   "z0": 9.8,
+   "z0": 11.77,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
   },
   {
    "type": "box",
-   "name": "F2_Accent_S5_R",
+   "name": "F2_Accent_S4_T",
    "center": [
-    198.475234,
-    3.671087
+    191.675678,
+    3.942266
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.58,
+    1.03,
     0.02,
-    2.8
+    0.83
    ],
-   "z0": 9.8,
+   "z0": 11.77,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -1621,8 +1477,287 @@
    ],
    "z0": 11.77,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N1_T",
+   "center": [
+    179.074438,
+    8.928364
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 11.77,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N2_T",
+   "center": [
+    185.069638,
+    8.689264
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 11.77,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N4_T",
+   "center": [
+    191.90601,
+    9.717642
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 11.77,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_N5_T",
+   "center": [
+    197.901211,
+    9.478542
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 11.77,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_Accent_T_T",
+   "center": [
+    188.231589,
+    2.778597
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 11.77,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_S1",
+   "center": [
+    179.458413,
+    3.123484
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 201",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_S2",
+   "center": [
+    185.453613,
+    2.884384
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 202",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_S4",
+   "center": [
+    192.289986,
+    3.912763
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 203",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_S5",
+   "center": [
+    198.285186,
+    3.673663
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 204",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_N1",
+   "center": [
+    179.689145,
+    8.908852
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 208",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_N2",
+   "center": [
+    185.684345,
+    8.669752
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 207",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_N4",
+   "center": [
+    192.520718,
+    9.69813
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 206",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_N5",
+   "center": [
+    198.515918,
+    9.45903
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 205",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_RoomPlate_T",
+   "center": [
+    188.845897,
+    2.749093
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 11.32,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 209",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -1780,7 +1915,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 9.7,
+   "z": 9.71,
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "bench_box_upholstered",
    "evidence": "2026-10-01 reference classroom plan v6: hall bench: oak-orange wooden box base + black upholstered pad (video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)",
@@ -1798,11 +1933,203 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 9.7,
+   "z": 9.71,
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "bench_box_upholstered",
    "evidence": "2026-10-01 reference classroom plan v6: hall bench: oak-orange wooden box base + black upholstered pad (video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)",
    "confidence": "low"
+  },
+  {
+   "type": "boxes",
+   "name": "F2_Hall_Floor",
+   "items": [
+    [
+     182.726255,
+     5.890441,
+     -2.2838545045845304,
+     11.45,
+     5.8,
+     0.01,
+     9.7
+    ],
+    [
+     189.546718,
+     6.268941,
+     -2.2838545045845304,
+     2.15,
+     7.1,
+     0.01,
+     9.7
+    ],
+    [
+     195.19312,
+     6.694265,
+     -2.2838545045845304,
+     9.1,
+     5.8,
+     0.01,
+     9.7
+    ]
+   ],
+   "material": "white",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "ue_note": "tile module not measured (count tiles across the 5.8 m corridor)",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "boxes",
+   "name": "F2_Hall_Skirting",
+   "items": [
+    [
+     177.609933,
+     3.198206,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     181.841545,
+     3.029441,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     186.535287,
+     2.842246,
+     -2.2838545045845304,
+     2.365,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     177.840585,
+     8.981575,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     182.072197,
+     8.812811,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     186.201391,
+     8.64813,
+     -2.2838545045845304,
+     1.235,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     188.159823,
+     8.570024,
+     -2.2838545045845304,
+     0.805,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     189.405489,
+     2.727776,
+     -2.2838545045845304,
+     2.15,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     188.916064,
+     9.84089,
+     -2.2838545045845304,
+     0.605,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     190.459828,
+     9.779322,
+     -2.2838545045845304,
+     0.605,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     190.846182,
+     3.971345,
+     -2.2838545045845304,
+     0.63,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     194.673118,
+     3.818719,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     198.90473,
+     3.649955,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     191.076834,
+     9.754715,
+     -2.2838545045845304,
+     0.63,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     194.90377,
+     9.602089,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     9.71
+    ],
+    [
+     199.135382,
+     9.433324,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     9.71
+    ]
+   ],
+   "material": "white",
+   "slot": "M_Terrazzo_Grey",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)",
+   "confidence": "medium"
   },
   {
    "type": "box",
@@ -2233,21 +2560,21 @@
    "type": "box",
    "name": "F2_R201_TV",
    "center": [
-    179.578649,
-    -1.389867
+    179.563661,
+    -1.389269
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -2288,6 +2615,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R201_Smoke_0",
+   "center": [
+    175.837508,
+    -0.089756
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R201_Smoke_1",
+   "center": [
+    177.636069,
+    -0.161486
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -2501,6 +2868,86 @@
    "slot": "M_Laminate_Oak_Grey",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R201_Blind_0_L",
+   "center": [
+    176.207013,
+    -3.497168
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R201_Blind_0_M",
+   "center": [
+    176.791545,
+    -3.52048
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.49,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R201_Blind_0_R",
+   "center": [
+    177.376077,
+    -3.543792
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R201_CCTV",
+   "center": [
+    174.155163,
+    -2.624712
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.12,
+    0.088
+   ],
+   "z0": 12.4,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cctv_dome",
+   "evidence": "2026-10-01 reference classroom plan v6: CCTV dome at the back end of the window beam (2026-10-03 Q0-02)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -3246,21 +3693,21 @@
    "type": "box",
    "name": "F2_R202_TV",
    "center": [
-    185.573849,
-    -1.628967
+    185.558861,
+    -1.628369
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -3301,6 +3748,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R202_Smoke_0",
+   "center": [
+    181.832709,
+    -0.328856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R202_Smoke_1",
+   "center": [
+    183.631268,
+    -0.400586
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -4510,21 +4997,21 @@
    "type": "box",
    "name": "F2_R203_TV",
    "center": [
-    190.581686,
-    -0.527663
+    190.596674,
+    -0.528261
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -4565,6 +5052,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R203_Smoke_0",
+   "center": [
+    194.414482,
+    0.470386
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R203_Smoke_1",
+   "center": [
+    192.615922,
+    0.542116
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -5774,21 +6301,21 @@
    "type": "box",
    "name": "F2_R204_TV",
    "center": [
-    196.576886,
-    -0.766763
+    196.591874,
+    -0.767361
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -5829,6 +6356,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R204_Smoke_0",
+   "center": [
+    200.409682,
+    0.231286
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R204_Smoke_1",
+   "center": [
+    198.611122,
+    0.303016
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -6042,6 +6609,86 @@
    "slot": "M_Laminate_Oak_Grey",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R204_Blind_0_L",
+   "center": [
+    199.789978,
+    -3.136675
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R204_Blind_0_M",
+   "center": [
+    199.205446,
+    -3.113363
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.49,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R204_Blind_0_R",
+   "center": [
+    198.620914,
+    -3.090051
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R204_CCTV",
+   "center": [
+    201.884808,
+    -2.429597
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.12,
+    0.088
+   ],
+   "z0": 12.4,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cctv_dome",
+   "evidence": "2026-10-01 reference classroom plan v6: CCTV dome at the back end of the window beam (2026-10-03 Q0-02)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -6787,21 +7434,21 @@
    "type": "box",
    "name": "F2_R208_TV",
    "center": [
-    180.168429,
-    13.398293
+    180.153441,
+    13.398891
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -6842,6 +7489,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R208_Smoke_0",
+   "center": [
+    176.335634,
+    12.400244
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R208_Smoke_1",
+   "center": [
+    178.134194,
+    12.328514
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -7991,21 +8678,21 @@
    "type": "box",
    "name": "F2_R207_TV",
    "center": [
-    186.163629,
-    13.159193
+    186.148641,
+    13.159791
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -8049,6 +8736,46 @@
   },
   {
    "type": "box",
+   "name": "F2_R207_Smoke_0",
+   "center": [
+    182.330834,
+    12.161144
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R207_Smoke_1",
+   "center": [
+    184.129394,
+    12.089414
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
    "name": "F2_R207_Radiator_0",
    "center": [
     182.124633,
@@ -8071,8 +8798,8 @@
    "type": "box",
    "name": "F2_R207_Radiator_1",
    "center": [
-    184.722552,
-    15.168205
+    184.582665,
+    15.173784
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8119,17 +8846,17 @@
      12.15
     ],
     [
-     183.427458,
-     15.316932,
+     183.357514,
+     15.319722,
      -2.2838545045845304,
-     0.75,
+     0.61,
      0.006,
      2.8,
      9.71
     ],
     [
-     184.726418,
-     15.265127,
+     184.58653,
+     15.270706,
      -2.2838545045845304,
      1.85,
      0.006,
@@ -8137,8 +8864,8 @@
      9.71
     ],
     [
-     184.726418,
-     15.265127,
+     184.58653,
+     15.270706,
      -2.2838545045845304,
      1.85,
      0.006,
@@ -8146,10 +8873,10 @@
      12.15
     ],
     [
-     185.962928,
-     15.215813,
+     185.892984,
+     15.218603,
      -2.2838545045845304,
-     0.625,
+     0.765,
      0.006,
      2.8,
      9.71
@@ -8220,8 +8947,8 @@
      10.75
     ],
     [
-     183.809659,
-     15.414779,
+     183.669771,
+     15.420358,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -8229,8 +8956,8 @@
      10.77
     ],
     [
-     185.652183,
-     15.341295,
+     185.512295,
+     15.346874,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -8238,8 +8965,8 @@
      10.77
     ],
     [
-     184.730921,
-     15.378037,
+     184.591033,
+     15.383616,
      -2.2838545045845304,
      1.838,
      0.22,
@@ -8247,8 +8974,8 @@
      12.144
     ],
     [
-     184.730124,
-     15.358053,
+     184.590236,
+     15.363632,
      -2.2838545045845304,
      1.85,
      0.26,
@@ -8828,21 +9555,21 @@
    "type": "box",
    "name": "F2_R206_TV",
    "center": [
-    191.171466,
-    14.260497
+    191.186454,
+    14.259899
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -8883,6 +9610,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R206_Smoke_0",
+   "center": [
+    194.912606,
+    12.960386
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R206_Smoke_1",
+   "center": [
+    193.114046,
+    13.032116
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -10092,21 +10859,21 @@
    "type": "box",
    "name": "F2_R205_TV",
    "center": [
-    197.166666,
-    14.021397
+    197.181654,
+    14.020799
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 10.76,
+   "z0": 10.54,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -10147,6 +10914,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R205_Smoke_0",
+   "center": [
+    200.907806,
+    12.721286
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R205_Smoke_1",
+   "center": [
+    199.109246,
+    12.793016
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 12.45,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -10360,6 +11167,86 @@
    "slot": "M_Laminate_Oak_Grey",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F2_R205_Blind_0_L",
+   "center": [
+    200.538302,
+    16.128698
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R205_Blind_0_M",
+   "center": [
+    199.95377,
+    16.15201
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.49,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R205_Blind_0_R",
+   "center": [
+    199.369238,
+    16.175322
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.58,
+    0.02,
+    1.28
+   ],
+   "z0": 10.81,
+   "material": "white",
+   "slot": "M_Fabric_Pleated_Cream",
+   "ue_asset": "pleated_blind",
+   "evidence": "2026-10-01 reference classroom plan v6: cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F2_R205_CCTV",
+   "center": [
+    202.590153,
+    15.256242
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.12,
+    0.088
+   ],
+   "z0": 12.4,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "cctv_dome",
+   "evidence": "2026-10-01 reference classroom plan v6: CCTV dome at the back end of the window beam (2026-10-03 Q0-02)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -22995,150 +23882,6 @@
   },
   {
    "type": "box",
-   "name": "F3_Accent_N1_L",
-   "center": [
-    178.270082,
-    8.960443
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 13.1,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_N1_R",
-   "center": [
-    179.878794,
-    8.896284
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 13.1,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_N1_T",
-   "center": [
-    179.074438,
-    8.928364
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.03,
-    0.02,
-    0.83
-   ],
-   "z0": 15.07,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_N5_L",
-   "center": [
-    197.096854,
-    9.510622
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 13.1,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_N5_R",
-   "center": [
-    198.705567,
-    9.446463
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 13.1,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_N5_T",
-   "center": [
-    197.901211,
-    9.478542
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.03,
-    0.02,
-    0.83
-   ],
-   "z0": 15.07,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_S1_L",
-   "center": [
-    178.039748,
-    3.185067
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 13.1,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_Accent_S1_R",
-   "center": [
-    179.64846,
-    3.120908
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 13.1,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F3_Accent_S1_T",
    "center": [
     178.844104,
@@ -23152,43 +23895,43 @@
    ],
    "z0": 15.07,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F3_Accent_S5_L",
+   "name": "F3_Accent_S2_T",
    "center": [
-    196.866522,
-    3.735245
+    184.839304,
+    2.913888
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.58,
+    1.03,
     0.02,
-    2.8
+    0.83
    ],
-   "z0": 13.1,
+   "z0": 15.07,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
    "confidence": "medium"
   },
   {
    "type": "box",
-   "name": "F3_Accent_S5_R",
+   "name": "F3_Accent_S4_T",
    "center": [
-    198.475234,
-    3.671087
+    191.675678,
+    3.942266
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.58,
+    1.03,
     0.02,
-    2.8
+    0.83
    ],
-   "z0": 13.1,
+   "z0": 15.07,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
    "confidence": "medium"
   },
   {
@@ -23206,8 +23949,287 @@
    ],
    "z0": 15.07,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N1_T",
+   "center": [
+    179.074438,
+    8.928364
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 15.07,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N2_T",
+   "center": [
+    185.069638,
+    8.689264
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 15.07,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N4_T",
+   "center": [
+    191.90601,
+    9.717642
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 15.07,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_N5_T",
+   "center": [
+    197.901211,
+    9.478542
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 15.07,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Accent_T_T",
+   "center": [
+    188.231589,
+    2.778597
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 15.07,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_S1",
+   "center": [
+    179.458413,
+    3.123484
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 301",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_S2",
+   "center": [
+    185.453613,
+    2.884384
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 302",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_S4",
+   "center": [
+    192.289986,
+    3.912763
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 303",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_S5",
+   "center": [
+    198.285186,
+    3.673663
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 304",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_N1",
+   "center": [
+    179.689145,
+    8.908852
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 308",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_N2",
+   "center": [
+    185.684345,
+    8.669752
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 307",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_N4",
+   "center": [
+    192.520718,
+    9.69813
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 306",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_N5",
+   "center": [
+    198.515918,
+    9.45903
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 305",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_RoomPlate_T",
+   "center": [
+    188.845897,
+    2.749093
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 14.62,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 309",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -23365,7 +24387,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 13.0,
+   "z": 13.01,
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "bench_box_upholstered",
    "evidence": "2026-10-01 reference classroom plan v6: hall bench: oak-orange wooden box base + black upholstered pad (video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)",
@@ -23383,11 +24405,203 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 13.0,
+   "z": 13.01,
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "bench_box_upholstered",
    "evidence": "2026-10-01 reference classroom plan v6: hall bench: oak-orange wooden box base + black upholstered pad (video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)",
    "confidence": "low"
+  },
+  {
+   "type": "boxes",
+   "name": "F3_Hall_Floor",
+   "items": [
+    [
+     182.726255,
+     5.890441,
+     -2.2838545045845304,
+     11.45,
+     5.8,
+     0.01,
+     13.0
+    ],
+    [
+     189.546718,
+     6.268941,
+     -2.2838545045845304,
+     2.15,
+     7.1,
+     0.01,
+     13.0
+    ],
+    [
+     195.19312,
+     6.694265,
+     -2.2838545045845304,
+     9.1,
+     5.8,
+     0.01,
+     13.0
+    ]
+   ],
+   "material": "white",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "ue_note": "tile module not measured (count tiles across the 5.8 m corridor)",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "boxes",
+   "name": "F3_Hall_Skirting",
+   "items": [
+    [
+     177.609933,
+     3.198206,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     181.841545,
+     3.029441,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     186.535287,
+     2.842246,
+     -2.2838545045845304,
+     2.365,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     177.840585,
+     8.981575,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     182.072197,
+     8.812811,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     186.201391,
+     8.64813,
+     -2.2838545045845304,
+     1.235,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     188.159823,
+     8.570024,
+     -2.2838545045845304,
+     0.805,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     189.405489,
+     2.727776,
+     -2.2838545045845304,
+     2.15,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     188.916064,
+     9.84089,
+     -2.2838545045845304,
+     0.605,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     190.459828,
+     9.779322,
+     -2.2838545045845304,
+     0.605,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     190.846182,
+     3.971345,
+     -2.2838545045845304,
+     0.63,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     194.673118,
+     3.818719,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     198.90473,
+     3.649955,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     191.076834,
+     9.754715,
+     -2.2838545045845304,
+     0.63,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     194.90377,
+     9.602089,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     13.01
+    ],
+    [
+     199.135382,
+     9.433324,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     13.01
+    ]
+   ],
+   "material": "white",
+   "slot": "M_Terrazzo_Grey",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)",
+   "confidence": "medium"
   },
   {
    "type": "box",
@@ -23818,21 +25032,21 @@
    "type": "box",
    "name": "F3_R301_TV",
    "center": [
-    179.578649,
-    -1.389867
+    179.563661,
+    -1.389269
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -23873,6 +25087,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R301_Smoke_0",
+   "center": [
+    175.837508,
+    -0.089756
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R301_Smoke_1",
+   "center": [
+    177.636069,
+    -0.161486
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -25022,21 +26276,21 @@
    "type": "box",
    "name": "F3_R302_TV",
    "center": [
-    185.573849,
-    -1.628967
+    185.558861,
+    -1.628369
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -25077,6 +26331,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R302_Smoke_0",
+   "center": [
+    181.832709,
+    -0.328856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R302_Smoke_1",
+   "center": [
+    183.631268,
+    -0.400586
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -26286,21 +27580,21 @@
    "type": "box",
    "name": "F3_R303_TV",
    "center": [
-    190.581686,
-    -0.527663
+    190.596674,
+    -0.528261
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -26341,6 +27635,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R303_Smoke_0",
+   "center": [
+    194.414482,
+    0.470386
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R303_Smoke_1",
+   "center": [
+    192.615922,
+    0.542116
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -27550,21 +28884,21 @@
    "type": "box",
    "name": "F3_R304_TV",
    "center": [
-    196.576886,
-    -0.766763
+    196.591874,
+    -0.767361
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -27605,6 +28939,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R304_Smoke_0",
+   "center": [
+    200.409682,
+    0.231286
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R304_Smoke_1",
+   "center": [
+    198.611122,
+    0.303016
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -28754,21 +30128,21 @@
    "type": "box",
    "name": "F3_R308_TV",
    "center": [
-    180.168429,
-    13.398293
+    180.153441,
+    13.398891
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -28809,6 +30183,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R308_Smoke_0",
+   "center": [
+    176.335634,
+    12.400244
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R308_Smoke_1",
+   "center": [
+    178.134194,
+    12.328514
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -29958,21 +31372,21 @@
    "type": "box",
    "name": "F3_R307_TV",
    "center": [
-    186.163629,
-    13.159193
+    186.148641,
+    13.159791
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -30016,6 +31430,46 @@
   },
   {
    "type": "box",
+   "name": "F3_R307_Smoke_0",
+   "center": [
+    182.330834,
+    12.161144
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R307_Smoke_1",
+   "center": [
+    184.129394,
+    12.089414
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
    "name": "F3_R307_Radiator_0",
    "center": [
     182.124633,
@@ -30038,8 +31492,8 @@
    "type": "box",
    "name": "F3_R307_Radiator_1",
    "center": [
-    184.722552,
-    15.168205
+    184.582665,
+    15.173784
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -30086,17 +31540,17 @@
      15.45
     ],
     [
-     183.427458,
-     15.316932,
+     183.357514,
+     15.319722,
      -2.2838545045845304,
-     0.75,
+     0.61,
      0.006,
      2.8,
      13.01
     ],
     [
-     184.726418,
-     15.265127,
+     184.58653,
+     15.270706,
      -2.2838545045845304,
      1.85,
      0.006,
@@ -30104,8 +31558,8 @@
      13.01
     ],
     [
-     184.726418,
-     15.265127,
+     184.58653,
+     15.270706,
      -2.2838545045845304,
      1.85,
      0.006,
@@ -30113,10 +31567,10 @@
      15.45
     ],
     [
-     185.962928,
-     15.215813,
+     185.892984,
+     15.218603,
      -2.2838545045845304,
-     0.625,
+     0.765,
      0.006,
      2.8,
      13.01
@@ -30187,8 +31641,8 @@
      14.05
     ],
     [
-     183.809659,
-     15.414779,
+     183.669771,
+     15.420358,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -30196,8 +31650,8 @@
      14.07
     ],
     [
-     185.652183,
-     15.341295,
+     185.512295,
+     15.346874,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -30205,8 +31659,8 @@
      14.07
     ],
     [
-     184.730921,
-     15.378037,
+     184.591033,
+     15.383616,
      -2.2838545045845304,
      1.838,
      0.22,
@@ -30214,8 +31668,8 @@
      15.444
     ],
     [
-     184.730124,
-     15.358053,
+     184.590236,
+     15.363632,
      -2.2838545045845304,
      1.85,
      0.26,
@@ -30844,21 +32298,21 @@
    "type": "box",
    "name": "F3_R306_TV",
    "center": [
-    191.171466,
-    14.260497
+    191.186454,
+    14.259899
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -30899,6 +32353,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R306_Smoke_0",
+   "center": [
+    194.912606,
+    12.960386
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R306_Smoke_1",
+   "center": [
+    193.114046,
+    13.032116
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -32108,21 +33602,21 @@
    "type": "box",
    "name": "F3_R305_TV",
    "center": [
-    197.166666,
-    14.021397
+    197.181654,
+    14.020799
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 14.06,
+   "z0": 13.84,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -32163,6 +33657,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_R305_Smoke_0",
+   "center": [
+    200.907806,
+    12.721286
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F3_R305_Smoke_1",
+   "center": [
+    199.109246,
+    12.793016
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 15.75,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -45001,150 +46535,6 @@
   },
   {
    "type": "box",
-   "name": "F4_Accent_N1_L",
-   "center": [
-    178.270082,
-    8.960443
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 16.4,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_N1_R",
-   "center": [
-    179.878794,
-    8.896284
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 16.4,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_N1_T",
-   "center": [
-    179.074438,
-    8.928364
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.03,
-    0.02,
-    0.83
-   ],
-   "z0": 18.37,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_N5_L",
-   "center": [
-    197.096854,
-    9.510622
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 16.4,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_N5_R",
-   "center": [
-    198.705567,
-    9.446463
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 16.4,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_N5_T",
-   "center": [
-    197.901211,
-    9.478542
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.03,
-    0.02,
-    0.83
-   ],
-   "z0": 18.37,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_S1_L",
-   "center": [
-    178.039748,
-    3.185067
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 16.4,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_Accent_S1_R",
-   "center": [
-    179.64846,
-    3.120908
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.58,
-    0.02,
-    2.8
-   ],
-   "z0": 16.4,
-   "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_Accent_S1_T",
    "center": [
     178.844104,
@@ -45158,44 +46548,44 @@
    ],
    "z0": 18.37,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
   },
   {
    "type": "box",
-   "name": "F4_Accent_S5_L",
+   "name": "F4_Accent_S2_T",
    "center": [
-    196.866522,
-    3.735245
+    184.839304,
+    2.913888
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.58,
+    1.03,
     0.02,
-    2.8
+    0.83
    ],
-   "z0": 16.4,
+   "z0": 18.37,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
   },
   {
    "type": "box",
-   "name": "F4_Accent_S5_R",
+   "name": "F4_Accent_S4_T",
    "center": [
-    198.475234,
-    3.671087
+    191.675678,
+    3.942266
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.58,
+    1.03,
     0.02,
-    2.8
+    0.83
    ],
-   "z0": 16.4,
+   "z0": 18.37,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -45212,8 +46602,287 @@
    ],
    "z0": 18.37,
    "material": "accent",
-   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue paint round the end-room door (hall photos 135/138)",
-   "confidence": "medium"
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N1_T",
+   "center": [
+    179.074438,
+    8.928364
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 18.37,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N2_T",
+   "center": [
+    185.069638,
+    8.689264
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 18.37,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N4_T",
+   "center": [
+    191.90601,
+    9.717642
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 18.37,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_N5_T",
+   "center": [
+    197.901211,
+    9.478542
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 18.37,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_Accent_T_T",
+   "center": [
+    188.231589,
+    2.778597
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    1.03,
+    0.02,
+    0.83
+   ],
+   "z0": 18.37,
+   "material": "accent",
+   "evidence": "2026-10-01 reference classroom plan v6: periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 B026-B040)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_S1",
+   "center": [
+    179.458413,
+    3.123484
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 401",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_S2",
+   "center": [
+    185.453613,
+    2.884384
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 402",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_S4",
+   "center": [
+    192.289986,
+    3.912763
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 403",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_S5",
+   "center": [
+    198.285186,
+    3.673663
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 404",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_N1",
+   "center": [
+    179.689145,
+    8.908852
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 408",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_N2",
+   "center": [
+    185.684345,
+    8.669752
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 407",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_N4",
+   "center": [
+    192.520718,
+    9.69813
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 406",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_N5",
+   "center": [
+    198.515918,
+    9.45903
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 405",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_RoomPlate_T",
+   "center": [
+    188.845897,
+    2.749093
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.12,
+    0.01,
+    0.16
+   ],
+   "z0": 17.92,
+   "material": "metal",
+   "slot": "M_Plastic_Black",
+   "ue_asset": "room_plate",
+   "content": "KOCH 409",
+   "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -45371,7 +47040,7 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 16.3,
+   "z": 16.31,
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "bench_box_upholstered",
    "evidence": "2026-10-01 reference classroom plan v6: hall bench: oak-orange wooden box base + black upholstered pad (video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)",
@@ -45389,11 +47058,203 @@
    "depth": 0.4,
    "seat_h": 0.45,
    "back": false,
-   "z": 16.3,
+   "z": 16.31,
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "bench_box_upholstered",
    "evidence": "2026-10-01 reference classroom plan v6: hall bench: oak-orange wooden box base + black upholstered pad (video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)",
    "confidence": "low"
+  },
+  {
+   "type": "boxes",
+   "name": "F4_Hall_Floor",
+   "items": [
+    [
+     182.926095,
+     5.882471,
+     -2.2838545045845304,
+     11.05,
+     5.8,
+     0.01,
+     16.3
+    ],
+    [
+     189.546718,
+     6.268941,
+     -2.2838545045845304,
+     2.15,
+     7.1,
+     0.01,
+     16.3
+    ],
+    [
+     195.19312,
+     6.694265,
+     -2.2838545045845304,
+     9.1,
+     5.8,
+     0.01,
+     16.3
+    ]
+   ],
+   "material": "white",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "ue_note": "tile module not measured (count tiles across the 5.8 m corridor)",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)",
+   "confidence": "medium"
+  },
+  {
+   "type": "boxes",
+   "name": "F4_Hall_Skirting",
+   "items": [
+    [
+     177.809773,
+     3.190236,
+     -2.2838545045845304,
+     1.04,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     181.841545,
+     3.029441,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     186.535287,
+     2.842246,
+     -2.2838545045845304,
+     2.365,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     178.040425,
+     8.973605,
+     -2.2838545045845304,
+     1.04,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     182.072197,
+     8.812811,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     186.201391,
+     8.64813,
+     -2.2838545045845304,
+     1.235,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     188.159823,
+     8.570024,
+     -2.2838545045845304,
+     0.805,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     189.405489,
+     2.727776,
+     -2.2838545045845304,
+     2.15,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     188.916064,
+     9.84089,
+     -2.2838545045845304,
+     0.605,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     190.459828,
+     9.779322,
+     -2.2838545045845304,
+     0.605,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     190.846182,
+     3.971345,
+     -2.2838545045845304,
+     0.63,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     194.673118,
+     3.818719,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     198.90473,
+     3.649955,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     191.076834,
+     9.754715,
+     -2.2838545045845304,
+     0.63,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     194.90377,
+     9.602089,
+     -2.2838545045845304,
+     4.97,
+     0.012,
+     0.08,
+     16.31
+    ],
+    [
+     199.135382,
+     9.433324,
+     -2.2838545045845304,
+     1.44,
+     0.012,
+     0.08,
+     16.31
+    ]
+   ],
+   "material": "white",
+   "slot": "M_Terrazzo_Grey",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)",
+   "confidence": "medium"
   },
   {
    "type": "box",
@@ -45824,21 +47685,21 @@
    "type": "box",
    "name": "F4_R401_TV",
    "center": [
-    179.578649,
-    -1.389867
+    179.563661,
+    -1.389269
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -45879,6 +47740,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R401_Smoke_0",
+   "center": [
+    175.837508,
+    -0.089756
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R401_Smoke_1",
+   "center": [
+    177.636069,
+    -0.161486
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -47028,21 +48929,21 @@
    "type": "box",
    "name": "F4_R402_TV",
    "center": [
-    185.573849,
-    -1.628967
+    185.558861,
+    -1.628369
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -47083,6 +48984,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R402_Smoke_0",
+   "center": [
+    181.832709,
+    -0.328856
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R402_Smoke_1",
+   "center": [
+    183.631268,
+    -0.400586
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -48292,21 +50233,21 @@
    "type": "box",
    "name": "F4_R403_TV",
    "center": [
-    190.581686,
-    -0.527663
+    190.596674,
+    -0.528261
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -48347,6 +50288,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R403_Smoke_0",
+   "center": [
+    194.414482,
+    0.470386
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R403_Smoke_1",
+   "center": [
+    192.615922,
+    0.542116
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -49556,21 +51537,21 @@
    "type": "box",
    "name": "F4_R404_TV",
    "center": [
-    196.576886,
-    -0.766763
+    196.591874,
+    -0.767361
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -49611,6 +51592,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R404_Smoke_0",
+   "center": [
+    200.409682,
+    0.231286
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R404_Smoke_1",
+   "center": [
+    198.611122,
+    0.303016
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -50760,21 +52781,21 @@
    "type": "box",
    "name": "F4_R408_TV",
    "center": [
-    180.168429,
-    13.398293
+    180.153441,
+    13.398891
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -50815,6 +52836,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R408_Smoke_0",
+   "center": [
+    176.335634,
+    12.400244
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R408_Smoke_1",
+   "center": [
+    178.134194,
+    12.328514
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -51626,21 +53687,21 @@
    "type": "box",
    "name": "F4_R407_TV",
    "center": [
-    186.163629,
-    13.159193
+    186.148641,
+    13.159791
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -51684,6 +53745,46 @@
   },
   {
    "type": "box",
+   "name": "F4_R407_Smoke_0",
+   "center": [
+    182.330834,
+    12.161144
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R407_Smoke_1",
+   "center": [
+    184.129394,
+    12.089414
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
    "name": "F4_R407_Radiator_0",
    "center": [
     182.124633,
@@ -51706,8 +53807,8 @@
    "type": "box",
    "name": "F4_R407_Radiator_1",
    "center": [
-    184.722552,
-    15.168205
+    184.582665,
+    15.173784
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -51754,17 +53855,17 @@
      18.75
     ],
     [
-     183.427458,
-     15.316932,
+     183.357514,
+     15.319722,
      -2.2838545045845304,
-     0.75,
+     0.61,
      0.006,
      2.8,
      16.31
     ],
     [
-     184.726418,
-     15.265127,
+     184.58653,
+     15.270706,
      -2.2838545045845304,
      1.85,
      0.006,
@@ -51772,8 +53873,8 @@
      16.31
     ],
     [
-     184.726418,
-     15.265127,
+     184.58653,
+     15.270706,
      -2.2838545045845304,
      1.85,
      0.006,
@@ -51781,10 +53882,10 @@
      18.75
     ],
     [
-     185.962928,
-     15.215813,
+     185.892984,
+     15.218603,
      -2.2838545045845304,
-     0.625,
+     0.765,
      0.006,
      2.8,
      16.31
@@ -51855,8 +53956,8 @@
      17.35
     ],
     [
-     183.809659,
-     15.414779,
+     183.669771,
+     15.420358,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -51864,8 +53965,8 @@
      17.37
     ],
     [
-     185.652183,
-     15.341295,
+     185.512295,
+     15.346874,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -51873,8 +53974,8 @@
      17.37
     ],
     [
-     184.730921,
-     15.378037,
+     184.591033,
+     15.383616,
      -2.2838545045845304,
      1.838,
      0.22,
@@ -51882,8 +53983,8 @@
      18.744
     ],
     [
-     184.730124,
-     15.358053,
+     184.590236,
+     15.363632,
      -2.2838545045845304,
      1.85,
      0.26,
@@ -52425,8 +54526,8 @@
    "type": "box",
    "name": "F4_R407_Curtain_1L",
    "center": [
-    183.747137,
-    15.177083
+    183.607249,
+    15.182662
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -52445,8 +54546,8 @@
    "type": "box",
    "name": "F4_R407_Curtain_1R",
    "center": [
-    185.695577,
-    15.099375
+    185.555689,
+    15.104954
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -52890,21 +54991,21 @@
    "type": "box",
    "name": "F4_R406_TV",
    "center": [
-    191.171466,
-    14.260497
+    191.186454,
+    14.259899
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -52945,6 +55046,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R406_Smoke_0",
+   "center": [
+    194.912606,
+    12.960386
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R406_Smoke_1",
+   "center": [
+    193.114046,
+    13.032116
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -54154,21 +56295,21 @@
    "type": "box",
    "name": "F4_R405_TV",
    "center": [
-    197.166666,
-    14.021397
+    197.181654,
+    14.020799
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.05,
-    1.57,
-    0.87
+    0.08,
+    1.96,
+    1.15
    ],
-   "z0": 17.36,
+   "z0": 17.14,
    "material": "metal",
    "slot": "M_Plastic_Black",
-   "ue_asset": "tv_70in",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
+   "ue_asset": "interactive_panel_86",
+   "evidence": "2026-10-01 reference classroom plan v6: ~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: scaled on a 1.20 m whiteboard)",
+   "confidence": "low"
   },
   {
    "type": "box",
@@ -54209,6 +56350,46 @@
    "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F4_R405_Smoke_0",
+   "center": [
+    200.907806,
+    12.721286
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
+   "name": "F4_R405_Smoke_1",
+   "center": [
+    199.109246,
+    12.793016
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.1,
+    0.1,
+    0.038
+   ],
+   "z0": 19.05,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "smoke_detector",
+   "evidence": "2026-10-01 reference classroom plan v6: 2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms assumed)",
+   "confidence": "low"
   },
   {
    "type": "box",
