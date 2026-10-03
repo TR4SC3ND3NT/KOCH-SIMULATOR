@@ -222,6 +222,39 @@
     115.192,
     72.124
    ]
+  },
+  {
+   "name": "LowerYard_WBed",
+   "ring": [
+    [
+     159.3,
+     68.75
+    ],
+    [
+     161.67,
+     68.66
+    ],
+    [
+     161.76,
+     72.56
+    ],
+    [
+     159.39,
+     72.65
+    ]
+   ],
+   "z": 3.4,
+   "blend": 0.0,
+   "grad": [
+    0.0,
+    -0.17
+   ],
+   "ref": [
+    160.5,
+    68.7
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): raised lawn bed (birch, roses) W of the stair at walkway level, falling N with the cheek top"
   }
  ],
  "elements": [
@@ -3941,18 +3974,18 @@
    "type": "stairs_run",
    "name": "LowerYard_Stair",
    "top": [
-    162.681,
-    70.27
+    163.95,
+    70.22
    ],
    "dir_deg": 87.8,
-   "width": 6.429999999999996,
-   "risers": 7,
-   "riser_h": 0.1607,
-   "tread": 0.75,
+   "width": 4.0,
+   "risers": 5,
+   "riser_h": 0.225,
+   "tread": 0.45,
    "z_top": 3.45,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure)",
    "confidence": "low"
   },
   {
@@ -4024,23 +4057,70 @@
    ]
   },
   {
-   "type": "box",
+   "type": "roof_plane",
    "name": "LowerYard_Stair_CheekE",
-   "center": [
-    166.272,
-    74.54
+   "ring": [
+    [
+     165.95,
+     70.1
+    ],
+    [
+     166.35,
+     70.085
+    ],
+    [
+     166.44,
+     72.55
+    ],
+    [
+     166.04,
+     72.565
+    ]
    ],
-   "dir_deg": -2.2,
-   "size": [
-    0.3999999999999986,
-    1.1999999999999993,
-    1.475
+   "z": [
+    3.45,
+    3.45,
+    2.73,
+    2.73
    ],
-   "z0": 2.025,
+   "thk": 1.6,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
-   "confidence": "low"
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): E cheek: low concrete wall with a sloped top, N end ~0.4 above the yard (was a 1.475 m box)"
+  },
+  {
+   "type": "roof_plane",
+   "name": "LowerYard_Stair_CheekW",
+   "ring": [
+    [
+     161.675,
+     70.18
+    ],
+    [
+     161.925,
+     70.17
+    ],
+    [
+     162.01,
+     72.55
+    ],
+    [
+     161.76,
+     72.56
+    ]
+   ],
+   "z": [
+    3.45,
+    3.45,
+    2.75,
+    2.75
+   ],
+   "thk": 1.6,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair"
   },
   {
    "type": "box",
@@ -11432,6 +11512,31 @@
    "slot": "M_Tile_Brick_Red",
    "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
    "confidence": "low"
+  }
+ ],
+ "ground_surfaces": [
+  {
+   "name": "LowerYard_WBed_Lawn",
+   "ring": [
+    [
+     159.3,
+     68.75
+    ],
+    [
+     161.67,
+     68.66
+    ],
+    [
+     161.76,
+     72.56
+    ],
+    [
+     159.39,
+     72.65
+    ]
+   ],
+   "slot": "M_Ground_Grass",
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): lawn bed"
   }
  ]
 }

@@ -681,7 +681,7 @@
    "u1": 47.28,
    "w0": 0.4,
    "depth": 1.2,
-   "z_back": 0.92,
+   "z_back": 0.75,
    "z_front": 0.32,
    "skirt_gap": 0.08,
    "post_pitch": 2.0,
@@ -701,7 +701,7 @@
     }
    ],
    "confidence": "low",
-   "evidence": "owner 2026-10-03 msg 62: the red run along B's north side is gas pipes hidden under a special roof, not flush with the wall. A204/A205 (NE end, open/damaged): maroon corrugated roof on a timber frame falling away from the wall with a raised maroon back edge, boards over the ~0.4 m gap to the wall, foil-insulated pipe (~0.25 m) + yellow gas pipe inside, maroon corrugated front skirt on short posts. A183 (walk, pitch 5.9 deg from the window verticals, B wall at 8.2 m): roof meets the wall line just under the ground-window sill (FFL+0.9..1.0), front top ~FFL+0.6, front face ~1.2 m off the wall, ~0.1 m gap under the skirt; video 250 f0044-0050 + A171-A189: the cover runs the whole north face. Sizes +-0.2 m, pipe positions by eye | 2026-10-03 photo pass (A181-A184): skirt 0.6-0.7 m high -> front top FFL+0.32 (roof falls ~37 deg from the back edge)"
+   "evidence": "owner 2026-10-03 msg 62: the red run along B's north side is gas pipes hidden under a special roof, not flush with the wall. A204/A205 (NE end, open/damaged): maroon corrugated roof on a timber frame falling away from the wall with a raised maroon back edge, boards over the ~0.4 m gap to the wall, foil-insulated pipe (~0.25 m) + yellow gas pipe inside, maroon corrugated front skirt on short posts. A183 (walk, pitch 5.9 deg from the window verticals, B wall at 8.2 m): roof meets the wall line just under the ground-window sill (FFL+0.9..1.0), front top ~FFL+0.6, front face ~1.2 m off the wall, ~0.1 m gap under the skirt; video 250 f0044-0050 + A171-A189: the cover runs the whole north face. Sizes +-0.2 m, pipe positions by eye | 2026-10-03 photo pass (A181-A184): skirt 0.6-0.7 m high -> front top FFL+0.32 (roof falls ~37 deg from the back edge) | 2026-10-03 video pass V0-03 (250 t14-18): the cover meets the wall just under the ground-window frame (sill FFL+0.82): back edge FFL+0.75"
   },
   {
    "type": "wall_sign",

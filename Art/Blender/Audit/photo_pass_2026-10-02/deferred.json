@@ -1,0 +1,80 @@
+{
+ "updated": "2026-10-03",
+ "items": [
+  {
+   "id": "R1-13/R3-06/V2-02",
+   "what": "alley-to-lower-level drop: both stairs measure ~1.0 m (6-7 risers 0.145-0.166) vs the model 1.22 (alley 6.57 / lower 5.35); needs one coordinated level solve over all stairs and pads",
+   "status": "open"
+  },
+  {
+   "id": "V3-04/V3-05",
+   "what": "C west stair continues above F3 and its dog-leg is rotated 180 deg (video) vs the owner note 'west stair serves F1-F3' and the F4 teachers' room over the bay",
+   "status": "disputed, not applied"
+  },
+  {
+   "id": "V3-09",
+   "what": "C basement piano room wider with a N-wall door + windows; needs the basement plan",
+   "status": "open"
+  },
+  {
+   "id": "V1-03",
+   "what": "HallEast E face: recessed pink entrance bay N of y 8.8, door N jamb y ~10.3 (porch moved to the wing's E side per R1-01; the recess itself is not modelled)",
+   "status": "partly applied"
+  },
+  {
+   "id": "V1-08",
+   "what": "canteen height: shadow audit 3.27 vs video 3.6-5.0 above the paving; pre-10-02 values restored",
+   "status": "disputed, applied middle option"
+  },
+  {
+   "id": "V3-08",
+   "what": "basement upper flight 9 risers: option (a) applied (riser 0.1227, tread 0.32) vs (b) riser 0.138 + top 5.488",
+   "status": "disputed, applied (a)"
+  },
+  {
+   "id": "V3-02",
+   "what": "orange diagonal stripe on the lab board wall: needs a box rotated about the wall normal (builder)",
+   "status": "open"
+  },
+  {
+   "id": "V3-11",
+   "what": "clover paving grey + pink-red mix in the hall-wing yard: needs a separate ground polygon",
+   "status": "open"
+  },
+  {
+   "id": "R2-02/R3-05",
+   "what": "G2_SE arch: clear height 2.0 (A147) vs 1.49 (other agent)",
+   "status": "disputed, unchanged (1.8)"
+  },
+  {
+   "id": "R2-03",
+   "what": "pergola walk W end: 4-riser tile stair, red tile wall, block wall, yellow gas pipe; plan positions inconsistent",
+   "status": "open"
+  },
+  {
+   "id": "R0-02",
+   "what": "HallEast E1 window position (order of items on the E face)",
+   "status": "open"
+  },
+  {
+   "id": "R0-08",
+   "what": "padlocked white door in the courts W fence (owner removed it 09-28)",
+   "status": "not applied (owner)"
+  },
+  {
+   "id": "R1-04/R1-05/R1-09/R1-12/R3-12",
+   "what": "wing W base box, hall N doors, hall S upper windows, centre-lamp pedestal, B porch piers: positions/sizes unsure",
+   "status": "open"
+  },
+  {
+   "id": "P0-03/P0-04/P0-06",
+   "what": "HallBed_BoxW block enclosure, boiler chimney, overhead pipe bridge",
+   "status": "open"
+  },
+  {
+   "id": "V2-09",
+   "what": "window + downpipe on the S wall W of the HallEast block",
+   "status": "open"
+  }
+ ]
+}

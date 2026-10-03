@@ -341,6 +341,122 @@
    "slot": "M_Tile_Brick_Red"
   },
   {
+   "type": "planter",
+   "name": "PlanterAN_W0",
+   "ring": [
+    [
+     172.07,
+     -17.699
+    ],
+    [
+     170.872,
+     -17.64
+    ],
+    [
+     170.93,
+     -16.442
+    ],
+    [
+     172.129,
+     -16.5
+    ]
+   ],
+   "curb_h": 0.08,
+   "curb_w": 0.08,
+   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
+  },
+  {
+   "type": "tree",
+   "name": "ShrubAN_W0",
+   "pos": [
+    171.5,
+    -17.07
+   ],
+   "height": 0.8,
+   "crown_d": 0.6,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V1-06: young shrub in the pit"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_W0",
+   "pos": [
+    172.443,
+    -18.268
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit",
+   "confidence": "medium",
+   "ue_asset": "bench_wrought_iron"
+  },
+  {
+   "type": "planter",
+   "name": "PlanterAN_W1",
+   "ring": [
+    [
+     169.14,
+     -17.559
+    ],
+    [
+     167.942,
+     -17.5
+    ],
+    [
+     168.0,
+     -16.302
+    ],
+    [
+     169.199,
+     -16.36
+    ]
+   ],
+   "curb_h": 0.08,
+   "curb_w": 0.08,
+   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
+  },
+  {
+   "type": "tree",
+   "name": "ShrubAN_W1",
+   "pos": [
+    168.57,
+    -16.93
+   ],
+   "height": 0.8,
+   "crown_d": 0.6,
+   "trunk_d": 0.04,
+   "crown_base": 0.1,
+   "shape": "round",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V1-06: young shrub in the pit"
+  },
+  {
+   "type": "bench",
+   "name": "BenchAN_W1",
+   "pos": [
+    169.513,
+    -18.128
+   ],
+   "dir_deg": 87.2,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit",
+   "confidence": "medium",
+   "ue_asset": "bench_wrought_iron"
+  },
+  {
    "type": "tree",
    "name": "TreeAN_1",
    "pos": [

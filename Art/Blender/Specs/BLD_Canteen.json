@@ -22,9 +22,9 @@
  },
  "plinth_m": 0.35,
  "wall_thk": 0.3,
- "storey_m": 2.9,
+ "storey_m": 4.3,
  "storeys": 1,
- "eave_z": 2.9,
+ "eave_z": 4.3,
  "ring": [
   [
    0,
@@ -44,76 +44,26 @@
   ]
  ],
  "plinth": {
-  "z_top": 0.45,
+  "z_top": 0.53,
   "proj": 0.03,
   "evidence": "red brick-tile plinth, 6 courses of ~0.15 m = 0.88 m above the paving at the W gable (070410255 t=46 s full-res: plinth 73 px vs wall 393 px); FFL = 0.35 above the paving (steps at the porch) | 2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): 8 courses of 0.10 m (A071)",
   "confidence": "medium"
  },
  "cornice": {
-  "z0": 2.7,
-  "z1": 2.9,
+  "z0": 4.1,
+  "z1": 4.3,
   "proj": 0.05,
   "evidence": "white fascia/soffit trim under the eaves (070410255 t=46 s)",
   "confidence": "low"
  },
- "window_types": {
-  "S1": {
-   "w": 1.2,
-   "h": 1.4,
-   "mullions": [
-    0.5
-   ],
-   "transoms": [],
-   "reveal": 0.1,
-   "surround": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "surround_proj": 0.0
-  },
-  "S2": {
-   "w": 0.6,
-   "h": 0.9,
-   "mullions": [],
-   "transoms": [],
-   "reveal": 0.1,
-   "surround": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "surround_proj": 0.0
-  }
- },
+ "window_types": {},
  "rows": {},
  "facades": [
   {
    "edge": 0,
    "name": "south",
-   "windows": [
-    {
-     "type": "S1",
-     "u": [
-      4.0
-     ],
-     "sills": [
-      0.9
-     ]
-    },
-    {
-     "type": "S2",
-     "u": [
-      15.0
-     ],
-     "sills": [
-      1.3
-     ]
-    }
-   ],
-   "evidence": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): S wall: rough-cast beige render, 2 windows and a downpipe (A071, A075; u +-1.5 / +-3)",
+   "windows": [],
+   "evidence": "2026-10-03 photo+video pass V1-02: no S1/S2 windows and no porch/downpipe on the canteen (those were the hall wing / HallEast in A070-A077); maybe one narrow slit ~0.25 x 0.8 near the W end (unsure, not modelled); S wall = beige horizontal siding like the gables",
    "confidence": "medium"
   },
   {
@@ -140,7 +90,7 @@
  ],
  "roof": {
   "type": "gable",
-  "pitch": 12,
+  "pitch": 15,
   "overhang": 0.4,
   "gable_edges": [
    1,
@@ -166,38 +116,6 @@
    },
    "evidence": "dark glazed porch with its own low roof at the NW end of the west gable, steps + a ramp with a handrail (070410255 t=46 s); size and position estimated",
    "confidence": "low"
-  },
-  {
-   "type": "downpipe",
-   "edge": 0,
-   "u": [
-    2.5
-   ],
-   "z0": -0.3,
-   "z1": 2.8,
-   "d": 0.1,
-   "evidence": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): downpipe on the S wall (A071, A075)",
-   "confidence": "low"
-  },
-  {
-   "type": "post_canopy",
-   "edge": 3,
-   "u0": 5.6,
-   "u1": 9.1,
-   "depth": 3.0,
-   "z0": 2.6,
-   "z1": 2.8,
-   "fascia_h": 0.2,
-   "posts_u": [
-    8.95
-   ],
-   "post_w": 0.15,
-   "post_in": 0.15,
-   "slot": "M_Paint_White",
-   "soffit_slot": "M_Wood_Stained",
-   "post_slot": "M_Paint_Maroon",
-   "evidence": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): open porch at the S end of the W gable under the extended roof, one maroon round post, timber soffit, red notice board, bench (A071, A072, A075); flat-canopy approximation",
-   "confidence": "medium"
   }
  ],
  "slots": {
@@ -208,8 +126,8 @@
    "edge": 1,
    "u0": 0.05,
    "u1": 9.05,
-   "z0": 1.95,
-   "z1": 2.25,
+   "z0": 2.95,
+   "z1": 3.4,
    "proj": 0.02,
    "slot": "M_Paint_Brown",
    "evidence": "brown horizontal band across the W/E ends ~2.6-3.05 m above the plinth top (070410255 t65.5: plinth 0.88 m = 40 px, band 110-150 px above it); light ribbed siding above and below; the gable triangle is dark-brown siding (not modelled as its own part yet)",
@@ -219,13 +137,13 @@
    "edge": 3,
    "u0": 0.05,
    "u1": 9.05,
-   "z0": 1.95,
-   "z1": 2.25,
+   "z0": 2.95,
+   "z1": 3.4,
    "proj": 0.02,
    "slot": "M_Paint_Brown",
    "evidence": "brown horizontal band across the W/E ends ~2.6-3.05 m above the plinth top (070410255 t65.5: plinth 0.88 m = 40 px, band 110-150 px above it); light ribbed siding above and below; the gable triangle is dark-brown siding (not modelled as its own part yet)",
    "confidence": "medium"
   }
  ],
- "height_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): wall top ~3.4 m above the S paving (A071: 34 courses of 0.10 m), eave 3.27 +-0.23 above the N paving (shadows); old 4.3 was scaled on a 0.15 m course"
+ "height_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): wall top ~3.4 m above the S paving (A071: 34 courses of 0.10 m), eave 3.27 +-0.23 above the N paving (shadows); old 4.3 was scaled on a 0.15 m course | 2026-10-03 photo+video pass DISPUTED: shadow audit 10-02 (calibrated on C) gave wall top 3.27 +-0.23 above the N paving; video 070410255 t46 gave eave 4.75 / apex 6.25 and the 10-03 video pass V1-08 gives wall top 3.6-5.0 with the 10-02 lowering based on photos of another building (R1-01/V1-02/V3-10). Taken: the pre-10-02 values (eave 4.3, plinth 0.53), pitch 15 (V1-08: 12.5-16)"
 }

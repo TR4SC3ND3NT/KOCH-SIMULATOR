@@ -10,8 +10,8 @@ import os
 
 SPEC = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs", "SITE_Garden.json")
 FIRST_ARCH = 2.25      # m west of the walk's east end (diamond-tile start)
-PITCH = 3.1            # m between arches: 2026-10-02 tile-row metrology A152/A172/A190 (2.95-3.2 m), 17 arches
-BENCH_OFF, BIN_OFF = 0.70, 0.82   # m from the pergola centre line toward the boulder wall (kept from the 2026-09-28 layout)
+PITCH = 2.75           # m between arches: video 250 slab-row calibration (2026-10-03 V0-01); was 3.1 (A152/A172/A190)
+BENCH_OFF, BIN_OFF = 1.01, 1.04   # m from the pergola centre line toward the boulder wall: backs 5 cm off the wall face (2026-10-03)
 EV = ("owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch "
       "3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay")
 
@@ -43,7 +43,7 @@ def main():
                for i, k in enumerate(bays)]
     # bins: one just west of the first arch; the others in the nearest bench-free bay to where they stood
     btm = dict(by["Bin_Pergola_125"])
-    old_bins = [e for e in E if e["name"].startswith("Bin_Pergola_")]
+    old_bins = [e for e in E if e["name"].startswith("Bin_Pergola_") and e["name"] != "Bin_Pergola_East"]   # East is re-made below
     free = [k for k in range(n) if k not in bays]
     bins = [dict(btm, name="Bin_Pergola_East", pos=at(0.8, BIN_OFF), evidence=EV + ": bin just west of the first arch (t7.0)")]
     for b in old_bins:
@@ -51,7 +51,7 @@ def main():
         k = min((k for k in free if k > 0), key=lambda k: abs((k + 0.5) * pitch - s_old))
         free.remove(k)
         bins.append(dict(b, pos=at((k + 0.5) * pitch, BIN_OFF), evidence=b.get("evidence", "").split(" | owner clip")[0] + " | " + EV))
-    drop = {e["name"] for e in old_b + old_bins}
+    drop = {e["name"] for e in old_b + old_bins} | {"Bin_Pergola_East"}
     i = next(k for k, e in enumerate(E) if e["name"] in drop)
     E = [e for e in E if e["name"] not in drop]
     E[i:i] = benches + bins

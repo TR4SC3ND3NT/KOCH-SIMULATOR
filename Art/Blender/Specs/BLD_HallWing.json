@@ -68,6 +68,56 @@
     0
    ],
    "surround_proj": 0.0
+  },
+  "WN1": {
+   "w": 0.94,
+   "h": 1.31,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-03 photo+video pass R1-01 (A071, 1.0 m kerb scale): N-face window near the E end",
+   "confidence": "medium"
+  },
+  "WN2": {
+   "w": 1.2,
+   "h": 1.3,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-03 photo+video pass R1-01: second N-face window further W",
+   "confidence": "low"
+  },
+  "WSL": {
+   "w": 0.36,
+   "h": 0.9,
+   "mullions": [],
+   "transoms": [],
+   "reveal": 0.1,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-03 photo+video pass V1-03: one slit window in the white rendered E wall, sill ~1.9 above the paving",
+   "confidence": "low"
   }
  },
  "rows": {
@@ -79,18 +129,16 @@
    "name": "east",
    "windows": [
     {
-     "type": "W",
+     "type": "WSL",
      "u": [
-      2.5,
-      5.0,
-      7.5
+      3.55
      ],
-     "rows": [
-      "G"
+     "sills": [
+      1.6
      ]
     }
    ],
-   "evidence": "gable-end building with a lean-to annex, windows (070410255 a_030-a_034)",
+   "evidence": "2026-10-03 photo+video pass V1-03: white rough-render E face with ONE slit window (the 3 x 1.2 x 1.3 windows were not seen); 2-leaf glazed door with a blue plate at its S end in the recessed pink bay (HallEast ED)",
    "confidence": "low"
   }
  ],
@@ -101,6 +149,45 @@
   "evidence": "red hipped roof at the hall NE end in Bing 2021 / Esri 2020 / Google z20 (x 135-153, y 12-22)",
   "confidence": "medium"
  },
- "attachments": [],
+ "attachments": [
+  {
+   "type": "post_canopy",
+   "name": "EastPorch",
+   "edge": 1,
+   "u0": 0.0,
+   "u1": 10.04,
+   "depth": 1.5,
+   "z0": 2.6,
+   "z1": 2.9,
+   "fascia_h": 0.2,
+   "posts_u": [
+    9.9
+   ],
+   "post_w": 0.12,
+   "post_in": 0.1,
+   "slot": "M_Paint_White",
+   "soffit_slot": "M_Wood_Stained",
+   "post_slot": "M_Paint_Maroon",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo+video pass R1-01 (A070-A076: 4 cues incl. the HallEast door bearing and Google: no porch roof at the canteen) + V1-03 + V3-10 (video f2): the timber-soffit lean-to on one maroon round post belongs to the hall wing's E side, post at the outer NE corner (~153.8, 20.5), soffit 2.9 +-0.3 above the paving, depth 1.0-2.0 (1.5 taken), running from the recessed door bay to the corner. DISPUTED: V1-03 put the outer corner at y ~15.0 from distances along the face; the wing outline (OSM/Bing/Google roof to y 21-22) wins"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Vent_N",
+   "kind": "vent",
+   "edge": 2,
+   "items": [
+    [
+     7.3,
+     3.1,
+     0.25,
+     0.25,
+     0.05
+    ]
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-03 photo+video pass R1-01: round vent d 0.25 on the N face at u 7.3, ~3.4 above the paving"
+  }
+ ],
  "storey_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): eave ~4.26 +-0.38 m above the N plaza (3 sources); one window row; the porch / low-wall photos belong to the canteen"
 }

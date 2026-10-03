@@ -335,7 +335,9 @@ def plan(k, zb, lobby, west_stair):
     for n, x in enumerate(((P1 + P2) / 2, (P3 + P4) / 2)):
         yy = hall(x)[1] - 0.25
         els.append({"type": "bench", "name": f"{P}Hall_Bench_N{n}", "pos": c_to_w(x, yy), "dir_deg": NORTH + 180,
-                    "length": 1.8, "depth": 0.40, "seat_h": 0.45, "back": False, "z": z(zb), **ev("hall bench, 1.8 m", "low")})
+                    "length": 1.8, "depth": 0.40, "seat_h": 0.45, "back": False, "z": z(zb), "slot": "M_Wood_Oak_Light",
+                    "ue_asset": "bench_box_upholstered", **ev("hall bench: oak-orange wooden box base + black upholstered pad "
+                                                              "(video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)", "low")})
     return els
 
 
@@ -468,8 +470,13 @@ def fitout(k, zb, num):
         p_w, t_w = face_skin("u", D, -1, 0.0, L, wops)
         end_room = key[1] in "15"
         p_b, t_b = face_skin("v", 0.0, 1, 0.0, D, [(D / 2 - WIN_W / 2, D / 2 + WIN_W / 2)] if end_room else [])
-        els.append({"type": "boxes", "name": R + "WindowWall_Paint", "items": p_w, "material": "white", "slot": "M_Paint_White", **ref})
-        els.append({"type": "boxes", "name": R + "BackWall_Paint", "items": p_b, "material": "white", "slot": "M_Paint_Sage", **ref})
+        # corner PC labs: the facade window wall is sage and the end (back) wall white (video 006 lab pan, 2026-10-03 V3-01);
+        # the C105 reference (white window wall, sage back wall) holds for the other rooms
+        swap = room_kind(k, key) == "lab" and end_room
+        els.append({"type": "boxes", "name": R + "WindowWall_Paint", "items": p_w, "material": "white",
+                    "slot": "M_Paint_Sage" if swap else "M_Paint_White", **ref})
+        els.append({"type": "boxes", "name": R + "BackWall_Paint", "items": p_b, "material": "white",
+                    "slot": "M_Paint_White" if swap else "M_Paint_Sage", **ref})
         els.append({"type": "boxes", "name": R + "Window_Trim", "items": t_w + t_b, "material": "white", "slot": "M_PVC_White",
                     **ev("white reveals and PVC window boards (C105 152, labs 2026-10-01)")})
         # laminate floor (C105 152/153, C204, desk room 140-149)
@@ -529,6 +536,10 @@ def fitout(k, zb, num):
                 els.append({"type": "chair_row", "name": R + f"MeetingChairs_{'AB'[sd > 0]}", "pos": c_to_w(*to_c(2.60, 3.30 + sd * 0.70)),
                             **dict(mt, n=3, pitch=0.60, face=sd * f_v), "ue_asset": "chair_visitor_black"})
         else:   # kind == "lab"
+            # wall-mounted black network cabinet + white panel under it on the end wall by the corridor-corner pilaster (V3-03)
+            bx("NetCabinet", PK, 0.45, 0.35, 0.95, 2.0, 2.45, slot="M_Steel_Paint_Dark", ue_asset="network_cabinet_wall_9u",
+               **ev("black wall network cabinet ~0.60 x 0.45 x 0.45, bottom ~2.0 (video 006 lab, 2026-10-03 V3-03)", "low"))
+            bx("NetPanel", PK, 0.046, 0.45, 0.85, 1.40, 1.80, slot="M_Plastic_White", **ev("white panel below the cabinet (V3-03)", "low"))
             # 25 PCs (owner 2026-10-01, C105 150-153): one row of 5 against the door wall (users face the wall) + two
             # islands of 2 rows back to back (users on the outer sides); desks 0.80 x 0.60 from 0.40 m off the back wall.
             # Island axes 2.50 / 4.95 m from the door wall: ~0.62 m between back-to-back chair rows, 1.1 m to the window wall.
@@ -568,7 +579,7 @@ WC_CUB_D = round(WC_W - WC_PASS - WC_FRONT_T, 3)
 WC_CUBS = (1.05, 1.05, 1.00)            # clear widths from the alcove to the north wall (b ascending)
 WC_ALCOVE, WC_ANTE = 1.20, 1.65         # sink alcove clear width; anteroom (lock) depth from the hall wall
 WC_CEIL, WC_BAND, WC_TILE_T = 2.60, 1.56, 0.01
-WC_ROWS = (0.36, 0.96)            # wall tile seams above the floor (bottom row cut 0.35; 029 end wall 0.355 / 0.96 / 1.56)
+WC_ROWS = (0.36, 0.96, 2.16)      # wall tile seams above the floor (bottom row cut 0.35; 029 end wall 0.355 / 0.96 / 1.56; 2.16 in the cubicles)
 WC_TILE, WC_GROUT, WC_FLOOR_CUT = 0.60, 0.003, 0.34   # tile, joint (m); floor row at the north wall cut to 0.34 (029)
 WC_WIN_W, WC_WIN_SILL, WC_WIN_H = 0.60, 1.42, 1.13   # opening at the wall face; head 2.55 under the cornice
 WC_WIN_A = WC_CUB_D + WC_FRONT_T + WC_WIN_W / 2    # window axis: its jamb on the cubicle front line (0.775 off the aisle wall)
@@ -680,12 +691,13 @@ def wc_fitout(k, zb):
                  ("b", b_blk, -1, 0.0, a_ps, []),                                             # block end (alcove side)
                  ("a", a_ps, 1, b_blk, D, o_fr),                                              # cubicle fronts, aisle side
                  ("b", D, -1, a_ps, WC_W, [])]                                                # north wall, aisle
-        for (b0, b1), c in zip(cub, cub_c):                                                   # cubicle interiors
-            faces += [("a", 0.0, 1, b0, b1, []), ("a", a_fr, -1, b0, b1, [(c - WC_CUB_DOOR / 2 - 0.02, c + WC_CUB_DOOR / 2 + 0.02)]),
-                      ("b", b0, 1, 0.0, a_fr, []), ("b", b1, -1, 0.0, a_fr, [])]
+        for (b0, b1), c in zip(cub, cub_c):                       # cubicle interiors: tiled to the cornice (video V2-05)
+            faces += [("a", 0.0, 1, b0, b1, [], C - 0.05), ("a", a_fr, -1, b0, b1, [(c - WC_CUB_DOOR / 2 - 0.02, c + WC_CUB_DOOR / 2 + 0.02)], C - 0.05),
+                      ("b", b0, 1, 0.0, a_fr, [], C - 0.05), ("b", b1, -1, 0.0, a_fr, [], C - 0.05)]
         tiles, grout, corn = [], [], []
         z_rows = [WC_FLOOR_T, *WC_ROWS, WC_BAND]
-        for ax, pos, sd, lo, hi, ops in faces:
+        for ax, pos, sd, lo, hi, ops, *top_ in faces:
+            band = top_[0] if top_ else WC_BAND
             span = lambda u0, u1, w0, w1, z0, z1: it(w0, w1, u0, u1, z0, z1) if ax == "a" else it(u0, u1, w0, w1, z0, z1)
             g0, g1 = sorted((pos, pos + sd * 0.004))                 # grout / adhesive layer
             t0, t1 = sorted((pos + sd * 0.004, pos + sd * T))       # tile body
@@ -702,7 +714,7 @@ def wc_fitout(k, zb):
                     if ax == "b" and pos == D and u < win[1] and o0 > win[0]:                 # under the window: to the sill
                         pieces += [(s0, s1, zt) for s0, s1, zt in ((u, win[0], WC_BAND), (win[0], win[1], WC_WIN_SILL), (win[1], o0, WC_BAND)) if s1 - s0 > 0.005]
                     else:
-                        pieces.append((u, o0, WC_BAND))
+                        pieces.append((u, o0, band))
                 u = max(u, o1)
             for p0, p1, zt in pieces:
                 grout.append(span(p0, p1, g0, g1, WC_FLOOR_T, zt))
@@ -719,7 +731,7 @@ def wc_fitout(k, zb):
         # north (outer) wall above the band: white paint skin and the window reveal lining (the shell's inner face is facade render)
         hd = WC_WIN_SILL + WC_WIN_H
         rv = round(X_W - 0.16 - 0.07, 3)                        # inner reveal depth (outer wall X_W = 0.45, frame at 0.16 + 0.07)
-        pw = [it(0.0, win[0], D - 0.006, D, WC_BAND, C), it(win[1], WC_W, D - 0.006, D, WC_BAND, C), it(win[0], win[1], D - 0.006, D, hd, C),
+        pw = [it(win[1], WC_W, D - 0.006, D, WC_BAND, C), it(win[0], win[1], D - 0.006, D, hd, C),   # cubicle part (a < win[0]) is tiled
               it(win[0], win[0] + 0.006, D, D + rv, WC_WIN_SILL + 0.02, hd), it(win[1] - 0.006, win[1], D, D + rv, WC_WIN_SILL + 0.02, hd),
               it(win[0] + 0.006, win[1] - 0.006, D, D + rv, hd - 0.006, hd)]
         els.append({"type": "boxes", "name": R + "North_Paint", "items": pw, "material": "white", "slot": "M_Paint_White",
@@ -743,12 +755,26 @@ def wc_fitout(k, zb):
         bx("Bin", T + 0.06, T + 0.40, bc - 0.16, bc + 0.16, WC_FLOOR_T, 0.50, "M_Plastic_Black", ue_asset="bin_bag_black", **wev("bin with a black bag between the pedestals (031/040)"))
         bx("Drain", T + 0.04, T + 0.19, bc + 0.12, bc + 0.27, WC_FLOOR_T, WC_FLOOR_T + 0.003, "M_Steel_Galv", **wev("floor drain grate by the right pedestal (040)"))
         bx("Socket", WC_W - T - 0.02, WC_W - T, bc - 0.04, bc + 0.04, 1.58, 1.66, "M_Plastic_White", **wev("socket above the tile band opposite the basins (031/033)"))
-        # cubicles: close-coupled WC on the wet wall, paper holder, small bin, light switch outside by the handle
+        # cubicles (video pass 2026-10-03 V2-05): white squat pan set flush in the floor tiles, outlet to the back (wet) wall,
+        # high-level plastic cistern on the back wall with a flush pipe down to the pan, tiled pipe box in the back corner,
+        # jumbo roll dispenser, bin in the back corner (clear of the door), light switch outside by the handle
+        PAN_A0, PAN_L, PAN_W = T + 0.12, 0.58, 0.44
         for n, ((b0, b1), c) in enumerate(zip(cub, cub_c)):
-            els.append({"type": "toilet", "name": f"{R}Toilet_{n}", "pos": W(T, c), "dir_deg": d_a, "z": z(zb + WC_FLOOR_T),
-                        **wev("close-coupled floor WC on the wet wall (cubicle interior not photographed)", "low")})
-            bx(f"PaperHolder_{n}", 0.62, 0.76, b1 - T - 0.07, b1 - T, 0.68, 0.76, "M_Chrome", **wev("paper holder", "low"))
-            bx(f"CubBin_{n}", a_fr - 0.26, a_fr - 0.04, b0 + T + 0.03, b0 + T + 0.25, WC_FLOOR_T, 0.32, "M_Plastic_Grey", **wev("small bin (039)", "low"))
+            bx(f"SquatPan_{n}", PAN_A0, PAN_A0 + PAN_L, c - PAN_W / 2, c + PAN_W / 2, WC_FLOOR_T - 0.004, WC_FLOOR_T + 0.004,
+               "M_Ceramic_White", ue_asset="squat_pan_ceramic", **wev("squat pan flush in the floor, outlet to the back wall (video V2-05)"))
+            for sg in (-1, 1):   # raised footrests either side of the bowl
+                bx(f"SquatPan_{n}_Foot{'LR'[sg > 0]}", PAN_A0 + PAN_L - 0.28, PAN_A0 + PAN_L - 0.04, c + sg * 0.13 - 0.05,
+                   c + sg * 0.13 + 0.05, WC_FLOOR_T + 0.004, WC_FLOOR_T + 0.016, "M_Ceramic_White", **wev("pan footrest"))
+            bx(f"Cistern_{n}", T, T + 0.14, c - 0.20, c + 0.20, 1.85, 2.15, "M_Plastic_White", ue_asset="cistern_high_level",
+               **wev("high-level plastic cistern on the back wall (height unsure, V2-05)", "low"))
+            bx(f"FlushPipe_{n}", T + 0.02, T + 0.05, c - 0.015, c + 0.015, WC_FLOOR_T + 0.016, 1.85, "M_Plastic_White",
+               **wev("flush pipe from the cistern down to the pan back (V2-05)", "low"))
+            bx(f"PipeBox_{n}", T, T + 0.16, b1 - T - 0.16, b1 - T, WC_FLOOR_T, 1.20, "M_Tile_Wall_Grey",
+               **wev("small tiled pipe box in the back corner (V2-05)", "low"))
+            bx(f"PaperHolder_{n}", 0.62, 0.74, b1 - T - 0.27, b1 - T, 0.80, 1.07, "M_Plastic_White", ue_asset="jumbo_roll_dispenser",
+               **wev("jumbo toilet-roll dispenser on the side wall (V2-05)", "low"))
+            bx(f"CubBin_{n}", T + 0.02, T + 0.24, b0 + T + 0.03, b0 + T + 0.25, WC_FLOOR_T, 0.32, "M_Plastic_Grey",
+               **wev("small bin in the back corner (039; V2-05)", "low"))
             bx(f"Switch_{n}", a_ps + T, a_ps + T + 0.015, c - WC_CUB_DOOR / 2 - 0.16, c - WC_CUB_DOOR / 2 - 0.08, 1.00, 1.08,
                "M_Plastic_White", **wev("light switch beside each cubicle door, handle side (029)"))
             lamp(f"CubLamp_{n}", a_fr / 2, c, 0.11, "ceiling_lamp_round_led_220")

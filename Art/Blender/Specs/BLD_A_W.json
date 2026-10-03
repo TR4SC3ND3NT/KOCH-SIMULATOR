@@ -552,6 +552,23 @@
    "w": -6.4,
    "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): LED floodlights on the A_N west wall at the F2 sill band over the gallery (070309303 s3 f01713/f01947); +-1.5 m along",
    "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "AC_Deck",
+   "kind": "ac",
+   "edge": 3,
+   "items": [
+    [
+     24.5,
+     -0.05,
+     1.04,
+     1.34,
+     0.4
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V2-10: floor-standing twin-fan AC outdoor unit on the gallery deck in front of the pilaster u 24.3-24.7, on a black base frame, pipe up the pilaster"
   }
  ],
  "ffl_z": 5.65,

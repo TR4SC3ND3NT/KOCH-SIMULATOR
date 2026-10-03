@@ -992,14 +992,14 @@
      -97.455
     ],
     [
-     94.914,
-     -97.559
+     94.729,
+     -97.55
     ]
    ],
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1008,8 +1008,8 @@
    "name": "Parapet_Front_02",
    "line": [
     [
-     94.944,
-     -97.561
+     95.129,
+     -97.57
     ],
     [
      96.912,
@@ -1019,7 +1019,7 @@
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1112,14 +1112,14 @@
      -98.087
     ],
     [
-     106.898,
-     -98.191
+     106.713,
+     -98.182
     ]
    ],
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1128,8 +1128,8 @@
    "name": "Parapet_Front_08",
    "line": [
     [
-     106.928,
-     -98.193
+     107.113,
+     -98.202
     ],
     [
      108.895,
@@ -1139,7 +1139,7 @@
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1232,14 +1232,14 @@
      -98.719
     ],
     [
-     118.881,
-     -98.823
+     118.696,
+     -98.813
     ]
    ],
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1248,8 +1248,8 @@
    "name": "Parapet_Front_14",
    "line": [
     [
-     118.911,
-     -98.824
+     119.096,
+     -98.834
     ],
     [
      120.878,
@@ -1259,7 +1259,7 @@
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1352,14 +1352,14 @@
      -99.351
     ],
     [
-     130.865,
-     -99.455
+     130.68,
+     -99.445
     ]
    ],
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1368,8 +1368,8 @@
    "name": "Parapet_Front_20",
    "line": [
     [
-     130.895,
-     -99.456
+     131.08,
+     -99.466
     ],
     [
      132.862,
@@ -1379,7 +1379,7 @@
    "height": 0.35,
    "thk": 0.22,
    "material": "stone",
-   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat)",
+   "evidence": "P2 by frames: precast planter-wall segments with vertical fluting, a joint every ~2.0 m (Street c3 frames f00460/f01199: segment length ~5.7 x the 0.35 m height); height 0.35 (mesh), thickness 0.22. west end at the block pillar (x 90.95, frames f00001-f00048). P1 mesh cross-profiles of zone Street c3 (clip 065653194, f01379/f01512): planter wall top 0.31/0.38 m above the sidewalk, 2.5-2.7 m from the walked line; mesh scale from the 1.52 m eye height, checked on the paver lattice (0.24 m repeat) | 2026-10-03 video pass V3-14: joint widened to 0.4 m for a lamp pole",
    "confidence": "medium",
    "slot": "M_Concrete_Precast"
   },
@@ -1465,6 +1465,155 @@
    "slot": "M_Concrete_Precast",
    "evidence": "P2 by frames: low grey precast kerb strip in front of the planter wall, ~0.45 m of paving between them (Street c3 f00166/f00460; kerb stones ~1.0 m long, 0.08 high) | 2026-10-01 QA: 0.10 (2 cm proud of the 0.08 sidewalk; their tops were coplanar)",
    "confidence": "medium"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_0",
+   "pos": [
+    94.929,
+    -97.56
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; V3-14: tall grey poles stand IN widened parapet joints (W end ~x 95, mid, E); joints chosen at ~12 m spacing, x unsure"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_1",
+   "pos": [
+    106.913,
+    -98.192
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; V3-14: tall grey poles stand IN widened parapet joints (W end ~x 95, mid, E); joints chosen at ~12 m spacing, x unsure"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_2",
+   "pos": [
+    118.896,
+    -98.823
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; V3-14: tall grey poles stand IN widened parapet joints (W end ~x 95, mid, E); joints chosen at ~12 m spacing, x unsure"
+  },
+  {
+   "type": "lamp",
+   "name": "PathLamp_B_3",
+   "pos": [
+    130.88,
+    -99.456
+   ],
+   "height": 4.2,
+   "head": "box",
+   "ue_asset": "street_lamp",
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; V3-14: tall grey poles stand IN widened parapet joints (W end ~x 95, mid, E); joints chosen at ~12 m spacing, x unsure"
+  },
+  {
+   "type": "box",
+   "name": "Drain_Sidewalk_E",
+   "center": [
+    132.5,
+    -100.3
+   ],
+   "dir_deg": -3.0,
+   "size": [
+    1.0,
+    0.55,
+    0.01
+   ],
+   "z_rel": 0.019,
+   "material": "metal",
+   "slot": "M_Steel_Grating",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-15: flush drain grating at the parapet foot near its E end (+-1.5 m)"
+  },
+  {
+   "type": "bin",
+   "name": "Bin_Sidewalk_E",
+   "pos": [
+    131.0,
+    -100.45
+   ],
+   "size": [
+    0.4,
+    0.4,
+    0.75
+   ],
+   "dir_deg": -3.0,
+   "ue_asset": "bin_cast_iron_ornamental",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-15: cast-iron ornamental bin against the kerb strip ~1.5 m W of the grating"
+  },
+  {
+   "type": "box",
+   "name": "GasRiser_W_Pipe",
+   "center": [
+    91.8,
+    -96.5
+   ],
+   "dir_deg": -3.0,
+   "size": [
+    0.6,
+    0.07,
+    0.07
+   ],
+   "z_rel": 1.2,
+   "material": "metal",
+   "slot": "M_Paint_Yellow",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-12: yellow gas pipe along the boundary wall ~1.2 m up, turning down, behind the mesh fence at its W end"
+  },
+  {
+   "type": "box",
+   "name": "GasRiser_W_Down",
+   "center": [
+    92.1,
+    -96.5
+   ],
+   "dir_deg": -3.0,
+   "size": [
+    0.07,
+    0.07,
+    1.2
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Paint_Yellow",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-12: down leg"
+  },
+  {
+   "type": "box",
+   "name": "GasRiser_W_Valve",
+   "center": [
+    92.1,
+    -96.5
+   ],
+   "dir_deg": -3.0,
+   "size": [
+    0.12,
+    0.12,
+    0.25
+   ],
+   "z_rel": 0.5,
+   "material": "metal",
+   "slot": "M_Paint_Blue",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-12: blue valve body at ~0.6 m"
   }
  ]
 }

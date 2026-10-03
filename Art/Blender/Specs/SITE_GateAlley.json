@@ -1554,11 +1554,372 @@
   },
   {
    "type": "wall",
-   "name": "PathParapet_S",
+   "name": "PathParapet_S_00",
    "line": [
     [
      161.115,
      -95.375
+    ],
+    [
+     162.495,
+     -95.472
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_01",
+   "line": [
+    [
+     162.894,
+     -95.501
+    ],
+    [
+     164.889,
+     -95.641
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_02",
+   "line": [
+    [
+     164.918,
+     -95.644
+    ],
+    [
+     166.914,
+     -95.784
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_03",
+   "line": [
+    [
+     166.943,
+     -95.787
+    ],
+    [
+     168.938,
+     -95.927
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_04",
+   "line": [
+    [
+     168.968,
+     -95.93
+    ],
+    [
+     170.963,
+     -96.07
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_05",
+   "line": [
+    [
+     170.993,
+     -96.073
+    ],
+    [
+     171.475,
+     -96.107
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_06",
+   "line": [
+    [
+     171.874,
+     -96.135
+    ],
+    [
+     173.869,
+     -96.276
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_07",
+   "line": [
+    [
+     173.898,
+     -96.278
+    ],
+    [
+     175.894,
+     -96.419
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_08",
+   "line": [
+    [
+     175.923,
+     -96.421
+    ],
+    [
+     177.918,
+     -96.562
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_09",
+   "line": [
+    [
+     177.948,
+     -96.564
+    ],
+    [
+     179.943,
+     -96.705
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_10",
+   "line": [
+    [
+     179.973,
+     -96.707
+    ],
+    [
+     180.953,
+     -96.776
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_11",
+   "line": [
+    [
+     181.352,
+     -96.804
+    ],
+    [
+     183.347,
+     -96.945
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_12",
+   "line": [
+    [
+     183.376,
+     -96.947
+    ],
+    [
+     185.371,
+     -97.088
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_13",
+   "line": [
+    [
+     185.401,
+     -97.09
+    ],
+    [
+     187.396,
+     -97.231
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_14",
+   "line": [
+    [
+     187.426,
+     -97.233
+    ],
+    [
+     189.421,
+     -97.374
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_15",
+   "line": [
+    [
+     189.451,
+     -97.376
+    ],
+    [
+     190.431,
+     -97.445
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_16",
+   "line": [
+    [
+     190.83,
+     -97.473
+    ],
+    [
+     192.826,
+     -97.614
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_17",
+   "line": [
+    [
+     192.855,
+     -97.616
+    ],
+    [
+     194.85,
+     -97.757
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_18",
+   "line": [
+    [
+     194.88,
+     -97.759
+    ],
+    [
+     196.875,
+     -97.9
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_19",
+   "line": [
+    [
+     196.905,
+     -97.902
     ],
     [
      198.231,
@@ -1568,7 +1929,7 @@
    "height": 0.4,
    "thk": 0.15,
    "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
    "confidence": "medium"
   },
   {
@@ -1675,11 +2036,11 @@
    "name": "PathLamp_00",
    "pos": [
     162.694,
-    -95.837
+    -95.487
    ],
    "height": 5.0,
    "head": "box",
-   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane) | 2026-10-03 photo/video pass R3-14/V2-04: pole stands in a parapet gap, on the parapet line",
    "confidence": "low"
   },
   {
@@ -1687,11 +2048,11 @@
    "name": "PathLamp_01",
    "pos": [
     171.674,
-    -96.471
+    -96.121
    ],
    "height": 5.0,
    "head": "box",
-   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane) | 2026-10-03 photo/video pass R3-14/V2-04: pole stands in a parapet gap, on the parapet line",
    "confidence": "low"
   },
   {
@@ -1699,11 +2060,11 @@
    "name": "PathLamp_02",
    "pos": [
     181.152,
-    -97.14
+    -96.79
    ],
    "height": 5.0,
    "head": "box",
-   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane) | 2026-10-03 photo/video pass R3-14/V2-04: pole stands in a parapet gap, on the parapet line",
    "confidence": "low"
   },
   {
@@ -1711,11 +2072,11 @@
    "name": "PathLamp_03",
    "pos": [
     190.631,
-    -97.81
+    -97.459
    ],
    "height": 5.0,
    "head": "box",
-   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane)",
+   "evidence": "grey steel lamp posts ~5 m with a tilted LED head standing at the parapet (065934318 t5-t8; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): 4 posts booth -> lane) | 2026-10-03 photo/video pass R3-14/V2-04: pole stands in a parapet gap, on the parapet line",
    "confidence": "low"
   },
   {
@@ -2120,32 +2481,32 @@
     -55.161
    ],
    "dir_deg": 87.192,
-   "risers": 4,
+   "risers": 6,
    "riser_h": 0.1743,
    "tread": 0.35,
    "width": 5.33,
    "z_top": 6.57,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-03 video pass V2-02: 6 risers (5 granite + the grey concrete kerb at the top), no landing; riser kept 0.1743 pending the level decision (R1-13/R3-06: total ~1.0)",
    "confidence": "medium",
    "top_flush": true,
-   "run_out": 0.35
+   "run_out": 0.0
   },
   {
    "type": "stairs_run",
    "name": "Steps_BCorner_Lower",
    "top": [
-    155.797,
-    -53.764
+    155.817,
+    -53.064
    ],
    "dir_deg": 87.192,
-   "risers": 3,
+   "risers": 1,
    "riser_h": 0.1743,
    "tread": 0.35,
    "width": 6.9,
-   "z_top": 5.873,
+   "z_top": 5.524,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-01 QA: top_flush, it starts inside the upper run-out (their end faces were coplanar)",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-01 QA: top_flush, it starts inside the upper run-out (their end faces were coplanar) | 2026-10-03 video pass V2-02: only the bottom step is wide (runs past the bed walls), directly under the upper base",
    "confidence": "medium",
    "top_flush": true
   },
@@ -2171,14 +2532,14 @@
     ]
    ],
    "z": [
-    6.93,
-    6.93,
-    6.93,
-    6.93
+    6.645,
+    6.65,
+    6.225,
+    6.22
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
+   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping)",
    "confidence": "medium"
   },
   {
@@ -2203,14 +2564,14 @@
     ]
    ],
    "z": [
-    6.93,
-    6.93,
-    6.93,
-    6.93
+    6.646,
+    6.65,
+    6.224,
+    6.22
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "rubble-stone bed wall with pink granite coping beside the upper flight (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping)",
    "confidence": "medium"
   },
   {
@@ -2235,14 +2596,14 @@
     ]
    ],
    "z": [
-    6.78,
-    6.78,
-    6.78,
-    6.78
+    6.57,
+    6.6,
+    6.2,
+    6.17
    ],
    "thk": 1.98,
    "material": "hedge",
-   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping)",
    "confidence": "medium"
   },
   {
@@ -2267,14 +2628,14 @@
     ]
    ],
    "z": [
-    6.93,
-    6.93,
-    6.93,
-    6.93
+    6.22,
+    6.22,
+    6.22,
+    6.22
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: front wall top at the low end of the sloping coping",
    "confidence": "medium"
   },
   {
@@ -2299,14 +2660,14 @@
     ]
    ],
    "z": [
-    6.78,
-    6.78,
-    6.78,
-    6.78
+    6.583,
+    6.6,
+    6.187,
+    6.17
    ],
    "thk": 1.98,
    "material": "hedge",
-   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping)",
    "confidence": "medium"
   },
   {
@@ -2331,14 +2692,14 @@
     ]
    ],
    "z": [
-    6.93,
-    6.93,
-    6.93,
-    6.93
+    6.22,
+    6.22,
+    6.22,
+    6.22
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: front wall top at the low end of the sloping coping",
    "confidence": "medium"
   },
   {
@@ -2425,61 +2786,6 @@
    "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
    "confidence": "low",
    "z": 5.35
-  },
-  {
-   "type": "sign",
-   "name": "NoticeStand_AS",
-   "pos": [
-    158.3,
-    -90.6
-   ],
-   "dir_deg": 87.2,
-   "w": 1.2,
-   "h": 1.3,
-   "z0": 0.95,
-   "t": 0.06,
-   "slot": "M_Sign_Panel",
-   "evidence": "070309303_s1 f00005, 082248481_s1 f00095/f00143/f00188: notice-board stand (2 posts + panel) in the bed with the painted kerb at the A_S corner, big conifer behind",
-   "ue_asset": "notice_board_stand",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "NoticeStand_AS_Post0",
-   "center": [
-    158.33,
-    -90.0
-   ],
-   "dir_deg": 0,
-   "size": [
-    0.06,
-    0.06,
-    2.0
-   ],
-   "material": "metal",
-   "slot": "M_Steel_Galv",
-   "evidence": "070309303_s1 f00005, 082248481_s1 f00095/f00143/f00188: notice-board stand (2 posts + panel) in the bed with the painted kerb at the A_S corner, big conifer behind",
-   "confidence": "low",
-   "z0": 5.35
-  },
-  {
-   "type": "box",
-   "name": "NoticeStand_AS_Post1",
-   "center": [
-    158.27,
-    -91.2
-   ],
-   "dir_deg": 0,
-   "size": [
-    0.06,
-    0.06,
-    2.0
-   ],
-   "material": "metal",
-   "slot": "M_Steel_Galv",
-   "evidence": "070309303_s1 f00005, 082248481_s1 f00095/f00143/f00188: notice-board stand (2 posts + panel) in the bed with the painted kerb at the A_S corner, big conifer behind",
-   "confidence": "low",
-   "z0": 5.35
   },
   {
    "type": "bench",
@@ -2645,46 +2951,6 @@
    "evidence": "070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1: 3-4 round clipped shrubs in the bed along A_S",
    "confidence": "low",
    "z": 6.331
-  },
-  {
-   "type": "path",
-   "name": "CirclePaving_AS_1",
-   "line": [
-    [
-     159.633,
-     -86.39
-    ],
-    [
-     159.486,
-     -89.387
-    ]
-   ],
-   "width": 1.6,
-   "top": 0.37,
-   "slot": "M_Paver_Clover_Grey",
-   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
-   "confidence": "low",
-   "thk": 0.45
-  },
-  {
-   "type": "wall",
-   "name": "Kerb_CirclePaving_AS_1",
-   "line": [
-    [
-     158.784,
-     -86.348
-    ],
-    [
-     158.637,
-     -89.345
-    ]
-   ],
-   "height": 0.43,
-   "thk": 0.1,
-   "material": "brick",
-   "slot": "M_Tile_Brick_Red",
-   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
-   "confidence": "low"
   }
  ]
 }

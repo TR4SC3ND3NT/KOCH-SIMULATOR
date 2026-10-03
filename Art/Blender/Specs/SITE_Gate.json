@@ -200,15 +200,15 @@
    "type": "sign",
    "name": "Billboard_West",
    "pos": [
-    129.776,
-    -99.848
+    141.2,
+    -97.6
    ],
    "dir_deg": 267.1,
-   "w": 3.0,
-   "h": 2.0,
+   "w": 1.2,
+   "h": 1.7,
    "t": 0.12,
-   "z0": 0.8,
-   "evidence": "P1: bearings from Street c2 frames f02711/f02830/f02947 cut with the planter-wall face: posts at x 128.5-131 on the sidewalk edge; range from its 2.0 m height in f02947 (1030 px at f 3463 -> 6.7 m) agrees; was x 143.6. freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster",
+   "z0": 0.1,
+   "evidence": "P1: bearings from Street c2 frames f02711/f02830/f02947 cut with the planter-wall face: posts at x 128.5-131 on the sidewalk edge; range from its 2.0 m height in f02947 (1030 px at f 3463 -> 6.7 m) agrees; was x 143.6. freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster | 2026-10-03 video pass V1-07: portrait panel (w:h 0.70) next to the W end of the bike rack, just S of the fence plinth, leaning back 10-15 deg on a rear stand (lean not modelled); size unsure",
    "confidence": "medium",
    "ue_note": "KOCH notice/rules only (no real text)"
   },
@@ -544,18 +544,18 @@
    "name": "PipeBarrier_Booth",
    "line": [
     [
-     158.6,
-     -101.2
+     141.6,
+     -100.5
     ],
     [
-     160.4,
-     -101.3
+     143.4,
+     -100.6
     ]
    ],
-   "height": 0.45,
+   "height": 0.25,
    "thk": 0.06,
    "material": "metal",
-   "evidence": "yellow-black steel pipe barrier on the forecourt in front of the booth's south face (web gate photo, bottom right); position estimated",
+   "evidence": "yellow-black steel pipe barrier on the forecourt in front of the booth's south face (web gate photo, bottom right); position estimated | 2026-10-03 video pass V1-07: the low yellow/black pipe barrier lies 1.5-2.5 m S of the billboard (one end bent down), not in front of the booth",
    "confidence": "low"
   },
   {
@@ -652,9 +652,10 @@
    ],
    "width": 4.4,
    "thk": 0.08,
-   "surface": "clover_paver_267x218",
-   "evidence": "P1: Google z20 paved gap between Lawn_SouthWest and Lawn_SouthEast from the zebra's south end to the south footway (x 152.0-156.4); clip 20260925_012108212 f00878 reaches the zebra from it",
-   "confidence": "medium"
+   "surface": "concrete",
+   "evidence": "P1: Google z20 paved gap between Lawn_SouthWest and Lawn_SouthEast from the zebra's south end to the south footway (x 152.0-156.4); clip 20260925_012108212 f00878 reaches the zebra from it | 2026-10-03 video pass V1-01: smooth cast concrete with crack joints and precast kerb edges, not clover pavers",
+   "confidence": "medium",
+   "slot": "M_Concrete"
   },
   {
    "type": "wall",
@@ -1096,101 +1097,210 @@
    "line": [
     [
      139.021,
-     -90.464
+     -91.98
     ],
     [
      100.567,
-     -88.581
+     -90.92
     ]
    ],
-   "width": 2.4,
-   "slot": "M_Paving_Diamond_Tile",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "width": 2.35,
+   "slot": "M_Paver_GreyPink",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed",
    "confidence": "low"
   },
   {
    "type": "wall",
-   "name": "Upstand_BFront",
+   "name": "Kerb_BFrontPath_N",
    "line": [
     [
-     138.09,
-     -89.017
+     139.021,
+     -90.755
     ],
     [
-     101.634,
-     -87.232
+     100.567,
+     -89.695
     ]
    ],
-   "height": 0.45,
-   "thk": 0.2,
+   "height": 0.1,
+   "thk": 0.1,
+   "cap_proj": 0.0,
    "material": "stone",
-   "slot": "M_Concrete_Precast",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
+   "slot": "M_Kerb_Painted_YW",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V3-13: 1.0 m painted kerb stones (yellow/white alternating), 0.10 high, on both path edges"
   },
   {
-   "type": "hedge",
-   "name": "Hedge_BFront",
+   "type": "wall",
+   "name": "Kerb_BFrontPath_S",
    "line": [
     [
-     138.12,
-     -88.418
+     139.021,
+     -93.205
     ],
     [
-     101.664,
-     -86.633
+     100.567,
+     -92.145
     ]
    ],
-   "width": 0.9,
-   "height": 1.15,
-   "top": "flat",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
+   "height": 0.1,
+   "thk": 0.1,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "slot": "M_Kerb_Painted_YW",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V3-13: 1.0 m painted kerb stones (yellow/white alternating), 0.10 high, on both path edges"
   },
   {
-   "type": "bin",
-   "name": "Bin_BFront",
+   "type": "tree",
+   "name": "Tree_BLawn_0_pine",
    "pos": [
-    128.577,
-    -89.052
+    108.0,
+    -87.436
    ],
-   "dir_deg": 87.2,
-   "size": [
-    0.45,
-    0.45,
-    0.8
+   "height": 9.0,
+   "crown_d": 3.4,
+   "shape": "cone",
+   "trunk_d": 0.25,
+   "crown_base": 1.2,
+   "species": "pine",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-13 (e): B-side lawn row between the kerb and the path (pines, 1 blue spruce, 2-3 large round junipers; crowns y -85..-89 in Google); x positions unsure"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BLawn_1_spruce_blue",
+   "pos": [
+    118.0,
+    -87.926
    ],
-   "slot": "M_Wrought_Iron",
-   "ue_asset": "bin_wrought_iron",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
+   "height": 8.0,
+   "crown_d": 3.2,
+   "shape": "cone",
+   "trunk_d": 0.25,
+   "crown_base": 1.2,
+   "species": "spruce_blue",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-13 (e): B-side lawn row between the kerb and the path (pines, 1 blue spruce, 2-3 large round junipers; crowns y -85..-89 in Google); x positions unsure"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BLawn_2_juniper",
+   "pos": [
+    126.5,
+    -88.342
+   ],
+   "height": 2.0,
+   "crown_d": 2.5,
+   "shape": "round",
+   "trunk_d": 0.12,
+   "crown_base": 0.2,
+   "species": "juniper",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-13 (e): B-side lawn row between the kerb and the path (pines, 1 blue spruce, 2-3 large round junipers; crowns y -85..-89 in Google); x positions unsure"
+  },
+  {
+   "type": "tree",
+   "name": "Tree_BLawn_3_juniper",
+   "pos": [
+    132.5,
+    -88.636
+   ],
+   "height": 2.0,
+   "crown_d": 2.5,
+   "shape": "round",
+   "trunk_d": 0.12,
+   "crown_base": 0.2,
+   "species": "juniper",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-13 (e): B-side lawn row between the kerb and the path (pines, 1 blue spruce, 2-3 large round junipers; crowns y -85..-89 in Google); x positions unsure"
   },
   {
    "type": "box",
-   "name": "Drain_BFront_W",
+   "name": "Bollard_BLawn_0",
    "center": [
-    101.166,
-    -88.611
+    104.0,
+    -85.64
    ],
    "dir_deg": -2.8,
    "size": [
-    0.5,
-    1.2,
-    0.02
+    0.1,
+    0.1,
+    0.45
    ],
-   "z_rel": 0.02,
+   "z_rel": 0.0,
    "material": "metal",
-   "slot": "M_Steel_Grating",
-   "ue_asset": "drain_grating",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "bollard_light",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-14: small black bollard lights on the B-side lawn ~1 m S of the facade walk; count/x unsure"
+  },
+  {
+   "type": "box",
+   "name": "Bollard_BLawn_1",
+   "center": [
+    114.0,
+    -86.13
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.1,
+    0.1,
+    0.45
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "bollard_light",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-14: small black bollard lights on the B-side lawn ~1 m S of the facade walk; count/x unsure"
+  },
+  {
+   "type": "box",
+   "name": "Bollard_BLawn_2",
+   "center": [
+    124.0,
+    -86.62
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.1,
+    0.1,
+    0.45
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "bollard_light",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-14: small black bollard lights on the B-side lawn ~1 m S of the facade walk; count/x unsure"
+  },
+  {
+   "type": "box",
+   "name": "Bollard_BLawn_3",
+   "center": [
+    134.0,
+    -87.11
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.1,
+    0.1,
+    0.45
+   ],
+   "z_rel": 0.0,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "ue_asset": "bollard_light",
+   "confidence": "low",
+   "evidence": "2026-10-03 video pass V3-14: small black bollard lights on the B-side lawn ~1 m S of the facade walk; count/x unsure"
   },
   {
    "type": "box",
    "name": "Step_BoothApron",
    "center": [
     139.52,
-    -90.489
+    -91.994
    ],
    "dir_deg": -2.8,
    "size": [
@@ -1201,59 +1311,7 @@
    "z_rel": 0.0,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
-  },
-  {
-   "type": "lamp",
-   "name": "PathLamp_B_0",
-   "pos": [
-    134.578,
-    -89.196
-   ],
-   "height": 4.2,
-   "head": "box",
-   "ue_asset": "street_lamp",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
-  },
-  {
-   "type": "lamp",
-   "name": "PathLamp_B_1",
-   "pos": [
-    123.591,
-    -88.658
-   ],
-   "height": 4.2,
-   "head": "box",
-   "ue_asset": "street_lamp",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
-  },
-  {
-   "type": "lamp",
-   "name": "PathLamp_B_2",
-   "pos": [
-    112.604,
-    -88.12
-   ],
-   "height": 4.2,
-   "head": "box",
-   "ue_asset": "street_lamp",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
-   "confidence": "low"
-  },
-  {
-   "type": "lamp",
-   "name": "PathLamp_B_3",
-   "pos": [
-    102.616,
-    -87.63
-   ],
-   "height": 4.2,
-   "head": "box",
-   "ue_asset": "street_lamp",
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V3-13: follows the path E end",
    "confidence": "low"
   },
   {
@@ -1261,14 +1319,14 @@
    "name": "Tree_BFront_0_pine",
    "pos": [
     132.416,
-    -92.444
+    -94.398
    ],
    "height": 9.0,
    "crown_d": 3.4,
    "shape": "cone",
    "trunk_d": 0.3,
    "crown_base": 1.5,
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V3-13: street-side row 2.6 m S of the path centre (Google crowns -92.5..-96)",
    "confidence": "low"
   },
   {
@@ -1276,14 +1334,14 @@
    "name": "Tree_BFront_1_poplar",
    "pos": [
     125.424,
-    -92.101
+    -94.205
    ],
    "height": 14.0,
    "crown_d": 2.4,
    "shape": "cone",
    "trunk_d": 0.35,
    "crown_base": 2.5,
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V3-13: street-side row 2.6 m S of the path centre (Google crowns -92.5..-96)",
    "confidence": "low"
   },
   {
@@ -1291,14 +1349,14 @@
    "name": "Tree_BFront_2_pine",
    "pos": [
     118.433,
-    -91.759
+    -94.012
    ],
    "height": 9.0,
    "crown_d": 3.4,
    "shape": "cone",
    "trunk_d": 0.3,
    "crown_base": 1.5,
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V3-13: street-side row 2.6 m S of the path centre (Google crowns -92.5..-96)",
    "confidence": "low"
   },
   {
@@ -1306,14 +1364,14 @@
    "name": "Tree_BFront_3_poplar",
    "pos": [
     111.441,
-    -91.417
+    -93.82
    ],
    "height": 14.0,
    "crown_d": 2.4,
    "shape": "cone",
    "trunk_d": 0.35,
    "crown_base": 2.5,
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V3-13: street-side row 2.6 m S of the path centre (Google crowns -92.5..-96)",
    "confidence": "low"
   },
   {
@@ -1321,14 +1379,14 @@
    "name": "Tree_BFront_4_pine",
    "pos": [
     104.45,
-    -91.074
+    -93.627
    ],
    "height": 9.0,
    "crown_d": 3.4,
    "shape": "cone",
    "trunk_d": 0.3,
    "crown_base": 1.5,
-   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983)",
+   "evidence": "B front path clip 065934318_s1/s2 f00006-f01072: paved path along B's south facade from the gate yard (one step down from the apron) west, hedge on a precast upstand between the path and the facade, tall grey lamp poles on the hedge side, a wrought-iron bin, pines and poplars along the far side, drain grating at the west end; offsets from the facade by eye (facade 7-10 m behind the hedge in f00562/f00983) | 2026-10-03 video pass V3-13: street-side row 2.6 m S of the path centre (Google crowns -92.5..-96)",
    "confidence": "low"
   },
   {
@@ -1557,6 +1615,67 @@
    "slot": "M_Steel_Paint_Dark",
    "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): notice board posts",
    "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "CirclePaving_BSouth",
+   "line": [
+    [
+     98.21,
+     -81.81
+    ],
+    [
+     147.81,
+     -84.24
+    ]
+   ],
+   "width": 5.0,
+   "thk": 0.08,
+   "top": 0.02,
+   "slot": "M_Paver_CircleDisc",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; V2-06: grey pavers with pink discs from B's wall to the kerb (width low confidence)"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_CirclePaving_BSouth",
+   "line": [
+    [
+     98.08,
+     -84.35
+    ],
+    [
+     147.68,
+     -86.78
+    ]
+   ],
+   "height": 0.12,
+   "thk": 0.15,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "slot": "M_Kerb_Painted_YW",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; yellow/white painted 1.0 m stones"
+  },
+  {
+   "type": "path",
+   "name": "SoldierCourse_BSouth_E",
+   "line": [
+    [
+     147.93,
+     -81.74
+    ],
+    [
+     147.68,
+     -86.78
+    ]
+   ],
+   "width": 0.2,
+   "thk": 0.08,
+   "top": 0.022,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "medium",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; red brick soldier course closing the circle walk at its E end (herringbone beyond)"
   }
  ],
  "ground_surfaces": [
@@ -1649,16 +1768,66 @@
      -89.6
     ],
     [
-     147.3,
-     -81.4
+     147.93,
+     -81.74
+    ],
+    [
+     147.68,
+     -86.78
     ],
     [
      136,
-     -81.0
+     -86.2
     ]
    ],
    "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "yard inside the gate, herringbone (alley clip 070309303 f00034, Gate c8 ground mosaic)"
+   "evidence": "yard inside the gate, herringbone (alley clip 070309303 f00034, Gate c8 ground mosaic) | 2026-10-03 video pass V2-06: herringbone stops at the soldier course closing the B-front circle walk"
+  },
+  {
+   "name": "B_FrontLawn_N",
+   "ring": [
+    [
+     100.57,
+     -84.55
+    ],
+    [
+     136.0,
+     -86.27
+    ],
+    [
+     136.0,
+     -90.63
+    ],
+    [
+     100.57,
+     -89.65
+    ]
+   ],
+   "slot": "M_Ground_Grass",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed"
+  },
+  {
+   "name": "B_FrontLawn_S",
+   "ring": [
+    [
+     100.57,
+     -92.2
+    ],
+    [
+     135.8,
+     -93.1
+    ],
+    [
+     135.8,
+     -99.5
+    ],
+    [
+     100.57,
+     -97.85
+    ]
+   ],
+   "slot": "M_Ground_Grass",
+   "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed"
   }
  ]
 }

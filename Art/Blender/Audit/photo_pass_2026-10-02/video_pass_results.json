@@ -1,0 +1,1970 @@
+[
+ {
+  "slice": "video_part0 (18 videos). Notes, scripts and crops are in /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/video_part0/ (notes.txt, pitch37.py, ovl.py, grid.py, probe.py, bb.json). The model was checked against build_new.blend (10-03 19:08), because build_empty.blend is stale (10-02 14:49).",
+  "coverage": [
+   {
+    "id": "006_PXL_20261001_041821243 t0.2-42.5s",
+    "scene": "Block C PC lab interior: lay-in grid, white window beam and pilasters, sage walls, wall network cabinet and DB board, dome CCTV, tilt-turn windows with pleated blinds, PC rows",
+    "camera": "inside a C lab, slow pan",
+    "checked": "room shell elements (WindowBeam/Pilaster/grid) exist in INT_C_Floors; the cameras, rack and DB board are set dressing and are not modelled",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "020_PXL_20261001_072332348 t0.2-4.5s",
+    "scene": "C classroom door from inside: black aluminium glass door, mid rail, jamb ~0.3 m from the room corner; corridor beyond (terrazzo, timber bench, blue accent panel)",
+    "camera": "inside a C classroom looking at the corridor door",
+    "checked": "door near the partition matches F2_Door_* placement; the heating pipe at the skirting is not modelled",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t0.2-4.0s",
+    "scene": "pergola walk at the G2_SSW foot",
+    "camera": "~(139,-47.4) looking W, then N",
+    "checked": "Arch_Bnd_G2_SSW on the walk N edge; W end tile wall, stair and yellow pipe (R2-03, deferred); benches against the boulder wall; bin",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t4.2-10.0s",
+    "scene": "through Arch_Bnd_G2_SSW to Hedge_Mass_5; pan E over the lawn bed: black globe lamp post in the bed N of the walk edging",
+    "camera": "~(139.5,-47.3) looking N to NE",
+    "checked": "lamp not in the model (only PergolaWalk_Lamp_0 at x 124)",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "V0-02"
+    ]
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t10.2-15.0s",
+    "scene": "walk E end: benches, bin at the stair foot, B-corner granite stair, A_W gallery posts",
+    "camera": "~(139,-47.5) looking E",
+    "checked": "pergola post spacing measured from the slab-row calibration",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-01"
+    ]
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t14.2-18.0s",
+    "scene": "over the boulder wall at B north: maroon corrugated gas-pipe cover (skirt on short posts, sloping roof to the wall), 3-light ground windows with bar grilles",
+    "camera": "~(139,-47.5) looking S",
+    "checked": "skirt 0.70 m + 0.09 gap match the model; the cover's back edge sits above the window sill in the model",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-03"
+    ]
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t18.2-28.0s",
+    "scene": "walking W along the walk to the Centre_NS_S foot",
+    "camera": "~(135->129.5,-47) looking W, then N",
+    "checked": "benches and bins along the wall; multi-stem shrub at the Centre_NS_S foot, no arch (GD-4 deletion confirmed)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t28.2-31.8s",
+    "scene": "Centre_NS_S path to the centre lamp",
+    "camera": "~(129.3,-46) looking N",
+    "checked": "hedges and scalloped edging on both sides, path 3 slabs wide = Hedge_Mass_8/9",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t32.2-35.8s",
+    "scene": "rose bed; walk at the G1_SSE foot looking W (white-globe lamp in the bed further W, W-end stair and pipe)",
+    "camera": "~(122.5,-46.4) looking W and N",
+    "checked": "edging L-corner at a pergola post at the G1_SSE foot; no lamp at x 124",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-01",
+     "V0-02"
+    ]
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t36.2-39.8s",
+    "scene": "G1_SSE path to Gazebo_1",
+    "camera": "~(122,-45.5) looking N",
+    "checked": "edging and lawn on the W side, hedge on the E side only (Hedge_Mass_7); gazebo hip roof, white posts, tile parapet",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "250_PXL_20260930_112953497 t40.2-42.2s",
+    "scene": "walk at the G1_SSE foot, looking W",
+    "camera": "~(122.5,-46.4) looking W",
+    "checked": "N posts stand just inside the edging",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "030_PXL_20260930_094930254 t0.2-19.2s",
+    "scene": "C classroom ceiling pan: sage back wall with orange diagonal stripe, white perimeter bulkhead, 600 lay-in grid, LED panel, board",
+    "camera": "inside a C classroom",
+    "checked": "grid, LED and bulkhead are modelled per room",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "102_PXL_20260930_105159573 t0.2-1.2s",
+    "scene": "lower-yard stair W end: W cheek wall with a sloped top round a raised lawn bed (birch, roses), kerb-stone risers painted yellow/white, pitch fence and red plinth behind",
+    "camera": "~(160.5,73.5) looking S",
+    "checked": "stair width/risers and the bed W of the stair",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-04"
+    ]
+   },
+   {
+    "id": "102_PXL_20260930_105159573 t1.5-4.0s",
+    "scene": "lane E/W (clover pavers, yellow/white kerbs), N lawn with spruces and roses, bench niche against the N block wall",
+    "camera": "~(162,76) panning E to N",
+    "checked": "NorthLawn_BenchNiche + NorthLawnBench_4 present (R0-11)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "102_PXL_20260930_105159573 t4.2-6.0s",
+    "scene": "workout yard: dip bars, double pull-up frame, wall bars on the courts' retaining wall, low concrete cheek end at the stair E foot",
+    "camera": "~(166,74) looking E",
+    "checked": "equipment order matches; CheekE is a 1.475 m box in the model but a low sloped end in the video",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-04"
+    ]
+   },
+   {
+    "id": "102_PXL_20260930_105159573 t6.2-8.2s",
+    "scene": "N lawn spruces, boundary block wall with brick pier, bench niche, lane W",
+    "camera": "~(163,78) looking N, then W",
+    "checked": "NorthBoundary, niche and bench",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "102_PXL_20260930_105159573 t8.5-11.8s",
+    "scene": "lower-yard stair, oblique and top-down: 5 kerb rows x 4 stones between two cheeks; separate lane kerb ~1 m N of the bottom riser",
+    "camera": "~(164,72.5) looking S, then down",
+    "checked": "riser count and width",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-04"
+    ]
+   },
+   {
+    "id": "PXL_20260924_081158036 t0.2-2.5s",
+    "scene": "C plaza looking S at the A_N north end (duct up the NE corner, red fire ladder to the roof hatch, clipped gable, brick plinth, benches), then W to the black-railed grating ramp at the A_W deck N end",
+    "camera": "~(178,-12) looking S, then W",
+    "checked": "A_N end features, AW_NorthRamp, BenchAN_*",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081158036 t2.8-8.8s",
+    "scene": "walk W along the plaza: maroon corrugated lean-to over the C south lightwell, juniper pits ~1.5 m off its edge, Dance Hall canopy box with scroll railing",
+    "camera": "~(185->176,-11) looking W",
+    "checked": "pits: 2 W of the canopy box and 4 E of it = PlanterW_S0/S1 and S2, W1-W3; lean-to edge = lightwell edge 0",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081158036 t9.2-11.5s",
+    "scene": "C south facade looking up (4 window rows, maroon frames), main entrance stair with rails",
+    "camera": "~(176,-9) looking N/up",
+    "checked": "C attachments stairs/ramp edge 2",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070251823 t0.2-0.5s",
+    "scene": "motion-blurred walk toward a gabled canopy on maroon-based posts; pink line on paving, manhole, shrub bed",
+    "camera": "unknown (not identified with two cues)",
+    "checked": "-",
+    "verdict": "blurry",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260923_080055451 t0.2-5.5s",
+    "scene": "C classroom with a sloped ceiling strip at the window wall, flat ceiling with an LED panel, whiteboard, TV, laminate floor",
+    "camera": "inside a C (attic-type) classroom looking at the board",
+    "checked": "not compared (interior lecture)",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070704360 t0.2-7.8s",
+    "scene": "C F1 lobby: terrazzo, LED grid with cross beams, periwinkle panels at black glass doors, water cooler, glazed entrance doors, snack vending + coffee machine + charge kiosk",
+    "camera": "C F1 hall, walking toward the entrance and turning",
+    "checked": "lobby fit-out exists in INT_C_F1",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070704360 t8.2-15.8s",
+    "scene": "F1 hall to the stair hall: benches with black seats under radiators, black glass lab doors, fire cabinet; first flight along the wall with a closed white stringer wall, black door under the landing at the window",
+    "camera": "C F1 hall walking toward a stair",
+    "checked": "stair, landing and closet topology = StairW/E_F1 + Closet_*_Door; closet leaf is black metal (model 'wood')",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070704360 t16.2-27.2s",
+    "scene": "climbing granite stair with a white balustrade; landing at the window; closet open; second flight to the F2 hall",
+    "camera": "on the C stair going up",
+    "checked": "first flight 10-11 risers on the f0051 stringer = model 11",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065856484 t0.2-7.8s",
+    "scene": "crossing the street on the zebra to the main gate: canopy on one white round column (W) and the beige-tile booth with maroon pier (E), bar fence, sliding gate, bike rack, A-frame signs, tree guards, street-light pole",
+    "camera": "zebra (154,-127)->(154,-110) looking N",
+    "checked": "zebra, canopy/column/booth topology, pole, A-frames = SITE_Gate",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065838589 t0.2-0.8s",
+    "scene": "same zebra crossing, trolleybus E of it, gate behind",
+    "camera": "~(154,-124) looking N",
+    "checked": "zebra/gate topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082013462 t0.2-3.0s",
+    "scene": "Gazebo_2 apron: clipped hedge and tree trunk, buildings beyond (phone rotated)",
+    "camera": "~(141,-25) looking up/E",
+    "checked": "apron edging and hedge",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082013462 t3.2-8.8s",
+    "scene": "Gazebo_2 interior: timber soffit with downlights, white square posts, brick-effect parapet with granite cap, opening between parapet ends, 1.77 m man",
+    "camera": "inside Gazebo_2 ~(144.6,-28.3)",
+    "checked": "posts, parapet and opening topology = gazebo spec",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082013462 t9.2-15.8s",
+    "scene": "from the gazebo opening down the apron/path: diamond slabs, scalloped edging, lawn with roses, fence line, trees",
+    "camera": "~(143,-33) looking S/SE",
+    "checked": "apron and paths",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082013462 t16.2-24.2s",
+    "scene": "gazebo interior pan: timber boarding on the inner parapet, wheelie bin, e-trike, Wi-Fi sticker on a post, A_W gallery with banner outside",
+    "camera": "inside Gazebo_2",
+    "checked": "set dressing only",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_080011086 t0.2-9.5s",
+    "scene": "C stair descent: flight to the window half-landing (radiator, plants, tilt-turn window), then second flight to a floor hall (blue panels, black glass doors)",
+    "camera": "on a C stair going down",
+    "checked": "two flights + window landing = StairW/E_*",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_075928860 t0.2-0.5s",
+    "scene": "C WC cubicles: grey large-format wall tile, light floor tile, black cubicle doors, squat pan",
+    "camera": "C WC",
+    "checked": "WC fit-out modelled 2026-10-01",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070021774 t0.2-1.8s",
+    "scene": "main-gate turnstile at the booth W side: ONE stainless tripod turnstile; a square-tube frame on its body holds TWO face terminals back to back; red X lamp; black steel bag rest on the tile wall; booth glazing faces the turnstile",
+    "camera": "~(156.5,-98) looking N, then E into the booth",
+    "checked": "Turnstile_In count 1 + FaceTerminal_In/Out + BagRest_Booth: matches; reconciles R3-13 with the owner's '2 devices' (= 2 face terminals on 1 turnstile)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070021774 t2.2-4.5s",
+    "scene": "inside the gate looking back W at the canopy, maroon booth pier with CCTV, thuja bed; then E: bench + red slatted box under trees at the A_S W end",
+    "camera": "~(158,-95) looking W, then E",
+    "checked": "Bench_InsideEast present; the small red slatted box (prop) is not modelled",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070021774 t4.8-6.8s",
+    "scene": "plaza N of the gate: B SE corner lettering + round logo, info board, alley N with painted kerbs, wheelie bin, spruces",
+    "camera": "~(156,-94) looking N/NW",
+    "checked": "GateAlley / B SE sign slot",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081918134 t0.2-1.5s",
+    "scene": "through Arch_Bnd_G1_N down G1_N to Gazebo_1: path 3 diamond slabs, clipped hedges both sides, edging at the arch foot",
+    "camera": "~(117.6,-9.5) looking S",
+    "checked": "hedge strips both sides of G1_N in the model (ortho overlay)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012714931 t0.2-7.8s",
+    "scene": "C basement hall: beige 60 porcelain + dark border strips, grey dado, wardrobe, radiators, barred hexagon-grille window, beam seating",
+    "camera": "C basement S corridor, walking E",
+    "checked": "INT_C_Basement hall finish (this clip is its source)",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012714931 t8.2-15.8s",
+    "scene": "large basement hall with easels and seating; segmental arch, 2 timber doors + 2 black louvres on the back wall of the arched bay",
+    "camera": "C basement hall looking W at the arch",
+    "checked": "BH_Vestibule_Arch/Doors/haunches exist",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012714931 t16.2-23.2s",
+    "scene": "at the arch looking down into the bay: brown tile stair with grooved nosings descends into it; door with a purple plate on the bay's back wall",
+    "camera": "C basement at the arch line (~x 180.3, y 5) looking W and down",
+    "checked": "model has the bay 1 riser UP",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V0-05"
+    ]
+   },
+   {
+    "id": "PXL_20260922_150544065 t0.2-61.2s",
+    "scene": "upright piano keyboard close-up, hands playing, static (all 184 frames checked on a montage)",
+    "camera": "not a locatable campus view",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "V0-01",
+    "title": "Pergola arch pitch is ~2.75 m, not 3.1. This also contradicts the earlier note of posts ~2.2 apart.",
+    "spec": "Art/Blender/Specs/SITE_Garden.json Pergola_South.pitch",
+    "current": "pitch 3.1 (about 16-17 bays over 50.3 m)",
+    "proposed": "pitch 2.75. Keep the line [[99.934,-45.532],[150.192,-48.021]] and put one N-edge post at the G1_SSE W-edging corner (~(121.6,-45.1)).",
+    "photos": [
+     "250 f0037",
+     "250 f0101",
+     "250 f0104"
+    ],
+    "method": "f0037 (camera on the walk looking E): 7 slab-row joints (period 0.405) fitted with d = K/(y - y_h). Residuals were under 1 cm (script pitch37.py). Roll-corrected N-post bases fall at 5.17 / 8.00 / 10.72 m, so the pitch is 2.83 / 2.72. f0104: 17-18 scalloped edging blocks (0.154) between consecutive N posts gives 2.6-2.8. f0101: with 2.75 counted from the G1_SSE corner post, the walk W end lands at x 100.1 (model 99.9); with 3.1 it lands at 97.4, beyond the wall.",
+    "error": "+-0.15 m",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V0-02",
+    "title": "Pergola-walk lamps are black cast posts with a white globe, standing in the lawn bed ~0.8 m N of the walk edging. There are two (E and W), and none at x 124.",
+    "spec": "Art/Blender/Specs/SITE_Garden.json PergolaWalk_Lamp_0 (+ new PergolaWalk_Lamp_1)",
+    "current": "one lamp_orn at [124.0,-45.9] (0.5 m inside the walk N edge)",
+    "proposed": "PergolaWalk_Lamp_0 pos -> [140.5,-45.4]; new PergolaWalk_Lamp_1 with the same params (height 2.6, globes 1, globe_d 0.3, top_globe) at [112.5,-44.3]",
+    "photos": [
+     "250 f0025-f0031",
+     "250 f0101",
+     "250 f0103-f0106"
+    ],
+    "method": "E lamp: seen about one pergola bay E of the camera at the G2_SSW foot (~(139.5,-47.3)), behind the edging. W lamp: in f0101 the pole foot is hidden between image rows 780 and 880. The post-base depth fit (pitch 2.75) puts it 9.5-16.8 m W of the camera (x 125.5), i.e. x 109-116. Nothing stands at x~124 in f0103-f0106. The y values are the PergolaWalk_South N edge + 0.8.",
+    "error": "E lamp x +-1.5, y +-0.4; W lamp x +-3.5",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V0-03",
+    "title": "B north gas-pipe cover: in the model its back edge rises 0.13 m above the ground-window sill and hides the window bottom. In the video the cover meets the wall just under the window frame.",
+    "spec": "Art/Blender/Specs/BLD_B.json attachments GasPipeCover_North.z_back",
+    "current": "z_back 0.92 (top surface FFL+0.95 = z 7.72) vs WG sill FFL+0.82 (z 7.59)",
+    "proposed": "z_back 0.75 (top 0.04 below the sill); keep z_front 0.32, depth 1.2, skirt",
+    "photos": [
+     "250 f0046",
+     "250 f0049"
+    ],
+    "method": "Camera on the walk ~(139,-47.5) looking S. Window width 2.0 = 590 px gives 295 px/m at the wall. The roof back edge is 18 px (0.06 m) below the window bottom frame. The front skirt (0.70 m depth-corrected) + 0.09 m gap match the model, so only the back edge is off. Model heights read from build_new.blend bboxes (GasPipeCover_North_E2 zmax 7.766, Win_E2 zmin 7.592).",
+    "error": "+-0.08 m",
+    "confidence": "medium-low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V0-04",
+    "title": "Lower-yard stair (settles P0-05): 5 kerb-stone risers, 4 stones (4.0 m) wide, on the E part of the walkway mouth. A raised lawn bed behind a sloped W cheek fills the W part, and the E cheek is low and sloped.",
+    "spec": "Art/Blender/Specs/SITE_Sports.json LowerYard_Stair, LowerYard_Stair_CheekE (+ new W cheek / bed)",
+    "current": "LowerYard_Stair top [162.681,70.27], width 6.43, risers 7, riser_h 0.1607, tread 0.75, z_top 3.45; CheekE box 0.4 x 1.2 x 1.475 at (166.272,74.54)",
+    "proposed": "LowerYard_Stair: top [163.95,70.22], width 4.0, risers 5, riser_h 0.225 (same 1.125 drop, z_top 3.45 to yard 2.325), tread 0.45 (unsure). New W cheek: concrete wall thk 0.25 along x 161.8 from y 70.3 (top z 3.45) to y ~72.5 (top ~2.75). Lawn bed between x 159.3 and 161.7 at walkway level, falling N. CheekE: same sloped top, N end ~0.4 above the yard instead of a 1.475 box.",
+    "photos": [
+     "102 f0001",
+     "102 f0013-f0016",
+     "102 f0026-f0036 (f0028 frontal, f0033 top-down)"
+    ],
+    "method": "Risers counted in f0028 (rows A-E, top row at the walkway level) and f0033 (5 rows between the cheeks + a separate lane kerb ~1 m N). Each row is 4 painted kerb stones of ~1.0 m (owner scale reference) alternating yellow/white, so the width is 4.0. Row A white stone: 487 px long, face 83 px at ~35 deg view pitch gives a riser of 0.21+-0.03, consistent with 1.125/5. Position: walkway between the pitch fence (x~159.3) and the courts (x~166) on the Google ortho. The bed and birch are W of the W cheek in f0027.",
+    "error": "risers exact; width +-0.15; position +-0.8 m; tread unsure",
+    "confidence": "medium (count/width), low (position)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V0-05",
+    "title": "Basement arched bay is sunken: about 4 risers DOWN from the big hall. The model has it 1 riser UP, and the old evidence text says 3 up.",
+    "spec": "Art/Blender/Specs/INT_C_Basement.json BH_Vestibule_Steps, BH_Vestibule_Door0/1 z0 (+ bay floor)",
+    "current": "BH_Vestibule_Steps risers 1, riser_h 0.15, z_top 4.12 (bay 0.15 above the 3.97 hall); doors z0 4.12",
+    "proposed": "BH_Vestibule_Steps runs down into the bay: top on the arch line (x~180.0), dir_deg 177.7 (the existing run reversed, i.e. heading W), risers 4, riser_h 0.15 (unsure), top_flush with the hall (z_top 3.97), width 3.44 (arch opening). Bay floor and Door0/Door1 z0 = 3.37.",
+    "photos": [
+     "012714931 f0037-f0044",
+     "012714931 f0049-f0070 (f0055 oblique, f0062 top-down, f0066)"
+    ],
+    "method": "f0062: the camera wearer's foot is on the hall floor at the arch. Column-peak search found the bright grooved nosing-strip groups at x=500: y 1012-22, 1109-28, 1235-75, 1464-1502; at x=800: 1030-47, 1158-82, 1358-91. That is 4 nosings. Each nosing sits at the FAR edge of its tread and no riser face is visible from above, so the stair descends. The bay floor is visible below the last tread (f0062, f0066), and the brown top band is flush with the hall along the arch (f0037-f0044).",
+    "error": "count +-1; riser_h 0.13-0.17 (drop 0.5-0.7)",
+    "confidence": "medium (direction), low (height)",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "B SE corner: large two-language lettering + round logo (070021774 f0017, f0021): existing KOCH slot, confirm it stays KOCH-only",
+   "Main-gate face terminals: brand labels and on-screen UI text (070021774 f0001)",
+   "Paper notice on the booth's glazed door (070021774 f0005)",
+   "C F1 lobby: snack vending machine livery, coffee kiosk brand panel, phone-charge kiosk text (070704360 f0013-f0024)",
+   "Gazebo_2 post: Wi-Fi sticker (082013462 f0061-f0064); the no-smoking pictogram is generic and fine",
+   "A_W gallery festival banner seen from the gazebo (082013462 f0069-f0073)",
+   "C basement door plates (purple room plates, e.g. the lab plate) (012714931 f0055-f0066)",
+   "Booth/gate: test-centre plate and plaque (already KOCH slots)"
+  ],
+  "open_questions": [
+   "Block C basement: when you walk from the big hall (easels, seating) into the arched bay with the two wooden doors and the two black vents, do you step down into it, and about how many steps? Is the door with the purple plate inside that bay the C001 lab?",
+   "Pergola walk in the garden: how many black lamp posts with a white globe stand in the lawn along the walk's north edge, and are they near the middle path, the east gazebo path, or elsewhere?",
+   "Lower yard stair (pitch to workout yard): is the stair only on the east part of the walkway end, with a raised grass bed (birch, roses) behind a sloping concrete wall on its west side?",
+   "The black door under the landing of the Block C stairs (closet at the window): is it the same black metal door on every floor, or only on the ground floor?"
+  ]
+ },
+ {
+  "slice": "video_part1 (19 videos, 135 sheets, all viewed; full frames checked per scene). Notes, scripts and crops: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/video_part1/ (notes.txt, canteen_h.py, ov.py, mont.py, strip.py, q.py, objs_world.json). Caveat: build_empty.blend is dated 2026-10-02 14:49 and predates today's spec edits (e.g. GBS_Garden_PergolaWalk_South lies at y -48..-52.8 while the spec line runs y -44.2..-48.8), so I compared against the specs, not that file. Not measured this pass: the courts offset step and the 26-kerb count (070410255 t48-60 frames show the area but no clean frontal kerb run), and the yard-stair risers (no frames of that stair in this slice).",
+  "coverage": [
+   {
+    "id": "PXL_20260924_053142377 t0.2-0.2s",
+    "scene": "classroom interior, 1 frame (desk, smartboard)",
+    "camera": "interior",
+    "checked": "n/a",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081856511 t0.2-3.5s",
+    "scene": "garden west apron of G2: 2-globe black cast lamp, gazebo posts behind, scalloped edging along a herringbone path, clipped hedge, young thujas, topiary balls on each side of a path to steps",
+    "camera": "~(138,-31), panning S/SW",
+    "checked": "lamp type, edging, hedge",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061913764 t0.2-10.2s",
+    "scene": "gate forecourt seen from the W: billboard, bike rack, bar fence on a plinth, sliding gate, canopy on a round column, booth, yellow-black low barrier by the parked cars",
+    "camera": "(140,-103)->(153,-101), looking E/NE then W",
+    "checked": "order of fence/rack/canopy/booth; barrier and billboard position",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-07"
+    ]
+   },
+   {
+    "id": "PXL_20260924_061913764 t10.2-14.2s",
+    "scene": "walk S across the forecourt to the NW end of the zebra: 2 pyramid tree guards, worn earth/asphalt edge flush with the road",
+    "camera": "(152,-104)->(154,-111), looking S",
+    "checked": "tree guards; dropped kerb",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081924271 t0.2-9.5s",
+    "scene": "garden: hedge-lined diamond-tile paths with scalloped edging converging on gazebo G2; A_W/A_N visible E over the hedges; hall pink/beige wall behind the gazebo",
+    "camera": "(152,-43)->(146,-33), looking NW",
+    "checked": "paths, hedges, edging, gazebo opening with red brick-tile stubs",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081924271 t9.5-14.2s",
+    "scene": "inside gazebo G2: white posts, red brick-tile parapet, timber benches, dark central column, slatted ceiling",
+    "camera": "(144.6,-28.4), rotating",
+    "checked": "posts, parapet, benches, column",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081924271 t14.2-18.2s",
+    "scene": "G2_SSW path S to the boundary: rubble-stone parapet at the path end, hedge arch and the pergola walk / B north wall beyond",
+    "camera": "(142,-34)->(139,-41), looking SSW",
+    "checked": "path end",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081235159 t0.2-3.5s",
+    "scene": "lower plaza E of the garden, in front of the A_W gallery S part, looking N toward the hall-bed benches and HallEast: yellow wheelie bin at the garden edge, spruces in yellow-kerbed lawns",
+    "camera": "~(157,-47), looking N",
+    "checked": "bins, kerbs",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "V1-04"
+    ]
+   },
+   {
+    "id": "PXL_20260924_081235159 t3.5-8.0s",
+    "scene": "wayfinding signboard (= Signboard_Arch) on 2 grey posts beside a black lamp; yellow wheelie bin and a wrought-iron litter bin in front of the scalloped edging; A_W gallery behind",
+    "camera": "~(156,-43), looking W then E",
+    "checked": "sign, bins",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "V1-04"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070629483 t0.2-5.2s",
+    "scene": "C plaza: benches at the A_N north wall, pan W to the hall E end, C SW corner with the basement-entry canopy and forged railing, Dance Hall shed, C west face",
+    "camera": "~(176,-12), rotating W->N",
+    "checked": "canopy, shed, maroon strips",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082537786 t0.2-4.2s",
+    "scene": "A_S west face: circle-paver strip with kerb, entrance pavilion on beige brick-tile piers with a red base, alley N to the A_W gallery",
+    "camera": "~(158,-88)->(157,-84), looking N",
+    "checked": "circle strip, pavilion piers",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012800431 t0.2-8.5s",
+    "scene": "C basement interior: stair landing, arched vestibule, doors",
+    "camera": "interior",
+    "checked": "n/a",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012429784 t0.2-3.0s",
+    "scene": "A_W gallery N end from the NW: tiled deck face, step, maroon round posts, timber soffit, white fascia; C and its basement-entry canopy behind",
+    "camera": "~(161,-17), looking SE",
+    "checked": "deck, posts, soffit",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081958653 t0.2-4.8s",
+    "scene": "garden S sector: bench on a gazebo apron, diamond-tile paths between clipped hedges with scalloped edging, rubble-stone wall pieces and steps at the path ends, B north wall beyond",
+    "camera": "~(121,-33), looking S",
+    "checked": "paths, hedges, edging, bench",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_080051708 t0.2-9.8s",
+    "scene": "C interior main stair walking down: granite treads, white railings, marble-look landings",
+    "camera": "interior",
+    "checked": "n/a",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012136583 t0.2-2.2s",
+    "scene": "gate from the forecourt at dusk: canopy with sawtooth fascia, column, booth, turnstile, sliding gate; pan W to the billboard, bike rack and yellow-black barrier",
+    "camera": "~(152,-106), looking N then NW",
+    "checked": "canopy/booth/gate/rack order, barrier, billboard",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-07"
+    ]
+   },
+   {
+    "id": "PXL_20260924_061707849 t0.2-3.0s",
+    "scene": "C south facade with trees in red-kerbed pits",
+    "camera": "~(180,-12), looking N",
+    "checked": "pit row",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061707849 t3.0-20.5s",
+    "scene": "A_N north wall: trees in red-kerbed pits alternating with dark slat benches, grey AHU duct box and AC units, tarp-covered unit at the W end, parking at the E end; then pan W",
+    "camera": "(185,-12)->(176,-14), looking E then W",
+    "checked": "tree/bench alternation, AHU, plinth",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070410255 t0.2-12.0s",
+    "scene": "garden G2_E boundary arch, then N along the A_W gallery N part: maroon posts, timber soffit, tiled deck face with steps, grating ramp at the N end; C ahead",
+    "camera": "(157,-29)->(163,-18), looking N/NE",
+    "checked": "arch, gallery posts, deck, steps, ramp",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070410255 t12.0-32.0s",
+    "scene": "C plaza W part: C SW corner, HallEast pink/cream gable with spruces in yellow/white-kerbed lawns, yellow wheelie bin by a lamp, Dance Hall shed, passage down to the lower yard (pink granite coping, roses, manholes)",
+    "camera": "(163,-18)->(160,0)->(162,10)",
+    "checked": "kerb colours, shed, passage stair",
+    "verdict": "matches",
+    "finding_ids": [
+     "V1-04"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070410255 t32.2-40.8s",
+    "scene": "lower passage yard: sports-hall E entrance (HallEast window, recessed pink door bay with name plate, white wall with slit window, timber-soffit lean-to on a maroon post, grating ramp), lower lawn with spruces/roses; canteen visible NE",
+    "camera": "(157,10)->(163,18), looking W/NW/N",
+    "checked": "facade order, porch, post, ramp, window types, where the face ends",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-03"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070410255 t40.8-48.0s",
+    "scene": "clover square N of C: pitch/courts fences, round bed with lamp, canteen W gable (siding with brown band, brick plinth, NW glazed vestibule) and S wall; C NW corner",
+    "camera": "(156,24)->(173,30), looking E/SE",
+    "checked": "canteen gable/porch, S wall, heights",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-02",
+     "V1-08"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070410255 t48.0-65.5s",
+    "scene": "pitch/courts walkway: pitch S gate (white gate, 2 timber steps, bin), courts gates, basketball court, round bed, canteen W gable + glazed vestibule again",
+    "camera": "(160,40)->(175,35), looking N/E",
+    "checked": "gate steps, fences, vestibule",
+    "verdict": "matches",
+    "finding_ids": [
+     "V1-02"
+    ]
+   },
+   {
+    "id": "PXL_20260925_012108212 t0.2-2.2s",
+    "scene": "from the S lawn strip across the road: N kerb, forecourt parking",
+    "camera": "~(135,-133), looking N",
+    "checked": "lawn strip, road",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012108212 t2.2-10.0s",
+    "scene": "S footway walked E: asphalt with painted white edges, lawn on both sides; unpaved car lot S of the footway",
+    "camera": "(136,-135)->(150,-135), looking E",
+    "checked": "footway surface and edges",
+    "verdict": "not_modelled",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012108212 t10.0-14.2s",
+    "scene": "footway to the crossing link and the S end of the zebra",
+    "camera": "(151,-134)->(154,-127), looking N",
+    "checked": "link surface",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-01"
+    ]
+   },
+   {
+    "id": "PXL_20260924_081904575 t0.2-2.5s",
+    "scene": "garden SE: Signboard_Arch beside the scalloped edging, G2 behind the hedges",
+    "camera": "~(155,-44), looking W/NW",
+    "checked": "sign next to the arch",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081904575 t2.5-5.0s",
+    "scene": "through hedge arch Arch_Bnd_G2_SE",
+    "camera": "~(153,-45), looking S",
+    "checked": "arch",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081904575 t5.0-8.5s",
+    "scene": "pergola walk E part: maroon steel hoop arches, diamond-tile walk, slat benches, rubble-stone parapet, wrought-iron bin, B north wall below",
+    "camera": "(152,-47)->(148,-48), looking W/S",
+    "checked": "pergola, parapet, benches",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012436367 t0.2-4.5s",
+    "scene": "A_W deck N end: 2 granite steps (W part) and a grating ramp (E part, wall side), both descending N; the ramp has rails on both sides",
+    "camera": "~(163,-15), looking E/SE",
+    "checked": "step/ramp order, rails",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-05"
+    ]
+   },
+   {
+    "id": "PXL_20260925_012436367 t4.5-13.2s",
+    "scene": "C plaza along the A_W/A_N north wall looking E: 2 pits with young shrubs and 2 wrought-iron benches at the W end, then the tarp unit and the tall-tree row; turn N to the C SW basement canopy",
+    "camera": "(163,-16)->(170,-12), looking E then N",
+    "checked": "W end of the pit row, benches, canopy",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V1-06"
+    ]
+   },
+   {
+    "id": "PXL_20260925_012327726 t0.2-30.5s",
+    "scene": "A_W gallery (lettering band) and lower plaza, side stair with grating ramp over the flight, B east face (white render, maroon surrounds, 2-lantern lamps, round shrubs, tall conifers at the NE), B porch; ends on the pink granite side stair",
+    "camera": "(163,-60)->(152,-70)->(158,-62)",
+    "checked": "ramp over the flight, shrubs and lamps, maroon light-well cover",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012744144 t0.2-12.2s",
+    "scene": "C basement interior: stair down, art room (mural, easels, pallet sofas), arched vestibule, lobby",
+    "camera": "interior",
+    "checked": "matches the BH_Art_* fit-out",
+    "verdict": "interior",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "V1-01",
+    "title": "Crossing_SouthLink is cast concrete, not clover pavers",
+    "spec": "SITE_Gate.json Crossing_SouthLink.surface",
+    "current": "clover_paver_267x218",
+    "proposed": "surface 'concrete' (smooth grey cast slab with crack joints, precast kerb edges on both sides); geometry unchanged",
+    "photos": [
+     "012108212 f31-f43 (t10.2-14.2)"
+    ],
+    "method": "Visual check on 1920 px frames: surface texture and joints compared with the clover pavers on the N forecourt (012136583).",
+    "error": "n/a (material)",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V1-02",
+    "title": "Contradicts an applied change: the canteen has no W-end porch or maroon post, and its S wall is siding, not render",
+    "spec": "BLD_Canteen.json attachments post_canopy (edge 3, u 5.6-9.1, posts_u [8.95]); facades[0] windows S1 (1.2x1.4, u 4.0) and S2 (0.6x0.9, u 15.0); S-wall render note (from photos A070-A077)",
+    "current": "open porch with a timber soffit on one maroon post at the S end of the W gable; S wall in rough-cast render with 2 windows",
+    "proposed": "Remove the post_canopy. Edge 0 windows: replace S1/S2 with one narrow slit window ~0.25 x 0.8 near the W end (u ~1-3, unsure), or none. S-wall material = the same beige horizontal siding as the gables (no brown band seen on the S wall). Keep the NW glazed vestibule (it has its own hip shingle roof) and its steps/ramp. A070-A077 show the sports-hall E entrance instead (pink inner wall, timber soffit, one maroon post, rough-cast wall with a downpipe), see V1-03.",
+    "photos": [
+     "070410255 f132 (t43.8)",
+     "f137 (t45.5)",
+     "f138 (t45.8)",
+     "f141 (t46.8)",
+     "f144 (t47.8)",
+     "f195-f196 (t64.8-65.2)"
+    ],
+    "method": "Two independent cues for the canteen ID: (1) the round bed with the 2-globe lamp directly W of the gable (RoundBed 173.7,31.1); (2) the parking lane between it and C, whose NW corner is visible on the right. Camera at (166-173, 27-31) looking E is frontal to the W gable. The siding runs flush to the SW corner; a dome-top bin and a parked car stand against it. The S wall, seen obliquely, is siding with a slit window and downpipes. No roof extension, soffit or post anywhere on the W or S side.",
+    "error": "slit-window u +-1.5 m",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V1-03",
+    "title": "Sports-hall E entrance: recessed door bay, white wall with one slit window, timber lean-to on a maroon post at the outer corner",
+    "spec": "BLD_HallEast.json attachments canopy (edge 1, u 9.0-10.6, depth 1.3), facades edge 1 ED u 9.7; BLD_HallWing.json facades edge 1 W u [2.5, 5.0, 7.5]",
+    "current": "HallEast E face flush to y 10.5 with the door in it under a flat 1.3 m canopy; wing E face with 3 windows 1.2 x 1.3",
+    "proposed": "HallEast E face (x ~153.2) ends at world y 8.8 +-0.3, 1.4 m N of window E1's N jamb (y 7.38). North of it, a recessed pink entrance bay (depth unsure, 0.5-1.5 m). In the bay, a 2-leaf glazed steel door ~1.4 x 2.2 with a blue plate and a KOCH board above it; door N jamb at y ~10.3. At jamb + 1.25 m: a downpipe and the pink->white colour change. White rough render continues to jamb + 4.75 m (y ~15.0 +-0.6), where the face ends at an outer corner. One slit window 0.36 x 0.90 (sill ~1.9 above the paving) centred at jamb + 3.7 m. Lean-to porch over the door and the white wall: timber soffit 2.9 +-0.3 m above the paving, gutter continuous with the main eave, depth unsure (1.0-2.0 m), maroon round post (d ~0.12) at the outer NE corner. A grating ramp with rails on both sides (0.9 m) runs along the HallEast face from the S up to the door landing. Remove the wing E windows u [2.5, 5.0, 7.5] (not on this face).",
+    "photos": [
+     "070410255 f100-f105 (t33.2-34.8)",
+     "f116-f122 (t38.5-40.5)"
+    ],
+    "method": "ID: lower lawn with spruces/roses and yellow-white kerbs (Passage_Lawn_Lower x 160.6-168) in front; descent via the pink-granite passage stair (f88-f97); sports-hall plate over the door. Scale in f103: 265 px/m from window E1 (0.95 m, A027) = 0.10 m plinth courses; window N jamb to the end of the beige face = 372 px = 1.4 m. f119 is frontal, camera ~(163,12) looking W, at 160 px/m from the door leaf (335 px for ~2.1 m): downpipe 200 px, window centre 590 px and wall end 760 px from the door jamb; slit 58 x 145 px. f100/f121/f122, looking N along the face: the wall ends at the post, with open paving beyond to the pitch fence.",
+    "error": "offsets along the face +-0.3 m; outer-corner y 14.4-15.6 (chained offsets); recess depth and porch depth unsure",
+    "confidence": "medium (topology), low (outer-corner y: conflicts with the Google z20 wing roof reaching y ~21-22)",
+    "needs_builder_change": true
+   },
+   {
+    "id": "V1-04",
+    "title": "Bins missing in front of Signboard_Arch (yellow wheelie bin + wrought-iron litter bin); the sign is a wayfinding board",
+    "spec": "SITE_Garden.json (new elements; Signboard_Arch note)",
+    "current": "Signboard_Arch at (155.0,-43.3), described as a campus map; no bins there",
+    "proposed": "Add bin WheelieBin_Yellow_SE (size [0.58,0.73,1.07], yellow plastic) and bin LitterBin_SE (ue_asset bin_wrought_iron, size [0.45,0.45,0.8]), both on the plaza paving within 1.0 m E/SE of Signboard_Arch. Exact offsets unsure: a frame_fit on 081235159 f13-f21 (sign posts, edging, lamp) would settle them. Signboard_Arch content: a white wayfinding panel ~0.9 x 1.4 with a dark header and arrows to the blocks, on 2 grey round posts (KOCH branding in UE). A second yellow wheelie bin stands by a black lamp at a lawn corner seen from the C plaza (070410255 f42-f45); its position is unsure.",
+    "photos": [
+     "081235159 f1-f23 (t0.2-7.5)",
+     "081904575 f1-f7 (t0.2-2.2)",
+     "070410255 f42-f45"
+    ],
+    "method": "The sign's identity is confirmed in 081904575: the same board stands right next to hedge arch G2_SE. The bins are seen in front of it in 081235159. Sizes by eye against the 1.07 m bin.",
+    "error": "position +-1 m",
+    "confidence": "high (existence), low (position)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V1-05",
+    "title": "A_W north grating ramp also has an E (wall-side) handrail",
+    "spec": "SITE_Garden.json (AW_NorthRampRail_W exists, no E rail)",
+    "current": "rail on the W side only",
+    "proposed": "rail3d AW_NorthRampRail_E points [[167.025,-20.422,5.65],[167.143,-18.025,5.35]], height 0.9, spacing 1.2, mid_rails 1, material metal, unique_posts true. This mirrors the W rail 0.03 inside the AW_NorthRamp E edge (167.055,-20.422)-(167.173,-18.025).",
+    "photos": [
+     "012436367 f1-f4 (t0.2-1.2)"
+    ],
+    "method": "Visual: two top rails, each with 2 posts, one on each side of the grating; the E one stands in front of the maroon corner pier. The step/ramp order (steps W, ramp E) matches the spec. Coordinates are derived from the spec ramp edge.",
+    "error": "follows the ramp edge",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V1-06",
+    "title": "Two extra red-kerbed pits with young shrubs and two wrought-iron benches W of TreeAN_0, at the A_W north wall",
+    "spec": "SITE_CPlaza.json (new PlanterAN_W0/W1, ShrubAN_W0/W1, BenchAN_W0/W1)",
+    "current": "the pit row starts at TreeAN_0 (x 174.43)",
+    "proposed": "Pits 1.2 x 1.2 (as PlanterAN_*) centred at (171.50,-17.07) and (168.57,-16.93), continuing the 2.93 m pitch westward on the TreeAN_0/1 line. Shrubs: height 0.8, crown_d 0.6, shape round. One bench per pit (ue_asset bench_wrought_iron, scroll legs), on the wall side, offset like BenchAN_0 (-1.2 m in y from the pit centre).",
+    "photos": [
+     "012436367 f9 (t2.8)",
+     "f15 (t4.8)",
+     "061707849 f15-f19"
+    ],
+    "method": "Camera ~(165,-17) looking E along the wall. Order from the W: pit with a young shrub, scroll bench, pit with a small shrub, tarp-covered unit, then the first tall tree with slat benches. 061707849 shows the tarp unit next to the first tall tree. x is extrapolated from the spec pitch.",
+    "error": "x +-1.0 m (pitch assumed), count high",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V1-07",
+    "title": "Billboard stands next to the W end of the bike rack (not 12 m further W) and is a portrait panel; the pipe barrier belongs in front of it, not in front of the booth",
+    "spec": "SITE_Gate.json Billboard_West (pos [129.776,-99.848], w 3.0, h 2.0, z0 0.8); PipeBarrier_Booth (line [[158.6,-101.2],[160.4,-101.3]])",
+    "current": "billboard on the sidewalk edge at x 129.8, landscape, on posts; barrier in front of the booth's S face",
+    "proposed": "Billboard_West at x 141.2 +-2.0, y -97.6 +-0.8, just S of the fence plinth. Panel portrait with w:h = 0.70 +-0.1, z0 ~0.1, leaning back 10-15 deg on a rear stand; absolute size unsure. PipeBarrier: move to x 141-144, y -100.5 +-1, 1.5-2.5 m S of the billboard; length 1.5 +-0.3; a low pole ~0.15-0.3 high with yellow/black bands, one end bent down. Remove it from the booth front.",
+    "photos": [
+     "012136583 f6-f7 (t1.8-2.2)",
+     "061913764 f1-f5, f23-f29"
+    ],
+    "method": "f6: nothing on the paving in front of the booth's S face. f7: billboard, rack, column and barrier in one frame; image-plane ratios along the fence line (rack 250 px, gap 115 px, panel 150 x 215 px). With the spec rack length of 5.0 m (itself estimated) the gap is 2.3 m and the panel 3.0 m wide, giving the centre at x 141.2.",
+    "error": "x +-2 m, y +-1 m",
+    "confidence": "medium (adjacency/order), low (metres)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V1-08",
+    "title": "Canteen is taller than the current spec (applied lowering came from another building's photos); exact height unsure",
+    "spec": "BLD_Canteen.json eave_z 2.9 (+ plinth_m 0.35 = 3.25 above the paving), plinth z_top 0.45, roof pitch 12",
+    "current": "wall top 3.25 m above the W paving",
+    "proposed": "unsure. Range: wall top (siding top) 3.6-5.0 m above the W paving, i.e. eave_z 3.3-4.6 above FFL. Plinth top 0.57-0.95 m above the paving (5.7-6.35 brick-tile courses). Roof rise above the eave = 0.26 x eave height (12.5-16 deg over the 4.55 m half span). Do not lower it further.",
+    "photos": [
+     "070410255 f144 (t47.8)",
+     "f195 (t64.8)",
+     "f137 (t45.5)"
+    ],
+    "method": "canteen_h.py. f144, frontal gable: course 11.0 px; ground to siding top 366 px = 33.3 courses; plinth 5.7 courses; apex 96 px above the verge line. f195: plinth course 21.4 px (6.35 courses) and an adult walking beside the vestibule, 286 px tall, solved with the horizon from a camera height of 1.45-1.6 m: a 0.10 m course gives a person of 1.16 m (implausible), 0.15 m gives 1.63 m. f137: parked sedan roof (1.475 m = 65 px) against the S-wall eave-to-ground height of 160 px behind it gives 3.6-4.0 m. A 0.10 m course gives 3.33 m; 0.15 m gives 5.0 m.",
+    "error": "+-0.7 m (range above)",
+    "confidence": "low (only 'taller than now' is consistent)",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "Wayfinding signboard at the garden SE (Signboard_Arch): header with the real institution name and logo plus block arrows (081235159 f13-f21, 081904575 f3-f7) -> KOCH wayfinding board",
+   "A_W gallery lettering band (012327726, 082537786): real slogan -> KOCH",
+   "Sports-hall E entrance: blue door plate and white name board above the double door (070410255 f103, f119) -> KOCH department plate",
+   "Gate booth brass plaque and the round-logo billboard on the W forecourt (012136583 f6-f7, 061913764) -> KOCH",
+   "Basement corridor round logo plaque above the door (012744144, 012800431) -> KOCH"
+  ],
+  "open_questions": [
+   "At the sports hall's east door (the one with the name board, the timber porch roof and the maroon post): when you stand at that door and walk north past the white wall with the small high window, does the building end at the post, with open paving to the football pitch? Or does the hall's north wing carry on further north?",
+   "Is the hall's north wing (the hip-roofed part north of the hall) reachable from the east side at all, or does it only have walls facing the hall's north yard?",
+   "The canteen (gable building east of the round flower bed, glass porch at its NW corner): are the red brick-look tiles on its base the same small size as on the sports hall, or the larger size used on the gate booth?",
+   "Roughly how tall is the canteen wall up to the roof edge: about one normal storey (~3.5 m) or noticeably taller (~4.5-5 m)?",
+   "Does the canteen's south side (facing the parking lane by Block C) have any real windows, or only one narrow slit window near its west end?",
+   "Where the garden paths meet the rubble-stone wall by the pergola walk, do they go up a few steps, or is it all level?",
+   "The tall portrait billboard on the forecourt west of the gate: does it stand right next to the bike rack, and is it taller than a person?"
+  ]
+ },
+ {
+  "slice": "video_part3 (9 videos: PXL_20260922_145003490, PXL_20260924_074805359, PXL_20260924_052716931, PXL_20260925_012404116, PXL_20260925_012547860, PXL_20260924_070541257, PXL_20260924_065653194, PXL_20260924_081213784, WhatsApp_2026-09-30_17-16-16; all 126 sheets viewed). Scratch: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/video_part3/ (notes.txt, bb.json of build_empty.blend, crop.py, bpath.py, out.json); 1 Cycles render (r1_stairE_F3.png)",
+  "coverage": [
+   {
+    "id": "PXL_20260922_145003490 t0-21.2s",
+    "scene": "upright piano close-up (walnut gloss veneer, music desk, keyboard), dark room, hands; location not identifiable (likely the C basement piano room; no wall or floor visible)",
+    "camera": "static over the keys",
+    "checked": "piano type is an upright walnut, matching the Piano_Upright_* type (1.47 x 0.66 x 1.30); no whole piano visible to measure",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_074805359 t0-26.2s",
+    "scene": "C corner PC lab (type F2_R201/R204/R205; room number not readable): pan from the back-wall rack -> door wall -> board wall -> facade window wall -> end window wall",
+    "camera": "seated mid-room, ~1.2 m high, pan ~300 deg",
+    "checked": "wall topology (door in the corridor wall at the board end; board wall = partition with whiteboard + TV; corner column at the board/facade corner; deep beam over the facade wall; ceiling boxes over the other walls; 600 grid + LED panels), paints, stripe, fittings",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-01",
+     "V3-02",
+     "V3-03"
+    ]
+   },
+   {
+    "id": "PXL_20260924_052716931 t0-6s",
+    "scene": "C F3 corridor at room 302 (door sign '302'), looking E along the corridor (terrazzo, periwinkle panels above doors, 600 LED panels, cross bulkheads, end window)",
+    "camera": "~(184.5,6.3,14.5) looking E, then turning S",
+    "checked": "corridor finish and door rhythm vs F3_Hall_S_West/N_West; doors glass2 single leaf",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_052716931 t6-11.8s",
+    "scene": "302 door frame + S hall wall + bench with a white heating riser above its E end",
+    "camera": "~(184,5.5,14.5) facing S, panning W",
+    "checked": "302 door position (x~184.8) with bench S0 (x 182.7) west of it; bench type; riser pipe",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-06",
+     "V3-07"
+    ]
+   },
+   {
+    "id": "PXL_20260924_052716931 t11.8-20.2s",
+    "scene": "West stair hall at the W end of the F3 corridor, beside the 301 door: floor-level guard with 3 potted plants, a flight with people coming DOWN from above, mid-landing, second flight up, end-wall window + radiator",
+    "camera": "~(182.5,5.5,14.5) looking W (order on the S wall is bench -> 301 door -> stair; facing S then panning right = W)",
+    "checked": "stair continues above F3; lane/landing orientation; guard; 301 door (single glazed leaf, matches)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-04",
+     "V3-05"
+    ]
+   },
+   {
+    "id": "PXL_20260925_012404116 t0-3.5s",
+    "scene": "wide granite stair N of B (lower plaza -> alley level), B NE-corner porch + A_S/A_W at the top",
+    "camera": "~(156,-51,6.8) looking S, panning W",
+    "checked": "riser count on the f2 full frame = 6 granite + 1 grey concrete kerb riser = 7 (model Steps_BCorner_Upper 4 + Lower 3, 7 x 0.1743); bed walls on both sides; lower steps running past the W bed (f5-f6)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012404116 t3.5-6s",
+    "scene": "garden SE entrance: pergola E-end steel arch, hedge arch Arch_Bnd_G2_SE, signboard (sign to KOCH), scalloped edging, garden E walk with lamps, gazebo roof behind",
+    "camera": "~(157,-50) panning W->N",
+    "checked": "presence and order of arch/signboard/edging",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012404116 t6-18.8s",
+    "scene": "A_W gallery front (red posts, maroon soffit, brick-tile plinth, AC units, slogan band = sign to KOCH), thuja pits with red kerbs, wheelie bin with broom, manhole",
+    "camera": "walks N from ~(158,-50) to ~(160,-28) at ~1.2 m, looking E/NE",
+    "checked": "pits (model has 4 at 4.45 m pitch, SfM'd from this same clip), bin AW_Bin_0, deck-edge step",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012404116 t18.8-20.2s",
+    "scene": "garden E walk N of the entrance: narrow path through a hedge arch, lamp, scalloped edging",
+    "camera": "~(158,-30) looking W/NW",
+    "checked": "presence",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012547860 t0-9.8s",
+    "scene": "C west basement entry: descent of the sunken stair (granite treads, brick-tile Dance Hall box wall on the left with a wooden door at the mid landing, forged grey railing + sloped brick-tile light-well cover on the right), mid landing, 2 risers into the light-well corridor",
+    "camera": "from ~(168.5,-4.4,6.9) moving E and down to ~(173.5,-4.5,5.6), looking E/down",
+    "checked": "upper-flight riser count (f2 descent view, f45 ascent view), width, landing door, lower 2 risers",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-08"
+    ]
+   },
+   {
+    "id": "PXL_20260925_012547860 t9.8-17.8s",
+    "scene": "turn on the mid landing: lower 2 steps, then looking back W/up the upper flight to the plaza under the canopy (forged parapet scrolls, canopy on posts)",
+    "camera": "~(173,-4.6,5.8) looking W/up",
+    "checked": "riser count on f45 (nosing profile: 9 nosings incl. the top landing edge), railing, canopy",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-08"
+    ]
+   },
+   {
+    "id": "PXL_20260925_012547860 t17.8-37.8s",
+    "scene": "light-well corridor heading E: honeycomb-barred C basement windows on the left, orange wardrobes + stored desks, grey brick-slip wainscot ~1 m, round downlights, 2 duct fans, sloped ceiling on the S side, pilasters",
+    "camera": "walks E along y~-5.0 from x~174 to ~181",
+    "checked": "wainscot, fans, wardrobes, desks, windows (all already modelled from this clip)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260925_012547860 t37.8-52.8s",
+    "scene": "piano room at the E end: the corridor N wall ends at a white column and the room widens to the N; raised one-step strip along the S wall into the room; E end wall ~3.8 m wide with a symmetric sloped ceiling (slopes both N and S); 2 uprights on the E wall + 1 more; N wall with a black steel door on a 2-riser platform, a barred window each side, 3 high barred transom windows",
+    "camera": "~(181,-5,5.5) -> ~(184.5,-5,5.6) looking E, then N",
+    "checked": "room width, step, door, windows vs the Piano_* elements",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-09"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070541257 t0-2s",
+    "scene": "hall wing N face + NE-corner porch (one maroon post, timber soffit, glazed door + fire board into the taller pink-striped hall end behind); boiler chimney behind, to the WSW",
+    "camera": "~(155,28,6.0) looking SW",
+    "checked": "identity: NOT the canteen (chimney WSW behind the roof; festoon alley + pitch fence/goals on a clockwise pan to W/N within 2 s; the canteen would be 25-30 m to the E, outside the view). N-face openings: window ~0.9 wide, round vent, another window further W, return face with a narrow tall window at the porch",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-10"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070541257 t2-9.5s",
+    "scene": "festoon alley heading W (thuja beds with yellow/white kerbs, roses, 2-globe ornamental lamps, string lights), pitch fence + floodlight masts + goals + benches to the N, chimney, D/Pavilion in the distance",
+    "camera": "~(150,31) panning W -> NW -> N",
+    "checked": "bed shapes, kerb paint, lamps, festoons (modelled from this clip) match; clover paving colour differs",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-11"
+    ]
+   },
+   {
+    "id": "PXL_20260924_065653194 t0-4s",
+    "scene": "W end of the street sidewalk: concrete-block pillar (SidewalkWestWall), yellow gas service pipe + blue valve riser behind the mesh fence, fluted parapet, B's W end (pink pilaster, AC units) beyond",
+    "camera": "~(92,-100.5) looking N/NE",
+    "checked": "pillar on the parapet line (x 90.9), mesh fence, gas riser",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-12"
+    ]
+   },
+   {
+    "id": "PXL_20260924_065653194 t4-13s",
+    "scene": "over the street parapet + hedge into the B front strip, W half (x ~95-112): lamp pole in a parapet gap, lawn, painted kerb, pink path, painted kerb, lawn with pines/round junipers/blue spruce, black bollard lights, paved strip along B's brick plinth",
+    "camera": "walks E along y~-100.5, x 93->105, looking N",
+    "checked": "cross-section order vs Path_BFront/Upstand_BFront/Hedge_BFront/Tree_BFront_*",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-13",
+     "V3-14"
+    ]
+   },
+   {
+    "id": "PXL_20260924_065653194 t13-24s",
+    "scene": "sidewalk looking E: tree pit (long trapezoid kerbed pit), parked cars + yellow/black wheel-stop bars, then a turn S to the street (trolley poles, apartment towers) and back E",
+    "camera": "~(105-114,-101)",
+    "checked": "StreetPit_02 shape/size (~4 x 1.4 m, matches 4.2 x 1.5), wheel stops, clover pavers",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065653194 t24-32s",
+    "scene": "walking E past the tree pit, people ahead, bins at the parapet, gate booth/billboard in the distance",
+    "camera": "(112->120,-101) looking E",
+    "checked": "pit, bins, parapet segments",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065653194 t32-40s",
+    "scene": "over the parapet into the B front strip, E half (x ~120-135): benches with backrests on the S edge of the pink path facing N, round cast bins, painted kerb on the N edge, lawn with blue spruce + pines + large round junipers, manhole covers on the lawn, bollard lights, B plinth",
+    "camera": "~(120-128,-100.8) looking N",
+    "checked": "same cross-section as t4-13 + benches",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-13",
+     "V3-14"
+    ]
+   },
+   {
+    "id": "PXL_20260924_065653194 t40-48s",
+    "scene": "lamp poles in parapet gaps, cast-iron ornamental bin on the sidewalk, rectangular drain grating at the parapet foot near its E end, parapet end; view E along the sidewalk to the gate (billboard, booth, bikes)",
+    "camera": "(128->134,-101)",
+    "checked": "grating + bin + lamp-in-gap",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V3-14",
+     "V3-15"
+    ]
+   },
+   {
+    "id": "PXL_20260924_065653194 t48-61.5s",
+    "scene": "sidewalk E of the parapet end: red-pattern clover pavers, billboard on the fence (sign to KOCH), flagpoles in the hedge, B's SE entrance glimpsed through trees, parking with wheel stops, bikes at the booth, gate booth W face",
+    "camera": "(134->152,-101) looking E/SE",
+    "checked": "billboard, flagpoles, bike rack, booth position",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081213784 t0-2s",
+    "scene": "C plaza W end looking W: hall S face (maroon eave, beige wall, brick-tile plinth), the taller HallEast end, benches with red-kerbed pits, covered stack (black tarp) by the wall",
+    "camera": "~(170,-11,6.9) looking W",
+    "checked": "presence and order of the hall S face, pits, benches (people fill most of the frame)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081213784 t2-4.5s",
+    "scene": "pan S->E: A_N N end (low canopy, benches, red planter), garden/plaza with yellow bins and blue spruces, then the C west basement canopy (brick box, forged railing, red-kerbed tree pit S of it)",
+    "camera": "~(171,-11) panning SW->NE",
+    "checked": "basement canopy + railing + pit order vs INT_C_Basement Stair_Railing_S and CPlaza PlanterW_S0..2 (pit ~3 m S of the railing)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "WhatsApp_2026-09-30_17-16-16 t0-24.7s",
+    "scene": "phone filming a monitor: photogrammetry mesh (built from screenshots, blue camera markers) of C (hip roof, dormers, W shed), the A_N/A_W roofs and the C plaza, orbiting",
+    "camera": "n/a (screen recording)",
+    "checked": "roof types/topology only (360x640, moire): C hip roof, dormer rows and the grey W shed roof are consistent with the model; no metric use",
+    "verdict": "blurry",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "V3-01",
+    "title": "C PC lab paint is reversed: the facade window wall is SAGE and the exterior end (back) wall with its window is WHITE",
+    "spec": "INT_C_Floors.json F2_R201/R204/R205: _WindowWall_Paint slot M_Paint_White, _BackWall_Paint slot M_Paint_Sage",
+    "current": "window wall white, back wall sage",
+    "proposed": "corner labs (R201, R204, R205): _WindowWall_Paint slot -> M_Paint_Sage; _BackWall_Paint slot -> M_Paint_White; board wall: add sage paint on its window-side part beyond the stripe (see V3-02)",
+    "photos": [
+     "074805359 f31",
+     "f37",
+     "f41",
+     "f43",
+     "f44",
+     "f46",
+     "f62",
+     "f63",
+     "f16",
+     "f66"
+    ],
+    "method": "topology from one continuous pan: board wall (whiteboard + TV, white) -> orange stripe -> sage part of the same wall -> corner column -> sage wall with windows and the deep window beam. That wall is adjacent to the board wall, so it is the facade (the end wall is opposite the board in the model plan). Facade -> corner -> white wall with windows opposite the board (end wall, holds the wall rack). The door is in the wall opposite the sage facade (f16/f66).",
+    "error": "topology only, no metric",
+    "confidence": "medium (one lab filmed; the C105 reference evidence came from a different room)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-02",
+    "title": "Orange diagonal stripe on the lab board wall (not modelled)",
+    "spec": "INT_C_Floors.json: new element per corner lab, e.g. F2_R201_BoardStripe (0.006 paint box on the board-wall face)",
+    "current": "none",
+    "proposed": "orange band 0.12-0.15 wide + a parallel white band ~0.10 on its window side. It starts under the ceiling box ~0.9 m from the corner-column face and runs down to the floor, away from the window, ~25-30 deg off vertical, passing behind the window-side half of the TV. The board-wall face between the stripe and the corner column is M_Paint_Sage.",
+    "photos": [
+     "074805359 f31",
+     "f37",
+     "f41"
+    ],
+    "method": "f41, scale from the TV (model 1.57 m = 255 px -> 162 px/m at the wall): stripe top 145 px from the column = 0.9 m; stripe at TV-bottom level 315 px = 1.95 m; band widths 25/20 px",
+    "error": "+-0.25 m position, +-5 deg",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-03",
+    "title": "Wall-mounted black network cabinet + white panel below it in the lab (not modelled)",
+    "spec": "INT_C_Floors.json: new box per filmed lab",
+    "current": "none",
+    "proposed": "black box ~0.60 w x 0.45 h x 0.45 d, bottom ~2.0 m above the floor, on the end (back) wall next to the corridor-corner pilaster; white panel 0.40 x 0.40 x 0.04 below it at ~1.4-1.8 m",
+    "photos": [
+     "074805359 f1-f3",
+     "f57-f60"
+    ],
+    "method": "proportions vs the 1.85 m window opening in the same wall (f58)",
+    "error": "+-0.15 m",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-04",
+    "title": "The west stair continues ABOVE F3 (F3 -> mid-landing -> F4); the model stops it at F3 with StairW_F2_TopGuard and puts the F4 teachers' room over the bay",
+    "spec": "INT_C_Floors.json: StairW_F2_TopGuard; missing StairW_F3_Flight1/_Landing/_LandingTop/_Flight2/_Rail1/_Rail1W; F4_Teach_W_Front + F4_Door_Teach_W (wall at x~177.3-177.5, y 3.2-9.0)",
+    "current": "no flights above F3 at the west stair",
+    "proposed": "add StairW_F3_* flights/landing/rails as a copy of StairW_F2_* raised +3.30 (z_top 14.612 / 16.3; 11 risers x 0.1535, tread 0.332, width 1.35), oriented per V3-05. The F4 arrival layout is an open question: this contradicts the owner note 'west stair serves F1-F3 only'.",
+    "photos": [
+     "052716931 f43-f55 (people walk down the upper flight in f47-f51; upper landing and a second rising flight at the top of f48/f53)",
+     "052716931 f22-f24 (door sign 302)"
+    ],
+    "method": "topology. Floor identified by the 302 door sign and by the order on the S wall: bench -> 301 door -> stair (model: bench S0 x 182.7, 301 door x 178.3-179.3, stair bay x 174-177).",
+    "error": "n/a",
+    "confidence": "high that flights exist above F3; what is at F4 is unknown",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-05",
+    "title": "West stair dog-leg is rotated 180 deg in plan vs the model",
+    "spec": "INT_C_Floors.json / INT_C_F1.json StairW_F#_Flight1/_Flight2/_Landing/_Rail1/_Rail1W/_TopGuard",
+    "current": "floor landings at the S end (Flight2 top (174.72,4.63)), mid-landing at the N end (y 7.97-9.13), arrival lane = W lane (end wall)",
+    "proposed": "mid-landings at the S end (y ~4.6-5.8), floor landings at the N end. At F3 the arrival flight is the E lane (corridor side, rising N to F3) and the up flight is the W lane (end-wall side, foot at the N end, rising S). That is, rotate the whole StairW stack 180 deg about the bay centre (~175.65, 6.85); the corridor-side floor guard stays along x~177.",
+    "photos": [
+     "052716931 f48 (guard + arrival-flight treads seen through it at lower right, rising to the right = N; the up-flight balustrade descends to its foot at the right)",
+     "052716931 f53 (girl standing at the up-flight foot at the right, next to the N wall; landing upper left = S)"
+    ],
+    "method": "the camera faces W (see V3-04), so left = S",
+    "error": "topology only",
+    "confidence": "medium (one viewpoint; check against east stair photos 135/138: if C is mirror-symmetric E-W, the east stair would also have its mid-landing at the S)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-06",
+    "title": "Vertical white heating riser on the S corridor wall above the E end of bench F3_Hall_Bench_S0 (not modelled)",
+    "spec": "INT_C_Floors.json: new box F3_HeatPipe_Riser_S0",
+    "current": "none (only horizontal HeatPipe at z 13.1)",
+    "proposed": "white pipe d 0.035 on the corridor face of F3_Hall_S_West at x~183.45 (+-0.3), from the ceiling down to ~0.7 m (+-0.15) above the floor, with a 90 deg elbow into the wall; standoff 0.03 from the wall face",
+    "photos": [
+     "052716931 f31-f34"
+    ],
+    "method": "seat top 0.45 m = 160 px at the wall (355 px/m); elbow 245 px above the wall foot -> 0.69 m",
+    "error": "+-0.15 m height, +-0.3 m x",
+    "confidence": "low-medium (not verified on F1/F2/F4)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-07",
+    "title": "Corridor bench is a wooden box frame (oak-orange) with a black upholstered seat pad, longer than 1.8 m",
+    "spec": "INT_C_Floors.json F3_Hall_Bench_S0 (and siblings): ue_asset/slot/length",
+    "current": "bench_generic 1.8 x 0.4, seat 0.45",
+    "proposed": "wooden box base + black pad (base M_Wood_Oak_Light, pad M_Leather_Black), seat 0.45 (used as the scale reference, consistent). Length unsure: 5 seated people fit (>= 2.4 m); one frontal photo showing both bench ends would settle it.",
+    "photos": [
+     "052716931 f31-f42"
+    ],
+    "method": "number of seated persons x ~0.5 m",
+    "error": "length unsure",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-08",
+    "title": "The C basement entry's upper flight has 9 risers, not 8",
+    "spec": "INT_C_Basement.json Stair_Upper (risers 8, riser_h 0.138, z_top 5.35) (+ Stair_Lower 2)",
+    "current": "8 + 2 risers",
+    "proposed": "Stair_Upper risers 9, tread 0.36 kept. Height unsure, two options: (a) keep the corridor floor (3.97) and the mid landing (4.246): riser_h 1.104/9 = 0.1227 to the same top 5.35; or (b) keep riser 0.138: top 5.488, which is 0.14 above the plaza and fits 'one kerb above the plaza' for Entry_Landing better. Prefer (b) only if the plaza-to-landing kerb is ~0.14; one tape measurement of a riser settles it.",
+    "photos": [
+     "012547860 f45 (ascent; nosings at y = 875, 917, 963, 1020, 1082, 1165, 1300, ~1495, ~1750 px: 9 nosings, spacing growing smoothly 42..255 px)",
+     "012547860 f2 (descent; 9 treads between the landings, consistent with >= 9)"
+    ],
+    "method": "intensity-gradient profile + visual count on full frames",
+    "error": "count +-0 on f45 (monotonic spacing); f2 ambiguous by 1",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-09",
+    "title": "Basement piano room is wider than the corridor and has a door + windows in its N wall",
+    "spec": "INT_C_Basement.json Piano_Step, Piano_Partition, Piano_Upright_0..2, Corr_Wainscot_N / N wall line y -4.17 at x > 182.5",
+    "current": "piano zone = corridor end, x 182.47-185.97, y -6.12..-4.26 (1.86 m), N side closed",
+    "proposed": "E end wall clear width ~3.8 m (+-0.4) N-S, so the room's N wall is ~2 m N of the corridor N wall line (placing it needs the C basement plan; unsure whether it lies inside C's west-wing footprint). N wall: black steel door 0.95 x 2.05 on a landing 2 risers up (~0.14 each, landing ~1.3 x 1.0), a barred window ~0.9 x 1.2 (sill ~1.0) on each side of the door, 3 high barred transoms (~1.0 x 0.5) above. Ceiling: flat middle sloping down to BOTH long walls (symmetric profile on the E wall). The raised one-step strip along the S wall runs from the corridor into the room (exists as Piano_Step). 2 uprights side by side on the E wall + 1 on the N/W side.",
+    "photos": [
+     "012547860 f114",
+     "f120-f126",
+     "f133-f145"
+    ],
+    "method": "E wall width from the frontal upright (model 1.45 m = 110 px; wall 290 px in f122)",
+    "error": "+-0.4 m width; door/window sizes +-0.2",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-10",
+    "title": "Video settles deferred R1-01: the timber-soffit porch on one maroon post is at the HALL WING's NE corner (beside the hall-end door), not at the canteen",
+    "spec": "BLD_HallWing.json attachments + facades edge 2 (N); BLD_Canteen.json post_canopy/downpipe/S windows",
+    "current": "as in R1-01 (porch on the canteen; wing N face blank)",
+    "proposed": "apply R1-01 as written: wing post_canopy at the NE corner, post ~(153.8,20.5 +-2); N-face window ~0.9 x 1.3 near the E end, round vent d~0.25, a second window further W; remove the porch from the canteen. Extra detail from f2: a short return face (with a narrow tall window ~0.3 x 1.2) sits between the porch and the main N face, so the porch is recessed into the NE corner.",
+    "photos": [
+     "070541257 f1-f3"
+    ],
+    "method": "identity from 3 independent cues (chimney bearing; alley/pitch on the same pan; taller hall mass behind the porch). Sizes not re-measured: R1-01 values (+-0.5 m) stand.",
+    "error": "as R1-01",
+    "confidence": "medium-high on identity",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-11",
+    "title": "Alley / hall-wing-yard clover paving is a grey + pink-red mix, not all grey",
+    "spec": "SITE_00_GroundCover.json ground_surfaces Paved_003 slot (around (130-160, 22-42))",
+    "current": "M_Paver_Clover_Grey",
+    "proposed": "clover paver with ~1/3 pink-red units in a random mix (new slot M_Paver_Clover_GreyPink or a tint variant)",
+    "photos": [
+     "070541257 f1-f9",
+     "f19-f29"
+    ],
+    "method": "visual count on the f7 foreground (pink : grey ~ 1 : 2)",
+    "error": "+-10 % share",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-12",
+    "title": "Gas service riser behind the street fence at its W end (not modelled)",
+    "spec": "SITE_StreetFront.json: new element GasRiser_W (pipe + valve)",
+    "current": "none",
+    "proposed": "yellow steel pipe d ~0.07 along the block boundary wall at ~1.2 m above the bed, running E ~0.6 m and turning down; blue valve body (d ~0.12, h ~0.25) at ~0.6 m; black pipe into the soil. Riser at ~(91.5,-96.5) +-0.4: ~0.6 m E of the pillar face, ~0.4 m behind (N of) the mesh fence.",
+    "photos": [
+     "065653194 f1-f6"
+    ],
+    "method": "pillar face x 90.9 as origin; offsets by eye vs the 0.35 m parapet in the same frame (f3: pipe-to-pillar 336 px at ~550 px/m)",
+    "error": "+-0.3 m position, +-0.2 m heights",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-13",
+    "title": "B front strip cross-section is wrong: no hedge on an upstand between the path and B; the path lies ~1.5-2.3 m further S; trees on BOTH sides of the path; painted kerbs on both path edges; benches on the S edge",
+    "spec": "SITE_Gate.json Path_BFront, Upstand_BFront, Hedge_BFront, Tree_BFront_0..4, Step_BoothApron (+ PathLamp_B_*, see V3-14)",
+    "current": "path line (139.021,-90.464)->(100.567,-88.581), width 2.4; 0.45 upstand + 1.15 hedge on its N side (y -89.0..-87.2); tree row at y -92.4..-91.1",
+    "proposed": "(a) delete Upstand_BFront and Hedge_BFront. (b) Path_BFront line (139.021,-91.98)->(100.567,-90.92), width 2.35 (pink/grey paving), with 1.0 m painted kerb stones (yellow/white alternating, 0.10 high) on both edges. (c) Step_BoothApron follows the path's E end (centre y -92.0). (d) Street-side tree row Tree_BFront_0..4 to y = path centre - 2.6 (~-93.5 W .. -94.6 E; crowns -92.5..-96 in Google). (e) New B-side lawn row between the path and B (y -85..-89): pines + 1 blue spruce + 2-3 large round junipers (~2.0 h, 2.5 d), crowns at y -85..-89 (Google); x unsure. (f) Paved strip along B's plinth from the wall to y ~-84.5 (Google light band -83.5..-85 beyond the eave). Benches with backrests on the path's S edge facing N (E half), positions unsure.",
+    "photos": [
+     "065653194 f13-f36 (frontal views over the parapet, W half)",
+     "065653194 f97-f120 (E half)",
+     "the hedge/upstand evidence cites 065934318_s1/s2; the video_part2 pass placed 065934318 t2-17.5 s on the sidewalk E of the gate (V2-04), so that hedge may belong to another strip; in 065653194 there is no hedge between this path and B"
+    ],
+    "method": "Google z20 ground profile over 32 columns, x 100..138 (scratch bpath.py): light band centre y = -0.0276 x - 88.140, rms 0.67 m, width median 2.35 m (IQR 1.7-3.3); topology from the video",
+    "error": "path centre +-0.5 m, width +-0.6 m, tree rows +-1.5 m",
+    "confidence": "topology high; positions medium-low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-14",
+    "title": "B front: the tall grey lamp poles stand IN gaps of the street parapet (as V2-04 on the E side), not on the B-side hedge line; small black bollard lights on the B-side lawn",
+    "spec": "SITE_Gate.json PathLamp_B_0..3; SITE_StreetFront.json Parapet_Front_*",
+    "current": "PathLamp_B_* at y -87.6..-89.2 (hedge side); parapet continuous with 3 cm joints",
+    "proposed": "move the 4 poles onto the parapet line (on (90.95,-97.35)->(135.8,-99.715)), each in a widened joint (gap ~0.4 m). x positions unsure: poles seen at the W end (~x 95, f11-f14), mid (f117-f122) and E (f157-f160). Add 4-6 bollard lights (black, h ~0.45, d ~0.1) on the B-side lawn ~1 m S of the facade paving strip.",
+    "photos": [
+     "065653194 f11-f14",
+     "f117-f122",
+     "f157-f160",
+     "f15",
+     "f105"
+    ],
+    "method": "topology; pole d ~0.14 vs the 0.22 parapet thickness",
+    "error": "x +-3 m",
+    "confidence": "topology high; x low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V3-15",
+    "title": "Street sidewalk: drain grating at the parapet foot near its E end + cast-iron ornamental bin (not modelled)",
+    "spec": "SITE_StreetFront.json: new box Drain_Sidewalk_E + bin",
+    "current": "none",
+    "proposed": "grating 1.0 x 0.55 (+-0.1), flush, long side along the parapet, at ~(132.5,-100.3) +-1.5; ornamental bin d 0.40 h 0.75 on the sidewalk ~1.5 m W of the grating, against the kerb strip",
+    "photos": [
+     "065653194 f127-f134"
+    ],
+    "method": "grating measured against the clover pavers 0.267 x 0.218 (4 x 2.5 pavers)",
+    "error": "+-0.1 m size, +-1.5 m x",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "A_W gallery slogan band above the red posts (012404116 t6-18.8s)",
+   "Garden SE-entrance signboard by the hedge arch (012404116 t3.5-6s)",
+   "Large billboard/banner with the institution logo on the fence W of the gate booth (065653194 f133-f155)",
+   "Banner with slogan text on the fence at the bike rack beside the booth (065653194 f167)",
+   "C classroom door plates (e.g. '302') and the wall poster with the institution's name in the F3 corridor (052716931 f22-f24): door numbers fine, logo poster -> KOCH"
+  ],
+  "open_questions": [
+   "West stair in C: when you go up the west staircase past the 3rd floor, does it arrive in the 4th-floor corridor, or does it end at a closed door / a landing in front of the teachers' room? (video 052716931 shows people coming down a flight above F3)",
+   "West stair in C: standing in the 3rd-floor corridor and looking at the west staircase, is the half-landing (where the stair turns) towards the front (south, plaza side) or towards the back (north, pitch side)? And is the east staircase the same way round?",
+   "C PC labs: are all the computer labs painted the same way (green on the long window wall, white on the end wall, orange diagonal stripe on the board wall), or only the one in the video?",
+   "C basement entry: are the steps from the plaza down to the mid-landing a normal step height (like a kerb), or noticeably shallow? Is the landing at the top one kerb step above the plaza?",
+   "Basement piano room: does the black steel door in its north wall lead outside (to a light well / yard) or into another basement room?",
+   "Corridor benches in C: are they about as long as a classroom door is wide, or longer (seat for 4-5 people)?",
+   "B front garden strip: are there benches along the pink path on its street side, and are there more than the few seen at the east half?"
+  ]
+ },
+ {
+  "slice": "video_part2 (18 videos, 150 sheets; notes: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/video_part2/notes.txt; renders r_he.png, r_he2.png from build_new.blend)",
+  "coverage": [
+   {
+    "id": "PXL_20260922_145101161 t0-86.2s",
+    "scene": "upright piano keyboard, hands playing (all 44 sheets)",
+    "camera": "static over the keys",
+    "checked": "no campus content",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061550830 t0.2-2.2s",
+    "scene": "C plaza looking W: herringbone, red-edged tree pits + benches + bin (TreeAN/BenchAN row) left, C south light-well corrugated covers + planters right",
+    "camera": "~(190,-13) look W",
+    "checked": "plaza layout",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t0.2-1.5s",
+    "scene": "garden east walkway at the A_W gallery looking S: red gallery posts + thuja pit left, lawn/edging/lamp right",
+    "camera": "~(157,-24) look S",
+    "checked": "topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t1.5-4.0s",
+    "scene": "Arch_Bnd_G2_E hedge arch, path W through it toward Gazebo_2",
+    "camera": "~(157.5,-28) look W",
+    "checked": "arch on the E edging, path W",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t4.0-6.8s",
+    "scene": "east lawn S of the G2_E arch: 2-globe black cast lamp beside the scalloped edging, hibiscus, thujas",
+    "camera": "~(158,-33) look W/SW",
+    "checked": "lamp vs model (Lamp_EastWalk_0 deleted by R3-04)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-01"
+    ]
+   },
+   {
+    "id": "PXL_20260924_061757320 t6.8-9.8s",
+    "scene": "edging SE to the G2_SE doughnut arch, signboard on 2 posts, wide stair + boulder wall + B ahead",
+    "camera": "~(157,-40) look S/SW",
+    "checked": "Signboard_Arch, edging",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t9.8-12.2s",
+    "scene": "B-corner wide granite stair frontal, bed walls both sides, boulder wall W",
+    "camera": "~(155.5,-44) look S",
+    "checked": "riser count (6 granite + grey kerb = 7), flight split, bed copings",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-02",
+     "V2-03"
+    ]
+   },
+   {
+    "id": "PXL_20260924_061757320 t12.2-18.5s",
+    "scene": "turn E then S along the A_W gallery walkway: posts, brick plinth, thuja pits, AC unit on the deck",
+    "camera": "(156,-47)->(158,-58) look E/S",
+    "checked": "posts, pits, deck fittings",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-10"
+    ]
+   },
+   {
+    "id": "PXL_20260924_061757320 t18.5-23.2s",
+    "scene": "climb of the pink granite side stair W up to the alley, steel ramp at right, sloped bed copings",
+    "camera": "(160.5,-61)->(157.5,-61) look W",
+    "checked": "risers 6 granite + kerb, ramp topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t23.2-29.2s",
+    "scene": "alley S: lawn strip with pink kerb + thujas, B east shrub bed, side stair/ramp from above, slogan band",
+    "camera": "(157,-60)->(156,-66) look S/E",
+    "checked": "BBed, lawn strip",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t29.2-42.5s",
+    "scene": "alley S past the ramp head to the A_S west face (red surrounds, AC units, junipers)",
+    "camera": "(156,-66)->(156,-80) look SE",
+    "checked": "A_S W face",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t42.5-52.5s",
+    "scene": "A_S west porch (beige-tile piers on red brick base, timber soffit, gable) + lawn strip, plaza",
+    "camera": "(155,-78)->(154,-86) look S/E",
+    "checked": "porch (R3-11 as applied)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t52.5-58.5s",
+    "scene": "yard W of the gate: directory board in the yellow/white kerbed bed, blue wheelie bins, B SE corner",
+    "camera": "~(152,-90) look S/SW",
+    "checked": "InfoBoard_Yard, bins",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_061757320 t58.5-63s",
+    "scene": "gate from inside: canopy on one round column, booth N window, sliding bar gate, turnstile lane",
+    "camera": "~(155,-93) look S",
+    "checked": "gate topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065812371 t0.2-3.8s",
+    "scene": "street S of the gate, apartment towers across the road",
+    "camera": "~(158,-108) look S",
+    "checked": "context only",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065910461 t0.2-4.5s",
+    "scene": "gate booth S face + SW corner: plaque, window, 7-course red plinth",
+    "camera": "~(158,-103) look N/NE",
+    "checked": "plinth courses, window, plaque position",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065910461 t4.5-6.8s",
+    "scene": "booth W face: wall lamp, service window over the black bag rest, one tripod turnstile, timber soffit downlights",
+    "camera": "~(156.5,-100) look N",
+    "checked": "one turnstile (agrees with dbacbaa), bag rest",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065910461 t5.8-7.5s",
+    "scene": "from under the canopy looking N: bar gate leaf, B SE lettering, plaza",
+    "camera": "~(156,-98) look N",
+    "checked": "gate -> plaza topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065910461 t7.5-9.2s",
+    "scene": "booth SW corner again",
+    "camera": "~(158,-103) look NE",
+    "checked": "as above",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065934318 t0.2-2.2s",
+    "scene": "booth E face: window (S) + outward white PVC door (N); A_S W porch far",
+    "camera": "~(161.5,-99) look W/NW",
+    "checked": "DW u1.54 / D u2.35 order",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_065934318 t2.2-17.5s",
+    "scene": "walk EAST along the inner sidewalk: fluted concrete parapet segments with gaps, grey lamp poles IN the gaps, hedge, cast bin, A_S south face (3-4 rows + storefront) behind",
+    "camera": "(162->190,-97) look N/NE",
+    "checked": "lamp/parapet topology; identity of the clip (A_S, not B)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-04",
+     "V2-08"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070309303 t0.2-1.8s",
+    "scene": "B SE bay lettering + logo, red tile plinth, circle pavers, directory board bed",
+    "camera": "~(152,-91) look NW",
+    "checked": "identity (B: 2 window rows)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-06",
+     "V2-07"
+    ]
+   },
+   {
+    "id": "PXL_20260924_070309303 t1.8-5.2s",
+    "scene": "A_S W porch, 'A Block' plate + CCTV on the SW pilaster, stair, lawn bed",
+    "camera": "~(156,-83) look E/SE",
+    "checked": "plate/CCTV/porch",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070309303 t5.2-10.2s",
+    "scene": "walk N on the alley past the A_S porch",
+    "camera": "(156,-85)->(156,-75) look N",
+    "checked": "topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070309303 t10.2-16s",
+    "scene": "A_S W face AC units, lawn strip w/ thujas + pink kerb, A_W gallery + slogan band",
+    "camera": "(157,-75)->(157,-66) look NE/N",
+    "checked": "AC units, lawn strip",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070309303 t16-21.8s",
+    "scene": "A_W south door bay, posts, B east face",
+    "camera": "~(157,-66) look N/NE",
+    "checked": "door bay",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070309303 t22-27s",
+    "scene": "B east face shrub bed (round shrubs, 2-lantern lamps, yellow kerb), alley N",
+    "camera": "(156,-60)->(157,-56) look W/N",
+    "checked": "BBed shrubs/lamps",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070309303 t27-33.8s",
+    "scene": "side stair + steel grating ramp from the top, slogan band above the gallery roof",
+    "camera": "~(157.5,-62) look E",
+    "checked": "ramp/stair topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070309303 t33.8-37.8s",
+    "scene": "A_W raised terrace path N, G2_SE doughnut arch + signboard",
+    "camera": "(158,-55)->(157,-46) look N/NW",
+    "checked": "arch, signboard, edging",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070647586 t0.2-3.8s",
+    "scene": "C main entrance from SW: juniper planter, granite stair + steel ramp, sign box on the canopy",
+    "camera": "~(176,-10) look N/NE",
+    "checked": "stair/ramp topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_070647586 t3.8-7.5s",
+    "scene": "C entrance frontal: 7 granite risers, brick-tile cheek w/ granite cap, light-well cover W, terracotta soffit, 4-bay storefront",
+    "camera": "~(175.5,-6.5) look N",
+    "checked": "riser count 7 (intensity profile f14) = spec",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_075725091 t0.2-13.2s",
+    "scene": "C WC cubicle interior: squat pan, high wall-hung cistern + flush pipe, walls tiled to the cornice, black panel door",
+    "camera": "interior (cubicle)",
+    "checked": "fixture type, tile height vs zone_c_v6 WC fit-out",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-05"
+    ]
+   },
+   {
+    "id": "PXL_20260924_075931189 t0.2-2.2s",
+    "scene": "C WC aisle: black cubicle doors, end window w/ radiator, tile band + white above",
+    "camera": "interior",
+    "checked": "window, radiator, band",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_075931189 t2.2-5.8s",
+    "scene": "sink alcove: 2 pedestal basins, one wide mirror, soap dispenser",
+    "camera": "interior",
+    "checked": "alcove fit-out",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_075931189 t5.8-10.5s",
+    "scene": "WC lobby: tile band, sockets above it, door to the corridor; cistern seen through a cubicle door",
+    "camera": "interior",
+    "checked": "band, cubicle content",
+    "verdict": "interior",
+    "finding_ids": [
+     "V2-05"
+    ]
+   },
+   {
+    "id": "PXL_20260924_080001839 t0.2-1.2s",
+    "scene": "C stair, motion blurred",
+    "camera": "interior",
+    "checked": "-",
+    "verdict": "blurry",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_080443026 t0.2-6.8s",
+    "scene": "C F2 corridor, stair hall, classroom door with blue surround + red fire box, PC lab",
+    "camera": "interior",
+    "checked": "already the source of the F2 corridor specs",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081249927 t0.2-1.8s",
+    "scene": "hall/HallEast SE corner from the garden NE corner looking N up the hall-C passage (NOT the canteen: mono-pitch end block falling N, canopy + glazed door + rail at its low N end, HallBed thujas + blue spruce, court fence + towers ahead)",
+    "camera": "~(160,-16) look NNW",
+    "checked": "model renders r_he/r_he2 from (160,-17,6.9)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-09"
+    ]
+   },
+   {
+    "id": "PXL_20260924_081946180 t0.2-3.2s",
+    "scene": "inside a gazebo looking N: maroon tile parapet + bench, white posts, diamond tiles, hall S face beyond",
+    "camera": "gazebo look N",
+    "checked": "gazebo parapet/tiles",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081946180 t3.2-5.2s",
+    "scene": "through the hedge maze",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "blurry",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_081946180 t5.2-10.8s",
+    "scene": "gazebo apron: black cast lamp on a tapered pedestal + pad 2-3 m off the parapet corner, slat benches on the hedges",
+    "camera": "apron W of Gazebo_2 look N/E",
+    "checked": "Lamp_G2_Apron (this clip is its source)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082006491 t0.2-2.2s",
+    "scene": "gazebo apron bench, lawn, gazebo behind hedges, hall S face + tower beyond",
+    "camera": "~(140,-31) look N/NE",
+    "checked": "bench, edging",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082248481 t0.2-1.2s",
+    "scene": "B SE bay lettering/logo, circle-paver walk along B with a red soldier edge to the herringbone yard",
+    "camera": "~(152,-90) look W/NW",
+    "checked": "paving along B",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-06"
+    ]
+   },
+   {
+    "id": "PXL_20260924_082248481 t1.2-5.8s",
+    "scene": "directory board on 2 posts in the yellow/white kerbed bed W of the yard, B behind",
+    "camera": "~(149,-89) look W",
+    "checked": "board identity",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-07"
+    ]
+   },
+   {
+    "id": "PXL_20260924_082337333 t0.2-1.2s",
+    "scene": "A_S west face from the plaza: gable porch, SW maroon pilaster with plate + CCTV, herringbone to the plinth",
+    "camera": "~(150,-84) look E",
+    "checked": "no circle strip, no board at the A_S SW corner",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-06",
+     "V2-07"
+    ]
+   },
+   {
+    "id": "PXL_20260924_082337333 t1.2-2.5s",
+    "scene": "lane S of the A_S SW corner, gate canopy + booth from the N, bar gate W, kerbed bed",
+    "camera": "~(152,-86) look S",
+    "checked": "booth N window, gate order",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "PXL_20260924_082606037 t0.2-1.2s",
+    "scene": "B south face from the SE corner looking W: circle-paver walk full length, yellow/white kerb, lawn strip with spruces + spot lamps, lettering/logo on the SE bay",
+    "camera": "~(147,-84) look W",
+    "checked": "paving/kerb/lawn, walk width",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "V2-06"
+    ]
+   }
+  ],
+  "findings": [
+   {
+    "id": "V2-01",
+    "title": "2-globe lamp on the garden east lawn exists (contradicts R3-04 deletion)",
+    "spec": "SITE_Garden.json new lamp_orn Lamp_EastLawn_0",
+    "current": "none (Lamp_EastWalk_0 at (157.524,-36.77) deleted 2026-10-03)",
+    "proposed": "{\"type\":\"lamp_orn\",\"name\":\"Lamp_EastLawn_0\",\"pos\":[156.70,-34.6],\"height\":2.65,\"globes\":2,\"globe_d\":0.26,\"arm_span\":0.57} black cast post (~0.08) with a flared foot, straight on the lawn ~0.35 m W of the edging, no pad. Lamp_EastWalk_1 (N of the G2_E arch) is not in this slice.",
+    "photos": [
+     "061757320 f13",
+     "061757320 f14",
+     "061757320 f16",
+     "061757320 f18"
+    ],
+    "method": "f13: edging blocks counted from the lamp front to the G2_E arch S-leg = 22.5 x 0.154 = 3.47 m (+0.28 parallax for the 0.4 m setback) -> 3.75 m S of y -30.86 = y -34.6; x = edging x at that y (157.06) - 0.35. f14 frontal: block pitch 31 px / 0.154 m = 203 px/m at the edging, lamp ~0.4 m deeper (-5%): foot to globe tops 513 px = 2.66 m, globe 50 px = 0.26, globe c-c 110 px = 0.57.",
+    "error": "pos +-0.6 along the edging, +-0.2 across; height +-0.2",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-02",
+    "title": "B-corner wide stair: 7 risers total (6 granite + top grey kerb) but only the BOTTOM step is wide; no landing/gap",
+    "spec": "SITE_GateAlley.json Steps_BCorner_Upper / Steps_BCorner_Lower",
+    "current": "Upper 4 x 0.1743 width 5.33 run_out 0.35 + Lower 3 x 0.1743 width 6.9 (gap tread between)",
+    "proposed": "Upper: risers 6 (5 granite + the grey concrete kerb at the top), width 5.33, run_out 0; Lower: risers 1, width 6.9 (the one step running past the bed walls and the boulder-wall face), directly under the upper base. Keep riser_h 0.1743 until the R1-13/R3-06 level decision (total rise unchanged at 7 risers). R1-13's '6 equal risers' omitted the kerb riser.",
+    "photos": [
+     "061757320 f35",
+     "061757320 f36",
+     "061757320 f37",
+     "061757320 f60"
+    ],
+    "method": "Full-res crops c36/c37/c37t: nosing lines counted from the foot (c37 rows 555-605, 515-560, 470-515, 432-470, 395-430, 360-392 px = 6 granite) + a grey kerb riser under the top landing; the bed walls start at the 2nd step (c36, c60). Top/bottom width ratio 1155/1440 px = 0.80 (spec 5.33/6.9 = 0.77).",
+    "error": "count exact; heights not re-measured (no reference person in frame)",
+    "confidence": "high (count/topology)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-03",
+    "title": "Wide-stair side beds have sloping granite copings following the stair, not flat raised beds",
+    "spec": "SITE_GateAlley.json WS_BedWall_E/W, WS_Bed_E/W, WS_Bed_E_Front/WS_Bed_W_Front",
+    "current": "flat: beds z 6.78, walls z 6.93",
+    "proposed": "Coping/bed tops slope from ~6.65 at the landing end to ~6.22 at the front; front wall stands on the bottom tread; red block/tile body with pink granite coping ~0.3 wide (use roof_plane per-vertex z on the existing rings: back vertices 6.65, front vertices 6.22)",
+    "photos": [
+     "061757320 f36",
+     "061757320 f37",
+     "061757320 f58",
+     "061757320 f59",
+     "061757320 f60"
+    ],
+    "method": "c60: front wall above the bottom tread 230 px vs the adjacent riser 80 px x 0.166 = 0.48 m -> 5.74+0.48 = 6.22; back end ~one kerb height above the landing (6.57+0.08)",
+    "error": "+-0.1 m",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-04",
+    "title": "Sidewalk lamp poles stand in gaps between fluted parapet segments (settles deferred R3-14)",
+    "spec": "SITE_GateAlley.json PathLamp_00..03, PathParapet_S",
+    "current": "lamps 0.35 m S of a continuous parapet",
+    "proposed": "As R3-14: lamps on the parapet line (162.694,-95.487), (171.674,-96.121), (181.152,-96.790), (190.631,-97.459); split PathParapet_S into segments with a 0.35-0.45 m gap centred on each pole (pole d ~0.14); segments step in height following the walk slope",
+    "photos": [
+     "065934318 f9",
+     "065934318 f13",
+     "065934318 f49",
+     "065934318 f52"
+    ],
+    "method": "f49 gap 75 px vs pole 25 px at the same depth = 3.0 pole diameters; f52 2.2",
+    "error": "gap +-0.15 m (pole diameter assumed 0.14)",
+    "confidence": "medium (topology high)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-05",
+    "title": "C WC cubicles: squat pan + high-level cistern, cubicle walls tiled to the ceiling",
+    "spec": "INT_C_Floors.json WCW_/WCE_ Toilet, Wall_Tile (generator Scripts/Geo/zones/zone_c_v6.py WC fit-out, WC_BAND 1.56, 'close-coupled floor WC ... not photographed')",
+    "current": "close-coupled floor WC per cubicle; 1.56 m tile band in the cubicles",
+    "proposed": "Per cubicle: white squat pan set flush in the floor tiles (outlet to the back wall), white plastic cistern wall-hung high on the back (wet) wall with a white flush pipe down to the pan, supply hose + valve beside it; cubicle walls tiled up to the cornice (2.60) with the white cornice; small tiled pipe box in a back corner; jumbo roll dispenser + brush + bin. Aisle/lobby keep the 1.56 band. Cistern height unsure.",
+    "photos": [
+     "075725091 f1-f13",
+     "075725091 f16",
+     "075725091 f19",
+     "075725091 f26",
+     "075931189 f8"
+    ],
+    "method": "visual; tile seams continue to the cornice inside the cubicle (f1-f7, f26-f28) while the lobby band stops at ~1.5 (075931189)",
+    "error": "-; cistern height unsure (a frame with the cistern and the floor, or a seam count up to it, settles it)",
+    "confidence": "high (type, tiling)",
+    "needs_builder_change": true
+   },
+   {
+    "id": "V2-06",
+    "title": "Circle-paver walk along the whole B south face (yellow/white kerb, lawn strip with spruces beyond); none along the A_S west face",
+    "spec": "SITE_GateAlley.json CirclePaving_AS_1 + Kerb_CirclePaving_AS_1 (delete); SITE_Gate.json ground_surfaces GateYard (trim); new path + kerb",
+    "current": "B front = GateYard herringbone (x 136-147.3 up to the B wall) + generic clover ground cover; 1.6 m circle strip + 0.43 red kerb along the A_S W face (159.6,-86.4)-(159.5,-89.4)",
+    "proposed": "path CirclePaving_BSouth line [[98.21,-81.81],[147.81,-84.24]] width 5.0 thk 0.08 (disc pavers: pink discs on grey; new slot or M_Paver_Clover_Grey stand-in); wall Kerb_CirclePaving_BSouth line [[98.08,-84.35],[147.68,-86.78]] height 0.12 thk 0.15, yellow/white painted 1.0 m stones; red brick soldier course closing the E end [[147.93,-81.74],[147.68,-86.78]] w 0.2 flush; GateYard ring -> [[136,-97.2],[161.6,-98.5],[160.3,-89.6],[147.93,-81.74],[147.68,-86.78],[136,-86.2]]; delete CirclePaving_AS_1 and Kerb_CirclePaving_AS_1 (herringbone runs to the A_S W plinth)",
+    "photos": [
+     "082606037 f1-f4",
+     "082248481 f1-f3",
+     "070309303 f1-f3",
+     "082337333 f2-f3"
+    ],
+    "method": "B S face from the BLD_B ring scaled 1.0286 about its centroid: (98.33,-79.31)-(147.93,-81.74); kerb parallel to the wall (same VP, 082606037 f1). Width: (a) Bed_YardWest N corner (146.6,-86.6) sits on the kerb line in 070309303 f1 -> 5.0; (b) ground-plane fit on the 1.0 m kerb stones in 082606037 f1 (joint rows 1120/1172/1290/1475, horizon 886, f*h 1143) -> 5.96 h = 3.8-5.2 m for f 1600-1800 px; (c) Google z20 pale band wall->conifer crowns 3.7-4.4 (crowns overhang); (d) WG window height 1.55 as scale -> 6.45 (inconsistent with the plinth course count, WG height may be off). 5.0 adopted.",
+    "error": "width +-1.0 (unsure: a tape across the walk or the disc-paver module settles it); lines +-0.3",
+    "confidence": "high (topology/material), low (width)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-07",
+    "title": "NoticeStand_AS is a duplicate of InfoBoard_Yard",
+    "spec": "SITE_GateAlley.json NoticeStand_AS, NoticeStand_AS_Post0, NoticeStand_AS_Post1",
+    "current": "board on 2 posts at (158.3,-90.6) by the A_S SW corner",
+    "proposed": "delete the 3 elements; keep SITE_Gate InfoBoard_Yard (147.2,-88.4)",
+    "photos": [
+     "082248481 f3-f18",
+     "070309303 f1",
+     "082337333 f2",
+     "082337333 f3"
+    ],
+    "method": "the frames its evidence cites (082248481 t3.2/4.8/6.3 s, 070309303 f1) show the board with B behind it (2 window rows, B lettering) in the yellow/white bed W of the yard; 082337333 f3 shows the A_S SW corner (conifer + lane) with no board",
+    "error": "-",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-08",
+    "title": "B-front path group was built from a clip of the A_S sidewalk (duplicate of PathParapet_S group)",
+    "spec": "SITE_Gate.json Path_BFront, Upstand_BFront, Hedge_BFront, PathLamp_B_0..3, Bin_BFront, Drain_BFront_W, Tree_BFront_0..4",
+    "current": "2.4 m path with precast upstand + hedge + 4 tall lamps + bin S of B (y -86.6..-91.7), evidence '065934318 f00006-f01072'",
+    "proposed": "unsure what is really there. The cited clip starts at the booth E door and walks EAST along the A_S front (3-4 storeys + storefront behind the parapet), already modelled as PathParapet_S/PathHedge_S/PathLamp_00..03/PathBin. The real B front (082606037) is the 5 m circle walk + kerb + lawn strip with spruces (V2-06). Keep Tree_BFront_* (Google tree row y -91..-94); delete or flag 'unverified' the path/upstand/hedge/lamps/bin/drain pending the owner.",
+    "photos": [
+     "065934318 f1",
+     "065934318 f7",
+     "065934318 f8",
+     "065934318 f10",
+     "065934318 f49",
+     "065934318 f52",
+     "082606037 f1"
+    ],
+    "method": "identification: booth E face door at the start (east side of the booth), walking direction E (parapet recedes right while looking N), building storeys/storefront = A_S",
+    "error": "-",
+    "confidence": "medium (misattribution); unsure (true content S of B's lawn strip)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-09",
+    "title": "S-facing wall W of the HallEast high block has a window, downpipe and gutter eave; model shows it blank",
+    "spec": "BLD_HallEast.json facades edge 0 / BLD_Hall.json facade edge 0 (E end)",
+    "current": "no window or downpipe on the S face at the hall/HallEast SE corner (render r_he2)",
+    "proposed": "unsure which spec owns the wall: 1 window ~1.2 w x ~1.0 h, sill ~2.0 above the terrace, near the E end of that S face; downpipe at its E end; maroon-tiled raised plinth terrace 0.25-0.3 high along the foot",
+    "photos": [
+     "081249927 f1",
+     "081249927 f3",
+     "081249927 f6"
+    ],
+    "method": "visual vs model renders r_he.png/r_he2.png (cam (160,-17,6.9) -> (150,8,7.5)); window proportions from its 4-pane frame (80 x 85 px), no metric reference",
+    "error": "sizes +-30%",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "V2-10",
+    "title": "Floor-standing twin-fan AC outdoor unit on the A_W gallery deck (not modelled)",
+    "spec": "BLD_A_W.json attachments (new wall_boxes AC_Deck)",
+    "current": "only wall units above the gallery roof (AC_Units z 4.4-4.75)",
+    "proposed": "{\"type\":\"wall_boxes\",\"name\":\"AC_Deck\",\"kind\":\"ac\",\"edge\":3,\"items\":[[24.5,-0.05,1.04,1.34,0.40]]} in front of the wall pilaster u 24.3-24.7 (N of AW_Pit_0), on a black base frame; pipe up the pilaster",
+    "photos": [
+     "061757320 f41",
+     "061757320 f42",
+     "061757320 f44"
+    ],
+    "method": "crop c42: A_W plinth 5 courses x 0.145 = 0.725 m = 97 px -> 134 px/m at the wall; unit front 140 px = 1.04 m, height incl. base 180 px = 1.34 m; depth not visible (0.40 assumed from the existing 1.0x1.3x0.4 unit type)",
+    "error": "size +-0.08; u +-0.5 (or +-5.9 if the pit is AW_Pit_1)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "Gate booth S face: brass plaque with the place name -> KOCH plaque; white plate below it (test-centre notice) -> KOCH notice (065910461 f1-f13)",
+   "B south face SE bay: big blue lettering (3 lines) + round logo -> KOCH lettering/logo (082606037, 082248481, 070309303 f1-f3)",
+   "Directory board in the yard bed (InfoBoard_Yard): place name, block list, campus map -> KOCH directory (082248481 f10-f18)",
+   "A_W slogan band 'GATEWAY TO THE WORLD!' -> KOCH slogan (070309303 f86-f92)",
+   "A_S SW pilaster 'A Block' plate -> KOCH block plate (082337333 f2-f3)",
+   "C entrance canopy sign box -> KOCH (070647586)"
+  ],
+  "open_questions": [
+   "South of the circle-paver walk along B's street side there is a lawn strip with blue spruces: is there anything beyond it (a second path with a low concrete parapet, hedge and tall grey lamp posts like in front of block A), or only trees up to the street fence?",
+   "The circle-paver walk along B's street side: is it about as wide as the walk under the A_W gallery plus the gallery itself, or clearly wider/narrower than the herringbone alley next to B's east side?",
+   "At the corner where the hall's south side meets the tall east end block (seen from the garden's north-east corner): is the pink wall with the single high window and the downpipe the hall itself or part of the east end block?",
+   "In the C toilets, is the cistern above the squat pan up near the ceiling (about the cornice) or at head height?",
+   "Is there a second notice board at the corner of block A near the gate, or only the one in the lawn bed by B's corner?"
+  ]
+ }
+]
