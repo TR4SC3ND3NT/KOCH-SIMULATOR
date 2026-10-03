@@ -383,7 +383,8 @@ def hall_finish(k, zb, west_stair, doors):
     for (xa, xb), (ya, yb) in zip(zip(xs[:-1], xs[1:]), ys):
         floor.append(it(xa, xb, ya, yb, 0.0, HALL_FIN))
         for yf, north in ((ya, False), (yb, True)):
-            ops = sorted((x - w / 2 - 0.02, x + w / 2 + 0.02) for x, w, n in doors if n == north and xa < x < xb)
+            ops = sorted((x - w / 2 - 0.02, x + w / 2 + 0.02) for x, w, n in doors
+                         if n == north and x + w / 2 + 0.02 > xa and x - w / 2 - 0.02 < xb)   # openings across a split too
             a = xa
             for o0, o1 in ops + [(xb, xb)]:
                 if o0 - a > 0.02:
