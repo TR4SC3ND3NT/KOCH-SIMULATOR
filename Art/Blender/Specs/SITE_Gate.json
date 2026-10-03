@@ -154,26 +154,9 @@
    "height": 1.0,
    "housing_w": 0.25,
    "housing_l": 0.8,
-   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; IN lane = the east one, next to the guard's service window (assumed, lane sides not seen)",
+   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; IN lane = the east one, next to the guard's service window (assumed, lane sides not seen) | 2026-10-03 photo pass R3-13 (A247-A258, 7 viewpoints): ONE stainless tripod with arrows both ways; the owner's '2 pass devices (in + out)' are the two readers (card + face tablet facing in and out) on a pole on its housing",
    "confidence": "medium",
-   "ue_logic": "turnstile_in"
-  },
-  {
-   "type": "turnstile",
-   "name": "Turnstile_Out",
-   "pos": [
-    155.805,
-    -97.215
-   ],
-   "dir_deg": 87.1,
-   "count": 1,
-   "passage_w": 0.55,
-   "height": 1.0,
-   "housing_w": 0.25,
-   "housing_l": 0.8,
-   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; OUT lane = the west one, beside the sliding gate",
-   "confidence": "medium",
-   "ue_logic": "turnstile_out"
+   "ue_logic": "turnstile_both"
   },
   {
    "type": "fence",
@@ -577,29 +560,10 @@
   },
   {
    "type": "box",
-   "name": "FaceTerminal_In_Pole",
-   "center": [
-    157.275,
-    -97.819
-   ],
-   "dir_deg": 267.1,
-   "size": [
-    0.06,
-    0.06,
-    1.4
-   ],
-   "z_rel": 0.0,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "FaceTerminal_In",
    "center": [
-    157.275,
-    -97.819
+    157.279,
+    -97.859
    ],
    "dir_deg": 267.1,
    "size": [
@@ -612,33 +576,14 @@
    "slot": "M_Plastic_Black",
    "ue_asset": "face_recognition_terminal",
    "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "FaceTerminal_Out_Pole",
-   "center": [
-    155.405,
-    -96.665
-   ],
-   "dir_deg": 87.1,
-   "size": [
-    0.06,
-    0.06,
-    1.4
-   ],
-   "z_rel": 0.0,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "FaceTerminal_Out",
    "center": [
-    155.405,
-    -96.665
+    157.271,
+    -97.779
    ],
    "dir_deg": 87.1,
    "size": [
@@ -650,7 +595,7 @@
    "material": "metal",
    "slot": "M_Plastic_Black",
    "ue_asset": "face_recognition_terminal",
-   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
+   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir | 2026-10-03 photo pass R3-13 (A247-A258, 7 viewpoints): ONE stainless tripod with arrows both ways; the owner's '2 pass devices (in + out)' are the two readers (card + face tablet facing in and out) on a pole on its housing; mounted back to back with the In terminal",
    "confidence": "medium"
   },
   {
@@ -1422,21 +1367,7 @@
    "head": "none",
    "pole_r": 0.03,
    "slot": "M_Steel_Galv",
-   "evidence": "pole of FaceTerminal_In",
-   "confidence": "medium"
-  },
-  {
-   "type": "lamp",
-   "name": "FaceTerminal_Out_Pole",
-   "pos": [
-    155.405,
-    -96.665
-   ],
-   "height": 1.2,
-   "head": "none",
-   "pole_r": 0.03,
-   "slot": "M_Steel_Galv",
-   "evidence": "pole of FaceTerminal_Out",
+   "evidence": "pole of FaceTerminal_In | 2026-10-03: one round pole carries both terminals (duplicate box pole removed)",
    "confidence": "medium"
   },
   {
