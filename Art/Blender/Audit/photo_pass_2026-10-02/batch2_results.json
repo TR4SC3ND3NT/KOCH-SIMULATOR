@@ -1,0 +1,4821 @@
+[
+ {
+  "slice": "batch2_part0: 95 photos (TG001-TG012 telegram 10-01, B000-B054 phone 09-23..25, W001-W028 web/plans/2022 360 tour). Every id was viewed full-frame plus zoomed crops. Model: current specs (rechecked after ca18bcd) + build_new.blend bounding boxes (bb.json). Scratch: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass2_part0/ (notes.txt, coverage.json, findings.json, v.py, sheet.py, ovl.py, tg_win.py, pano21.py, chimney.py, accent_t.py, crops/). Room ids: TG004-TG011, B004-B017 = lab R105 (F1, the only lab with 2 facade windows; B016 pano). B026-B033 = F3 corridor (plate '302'). B035/B036 = C south entrance. B044-B054 = gate plaza / A_S west walkway. W021 pano resected from 3 known bearings.",
+  "coverage": [
+   {
+    "id": "TG001",
+    "scene": "C, unidentified room: charcoal-grey wall, PVC window with a pleated blind, white reveal lining, plain plaster ceiling",
+    "camera": "close-up facing the window",
+    "checked": "window trim/blind; no charcoal paint in any INT_C spec; room not identifiable (open question)",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "TG002",
+    "scene": "same window as TG001",
+    "camera": "close-up",
+    "checked": "same",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "TG003",
+    "scene": "same window, top corner + plain ceiling",
+    "camera": "close-up",
+    "checked": "same",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "TG004",
+    "scene": "C F1 lab R105 (2 windows in the N facade wall; red shingle roof outside)",
+    "camera": "(183.0,9.4) z~7.9 look N, ultrawide",
+    "checked": "paint (window wall white, W wall + W column sage, E wall white), AC on E wall at window end, TV on E wall, window beam + side bulkhead, 600 grid + 2 LED panels, radiators all match; CCTV dome, 2 smoke detectors, pleated blinds missing",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01",
+     "Q0-02"
+    ]
+   },
+   {
+    "id": "TG005",
+    "scene": "C F1 lab R105 far wall",
+    "camera": "(183.4,10.3) look N",
+    "checked": "tg_win.py: wall span 5.48 vs model 5.44; window gap 0.61 vs 0.74; E window 0.14 m W",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01",
+     "Q0-02",
+     "Q0-04"
+    ]
+   },
+   {
+    "id": "TG006",
+    "scene": "C F1 lab R105 window close-up; open middle sash carries its blind; red hex + grey shingle roofs outside",
+    "camera": "(183.5,13.0) look N",
+    "checked": "W type 3 lights with middle sash matches; blinds missing",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01"
+    ]
+   },
+   {
+    "id": "TG007",
+    "scene": "same as TG006",
+    "camera": "(183.5,13.0) look N",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01"
+    ]
+   },
+   {
+    "id": "TG008",
+    "scene": "C F1 lab R105 whole far wall",
+    "camera": "(183.6,10.0) look N",
+    "checked": "as TG004",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01",
+     "Q0-02"
+    ]
+   },
+   {
+    "id": "TG009",
+    "scene": "C F1 lab R105",
+    "camera": "(183.4,10.0) look N",
+    "checked": "as TG004",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01",
+     "Q0-02"
+    ]
+   },
+   {
+    "id": "TG010",
+    "scene": "C F1 lab R105, E wall: AC + trunking to a socket, TV near the far corner",
+    "camera": "(183.8,10.5) look N",
+    "checked": "AC/TV positions match",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01",
+     "Q0-02"
+    ]
+   },
+   {
+    "id": "TG011",
+    "scene": "C F1 lab R105 frontal far wall",
+    "camera": "(183.4,12.0) look N",
+    "checked": "gap 0.60 / spacing 2.45; island near the window with chairs between it and the window matches Desks_3/4",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-01",
+     "Q0-04"
+    ]
+   },
+   {
+    "id": "TG012",
+    "scene": "same charcoal room: tilt-turn sash, a blind per light",
+    "camera": "close-up",
+    "checked": "same as TG001",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B000",
+    "scene": "classroom (number not visible): orange beech desks with perforated steel trays, grey-taupe curtains",
+    "camera": "seated, toward windows",
+    "checked": "desk slot matches; curtains look greyer than M_Fabric_Curtain_Brown (shade, low confidence)",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B001",
+    "scene": "classroom whiteboard, teacher writing",
+    "camera": "seated at board",
+    "checked": "whiteboard present; no metric scale",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B002",
+    "scene": "same whiteboard",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B003",
+    "scene": "whiteboard close-up",
+    "camera": "same",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B004",
+    "scene": "C F1 lab R105 (identified via the B016 pano): orange stripe + PCs",
+    "camera": "seated in the wall row",
+    "checked": "stripe present",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q0-05"
+    ]
+   },
+   {
+    "id": "B005",
+    "scene": "face close-up",
+    "camera": "-",
+    "checked": "nothing usable",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B006",
+    "scene": "person, white wall",
+    "camera": "-",
+    "checked": "nothing usable",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B007",
+    "scene": "C F1 lab R105 board-wall corner: AC trunking to a socket",
+    "camera": "mid-room look E",
+    "checked": "minor trunking, not modelled",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q0-05"
+    ]
+   },
+   {
+    "id": "B008",
+    "scene": "person at a wall",
+    "camera": "-",
+    "checked": "nothing usable",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B009",
+    "scene": "same as B008",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B010",
+    "scene": "C F1 lab R105 wall row along the sage corridor wall, stripe",
+    "camera": "seated, look along the wall row",
+    "checked": "wall row facing the wall matches",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q0-05"
+    ]
+   },
+   {
+    "id": "B011",
+    "scene": "C F1 lab R105 facing the board (E partition): windows LEFT, corridor wall with the door at the board end RIGHT, AC on the board wall at the window end",
+    "camera": "(181.5,12.0) z~7.6 look E",
+    "checked": "AC/TV/whiteboard order matches (y 14.16/13.16/10.71); wall row matches; S corridor wall sage up to a diagonal orange+white stripe near the door (missing); window wall white matches",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-05",
+     "Q0-02"
+    ]
+   },
+   {
+    "id": "B012",
+    "scene": "C F1 lab R105 board wall: AC, display, whiteboard",
+    "camera": "(181.3,12.5) look E",
+    "checked": "order + heights match",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B013",
+    "scene": "same as B012",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B014",
+    "scene": "C F1 lab R105 vertical pano: black vented network cabinet under the ceiling on a sage wall",
+    "camera": "seated mid-room",
+    "checked": "F1_R105_NetCabinet present",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B015",
+    "scene": "C F1 lab R105 sage corridor wall behind the wall-row desk",
+    "camera": "seated at the wall row",
+    "checked": "sage S wall not modelled",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-05"
+    ]
+   },
+   {
+    "id": "B016",
+    "scene": "C F1 lab R105 360 pano: sage W wall, 2 facade windows, board wall, sage S wall with stripe near the door, wall row + 2 islands",
+    "camera": "(183.0,11.0) z~7.6 pano",
+    "checked": "room topology and paint",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-05",
+     "Q0-02"
+    ]
+   },
+   {
+    "id": "B017",
+    "scene": "C F1 lab R105 toward the board wall",
+    "camera": "(182.0,12.3) look E",
+    "checked": "matches",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B018",
+    "scene": "laptop screen",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B019",
+    "scene": "laptop screen",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B020",
+    "scene": "projected slide",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B021",
+    "scene": "person at a laptop, white desk in a white corner (room not identifiable)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B022",
+    "scene": "same (blurred)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B023",
+    "scene": "same",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B024",
+    "scene": "same as B021",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B025",
+    "scene": "same",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "B026",
+    "scene": "C F3 corridor at room 302's door: anthracite frame, glazed leaf, black room plate + QR on the frame, terrazzo floor, blue above-door panels",
+    "camera": "(184.8,3.6) z~14.6 look NW",
+    "checked": "door glass2 anthracite matches; room plate missing",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-06"
+    ]
+   },
+   {
+    "id": "B027",
+    "scene": "hand over face",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B028",
+    "scene": "face, corridor behind",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B029",
+    "scene": "C F3 corridor N wall: blue above a door, stacked chairs in the stair-hall opening",
+    "camera": "(185.0,4.5) look N",
+    "checked": "accents",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-06"
+    ]
+   },
+   {
+    "id": "B030",
+    "scene": "C F3 corridor N wall: glazed door with blue only above it; lower wall slightly greyer; radiator",
+    "camera": "(185.5,4.3) look N",
+    "checked": "accents, floor",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-06",
+     "Q0-07"
+    ]
+   },
+   {
+    "id": "B031",
+    "scene": "C F3 corridor looking W from the E part: blue above every classroom door, WC door on full-height blue before the N jog, S jog on the left, W-end windows, terrazzo + skirting, 2 rows of LED panels",
+    "camera": "(199.0,4.5) z~14.6 look W",
+    "checked": "F3_Accent_* pattern; floor finish",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-06",
+     "Q0-07"
+    ]
+   },
+   {
+    "id": "B032",
+    "scene": "C F3 corridor, same direction",
+    "camera": "(198.5,5.0) look W",
+    "checked": "as B031",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-06"
+    ]
+   },
+   {
+    "id": "B033",
+    "scene": "same, person in front",
+    "camera": "(198.0,5.0) look W",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-06"
+    ]
+   },
+   {
+    "id": "B034",
+    "scene": "C classroom: interactive display + whiteboard, oak/steel teacher desk, orange desk, laminate, brown skirting",
+    "camera": "front row, look at the board wall",
+    "checked": "display/whiteboard height ratio 410/450 px, bottom at 0.74 x display height; model tv 1.57 x 0.87",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-08"
+    ]
+   },
+   {
+    "id": "B035",
+    "scene": "C south entrance (cues: 'C' plate, maroon stair tower with 2 T windows per floor, maroon surrounds, red light-well covers, granite stair + grating ramp)",
+    "camera": "(188.2,-17.0) z~6.9 look N, 0.5x",
+    "checked": "7 risers counted, cheeks, ramp over the stair, canopy + sign box + floodlights, downpipes, junipers",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B036",
+    "scene": "same entrance, closer",
+    "camera": "(188.0,-11.5) look N",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B037",
+    "scene": "face, C stair behind",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B038",
+    "scene": "face, C stair behind",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B039",
+    "scene": "street zebra (yellow/white) toward the main gate",
+    "camera": "(154.3,-127.0) z~8.4 look N",
+    "checked": "zebra width/colours, NW lamp pole, canopy, booth",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B040",
+    "scene": "C upper-floor office: laminate, brown skirting, heating pipe, glazed anthracite door to the terrazzo corridor, blue above the door opposite",
+    "camera": "in the room, looking at the door",
+    "checked": "person is not a reference person -> no metric",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q0-06"
+    ]
+   },
+   {
+    "id": "B041",
+    "scene": "campus wayfinding board on 2 posts in a lawn",
+    "camera": "close",
+    "checked": "content = sign to KOCH",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B042",
+    "scene": "same board",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B043",
+    "scene": "laptop in a bus",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "B044",
+    "scene": "gate plaza at the SouthStair head looking N up the alley: B lettering + porch, A_S 'A Block' plate + west porch, Planter_South, SouthStair",
+    "camera": "(154.5,-94.5) z~8.0 look N, 0.5x",
+    "checked": "Plaza_StairTop, manhole, Planter_South, kerbs, porch, SouthStair",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q0-09"
+    ]
+   },
+   {
+    "id": "B045",
+    "scene": "A_S SW corner with 'A Block' plate, SouthStair, drain grate",
+    "camera": "(155.5,-94.0) look NE",
+    "checked": "SouthStair, Landing_SW",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B046",
+    "scene": "SouthStair from the landing looking up SW: 8 risers, gate fence + cars beyond",
+    "camera": "(158.3,-91.5) z~6.7 look SW",
+    "checked": "8 risers counted",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B047",
+    "scene": "A_S west walkway under the porch looking N: PavilionStair, Planter_South rock-face wall (4 courses) + pink coping, Retain_Walkway_S, A_W colonnade",
+    "camera": "(159.4,-86.0) z~6.7 look N",
+    "checked": "planter wall height",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-09"
+    ]
+   },
+   {
+    "id": "B048",
+    "scene": "same walkway further N",
+    "camera": "(159.6,-84.0) look N",
+    "checked": "Retain_Walkway_S, A_W gallery",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B049",
+    "scene": "walkway S of the porch looking N: planter wall = 5.3 bottom risers",
+    "camera": "(159.3,-89.5) z~6.6 look N, 0.5x",
+    "checked": "RetWall_South height",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-09"
+    ]
+   },
+   {
+    "id": "B050",
+    "scene": "alley from the gate plaza looking N: B lettering, B porch, herringbone",
+    "camera": "(153.0,-95.0) look N",
+    "checked": "B LetteringLogo slot exists",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B051",
+    "scene": "A_S west porch from the alley: piers on the alley, PavilionStair, planter soil just below the alley kerb",
+    "camera": "(154.0,-92.0) z~8.0 look NE",
+    "checked": "Planter_South surface",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q0-09"
+    ]
+   },
+   {
+    "id": "B052",
+    "scene": "alley looking N, porch right",
+    "camera": "(154.5,-93.0) look N",
+    "checked": "-",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B053",
+    "scene": "gate plaza looking S: booth, canopy, sliding gate, bin, yellow kerb",
+    "camera": "(156.0,-90.5) z~8.0 look S",
+    "checked": "booth/canopy/gate",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "B054",
+    "scene": "A_S west porch frontal",
+    "camera": "(152.5,-84.0) look E",
+    "checked": "porch (R3-11 applied)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W001",
+    "scene": "owner screenshot of an OLD model (high ramp at the A_W gallery)",
+    "camera": "-",
+    "checked": "current AW_NorthRamp rises only 0.30 m -> resolved",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W002",
+    "scene": "owner screenshot of an OLD model of the alley with red marks",
+    "camera": "-",
+    "checked": "current BBed_Curb 0.12; PavilionStair/SideStair exist -> addressed",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W003",
+    "scene": "labelled satellite screenshot",
+    "camera": "-",
+    "checked": "plan only",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W004",
+    "scene": "old photo of B's SE corner: lettering on the S face, B east porch, A_S porch, wayfinding board",
+    "camera": "(156,-95) look NW",
+    "checked": "LetteringLogo edge 0 matches; InfoBoard_Yard present",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W005",
+    "scene": "2014 snow photo: alley S of the pitch looking W: fence, benches, spruces, 3-globe lamps, pavilion, fire-escape building, chimney",
+    "camera": "~(165,36) look W (not solved)",
+    "checked": "lamps/benches/spruces; chimney present",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q0-10"
+    ]
+   },
+   {
+    "id": "W006",
+    "scene": "older photo of the main gate from the street: canopy, column, sliding gate, booth, reader pole, yellow pipe barrier at the booth",
+    "camera": "(157,-108) look N",
+    "checked": "matches; pipe barrier at the booth (older than the V1-07 video)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W007",
+    "scene": "2025 festival 3D render (schematic)",
+    "camera": "-",
+    "checked": "layout only",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W008",
+    "scene": "festival event map (schematic)",
+    "camera": "-",
+    "checked": "layout consistent",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W009",
+    "scene": "B SE corner: lettering on the S face, east porch",
+    "camera": "(153,-88) look W",
+    "checked": "matches",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W010",
+    "scene": "brochure drone aerial (D partial)",
+    "camera": "-",
+    "checked": "no usable detail",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W011",
+    "scene": "college schematic plan",
+    "camera": "-",
+    "checked": "canteen N of C consistent",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W012",
+    "scene": "stylised festival map cover",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W013",
+    "scene": "2013 gate elevation from the street",
+    "camera": "(157,-112) look N",
+    "checked": "matches (already used for GateCanopy)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W014",
+    "scene": "B from the SE",
+    "camera": "(160,-95) look NW",
+    "checked": "matches",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W015",
+    "scene": "old A_W gallery walk",
+    "camera": "-",
+    "checked": "old state",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W016",
+    "scene": "2022 360 'D block': curved 4-storey building, curved canopy, 2 gazebos",
+    "camera": "-",
+    "checked": "no curved facade on any campus ortho (D_W/D_M rectangular) -> not placeable",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "W017",
+    "scene": "2022 360 D lobby (coffered timber ceiling)",
+    "camera": "-",
+    "checked": "D interiors outside the greybox scope",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "W018",
+    "scene": "2022 360 D corridor",
+    "camera": "-",
+    "checked": "same",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "W019",
+    "scene": "2022 360 D hall",
+    "camera": "-",
+    "checked": "same",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "W020",
+    "scene": "2022 360 on a court: fences, floodlights, canteen gable + C behind",
+    "camera": "~(190,58)",
+    "checked": "layout consistent",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W021",
+    "scene": "2022 360 plaza N of the hall: pitch corner, pavilion stair, hall wing, C, hall N face, boiler chimney behind the hall roof",
+    "camera": "resected (104.41,34.6) z~5.4, heading offset 190.27 (pano21.py)",
+    "checked": "chimney bearing vs P0-04 (predicted x 3913, observed 3910)",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q0-10"
+    ]
+   },
+   {
+    "id": "W022",
+    "scene": "2022 360 plaza between hall wing (timber-soffit porch at its NE corner), canteen (siding, gable), C, courts",
+    "camera": "~(165,25)",
+    "checked": "matches applied V1-02/V3-10",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W023",
+    "scene": "2022 360 plaza N of B (old pavers)",
+    "camera": "-",
+    "checked": "old paving",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W024",
+    "scene": "2022 360 inside the garden gazebo",
+    "camera": "gazebo centre",
+    "checked": "maroon column/parapet, timber soffit match GD-9",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W025",
+    "scene": "2022 360 gate plaza",
+    "camera": "(153,-93)",
+    "checked": "matches (pavers relaid since)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W026",
+    "scene": "2022 360 garden plaza at B north",
+    "camera": "-",
+    "checked": "old state",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W027",
+    "scene": "2022 360 garden/plaza",
+    "camera": "-",
+    "checked": "old state",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "W028",
+    "scene": "2022 360 canteen interior: timber ceiling, glazed N wall to the courts",
+    "camera": "canteen",
+    "checked": "matches the CW glazing overlay",
+    "verdict": "matches",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "Q0-10",
+    "title": "Boiler chimney not modelled: steel stack rising through the hall roof at x 107.2. This settles P0-04 ('N wall or W end'): it is neither.",
+    "spec": "SITE_Sports.json (or SITE_HallCPassage.json): new BoilerChimney + BoilerChimney_Bracket. P0-04 was never applied, and build_new.blend has no chimney object.",
+    "current": "none",
+    "proposed": "{type: box (cylinder if supported), name: BoilerChimney, center [107.15, 8.8], size [0.36, 0.36, 16.5], z0 4.5 (top z 21.0), slot M_Steel_Paint_Dark}; {type: box, name: BoilerChimney_Bracket, center [107.15, 8.8], size [0.7, 0.7, 0.08], z0 16.2, slot M_Steel_Paint_Dark}",
+    "photos": [
+     "W021",
+     "W005"
+    ],
+    "method": "W021 (equirect 4096x2048) resected from 3 bearings (pitch SW fence corner, pavilion stair, hall-wing/hall N-wall junction). Camera (104.41,34.6), heading offset 190.27. Check: C's NE corner lands within 3.8 deg. Chimney columns x 3908-3913 give ray az 173.9 deg, which reaches x 107.21/107.14/106.99 at y 8.3/9.0/10.4. The P0-04 shadow base predicts x 3913 vs 3910 observed. The stack rises from behind the hall's N roof edge (roof-edge elevation 16.4 deg gives z 12.0, the model eave, an independent check). Top elevation 31.2 deg, bracket 22.8 deg, width 9 px at 25.7 m. Camera eye z 5.4 (pano21.py, chimney.py).",
+    "error": "lateral +-0.3 m, along the ray +-1.5 m, top z +-1.2, diameter +-0.05",
+    "confidence": "medium-high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-09",
+    "title": "Planter_South's wall on the walkway side is ~0.9 m high (not 0.47), and the soil stays high next to the PavilionStair",
+    "spec": "SITE_GateAlley.json RetWall_South (z, thk), RetWall_South_Coping (z), Planter_South (E-edge z)",
+    "current": "RetWall_South z 5.82 (0.47 above Walkway_South 5.35), coping 5.87; Planter_South z [6.55,5.849,5.8,5.8,6.5,6.5]",
+    "proposed": "RetWall_South z 6.18 (thk 1.38); RetWall_South_Coping z 6.23 (thk 0.06); Planter_South z [6.55,6.15,6.15,6.15,6.5,6.5]",
+    "photos": [
+     "B049",
+     "B047",
+     "B051",
+     "B044"
+    ],
+    "method": "B049: wall face at the stair foot measures 250 px against the 47 px bottom riser at the same depth, i.e. 5.3 risers x 0.175 (PavilionStair (6.75-5.35)/8) = 0.93 m. B047: 4 rock-face block courses (~0.20) + 0.05 coping = 0.85 m. B051: the soil beside the stair sits only 0.15-0.2 below the alley kerb.",
+    "error": "+-0.08 m",
+    "confidence": "medium; this contradicts the earlier 'knee height ~0.5' estimate from video 070309303",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-06",
+    "title": "C F3 corridor: a periwinkle panel sits ABOVE every classroom door (door head to bulkhead); classroom doors have no full-height blue beside them",
+    "spec": "INT_C_Floors.json F3_Accent_S1/S5/N1/N5 _L/_R and new _T panels (zone_c_v6.py accents). F2/F4 are probably the same (not photographed).",
+    "current": "full-height L/R 0.58 x 2.8 + T 1.03 x 0.83 at 4 end-room doors only; WC accents L/R/T",
+    "proposed": "Delete F3_Accent_S1_L/_R, S5_L/_R, N1_L/_R, N5_L/_R and keep their _T. Add _T boxes [1.03,0.02,0.93] z0 15.07 dir -2.284 material accent: S2 [184.839,2.914], S4 [191.676,3.942], T [188.232,2.779], N2 [185.070,8.689], N4 [191.906,9.718] (same door offset as the existing S1_T/N1_T, accent_t.py). Keep the WC-door full-height accents. Add a black room plate 0.12 x 0.01 x 0.16 on the hinge-side frame of each classroom door at FFL+1.7 (KOCH number).",
+    "photos": [
+     "B031",
+     "B030",
+     "B029",
+     "B026",
+     "B032",
+     "B033",
+     "B040"
+    ],
+    "method": "Direct observation of doors R304, R303, R309 (S) and R305 (N): blue only between the door head and the bulkhead, white beside them. Panel width ~0.98-1.0 x the frame (190 px vs 195 px).",
+    "error": "+-0.1 m",
+    "confidence": "medium (F3); low (F2/F4)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-05",
+    "title": "Lab R105: the corridor (door) wall is SAGE with an orange+white diagonal stripe at its board end; the W corner column is sage",
+    "spec": "INT_C_F1.json (zone_c_v6.py lab fit-out): F1_R105_Column_BackWin.slot; new F1_R105_DoorWall_Paint, F1_R105_DoorWallStripe",
+    "current": "corridor wall default white; Column_BackWin M_Paint_White; no stripe",
+    "proposed": "Column_BackWin slot M_Paint_Sage. DoorWall_Paint: 0.006 boxes on the S wall room face (line ~(180.46,9.30)-(184.3,9.15)), z 6.41-9.05, M_Paint_Sage. DoorWallStripe: orange band 0.13 + white band 0.10 on its E side, top under the DoorBox at x ~184.4 (just W of the door jamb x 184.6), running down westward 25-30 deg off vertical to the floor at x ~183.1. The door surround to the board corner stays white.",
+    "photos": [
+     "B011",
+     "B016",
+     "B015",
+     "B004",
+     "B010"
+    ],
+    "method": "Room id: B016 pano shows 2 facade windows (R105 only), windows on the left, door on the right at the board end, AC at the window end; the sage W wall is also seen in TG004. Stripe position read by eye against the door frame. Not a contradiction of V3-01: that filmed lab (windows to the right of the board) is a corner lab.",
+    "error": "stripe +-0.3 m, +-7 deg",
+    "confidence": "medium (paint), low (stripe position)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-04",
+    "title": "C north facade: R105's east window column is 0.14 m too far east (window gap 0.60, not 0.74)",
+    "spec": "BLD_C.json facades[edge 7].windows W u (c_shell_v6.py); the R105 trim/paint/radiator in INT_C_F1 follow it",
+    "current": "u 3.45 (local x 10.70, world ~184.72,15.37)",
+    "proposed": "u 3.59 (local x 10.56, world ~184.58,15.38), rows F1-F4",
+    "photos": [
+     "TG005",
+     "TG011"
+    ],
+    "method": "Frontal far wall, scale from frame widths (1.85 m = 284/315 px/m). The scale is validated by the wall span: 5.48 measured vs 5.44 in the model. Left pier 0.45 (model 0.48), gap 0.61/0.60 (0.74), right pier 0.72 (0.52), centre spacing 2.46/2.45 (2.59) (tg_win.py).",
+    "error": "+-0.05 m",
+    "confidence": "medium (interior only; rows F2-F4 assumed stacked)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-08",
+    "title": "Classroom/lab display is a larger interactive panel (~86 in) hung lower than the tv_70in box",
+    "spec": "INT_C_F1.json / INT_C_Floors.json all *_TV boxes (zone_c_v6.py)",
+    "current": "size [0.05,1.57,0.87], z0 FFL+1.05 (top FFL+1.92)",
+    "proposed": "size [0.08,1.96,1.15], z0 FFL+0.84, same centre, ue_asset interactive_panel_86",
+    "photos": [
+     "B034",
+     "B011",
+     "B012"
+    ],
+    "method": "B034: display/whiteboard heights at their shared edge are 410/450 px, giving 1.09 m if the board is 1.20 m. The display bottom sits 0.74 x the display height above the skirting, giving h 1.09-1.17 m and bottom 0.81-0.87 m. The top (1.90-2.04) matches the model.",
+    "error": "+-0.08 m",
+    "confidence": "medium-low (assumes a 1.20 m whiteboard)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-01",
+    "title": "Lab R105 windows have cream pleated blinds, one per light, fixed on the sashes; no curtains",
+    "spec": "INT_C_F1.json (zone_c_v6.py lab fit-out); R103/R201/R204/R205 are probably the same",
+    "current": "none",
+    "proposed": "F1_R105_Blind_{0,1}_{L,M,R}: boxes 0.58/0.49/0.58 wide x 0.02 x 1.28 high, z0 7.51, on the glass plane of the windows centred (182.13,15.45) and (184.58,15.35) (after Q0-04), dir -2.284, slot M_Fabric_Pleated_Cream, ue_asset pleated_blind (M moves with the sash)",
+    "photos": [
+     "TG004",
+     "TG005",
+     "TG006",
+     "TG007",
+     "TG008",
+     "TG009",
+     "TG010",
+     "TG011"
+    ],
+    "method": "direct observation; light widths from the W type mullions 0.35/0.65",
+    "error": "+-0.05 m",
+    "confidence": "high (presence), medium (sizes)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-02",
+    "title": "Lab R105: CCTV dome at the W end of the window beam and 2 ceiling smoke detectors are missing",
+    "spec": "INT_C_F1.json new boxes (zone_c_v6.py); detectors are missing in every room",
+    "current": "CCTV only in the corridor; no detectors",
+    "proposed": "F1_R105_CCTV [0.12,0.12,0.10] at (180.85,14.75) z0 9.18, M_Plastic_White, cctv_dome; F1_R105_Smoke_0/_1 [0.10,0.10,0.05] z0 9.25 at (182.3,12.3)/(184.3,12.2), M_Plastic_White, smoke_detector",
+    "photos": [
+     "TG004",
+     "TG005",
+     "TG008",
+     "TG009",
+     "TG010",
+     "TG011",
+     "B011"
+    ],
+    "method": "direct observation; detector positions from a tile count",
+    "error": "CCTV +-0.2 m, detectors +-0.6 m",
+    "confidence": "high (presence), low (detector positions)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q0-07",
+    "title": "C upper corridors have a light-grey terrazzo tile floor and a grey terrazzo skirting; the slab has no finish",
+    "spec": "INT_C_Floors.json F2-F4 corridor (new F#_Hall_Floor + F#_Hall_Skirting_S/N, zone_c_v6.py)",
+    "current": "slab material 'stone', no slot, no skirting",
+    "proposed": "F#_Hall_Floor box 0.01 over the corridor (wall face to wall face, x 174.1-202.4), slot M_Terrazzo_Grey_Tile. Skirting boxes 0.08 x 0.012 on both corridor wall faces, broken at the doors, slot M_Terrazzo_Grey. Tile module unsure: counting tiles across the 5.8 m corridor in a frontal floor photo would settle it.",
+    "photos": [
+     "B031",
+     "B030",
+     "B032",
+     "B033",
+     "B026"
+    ],
+    "method": "direct observation",
+    "error": "-",
+    "confidence": "medium",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "B lettering + round logo on the S face near the SE corner (LetteringLogo slot exists): B044, B050, W004, W009, W014, W025",
+   "C entrance sign box over the canopy (slot already KOCH): B035, B036",
+   "Room plates with QR timetable on the C classroom door frames ('cabinet 302'): B026 -> KOCH room plate",
+   "'A Block' plate on A_S's SW maroon pilaster: B044, B045 -> KOCH block plate",
+   "Campus wayfinding board (3D map + department list) on 2 posts in B's south lawn: B041, B042, W004 -> KOCH map board",
+   "Gate booth plaque: W006 -> KOCH plaque",
+   "Festival banners and boxes in the 2025/2026 maps/renders (W007, W008, W012) if any are reproduced"
+  ],
+  "open_questions": [
+   "Telegram photos of 10-01 (TG001-TG003, TG012) show a room with dark charcoal-grey walls, a smooth plaster ceiling (no tile grid), white PVC windows and cream pleated blinds. Which room in Block C is that (floor and room number)?",
+   "The 2022 360 tour photo labelled 'D block' (W016) shows a 4-storey beige/maroon building with a curved front, a curved entrance canopy on two maroon posts and two gazebos in the lawn. Is that building on this campus, and if so, which building is it?"
+  ]
+ },
+ {
+  "slice": "pass2_part1: 102 web photos (2GIS user photos G000-G098, Wikimedia Commons 2010-11 G100-G102). Notes, crops and scripts are in /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass2_part1/ (notes.txt, crop.py, ortho.py, vline.py = 1D projective fit, g020_rect.py/g020_c.py = 2-VP face rectification of the drone photo G020, allbb_new.json = object bounds from build_new.blend). These photos are old (2010-2025). Where a 2026 photo differs, the 2026 state was kept and checked against the 2026 photo (A230, A234, A240, A241, A255). 45 photos are interiors of A/D or unidentified rooms (no INT spec), or can't be placed with 2 cues.",
+  "coverage": [
+   {
+    "id": "G000",
+    "scene": "B SE corner: S face bay A lettering + logo, E porch, block plate + CCTV on the SE pilaster",
+    "camera": "(158,-92) look NW",
+    "checked": "bay A windows (1D fit on the pilasters: within 0.5 m of spec 7.67/10.61), plate/CCTV, plinth 5 courses",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-01"
+    ]
+   },
+   {
+    "id": "G001",
+    "scene": "B bay A lettering behind the B-front junipers/spruce",
+    "camera": "(140,-90) look N",
+    "checked": "LetteringLogo slot, front trees",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G002",
+    "scene": "alley looking N: B porch, B plate, A_S porch + W face, A_W gallery, C far",
+    "camera": "(152,-86) look N",
+    "checked": "topology; old circle pavers (2026 herringbone kept)",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q1-01"
+    ]
+   },
+   {
+    "id": "G003",
+    "scene": "B SE corner from the gate-plaza stair head, yard info board, south stair bed",
+    "camera": "(156,-95) look NW",
+    "checked": "InfoBoard_Yard, Plaza_StairTop, Planter_South",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G004",
+    "scene": "D_W W (street) face in snow, entrance canopy, pavilions, fence",
+    "camera": "(-213,40) look E",
+    "checked": "window columns + colour fields",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D2"
+    ]
+   },
+   {
+    "id": "G005",
+    "scene": "D_W corner lettering + logo at dusk, globe lamps on the fence piers",
+    "camera": "W street look E",
+    "checked": "lettering presence",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-D3",
+     "Q1-D6"
+    ]
+   },
+   {
+    "id": "G006",
+    "scene": "D_W W face through the street fence, canopy, globe lamps on the gate pier",
+    "camera": "(-212,55) look E/SE",
+    "checked": "colour-field pattern",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D6"
+    ]
+   },
+   {
+    "id": "G007",
+    "scene": "C S entrance (old sign box), tower windows, 7 granite steps, lightwell covers",
+    "camera": "(184,-12) look N",
+    "checked": "T windows, stairs, lightwells; the 2026 canopy governs",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G008",
+    "scene": "SW-campus courts (turf + 2 tennis cages) behind the D street fence; dormer building, D_W, D_M behind",
+    "camera": "(-120,-95) look N",
+    "checked": "no spec for the courts; dormer building is only a CTX box",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-D7",
+     "Q1-D6"
+    ]
+   },
+   {
+    "id": "G009",
+    "scene": "D_W SW street corner: booth with sign canopy, red barred gate, pavilion, lettering",
+    "camera": "street SW of D_W look NE",
+    "checked": "9-column face, booth at the S gate",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D3",
+     "Q1-D5"
+    ]
+   },
+   {
+    "id": "G010",
+    "scene": "B SE corner at night (old): lettering, plate, porch, A_S porch piers",
+    "camera": "(160,-90) look W",
+    "checked": "topology",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q1-01"
+    ]
+   },
+   {
+    "id": "G011",
+    "scene": "wave-paver walk between a block wall and a dark 3-storey block, low sun",
+    "camera": "-",
+    "checked": "not placed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G012",
+    "scene": "courts N of the canteen from the canteen terrace (turf court with red border, basketball goal, hard court)",
+    "camera": "(190,37) look N",
+    "checked": "courts/fences, terrace pavers (V3-11 open)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G013",
+    "scene": "street at the zebra: gate booth, gate canopy, concrete street-light pole",
+    "camera": "(147,-111) look NE",
+    "checked": "booth, canopy, StreetLamp_ZebraN",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G014",
+    "scene": "pergola walk looking W: arches, boulder wall benches, bins, diamond slabs",
+    "camera": "(140,-46.5) look W",
+    "checked": "Pergola_South, benches, bins, wall",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G015",
+    "scene": "old: decorated alley looking W from the canteen porch: round bed lamp, thuja beds, pitch cage",
+    "camera": "(180,32) look W",
+    "checked": "RoundBed, AlleyLamp_*, PitchFence",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G016",
+    "scene": "old: B SE pilaster E face under the porch soffit with 2 brass plates, storefront pier",
+    "camera": "(149.5,-80.5) look W",
+    "checked": "2026 A234 shows the plates removed; pier cladding matches",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G017",
+    "scene": "old winter: walkway along the A_W gallery to C",
+    "camera": "(158,-62) look N",
+    "checked": "gallery + C topology",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G018",
+    "scene": "interior corridor with central columns (not C)",
+    "camera": "-",
+    "checked": "no C match",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G019",
+    "scene": "dining hall interior",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G020",
+    "scene": "drone over the D forecourt: D_W W + S faces, roof canopy, entrance canopy, pavilions, lettering",
+    "camera": "(-215,0) z~35 look NNE",
+    "checked": "9 columns (projective fit rms 1.2 px), colour fields, door, S-face lettering heights",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D2",
+     "Q1-D3"
+    ]
+   },
+   {
+    "id": "G021",
+    "scene": "C S entrance (2019-21) sign box + salmon canopy, steps, cheeks",
+    "camera": "(184,-14) look N",
+    "checked": "tower/steps; 2026 governs",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G022",
+    "scene": "B S facade from the W part: pilasters, lettering, plate, porch",
+    "camera": "(120,-90) look NE",
+    "checked": "bays, plate",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q1-01"
+    ]
+   },
+   {
+    "id": "G023",
+    "scene": "hall-wing N face (2021): E porch, return face, downpipe, 2 windows, round vent, alley lamp",
+    "camera": "(145,33) look S/SE",
+    "checked": "WN1/WN2 types exist but there is no facade edge 2, so no N windows are built; vent u 7.3 ok",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-02"
+    ]
+   },
+   {
+    "id": "G024",
+    "scene": "street view of the D complex S side: D_W, beige link, blue glazed curtain-wall tower, D_M",
+    "camera": "SW street corner look NE",
+    "checked": "no glazed tower in the D specs",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-D4"
+    ]
+   },
+   {
+    "id": "G025",
+    "scene": "close-up: B bay A logo + lettering (old)",
+    "camera": "-",
+    "checked": "LetteringLogo slot",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G026",
+    "scene": "close-up: D_W S face W end lettering + logo, panel grid, roof canopy posts",
+    "camera": "S of D_W look N",
+    "checked": "lettering missing",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-D3"
+    ]
+   },
+   {
+    "id": "G027",
+    "scene": "drone from the NW: D_W N + W faces, forecourt, flags, booth, D_M wings",
+    "camera": "(-230,95) z~40 look SE",
+    "checked": "9-column W face, N-face canopy, booth position",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D5"
+    ]
+   },
+   {
+    "id": "G028",
+    "scene": "under the gate canopy: soffit lights, column, turnstile, booth plaque + plate",
+    "camera": "(156,-99) look NW",
+    "checked": "SoffitLight_0..3, Turnstile (R3-13), BoothPlaque",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q1-05"
+    ]
+   },
+   {
+    "id": "G029",
+    "scene": "sports-hall gym interior (source of the Overlays/BLD_Hall Gym)",
+    "camera": "gym E end look W",
+    "checked": "barred windows on both long walls, 2 per bay",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-03"
+    ]
+   },
+   {
+    "id": "G030",
+    "scene": "large lobby interior (coffered ceiling, curtain wall)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G031",
+    "scene": "same lobby, reception desk",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G032",
+    "scene": "seminar room (carpet, U-desks)",
+    "camera": "-",
+    "checked": "not a C room",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G033",
+    "scene": "hall with checkered tiles, white columns (A/D)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G034",
+    "scene": "students on the B-corner wide granite stair, A_W gallery behind",
+    "camera": "(150,-52) look E/SE",
+    "checked": "6-7 risers (V2-02 applied)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G035",
+    "scene": "B SE pilaster S face: old plate, CCTV, junction box, antenna",
+    "camera": "(146,-90) look N",
+    "checked": "plate 0.56x0.27 (pilaster 1.03 m scale); 2026 A241 frontal re-measure",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-01"
+    ]
+   },
+   {
+    "id": "G036",
+    "scene": "lounge interior with a small stair (not C)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G037",
+    "scene": "faculty coffee corner interior",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G038",
+    "scene": "B bay A lettering from under the gate canopy, plate + CCTV on the SE pilaster",
+    "camera": "(152,-98) look N",
+    "checked": "supports Q1-01",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q1-01"
+    ]
+   },
+   {
+    "id": "G039",
+    "scene": "canteen terrace looking N at the courts",
+    "camera": "(185,35) look N",
+    "checked": "courts/fences",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G040",
+    "scene": "from Ankara St: gate canopy, column, booth, fence, flagpole, B",
+    "camera": "(150,-130) look N",
+    "checked": "canopy, column, booth, Flagpole_0/1",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G041",
+    "scene": "D_W SW corner from the forecourt S gate: booth, red sliding gate, lettering, 9-column W face",
+    "camera": "(-212,8) look NE",
+    "checked": "columns, booth at the S end",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D3",
+     "Q1-D5"
+    ]
+   },
+   {
+    "id": "G042",
+    "scene": "D street fence close-up (block base wall, brick piers, globe lamps, wrought iron) + D_W + glazed tower",
+    "camera": "(-209,0) look NE",
+    "checked": "DFront_Fence is a plain fence",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D6",
+     "Q1-D4"
+    ]
+   },
+   {
+    "id": "G043",
+    "scene": "assembly hall interior",
+    "camera": "-",
+    "checked": "not modelled",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G044",
+    "scene": "high view from the N towers: pitch, courts offset, alley, hall-wing roof, hall N wall full length, boiler chimney behind the hall roof",
+    "camera": "(95-140,130) z~25 look S",
+    "checked": "hall N wall fields/doors/windows mapped at 23.7 px/m from the HN windows, anchored on the wing W face; chimney bearing",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-03",
+     "Q1-04"
+    ]
+   },
+   {
+    "id": "G045",
+    "scene": "dining/canteen interior (orange column, red chairs)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G046",
+    "scene": "D_W from the W street gate at dusk: canopy, colour fields, booth",
+    "camera": "W street gate look E/SE",
+    "checked": "9-column/field pattern",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1"
+    ]
+   },
+   {
+    "id": "G047",
+    "scene": "D forecourt booth (brass plaque, lamp) + D_W face",
+    "camera": "W gate look E/SE",
+    "checked": "as G046",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1"
+    ]
+   },
+   {
+    "id": "G048",
+    "scene": "assembly hall from the balcony",
+    "camera": "-",
+    "checked": "not modelled",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G049",
+    "scene": "PC lab close-up with a person",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G050",
+    "scene": "stairwell with green dado, marble landing, mural (building unknown)",
+    "camera": "-",
+    "checked": "no C evidence of this finish",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G051",
+    "scene": "C S entrance (~2023): sign box + floodlights, door, steps, ramp, lightwells, CCTV",
+    "camera": "(184,-13) look N",
+    "checked": "stairs, ramp, lightwells, CCTV_S, downpipes",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G052",
+    "scene": "alley at dusk looking S to the gate: A_S porch, B E face + porch, lamps",
+    "camera": "(153,-62) look S",
+    "checked": "B porch/BBed; old paving",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G053",
+    "scene": "A_S SW pilaster with block plate + 2 CCTV, porch, AC units at dusk",
+    "camera": "(150,-88) look NE",
+    "checked": "BlockPlate, CCTV_Corner",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G054",
+    "scene": "plaza S of A_W looking N along the gallery: thuja pits, AC unit, signboard, C",
+    "camera": "(156,-58) look N",
+    "checked": "AW pits, AC_Deck, C",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G055",
+    "scene": "dark walk with benches and a 2-storey white block (not placed)",
+    "camera": "-",
+    "checked": "not placed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G056",
+    "scene": "A_S W face frontal at dusk: gable porch, block plate + CCTV, slogan band",
+    "camera": "(150,-80) look E",
+    "checked": "porch, plate, AC units",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G057",
+    "scene": "C S tower + E wing (winter): windows, downpipe, old sign box",
+    "camera": "(184,-10) look N",
+    "checked": "W/T windows, downpipe E3 u 0.25",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G058",
+    "scene": "lobby with a glazed curtain wall (not C)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G059",
+    "scene": "B SE corner from the gate-plaza stair: lettering, maroon panel, porch, stair beds",
+    "camera": "(152,-95) look NW",
+    "checked": "LetteringLogo, WAP panel, porch, Plaza stair",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G060",
+    "scene": "D_W W-face walkway in rain: panel cladding, red granite plinth with ledge, clover pavers, booth, gas pipe on the fence",
+    "camera": "(-196,30) look N",
+    "checked": "plinth finish, gas pipe",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D6"
+    ]
+   },
+   {
+    "id": "G061",
+    "scene": "wave-paver path, gravel lot, brick hip-roof building (not placed)",
+    "camera": "-",
+    "checked": "not placed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G062",
+    "scene": "from an upper window looking down at the pitch (window not placed)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G063",
+    "scene": "A_W gallery walkway under the timber soffit, red posts, rock-face wall + rail",
+    "camera": "(163,-45) look S",
+    "checked": "gallery, walkway W wall",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G064",
+    "scene": "festival tents before a 1-storey white building (not placed)",
+    "camera": "-",
+    "checked": "not placed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G065",
+    "scene": "PC lab with tiled floor (not C)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G066",
+    "scene": "cafe interior with a timber ceiling (likely canteen)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G067",
+    "scene": "A_S street face with box surrounds + sidewalk lamp pole",
+    "camera": "(175,-99) look N",
+    "checked": "A_S S rows, PathLamp",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G068",
+    "scene": "D_W W face from the W street: 9 columns, 3 flags, canopy under columns 4-5, booth at the N gate",
+    "camera": "(-222,85) look SE",
+    "checked": "columns, canopy, booth vs the Google roofs",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D1",
+     "Q1-D2",
+     "Q1-D5"
+    ]
+   },
+   {
+    "id": "G069",
+    "scene": "festival props by the lower-lawn spruce; HallEast door, C west shed, pitch",
+    "camera": "(164,6) look N",
+    "checked": "spruce, HallEast door/canopy, shed",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G070",
+    "scene": "gate booth S face: plaque, canopy fascia, B lettering, A_S",
+    "camera": "(160,-104) look N",
+    "checked": "BoothPlaque, window",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G071",
+    "scene": "D_W SW lettering through the D street fence (snow)",
+    "camera": "W street look NE",
+    "checked": "lettering, fence ornament",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-D3",
+     "Q1-D6"
+    ]
+   },
+   {
+    "id": "G072",
+    "scene": "same corner: fence block piers, lime-green base blocks, arched iron panels, globe lamp",
+    "camera": "W street look NE",
+    "checked": "fence type",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D6",
+     "Q1-D3"
+    ]
+   },
+   {
+    "id": "G073",
+    "scene": "classroom with a world-map mural (not placed)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G074",
+    "scene": "night on the pitch: rope-net roof, floodlights, goal",
+    "camera": "inside the pitch",
+    "checked": "Pitch_NetRoof, PitchFlood_*",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G075",
+    "scene": "lobby with timber-slat stair (not C)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G076",
+    "scene": "D_W SW corner 2025: lettering block, S-face windows, fence piers with globe lamps",
+    "camera": "(-200,0) look NE",
+    "checked": "lettering extent, S-face pattern, fence",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D3",
+     "Q1-D1",
+     "Q1-D6"
+    ]
+   },
+   {
+    "id": "G077",
+    "scene": "gate booth S face close-up: plaque with the test-centre plate below it, CCTV under the soffit",
+    "camera": "(157.6,-101) look up NW",
+    "checked": "TestCentrePlate position (spec: right of the plaque); A255 re-measured",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-05"
+    ]
+   },
+   {
+    "id": "G078",
+    "scene": "conference room (not placed)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G079",
+    "scene": "B bay A lettering 2024-25 through the B-front fence",
+    "camera": "(143,-95) look N/NE",
+    "checked": "lettering extent: 2-point scale, eave 8.23 / plinth 0.80",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-06"
+    ]
+   },
+   {
+    "id": "G080",
+    "scene": "D forecourt N gate: booth + gate canopy with sign fascia, 3 flagpoles, pavilions",
+    "camera": "(-212,90) look E/SE",
+    "checked": "booth at the N gate next to the flagpoles",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q1-D5"
+    ]
+   },
+   {
+    "id": "G081",
+    "scene": "library interior (A)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G082",
+    "scene": "faculty lounge with circuit-light wall art (A)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G083",
+    "scene": "A_W gallery from the circle-paver walk: slogan band, door-bay plate, junipers, A_N",
+    "camera": "(157,-66) look N",
+    "checked": "gallery, LetterBand, DoorBay_S",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G084",
+    "scene": "long block under construction netting, gravel lot (not placed)",
+    "camera": "-",
+    "checked": "not placed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G085",
+    "scene": "A_W gallery glazed double door with transom and 'dining' plate",
+    "camera": "(154,-60) look E",
+    "checked": "DD exists, plate missing",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-07"
+    ]
+   },
+   {
+    "id": "G086",
+    "scene": "C F1 hall before the renovation (green walls, fluorescent tubes)",
+    "camera": "C F1 hall",
+    "checked": "superseded by the 2026 photos",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G087",
+    "scene": "library from the mezzanine (A)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G088",
+    "scene": "A_W gallery + A_S NW pilaster with painted lettering (old), door-bay awning",
+    "camera": "(157,-66) look N",
+    "checked": "2026 A230: lettering gone",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G089",
+    "scene": "lounge with a slatted timber logo wall (not placed)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G090",
+    "scene": "library from the mezzanine (A)",
+    "camera": "-",
+    "checked": "no INT spec",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G091",
+    "scene": "lawn + wave pavers before a block retaining wall with fence, 6-riser granite stair, red tile wall",
+    "camera": "-",
+    "checked": "location not fixed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G092",
+    "scene": "wave-paver walk with a centre line beside a long maroon/beige block (D, probable)",
+    "camera": "-",
+    "checked": "not fixed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G093",
+    "scene": "snow: rock-face bed wall with granite coping, junipers, A_S W face + porch",
+    "camera": "(156,-87) look E",
+    "checked": "RetWall_South + coping, porch",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G094",
+    "scene": "dusk: A_W gallery, lit slogan band, AC units, ramp, yellow bin, C behind",
+    "camera": "(155,-58) look N",
+    "checked": "LetterBand, AC_Units, ramp, bin, signboard",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "G095",
+    "scene": "blossom tree + spruce before a 4-storey block (not placed)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G096",
+    "scene": "classroom with fluorescent tubes (not C)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "G097",
+    "scene": "sunset walk along a maroon block with a column porch (D, probable)",
+    "camera": "-",
+    "checked": "not fixed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G098",
+    "scene": "rose bed before an ashlar retaining wall with a granite logo slab",
+    "camera": "-",
+    "checked": "not fixed with 2 cues",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "G100",
+    "scene": "Commons 2010: B from the SW, 4 equal bays, lettering, porch, downpipes beside the pilasters",
+    "camera": "(95,-95) look NE",
+    "checked": "equal-bay projective check to 4 px; downpipes",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-08"
+    ]
+   },
+   {
+    "id": "G101",
+    "scene": "Commons 2010 winter: pergola walk looking W, boulder wall, B N face with 3 downpipes",
+    "camera": "(140,-46) look W",
+    "checked": "B N windows vs spec (rms 3.2 px), downpipes",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q1-08"
+    ]
+   },
+   {
+    "id": "G102",
+    "scene": "Commons 2011: garden SE plaza looking S along the A_W gallery to the old gate stair, B right",
+    "camera": "(152,-50) look S",
+    "checked": "topology",
+    "verdict": "matches",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "Q1-01",
+    "title": "B SE corner pilaster: block plate, CCTV and junction box are missing",
+    "spec": "Art/Blender/Specs/BLD_B.json attachments (new)",
+    "current": "nothing on the SE corner pilaster S face (Pilaster_E0_04, u 47.28-48.28)",
+    "proposed": "{type: wall_sign, name: BlockPlate_B, edge: 0, u0: 47.50, u1: 48.00, z0: 3.06, z1: 3.32, t: 0.02, w0: 0.14, slot: M_Sign_KOCH, content: 'KOCH block plate B'} + {type: wall_boxes, name: CCTV_SE, kind: cctv, edge: 0, w0: 0.14, items: [[47.75, 3.69, 0.10, 0.10, 0.25]]} + {type: wall_boxes, name: JBox_SE, edge: 0, w0: 0.14, items: [[47.75, 3.55, 0.20, 0.09, 0.08]], slot: M_Plastic_White}. Local values (scale 1.0286 is applied by the builder).",
+    "photos": [
+     "G000",
+     "G035",
+     "G038",
+     "G002",
+     "G010",
+     "G022",
+     "A241 (2026)"
+    ],
+    "method": "2026 A241, full resolution, frontal pilaster S face: 765 px = 1.03 m, 743 px/m, tilt 3.8 deg. Plate 0.51 x 0.27 at 3.30-3.57 above the circle paving, 0.29-0.80 from the E arris. Junction box at 3.80-3.89, CCTV above it. Converted with FFL = SE grade + 0.15 (plinth_note) and /1.0286. G035 (old plate 0.56 x 0.27, pilaster 180 px = 1.03 m) and G000 (1D projective fit: plate z 2.8-3.1, older position) confirm the plate exists.",
+    "error": "+-0.05 along the face, +-0.08 height",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-02",
+    "title": "Hall-wing N face windows are not built: types exist, no facade edge 2",
+    "spec": "Art/Blender/Specs/BLD_HallWing.json facades (edge 2 missing) + attachments",
+    "current": "window_types WN1/WN2 are defined (R1-01), but facades has only edge 1, so the N wall is blank in build_new (Wall_E2 has 8 vertices). Vent_N u 7.3 exists.",
+    "proposed": "add facades entry {edge: 2, name: north, windows: [{type: WN1, u: [3.3], sills: [1.65]}, {type: WN2, u: [8.4], sills: [1.65]}]} + {type: downpipe, edge: 2, u: [1.9], z0: -0.3, z1: 3.5} + cladding {edge: 2, u0: 6.0, u1: 9.5, z0: 0.6, z1: 3.55, proj: 0.01, slot: M_Render_Beige} (beige band round the vent; pink E and W of it)",
+    "photos": [
+     "G023"
+    ],
+    "method": "G023 (2021, from the alley): order from the E is porch, recessed return face with a narrow window, downpipe, window 1, beige band with the round vent, window 2, pink. Window 1 = 55 px = 0.94 m (58.5 px/m). Offsets with that scale: downpipe -1.35 m, vent +4.5 m, band +2.7..+6.2 m. These are lower bounds because the face recedes, and they agree with R1-01 (u 3.3 / 7.3 / 8.4).",
+    "error": "u +-0.5, band edges +-0.7",
+    "confidence": "medium (existence), low (band)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-03",
+    "title": "Sports-hall N face: real layout (render fields, maroon tile door bay, 2 doors, flue, windows) differs from the evenly spaced HN list",
+    "spec": "Art/Blender/Specs/Overlays/BLD_Hall.json facades edge 2 + BLD_Hall.json cladding/attachments (u along edge 2 from the NE corner, local x = 60.2 - u)",
+    "current": "edge 2: 6 HN windows u [57.1, 51.1, 45.1, 39.1, 33.1, 27.1], no doors, no fields (R1-05 deferred because positions were unknown)",
+    "proposed": "HN windows u [18.6, 21.8, 27.1] (sills as now 1.25) and remove u 33.1-57.1. New type HS {w 1.0, h 0.8} at u [44.8, 46.9], sill ~2.2 (unsure). Entrances: E door (2-leaf rusty steel) u0 33.9, u1 36.3, z1 2.6; W door (2-leaf, blue in 2023, maroon panel in 2026 per R1-05) u0 49.6, u1 52.4, z1 2.7. Cladding: maroon brick-tile bay u 31.7-40.6 z 0.35-5.64 slot M_Tile_Brick_Red; pink render u 16.5-23.7 and u 46.9-60.2, slot M_Render_Pink. Downpipe u 43.5. White flue pipe d 0.2 at u 35.9 from the eave down to z ~2.5. Small dark box/vestibule u 38.7-40.8 (depth ~1.0, h ~2.5, unsure).",
+    "photos": [
+     "G044",
+     "G029"
+    ],
+    "method": "G044 high view from the N towers, wall near-frontal. Scale from the HN windows (1.9 m = 43-45 px, constant across the span within 5%): 23.7 px/m. Anchor: wing W face (local x 45.8) at image x 190. Positions follow local = 45.8 - (x - 190)/23.7. The one existing spec window that is consistent with A082 (u 27.1) lands on an image window (x 490). G029 (gym interior) shows windows on both long walls.",
+    "error": "+-1.5 m along the face (anchor +-0.5, scale +-5%)",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-04",
+    "title": "Boiler chimney bearing from G044 disagrees with P0-04 (deferred)",
+    "spec": "(new element, P0-04 open)",
+    "current": "not modelled; P0-04 proposed (107,9) from shadows",
+    "proposed": "unsure. G044 puts the stack at world x 113-116 if it stands within y 4-12. The base is hidden behind the hall roof. To settle it, cut a second bearing from any photo that shows the stack together with known hall features (e.g. A079 bearing 251 deg) with this ray, or read the shadow root on Google z20 at the SE end of the thin shadow line (~(106,7)).",
+    "photos": [
+     "G044"
+    ],
+    "method": "In the image, the stack is at local hall x 26.6 (same 23.7 px/m mapping as Q1-03). A camera at x 95-140, y ~130 gives a ray that crosses y 4-12 at x 113-116.",
+    "error": "+-3 m",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-05",
+    "title": "Gate booth test-centre plate sits BELOW the plaque, not right of it",
+    "spec": "Art/Blender/Specs/SITE_Gate.json TestCentrePlate",
+    "current": "pos [158.51,-100.29] (u ~1.2, over the window), w 0.4, h 0.3, z0 2.4",
+    "proposed": "pos [157.701, -100.266], dir_deg 267.1, w 0.38, h 0.27, z0 1.80 (left-aligned under BoothPlaque)",
+    "photos": [
+     "G077",
+     "G028",
+     "A255 (2026)"
+    ],
+    "method": "A255 frontal, tile courses 0.16 m = 57 px: plate u 0.20-0.58 from the SW corner, z 1.80-2.07; plaque 0.67 x 0.48 at z 2.25-2.73 (spec ok). World position = booth anchor + 0.39 x_dir, 0.02 out from the face.",
+    "error": "+-0.05",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-06",
+    "title": "B bay-A lettering block slightly narrower, lower top",
+    "spec": "Art/Blender/Specs/BLD_B.json attachments LetteringLogo",
+    "current": "u0 42.3, u1 46.7, z0 3.1, z1 7.5 (local)",
+    "proposed": "u0 43.1, u1 46.8, z0 3.7, z1 7.1 (local)",
+    "photos": [
+     "G079",
+     "G001",
+     "G059"
+    ],
+    "method": "G079 (2024-25): 2-point vertical scale on the SE pilaster (eave 8.23 and plinth top 0.80, scaled) = 134.6 px/m, between the affine and projective fits. Top 7.4-7.5, bottom 3.7-4.2 above grade, width 3.8, gap to the SE pilaster 0.48. Converted with FFL = grade + 0.15 and /1.0286.",
+    "error": "+-0.3",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-07",
+    "title": "Blue door plate in the transom of the A_W gallery double door (not modelled)",
+    "spec": "Art/Blender/Specs/BLD_A_W.json attachments (new)",
+    "current": "DD door u 43.65, no plate",
+    "proposed": "{type: wall_sign, name: Plate_DD, edge: 3, u0: 43.45, u1: 43.85, z0: 2.15, z1: 2.41, t: 0.01, w0: -0.05, slot: M_Sign_KOCH}",
+    "photos": [
+     "G085"
+    ],
+    "method": "plate 114 px vs the 1.35 m opening = 395 px gives 0.39 x 0.26, centred on the door, top at the transom head",
+    "error": "+-0.05",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-08",
+    "title": "B rainwater downpipes missing (S face beside the intermediate pilasters, N face 3)",
+    "spec": "Art/Blender/Specs/BLD_B.json attachments (new downpipe)",
+    "current": "no downpipes on B",
+    "proposed": "{type: downpipe, edge: 0, u: [11.6, 23.4, 35.2], z0: -0.3, z1: 7.9, d: 0.1} + {type: downpipe, edge: 2, u: [12.3, 24.1, 35.9], z0: -0.3, z1: 7.9, d: 0.1}",
+    "photos": [
+     "G100",
+     "G101",
+     "G000"
+    ],
+    "method": "G100: a downpipe just W of each intermediate pilaster, at the bay joints. G101: 3 downpipes on the N face; a window-rhythm fit (rms 3.2 px) puts them about 12 m apart. The N face u values are mirrored bay joints because that fit leaves +-3 m. G000 also shows 2 on the E face (u not measured).",
+    "error": "S +-0.4, N +-3",
+    "confidence": "low (2010 photos)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-D1",
+    "title": "D_W facades: 9 window columns at 6.45 m with 2 beige fields per long face, not 19-20 columns at 3 m",
+    "spec": "Art/Blender/Specs/BLD_D_W.json facades edge 3 (W) and edge 1 (E, mirror assumed), edge 0 (S); cladding; plinth slot",
+    "current": "edge 3/1: 19 cols at 3.0 m (u 2.55-56.55), one beige field u 17.73-41.32 z 0.6-13.2; edge 0: 10 cols at 3 m; plinth default brick tile",
+    "proposed": "edge 3 windows u [3.94, 10.39, 16.84, 23.29, 29.74, 36.2, 42.65, 49.1, 55.55] rows F1-F4. Cladding edge 3: beige u 7.7-26.3 and u 32.9-52.3, z 0.6-10.0 (F4 band maroon). Same on edge 1 only if confirmed (not photographed). Edge 0 (S): u 0-9.8 blank corner strip (lettering, Q1-D3), windows u [11.3, 17.75, 24.2, 30.65], beige field u 10.1-~26.5, z 0.6-10.0. Plinth slot M_Granite_Red with a sloped ledge. Window size is unsure: units incl. surround ~2.9 x 2.5 by drone rectification; true opening needs a frontal ground photo with a person.",
+    "photos": [
+     "G020",
+     "G004",
+     "G006",
+     "G009",
+     "G027",
+     "G041",
+     "G046",
+     "G047",
+     "G060",
+     "G068",
+     "G076"
+    ],
+    "method": "G020 drone: 9 window columns fitted with a 1D projective map, rms 1.2 px. The face is 9.16 pitches, the end columns are 0.61/0.55 pitch from the corners, and the 59.1 m ring gives a pitch of 6.452. Colour edges were mapped through the same fit. 9 columns are counted in G004, G006, G027, G041, G068. S face from the 2-VP rectification of G020 (f 811 px): first window edge 9.83 m from the SW corner.",
+    "error": "columns +-0.3, field edges +-0.7, S face +-1",
+    "confidence": "medium (W face), low (S/E)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-D2",
+    "title": "D_W W entrance is under columns 4-5 / in the maroon band, not at u 14.75-17.45 (DISPUTED)",
+    "spec": "Art/Blender/Specs/Overlays/BLD_D_W.json facades edge 3 entrances, attachments stairs + post_canopy",
+    "current": "entrance u 14.75-17.45, canopy u 13.5-18.7, stairs u 14.6-17.6",
+    "proposed": "entrance u0 28.2, u1 30.9 (centre in the maroon band of column 5); canopy u 26.4-32.9; stairs u 28.0-31.1; remove_windows F1 col u 29.74 instead of 14.55/17.55",
+    "photos": [
+     "G020",
+     "G068",
+     "G004"
+    ],
+    "method": "G020 and G068 both show the flat canopy on 2 posts under columns 4-5 in front of the maroon band. The Google z20 pink paved strip from the street gate (y 38-44.6) leads to u 30-36.6. The current value came from a light bar at y 55-62 that leans 1.3 m east, i.e. ~10 m high, so it is not the canopy.",
+    "error": "+-2.5",
+    "confidence": "low-medium (disputed: G020 door pixel mapping gave u 22.3-25.8)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-D3",
+    "title": "D_W corner lettering + round logo on the S face (not modelled)",
+    "spec": "Art/Blender/Specs/BLD_D_W.json attachments (new)",
+    "current": "none",
+    "proposed": "{type: wall_sign, name: LetteringLogo_DW, edge: 0, u0: 0.6, u1: 8.6, z0: 8.2, z1: 13.0, t: 0.08, slot: M_Sign_KOCH, content: 'TODO_LORE: KOCH lettering 3 lines + round logo + 3 lines'}",
+    "photos": [
+     "G020",
+     "G026",
+     "G005",
+     "G071",
+     "G072",
+     "G076",
+     "G041",
+     "G009"
+    ],
+    "method": "G020 2-VP rectification of the S face: text from 0.58 to 8.58 m from the SW corner. Heights from the 2025 layout in G076: top just under the frieze (13.2), bottom level with the F3 window middle (7.5 + 0.75). The 2021 layout (G020 sill fit) was z 9.8-11.9.",
+    "error": "+-0.6",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-D4",
+    "title": "Glazed curtain-wall stair tower at the D_W/D_M junction (S side) is missing",
+    "spec": "Art/Blender/Specs/BLD_D_M.json edge 0 (9.14 m S face of the W stub)",
+    "current": "plain wall with nothing on edge 0",
+    "proposed": "cladding {edge 0, u0 0.3, u1 8.8, z0 0.6, z1 13.2, proj 0.05, slot M_Glass} + a flat roof slab overhang; unsure whether the stub is the tower or the beige link next to it. A frontal photo of the S side would settle it.",
+    "photos": [
+     "G024",
+     "G042"
+    ],
+    "method": "visual: blue glazed full-height tower with dark mullions and a flat overhanging roof between D_W and the long D_M block",
+    "error": "position +-3",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-D5",
+    "title": "D forecourt has 2 gate booths (N and S gates), not one at mid-face",
+    "spec": "Art/Blender/Specs/SITE_WestFront.json DFront_Booth / DFront_BoothRoof",
+    "current": "one booth center (-204.4, 47.8), 3.0 x 3.0",
+    "proposed": "DFront_Booth_N center (-205.2, 87.4) size [2.8, 3.4, 2.8] + roof [3.4, 4.0, 0.3]; DFront_Booth_S center (-199.1, 14.8) size [2.9, 4.2, 2.8] + roof [3.5, 4.8, 0.3]; remove the mid one (nothing there in Google z20 or in the photos)",
+    "photos": [
+     "G068",
+     "G080",
+     "G041",
+     "G009",
+     "G047"
+    ],
+    "method": "Google z20 red booth roofs: x -206..-202.6 / y 86..90 and x -200..-196.5 / y 13..17.8, lean-corrected (-0.87 E, -0.6 N at 3 m). Photos: booth at the N gate next to the flagpoles (G068, G080); booth at the S end with a red barred gate (G041, G009).",
+    "error": "+-0.6",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q1-D6",
+    "title": "D street fence is a block base wall with brick/block piers, globe lamps and ornamental iron panels; yellow gas pipe inside",
+    "spec": "Art/Blender/Specs/SITE_WestFront.json DFront_Fence_0/1",
+    "current": "plain fence 1.8 m",
+    "proposed": "base wall h ~0.7 (white/grey blocks with a red or lime-green block pattern), piers ~0.5 x 0.5 x 2.2 with a white globe lamp on every 2nd pier, arched wrought-iron panels with gilt ring ornament, top ~1.9-2.0. Pier pitch unsure (3-4 m); a frontal photo of 3 piers with a person would settle it. Plus a yellow gas pipe d 0.1 on short posts ~0.5 m inside the W fence.",
+    "photos": [
+     "G008",
+     "G042",
+     "G072",
+     "G076",
+     "G005",
+     "G060"
+    ],
+    "method": "visual; heights by comparison with people/cars only",
+    "error": "+-0.3 heights, pitch unsure",
+    "confidence": "low",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Q1-D7",
+    "title": "SW campus: football cage + 2 tennis cages not modelled; the dormer building south of D_W is campus",
+    "spec": "new SITE elements (SITE_Sports or a new SITE_WestCourts); GB_CTX_255081513",
+    "current": "nothing at x -140..-105, y -76..+6; the 4-storey red-roof building with gable dormers is only a CTX box",
+    "proposed": "Football cage ring x -136.9..-110.6, y -39.7..5.6 (turf, 5-7 m green mesh, flood masts). Tennis pair ring x -139.5..-105.0, y -75.6..-39.7, split at x -120.2 (red courts, mesh cages). The CTX building needs a BLD spec (4 storeys, maroon/beige, red hip roof with gable dormers); sizes not measured.",
+    "photos": [
+     "G008"
+    ],
+    "method": "Google z20 crop at 0.1 m/px, fence/court edges read on a 5 m grid. Fence tops lean E/N by up to 2 m; Bing would settle the base line.",
+    "error": "+-1.5",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "B S face bay A lettering (3+3 lines) + round logo (G000, G025, G079, G059)",
+   "B SE pilaster block plate (G035, A241) and old brass faculty plates (G016)",
+   "A_S SW pilaster block plate (G053, G056); A_S NW pilaster painted department lettering, old (G088)",
+   "A_W gallery slogan band (G083, G094) and the door-bay dark-blue plate",
+   "A_W double-door 'dining' plate (G085)",
+   "C S entrance sign box / fascia (G007, G021, G051, G057)",
+   "D_W corner lettering + logo (G005, G020, G026, G071, G076)",
+   "D forecourt booth sign canopies and the N-gate canopy fascia lettering + logo (G009, G041, G080)",
+   "gate booth brass plaque + test-centre plate (G028, G070, G077)",
+   "flags on the D forecourt and gate flagpoles (G080, G040)",
+   "interior logo walls and faculty lettering (G082, G089), library desk text (G081), college banner in the C hall (G086)"
+  ],
+  "open_questions": []
+ },
+ {
+  "slice": "batch2_part2: 76 photos, CC001-CC031 (2026-09-24_25_C) and CE001-CE045 (2026-09-30_C_exterior). Notes and scripts are in /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass2_part2/: notes.txt, pnp.py, rayy.py, an_rows*.py, pnp_*_cam.json. Model reference: build_new.blend bounding boxes (bb.json) plus the current specs, re-read on 10-03. Corrections to my own earlier notes: Q2-17 is a red A4 poster, not a fire sounder (CE045 close-up); Q2-04 is withdrawn (trunk x differences are within the ray error).",
+  "coverage": [
+   {
+    "id": "CC001",
+    "scene": "C south front and entrance from SSE (12 mm)",
+    "camera": "PnP (187.7,-15.8,6.4), heading 19, 25 pts, rms 7.3",
+    "checked": "facade columns, tower, canopy and sign, 3 floods, 2 downpipes with jog, cheeks, 7 risers, ramp, E-ramp juniper and pit, lightwells (z-buffer overlay)",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-01",
+     "Q2-03"
+    ]
+   },
+   {
+    "id": "CC002",
+    "scene": "C south front, W wing, from SSE (12 mm)",
+    "camera": "PnP (186.3,-14.4,6.7), heading 338, rms 17",
+    "checked": "W-wing columns, SW pilaster, 5 trunks in front of the W wing, lightwell cover W end, LED flood on the cover edge",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-05",
+     "Q2-21"
+    ]
+   },
+   {
+    "id": "CC003",
+    "scene": "C entrance close-up (49 mm) from S",
+    "camera": "~(188,-12), looking N",
+    "checked": "7 risers counted, orange cassette soffit, dome lamp on the soffit, C block plate, CCTV with cable at the E reveal, downpipes, storefront bays",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-01",
+     "Q2-02",
+     "Q2-22"
+    ]
+   },
+   {
+    "id": "CC004",
+    "scene": "A_N north wall at the fire ladder/AHU, bench and pit",
+    "camera": "~(188,-16.5), looking S",
+    "checked": "bench construction, AHU, ladder, barred window",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-06",
+     "Q2-20"
+    ]
+   },
+   {
+    "id": "CC005",
+    "scene": "A_N NE corner, bench and juniper pit",
+    "camera": "~(194,-15), looking S",
+    "checked": "plinth corner return, galvanised corner duct, banded bollard",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-07"
+    ]
+   },
+   {
+    "id": "CC006",
+    "scene": "A_N NE corner and the parking edge",
+    "camera": "~(193,-14), looking SE",
+    "checked": "bollards and chain (one knocked over), red edge line, TreeAN_7 pit, bench, palisade fence",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-07"
+    ]
+   },
+   {
+    "id": "CC007",
+    "scene": "parking E of A_N/C",
+    "camera": "~(194,-13), looking NE",
+    "checked": "gravel lot, bollard with chain, red line, fence, C SE pilaster",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-07"
+    ]
+   },
+   {
+    "id": "CC008",
+    "scene": "C F2 lab R201 (SW corner) ceiling",
+    "camera": "~(177,1, z 11.1), looking S and up",
+    "checked": "600 grid, 4 LED panels, 2 smoke detectors, CCTV dome, trunking, sage/white walls (V3-01), pleated blinds",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-08"
+    ]
+   },
+   {
+    "id": "CC009",
+    "scene": "C F2 lab R201",
+    "camera": "~(178.5,2, z 11.1), looking S",
+    "checked": "PC rows parallel to the facade, TV with orange stripe on the E wall (V3-02), tilt-turn sash, blinds",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-08"
+    ]
+   },
+   {
+    "id": "CC010",
+    "scene": "C F1 hall looking E to the E stair hall",
+    "camera": "~(184,6, z 7.9), looking E",
+    "checked": "stair flights, balusters, brown exit door with 3-light transom, N5 blue accent with fire-hose box, CCTV, terrazzo, two-tone walls",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-09"
+    ]
+   },
+   {
+    "id": "CC011",
+    "scene": "C F1 hall WC recess looking N",
+    "camera": "PnP on 11 door corners: (190.1,4.8, z 7.7), heading 351, rms 27",
+    "checked": "WC4 and WC5 doors, N4 glass door, blue accent extents, framed board on the jog wall",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-10"
+    ]
+   },
+   {
+    "id": "CC012",
+    "scene": "C F1 lobby W wall",
+    "camera": "~(189,0.5), looking W",
+    "checked": "vending, coffee and charge kiosk order and positions; radiator on the W wall",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-11"
+    ]
+   },
+   {
+    "id": "CC013",
+    "scene": "C F1 lobby: fire-alarm panel, breaker box, clear box, 4-gang socket (close-up)",
+    "camera": "lobby, wall not identifiable (taken between CC012 and CC014)",
+    "checked": "small wall fittings",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-12"
+    ]
+   },
+   {
+    "id": "CC014",
+    "scene": "C F1 vestibule looking S at the storefront from inside",
+    "camera": "~(188,0, z 7.6), looking S",
+    "checked": "storefront bays and transoms, radiator on the E jamb wall, pipe loop at the glazing foot",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-11"
+    ]
+   },
+   {
+    "id": "CC015",
+    "scene": "from the A_W deck-end steps looking NNW at the C W face, Dance Hall entry and passage lawn",
+    "camera": "joint PnP with CC016: (161.0,-23.2,6.7), sd 0.4/1.0/0.4",
+    "checked": "C W-face columns 3.625/8.5/11.25 (match), shed, canopy, spruces, kerb",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-13"
+    ]
+   },
+   {
+    "id": "CC016",
+    "scene": "same spot looking NNE at the C SW corner",
+    "camera": "(161.0,-23.2,6.7), looking NNE, 52 corners, rms 11.7",
+    "checked": "S col 3.52, W col 16.175, 2 downpipes, canopy, juniper pits, ramp ahead, PlanterAN_W1 sapling",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-13"
+    ]
+   },
+   {
+    "id": "CC017",
+    "scene": "same spot looking WNW at the HallEast end",
+    "camera": "(161,-23), looking WNW",
+    "checked": "HallEast panels, E porch, lawns with spruces and thujas, painted kerbs (sports zone)",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-13"
+    ]
+   },
+   {
+    "id": "CC018",
+    "scene": "West shed W front from SW",
+    "camera": "~(163,-5), looking E",
+    "checked": "grey roof, brass edge, hex-shingle band, red tile base; concrete apron and kerb at the foot",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CC019",
+    "scene": "same spot looking NNE at the passage upper lawn",
+    "camera": "PnP (163.0,-5.1,6.9), heading 47, rms 30",
+    "checked": "lawn SE corner cut, paved walk between lawn and shed, drain channel",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CC020",
+    "scene": "same spot looking E/NE at the shed S end and Dance Hall entry",
+    "camera": "(163,-5), looking ENE",
+    "checked": "C W-face column test (H rms 30 vs 131, model columns confirmed), navy plate on the pier, canopy soffit",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CC021",
+    "scene": "Dance Hall basement entry from SW",
+    "camera": "~(165,-7), looking E",
+    "checked": "canopy, steel post, pier with plate, dome lamp, vent, stair with forged railing, sloped landing, herringbone strip and kerb",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CC022",
+    "scene": "same, 4 s later",
+    "camera": "~(165,-7), looking E",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CC023",
+    "scene": "same spot looking N along the shed S end",
+    "camera": "~(165,-7), looking N",
+    "checked": "shed roof, brass trim, shingle, tile; apron and kerb along the shed foot",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CC024",
+    "scene": "2x tele down the basement stair from the landing",
+    "camera": "~(168,-5), looking E",
+    "checked": "canopy soffit, post, forged railing, white forged gate leaf at the stair head, glazed entry at the foot, barred window",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-15"
+    ]
+   },
+   {
+    "id": "CC025",
+    "scene": "2x tele along the W-wing S face",
+    "camera": "~(170,-8), looking E",
+    "checked": "red sloped covers with grey concrete gutter, 6 red-kerbed juniper pits, entrance stair, cheek, ramp",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CC026",
+    "scene": "ultrawide view of the Dance Hall canopy, shed and W wing",
+    "camera": "~(166,-9), looking NE",
+    "checked": "canopy, shed, pits",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CC027",
+    "scene": "ultrawide down the basement stair",
+    "camera": "~(169.5,-4.5, z 6.8), looking E and down",
+    "checked": "upper flight 9 risers = Stair_Upper 9; landing, 2 risers = Stair_Lower 2; DanceHall_Door; diagonal red tiles on both side walls; granite treads",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-15"
+    ]
+   },
+   {
+    "id": "CC028",
+    "scene": "C basement piano room",
+    "camera": "basement piano room, looking E",
+    "checked": "upright piano on a raised strip, chair, notice, beige tile wainscot ~1.0 m, grey 600 floor (confirms V3-09)",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "CC029",
+    "scene": "piano room, second piano, high barred hex-grille window",
+    "camera": "basement piano room",
+    "checked": "windows in the N wall (V3-09)",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "CC030",
+    "scene": "piano room N wall: steel door on a 1-step platform, barred windows, 3 transoms",
+    "camera": "basement piano room, looking N",
+    "checked": "V3-09 door, windows and transoms",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "CC031",
+    "scene": "basement floor: recessed stainless 3-bar foot-scraper grate in marble-effect tiles",
+    "camera": "in or near the piano room (8 s after CC030)",
+    "checked": "floor fitting",
+    "verdict": "interior",
+    "finding_ids": [
+     "Q2-16"
+    ]
+   },
+   {
+    "id": "CE001",
+    "scene": "C entrance W cheek from the W lightwell cover",
+    "camera": "~(184.5,-6.5,5.9), looking NE",
+    "checked": "granite-capped cheek, beige render with maroon base, cover up to the cheek, downpipe jog onto the cover, 7 risers, ramp rails",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE002",
+    "scene": "under the canopy looking N",
+    "camera": "~(186.5,-6.5), looking N and up",
+    "checked": "orange cassette soffit, C plate, dome device on the soffit, CCTV at the E reveal, storefront",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-01",
+     "Q2-02"
+    ]
+   },
+   {
+    "id": "CE003",
+    "scene": "W cheek and stair from SW",
+    "camera": "~(184,-9), looking NE",
+    "checked": "risers, ramp corner platform and run with rails",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-03"
+    ]
+   },
+   {
+    "id": "CE004",
+    "scene": "from the W-wing pits looking W",
+    "camera": "~(182,-7.5), looking W",
+    "checked": "cover continuing W past the C SW corner to the canopy, forged railing, maroon SW strip and downpipe",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-05"
+    ]
+   },
+   {
+    "id": "CE005",
+    "scene": "Dance Hall entry from SE",
+    "camera": "~(171,-9), looking NW",
+    "checked": "canopy on 2 steel posts, red tile wall, plate, dome lamp, vent, forged railing with return, cover E of the post, apron with rounded kerb",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-05",
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CE006",
+    "scene": "same, wider",
+    "camera": "~(171,-9), looking NW",
+    "checked": "plus passage lawn spruces and the HallEast facade",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE007",
+    "scene": "same, from further E",
+    "camera": "~(172,-9), looking NW",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE008",
+    "scene": "looking W across the plaza to HallEast",
+    "camera": "~(172,-9), looking W",
+    "checked": "yellow/white passage kerb, spruces",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE009",
+    "scene": "Dance Hall pier and shed S end from SE",
+    "camera": "~(170,-8), looking N",
+    "checked": "plate on the pier, brass trim, hex shingle, sloped concrete landing",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE010",
+    "scene": "same, wider, with the C W wing",
+    "camera": "~(170,-8), looking N",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE011",
+    "scene": "A_N north wall, frontal, with the fire ladder",
+    "camera": "PnP on 8 pit corners: (188.21,-10.38,7.49), heading 179, pitch 10.5, rms 23; fascia check 14.51 vs model 14.52",
+    "checked": "ladder (foot, top, roof hatch), AHU and duct, downpipe, F1/F2 window heights, plinth, benches, pits",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-19",
+     "Q2-20",
+     "Q2-06"
+    ]
+   },
+   {
+    "id": "CE012",
+    "scene": "duplicate of CE011 (0.1 s)",
+    "camera": "same as CE011",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-19",
+     "Q2-20"
+    ]
+   },
+   {
+    "id": "CE013",
+    "scene": "A_N north wall E part, frontal-oblique",
+    "camera": "~(191,-14), looking SSW",
+    "checked": "NE-corner bollards and duct, 3 benches and pits, AHU with fan and elbow, vertical duct top, ladder over the window E third, cable tray",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-06",
+     "Q2-07",
+     "Q2-19",
+     "Q2-20"
+    ]
+   },
+   {
+    "id": "CE014",
+    "scene": "A_N north wall looking W along the bench row (owner's 1.77 m man in frame)",
+    "camera": "~(188.5,-14.5), looking W",
+    "checked": "AHU, maroon downpipe, AC outdoor unit with isolator under window E2_04, BenchAN_3, forged bin CP_Bin_AN_3 beside rose pit PlanterAN_3 (match), TreeAN_2 with bench, A_W deck end with forged bench and ramp",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-20",
+     "Q2-06"
+    ]
+   },
+   {
+    "id": "CE015",
+    "scene": "C entrance from S (24 mm)",
+    "camera": "~(188,-13), looking N",
+    "checked": "sign box (KOCH slot), canopy, storefront, stair and ramp, junipers",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE016",
+    "scene": "2x tele up at the sign box W end",
+    "camera": "~(188,-9), looking N and up",
+    "checked": "soffit, fascia, second bullet CCTV at the W storefront head, white downpipe on the tower W corner",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-02"
+    ]
+   },
+   {
+    "id": "CE017",
+    "scene": "Dance Hall entry from S",
+    "camera": "~(171,-12), looking N",
+    "checked": "canopy, 2 posts, railing, plate, red A4 poster on the pier (not a fire box), vent, dome lamp, landing",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE018",
+    "scene": "same, 2 s later",
+    "camera": "~(171,-12), looking N",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE019",
+    "scene": "plaza W of C looking NW",
+    "camera": "~(170,-12), looking NW",
+    "checked": "HallEast, passage spruces and kerb, shed and pier",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE020",
+    "scene": "same, looking N",
+    "camera": "~(170,-12), looking N",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE021",
+    "scene": "same, 2 s later",
+    "camera": "~(170,-12), looking N",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE022",
+    "scene": "duplicate of CE021",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE023",
+    "scene": "Dance Hall entry and C W face from SW",
+    "camera": "~(168,-12), looking NNE",
+    "checked": "pier with plate and poster, canopy",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE024",
+    "scene": "along the A_N north wall looking E",
+    "camera": "PnP on C E-wing windows: (164.7,-19.6), heading 84 (height unreliable)",
+    "checked": "benches wall-side of the pits (oblique; earlier 'in the pit row' read withdrawn), rose pit, plinth, duct and AC, downpipe",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CE025",
+    "scene": "A_W gallery NE corner deck front",
+    "camera": "~(165,-19), looking S",
+    "checked": "red-tile deck front with a ~0.6x0.12 vent grate, pink deck tiles, forged bench end",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE026",
+    "scene": "A_W deck N end corner",
+    "camera": "~(164,-19), looking S",
+    "checked": "red-tile pier, 3 risers, grating ramp with 2 rails, lawn and yellow wheelie bin beyond",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE027",
+    "scene": "A_W deck N end from N, along the gallery",
+    "camera": "~(166.5,-17.5), looking S",
+    "checked": "timber soffit, maroon posts, 2 granite steps and a coping step (3 risers), wall-side grating ramp with rails both sides, ramp:steps width 0.36:0.64",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE028",
+    "scene": "same, closer (24 mm portrait)",
+    "camera": "~(166.5,-18), looking S",
+    "checked": "3 risers, ramp, corner pier, CCTV dome on the soffit, junction box",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE029",
+    "scene": "from the deck N end looking W/NW to the garden",
+    "camera": "~(164.5,-20), looking WNW",
+    "checked": "granite steps wrap around the deck NW corner; lawn with scalloped edging, lamps, wheelie bin, hedges",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE030",
+    "scene": "C SW corner and W-wing S face from the A_W N end",
+    "camera": "PnP (166.2,-18.3,5.9), heading 34, f 3213, rms 14",
+    "checked": "facade, SW strip with 2 white downpipes, canopy with forged railing medallion, 6 junipers, cover W end, LED flood, datum",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-05",
+     "Q2-21"
+    ]
+   },
+   {
+    "id": "CE031",
+    "scene": "same, 2 s later",
+    "camera": "~(166,-18.5), heading ~35",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-05"
+    ]
+   },
+   {
+    "id": "CE032",
+    "scene": "same, 3 s later",
+    "camera": "~(166,-18.5), heading ~35",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-05"
+    ]
+   },
+   {
+    "id": "CE033",
+    "scene": "from beside PlanterAN_W1 looking N at the Dance Hall entry and passage lawn",
+    "camera": "~(168.5,-16.5), looking N",
+    "checked": "canopy, pier plate and poster, shed S end with sloped top, apron, spruces, yellow/white kerb, globe lamp",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE034",
+    "scene": "same, with the owner's man in the foreground",
+    "camera": "~(168.5,-16.5), looking N",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE035",
+    "scene": "same, lower, sapling pit in the foreground (= ShrubAN_W1)",
+    "camera": "~(168.5,-17), looking NNE",
+    "checked": "same; a walking person (not a scale reference)",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CE036",
+    "scene": "plaza W of the canopy looking NW at the lawn SE corner and the shed W face",
+    "camera": "~(165.5,-6.5), looking NW",
+    "checked": "kerb ends short of the shed, paved strip and drain gap, shingle, brass trim, apron with kerb, globe lamp",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CE037",
+    "scene": "same, 1 s later",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CE038",
+    "scene": "shed SW pier and W face from SW",
+    "camera": "~(165,-6), looking NE",
+    "checked": "navy plate size, A4 poster, roof falling W, brass edge, hex shingle, tile base, apron, twin-globe lamp",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE039",
+    "scene": "same, 1 s later",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE040",
+    "scene": "at the pier SW corner looking W/SW",
+    "camera": "~(167.3,-3.8), looking WSW",
+    "checked": "HallEast, lawn with spruces and thujas, kerb; concrete kerb, channel and lower herringbone strip along the shed foot",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-14",
+     "Q2-17"
+    ]
+   },
+   {
+    "id": "CE041",
+    "scene": "same, portrait",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CE042",
+    "scene": "from the stair-head granite landing looking S down at the paving",
+    "camera": "~(169,-4.5), looking S and down",
+    "checked": "forged railing, granite landing, raised concrete kerb with gutter trough, herringbone strip",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q2-14"
+    ]
+   },
+   {
+    "id": "CE043",
+    "scene": "stair head looking S at the A_N W end and A_W N end",
+    "camera": "~(169.5,-4.5), looking S",
+    "checked": "benches and pits E to W, deck-end ramp and steps, fascia flood, windows",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-06",
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE044",
+    "scene": "same, 1 s later",
+    "camera": "same",
+    "checked": "wooden steel-frame bench, EMPTY pit, forged bench, sapling pit, wall-side ramp, 3 risers",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-06",
+     "Q2-18"
+    ]
+   },
+   {
+    "id": "CE045",
+    "scene": "close-up of the pier S face",
+    "camera": "~(168,-5), looking N",
+    "checked": "plate 0.47x0.25 from tile courses, A4 poster 0.22x0.33 below it, shed shingle band and brass trim, apron",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q2-17"
+    ]
+   }
+  ],
+  "findings": [
+   {
+    "id": "Q2-19",
+    "title": "A_N north wall: F1 windows and brick plinth sit higher than modelled",
+    "spec": "BLD_A_N.json rows, window_types, facades[edge 2], plinth.edge_z_top",
+    "current": "edge-2 F1 windows type N (1.9x1.2): sill FFL+0.92 = 6.39, head 7.59; plinth z_top 0.92 (6.39 abs)",
+    "proposed": "rows += {\"F1N\": 1.48}; window_types += \"N1\" (copy of N, h 1.03); facades edge 2: the F1 parts become {\"type\":\"N1\",\"u\":[3.48,9.63],\"rows\":[\"F1N\"]} and {\"type\":\"N1\",\"u\":[14.67,20.82],\"rows\":[\"F1N\"]}; F2 entries stay type N, row F2; plinth.edge_z_top {\"2\": 1.18} (= 6.65 abs). Paving stays at 5.3.",
+    "photos": [
+     "CE011",
+     "CE012",
+     "CE013",
+     "CE014"
+    ],
+    "method": "CE011 PnP (f 3399 fixed) on 8 outer kerb corners of PlanterAN_4/5 at z 5.43, rms 23 px. Rays to the wall plane y -20.88 give: ground at the wall 5.26, plinth top 6.65, F1 sill 6.95, F1 head 7.98, F2 head 10.75 (model 10.65), fascia underside 14.51 (model 14.52, eave audit 14.75 +-0.5). The fascia and F2 checks validate the pose. F1 window x 187.22-189.19 (width 1.97 = model). This agrees with the spec's own plinth_note (photo: plinth 1.36, sill 1.78 above the ground), so the rows are wrong, not the terrain. Scale-free cross-check in CE011/CE013: window width = 1.34 x plinth height.",
+    "error": "z +-0.12 m (pit-spacing uncertainty); the camera height of 2.06 m above the paving is high, but the fascia check rules out a scale error > 3%",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-20",
+    "title": "A_N north wall fittings: AHU/duct size, ladder foot, missing AC unit, downpipe, roof hatch",
+    "spec": "BLD_A_N.json attachments AHU_North, FireLadder_North, plus new wall_boxes and downpipe (edge 2; u = (197.584 - x)/0.9988)",
+    "current": "AHU items [10.85,-0.28,2.6,0.7,0.8] and [12.6,-0.579,0.55,1.25,0.5] (x 184.72-188.08, top 5.89/6.14); ladder z 5.37-14.695; no AC unit, no downpipe, no hatch",
+    "proposed": "AHU_North items -> [[10.34,-0.06,2.0,1.04,0.8],[11.73,-0.06,0.78,1.69,0.6]] (box x 186.26-188.26, z 5.41-6.45; vertical duct with elbow x 185.48-186.26, top 7.10). FireLadder_North: rails and rungs start at z_rel 0.30 (5.77) and end at 9.42 (14.89, over the gutter). New wall_boxes {\"name\":\"ACUnit_North\",\"kind\":\"ac\",\"edge\":2,\"items\":[[13.70,0.56,0.95,0.80,0.35]],\"slot\":\"M_Plastic_White\"} plus isolator {\"name\":\"ACIsolator_North\",\"edge\":2,\"items\":[[13.05,0.90,0.20,0.30,0.10]]}. New {\"type\":\"downpipe\",\"name\":\"DP_North\",\"edge\":2,\"u\":[12.55],\"z0\":0.29,\"z1\":9.3,\"d\":0.1,\"jog\":{\"z\":2.0,\"du\":0.38}} (white upper part, maroon lower part). Roof hatch: dark 0.6x0.4 opening in the fascia between the ladder rails at u 9.15.",
+    "photos": [
+     "CE011",
+     "CE013",
+     "CE014",
+     "CC004"
+    ],
+    "method": "CE011 PnP rays (Q2-19). AHU front plane y -20.1: x 185.48-188.26, top 6.43-6.52. Ladder rails x 188.35-188.92 (model 188.13-188.77), foot z 5.78, top 14.89. Downpipe: top x 185.03 (ray at row 480), foot x 184.67, z 5.76. Duct top from the CE013 ratio: 0.43 m above the plinth top. AC: CE014, under the E end of window E2_04 and W of the downpipe; face about 0.95x0.8 from tile courses (0.15 m). Hatch: 125 px between the rails = 0.6 m, so the opening height 85 px = 0.41 m.",
+    "error": "x +-0.2 (AHU, ladder), AC x +-0.3, z +-0.15; jog height not visible (tree)",
+    "confidence": "medium (AHU, ladder, downpipe foot), low-medium (AC x, jog z)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-06",
+    "title": "A_N bench row: timber-slat steel-frame benches; BenchAN_W0 is not wrought iron; PlanterAN_W0 is empty",
+    "spec": "SITE_CPlaza.json BenchAN_0..6, BenchAN_W0 (ue_asset), ShrubAN_W0",
+    "current": "BenchAN_0..6 have the default bench asset; BenchAN_W0 and W1 use ue_asset bench_wrought_iron; ShrubAN_W0 is a 0.8 m shrub in PlanterAN_W0",
+    "proposed": "BenchAN_0..6 and BenchAN_W0: ue_asset 'bench_timber_steelframe' (dark-brown steel angle frame, 3 seat boards, 2-3 back boards, no armrests, slot M_Wood_Stained_Dark + M_Steel_Paint_Dark). BenchAN_W1 stays wrought iron (arched forged back). Delete ShrubAN_W0 (pit is bare soil). Positions unchanged.",
+    "photos": [
+     "CE044",
+     "CE043",
+     "CE014",
+     "CE011",
+     "CE013",
+     "CC004"
+    ],
+    "method": "CE044 (from the stair head looking S) shows, E to W: wooden steel-frame bench, empty pit, forged arched bench, pit with a broad-leaf sapling, wall-side ramp. Model order is BenchAN_W0, PlanterAN_W0, BenchAN_W1, PlanterAN_W1, AW_NorthRamp, so the W0 slots are the wooden bench and the empty pit. The CE011/CE013 frontal views show bench construction and that benches sit wall-side of the pits (= model).",
+    "error": "type only",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-07",
+    "title": "Banded bollards with chain at the A_N NE corner / parking edge (one knocked over)",
+    "spec": "SITE_CPlaza_Props.json (new elements)",
+    "current": "none",
+    "proposed": "box Bollard_AN_0 at (196.9,-20.95); Bollard_AN_1 at (195.9,-19.0), lying flat, dir 120; Bollard_AN_2 at (195.9,-17.1). Each: size [0.10,0.10,1.0], z_rel 0, black/yellow bands (slot M_Paint_Yellow, bands 0.15), ue_asset 'bollard_banded'. Chain: boxes Bollard_AN_Chain, 3 segments 0.02x0.02 between the bollard tops, sag 0.3 m, M_Steel_Paint_Dark.",
+    "photos": [
+     "CC005",
+     "CC006",
+     "CC007",
+     "CE013"
+    ],
+    "method": "CC006 (looking SE from ~(193,-14)): one bollard against the plinth at the NE corner; the fallen one on the red CPlaza_EastEdge line level with the TreeAN_7 pit's NE corner; a standing one about 2 m further N on the line. CE013 shows the corner bollard(s) at the plinth. Positions by relation to the pit and the red line, with no PnP.",
+    "error": "+-0.6 m",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-01",
+    "title": "C entrance 'C block' plate is small and portrait, not 0.5x0.23",
+    "spec": "BLD_C.json attachments CPlate (wall_sign, edge 2)",
+    "current": "u0 1.65, u1 2.15, z0 3.33, z1 3.56 (0.50 x 0.23, landscape)",
+    "proposed": "u0 1.75, u1 1.98, z0 3.30, z1 3.58 (0.23 x 0.28, portrait, on the orange cassette band under the soffit); slot M_Sign_KOCH, content 'KOCH C-block plate (letter C + block word)'",
+    "photos": [
+     "CC003",
+     "CE002",
+     "CE015"
+    ],
+    "method": "CC003 (49 mm, near-frontal): plate 42x57 px. Band cassette pitch 119 px = 0.6 m (canopy panel 0.6), giving 0.21x0.29; with the woman at the door (~1.60 m) as scale, 0.25x0.34. Centre 376 px from the storefront W frame over 760 px, so u 1.86 of 3.76.",
+    "error": "size +-0.04, u +-0.1",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-02",
+    "title": "Entrance soffit dome lamp and a W CCTV are missing",
+    "spec": "BLD_C.json attachments (new wall_boxes, edge 2)",
+    "current": "only CCTV_S at u 3.66; no soffit lamp",
+    "proposed": "{\"type\":\"wall_boxes\",\"name\":\"Lamp_EntranceSoffit\",\"kind\":\"lamp\",\"edge\":2,\"w0\":0.35,\"items\":[[1.93,3.50,0.30,0.10,0.30]]} (round white dome on the soffit); {\"type\":\"wall_boxes\",\"name\":\"CCTV_SW\",\"edge\":2,\"w0\":-0.3,\"items\":[[0.12,3.25,0.12,0.12,0.2]],\"confidence\":\"low\"}",
+    "photos": [
+     "CC003",
+     "CE002",
+     "CE016"
+    ],
+    "method": "CC003: dome centre 615 px gives u 1.96; diameter 60 px at ~200 px/m = 0.30; it sits just in front of the wall band. CE016 (2x tele) shows a bullet camera under the soffit at the W storefront head, mirroring CCTV_S.",
+    "error": "u +-0.1, CCTV u +-0.3",
+    "confidence": "medium (lamp), low-medium (CCTV)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-05",
+    "title": "W lightwell cover runs W to the canopy E post; LED flood on its edge is missing",
+    "spec": "BLD_C.json attachments lightwell (edge 0) u0; new floodlight",
+    "current": "lightwell edge 0 u0 0.6 (cover starts at x 173.86); no flood on the W cover",
+    "proposed": "lightwell edge 0: u0 0.6 -> -0.37 (cover reaches x 172.9 at the canopy E post, over the foot of the basement stair; parapet spans unchanged). New {\"type\":\"floodlight\",\"name\":\"Flood_LW_W\",\"edge\":0,\"u\":[2.95],\"z\":-0.65,\"w\":2.3,\"confidence\":\"low\"} (LED flood on the cover's outer edge, aimed at the facade)",
+    "photos": [
+     "CE017",
+     "CE004",
+     "CE030",
+     "CE031",
+     "CE032",
+     "CC002"
+    ],
+    "method": "CE017/CE004: the red corrugated cover starts right at the E canopy post (model post x 172.85) beside the railing return. CE030 (PnP cam (166.2,-18.3)): flood at 745 px between trunks at 715 px (JuniperW_S2 x 175.6) and 855 px (TreeW_1 x 178.1), interpolated to x 176.2 +-0.5, so u = 2.95.",
+    "error": "u0 +-0.2; flood u +-0.5",
+    "confidence": "medium (cover), low-medium (flood)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-14",
+    "title": "Passage upper lawn SE corner is cut; concrete apron, kerb and channel along the shed foot",
+    "spec": "SITE_HallCPassage.json Passage_Lawn_Upper ring; new slab/wall elements",
+    "current": "lawn ring [[159.161,0.326],[167.305,0.013],[167.631,8.507],[159.787,8.808],[159.732,7.389],[159.432,7.401]] (lawn runs to the shed); no apron",
+    "proposed": "Passage_Lawn_Upper ring -> [[159.161,0.326],[164.0,0.14],[165.25,1.0],[166.5,2.0],[167.0,3.0],[167.46,4.0],[167.631,8.507],[159.787,8.808],[159.732,7.389],[159.432,7.401]]. New slab Shed_Apron (smooth cast concrete, M_Concrete): ring [[166.7,-3.0],[167.5,-3.0],[167.5,4.0],[166.9,3.6]], z top +0.10 at the shed sloping to +0.0 at the kerb. New wall Shed_Apron_Kerb: line [[166.6,-6.5],[166.6,3.5]], h 0.12, t 0.20, concrete, with a 0.15 wide open gutter trough on its E side and a 0.6 m lower herringbone strip between kerb and landing (Entry_Landing W edge).",
+    "photos": [
+     "CC018",
+     "CC019",
+     "CC023",
+     "CE036",
+     "CE037",
+     "CE040",
+     "CE041",
+     "CE042",
+     "CE005",
+     "CE009"
+    ],
+    "method": "Google z20 ortho, green/paving classification on a 0.25 m grid. Lawn E edge at y 0, 1, 2, 3, 4: x 164.0, 165.25, 166.5, 167.0, 167.5 (shed). The model's corner vertex (167.305,0.013) is cut diagonally. Ground features have no lean. CC019 PnP and CE036 show the kerb ending short of the shed, with a paved strip and drain gap. The apron and kerb widths are from tile counts in CC018/CE040 (apron 0.6-1.0 m), with no PnP.",
+    "error": "lawn +-0.25 m; apron/kerb +-0.4 m",
+    "confidence": "medium (lawn), low (apron geometry)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-17",
+    "title": "Dance Hall pier: plate is bigger than modelled; the red item is an A4 event poster, not a fire box",
+    "spec": "BLD_C.json attachments Sign_DanceHall (edge 0, w0 -0.13); new wall_sign poster",
+    "current": "Sign_DanceHall item [-5.56,0.6,0.38,0.2,0.02] (0.38x0.20); no poster",
+    "proposed": "Sign_DanceHall item -> [-5.56,0.6,0.47,0.25,0.02], slot M_Sign_KOCH, content 'KOCH training-hall plate'. New {\"type\":\"wall_boxes\",\"name\":\"Poster_DanceHall\",\"edge\":0,\"w0\":-0.13,\"items\":[[-5.56,-0.06,0.22,0.31,0.003]],\"slot\":\"M_Sign_KOCH\",\"content\":\"TODO_LORE: KOCH event poster\"} (centre 0.66 m below the plate centre)",
+    "photos": [
+     "CE045",
+     "CE038",
+     "CE039",
+     "CE040",
+     "CE017",
+     "CE018",
+     "CE023",
+     "CE033",
+     "CE034"
+    ],
+    "method": "CE045 close-up: plate 140x75 px, poster 65x100 px, tile course 46 px. Course = 0.15 m (same brick-effect tile as the A_N plinth: 1.39 m / 9.4 courses in CE011) gives plate 0.47x0.25 and poster 0.21x0.33. Poster centre 198 px (4.3 courses) below the plate centre. The 'red box' in CE017/CE023 is this poster.",
+    "error": "+-15% (course size)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-18",
+    "title": "A_W deck N end: 3 risers; ramp narrower than the steps; steps return around the NW corner; deck vent grate",
+    "spec": "SITE_Garden.json AW_NorthSteps, AW_NorthRamp(+_Base), AW_NorthRampRail_W",
+    "current": "AW_NorthSteps 2 risers x 0.15, width 1.25, top (165.233,-20.332); ramp x 165.857-167.055 (1.2 wide); W rail at x 165.887",
+    "proposed": "AW_NorthSteps: risers 3, riser_h 0.10 (0.12 if the deck is 0.36 above the square as AW_SquareN says), width 1.50, centre x 165.46 (spans 164.71-166.21); top riser = coping over a red-tile course. AW_NorthRamp and _Base ring W edge 165.857/165.974 -> 166.21/166.33 (ramp 0.85 wide, wall side); AW_NorthRampRail_W points x -> 166.24/166.36. Add a return run of the same 3 risers along the deck W edge, about 1.0 m long (length low confidence). New box AW_DeckVent: 0.60x0.02x0.12 grate in the deck N front near the NE pier, z 5.40-5.52 (low).",
+    "photos": [
+     "CE026",
+     "CE027",
+     "CE028",
+     "CE029",
+     "CE025",
+     "CE043",
+     "CE044"
+    ],
+    "method": "CE027/CE028 (looking S, near-frontal): bottom granite step, second granite step, coping step = 3 risers over the model's 0.30 rise. Width ratio ramp:steps = 280:520 px at the top tread and 380:650 px at the bottom tread, so 0.36:0.64. Applied to the model deck end 164.71 (gallery outer edge) to 167.06 (ramp E edge) = 2.35 m: ramp 0.85, steps 1.50. CE044 confirms the ramp is on the wall side and the steps W of it.",
+    "error": "widths +-0.15; riser_h +-0.02",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-10",
+    "title": "F1 WC zone blue accent extents",
+    "spec": "INT_C_F1.json F1_Accent_WC_12.4_*, F1_Accent_WC_14.7_* (generated by Scripts/Geo/zones/zone_c_v6.py accent rule ~l.349; or a hand fitting in remap_c_v6.py)",
+    "current": "WC4 door framed by L (186.21-186.82) + R (187.76-188.46) full-height panels + T over the door; recess: L 188.51-189.22, T over WC5, R 190.16-190.76; nothing on the jog wall or around N4",
+    "proposed": "Delete F1_Accent_WC_12.4_L and _R. F1_Accent_WC_12.4_T: along-wall span 186.66-187.76 (size [1.10,0.02,0.83], z0 8.47). Recess full height (z 6.5-9.3): keep WC_14.7_L and _T; WC_14.7_R -> 190.16-191.42 (size [1.26,0.02,2.8]). Add T over N4: 191.42-192.41, z0 8.47, h 0.83. Add panel 192.41-192.63 (0.22 wide, full height). Add jog-face panel on F1_Hall_N_Jog: centre (188.40,9.42), dir 87.7, size [1.30,0.02,2.8], z0 6.5, on the hall (E) side.",
+    "photos": [
+     "CC011"
+    ],
+    "method": "CC011 PnP on 11 door corners (rms 27 px, cam (190.1,4.8,7.7)). Blue only above the WC4 head, extending ~0.16 m W of the door frame, none E of it. Recess jog face and N wall blue full height including around N4; blue ends ~0.2 m E of N4's E jamb (ray x 192.63).",
+    "error": "+-0.08 m",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-11",
+    "title": "Lobby W-wall radiator and vestibule radiator with pipe loop are missing",
+    "spec": "INT_C_F1.json (new; hand fittings in remap_c_v6.py)",
+    "current": "none in the lobby/vestibule",
+    "proposed": "radiator F1_Lobby_Radiator_W: pos (185.88,-1.6), dir 87.7, n 11, pitch 0.07 (~0.8 m), height 0.55, z0 6.55. Radiator F1_Vest_Radiator_E: pos (189.75,-2.2), dir 267.7, n 13 (~1.05 m), height 0.55, z0 6.5. boxes F1_Vest_PipeLoop: white 0.02 pipe along the glazing foot from (186.2,-2.75) to (189.8,-2.75), z 6.48, M_PVC_White",
+    "photos": [
+     "CC012",
+     "CC014"
+    ],
+    "method": "CC012: radiator on the lobby W wall between the vending machine S end (y -0.95) and the storefront; section count ~11. CC014: ~13 sections on the E side wall right by the storefront, pipe along the glazing foot. Positions are by order and relation only.",
+    "error": "+-0.4 m along the wall",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-09",
+    "title": "F1 hall walls are two-tone (cream dado to door-head height, white above)",
+    "spec": "INT_C_F1.json hall int_wall paint (zone_c_v6.py wall finish rule)",
+    "current": "single wall paint",
+    "proposed": "hall walls (F1_Hall_* faces): M_Paint_Cream from FFL to z_rel 2.05 (8.45 abs, door-head line), M_Paint_White above. Blue accent panels stay on top.",
+    "photos": [
+     "CC010",
+     "CC011"
+    ],
+    "method": "the colour change lines up with the door heads (2.05) and the transom of the exit door in CC010/CC011",
+    "error": "+-0.05 m",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-08",
+    "title": "F2 lab R201: pleated blinds, smoke detectors, CCTV dome",
+    "spec": "INT_C_Floors.json (zone_c_v6.py room fit-out, F2 R201)",
+    "current": "none",
+    "proposed": "per R201 window: box blind 0.02 thick x window width x 0.6 drop at the window head, M_Fabric_White, ue_asset 'pleated_blind'. 2 discs Smoke_R201_0/1 (d 0.10, h 0.04) on the ceiling at 1/3 and 2/3 of the room length on the centre line. Disc CCTV_R201 (d 0.12) at the ceiling in the facade/W end-wall corner, 0.3 m from both walls. Box white trunking 0.06x0.04 along the top of the facade wall.",
+    "photos": [
+     "CC008",
+     "CC009"
+    ],
+    "method": "CC008/CC009 ultrawide (12 mm), qualitative; PnP on 7 window corners was degenerate",
+    "error": "positions +-1 m",
+    "confidence": "low (positions), high (presence)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-12",
+    "title": "Lobby wall fittings: fire-alarm panel, breaker box, clear box, 4-gang socket",
+    "spec": "INT_C_F1.json (hand fittings, remap_c_v6.py)",
+    "current": "none",
+    "proposed": "boxes on the lobby W wall (x 185.82) N of the charge kiosk, y 2.6-3.3: FireAlarmPanel 0.40x0.10x0.30 at z_rel 1.50; BreakerBox 0.30x0.10x0.40 at 1.50; ClearBox 0.20x0.08x0.25 at 1.65; Socket4 0.30x0.03x0.08 at 0.30",
+    "photos": [
+     "CC013"
+    ],
+    "method": "close-up heights by relation to the socket and door height. The wall is not identifiable; CC013 was taken between CC012 (lobby W wall) and CC014 (vestibule), so the lobby W wall is the best-supported option.",
+    "error": "wall uncertain; heights +-0.1",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-15",
+    "title": "Basement stair: diagonal red tiles on the side walls; white forged gate leaf at the stair head",
+    "spec": "INT_C_Basement.json Stair_Wall_N, Stair_Wall_S (slot), new gate (zone_c_v6.py basement or a remap_c_v6.py hand fitting)",
+    "current": "stair walls in the default finish; no gate",
+    "proposed": "Stair_Wall_N/S slot M_Tile_Brick_Red with pattern 'diagonal_45' (UE material param). New gate_leaf Stair_Gate at the upper-flight head: line [[169.1,-5.4],[169.1,-4.4]], h 1.0, forged, painted white (low).",
+    "photos": [
+     "CC027",
+     "CC024"
+    ],
+    "method": "CC027: red brick-effect tiles laid at 45 deg on both side walls. CC024 (2x tele): white-painted forged leaf at the stair head. Leaf size by relation to the 0.9 m railing.",
+    "error": "gate +-0.3 m",
+    "confidence": "high (tiles), low (gate)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-16",
+    "title": "Basement foot-scraper grate",
+    "spec": "INT_C_Basement.json (new box)",
+    "current": "none",
+    "proposed": "box FootGrate_Piano: 0.60x0.40, stainless frame with 3 bars, flush with the floor, inside the piano-room N door (on the 1-step platform side)",
+    "photos": [
+     "CC031"
+    ],
+    "method": "close-up only; location taken from the photo sequence (8 s after CC030, the N-wall door)",
+    "error": "location unsure",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-13",
+    "title": "A_W deck N end position disputed (photo camera ~3-4 m SW of the model steps)",
+    "spec": "SITE_Garden.json AW_NorthSteps/AW_NorthRamp, BLD_A_W ring N end",
+    "current": "steps/ramp at y -20.4..-18.0, x 164.6-167.1",
+    "proposed": "no change (unsure). Joint PnP CC015+CC016 (52 C-facade corners, rms 11.7) puts the camera at (161.0,-23.2,6.7), sd 0.4/1.0/0.4, standing on the deck-end steps with the ramp on its right, which would place the deck end ~2.9 m S and ~3.5 m W of the model. That contradicts the Google-based audit (A_N north end further N). Settle with one tape measurement from the C SW corner to the deck-end bottom step, or a fresh PnP from a photo showing both the deck end and the C S face.",
+    "photos": [
+     "CC015",
+     "CC016",
+     "CC017"
+    ],
+    "method": "PnP; a camera height only 1.35 above 5.35 also points to a pose or datum problem",
+    "error": "+-1 m in y",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-21",
+    "title": "Datum: C windows vs plaza paving disagree by ~0.45 m in front of the W wing",
+    "spec": "BLD_C.json ffl_z / SITE_Garden LowerTerrace z",
+    "current": "C FFL 6.4, plaza 5.35",
+    "proposed": "no change (unsure). PnP on C windows puts the camera only 0.06-0.5 m above the 5.35 plaza (CE030 z 5.88; CE024, CC002), and the cover edge and pits project 80-170 px above their photo positions (CE030), i.e. the paving in front of the W wing is ~0.45 m lower relative to C than modelled. This conflicts with 7 risers x 0.154 at the entrance. Settle by counting the paving courses or measuring the step heights from the W-wing cover edge to the paving at 2-3 points, or by a levelled photo of the entrance stair with a person.",
+    "photos": [
+     "CE030",
+     "CC002",
+     "CE024"
+    ],
+    "method": "window-based PnP with f free; camera z vs the expected 1.4-1.6 m eye height",
+    "error": "+-0.2",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-03",
+    "title": "E ramp run end vs E-ramp juniper pit",
+    "spec": "BLD_C.json ramp 'Run' (edge 2) u1 / SITE_CPlaza PlanterE_Ramp",
+    "current": "Run u 3.3-9.5 (ends x ~195.5), pit x 191.5-192.7",
+    "proposed": "no change (unsure). In CC001 (PnP rms 7.3) the photo rail end lies W of the pit's W corner (1800 vs 1850 px), while the model run projects E of the pit. Shortening the run to ~u 5.3 would make a 40% slope, so the pit position (not the ramp) is the more likely error. Settle with a photo from the E along the ramp showing the pit and the rail end together.",
+    "photos": [
+     "CC001",
+     "CE003"
+    ],
+    "method": "z-buffer overlay of the CC001 PnP",
+    "error": "+-0.6 m",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q2-22",
+    "title": "C storefront head/transom height may be lower than 3.29/2.65 (disputed)",
+    "spec": "BLD_C.json facades[edge 2].entrance z1, transom_z",
+    "current": "head 3.29, transom underside 2.65",
+    "proposed": "no change (unsure). CC003 (49 mm): width:height of the storefront = 760:500 px (model 3.76:3.29 = 1.14 vs photo 1.52). Scales: cassette pitch 0.6 gives head 2.53 and transom 2.05; the woman at the door (~1.60 m) gives head ~3.0; the model has 3.29 from mesh rays. Settle by measuring the door-leaf height or the storefront width at the threshold.",
+    "photos": [
+     "CC003"
+    ],
+    "method": "single-view ratios",
+    "error": "+-0.3",
+    "confidence": "low",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "C entrance 'C BLOK' plate (CC003, CE002) -> KOCH C-block plate",
+   "C entrance sign box with real lettering/logo (CE015, CE016) -> KOCH sign (slot exists)",
+   "Dance Hall pier navy plate with local-language text + 'TRAINING HALL' (CE038, CE045, CC020) -> KOCH training-hall plate",
+   "red A4 'OPEN MIC' event poster on the pier (CE038-CE045, CE017) -> TODO_LORE KOCH event poster",
+   "brand logo on the A_N AC outdoor unit (CE014) -> blank or fictional brand",
+   "room number plate 104 on the N4 door (CC011) -> KOCH room plate",
+   "brand on the fan/AHU label (CE011, CE013) -> blank"
+  ],
+  "open_questions": []
+ },
+ {
+  "slice": "pass2_part3 (batch2_part3.json, 103 photos: 2026-09-30_C105 CK001-021, 2026-09-30_C_interior CI001-027, 2026-10-01_C204 CR001-025, 2026-10-01_WC CW001-022, 2026-10-01_classroom2 CL001-008). Notes, scripts and crops: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass2_part3/ (notes.txt, final.json, h18.py, cw.py, v/). Room IDs checked against the evidence: the classroom2 folder and CR019-CR025 show R105, not 204. CI017-CI026 show classroom 102 (F1, SE corner). Every fix is in Scripts/Geo/zones/zone_c_v6.py (the generator) unless marked INT_C_F1 hand fitting (remap_c_v6). All C-local values convert to world coordinates with origin (173.264,-3.640) and x_dir (0.99920,-0.03985).",
+  "coverage": [
+   {
+    "id": "CK001",
+    "scene": "C105 (R105 lab) ceiling at back/door (SW) corner, looking up",
+    "camera": "(180.7,9.6) up",
+    "checked": "grid cut tiles vs boxes, net cabinet bottom",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-02"
+    ]
+   },
+   {
+    "id": "CK002",
+    "scene": "dup of CK001",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CK003",
+    "scene": "dup of CK001",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CK004",
+    "scene": "R105 from the window-side island looking E at board wall; door wall on right with door + orange stripe + sage",
+    "camera": "(~181.9,12.8) look E",
+    "checked": "board wall TV/whiteboard order, door near board corner, door-wall paint",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CK005",
+    "scene": "same as CK004",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CK006",
+    "scene": "same as CK004 (grid crop of stripe)",
+    "camera": "same",
+    "checked": "stripe start at DoorBox soffit above door W half, white band, sage",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CK007",
+    "scene": "R105 looking up NNW at window wall + ceiling",
+    "camera": "(~183,13.5) look N up",
+    "checked": "2 windows w/ pleated blinds, AC on board wall at window corner, smoke detector, CCTV dome NW corner",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-03",
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CK008",
+    "scene": "R105 up along sage back wall to window wall",
+    "camera": "(~181.5,12) look NW up",
+    "checked": "back wall sage, grid, CCTV dome at BackBox/WindowBeam corner, LED panel",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CK009",
+    "scene": "R105 NW corner: sage back wall + sage column, window wall white, window 3-sash with blinds, CCTV dome",
+    "camera": "(~182,13) look NNW",
+    "checked": "column paint (sage, model white), window jamb 0.47 off column (model 0.475)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-05",
+     "Q3-03",
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CK010",
+    "scene": "R105 ceiling corner looking up (dim)",
+    "camera": "(~181,10) up",
+    "checked": "grid/box",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CK011",
+    "scene": "R105 wall-row desk against sage door wall, pilaster, white cable trunking at desk height",
+    "camera": "(~181.5,9.8) look S",
+    "checked": "desk 0.80x0.60 white, wall sage, trunking",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-06"
+    ]
+   },
+   {
+    "id": "CK012",
+    "scene": "R105 ceiling corner with net cabinet",
+    "camera": "(180.7,9.6) up",
+    "checked": "grid, cabinet",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-02"
+    ]
+   },
+   {
+    "id": "CK013",
+    "scene": "R105 net cabinet near ceiling corner, sage walls",
+    "camera": "(180.7,9.6) up",
+    "checked": "cabinet on back wall by pilaster",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-02"
+    ]
+   },
+   {
+    "id": "CK014",
+    "scene": "R105 lesson, looking E at board wall: TV (slides) left, whiteboard right, AC above near window, stripe on door wall right",
+    "camera": "(~181,12.5) look E",
+    "checked": "order TV/WB/AC, stripe",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CK015",
+    "scene": "R105 looking N at window wall from mid room, sage back wall left, CCTV dome, smoke detector",
+    "camera": "(~183,12) look N",
+    "checked": "windows, blinds, dome",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-03",
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CK016",
+    "scene": "R105 0.5x overview from SW (back) towards NE: windows, AC, TV, WB, stripe, LED panels, 2 smoke detectors",
+    "camera": "(~181,10.5) look ENE",
+    "checked": "layout",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-03",
+     "Q3-04",
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CK017",
+    "scene": "R105 0.5x overview similar to CK016",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CK018",
+    "scene": "R105 frontal door wall from N: door near board corner, stripe, sage, cabinet+DB panel on back wall by pilaster, green bin, switch, skirting",
+    "camera": "(~183.5,15) look S",
+    "checked": "homography on door frame (4.36-5.35 x 2.05)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-02",
+     "Q3-05",
+     "Q3-08",
+     "Q3-11"
+    ]
+   },
+   {
+    "id": "CK019",
+    "scene": "as CK018",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-02"
+    ]
+   },
+   {
+    "id": "CK020",
+    "scene": "R105 frontal window wall from S: 2 x 3-sash windows w/ blinds, radiators 1.2 m, CCTV dome, AC",
+    "camera": "(~183.3,11) look N",
+    "checked": "window u 0.72-2.70 / 3.32-5.30 (539 px/m on the 5.45 m wall run; model 0.725-2.575 / 3.325-5.175, pitch 2.60 equal), head 0.15 below beam, radiator 1.20 wide top ~0.87",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-04",
+     "Q3-09",
+     "Q3-10",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CK021",
+    "scene": "R105 frontal board wall from W: TV, whiteboard, AC, triple socket, skirting, smoke detector",
+    "camera": "(~181.5,16.4) look E",
+    "checked": "TV v 3.03-4.66 z 1.15-2.04; WB v 0.66-2.47 z 0.80-2.05; AC v 4.71-5.70 z 2.40-2.72 (558 px/m on the 5.75 m wall; ceiling check 2.93)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-07",
+     "Q3-08"
+    ]
+   },
+   {
+    "id": "CI001",
+    "scene": "F1 hall S wall at room 101 (S4) door, looking S; bench E of door, radiator + white riser, blue panel above door only, black linear wall lamp, dado 2-tone, Hall_Beam at the jog top-right",
+    "camera": "(~191.2,10.6) look S",
+    "checked": "door 0.99x2.05 (788 px/m full), blue T panel frame-wide head->ceiling (top 3.03), dado line 2.10, bench/radiator x",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-16",
+     "Q3-17",
+     "Q3-18",
+     "Q3-19"
+    ]
+   },
+   {
+    "id": "CI002",
+    "scene": "F1 lobby looking S to the glazed entrance: water cooler E, vending/coffee/charge kiosk W, radiator + wall terminal on E wall near entrance, 2 cross bulkheads",
+    "camera": "(~188.4,7.5) look S",
+    "checked": "order of kiosks (vending S, coffee, charge N), cooler opposite coffee",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-22"
+    ]
+   },
+   {
+    "id": "CI003",
+    "scene": "F1 hall looking W from the lobby: S2/N2 doors + benches, far 107/106 doors with blue T panels only, W stair (flight-1 foot at S rising N), end window w/ blinds, landing door, radiator, wall lamps, fire cabinet on the white N wall by the stair",
+    "camera": "(~186.7,7.8) look W",
+    "checked": "stair hand, accents, benches, ceiling bulkhead, dado",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-17",
+     "Q3-18",
+     "Q3-19",
+     "Q3-20",
+     "Q3-23"
+    ]
+   },
+   {
+    "id": "CI004",
+    "scene": "dup of CI003",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-17",
+     "Q3-20"
+    ]
+   },
+   {
+    "id": "CI005",
+    "scene": "F1 hall: two people seated on a hall bench (3 black pads, oak box base) against white wall",
+    "camera": "hall S wall",
+    "checked": "bench type",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CI006",
+    "scene": "same, 0.5x",
+    "camera": "same",
+    "checked": "bench seat ~0.45",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CI007",
+    "scene": "R105 lab (earlier, 15:46) from the back looking E: TV, whiteboard, AC, desks",
+    "camera": "R105",
+    "checked": "as CK021",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CI008",
+    "scene": "R105 lab looking N: sage back wall left, window wall with 3-light windows + blinds, CCTV dome",
+    "camera": "R105",
+    "checked": "as CK020",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-03",
+     "Q3-04",
+     "Q3-05"
+    ]
+   },
+   {
+    "id": "CI009",
+    "scene": "R105 lab looking NE: AC over TV side, whiteboard, smoke detector",
+    "camera": "R105",
+    "checked": "as CK021",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-07",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CI010",
+    "scene": "F1 lobby W wall frontal: vending (front E), radiator S of it with white pipes, coffee kiosk N of it, charge kiosk, dado 2-tone",
+    "camera": "(~188.4,1.3) look W",
+    "checked": "order/sizes",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-22",
+     "Q3-18"
+    ]
+   },
+   {
+    "id": "CI011",
+    "scene": "dup of CI010",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-22"
+    ]
+   },
+   {
+    "id": "CI012",
+    "scene": "F1 hall N wall E end: door 103 (number plate), blue from the door frame E edge to the stair-front corner + above door, red fire-hose cabinet against the corner, white riser in the corner, low heating pipe w/ brass valve, terrazzo skirting",
+    "camera": "(~198.2,7.5) look N",
+    "checked": "accent extent, cabinet position z 1.19-1.75, door->corner 1.07 m (312 px/m)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-17",
+     "Q3-23",
+     "Q3-24",
+     "Q3-18"
+    ]
+   },
+   {
+    "id": "CI013",
+    "scene": "F1 E stair hall: flight-1 foot, plant ledge with pots, timber exit double door + transom, CCTV dome at S wall/end corner",
+    "camera": "(~200,6) look E",
+    "checked": "ledge, door, dome",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-26"
+    ]
+   },
+   {
+    "id": "CI014",
+    "scene": "E stair flight from the side, plant ledge",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CI015",
+    "scene": "F1 E stair hall frontal from W: blue N wall + fire cabinet left, flight 1 rising N with solid side wall, exit door, radiator by the door, CCTV dome on the S wall near the end, dado line on S wall",
+    "camera": "(~195.5,8.5) look E",
+    "checked": "stair hand (foot S), ledge pots, door",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-23",
+     "Q3-26",
+     "Q3-18",
+     "Q3-17"
+    ]
+   },
+   {
+    "id": "CI016",
+    "scene": "dup of CI015",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-23",
+     "Q3-26"
+    ]
+   },
+   {
+    "id": "CI017",
+    "scene": "room 102 looking E at the sage end wall (window centred, curtain on its N side, radiator), 1.77 m man against the wall, CCTV dome at SE corner",
+    "camera": "(~197.5,3.5) look E",
+    "checked": "window 1.85 class (part hidden by curtain), head~2.5, end-wall curtains",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-03",
+     "Q3-14"
+    ]
+   },
+   {
+    "id": "CI018",
+    "scene": "dup of CI017",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-14"
+    ]
+   },
+   {
+    "id": "CI019",
+    "scene": "room 102 looking N at the white door wall: door 0.53 from the board corner, green bin, switch, white heating pipe low on the board wall, sage end wall right",
+    "camera": "(~197,2.5) look N",
+    "checked": "door position, wall colours",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-11",
+     "Q3-15"
+    ]
+   },
+   {
+    "id": "CI020",
+    "scene": "dup of CI019 (person in hall)",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-11"
+    ]
+   },
+   {
+    "id": "CI021",
+    "scene": "room 102 looking N/NW at the door wall, curtain on the E wall window",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CI022",
+    "scene": "room 102 looking S at the white window wall (one window + curtain), teacher's desk at the board/window corner with chair on the board side, CCTV at SE corner, sage end wall, sage board wall with IFP",
+    "camera": "(~197.5,6.5) look S",
+    "checked": "teacher desk orientation",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-13",
+     "Q3-12",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CI023",
+    "scene": "room 102 frontal board wall (W): IFP 75in + whiteboard, sage with white strip by the door corner, white pipe at ~0.23 m, bulkhead along the top, 1.77 m man, teacher desk + chair",
+    "camera": "(~201,4.6) look W",
+    "checked": "WB 1.80x1.20 scale (214 px/m on the 5.75 m wall): TV v 3.11-4.78 z 0.82-1.83, WB v 0.91-2.66 z 0.74-1.93, sage/white boundary v 1.54",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-12",
+     "Q3-13",
+     "Q3-15",
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CI024",
+    "scene": "dup of CI023",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-12"
+    ]
+   },
+   {
+    "id": "CI025",
+    "scene": "room 102 frontal E end wall: sage, one window centred (1.85 class), 2 brown curtains on a white rail along the wall top, radiator, CCTV dome SE corner, smoke detector",
+    "camera": "(~196,4.5) look E",
+    "checked": "window, curtains",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-14",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CI026",
+    "scene": "dup of CI025",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-14"
+    ]
+   },
+   {
+    "id": "CI027",
+    "scene": "basement piano room: inside of an upright piano (action/hammers), close-up",
+    "camera": "basement",
+    "checked": "piano internals - not modelled at greybox level",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "CR016",
+    "scene": "south-row room with board on the E (201/202 type): door from inside with the 1.87 m man in the doorway, white door wall, white cabinet, teal bin, low white heating pipe on the board wall",
+    "camera": "inside S-row room look N",
+    "checked": "door 0.99 x ~2.03, door 0.54 from the board corner",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-15"
+    ]
+   },
+   {
+    "id": "CR001",
+    "scene": "204 lesson, looking W at the board wall: TV (S side), whiteboard (N side), sage with white strip by the door corner, smoke detector",
+    "camera": "(~197.5,6.5 F2) look W",
+    "checked": "wall colours, order",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-27",
+     "Q3-12"
+    ]
+   },
+   {
+    "id": "CR002",
+    "scene": "204 looking W/SW: S window wall WHITE with 3-light window + blinds, sage board wall",
+    "camera": "same",
+    "checked": "window-wall colour",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-27",
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CR003",
+    "scene": "204 looking S: white window wall with centred 3-light window + blinds, sage E end wall left + sage board wall right, CCTV dome at SE corner",
+    "camera": "(~197,5.5) look S",
+    "checked": "colours, dome",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-27",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CR004",
+    "scene": "204 looking E: sage end wall with 3-light window (middle sash open, blinds), radiator, CCTV at SE corner, white S wall right",
+    "camera": "(~196.5,3.5) look E",
+    "checked": "end-wall colour (model white)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-27",
+     "Q3-04",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CR005",
+    "scene": "204 E end wall: network cabinet with patch panel + white DB panel with meter directly below, N of the window",
+    "camera": "same",
+    "checked": "cabinet location on the end wall by the corridor corner (as V3-03)",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-02"
+    ]
+   },
+   {
+    "id": "CR006",
+    "scene": "204 TV close-up (2x): wall TV with power cable to a socket, sage wall",
+    "camera": "204 board wall",
+    "checked": "TV + cable/socket",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CR007",
+    "scene": "dup of CR006",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CR008",
+    "scene": "dup of CR006",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-07"
+    ]
+   },
+   {
+    "id": "CR009",
+    "scene": "204 board wall from the E: TV, whiteboard straddling the sage/white boundary, triple socket, teacher's desk pedestal + PC at the S end",
+    "camera": "(~198,6) look W",
+    "checked": "order, boundary 53% along the WB",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-27",
+     "Q3-12"
+    ]
+   },
+   {
+    "id": "CR010",
+    "scene": "204 board wall + door in the N wall at the right",
+    "camera": "same",
+    "checked": "door near the board corner",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CR011",
+    "scene": "204 door wall from inside (0.5x): white, door near the board (left) corner, black bin, white cabinet",
+    "camera": "(~199,1.5) look N",
+    "checked": "door position",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-11"
+    ]
+   },
+   {
+    "id": "CR012",
+    "scene": "as CR011; through the door: hall with a frame-wide blue panel over the opposite (205) door",
+    "camera": "same",
+    "checked": "door 0.57 from the board corner; accent type",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-17"
+    ]
+   },
+   {
+    "id": "CR013",
+    "scene": "204 door wall from inside",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CR014",
+    "scene": "dup CR013",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CR015",
+    "scene": "dup CR013",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CR017",
+    "scene": "other room (13:17): door with glass in the left wall, whiteboard with notes on the right wall, teal bin, low white pipe, desk + PC in the foreground",
+    "camera": "unknown room (F1/F2)",
+    "checked": "door + WB present; room not identifiable",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CR018",
+    "scene": "door close-up from inside (13:23): switch beside the door, teal bin, white pipe; through the glass the hall with a blue panel over a door, wooden bench, poster",
+    "camera": "unknown room",
+    "checked": "door, switch",
+    "verdict": "matches",
+    "finding_ids": [
+     "Q3-11"
+    ]
+   },
+   {
+    "id": "CR019",
+    "scene": "R105 (folder label C204, but this is 105: non-mirrored N-row lab, stripe right of the door descending W, lobby charge kiosk seen through the door in CR022) door wall from inside with a man in the doorway; green bin left of door; wall-row pedestal desk + PC right",
+    "camera": "(~184.5,13) look S",
+    "checked": "stripe start over the door W half, bin, opposite door 108 has a blue T panel",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01",
+     "Q3-11",
+     "Q3-17"
+    ]
+   },
+   {
+    "id": "CR020",
+    "scene": "dup CR019",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CR021",
+    "scene": "dup CR019",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CR022",
+    "scene": "R105 door close, man in doorway, hall/lobby with charge kiosk beyond",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CR023",
+    "scene": "dup CR019 (step back)",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CR024",
+    "scene": "dup CR019",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CR025",
+    "scene": "dup CR019",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CW001",
+    "scene": "R105 door head from inside looking up (15:02): black door frame head, white DoorBox above, orange stripe starting at the top right, LED panel",
+    "camera": "R105 near door",
+    "checked": "stripe starts at the DoorBox right over the door",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "Q3-01"
+    ]
+   },
+   {
+    "id": "CW002",
+    "scene": "WC aisle looking N to the end window: 3 anthracite cubicle doors left (switches by the handles), tiles to 1.55 + white above, PVC strip ceiling + cornice, round lamp, window (lower tilt sash + upper fixed) on the cubicle-front line, 7-section radiator with pipes",
+    "camera": "WC aisle S end look N",
+    "checked": "layout, window, radiator, lamp",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW003",
+    "scene": "dup CW002",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW004",
+    "scene": "WC sink alcove: 2 pedestal basins, one mirror, soap dispenser, bin between pedestals, man (selfie)",
+    "camera": "alcove look at the wet wall",
+    "checked": "basins/mirror/soap/bin",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW005",
+    "scene": "WC alcove ceiling: round lamp + round air diffuser, cornice, mirror below",
+    "camera": "alcove up",
+    "checked": "lamp, diffuser",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW006",
+    "scene": "WC inside corner: socket above the tile band, double light switch on the tiles at ~0.90",
+    "camera": "WC corner",
+    "checked": "socket height 1.62 ok; switch not modelled",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-28"
+    ]
+   },
+   {
+    "id": "CW007",
+    "scene": "WC end wall tiles (600, band)",
+    "camera": "WC",
+    "checked": "tile seams 0.36/0.96/1.56",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW008",
+    "scene": "WC end wall under the window: sill, tiles up to the sill, radiator top",
+    "camera": "WC",
+    "checked": "sill/tile",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW009",
+    "scene": "dup CW008",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW010",
+    "scene": "cubicle door close-up: anthracite PVC leaf, lever handle with lock, switch on the tiles left",
+    "camera": "WC aisle",
+    "checked": "door, switch",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW011",
+    "scene": "WC floor tiles 600 with feet (scale)",
+    "camera": "WC aisle",
+    "checked": "floor grid",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW012",
+    "scene": "WC floor + door jamb at the alcove/lock",
+    "camera": "WC",
+    "checked": "floor/jamb",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW013",
+    "scene": "WC floor in front of the basins: pedestals, floor drain between them, cut tile",
+    "camera": "alcove",
+    "checked": "drain between the pedestals (model: by the right pedestal, ok)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW014",
+    "scene": "dup CW013",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW015",
+    "scene": "dup CW013",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW016",
+    "scene": "tiles behind a basin + tap",
+    "camera": "alcove",
+    "checked": "tile seams",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW017",
+    "scene": "dup CW016",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW018",
+    "scene": "WC floor at a door threshold (lock door)",
+    "camera": "WC",
+    "checked": "floor",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "CW019",
+    "scene": "R105 window top corner (16:36, dark exposure): pleated blind in a top cassette inside the white PVC frame, white reveal",
+    "camera": "R105 window wall",
+    "checked": "blind type",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CW020",
+    "scene": "dup CW019",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CW021",
+    "scene": "dup CW019",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CW022",
+    "scene": "R105 window light with the opening sash hinge + blind",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL001",
+    "scene": "R105 looking N at the window wall: 2 x 3-light windows w/ blinds (one sash open), sage back wall, CCTV, AC",
+    "camera": "(~183.3,11.5) look N",
+    "checked": "as CK020",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04",
+     "Q3-03"
+    ]
+   },
+   {
+    "id": "CL002",
+    "scene": "dup CL001",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL003",
+    "scene": "dup CL001",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL004",
+    "scene": "dup CL001",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL005",
+    "scene": "R105 windows 2x zoom: 3 lights, middle sash open inward hinged left, blinds on every light, radiator",
+    "camera": "same",
+    "checked": "light layout (W type mullions 0.35/0.65)",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL006",
+    "scene": "dup CL005",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL007",
+    "scene": "dup CL001",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-04"
+    ]
+   },
+   {
+    "id": "CL008",
+    "scene": "R105 0.5x from the SW (back/door) corner: sage back wall, window wall, TV on the board wall, 2 smoke detectors, desks",
+    "camera": "(~180.9,9.6) look NE",
+    "checked": "layout",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "Q3-03"
+    ]
+   }
+  ],
+  "findings": [
+   {
+    "id": "Q3-01",
+    "title": "R105 door (corridor) wall: white near the board corner, then an orange diagonal stripe + white band, then sage to the back wall (model: whole door wall white, no stripe)",
+    "spec": "zone_c_v6.py fitout() lab rooms (INT_C_F1 F1_R105_*): new elements F1_R105_DoorWall_Sage + F1_R105_DoorStripe (+ white band) on the door-wall face v=0.006",
+    "current": "door wall = int_wall F1_Hall_N_West material white; no stripe",
+    "proposed": "R105 (u,z) on face v=+0.006 (C-local y 13.006, x = 6.45+u). Orange parallelogram: top edge z 2.65 (DoorBox soffit) at u 4.52-4.66; bottom z 0.01 at u 2.10-2.24 (seen down to z 1.19 at u 3.13-3.28, extrapolated below). White band (M_Paint_White) on its -u side: top u 4.36-4.52, bottom u 1.87-2.10. Sage (M_Paint_Sage) from u 0.15 (pilaster face) to the band edge, z 0.05..2.65. The region at u > stripe stays white, and the DoorBox stays white. World: stripe top (184.743,8.912)-(184.883,8.907), bottom (182.325,9.009)-(182.465,9.003). The stripe is ~40.9 deg off vertical, 0.105 wide (perpendicular), band 0.12. NOTE: V3-02 puts a stripe on the board wall of a corner lab; in C105 the stripe is on the door wall.",
+    "photos": [
+     "CK004",
+     "CK005",
+     "CK006",
+     "CK011",
+     "CK014",
+     "CK016",
+     "CK017",
+     "CK018",
+     "CK019",
+     "CR019",
+     "CW001"
+    ],
+    "method": "CK018 planar homography of the door wall from the door frame corners (u 4.36/5.35, z 0/2.05; script h18.py); stripe edges read at z 2.79 and 1.19. Check point: the board corner came out at u 5.96-6.03 (true 5.80), so the error is +-0.15 m. CK006 and CW001 confirm the stripe starts at the DoorBox soffit above the W half of the door.",
+    "error": "u +-0.15, z +-0.08, angle +-3 deg",
+    "confidence": "high (existence/colours), medium (geometry)",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Q3-02",
+    "title": "Lab network cabinet + DB panel are lower than modelled: cabinet 1.60-2.05, white DB panel 1.18-1.60 directly beneath, white conduit down from it",
+    "spec": "zone_c_v6.py fitout() lab branch bx('NetCabinet',...2.0,2.45) / bx('NetPanel',...1.40,1.80) (INT_C_F1 F1_R105_/F1_R103_NetCabinet/NetPanel; INT_C_Floors F2_R201/204/205_*)",
+    "current": "cabinet z 2.00-2.45, panel 1.40-1.80 (gap 0.20)",
+    "proposed": "NetCabinet z 1.60-2.05 (0.45 size kept, glass front door). NetPanel z 1.18-1.60, 0.30 wide (v 0.50-0.80), DB box with meter window, M_Plastic_White. New NetConduit box 0.04 x 0.03 on the back wall at v 0.62, z 0.90-1.18. R105 world: cabinet centre stays (180.481,9.733), z0 8.00; panel z0 7.58.",
+    "photos": [
+     "CK001",
+     "CK012",
+     "CK013",
+     "CK018",
+     "CK019",
+     "CR005"
+    ],
+    "method": "CK018 door-wall homography extended to the corner line (h18.py) gives cabinet 1.60-2.04 and panel 1.18-1.59. Scale check: the measured heights 0.44/0.41 equal the modelled 0.45/0.40. A gap of ~0.6 to the box soffit is visible, and the cabinet top images at the door-head level while sitting 0.35-0.95 m nearer the camera.",
+    "error": "+-0.10",
+    "confidence": "medium; contradicts V3-03 (bottom ~2.0, low confidence, corner-lab video)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-03",
+    "title": "Room ceiling devices: CCTV dome at the back-wall/window-wall corner (labs and classroom 102), 1-2 smoke detectors (not modelled in rooms)",
+    "spec": "zone_c_v6.py fitout(): new boxes R+'CCTV', discs R+'Smoke_0/1' (all standard rooms; seen in R105, 102, 204)",
+    "current": "none in rooms",
+    "proposed": "CCTV dome box 0.12x0.12x0.10 (M_Plastic_White, ue_asset cctv_dome) hanging under the BackBox/WindowBeam junction at u 0.15, v D-0.55, z0 C-0.35. R105: world (180.608,14.882), z0 8.95. Smoke detectors: disc r 0.05, h 0.04 at z C-0.04, u 2.00 and 4.40, v 3.20. R105 world (182.353,12.210) and (184.751,12.115).",
+    "photos": [
+     "CK007",
+     "CK008",
+     "CK009",
+     "CK015",
+     "CK016",
+     "CK020",
+     "CK021",
+     "CI017",
+     "CI022",
+     "CI025",
+     "CR003",
+     "CR004",
+     "CL001",
+     "CL008"
+    ],
+    "method": "visual position: the corner dome sits on the box soffit next to the column in every room photographed; the detectors sit on the centre tile line, one per half",
+    "error": "dome +-0.1; detectors +-0.5",
+    "confidence": "high (existence), low (detector positions)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-04",
+    "title": "Lab windows: white pleated blinds in top cassettes on every light (3 per window); labs have neither curtains nor blinds in the model",
+    "spec": "zone_c_v6.py fitout() lab branch: new boxes R+'Blind_{n}{k}' per window light (long-facade and end-wall windows)",
+    "current": "none (classrooms get brown curtains; labs nothing)",
+    "proposed": "Per window, 3 boxes on the glass plane (v = D + 0.20 into the reveal). Light widths 0.35/0.30/0.35 of the opening (type W mullions). z WIN_SILL+0.05 .. WIN_SILL+WIN_H-0.05, thickness 0.02, slot M_Fabric_Blind_White, plus a 0.03 cassette at the top. The middle (opening) light's blind rides on the sash.",
+    "photos": [
+     "CK007",
+     "CK009",
+     "CK015",
+     "CK016",
+     "CK020",
+     "CR002",
+     "CR003",
+     "CR004",
+     "CW019",
+     "CW020",
+     "CW021",
+     "CW022",
+     "CL001",
+     "CL005"
+    ],
+    "method": "visual; light fractions on the CK020 frontal view are 0.37/0.29/0.34 (539 px/m)",
+    "error": "-",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-05",
+    "title": "R105 corner column (back/window) and back-door pilaster are sage, not white",
+    "spec": "zone_c_v6.py fitout(): bx('Column_BackWin'...M_Paint_White), bx('Pilaster_BackDoor'...M_Paint_White)",
+    "current": "M_Paint_White",
+    "proposed": "Slot M_Paint_Sage for Column_BackWin and Pilaster_BackDoor (the sage back wall wraps them). BackBox, WindowBeam and DoorBox stay white.",
+    "photos": [
+     "CK009",
+     "CK020",
+     "CK018",
+     "CI008"
+    ],
+    "method": "visual colour (CK009 column faces x 500-760 full px sage; g_CK018_2900_300 pilaster sage)",
+    "error": "-",
+    "confidence": "medium-high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-06",
+    "title": "White PVC cable trunking along the lab door wall behind the wall row, at desk height (not modelled)",
+    "spec": "zone_c_v6.py lab branch: new box R+'Trunking_Door'",
+    "current": "none",
+    "proposed": "Box 0.10 high x 0.05 deep on the door-wall face, u 0.25..4.25 (wall-row length), wrapping the pilaster, z 0.78-0.88, slot M_PVC_White",
+    "photos": [
+     "CK011"
+    ],
+    "method": "visual against the desk top (0.75)",
+    "error": "z +-0.10",
+    "confidence": "medium (existence), low (height)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-07",
+    "title": "Board-wall fittings sit nearer the door than modelled: TV centre v ~3.85-3.95 (model 4.30); lab TV larger and higher; classroom TV is a 75in interactive panel mounted lower",
+    "spec": "zone_c_v6.py fitout(): bx('TV', v 4.30+-0.785, z 1.06-1.93), bx('Whiteboard', v 1.85+-0.90, z 0.75-1.95), bx('AC', v 5.30+-0.45, z 2.30-2.60) (all rooms)",
+    "current": "TV centre v 4.30, 1.57 wide, z 1.06-1.93; WB v 1.85, 1.80x1.20, z 0.75-1.95; AC v 5.30, 0.90 wide, z 2.30-2.60",
+    "proposed": "Labs (R105 measured): TV v 3.84+-0.815 (1.63 wide), z 1.15-2.05. Whiteboard v 1.57+-0.905 (1.81 x 1.25), z 0.80-2.05. AC v 5.20+-0.495 (0.99 wide), z 2.40-2.72. Triple socket 0.16x0.02x0.05 at v 3.78, z 0.88-0.93, with a cable to the TV. R105 world centres: TV (186.145,12.700) z0 7.55; WB (186.070,10.431) z0 7.20; AC (186.055,14.064) z0 8.80. Plain classrooms (102 measured): interactive flat panel 1.67 x 1.02 at v 3.94, z 0.82-1.83; whiteboard v 1.79, z 0.74-1.93 (102 world: IFP centre (196.566,-0.406), WB (196.652,1.742)).",
+    "photos": [
+     "CK021",
+     "CK014",
+     "CK016",
+     "CK004",
+     "CI007",
+     "CI009",
+     "CI023",
+     "CR006",
+     "CR009"
+    ],
+    "method": "CK021 frontal board wall, span from the pilaster face (x 580 full px, v 5.75) to the door corner (x 3790, v 0) = 558 px/m. Checks: whiteboard width 1.81 (asset 1.80); ceiling 2.93 above the floor line (model 2.90), so heights are scaled by 0.99. CI023 at 214 px/m from the 5.75 m wall (whiteboard 1.75x1.19 check).",
+    "error": "+-0.05 position, +-0.04 height (R105); +-0.10 (102)",
+    "confidence": "high (R105), medium (102)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-08",
+    "title": "Laminate skirting along the room walls; terrazzo skirting in the halls (not modelled)",
+    "spec": "zone_c_v6.py fitout(): new boxes R+'Skirting' round each room; plan(): hall skirting",
+    "current": "none",
+    "proposed": "Rooms: 0.045 high x 0.012 deep, slot M_Laminate_Oak_Grey, on every wall face at z LAM..LAM+0.045, with gaps at the door opening. Halls: terrazzo skirting ~0.08 high x 0.012 (M_Terrazzo) on all hall wall faces.",
+    "photos": [
+     "CK018",
+     "CK021",
+     "CI012",
+     "CI015",
+     "CR012"
+    ],
+    "method": "px / scale (g_CK021_1300_1950: band at y 2100-2125 at 558 px/m)",
+    "error": "+-0.01 (rooms), +-0.03 (halls)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-09",
+    "title": "Window head only 0.15 below the window-beam soffit (model 0.25): interior sill ~1.15, or beam at 2.60 (disputed)",
+    "spec": "BLD_C rows F1 1.05 / zone_c_v6 WIN_SILL 1.05, WIN_H 1.40 vs WindowBeam z C-0.20 = 2.70",
+    "current": "head 2.45, beam soffit 2.70",
+    "proposed": "In the CK020 frontal view, the wall strip between the beam soffit and the frame top is 80 px at 539 px/m = 0.15 (the C105 etalon says the same: sill 1.10, head 2.55). Frame height 1.40 is confirmed. Best supported: interior sill 1.15 / head 2.55 (beam 2.70 and ceiling 2.90 checked in CK021). If the facade sill 1.05 is firm, lower the beam soffit to 2.60 instead.",
+    "photos": [
+     "CK020",
+     "CK009"
+    ],
+    "method": "frontal plane scale (5.45 m wall run = 2940 px)",
+    "error": "+-0.03 on the gap, sill +-0.05",
+    "confidence": "medium (gap), low (which element moves)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-10",
+    "title": "Under-window radiators are 1.20 wide (~15 sections), top ~0.87",
+    "spec": "zone_c_v6.py fitout(): bx('Radiator_n', uw-0.50..uw+0.50, z 0.15-0.70)",
+    "current": "1.00 wide, z 0.15-0.70",
+    "proposed": "uw-0.60..uw+0.60, z 0.30-0.87 (bottom assumed from a 0.57 sectional radiator; bottom not visible), M_Paint_White aluminium sections",
+    "photos": [
+     "CK020"
+    ],
+    "method": "frontal scale 539 px/m (g_CK020_1300_1450: right radiator x 2610-3270 full px, top y 1595); top = head 2.55 - (1595-690)/539. The radiator centre at u 4.28 matches the window centre (4.31).",
+    "error": "width +-0.05, top +-0.05, bottom unsure",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-11",
+    "title": "Waste-paper basket in the board/door corner + light switch on the door wall by the door (every room photographed; not modelled)",
+    "spec": "zone_c_v6.py fitout(): new boxes R+'Bin', R+'Switch' (all standard rooms)",
+    "current": "none",
+    "proposed": "Bin: cylinder r 0.16, h 0.30 (M_Plastic_Green; black bag in 102/204) at u L-0.15, v 0.25. Switch: 0.08x0.02x0.08 on the door wall at u L-0.18, z 0.87 (0.27 east of the door's board-side jamb). R105 measured: switch u 5.62 z 0.89; bin u 5.49-5.81.",
+    "photos": [
+     "CK018",
+     "CI019",
+     "CI020",
+     "CR011",
+     "CR018",
+     "CR019"
+    ],
+    "method": "CK018 door-wall homography (h18.py)",
+    "error": "+-0.1",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-12",
+    "title": "Board wall is sage with a white strip by the door corner, and a bulkhead runs along its top (classroom 102 and lab 204); model: white partition, no bulkhead",
+    "spec": "zone_c_v6.py fitout(): new boxes R+'BoardWall_Paint' (sage), R+'BoardBox'; Pilaster_BoardWin slot. Applies to class rooms and to 204; not to R105.",
+    "current": "board wall = int_wall white; no box along the board wall",
+    "proposed": "On the board-wall face (u = L-0.006..L): M_Paint_Sage for v 1.54..D-0.60, z LAM..C, with the window-side pilaster sage too. v 0..1.54 stays white; the boundary is vertical and runs under the whiteboard. BoardBox (low confidence): 0.20 deep (u L-0.20..L) along v 0.30..D-0.50, z C-0.25..C, painted to match the wall behind. Room 102 world: boundary at C-local (23.155,6.56) = (196.693,2.761). NOTE: the R105 board wall is white (CK021).",
+    "photos": [
+     "CI019",
+     "CI020",
+     "CI022",
+     "CI023",
+     "CI024",
+     "CR001",
+     "CR009"
+    ],
+    "method": "CI023 frontal board wall, 214 px/m from the 5.75 m wall span (whiteboard check 1.75x1.19); boundary at x 1140 display = 1.54 m from the door corner. In 204 the boundary lies 53% along the whiteboard from its S end (CR001/CR009), which agrees.",
+    "error": "+-0.10 (102), +-0.25 (204)",
+    "confidence": "high (colours), low (box)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-13",
+    "title": "Classroom 102 teacher's desk stands parallel to the board with the teacher between desk and board (model: desk perpendicular to the board, teacher's back to the windows)",
+    "spec": "zone_c_v6.py fitout() class branch, door_left False case (R+'TeacherDesk' / 'TeacherChair')",
+    "current": "102: desk_row along u at to_c(L-1.00, D-1.05), chair at to_c(L-1.00, D-0.43)",
+    "proposed": "Desk 1.20 x 0.60 (oak top, black steel frame, modesty panel toward the class) along v (dir d_v), centre to_c(L-1.10, D-1.00) = C-local (24.25,2.75), world (197.604,-1.859). Chair (black fabric visitor chair) at to_c(L-0.45, D-1.00) = (23.60,2.75), world (196.955,-1.833), facing the class.",
+    "photos": [
+     "CI022",
+     "CI023",
+     "CI024"
+    ],
+    "method": "visual layout: the desk's long side is parallel to the board and the chair sits between desk and board in both views",
+    "error": "+-0.3 position",
+    "confidence": "medium (orientation), low (position); contradicts the owner rule 'door on the right -> back to the windows' for this room",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-14",
+    "title": "Classroom curtains also hang at the end-wall window; ~floor length, 2 panels ~0.6 wide on a white rail at the wall top (model: long-facade windows only, 0.40 panels, bottom 0.25)",
+    "spec": "zone_c_v6.py fitout() class branch curtains (Curtain_{n}{L,R}); facade_windows(key) + end-wall window for end rooms",
+    "current": "Curtain panels 0.40 wide, z 0.25..C-0.22, long-facade windows only",
+    "proposed": "Panels 0.60 wide (beside each window edge +0.05), z 0.05..C-0.25. New R+'CurtainRail' box 0.06 x 0.05 (M_PVC_White) under the beam/box: length = window + 1.4 (3.3 m at the 102 end window), z C-0.30..C-0.25. Add the end-wall window of end rooms (back wall, v = D/2) to the curtain loop.",
+    "photos": [
+     "CI017",
+     "CI018",
+     "CI021",
+     "CI022",
+     "CI025",
+     "CI026"
+    ],
+    "method": "CI025 frontal end wall: window frame 385 px for 1.85-1.89 m; panels 110-120 px = 0.55-0.60 m; curtain bottom 1.06 m below the sill",
+    "error": "+-0.08",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-15",
+    "title": "Low white heating pipe along the room board wall and door wall at ~0.12-0.23 m (not modelled in rooms)",
+    "spec": "zone_c_v6.py fitout(): new boxes R+'HeatPipe_Board', R+'HeatPipe_Door'",
+    "current": "none",
+    "proposed": "Pipe box 0.03 x 0.03, 0.04 off the wall face, z 0.21..0.24, along the board wall (v 0.15..D-0.60) and the door wall (u from the board corner to the door jamb), slot M_PVC_White",
+    "photos": [
+     "CI023",
+     "CI019",
+     "CI020",
+     "CR016",
+     "CR017"
+    ],
+    "method": "CI023 frontal scale: pipe at y 740 vs wall base 790 at 214 px/m",
+    "error": "z +-0.05",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-16",
+    "title": "F1 hall bench + radiator east of door 101 sit closer to the door; the bench has 3 pads, 1.8 m (confirms the model length, contradicts V3-07's >=2.4)",
+    "spec": "INT_C_F1 F1_Hall_Bench_S1 (bench), F1_Hall_Radiator_S1 (box)",
+    "current": "bench centre C-local x 21.13 (20.23-22.03), radiator x 21.13 behind it",
+    "proposed": "F1_Hall_Bench_S1 pos C-local (19.85,8.50) = world (193.437,4.062). F1_Hall_Radiator_S1 centre C-local (20.70,8.34) = world (194.276,3.769), 0.80 wide. The bench W end is 0.36 m E of the door frame, and the radiator sits behind the bench E end.",
+    "photos": [
+     "CI001",
+     "CI003",
+     "CI005",
+     "CI006"
+    ],
+    "method": "CI001 frontal-ish S wall, door frame 0.99 = 260 display px; bench W end 95 px E of the frame, radiator W end 450 px E of the frame; 3 seat pads in CI001/CI003",
+    "error": "+-0.15",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-17",
+    "title": "Blue accent is a frame-wide panel over each classroom door, from the head to the ceiling; only 103 (N5) also has blue from its E jamb to the stair-front corner; no L panels",
+    "spec": "zone_c_v6.py plan() accent loop (F#_Accent_{N1,N5,S1,S5}_{L,R,T}); INT_C_F1 / INT_C_Floors",
+    "current": "L/R panels 0.58 (N1 L and N5 R run to the stair corner) + T 1.03 wide, at N1/N5/S1/S5 only",
+    "proposed": "Every classroom door (S1,S2,S4,S5,N1,N2,N4,N5, all floors) gets Accent_{key}_T: width 0.99 (= frame), z DOOR_H+0.02..CC (3.00), 0.02 skin. Keep Accent_N5_R (frame E edge -> stair corner) on F1. Delete Accent_N5_L, Accent_N1_L/R and Accent_S1_L/R (CI003: 106/107 have the T panel only; the W fire cabinet sits on white wall). S5_L/R were not photographed from the hall: make them T only by analogy.",
+    "photos": [
+     "CI001",
+     "CI003",
+     "CI004",
+     "CI012",
+     "CI015",
+     "CR012",
+     "CR019"
+    ],
+    "method": "visual. CI001: blue panel x 1310-2040 full px = frame width, top 3.03 above the floor at 788 px/m. F2: CR012 shows a frame-wide panel over 205. CR019 shows a T panel over 108.",
+    "error": "-",
+    "confidence": "high (101, 103, 106, 107, 108, 205)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-18",
+    "title": "Corridor/lobby walls are two-tone: light greige up to 2.10, white above (model: white)",
+    "spec": "zone_c_v6.py plan(): new paint-skin boxes on all hall/lobby wall faces (seen on F1; F2+ not photographed)",
+    "current": "hall walls material white",
+    "proposed": "0.006 skin on each hall wall face, z 0..2.10, slot M_Paint_Greige (new, ~sRGB 200,195,188); white above",
+    "photos": [
+     "CI001",
+     "CI003",
+     "CI010",
+     "CI012",
+     "CI015"
+    ],
+    "method": "line height above the door-frame head: CI001 35 px at 788 px/m -> 2.10; CI012 15 px at 312 px/m -> 2.10",
+    "error": "+-0.05",
+    "confidence": "medium-high",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Q3-19",
+    "title": "Black linear wall lamps (picture-light type) on the corridor walls at ~2.45 (not modelled)",
+    "spec": "INT_C_F1 new boxes F1_Hall_WallLamp_* (zone_c_v6 plan or hand fittings)",
+    "current": "none in the halls (only StairE/W_WallLight)",
+    "proposed": "Box 0.35 x 0.08 x 0.06 (M_Steel_Paint_Dark, ue_asset wall_light_linear_black) at z 2.45, one per bench/door bay on both hall walls. Seen: S wall C-local x ~19.7 (1.12 m E of the 101 door frame), the W-end walls near the 107/106 doors, and the N wall over the 105-side bench.",
+    "photos": [
+     "CI001",
+     "CI003",
+     "CI004"
+    ],
+    "method": "CI001: lamp 0.42 above the door head (289 display px/m)",
+    "error": "z +-0.1, x +-0.3, count unsure",
+    "confidence": "medium (existence), low (count)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-20",
+    "title": "F1 west stair: the corridor-lane flight's foot is at the S end and it rises N to a N landing, as modelled. This is evidence against V3-05 (rotate 180 deg) at F1.",
+    "spec": "INT_C_F1 StairW_F1_* (deferred V3-04/V3-05)",
+    "current": "model as photo",
+    "proposed": "No change at F1. If V3-05 holds for F3, the stack is not a simple repeat; keep it deferred.",
+    "photos": [
+     "CI003",
+     "CI004"
+    ],
+    "method": "Topology with 2 cues: (1) looking W, the end wall holds a window + black landing door, unlike the E end's timber exit door (CI015); (2) the near flight rises left->right, so its foot is on the left = S. CI015 shows the E stair with its foot at the S as well, mirrored as in the model.",
+    "error": "-",
+    "confidence": "high (F1)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-22",
+    "title": "Lobby: radiators on both side walls near the entrance + a wall terminal (not modelled)",
+    "spec": "INT_C_F1 new boxes F1_Lobby_Radiator_W/E, F1_Lobby_Terminal",
+    "current": "none",
+    "proposed": "F1_Lobby_Radiator_W: 0.85 x 0.08 x 0.55, bottom 0.17, at C-local (12.49,2.70) (just S of the vending machine, on the P2 face), world (185.832,-1.439). F1_Lobby_Radiator_E: same size at (16.91,2.70), world (190.288,-1.617). Terminal 0.15 x 0.08 x 0.25 on the E wall at z 1.55, C-local (16.91,4.3). The kiosk order (vending S, coffee, charge kiosk N; cooler on the E wall) matches the model.",
+    "photos": [
+     "CI002",
+     "CI010",
+     "CI011"
+    ],
+    "method": "visual order; radiator ~13 sections",
+    "error": "+-0.4",
+    "confidence": "medium (existence), low (position)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-23",
+    "title": "Fire-hose cabinets are on the NORTH hall wall against the stair-front corner at both ends (model: S wall)",
+    "spec": "INT_C_F1 F1_FireHose_W / F1_FireHose_E (+ F2+ copies)",
+    "current": "W at C-local (4.44,7.12), E at (23.12,8.42), both on the S hall wall; z 1.10-1.75; 0.54 x 0.23 x 0.65",
+    "proposed": "E: centre C-local (25.745,13.985) = world (199.546,9.308), dir EAST, size 0.51 x 0.23 x 0.57, z0 7.59 (1.19 above F1). W (mirror, CI003): C-local (3.655,12.685) = world (177.422,8.889), same size and z. Add a white riser pipe d 0.05 in each corner.",
+    "photos": [
+     "CI012",
+     "CI015",
+     "CI003"
+    ],
+    "method": "CI012 frontal N wall, scale 308 px/m from the 0.99 door frame (x 185-490): cabinet x 662-818, top 1.75, bottom 1.19. CI003: W-end cabinet on the N wall beside the 106 door.",
+    "error": "+-0.08",
+    "confidence": "high (wall), medium (x)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-24",
+    "title": "103 door E frame edge to the stair-front corner = 1.07 m (model 1.46): either the door or the stair bay is off by ~0.4 m (disputed)",
+    "spec": "zone_c_v6.py DOOR_N['N5'] (0.45 m off the board corner) vs FRONT_E = X_E - STAIR_X (26.05)",
+    "current": "103 frame 23.60-24.59, corner 26.05",
+    "proposed": "Unsure which moves: (a) stair bay 3.29 wide (FRONT_E 25.66), or (b) the 103 door 0.39 m further E (0.84 off the board corner). Neither is better supported: the 0.45 door rule is measured only in C105. A frontal photo of the F1 N wall from the 103 door to the E end wall, or a tape measure across the stair, settles it.",
+    "photos": [
+     "CI012"
+    ],
+    "method": "308 px/m on the frontal wall, from the 0.99 frame",
+    "error": "+-0.10",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-26",
+    "title": "CCTV dome in the E stair hall on the S hall wall by the end wall (not modelled)",
+    "spec": "INT_C_F1 new box F1_CCTV_StairE",
+    "current": "F1 domes only at C-local (6.13,12.65) and (21.25,13.95)",
+    "proposed": "Box 0.12 x 0.12 x 0.10, M_Plastic_White, at C-local (28.60,8.32) = world (202.173,3.534), z0 9.28 (2.88 above F1)",
+    "photos": [
+     "CI013",
+     "CI015",
+     "CI016"
+    ],
+    "method": "visual: dome just W of the S wall / end wall corner, at the ceiling",
+    "error": "+-0.3",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-27",
+    "title": "Lab 204 (F2 SE corner) paint follows the C105 rule, not the V3-01 swap: S window wall WHITE, E end wall SAGE, board wall sage with a white strip by the door; no orange stripe in 204",
+    "spec": "zone_c_v6.py fitout(): swap = room_kind == 'lab' and end_room (INT_C_Floors F2_R204_WindowWall_Paint slot M_Paint_Sage, F2_R204_BackWall_Paint M_Paint_White); board wall paint as Q3-12",
+    "current": "204: window wall sage, end wall white (V3-01 applied to all corner labs)",
+    "proposed": "F2_R204_WindowWall_Paint slot M_Paint_White. F2_R204_BackWall_Paint slot M_Paint_Sage. Board-wall sage skin for v 1.5..D-0.60 (+ pilaster) as in Q3-12. Keep the swap only for the lab V3-01 actually filmed (not 204). V3-02 (board-wall stripe) does not apply to 204.",
+    "photos": [
+     "CR001",
+     "CR002",
+     "CR003",
+     "CR004",
+     "CR005",
+     "CR009",
+     "CR010"
+    ],
+    "method": "Topology: the board is on the W wall (the door is on its right in CR010). The window wall is the one with the window next to the board wall on its S side (CR002 left; CR003 faces it: white wall between two sage walls, CCTV at SE). The end wall holds the network cabinet (V3-03 location; CR004/CR005: sage with the window and the cabinet N of it).",
+    "error": "-",
+    "confidence": "high (204)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Q3-28",
+    "title": "WC: double light switch on the tiles at ~0.90 in an inside corner beside the above-band socket (not modelled)",
+    "spec": "zone_c_v6.py wc_fitout(): new box R+'LightSwitch'",
+    "current": "only the cubicle switches + the socket",
+    "proposed": "Box 0.08 x 0.015 x 0.08 (M_Plastic_White) on the tile face at z 0.86-0.94, in the corner opposite the basins next to the Socket (a = WC_W - T, b = bc + 0.10). The exact corner is unsure.",
+    "photos": [
+     "CW006"
+    ],
+    "method": "the switch sits just below the 0.96 tile seam",
+    "error": "z +-0.05, position unsure",
+    "confidence": "low",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "CI010/CI011/CI002: coffee kiosk header lettering and instruction panels -> sign to KOCH (KOCH coffee kiosk)",
+   "CI010/CI002: vending machine brand graphic and stickers -> sign to KOCH",
+   "CI002/CI010/CR022: power-bank rental kiosk brand panels and Cyrillic slogans -> sign to KOCH",
+   "CK018/CK021/CR003: monitor/TV brand logos (front and back) -> KOCH or plain",
+   "CI012: room number plate on the door frame ('103') -> KOCH room plate (number is fine)",
+   "CI017/CI025: school desk/chair maker logos on the desk modesty plates and chair backs -> KOCH or plain"
+  ],
+  "open_questions": [
+   "Which corner computer lab has the long window wall painted green (this was seen in a video), and is it 201, 205 or 103? In 204 the window wall is white and the end wall green.",
+   "In room 102 (and the other plain classrooms), does the teacher always sit between the desk and the board, facing the class?"
+  ]
+ }
+]

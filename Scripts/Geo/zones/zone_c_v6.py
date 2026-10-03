@@ -305,50 +305,75 @@ def plan(k, zb, lobby, west_stair):
         h0, h1 = hall(x + 0.01)
         els.append(slab(f"{P}Hall_Beam_{x:.1f}", x - 0.2, x + 0.2, min(hall(x - 0.01)[0], h0), max(hall(x - 0.01)[1], h1),
                         zb + COR_BEAM_Z, zb + CC, "white", **ev("bulkheads crossing the hall at the lobby sides, underside 2.66 (003)")))
-    # blue accent panels at the end-room doors and around the WC doors
-    # the paint runs round the door opening (a box over it hid the door); on F1 north it runs on to the stair-bay corner
-    # with the fire-hose cabinet on it (135/138: blue from ~0.1 m beside the frame to the flight-1 side wall)
-    # F2+ (2026-10-03 photo pass Q0-06, F3 photos B026-B040; F2/F4 assumed): blue only over every classroom door, from
-    # the door head to the bulkhead, white beside it; F1 keeps the full-height paint at the end-room doors (135/138)
+    # blue accent paint (2026-10-03 Q3-17 F1 CI/CK + Q0-06 F3 B026-B040, supersedes the end-room L/R panels): a frame-wide
+    # panel over every classroom door from the head to the ceiling; on F1 room 103 (N5) the blue also runs from its east
+    # jamb to the stair-front corner, where the fire-hose cabinet hangs. Around the WC doors the wall is blue (owner).
     hall_doors = [(key, DOOR_S[key], False) for key in ("S1", "S2", "S4", "S5")] + \
                  [(key, DOOR_N[key], True) for key in ("N1", "N2", "N4", "N5")] + ([] if lobby else [("T", DOOR_TEACH, False)])
-    painted = {}
+    blue = [(P2 + 0.1, P_WCM, True), (X_JN + PART / 2, P3 - 0.1, True)]   # full-height blue ranges (x0, x1, north) for skins
+    if k == 1:                                                          # F1 WC zone as photographed (Q2-10, below)
+        blue = [(X_JN + PART / 2, DOOR_N["N4"] + DOOR_W / 2 + 0.22, True)]
+    evq = ev("periwinkle-blue panel over the classroom door, head to ceiling (2026-10-03 Q3-17 / Q0-06)",
+             "high" if k in (1, 3) else "low")
+    zt = DOOR_H + 0.02
     for key, x, north in hall_doors:
-        if k == 1 and key not in ("N1", "N5", "S1", "S5"):
-            continue
         yy = (hall(x)[1] - 0.01) if north else (hall(x)[0] + 0.01)
-        o0, o1 = x - DOOR_W / 2 - 0.02, x + DOOR_W / 2 + 0.02          # wall opening (wall() adds 2 cm a side)
-        a0, a1 = x - DOOR_W / 2 - 0.6, x + DOOR_W / 2 + 0.6
-        if north and k == 1:
-            a0, a1 = (a0, X_E - STAIR_X) if key == "N5" else (X_W + STAIR_X, a1)
-        zt = DOOR_H + 0.02
-        parts = (("L", a0, o0, 0.1, CC - 0.1), ("R", o1, a1, 0.1, CC - 0.1), ("T", o0, o1, zt, CC - 0.1)) if k == 1 else \
-                (("T", o0, o1, zt, CC - 0.1),)
-        painted[key] = k == 1
+        parts = [("T", x - DOOR_W / 2, x + DOOR_W / 2, zt, CC - 0.02)]
+        if k == 1 and key == "N5":
+            parts.append(("R", x + DOOR_W / 2 + 0.02, FRONT_E, 0.1, CC - 0.02))
+            blue.append((x + DOOR_W / 2 + 0.02, FRONT_E, True))
         for nm, u0, u1, z0_, z1_ in parts:
             els.append({"type": "box", "name": f"{P}Accent_{key}_{nm}", "center": c_to_w((u0 + u1) / 2, yy), "dir_deg": EAST,
-                        "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_), "material": "accent",
-                        **(ev("periwinkle-blue paint round the end-room door (hall photos 135/138)") if k == 1 else
-                           ev("periwinkle-blue panel over the classroom door, door head to bulkhead (2026-10-03 Q0-06, F3 "
-                              "B026-B040)", "medium" if k == 3 else "low"))})
+                        "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_), "material": "accent", **evq})
+
+    def on_blue(xa, xb, north):
+        return any(n == north and xa < b1 and xb > b0 for b0, b1, n in blue)
     # black room plate (KOCH number) on the frame side of every classroom door at FFL+1.70 (Q0-06; side assumed: +x)
     for key, x, north in hall_doors:
-        off = 0.02 if painted.get(key) else 0.0                         # in front of the F1 paint skin
+        xp = x + DOOR_W / 2 + 0.02 + 0.10
+        off = 0.02 if on_blue(xp - 0.06, xp + 0.06, north) else 0.0     # in front of the blue paint skin
         yy = (hall(x)[1] - off - 0.005) if north else (hall(x)[0] + off + 0.005)
         rn = num.get(key, f"{k}09")
-        els.append({"type": "box", "name": f"{P}RoomPlate_{key}", "center": c_to_w(x + DOOR_W / 2 + 0.02 + 0.10, yy),
+        els.append({"type": "box", "name": f"{P}RoomPlate_{key}", "center": c_to_w(xp, yy),
                     "dir_deg": EAST, "size": [0.12, 0.01, 0.16], "z0": z(zb + 1.62), "material": "metal",
                     "slot": "M_Plastic_Black", "ue_asset": "room_plate", "content": f"KOCH {rn}",
                     **ev("black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)", "low")})
-    # WC accent walls: same paint-round-the-opening rule (a full panel hid both WC doors, owner 2026-10-03)
-    for (x0, x1, yy), (xd, _wc) in zip(((P2 + 0.1, P_WCM, HW1 - 0.01), (P_WCM, P3 - 0.1, HE1 - 0.01)), WC_DOORS):
-        o0, o1, zt = xd - WC_DOOR_W / 2 - 0.02, xd + WC_DOOR_W / 2 + 0.02, DOOR_H + 0.02
-        for nm, u0, u1, z0_, z1_ in (("L", x0, o0, 0.1, CC - 0.1), ("R", o1, x1, 0.1, CC - 0.1), ("T", o0, o1, zt, CC - 0.1)):
-            if u1 - u0 < 0.02:
-                continue
-            els.append({"type": "box", "name": f"{P}Accent_WC_{x0:.1f}_{nm}", "center": c_to_w((u0 + u1) / 2, yy),
-                        "dir_deg": EAST, "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_),
-                        "material": "accent", **ev("blue accent wall at the WC doors, painted round the door opening")})
+    # F1: black linear wall lamps at 2.45, one per classroom door, 1.12 m east of the frame (Q3-19; count unsure)
+    if k == 1:
+        for key, x, north in hall_doors:
+            xl = x + DOOR_W / 2 + 1.12 + 0.175
+            off = 0.02 if on_blue(xl - 0.175, xl + 0.175, north) else 0.0
+            yy = (hall(x)[1] - off - 0.04) if north else (hall(x)[0] + off + 0.04)
+            els.append({"type": "box", "name": f"{P}Hall_WallLamp_{key}", "center": c_to_w(xl, yy), "dir_deg": EAST,
+                        "size": [0.35, 0.08, 0.06], "z0": z(zb + 2.45), "material": "metal", "slot": "M_Steel_Paint_Dark",
+                        "ue_asset": "wall_light_linear_black", **ev("black linear wall lamp at ~2.45 (2026-10-03 Q3-19)", "low")})
+    # WC accent walls: same paint-round-the-opening rule (a full panel hid both WC doors, owner 2026-10-03). F1 as
+    # photographed (Q2-10 CC/CI): WC4 only a 1.10 panel over its door; the WC5 recess blue full height from the jog face
+    # to the 104 (N4) door frame and 0.22 past it; F2+ (not photographed) keep the paint-round rule.
+    wcs = ((P2 + 0.1, P_WCM, HW1 - 0.01), (X_JN + PART / 2, P3 - 0.1, HE1 - 0.01))
+    if k == 1:
+        evw = ev("F1 WC zone blue as photographed (2026-10-03 Q2-10)", "medium")
+        xd4, xd5, x4 = WC_DOORS[0][0], WC_DOORS[1][0], DOOR_N["N4"]
+        o0, o1 = xd5 - WC_DOOR_W / 2 - 0.02, xd5 + WC_DOOR_W / 2 + 0.02
+        for nm, u0, u1, z0_, z1_, yy in (("WC4_T", xd4 - 0.55, xd4 + 0.55, zt, CC - 0.1, HW1 - 0.01),
+                                         ("WC5_L", X_JN + PART / 2, o0, 0.1, CC - 0.1, HE1 - 0.01),
+                                         ("WC5_T", o0, o1, zt, CC - 0.1, HE1 - 0.01),
+                                         ("WC5_R", o1, x4 - DOOR_W / 2, 0.1, CC - 0.1, HE1 - 0.01),
+                                         ("N4_R", x4 + DOOR_W / 2, x4 + DOOR_W / 2 + 0.22, 0.1, CC - 0.1, HE1 - 0.01)):
+            els.append({"type": "box", "name": f"{P}Accent_{nm}", "center": c_to_w((u0 + u1) / 2, yy), "dir_deg": EAST,
+                        "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_), "material": "accent", **evw})
+        els.append({"type": "box", "name": f"{P}Accent_Jog", "center": c_to_w(X_JN + PART / 2 + 0.01, (HW1 + HE1) / 2),
+                    "dir_deg": NORTH, "size": [round(HE1 - HW1, 3), 0.02, round(CC - 0.2, 3)], "z0": z(zb + 0.1),
+                    "material": "accent", **evw})
+    else:
+        for (x0, x1, yy), (xd, _wc) in zip(wcs, WC_DOORS):
+            o0, o1 = xd - WC_DOOR_W / 2 - 0.02, xd + WC_DOOR_W / 2 + 0.02
+            for nm, u0, u1, z0_, z1_ in (("L", x0, o0, 0.1, CC - 0.1), ("R", o1, x1, 0.1, CC - 0.1), ("T", o0, o1, zt, CC - 0.1)):
+                if u1 - u0 < 0.02:
+                    continue
+                els.append({"type": "box", "name": f"{P}Accent_WC_{x0:.1f}_{nm}", "center": c_to_w((u0 + u1) / 2, yy),
+                            "dir_deg": EAST, "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_),
+                            "material": "accent", **ev("blue accent wall at the WC doors, painted round the door opening")})
     for n, x in enumerate((FRONT_W + 3.9, FRONT_E - 3.9)):
         els.append({"type": "box", "name": f"{P}Hall_Radiator_{n}", "center": c_to_w(x, hall(x)[1] - 0.06), "dir_deg": EAST,
                     "size": [0.8, 0.08, 0.55], "z0": z(zb + 0.15), "material": "white", **ev("sectional radiator on the north hall wall")})
@@ -358,42 +383,60 @@ def plan(k, zb, lobby, west_stair):
                     "length": 1.8, "depth": 0.40, "seat_h": 0.45, "back": False, "z": z(zb + (HALL_FIN if k > 1 else 0.0)), "slot": "M_Wood_Oak_Light",
                     "ue_asset": "bench_box_upholstered", **ev("hall bench: oak-orange wooden box base + black upholstered pad "
                                                               "(video V3-07); length 1.8 kept (>= 2.4 per V3-07, unsure)", "low")})
-    if k > 1:
-        els += hall_finish(k, zb, west_stair, [(x, DOOR_W, north) for _, x, north in hall_doors] +
-                           [(xd, WC_DOOR_W, True) for xd, _ in WC_DOORS])
+    els += hall_finish(k, zb, west_stair, lobby, [(x, DOOR_W, north) for _, x, north in hall_doors] +
+                       [(xd, WC_DOOR_W, True) for xd, _ in WC_DOORS], blue)
     return els
 
 
 HALL_FIN = 0.010     # F2+ corridor terrazzo tile on the slab (m)
 
 
-def hall_finish(k, zb, west_stair, doors):
-    """F2-F4 corridor: light-grey terrazzo tiles wall face to wall face between the stair halls, grey terrazzo skirting
-    0.08 on both long walls, broken at the door openings (2026-10-03 Q0-07, F3 B026-B033). Pieces split at the jogs:
-    the north face steps at X_JN + PART/2, the south face at X_JS - PART/2 (hall_doors x, width, north)."""
-    P, ev7 = f"F{k}_", ev("terrazzo tile floor + terrazzo skirting in the upper corridors (2026-10-03 Q0-07)", "medium")
+def hall_finish(k, zb, west_stair, lobby, doors, blue):
+    """Corridor finishes between the stair halls. F2-F4: light-grey terrazzo tiles wall face to wall face (Q0-07, F3
+    B026-B033). All floors: grey terrazzo skirting 0.08 on both long walls, broken at the openings (Q0-07 / Q3-08). F1:
+    two-tone walls, light greige up to 2.10 and white above, except where the wall is blue (Q3-18 CI; F2+ not seen, white).
+    Pieces split at the jogs: the north face steps at X_JN + PART/2, the south face at X_JS - PART/2; F1 leaves the lobby
+    front open. doors = [(x, width, north)], blue = [(x0, x1, north)] full-height accent ranges."""
+    P, ev7 = f"F{k}_", ev("terrazzo tile floor + terrazzo skirting in the corridors (2026-10-03 Q0-07 / Q3-08)", "medium")
+    fin = HALL_FIN if k > 1 else 0.0
     x0 = FRONT_W if west_stair else FRONT_W + 0.4
     xs = [x0, X_JN + PART / 2, X_JS - PART / 2, FRONT_E]
     ys = [(HW0, HW1), (HW0, HE1), (HE0, HE1)]
-    floor, skirt = [], []
+    floor, skirt, greige = [], [], []
 
     def it(xa, xb, ya, yb, za, zb_):
         cx, cy = c_to_w((xa + xb) / 2, (ya + yb) / 2)
         return [cx, cy, EAST, round(xb - xa, 4), round(yb - ya, 4), round(zb_ - za, 4), z(zb + za)]
+
+    def runs(xa, xb, gaps):
+        """[xa, xb] minus the gap intervals, pieces > 2 cm."""
+        out, a = [], xa
+        for g0, g1 in sorted(gaps) + [(xb, xb)]:
+            if min(g0, xb) - a > 0.02:
+                out.append((a, min(g0, xb)))
+            a = max(a, g1)
+        return out
     for (xa, xb), (ya, yb) in zip(zip(xs[:-1], xs[1:]), ys):
-        floor.append(it(xa, xb, ya, yb, 0.0, HALL_FIN))
+        if k > 1:
+            floor.append(it(xa, xb, ya, yb, 0.0, HALL_FIN))
         for yf, north in ((ya, False), (yb, True)):
-            ops = sorted((x - w / 2 - 0.02, x + w / 2 + 0.02) for x, w, n in doors
-                         if n == north and x + w / 2 + 0.02 > xa and x - w / 2 - 0.02 < xb)   # openings across a split too
-            a = xa
-            for o0, o1 in ops + [(xb, xb)]:
-                if o0 - a > 0.02:
-                    y0_, y1_ = (yf - 0.012, yf) if north else (yf, yf + 0.012)
-                    skirt.append(it(a, o0, y0_, y1_, HALL_FIN, HALL_FIN + 0.08))
-                a = max(a, o1)
-    return [{"type": "boxes", "name": P + "Hall_Floor", "items": floor, "material": "white", "slot": "M_Terrazzo_Grey_Tile",
-             "ue_note": "tile module not measured (count tiles across the 5.8 m corridor)", **ev7},
-            {"type": "boxes", "name": P + "Hall_Skirting", "items": skirt, "material": "white", "slot": "M_Terrazzo_Grey", **ev7}]
+            ops = [(x - w / 2 - 0.02, x + w / 2 + 0.02) for x, w, n in doors if n == north]
+            if lobby and not north:
+                ops.append((P2 - PART / 2, X_JS - PART / 2))                # F1 lobby front: no wall
+            sgn = -1 if north else 1
+            for a, b in runs(xa, xb, ops):
+                skirt.append(it(a, b, *sorted((yf, yf + sgn * 0.012)), fin, fin + 0.08))
+            if k == 1:
+                for a, b in runs(xa, xb, ops + [(b0, b1) for b0, b1, n in blue if n == north]):
+                    greige.append(it(a, b, *sorted((yf, yf + sgn * 0.006)), 0.08, 2.10))
+    out = [{"type": "boxes", "name": P + "Hall_Skirting", "items": skirt, "material": "white", "slot": "M_Terrazzo_Grey", **ev7}]
+    if floor:
+        out.append({"type": "boxes", "name": P + "Hall_Floor", "items": floor, "material": "white", "slot": "M_Terrazzo_Grey_Tile",
+                    "ue_note": "tile module not measured (count tiles across the 5.8 m corridor)", **ev7})
+    if greige:
+        out.append({"type": "boxes", "name": P + "Hall_Dado_Paint", "items": greige, "material": "white", "slot": "M_Paint_Greige",
+                    **ev("two-tone hall walls: light greige to 2.10, white above (2026-10-03 Q3-18 / Q2-09)", "medium")})
+    return out
 
 
 # --- reference classroom fit-out (C105, docs/reference/C105_etalon.png). Room frame: u from the back wall to the board
@@ -467,10 +510,18 @@ def fitout(k, zb, num):
         bx("WindowBeam", 0.25, L - 0.10, D - 0.50, D - PK, C - 0.20, C + 0.01, slot="M_Paint_White", **ref)
         bx("DoorBox", 0.15, L, 0.0, 0.30, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
         bx("BackBox", PK, 0.20, 0.30, D - 0.50, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
-        bx("Pilaster_BackDoor", PK, 0.15, 0.0, 0.30, 0.0, C + 0.01, slot="M_Paint_White", **ref)
         r105 = k == 1 and key == "N2"
+        kind = room_kind(k, key)
+        x0 = to_c(0, 0)[0]
+        ud = ((DOOR_N if key[0] == "N" else DOOR_S)[key] - x0) * su            # door axis along u
+        ud0, ud1 = ud - DOOR_W / 2 - 0.02, ud + DOOR_W / 2 + 0.02              # wall opening
+        # the sage back wall wraps the back pilaster and the corner column in R105 (Q3-05 CK)
+        bx("Pilaster_BackDoor", PK, 0.15, 0.0, 0.30, 0.0, C + 0.01, slot="M_Paint_Sage" if r105 else "M_Paint_White", **ref)
         bx("Column_BackWin", PK, 0.25, D - 0.50, D - PK, 0.0, C + 0.01, slot="M_Paint_Sage" if r105 else "M_Paint_White", **ref)
-        bx("Pilaster_BoardWin", L - 0.10, L, D - 0.60, D - PK, 0.0, C + 0.01, slot="M_Paint_White", **ref)
+        # board wall (Q3-12, classroom 102 / lab 204): sage from v 1.54 to the window pilaster (sage too), white strip by the
+        # door corner; R105's board wall is white (CK021). Other rooms assumed like 102 / 204.
+        board_sage = not r105
+        bx("Pilaster_BoardWin", L - 0.10, L, D - 0.60, D - PK, 0.0, C + 0.01, slot="M_Paint_Sage" if board_sage else "M_Paint_White", **ref)
         # lay-in ceiling (C105 tile metrology): T-grid on the measured seams - along u back box 0.20 + cut 0.28 + 8 x 0.60
         # + cut 0.52, along v door box 0.30 + cut 0.15 + 9 x 0.60 + window beam 0.50 - plus the wall angle on the box/beam
         # faces; 4 LED panels 600 x 600 in tiles u #1/#6 x v #2/#6 (153: front pair at u 4.08-4.68, v 1.65-2.25 / 4.05-4.65)
@@ -484,20 +535,30 @@ def fitout(k, zb, num):
             for j, v0 in enumerate((1.65, 4.05)):
                 bx(f"LED_{i}{j}", u0 + 0.012, u0 + 0.588, v0 + 0.012, v0 + 0.588, C - 0.015, C, mat="white",
                    slot="M_LED_Panel_600", ue_asset="led_panel_600", **ev("600 x 600 LED panel in a grid cell (C105 153/034-037)"))
-        # board wall: 70-inch TV, 1.8 x 1.2 whiteboard, split AC (153)
-        bx("TV", L - 0.085, L - 0.005, 4.30 - 0.98, 4.30 + 0.98, 0.84, 1.99, mat="metal", slot="M_Plastic_Black",
-           ue_asset="interactive_panel_86", **ev("~86-inch interactive panel 1.96 x 1.15, bottom 0.84 (2026-10-03 Q0-08, B034: "
-                                                 "scaled on a 1.20 m whiteboard)", "low"))
-        bx("Whiteboard", L - 0.025, L - 0.005, 1.85 - 0.90, 1.85 + 0.90, 0.75, 1.95, slot="M_Plastic_White", ue_asset="whiteboard_180x120", **ref)
-        bx("AC", L - 0.25, L - 0.005, 5.30 - 0.45, 5.30 + 0.45, 2.30, 2.60, slot="M_AC_Casing", ue_asset="ac_split_indoor", **ref)
-        for n, uc in enumerate((1.98, 3.78)):
-            bx(f"Smoke_{n}", uc - 0.05, uc + 0.05, 3.10, 3.20, C - 0.05, C - 0.012, slot="M_Plastic_White", ue_asset="smoke_detector",
-               **ev("2 ceiling smoke detectors (2026-10-03 Q0-02, R105 TG004-TG011; positions by tile count, other rooms "
-                    "assumed)", "low"))
-        # radiators under the long-facade windows
+        # board wall (2026-10-03 Q3-07, measured R105 CK / classroom 102 CL; Q0-08 superseded): labs a 1.63 m display high,
+        # whiteboard 1.81 x 1.25, AC 0.99 wide; plain rooms a 75-inch interactive panel hung low. Fixed on the paint skin.
+        LB = L - PK
+        evt = ev("board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)", "high" if r105 else "medium")
+        if kind == "lab":
+            bx("TV", LB - 0.06, LB, 3.84 - 0.815, 3.84 + 0.815, 1.15, 2.05, mat="metal", slot="M_Plastic_Black", ue_asset="tv_75in", **evt)
+            bx("Whiteboard", LB - 0.02, LB, 1.57 - 0.905, 1.57 + 0.905, 0.80, 2.05, slot="M_Plastic_White", ue_asset="whiteboard_180x120", **evt)
+            bx("AC", LB - 0.245, LB, 5.20 - 0.495, 5.20 + 0.495, 2.40, 2.72, slot="M_AC_Casing", ue_asset="ac_split_indoor", **evt)
+            bx("Socket_TV", LB - 0.02, LB, 3.78 - 0.08, 3.78 + 0.08, 0.88, 0.93, slot="M_Plastic_White", **evt)
+        else:
+            bx("TV", LB - 0.08, LB, 3.94 - 0.835, 3.94 + 0.835, 0.82, 1.83, mat="metal", slot="M_Plastic_Black",
+               ue_asset="interactive_panel_75", **evt)
+            bx("Whiteboard", LB - 0.02, LB, 1.79 - 0.905, 1.79 + 0.905, 0.74, 1.93, slot="M_Plastic_White", ue_asset="whiteboard_180x120", **evt)
+            bx("AC", LB - 0.245, LB, 5.30 - 0.45, 5.30 + 0.45, 2.30, 2.60, slot="M_AC_Casing", ue_asset="ac_split_indoor", **ref)
+        evs = ev("CCTV dome under the back box at the window-wall corner, 2 smoke detectors (2026-10-03 Q0-02 / Q3-03: R105, "
+                 "102, 204; detector positions by tile count; other rooms assumed)", "medium" if r105 else "low")
+        for n, uc in enumerate((1.98, 4.38)):                              # lay-in cell centres clear of the LED panels
+            bx(f"Smoke_{n}", uc - 0.05, uc + 0.05, 3.10, 3.20, C - 0.05, C - 0.012, slot="M_Plastic_White", ue_asset="smoke_detector", **evs)
+        bx("CCTV", 0.09, 0.21, D - 0.63, D - 0.51, C - 0.35, C - 0.25, slot="M_Plastic_White", ue_asset="cctv_dome", **evs)
+        # radiators under the long-facade windows: 1.20 wide (~15 sections), top 0.87 (Q3-10)
         for n, xw in enumerate(facade_windows(key)):
-            uw = (xw - to_c(0, 0)[0]) * su
-            bx(f"Radiator_{n}", uw - 0.50, uw + 0.50, D - 0.14, D - 0.06, 0.15, 0.70, slot="M_Paint_White", ue_asset="radiator_sectional", **ref)
+            uw = (xw - x0) * su
+            bx(f"Radiator_{n}", uw - 0.60, uw + 0.60, D - 0.14, D - 0.06, 0.30, 0.87, slot="M_Paint_White", ue_asset="radiator_sectional",
+               **ev("sectional radiator 1.20 wide, top ~0.87 (2026-10-03 Q3-10)", "medium"))
         # interior finish of the outer walls (the shell's inner face carries the facade render and the maroon reveals):
         # window wall white with white reveals and PVC window boards, back wall sage green (C105 150/152, labs
         # 2026-10-01); the back wall of the end rooms is the outer end wall with one window at its middle
@@ -528,14 +589,14 @@ def fitout(k, zb, num):
                              box_(o0, o1, *sorted((at + depth_dir * 0.04, at - depth_dir * rv)), zs, zs + 0.02)]
                 a = max(a, o1)
             return paint, trim
-        x0 = to_c(0, 0)[0]
         wops = [((xw - x0) * su - WIN_W / 2, (xw - x0) * su + WIN_W / 2) for xw in facade_windows(key)]
         p_w, t_w = face_skin("u", D, -1, 0.0, L, wops)
         end_room = key[1] in "15"
         p_b, t_b = face_skin("v", 0.0, 1, 0.0, D, [(D / 2 - WIN_W / 2, D / 2 + WIN_W / 2)] if end_room else [])
         # corner PC labs: the facade window wall is sage and the end (back) wall white (video 006 lab pan, 2026-10-03 V3-01);
         # the C105 reference (white window wall, sage back wall) holds for the other rooms
-        swap = room_kind(k, key) == "lab" and end_room
+        # 2026-10-03 Q3-27: lab 204 (F2 SE) follows the C105 rule, so the swap stays only on the unidentified corner labs
+        swap = kind == "lab" and end_room and not (k == 2 and key == "S5")
         els.append({"type": "boxes", "name": R + "WindowWall_Paint", "items": p_w, "material": "white",
                     "slot": "M_Paint_Sage" if swap else "M_Paint_White", **ref})
         els.append({"type": "boxes", "name": R + "BackWall_Paint", "items": p_b, "material": "white",
@@ -544,7 +605,28 @@ def fitout(k, zb, num):
                     **ev("white reveals and PVC window boards (C105 152, labs 2026-10-01)")})
         # laminate floor (C105 152/153, C204, desk room 140-149)
         bx("Floor_Laminate", 0.0, L, 0.0, D, 0.0, LAM, slot="M_Laminate_Oak_Grey", **ref)
-        kind = room_kind(k, key)
+        SK, ST = LAM + 0.045, 0.012                         # laminate skirting top / depth (Q3-08)
+        if board_sage:
+            els.append({"type": "boxes", "name": R + "BoardWall_Paint", "items": [itm(LB, L, 1.54, D - 0.60, SK, C - 0.012)],
+                        "material": "white", "slot": "M_Paint_Sage",
+                        **ev("board wall sage from v 1.54 to the window pilaster, white strip by the door (Q3-12)", "medium")})
+        sk_items = [itm(0.15, ud0, 0.0, ST, LAM, SK), itm(ud1, LB, 0.0, ST, LAM, SK),           # door wall
+                    itm(0.15, 0.15 + ST, ST, 0.30, LAM, SK), itm(PK, 0.15 + ST, 0.30, 0.30 + ST, LAM, SK),   # back-door pilaster
+                    itm(PK, PK + ST, 0.30 + ST, D - 0.50 - ST, LAM, SK),                       # back wall
+                    itm(PK, 0.25 + ST, D - 0.50 - ST, D - 0.50, LAM, SK), itm(0.25, 0.25 + ST, D - 0.50, D - PK - ST, LAM, SK),
+                    itm(0.25 + ST, L - 0.10 - ST, D - PK - ST, D - PK, LAM, SK),                # window wall
+                    itm(L - 0.10 - ST, L - 0.10, D - 0.60 - ST, D - PK - ST, LAM, SK), itm(L - 0.10 - ST, LB, D - 0.60 - ST, D - 0.60, LAM, SK),
+                    itm(LB - ST, LB, ST, D - 0.60 - ST, LAM, SK)]                               # board wall
+        els.append({"type": "boxes", "name": R + "Skirting", "items": sk_items, "material": "white", "slot": "M_Laminate_Oak_Grey",
+                    **ev("laminate skirting 45 mm round the room, broken at the door (2026-10-03 Q3-08)", "medium")})
+        # low white heating pipe along the board wall and the door wall's board end, 0.04 off the faces (Q3-15)
+        els.append({"type": "boxes", "name": R + "HeatPipe", "items": [itm(LB - 0.07, LB - 0.04, 0.07, D - 0.60, 0.21, 0.24),
+                                                                       itm(ud1, LB - 0.04, 0.04, 0.07, 0.21, 0.24)],
+                    "material": "white", "slot": "M_PVC_White", **ev("white heating pipe at ~0.21 (2026-10-03 Q3-15)", "medium")})
+        evbin = ev("waste-paper basket in the board/door corner, light switch beside the door (2026-10-03 Q3-11)", "medium")
+        els.append({"type": "disc", "name": R + "Bin", "pos": c_to_w(*to_c(L - 0.25, 0.27)), "r": 0.14, "z0": z(zb + LAM),
+                    "z1": z(zb + LAM + 0.30), "seg": 16, "material": "white", "slot": "M_Plastic_Green", "ue_asset": "waste_bin_round", **evbin})
+        bx("LightSwitch", L - 0.22, L - 0.14, 0.0, 0.02, 0.83, 0.91, slot="M_Plastic_White", ue_asset="light_switch_double", **evbin)
         door_left = su * sv < 0          # facing the board (+u) the door wall (v = 0) is on the left
         if kind == "class":
             # plain classroom (2026-09-30_C_interior 140-149; owner: 24 pupils + teacher): single desks 0.60 x 0.45 (orange
@@ -568,13 +650,24 @@ def fitout(k, zb, num):
             els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*tp), "depth": 0.60,
                         "slot": "M_Wood_Oak_Light", "ue_asset": "teacher_desk_oak_steel_1200", **t})
             els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*cp), "ue_asset": "office_chair_iso_black", **t})
-            # curtains at the long-facade windows (brown, ceiling track)
+            # curtains (Q3-14 CL / 102): 2 near floor-length panels 0.60 wide per window on a white rail under the beam, also
+            # at the end-wall window of the end rooms (under the back box)
+            evc = ev("curtains 2 x 0.60 per window, ~floor length, white rail (2026-10-03 Q3-14)", "medium")
             for n, xw in enumerate(facade_windows(key)):
-                uw = (xw - to_c(0, 0)[0]) * su
+                uw = (xw - x0) * su
+                bx(f"CurtainRail_{n}", max(0.26, uw - WIN_W / 2 - 0.30), min(L - 0.11, uw + WIN_W / 2 + 0.30), D - 0.16, D - 0.10,
+                   C - 0.25, C - 0.20, slot="M_PVC_White", **evc)
                 for sd in (-1, 1):
-                    uc_ = uw + sd * (WIN_W / 2 + 0.05)
-                    bx(f"Curtain_{n}{'LR'[sd > 0]}", uc_ - 0.20, uc_ + 0.20, D - 0.16, D - 0.10, 0.25, C - 0.22,
-                       slot="M_Fabric_Curtain_Brown", ue_asset="curtain_panel_blackout", **dk)
+                    uc_ = uw + sd * WIN_W / 2
+                    bx(f"Curtain_{n}{'LR'[sd > 0]}", uc_ - 0.30, uc_ + 0.30, D - 0.16, D - 0.10, 0.05, C - 0.25,
+                       slot="M_Fabric_Curtain_Brown", ue_asset="curtain_panel_blackout", **evc)
+            if end_room:
+                bx("CurtainRail_End", 0.10, 0.16, D / 2 - WIN_W / 2 - 0.30, D / 2 + WIN_W / 2 + 0.30, C - 0.30, C - 0.25,
+                   slot="M_PVC_White", **evc)
+                for sd in (-1, 1):
+                    vc_ = D / 2 + sd * WIN_W / 2
+                    bx(f"Curtain_End{'LR'[sd > 0]}", 0.10, 0.16, vc_ - 0.30, vc_ + 0.30, 0.05, C - 0.30,
+                       slot="M_Fabric_Curtain_Brown", ue_asset="curtain_panel_blackout", **evc)
         elif kind in ("teachers", "vice"):
             # staff office (owner: 207 vice principal, 307 / 405 / 408 teachers' offices; layout not photographed): desks
             # 1.40 x 0.70 with PCs along the back and window walls, cabinets along the door wall, a meeting table
@@ -599,39 +692,53 @@ def fitout(k, zb, num):
                 els.append({"type": "chair_row", "name": R + f"MeetingChairs_{'AB'[sd > 0]}", "pos": c_to_w(*to_c(2.60, 3.30 + sd * 0.70)),
                             **dict(mt, n=3, pitch=0.60, face=sd * f_v), "ue_asset": "chair_visitor_black"})
         else:   # kind == "lab"
-            # cream pleated blinds, one per light, on the sashes (Q0-01 R105 TG004-TG011; the other labs assumed); the
-            # window frame's room face is rv inside the wall's inner face
-            evb = ev("cream pleated blinds per light on the sashes, no curtains (2026-10-03 Q0-01)", "medium" if r105 else "low")
+            # pleated blinds in top cassettes, one per light (type W lights 0.35 / 0.30 / 0.35 of the opening), on the sashes
+            # just inside the frame (rv into the wall), also at the end-wall window (Q0-01 TG, Q3-04 CK, R201 Q2-08)
+            evb = ev("white-cream pleated blinds per light in top cassettes, no curtains (2026-10-03 Q0-01 / Q3-04)", "high")
+            LIGHTS = (("L", -0.885, -0.30), ("M", -0.255, 0.255), ("R", 0.30, 0.885))
+            zb0, zb1 = WIN_SILL + 0.05, WIN_SILL + WIN_H - 0.08
             for n, xw in enumerate(facade_windows(key)):
-                uw = (xw - to_c(0, 0)[0]) * su
-                for nm, a0, a1 in (("L", -0.875, -0.295), ("M", -0.245, 0.245), ("R", 0.295, 0.875)):
-                    bx(f"Blind_{n}_{nm}", uw + a0, uw + a1, D + rv - 0.04, D + rv - 0.02, WIN_SILL + 0.06, WIN_SILL + 1.34,
+                uw = (xw - x0) * su
+                for nm, a0, a1 in LIGHTS:
+                    bx(f"Blind_{n}_{nm}", uw + a0, uw + a1, D + rv - 0.04, D + rv - 0.02, zb0, zb1,
                        slot="M_Fabric_Pleated_Cream", ue_asset="pleated_blind", **evb)
-            bx("CCTV", 0.34, 0.46, D - 0.66, D - 0.54, C - 0.10, C - 0.012, slot="M_Plastic_White", ue_asset="cctv_dome",
-               **ev("CCTV dome at the back end of the window beam (2026-10-03 Q0-02)", "medium" if r105 else "low"))
+                    bx(f"BlindBox_{n}_{nm}", uw + a0, uw + a1, D + rv - 0.045, D + rv - 0.015, zb1, zb1 + 0.04, slot="M_PVC_White", **evb)
+            if end_room:
+                for nm, a0, a1 in LIGHTS:
+                    bx(f"Blind_End_{nm}", -rv + 0.02, -rv + 0.04, D / 2 + a0, D / 2 + a1, zb0, zb1,
+                       slot="M_Fabric_Pleated_Cream", ue_asset="pleated_blind", **evb)
+                    bx(f"BlindBox_End_{nm}", -rv + 0.015, -rv + 0.045, D / 2 + a0, D / 2 + a1, zb1, zb1 + 0.04, slot="M_PVC_White", **evb)
             if r105:
-                # corridor wall sage from the back pilaster to an orange + white diagonal stripe that rises towards the door
-                # (bottom u 2.87 at the floor, top u 4.17 under the door box, ~26 deg); door surround white (Q0-05 B016)
-                ub, ut, zt_ = 2.87, 4.17, C - 0.25
+                # corridor wall (Q3-01 CK, supersedes Q0-05): from the back pilaster sage, then a white band 0.12 and an orange
+                # stripe 0.105 rising towards the door (axis u 2.17 at the floor -> 4.59 under the door box, ~42 deg); white
+                # from the stripe to the board corner. Both start above the skirting.
+                ub, ut, z0s, zt_ = 2.17, 4.59, SK, C - 0.25
                 tilt = math.degrees(math.atan2(ut - ub, zt_ - LAM))
-                ln = math.hypot(ut - ub, zt_ - LAM) - 0.07
+                c_ = math.cos(math.radians(tilt))
+                dw = (0.105 / 2 + 0.12 / 2) / c_                                   # white band axis, horizontally (-u)
                 paint = []
-                for i in range(10):                                      # sage to the stripe axis, hidden under the band
-                    za, zb_ = LAM + (zt_ - LAM) * i / 10, LAM + (zt_ - LAM) * (i + 1) / 10
-                    ue = ub + (ut - ub) * (i + 0.5) / 10
+                for i in range(20):                                      # sage up to the white band axis, steps hidden by it
+                    za, zb_ = z0s + (zt_ - z0s) * i / 20, z0s + (zt_ - z0s) * (i + 1) / 20
+                    ue = ub - dw + (ut - ub) * ((za + zb_) / 2 - LAM) / (zt_ - LAM)
                     paint.append(itm(0.15, ue, 0.0, PK, za, zb_))
                 els.append({"type": "boxes", "name": R + "DoorWall_Paint", "items": paint, "material": "white",
-                            "slot": "M_Paint_Sage", **ev("R105 corridor wall sage (2026-10-03 Q0-05 B011/B016)", "medium")})
-                um, zm = (ub + ut) / 2, (LAM + zt_) / 2
-                c_ = math.cos(math.radians(tilt))
-                for nm, du, w, sl in (("Orange", 0.0, 0.13, "M_Paint_Orange"), ("White", 0.115 / c_, 0.10, "M_Paint_White")):
+                            "slot": "M_Paint_Sage", **ev("R105 corridor wall sage (Q3-01 / Q0-05)", "high")})
+                ln = (zt_ - z0s) / c_ - 0.08                                       # ends inside the wall height
+                zm = (z0s + zt_) / 2
+                um = ub + (ut - ub) * (zm - LAM) / (zt_ - LAM)
+                for nm, du, w, sl in (("Orange", 0.0, 0.105, "M_Paint_Orange"), ("White", -dw, 0.12, "M_Paint_White")):
                     bx(f"DoorWallStripe_{nm}", um + du - w / 2, um + du + w / 2, PK, PK + 0.004, zm - ln / 2, zm + ln / 2,
                        slot=sl, tilt_deg=round(su * tilt, 2),
-                       **ev("orange + white diagonal stripe on the corridor wall by the door (2026-10-03 Q0-05)", "low"))
-            # wall-mounted black network cabinet + white panel under it on the end wall by the corridor-corner pilaster (V3-03)
-            bx("NetCabinet", PK, 0.45, 0.35, 0.95, 2.0, 2.45, slot="M_Steel_Paint_Dark", ue_asset="network_cabinet_wall_9u",
-               **ev("black wall network cabinet ~0.60 x 0.45 x 0.45, bottom ~2.0 (video 006 lab, 2026-10-03 V3-03)", "low"))
-            bx("NetPanel", PK, 0.046, 0.45, 0.85, 1.40, 1.80, slot="M_Plastic_White", **ev("white panel below the cabinet (V3-03)", "low"))
+                       **ev("orange stripe + white band on the corridor wall (2026-10-03 Q3-01 CK, Q0-05 B016)", "medium"))
+            # black wall network cabinet with a glass door, white DB panel under it and a conduit, on the end (back) wall by
+            # the corridor-corner pilaster (V3-03; heights Q3-02 R105: cabinet 1.60-2.05, panel 1.18-1.60)
+            evn = ev("network cabinet 1.60-2.05 + DB panel 1.18-1.60 + conduit (2026-10-03 Q3-02; V3-03 read ~2.0)", "medium")
+            bx("NetCabinet", PK, 0.45, 0.35, 0.95, 1.60, 2.05, slot="M_Steel_Paint_Dark", ue_asset="network_cabinet_wall_9u", **evn)
+            bx("NetPanel", PK, 0.10, 0.50, 0.80, 1.18, 1.60, slot="M_Plastic_White", ue_asset="db_panel_meter", **evn)
+            bx("NetConduit", PK, PK + 0.03, 0.60, 0.64, 0.90, 1.18, slot="M_PVC_White", **evn)
+            # white PVC trunking along the door wall behind the wall row (Q3-06)
+            bx("Trunking_Door", 0.25, 4.25, PK + 0.004, PK + 0.054, 0.78, 0.88, slot="M_PVC_White",
+               **ev("PVC trunking at desk height behind the wall row (2026-10-03 Q3-06)", "low"))
             # 25 PCs (owner 2026-10-01, C105 150-153): one row of 5 against the door wall (users face the wall) + two
             # islands of 2 rows back to back (users on the outer sides); desks 0.80 x 0.60 from 0.40 m off the back wall.
             # Island axes 2.50 / 4.95 m from the door wall: ~0.62 m between back-to-back chair rows, 1.1 m to the window wall.
@@ -651,9 +758,10 @@ def fitout(k, zb, num):
             # up to the board wall (end against the wall); the teacher sits with his back to the windows, PC in front
             tv = 4.95 + 0.30
             t = {"dir_deg": d_u, "face": f_v, "n": 1, "pitch": 1.40, "z": z(zb + LAM), **lab}
-            els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(L - 0.70, tv)), "depth": 0.60, **t})
-            els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(L - 0.70, tv)), **dict(t, z=z(zb + LAM + 0.75))})
-            els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(L - 0.70, tv + 0.62)), **t})
+            tu = L - 0.79                                   # end 0.09 off the board wall: clear of its heating pipe (Q3-15)
+            els.append({"type": "desk_row", "name": R + "TeacherDesk", "pos": c_to_w(*to_c(tu, tv)), "depth": 0.60, **t})
+            els.append({"type": "monitor_row", "name": R + "TeacherPC", "pos": c_to_w(*to_c(tu, tv)), **dict(t, z=z(zb + LAM + 0.75))})
+            els.append({"type": "chair_row", "name": R + "TeacherChair", "pos": c_to_w(*to_c(tu, tv + 0.62)), **t})
     return els
 
 
@@ -1015,6 +1123,25 @@ def build():
     f1.append({"type": "box", "name": "F1_ChargeKiosk", "center": c_to_w(P2 + PART / 2 + 0.25, HW0 - 0.75), "dir_deg": EAST,
                "size": [0.40, 0.40, 1.45], "z0": z(0.0), "material": "white", "slot": "M_Plastic_White", "ue_asset": "powerbank_kiosk",
                **ev("power-bank rental kiosk by the coffee kiosk (002)")})
+    # lobby radiators on both side walls near the entrance + a wall terminal on the east wall (2026-10-03 Q3-22 CI)
+    evl = ev("lobby radiators on both side walls by the entrance + wall terminal (2026-10-03 Q3-22; positions +-0.4)", "low")
+    for nm, xr in (("W", P2 + PART / 2 + 0.06), ("E", P3 - PART / 2 - 0.06)):
+        f1.append({"type": "box", "name": f"F1_Lobby_Radiator_{nm}", "center": c_to_w(xr, 2.70), "dir_deg": NORTH,
+                   "size": [0.85, 0.08, 0.55], "z0": z(0.17), "material": "white", "slot": "M_Paint_White",
+                   "ue_asset": "radiator_sectional", **evl})
+    f1.append({"type": "box", "name": "F1_Lobby_Terminal", "center": c_to_w(P3 - PART / 2 - 0.04, 4.30), "dir_deg": NORTH,
+               "size": [0.15, 0.08, 0.25], "z0": z(1.55), "material": "white", "slot": "M_Plastic_Grey", "ue_asset": "wall_terminal", **evl})
+    evf = ev("lobby W wall fittings: fire-alarm panel, breaker box, clear box, 4-gang socket (2026-10-03 Q2-12; wall unsure)", "low")
+    for nm, y0_, y1_, d_, z0_, z1_, sl in (("FireAlarmPanel", 2.40, 2.80, 0.10, 1.50, 1.80, "M_Plastic_White"),
+                                           ("BreakerBox", 2.85, 3.15, 0.10, 1.50, 1.90, "M_Plastic_Grey"),
+                                           ("ClearBox", 2.15, 2.35, 0.08, 1.65, 1.90, "M_Plastic_White"),
+                                           ("Socket4", 1.90, 2.20, 0.03, 0.30, 0.38, "M_Plastic_White")):
+        f1.append({"type": "box", "name": f"F1_Lobby_{nm}", "center": c_to_w(P2 + PART / 2 + d_ / 2, (y0_ + y1_) / 2),
+                   "dir_deg": NORTH, "size": [round(y1_ - y0_, 3), d_, round(z1_ - z0_, 3)], "z0": z(z0_), "material": "white",
+                   "slot": sl, **evf})
+    f1.append({"type": "box", "name": "F1_CCTV_StairE", "center": c_to_w(28.60, HE0 + 0.07), "dir_deg": EAST, "size": [0.12, 0.12, 0.10],
+               "z0": z(2.88), "material": "white", "slot": "M_Plastic_White", "ue_asset": "cctv_dome",
+               **ev("CCTV dome on the S hall wall by the E end wall (2026-10-03 Q3-26)", "medium")})
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
     # east stair hall (138): the end wall steps back at the F2 floor over flight 2 - a white ledge with a row of potted

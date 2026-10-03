@@ -681,12 +681,12 @@
   {
    "type": "lightwell",
    "edge": 0,
-   "u0": 0.6,
+   "u0": -0.37,
    "u1": 12.3,
    "depth": 2.3,
    "z_wall": -0.1,
    "z_edge": -0.7,
-   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated | 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band and fall to a low fascia ~0.35 m above the paving (012526070, 061624280); they roof the basement corridor, whose floor is now plaza-1.38 (INT_C_Basement) | [B] owner 2026-09-28: starts after the basement stair's foot (the stair descends east along this line; the cover began over its last steps) | [B] ends at the stair's west cheek (ribs ran into the cheek)",
+   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated | 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band and fall to a low fascia ~0.35 m above the paving (012526070, 061624280); they roof the basement corridor, whose floor is now plaza-1.38 (INT_C_Basement) | [B] owner 2026-09-28: starts after the basement stair's foot (the stair descends east along this line; the cover began over its last steps) | [B] ends at the stair's west cheek (ribs ran into the cheek) | 2026-10-03 photo pass batch 2 Q2-05 (CE): the W cover runs west to the canopy E post",
    "confidence": "medium",
    "parapet": {
     "spans": [
@@ -865,14 +865,16 @@
    "type": "wall_sign",
    "name": "CPlate",
    "edge": 2,
-   "u0": 1.65,
-   "u1": 2.15,
-   "z0": 3.33,
-   "z1": 3.56,
+   "u0": 1.75,
+   "u1": 1.98,
+   "z0": 3.3,
+   "z1": 3.58,
    "t": 0.02,
    "color": "sign",
-   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH",
-   "confidence": "medium"
+   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH | 2026-10-03 photo pass batch 2 Q2-01 (CC): small portrait plate 0.23 x 0.28 on the cassette band under the soffit",
+   "confidence": "medium",
+   "slot": "M_Sign_KOCH",
+   "content": "KOCH C-block plate (letter C + block word)"
   },
   {
    "type": "downpipe",
@@ -920,14 +922,15 @@
     [
      -5.56,
      0.6,
-     0.38,
-     0.2,
+     0.47,
+     0.25,
      0.02
     ]
    ],
    "slot": "M_Sign_KOCH",
    "confidence": "medium",
-   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): small navy plate 0.12 m from the corner above the landing; in game a KOCH plate only (the real text is never used)"
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): small navy plate 0.12 m from the corner above the landing; in game a KOCH plate only (the real text is never used) | 2026-10-03 photo pass batch 2 Q2-17 (CE): plate 0.47 x 0.25",
+   "content": "KOCH training-hall plate"
   },
   {
    "type": "wall_boxes",
@@ -992,6 +995,73 @@
    ],
    "confidence": "low",
    "evidence": "2026-10-02 photo diff: white bullet camera under the soffit at the east reveal of the entrance recess (061631264, 159)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Lamp_EntranceSoffit",
+   "kind": "lamp",
+   "edge": 2,
+   "w0": 0.35,
+   "items": [
+    [
+     1.93,
+     3.5,
+     0.3,
+     0.1,
+     0.3
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-02 (CC): round white dome lamp on the entrance soffit"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "CCTV_SW",
+   "edge": 2,
+   "w0": -0.3,
+   "items": [
+    [
+     0.12,
+     3.25,
+     0.12,
+     0.12,
+     0.2
+    ]
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-02 (CC): CCTV at the W end of the entrance front (u +-0.3)"
+  },
+  {
+   "type": "floodlight",
+   "name": "Flood_LW_W",
+   "edge": 0,
+   "u": [
+    2.95
+   ],
+   "z": -0.65,
+   "w": 2.3,
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-05 (CE): LED flood on the W lightwell cover edge aimed at the facade (u +-0.5)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Poster_DanceHall",
+   "kind": "sign",
+   "edge": 0,
+   "w0": -0.13,
+   "items": [
+    [
+     -5.56,
+     -0.06,
+     0.22,
+     0.31,
+     0.003
+    ]
+   ],
+   "slot": "M_Sign_KOCH",
+   "content": "TODO_LORE: KOCH event poster (A4)",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-17 (CE): the red item under the plate is an A4 event poster, not a fire box"
   }
  ],
  "basement": {

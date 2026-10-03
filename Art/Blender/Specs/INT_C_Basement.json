@@ -229,8 +229,10 @@
      "z1": 6.246
     }
    ],
-   "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box | [B] owner 2026-09-28 ('walls on top of each other'): this wall is the Dance Hall box's south wall itself, from the stair foot up to the canopy (the separate BLD_C DanceHallEntry box on the same spot was removed)",
-   "confidence": "medium"
+   "evidence": "brick-effect tile wall on the left going down with a brown wooden door at the mid landing (012543364, frames 1-10) = the Dance Hall box | [B] owner 2026-09-28 ('walls on top of each other'): this wall is the Dance Hall box's south wall itself, from the stair foot up to the canopy (the separate BLD_C DanceHallEntry box on the same spot was removed) | 2026-10-03 photo pass batch 2 Q2-15 (CE): side walls clad in diagonal red tiles",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red",
+   "ue_pattern": "diagonal_45"
   },
   {
    "type": "int_wall",
@@ -249,8 +251,10 @@
    "z1": 5.43,
    "thk": 0.25,
    "material": "brick",
-   "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80) | 2026-10-02 QA: top 3 cm over the landing (it was coplanar with it where the landing laps over its west end)",
-   "confidence": "medium"
+   "evidence": "brick-tile retaining wall on the right side under the wrought-iron railing (frames 1-10, 70-80) | 2026-10-02 QA: top 3 cm over the landing (it was coplanar with it where the landing laps over its west end) | 2026-10-03 photo pass batch 2 Q2-15 (CE): side walls clad in diagonal red tiles",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red",
+   "ue_pattern": "diagonal_45"
   },
   {
    "type": "int_wall",

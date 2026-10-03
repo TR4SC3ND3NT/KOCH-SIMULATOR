@@ -363,24 +363,9 @@
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0",
+   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0 | 2026-10-03 photo pass batch 2 Q2-06: the pit is bare soil (shrub removed)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
-  },
-  {
-   "type": "tree",
-   "name": "ShrubAN_W0",
-   "pos": [
-    171.5,
-    -17.07
-   ],
-   "height": 0.8,
-   "crown_d": 0.6,
-   "trunk_d": 0.04,
-   "crown_base": 0.1,
-   "shape": "round",
-   "confidence": "medium",
-   "evidence": "2026-10-03 video pass V1-06: young shrub in the pit"
   },
   {
    "type": "bench",
@@ -394,9 +379,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit",
+   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
    "confidence": "medium",
-   "ue_asset": "bench_wrought_iron"
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "planter",
@@ -721,8 +707,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "bench",
@@ -736,8 +724,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "bench",
@@ -751,8 +741,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "bench",
@@ -766,8 +758,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "bench",
@@ -781,8 +775,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "bench",
@@ -796,8 +792,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "tree",
@@ -853,8 +851,10 @@
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
-   "confidence": "medium"
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "confidence": "medium",
+   "ue_asset": "bench_timber_steelframe",
+   "slot": "M_Wood_Stained"
   },
   {
    "type": "path",

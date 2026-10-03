@@ -54,7 +54,7 @@
  "plinth": {
   "z_top": 0.92,
   "proj": 0.03,
-  "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red brick-tile plinth ~1.65 m above the paving (bench backs 0.85 for scale) | 2026-10-02 zaudit: no plinth band along the party walls with the other A blocks",
+  "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red brick-tile plinth ~1.65 m above the paving (bench backs 0.85 for scale) | 2026-10-02 zaudit: no plinth band along the party walls with the other A blocks | 2026-10-03 photo pass batch 2 Q2-19: north end plinth top FFL+1.18 (+-0.12)",
   "skip": {
    "0": [
     [
@@ -68,6 +68,9 @@
      12.85
     ]
    ]
+  },
+  "edge_z_top": {
+   "2": 1.18
   }
  },
  "pilasters": [
@@ -122,12 +125,32 @@
    "surround_proj": 0.0,
    "evidence": "A_S west 3rd-floor windows 86 x 64 px in the rectified pano (0.02289 m/px): 1.97 x 1.47 m; 3 lights + top transom (082337 f0.5, pano intro)",
    "confidence": "medium"
+  },
+  "N1": {
+   "w": 1.9,
+   "h": 1.03,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-03 photo pass batch 2 Q2-19 (CC/CE A_N north wall PnP): F1 north windows 1.90 x 1.03, sill FFL+1.48",
+   "confidence": "medium"
   }
  },
  "rows": {
   "F1": 0.92,
   "F2": 3.98,
-  "F3": 7.04
+  "F3": 7.04,
+  "F1N": 1.48
  },
  "facades": [
   {
@@ -135,15 +158,35 @@
    "name": "north_end",
    "windows": [
     {
+     "type": "N1",
+     "u": [
+      3.48,
+      9.63
+     ],
+     "rows": [
+      "F1N"
+     ]
+    },
+    {
      "type": "N",
      "u": [
       3.48,
       9.63
      ],
      "rows": [
-      "F1",
       "F2"
      ]
+    },
+    {
+     "type": "N1",
+     "u": [
+      14.67,
+      20.82
+     ],
+     "rows": [
+      "F1N"
+     ],
+     "status": "assumed mirror (west half not in the clip)"
     },
     {
      "type": "N",
@@ -152,13 +195,12 @@
       20.82
      ],
      "rows": [
-      "F1",
       "F2"
      ],
      "status": "assumed mirror (west half not in the clip)"
     }
    ],
-   "evidence": "rect of 081158036 f0.3 (+ SfM plane from the Block C model): from the NE corner 1.14 and 3.2 storeys; sills 1.0 storey apart; 3rd floor blank; red fire ladder at u 8.8-9.5 to a roof hatch; storey 266 px",
+   "evidence": "rect of 081158036 f0.3 (+ SfM plane from the Block C model): from the NE corner 1.14 and 3.2 storeys; sills 1.0 storey apart; 3rd floor blank; red fire ladder at u 8.8-9.5 to a roof hatch; storey 266 px | 2026-10-03 photo pass batch 2 Q2-19: F1 windows 1.03 high, sill FFL+1.48 (+-0.12)",
    "confidence": "medium"
   },
   {
@@ -226,23 +268,23 @@
    "edge": 2,
    "items": [
     [
-     10.85,
-     -0.28,
-     2.6,
-     0.7,
+     10.34,
+     -0.06,
+     2.0,
+     1.04,
      0.8
     ],
     [
-     12.6,
-     -0.579,
-     0.55,
-     1.25,
-     0.5
+     11.73,
+     -0.06,
+     0.78,
+     1.69,
+     0.6
     ]
    ],
    "slot": "M_Steel_Galv",
-   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): galvanised air-handling unit on the paving against the plinth + duct into the wall; position along the wall estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): AHU box at u 9.55-12.15 just west of the fire ladder, ~0.45 m up on legs (it overlapped BenchAN_1)",
-   "confidence": "low"
+   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): galvanised air-handling unit on the paving against the plinth + duct into the wall; position along the wall estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): AHU box at u 9.55-12.15 just west of the fire ladder, ~0.45 m up on legs (it overlapped BenchAN_1) | 2026-10-03 photo pass batch 2 Q2-20: AHU box u 9.34-11.34, vertical duct with elbow to FFL+1.63",
+   "confidence": "medium"
   },
   {
    "type": "wall_boxes",
@@ -251,239 +293,301 @@
    "items": [
     [
      8.85,
-     -0.1,
+     0.3,
      0.04,
-     9.3,
+     9.12,
      0.16
     ],
     [
      9.45,
-     -0.1,
+     0.3,
      0.04,
-     9.3,
+     9.12,
      0.16
     ],
     [
      9.15,
-     0.2,
+     0.45,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     0.5,
+     0.75,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     0.8,
+     1.05,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     1.1,
+     1.35,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     1.4,
+     1.65,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     1.7,
+     1.95,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     2.0,
+     2.25,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     2.3,
+     2.55,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     2.6,
+     2.85,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     2.9,
+     3.15,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     3.2,
+     3.45,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     3.5,
+     3.75,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     3.8,
+     4.05,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     4.1,
+     4.35,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     4.4,
+     4.65,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     4.7,
+     4.95,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     5.0,
+     5.25,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     5.3,
+     5.55,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     5.6,
+     5.85,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     5.9,
+     6.15,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     6.2,
+     6.45,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     6.5,
+     6.75,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     6.8,
+     7.05,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     7.1,
+     7.35,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     7.4,
+     7.65,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     7.7,
+     7.95,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     8.0,
+     8.25,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     8.3,
+     8.55,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     8.6,
+     8.85,
      0.6,
      0.025,
      0.16
     ],
     [
      9.15,
-     8.9,
-     0.6,
-     0.025,
-     0.16
-    ],
-    [
      9.15,
-     9.2,
      0.6,
      0.025,
      0.16
     ]
    ],
    "slot": "M_Steel_Paint_Maroon",
-   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red steel roof-access ladder from ~1.0 m above the FFL to the eave, left of the AHU; position estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): ladder at u 8.85/9.45 (the facade note's 'u 8.8-9.5'), over the barred F1 window, starting ~0.6 m above the paving",
+   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red steel roof-access ladder from ~1.0 m above the FFL to the eave, left of the AHU; position estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): ladder at u 8.85/9.45 (the facade note's 'u 8.8-9.5'), over the barred F1 window, starting ~0.6 m above the paving | 2026-10-03 photo pass batch 2 Q2-20: ladder from 0.30 above the FFL to over the gutter (9.42)",
    "confidence": "low"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "ACUnit_North",
+   "kind": "ac",
+   "edge": 2,
+   "items": [
+    [
+     13.7,
+     0.56,
+     0.95,
+     0.8,
+     0.35
+    ]
+   ],
+   "slot": "M_Plastic_White",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: AC outdoor unit on the A_N north wall (x +-0.3)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "ACIsolator_North",
+   "edge": 2,
+   "items": [
+    [
+     13.05,
+     0.9,
+     0.2,
+     0.3,
+     0.1
+    ]
+   ],
+   "slot": "M_Plastic_Grey",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: isolator box by the AC unit"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_North",
+   "edge": 2,
+   "u": [
+    12.55
+   ],
+   "z0": 0.29,
+   "z1": 9.3,
+   "d": 0.1,
+   "jog": {
+    "z": 2.0,
+    "du": 0.38
+   },
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "RoofHatch_North",
+   "edge": 2,
+   "items": [
+    [
+     9.15,
+     9.0,
+     0.6,
+     0.4,
+     0.02
+    ]
+   ],
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: dark roof-hatch opening in the fascia between the ladder rails"
   }
  ],
  "ffl_z": 5.47,

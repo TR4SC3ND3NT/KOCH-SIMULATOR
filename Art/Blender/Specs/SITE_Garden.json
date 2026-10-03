@@ -5334,17 +5334,17 @@
    "type": "stairs_run",
    "name": "AW_NorthSteps",
    "top": [
-    165.233,
-    -20.332
+    165.46,
+    -20.343
    ],
    "dir_deg": 87.192,
-   "risers": 2,
-   "riser_h": 0.15,
+   "risers": 3,
+   "riser_h": 0.1,
    "tread": 0.35,
-   "width": 1.25,
+   "width": 1.5,
    "z_top": 5.65,
    "material": "granite",
-   "evidence": "north end of the deck: 2 granite steps on the outer part of the deck end (012436367 f01-f07; map owner) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py): 2 risers 0.15 from the deck (5.65) to the square",
+   "evidence": "north end of the deck: 2 granite steps on the outer part of the deck end (012436367 f01-f07; map owner) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py): 2 risers 0.15 from the deck (5.65) to the square | 2026-10-03 photo pass batch 2 Q2-18 (CC/CE): 3 risers, 1.50 wide (x 164.71-166.21)",
    "confidence": "medium"
   },
   {
@@ -5352,7 +5352,7 @@
    "name": "AW_NorthRamp",
    "ring": [
     [
-     165.857,
+     166.21,
      -20.363
     ],
     [
@@ -5364,7 +5364,7 @@
      -18.025
     ],
     [
-     165.974,
+     166.33,
      -17.966
     ]
    ],
@@ -5376,7 +5376,7 @@
    ],
    "thk": 0.06,
    "material": "metal",
-   "evidence": "grey grating ramp on the wall side of the deck end, running straight north down to the square (map owner 2026-09-26 marked screenshot) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
+   "evidence": "grey grating ramp on the wall side of the deck end, running straight north down to the square (map owner 2026-09-26 marked screenshot) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: ramp 0.85 wide on the wall side",
    "confidence": "medium"
   },
   {
@@ -5384,7 +5384,7 @@
    "name": "AW_NorthRamp_Base",
    "ring": [
     [
-     165.857,
+     166.21,
      -20.363
     ],
     [
@@ -5396,7 +5396,7 @@
      -18.025
     ],
     [
-     165.974,
+     166.33,
      -17.966
     ]
    ],
@@ -5408,7 +5408,7 @@
    ],
    "thk": 0.5,
    "material": "stone",
-   "evidence": "infill under the ramp | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
+   "evidence": "infill under the ramp | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: ramp 0.85 wide on the wall side",
    "confidence": "medium"
   },
   {
@@ -5416,12 +5416,12 @@
    "name": "AW_NorthRampRail_W",
    "points": [
     [
-     165.887,
+     166.24,
      -20.364,
      5.65
     ],
     [
-     166.004,
+     166.36,
      -17.967,
      5.35
     ]
@@ -5431,7 +5431,7 @@
    "mid_rails": 1,
    "material": "metal",
    "unique_posts": true,
-   "evidence": "ramp rail | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5",
+   "evidence": "ramp rail | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: rail on the narrower ramp's W edge",
    "confidence": "medium"
   },
   {
