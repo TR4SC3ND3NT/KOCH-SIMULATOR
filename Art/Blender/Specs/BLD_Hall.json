@@ -55,10 +55,10 @@
  "plinth": {
   "z_top": 0.35,
   "proj": 0.03,
-  "evidence": "red brick-tile plinth, top 0.84 m above the deck (A_16 rect, 6 m bay scale) | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): plinth ~0.4 above the S walk, 6 courses = 0.6 m above the N paving (A082)",
+  "evidence": "red brick-tile plinth, top 0.84 m above the deck (A_16 rect, 6 m bay scale) | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): plinth ~0.4 above the S walk, 6 courses = 0.6 m above the N paving (A082) | 2026-10-03 photo pass R1-07 (A081-A086, kerb/person scale; tile course ~0.165 here, not 0.10): N plinth top 1.18 above the N paving",
   "confidence": "low",
   "edge_z_top": {
-   "2": -0.15
+   "2": 0.45
   }
  },
  "pilasters": [],
@@ -83,7 +83,7 @@
   },
   "HN": {
    "w": 1.9,
-   "h": 1.45,
+   "h": 1.7,
    "mullions": [
     0.33,
     0.67
@@ -97,7 +97,7 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): N facade windows (A082)",
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): N facade windows (A082) | 2026-10-03 photo pass R1-07: 1.70 high, sills 1.98 above the N paving (1.25 rel FFL), heads 2.95",
    "confidence": "low"
   }
  },

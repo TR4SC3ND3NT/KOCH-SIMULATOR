@@ -804,7 +804,7 @@ def extra_rooms(k, zb):
         # 4.2 / 7.5 / 10.75 above the F1 FFL) over the lobby; west-end room: facade type W 1.85 x 1.40 at row F4 (1.05)
         C = ceil_of(k)
         if num == "410":
-            wins, ww, wsill, wh = [(cw - 0.9) - HW0, (cw + 1.4) - HW0], WIN_W, WIN_SILL, WIN_H
+            wins, ww, wsill, wh = [(cw - 1.35) - HW0, (cw + 1.4) - HW0], WIN_W, WIN_SILL, WIN_H   # cw - 1.35: photo pass R0-05
         else:
             wins, ww, wsill, wh = [X_TOWER0 + 0.92 - P2 - PART / 2, X_TOWER0 + 2.86 - P2 - PART / 2], 1.0, (4.2, 7.5, 10.75)[k - 2] - (k - 1) * STOREY, 1.40
         rv = round(X_W - 0.16 - 0.07, 3)

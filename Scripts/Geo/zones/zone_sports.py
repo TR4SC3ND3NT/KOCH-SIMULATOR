@@ -28,13 +28,16 @@ Z_LOW = Z_PLAZA - 0.60   # lower yard behind the courts (owner 2026-09-28: lower
 # ---------------------------------------------------------------- measured outlines (local u, v)
 P_U0, P_U1, P_V0, P_V1 = -0.10, 44.35, 0.15, 25.40     # pitch plinth = fence line
 P_IN = 0.30                                            # red rubber border inside the fence (drone d_07/d_19)
-# courts block = fence line. 2026-09-28 owner: the courts fence is flush with the pitch fence on both long sides (S and N);
+# courts block = fence line. 2026-09-28 owner: flush with the pitch fence on both long sides (superseded 2026-10-02, below);
 # the ortho read S v 1.7 / N v 28.0 (Google 28.6 incl. the lean band): the band beyond v 25.4 is the workout area
 # behind the basketball court (WORKOUT below), not courts surface
-C_U0, C_U1, C_V0, C_V1 = 50.90, 97.00, P_V0, P_V1
+# 2026-10-02 owner: the courts start AND end further north than the pitch by the same amount (both ends offset); photo
+# pass 2026-10-03 R0-07 (A033/A034/A042 ground metrology, S step 1.65) and R1-02 (1.8): shift 1.72 +-0.1
+C_SHIFT = 1.72
+C_U0, C_U1, C_V0, C_V1 = 50.90, 97.00, P_V0 + C_SHIFT, P_V1 + C_SHIFT
 DIV1, DIV2 = 68.90, 84.35                              # division fences bb|vb, vb|third court
-BB = (52.90, 67.40, 0.90, 24.66)                       # basketball green field: measured 23.76 m long, re-centred in the flush block
-VB = (72.40, 81.10, 3.95, 21.60)                       # volleyball green inner court (8.7 x 17.65 measured), re-centred
+BB = (52.90, 67.40, 0.90 + C_SHIFT, 24.66 + C_SHIFT)   # basketball green field: measured 23.76 m long, centred in the block
+VB = (72.40, 81.10, 3.95 + C_SHIFT, 21.60 + C_SHIFT)   # volleyball green inner court (8.7 x 17.65 measured), centred
 
 EV_ORTHO = ("Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the "
             "rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration)")
@@ -235,9 +238,9 @@ add(type="roof_plane", name="LowerYard_RampE", ring=rect(SE_U0, SE_U1, C_V1, C_V
     evidence=ev_ly + "; owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps)", confidence="low")
 # sand pit for jumps (owner 2026-09-28), west of the ramp, along the retaining wall; long-jump pit size assumed
 EV_SP = "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed"
-add(type="slab", name="LowerYard_SandPit", ring=rect(88.0, 95.0, 27.2, 30.2), z0=Z_LOW - 0.3, z1=Z_LOW + 0.02, material="stone",
+add(type="slab", name="LowerYard_SandPit", ring=rect(88.0, 95.0, 27.2 + C_SHIFT, 30.2 + C_SHIFT), z0=Z_LOW - 0.3, z1=Z_LOW + 0.02, material="stone",
     slot="M_Sand", evidence=EV_SP, confidence="low")
-add(type="planter", name="LowerYard_SandPit_Curb", ring=rect(87.9, 95.1, 27.1, 30.3), curb_w=0.1, curb_h=0.08,
+add(type="planter", name="LowerYard_SandPit_Curb", ring=rect(87.9, 95.1, 27.1 + C_SHIFT, 30.3 + C_SHIFT), curb_w=0.1, curb_h=0.08,
     slot="M_Concrete_Precast", evidence=EV_SP, confidence="low")
 
 # ---------------------------------------------------------------- WORKOUT area behind the basketball court (owner 2026-09-28)
@@ -467,7 +470,7 @@ add(type="tree", name="WestBigSpruce", pos=W(-18.0, 31.0), height=12.0, crown_d=
 
 # ---------------------------------------------------------------- terrain pads
 pads = [
-    dict(name="SportsPlatform", ring=poly([(-20.0, -2.2), (101.0, -2.2), (101.0, 25.4), (44.35, 25.4), (44.35, 26.9),
+    dict(name="SportsPlatform", ring=poly([(-20.0, -2.2), (101.0, -2.2), (101.0, C_V1), (44.35, C_V1), (44.35, 26.9),
                                            (-20.0, 26.9)]), z=Z_PLAZA, blend=10.0,
          evidence="bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone "
                   "2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives "

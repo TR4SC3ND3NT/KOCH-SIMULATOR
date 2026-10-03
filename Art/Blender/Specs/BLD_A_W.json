@@ -157,7 +157,7 @@
  "window_types": {
   "G": {
    "w": 1.8,
-   "h": 1.3,
+   "h": 1.36,
    "mullions": [
     0.5
    ],
@@ -168,11 +168,11 @@
    "surround": [
     0.13,
     0.13,
-    0.2,
-    0.08
+    0.3,
+    0.21
    ],
    "surround_proj": 0.03,
-   "evidence": "ground-floor windows behind the gallery: 1.74-1.95 x 1.30 m, sill 0.87, head 2.17 (rect of pano intro2 yaw 80, f=780.9 px, scale from the 2.17 m double door; eave then 5.87 m = independent check of 5.7-5.9 from the A_S rects); 2026 (012327726 t28.5 frontal): glass 1.80 x 1.30 (w/h ratio 1.38), sill 0.92 / head 2.22 above the gallery floor, maroon surround 0.13 sides, 0.20 bottom down to the plinth, 0.08 top up to the soffit",
+   "evidence": "ground-floor windows behind the gallery: 1.74-1.95 x 1.30 m, sill 0.87, head 2.17 (rect of pano intro2 yaw 80, f=780.9 px, scale from the 2.17 m double door; eave then 5.87 m = independent check of 5.7-5.9 from the A_S rects); 2026 (012327726 t28.5 frontal): glass 1.80 x 1.30 (w/h ratio 1.38), sill 0.92 / head 2.22 above the gallery floor, maroon surround 0.13 sides, 0.20 bottom down to the plinth, 0.08 top up to the soffit | 2026-10-03 photo pass R3-08: 1.36 high, sill 0.97 (head 2.33); surround top to the 2.54 soffit, bottom to the plinth",
    "confidence": "medium"
   },
   "GN": {
@@ -244,13 +244,13 @@
    "confidence": "low"
   },
   "DD": {
-   "w": 1.5,
-   "h": 2.17,
+   "w": 1.35,
+   "h": 2.48,
    "mullions": [
     0.5
    ],
    "transoms": [
-    0.86
+    0.79
    ],
    "reveal": 0.12,
    "surround": [
@@ -260,12 +260,12 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "glazed double door with transom ('Dining Hall' plate, 2GIS 2025-05 photo): dark open doorway with a chair beside it in the bay north of the brick pier (070309303 t21 and t28)",
+   "evidence": "glazed double door with transom ('Dining Hall' plate, 2GIS 2025-05 photo): dark open doorway with a chair beside it in the bay north of the brick pier (070309303 t21 and t28) | 2026-10-03 photo pass R3-08: 1.35 x 2.48 incl. the transom (leaves 1.96)",
    "confidence": "low"
   }
  },
  "rows": {
-  "G1": 0.87,
+  "G1": 0.97,
   "NE": 1.07
  },
  "facades": [
@@ -371,18 +371,18 @@
    ],
    "post_w": 0.114,
    "post_d": 0.114,
-   "z_underside": 2.7,
+   "z_underside": 2.99,
    "roof_type": "shed",
    "roof_thk": 0.06,
    "roof_fall": 0.3,
    "beam_h": 0.45,
    "roof_overhang": 0.15,
    "floor_z": 0.0,
-   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line | A_W gallery deck: one flat tiled platform ~0.30 above the walkway / square along the whole gallery (map owner: 'not less than 25 cm, level everywhere'; 012327726 t4-6 s and t26-30 s: tiled deck with a pink granite edge and a lower step strip; north end 0.36 above the square, 012429784)",
+   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line | A_W gallery deck: one flat tiled platform ~0.30 above the walkway / square along the whole gallery (map owner: 'not less than 25 cm, level everywhere'; 012327726 t4-6 s and t26-30 s: tiled deck with a pink granite edge and a lower step strip; north end 0.36 above the square, 012429784) | 2026-10-03 photo pass R3-08 (south bay metrology): timber soffit 2.54 above the deck (was 2.25); roof/beam +0.29",
    "confidence": "medium",
    "post_round": true,
    "post_inset": 0.0,
-   "soffit_z": 2.25,
+   "soffit_z": 2.54,
    "soffit_t": 0.03,
    "coping": {
     "t": 0.05,
@@ -513,15 +513,16 @@
    "type": "wall_sign",
    "name": "YellowPlate_DoorS",
    "edge": 3,
-   "u0": 48.3,
-   "u1": 49.0,
-   "z0": 2.18,
-   "z1": 2.42,
+   "u0": 48.09,
+   "u1": 49.21,
+   "z0": 2.24,
+   "z1": 3.07,
    "t": 0.02,
    "w0": 2.34,
-   "color": "sign",
-   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): yellow sign plate above the south door-bay door (070309303 s2, 012404116 s2); blank KOCH",
-   "confidence": "medium"
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): yellow sign plate above the south door-bay door (070309303 s2, 012404116 s2); blank KOCH | 2026-10-03 photo pass R3-09: large dark-blue plate 1.12 wide centred on the door, z 2.24-3.07, under the corrugated awning on 2 diagonal brackets",
+   "confidence": "medium",
+   "slot": "M_Sign_KOCH",
+   "content": "TODO_LORE: KOCH door-bay sign (dark blue)"
   },
   {
    "type": "downpipe",

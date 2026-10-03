@@ -21,12 +21,12 @@
      38.924
     ],
     [
-     215.901,
-     66.504
+     215.967,
+     68.223
     ],
     [
-     159.292,
-     68.679
+     159.358,
+     70.398
     ],
     [
      159.35,
@@ -39,7 +39,7 @@
    ],
    "z": 3.45,
    "blend": 10.0,
-   "evidence": "bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone 2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives 3.3-3.6 along it, rms 1 m) so the 10 m blend into the alley/canteen stays within 0.1-0.4 m",
+   "evidence": "bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone 2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives 3.3-3.6 along it, rms 1 m) so the 10 m blend into the alley/canteen stays within 0.1-0.4 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -104,28 +104,28 @@
    "name": "LowerYard",
    "ring": [
     [
-     159.292,
-     68.679
+     159.358,
+     70.398
     ],
     [
-     165.838,
-     68.427
+     165.904,
+     70.146
     ],
     [
-     165.887,
-     69.726
+     165.953,
+     71.445
     ],
     [
-     211.953,
-     67.957
+     212.019,
+     69.675
     ],
     [
-     211.904,
-     66.658
+     211.97,
+     68.376
     ],
     [
-     215.901,
-     66.504
+     215.967,
+     68.223
     ],
     [
      216.615,
@@ -146,7 +146,7 @@
    ],
    "z": 2.175,
    "blend": 0.0,
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); the lane behind the pitch included (owner overview sketch) | 2026-09-29 zone loop (sports): owner - the courts platform stands 1.15-1.20 m above the pull-up strip, the strip ends at the pull-up bars / sand pit and the yard road beyond it is ~0.15 m lower; the ground around the yard (DEM) is 1.7-2.3, so the yard (was 2.85, 0.6-1.1 m above its surroundings) is lowered, the courts stay: yard road level 2.175",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); the lane behind the pitch included (owner overview sketch) | 2026-09-29 zone loop (sports): owner - the courts platform stands 1.15-1.20 m above the pull-up strip, the strip ends at the pull-up bars / sand pit and the yard road beyond it is ~0.15 m lower; the ground around the yard (DEM) is 1.7-2.3, so the yard (was 2.85, 0.6-1.1 m above its surroundings) is lowered, the courts stay: yard road level 2.175 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -269,8 +269,9 @@
    "z0": 3.1,
    "z1": 3.79,
    "material": "brick",
-   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): turf/fence line W u -0.1 (Google -0.11..-0.05, Bing -0.02..-0.19), E u 44.35 (Bing 44.27..44.42; Google 44.0-44.6 blurred by the E fence shadow), S v 0.15 (Google 0.12..0.26), N v 25.4 (Google 25.42, Bing 25.35..25.45) -> 44.45 x 25.25 m. Red brick-tile plinth ~0.35 m above the walkway at the SE gate (070410255 t=60 s) and along the W end (drone 2022 f 0:14)",
-   "confidence": "medium"
+   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): turf/fence line W u -0.1 (Google -0.11..-0.05, Bing -0.02..-0.19), E u 44.35 (Bing 44.27..44.42; Google 44.0-44.6 blurred by the E fence shadow), S v 0.15 (Google 0.12..0.26), N v 25.4 (Google 25.42, Bing 25.35..25.45) -> 44.45 x 25.25 m. Red brick-tile plinth ~0.35 m above the walkway at the SE gate (070410255 t=60 s) and along the W end (drone 2022 f 0:14) | 2026-10-03 photo pass P0-07 + R0 A034/A042: pink-red painted concrete with drain holes, not brick tile",
+   "confidence": "medium",
+   "slot": "M_Paint_RedPink"
   },
   {
    "type": "slab",
@@ -798,82 +799,82 @@
    "name": "Courts_Slab",
    "ring": [
     [
-     164.868,
-     43.196
+     164.934,
+     44.915
     ],
     [
-     210.934,
-     41.426
+     211.0,
+     43.145
     ],
     [
-     211.904,
-     66.658
+     211.97,
+     68.376
     ],
     [
-     165.838,
-     68.427
+     165.904,
+     70.146
     ]
    ],
    "holes": [
     [
      [
-      166.896,
-      43.869
+      166.962,
+      45.587
      ],
      [
-      181.385,
-      43.312
+      181.451,
+      45.031
      ],
      [
-      182.297,
-      67.054
+      182.363,
+      68.773
      ],
      [
-      167.808,
-      67.611
+      167.874,
+      69.33
      ]
     ],
     [
      [
-      186.341,
-      45.999
+      186.407,
+      47.718
      ],
      [
-      195.335,
-      45.653
+      195.401,
+      47.372
      ],
      [
-      196.026,
-      63.64
+      196.092,
+      65.359
      ],
      [
-      187.033,
-      63.986
+      187.099,
+      65.705
      ]
     ],
     [
      [
-      198.345,
-      41.96
+      198.411,
+      43.679
      ],
      [
-      210.886,
-      41.478
+      210.952,
+      43.197
      ],
      [
-      211.852,
-      66.61
+      211.918,
+      68.328
      ],
      [
-      199.311,
-      67.091
+      199.377,
+      68.81
      ]
     ]
    ],
    "z0": 3.1,
    "z1": 3.5,
    "material": "brick",
-   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 (Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) -> 46.1 x 26.3 m; 2026-09-28 owner: S and N fences flush with the pitch -> v 0.15..25.40 (46.1 x 25.25 m); red acrylic surface, flush with the walkway + 5 cm curb",
+   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 (Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) -> 46.1 x 26.3 m; 2026-09-28 owner: S and N fences flush with the pitch -> v 0.15..25.40 (46.1 x 25.25 m); red acrylic surface, flush with the walkway + 5 cm curb | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
@@ -881,26 +882,26 @@
    "name": "Court_Basket_Field",
    "ring": [
     [
-     166.896,
-     43.869
+     166.962,
+     45.587
     ],
     [
-     181.385,
-     43.312
+     181.451,
+     45.031
     ],
     [
-     182.297,
-     67.054
+     182.363,
+     68.773
     ],
     [
-     167.808,
-     67.611
+     167.874,
+     69.33
     ]
    ],
    "z0": 3.1,
    "z1": 3.5,
    "material": "hedge",
-   "evidence": "green basketball field u 52.9..67.4, 23.76 m long (Google profiles v 3.04..26.8, rms 0.03-0.06 m; N edge 26.4..27.3 blurred); re-centred in the courts block made flush with the pitch (owner 2026-09-28)",
+   "evidence": "green basketball field u 52.9..67.4, 23.76 m long (Google profiles v 3.04..26.8, rms 0.03-0.06 m; N edge 26.4..27.3 blurred); re-centred in the courts block made flush with the pitch (owner 2026-09-28) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
@@ -908,26 +909,26 @@
    "name": "Court_Volley_Field",
    "ring": [
     [
-     186.341,
-     45.999
+     186.407,
+     47.718
     ],
     [
-     195.335,
-     45.653
+     195.401,
+     47.372
     ],
     [
-     196.026,
-     63.64
+     196.092,
+     65.359
     ],
     [
-     187.033,
-     63.986
+     187.099,
+     65.705
     ]
    ],
    "z0": 3.1,
    "z1": 3.5,
    "material": "hedge",
-   "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06) | 2026-10-02 scale audit: standard 9 x 18 m (Google ~8.9 x 17.7 with lines); centre kept",
+   "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06) | 2026-10-02 scale audit: standard 9 x 18 m (Google ~8.9 x 17.7 with lines); centre kept | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
@@ -935,26 +936,26 @@
    "name": "Court_Hard_Field",
    "ring": [
     [
-     198.345,
-     41.96
+     198.411,
+     43.679
     ],
     [
-     210.886,
-     41.478
+     210.952,
+     43.197
     ],
     [
-     211.852,
-     66.61
+     211.918,
+     68.328
     ],
     [
-     199.311,
-     67.091
+     199.377,
+     68.81
     ]
    ],
    "z0": 3.1,
    "z1": 3.5,
    "material": "brick",
-   "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green)",
+   "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
@@ -963,118 +964,118 @@
    "lines": [
     [
      [
-      166.896,
-      43.869
+      166.962,
+      45.587
      ],
      [
-      181.385,
-      43.312
+      181.451,
+      45.031
      ],
      [
-      182.297,
-      67.054
+      182.363,
+      68.773
      ],
      [
-      167.808,
-      67.611
+      167.874,
+      69.33
      ],
      [
-      166.896,
-      43.869
+      166.962,
+      45.587
      ]
     ],
     [
      [
-      167.352,
-      55.74
+      167.418,
+      57.459
      ],
      [
-      181.841,
-      55.183
+      181.907,
+      56.902
      ]
     ],
     [
      [
-      171.692,
-      43.684
+      171.758,
+      45.403
      ],
      [
-      171.915,
-      49.48
+      171.981,
+      51.199
      ],
      [
-      176.811,
-      49.292
+      176.877,
+      51.011
      ],
      [
-      176.588,
-      43.496
+      176.654,
+      45.215
      ]
     ],
     [
      [
-      167.545,
-      43.844
+      167.611,
+      45.562
      ],
      [
-      167.66,
-      46.832
+      167.726,
+      48.55
      ]
     ],
     [
      [
-      180.735,
-      43.337
+      180.801,
+      45.056
      ],
      [
-      180.85,
-      46.325
+      180.916,
+      48.044
      ]
     ],
     [
      [
-      172.604,
-      67.427
+      172.67,
+      69.146
      ],
      [
-      172.381,
-      61.631
+      172.447,
+      63.35
      ],
      [
-      177.278,
-      61.443
+      177.344,
+      63.162
      ],
      [
-      177.501,
-      67.239
+      177.567,
+      68.957
      ]
     ],
     [
      [
-      168.457,
-      67.586
+      168.523,
+      69.305
      ],
      [
-      168.342,
-      64.598
+      168.408,
+      66.317
      ]
     ],
     [
      [
-      181.647,
-      67.079
+      181.713,
+      68.798
      ],
      [
-      181.533,
-      64.092
+      181.599,
+      65.81
      ]
     ]
    ],
    "arcs": [
     {
      "c": [
-      174.596,
-      55.462
+      174.662,
+      57.18
      ],
      "r": 1.8,
      "a0": 0,
@@ -1082,8 +1083,8 @@
     },
     {
      "c": [
-      174.363,
-      49.386
+      174.429,
+      51.105
      ],
      "r": 1.8,
      "a0": -2.2,
@@ -1091,8 +1092,8 @@
     },
     {
      "c": [
-      174.201,
-      45.164
+      174.267,
+      46.883
      ],
      "r": 6.75,
      "a0": 9.901492031823494,
@@ -1100,8 +1101,8 @@
     },
     {
      "c": [
-      174.83,
-      61.537
+      174.896,
+      63.256
      ],
      "r": 1.8,
      "a0": 177.8,
@@ -1109,8 +1110,8 @@
     },
     {
      "c": [
-      174.992,
-      65.759
+      175.058,
+      67.478
      ],
      "r": 6.75,
      "a0": -170.0985079681765,
@@ -1119,15 +1120,15 @@
    ],
    "width": 0.05,
    "z": 3.5,
-   "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field",
+   "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Hoop_S_Pole",
    "center": [
-    174.119,
-    43.041
+    174.185,
+    44.759
    ],
    "size": [
     0.16,
@@ -1137,15 +1138,15 @@
    "dir_deg": -2.2,
    "z0": 3.5,
    "material": "metal",
-   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022)",
+   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Hoop_S_Arm",
    "center": [
-    174.153,
-    43.915
+    174.219,
+    45.634
    ],
    "size": [
     1.75,
@@ -1155,15 +1156,15 @@
    "dir_deg": 87.8,
    "z0": 6.7,
    "material": "metal",
-   "evidence": "arm to the board",
+   "evidence": "arm to the board | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Hoop_S_Board",
    "center": [
-    174.186,
-    44.789
+    174.252,
+    46.508
    ],
    "size": [
     1.8,
@@ -1173,15 +1174,15 @@
    "dir_deg": -2.2,
    "z0": 6.4,
    "material": "white",
-   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard)",
+   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Hoop_S_Rim",
    "center": [
-    174.201,
-    45.164
+    174.267,
+    46.883
    ],
    "size": [
     0.45,
@@ -1191,15 +1192,15 @@
    "dir_deg": -2.2,
    "z0": 6.54,
    "material": "metal",
-   "evidence": "rim 0.45 m at 3.05 m",
+   "evidence": "rim 0.45 m at 3.05 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Hoop_N_Pole",
    "center": [
-    175.073,
-    67.882
+    175.139,
+    69.601
    ],
    "size": [
     0.16,
@@ -1209,15 +1210,15 @@
    "dir_deg": -2.2,
    "z0": 3.5,
    "material": "metal",
-   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022)",
+   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Hoop_N_Arm",
    "center": [
-    175.04,
-    67.008
+    175.106,
+    68.727
    ],
    "size": [
     1.75,
@@ -1227,15 +1228,15 @@
    "dir_deg": 87.8,
    "z0": 6.7,
    "material": "metal",
-   "evidence": "arm to the board",
+   "evidence": "arm to the board | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Hoop_N_Board",
    "center": [
-    175.006,
-    66.134
+    175.072,
+    67.852
    ],
    "size": [
     1.8,
@@ -1245,15 +1246,15 @@
    "dir_deg": -2.2,
    "z0": 6.4,
    "material": "white",
-   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard)",
+   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Hoop_N_Rim",
    "center": [
-    174.992,
-    65.759
+    175.058,
+    67.478
    ],
    "size": [
     0.45,
@@ -1263,7 +1264,7 @@
    "dir_deg": -2.2,
    "z0": 6.54,
    "material": "metal",
-   "evidence": "rim 0.45 m at 3.05 m",
+   "evidence": "rim 0.45 m at 3.05 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -1274,66 +1275,66 @@
    "lines": [
     [
      [
-      186.341,
-      45.999
+      186.407,
+      47.718
      ],
      [
-      195.335,
-      45.653
+      195.401,
+      47.372
      ],
      [
-      196.026,
-      63.64
+      196.092,
+      65.359
      ],
      [
-      187.033,
-      63.986
+      187.099,
+      65.705
      ],
      [
-      186.341,
-      45.999
+      186.407,
+      47.718
      ]
     ],
     [
      [
-      186.687,
-      54.992
+      186.753,
+      56.711
      ],
      [
-      195.68,
-      54.647
+      195.746,
+      56.366
      ]
     ],
     [
      [
-      186.572,
-      51.994
+      186.638,
+      53.713
      ],
      [
-      195.565,
-      51.649
+      195.631,
+      53.368
      ]
     ],
     [
      [
-      186.802,
-      57.99
+      186.868,
+      59.709
      ],
      [
-      195.796,
-      57.645
+      195.862,
+      59.364
      ]
     ]
    ],
-   "evidence": "white lines on the green inner court; net line across the long axis (drone d_23)",
+   "evidence": "white lines on the green inner court; net line across the long axis (drone d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "VolleyNetPost_0",
    "center": [
-    186.237,
-    55.009
+    186.304,
+    56.728
    ],
    "size": [
     0.1,
@@ -1343,15 +1344,15 @@
    "dir_deg": -2.2,
    "z0": 3.5,
    "material": "white",
-   "evidence": "white net posts outside the sidelines (drone 2022 d_23)",
+   "evidence": "white net posts outside the sidelines (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "VolleyNetPost_1",
    "center": [
-    196.13,
-    54.629
+    196.196,
+    56.348
    ],
    "size": [
     0.1,
@@ -1361,15 +1362,15 @@
    "dir_deg": -2.2,
    "z0": 3.5,
    "material": "white",
-   "evidence": "white net posts outside the sidelines (drone 2022 d_23)",
+   "evidence": "white net posts outside the sidelines (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "VolleyNet",
    "center": [
-    191.184,
-    54.819
+    191.25,
+    56.538
    ],
    "size": [
     9.799999999999988,
@@ -1379,7 +1380,7 @@
    "dir_deg": -2.2,
    "z0": 4.93,
    "material": "white",
-   "evidence": "net top 2.43 m (standard); drone d_23",
+   "evidence": "net top 2.43 m (standard); drone d_23 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -1388,88 +1389,88 @@
    "lines": [
     [
      [
-      199.161,
-      42.619
+      199.227,
+      44.338
      ],
      [
-      210.123,
-      42.198
+      210.189,
+      43.917
      ],
      [
-      211.036,
-      65.95
+      211.102,
+      67.669
      ],
      [
-      200.074,
-      66.372
+      200.14,
+      68.09
      ],
      [
-      199.161,
-      42.619
+      199.227,
+      44.338
      ]
     ],
     [
      [
-      200.53,
-      42.566
+      200.596,
+      44.285
      ],
      [
-      201.443,
-      66.319
+      201.509,
+      68.038
      ]
     ],
     [
      [
-      208.754,
-      42.251
+      208.82,
+      43.969
      ],
      [
-      209.667,
-      66.003
+      209.733,
+      67.722
      ]
     ],
     [
      [
-      200.741,
-      48.047
+      200.807,
+      49.766
      ],
      [
-      208.965,
-      47.732
+      209.031,
+      49.45
      ]
     ],
     [
      [
-      201.232,
-      60.838
+      201.298,
+      62.557
      ],
      [
-      209.456,
-      60.522
+      209.522,
+      62.241
      ]
     ],
     [
      [
-      204.853,
-      47.889
+      204.919,
+      49.608
      ],
      [
-      205.344,
-      60.68
+      205.41,
+      62.399
      ]
     ]
    ],
    "width": 0.05,
    "z": 3.5,
-   "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred",
+   "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "HardNetPost_0",
    "center": [
-    199.103,
-    54.515
+    199.169,
+    56.234
    ],
    "size": [
     0.08,
@@ -1479,15 +1480,15 @@
    "dir_deg": -2.2,
    "z0": 3.5,
    "material": "metal",
-   "evidence": "net across the court (drone 2022 d_23)",
+   "evidence": "net across the court (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "HardNetPost_1",
    "center": [
-    211.094,
-    54.054
+    211.16,
+    55.773
    ],
    "size": [
     0.08,
@@ -1497,15 +1498,15 @@
    "dir_deg": -2.2,
    "z0": 3.5,
    "material": "metal",
-   "evidence": "net across the court (drone 2022 d_23)",
+   "evidence": "net across the court (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "HardNet",
    "center": [
-    205.099,
-    54.285
+    205.165,
+    56.004
    ],
    "size": [
     12.0,
@@ -1515,7 +1516,7 @@
    "dir_deg": -2.2,
    "z0": 3.55,
    "material": "white",
-   "evidence": "tennis net 0.91 m",
+   "evidence": "tennis net 0.91 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -1523,31 +1524,31 @@
    "name": "CourtsFence_Perimeter",
    "line": [
     [
-     166.267,
-     43.142
+     166.333,
+     44.861
     ],
     [
-     164.868,
-     43.196
+     164.934,
+     44.915
     ],
     [
-     165.838,
-     68.427
+     165.904,
+     70.146
     ],
     [
-     211.904,
-     66.658
+     211.97,
+     68.376
     ],
     [
-     210.934,
-     41.426
+     211.0,
+     43.145
     ],
     [
-     200.042,
-     41.845
+     200.108,
+     43.563
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1565,15 +1566,15 @@
    "name": "CourtsFence_Div1",
    "line": [
     [
-     182.855,
-     42.505
+     182.921,
+     44.224
     ],
     [
-     183.824,
-     67.736
+     183.89,
+     69.455
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 68.9 (Google profile rms 0.14-0.34)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 68.9 (Google profile rms 0.14-0.34) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1591,15 +1592,15 @@
    "name": "CourtsFence_Div2",
    "line": [
     [
-     198.294,
-     41.912
+     198.36,
+     43.631
     ],
     [
-     199.263,
-     67.143
+     199.329,
+     68.862
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 84.35 (Google profile rms 0.14-0.34)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 84.35 (Google profile rms 0.14-0.34) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1617,15 +1618,15 @@
    "name": "CourtsFence_S0",
    "line": [
     [
-     198.943,
-     41.887
+     199.009,
+     43.606
     ],
     [
-     184.654,
-     42.436
+     184.72,
+     44.155
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1643,15 +1644,15 @@
    "name": "CourtsFence_S1",
    "line": [
     [
-     183.554,
-     42.478
+     183.62,
+     44.197
     ],
     [
-     167.366,
-     43.1
+     167.432,
+     44.819
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -2410,25 +2411,25 @@
     160.587,
     82.84
    ],
-   "height": 6.0,
-   "crown_d": 3.5,
+   "height": 5.3,
+   "crown_d": 4.2,
    "crown_base": 0.3,
    "shape": "cone",
-   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): two large blue spruces flanking the bench niche (A060, A061)",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): two large blue spruces flanking the bench niche (A060, A061) | 2026-10-03 photo pass R0-10 (A049, man 1.77 m: 418 px/m): crown 4.2, height 5.3",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "NorthLawnSpruce_3",
    "pos": [
-    166.083,
-    82.628
+    165.7,
+    82.64
    ],
-   "height": 6.0,
-   "crown_d": 3.5,
+   "height": 4.8,
+   "crown_d": 4.2,
    "crown_base": 0.3,
    "shape": "cone",
-   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): two large blue spruces flanking the bench niche (A060, A061)",
+   "evidence": "owner 2026-09-28 (sketch): spruces beside the bench opposite the yard stair | 2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): two large blue spruces flanking the bench niche (A060, A061) | 2026-10-03 photo pass R0-10 (A049): crown 4.2, height 4.8, 5.1 m from Spruce_2",
    "confidence": "low"
   },
   {
@@ -2450,27 +2451,27 @@
    "name": "LowerYard_SandPit",
    "ring": [
     [
-     202.979,
-     68.802
+     203.045,
+     70.521
     ],
     [
-     209.974,
-     68.533
+     210.04,
+     70.252
     ],
     [
-     210.089,
-     71.531
+     210.155,
+     73.25
     ],
     [
-     203.094,
-     71.8
+     203.16,
+     73.518
     ]
    ],
    "z0": 2.025,
    "z1": 2.345,
    "material": "stone",
    "slot": "M_Sand",
-   "evidence": "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed",
+   "evidence": "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -2478,26 +2479,26 @@
    "name": "LowerYard_SandPit_Curb",
    "ring": [
     [
-     202.876,
-     68.706
+     202.942,
+     70.424
     ],
     [
-     210.07,
-     68.429
+     210.136,
+     70.148
     ],
     [
-     210.193,
-     71.627
+     210.259,
+     73.346
     ],
     [
-     202.998,
-     71.903
+     203.064,
+     73.622
     ]
    ],
    "curb_w": 0.1,
    "curb_h": 0.08,
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed",
+   "evidence": "owner 2026-09-28 (marked on the overview): a sand pit for jumps in the lower yard west of the east ramp; 7 x 3 m assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -2602,20 +2603,20 @@
    "name": "LowerYard_RampE",
    "ring": [
     [
-     211.884,
-     66.658
+     211.95,
+     68.377
     ],
     [
-     215.351,
-     66.525
+     215.417,
+     68.244
     ],
     [
-     215.743,
-     76.717
+     215.809,
+     78.435
     ],
     [
-     212.276,
-     76.85
+     212.342,
+     78.568
     ]
    ],
    "z": [
@@ -2627,7 +2628,7 @@
    "thk": 1.225,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps) | 2026-09-29 zone loop: the yard went down (strip 2.325, yard road 2.175); the ramp kept at 1:8 (12.5%) by running 10.2 m out onto the yard road (5 m would be 22.5%), solid down to the strip",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured); owner 2026-09-28: a proper way down at the east end too, as a ramp (no steps) | 2026-09-29 zone loop: the yard went down (strip 2.325, yard road 2.175); the ramp kept at 1:8 (12.5%) by running 10.2 m out onto the yard road (5 m would be 22.5%), solid down to the strip | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -2848,27 +2849,89 @@
    "confidence": "low"
   },
   {
+   "type": "path",
+   "name": "NorthLawn_BenchNiche",
+   "line": [
+    [
+     163.14,
+     81.45
+    ],
+    [
+     163.29,
+     85.3
+    ]
+   ],
+   "width": 1.9,
+   "thk": 0.08,
+   "top": 0.02,
+   "surface": "clover",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R0-11 (A048/A049): paved recess off the lane, opening 1.9, ~3.8 deep to the boundary wall, Y/W kerbs both sides (wall top 2.07 / pillar 2.30 above its floor)"
+  },
+  {
+   "type": "wall",
+   "name": "NorthLawn_BenchNiche_Kerb0",
+   "line": [
+    [
+     162.191,
+     81.487
+    ],
+    [
+     162.338,
+     85.334
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.12,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R0-11: painted yellow/white kerb along the niche side"
+  },
+  {
+   "type": "wall",
+   "name": "NorthLawn_BenchNiche_Kerb1",
+   "line": [
+    [
+     164.089,
+     81.414
+    ],
+    [
+     164.237,
+     85.261
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.12,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R0-11: painted yellow/white kerb along the niche side"
+  },
+  {
    "type": "bench",
    "name": "NorthLawnBench_4",
    "pos": [
-    163.137,
-    82.141
+    163.28,
+    84.8
    ],
    "dir_deg": -92.2,
-   "length": 1.8,
+   "length": 1.45,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees; this one opposite the stair down to the lower yard",
+   "evidence": "owner 2026-09-28 (marks on the overview): benches along the back fence between the trees; this one opposite the stair down to the lower yard | 2026-10-03 photo pass R0-11 (A048, man 1.76 m check): bench at the back of a paved niche, 1.43 long, facing the lane",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp0_Post0",
    "center": [
-    169.208,
-    70.199
+    169.274,
+    71.918
    ],
    "size": [
     0.08,
@@ -2879,7 +2942,7 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "ue_asset": "workout_pullup_bar_double"
   },
@@ -2887,8 +2950,8 @@
    "type": "box",
    "name": "Workout_PullUp0_Post1",
    "center": [
-    169.254,
-    71.398
+    169.32,
+    73.117
    ],
    "size": [
     0.08,
@@ -2899,15 +2962,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp0_Post2",
    "center": [
-    169.3,
-    72.597
+    169.366,
+    74.316
    ],
    "size": [
     0.08,
@@ -2918,15 +2981,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp0_Bar0",
    "center": [
-    169.231,
-    70.799
+    169.297,
+    72.518
    ],
    "size": [
     1.1999999999999993,
@@ -2937,15 +3000,15 @@
    "z0": 4.785,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp0_Bar1",
    "center": [
-    169.277,
-    71.998
+    169.343,
+    73.717
    ],
    "size": [
     1.1999999999999993,
@@ -2956,15 +3019,15 @@
    "z0": 4.485,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp1_Post0",
    "center": [
-    171.007,
-    70.13
+    171.073,
+    71.849
    ],
    "size": [
     0.08,
@@ -2975,7 +3038,7 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "ue_asset": "workout_pullup_bar_double"
   },
@@ -2983,8 +3046,8 @@
    "type": "box",
    "name": "Workout_PullUp1_Post1",
    "center": [
-    171.053,
-    71.329
+    171.119,
+    73.048
    ],
    "size": [
     0.08,
@@ -2995,15 +3058,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp1_Post2",
    "center": [
-    171.099,
-    72.528
+    171.165,
+    74.247
    ],
    "size": [
     0.08,
@@ -3014,15 +3077,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp1_Bar0",
    "center": [
-    171.03,
-    70.73
+    171.096,
+    72.448
    ],
    "size": [
     1.1999999999999993,
@@ -3033,15 +3096,15 @@
    "z0": 4.785,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_PullUp1_Bar1",
    "center": [
-    171.076,
-    71.929
+    171.142,
+    73.648
    ],
    "size": [
     1.1999999999999993,
@@ -3052,15 +3115,15 @@
    "z0": 4.485,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Post0",
    "center": [
-    172.887,
-    69.578
+    172.953,
+    71.296
    ],
    "size": [
     0.07,
@@ -3071,7 +3134,7 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "ue_asset": "workout_wall_bars"
   },
@@ -3079,8 +3142,8 @@
    "type": "box",
    "name": "Workout_WallBars0_Post1",
    "center": [
-    173.886,
-    69.539
+    173.952,
+    71.258
    ],
    "size": [
     0.07,
@@ -3091,15 +3154,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Post2",
    "center": [
-    174.885,
-    69.501
+    174.951,
+    71.22
    ],
    "size": [
     0.07,
@@ -3110,15 +3173,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Post3",
    "center": [
-    175.885,
-    69.462
+    175.951,
+    71.181
    ],
    "size": [
     0.07,
@@ -3129,15 +3192,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung0",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3148,15 +3211,15 @@
    "z0": 2.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung1",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3167,15 +3230,15 @@
    "z0": 2.925,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung2",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3186,15 +3249,15 @@
    "z0": 3.225,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung3",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3205,15 +3268,15 @@
    "z0": 3.525,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung4",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3224,15 +3287,15 @@
    "z0": 3.825,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung5",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3243,15 +3306,15 @@
    "z0": 4.125,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung6",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3262,15 +3325,15 @@
    "z0": 4.425,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung7",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3281,15 +3344,15 @@
    "z0": 4.725,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung8",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3300,15 +3363,15 @@
    "z0": 5.025,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung9",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3319,15 +3382,15 @@
    "z0": 5.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars0_Rung10",
    "center": [
-    174.386,
-    69.52
+    174.452,
+    71.239
    ],
    "size": [
     3.0,
@@ -3338,15 +3401,15 @@
    "z0": 5.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Post0",
    "center": [
-    176.284,
-    69.447
+    176.35,
+    71.166
    ],
    "size": [
     0.07,
@@ -3357,7 +3420,7 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "ue_asset": "workout_wall_bars"
   },
@@ -3365,8 +3428,8 @@
    "type": "box",
    "name": "Workout_WallBars1_Post1",
    "center": [
-    177.284,
-    69.409
+    177.35,
+    71.127
    ],
    "size": [
     0.07,
@@ -3377,15 +3440,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Post2",
    "center": [
-    178.283,
-    69.37
+    178.349,
+    71.089
    ],
    "size": [
     0.07,
@@ -3396,15 +3459,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Post3",
    "center": [
-    179.282,
-    69.332
+    179.348,
+    71.051
    ],
    "size": [
     0.07,
@@ -3415,15 +3478,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung0",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3434,15 +3497,15 @@
    "z0": 2.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung1",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3453,15 +3516,15 @@
    "z0": 2.925,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung2",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3472,15 +3535,15 @@
    "z0": 3.225,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung3",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3491,15 +3554,15 @@
    "z0": 3.525,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung4",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3510,15 +3573,15 @@
    "z0": 3.825,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung5",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3529,15 +3592,15 @@
    "z0": 4.125,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung6",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3548,15 +3611,15 @@
    "z0": 4.425,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung7",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3567,15 +3630,15 @@
    "z0": 4.725,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung8",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3586,15 +3649,15 @@
    "z0": 5.025,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung9",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3605,15 +3668,15 @@
    "z0": 5.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_WallBars1_Rung10",
    "center": [
-    177.783,
-    69.389
+    177.849,
+    71.108
    ],
    "size": [
     3.0,
@@ -3624,15 +3687,15 @@
    "z0": 5.625,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067)",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): 11 rungs at 0.30 m (A067) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_BarW",
    "center": [
-    167.072,
-    71.382
+    167.138,
+    73.101
    ],
    "size": [
     2.0,
@@ -3643,15 +3706,15 @@
    "z0": 3.555,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_BarE",
    "center": [
-    167.631,
-    71.361
+    167.697,
+    73.079
    ],
    "size": [
     2.0,
@@ -3662,7 +3725,7 @@
    "z0": 3.555,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -3747,18 +3810,18 @@
    "name": "CourtsGate_Basket",
    "line": [
     [
-     166.347,
-     43.139
+     166.413,
+     44.858
     ],
     [
-     167.286,
-     43.103
+     167.352,
+     44.822
     ]
    ],
    "height": 2.1,
    "panel": "bars",
    "z_base": 3.5,
-   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -3766,15 +3829,15 @@
    "name": "CourtsGate_Basket_Head",
    "line": [
     [
-     166.357,
-     43.139
+     166.423,
+     44.857
     ],
     [
-     167.276,
-     43.103
+     167.342,
+     44.822
     ]
    ],
-   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "height": 2.7500000000000004,
    "post_spacing": 3.0,
@@ -3791,18 +3854,18 @@
    "name": "CourtsGate_Volley",
    "line": [
     [
-     183.634,
-     42.475
+     183.7,
+     44.194
     ],
     [
-     184.574,
-     42.439
+     184.64,
+     44.158
     ]
    ],
    "height": 2.1,
    "panel": "bars",
    "z_base": 3.5,
-   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -3810,15 +3873,15 @@
    "name": "CourtsGate_Volley_Head",
    "line": [
     [
-     183.644,
-     42.475
+     183.71,
+     44.193
     ],
     [
-     184.564,
-     42.439
+     184.63,
+     44.158
     ]
    ],
-   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "height": 2.7500000000000004,
    "post_spacing": 3.0,
@@ -3835,18 +3898,18 @@
    "name": "CourtsGate_Hard",
    "line": [
     [
-     199.023,
-     41.884
+     199.089,
+     43.603
     ],
     [
-     199.962,
-     41.848
+     200.028,
+     43.567
     ]
    ],
    "height": 2.1,
    "panel": "bars",
    "z_base": 3.5,
-   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -3854,15 +3917,15 @@
    "name": "CourtsGate_Hard_Head",
    "line": [
     [
-     199.033,
-     41.883
+     199.099,
+     43.602
     ],
     [
-     199.952,
-     41.848
+     200.018,
+     43.567
     ]
    ],
-   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye",
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "height": 2.7500000000000004,
    "post_spacing": 3.0,
@@ -3878,8 +3941,8 @@
    "type": "stairs_run",
    "name": "LowerYard_Stair",
    "top": [
-    162.615,
-    68.551
+    162.681,
+    70.27
    ],
    "dir_deg": 87.8,
    "width": 6.429999999999996,
@@ -3889,15 +3952,15 @@
    "z_top": 3.45,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "LowerYard_Retain_Courts",
    "center": [
-    188.895,
-    68.192
+    188.962,
+    69.911
    ],
    "dir_deg": -2.2,
    "size": [
@@ -3908,7 +3971,7 @@
    "z0": 2.025,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -3964,8 +4027,8 @@
    "type": "box",
    "name": "LowerYard_Stair_CheekE",
    "center": [
-    166.206,
-    72.821
+    166.272,
+    74.54
    ],
    "dir_deg": -2.2,
    "size": [
@@ -3976,15 +4039,15 @@
    "z0": 2.025,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostWS",
    "center": [
-    167.037,
-    70.483
+    167.103,
+    72.202
    ],
    "size": [
     0.07,
@@ -3995,7 +4058,7 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low",
    "ue_asset": "workout_parallel_bars"
   },
@@ -4003,8 +4066,8 @@
    "type": "box",
    "name": "Workout_Dip_PostES",
    "center": [
-    167.597,
-    70.461
+    167.663,
+    72.18
    ],
    "size": [
     0.07,
@@ -4015,15 +4078,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostWN",
    "center": [
-    167.106,
-    72.281
+    167.172,
+    74.0
    ],
    "size": [
     0.07,
@@ -4034,15 +4097,15 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostEN",
    "center": [
-    167.666,
-    72.26
+    167.732,
+    73.979
    ],
    "size": [
     0.07,
@@ -4053,7 +4116,7 @@
    "z0": 2.325,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed",
+   "evidence": "owner 2026-09-28: a workout area with pull-up bars behind the basketball court, between it and the lane (the ortho band v 25.4..28.6 that was read as courts); set per the owner (parallel bars + 4 pull-up bars, 2 rows x 2), positions from the owner sketch, heights assumed | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4211,39 +4274,39 @@
    "name": "CourtsThujaPot_0",
    "ring": [
     [
-     173.174,
-     40.575
+     173.24,
+     42.294
     ],
     [
-     173.973,
-     40.544
+     174.039,
+     42.263
     ],
     [
-     174.004,
-     41.344
+     174.07,
+     43.063
     ],
     [
-     173.204,
-     41.375
+     173.27,
+     43.093
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_0",
    "pos": [
-    173.589,
-    40.96
+    173.655,
+    42.678
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4251,39 +4314,39 @@
    "name": "CourtsThujaPot_1",
    "ring": [
     [
-     179.269,
-     40.341
+     179.335,
+     42.06
     ],
     [
-     180.069,
-     40.31
+     180.135,
+     42.029
     ],
     [
-     180.099,
-     41.11
+     180.165,
+     42.828
     ],
     [
-     179.3,
-     41.14
+     179.366,
+     42.859
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_1",
    "pos": [
-    179.684,
-    40.725
+    179.75,
+    42.444
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4291,39 +4354,39 @@
    "name": "CourtsThujaPot_2",
    "ring": [
     [
-     185.065,
-     40.118
+     185.131,
+     41.837
     ],
     [
-     185.864,
-     40.088
+     185.93,
+     41.806
     ],
     [
-     185.895,
-     40.887
+     185.961,
+     42.606
     ],
     [
-     185.096,
-     40.918
+     185.162,
+     42.637
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_2",
    "pos": [
-    185.48,
-    40.503
+    185.546,
+    42.221
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4331,39 +4394,39 @@
    "name": "CourtsThujaPot_3",
    "ring": [
     [
-     190.261,
-     39.919
+     190.327,
+     41.637
     ],
     [
-     191.061,
-     39.888
+     191.127,
+     41.607
     ],
     [
-     191.091,
-     40.687
+     191.157,
+     42.406
     ],
     [
-     190.292,
-     40.718
+     190.358,
+     42.437
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_3",
    "pos": [
-    190.676,
-    40.303
+    190.742,
+    42.022
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4371,39 +4434,39 @@
    "name": "CourtsThujaPot_4",
    "ring": [
     [
-     195.357,
-     39.723
+     195.423,
+     41.442
     ],
     [
-     196.157,
-     39.692
+     196.223,
+     41.411
     ],
     [
-     196.188,
-     40.492
+     196.254,
+     42.21
     ],
     [
-     195.388,
-     40.522
+     195.454,
+     42.241
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_4",
    "pos": [
-    195.772,
-    40.107
+    195.838,
+    41.826
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4411,39 +4474,39 @@
    "name": "CourtsThujaPot_5",
    "ring": [
     [
-     201.253,
-     39.496
+     201.319,
+     41.215
     ],
     [
-     202.052,
-     39.466
+     202.118,
+     41.185
     ],
     [
-     202.083,
-     40.265
+     202.149,
+     41.984
     ],
     [
-     201.284,
-     40.296
+     201.35,
+     42.015
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_5",
    "pos": [
-    201.668,
-    39.881
+    201.734,
+    41.6
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -4451,39 +4514,39 @@
    "name": "CourtsThujaPot_6",
    "ring": [
     [
-     207.049,
-     39.274
+     207.115,
+     40.993
     ],
     [
-     207.848,
-     39.243
+     207.914,
+     40.962
     ],
     [
-     207.879,
-     40.043
+     207.945,
+     41.761
     ],
     [
-     207.079,
-     40.073
+     207.146,
+     41.792
     ]
    ],
    "curb_w": 0.08,
    "curb_h": 0.35,
-   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone",
+   "evidence": "small square concrete planters with a thuja along the S side of the courts (drone 2022 d_23; Google dots v -0.3..0.0, ~5.9 m spacing); not visible in the blurred 2026-09 frame 070410255 t=39 s: may be gone | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "CourtsThuja_6",
    "pos": [
-    207.464,
-    39.658
+    207.53,
+    41.377
    ],
    "height": 2.4,
    "crown_d": 0.8,
    "crown_base": 0.4,
    "trunk_d": 0.08,
-   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence)",
+   "evidence": "thuja ~2.4 m (drone d_23, vs the 4.9 m fence) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
    "confidence": "low"
   },
   {
@@ -10671,8 +10734,8 @@
    "type": "box",
    "name": "NorthBoundary_Pillar_104",
    "center": [
-    162.159,
-    85.381
+    163.3,
+    85.337
    ],
    "size": [
     0.45,
@@ -10682,15 +10745,15 @@
    "dir_deg": -2.2,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
-   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed | 2026-10-03 photo pass R0-11: pillar centred behind the niche bench (x ~163.3)",
    "confidence": "low"
   },
   {
    "type": "box",
    "name": "NorthBoundary_PillarCap_104",
    "center": [
-    162.159,
-    85.381
+    163.3,
+    85.337
    ],
    "size": [
     0.55,
@@ -10701,7 +10764,7 @@
    "z_rel": 2.5,
    "material": "brick",
    "slot": "M_Tile_Brick_Red",
-   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed",
+   "evidence": "campus N boundary: dark line v 41.8-42.3 on Google 2026 (shadow of the wall), cars parked beyond; owner 2026-09-28: a solid fence of red block pillars with pale-yellow cast sand-concrete panels between them (replaces the bar fence + brick piers read from drone 2022 d_07); pillar pitch 3.0 m and heights assumed | 2026-10-03 photo pass R0-11: pillar centred behind the niche bench (x ~163.3)",
    "confidence": "low"
   },
   {

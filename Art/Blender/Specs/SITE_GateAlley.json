@@ -829,12 +829,12 @@
      -81.854
     ],
     [
-     158.468,
-     -81.979
+     159.255,
+     -81.98
     ],
     [
-     159.359,
-     -63.801
+     160.145,
+     -63.8
     ],
     [
      157.642,
@@ -843,13 +843,13 @@
    ],
    "z": [
     6.672,
-    6.404,
-    6.315,
+    6.4,
+    6.4,
     6.57
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10)",
    "confidence": "medium"
   },
   {
@@ -1013,36 +1013,25 @@
    "confidence": "medium"
   },
   {
-   "type": "roof_plane",
-   "name": "Curb_Walkway_S",
-   "ring": [
+   "type": "wall",
+   "name": "Retain_Walkway_S",
+   "line": [
     [
-     159.516,
+     159.43,
      -82.03
     ],
     [
-     160.408,
-     -63.852
-    ],
-    [
-     160.528,
-     -63.858
-    ],
-    [
-     159.636,
-     -82.036
+     160.32,
+     -63.86
     ]
    ],
-   "z": [
-    5.47,
-    5.47,
-    5.47,
-    5.47
-   ],
-   "thk": 0.67,
+   "height": 1.0,
+   "thk": 0.35,
+   "cap_proj": 0.03,
    "material": "brick",
-   "evidence": "low pink concrete curb at the foot of the bank along the walkway (070309303 f24-f44, f40 ground rays x 0.0-0.4)",
-   "confidence": "medium"
+   "slot": "M_Block_RockFace_Red",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R3-07: the walkway's W side is a vertical retaining wall (red rock-face block, 4-5 courses + 1 red brick course at the foot, pink granite coping 0.40 x 0.05), 1.0 above the walkway, from the side-stair S bed wall to the A_S west-porch stair bed wall; replaces Curb_Walkway_S; line 0.15 W of the old curb so its E face stays on the walkway edge"
   },
   {
    "type": "roof_plane",
@@ -2656,46 +2645,6 @@
    "evidence": "070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1: 3-4 round clipped shrubs in the bed along A_S",
    "confidence": "low",
    "z": 6.331
-  },
-  {
-   "type": "path",
-   "name": "CirclePaving_AS_0",
-   "line": [
-    [
-     160.482,
-     -70.309
-    ],
-    [
-     159.86,
-     -82.996
-    ]
-   ],
-   "width": 1.72,
-   "top": 0.37,
-   "slot": "M_Paver_Clover_Grey",
-   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion | 2026-10-02 zaudit: the strip IS the walkway surface there: widened to the walkway's wall-side edge, walkway trimmed to start at its north end (they overlapped 11.7 m2, 1 cm apart)",
-   "confidence": "low",
-   "thk": 0.45
-  },
-  {
-   "type": "wall",
-   "name": "Kerb_CirclePaving_AS_0",
-   "line": [
-    [
-     159.573,
-     -70.264
-    ],
-    [
-     158.951,
-     -82.952
-    ]
-   ],
-   "height": 0.43,
-   "thk": 0.1,
-   "material": "brick",
-   "slot": "M_Tile_Brick_Red",
-   "evidence": "082537786_s1 f00104/f00131/f00158, 082248481_s1 f00023-00078: a strip of circle-pattern pavers ~1.6 m wide along the A_S west face with a red kerb on its outer edge, herringbone paving beyond; broken at the pavilion",
-   "confidence": "low"
   },
   {
    "type": "path",

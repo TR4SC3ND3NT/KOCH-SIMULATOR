@@ -1472,13 +1472,13 @@
      -99.459
     ]
    ],
-   "height": 1.87,
+   "height": 1.95,
    "post_spacing": 1.5,
    "post": 0.06,
    "panel": "bars",
-   "bottom_gap": 0.34,
+   "bottom_gap": 0.36,
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): bar fence 1.55 m with spear tops on the 0.32 plinth, 3.0 m between A_S's SE corner and the lane gate (person 1.72-1.75 m at the gate plane for scale)",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): bar fence 1.55 m with spear tops on the 0.32 plinth, 3.0 m between A_S's SE corner and the lane gate (person 1.72-1.75 m at the gate plane for scale) | 2026-10-03 photo pass R3-15: 1.95 incl. a 0.36 plinth (low)",
    "confidence": "medium"
   },
   {
@@ -1494,11 +1494,11 @@
      -99.669
     ]
    ],
-   "height": 1.6,
-   "bottom_gap": 0.08,
+   "height": 1.72,
+   "bottom_gap": 0.18,
    "slot": "M_Steel_Paint_Dark",
    "ue_logic": "sliding_gate",
-   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): sliding gate across the east lane, vertical bars with small ring ornaments, opening 3.7-3.9 m (A275-A278)",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): sliding gate across the east lane, vertical bars with small ring ornaments, opening 3.7-3.9 m (A275-A278) | 2026-10-03 photo pass R3-15: leaf 1.72 on a 0.18 bottom beam (top 1.90)",
    "confidence": "medium"
   },
   {

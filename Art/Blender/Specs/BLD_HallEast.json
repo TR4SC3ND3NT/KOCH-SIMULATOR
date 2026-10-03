@@ -50,8 +50,8 @@
  "pilasters": [],
  "window_types": {
   "E1": {
-   "w": 1.1,
-   "h": 1.3,
+   "w": 1.01,
+   "h": 1.04,
    "mullions": [
     0.5
    ],
@@ -63,7 +63,8 @@
     0,
     0
    ],
-   "surround_proj": 0.0
+   "surround_proj": 0.0,
+   "evidence": "2026-10-03 photo pass R0-01 (A027 plane rectification, f 3399 px, quad 89.94 deg, tile check 0.197 x 0.100): reveal opening 1.01 x 1.04, PVC frame 0.95 x 0.99, 1 mullion; sill kept"
   },
   "ED": {
    "w": 1.0,

@@ -23,7 +23,10 @@ R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron),
 # (A019/A022, 1.71-1.76 m by the 0.40 m tiles): clear 0.95 x 2.05 m, outer ~3.2-3.5 wide x 3.0 high, ~1.0 m deep. (A first
 # pass scaled them on 0.20 m edging blocks; the blocks are 0.153 m, so it came out 1.31x too big.)
 ARCH_T, ARCH_H, ARCH_D, ARCH_SPAN = 1.1, 2.05, 1.0, 0.95   # leg/crown thickness, clear height, depth, clear span (m)
-ARCH_OVR = {"G1_N": {"thk": 1.34, "height": 2.2}, "G2_SE": {"height": 1.8}}   # per-arch measured differences
+# per-arch measured differences; G1_N: A022 with the 1.77 m man (966 px/m): fingertip 2.17, crown 2.92, outer 3.33
+ARCH_OVR = {"G1_N": {"thk": 1.19, "height": 2.17, "crown_thk": 0.75}, "G2_SE": {"height": 1.8}}
+# centre square: lawn, not hedge, behind the W0 / E0 / S0 benches (photo pass R1-11, A100-A109): world boxes cut from the mass
+NO_HEDGE = [((122.7, -32.02), (127.64, -27.7)), ((131.16, -32.33), (134.47, -29.19))]
 NO_ARCH = {"G1_SSE", "Centre_NS_S"}              # A157-A160, A103: these two exits to the pergola walk have no arch
 # 2026-09-30 photos (A019-A022, A217, A155, A165-A169): no hedge on the garden boundary - scalloped edging and lawn,
 # the arches stand alone on the edging line (the owner's 2026-09-28 "hedge everywhere" predates the photos)
@@ -232,8 +235,10 @@ def main():
         arches.append({"type": "hedge_arch", "name": f"Arch_Bnd_{name}", "center": _r((x.x, x.y)),
                        "dir_deg": round(math.degrees(math.atan2(ny, nx)), 2), "span": round(span, 3),
                        "thk": ov.get("thk", ARCH_T), "depth": ARCH_D, "height": ov.get("height", ARCH_H),
+                       **({"crown_thk": ov["crown_thk"]} if "crown_thk" in ov else {}),
                        "confidence": "medium", "evidence": EV + " | 2026-10-02 photo diff: free-standing; person-scaled "
                        "(A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"})
+    cut += [Polygon([(a_[0], a_[1]), (b_[0], a_[1]), (b_[0], b_[1]), (a_[0], b_[1])]) for a_, b_ in NO_HEDGE]
     solid = solid.difference(unary_union(cut)).buffer(0)
     parts = [q for q in getattr(solid, "geoms", [solid]) if q.area > 0.05]
     parts.sort(key=lambda q: (-q.centroid.y, q.centroid.x))

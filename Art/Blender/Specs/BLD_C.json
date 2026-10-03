@@ -465,14 +465,14 @@
   {
    "edge": 8,
    "name": "west",
-   "status": "2026-10-01 plan v6 (c_shell_v6.py): reference classrooms 5.80 x 6.35, corridor 5.0",
+   "status": "2026-10-01 plan v6 (c_shell_v6.py): reference classrooms 5.80 x 6.35, corridor 5.0 | 2026-10-03 photo pass R0-05 (A031 rectified, orthogonality 89.5 deg: column fractions 0.192/0.437/0.574/0.819): corridor-end column at u 11.25 (was 10.8)",
    "confidence": "medium",
    "windows": [
     {
      "type": "W",
      "u": [
       3.625,
-      10.8,
+      11.25,
       16.175
      ],
      "rows": [

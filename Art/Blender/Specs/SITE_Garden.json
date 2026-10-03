@@ -1201,129 +1201,6 @@
    "name": "Hedge_Mass_5",
    "ring": [
     [
-     125.218,
-     -31.856
-    ],
-    [
-     125.384,
-     -28.694
-    ],
-    [
-     123.387,
-     -28.542
-    ],
-    [
-     123.231,
-     -29.01
-    ],
-    [
-     123.017,
-     -29.515
-    ],
-    [
-     122.762,
-     -30.0
-    ],
-    [
-     122.531,
-     -30.372
-    ],
-    [
-     122.208,
-     -30.815
-    ],
-    [
-     121.924,
-     -31.149
-    ],
-    [
-     121.54,
-     -31.54
-    ],
-    [
-     121.189,
-     -31.846
-    ],
-    [
-     123.74,
-     -45.352
-    ],
-    [
-     123.021,
-     -45.317
-    ],
-    [
-     120.421,
-     -31.551
-    ],
-    [
-     120.842,
-     -31.225
-    ],
-    [
-     121.271,
-     -30.823
-    ],
-    [
-     121.66,
-     -30.38
-    ],
-    [
-     122.003,
-     -29.901
-    ],
-    [
-     122.297,
-     -29.391
-    ],
-    [
-     122.54,
-     -28.855
-    ],
-    [
-     122.729,
-     -28.298
-    ],
-    [
-     122.849,
-     -27.799
-    ],
-    [
-     126.119,
-     -28.048
-    ],
-    [
-     125.954,
-     -31.193
-    ],
-    [
-     129.099,
-     -31.358
-    ],
-    [
-     128.354,
-     -45.578
-    ],
-    [
-     127.655,
-     -45.544
-    ],
-    [
-     128.364,
-     -32.02
-    ]
-   ],
-   "holes": [],
-   "height": 1.25,
-   "top": "flat",
-   "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
-  },
-  {
-   "type": "hedge",
-   "name": "Hedge_Mass_6",
-   "ring": [
-    [
      137.091,
      -45.134
     ],
@@ -1380,28 +1257,8 @@
      -29.188
     ],
     [
-     134.306,
-     -32.332
-    ],
-    [
-     131.16,
-     -32.167
-    ],
-    [
-     130.452,
-     -45.68
-    ],
-    [
-     129.753,
-     -45.646
-    ],
-    [
-     130.498,
-     -31.431
-    ],
-    [
-     133.643,
-     -31.596
+     133.769,
+     -29.19
     ],
     [
      133.808,
@@ -1480,7 +1337,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_7",
+   "name": "Hedge_Mass_6",
    "ring": [
     [
      119.259,
@@ -1571,7 +1428,148 @@
   },
   {
    "type": "hedge",
+   "name": "Hedge_Mass_7",
+   "ring": [
+    [
+     122.7,
+     -30.106
+    ],
+    [
+     122.341,
+     -30.641
+    ],
+    [
+     121.997,
+     -31.068
+    ],
+    [
+     121.619,
+     -31.464
+    ],
+    [
+     121.189,
+     -31.846
+    ],
+    [
+     123.74,
+     -45.352
+    ],
+    [
+     123.021,
+     -45.317
+    ],
+    [
+     120.421,
+     -31.551
+    ],
+    [
+     120.842,
+     -31.225
+    ],
+    [
+     121.203,
+     -30.893
+    ],
+    [
+     121.535,
+     -30.532
+    ],
+    [
+     121.837,
+     -30.145
+    ],
+    [
+     122.106,
+     -29.735
+    ],
+    [
+     122.341,
+     -29.304
+    ],
+    [
+     122.54,
+     -28.855
+    ],
+    [
+     122.7,
+     -28.397
+    ]
+   ],
+   "holes": [],
+   "height": 1.25,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "hedge",
    "name": "Hedge_Mass_8",
+   "ring": [
+    [
+     127.64,
+     -31.983
+    ],
+    [
+     127.64,
+     -31.282
+    ],
+    [
+     129.099,
+     -31.358
+    ],
+    [
+     128.354,
+     -45.578
+    ],
+    [
+     127.655,
+     -45.544
+    ],
+    [
+     128.364,
+     -32.02
+    ]
+   ],
+   "holes": [],
+   "height": 1.25,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Mass_9",
+   "ring": [
+    [
+     131.16,
+     -32.167
+    ],
+    [
+     130.452,
+     -45.68
+    ],
+    [
+     129.753,
+     -45.646
+    ],
+    [
+     130.498,
+     -31.431
+    ],
+    [
+     131.16,
+     -31.466
+    ]
+   ],
+   "holes": [],
+   "height": 1.25,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Mass_10",
    "ring": [
     [
      146.712,
@@ -1673,9 +1671,10 @@
    ],
    "dir_deg": 86.1,
    "span": 0.95,
-   "thk": 1.34,
+   "thk": 1.19,
    "depth": 1.0,
-   "height": 2.2,
+   "height": 2.17,
+   "crown_thk": 0.75,
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
@@ -3116,8 +3115,8 @@
      -9.913
     ],
     [
-     115.804,
-     -10.946
+     117.008,
+     -11.028
     ]
    ],
    "height": 0.2,
@@ -3134,8 +3133,8 @@
    "name": "Edging_Bnd_1",
    "line": [
     [
-     119.426,
-     -11.192
+     118.206,
+     -11.109
     ],
     [
      129.249,
@@ -3312,8 +3311,8 @@
      -36.883
     ],
     [
-     99.624,
-     -25.407
+     99.689,
+     -24.409
     ]
    ],
    "height": 0.2,
@@ -3330,8 +3329,8 @@
    "name": "Edging_Bnd_9",
    "line": [
     [
-     99.828,
-     -22.259
+     99.767,
+     -23.206
     ],
     [
      100.628,
@@ -4685,17 +4684,17 @@
    "name": "PergolaWalk_South",
    "line": [
     [
-     99.914,
-     -45.33
+     99.918,
+     -45.245
     ],
     [
-     152.451,
-     -47.9
+     152.455,
+     -47.815
     ]
    ],
-   "width": 2.2,
+   "width": 2.03,
    "surface": "diamond_tile_0.4",
-   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-10-02 garden photo diff (A152, A190, A191, A148): walk 2.6 m = 6.5 tile columns incl. a 0.40 m octagon-tile strip along the wall foot; widened to the garden side | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5-t8: long straight diamond-tile walk (5-6 tile columns ~2.2 m) under maroon steel-pipe hoops with vines, boulder wall on its south side with benches + wrought-iron bins; starts at a herringbone landing with a red granite step at the SE corner. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-10-02 garden photo diff (A152, A190, A191, A148): walk 2.6 m = 6.5 tile columns incl. a 0.40 m octagon-tile strip along the wall foot; widened to the garden side | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: width 2.03, N edge kept",
    "confidence": "low"
   },
   {
@@ -4703,17 +4702,17 @@
    "name": "PergolaWalk_South_Border",
    "line": [
     [
-     99.85,
-     -46.629
+     99.858,
+     -46.458
     ],
     [
-     152.387,
-     -49.199
+     152.395,
+     -49.028
     ]
    ],
    "width": 0.4,
    "surface": "octagon_tile_0.4",
-   "evidence": "2026-10-02 garden photo diff (A152, A190, A191, A148): walk 2.6 m = 6.5 tile columns incl. a 0.40 m octagon-tile strip along the wall foot; widened to the garden side | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "2026-10-02 garden photo diff (A152, A190, A191, A148): walk 2.6 m = 6.5 tile columns incl. a 0.40 m octagon-tile strip along the wall foot; widened to the garden side | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: border row follows the narrower walk",
    "confidence": "low"
   },
   {
@@ -4742,15 +4741,15 @@
    "type": "bench",
    "name": "Bench_Pergola_0",
    "pos": [
-    145.446,
-    -48.487
+    145.431,
+    -48.788
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.30 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4758,15 +4757,15 @@
    "type": "bench",
    "name": "Bench_Pergola_1",
    "pos": [
-    139.164,
-    -48.176
+    139.149,
+    -48.481
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.31 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4774,15 +4773,15 @@
    "type": "bench",
    "name": "Bench_Pergola_2",
    "pos": [
-    132.881,
-    -47.865
+    132.866,
+    -48.174
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.31 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4790,15 +4789,15 @@
    "type": "bench",
    "name": "Bench_Pergola_3",
    "pos": [
-    126.599,
-    -47.553
+    126.584,
+    -47.867
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.31 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4806,15 +4805,15 @@
    "type": "bench",
    "name": "Bench_Pergola_4",
    "pos": [
-    120.317,
-    -47.242
+    120.301,
+    -47.559
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.32 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4822,15 +4821,15 @@
    "type": "bench",
    "name": "Bench_Pergola_5",
    "pos": [
-    114.035,
-    -46.931
+    114.019,
+    -47.251
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.32 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4838,15 +4837,15 @@
    "type": "bench",
    "name": "Bench_Pergola_6",
    "pos": [
-    107.752,
-    -46.62
+    107.736,
+    -46.94
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.32 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4854,15 +4853,15 @@
    "type": "bench",
    "name": "Bench_Pergola_7",
    "pos": [
-    101.47,
-    -46.309
+    101.454,
+    -46.629
    ],
    "dir_deg": 87.2,
    "length": 1.9,
    "depth": 0.5,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "081904575 t5.5-t8.5: benches in a row against the boulder wall under the pergola; one per ~4.5 m along each wall segment, clear of the stair gaps (x 126.0-127.6, 138.0-139.6) | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.32 m to the moved wall",
    "confidence": "medium",
    "ue_asset": "bench_slats_steel_frame"
   },
@@ -4870,8 +4869,8 @@
    "type": "bin",
    "name": "Bin_Pergola_East",
    "pos": [
-    149.353,
-    -48.8
+    149.343,
+    -49.005
    ],
    "size": [
     0.45,
@@ -4881,14 +4880,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay: bin just west of the first arch (t7.0) | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge"
+   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay: bin just west of the first arch (t7.0) | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.20 m to the moved wall"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_East",
    "pos": [
-    142.299,
-    -48.451
+    142.289,
+    -48.66
    ],
    "size": [
     0.45,
@@ -4898,14 +4897,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: bin just west of the first arch (t7.0) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge"
+   "evidence": "owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end, pitch 2.4 m, benches in every 2nd bay: bin just west of the first arch (t7.0) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.21 m to the moved wall"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_125",
    "pos": [
-    123.452,
-    -47.518
+    123.441,
+    -47.738
    ],
    "size": [
     0.45,
@@ -4915,14 +4914,14 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.22 m to the moved wall"
   },
   {
    "type": "bin",
    "name": "Bin_Pergola_137",
    "pos": [
-    136.017,
-    -48.14
+    136.007,
+    -48.352
    ],
    "size": [
     0.45,
@@ -4932,19 +4931,19 @@
    "dir_deg": 87.2,
    "ue_asset": "bin_wrought_iron",
    "confidence": "medium",
-   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge"
+   "evidence": "081904575 t6.5-t8.5: black wrought-iron litter bins on scroll feet against the boulder wall next to the stair gaps | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01: back 0.21 m to the moved wall"
   },
   {
    "type": "wall",
    "name": "RetainingWall_South_0",
    "line": [
     [
-     99.312,
-     -47.404
+     99.328,
+     -47.084
     ],
     [
-     151.498,
-     -49.956
+     151.514,
+     -49.636
     ]
    ],
    "height": 1.1,
@@ -4952,7 +4951,7 @@
    "cap_proj": 0.0,
    "material": "stone",
    "kind": "boulder_retaining",
-   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): east end stops at the stair's west bed | 2026-10-02: ~1.1 m above the walk (A190 pitched-camera metrology) | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge",
+   "evidence": "Rounded river-boulder retaining wall, 4 courses ~0.9-1.0 m on the garden side (081904575 t6-t8, 081958653 t3.5); upper ground toward Block B beyond it (terrain falls 2.4 m/100 m to the north; 2020 pano: benches standing on top of it ~1.4 m above the Gazebo_1 floor). Line = pergola-walk south edge, Google z20: walk = bright band y -45.0..-47.0 at x 140-150 (dark wall line -47.3), -45.5..-47 at x 125-131 -> grid v -19.3 (+-0.4). Builder z follows the smooth terrain, so the level step itself is not modelled. | [B] 2026-09-28: 1.00 m so the top course stands ~4 cm above the upper terrace (6.31). | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | [B] owner 2026-09-28: no stairs through the wall (removed), one continuous wall | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): east end stops at the stair's west bed | 2026-10-02: ~1.1 m above the walk (A190 pitched-camera metrology) | 2026-10-03 owner msg 62 (more ground between B's north wall and the boulder wall than modelled; the maroon run along B is a gas-pipe cover standing off the wall): walk set moved 3.81 m grid-north. Google z20 ground profile: paving band v -17.5..-19.7 (garden frame) over x 104-150, parallel to the grid, its north edge on the garden lawn edging; A183 single-view metrology (vertical VP -> pitch 5.9 deg down, f from fl35 24 mm; B ground-window head FFL+2.42): camera -> B wall 8.2 +-0.9 m, wall north face -> B 6.2-7.4 m (model had 2.76); video 250 f0007-0025: scalloped edging + hedge directly on the walk's north edge | 2026-10-03 photo pass R2-01 (A152/A153/A155/A190/A191: wall foot -> edging 2.63 +-0.15 = 0.2 concrete strip + 6 slabs of 0.405): wall +0.32 m grid-north",
    "confidence": "low"
   },
   {
@@ -4960,8 +4959,8 @@
    "name": "RetainingWall_South_Return",
    "line": [
     [
-     151.498,
-     -49.956
+     151.514,
+     -49.636
     ],
     [
      151.337,
@@ -4974,7 +4973,7 @@
    "material": "stone",
    "kind": "boulder_retaining",
    "confidence": "low",
-   "evidence": "2026-10-03 (A202/A203 stair-top views): the boulder wall turns south at the pergola walk's east end and holds the upper terrace (6.31) above the lower landing between the walk and the wide stair's foot, up to the west raised bed's front wall (WS_Bed_W_Front); line = the moved wall's east end -> grid-south 3.3 m"
+   "evidence": "2026-10-03 (A202/A203 stair-top views): the boulder wall turns south at the pergola walk's east end and holds the upper terrace (6.31) above the lower landing between the walk and the wide stair's foot, up to the west raised bed's front wall (WS_Bed_W_Front); line = the moved wall's east end -> grid-south 3.3 m | 2026-10-03 photo pass R2-01: start follows the wall"
   },
   {
    "type": "path",
@@ -4991,9 +4990,9 @@
    ],
    "width": 3.37,
    "thk": 0.08,
-   "surface": "octagon_tile_0.4",
+   "surface": "diamond_tile_0.4",
    "confidence": "low",
-   "evidence": "2026-10-03: lower-level paving where the moved pergola walk, the G2_SE arch path and the wide stair's foot meet (A202 bottom right: grey patterned tiles at the stair foot; Google z20: pale paved block x 152-157 north of the stair); extent = return wall east face .. stair east end, stair foot .. garden SE chamfer"
+   "evidence": "2026-10-03: lower-level paving where the moved pergola walk, the G2_SE arch path and the wide stair's foot meet (A202 bottom right: grey patterned tiles at the stair foot; Google z20: pale paved block x 152-157 north of the stair); extent = return wall east face .. stair east end, stair foot .. garden SE chamfer | 2026-10-03 photo pass R3-02: diamond 0.40 slabs W of the diagonal joint (stair foot ~x155 -> G2_SE mouth); herringbone E of it = PergolaEast_Landing_E"
   },
   {
    "type": "path",
@@ -5010,9 +5009,9 @@
    ],
    "width": 3.9,
    "thk": 0.08,
-   "surface": "octagon_tile_0.4",
+   "surface": "diamond_tile_0.4",
    "confidence": "low",
-   "evidence": "2026-10-03: lower-level paving where the moved pergola walk, the G2_SE arch path and the wide stair's foot meet (A202 bottom right: grey patterned tiles at the stair foot; Google z20: pale paved block x 152-157 north of the stair); extent = return wall east face .. stair east end, stair foot .. garden SE chamfer"
+   "evidence": "2026-10-03: lower-level paving where the moved pergola walk, the G2_SE arch path and the wide stair's foot meet (A202 bottom right: grey patterned tiles at the stair foot; Google z20: pale paved block x 152-157 north of the stair); extent = return wall east face .. stair east end, stair foot .. garden SE chamfer | 2026-10-03 photo pass R3-02: diamond 0.40 slabs W of the diagonal joint (stair foot ~x155 -> G2_SE mouth); herringbone E of it = PergolaEast_Landing_E"
   },
   {
    "type": "lamp_orn",
@@ -5030,74 +5029,44 @@
    "arm_span": 0.8
   },
   {
-   "type": "lamp_orn",
-   "name": "Lamp_EastWalk_0",
-   "pos": [
-    157.524,
-    -36.77
-   ],
-   "height": 3.2,
-   "head": "ball",
-   "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders. | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9)",
-   "confidence": "low",
-   "globes": 2,
-   "globe_d": 0.35,
-   "arm_span": 0.8
-  },
-  {
-   "type": "lamp_orn",
-   "name": "Lamp_EastWalk_1",
-   "pos": [
-    158.408,
-    -20.795
-   ],
-   "height": 3.2,
-   "head": "ball",
-   "evidence": "081856511 t1.9: black cast-iron lamp post with a white globe at the lawn edge of the herringbone walkway along the garden (scalloped edging, thujas). Count/spacing along the walk unknown; positions are placeholders. | [B] 2026-09-28: garden lamps are black cast posts with two white globes on scroll arms (081856511 t0.3, 081946180 t9)",
-   "confidence": "low",
-   "globes": 2,
-   "globe_d": 0.35,
-   "arm_span": 0.8
-  },
-  {
    "type": "planter",
    "name": "AW_Pit_0",
    "ring": [
     [
-     161.485,
-     -43.931
+     161.345,
+     -46.781
     ],
     [
-     162.384,
-     -43.975
+     162.244,
+     -46.825
     ],
     [
-     162.443,
-     -42.776
+     162.303,
+     -45.626
     ],
     [
-     161.544,
-     -42.732
+     161.404,
+     -45.582
     ]
    ],
    "curb_h": 0.1,
    "curb_w": 0.08,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "AW_PitThuja_0",
    "pos": [
-    161.964,
-    -43.354
+    161.824,
+    -46.204
    ],
    "height": 2.8,
    "crown_d": 0.7,
    "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
@@ -5105,40 +5074,40 @@
    "name": "AW_Pit_1",
    "ring": [
     [
-     161.706,
-     -39.436
+     161.566,
+     -42.286
     ],
     [
-     162.605,
-     -39.48
+     162.465,
+     -42.33
     ],
     [
-     162.663,
-     -38.282
+     162.523,
+     -41.132
     ],
     [
-     161.765,
-     -38.238
+     161.625,
+     -41.088
     ]
    ],
    "curb_h": 0.1,
    "curb_w": 0.08,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "AW_PitThuja_1",
    "pos": [
-    162.185,
-    -38.859
+    162.045,
+    -41.709
    ],
    "height": 2.8,
    "crown_d": 0.7,
    "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
@@ -5146,40 +5115,40 @@
    "name": "AW_Pit_2",
    "ring": [
     [
-     161.924,
-     -34.992
+     161.784,
+     -37.842
     ],
     [
-     162.823,
-     -35.036
+     162.683,
+     -37.886
     ],
     [
-     162.881,
-     -33.837
+     162.741,
+     -36.687
     ],
     [
-     161.983,
-     -33.793
+     161.843,
+     -36.643
     ]
    ],
    "curb_h": 0.1,
    "curb_w": 0.08,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "AW_PitThuja_2",
    "pos": [
-    162.403,
-    -34.414
+    162.263,
+    -37.264
    ],
    "height": 2.8,
    "crown_d": 0.7,
    "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
@@ -5187,40 +5156,40 @@
    "name": "AW_Pit_3",
    "ring": [
     [
-     162.142,
-     -30.547
+     162.002,
+     -33.397
     ],
     [
-     163.041,
-     -30.591
+     162.901,
+     -33.441
     ],
     [
-     163.099,
-     -29.393
+     162.959,
+     -32.243
     ],
     [
-     162.201,
-     -29.348
+     162.061,
+     -32.198
     ]
    ],
    "curb_h": 0.1,
    "curb_w": 0.08,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "AW_PitThuja_3",
    "pos": [
-    162.621,
-    -29.97
+    162.481,
+    -32.82
    ],
    "height": 2.8,
    "crown_d": 0.7,
    "shape": "cone",
    "trunk_d": 0.08,
    "crown_base": 0.2,
-   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face",
+   "evidence": "4 thujas in red-curbed pits in front of the A_W gallery deck, lower plaza: SfM of 012404116+012429784+012436367 (3.35 m/unit from bin, camera height, pavers), orthophoto ~/koch_work/fixAW/sfm/m1_orthoD_0.09_g.jpg; first pit confirmed in 070309303 f73, same 4 trees in 012327726 f55; centres A-local y 49.5/54.0/58.45/62.9 (4.45 m pitch), x 0.7 = 1.35 m in front of the deck face | 2026-10-03 photo pass R3-03: pits 2.85 m south along the deck line (spacing 4.45 kept)",
    "confidence": "medium"
   },
   {
@@ -5664,13 +5633,13 @@
     137.44,
     -2.455
    ],
-   "height": 8.0,
-   "crown_d": 3.0,
-   "trunk_d": 0.25,
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.3,
    "crown_base": 0.6,
    "shape": "cone",
-   "species": "spruce",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-03 photo pass P0-02 (A018/A002/A004/A005/A016): columnar thuja (some double), not a tall spruce",
    "confidence": "medium"
   },
   {
@@ -5680,13 +5649,13 @@
     142.44,
     -2.597
    ],
-   "height": 8.0,
-   "crown_d": 3.0,
-   "trunk_d": 0.25,
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.3,
    "crown_base": 0.6,
    "shape": "cone",
-   "species": "spruce",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-03 photo pass P0-02 (A018/A002/A004/A005/A016): columnar thuja (some double), not a tall spruce",
    "confidence": "medium"
   },
   {
@@ -5696,13 +5665,13 @@
     146.94,
     -2.725
    ],
-   "height": 8.0,
-   "crown_d": 3.0,
-   "trunk_d": 0.25,
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.3,
    "crown_base": 0.6,
    "shape": "cone",
-   "species": "spruce",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-03 photo pass P0-02 (A018/A002/A004/A005/A016): columnar thuja (some double), not a tall spruce",
    "confidence": "medium"
   },
   {
@@ -5712,13 +5681,13 @@
     137.341,
     -5.953
    ],
-   "height": 8.0,
-   "crown_d": 3.0,
-   "trunk_d": 0.25,
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.3,
    "crown_base": 0.6,
    "shape": "cone",
-   "species": "spruce",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-03 photo pass P0-02 (A018/A002/A004/A005/A016): columnar thuja (some double), not a tall spruce",
    "confidence": "medium"
   },
   {
@@ -5728,13 +5697,13 @@
     141.841,
     -6.082
    ],
-   "height": 8.0,
-   "crown_d": 3.0,
-   "trunk_d": 0.25,
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.3,
    "crown_base": 0.6,
    "shape": "cone",
-   "species": "spruce",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-03 photo pass P0-02 (A018/A002/A004/A005/A016): columnar thuja (some double), not a tall spruce",
    "confidence": "medium"
   },
   {
@@ -5744,13 +5713,13 @@
     146.841,
     -6.224
    ],
-   "height": 8.0,
-   "crown_d": 3.0,
-   "trunk_d": 0.25,
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.3,
    "crown_base": 0.6,
    "shape": "cone",
-   "species": "spruce",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
+   "species": "thuja",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-03 photo pass P0-02 (A018/A002/A004/A005/A016): columnar thuja (some double), not a tall spruce",
    "confidence": "medium"
   },
   {
@@ -5928,6 +5897,196 @@
    "ue_asset": "bench_slats_steel_frame",
    "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
    "confidence": "low"
+  },
+  {
+   "type": "path",
+   "name": "HallWalk_Diamond",
+   "line": [
+    [
+     100.74,
+     -8.3
+    ],
+    [
+     158.32,
+     -12.22
+    ]
+   ],
+   "width": 3.24,
+   "thk": 0.08,
+   "top": 0.018,
+   "surface": "diamond_tile_0.4",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R1-10: garden N walk = 3.24 m band of 0.40 diamond slabs (8 rows)"
+  },
+  {
+   "type": "path",
+   "name": "HallWalk_PinkRow",
+   "line": [
+    [
+     100.64,
+     -9.71
+    ],
+    [
+     158.23,
+     -13.63
+    ]
+   ],
+   "width": 0.405,
+   "thk": 0.08,
+   "top": 0.02,
+   "slot": "M_Paving_Diamond_Tile_Pink",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R1-10: first (south) slab row pink-tinted"
+  },
+  {
+   "type": "path",
+   "name": "HallWalk_SoldierCourse",
+   "line": [
+    [
+     155.6,
+     -8.6
+    ],
+    [
+     155.25,
+     -13.6
+    ]
+   ],
+   "width": 0.25,
+   "thk": 0.08,
+   "top": 0.02,
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R1-10: red brick soldier course across the walk's E end; herringbone only E of it (x ~155-156)"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "PergolaWalk_Lamp_0",
+   "pos": [
+    124.0,
+    -45.9
+   ],
+   "height": 2.6,
+   "globes": 1,
+   "globe_d": 0.3,
+   "arm_span": 0.0,
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R2-04 (A165-A172): black cast post beside a pergola post on the walk N edge, globe at about the pergola top-rail height",
+   "top_globe": true
+  },
+  {
+   "type": "lamp_orn",
+   "name": "StairTop_Lamp_W",
+   "pos": [
+    152.4,
+    -55.2
+   ],
+   "height": 2.9,
+   "globes": 2,
+   "globe_d": 0.3,
+   "arm_span": 0.7,
+   "base_box": [
+    0.4,
+    0.4,
+    0.4
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R2-06 (A202, A203, A145, A148): 2-lantern lamp post on a scroll T-arm, black cast post on a concrete base block, terrace corner W of the wide-stair top (pavers 0.2 m: post 2.9 +-0.4)"
+  },
+  {
+   "type": "box",
+   "name": "FireBoard_BNE",
+   "center": [
+    150.5,
+    -55.8
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    1.2,
+    0.05,
+    0.9
+   ],
+   "z0": 7.6,
+   "material": "metal",
+   "slot": "M_Sheet_Red",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R2-05 (A206, A148): red fire board (shovel, 2 cones) on a grey steel pole at B's NE corner; sizes unsure"
+  },
+  {
+   "type": "box",
+   "name": "FireBoard_BNE_Pole",
+   "center": [
+    150.5,
+    -55.75
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.08,
+    0.08,
+    2.2
+   ],
+   "z0": 6.3,
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R2-05: pole"
+  },
+  {
+   "type": "box",
+   "name": "SandBox_BNE",
+   "center": [
+    150.5,
+    -56.15
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    1.0,
+    0.5,
+    0.5
+   ],
+   "z0": 6.3,
+   "material": "metal",
+   "slot": "M_Sheet_Red",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R2-05: red sand box at the board foot"
+  },
+  {
+   "type": "box",
+   "name": "StairTop_Post",
+   "center": [
+    152.0,
+    -53.6
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.12,
+    0.12,
+    0.9
+   ],
+   "z0": 6.35,
+   "material": "metal",
+   "slot": "M_Wrought_Iron",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R3-01: short black cast post (lamp stub/bollard) ~0.9 m on a ~0.4 m concrete pad, raised lawn W of the stair top"
+  },
+  {
+   "type": "path",
+   "name": "PergolaEast_Landing_E",
+   "line": [
+    [
+     155.663,
+     -49.257
+    ],
+    [
+     159.458,
+     -49.442
+    ]
+   ],
+   "width": 7.2,
+   "thk": 0.08,
+   "top": 0.022,
+   "surface": "herringbone_200x100",
+   "confidence": "low",
+   "evidence": "2026-10-03 photo pass R3-02: herringbone 200x100 grey E of the diagonal joint (as the gallery plaza); the joint is simplified to a straight line"
   }
  ],
  "ground": "pads",
@@ -6006,16 +6165,16 @@
      -57.343
     ],
     [
-     151.249,
-     -49.942
+     151.265,
+     -49.624
     ],
     [
-     99.312,
-     -47.404
+     99.328,
+     -47.084
     ]
    ],
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing). | 2026-09-28: N edge follows the boulder wall 0.55 m north (owner screenshot 58) | 2026-10-03: N edge on the moved wall centreline (+3.81 m grid-north, owner msg 62 + Google z20 + A183), E edge on the wall's east return (inner face u 21.225) round B's NE corner (A203/A204: terrace ground runs to the alley kerb)"
+   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing). | 2026-09-28: N edge follows the boulder wall 0.55 m north (owner screenshot 58) | 2026-10-03: N edge on the moved wall centreline (+3.81 m grid-north, owner msg 62 + Google z20 + A183), E edge on the wall's east return (inner face u 21.225) round B's NE corner (A203/A204: terrace ground runs to the alley kerb) | 2026-10-03 photo pass R2-01: N edge on the moved wall centreline"
   },
   {
    "name": "AW_SquareN",
@@ -6063,8 +6222,8 @@
      -9.5
     ]
    ],
-   "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py): paved walk between the Hall and the garden"
+   "slot": "M_Concrete",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py): paved walk between the Hall and the garden | 2026-10-03 photo pass R1-10 (A094-A099): plain concrete apron to the hall; diamond band + herringbone E of a red soldier course are path elements"
   },
   {
    "name": "HallBed_Lawn",
@@ -6093,12 +6252,12 @@
    "name": "B_NorthTerrace_Grass",
    "ring": [
     [
-     99.303,
-     -47.652
+     99.318,
+     -47.334
     ],
     [
-     142.023,
-     -49.741
+     142.039,
+     -49.423
     ],
     [
      141.703,
@@ -6116,12 +6275,12 @@
    "name": "B_NorthTerrace_Dirt",
    "ring": [
     [
-     142.023,
-     -49.741
+     142.039,
+     -49.423
     ],
     [
-     151.237,
-     -50.192
+     151.253,
+     -49.874
     ],
     [
      150.888,

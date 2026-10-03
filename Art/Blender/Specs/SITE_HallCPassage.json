@@ -173,10 +173,81 @@
     ]
    ],
    "z0": 4.175,
-   "z1": 5.3999999999999995,
+   "z1": 5.36,
+   "material": "brick",
+   "evidence": "the cheek turns E at the stair foot and runs to the C shed front as the coping of the upper lawn's retaining edge; lower paved strip with a manhole N of it (a_062, Google z20 shadow line y 9.0-9.2) | 2026-10-03 photo pass R0-03 (A028/A029): red tile body under a pink granite coping (one slab loose)",
+   "confidence": "medium",
+   "slot": "M_Tile_Brick_Red"
+  },
+  {
+   "type": "slab",
+   "name": "Passage_Cheek_Return_Coping",
+   "ring": [
+    [
+     159.77,
+     8.790000000000001
+    ],
+    [
+     167.861,
+     8.469000000000001
+    ],
+    [
+     167.872,
+     8.828999999999999
+    ],
+    [
+     159.77,
+     9.149
+    ]
+   ],
+   "z0": 5.36,
+   "z1": 5.4,
    "material": "granite",
-   "evidence": "the cheek turns E at the stair foot and runs to the C shed front as the coping of the upper lawn's retaining edge; lower paved strip with a manhole N of it (a_062, Google z20 shadow line y 9.0-9.2)",
-   "confidence": "medium"
+   "confidence": "high",
+   "evidence": "2026-10-03 photo pass R0-03: pink granite coping slabs 0.04 m, 3 cm proud of the tile body"
+  },
+  {
+   "type": "slab",
+   "name": "Passage_ShedLedge",
+   "ring": [
+    [
+     166.97,
+     9.12
+    ],
+    [
+     167.47,
+     9.12
+    ],
+    [
+     167.47,
+     11.3
+    ],
+    [
+     166.97,
+     11.3
+    ]
+   ],
+   "z0": 4.175,
+   "z1": 4.31,
+   "material": "concrete",
+   "slot": "M_Concrete",
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R0-04 (A028-A030, A032): concrete ledge 0.12-0.15 high at the foot of the C west shed in the lower yard"
+  },
+  {
+   "type": "lamp_orn",
+   "name": "Passage_Lamp_CheekE",
+   "pos": [
+    167.1,
+    8.4
+   ],
+   "z": 5.4,
+   "height": 1.8,
+   "globes": 2,
+   "globe_d": 0.13,
+   "arm_span": 0.65,
+   "confidence": "medium",
+   "evidence": "2026-10-03 photo pass R0-06 (A028: 748 px at 400 px/m = 1.87 m; A030: 1.73 m): 2-globe lamp on the upper passage at the Cheek_Return E end"
   },
   {
    "type": "roof_plane",

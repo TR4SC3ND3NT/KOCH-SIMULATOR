@@ -356,12 +356,13 @@ class Site:
         c = Vector(el["center"])
         fwd, left = rot2(el.get("dir_deg", 0.0))
         s, h, t, dep = el["span"], el["height"], el.get("thk", 0.6), el.get("depth", 1.0)
+        ct = el.get("crown_thk", t)                      # thinner crown than legs (2026-10-02/03 photo pass P0-01)
         r_in = s / 2
         zs = h - r_in                                    # springing height of the semicircle (clear height = h)
         prof = [(-(r_in + t), -BURY), (-(r_in + t), zs)]
-        for k in range(1, 12):
+        for k in range(1, 12):                           # outer: half-ellipse, legs t wide, crown ct thick
             a = math.pi - math.pi * k / 12
-            prof.append(((r_in + t) * math.cos(a), zs + (r_in + t) * math.sin(a)))
+            prof.append(((r_in + t) * math.cos(a), zs + (r_in + ct) * math.sin(a)))
         prof += [(r_in + t, zs), (r_in + t, -BURY), (r_in, -BURY), (r_in, zs)]
         for k in range(1, 12):
             a = math.pi * k / 12
@@ -1234,7 +1235,7 @@ class Site:
         """Ornamental cast lamp post: pole, symmetric scroll arms (simplified to bars) with a globe at each end.
         'cross': true = two crossed arms with a globe at each of the 4 ends (globes is then ignored)."""
         P = Vector(el["pos"])
-        z = self.gz(P.x, P.y)
+        z = el["z"] if "z" in el else self.gz(P.x, P.y)   # explicit z: on a slab / landing above the terrain
         h, span, n = el.get("height", 3.6), el.get("arm_span", 1.0), int(el.get("globes", 2))
         r = el.get("globe_d", 0.3) / 2
         fwd, left = rot2(el.get("dir_deg", 0.0))
@@ -1255,8 +1256,10 @@ class Site:
             bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=r,
                                       matrix=Matrix.Translation((P.x, P.y, z + h + 0.25 + r - 0.02)))
         m = _frame2(P, left)
-        box(bm, m, -span / 2, span / 2, -0.02, 0.02, z + h - 0.22, z + h - 0.18)   # arm bar
-        ends = [left * (-span / 2 + span * k / max(1, n - 1)) for k in range(n)]
+        ends = []
+        if span > 0:   # arm_span 0: single globe on the pole top only (top_globe), no arm
+            box(bm, m, -span / 2, span / 2, -0.02, 0.02, z + h - 0.22, z + h - 0.18)   # arm bar
+            ends = [left * (-span / 2 + span * k / max(1, n - 1)) for k in range(n)]
         if el.get("cross"):   # second bar 1.5 cm lower so the crossing has no coplanar faces
             box(bm, _frame2(P, fwd), -span / 2, span / 2, -0.02, 0.02, z + h - 0.235, z + h - 0.195)
             ends = [left * (-span / 2), left * (span / 2), fwd * (-span / 2), fwd * (span / 2)]

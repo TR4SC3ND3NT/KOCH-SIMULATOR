@@ -1,0 +1,2951 @@
+[
+ {
+  "slice": "batch1r_part0: A026-A051 (26 photos, 2026-09-30 16:42-16:46). Notes and scripts: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass1r_part0/ (notes.txt, gc.py, prof.py, plane.py, a027.py, a031.py, a042g.py, oprof.py, acorr.py, redseg.py, probe.py, bb.json). Route: Hall-C passage upper landing, then the lower passage yard at the C west shed, then the pitch/courts walkway, then the yard stair, lane and bench niche.",
+  "coverage": [
+   {
+    "id": "A026",
+    "scene": "Hall-C passage upper landing at the HallEast E face, looking down",
+    "camera": "~(154.3,8.5), looking down/W",
+    "checked": "Order of items on the E face: the landing rail meets the wall at the N end of the maroon cover box, then a steel plate over a pit, then the granite landing. The herringbone paving is level with the granite.",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-02"
+    ]
+   },
+   {
+    "id": "A027",
+    "scene": "HallEast E face window E1, frontal",
+    "camera": "~(155.5,10), looking W",
+    "checked": "Plane rectification (f 3399 px; quad orthogonality 89.94 deg; check tile 0.197 x 0.100). Frame 0.954 x 0.991, reveal opening 1.01 x 1.04, frame bottom 0.67 above the apron. Pink field ends 0.07 S of the reveal.",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-01",
+     "R0-02"
+    ]
+   },
+   {
+    "id": "A028",
+    "scene": "Lower passage yard looking E at the C west shed",
+    "camera": "~(160.7,10.0), looking E",
+    "checked": "Cheek_Return material (red tile body with a pink granite coping), concrete ledge at the shed foot, 2-globe lamp at the Cheek_Return E end (748 px tall at 400 px/m = 1.87 m), lower-lawn kerbs",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-03",
+     "R0-04",
+     "R0-06"
+    ]
+   },
+   {
+    "id": "A029",
+    "scene": "Same yard, closer, looking E/SE",
+    "camera": "~(163.5,10.8), looking E",
+    "checked": "Cheek coping slab (one loose), cracked tile body, ledge 0.12-0.15 high, Y/W kerb on the lower lawn W side (matches), manhole",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-03",
+     "R0-04"
+    ]
+   },
+   {
+    "id": "A030",
+    "scene": "C west face over the shed (portrait)",
+    "camera": "~(162,9.8), looking E/up",
+    "checked": "Lamp 1129 px at ~654 px/m = 1.73 m, globes ~0.12, arm span ~0.65; shed tile courses 0.1 m; ledge",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R0-06",
+     "R0-04"
+    ]
+   },
+   {
+    "id": "A031",
+    "scene": "C west face frontal (landscape)",
+    "camera": "~(158,10), looking E/up",
+    "checked": "Rectified (orthogonality 89.5 deg). Window column centre fractions 0.192/0.437/0.574/0.819 (spec 0.183/0.429/0.545/0.817). Column 2 only on F3-F4 (spec ok). Row heights consistent between storeys. Maroon corner strips at both ends.",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-05"
+    ]
+   },
+   {
+    "id": "A032",
+    "scene": "C west face over the shed, closer",
+    "camera": "~(160,10), looking E/up",
+    "checked": "Same 4 window columns as A031. Shed roof and trim, lamp, ledge and cheek corner.",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-05",
+     "R0-06",
+     "R0-04"
+    ]
+   },
+   {
+    "id": "A033",
+    "scene": "Inside the courts SW corner by the W-fence door, looking W/NW at the pitch SE corner (portrait)",
+    "camera": "~(166,44.5), looking W",
+    "checked": "Pitch E fence on a red-painted concrete plinth, bin and 2-step stool at the pitch S gate (match), clover pavers on the walkway, thuja alley with 2-globe lamps, white barred padlocked door in the courts W fence",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-08"
+    ]
+   },
+   {
+    "id": "A034",
+    "scene": "Same scene, landscape, through the white barred door",
+    "camera": "~(166,44.5) inside the courts, looking W",
+    "checked": "Door in the courts W fence: w/h 0.49 frontal, so ~1.0 x 2.1, padlocked. Pitch plinth red concrete ~0.35-0.45 (P0-07 confirmed).",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-08"
+    ]
+   },
+   {
+    "id": "A035",
+    "scene": "Walkway N part through the courts W fence into the basketball court (portrait)",
+    "camera": "~(162,62), looking E",
+    "checked": "Teal fence, N hoop pole by the N fence, wall bars outside the N fence, floodlight masts E, kerb corner in the foreground",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A036",
+    "scene": "Same as A035, second frame",
+    "camera": "~(163,62), looking E",
+    "checked": "Same items, basketball court lines",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A037",
+    "scene": "Courts NW area from the walkway (landscape)",
+    "camera": "~(163,63), looking E",
+    "checked": "N fence receding, N hoop, wall bars and pull-up posts outside the N fence on the lower strip",
+    "verdict": "matches",
+    "finding_ids": [
+     "R0-07"
+    ]
+   },
+   {
+    "id": "A038",
+    "scene": "Pitch NE corner: 3 painted kerb risers up to the path along the pitch N side, looking W",
+    "camera": "~(160,69.5), looking W",
+    "checked": "NorthPath_Steps: 3 risers ~0.10 high (165 px at ~1600 px/m from the 0.267 clover period of 426 px). Width ~1.35-1.55 +-0.15 vs model 1.7, within error.",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A039",
+    "scene": "Courts NW corner, young man on the dip bars, looking E along the courts N fence",
+    "camera": "~(165,69.5) on the Retain_Courts top, looking E",
+    "checked": "Dip bars run N-S (model 87.8 deg ok), wall bars, pull-ups, lane to the guard booth, concrete wall top ~1.2 wide (model 1.3)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A040",
+    "scene": "Courts NW corner from the walkway N end",
+    "camera": "~(163,71), looking SE",
+    "checked": "Wide concrete top of the retaining wall along the N fence, lower strip on the left, kerb corner",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A041",
+    "scene": "Walkway N end looking W: NorthPath_Steps and the sloped Retain_Terrace low wall",
+    "camera": "~(161,70.5), looking W",
+    "checked": "3 risers; the terrace wall slopes down to the N; wave pavers in the foreground",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A042",
+    "scene": "Walkway from its N end looking S, between the courts (left) and the pitch (right)",
+    "camera": "~(162.3,72), looking S",
+    "checked": "Ground metrology (camera h 1.25 from the 1.0 m kerbs, horizon v~990): walkway ~6.3 wide (model 6.5). The courts W fence runs on N past the pitch plinth end (supports the N offset). Plinth is red-painted concrete with drain holes.",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-07"
+    ]
+   },
+   {
+    "id": "A043",
+    "scene": "Yard stair top looking W/NW: NorthPath_Steps, Retain_Terrace wall, birch/rose bank",
+    "camera": "~(161,73), looking W",
+    "checked": "Terrace wall slopes from 3.8 down to 2.65 northward, as modelled",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A044",
+    "scene": "Same as A043, second frame",
+    "camera": "~(161,73), looking W",
+    "checked": "Same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A045",
+    "scene": "Yard stair seen from its W cheek, looking along the risers",
+    "camera": "~(160,74), looking E/down",
+    "checked": "3 painted kerb rows plus the lane kerb row visible; flower-paver treads; consistent with P0-05 (5 rows)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A046",
+    "scene": "Yard stair treads from above",
+    "camera": "~(162,74), looking N/down",
+    "checked": "Y/W 1.0 m stones; tread ~0.76 +-0.1 (model 0.75)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A047",
+    "scene": "Yard stair E end: rows end at a concrete patch with a manhole, pull-up posts beyond",
+    "camera": "~(165,72.5), looking N/down",
+    "checked": "Second manhole on a concrete patch at the stair E end (only the lane manhole is modelled)",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R0-12"
+    ]
+   },
+   {
+    "id": "A048",
+    "scene": "Bench niche N of the lane, scale man (1.77 m) on the lane",
+    "camera": "~(163,76.5), about 2.6 m above the lane, looking N",
+    "checked": "Scale check: man 1064 px at 605 px/m = 1.76 m. Lane kerb to kerb 2.9 +-0.3. Niche opening 1.9, depth ~3.7 to the bench, bench 1.43. Wall top 2.07 and pillar top 2.30 above the niche floor.",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R0-11",
+     "R0-10"
+    ]
+   },
+   {
+    "id": "A049",
+    "scene": "Same niche, man walking, spruces either side",
+    "camera": "~(163.5,77), looking N",
+    "checked": "Scale 418 px/m at the trunk base (man 1166 px, horizon 1084). Spruce crowns 4.3/4.1, heights 5.3/4.8, centre spacing 5.1 (model 3.5 crown, 6.0 high, 5.5 apart).",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-10",
+     "R0-11"
+    ]
+   },
+   {
+    "id": "A050",
+    "scene": "Lane looking W from the stair foot",
+    "camera": "~(159,78), looking W",
+    "checked": "Bank lawn with roses meets the lane through a flush Y/W kerb W of the stair cheek end; no 0.6 m wall",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R0-09"
+    ]
+   },
+   {
+    "id": "A051",
+    "scene": "Yard stair top looking E/NE: rows descend N, E cheek slopes N, dip and pull-up bars beyond, lane and guard booth far",
+    "camera": "~(160.5,72), looking E",
+    "checked": "Consistent with P0-05; dip bars N-S",
+    "verdict": "matches",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "R0-07",
+    "title": "Courts block offset north of the pitch (step at both ends), length 26.1",
+    "spec": "SITE_Sports.json: Courts_Slab ring/holes, Court_*_Field, Court_*_Lines, Hoop_*, nets, CourtsFence_* lines, CourtsGate_*, CourtsThuja*, LowerYard_Retain_Courts, Workout_*, LowerYard_RampE, LowerYard terrain_pads edge",
+    "current": "Courts flush with the pitch: v 0.15..25.40 in the sports frame (origin 114,45, -2.2 deg); S edge y~43.2, N edge y~68.4 at x 165",
+    "proposed": "Courts outer v 1.80..27.90. Courts_Slab outer ring: (164.932,44.845),(210.998,43.075),(212.000,69.156),(165.934,70.925). S-edge vertices (S fences, gates, S hoop) +(0.063,1.649); N-edge vertices (N fence, N hoop, LowerYard_Retain_Courts, Workout_*, LowerYard_Strip/LowerYard S edge E of x165.8, LowerYard_RampE S edge) +(0.096,2.498); interior items (fields, lines, nets, volley/hard posts, division-fence mid) +(0.080,2.073), division fences stretched to the new S/N edges",
+    "photos": [
+     "A042",
+     "A037",
+     "A035",
+     "A036"
+    ],
+    "method": "oprof.py luminance-step profiles across both ends on 3 orthos, within each image, so registration cancels. Pitch edge column x150-157 vs courts edge column x169-172, corrected for the -2.2 deg frame slope (0.65 m). S step: Google +1.45, Bing +1.65, Esri +1.9. N step (court surface end): Google +2.75, Bing +2.4, Esri +2.4. Courts length 25.25 + 0.85 = 26.1, which matches the owner's 26 kerb stones of ~1.0 m. A042 shows the courts W fence running N past the end of the pitch plinth.",
+    "error": "S +-0.25, N +-0.3, length +-0.3",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-01",
+    "title": "HallEast E1 window smaller",
+    "spec": "BLD_HallEast.json window_types.E1",
+    "current": "w 1.10, h 1.30, mullion 0.5",
+    "proposed": "w 1.01, h 1.04 (opening); PVC frame 0.95 x 0.99 with 1 mullion; keep sill 0.37 (head drops to 1.41 above FFL)",
+    "photos": [
+     "A027"
+    ],
+    "method": "Plane rectification from the 4 frame corners with f = 0.833 x 4080 (a027.py). Self-check: tile 0.197 x 0.100 m, matching the 0.100 course, and the quad is orthogonal to 89.94 deg. Course = 0.0440 plane units: frame 0.954 x 0.991, reveal 1.006 x 1.039.",
+    "error": "+-0.03",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-02",
+    "title": "HallEast E-face order: E1 window lies N of the landing rail, not over the bench",
+    "spec": "BLD_HallEast.json facades[edge 1].windows E1 u; SITE_HallCPassage Passage_Bench / Passage_LandingRail",
+    "current": "E1 at world y 6.21-7.38, S of the landing rail (y 7.93) and inside the bench span (y 1.24-7.64)",
+    "proposed": "S to N along the face: maroon cover box ends at the landing rail line; then a steel plate over a pit 0.83 wide; then the pink band; then the E1 S reveal at rail + 2.08 (world y ~10.0); then beige >= 1.0; then the low part with the door. Move E1 u from 7.6 to ~9.6-10.0 and re-check the ED door u (9.7) against it.",
+    "photos": [
+     "A026",
+     "A027",
+     "A006",
+     "A007"
+    ],
+    "method": "A026/A027 at the A025 tile scale (0.100 course): plate 0.83, rail to reveal 2.08",
+    "error": "+-0.15 on the offsets; absolute position depends on the rail position",
+    "confidence": "medium (order), low (absolute)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-03",
+    "title": "Passage_Cheek_Return: red tile body with a granite coping",
+    "spec": "SITE_HallCPassage.json Passage_Cheek_Return (check Passage_Cheek_E too)",
+    "current": "one granite slab z 4.175-5.40",
+    "proposed": "body z 4.175-5.36, slot M_Tile_Brick_Red; new slab Passage_Cheek_Return_Coping on the same ring offset 0.03 outward, z 5.36-5.40, granite",
+    "photos": [
+     "A028",
+     "A029",
+     "A030"
+    ],
+    "method": "Visual at full resolution: brick-effect tiles (0.2 x 0.1) under pink granite coping slabs ~0.04 thick",
+    "error": "coping thickness +-0.02",
+    "confidence": "high (material)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-04",
+    "title": "Concrete ledge at the foot of the C west shed in the lower yard",
+    "spec": "SITE_HallCPassage.json (new element)",
+    "current": "none",
+    "proposed": "slab Passage_ShedLedge ring (166.97,9.12),(167.47,9.12),(167.47,11.30),(166.97,11.30), z 4.175-4.31, M_Concrete",
+    "photos": [
+     "A029",
+     "A028",
+     "A030"
+    ],
+    "method": "A029 crop: shed course 57 px per 0.1 m; ledge face 70-90 px at ~0.4 m nearer gives 0.12-0.15 high; depth 0.4-0.5 after foreshortening",
+    "error": "height +-0.03, depth +-0.1",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-05",
+    "title": "C west face: window column 3 further south",
+    "spec": "BLD_C.json facades[edge 8 west].windows W u",
+    "current": "u [3.625, 10.8, 16.175] (+ [8.5] on F3-F4)",
+    "proposed": "u [3.625, 11.25, 16.175]; keep [8.5]",
+    "photos": [
+     "A031",
+     "A032"
+    ],
+    "method": "a031.py rectification (orthogonality 89.5 deg) of the column centres between the corner strips: 0.192/0.437/0.574/0.819. Column 3 relative to columns 2 and 4 = 0.359 (spec 0.299), so u = 8.5 + 0.359 x 7.675 = 11.25.",
+    "error": "+-0.12",
+    "confidence": "medium-high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-06",
+    "title": "2-globe lamp on the upper passage at the Cheek_Return E end",
+    "spec": "SITE_HallCPassage.json (new lamp_orn)",
+    "current": "none",
+    "proposed": "lamp_orn pos (167.1,8.4), z base 5.40, height 1.8, globes 2, globe_d 0.13, arm_span 0.65",
+    "photos": [
+     "A028",
+     "A030"
+    ],
+    "method": "A028: 748 px at 400 px/m = 1.87 m. A030: 1129 px at 654 px/m = 1.73 m. Scales from the shed tile courses.",
+    "error": "height +-0.15, position +-0.4",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-08",
+    "title": "Locked white barred door in the courts W fence near the SW corner",
+    "spec": "SITE_Sports.json (new gate_leaf CourtsGate_West)",
+    "current": "no W door (removed per owner 2026-09-28)",
+    "proposed": "gate_leaf panel bars, height 2.1, width 1.0, z_base 3.5, in the W fence at v ~2.3..3.3 (after R0-07), i.e. line (164.95,47.33)-(164.99,48.33); padlocked (not an entrance)",
+    "photos": [
+     "A034",
+     "A033"
+    ],
+    "method": "Frontal view from inside the courts: w/h = 1032/2121 px = 0.49, with h = 2.1 (the other gates)",
+    "error": "width +-0.1; position along the fence unsure +-1.5",
+    "confidence": "medium (exists), low (position)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-09",
+    "title": "Lane S edge W of the yard stair: flush kerb, not a 0.6 m wall",
+    "spec": "SITE_Sports.json LowerYard_Retain_Bed (+ NorthTerrace_Bank grade)",
+    "current": "box top 2.855 (0.6-0.68 above the lane 2.175)",
+    "proposed": "near the stair (x ~145-159) the top is z 2.325 (kerb 0.15 above the lane), painted Y/W 1.0 m stones, and the bank lawn grades down to it; beyond x 145 unseen",
+    "photos": [
+     "A050"
+    ],
+    "method": "Full-resolution crop: lawn surface flush with the kerb top, lane pavers directly beyond, no wall face",
+    "error": "kerb height +-0.05; W extent unknown",
+    "confidence": "medium-low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-10",
+    "title": "Niche spruces smaller crown, lower",
+    "spec": "SITE_Sports.json NorthLawnSpruce_2 / NorthLawnSpruce_3",
+    "current": "height 6.0, crown_d 3.5, pos x 160.587 / 166.083",
+    "proposed": "Spruce_2 height 5.3, crown_d 4.2, pos keep; Spruce_3 height 4.8, crown_d 4.2, pos (165.70,82.64)",
+    "photos": [
+     "A049",
+     "A048"
+    ],
+    "method": "A049: man 1166 px at feet row 2914 = 659 px/m; lane kerb 445 px/m at row 2320; so horizon 1084 and 418 px/m at the trunk base row 2244. Crowns 1807/1719 px = 4.3/4.1 m, tops 5.3/4.8 m, centres 2140 px = 5.1 m apart.",
+    "error": "+-0.4",
+    "confidence": "medium-low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-11",
+    "title": "Bench niche in the north lawn (not modelled)",
+    "spec": "SITE_Sports.json new paved recess + NorthLawnBench_4 + pillar",
+    "current": "bench at (163.137,82.141) in plain lawn; pillars every 3 m (104 at x 162.16)",
+    "proposed": "paved recess with Y/W kerbs both sides, ring (162.191,81.487),(164.089,81.414),(164.237,85.261),(162.338,85.334); NorthLawnBench_4 to (163.28,84.80), length 1.45, facing S; a boundary pillar centred behind the bench (x ~163.3); pillar top 2.30, wall top 2.07 above the niche floor",
+    "photos": [
+     "A048",
+     "A049"
+    ],
+    "method": "A048 ground scale linear in v (lane kerbs 650/430 px per 1.0 m stone; checked with the man: 1.76 m). Opening 846 px / 450 = 1.9; depth from the lane kerb to the bench ~3.7, which matches the model lawn S edge to wall = 3.85; bench 450 px at 314 px/m = 1.43. A049 at the wall: 323 px/m.",
+    "error": "width +-0.2, depth +-0.3, heights +-0.15",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R0-12",
+    "title": "Second manhole at the yard stair E end",
+    "spec": "SITE_Sports.json (new box, like LowerYard_Manhole)",
+    "current": "none",
+    "proposed": "manhole_cover 0.7 x 0.7 on a concrete patch at ~(165.3,72.6), on the landing surface E of the painted rows",
+    "photos": [
+     "A047"
+    ],
+    "method": "Visual, relative to the stair rows and the E cheek",
+    "error": "+-0.8",
+    "confidence": "low",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [],
+  "open_questions": [
+   "Courts vs pitch: from the air photos the courts start about 1.6 m further north than the pitch at the south end, and end about 2.5 m further north at the north end, so the courts come out about 1 m longer than the pitch (26 kerb stones). Is the courts block longer than the pitch, or is the step really the same at both ends?",
+   "Courts west fence: there is a white barred door with a padlock near its south-west corner. Should it stay in the model as a locked door?",
+   "Lane west of the stair down to the workout yard: does the lawn come down to the lane with only a low painted kerb all the way to the west, or is there a knee-high wall further west?",
+   "Boundary wall along the lane: is there a red brick pillar behind every bench niche, and how many grey block panels are there between two pillars?",
+   "HallEast east face: between the ramp landing railing and the glazed door, is there exactly one window, and does it sit on the beige part just north of the pink strip?"
+  ]
+ },
+ {
+  "slice": "pass1r_part1: A070-A140 (71 photos), scratch /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass1r_part1/ (notes.txt, geo.py, draw.py, v.py, face1d.py, stair129.py, edges_courts.py, vp_pave.py, prof.py, acf.py, ortho_crop.py, plan_centre.py)",
+  "coverage": [
+   {
+    "id": "A070",
+    "scene": "sports walkway between the courts (E, teal cage) and the pitch (W, green fence on red plinth), looking S toward the HallEast door and the hall-wing porch",
+    "camera": "(162.5,58) yaw 181 (VP of the walkway edges at x1577)",
+    "checked": "courts S end vs pitch S end, porch bearing (door 190.4 deg, post 193.2 deg), building identity",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-01",
+     "R1-02"
+    ]
+   },
+   {
+    "id": "A071",
+    "scene": "hall wing face with the timber-soffit porch on one maroon post at its E end; HallEast with its glazed door + blue plate beyond on the left",
+    "camera": "(159,29) look SW",
+    "checked": "porch, windows, plinth (7 courses = 0.90 m via 1.0 m kerbs), wall height 4.3 m, post 4.25 m",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-01"
+    ]
+   },
+   {
+    "id": "A072",
+    "scene": "from the wing porch looking S: porch post, soffit, pink rear wall with fire board, HallEast door canopy ~11 m beyond, passage stair, spruces",
+    "camera": "(158,28) look S",
+    "checked": "porch is next to the HallEast/passage, not at the canteen",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-01"
+    ]
+   },
+   {
+    "id": "A073",
+    "scene": "alley N of the hall looking W: kerbed beds, columnar thujas, 1-globe lamps, pitch fence",
+    "camera": "(140,31) look W",
+    "checked": "AlleyBed/Thuja/Lamp layout",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A074",
+    "scene": "hall wing NW corner, W face (narrow openings, vent, base box), hall N wall behind, double thuja in a pit",
+    "camera": "(131,25) look SE",
+    "checked": "hip roof (eave + gutter on both faces), wall height",
+    "verdict": "matches",
+    "finding_ids": [
+     "R1-04"
+    ]
+   },
+   {
+    "id": "A075",
+    "scene": "hall wing N face from the NW corner looking E, post at the far end, C beyond; W face",
+    "camera": "(130,23) look E",
+    "checked": "plinth lines + wall top fit (VP), plinth 6 courses, wall 4.0 m above paving; model wall top 4.08-4.26",
+    "verdict": "matches",
+    "finding_ids": [
+     "R1-01"
+    ]
+   },
+   {
+    "id": "A076",
+    "scene": "same corner: N face (2 windows, round vent, downpipe, post at the far end) + W face (eaves on both faces = hip), hall N wall behind",
+    "camera": "(130,23) look E/SE",
+    "checked": "roof type, window order",
+    "verdict": "matches",
+    "finding_ids": [
+     "R1-01",
+     "R1-04"
+    ]
+   },
+   {
+    "id": "A077",
+    "scene": "hall wing W face (left) + hall N wall frontal (barred 3-light windows, string course, tile plinth)",
+    "camera": "(129,24) look SE",
+    "checked": "wing/hall junction, paving rise along the W face",
+    "verdict": "matches",
+    "finding_ids": [
+     "R1-04"
+    ]
+   },
+   {
+    "id": "A078",
+    "scene": "wing W face base box (EPS insulation, peeling render) running to the hall N wall, clover pavers",
+    "camera": "(132,16) look E/down",
+    "checked": "base box extent",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R1-04"
+    ]
+   },
+   {
+    "id": "A079",
+    "scene": "hall N yard looking W along the hall N wall: thujas in square white-kerbed pits, maroon tile door bay, boiler stack behind the roof, white 3-storey block",
+    "camera": "(138,24) look W",
+    "checked": "door bay, chimney (consistent with P0-04, no new position)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-05"
+    ]
+   },
+   {
+    "id": "A080",
+    "scene": "hall N yard looking N: alley beds, 2-globe lamps, pitch fence, towers",
+    "camera": "(120,26) look N",
+    "checked": "alley layout",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A081",
+    "scene": "hall N wall looking W: maroon bay with a rusty 2-leaf steel door, bikes, yellow bin",
+    "camera": "(122,22) look W",
+    "checked": "doors on hall edge 2",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-05"
+    ]
+   },
+   {
+    "id": "A082",
+    "scene": "scale man (1.77) at the hall N wall by a wrought bench",
+    "camera": "(122,21) look W, h 1.49",
+    "checked": "man 1100 px, horizon 1860; plinth 7 courses 1.16 m, sills 1.98, heads 3.68 above the paving",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-07",
+     "R1-08"
+    ]
+   },
+   {
+    "id": "A083",
+    "scene": "hall N yard W part looking WNW: thuja/rose beds, lamp, brick pier wall, timber pavilion far W, off-site power-plant stack on the skyline",
+    "camera": "(108,24) look WNW",
+    "checked": "bed layout; the far stack is off-site, not the boiler chimney",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A084",
+    "scene": "hall N wall W end: maroon steel double door with glazing, barred window, louvred vent, lower W annex, banner pole, pink stage",
+    "camera": "(105,22) look W",
+    "checked": "doors on hall edge 2",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-05"
+    ]
+   },
+   {
+    "id": "A085",
+    "scene": "same as A084, closer",
+    "camera": "(104,22) look W",
+    "checked": "door bay, stage ~4.2 x 1.0 x 0.5",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-05"
+    ]
+   },
+   {
+    "id": "A086",
+    "scene": "same as A084, wider",
+    "camera": "(106,22) look W",
+    "checked": "door bay, annex",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-05"
+    ]
+   },
+   {
+    "id": "A087",
+    "scene": "HallEast glazed 2-leaf door in a pink panel, blue name sign + small plate, 1-step red granite landing, timber soffit, downpipe + fire board at right",
+    "camera": "(157,9.5) look W",
+    "checked": "door, sign, canopy; door frame 11.4 plinth courses -> course ~0.18",
+    "verdict": "matches",
+    "finding_ids": [
+     "R1-08"
+    ]
+   },
+   {
+    "id": "A088",
+    "scene": "HallEast tall block with low 2-light window, 6-course tile plinth, mesh ramp + rails, maroon cover box",
+    "camera": "(156,6) look W",
+    "checked": "E1 window, ramp, cover",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A089",
+    "scene": "scale man at the passage stair/ramp foot looking S: 5-riser granite stair, mesh ramp, HallEast",
+    "camera": "(158,13) look S, h 1.46",
+    "checked": "paving VPs (vp_pave.py), plinth 7 courses 1.28 m, ramp 0.86 m between rails, 5 risers",
+    "verdict": "matches",
+    "finding_ids": [
+     "R1-08"
+    ]
+   },
+   {
+    "id": "A090",
+    "scene": "HallEast S face base: maroon sloped sheet cover on a low upstand, steel pipes, hose",
+    "camera": "(151,-4) look N",
+    "checked": "applied lightwell cover",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A091",
+    "scene": "along the hall S wall looking W from its E end: maroon cover, paver strip, kerbed lawn, pink/beige fields with a low row AND an upper row of windows",
+    "camera": "(153,-3) look W",
+    "checked": "window rows",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-09"
+    ]
+   },
+   {
+    "id": "A092",
+    "scene": "same as A091",
+    "camera": "(153,-3) look W",
+    "checked": "window rows, festival boxes far W",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-09"
+    ]
+   },
+   {
+    "id": "A093",
+    "scene": "C main entrance: maroon corrugated lightwell cover, cheek wall with granite cap, granite stair, ramp, red-kerbed tree pits",
+    "camera": "(183,-12) look N",
+    "checked": "applied batch 3",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A094",
+    "scene": "C west shed front: hex shingle band, brass edge, grey roof, red tile base, drainage channel",
+    "camera": "(162,14) look S",
+    "checked": "applied WestShed",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A095",
+    "scene": "A_N north end: grey rough-cast, tile plinth, fire ladder, AC units, AHU duct, junipers in pink-kerbed pits, benches",
+    "camera": "(185,-16) look S",
+    "checked": "applied 5cb1ee4",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A096",
+    "scene": "plaza E of the hall looking N: HallBed lawn with a curved painted kerb, thuja, hall S face E end, maroon covers, HallEast, fence/gate to the passage",
+    "camera": "(152,-13) look N",
+    "checked": "covers, lawn bed (kerb corner is rounded, minor)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A097",
+    "scene": "ground at the E end of the garden N walk: herringbone | red brick soldier course | 0.40 diamond slabs (first row pink) | yellow kerb",
+    "camera": "(156,-13) look W/down",
+    "checked": "surface types",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-10"
+    ]
+   },
+   {
+    "id": "A098",
+    "scene": "garden N walk looking W: 0.40 diamond slabs, slat benches + wrought bins on the edging, plain concrete apron to the hall, red block enclosure, pipe bridge, W end walls",
+    "camera": "(136,-11) look W",
+    "checked": "walk width 8 slabs = 3.24 m, apron material",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-10"
+    ]
+   },
+   {
+    "id": "A099",
+    "scene": "centre square looking E: bench E1 in a hedge niche, E link, G2 behind",
+    "camera": "(128,-27) look E",
+    "checked": "hedge behind E1",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A100",
+    "scene": "centre square SE corner: benches E0 and S0 with a wrought bin, lawn behind both",
+    "camera": "(129.5,-27.5) look SE",
+    "checked": "hedge masses around the square",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A101",
+    "scene": "same as A100",
+    "camera": "(129.5,-27.5) look SE",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A102",
+    "scene": "E link to G2 between hedges, ends at a post + red-tile parapet stub",
+    "camera": "(131,-28) look E",
+    "checked": "link hedges, gazebo openings",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A103",
+    "scene": "S arm looking S between hedges to the boulder wall and B",
+    "camera": "(130,-30) look S",
+    "checked": "S arm hedges",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A104",
+    "scene": "same as A103",
+    "camera": "(130,-30) look S",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A105",
+    "scene": "centre square W side: bench W0 on the edging with lawn behind, W link with a hedge on one side, G1 behind",
+    "camera": "(131,-29) look W",
+    "checked": "Hedge_Mass_5 extent",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A106",
+    "scene": "same as A105",
+    "camera": "(131,-29) look W",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A107",
+    "scene": "same as A105, wider",
+    "camera": "(131,-29) look W",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A108",
+    "scene": "centre lamp base: tapered black pedestal on a bolted plate on a concrete pad",
+    "camera": "(130,-28.8) look N/down",
+    "checked": "pad ~0.70 x 0.70 x 0.07 (0.405 slab scale), pedestal base 0.37",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-12"
+    ]
+   },
+   {
+    "id": "A109",
+    "scene": "same as A108",
+    "camera": "(130,-28.8) look N/down",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-12"
+    ]
+   },
+   {
+    "id": "A110",
+    "scene": "centre lamp head: 3 globes with leaf cups, N arm between hedges, hall S face",
+    "camera": "(130,-28) look N",
+    "checked": "globe count (GD-7)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A111",
+    "scene": "centre lamp from below: curved top-globe arm, side globe, hanging globe",
+    "camera": "(130.5,-28.5) look N",
+    "checked": "globe count",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A112",
+    "scene": "lamp pole foreground; scale man seated on bench E0; E link to G2; lawn behind E0",
+    "camera": "(129.5,-28) look E",
+    "checked": "confirms lawn behind E0",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A113",
+    "scene": "scalloped edging block close-up on diamond slabs",
+    "camera": "centre square edge, look down",
+    "checked": "0.154 pitch (applied)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A114",
+    "scene": "hedge foliage close-up",
+    "camera": "garden",
+    "checked": "material reference only",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "A115",
+    "scene": "hedge side with edging and slabs",
+    "camera": "garden",
+    "checked": "material reference only",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "A116",
+    "scene": "past bench S0/E0 over the lawn toward G2 behind a hedge, poplar",
+    "camera": "(132.5,-31) look E",
+    "checked": "no hedge behind the bench",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A117",
+    "scene": "lawn S of the square to the boulder wall and B",
+    "camera": "(132.5,-31.5) look S",
+    "checked": "no hedge in the SE quadrant",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A118",
+    "scene": "lawn SE of the square, poplar",
+    "camera": "(133,-31) look SE",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-11"
+    ]
+   },
+   {
+    "id": "A119",
+    "scene": "bench W1 at the square NW corner with the hedge behind, hall S face beyond",
+    "camera": "(127,-25.5) look N",
+    "checked": "Hedge_Mass_0",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A120",
+    "scene": "same as A119",
+    "camera": "(127,-25.5) look N",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A121",
+    "scene": "W link into G1 between hedges, post + red-tile stub",
+    "camera": "(125,-27.6) look W",
+    "checked": "link hedges",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A122",
+    "scene": "gazebo inside: maroon parapet inner face, column base band, timber bench",
+    "camera": "G1 interior",
+    "checked": "GD-9",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "A123",
+    "scene": "gazebo inside: perimeter bench, red/grey diamond floor",
+    "camera": "G1 interior",
+    "checked": "GD-9",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "A124",
+    "scene": "gazebo inside with the scale man, maroon round centre column, slat ceiling",
+    "camera": "G1 interior",
+    "checked": "heights (see A125)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A125",
+    "scene": "gazebo inside with the scale man",
+    "camera": "G1 interior, h ~1.5",
+    "checked": "man 987 px; parapet 0.96 m, soffit 2.75 +-0.2 m (model 0.94 / 2.6)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A126",
+    "scene": "same as A125",
+    "camera": "G1 interior",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A127",
+    "scene": "same as A125",
+    "camera": "G1 interior",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A128",
+    "scene": "hedge + tree at the garden E edge, A-block facade with maroon surrounds beyond",
+    "camera": "(155,-24) look E",
+    "checked": "qualitative",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A129",
+    "scene": "wide granite stair at B's NE corner from the garden SE, boulder wall at its W end, herringbone foot, A_W gallery at the top left",
+    "camera": "(155.5,-50.5) look S, h 1.17",
+    "checked": "stair129.py: 6 risers 0.166, tread 0.30 (12 edge rows, rms 5.5 px, pavers 1200 px/m)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A130",
+    "scene": "same stair",
+    "camera": "(155.5,-50.5) look S",
+    "checked": "riser count 6",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A131",
+    "scene": "same stair",
+    "camera": "(155.5,-50.5) look S",
+    "checked": "riser count 6",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A132",
+    "scene": "same stair, obstructed by a person",
+    "camera": "(155,-50.5) look S",
+    "checked": "riser count 6",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A133",
+    "scene": "same stair W end: bottom 2 treads run past the boulder wall line, diamond slabs W of it",
+    "camera": "(154.5,-51) look S",
+    "checked": "riser count 6, end splay",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A134",
+    "scene": "same stair from the NW: 6 risers, N/E end stepped back per tread beside a red-tile planter cheek, A_W gallery behind",
+    "camera": "(151,-52) look E",
+    "checked": "riser count, splay",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A135",
+    "scene": "walk along the A_W gallery looking S, stair cheek and steel stair at right",
+    "camera": "(159.5,-49) look S",
+    "checked": "gallery, cheek",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A136",
+    "scene": "herringbone plaza at the garden SE: doughnut hedge arch, rose arch, boulder wall",
+    "camera": "(158,-47) look NW",
+    "checked": "GD-1",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A137",
+    "scene": "A_W gallery frontal: red posts, timber soffit, maroon window surrounds, slogan letter band",
+    "camera": "(163,-36) look E",
+    "checked": "applied gallery",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A138",
+    "scene": "A_W gallery oblique, thujas in red-kerbed pits, AC unit",
+    "camera": "(162,-40) look NE",
+    "checked": "pits, gallery",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A139",
+    "scene": "scale man beside the B-corner stair, A_W gallery behind",
+    "camera": "(153,-50.5) look E/SE",
+    "checked": "6 risers",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   },
+   {
+    "id": "A140",
+    "scene": "same as A139",
+    "camera": "(153,-50.5) look E/SE",
+    "checked": "6 risers",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R1-13"
+    ]
+   }
+  ],
+  "findings": [
+   {
+    "id": "R1-01",
+    "title": "The timber-soffit porch on one maroon post, its downpipe and its windows belong to the hall wing (E end, beside the HallEast door), not the canteen. This contradicts applied commit cc86c47.",
+    "spec": "Art/Blender/Specs/BLD_Canteen.json attachments (post_canopy edge 3, downpipe edge 0 u 2.5) + facades[edge 0].windows (S1 u 4.0, S2 u 15.0); Art/Blender/Specs/BLD_HallWing.json attachments / facades",
+    "current": "Canteen: post_canopy edge 3 u0 5.6 u1 9.1 depth 3.0, post at u 8.95 (world ~(179.3,27.2)); S windows S1/S2 + downpipe, sourced from A071/A075. Wing: no porch, windows only on E edge 1 at u 2.5/5.0/7.5",
+    "proposed": "Canteen: remove the post_canopy and the edge-0 downpipe; set the edge-0 windows back to [] ('not photographed in 2026'); keep the eave 2.9 (from the shadow calibration). Wing: add {\"type\":\"post_canopy\",\"edge\":1,\"u0\":8.0,\"u1\":10.04,\"depth\":2.0,\"z0\":3.4,\"z1\":3.6,\"posts_u\":[9.9],\"post_w\":0.15,\"slot\":\"M_Paint_White\",\"soffit_slot\":\"M_Wood_Stained\",\"post_slot\":\"M_Paint_Maroon\"}. That is a porch at the wing's NE corner, post at world ~(153.8,20.5 +-2), roof at the wing eave. It also needs a pink inner wall and a red fire board ~2.0 x 0.7. N-face openings (edge 2, u measured from the NE corner going W): window 0.94 x 1.31 at u 3.3, round vent d 0.25 at u 7.3 (z ~3.4 above the paving), window 1.2 x 1.3 at u 8.4. Sills are ~2.2 above the N paving (= 1.65 rel FFL 4.95). Error +-0.5 / +-1.3 m.",
+    "photos": [
+     "A070",
+     "A071",
+     "A072",
+     "A075",
+     "A076",
+     "A087"
+    ],
+    "method": "Identification uses 4 cues. (1) A070 from the walkway at (162.5,58), camera fixed by the HallEast door bearing 190.4 deg (model door at y 9.5): the porch post is at 193.2 deg, i.e. at x 153.8, y ~21. The canteen W end (x 182) would be 30-53 deg to the LEFT, outside the frame. (2) In A072, taken from the porch, the HallEast door canopy is ~11 m beyond the post (400 px width for 1.6 m). (3) A075/A076: hip-roof corner with eaves and gutters on both faces. The W face joins the tall hall N wall, which has 3-light barred windows (A077). C stands beyond the far end. (4) Google z20: the canteen W end is a straight roof edge at x 182.6 with no porch roof, and its gable ridge runs E-W. Sizes and heights come from the 1.0 m painted kerb stones at the porch in A071 (280/305 px per stone): post 4.25 m, wall top 4.3 m, plinth 0.90 m.",
+    "error": "post position +-2 m; window u +-0.5 (A071) but the A076 window order is mirrored vs A071 (see open question); sizes +-0.1",
+    "confidence": "medium (attribution: high; exact porch corner: medium)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-02",
+    "title": "Courts block is offset ~1.8 m north of the pitch at both ends (owner 10-02). The model has it flush.",
+    "spec": "Scripts/Geo/zones/zone_sports.py C_U0..C_V1, BB, VB, division fences -> regenerate Art/Blender/Specs/SITE_Sports.json",
+    "current": "C_V0, C_V1 = P_V0, P_V1 = 0.15, 25.40 (sports frame origin (114,45), rot -2.2 deg). The courts S fence is flush with the pitch S fence (owner note of 09-28).",
+    "proposed": "C_V0 = 1.95, C_V1 = 27.20 (+1.8 m in v), and +1.8 on the v of BB, VB, HARD and the DIV fences, hoops and nets. World corners: SW (164.94,44.99), SE (211.00,43.22), NW (165.91,70.23), NE (211.97,68.46). The courts N retaining wall, workout strip and courts thujas follow C_V1/C_V0 in the script. Re-check that the lower-yard stair and dip bars still clear the moved N fence.",
+    "photos": [
+     "A070"
+    ],
+    "method": "Plan: Google z20 brightness/redness profiles across the edges (edges_courts.py). Pitch S edge at y 44.0 (x 144-156, v ~0.35). Courts outer red edge at y 44.5-45.0 for x 168-180 (u 54-66), which is v 1.7-2.2. This matches the earlier ortho read 'S v 1.7 / N v 28.0' quoted in zone_sports.py. Photo: in A070 the courts SW post base sits 365 px below the walkway VP (camera 1.7 m), so 13.4 m away. With the camera at y ~58, that is v ~1.55. In A070 the courts' S end is clearly nearer the camera than the pitch's S end. Owner: same offset at both ends, so v1 = 25.4 + 1.8.",
+    "error": "+-0.3 m (ortho edge blur 0.2-0.5)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-04",
+    "title": "Hall-wing W face: rendered insulation base box along the whole face (not modelled)",
+    "spec": "Art/Blender/Specs/BLD_HallWing.json attachments",
+    "current": "none; plain tile plinth on edge 3",
+    "proposed": "{\"type\":\"wall_box\"|\"lightwell\"-like box, edge 3, u0 0.0, u1 9.6 (full W face to the hall N wall), proj 0.15, top 0.6 at the N end falling to ~0.3 at the S end (paving rises), slot M_Render_Beige}. If no box type exists, use cladding proj 0.15 z0 -0.6 z1 0.0 rel FFL.",
+    "photos": [
+     "A074",
+     "A076",
+     "A077",
+     "A078"
+    ],
+    "method": "A078 close-up and A076 at the NW corner: visible height 0.59 m at the N end vs 0.28 m at the S end, by plinth-course ratio (A077). Projection from the corner shadow, by eye.",
+    "error": "+-0.1 m height, +-0.05 proj",
+    "confidence": "low",
+    "needs_builder_change": true
+   },
+   {
+    "id": "R1-05",
+    "title": "Hall N wall: maroon full-height tile door bays with 2-leaf steel doors (2 of them) are missing",
+    "spec": "Art/Blender/Specs/Overlays/BLD_Hall.json facades edge 2 (only HN windows)",
+    "current": "edge 2: 6 HN windows u 27.1-57.1, no doors, no maroon bays",
+    "proposed": "Add 2 entrances on edge 2 inside maroon cladding bays (slot M_Tile_Maroon, ~2.5-4 m wide, full wall height): (a) a rusty 2-leaf steel door ~1.8 x 2.4 near the yellow bin (A081/A082); (b) a 2-leaf steel door with a glazed panel near the W end (A084-A086). Positions are unsure: a PnP solve of A081 and A084 against the hall N wall window grid would fix u.",
+    "photos": [
+     "A079",
+     "A081",
+     "A082",
+     "A084",
+     "A085",
+     "A086"
+    ],
+    "method": "visual; existence on 6 photos, positions not solved",
+    "error": "u unsure (+-6 m), size +-0.3",
+    "confidence": "low (positions), high (existence)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-07",
+    "title": "Hall N plinth and window sills are much higher than modelled. This contradicts the applied 'plinth 6 courses = 0.6 m above the N paving'.",
+    "spec": "Art/Blender/Specs/BLD_Hall.json plinth.edge_z_top['2'] and window_types.HN / Overlays/BLD_Hall.json edge 2 sills",
+    "current": "plinth edge_z_top['2'] -0.15, i.e. top z 5.25 = 0.58 above the N paving at 4.67. HN h 1.45, sills 0.35 rel FFL, i.e. 1.08 above the paving.",
+    "proposed": "plinth edge_z_top['2'] 0.45 (top z 5.85 = 1.18 above the paving). HN h 1.70, sills 1.25 rel FFL (z 6.65 = 1.98 above the paving), heads at 2.95 rel FFL.",
+    "photos": [
+     "A082"
+    ],
+    "method": "Scale man 1.77 m = 1100 px (head 1685, feet 2785). Horizon at y 1860 from the hall N-wall line VP, so the camera is at 1.49 m. Plinth top is 7 courses = 1.16 m (+-0.08); pass1_part1 measured 1.21. Sill 1.98 / head 3.68 here vs 1.91 / 3.69-3.71 in part1. Paving z 4.67 from a model probe at (120,14).",
+    "error": "+-0.08 m",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-08",
+    "title": "Brick-effect tile course is not 0.10 m on the hall N wall, HallEast or wing. Several applied heights were scaled from 0.099 m.",
+    "spec": "BLD_HallEast.json plinth (0.40 = 4 courses), BLD_Hall.json plinth evidence, sports-zone 2nd-pass numbers",
+    "current": "0.099-0.10 m course used everywhere (A025/A027 scaling)",
+    "proposed": "No blind change. Use measured absolute heights only. Wing plinth = 0.90 m at the porch (kerb scale, course ~0.13). Hall N plinth = 1.18 m (course ~0.165). HallEast plinth beside the ramp = 1.28 m above the lower passage paving 4.475 (model top 5.76: OK). Re-check any element sized as 'N courses x 0.10'.",
+    "photos": [
+     "A071",
+     "A082",
+     "A087",
+     "A089"
+    ],
+    "method": "A071: 7 courses = 260 px at 290 px/m (1.0 m kerbs), so 0.128 m. A082: 7 courses = 1.16 m (man), so 0.165. A089/A087: man and door frame (11.4 courses for a ~2.1 m door), so 0.18.",
+    "error": "+-15% per site",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-09",
+    "title": "Hall S face has a second (upper) window row above the white string course",
+    "spec": "Art/Blender/Specs/BLD_Hall.json facades edge 0 rows",
+    "current": "20 x H at row G 0.8 only",
+    "proposed": "Add row U with 1 tall window per pink bay (bays u 6-12, 18-24, 30-36, 42-48, 54-60, centred u 9/21/33/45/57) above the string course. Size and sill are unsure: a solve of A091 against the 6 m bay grid and the lightwell cover would settle them.",
+    "photos": [
+     "A091",
+     "A092",
+     "A096"
+    ],
+    "method": "visual on full-res crops; not measured",
+    "error": "unsure",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-10",
+    "title": "Garden N walk is a 3.24 m band of 0.40 diamond slabs (first row pink). It has a plain concrete apron to the hall and herringbone only E of a red brick soldier course. The model is all herringbone.",
+    "spec": "Art/Blender/Specs/SITE_Garden.json ground_surfaces HallBed_Paving + new path elements",
+    "current": "HallBed_Paving ring [[87.638,1.063],[150.813,-0.735],[158.2,-13.4],[100.4,-9.5]] slot M_Paver_Herringbone_Grey",
+    "proposed": "Add {\"type\":\"path\",\"name\":\"HallWalk_Diamond\",\"line\":[[100.74,-8.30],[158.32,-12.22]],\"width\":3.24,\"thk\":0.08,\"surface\":\"diamond_tile_0.4\"} and {\"type\":\"path\",\"name\":\"HallWalk_PinkRow\",\"line\":[[100.64,-9.71],[158.23,-13.63]],\"width\":0.405,\"thk\":0.08,\"surface\":\"diamond_tile_0.4_red\"}. Change the HallBed_Paving slot to M_Concrete (plain apron). Add a red soldier-course strip (0.1 x 0.2 bricks on edge, 0.25 wide) across the walk's E end at x ~155-156, with herringbone only E of it.",
+    "photos": [
+     "A097",
+     "A098"
+    ],
+    "method": "A098 contrast crop (A098_row.jpg) on a row across the walk: 8 slab modules from the edging to the apron edge, x 0.405 = 3.24 m. The band is the edging line offset 3.24 m along its N normal (0.0679,0.9977). A097 shows the junction sequence.",
+    "error": "+-0.2 m width; E-end strip x +-1 m",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-11",
+    "title": "Centre square: no hedge behind benches W0, E0 and S0. Lawn instead; hedges only along the links and arms.",
+    "spec": "Art/Blender/Specs/SITE_Garden.json Hedge_Mass_5, Hedge_Mass_6",
+    "current": "Hedge_Mass_5 wraps the square's SW corner: W side x 125.2-126.1 y -28.05..-31.86, S side y -31.19..-32.02, and the W link's S strip x 122.85-125.38 y -27.8..-28.7. Hedge_Mass_6 wraps the SE corner: S side x 131.16-134.31 y -31.43..-32.33, E side x 133.64-134.47 y -28.45..-32.33.",
+    "proposed": "Clip Hedge_Mass_5: remove the region x 122.7-127.64, y -32.02..-27.7 (keep the S arm W strip x 127.64-129.1 south of y -32.02 and the G1 apron curve). Clip Hedge_Mass_6: remove x 131.16-134.47, y -32.33..-29.19 (keep the E link S strip y -29.19..-28.45 and the S arm E strip x 130.44-131.16). Lawn fills the gaps. The existing CentreSquare_Edging_0/1 stay.",
+    "photos": [
+     "A100",
+     "A101",
+     "A105",
+     "A106",
+     "A107",
+     "A112",
+     "A116",
+     "A117",
+     "A118"
+    ],
+    "method": "Full-res views from the square. Lawn with trees/roses directly behind W0, E0 and S0. Hedge only at E0's N end (E link) and S0's W end (S arm). A119/A120 and A099 confirm the hedge behind W1/E1 (N half). Extents are taken from the model plan (plan_centre.png) vs the photos.",
+    "error": "+-0.5 m on the clip lines",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R1-12",
+    "title": "Centre lamp: tapered pedestal on a smaller, thinner pad",
+    "spec": "SITE_Garden.json CentreSquare_Lamp base_box / pad",
+    "current": "base_box [0.35,0.35,1.0] (straight box), pad [0.95,0.95,0.10]",
+    "proposed": "pad [0.70,0.70,0.07]. Pedestal tapered: base 0.37 square, top ~0.15 at the scroll collar ~1.1 m up (top width/height unsure).",
+    "photos": [
+     "A108",
+     "A109",
+     "A110"
+    ],
+    "method": "A108 crop: pad vs the adjacent 0.405 m slab modules in the same plane (pad = 1.73 modules, step = 0.17 module)",
+    "error": "+-0.05 m",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "R1-13",
+    "title": "B-corner wide granite stair is one flight of 6 equal risers (0.166 m), not 4 + 3 risers of 0.174 m",
+    "spec": "Art/Blender/Specs/SITE_GateAlley.json Steps_BCorner_Upper / Steps_BCorner_Lower",
+    "current": "Upper 4 x 0.1743 (z_top 6.57, width 5.33, tread 0.35, run_out 0.35) + Lower 3 x 0.1743 (z_top 5.873, width 6.9); total 1.22 m to 5.35",
+    "proposed": "Upper: risers 4, riser_h 0.166, tread 0.30, z_top 6.57, width 5.33, run_out 0. Lower: risers 2, riser_h 0.166, tread 0.30, z_top 5.906, width 6.9, top directly under the Upper base (no connecting landing). Foot then at 5.574, 0.22 m above the modelled garden paving at 5.35 (open question: the foot paving level or a ramp/step beyond).",
+    "photos": [
+     "A129",
+     "A130",
+     "A131",
+     "A132",
+     "A133",
+     "A134",
+     "A139",
+     "A140"
+    ],
+    "method": "stair129.py fits camera height, distance, pitch, riser and tread to the 12 nosing/base rows read at x 2300 of A129 (N 1824/1498/1239/1022/839/654, B 2001/1675/1402/1177/981/796). Scale: 200x100 herringbone pavers, 1200 px/m across at the foot. Result: riser 0.166, tread 0.303, camera 1.17 m, rms 5.5 px. Scale +-8% gives 0.153-0.181. 6 risers counted on A129-A134 and A139/A140. Bottom 2 treads run past the boulder wall line (A133); the N/E end steps back per tread (A134).",
+    "error": "riser +0.015/-0.013, tread +-0.03, total rise 1.00 +-0.09",
+    "confidence": "medium",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "HallEast E door (A087, A070): large blue sign ~1.0 x 0.5 m over the door, carrying a real person's name + 'SPORTS HALL' bilingual. Small blue plate ~0.35 x 0.15 left of the door. Both to KOCH (NamePlate_E slot exists; add the second, smaller plate).",
+   "A_W gallery letter band slogan on the white fascia (A137, A138) to KOCH lettering.",
+   "Hall N wall W end (A084-A086): vertical blue/white banner with a logo on a pole/flue to KOCH banner.",
+   "Hall S side festival boxes / stacked chairs with event livery (A091, A098) to KOCH livery if kept."
+  ],
+  "open_questions": [
+   "Hall wing porch (wooden ceiling, one red post): is it at the corner of the low building that faces the football pitch, or right next to the sports-hall glass door with the blue sign? (A070/A072 put it ~10 m north of that door, and A071/A076 show the windows in mirrored order.)",
+   "Wide granite stair at block B's corner (6 steps): at its bottom, is the paving level with the garden walk, or is there one more small step or slope down to the walk?",
+   "Sports hall, garden side: does every pink panel have one tall window high up above the white line, or only some of them?",
+   "Sports hall north side: how many big steel double doors are there, one in the middle part and one near the west end?",
+   "Centre square lamp: is the black base a tapered column about knee-to-hip high?"
+  ]
+ },
+ {
+  "slice": "pass1r_part2: A141-A210 (70 photos). Areas: A_W/B alley and the stair foot (A141-A144), the B NE wide stair, the pergola walk east end and the G2_SE arch (A145-A154), a pergola-walk burst from the G1_SSE foot (A155-A189), looking over the wall at the B north gas-pipe cover (A190-A201), and the stair top, the B NE corner and the A_W gallery bed (A202-A210). Notes are in /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass1r_part2/notes.txt and coverage.json. NOTE: the working tree already has uncommitted changes in this same area: wall and walk moved +3.8 m north, GasPipeCover_North, RetainingWall_South_Return, PergolaEast_Landing. I checked against these current specs, and no photo contradicts them.",
+  "coverage": [
+   {
+    "id": "A141",
+    "scene": "A_W/B alley: lower plaza at the wide-stair foot, look S along the A_W gallery; scale man 1.77 at 2.3 m",
+    "camera": "(159.9,-49.5) h1.6, look S (yaw 183, pitch -6)",
+    "checked": "ground metrology (VP 2241,1233): bed face->gallery kerb 2.93 (h1.6) vs model 2.59; stair 5 granite risers + concrete kerb visible; A_S porch",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A142",
+    "scene": "same, portrait from the stair foot",
+    "camera": "(160,-50) look S",
+    "checked": "7 risers incl. concrete top kerb (model 3+4 x 0.174)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A143",
+    "scene": "2x zoom (fl35 49) along the alley: grating ramp, bed wall, gallery",
+    "camera": "(160,-48) look S",
+    "checked": "ramp outer width 1.02 (model 1.10), walkway ramp->gallery kerb 1.90 (model 1.49) +-0.3; ramp landing + rails turn W",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A144",
+    "scene": "2x zoom: ramp top landing, A_S entrance porch and its granite flight",
+    "camera": "(160,-50) look S",
+    "checked": "ramp 2 grating panels, landing at top then rail turns W = model Run1/Run2",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A145",
+    "scene": "wide stair W end + pergola walk E end from the lower plaza",
+    "camera": "(156,-49) look W",
+    "checked": "boulder wall abuts the stair at step 3-4; upper terrace bed with roses, 2-lantern lamp post, conifers; first pergola hoop + wrought bin",
+    "verdict": "matches",
+    "finding_ids": [
+     "R2-06"
+    ]
+   },
+   {
+    "id": "A146",
+    "scene": "wide stair W end + pergola walk E end from the lower plaza",
+    "camera": "(156,-49) look W",
+    "checked": "same as A145",
+    "verdict": "matches",
+    "finding_ids": [
+     "R2-06"
+    ]
+   },
+   {
+    "id": "A147",
+    "scene": "pergola walk E end + G2_SE topiary arch (right)",
+    "camera": "(156,-47) look W",
+    "checked": "arch: edging pitch 0.154 -> 506 px/m: outer 2.80, inner clear 2.0, leg 1.2 (model height 1.8, thk 1.1); W end red wall/steps",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R2-02",
+     "R2-03"
+    ]
+   },
+   {
+    "id": "A148",
+    "scene": "low view S at the wide stair W end and the boulder wall E end",
+    "camera": "(151.5,-50.5) h0.9 look S",
+    "checked": "5 granite risers + top kerb visible, boulder wall 5 courses ~1.1, red fire board + lamp post on the terrace, gas-pipe cover, A_S porch far",
+    "verdict": "matches",
+    "finding_ids": [
+     "R2-05"
+    ]
+   },
+   {
+    "id": "A149",
+    "scene": "same as A148 (1 s later)",
+    "camera": "(151.5,-50.5) h0.9 look S",
+    "checked": "same as A148",
+    "verdict": "matches",
+    "finding_ids": [
+     "R2-05"
+    ]
+   },
+   {
+    "id": "A150",
+    "scene": "wide stair from its NW foot, A_W gallery behind",
+    "camera": "(151.8,-50.8) look ESE",
+    "checked": "7 risers incl. kerb; W ends of all steps die into the boulder return wall (= RetainingWall_South_Return); lower 2 steps longer to the E (staggered, not measured)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A151",
+    "scene": "upper plaza looking SE at A_W gallery, ramp, bed strip, A_N blank W wall, A_S NW corner",
+    "camera": "(156,-58) look SE",
+    "checked": "ramp along the bed, landing S, rails W = model",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A152",
+    "scene": "pergola walk from its E end looking W",
+    "camera": "(151,-48.4) look W",
+    "checked": "cross-section at first slab row: 0.2 concrete strip + 6 slabs (pink octagon, 4 grey diamond, pink diamond) = 2.63 wall foot->edging; posts 2.64 c-c (model 2.95 / 2.45)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R2-01"
+    ]
+   },
+   {
+    "id": "A153",
+    "scene": "pergola walk from its E end looking W (repeat)",
+    "camera": "(151,-48.4) look W",
+    "checked": "same cross-section as A152",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R2-01"
+    ]
+   },
+   {
+    "id": "A154",
+    "scene": "walk E end looking E: lower plaza, wide stair (scale man 1.77 on top landing), A_W lettering band",
+    "camera": "(150.5,-48) look E",
+    "checked": "stair 6 granite risers + landing seen from N; edging turns N at the walk end",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A155",
+    "scene": "pergola walk mid looking W (burst start)",
+    "camera": "(122.3,-46.0) look W",
+    "checked": "walk/benches/bins along the wall; W end: 4 tile risers to a landing, red tile wall 1.19 + corrugated coping, block wall, brick pier, yellow gas pipe S-bend",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R2-01",
+     "R2-03"
+    ]
+   },
+   {
+    "id": "A156",
+    "scene": "same, pan WNW: lawn with roses, edging on walk N edge",
+    "camera": "(122.3,-46.0) look WNW",
+    "checked": "edging directly on the walk N edge; W end wall",
+    "verdict": "matches",
+    "finding_ids": [
+     "R2-03"
+    ]
+   },
+   {
+    "id": "A157",
+    "scene": "G1_SSE path N to Gazebo_1 (hip shingle roof, white posts, tile parapet)",
+    "camera": "(122.3,-46.0) look N",
+    "checked": "path 3 diamond tiles + edging W side, clipped hedge E side only (= Hedge_Mass_5); gazebo straight ahead",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A158",
+    "scene": "G1_SSE path N to Gazebo_1",
+    "camera": "(122.3,-46.0) look N",
+    "checked": "same as A157",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A159",
+    "scene": "G1_SSE path N to Gazebo_1",
+    "camera": "(122.3,-46.0) look N",
+    "checked": "same as A157",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A160",
+    "scene": "G1_SSE path N to Gazebo_1",
+    "camera": "(122.3,-46.0) look NNE",
+    "checked": "same as A157",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A161",
+    "scene": "pan NE: hedge mass, lawn sector, conifers, red building far N",
+    "camera": "(122.3,-46.0) look NE",
+    "checked": "hedge ~1.0-1.1 high, layout",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A162",
+    "scene": "pan NE: hedge mass, lawn sector",
+    "camera": "(122.3,-46.0) look NE",
+    "checked": "same as A161",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A163",
+    "scene": "pan NE: hedge mass, lawn sector",
+    "camera": "(122.3,-46.0) look NE",
+    "checked": "same as A161",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A164",
+    "scene": "pan NE: hedge mass, lawn sector",
+    "camera": "(122.3,-46.0) look ENE",
+    "checked": "same as A161",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A165",
+    "scene": "pan E: hedge row, pergola post + black lamp post at walk N edge, Gazebo_2 through trees",
+    "camera": "(122.3,-46.0) look ENE",
+    "checked": "lamp post beside a pergola post not in spec",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A166",
+    "scene": "pan E: hedge row, pergola post + lamp post",
+    "camera": "(122.3,-46.0) look ENE",
+    "checked": "same as A165",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A167",
+    "scene": "pan E: hedge row, pergola post + lamp post",
+    "camera": "(122.3,-46.0) look E",
+    "checked": "same as A165",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A168",
+    "scene": "pan E: hedge row, pergola post + lamp post",
+    "camera": "(122.3,-46.0) look E",
+    "checked": "same as A165",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A169",
+    "scene": "pan E along the walk: hoops, benches on S side, bin, people at the far E stair",
+    "camera": "(122.3,-46.0) look E",
+    "checked": "hoop profile, bench backs to the wall, lamp post",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A170",
+    "scene": "pan E along the walk",
+    "camera": "(122.3,-46.0) look E",
+    "checked": "same as A169",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A171",
+    "scene": "pan E along the walk",
+    "camera": "(122.3,-46.0) look E",
+    "checked": "same as A169",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A172",
+    "scene": "pan E along the walk",
+    "camera": "(122.3,-46.0) look E",
+    "checked": "same as A169",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-04"
+    ]
+   },
+   {
+    "id": "A173",
+    "scene": "walk looking ESE: bin, boulder wall, benches, gas-pipe cover beyond",
+    "camera": "(122.3,-46.0) look ESE",
+    "checked": "wall top ~1.0-1.1 above the walk, cover continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A174",
+    "scene": "walk looking ESE",
+    "camera": "(122.3,-46.0) look ESE",
+    "checked": "same as A173",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A175",
+    "scene": "walk looking ESE",
+    "camera": "(122.3,-46.0) look SE",
+    "checked": "same as A173",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A176",
+    "scene": "walk looking SE",
+    "camera": "(122.3,-46.0) look SE",
+    "checked": "same as A173",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A177",
+    "scene": "pan S over the wall: upper terrace, gas-pipe cover, B N face windows",
+    "camera": "(122.3,-46.2) look SSE",
+    "checked": "terrace level ~ wall top; cover stands off the wall (applied GasPipeCover_North)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A178",
+    "scene": "pan S over the wall",
+    "camera": "(122.3,-46.2) look S",
+    "checked": "same as A177",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A179",
+    "scene": "pan S over the wall",
+    "camera": "(122.3,-46.2) look S",
+    "checked": "same as A177",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A180",
+    "scene": "pan S over the wall",
+    "camera": "(122.3,-46.2) look S",
+    "checked": "same as A177",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A181",
+    "scene": "over-the-wall close-up: cover (maroon skirt, grey lid) + terrace spruces",
+    "camera": "(122.3,-46.3) look S",
+    "checked": "cover top under ground-floor sills, continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A182",
+    "scene": "over-the-wall close-up",
+    "camera": "(122.3,-46.3) look S",
+    "checked": "same as A181",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A183",
+    "scene": "over-the-wall close-up",
+    "camera": "(122.3,-46.3) look S",
+    "checked": "same as A181 (photo the parent used for the wall move; consistent)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A184",
+    "scene": "over-the-wall close-up",
+    "camera": "(122.3,-46.3) look SSW",
+    "checked": "same as A181",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A185",
+    "scene": "pan SW over the wall: cover continues W, spruces",
+    "camera": "(122.3,-46.3) look SW",
+    "checked": "continuous cover, wall runs W",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A186",
+    "scene": "pan SW over the wall",
+    "camera": "(122.3,-46.3) look SW",
+    "checked": "same as A185",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A187",
+    "scene": "pan WSW over the wall",
+    "camera": "(122.3,-46.3) look WSW",
+    "checked": "same as A185",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A188",
+    "scene": "pan W along the wall",
+    "camera": "(122.3,-46.3) look W",
+    "checked": "same as A185",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A189",
+    "scene": "walk looking W: wall, benches, W end tile stair + yellow pipe",
+    "camera": "(122.3,-46.0) look W",
+    "checked": "same as A155",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R2-03"
+    ]
+   },
+   {
+    "id": "A190",
+    "scene": "top-down: boulder wall foot, concrete strip, octagon row, diamond slabs",
+    "camera": "(118,-46.5) look down S",
+    "checked": "octagon border row at the wall side = PergolaWalk_South_Border",
+    "verdict": "matches",
+    "finding_ids": [
+     "R2-01"
+    ]
+   },
+   {
+    "id": "A191",
+    "scene": "top-down: pergola post base plate on the octagon row near the wall foot",
+    "camera": "(118,-46.5) look down",
+    "checked": "S posts ~0.15-0.2 off the wall foot (model 0.43 off the face)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R2-01"
+    ]
+   },
+   {
+    "id": "A192",
+    "scene": "over the wall: wall-top concrete planting trough with vines, terrace, cover, B windows",
+    "camera": "(118,-46.3) look S",
+    "checked": "cover present; trough is a detail",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A193",
+    "scene": "pan over the wall S: vines in the trough, cover, B windows",
+    "camera": "(116,-46.3) look S",
+    "checked": "cover continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A194",
+    "scene": "pan over the wall S",
+    "camera": "(116,-46.3) look S",
+    "checked": "same as A193",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A195",
+    "scene": "pan over the wall S",
+    "camera": "(116,-46.3) look S",
+    "checked": "same as A193",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A196",
+    "scene": "pan over the wall S",
+    "camera": "(116,-46.3) look S",
+    "checked": "same as A193",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A197",
+    "scene": "over the wall further W",
+    "camera": "(113,-46.2) look S",
+    "checked": "cover continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A198",
+    "scene": "over the wall further W",
+    "camera": "(113,-46.2) look S",
+    "checked": "cover continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A199",
+    "scene": "over the wall further W",
+    "camera": "(113,-46.2) look S",
+    "checked": "cover continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A200",
+    "scene": "over the wall further W",
+    "camera": "(113,-46.2) look S",
+    "checked": "cover continuous",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A201",
+    "scene": "look N into the garden SW lawn sector, hedges, gazebo far",
+    "camera": "(113,-45.5) look N",
+    "checked": "layout qualitative",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A202",
+    "scene": "wide stair top looking N down into the garden",
+    "camera": "(155,-56) look N",
+    "checked": "stair, terrace bed, 2-lantern lamp post on concrete base, pergola beyond",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-06"
+    ]
+   },
+   {
+    "id": "A203",
+    "scene": "stair top landing W end looking NW: 2-lantern lamp on concrete base, yellow/white plaza kerb, terrace dirt, B NE box, rose bed with boulder face",
+    "camera": "(154.5,-55.5) look NW",
+    "checked": "lamp: post 2030 px, pavers 0.2 m = 680-700 px/m -> h ~2.9",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-06"
+    ]
+   },
+   {
+    "id": "A204",
+    "scene": "upper plaza looking SW: B NE corner box (damaged sheets), terrace ground, manhole, yellow/white kerb",
+    "camera": "(157,-56) look SW",
+    "checked": "box wrap 2.2 + pipe cover (applied)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A205",
+    "scene": "terrace W of the stair: damaged box sheets, trees, manhole",
+    "camera": "(153,-55.5) look SW",
+    "checked": "applied box",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A206",
+    "scene": "red fire board (shovel, 2 cones) on grey pole + red sand box at the B NE box",
+    "camera": "(150.5,-55.5) look S",
+    "checked": "not in any spec",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R2-05"
+    ]
+   },
+   {
+    "id": "A207",
+    "scene": "B NE lightwell box against the brick-tile plinth",
+    "camera": "(150,-55.5) look SE",
+    "checked": "applied box",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A208",
+    "scene": "A_W gallery bed: thuja, hydrangea, pink granite curb, herringbone alley with red edging",
+    "camera": "(157,-60) look E",
+    "checked": "BBed/alley",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A209",
+    "scene": "same further S, gallery walkway below a granite curb",
+    "camera": "(157,-63) look E",
+    "checked": "alley/bed/walkway order",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A210",
+    "scene": "ramp + gallery door",
+    "camera": "(157,-60) look SE",
+    "checked": "GateAlley ramp/rails",
+    "verdict": "matches",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "R2-01",
+    "title": "Pergola walk cross-section 0.3 m too wide: boulder wall too far south",
+    "spec": "SITE_Garden.json: RetainingWall_South_0.line, RetainingWall_South_Return.line[0], PergolaWalk_South (line,width), PergolaWalk_South_Border.line, pad UpperTerraceSouth N edge",
+    "current": "Measured perpendicular to the walk axis (0 = walk centre): wall centre -2.10 (thk 0.5, so the N face is at -1.85); border strip -1.5..-1.1; walk -1.1..+1.1; pergola posts -1.425/+1.025. Wall face to walk N edge = 2.95; S post 0.43 off the wall face.",
+    "proposed": "Keep the walk N edge (+1.1) and Pergola_South as they are. RetainingWall_South_0.line [[99.328,-47.084],[151.514,-49.636]] (+0.32 grid-north). RetainingWall_South_Return gets the same +0.32 shift at its start (and the terrace pad N edge follows the wall). PergolaWalk_South: width 2.03, line [[99.918,-45.245],[152.455,-47.815]]. PergolaWalk_South_Border line [[99.858,-46.458],[152.395,-49.028]]. Leave a 0.2 m concrete strip at the wall foot. The N-edge slab row is pink-tinted.",
+    "photos": [
+     "A152",
+     "A153",
+     "A190",
+     "A191",
+     "A155"
+    ],
+    "method": "A152 at the first slab row: the row has 6 slabs (1 pink octagon, 4 grey diamond, 1 pink diamond) = 2150 px, so 885 px/m with the 0.405 slab period. Wall foot to edging = 0.2 concrete strip + 6 x 0.405 = 2.63 m. Post centres 2340 px = 2.64. A191 (top-down): the S post plate sits on the octagon row 0.15-0.2 off the wall foot. With the shift, the B N wall to boulder wall face distance goes from 6.65 to 6.97, still inside the 6.2-7.4 that A183 gave.",
+    "error": "+-0.15 m",
+    "confidence": "medium-low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R2-02",
+    "title": "G2_SE topiary arch too low and its crown too thin",
+    "spec": "SITE_Garden.json: Arch_Bnd_G2_SE (height, thk, span; crown_thk is the builder option proposed in P0-01)",
+    "current": "height 1.8, thk 1.1, span 1.01",
+    "proposed": "height 2.0 (inner clear), thk 1.2, span 0.95, crown_thk 0.8. Outer crown ~2.8 above the path.",
+    "photos": [
+     "A147"
+    ],
+    "method": "A147: the edging blocks at the arch foot repeat at 78 px = 0.154 m, so 506 px/m (block height 100 px = 0.20, consistent). From the edging base (y2140): outer crown y725 = 2.80 m, inner crown y1133 = 2.0 m. Left leg 600 px = 1.2 m; opening ~470 px, nearer leg, ~0.9 m. Camera at ~(156,-47) looking W, arch to the NW at (153.3,-44.3).",
+    "error": "+-0.2 m",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "R2-03",
+    "title": "Pergola walk W end: 4-riser tile stair to a landing, red tile wall with corrugated coping, block wall, yellow gas pipe",
+    "spec": "SITE_Garden.json: new elements at the PergolaWalk_South W end (x ~99.3-100); refines GD-12 (red wall 1.8 m)",
+    "current": "The walk ends at x 99.9 and nothing is modelled beyond it. GD-12 proposed one red brick wall 1.8 m.",
+    "proposed": "stairs_run Pergola_WestStair: rises W from the walk (dir_deg -2.8 = descending E), risers 4, riser_h 0.175, z_top = walk +0.70, tile-clad risers (M_Tile_Brick_Red); lower risers progressively longer to the N (stepped pyramid); width ~ walk width (2.4); tread unsure. Behind the landing: wall 'Pergola_WestWall' along x ~99.3, red brick-effect tile, top 1.19 above the walk (0.49 above the landing), grey corrugated sheet coping ~0.05; above/behind it a grey concrete-block wall (390x190 courses) >=0.8 m higher; one red brick pier at its S part. Yellow gas pipe d 0.09 along the walk foot of the stair with an S-bend down to the walk.",
+    "photos": [
+     "A155",
+     "A189",
+     "A147",
+     "A156"
+    ],
+    "method": "A155 at 3x upscale: brick-tile course 17.5 px and concrete-block course 35 px (0.20 m), so the tile course is 0.10 m. Walk to landing 122 px = 7 courses = 0.70 (4 risers at 0.175). Landing to coping 86 px = 0.49. Walk to coping 208 px = 1.19. Pipe 15-16 px = 0.09. Matches the earlier pad note that the pergola walk climbs ~0.7 m over x 100-104.",
+    "error": "heights +-0.05; plan position and tread depth unsure (needs a photo from the W end or the owner)",
+    "confidence": "medium (heights), low (plan)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R2-04",
+    "title": "Black lamp post on the pergola walk N edge near the G1_SSE foot",
+    "spec": "SITE_Garden.json: new lamp_orn",
+    "current": "not modelled (no lamp along the pergola walk)",
+    "proposed": "lamp_orn PergolaWalk_Lamp_0 pos (124.0,-45.9), height 2.6, black cast post beside a pergola post on the walk N edge; globe count unsure (at least 1).",
+    "photos": [
+     "A165",
+     "A166",
+     "A167",
+     "A168",
+     "A169",
+     "A170",
+     "A171",
+     "A172"
+    ],
+    "method": "The burst camera is located at the G1_SSE foot (122.3,-46.0): A157 shows the path with a hedge on the E side only (Hedge_Mass_5) and Gazebo_1 straight ahead; A165 shows Gazebo_2 to the right. The lamp appears close and to the ENE/E next to a pergola post, and its globe sits at about top-rail height (pergola post_h 2.3).",
+    "error": "position +-1.5 m along the walk, +-0.3 across; height +-0.3",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R2-05",
+    "title": "Fire board and sand box at B's NE corner",
+    "spec": "SITE_GateAlley.json (or BLD_B attachments): new props",
+    "current": "not modelled",
+    "proposed": "Red fire board (shovel, 2 conical buckets) on a single grey steel pole + red sand box at its foot, on the terrace in front of the B NE lightwell box near the corner, ~(150.5,-55.8). Sizes unsure.",
+    "photos": [
+     "A206",
+     "A148",
+     "A149"
+    ],
+    "method": "Qualitative. A206 shows it in front of the damaged NE box; A148 shows it on the terrace edge just S of the boulder-wall/stair junction.",
+    "error": "position +-1 m; sizes unsure",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R2-06",
+    "title": "2-lantern lamp post at the W end of the wide-stair top landing",
+    "spec": "SITE_GateAlley.json: new lamp_orn",
+    "current": "not modelled",
+    "proposed": "lamp_orn StairTop_Lamp_W pos (152.4,-55.2), height 2.9, 2 lanterns on a scroll T-arm, black cast post on a concrete base block ~0.4. It stands in the terrace corner W of the stair top, where the yellow/white plaza kerb meets the white concrete bed edge.",
+    "photos": [
+     "A203",
+     "A202",
+     "A145",
+     "A146",
+     "A148"
+    ],
+    "method": "A203: herringbone pavers 0.2 m long = 680-700 px/m near the lamp base; post base to lantern top 2030 px gives 2.9 m.",
+    "error": "height +-0.4; position +-0.7",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "A154/A151: blue capital-letter band on the A_W gallery (ends '...WORLD!') -> KOCH lettering (already listed in garden.md)",
+   "A141/A151: small blue door plates at the A_W gallery doors -> KOCH plates",
+   "A157: 'Wi-Fi' plate on a Gazebo_1 post -> generic or KOCH styling",
+   "A141/A142: number plate on a parked car beyond the gate -> blur or replace"
+  ],
+  "open_questions": [
+   "At the west end of the pergola walk, the 4 tile steps go up to a small landing in front of a red tiled wall. Where does that landing lead (a gate, a yard west of B, a building door), or is it a dead end?",
+   "Is the grey concrete-block wall behind the red tiled wall at the pergola west end part of another building, or a free-standing boundary wall? Roughly how tall is it compared with a person?",
+   "Along the pergola walk, how many black lamp posts are there, and do they stand on the garden (north) side of the walk? How many globes does each one have?",
+   "The two lowest steps of the wide stair by B's NE corner run further toward the alley than the upper ones. Is it only those two, or does each step get progressively shorter?"
+  ]
+ },
+ {
+  "slice": "batch1r_part3: A211-A281 (71 photos). Garden SE / lower plaza in front of the A_W gallery (A211-A219), the A_W south bay, side stair, ramp and walkway (A220-A231), the alley, the A_S west porch and the B porch (A232-A246), the gate booth and turnstile (A247-A258), the street sidewalk east to the east-lane gate (A259-A278), then outside the campus or not relevant (A279-A281). Notes: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/pass1r_part3/notes.txt. Scripts in the same dir: pnp.py (PnP), ray.py (ground back-projection), stairfit.py (frontal stair + scale-man fit), overlay.py/whois.py/edges.npz (model edges projected onto photos), ovl.py (ortho + spec overlay), v.py (crops).",
+  "coverage": [
+   {
+    "id": "A211",
+    "scene": "garden SE: top of the B-corner wide stair looking NW down to the pergola walk's east end",
+    "camera": "(153.6,-55.3) z~8, look NW (~315)",
+    "checked": "Granite stair going down, diamond slabs and a mosaic strip at the foot, scalloped edging, first pergola hoop (round top, maroon tube). A short black cast post on a pad stands on the raised lawn W of the stair top.",
+    "verdict": "not_modelled",
+    "finding_ids": [
+     "R3-01",
+     "R3-02"
+    ]
+   },
+   {
+    "id": "A212",
+    "scene": "lower plaza in front of the A_W gallery looking N from the B-corner stair top",
+    "camera": "PnP (8 post points, f 3173, rms 3.4 px): (156.9,-55.0,7.93), heading 16, pitch -2",
+    "checked": "Gallery posts, fascia and deck match. The 4 thuja pits back-project 2.85 m south of the model. Lawn E edge and chamfer checked. No lamp post at Lamp_EastWalk_0/1.",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-03",
+     "R3-04"
+    ]
+   },
+   {
+    "id": "A213",
+    "scene": "re-take of A212",
+    "camera": "same as A212",
+    "checked": "Pits, missing lamps, manhole mid-plaza, hedge row W of the lawn",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-03",
+     "R3-04"
+    ]
+   },
+   {
+    "id": "A214",
+    "scene": "gate alley from its N end looking S to the gate",
+    "camera": "(155.5,-57) z~8, look S",
+    "checked": "A_S NW corner + porch, A_W door bay, ramp, B east porch, BBed kerb, gate canopy + booth; topology matches",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A215",
+    "scene": "re-take of A214",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A216",
+    "scene": "lower plaza at the garden SE looking W at the G2_SE doughnut arch and lawn bed",
+    "camera": "(158,-49) look ~300",
+    "checked": "Arch on the edging line, lawn chamfer, thujas, gallery pits; no lamp post on the lawn edge",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-04"
+    ]
+   },
+   {
+    "id": "A217",
+    "scene": "G2_SE doughnut hedge arch, frontal",
+    "camera": "(155.6,-50.5) look NW",
+    "checked": "Scaled from the edging blocks (0.154 pitch / 0.20 high, ~585 px/m): outer 3.17 x 2.25, path 1.00, clear 1.49, crown 0.76",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-05"
+    ]
+   },
+   {
+    "id": "A218",
+    "scene": "re-take of A217",
+    "camera": "same",
+    "checked": "Confirms the arch measurement",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-05"
+    ]
+   },
+   {
+    "id": "A219",
+    "scene": "looking down the B-corner stair to its foot",
+    "camera": "(154.5,-55.5) z~8, look NNW, pitch ~-45",
+    "checked": "Foot surfaces: herringbone E, diamond W, mosaic strip, diagonal joint",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-02"
+    ]
+   },
+   {
+    "id": "A220",
+    "scene": "(12 mm) from the side-stair head looking SE: side stair, A_W south bay + door bay, A_S NW corner",
+    "camera": "(157.5,-61.5) z~7.9, look ~120",
+    "checked": "Stair between bed walls, ramp, door bay, lawn strip",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-06"
+    ]
+   },
+   {
+    "id": "A221",
+    "scene": "re-take of A220",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-06"
+    ]
+   },
+   {
+    "id": "A222",
+    "scene": "(12 mm) side stair frontal from the walkway, scale man on the top tread",
+    "camera": "(161.8,-61.8) z~6.7, look W",
+    "checked": "stairfit (12 edges + man): riser 0.139, tread 0.336, 6 granite steps + 1 grey kerb riser; f-independent riser bound <= 0.156; width 3.5",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-06"
+    ]
+   },
+   {
+    "id": "A223",
+    "scene": "side stair, man at the top (re-take)",
+    "camera": "(161.3,-61.7) z~6.3, look W",
+    "checked": "Riser bound <= 0.156 (man 690 px vs riser-6 61 px)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-06"
+    ]
+   },
+   {
+    "id": "A224",
+    "scene": "(12 mm) side stair from the SE; walkway retaining wall S of it; B porch and A_S porch beyond",
+    "camera": "(160.8,-66) look NW",
+    "checked": "Walkway W side is a vertical rock-face block wall with coping and a flat lawn on top, not a bank with a curb",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-07"
+    ]
+   },
+   {
+    "id": "A225",
+    "scene": "(12 mm) steel ramp from the walkway: grating platform over the stair's N part, then a long run N to the walkway",
+    "camera": "(161.5,-58.5) look W",
+    "checked": "Ramp topology (Run1/landing/Run2) and rails",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-06"
+    ]
+   },
+   {
+    "id": "A226",
+    "scene": "same ramp, man at the stair top",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A227",
+    "scene": "same ramp, man walking down",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A228",
+    "scene": "(12 mm) A_W gallery south bay frontal, scale man against the wall",
+    "camera": "(162.8,-62) on the deck, look E",
+    "checked": "Man 693 px (391 px/m): soffit 2.54 above the deck, dado 0.73 (5 courses), G frame 1.36 high with sill 0.97, DD 1.35 x 2.48",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-08"
+    ]
+   },
+   {
+    "id": "A229",
+    "scene": "(12 mm) along the gallery south bay looking S",
+    "camera": "(163.3,-58) look S",
+    "checked": "Soffit, deck tiles, S end wall, walkway + retaining wall",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-08"
+    ]
+   },
+   {
+    "id": "A230",
+    "scene": "A_W door bay (registration office) door, blue plate and awning",
+    "camera": "(161.5,-66.5) look NE",
+    "checked": "Plate dark blue ~1.12 x 0.83 above the door head; awning on diagonal brackets; 2 CCTV on the A_S pilaster",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-09"
+    ]
+   },
+   {
+    "id": "A231",
+    "scene": "walkway along the A_S west face looking S, man walking",
+    "camera": "(160.3,-66) look S",
+    "checked": "Herringbone paving (not circle pavers), grating at the wall foot, retaining wall W ~1.0 (man scale)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-07",
+     "R3-10"
+    ]
+   },
+   {
+    "id": "A232",
+    "scene": "from the Lawn_S strip (coping in the foreground) looking W at B's S porch",
+    "camera": "(158.5,-77) look W",
+    "checked": "Lawn flat to the coping, red kerb at the alley, B bed",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-07"
+    ]
+   },
+   {
+    "id": "A233",
+    "scene": "(12 mm) B east face S end and porch",
+    "camera": "(158,-78) look W",
+    "checked": "Lean-to porch roof, 2 piers, storefront, red window band",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A234",
+    "scene": "B porch frontal (24 mm)",
+    "camera": "(156.5,-78) look W",
+    "checked": "Pier/c-c/height ratios in tile courses: pier 4.55, c-c 44.9, beam 19.8 courses",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-12"
+    ]
+   },
+   {
+    "id": "A235",
+    "scene": "A_S west porch stair from the walkway foot, man at the top",
+    "camera": "(159.8,-84) look W",
+    "checked": "Edge profile: 7 granite risers + grey kerb riser = 8 = spec; height not solvable",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A236",
+    "scene": "same stair oblique from the NE, bed walls both sides, B SE lettering beyond",
+    "camera": "(160,-81) look SW",
+    "checked": "Flared bottom steps, B lettering position",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A237",
+    "scene": "same stair from the S side",
+    "camera": "(160,-88) look NW",
+    "checked": "Bed wall, lawn",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A238",
+    "scene": "under the A_S west porch looking W up the stair",
+    "camera": "(160.5,-84) look W",
+    "checked": "Piers 0.53 wide, ~12.4 courses from the stair head to the soffit",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-11"
+    ]
+   },
+   {
+    "id": "A239",
+    "scene": "A_S west door in the porch recess",
+    "camera": "(160,-84.5) look E",
+    "checked": "Black double door + transom, beige recess, downlights",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A240",
+    "scene": "A_S west porch frontal from the alley (gable pediment)",
+    "camera": "(149.5,-84.5) look E",
+    "checked": "Scaled by the pier courses (0.16): piers 0.56, c-c 2.99, outer 3.54, eave 2.11 above the pier base, roof 4.96, pitch 27",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-11"
+    ]
+   },
+   {
+    "id": "A241",
+    "scene": "B SE corner looking N along the east face; circle-paver strip with a red/white kerb",
+    "camera": "(150.5,-86) look N",
+    "checked": "Circle pavers at B's SE corner (not modelled); porch lean-to end",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-10"
+    ]
+   },
+   {
+    "id": "A242",
+    "scene": "same with the man at the S pier",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-10"
+    ]
+   },
+   {
+    "id": "A243",
+    "scene": "same, closer, man by the pier",
+    "camera": "(150.8,-84) look N",
+    "checked": "Pier face >= 0.57 m (man scale, lower bound)",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-10",
+     "R3-12"
+    ]
+   },
+   {
+    "id": "A244",
+    "scene": "B porch frontal, man at the open door",
+    "camera": "(155,-78) look W",
+    "checked": "Wall tile course 0.169 by man scale",
+    "verdict": "matches",
+    "finding_ids": [
+     "R3-12"
+    ]
+   },
+   {
+    "id": "A245",
+    "scene": "B upper storey over the porch",
+    "camera": "(154,-78) look W, up",
+    "checked": "Red window band, AC, pilaster, shingle lean-to",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A246",
+    "scene": "B lobby interior (sign, vending machine)",
+    "camera": "interior",
+    "checked": "-",
+    "verdict": "interior",
+    "finding_ids": []
+   },
+   {
+    "id": "A247",
+    "scene": "gate from inside looking S: booth, canopy on one column, sliding gate, turnstile",
+    "camera": "(152,-91) look S",
+    "checked": "Canopy, booth and gate match; only ONE tripod turnstile",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-13"
+    ]
+   },
+   {
+    "id": "A248",
+    "scene": "same, wider",
+    "camera": "(151,-90) look S",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-13"
+    ]
+   },
+   {
+    "id": "A249",
+    "scene": "booth from the NW: W face, hatch, bag rest, bench, turnstile, SouthStair",
+    "camera": "(154,-93) look SE",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-13"
+    ]
+   },
+   {
+    "id": "A250",
+    "scene": "bed W of the gate inside, yellow/white kerbs, hedge",
+    "camera": "(149,-93) look S",
+    "checked": "Bed_InsideWest",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A251",
+    "scene": "bed E end at the gate post",
+    "camera": "(151,-94) look S",
+    "checked": "kerb meets the gate line",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A252",
+    "scene": "gate W end: column, motor post, fence, bike rack",
+    "camera": "(150.5,-95) look S",
+    "checked": "GatePost, Fence_West, BikeRack",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A253",
+    "scene": "turnstile close-up from inside",
+    "camera": "(156.5,-96.5) look S",
+    "checked": "1 tripod, both-direction arrows, reader + face tablet pole, curved mobile railing",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-13"
+    ]
+   },
+   {
+    "id": "A254",
+    "scene": "same, another walker",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-13"
+    ]
+   },
+   {
+    "id": "A255",
+    "scene": "booth S face with the man",
+    "camera": "(158.6,-103) look N",
+    "checked": "plaques, window, tile base",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A256",
+    "scene": "booth S face, man ~0.45 m in front",
+    "camera": "(158.3,-102.8) look N",
+    "checked": "Man-scaled tile course 0.149 +-0.01 (spec 0.16), consistent within error",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A257",
+    "scene": "booth from the SW, man at the corner",
+    "camera": "(156.5,-104) look NE",
+    "checked": "~22 courses base to fascia = 3.3-3.5 m",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A258",
+    "scene": "booth from the SW, wider",
+    "camera": "(156,-105) look NE",
+    "checked": "canopy over the booth, tripod",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A259",
+    "scene": "booth E door + start of the sidewalk parapet/hedge",
+    "camera": "(161.5,-97.5) look E",
+    "checked": "PathClover_S, PathParapet_S start",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A260",
+    "scene": "sidewalk parapet segments, gutter, lamp in a gap, hedge",
+    "camera": "(163,-97.5) look NE",
+    "checked": "Lamp in the parapet line; parapet segmented; dished gutter",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-14"
+    ]
+   },
+   {
+    "id": "A261",
+    "scene": "same, looking E along the sidewalk",
+    "camera": "(163.5,-97.8) look E",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-14"
+    ]
+   },
+   {
+    "id": "A262",
+    "scene": "wrought bin close-up at the parapet",
+    "camera": "(164.5,-97) look down",
+    "checked": "PathBin",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A263",
+    "scene": "over the hedge at the A_S S face + spot post on the lawn",
+    "camera": "(166,-97.5) look N",
+    "checked": "lawn, facade",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A264",
+    "scene": "LED street-lamp head on a tilted pole",
+    "camera": "(167,-97.5) look up",
+    "checked": "head type",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A265",
+    "scene": "lamp pole between 2 parapet blocks",
+    "camera": "(171.7,-97.5) look N",
+    "checked": "lamp in the parapet line",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-14"
+    ]
+   },
+   {
+    "id": "A266",
+    "scene": "hedge + A_S storefront and benches",
+    "camera": "(178,-98) look N",
+    "checked": "A_S storefront (applied)",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A267",
+    "scene": "A_S S face W part over the hedge",
+    "camera": "(172,-98) look NW",
+    "checked": "facade",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A268",
+    "scene": "A_S S face storefront + red band, lawn to the A_S walk",
+    "camera": "(185,-98.3) look N",
+    "checked": "storefront, walk",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A269",
+    "scene": "re-take of A268",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A270",
+    "scene": "A_S SE corner pilaster, east lane",
+    "camera": "(195,-98.5) look NE",
+    "checked": "corner, walk",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A271",
+    "scene": "A_S S face E part through pines",
+    "camera": "(190,-98) look NW",
+    "checked": "facade",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A272",
+    "scene": "A_S S face W part through pines, signboard stand",
+    "camera": "(180,-98) look NW",
+    "checked": "facade",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A273",
+    "scene": "A_S SE corner + east lane through a tree",
+    "camera": "(197,-98.5) look NE",
+    "checked": "corner",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A274",
+    "scene": "east lane looking N from the lane gate",
+    "camera": "(200,-99.5) look N",
+    "checked": "lane, fence, A_S E face",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A275",
+    "scene": "east lane gate from the street sidewalk, man at the gate",
+    "camera": "(201.5,-103) look N",
+    "checked": "see A276",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-15"
+    ]
+   },
+   {
+    "id": "A276",
+    "scene": "east lane gate frontal with the man",
+    "camera": "(201.5,-103) look N",
+    "checked": "Gate plane 424 px/m: leaf top 1.90, bottom 0.18, length 3.77; fence 1.99, plinth 0.36; floodlight 2.56",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-15"
+    ]
+   },
+   {
+    "id": "A277",
+    "scene": "re-take of A276",
+    "camera": "same",
+    "checked": "same",
+    "verdict": "mismatch",
+    "finding_ids": [
+     "R3-15"
+    ]
+   },
+   {
+    "id": "A278",
+    "scene": "east lane looking N (wide)",
+    "camera": "(203,-100) look N",
+    "checked": "lane, fence",
+    "verdict": "matches",
+    "finding_ids": []
+   },
+   {
+    "id": "A279",
+    "scene": "street sidewalk E of the lane, neighbour fence with a banner",
+    "camera": "(206,-101) look E",
+    "checked": "outside campus",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "A280",
+    "scene": "street footpath further E, bus stop far",
+    "camera": "(210,-108) look E",
+    "checked": "outside campus",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   },
+   {
+    "id": "A281",
+    "scene": "phone screenshot (app panel)",
+    "camera": "-",
+    "checked": "-",
+    "verdict": "irrelevant",
+    "finding_ids": []
+   }
+  ],
+  "findings": [
+   {
+    "id": "R3-03",
+    "title": "A_W gallery thuja pits sit 2.85 m too far north",
+    "spec": "SITE_Garden.json AW_Pit_0..3 (ring) + AW_PitThuja_0..3 (pos)",
+    "current": "pit centres (161.96,-43.35),(162.19,-38.86),(162.40,-34.42),(162.62,-29.97), spacing 4.45",
+    "proposed": "Move all 8 elements by (-0.14,-2.85), along the deck line. New centres: (161.82,-46.20),(162.05,-41.71),(162.26,-37.27),(162.48,-32.82). Keep sizes and the 4.45 spacing.",
+    "photos": [
+     "A212",
+     "A213",
+     "A216"
+    ],
+    "method": "A212 PnP on 8 gallery-post points (base 5.65 / top 7.90, f fitted 3173, rms 3.4 px). Camera (156.93,-55.01,7.93) = eye height above the B-corner stair top 6.57, which fixes the post index. The posts are evenly spaced, so the index was also checked with the roof's north end. Pit centres back-projected onto z 5.35 / 5.45: (162.26,-46.08)/(162.05,-46.43), (162.67,-41.01)/(162.45,-41.55), (162.83,-36.56)/(162.60,-37.28), (162.93,-32.49)/(162.70,-33.37). Measured spacing 4.4-5.1.",
+    "error": "+-0.3 m (nearest pit) to +-0.8 m (farthest), mostly along y from the pit-top z uncertainty",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-06",
+    "title": "Side stair risers lower and treads shorter; the alley-to-walkway drop is ~1.0 m, not 1.22",
+    "spec": "SITE_GateAlley.json SideStair (riser_h, tread, width) + the walkway/alley levels",
+    "current": "7 risers x 0.174 = 1.22, tread 0.42, width 3.34; alley 6.57, Walkway_North 5.36",
+    "proposed": "SideStair: 7 risers (6 granite + the grey concrete kerb at the top) x 0.145, tread 0.34, width 3.5 between the bed walls. The bottom step is ~3.85 wide and projects 0.17 S and 0.2 N. Total drop 1.0 +-0.07: either raise the lower level (Walkway_North and the gallery walkway pads ~5.57) or lower the alley. This is the same conclusion as R1-13 (B-corner stair 6 x 0.166 = 1.00), so both need one coordinated level decision.",
+    "photos": [
+     "A222",
+     "A223",
+     "A220",
+     "A221",
+     "A225"
+    ],
+    "method": "stairfit.py on A222: 12 riser edges at x 1900 + the 1.77 m man on the top tread, f 1300-2000 scanned. Riser 0.136-0.146 (0.139 at f 1700), rms 1.9 px. Tread 0.31-0.38, depends on f. f-independent bound: man 702 px vs top riser 62 px with the man behind that riser gives riser <= 0.156 (A223: <= 0.156). The 7 x 0.174 hypothesis fits worse.",
+    "error": "riser +-0.01, tread +-0.04, drop +-0.07",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-07",
+    "title": "Walkway W side is a vertical retaining wall, not a curb plus a sloping bank",
+    "spec": "SITE_GateAlley.json Curb_Walkway_S (+ Lawn_S east edge)",
+    "current": "Low pink curb at 5.47 on the line (159.52,-82.03)->(160.41,-63.85); lawn bank slopes down to it",
+    "proposed": "Replace with a wall on the same line (159.58,-82.03)->(160.47,-63.86): height 1.0 above the walkway, thk 0.35. Material: red rock-face block (4-5 courses + 1 red brick course at the foot) with a pink granite coping 0.40 wide x 0.05. Lawn_S is flat to the coping, so its east-edge z goes to wall top (~6.40). It runs from the side-stair S bed wall to the A_S west-porch stair bed wall.",
+    "photos": [
+     "A224",
+     "A231",
+     "A232",
+     "A229",
+     "A220"
+    ],
+    "method": "A231: man 837 px = 473 px/m at his depth; wall 458 px tall beside him gives 0.97. A224/A220: vertical block face with a flat lawn top, seen along its length.",
+    "error": "+-0.15 m height",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-13",
+    "title": "Main gate has ONE tripod turnstile (both directions), not two",
+    "spec": "SITE_Gate.json Turnstile_In / Turnstile_Out / LaneRail_Turnstile / FaceTerminal_*",
+    "current": "2 tripod units 1.07 m apart: In (156.875,-97.269), Out (155.805,-97.215)",
+    "proposed": "Keep 1 unit at Turnstile_In (156.875,-97.269), lane between it and the booth W wall / bag rest, ue_logic both directions. Delete Turnstile_Out. Mount a pole on the housing carrying a card reader + face tablet (one facing in, one facing out). Add a curved mobile steel railing (~1.1 high, ~1.5 long N-S) on its W side between the tripod and the gate leaf.",
+    "photos": [
+     "A247",
+     "A248",
+     "A249",
+     "A253",
+     "A254",
+     "A256",
+     "A258"
+    ],
+    "method": "Visual count from 7 viewpoints (in/out, close/far). Only one stainless tripod body, with green arrows for both directions. A253/A254 frontal at 1 m.",
+    "error": "count exact; positions +-0.3 m",
+    "confidence": "medium (contradicts the owner's '2 devices' answer, see open question)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-05",
+    "title": "G2_SE doughnut hedge arch: lower clear height, thinner crown",
+    "spec": "SITE_Garden.json Arch_Bnd_G2_SE (span, thk, height) + crown_thk builder option (as P0-01)",
+    "current": "span 1.01, thk 1.1, height 1.8 -> outer 3.21 wide x 2.9 high",
+    "proposed": "span 1.00, height (clear) 1.49, thk (legs) 1.08, crown_thk 0.76 -> outer 3.17 x 2.25",
+    "photos": [
+     "A217",
+     "A218",
+     "A216"
+    ],
+    "method": "A217 frontal at the arch base. Scale from the scalloped edging in the arch plane (pitch 0.154 = 84-95 px, block 0.20 = 110-115 px, ~585 px/m). Outer width 1855 px, path between legs 585, outer top 1314, clear 870, crown 444, legs 585/685 px.",
+    "error": "+-0.1 m (+-7 % scale)",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "R3-04",
+    "title": "No lamp posts on the garden's east lawn edge",
+    "spec": "SITE_Garden.json Lamp_EastWalk_0, Lamp_EastWalk_1",
+    "current": "lamp_orn 3.2 m at (157.524,-36.77) and (158.408,-20.795)",
+    "proposed": "Delete Lamp_EastWalk_0. Delete Lamp_EastWalk_1 too unless another photo shows it.",
+    "photos": [
+     "A212",
+     "A213",
+     "A216"
+    ],
+    "method": "Lamp_EastWalk_0 should appear 21 m away in A212 at (712,2399)-(699,1806) full px, ~600 px tall in clear view. Only a young tree is there. A216 views the same lawn edge from 5-10 m.",
+    "error": "-",
+    "confidence": "medium (_0), low (_1, partly behind trees at 34 m)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-08",
+    "title": "A_W gallery south bay: timber soffit higher; window/door sizes",
+    "spec": "BLD_A_W.json attachments[gallery].soffit_z; window_types G, DD; rows G1",
+    "current": "soffit_z 2.25; G 1.80 x 1.30, sill 0.87 (head 2.17); DD 1.5 x 2.17",
+    "proposed": "soffit_z 2.54 (z_underside / beam to follow +0.29). G h 1.36, row sill 0.97 (head 2.33). DD w 1.35, h 2.48 incl. transom (leaves 1.96). Surround tops stay touching the soffit.",
+    "photos": [
+     "A228",
+     "A229"
+    ],
+    "method": "A228 (12 mm, frontal): man against the wall, 693 px = 391 px/m. Deck->soffit 994 px = 2.54. Cross-check with the dado: 287 px / 5 courses = 0.73 (spec 0.72); soffit = 17.4 courses x 0.145 = 2.53.",
+    "error": "+-0.1 m",
+    "confidence": "medium-low (one bay measured; the N bays may differ if the deck steps)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-10",
+    "title": "Circle-paver strip is at B's SE corner, not along the A_S west walkway",
+    "spec": "SITE_GateAlley.json CirclePaving_AS_0 + Kerb_CirclePaving_AS_0",
+    "current": "circle-paver strip 1.72 wide along A_S west face, line (160.48,-70.31)->(159.86,-83.00), red kerb 0.43",
+    "proposed": "Delete both elements from the A_S walkway (herringbone there). Add a circle-paver strip with a red/white painted kerb toward the alley along B's S face, ending at B's SE pilaster (~147.9,-81.7). Width and west extent unsure; Google shows a pale band y -81.5..-84 S of B (2.5 m, unconfirmed).",
+    "photos": [
+     "A231",
+     "A241",
+     "A242",
+     "A243"
+    ],
+    "method": "A231 looks S along the whole A_S west walkway: herringbone + wall-foot grating. A241-A243: red-disc pavers and a red/white kerb meet B's SE corner left of the alley herringbone.",
+    "error": "extent unsure",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-11",
+    "title": "A_S west porch wider, lower and flatter",
+    "spec": "BLD_A_S.json attachments[porch] (u0, u1, piers_u, pier_w, overhang, pitch, z_eave)",
+    "current": "u0 13.15, u1 16.15, piers_u [13.4, 15.9], pier_w 0.5, overhang 0.45, pitch 34, z_eave 3.8 above FFL 5.47 (9.27)",
+    "proposed": "piers_u [13.15, 16.15] (c-c 2.99), pier_w 0.56, u0 12.88, u1 16.42, overhang 0.70, pitch 27. z_eave = soffit 2.11 above the pier base on the alley (~6.67) -> 8.78 abs = FFL + 3.31.",
+    "photos": [
+     "A240",
+     "A238"
+    ],
+    "method": "A240 frontal from the alley. Scale from the pier tile courses (0.16 m/course, owner B-pier value): 25 display px/course. Pier 0.56, c-c 2.99, outer 3.54, eave 2.11, apex 3.78, roof 4.96, pediment slope atan(195/385) = 27 deg. A238: pier 0.53 and 12.4 courses (1.98) from the stair head to the soffit.",
+    "error": "+-7 % (course size), eave +-0.15",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-15",
+    "title": "East-lane sliding gate is taller with a higher bottom beam",
+    "spec": "SITE_Gate.json EastLane_SlidingGate (height, bottom_gap), EastLane_Fence (height)",
+    "current": "leaf height 1.6, bottom_gap 0.08 (top 1.68); fence 1.87 incl. 0.32 plinth",
+    "proposed": "leaf height 1.72, bottom_gap 0.18 (top 1.90). Fence height 1.95 (bottom_gap 0.36), low confidence. Leaf length 3.77 and fence run 3.1 confirm the current lines.",
+    "photos": [
+     "A276",
+     "A275",
+     "A277"
+    ],
+    "method": "Man 787 px (hair 1150, sole 1937), standing in front of the gate. Horizon at camera height ~1.4 -> y 1314. Gate-plane ground (post/plinth feet) y 1907 gives depth ratio 1.05, so 424 px/m at the gate. Top rail y 1101, bottom beam y 1830, fence spear tops y 1065, plinth top y 1754.",
+    "error": "+-0.08 m",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-09",
+    "title": "A_W door-bay plate is a large dark-blue sign",
+    "spec": "BLD_A_W.json attachments YellowPlate_DoorS",
+    "current": "u 48.3-49.0 (0.70 wide), z 2.18-2.42, color sign (yellow)",
+    "proposed": "Width 1.12 centred on the door (u 48.09-49.21), z0 2.24, z1 3.07, dark blue, slot M_Sign_KOCH (KOCH text). The corrugated awning on 2 diagonal brackets sits above it.",
+    "photos": [
+     "A230",
+     "A220"
+    ],
+    "method": "A230: scaled by the door leaf (2.1 m, spec D) = 212 px/m display. Plate 237 x 175 px; bottom 0.14 above the door head.",
+    "error": "+-0.1 m",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-12",
+    "title": "B east porch piers wider and taller",
+    "spec": "BLD_B.json attachments EntrancePorch (posts_u, post_w/post_d, z_underside)",
+    "current": "posts_u [0.7, 7.4] (c-c 6.7 x 1.0286 = 6.89), post 0.48 (0.49 scaled), z_underside 2.9",
+    "proposed": "post_w/post_d 0.73 (local 0.71), c-c 7.2-7.6 (local 7.0-7.4; keep the N post and move the S one), z_underside 3.2. Unsure until a tape check.",
+    "photos": [
+     "A234",
+     "A244",
+     "A243"
+    ],
+    "method": "A234 frontal, in pier tile courses (74.8 px): pier 4.55, c-c 44.9, beam 19.8 courses. Course 0.16 (owner) to 0.169 (A244 man scale): pier 0.73-0.77, c-c 7.2-7.6, beam 3.17-3.35. A243 lower bound: pier >= 0.57.",
+    "error": "+-7 %",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-14",
+    "title": "Sidewalk lamp posts stand in the parapet line (gaps between segments)",
+    "spec": "SITE_GateAlley.json PathLamp_00..03, PathParapet_S, Kerb_PathParapet_S",
+    "current": "lamps 0.35 m S of the parapet line; continuous parapet; 0.1 raised kerb at its foot",
+    "proposed": "Lamps: (162.694,-95.487), (171.674,-96.121), (181.152,-96.790), (190.631,-97.459). Parapet as ~2.0 m fluted segments with ~0.15 gaps, slightly stepped, with a lamp in a gap. Replace the raised kerb with a dished concrete gutter ~0.3 wide, flush.",
+    "photos": [
+     "A260",
+     "A261",
+     "A265"
+    ],
+    "method": "Visual: the pole base sits between two parapet blocks at the hedge face. Offsets computed from the spec parapet line.",
+    "error": "+-0.15 m",
+    "confidence": "low",
+    "needs_builder_change": true
+   },
+   {
+    "id": "R3-02",
+    "title": "Paving at the B-corner stair foot is herringbone/diamond, not octagon tile",
+    "spec": "SITE_Garden.json PergolaEast_Landing_S / PergolaEast_Landing_N surface",
+    "current": "octagon_tile_0.4 on both",
+    "proposed": "Surface split along a diagonal joint from the stair foot near x 155 to the G2_SE arch-path mouth (153.3,-44.3). E part: herringbone 200x100 grey (as the gallery plaza). W part: diamond 0.40 slabs (as the pergola walk). Plus a grey crazy-mosaic strip ~0.6 wide along the bottom step's W half.",
+    "photos": [
+     "A219",
+     "A211",
+     "A217"
+    ],
+    "method": "Visual from the stair top (A219) and from the arch (A217)",
+    "error": "joint line +-0.5 m",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "R3-01",
+    "title": "Short black cast post on the raised lawn W of the B-corner stair top",
+    "spec": "SITE_Garden.json (new box/lamp element)",
+    "current": "not modelled",
+    "proposed": "Black cast post ~0.9 high (lamp stub or bollard) on a ~0.4 m concrete pad at about (152.0,-53.6)",
+    "photos": [
+     "A211"
+    ],
+    "method": "Visual, ~3 m left-ahead of the camera at the stair top W end",
+    "error": "+-0.8 m",
+    "confidence": "low",
+    "needs_builder_change": false
+   }
+  ],
+  "signs_to_koch": [
+   "A230/A220: dark-blue bilingual 'registration office' plate over the A_W door-bay door",
+   "A240: 'A BLOCK' plate on the A_S red pilaster at the west porch",
+   "A241-A243: 'B BLOCK' plate on B's SE pilaster",
+   "A241-A243, A136-era: slogan letter band on the A_W upper wall (seen beyond B)",
+   "A236: big lettering + round logo on B's south face E end",
+   "A234/A244/A246: storefront glass logo + 'faculty of engineering' lettering and lobby circuit-wall sign with logo in B",
+   "A255-A257: brass plaque with the real name + logo and an 'approved test centre' plate on the gate booth S face",
+   "A254: printed Face-ID instruction sheet on the gate leaf",
+   "A279: advert banner on the neighbour fence (outside campus, ignore)"
+  ],
+  "open_questions": [
+   "Main gate: the photos show one steel tripod turnstile with arrows both ways and a pole carrying a card reader and a face tablet. You said 2 devices (in + out). Are those the two readers on one tripod, or is there a second tripod I did not photograph?",
+   "The red-disc (circle) paving with the red/white kerb at B's south-east corner: does it run along B's front wall toward the gate, and how far (to the gate, or along the whole B front)? Is the walkway along A's west wall (below the lawn wall) all grey herringbone?",
+   "Walking down from the alley to the walkway by the A_W gallery (6 granite steps + the grey kerb step): does that drop feel about knee-to-hip height (~1 m), and is the gallery-front plaza at the bottom of the wide B-corner stair at the same level as that walkway?",
+   "The short black cast-iron post on the lawn W of the top of the wide B-corner stair: is it a lamp with its head missing, or a garden bollard light?",
+   "Garden east edge (the lawn between the gallery plaza and the gazebo side): is there any lamp post along it, or only the lamps inside the garden?"
+  ]
+ }
+]

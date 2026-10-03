@@ -56,7 +56,7 @@ def main(src):
            {"edge": 7, "name": "north_west", "status": EV,
             "windows": [win(sorted(XJN - x for x in xs("N1") + xs("N2"))), {"type": "WC", "u": [round(XJN - N.WC_WIN_N[0], 3)], "sills": WC_SILLS}]},
            {"edge": 8, "name": "west", "status": EV, "confidence": "medium",
-            "windows": [win([YW - (hnw + N.PART + N.Y_NW) / 2, YW - (cw - 0.9), YW - (N.Y_SW + hsw - N.PART) / 2]),
+            "windows": [win([YW - (hnw + N.PART + N.Y_NW) / 2, YW - (cw - 1.35), YW - (N.Y_SW + hsw - N.PART) / 2]),
                         win([YW - (cw + 1.4)], ("F3", "F4"))]}]
     C["facades"] = fac
     C["window_types"]["WC"].update(w=N.WC_WIN_W, h=N.WC_WIN_H, evidence=C["window_types"]["WC"]["evidence"] +
