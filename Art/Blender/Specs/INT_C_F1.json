@@ -25677,7 +25677,7 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "2026-10-03 photo pass Q3-23 (CI003/CK): fire-hose cabinets on the NORTH hall wall against the stair-front corner at both ends, 0.51 x 0.23 x 0.57, bottom FFL+1.19 | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
+   "evidence": "2026-10-03 photo pass Q3-23 (CI003/CK): fire-hose cabinets on the NORTH hall wall against the stair-front corner at both ends (the duplicate StairW/StairE_FireBox removed), 0.51 x 0.23 x 0.57, bottom FFL+1.19 | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "medium"
   },
   {
@@ -25697,7 +25697,7 @@
    "material": "brick",
    "slot": "M_Sheet_Red",
    "ue_asset": "fire_hose_cabinet",
-   "evidence": "2026-10-03 photo pass Q3-23 (CI003/CK): fire-hose cabinets on the NORTH hall wall against the stair-front corner at both ends, 0.51 x 0.23 x 0.57, bottom FFL+1.19 | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
+   "evidence": "2026-10-03 photo pass Q3-23 (CI003/CK): fire-hose cabinets on the NORTH hall wall against the stair-front corner at both ends (the duplicate StairW/StairE_FireBox removed), 0.51 x 0.23 x 0.57, bottom FFL+1.19 | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "medium"
   },
   {
@@ -26284,26 +26284,6 @@
   },
   {
    "type": "box",
-   "name": "F1_StairW_FireBox",
-   "center": [
-    177.584227,
-    8.877709
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.54,
-    0.23,
-    0.65
-   ],
-   "z0": 7.5,
-   "material": "brick",
-   "slot": "M_Sheet_Red",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "fire_hose_cabinet"
-  },
-  {
-   "type": "box",
    "name": "F1_StairE_LandingDoor",
    "center": [
     201.856276,
@@ -26361,26 +26341,6 @@
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "wall_light_linear"
-  },
-  {
-   "type": "box",
-   "name": "F1_StairE_FireBox",
-   "center": [
-    199.430308,
-    9.307472
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.54,
-    0.23,
-    0.65
-   ],
-   "z0": 7.5,
-   "material": "brick",
-   "slot": "M_Sheet_Red",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "fire_hose_cabinet"
   },
   {
    "type": "box",
