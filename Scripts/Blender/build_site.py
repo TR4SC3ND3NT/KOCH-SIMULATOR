@@ -870,7 +870,8 @@ class Site:
         box(bl, m, ha, hb, wl0 - 0.05, wl0, z0 + 1.0, z0 + 1.03)
         self.emit({**el, "name": el.get("name", "Door") + "_Leaf"}, bl, COL[el.get("leaf_material", el.get("material", "metal"))], (A.x, A.y, z0))
         if bg.verts:
-            self.emit({**el, "name": el.get("name", "Door") + "_Glass"}, bg, COL["glass"], (A.x, A.y, z0))
+            # glass always takes the glass slot (the element's own "slot" is the frame/leaf finish)
+            self.emit({**el, "name": el.get("name", "Door") + "_Glass", "slot": "M_Glass"}, bg, COL["glass"], (A.x, A.y, z0))
         else:
             bg.free()
 

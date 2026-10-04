@@ -26990,8 +26990,8 @@
    ],
    "z0": 6.4,
    "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-04 D2 X0-05: on the lining of the 3.76 m lobby",
+   "slot": "M_Plastic_Black",
+   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-04 D2 X0-05: on the lining of the 3.76 m lobby | 2026-10-04 walkthrough (CI010/CI011): black vending machine, oak-veneer coffee kiosk with a black base",
    "confidence": "low",
    "ue_asset": "vending_machine"
   },
@@ -27010,8 +27010,8 @@
    ],
    "z0": 6.4,
    "material": "wood",
-   "slot": "M_Wood_Stained",
-   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-04 D2 X0-05: on the lining of the 3.76 m lobby",
+   "slot": "M_Wood_Oak_Light",
+   "evidence": "lobby frames 070704360_s1 f00019/f00340 (water cooler + socket, vending machine, coffee kiosk by the entrance) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-04 D2 X0-05: on the lining of the 3.76 m lobby | 2026-10-04 walkthrough (CI010/CI011): black vending machine, oak-veneer coffee kiosk with a black base",
    "confidence": "low",
    "ue_asset": "coffee_kiosk"
   },
