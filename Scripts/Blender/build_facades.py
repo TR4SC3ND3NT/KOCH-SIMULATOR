@@ -1025,9 +1025,26 @@ class Building:
                     ob.data.materials[0] = mat(a["slot"])
             elif t == "downpipe":  # rainwater downpipe: square-ish section d, off the wall by `off`, z0..z1 rel FFL
                 d, off = a.get("d", 0.1), a.get("off", 0.04)
+                jog = a.get("jog")                     # optional {z, du}: lower leg offset along the wall below z
+                bm_lo = bmesh.new()
                 for u in a["u"]:
-                    box(bm, fr, u - d / 2, u + d / 2, off, off + d, a["z0"], a["z1"])
-                self.obj(f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}", bm, COL["frame"], a.get("evidence"), cf)
+                    if jog:
+                        ul = u + jog["du"]
+                        box(bm, fr, u - d / 2, u + d / 2, off, off + d, jog["z"], a["z1"])
+                        box(bm_lo, fr, min(u, ul) - d / 2, max(u, ul) + d / 2, off, off + d, jog["z"] - d, jog["z"])
+                        box(bm_lo, fr, ul - d / 2, ul + d / 2, off, off + d, a["z0"], jog["z"] - d)
+                    else:
+                        box(bm, fr, u - d / 2, u + d / 2, off, off + d, a["z0"], a["z1"])
+                nm = f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}"
+                ob = self.obj(nm, bm, COL["frame"], a.get("evidence"), cf)
+                if a.get("slot"):
+                    ob.data.materials[0] = mat(a["slot"])
+                if jog:   # lower leg: own object so it can take another finish ("lower_slot", e.g. painted with the plinth)
+                    ob = self.obj(nm + "_Lower", bm_lo, COL["frame"], a.get("evidence"), cf)
+                    if a.get("lower_slot", a.get("slot")):
+                        ob.data.materials[0] = mat(a.get("lower_slot", a.get("slot")))
+                else:
+                    bm_lo.free()
             elif t == "floodlight":  # small wall/sign-mounted flood lamps: box heads on short arms
                 for u in a["u"]:
                     box(bm, fr, u - 0.12, u + 0.12, a.get("w", 0.35), a.get("w", 0.35) + 0.12, a["z"], a["z"] + 0.18)
@@ -1476,14 +1493,32 @@ class Building:
         cf, ev = a.get("confidence"), a.get("evidence")
         tag = f"E{a['edge']}_{u0:.0f}"
         bm = bmesh.new()
+        # optional "pier_base": {"z": top rel FFL, "slot"}: piers in two finishes (beige tile over a red brick base)
+        pb = a.get("pier_base")
+        bm_b = bmesh.new() if pb else None
         for u in a.get("piers_u", [u0 + pw / 2, u1 - pw / 2]):
-            box(bm, fr, u - pw / 2, u + pw / 2, dep - pw, dep, e["zg"] - BURY_M, ze)
+            zb0 = e["zg"] - BURY_M
+            if pb:
+                box(bm_b, fr, u - pw / 2, u + pw / 2, dep - pw, dep, zb0, pb["z"])
+                zb0 = pb["z"]
+            box(bm, fr, u - pw / 2, u + pw / 2, dep - pw, dep, zb0, ze)
         box(bm, fr, u0, u1, dep - pw, dep, ze - 0.35, ze)                                    # front beam
         _prism_along_w(bm, fr, [(u0, ze), (u1, ze), (um, ze + hs)], dep - pw, dep - 0.05)      # pediment
-        self.obj(f"PorchPiers_{tag}", bm, COL["wall"], ev, cf)
+        ob = self.obj(f"PorchPiers_{tag}", bm, COL["wall"], ev, cf)
+        if a.get("pier_slot"):
+            ob.data.materials[0] = mat(a["pier_slot"])
+        if pb:
+            ob = self.obj(f"PorchPierBase_{tag}", bm_b, COL["wall"], ev, cf)
+            if pb.get("slot"):
+                ob.data.materials[0] = mat(pb["slot"])
         bm = bmesh.new()
-        _prism_along_w(bm, fr, [(u0 - oh, ze - oh * tp), (um, ze + hs), (u1 + oh, ze - oh * tp), (u1 + oh, ze - oh * tp + thk),
-                                (um, ze + hs + thk), (u0 - oh, ze - oh * tp + thk)], 0.0, dep + oh)
+        # "eave_flat": the overhang runs out level from the pediment base (boxed eave), not down the roof pitch
+        dz = 0.0 if a.get("eave_flat") else oh * tp
+        prof = [(u0 - oh, ze - dz), (um, ze + hs), (u1 + oh, ze - dz), (u1 + oh, ze - dz + thk), (um, ze + hs + thk), (u0 - oh, ze - dz + thk)]
+        if a.get("eave_flat"):
+            prof = [(u0 - oh, ze), (u0, ze), (um, ze + hs), (u1, ze), (u1 + oh, ze), (u1 + oh, ze + thk), (u1, ze + thk),
+                    (um, ze + hs + thk), (u0, ze + thk), (u0 - oh, ze + thk)]
+        _prism_along_w(bm, fr, prof, 0.0, dep + oh)
         self.obj(f"PorchRoof_{tag}", bm, COL["roof"], ev, cf)
 
     def build(self):

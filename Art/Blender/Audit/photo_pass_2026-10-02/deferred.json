@@ -102,11 +102,6 @@
    "status": "disputed, not applied"
   },
   {
-   "id": "Q2-22",
-   "what": "C storefront head 3.29 / transom 2.65 may be lower (2.5-3.0)",
-   "status": "disputed, not applied"
-  },
-  {
    "id": "Q2-18b",
    "what": "A_W deck: 3-riser return along the deck W edge (~1.0 m) + vent grate in the N front",
    "status": "low confidence, not applied"
@@ -170,6 +165,66 @@
    "id": "Q0-05/Q3-01",
    "what": "R105 stripe geometry: Q3-01 (CK, 42 deg, white band on the back side) applied over Q0-05 (26 deg)",
    "status": "resolved to Q3-01"
+  },
+  {
+   "id": "Q2-22/X0-13",
+   "what": "C storefront head/transom lower than 3.29/2.65: interior ratio gives head <= 2.85, transom <= 2.25 if the glazing spans the 4.5 m lobby (2.38/1.88 at the model's 3.76 width)",
+   "status": "disputed, not applied: one width measurement of the glazing settles it"
+  },
+  {
+   "id": "X0-05",
+   "what": "room 101 door 1.21 m from the S-wall jog corner (model 0.65): move the jog/lobby E wall to x 16.39 or the door 0.56 E",
+   "status": "disputed, not applied"
+  },
+  {
+   "id": "X0-09",
+   "what": "edge across the hall at the F1 E stair front at z ~2.76 (bulkhead there, or Hall_Bulkhead_E further E)",
+   "status": "low-medium, not applied"
+  },
+  {
+   "id": "X0-12",
+   "what": "R105 DB panel 0.29 tall (vs 0.42, Q3-02)",
+   "status": "low, contradicts Q3-02, not applied"
+  },
+  {
+   "id": "X1-03b",
+   "what": "WestShed N-front openings: window y 16.87-17.47 z 4.64-5.71, glazed door y 15.58-16.61 z 4.28-5.82",
+   "status": "needs shed opening support in the builder; not applied (shed length applied)"
+  },
+  {
+   "id": "X1-05",
+   "what": "A_N north eave: white boxed soffit + white gutter",
+   "status": "needs detail eave on a non-detail building; not applied"
+  },
+  {
+   "id": "X1-06",
+   "what": "C AC_North units: on the ground at the N wall foot or one wall unit at u ~7 (t45.5)",
+   "status": "low, not applied"
+  },
+  {
+   "id": "X2-10",
+   "what": "B east entrance sill 0.23 above the porch paving (photo flush): porch pad or lower sill",
+   "status": "not applied (design choice)"
+  },
+  {
+   "id": "X3-01",
+   "what": "garden SE lawn bed outline: straight plain E kerb to (156.92,-44.86), scalloped chamfer to (154.38,-46.79); bins/sign then outside",
+   "status": "not applied: the chamfer-to-arch link is unmeasured and the boundary ring drives hedges/arches in zone_garden.py"
+  },
+  {
+   "id": "X3-03",
+   "what": "pergola walk E end vs the B-corner wide stair (~4.9 m)",
+   "status": "disputed, not applied"
+  },
+  {
+   "id": "X3-09",
+   "what": "A_W south-bay ramp foot ~4 m further S",
+   "status": "low, not applied"
+  },
+  {
+   "id": "X2-07b",
+   "what": "street curbs past x 190 to 240",
+   "status": "not applied (asphalt extended)"
   }
  ]
 }

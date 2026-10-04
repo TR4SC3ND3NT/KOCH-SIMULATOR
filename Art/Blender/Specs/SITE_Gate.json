@@ -207,10 +207,10 @@
    "w": 1.2,
    "h": 1.7,
    "t": 0.12,
-   "z0": 0.1,
-   "evidence": "P1: bearings from Street c2 frames f02711/f02830/f02947 cut with the planter-wall face: posts at x 128.5-131 on the sidewalk edge; range from its 2.0 m height in f02947 (1030 px at f 3463 -> 6.7 m) agrees; was x 143.6. freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster | 2026-10-03 video pass V1-07: portrait panel (w:h 0.70) next to the W end of the bike rack, just S of the fence plinth, leaning back 10-15 deg on a rear stand (lean not modelled); size unsure",
+   "z0": 0.8,
+   "evidence": "P1: bearings from Street c2 frames f02711/f02830/f02947 cut with the planter-wall face: posts at x 128.5-131 on the sidewalk edge; range from its 2.0 m height in f02947 (1030 px at f 3463 -> 6.7 m) agrees; was x 143.6. freestanding banner billboard on 2 posts facing the street, west of the bike rack (061913764 f0.5, 065653194 t45-49); content -> KOCH recruiting poster | 2026-10-03 video pass V1-07: portrait panel (w:h 0.70) next to the W end of the bike rack, just S of the fence plinth, leaning back 10-15 deg on a rear stand (lean not modelled); size unsure | 2026-10-04 re-verification X2-12: panel bottom ~0.8 m above the ground on posts",
    "confidence": "medium",
-   "ue_note": "KOCH notice/rules only (no real text)"
+   "ue_note": "KOCH notice/rules only (no real text); on 2 steel posts (rear stand)"
   },
   {
    "type": "sign",
@@ -250,8 +250,10 @@
    ],
    "height": 10.0,
    "head": "box",
-   "evidence": "concrete street-light pole at the NW corner of the zebra on the forecourt edge, small bike rack at its base (065835543.MP.jpg, 065856484 f4.5)",
-   "confidence": "medium"
+   "evidence": "concrete street-light pole at the NW corner of the zebra on the forecourt edge, small bike rack at its base (065835543.MP.jpg, 065856484 f4.5) | 2026-10-04 re-verification X2-11: thick concrete pole like the trolley poles; LED head on a thin steel bracket ~1.6 m above its top (UE)",
+   "confidence": "medium",
+   "slot": "M_Concrete",
+   "pole_r": 0.17
   },
   {
    "type": "lamp",
@@ -1483,11 +1485,11 @@
      -99.669
     ]
    ],
-   "height": 1.72,
+   "height": 2.0,
    "bottom_gap": 0.18,
    "slot": "M_Steel_Paint_Dark",
    "ue_logic": "sliding_gate",
-   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): sliding gate across the east lane, vertical bars with small ring ornaments, opening 3.7-3.9 m (A275-A278) | 2026-10-03 photo pass R3-15: leaf 1.72 on a 0.18 bottom beam (top 1.90)",
+   "evidence": "2026-09-30 walk along the street sidewalk (A259-A278): sliding gate across the east lane, vertical bars with small ring ornaments, opening 3.7-3.9 m (A275-A278) | 2026-10-03 photo pass R3-15: leaf 1.72 on a 0.18 bottom beam (top 1.90) | 2026-10-04 re-verification X2-03: top rail ~1.90 above the ground (photo)",
    "confidence": "medium"
   },
   {
@@ -1676,6 +1678,44 @@
    "slot": "M_Tile_Brick_Red",
    "confidence": "medium",
    "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed; red brick soldier course closing the circle walk at its E end (herringbone beyond)"
+  },
+  {
+   "type": "box",
+   "name": "Billboard_West_Post_0",
+   "center": [
+    141.17,
+    -97.14999999999999
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.06,
+    0.06,
+    0.85
+   ],
+   "z_rel": -0.05,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "low",
+   "evidence": "2026-10-04 re-verification X2-12: billboard post"
+  },
+  {
+   "type": "box",
+   "name": "Billboard_West_Post_1",
+   "center": [
+    141.23,
+    -98.05
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.06,
+    0.06,
+    0.85
+   ],
+   "z_rel": -0.05,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "low",
+   "evidence": "2026-10-04 re-verification X2-12: billboard post"
   }
  ],
  "ground_surfaces": [
@@ -1695,6 +1735,14 @@
      -113.687
     ],
     [
+     240,
+     -115.3
+    ],
+    [
+     240,
+     -129.9
+    ],
+    [
      210,
      -128.487
     ],
@@ -1704,7 +1752,7 @@
     ]
    ],
    "slot": "M_Asphalt",
-   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484; north edge west of x 125 flat at y -109.6 (Google z20: the road does not follow the Curb_North slope westward; trolley pole f00996 on the paved strip at the edge)"
+   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484; north edge west of x 125 flat at y -109.6 (Google z20: the road does not follow the Curb_North slope westward; trolley pole f00996 on the paved strip at the edge) | 2026-10-04 re-verification X2-07: asphalt runs on east past x 210 (was grass; low)"
   },
   {
    "name": "Forecourt",
@@ -1828,6 +1876,33 @@
    ],
    "slot": "M_Ground_Grass",
    "evidence": "2026-10-03 video pass V2-06/V3-13/V2-08 (082606037 walk along B's front, Google z20 tree crowns): B front = 5 m circle-paver walk along the facade + yellow/white kerb, lawn strip with pines/spruce/junipers, a 2.35 m pink/grey path with painted kerbs both sides, the street-side tree row, then the parapet with the lamp poles in its gaps. The old path/upstand/hedge/lamps/bin/drain group came from a clip of the A_S sidewalk (065934318) and is removed"
+  },
+  {
+   "name": "GateBoothClover",
+   "ring": [
+    [
+     157.2,
+     -100.4
+    ],
+    [
+     188.0,
+     -101.95
+    ],
+    [
+     188.0,
+     -106.4
+    ],
+    [
+     160.0,
+     -104.9
+    ],
+    [
+     157.2,
+     -104.75
+    ]
+   ],
+   "slot": "M_Paver_Clover_Grey",
+   "evidence": "2026-10-04 re-verification X2-06: clover pavers S/E of the gate booth out to the parking (was grass)"
   }
  ]
 }

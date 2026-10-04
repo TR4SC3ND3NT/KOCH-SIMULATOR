@@ -3981,11 +3981,11 @@
    "width": 4.0,
    "risers": 5,
    "riser_h": 0.225,
-   "tread": 0.45,
+   "tread": 0.76,
    "z_top": 3.45,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure) | 2026-10-04 re-verification X3-07: treads ~0.76 (run 3.0, foot y ~73.3)",
    "confidence": "low"
   },
   {
@@ -4069,25 +4069,25 @@
      70.085
     ],
     [
-     166.44,
-     72.55
+     166.469,
+     73.3
     ],
     [
-     166.04,
-     72.565
+     166.069,
+     73.315
     ]
    ],
    "z": [
     3.45,
     3.45,
-    2.73,
-    2.73
+    2.4,
+    2.4
    ],
    "thk": 1.6,
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): E cheek: low concrete wall with a sloped top, N end ~0.4 above the yard (was a 1.475 m box)"
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): E cheek: low concrete wall with a sloped top, N end ~0.4 above the yard (was a 1.475 m box) | 2026-10-04 re-verification X3-07: follows the longer flight"
   },
   {
    "type": "roof_plane",
@@ -4102,25 +4102,25 @@
      70.17
     ],
     [
-     162.01,
-     72.55
+     162.039,
+     73.3
     ],
     [
-     161.76,
-     72.56
+     161.789,
+     73.31
     ]
    ],
    "z": [
     3.45,
     3.45,
-    2.75,
-    2.75
+    2.4,
+    2.4
    ],
    "thk": 1.6,
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair"
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair | 2026-10-04 re-verification X3-07: follows the longer flight"
   },
   {
    "type": "box",

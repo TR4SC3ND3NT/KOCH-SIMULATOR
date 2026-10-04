@@ -614,8 +614,8 @@
    "name": "Curb_PlanterSouth",
    "ring": [
     [
-     154.894,
-     -91.565
+     154.945,
+     -90.895
     ],
     [
      155.318,
@@ -626,8 +626,8 @@
      -85.987
     ],
     [
-     154.994,
-     -91.573
+     155.045,
+     -90.903
     ]
    ],
    "z": [
@@ -638,7 +638,7 @@
    ],
    "thk": 2.03,
    "material": "brick",
-   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04)",
+   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole",
    "confidence": "medium"
   },
   {
@@ -1396,11 +1396,11 @@
      -55.594
     ],
     [
-     160.808,
+     159.915,
      -55.712
     ],
     [
-     160.822,
+     159.93,
      -55.412
     ],
     [
@@ -1416,7 +1416,7 @@
    ],
    "thk": 1.83,
    "material": "stone",
-   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open)",
    "confidence": "medium"
   },
   {
@@ -2027,8 +2027,8 @@
    "crown_d": 6.5,
    "shape": "round",
    "trunk_d": 0.35,
-   "crown_base": 2.2,
-   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth)",
+   "crown_base": 4.5,
+   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth) | 2026-10-04 re-verification X2-08: crown above the canopy ridge (it hid the booth)",
    "confidence": "low"
   },
   {
@@ -2292,7 +2292,7 @@
    "type": "tree",
    "name": "BBed_Shrub_00",
    "pos": [
-    149.746,
+    150.196,
     -70.989
    ],
    "height": 1.6,
@@ -2300,14 +2300,14 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_01",
    "pos": [
-    149.878,
+    150.328,
     -68.292
    ],
    "height": 1.6,
@@ -2315,14 +2315,14 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_02",
    "pos": [
-    150.015,
+    150.465,
     -65.495
    ],
    "height": 1.6,
@@ -2330,14 +2330,14 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_03",
    "pos": [
-    150.148,
+    150.598,
     -62.799
    ],
    "height": 1.6,
@@ -2345,7 +2345,7 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B)",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
    "confidence": "medium"
   },
   {
@@ -2583,11 +2583,11 @@
      -55.309
     ],
     [
-     160.822,
+     159.93,
      -55.412
     ],
     [
-     160.891,
+     160.002,
      -54.014
     ],
     [
@@ -2603,7 +2603,7 @@
    ],
    "thk": 1.98,
    "material": "hedge",
-   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping)",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open)",
    "confidence": "medium"
   },
   {
@@ -2615,11 +2615,11 @@
      -53.933
     ],
     [
-     160.891,
+     160.002,
      -54.014
     ],
     [
-     160.906,
+     160.017,
      -53.714
     ],
     [
@@ -2635,7 +2635,7 @@
    ],
    "thk": 2.13,
    "material": "stone",
-   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: front wall top at the low end of the sloping coping",
+   "evidence": "rubble-stone front wall of the raised bed facing the lower plaza (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: front wall top at the low end of the sloping coping | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open)",
    "confidence": "medium"
   },
   {
@@ -2882,8 +2882,8 @@
    "type": "box",
    "name": "Manhole_ASCorner",
    "center": [
-    159.6,
-    -92.4
+    155.0,
+    -91.3
    ],
    "dir_deg": 0,
    "size": [
@@ -2894,9 +2894,9 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "ue_asset": "manhole_cover",
-   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner",
-   "confidence": "low",
-   "z0": 5.352
+   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner | 2026-10-04 re-verification X2-02: the round manhole is on the plaza W of the planter, not on the lower landing",
+   "confidence": "medium",
+   "z0": 6.78
   },
   {
    "type": "tree",
@@ -2951,6 +2951,25 @@
    "evidence": "070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1: 3-4 round clipped shrubs in the bed along A_S",
    "confidence": "low",
    "z": 6.331
+  },
+  {
+   "type": "box",
+   "name": "Grate_LandingSW",
+   "center": [
+    159.9,
+    -90.1
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.9,
+    0.4,
+    0.02
+   ],
+   "z0": 5.35,
+   "material": "metal",
+   "slot": "M_Steel_Grating",
+   "confidence": "medium",
+   "evidence": "2026-10-04 re-verification X2-02: rectangular drain grate on the A_S SW lower landing"
   }
  ]
 }

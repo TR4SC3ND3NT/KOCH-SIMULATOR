@@ -1749,7 +1749,8 @@
    "span": 1.01,
    "thk": 1.1,
    "depth": 1.0,
-   "height": 1.8,
+   "height": 1.65,
+   "crown_thk": 0.73,
    "confidence": "medium",
    "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
   },
@@ -5586,75 +5587,13 @@
      0.127
     ]
    ],
-   "height": 0.85,
+   "height": 1.7,
    "thk": 0.3,
    "cap_proj": 0.03,
    "material": "brick",
-   "slot": "M_Tile_Brick_Red",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "slab",
-   "name": "HallBed_BoxE_Soil",
-   "ring": [
-    [
-     113.149,
-     0.287
-    ],
-    [
-     118.649,
-     0.131
-    ],
-    [
-     118.504,
-     -4.967
-    ],
-    [
-     113.003,
-     -4.811
-    ]
-   ],
-   "z0": 5.25,
-   "z1": 6.1,
-   "material": "stone",
-   "slot": "M_Ground_Grass",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "HallBed_BoxE_Shrub_0",
-   "pos": [
-    114.352,
-    -3.143
-   ],
-   "z": 6.1,
-   "height": 1.0,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.1,
-   "shape": "round",
-   "species": "rose",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "HallBed_BoxE_Shrub_1",
-   "pos": [
-    117.297,
-    -1.636
-   ],
-   "z": 6.1,
-   "height": 1.0,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.1,
-   "shape": "round",
-   "species": "rose",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
+   "slot": "M_Block_RockFace_Red",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-04 re-verification X3-04: 1.7 m red concrete-block service enclosure with a sheet cap, not a planter",
+   "confidence": "medium"
   },
   {
    "type": "planter",

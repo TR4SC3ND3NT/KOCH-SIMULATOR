@@ -24,7 +24,7 @@ R_APRON, R_EDGE, R_HEDGE = 5.3, 5.75, 6.35       # path start (under the apron),
 # pass scaled them on 0.20 m edging blocks; the blocks are 0.153 m, so it came out 1.31x too big.)
 ARCH_T, ARCH_H, ARCH_D, ARCH_SPAN = 1.1, 2.05, 1.0, 0.95   # leg/crown thickness, clear height, depth, clear span (m)
 # per-arch measured differences; G1_N: A022 with the 1.77 m man (966 px/m): fingertip 2.17, crown 2.92, outer 3.33
-ARCH_OVR = {"G1_N": {"thk": 1.19, "height": 2.17, "crown_thk": 0.75}, "G2_SE": {"height": 1.8}}
+ARCH_OVR = {"G1_N": {"thk": 1.19, "height": 2.17, "crown_thk": 0.75}, "G2_SE": {"height": 1.65, "crown_thk": 0.73}}   # G2_SE: outer top 2.38 (A147/A154, 2026-10-04 X3-02)
 # centre square: lawn, not hedge, behind the W0 / E0 / S0 benches (photo pass R1-11, A100-A109): world boxes cut from the mass
 NO_HEDGE = [((122.7, -32.02), (127.64, -27.7)), ((131.16, -32.33), (134.47, -29.19))]
 NO_ARCH = {"G1_SSE", "Centre_NS_S"}              # A157-A160, A103: these two exits to the pergola walk have no arch

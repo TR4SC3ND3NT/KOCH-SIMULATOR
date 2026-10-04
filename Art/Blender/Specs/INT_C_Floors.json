@@ -809,7 +809,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 203",
    "confidence": "medium"
@@ -834,7 +834,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 204",
    "confidence": "medium"
@@ -920,7 +920,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 208",
    "confidence": "medium"
@@ -945,7 +945,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 207",
    "confidence": "medium"
@@ -2598,26 +2598,6 @@
   },
   {
    "type": "box",
-   "name": "F2_R201_AC",
-   "center": [
-    179.444363,
-    -2.285222
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.99,
-    0.32
-   ],
-   "z0": 12.1,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F2_R201_Socket_TV",
    "center": [
     179.61336,
@@ -4152,26 +4132,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_R202_AC",
-   "center": [
-    185.435578,
-    -2.624242
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 12.0,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -5711,26 +5671,6 @@
   },
   {
    "type": "box",
-   "name": "F2_R203_AC",
-   "center": [
-    190.640257,
-    -1.530788
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 12.0,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F2_R203_Smoke_0",
    "center": [
     194.414482,
@@ -7261,26 +7201,6 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
-   "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_R204_AC",
-   "center": [
-    196.639442,
-    -1.669968
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.99,
-    0.32
-   ],
-   "z0": 12.1,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
    "confidence": "medium"
   },
@@ -8824,26 +8744,6 @@
   },
   {
    "type": "box",
-   "name": "F2_R208_AC",
-   "center": [
-    180.109858,
-    14.401418
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 12.0,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F2_R208_Smoke_0",
    "center": [
     176.335634,
@@ -10359,26 +10259,6 @@
   },
   {
    "type": "box",
-   "name": "F2_R207_AC",
-   "center": [
-    186.105058,
-    14.162318
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 12.0,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F2_R207_Smoke_0",
    "center": [
     182.330834,
@@ -11445,26 +11325,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_R206_AC",
-   "center": [
-    191.309737,
-    15.255772
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 12.0,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -12999,26 +12859,6 @@
    "material": "white",
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
-   "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F2_R205_AC",
-   "center": [
-    197.300952,
-    14.916752
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.99,
-    0.32
-   ],
-   "z0": 12.1,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
    "confidence": "medium"
   },
@@ -15889,55 +15729,55 @@
      10.662
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.345,
      9.713
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.597,
      10.062
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.457,
      10.662
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.345,
      9.713
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      10.062
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      10.662
@@ -17573,19 +17413,19 @@
      9.712
     ],
     [
-     187.224458,
-     15.166502,
+     187.274418,
+     15.164509,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.004,
      1.408,
      9.712
     ],
     [
-     186.699878,
-     15.187423,
+     186.749838,
+     15.18543,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.004,
      1.548,
      9.712
@@ -17736,19 +17576,19 @@
    "name": "F2_WCW_North_Paint",
    "items": [
     [
-     186.699838,
-     15.186424,
+     186.749798,
+     15.184431,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.006,
      1.04,
      11.26
     ],
     [
-     187.224418,
-     15.165502,
+     187.274378,
+     15.16351,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.006,
      0.05,
      12.25
@@ -17763,8 +17603,8 @@
      11.14
     ],
     [
-     186.932159,
-     15.290247,
+     187.032079,
+     15.286262,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -17772,10 +17612,10 @@
      11.14
     ],
     [
-     187.228921,
-     15.278412,
+     187.278881,
+     15.27642,
      -2.2838545045845304,
-     0.588,
+     0.488,
      0.22,
      0.006,
      12.244
@@ -17790,12 +17630,12 @@
    "type": "box",
    "name": "F2_WCW_Window_Sill",
    "center": [
-    187.228323,
-    15.263424
+    187.278283,
+    15.261432
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.6,
+    0.5,
     0.25,
     0.02
    ],
@@ -20829,55 +20669,55 @@
      10.662
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.345,
      9.713
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.597,
      10.062
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.457,
      10.662
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.345,
      9.713
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      10.062
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      10.662
@@ -22513,19 +22353,19 @@
      9.712
     ],
     [
-     190.273863,
-     16.345912,
+     190.223903,
+     16.347904,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.004,
      1.408,
      9.712
     ],
     [
-     190.798443,
-     16.32499,
+     190.748483,
+     16.326983,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.004,
      1.548,
      9.712
@@ -22676,19 +22516,19 @@
    "name": "F2_WCE_North_Paint",
    "items": [
     [
-     190.798403,
-     16.323991,
+     190.748443,
+     16.325984,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.006,
      1.04,
      11.26
     ],
     [
-     190.273823,
-     16.344912,
+     190.223863,
+     16.346905,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.006,
      0.05,
      12.25
@@ -22703,8 +22543,8 @@
      11.14
     ],
     [
-     190.575088,
-     16.445987,
+     190.475168,
+     16.449972,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -22712,10 +22552,10 @@
      11.14
     ],
     [
-     190.278326,
-     16.457822,
+     190.228366,
+     16.459814,
      -2.2838545045845304,
-     0.588,
+     0.488,
      0.22,
      0.006,
      12.244
@@ -22730,12 +22570,12 @@
    "type": "box",
    "name": "F2_WCE_Window_Sill",
    "center": [
-    190.277728,
-    16.442834
+    190.227768,
+    16.444827
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.6,
+    0.5,
     0.25,
     0.02
    ],
@@ -24625,11 +24465,11 @@
    "z_top": 11.312,
    "bottom_riser_h": 0.0767,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
    "confidence": "medium",
-   "soffit_thk": 0.18
+   "soffit_thk": 0.08
   },
   {
    "type": "slab",
@@ -24683,8 +24523,8 @@
    "z0": 11.282,
    "z1": 11.312,
    "material": "granite",
-   "slot": "M_Granite_Beige",
-   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo half-landing top, granite treads (video 080011086, 2026-10-04 X0-08)",
    "confidence": "medium"
   },
   {
@@ -24701,9 +24541,9 @@
    "tread": 0.332,
    "z_top": 13.0,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
-   "soffit_thk": 0.18,
+   "soffit_thk": 0.08,
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 2",
    "confidence": "medium"
   },
@@ -24825,11 +24665,11 @@
    "z_top": 11.312,
    "bottom_riser_h": 0.0767,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
    "confidence": "medium",
-   "soffit_thk": 0.18
+   "soffit_thk": 0.08
   },
   {
    "type": "slab",
@@ -24883,8 +24723,8 @@
    "z0": 11.282,
    "z1": 11.312,
    "material": "granite",
-   "slot": "M_Granite_Beige",
-   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo half-landing top, granite treads (video 080011086, 2026-10-04 X0-08)",
    "confidence": "medium"
   },
   {
@@ -24901,9 +24741,9 @@
    "tread": 0.332,
    "z_top": 13.0,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
-   "soffit_thk": 0.18,
+   "soffit_thk": 0.08,
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 2",
    "confidence": "medium"
   },
@@ -25813,7 +25653,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 303",
    "confidence": "medium"
@@ -25838,7 +25678,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 304",
    "confidence": "medium"
@@ -25924,7 +25764,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 308",
    "confidence": "medium"
@@ -25949,7 +25789,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 307",
    "confidence": "medium"
@@ -27602,26 +27442,6 @@
   },
   {
    "type": "box",
-   "name": "F3_R301_AC",
-   "center": [
-    179.440378,
-    -2.385142
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F3_R301_Smoke_0",
    "center": [
     175.837508,
@@ -29133,26 +28953,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_R302_AC",
-   "center": [
-    185.435578,
-    -2.624242
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -30692,26 +30492,6 @@
   },
   {
    "type": "box",
-   "name": "F3_R303_AC",
-   "center": [
-    190.640257,
-    -1.530788
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F3_R303_Smoke_0",
    "center": [
     194.414482,
@@ -32247,26 +32027,6 @@
   },
   {
    "type": "box",
-   "name": "F3_R304_AC",
-   "center": [
-    196.635457,
-    -1.769888
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F3_R304_Smoke_0",
    "center": [
     200.409682,
@@ -33778,26 +33538,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_R308_AC",
-   "center": [
-    180.109858,
-    14.401418
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -35317,26 +35057,6 @@
   },
   {
    "type": "box",
-   "name": "F3_R307_AC",
-   "center": [
-    186.105058,
-    14.162318
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F3_R307_Smoke_0",
    "center": [
     182.330834,
@@ -36452,26 +36172,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_R306_AC",
-   "center": [
-    191.309737,
-    15.255772
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -38007,26 +37707,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F3_R305_AC",
-   "center": [
-    197.304937,
-    15.016672
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 15.3,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -40873,55 +40553,55 @@
      13.962
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.345,
      13.014
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.597,
      13.361
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.457,
      13.962
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.345,
      13.014
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      13.361
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      13.962
@@ -42557,19 +42237,19 @@
      13.012
     ],
     [
-     187.224458,
-     15.166502,
+     187.274418,
+     15.164509,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.004,
      1.408,
      13.012
     ],
     [
-     186.699878,
-     15.187423,
+     186.749838,
+     15.18543,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.004,
      1.548,
      13.012
@@ -42720,19 +42400,19 @@
    "name": "F3_WCW_North_Paint",
    "items": [
     [
-     186.699838,
-     15.186424,
+     186.749798,
+     15.184431,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.006,
      1.04,
      14.56
     ],
     [
-     187.224418,
-     15.165502,
+     187.274378,
+     15.16351,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.006,
      0.05,
      15.55
@@ -42747,8 +42427,8 @@
      14.44
     ],
     [
-     186.932159,
-     15.290247,
+     187.032079,
+     15.286262,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -42756,10 +42436,10 @@
      14.44
     ],
     [
-     187.228921,
-     15.278412,
+     187.278881,
+     15.27642,
      -2.2838545045845304,
-     0.588,
+     0.488,
      0.22,
      0.006,
      15.544
@@ -42774,12 +42454,12 @@
    "type": "box",
    "name": "F3_WCW_Window_Sill",
    "center": [
-    187.228323,
-    15.263424
+    187.278283,
+    15.261432
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.6,
+    0.5,
     0.25,
     0.02
    ],
@@ -45813,55 +45493,55 @@
      13.962
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.345,
      13.014
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.597,
      13.361
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.457,
      13.962
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.345,
      13.014
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      13.361
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      13.962
@@ -47497,19 +47177,19 @@
      13.012
     ],
     [
-     190.273863,
-     16.345912,
+     190.223903,
+     16.347904,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.004,
      1.408,
      13.012
     ],
     [
-     190.798443,
-     16.32499,
+     190.748483,
+     16.326983,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.004,
      1.548,
      13.012
@@ -47660,19 +47340,19 @@
    "name": "F3_WCE_North_Paint",
    "items": [
     [
-     190.798403,
-     16.323991,
+     190.748443,
+     16.325984,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.006,
      1.04,
      14.56
     ],
     [
-     190.273823,
-     16.344912,
+     190.223863,
+     16.346905,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.006,
      0.05,
      15.55
@@ -47687,8 +47367,8 @@
      14.44
     ],
     [
-     190.575088,
-     16.445987,
+     190.475168,
+     16.449972,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -47696,10 +47376,10 @@
      14.44
     ],
     [
-     190.278326,
-     16.457822,
+     190.228366,
+     16.459814,
      -2.2838545045845304,
-     0.588,
+     0.488,
      0.22,
      0.006,
      15.544
@@ -47714,12 +47394,12 @@
    "type": "box",
    "name": "F3_WCE_Window_Sill",
    "center": [
-    190.277728,
-    16.442834
+    190.227768,
+    16.444827
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.6,
+    0.5,
     0.25,
     0.02
    ],
@@ -49595,6 +49275,66 @@
    "confidence": "low"
   },
   {
+   "type": "box",
+   "name": "F3_Plant_0",
+   "center": [
+    177.26176,
+    5.007508
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.35,
+    0.35,
+    0.7
+   ],
+   "z0": 13.01,
+   "material": "hedge",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "potted_plant_floor",
+   "evidence": "2026-10-01 reference classroom plan v6: potted plants at the F3 W stair guard (X0-02; y +-0.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Plant_1",
+   "center": [
+    177.297625,
+    5.906787
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.35,
+    0.35,
+    0.7
+   ],
+   "z0": 13.01,
+   "material": "hedge",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "potted_plant_floor",
+   "evidence": "2026-10-01 reference classroom plan v6: potted plants at the F3 W stair guard (X0-02; y +-0.5)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F3_Plant_2",
+   "center": [
+    177.33349,
+    6.806067
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.35,
+    0.35,
+    0.7
+   ],
+   "z0": 13.01,
+   "material": "hedge",
+   "slot": "M_Hedge_Foliage",
+   "ue_asset": "potted_plant_floor",
+   "evidence": "2026-10-01 reference classroom plan v6: potted plants at the F3 W stair guard (X0-02; y +-0.5)",
+   "confidence": "medium"
+  },
+  {
    "type": "stairs_run",
    "name": "StairE_F3_Flight1",
    "top": [
@@ -49609,11 +49349,11 @@
    "z_top": 14.612,
    "bottom_riser_h": 0.0767,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
    "confidence": "medium",
-   "soffit_thk": 0.18
+   "soffit_thk": 0.08
   },
   {
    "type": "slab",
@@ -49667,8 +49407,8 @@
    "z0": 14.582,
    "z1": 14.612,
    "material": "granite",
-   "slot": "M_Granite_Beige",
-   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo half-landing top, granite treads (video 080011086, 2026-10-04 X0-08)",
    "confidence": "medium"
   },
   {
@@ -49685,9 +49425,9 @@
    "tread": 0.332,
    "z_top": 16.3,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
-   "soffit_thk": 0.18,
+   "soffit_thk": 0.08,
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 2",
    "confidence": "medium"
   },
@@ -50570,7 +50310,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 403",
    "confidence": "medium"
@@ -50595,7 +50335,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 404",
    "confidence": "medium"
@@ -50681,7 +50421,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 408",
    "confidence": "medium"
@@ -50706,7 +50446,7 @@
    "wall_thk": 0.2,
    "leaf": "glass2",
    "mid": 1.0,
-   "hinge": "left",
+   "hinge": "right",
    "material": "metal",
    "evidence": "2026-10-01 reference classroom plan v6: door of room 407",
    "confidence": "medium"
@@ -52385,26 +52125,6 @@
   },
   {
    "type": "box",
-   "name": "F4_R401_AC",
-   "center": [
-    179.440378,
-    -2.385142
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_R401_Smoke_0",
    "center": [
     175.837508,
@@ -53916,26 +53636,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_R402_AC",
-   "center": [
-    185.435578,
-    -2.624242
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -55475,26 +55175,6 @@
   },
   {
    "type": "box",
-   "name": "F4_R403_AC",
-   "center": [
-    190.640257,
-    -1.530788
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_R403_Smoke_0",
    "center": [
     194.414482,
@@ -57030,26 +56710,6 @@
   },
   {
    "type": "box",
-   "name": "F4_R404_AC",
-   "center": [
-    196.635457,
-    -1.769888
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_R404_Smoke_0",
    "center": [
     200.409682,
@@ -58565,26 +58225,6 @@
   },
   {
    "type": "box",
-   "name": "F4_R408_AC",
-   "center": [
-    180.109858,
-    14.401418
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_R408_Smoke_0",
    "center": [
     176.335634,
@@ -59680,26 +59320,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_R407_AC",
-   "center": [
-    186.105058,
-    14.162318
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -61239,26 +60859,6 @@
   },
   {
    "type": "box",
-   "name": "F4_R406_AC",
-   "center": [
-    191.309737,
-    15.255772
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
    "name": "F4_R406_Smoke_0",
    "center": [
     194.912606,
@@ -62790,26 +62390,6 @@
    "slot": "M_Plastic_White",
    "ue_asset": "whiteboard_180x120",
    "evidence": "2026-10-01 reference classroom plan v6: board-wall fittings measured in R105 / 102 (2026-10-03 Q3-07)",
-   "confidence": "medium"
-  },
-  {
-   "type": "box",
-   "name": "F4_R405_AC",
-   "center": [
-    197.304937,
-    15.016672
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.245,
-    0.9,
-    0.3
-   ],
-   "z0": 18.6,
-   "material": "white",
-   "slot": "M_AC_Casing",
-   "ue_asset": "ac_split_indoor",
-   "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
   {
@@ -65240,55 +64820,55 @@
      17.261
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.345,
      16.313
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.597,
      16.661
     ],
     [
-     186.999439,
-     15.170472,
+     187.049399,
+     15.168479,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.457,
      17.261
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.345,
      16.313
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      16.661
     ],
     [
-     186.699679,
-     15.182427,
+     186.749639,
+     15.180434,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      17.261
@@ -66924,19 +66504,19 @@
      16.312
     ],
     [
-     187.224458,
-     15.166502,
+     187.274418,
+     15.164509,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.004,
      1.408,
      16.312
     ],
     [
-     186.699878,
-     15.187423,
+     186.749838,
+     15.18543,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.004,
      1.548,
      16.312
@@ -67087,19 +66667,19 @@
    "name": "F4_WCW_North_Paint",
    "items": [
     [
-     186.699838,
-     15.186424,
+     186.749798,
+     15.184431,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.006,
      1.04,
      17.86
     ],
     [
-     187.224418,
-     15.165502,
+     187.274378,
+     15.16351,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.006,
      0.05,
      18.85
@@ -67114,8 +66694,8 @@
      17.74
     ],
     [
-     186.932159,
-     15.290247,
+     187.032079,
+     15.286262,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -67123,10 +66703,10 @@
      17.74
     ],
     [
-     187.228921,
-     15.278412,
+     187.278881,
+     15.27642,
      -2.2838545045845304,
-     0.588,
+     0.488,
      0.22,
      0.006,
      18.844
@@ -67141,12 +66721,12 @@
    "type": "box",
    "name": "F4_WCW_Window_Sill",
    "center": [
-    187.228323,
-    15.263424
+    187.278283,
+    15.261432
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.6,
+    0.5,
     0.25,
     0.02
    ],
@@ -70180,55 +69760,55 @@
      17.261
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.345,
      16.313
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.597,
      16.661
     ],
     [
-     190.498484,
-     16.331949,
+     190.448524,
+     16.333942,
      -2.2838545045845304,
-     0.147,
+     0.047,
      0.006,
      0.457,
      17.261
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.345,
      16.313
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      16.661
     ],
     [
-     190.798244,
-     16.319994,
+     190.748284,
+     16.321987,
      -2.2838545045845304,
-     0.447,
+     0.547,
      0.006,
      0.597,
      17.261
@@ -71864,19 +71444,19 @@
      16.312
     ],
     [
-     190.273863,
-     16.345912,
+     190.223903,
+     16.347904,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.004,
      1.408,
      16.312
     ],
     [
-     190.798443,
-     16.32499,
+     190.748483,
+     16.326983,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.004,
      1.548,
      16.312
@@ -72027,19 +71607,19 @@
    "name": "F4_WCE_North_Paint",
    "items": [
     [
-     190.798403,
-     16.323991,
+     190.748443,
+     16.325984,
      -2.2838545045845304,
-     0.45,
+     0.55,
      0.006,
      1.04,
      17.86
     ],
     [
-     190.273823,
-     16.344912,
+     190.223863,
+     16.346905,
      -2.2838545045845304,
-     0.6,
+     0.5,
      0.006,
      0.05,
      18.85
@@ -72054,8 +71634,8 @@
      17.74
     ],
     [
-     190.575088,
-     16.445987,
+     190.475168,
+     16.449972,
      -2.2838545045845304,
      0.006,
      0.22,
@@ -72063,10 +71643,10 @@
      17.74
     ],
     [
-     190.278326,
-     16.457822,
+     190.228366,
+     16.459814,
      -2.2838545045845304,
-     0.588,
+     0.488,
      0.22,
      0.006,
      18.844
@@ -72081,12 +71661,12 @@
    "type": "box",
    "name": "F4_WCE_Window_Sill",
    "center": [
-    190.277728,
-    16.442834
+    190.227768,
+    16.444827
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.6,
+    0.5,
     0.25,
     0.02
    ],
@@ -74470,11 +74050,11 @@
    "z_top": 17.912,
    "bottom_riser_h": 0.0767,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 1 (hall photo layout, 3.45 m storey)",
    "confidence": "medium",
-   "soffit_thk": 0.18
+   "soffit_thk": 0.08
   },
   {
    "type": "slab",
@@ -74528,8 +74108,8 @@
    "z0": 17.882,
    "z1": 17.912,
    "material": "granite",
-   "slot": "M_Granite_Beige",
-   "evidence": "2026-10-01 reference classroom plan v6: granite landing finish (138)",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "evidence": "2026-10-01 reference classroom plan v6: terrazzo half-landing top, granite treads (video 080011086, 2026-10-04 X0-08)",
    "confidence": "medium"
   },
   {
@@ -74546,9 +74126,9 @@
    "tread": 0.332,
    "z_top": 19.6,
    "material": "granite",
-   "slot": "M_Granite_Beige",
+   "slot": "M_Granite_Pink",
    "side_slot": "M_Paint_White",
-   "soffit_thk": 0.18,
+   "soffit_thk": 0.08,
    "evidence": "2026-10-01 reference classroom plan v6: U-stair flight 2",
    "confidence": "medium"
   },

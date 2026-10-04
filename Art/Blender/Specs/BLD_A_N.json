@@ -560,17 +560,19 @@
    "name": "DP_North",
    "edge": 2,
    "u": [
-    12.55
+    12.585
    ],
    "z0": 0.29,
    "z1": 9.3,
    "d": 0.1,
    "jog": {
-    "z": 2.0,
-    "du": 0.38
+    "z": 3.68,
+    "du": 0.285
    },
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree | 2026-10-04 re-verification X1-04: white upper leg u 12.585, maroon lower leg u 12.87; jog height hidden (mid of 6.8-11.5 abs)",
+   "slot": "M_PVC_Gutter_White",
+   "lower_slot": "M_Paint_Maroon"
   },
   {
    "type": "wall_boxes",

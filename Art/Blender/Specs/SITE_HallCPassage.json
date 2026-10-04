@@ -472,21 +472,21 @@
      11.579
     ],
     [
-     167.938,
-     11.297
+     166.95,
+     11.335
     ],
     [
-     168.253,
-     19.491
+     166.95,
+     16.6
     ],
     [
-     160.908,
-     19.773
+     160.79,
+     16.6
     ]
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "lower lawn with roses, blue spruces and a deciduous tree between the path and the C shed, yellow/white curbs on its W side (a_065..a_078); Google z20 x 160.5..167.8, y 11..19.5 | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44).",
+   "evidence": "lower lawn with roses, blue spruces and a deciduous tree between the path and the C shed, yellow/white curbs on its W side (a_065..a_078); Google z20 x 160.5..167.8, y 11..19.5 | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44). | 2026-10-04 re-verification X1-01: E edge at the shed ledge front (was inside the WestShed), N part herringbone (N edge +-0.8)",
    "confidence": "medium",
    "paint": [
     [
@@ -545,28 +545,14 @@
    "type": "tree",
    "name": "Passage_Spruce_Lower",
    "pos": [
-    164.5,
-    16.4
+    164.0,
+    13.6
    ],
    "height": 6.0,
    "crown_d": 3.8,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "Passage_Spruce_LowerSmall",
-   "pos": [
-    161.4,
-    17.8
-   ],
-   "height": 3.5,
-   "crown_d": 2.0,
-   "crown_base": 0.3,
-   "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065)",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 re-verification X1-02: no spruce N of y 15 in frame t45.5; one blue spruce in the lawn's S part (A028/G069), position estimated",
    "confidence": "low"
   },
   {

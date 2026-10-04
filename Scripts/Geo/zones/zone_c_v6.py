@@ -58,7 +58,7 @@ LANDING = 1.16
 FLIGHT_W, WELL = 1.35, 0.20
 STAIR_X = 2 * FLIGHT_W + WELL
 FRONT_W, FRONT_E = X_W + STAIR_X, X_E - STAIR_X
-SOFFIT = 0.18
+SOFFIT = 0.08          # flight soffit slab: 0.18 cut the F1 E exit-door frame / W window head (2026-10-04 X0-01)
 F5_Z = 4 * STOREY
 
 
@@ -180,7 +180,7 @@ def ceilings(k, zb, open_bays):
     return els
 
 
-STAIR_FINISH = {"slot": "M_Granite_Beige", "side_slot": "M_Paint_White"}   # beige stone treads, white painted strings (003/138)
+STAIR_FINISH = {"slot": "M_Granite_Pink", "side_slot": "M_Paint_White"}   # pinkish granite treads, white painted strings (003/138, X0-08)
 
 
 def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
@@ -209,8 +209,8 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
     # white, not stone)
     els.append(slab(f"{prefix}_Landing", xs[0], xs[1], y_land, h1, zb if solid else top1 - 0.2, top1 - 0.03, "white",
                     slot="M_Paint_White", **ev("half-landing against the north hall wall")))
-    els.append(slab(f"{prefix}_LandingTop", xs[0], xs[1], y_land, h1, top1 - 0.03, top1, "granite", slot=STAIR_FINISH["slot"],
-                    **ev("granite landing finish (138)")))
+    els.append(slab(f"{prefix}_LandingTop", xs[0], xs[1], y_land, h1, top1 - 0.03, top1, "granite", slot="M_Terrazzo_Grey_Tile",
+                    **ev("terrazzo half-landing top, granite treads (video 080011086, 2026-10-04 X0-08)")))
     els.append({"type": "stairs_run", "name": f"{prefix}_Flight2", "top": c_to_w(xb, y_bot), "dir_deg": NORTH,
                 "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD,
                 "z_top": z(zb + STOREY), "material": "granite", **STAIR_FINISH, "soffit_thk": SOFFIT, **ev("U-stair flight 2")})
@@ -241,6 +241,9 @@ DOOR_OFF = PART / 2 + 0.45 + DOOR_W / 2
 DOOR_S = {"S1": P1 - DOOR_OFF, "S2": P2 - DOOR_OFF, "S4": P3 + DOOR_OFF, "S5": P4 + DOOR_OFF}   # 107/108 east ends, 101/102 west ends
 DOOR_N = {"N1": P1 - DOOR_OFF, "N2": P2 - DOOR_OFF, "N4": P3 + DOOR_OFF, "N5": P4 + DOOR_OFF}   # 106/105 east ends, 104/103 west ends
 DOOR_TEACH = (P2 + P3) / 2
+# leaf hinge side along the wall line (CI001/CI003/CK018, 2026-10-04 X0-04): the leaf hangs on the jamb away from the board
+# corner; "left" puts S doors on the W jamb and N doors (lines run E->W) on the E jamb
+HINGE = {"S4": "right", "S5": "right", "N1": "right", "N2": "right"}
 WC_DOORS = [(P2 + 0.1 + WC_W / 2, "WC4"), (P_WCM + 0.1 + WC_W / 2, "WC5")]
 NUMBERS = {1: {"S1": "107", "S2": "108", "S4": "101", "S5": "102", "N1": "106", "N2": "105", "N4": "104", "N5": "103"}}
 for k in (2, 3, 4):
@@ -263,7 +266,7 @@ def plan(k, zb, lobby, west_stair):
         els.append(wall(P + nm, a, b, zb, doors=[(x - a[0], DOOR_W) for x, _ in dd], h=CC + 0.03, **ev("south hall wall")))
         for x, key in dd:
             lab = "teachers' room over the lobby" if key == "T" else f"room {num[key]}"
-            els.append(door(f"{P}Door_{key}", a, b, x - a[0], zb, **ev(f"door of {lab}")))
+            els.append(door(f"{P}Door_{key}", a, b, x - a[0], zb, hinge=HINGE.get(key, "left"), **ev(f"door of {lab}")))
     # int_wall lines are a FACE with the thickness to their left: partitions/jogs are offset by PART / 2 so they sit
     # centred on their plan lines (the room / WC frames and the asserts assume centred walls)
     els.append(wall(P + "Hall_S_Jog", (X_JS + PART / 2, HW0 - PART), (X_JS + PART / 2, HE0 - PART), zb, thk=PART, h=CC + 0.03, **ev("south hall wall jog 1.3 m (mirrors the facade step)")))
@@ -274,7 +277,7 @@ def plan(k, zb, lobby, west_stair):
         els.append(wall(P + nm, a, b, zb, doors=[(a[0] - x, w) for x, _, w in dd], h=CC + 0.03, **ev("north hall wall; one WC stands forward of the other (owner)")))
         for x, key, w in dd:
             wc = key.startswith("WC")
-            els.append(door(f"{P}Door_{key}", a, b, a[0] - x, zb, width=w, leaf="solid" if wc else "glass2",
+            els.append(door(f"{P}Door_{key}", a, b, a[0] - x, zb, width=w, leaf="solid" if wc else "glass2", hinge=HINGE.get(key, "left"),
                             **ev("WC door, solid black leaf" if wc else f"door of room {num[key]}")))
     els.append(wall(P + "Hall_N_Jog", (X_JN - PART / 2, HE1 + PART), (X_JN - PART / 2, HW1 + PART), zb, h=CC + 0.03, **ev("north hall wall jog at the WC mid wall (owner)")))
     # partitions
@@ -542,13 +545,13 @@ def fitout(k, zb, num):
         if kind == "lab":
             bx("TV", LB - 0.06, LB, 3.84 - 0.815, 3.84 + 0.815, 1.15, 2.05, mat="metal", slot="M_Plastic_Black", ue_asset="tv_75in", **evt)
             bx("Whiteboard", LB - 0.02, LB, 1.57 - 0.905, 1.57 + 0.905, 0.80, 2.05, slot="M_Plastic_White", ue_asset="whiteboard_180x120", **evt)
-            bx("AC", LB - 0.245, LB, 5.20 - 0.495, 5.20 + 0.495, 2.40, 2.72, slot="M_AC_Casing", ue_asset="ac_split_indoor", **evt)
+            if r105:   # split AC only in R105; none in 102 / 204 / the other rooms (2026-10-04 X0-06)
+                bx("AC", LB - 0.245, LB, 5.20 - 0.495, 5.20 + 0.495, 2.40, 2.72, slot="M_AC_Casing", ue_asset="ac_split_indoor", **evt)
             bx("Socket_TV", LB - 0.02, LB, 3.78 - 0.08, 3.78 + 0.08, 0.88, 0.93, slot="M_Plastic_White", **evt)
         else:
             bx("TV", LB - 0.08, LB, 3.94 - 0.835, 3.94 + 0.835, 0.82, 1.83, mat="metal", slot="M_Plastic_Black",
                ue_asset="interactive_panel_75", **evt)
             bx("Whiteboard", LB - 0.02, LB, 1.79 - 0.905, 1.79 + 0.905, 0.74, 1.93, slot="M_Plastic_White", ue_asset="whiteboard_180x120", **evt)
-            bx("AC", LB - 0.245, LB, 5.30 - 0.45, 5.30 + 0.45, 2.30, 2.60, slot="M_AC_Casing", ue_asset="ac_split_indoor", **ref)
         evs = ev("CCTV dome under the back box at the window-wall corner, 2 smoke detectors (2026-10-03 Q0-02 / Q3-03: R105, "
                  "102, 204; detector positions by tile count; other rooms assumed)", "medium" if r105 else "low")
         for n, uc in enumerate((1.98, 4.38)):                              # lay-in cell centres clear of the LED panels
@@ -781,7 +784,7 @@ WC_ALCOVE, WC_ANTE = 1.20, 1.65         # sink alcove clear width; anteroom (loc
 WC_CEIL, WC_BAND, WC_TILE_T = 2.60, 1.56, 0.01
 WC_ROWS = (0.36, 0.96, 2.16)      # wall tile seams above the floor (bottom row cut 0.35; 029 end wall 0.355 / 0.96 / 1.56; 2.16 in the cubicles)
 WC_TILE, WC_GROUT, WC_FLOOR_CUT = 0.60, 0.003, 0.34   # tile, joint (m); floor row at the north wall cut to 0.34 (029)
-WC_WIN_W, WC_WIN_SILL, WC_WIN_H = 0.60, 1.42, 1.13   # opening at the wall face; head 2.55 under the cornice
+WC_WIN_W, WC_WIN_SILL, WC_WIN_H = 0.50, 1.42, 1.13   # opening at the wall face (0.50: CW002-008, 2026-10-04 X0-07); head 2.55
 WC_WIN_A = WC_CUB_D + WC_FRONT_T + WC_WIN_W / 2    # window axis: its jamb on the cubicle front line (0.775 off the aisle wall)
 WC_CUB_DOOR, WC_IN_DOOR, WC_IN_DOOR_A0 = 0.70, 0.78, 0.55
 WC_HALL_DOOR_A = WC_W / 2
@@ -1139,8 +1142,8 @@ def build():
         f1.append({"type": "box", "name": f"F1_Lobby_{nm}", "center": c_to_w(P2 + PART / 2 + d_ / 2, (y0_ + y1_) / 2),
                    "dir_deg": NORTH, "size": [round(y1_ - y0_, 3), d_, round(z1_ - z0_, 3)], "z0": z(z0_), "material": "white",
                    "slot": sl, **evf})
-    f1.append({"type": "box", "name": "F1_CCTV_StairE", "center": c_to_w(28.60, HE0 + 0.07), "dir_deg": EAST, "size": [0.12, 0.12, 0.10],
-               "z0": z(2.88), "material": "white", "slot": "M_Plastic_White", "ue_asset": "cctv_dome",
+    f1.append({"type": "box", "name": "F1_CCTV_StairE", "center": c_to_w(27.70, HE0 + 0.07), "dir_deg": EAST, "size": [0.12, 0.12, 0.10],
+               "z0": z(2.95), "material": "white", "slot": "M_Plastic_White", "ue_asset": "cctv_dome",
                **ev("CCTV dome on the S hall wall by the E end wall (2026-10-03 Q3-26)", "medium")})
     f1 += stair_storey("StairW_F1", X_W, +1, 0.0, solid=True, top_floor=False)
     f1 += stair_storey("StairE_F1", X_E, -1, 0.0, solid=True, top_floor=False)
@@ -1167,13 +1170,13 @@ def build():
     for side, xw, sg in (("W", X_W, +1), ("E", X_E, -1)):
         h0, h1 = hall(xw + sg * 1.0)
         y_b = h0 + (COR - LANDING - (RISERS - 1) * TREAD)
-        y_c = y_b + 1.20                          # closet front 1.2 m up the flight: the 2.0 m door fits under the soffit
+        y_c = y_b + 1.30                          # closet front 1.3 m up the flight: clear of the exit-door frame (X0-11)
         y_l = y_b + (RISERS - 1) * TREAD
         soff = lambda y: STOREY - RISER_H - SOFFIT * (TREAD ** 2 + RISER_H ** 2) ** 0.5 / TREAD - (y - y_b) * RISER_H / TREAD
         xo = xw + sg * FLIGHT_W
         xa, xb = (xw, xo) if sg > 0 else (xo, xw)
         f1.append(wall(f"Closet_{side}_Front", (xb, y_c), (xa, y_c), h=soff(y_c) - 0.02, thk=0.12, doors=[(FLIGHT_W / 2, 0.8)], **evc))
-        f1.append(door(f"Closet_{side}_Door", (xb, y_c), (xa, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", **dict(evc, wall_thk=0.12, material="wood")))
+        f1.append(door(f"Closet_{side}_Door", (xb, y_c), (xa, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", **dict(evc, wall_thk=0.12, material="metal")))   # black metal (X0-03)
         f1.append({"type": "roof_plane", "name": f"Closet_{side}_Side", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
                    "ring": [c_to_w(xo - sg * 0.12, y_c), c_to_w(xo, y_c), c_to_w(xo, y_l), c_to_w(xo - sg * 0.12, y_l)],
                    "z": [z(soff(y_c) - 0.02), z(soff(y_c) - 0.02), z(soff(y_l) - 0.02), z(soff(y_l) - 0.02)], **evc})
@@ -1183,6 +1186,11 @@ def build():
         west = k <= 3
         up += floor_slabs(k, zb, {"W": west, "E": True}) + ceilings(k, zb, {"W": k < 3, "E": True})
         up += plan(k, zb, lobby=False, west_stair=west) + fitout(k, zb, NUMBERS[k]) + wc_fitout(k, zb) + extra_rooms(k, zb)
+        if k == 3:   # potted floor plants in front of the W stair guard at F3, none at F1 (video 052716931, 2026-10-04 X0-02)
+            for i, yp in enumerate((8.8, 9.7, 10.6)):
+                up.append({"type": "box", "name": f"F3_Plant_{i}", "center": c_to_w(FRONT_W + 0.30, yp), "dir_deg": 0,
+                           "size": [0.35, 0.35, 0.7], "z0": z(zb + HALL_FIN), "material": "hedge", "slot": "M_Hedge_Foliage",
+                           "ue_asset": "potted_plant_floor", **ev("potted plants at the F3 W stair guard (X0-02; y +-0.5)", "medium")})
         if k < 3:
             up += stair_storey(f"StairW_F{k}", X_W, +1, zb, solid=False, top_floor=(k == 2))
         up += stair_storey(f"StairE_F{k}", X_E, -1, zb, solid=False, top_floor=(k == 4))

@@ -701,26 +701,26 @@
    "type": "lamp",
    "name": "Flagpole_0",
    "pos": [
-    126.684,
-    -99.535
+    135.0,
+    -99.95
    ],
    "height": 9.0,
    "head": "ball",
    "slot": "M_Paint_White",
-   "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate)",
+   "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate) | 2026-10-04 re-verification X2-09: at the parapet E end (low)",
    "confidence": "medium"
   },
   {
    "type": "lamp",
    "name": "Flagpole_1",
    "pos": [
-    128.284,
-    -99.619
+    135.6,
+    -99.75
    ],
    "height": 9.0,
    "head": "ball",
    "slot": "M_Paint_White",
-   "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate)",
+   "evidence": "P1: tall white flagpole with halyards at the planter-wall face (Street c2 frames f02711/f02830/f02947, bearings cut with the wall face, +-0.7 m along); height ~9 m above the pine crowns (estimate) | 2026-10-04 re-verification X2-09: at the parapet E end (low)",
    "confidence": "medium"
   },
   {

@@ -18,6 +18,7 @@ EV = ("owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows /
 Z_G = 5.35                                      # ground level of the walk (LowerTerrace)
 BOXES = [("W", 88.6, 98.0, 4.4), ("E", 113.0, 118.8, 5.3)]     # x0, x1 (world), depth out from the wall (m)
 BOX_H, BOX_T = 0.85, 0.3
+ENCLOSURES = {"E": 1.7}                        # box -> enclosure wall height (m)
 BED = (134.0, None, 6.8)                        # x0 world, x1 = Hall east end, depth out from the wall
 SPRUCES = [(137.5, 2.1), (142.5, 2.1), (147.0, 2.1), (137.5, 5.6), (142.0, 5.6), (147.0, 5.6), (150.8, 5.4)]
 BENCH_X = [104.0, 110.0, 123.5, 137.0, 143.0, 149.0, 154.5]    # along the garden's north hedge (arches at x 117.6, 130.8)
@@ -40,6 +41,11 @@ def main():
         ring = [W(u0, 0.0), W(u1, 0.0), W(u1, dep), W(u0, dep)]
         # 3 brick walls as one mitred run (the 4th side is the Hall wall; separate pieces overlapped at the corners and
         # left a notch outside them) + the raised soil inside
+        if nm in ENCLOSURES:   # red concrete-block service enclosure, not a planter (2026-10-04 X3-04)
+            new.append({"type": "wall", "name": f"HallBed_Box{nm}_Wall", "line": [W(u0, 0.05), W(u0, dep), W(u1, dep), W(u1, 0.05)],
+                        "height": ENCLOSURES[nm], "thk": BOX_T, "cap_proj": 0.03, "material": "brick", "slot": "M_Block_RockFace_Red",
+                        "evidence": EV + " | 2026-10-04 re-verification X3-04: 1.7 m block enclosure with a sheet cap", "confidence": "medium"})
+            continue
         new.append({"type": "wall", "name": f"HallBed_Box{nm}_Wall", "line": [W(u0, 0.05), W(u0, dep), W(u1, dep), W(u1, 0.05)],
                     "height": BOX_H, "thk": BOX_T, "cap_proj": 0.03, "material": "brick", "slot": "M_Tile_Brick_Red", "evidence": EV,
                     "confidence": "low"})

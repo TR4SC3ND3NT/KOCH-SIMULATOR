@@ -2,7 +2,7 @@
  "id": "BLD_GuardBoothNE",
  "collection": "SITE_Sport",
  "scale": 1.0,
- "status": "owner 2026-09-28: small guard post like the gate booth (cream brick-look tiles, red tile band, white PVC), sizes assumed",
+ "status": "owner 2026-09-28: small guard post like the gate booth (cream brick-look tiles, red tile band, white PVC), sizes assumed | 2026-10-04 re-verification X2-04: white prefab panel cabin with a white roof overhang (no tile, no red band)",
  "anchor": {
   "world_xy": [
    213.409,
@@ -37,16 +37,10 @@
    2.0
   ]
  ],
- "plinth": {
-  "z_top": 0.8,
-  "proj": 0.02,
-  "evidence": "red brick-look tile band as on the gate booth, lower",
-  "confidence": "low"
- },
  "cornice": {
-  "z0": 2.58,
+  "z0": 2.45,
   "z1": 2.6,
-  "proj": 0.0
+  "proj": 0.25
  },
  "window_types": {
   "W": {
@@ -142,10 +136,8 @@
   "confidence": "low"
  },
  "attachments": [],
- "wall_material": "M_Tile_Beige",
- "slots": {
-  "Plinth": "M_Tile_Brick_Red"
- },
+ "wall_material": "M_PVC_White",
+ "slots": {},
  "ffl_z": 2.225,
  "ffl_note": "lower-yard level 2.85 + 5 cm step (sports frame Z_LOW) | 2026-09-29: yard lowered to 2.175 -> FFL 2.225"
 }
