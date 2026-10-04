@@ -120,6 +120,61 @@ def parts_to_mesh(name, parts):
     return me
 
 
+def _cut_along_rings(ter, rings, cell=4.0):
+    """Split the terrain faces along every ring edge (vertical-plane bisects on the faces near each edge) so the
+    per-face surface slots follow the rings exactly; classifying whole ~1 m faces made every lawn/paving border a
+    staircase that leaked past kerbs (walkthrough 2026-10-04, round bed G015). Heights are untouched: cut vertices
+    lie on the original faces. A cut may run on up to one face past a ring corner (harmless extra edge)."""
+    from mathutils import Vector
+    Mi = ter.matrix_world.inverted()
+    bm = bmesh.new()
+    bm.from_mesh(ter.data)
+    grid = {}
+
+    def add(f):
+        xs = [v.co.x for v in f.verts]; ys = [v.co.y for v in f.verts]
+        for i in range(int(min(xs) // cell), int(max(xs) // cell) + 1):
+            for j in range(int(min(ys) // cell), int(max(ys) // cell) + 1):
+                grid.setdefault((i, j), set()).add(f)
+    for f in bm.faces:
+        add(f)
+    for ring in rings:
+        P = [(Mi @ Vector((x, y, 0.0))).xy for x, y in ring]
+        for a, b in zip(P, P[1:] + P[:1]):
+            d = b - a
+            if d.length < 1e-4:
+                continue
+            x0, x1 = min(a.x, b.x) - 0.01, max(a.x, b.x) + 0.01
+            y0, y1 = min(a.y, b.y) - 0.01, max(a.y, b.y) + 0.01
+            n = Vector((-d.y, d.x)).normalized()
+            cand = set()
+            for i in range(int(x0 // cell), int(x1 // cell) + 1):
+                for j in range(int(y0 // cell), int(y1 // cell) + 1):
+                    cand |= grid.get((i, j), set())
+            faces = []
+            for f in cand:
+                if not f.is_valid:
+                    continue
+                xs = [v.co.x for v in f.verts]; ys = [v.co.y for v in f.verts]
+                if max(xs) < x0 or min(xs) > x1 or max(ys) < y0 or min(ys) > y1:
+                    continue
+                sd = [(v.co.xy - a).dot(n) for v in f.verts]
+                if min(sd) < -1e-4 and max(sd) > 1e-4:   # straddles the edge's line
+                    faces.append(f)
+            if not faces:
+                continue
+            edges = {e for f in faces for e in f.edges}
+            verts = {v for f in faces for v in f.verts}
+            res = bmesh.ops.bisect_plane(bm, geom=list(verts) + list(edges) + faces, dist=1e-5,
+                                         plane_co=(a.x, a.y, 0.0), plane_no=(n.x, n.y, 0.0))
+            for g in res["geom"]:
+                if isinstance(g, bmesh.types.BMFace):
+                    add(g)
+    bm.to_mesh(ter.data)
+    bm.free()
+    ter.data.update()
+
+
 def assign_ground_surfaces(ter, specs_dir):
     """Per-face slots on the terrain from the specs' "ground_surfaces" [{"name", "ring": [[x, y], ...], "slot": M_*}]
     (paved areas that are ground, not separate objects: carriageway, forecourts, yards, plazas). Base slot 0 stays
@@ -146,6 +201,7 @@ def assign_ground_surfaces(ter, specs_dir):
     me = ter.data
     if not me.materials:
         me.materials.append(mat("M_Ground_Grass"))
+    _cut_along_rings(ter, [sf["ring"] for sf in surf])
     M = ter.matrix_world
     cen = np.array([(M @ p.center)[:2] for p in me.polygons])
     idx = np.zeros(len(cen), int)
