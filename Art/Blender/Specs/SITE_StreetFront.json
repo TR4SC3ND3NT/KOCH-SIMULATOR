@@ -1615,5 +1615,6 @@
    "confidence": "low",
    "evidence": "2026-10-03 video pass V3-12: blue valve body at ~0.6 m"
   }
- ]
+ ],
+ "ground": "pads"
 }

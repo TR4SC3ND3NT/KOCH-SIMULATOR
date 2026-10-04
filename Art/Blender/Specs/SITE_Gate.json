@@ -313,8 +313,8 @@
      -109.382
     ],
     [
-     151.8,
-     -110.739
+     136.0,
+     -109.939
     ]
    ],
    "height": 0.15,
@@ -322,6 +322,24 @@
    "material": "stone",
    "evidence": "north carriageway edge y=-110.8 at x=153 (Google z20 profiles; parking forecourt pavers north of it); yellow-painted at the crossing. NOTE terrain.json carriageway (OSM centre, 15 m) puts this edge at -111.6: shift the carriageway mask 0.8 m north",
    "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_North_Fc",
+   "line": [
+    [
+     136.0,
+     -109.939
+    ],
+    [
+     151.8,
+     -110.739
+    ]
+   ],
+   "height": 0.02,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "2026-10-04 street levels (owner: road and forecourt one level, zebra a raised table): flush kerb along the forecourt"
   },
   {
    "type": "wall",
@@ -344,11 +362,29 @@
   },
   {
    "type": "wall",
-   "name": "Curb_North_E",
+   "name": "Curb_North_E_Fc",
    "line": [
     [
      156.6,
      -110.982
+    ],
+    [
+     176.0,
+     -111.965
+    ]
+   ],
+   "height": 0.02,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "2026-10-04 street levels (owner: road and forecourt one level, zebra a raised table): flush kerb along the forecourt"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_North_E",
+   "line": [
+    [
+     176.0,
+     -111.965
     ],
     [
      190.0,
@@ -1924,36 +1960,228 @@
  ],
  "terrain_pads": [
   {
-   "name": "Zebra_RaisedTable",
+   "name": "Forecourt_Gate",
    "ring": [
     [
-     152.05,
-     -110.85
+     136.0,
+     -95.53
     ],
     [
-     156.35,
-     -111.07
+     156.85,
+     -96.58
     ],
     [
-     156.35,
-     -125.82
+     156.7,
+     -101.05
     ],
     [
-     152.05,
-     -125.6
+     161.55,
+     -101.3
+    ],
+    [
+     176.0,
+     -102.03
+    ],
+    [
+     176.0,
+     -111.965
+    ],
+    [
+     136.0,
+     -109.939
     ]
    ],
-   "z": 7.415,
+   "z": 6.9,
    "grad": [
-    -0.005,
-    -0.0318
+    0.00036,
+    0.00713
    ],
    "ref": [
     154.2,
-    -110.85
+    -96.96
    ],
-   "blend": 0.5,
-   "evidence": "2026-10-04 levels pass L1-03 (061913764 f41 / 065856484 f_0020: forecourt meets the zebra flush; f_0005/f_0014: stripes over a hump)"
+   "blend": 2.0,
+   "evidence": "2026-10-04 street levels pass: owner fact (road and forecourt one level, zebra a raised table 0.15-0.20); A247 vertical-segment triangulation (2 men 1.75 m on the forecourt at y -103/-105, car wheel on the road, booth N plinth 7 x 0.16) -> forecourt 6.69-6.88 (mean 6.80), 0.1-0.3 below the booth ground; 065856484 f13 (forecourt ~ gate level +-0.3); 061913764 f24-f26 / 065812371: forecourt flush with the road, table ramps on its W side. Gate line kept at 6.90 -> 0.7% fall to the street (drain gratings on the forecourt). Ring: from 0.5 m N of the fence/gate line (gate line held at 6.90, P05) to the N kerb line, x 136-176 (Forecourt ring), around the booth pad"
+  },
+  {
+   "name": "Street_Gate_W",
+   "ring": [
+    [
+     100.0,
+     -109.511
+    ],
+    [
+     125.0,
+     -109.382
+    ],
+    [
+     136.0,
+     -109.939
+    ],
+    [
+     136.0,
+     -124.739
+    ],
+    [
+     100.0,
+     -122.915
+    ]
+   ],
+   "z": 7.52,
+   "blend": 2.0,
+   "grad": [
+    -0.02,
+    0.0
+   ],
+   "ref": [
+    100.0,
+    -109.511
+   ],
+   "evidence": "street levels pass: harmonic-free ramp of the lowered street back toward the DEM road, 2.0 %/m along the street (x 100 -> 136); grade assumed (no photo measures the street W of x 135)"
+  },
+  {
+   "name": "Street_Gate",
+   "ring": [
+    [
+     136,
+     -109.939
+    ],
+    [
+     176,
+     -111.965
+    ],
+    [
+     176,
+     -126.765
+    ],
+    [
+     136,
+     -124.739
+    ]
+   ],
+   "z": 6.8,
+   "blend": 2.0,
+   "evidence": "2026-10-04 street levels pass: owner fact (road and forecourt one level, zebra a raised table 0.15-0.20); A247 vertical-segment triangulation (2 men 1.75 m on the forecourt at y -103/-105, car wheel on the road, booth N plinth 7 x 0.16) -> forecourt 6.69-6.88 (mean 6.80), 0.1-0.3 below the booth ground; 065856484 f13 (forecourt ~ gate level +-0.3); 061913764 f24-f26 / 065812371: forecourt flush with the road, table ramps on its W side. Gate line kept at 6.90 -> 0.7% fall to the street (drain gratings on the forecourt); road flat at the forecourt kerb level 6.80 (camber unmeasured), x 136-176 = photo coverage A247/065812371/061913764/012108212"
+  },
+  {
+   "name": "Street_Gate_E",
+   "ring": [
+    [
+     176,
+     -111.965
+    ],
+    [
+     206,
+     -113.485
+    ],
+    [
+     206,
+     -128.284
+    ],
+    [
+     176,
+     -126.765
+    ]
+   ],
+   "z": 6.8,
+   "blend": 2.0,
+   "grad": [
+    0.015,
+    0.0
+   ],
+   "ref": [
+    176,
+    -111.965
+   ],
+   "evidence": "street levels pass: ramp back toward the DEM road, 1.5 %/m (x 176 -> 206); grade assumed (no photo measures the street E of x 175)"
+  },
+  {
+   "name": "Street_SouthVerge_W",
+   "ring": [
+    [
+     119.0,
+     -123.878
+    ],
+    [
+     136.0,
+     -124.739
+    ],
+    [
+     136.0,
+     -141.739
+    ],
+    [
+     119.0,
+     -140.878
+    ]
+   ],
+   "z": 7.29,
+   "blend": 2.0,
+   "grad": [
+    -0.02,
+    0.0
+   ],
+   "ref": [
+    119.0,
+    -123.878
+   ],
+   "evidence": "road ramp + 0.15 S kerb (Curb_South 0.15)"
+  },
+  {
+   "name": "Street_SouthVerge",
+   "ring": [
+    [
+     136,
+     -124.739
+    ],
+    [
+     176,
+     -126.765
+    ],
+    [
+     176,
+     -143.765
+    ],
+    [
+     136,
+     -141.739
+    ]
+   ],
+   "z": 6.95,
+   "blend": 2.0,
+   "evidence": "road 6.80 + 0.15 S kerb (065812371: kerb stones either side of the S mouth; 012108212 f43: S mouth near-flush with the table; 012108212 t2-10: lawn strip and footway flush, cars parked on the lot directly S of the footway -> ring to footway S edge + 5 m)"
+  },
+  {
+   "name": "Street_SouthVerge_E",
+   "ring": [
+    [
+     176.0,
+     -126.765
+    ],
+    [
+     192.5,
+     -127.601
+    ],
+    [
+     192.5,
+     -144.601
+    ],
+    [
+     176.0,
+     -143.765
+    ]
+   ],
+   "z": 6.95,
+   "blend": 2.0,
+   "grad": [
+    0.015,
+    0.0
+   ],
+   "ref": [
+    176,
+    -126.765
+   ],
+   "evidence": "road ramp + 0.15 S kerb (Curb_South_E 0.15)"
   },
   {
    "name": "Booth_Level",
@@ -1978,6 +2206,31 @@
    "z": 6.97,
    "blend": 1.5,
    "evidence": "2026-10-04 levels pass L1-04 (A247 N face + A258 S face: 7 plinth courses x 0.16 on both faces -> level ground)"
+  },
+  {
+   "name": "Zebra_RaisedTable",
+   "ring": [
+    [
+     152.05,
+     -110.85
+    ],
+    [
+     156.35,
+     -111.07
+    ],
+    [
+     156.35,
+     -125.82
+    ],
+    [
+     152.05,
+     -125.6
+    ]
+   ],
+   "z": 6.97,
+   "blend": 1.0,
+   "evidence": "owner 2026-10-04: raised crossing 0.15-0.20 above the road, as wide as the zebra -> 6.80 + 0.17; ramps ~1 m (terrain grid 1 m; 065812371 shows ~1 m asphalt band between the apron pavers and the first stripe, 061913764 f24-f26 the W ramp)"
   }
- ]
+ ],
+ "ground": "pads"
 }

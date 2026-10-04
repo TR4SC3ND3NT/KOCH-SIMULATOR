@@ -937,5 +937,7 @@
    "evidence": " | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): beige tile on the storefront piers"
   }
  ],
- "scale_note": "2026-10-02 audit: Google z20 eave 50.66 x 26.42 (lean-free, model 49.28 x 25.46); B-A gap from the alley SfM 12.6 vs 13.43 (B's east wall further east); photo wall top 8.51 +-0.21 vs 8.15. The pano metrics were scaled on the OSM length 48.28, so the whole block (plan, bays, heights) scales by 49.66 / 48.28"
+ "scale_note": "2026-10-02 audit: Google z20 eave 50.66 x 26.42 (lean-free, model 49.28 x 25.46); B-A gap from the alley SfM 12.6 vs 13.43 (B's east wall further east); photo wall top 8.51 +-0.21 vs 8.15. The pano metrics were scaled on the OSM length 48.28, so the whole block (plan, bays, heights) scales by 49.66 / 48.28",
+ "ffl_z": 6.754,
+ "ffl_note": " | 2026-10-04: pinned at the rule value (the street pads would lower it 0.08)"
 }
