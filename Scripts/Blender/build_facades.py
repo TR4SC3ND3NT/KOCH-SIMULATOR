@@ -1036,7 +1036,7 @@ class Building:
                         box(bm_lo, fr, ul - d / 2, ul + d / 2, off, off + d, a["z0"], jog["z"] - d)
                     else:
                         box(bm, fr, u - d / 2, u + d / 2, off, off + d, a["z0"], a["z1"])
-                nm = f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}"
+                nm = f"Downpipe_E{a['edge']}_{a['u'][0]:.0f}" + (f"_{a['name']}" if a.get("name") else "")   # unique per spec item
                 ob = self.obj(nm, bm, COL["frame"], a.get("evidence"), cf)
                 if a.get("slot"):
                     ob.data.materials[0] = mat(a["slot"])
