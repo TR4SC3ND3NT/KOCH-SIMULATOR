@@ -1020,5 +1020,40 @@
    "slot": "M_Gravel_Compacted",
    "evidence": "2026-10-02 photo diff: compacted grey-brown gravel parking east of the red line, cars up to C's SE pilaster (061643243, 061648727, 167); x of the line +-0.7 m | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   }
+ ],
+ "terrain_pads": [
+  {
+   "name": "CPlaza_WWing",
+   "ring": [
+    [
+     175.58545,
+     -7.114475
+    ],
+    [
+     188.87481,
+     -7.64448
+    ],
+    [
+     189.151768,
+     -0.70004
+    ],
+    [
+     175.862408,
+     -0.170035
+    ]
+   ],
+   "z": 5.05,
+   "blend": 0.6,
+   "grad": [
+    0.02108,
+    -0.00084
+   ],
+   "ref": [
+    176.24445,
+    -3.1376
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-04 D1 Q2-21 (PnP on the C windows + cover edge / pits in CE030, CE024, CC002): the plaza in front of the C W wing is 0.27 lower at its W end, 5.05 at u 0-8 rising to 5.32 at the entrance-stair foot (u 12.8); C FFL and the entrance stair unchanged"
+  }
  ]
 }
