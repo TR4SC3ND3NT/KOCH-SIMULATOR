@@ -9,7 +9,7 @@
   {
    "id": "V3-04/V3-05",
    "what": "C west stair continues above F3 and its dog-leg is rotated 180 deg (video) vs the owner note 'west stair serves F1-F3' and the F4 teachers' room over the bay",
-   "status": "disputed, not applied"
+   "status": "resolved by the owner 2026-10-04: the W stair ends at F3, F4 W end = teachers' room (model kept); the filmed stair going on up is the E one (to F4 and F5, as modelled)"
   },
   {
    "id": "V3-09",
@@ -304,7 +304,7 @@
   {
    "id": "V3-04 (D2)",
    "what": "C W stair continues F3 -> F4 (video)",
-   "status": "NOT applied: contradicts campus.md (owner: F4 offices where the W stair would be); needs the owner"
+   "status": "resolved by the owner 2026-10-04: the W stair ends at F3, F4 W end = teachers' room (model kept); the filmed stair going on up is the E one (to F4 and F5, as modelled)"
   }
  ]
 }
