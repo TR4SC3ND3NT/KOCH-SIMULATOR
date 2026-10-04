@@ -5275,17 +5275,17 @@
    "type": "stairs_run",
    "name": "AW_NorthSteps",
    "top": [
-    165.67,
-    -16.043
+    166.094,
+    -16.064
    ],
    "dir_deg": 87.192,
    "risers": 3,
    "riser_h": 0.1,
    "tread": 0.35,
-   "width": 1.5,
+   "width": 2.35,
    "z_top": 5.65,
    "material": "granite",
-   "evidence": "north end of the deck: 2 granite steps on the outer part of the deck end (012436367 f01-f07; map owner) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py): 2 risers 0.15 from the deck (5.65) to the square | 2026-10-03 photo pass batch 2 Q2-18 (CC/CE): 3 risers, 1.50 wide (x 164.71-166.21) | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis)",
+   "evidence": "north end of the deck: 2 granite steps on the outer part of the deck end (012436367 f01-f07; map owner) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py): 2 risers 0.15 from the deck (5.65) to the square | 2026-10-03 photo pass batch 2 Q2-18 (CC/CE): 3 risers, 1.50 wide (x 164.71-166.21) | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis) | 2026-10-04 walkthrough (CE026-CE028 vs render): the grating lies over the steps (no separate ramp past them), granite steps run under it across the deck end",
    "confidence": "medium"
   },
   {
@@ -5301,12 +5301,12 @@
      -16.122
     ],
     [
-     167.383,
-     -13.725
+     167.334,
+     -14.724
     ],
     [
-     166.54,
-     -13.666
+     166.489,
+     -14.665
     ]
    ],
    "z": [
@@ -5317,39 +5317,7 @@
    ],
    "thk": 0.06,
    "material": "metal",
-   "evidence": "grey grating ramp on the wall side of the deck end, running straight north down to the square (map owner 2026-09-26 marked screenshot) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: ramp 0.85 wide on the wall side | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "AW_NorthRamp_Base",
-   "ring": [
-    [
-     166.42,
-     -16.063
-    ],
-    [
-     167.265,
-     -16.122
-    ],
-    [
-     167.383,
-     -13.725
-    ],
-    [
-     166.54,
-     -13.666
-    ]
-   ],
-   "z": [
-    5.59,
-    5.59,
-    5.29,
-    5.29
-   ],
-   "thk": 0.5,
-   "material": "stone",
-   "evidence": "infill under the ramp | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: ramp 0.85 wide on the wall side | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis)",
+   "evidence": "grey grating ramp on the wall side of the deck end, running straight north down to the square (map owner 2026-09-26 marked screenshot) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: ramp 0.85 wide on the wall side | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis) | 2026-10-04 walkthrough (CE026-CE028 vs render): the grating lies over the steps (no separate ramp past them), granite steps run under it across the deck end",
    "confidence": "medium"
   },
   {
@@ -5362,8 +5330,8 @@
      5.65
     ],
     [
-     166.57,
-     -13.667,
+     166.519,
+     -14.666,
      5.35
     ]
    ],
@@ -5372,7 +5340,7 @@
    "mid_rails": 1,
    "material": "metal",
    "unique_posts": true,
-   "evidence": "ramp rail | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: rail on the narrower ramp's W edge | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis)",
+   "evidence": "ramp rail | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-03 photo pass batch 2 Q2-18: rail on the narrower ramp's W edge | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis) | 2026-10-04 walkthrough (CE026-CE028 vs render): the grating lies over the steps (no separate ramp past them), granite steps run under it across the deck end",
    "confidence": "medium"
   },
   {
@@ -5385,8 +5353,8 @@
      5.65
     ],
     [
-     167.353,
-     -13.725,
+     167.304,
+     -14.724,
      5.35
     ]
    ],
@@ -5395,7 +5363,7 @@
    "mid_rails": 1,
    "material": "metal",
    "unique_posts": true,
-   "evidence": "2026-10-03 video pass V1-05 (081158036): the grating ramp has a wall-side (E) handrail too, 0.03 inside its E edge | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis)",
+   "evidence": "2026-10-03 video pass V1-05 (081158036): the grating ramp has a wall-side (E) handrail too, 0.03 inside its E edge | 2026-10-04 D1: with the A_W north end (+4.3 along the A y-axis) | 2026-10-04 walkthrough (CE026-CE028 vs render): the grating lies over the steps (no separate ramp past them), granite steps run under it across the deck end",
    "confidence": "medium"
   },
   {

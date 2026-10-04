@@ -95,8 +95,8 @@ def main(src):
                                         "the brass flashing, ~0.7 m at the south end thinning to ~0.25 m at the north end, over "
                                         "brick-effect tile (~0.10 m courses)")
                 # the Dance Hall door on the basement-stair landing opens into this box: hollow (room in INT_C_Basement),
-                # floor at the basement level (3.97); the stair's wall (Stair_Wall_N, w 0-4.37) closes most of the south end
-                a.update(hollow=True, z_floor=-2.70, wall_t=0.3,
+                # floor at the basement level (2.90); the stair's wall (Stair_Wall_N, w 0-4.37) closes most of the south end
+                a.update(hollow=True, z_floor=-3.75, wall_t=0.3,
                          hollow_ends=[{"end": "u0"}, {"end": "u1", "w0": 4.27, "w1": a["depth"]}])
             if "u" in a:
                 a["u"] = [round(v + YW - OLD_W, 3) for v in a["u"]]

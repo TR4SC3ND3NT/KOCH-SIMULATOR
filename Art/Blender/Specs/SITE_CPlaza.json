@@ -305,13 +305,13 @@
     177.53,
     -13.718
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-04 walkthrough (CE011/CE013 vs render): junipers, irregular cones with foliage from ~1 m, not round crowns on bare trunks",
    "confidence": "medium",
    "height": 6.5,
-   "crown_d": 3.2,
+   "crown_d": 2.8,
    "trunk_d": 0.18,
-   "crown_base": 1.8,
-   "shape": "ellipsoid"
+   "crown_base": 1.0,
+   "shape": "cone"
   },
   {
    "type": "planter",
@@ -449,13 +449,13 @@
     180.461,
     -13.862
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-04 walkthrough (CE011/CE013 vs render): junipers, irregular cones with foliage from ~1 m, not round crowns on bare trunks",
    "confidence": "medium",
    "height": 6.5,
-   "crown_d": 3.2,
+   "crown_d": 2.8,
    "trunk_d": 0.18,
-   "crown_base": 1.8,
-   "shape": "ellipsoid"
+   "crown_base": 1.0,
+   "shape": "cone"
   },
   {
    "type": "planter",
@@ -491,13 +491,13 @@
     183.403,
     -14.006
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-04 walkthrough (CE011/CE013 vs render): junipers, irregular cones with foliage from ~1 m, not round crowns on bare trunks",
    "confidence": "medium",
    "height": 6.5,
-   "crown_d": 3.2,
+   "crown_d": 2.8,
    "trunk_d": 0.18,
-   "crown_base": 1.8,
-   "shape": "ellipsoid"
+   "crown_base": 1.0,
+   "shape": "cone"
   },
   {
    "type": "planter",
@@ -576,13 +576,13 @@
     189.265,
     -14.293
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-04 walkthrough (CE011/CE013 vs render): junipers, irregular cones with foliage from ~1 m, not round crowns on bare trunks",
    "confidence": "medium",
    "height": 6.5,
-   "crown_d": 3.2,
+   "crown_d": 2.8,
    "trunk_d": 0.18,
-   "crown_base": 1.8,
-   "shape": "ellipsoid"
+   "crown_base": 1.0,
+   "shape": "cone"
   },
   {
    "type": "planter",
@@ -618,13 +618,13 @@
     192.196,
     -14.437
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-04 walkthrough (CE011/CE013 vs render): junipers, irregular cones with foliage from ~1 m, not round crowns on bare trunks",
    "confidence": "medium",
    "height": 6.5,
-   "crown_d": 3.2,
+   "crown_d": 2.8,
    "trunk_d": 0.18,
-   "crown_base": 1.8,
-   "shape": "ellipsoid"
+   "crown_base": 1.0,
+   "shape": "cone"
   },
   {
    "type": "planter",
@@ -660,13 +660,13 @@
     195.137,
     -14.581
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-04 walkthrough (CE011/CE013 vs render): junipers, irregular cones with foliage from ~1 m, not round crowns on bare trunks",
    "confidence": "medium",
    "height": 6.5,
-   "crown_d": 3.2,
+   "crown_d": 2.8,
    "trunk_d": 0.18,
-   "crown_base": 1.8,
-   "shape": "ellipsoid"
+   "crown_base": 1.0,
+   "shape": "cone"
   },
   {
    "type": "planter",

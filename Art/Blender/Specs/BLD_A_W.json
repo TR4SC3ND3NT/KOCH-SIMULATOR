@@ -775,5 +775,9 @@
   }
  ],
  "site_notes": "Stairs, steel ramp, lawn bank edgings, retaining wall, planters of the gallery surroundings are in SITE_Garden (AW_* elements).",
- "walls_to_ffl": true
+ "walls_to_ffl": true,
+ "slots": {
+  "Wall": "M_Render_Shuba_Grey"
+ },
+ "slots_note": "2026-10-04 walkthrough (A151/A245 vs render): light grey textured (shuba) render like A_N and B, not beige (only C is beige)"
 }

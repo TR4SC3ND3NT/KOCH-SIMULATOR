@@ -524,12 +524,15 @@ class Building:
                 cuts = sorted((o.u0, o.u1, False) for o, tn, _w in self.openings_for(i)[0] if tn == "entrance" or o.z0 < zt)
                 # "skip": {edge: [[u0, u1], ...]} spans against a neighbouring building (party walls): no band there,
                 # it would run inside the neighbour with its faces on the neighbour's wall faces
-                cuts = sorted(cuts + [(u0, u1, True) for u0, u1 in pl.get("skip", {}).get(str(i), [])])
+                skips = pl.get("skip", {}).get(str(i), [])
+                cuts = sorted(cuts + [(u0, u1, True) for u0, u1 in skips])
                 a = -p0
                 for c0, c1, party in cuts + [(e["L"] + p1, e["L"] + p1, False)]:
                     if c0 - a > 0.01 and zt > e["zg"] + 0.05:
                         box(bm_pl, e["frame"], a, c0, 0.0, pl["proj"], e["zg"] - 0.05, zt)
-                    if c1 - c0 > 0.01 and e["zg"] < -0.07 and not party:   # under a door: band up to 2 cm below the threshold
+                    # an opening inside a skip span (basement light well / room in front of the wall) gets no band either
+                    inside_skip = any(s0 <= c0 and c1 <= s1 for s0, s1 in skips)
+                    if c1 - c0 > 0.01 and e["zg"] < -0.07 and not party and not inside_skip:   # under a door: band up to 2 cm below the threshold
                         box(bm_pl, e["frame"], c0, c1, 0.0, pl["proj"], e["zg"] - 0.05, min(-0.02, zt))
                     a = max(a, c1)
             self.obj("Plinth", bm_pl, COL["plinth"], pl.get("evidence", "brick-tile plinth"), pl.get("confidence"))
@@ -878,14 +881,15 @@ class Building:
         if t == "stairs":
             H = a["risers"] * a["riser_h"]
             stone = bmesh.new()
+            so = a.get("soffit", {})   # hollow underside over a basement room (z rel FFL, from the wall to w0)
             D.stone_stair(stone, fr, a["u0"], a["u1"], a["risers"], a["riser_h"], a["tread"], a["landing"], 0.0,
-                          w_back=-0.05, nosing=a.get("nosing", 0.02))
+                          w_back=-0.05, nosing=a.get("nosing", 0.02), soffit_z=so.get("z"), soffit_w=so.get("w0"))
             self.obj_parts(f"Stairs_E{a['edge']}_{a['u0']:.0f}", {"M_Granite_Red": stone}, ev, cf)
             for n, c in enumerate(a.get("cheeks", [])):
                 body, cap = bmesh.new(), bmesh.new()
                 ct = c.get("cap_t", 0.04)
                 ov = c.get("cap_over", 0.02)
-                zb = -H - 0.2
+                zb = c.get("z_bottom", -H - 0.2)   # z_bottom: underside raised over a basement corridor
                 # optional knee: level top from the wall to w_knee (along the landing), then the slope to w1
                 # w0: where the cheek starts (e.g. at a wing face in front of a recessed tower)
                 w0 = c.get("w0", 0.0)
@@ -1273,15 +1277,27 @@ class Building:
         tag = f"E{a['edge']}_{u0:.0f}"
         bm = bmesh.new()
         inset = a.get("post_inset", 0.0)          # post centre this far inside the deck edge (m)
+        # optional "post_base": {"z": top rel FFL, "slot"}: square piers in two finishes (beige tile over a red base)
+        pb = a.get("post_base")
+        bm_b = bmesh.new() if pb else None
         for u in a.get("posts_u", []):
             zp0 = zb - (0.0 if "floor_z" in a else BURY_M)
+            if pb and not a.get("post_round"):
+                box(bm_b, fr, u - pw / 2, u + pw / 2, dep - pd - inset, dep - inset, zp0, pb["z"])
+                zp0 = pb["z"]
             if a.get("post_round"):                # round steel tube, diameter post_w
                 wc = dep - inset - pw / 2 if inset else dep - pd / 2
                 bmesh.ops.create_cone(bm, cap_ends=True, cap_tris=False, segments=12, radius1=pw / 2, radius2=pw / 2,
                                       depth=zu - bh - zp0, matrix=fr @ Matrix.Translation((u, wc, (zp0 + zu - bh) / 2)))
             else:
                 box(bm, fr, u - pw / 2, u + pw / 2, dep - pd - inset, dep - inset, zp0, zu - bh)
-        self.obj(f"GalleryPosts_{tag}", bm, COL["post"], ev, cf)
+        ob = self.obj(f"GalleryPosts_{tag}", bm, COL["post"], ev, cf)
+        if a.get("post_slot"):
+            ob.data.materials[0] = mat(a["post_slot"])
+        if pb:
+            ob = self.obj(f"GalleryPostBase_{tag}", bm_b, COL["post"], ev, cf)
+            if pb.get("slot"):
+                ob.data.materials[0] = mat(pb["slot"])
         self.build_gallery_extras(a, fr, tag, ev, cf)
         bm = bmesh.new()
         if bh > 1e-3:   # beam_h 0 = no edge beam (a zero-height box is 4 zero-area faces)

@@ -400,11 +400,13 @@ def corrugated_sheet(bm, frame, u0, u1, w0, z0, w1, z1, pitch=0.2, rib_h=0.021, 
 
 # ---------------------------------------------------------------------------------------------------- stairs
 def stone_stair(bm, frame, u0, u1, risers, riser_h, tread, w_top, z_top, w_back=None, nosing=0.02, chamfer=0.006,
-                slab=0.04, bury=0.2):
+                slab=0.04, bury=0.2, soffit_z=None, soffit_w=None):
     """Stair going outward (+w) and down from the landing edge (w_top, z_top), as ONE solid profile prism: every
     nosing is a chamfered stone edge overhanging its riser by `nosing` with the slab thickness `slab` undercut (the
     real granite tread-over-riser detail). risers counts the landing's own riser: total rise = risers * riser_h.
-    w_back: back of the landing (default w_top - 1). Returns the w of the bottom riser foot."""
+    w_back: back of the landing (default w_top - 1). soffit_z/soffit_w: hollow underside over a room below (C basement
+    piano room): flat soffit at soffit_z from w_back to soffit_w, then a straight waist to the buried foot.
+    Returns the w of the bottom riser foot."""
     wb = w_top - 1.0 if w_back is None else w_back
     zg = z_top - risers * riser_h
     prof = [(wb, zg - bury), (wb, z_top)]
@@ -417,6 +419,9 @@ def stone_stair(bm, frame, u0, u1, risers, riser_h, tread, w_top, z_top, w_back=
             prof.append((w, z))
             w += tread
     prof += [(w, zg), (w, zg - bury)]  # bottom riser runs into the paving (buried: never floats on sloped grade)
+    if soffit_z is not None:
+        prof[0] = (wb, soffit_z)
+        prof.append((soffit_w, soffit_z))
     prism_profile(bm, frame, _ccw(prof), u0, u1)
     return w
 

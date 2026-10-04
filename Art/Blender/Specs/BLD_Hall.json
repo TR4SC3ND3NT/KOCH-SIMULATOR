@@ -247,9 +247,9 @@
    "z0": 0.35,
    "z1": 5.64,
    "proj": 0.02,
-   "slot": "M_Tile_Brick_Red",
+   "slot": "M_Tile_Brick_Maroon",
    "confidence": "low",
-   "evidence": "2026-10-03 photo batch 2 Q1-03: maroon brick-tile door bay"
+   "evidence": "2026-10-03 photo batch 2 Q1-03: maroon brick-tile door bay | 2026-10-04 walkthrough (A079/A081/A082): crimson, darker than the orange-red tile of A/C"
   },
   {
    "edge": 2,
@@ -274,5 +274,9 @@
    "evidence": "2026-10-03 photo batch 2 Q1-03: pink render field"
   }
  ],
- "ffl_note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): floor at the HallEast landing level (glazed E door at 5.35, A006); eave/ridge kept at their absolute height"
+ "ffl_note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): floor at the HallEast landing level (glazed E door at 5.35, A006); eave/ridge kept at their absolute height",
+ "slots": {
+  "Plinth": "M_Tile_Brick_Maroon"
+ },
+ "slots_note": "2026-10-04 walkthrough (A016/A017 S, A079-A082 N): the hall plinth is crimson/magenta painted brick-tile, not the orange-red tile of A/C"
 }

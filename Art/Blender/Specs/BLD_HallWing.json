@@ -240,5 +240,10 @@
    "confidence": "low",
    "evidence": "2026-10-03 photo batch 2 Q1-02: beige band round the vent; pink E and W of it"
   }
- ]
+ ],
+ "slots": {
+  "Wall": "M_Render_Shuba_Grey",
+  "Plinth": "M_Tile_Brick_Maroon"
+ },
+ "slots_note": "2026-10-04 walkthrough (A074/A075/A077 vs render): grey textured (shuba) render walls and a crimson brick-tile plinth, not beige/red"
 }

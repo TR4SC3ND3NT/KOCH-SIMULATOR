@@ -654,9 +654,14 @@
    "roof_fall": 0.8,
    "beam_h": 0.0,
    "roof_overhang": 0.25,
-   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses) | 2026-10-04 re-verification round 2 Y2-03: soffit 2.82 above the porch paving (2.90 was measured from the paving, applied over the FFL)",
+   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses) | 2026-10-04 re-verification round 2 Y2-03: soffit 2.82 above the porch paving (2.90 was measured from the paving, applied over the FFL) | 2026-10-04 walkthrough (A233/A234 vs render): piers are beige brick-tile over a red brick-tile base (~1.15 m above the paving), not dark steel posts",
    "confidence": "medium",
-   "wedge": true
+   "wedge": true,
+   "post_slot": "M_Tile_Beige",
+   "post_base": {
+    "z": 1.0,
+    "slot": "M_Tile_Brick_Red"
+   }
   },
   {
    "type": "lightwell",
@@ -939,5 +944,9 @@
  ],
  "scale_note": "2026-10-02 audit: Google z20 eave 50.66 x 26.42 (lean-free, model 49.28 x 25.46); B-A gap from the alley SfM 12.6 vs 13.43 (B's east wall further east); photo wall top 8.51 +-0.21 vs 8.15. The pano metrics were scaled on the OSM length 48.28, so the whole block (plan, bays, heights) scales by 49.66 / 48.28",
  "ffl_z": 6.754,
- "ffl_note": " | 2026-10-04: pinned at the rule value (the street pads would lower it 0.08)"
+ "ffl_note": " | 2026-10-04: pinned at the rule value (the street pads would lower it 0.08)",
+ "slots": {
+  "Wall": "M_Render_Shuba_Grey"
+ },
+ "slots_note": "2026-10-04 walkthrough (A233/A234, B044/B050): grey textured (shuba) render on B, like A_N; C is the beige one"
 }
