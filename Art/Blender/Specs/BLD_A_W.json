@@ -44,7 +44,7 @@
    77.25
   ]
  ],
- "ring_notes": "Google z20 strip roof x 1.55..2.03 (west eave) to the main wall; north eave y 76.7. West wall 0.9 m behind the A_S west face (070309303 f17-f20). Open question: Google shows a 3 m dark band between A_S and the strip roof (y 23.2-26.2) that a shadow alone does not explain (low roof section or light well at the south end?). | 2026-09-26 photo-match (070309303 SfM): the gallery is a LOGGIA under a single-storey strip, not a colonnade in front of a 2-storey wall: posts/fascia/door bay on the facade line x ~2.2-2.3 (Google west eave x 1.55-2.03), deck and window wall back to x ~4.5 (plane-sweep deck heights reach x 4.5); the blank lettered wall above the gallery roof is the A_N west wall (SfM tracks of 16-66 frames at x 10.9-11.4), not an A_W upper storey.",
+ "ring_notes": "Google z20 strip roof x 1.55..2.03 (west eave) to the main wall; north eave y 76.7. West wall 0.9 m behind the A_S west face (070309303 f17-f20). Open question: Google shows a 3 m dark band between A_S and the strip roof (y 23.2-26.2) that a shadow alone does not explain (low roof section or light well at the south end?). | 2026-09-26 photo-match (070309303 SfM): the gallery is a LOGGIA under a single-storey strip, not a colonnade in front of a 2-storey wall: posts/fascia/door bay on the facade line x ~2.2-2.3 (Google west eave x 1.55-2.03), deck and window wall back to x ~4.5 (plane-sweep deck heights reach x 4.5); the blank lettered wall above the gallery roof is the A_N west wall (SfM tracks of 16-66 frames at x 10.9-11.4), not an A_W upper storey. | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): the Google dark band at local y 23.0-25.85 is the A_S shadow, not a roof",
  "cornice": null,
  "plinth": {
   "z_top": 0.67,
@@ -55,102 +55,102 @@
  "pilasters": [
   {
    "edge": 3,
-   "u0": 50.87,
-   "u1": 51.27,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 47.33,
-   "u1": 47.73,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 41.43,
-   "u1": 41.83,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 36.1,
-   "u1": 36.5,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 30.2,
-   "u1": 30.6,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 24.3,
-   "u1": 24.7,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 18.4,
-   "u1": 18.8,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 12.5,
-   "u1": 12.9,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
-   "u0": 6.6,
-   "u1": 7.0,
-   "proj": 0.05,
-   "z0": 0.0,
-   "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5) | 2026-10-02: midway between the windows behind the posts (A137)",
-   "confidence": "medium"
-  },
-  {
-   "edge": 3,
    "u0": 0.13,
    "u1": 0.53,
-   "proj": 0.05,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
    "z0": 0.0,
    "z1": 2.25,
-   "evidence": "dark-red wall columns of the gallery bays up to the timber soffit (pano intro2 rect 5.9 m pitch; 012327726 t28.5)",
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 6.43,
+   "u1": 6.83,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 12.58,
+   "u1": 12.98,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 18.73,
+   "u1": 19.13,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 24.88,
+   "u1": 25.28,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 31.03,
+   "u1": 31.43,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 37.18,
+   "u1": 37.58,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 45.4,
+   "u1": 45.8,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 50.0,
+   "u1": 50.4,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
+   "confidence": "medium"
+  },
+  {
+   "edge": 3,
+   "u0": 51.63,
+   "u1": 52.03,
+   "proj": 0.03,
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): pilasters mid-bay / pier at the door bay",
+   "z0": 0.0,
+   "z1": 2.25,
    "confidence": "medium"
   }
  ],
@@ -280,6 +280,24 @@
    "surround_proj": 0.0,
    "confidence": "medium",
    "evidence": "2026-10-04 re-verification round 2 Y1-04: 2 high 2-light windows in a shallow band on the A_W north end wall"
+  },
+  "DS": {
+   "w": 1.2,
+   "h": 2.48,
+   "mullions": [],
+   "transoms": [
+    0.79
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "confidence": "medium",
+   "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): glazed single door with transom (A212)"
   }
  },
  "rows": {
@@ -294,13 +312,11 @@
     {
      "type": "G",
      "u": [
-      3.85,
-      9.75,
-      15.65,
-      21.55,
-      27.45,
-      33.35,
-      39.25
+      22.15,
+      28.6,
+      33.8,
+      39.2,
+      44.0
      ],
      "rows": [
       "G1"
@@ -311,7 +327,7 @@
     {
      "type": "DD",
      "u": [
-      43.65
+      47.95
      ],
      "sills": [
       0.02
@@ -331,17 +347,43 @@
      "type": "GN",
      "name": "S_end",
      "u": [
-      42.4,
-      45.0,
-      46.95
+      46.7,
+      49.2,
+      51.0
      ],
      "rows": [
       "G1"
      ],
      "evidence": "narrow 2-pane windows between the last post and the brick pier (012327726 t4-5 s)"
+    },
+    {
+     "type": "GNE",
+     "name": "N_narrow",
+     "u": [
+      5.7,
+      8.2,
+      11.8,
+      14.1,
+      17.8
+     ],
+     "rows": [
+      "G1"
+     ],
+     "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): narrow 2-pane windows in the north half (A212, +-0.7)"
+    },
+    {
+     "type": "DS",
+     "u": [
+      9.9,
+      16.1
+     ],
+     "sills": [
+      0.02
+     ],
+     "evidence": "2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): glazed single doors (A212, pano)"
     }
    ],
-   "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige | 2026-09-26: the south door moved to the door-bay front (attachment DoorBay_S); the small high 'UW' window is on the A_N wall above the strip roof (A_N owner)",
+   "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige | 2026-09-26: the south door moved to the door-bay front (attachment DoorBay_S); the small high 'UW' window is on the A_N wall above the strip roof (A_N owner) | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): north half is narrow windows + 2 doors, not one G per post",
    "confidence": "medium"
   },
   {
@@ -386,17 +428,17 @@
    "type": "gallery",
    "edge": 3,
    "u0": 0.3,
-   "u1": 47.55,
+   "u1": 51.85,
    "depth": 2.2,
    "posts_u": [
-    3.85,
-    9.75,
-    15.65,
-    21.55,
-    27.45,
-    33.35,
-    39.25,
-    45.15
+    3.55,
+    9.7,
+    15.85,
+    22.0,
+    28.15,
+    34.3,
+    40.45,
+    46.6
    ],
    "post_w": 0.114,
    "post_d": 0.114,
@@ -407,7 +449,7 @@
    "beam_h": 0.45,
    "roof_overhang": 0.15,
    "floor_z": 0.0,
-   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line | A_W gallery deck: one flat tiled platform ~0.30 above the walkway / square along the whole gallery (map owner: 'not less than 25 cm, level everywhere'; 012327726 t4-6 s and t26-30 s: tiled deck with a pink granite edge and a lower step strip; north end 0.36 above the square, 012429784) | 2026-10-03 photo pass R3-08 (south bay metrology): timber soffit 2.54 above the deck (was 2.25); roof/beam +0.29",
+   "evidence": "2026 site footage: deck FLAT at the floor level along the whole gallery (plinth 5 courses everywhere), ornamental concrete tiles, red brick-tile edge + pink granite coping, exposed 0.36 m at the N end (012429784) and ~0.15 m above the walkway further south; round red steel posts ~0.11 m, 0.25 m inside the deck edge under the fascia beam (depth = beam line 2.25 + deck_extra 0.25), at the BAY CENTRES in front of the windows (PnP 012327726 t28.5 + 061757320 t15: post within 0.5 m of the window centre), not at the wall columns; flat timber soffit 2.30 m above the deck (touches the window-surround tops); white fascia beam 2.30-2.75 m with an eaves gutter and downpipes; maroon corrugated roof ~2.8 m at the eave rising to ~3.05 m at the wall (012327726 t28.5, 070309303 t33); gallery roof and deck end at the brick pier u~50.9, the south door bay has its own corrugated awning; southernmost post ~u 45-46 (PnP 070309303 t21, 13 px: posts every ~5.9 m, none in front of the pier/door) | 2026-09-26 070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: post at A-local (2.15-2.41, 31.1) triangulated in f56/f58 (0.3 px): posts line x 2.3 (was -0.05), u +0.57; beam bottom z_rel 2.37; deck + walkway plane-sweep heights continuous to x ~4.5 -> loggia depth 2.2 behind the beam line | A_W gallery deck: one flat tiled platform ~0.30 above the walkway / square along the whole gallery (map owner: 'not less than 25 cm, level everywhere'; 012327726 t4-6 s and t26-30 s: tiled deck with a pink granite edge and a lower step strip; north end 0.36 above the square, 012429784) | 2026-10-03 photo pass R3-08 (south bay metrology): timber soffit 2.54 above the deck (was 2.25); roof/beam +0.29 | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium",
    "post_round": true,
    "post_inset": 0.0,
@@ -421,10 +463,10 @@
    "deck_bottom": -0.6,
    "gutter": true,
    "downpipes_u": [
-    9.9,
-    21.7,
-    33.5,
-    45.3
+    3.7,
+    16.0,
+    28.3,
+    40.6
    ],
    "deck_extra": 0.25,
    "end_boards": true
@@ -432,24 +474,24 @@
   {
    "type": "canopy",
    "edge": 3,
-   "u0": 47.65,
-   "u1": 49.9,
+   "u0": 51.95,
+   "u1": 54.2,
    "depth": 3.6,
    "z0": 2.25,
    "z1": 2.33,
-   "evidence": "2026: corrugated awning over the south door bay, continuing the gallery line past the brick pier (070309303 t17-21) | 2026-09-26: awning projects ~1.3 m in front of the door-bay front (x 2.2), wall moved to x 4.5 -> depth 3.6",
+   "evidence": "2026: corrugated awning over the south door bay, continuing the gallery line past the brick pier (070309303 t17-21) | 2026-09-26: awning projects ~1.3 m in front of the door-bay front (x 2.2), wall moved to x 4.5 -> depth 3.6 | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "low"
   },
   {
    "type": "wall_sign",
    "name": "LetterBand",
    "edge": 3,
-   "u0": 16.85,
-   "u1": 34.95,
+   "u0": 21.15,
+   "u1": 39.25,
    "z0": 6.2,
    "z1": 7.3,
    "t": 0.06,
-   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: letters on the A_N west wall x 10.9-11.4 (SfM keypoints, tracks 5-66), '!' at y 38.0, 'G' at y 56.1, z_rel 6.35-7.37 (~1 m letters); kept in this spec (w0 = A_N face) until the A_N owner moves it; content -> KOCH slogan (R4)",
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: letters on the A_N west wall x 10.9-11.4 (SfM keypoints, tracks 5-66), '!' at y 38.0, 'G' at y 56.1, z_rel 6.35-7.37 (~1 m letters); kept in this spec (w0 = A_N face) until the A_N owner moves it; content -> KOCH slogan (R4) | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium",
    "w0": -6.4,
    "slot": "M_Sign_KOCH",
@@ -461,42 +503,42 @@
    "edge": 3,
    "items": [
     [
-     13.65,
+     17.95,
      4.75,
      0.8,
      0.6,
      0.3
     ],
     [
-     19.55,
+     23.85,
      4.75,
      0.8,
      0.6,
      0.3
     ],
     [
-     24.35,
+     28.65,
      4.75,
      0.8,
      0.6,
      0.3
     ],
     [
-     30.25,
+     34.55,
      4.75,
      0.8,
      0.6,
      0.3
     ],
     [
-     35.75,
+     40.05,
      4.4,
      1.0,
      1.3,
      0.4
     ]
    ],
-   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: outdoor AC units on the A_N west wall above the strip roof: SfM keypoints in f40 and f60 agree at y 59.3/53.4/48.6/42.7/37.2, centres z_rel 4.9-5.2, x 10.5-11.8; the southern one is a tall multi-fan unit; units north of y 60 not surveyed",
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: outdoor AC units on the A_N west wall above the strip roof: SfM keypoints in f40 and f60 agree at y 59.3/53.4/48.6/42.7/37.2, centres z_rel 4.9-5.2, x 10.5-11.8; the southern one is a tall multi-fan unit; units north of y 60 not surveyed | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium",
    "w0": -6.4
   },
@@ -504,51 +546,51 @@
    "type": "shed",
    "name": "DoorBay_S",
    "edge": 3,
-   "u0": 47.73,
-   "u1": 50.2,
+   "u0": 52.03,
+   "u1": 54.5,
    "depth": 2.3,
    "z_high": 3.2,
    "z_low": 3.05,
-   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: closed south bay between the brick pier (u 50.9) and the A_S pilaster: door wall + yellow sign at A-local x 2.11-2.16 (SfM keypoints, f38), flush with the posts line; the loggia starts north of the pier | 2026-10-02 zaudit: starts on the gallery pilaster's face (it swallowed 0.13 m of the pilaster)",
+   "evidence": "070309303 two-lens SfM (COLMAP, 151 frames, 0.80 px, zoom switch f38/f39 split into two cameras) aligned to the A_S walls: closed south bay between the brick pier (u 50.9) and the A_S pilaster: door wall + yellow sign at A-local x 2.11-2.16 (SfM keypoints, f38), flush with the posts line; the loggia starts north of the pier | 2026-10-02 zaudit: starts on the gallery pilaster's face (it swallowed 0.13 m of the pilaster) | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium"
   },
   {
    "type": "wall_sign",
    "name": "DoorS",
    "edge": 3,
-   "u0": 48.15,
-   "u1": 49.15,
+   "u0": 52.45,
+   "u1": 53.45,
    "z0": 0.02,
    "z1": 2.1,
    "t": 0.04,
    "w0": 2.3,
    "color": "frame",
-   "evidence": "grey aluminium door with glazed upper panel in the door-bay front, one step above the walkway (070309303 t17-21)",
+   "evidence": "grey aluminium door with glazed upper panel in the door-bay front, one step above the walkway (070309303 t17-21) | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium"
   },
   {
    "type": "canopy",
    "name": "Awning_DD",
    "edge": 3,
-   "u0": 42.75,
-   "u1": 44.55,
+   "u0": 47.05,
+   "u1": 48.85,
    "depth": 0.9,
    "z0": 2.3,
    "z1": 2.36,
-   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): flat grey corrugated awning over the glazed double door under the gallery, just below the gallery beam; width = door + 0.3 m each side",
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): flat grey corrugated awning over the glazed double door under the gallery, just below the gallery beam; width = door + 0.3 m each side | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium"
   },
   {
    "type": "wall_sign",
    "name": "YellowPlate_DoorS",
    "edge": 3,
-   "u0": 48.09,
-   "u1": 49.21,
+   "u0": 52.39,
+   "u1": 53.51,
    "z0": 2.24,
    "z1": 3.07,
    "t": 0.02,
    "w0": 2.34,
-   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): yellow sign plate above the south door-bay door (070309303 s2, 012404116 s2); blank KOCH | 2026-10-03 photo pass R3-09: large dark-blue plate 1.12 wide centred on the door, z 2.24-3.07, under the corrugated awning on 2 diagonal brackets",
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): yellow sign plate above the south door-bay door (070309303 s2, 012404116 s2); blank KOCH | 2026-10-03 photo pass R3-09: large dark-blue plate 1.12 wide centred on the door, z 2.24-3.07, under the corrugated awning on 2 diagonal brackets | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "medium",
    "slot": "M_Sign_KOCH",
    "content": "TODO_LORE: KOCH door-bay sign (dark blue)"
@@ -558,15 +600,15 @@
    "name": "Downpipes_AN",
    "edge": 3,
    "u": [
-    1.0,
-    24.4,
-    46.8
+    6.8,
+    28.7,
+    51.1
    ],
    "z0": 3.2,
    "z1": 9.9,
    "d": 0.1,
    "off": -6.36,
-   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): white downpipes on the A_N west wall above the gallery roof, three: near the north end, mid-way and at the south end (070309303 s3 f01550/f01713, 012327726 s1 f00021); u +-1 m",
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): white downpipes on the A_N west wall above the gallery roof, three: near the north end, mid-way and at the south end (070309303 s3 f01550/f01713, 012327726 s1 f00021); u +-1 m | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "low"
   },
   {
@@ -574,12 +616,12 @@
    "name": "Flood_AN",
    "edge": 3,
    "u": [
-    12.0,
-    36.8
+    16.3,
+    41.1
    ],
    "z": 4.3,
    "w": -6.4,
-   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): LED floodlights on the A_N west wall at the F2 sill band over the gallery (070309303 s3 f01713/f01947); +-1.5 m along",
+   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): LED floodlights on the A_N west wall at the F2 sill band over the gallery (070309303 s3 f01713/f01947); +-1.5 m along | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
    "confidence": "low"
   },
   {
@@ -603,8 +645,8 @@
    "type": "wall_sign",
    "name": "Plate_DD",
    "edge": 3,
-   "u0": 43.45,
-   "u1": 43.85,
+   "u0": 47.75,
+   "u1": 48.15,
    "z0": 2.15,
    "z1": 2.41,
    "t": 0.01,
@@ -612,7 +654,7 @@
    "slot": "M_Sign_KOCH",
    "content": "TODO_LORE: KOCH door plate",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo batch 2 Q1-07: blue plate in the double-door transom"
+   "evidence": "2026-10-03 photo batch 2 Q1-07: blue plate in the double-door transom | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered"
   }
  ],
  "ffl_z": 5.65,

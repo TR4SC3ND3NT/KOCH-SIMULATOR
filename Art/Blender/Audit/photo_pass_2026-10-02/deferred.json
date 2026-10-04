@@ -320,6 +320,16 @@
    "id": "L3-03b",
    "what": "courts block falls N with the walkway (plane 3.48 S / 3.29 N); modelled flat 3.39 (+-0.1)",
    "status": "applied as flat fallback"
+  },
+  {
+   "id": "AW-face",
+   "what": "A_W post pitch 6.15 (N-face/S-end chains, ortho, focal) vs A142/A154 (stair-anchored) putting posts 6-7 ~1.9 m further N",
+   "status": "applied the 6.15 solution; tape N face -> post 1, post pitch, post 8 -> end wall would settle it"
+  },
+  {
+   "id": "AW-face-b",
+   "what": "~3 LED floods + CCTV under the A_W gallery soffit at the north end",
+   "status": "low, not applied"
   }
  ]
 }
