@@ -1617,11 +1617,15 @@ class Building:
                 box(bm_b, fr, u - pw / 2, u + pw / 2, dep - pw, dep, zb0, pb["z"])
                 zb0 = pb["z"]
             box(bm, fr, u - pw / 2, u + pw / 2, dep - pw, dep, zb0, ze)
-        box(bm, fr, u0, u1, dep - pw, dep, ze - 0.35, ze)                                    # front beam
-        _prism_along_w(bm, fr, [(u0, ze), (u1, ze), (um, ze + hs)], dep - pw, dep - 0.05)      # pediment
+        bm_p = bmesh.new() if a.get("pediment_slot") else bm   # beam + gable in their own finish (A_S: pink render)
+        box(bm_p, fr, u0, u1, dep - pw, dep, ze - 0.35, ze)                                  # front beam
+        _prism_along_w(bm_p, fr, [(u0, ze), (u1, ze), (um, ze + hs)], dep - pw, dep - 0.05)    # pediment
         ob = self.obj(f"PorchPiers_{tag}", bm, COL["wall"], ev, cf)
         if a.get("pier_slot"):
             ob.data.materials[0] = mat(a["pier_slot"])
+        if bm_p is not bm:
+            obp = self.obj(f"PorchPediment_{tag}", bm_p, COL["wall"], ev, cf)
+            obp.data.materials[0] = mat(a["pediment_slot"])
         if pb:
             ob = self.obj(f"PorchPierBase_{tag}", bm_b, COL["wall"], ev, cf)
             if pb.get("slot"):
