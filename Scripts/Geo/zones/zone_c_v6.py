@@ -1198,8 +1198,9 @@ def build():
         soff = lambda y: STOREY - RISER_H - SOFFIT * (TREAD ** 2 + RISER_H ** 2) ** 0.5 / TREAD - (y - y_b) * RISER_H / TREAD
         xo = xw + sg * FLIGHT_W
         xa, xb = (xw, xo) if sg > 0 else (xo, xw)
-        f1.append(wall(f"Closet_{side}_Front", (xb, y_c), (xa, y_c), h=soff(y_c) - 0.02, thk=0.12, doors=[(FLIGHT_W / 2, 0.8)], **evc))
-        f1.append(door(f"Closet_{side}_Door", (xb, y_c), (xa, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", **dict(evc, wall_thk=0.12, material="metal")))   # black metal (X0-03)
+        ud_c = FLIGHT_W / 2 + (0.125 if side == "E" else 0.0)   # E: clear of the exit-door radiator (door_qa, Y0-e)
+        f1.append(wall(f"Closet_{side}_Front", (xb, y_c), (xa, y_c), h=soff(y_c) - 0.02, thk=0.12, doors=[(ud_c, 0.8)], **evc))
+        f1.append(door(f"Closet_{side}_Door", (xb, y_c), (xa, y_c), ud_c, width=0.8, leaf="solid", **dict(evc, wall_thk=0.12, material="metal")))   # black metal (X0-03)
         # side wall: a straight wall up to the low end of the flight + a wedge on it following the soffit (a single sloped
         # slab hung below the F1 slab into the basement hall, 2026-10-04 Y0-a)
         xl_ = xo if sg > 0 else xo + 0.12                       # wall() thickness goes to the left of the line (-x)
