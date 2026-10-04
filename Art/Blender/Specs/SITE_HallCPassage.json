@@ -117,11 +117,11 @@
    ],
    "dir_deg": -92.2,
    "width": 2.2,
-   "risers": 5,
-   "riser_h": 0.175,
+   "risers": 6,
+   "riser_h": 0.146,
    "tread": 0.33,
    "top_landing": 0.4,
-   "evidence": "070410255 t=26-33 s (2 fps a_053..a_067 + 10 fps crops): herringbone path between the hall E end and the lawn ends in a full-width granite stair descending north; granite cheek on its E side turns E at the bottom as the coping of the lawn's retaining edge, lower paved strip N of it running to the C shed front (a_062). Plan from Google z20 (return-arm coping shadow y 9.0-9.2, lower lawn W edge x 160.5, strip y 9.2-10.8, dirt bed y 0-9). 5 risers counted from the top landing (4K frame t=29.5 s: nosings at 1640/1450/1335/1235/1170 px); drop 0.44 SfM units x 2.0 m/unit = 0.88 m (SfM of t=12-34 s, 80 frames, pavement-normal up; scale from 0.2 x 0.1 m pavers and 1.0 m curbs) -> 5 x 0.175",
+   "evidence": "070410255 t=26-33 s (2 fps a_053..a_067 + 10 fps crops): herringbone path between the hall E end and the lawn ends in a full-width granite stair descending north; granite cheek on its E side turns E at the bottom as the coping of the lawn's retaining edge, lower paved strip N of it running to the C shed front (a_062). Plan from Google z20 (return-arm coping shadow y 9.0-9.2, lower lawn W edge x 160.5, strip y 9.2-10.8, dirt bed y 0-9). 5 risers counted from the top landing (4K frame t=29.5 s: nosings at 1640/1450/1335/1235/1170 px); drop 0.44 SfM units x 2.0 m/unit = 0.88 m (SfM of t=12-34 s, 80 frames, pavement-normal up; scale from 0.2 x 0.1 m pavers and 1.0 m curbs) -> 5 x 0.175 | 2026-10-04 levels pass L2-06: 6 risers counted (same 0.875 drop)",
    "confidence": "medium"
   },
   {

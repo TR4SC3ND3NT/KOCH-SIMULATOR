@@ -370,6 +370,25 @@
      -123.422
     ],
     [
+     151.8,
+     -125.539
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "P1 crossing clip (Gate c13): walked profile drops 0.14 m at y -126.5 (8.25 -> 8.11), the kerb height 0.15 confirmed. south carriageway edge y=-125.6 at x=153 (Google z20: light gutter strip then lawn from -126.3); road width 14.8 m, centre line (white) at -118.5",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_South_E",
+   "line": [
+    [
+     156.6,
+     -125.782
+    ],
+    [
      190.0,
      -127.474
     ]
@@ -378,6 +397,25 @@
    "thk": 0.15,
    "material": "stone",
    "evidence": "P1 crossing clip (Gate c13): walked profile drops 0.14 m at y -126.5 (8.25 -> 8.11), the kerb height 0.15 confirmed. south carriageway edge y=-125.6 at x=153 (Google z20: light gutter strip then lawn from -126.3); road width 14.8 m, centre line (white) at -118.5",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_South_Dropped",
+   "line": [
+    [
+     151.8,
+     -125.539
+    ],
+    [
+     156.6,
+     -125.782
+    ]
+   ],
+   "height": 0.02,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "2026-10-04 levels pass L1-03: dropped kerb at the raised zebra (mirrors Curb_North_Dropped)",
    "confidence": "medium"
   },
   {
@@ -1882,6 +1920,64 @@
    ],
    "slot": "M_Paver_Clover_Grey",
    "evidence": "2026-10-04 re-verification X2-06: clover pavers S/E of the gate booth out to the parking (was grass) | 2026-10-04 re-verification round 2 Y2-01: N edge on the PathClover_S centreline (no grass strip)"
+  }
+ ],
+ "terrain_pads": [
+  {
+   "name": "Zebra_RaisedTable",
+   "ring": [
+    [
+     152.05,
+     -110.85
+    ],
+    [
+     156.35,
+     -111.07
+    ],
+    [
+     156.35,
+     -125.82
+    ],
+    [
+     152.05,
+     -125.6
+    ]
+   ],
+   "z": 7.415,
+   "grad": [
+    -0.005,
+    -0.0318
+   ],
+   "ref": [
+    154.2,
+    -110.85
+   ],
+   "blend": 0.5,
+   "evidence": "2026-10-04 levels pass L1-03 (061913764 f41 / 065856484 f_0020: forecourt meets the zebra flush; f_0005/f_0014: stripes over a hump)"
+  },
+  {
+   "name": "Booth_Level",
+   "ring": [
+    [
+     156.7,
+     -101.05
+    ],
+    [
+     161.55,
+     -101.3
+    ],
+    [
+     161.7,
+     -96.55
+    ],
+    [
+     156.85,
+     -96.3
+    ]
+   ],
+   "z": 6.97,
+   "blend": 1.5,
+   "evidence": "2026-10-04 levels pass L1-04 (A247 N face + A258 S face: 7 plinth courses x 0.16 on both faces -> level ground)"
   }
  ]
 }

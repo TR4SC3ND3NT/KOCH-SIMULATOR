@@ -1,0 +1,877 @@
+[
+ {
+  "segment": "L1: street/zebra -> gate line, booth and turnstile -> gate plaza -> SouthStair -> A_S SW landing and west walkway (porch, PavilionStair) -> alley S->N (B porch, side stair, A_W south-bay ramp) -> lower plaza at the B-corner stair foot (A_W square, 5.35). Model sampled read-only in build_levels.blend: a 0.5 m ray grid (x 140-200, y -130..-44) plus point probes. Scripts and notes are in /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/levels_0/ (notes.txt, zgrid.py, zprobe.py, gq.py, fitgen.py, twostep.py). Main result: the alley-to-lower-level drops are right in the model (about 1.37 at the porch and gate plaza, about 1.25 at the side stair). The deferred 'about 1.0 m' claim (R1-13/R3-06/V2-02) is wrong: its single-photo fits are degenerate between camera height and pitch. What does need fixing: a 0.35 m pit in the A_S walkway, door sills 0.13-0.21 m above flush thresholds (A_S west and south doors, B east storefront), a 0.14 m kerb step at the zebra mouth that the video shows as flush, the booth ground sloping where the photos show it level, and a 0.6 m terrain lump at the ramp foot. The forecourt slope is left open, with a request for a measurement.",
+  "profile": [
+   {
+    "name": "P01 road at zebra, S kerb",
+    "x": 154.2,
+    "y": -125.5,
+    "z_model": 7.734,
+    "evidence": "model only; S footway (Crossing_SouthLink) 7.92-7.95, curb step 0.18 in terrain; video 012108212 f43 shows a near-flush S mouth"
+   },
+   {
+    "name": "P02 road at zebra, N kerb (road side)",
+    "x": 154.2,
+    "y": -111,
+    "z_model": 7.274,
+    "evidence": "carriageway falls 0.43 N across 13.5 m in the model (DEM)"
+   },
+   {
+    "name": "P03 forecourt just N of the zebra",
+    "x": 154.2,
+    "y": -110.6,
+    "z_model": 7.411,
+    "z_photo": 7.29,
+    "delta": 0.12,
+    "evidence": "061913764 f41 (vf3 f_0041), 065856484 f_0020: worn asphalt meets the first zebra stripe flush, no kerb face; 065856484 f_0005/f_0014: stripes run over a hump (raised crossing). Model terrain carries the full 0.15 curb reveal there (Curb_North_Dropped 0.02 sits hidden 0.13 under it)"
+   },
+   {
+    "name": "P04 forecourt 5 m S of the gate",
+    "x": 154.2,
+    "y": -105,
+    "z_model": 7.219,
+    "z_photo": 6.7,
+    "delta": 0.52,
+    "evidence": "A247: horizon row 1399 and camera height 1.44 from 6 herringbone module rows (2250-3040, rms 9 px/m); person outside gate feet -0.20, SUV wheels +0.04, booth N base -0.05..-0.16 relative to the paving near the camera (model 6.78) -> forecourt about level with the plaza. LOW confidence (single photo, +-0.15..0.25); B053 (12 mm) could not confirm"
+   },
+   {
+    "name": "P05 gate line / sliding gate",
+    "x": 154.2,
+    "y": -97.5,
+    "z_model": 6.901,
+    "evidence": "A247, B053: paving continuous and visually level through the gate and the turnstile lane"
+   },
+   {
+    "name": "P06 booth NW ground",
+    "x": 157.4,
+    "y": -97,
+    "z_model": 6.89,
+    "z_photo": 6.97,
+    "delta": -0.08,
+    "evidence": "A247 crop: N-face plinth 7 courses (~268 px, ledge at course 2) = same 7 courses x 0.16 as the S face (spec, A258) -> ground level around the booth; model: SW 7.034, SE 7.037, NW 6.89, NE 6.93 (N face shows 1.26 of plinth instead of 1.12)"
+   },
+   {
+    "name": "P07 booth SW ground",
+    "x": 157.2,
+    "y": -100.5,
+    "z_model": 7.034,
+    "z_photo": 6.97,
+    "delta": 0.06,
+    "evidence": "as P06; booth FFL 7.13 = max ground + plinth_m 0.1"
+   },
+   {
+    "name": "P08 SouthStair head (gate plaza)",
+    "x": 155.6,
+    "y": -93.6,
+    "z_model": 6.77,
+    "z_photo": 6.72,
+    "delta": 0.05,
+    "evidence": "B046/B044: 8 risers counted (grey concrete kerb + 7 red granite), same build as the PavilionStair (B046 scale-free fit ill-posed: camera ~0.6 m, low). Same rise as P11: 1.37 +-0.05 above the landing"
+   },
+   {
+    "name": "P09 SouthStair foot / landing SW",
+    "x": 159.3,
+    "y": -93,
+    "z_model": 5.35,
+    "z_photo": 5.35,
+    "delta": 0,
+    "evidence": "reference level of the lower walkway (owner: no steps on the paved yard); B045 drain grate on it"
+   },
+   {
+    "name": "P10 walkway under the A_S porch (PavilionStair foot)",
+    "x": 158,
+    "y": -84,
+    "z_model": 5.35,
+    "z_photo": 5.35,
+    "delta": 0,
+    "evidence": "A235 camera ground"
+   },
+   {
+    "name": "P11 PavilionStair top landing (alley at the porch)",
+    "x": 155.4,
+    "y": -83.9,
+    "z_model": 6.765,
+    "z_photo": 6.72,
+    "delta": 0.045,
+    "evidence": "A235 frontal, man on the landing: herringbone module rows 2580-3060 -> horizon 938-993, camera 1.36 +-0.035, pitch ~12 deg; stair = 7 granite risers 0.179 + concrete kerb 0.10-0.12; rise 1.35-1.38 (+2% if the 100 mm module includes the joint -> up to 1.41). Model 8 x 0.175 = 1.40: OK"
+   },
+   {
+    "name": "P12 A_S west door sill",
+    "x": 160.75,
+    "y": -84.3,
+    "z_model": 5.49,
+    "z_photo": 5.37,
+    "delta": 0.12,
+    "evidence": "A239 frontal: threshold and mat flush with the walkway herringbone (<0.03); model door frame bottom 5.49 (entrance at FFL 5.47 + 0.02) over walkway 5.35"
+   },
+   {
+    "name": "P13 A_S south storefront sill",
+    "x": 184.9,
+    "y": -90.7,
+    "z_model": 5.49,
+    "z_photo": 5.37,
+    "delta": 0.12,
+    "evidence": "spec evidence (A271): 'threshold at the walkway'; Landing_SW 5.35 in front; model frame bottom 5.49"
+   },
+   {
+    "name": "P14 walkway along A_S between the porch stair and A_W",
+    "x": 160.2,
+    "y": -76,
+    "z_model": 5,
+    "z_photo": 5.35,
+    "delta": -0.35,
+    "evidence": "A231 (looking S along A_S): one continuous flat herringbone walkway between the plinth and the retaining wall; model: no paving from y -81.96 (Walkway_South) to -70.3 (Walkway_North), the bare lower-zone pad at 5.0 shows (probe rows y -80, -77, -72)"
+   },
+   {
+    "name": "P15 B east porch paving at the storefront",
+    "x": 148.3,
+    "y": -78,
+    "z_model": 6.585,
+    "z_photo": 6.58,
+    "delta": 0,
+    "evidence": "A234/A244 frontal: porch paving runs flat to the storefront, threshold flush; model paving slopes 6.62 (y -80) -> 6.55 (y -77)"
+   },
+   {
+    "name": "P16 B east storefront sill",
+    "x": 147.9,
+    "y": -77.4,
+    "z_model": 6.79,
+    "z_photo": 6.6,
+    "delta": 0.19,
+    "evidence": "A234: no step at the doors; model door bottom 6.79-6.80 (B FFL ~6.77 = max ground - 0.05)"
+   },
+   {
+    "name": "P17 alley N part (lawn strip path)",
+    "x": 152.5,
+    "y": -70,
+    "z_model": 6.57,
+    "z_photo": 6.6,
+    "delta": -0.03,
+    "evidence": "SfM sweep (generator header): path 1.26 +-0.05 above the walkway; A222 (P18) 1.25 +-0.05"
+   },
+   {
+    "name": "P18 SideStair top (kerb top = alley)",
+    "x": 158.09,
+    "y": -61.72,
+    "z_model": 6.57,
+    "z_photo": 6.61,
+    "delta": -0.04,
+    "evidence": "A222 (12 mm, man on top): herringbone module rows 2060-2950 (9 rows, rel rms 0.8%) -> horizon row 1223, pitch 12.5 deg, camera 1.29 +-0.015 above the walkway; kerb top lies on the horizon. Fit: 6 granite risers 0.185 + concrete kerb 0.12-0.155 = 1.22-1.28 for f 1300-2100. Tread NOT determinable (0.33-0.42 depending on f) -> keep the SfM tread 0.42"
+   },
+   {
+    "name": "P19 SideStair foot / walkway N",
+    "x": 160.5,
+    "y": -62,
+    "z_model": 5.36,
+    "z_photo": 5.35,
+    "delta": 0.01,
+    "evidence": "A222 camera ground; A224"
+   },
+   {
+    "name": "P20 ramp grating landing (over the stair N part)",
+    "x": 160.4,
+    "y": -60.7,
+    "z_model": 6.18,
+    "evidence": "A225: the platform sits at about the 4th/5th tread (~0.75-0.9 above the walkway); consistent, not measured further"
+   },
+   {
+    "name": "P21 strip between WS_Bed_E and Walkway_North at the ramp foot",
+    "x": 160.4,
+    "y": -54.5,
+    "z_model": 5.96,
+    "z_photo": 5.35,
+    "delta": 0.61,
+    "evidence": "A141/A143: walkway paving runs along one continuous bed/coping wall line from the ramp bay to the wide-stair cheek; model shows a bare 0.6 m terrain block x 160.0-160.7, y -55.7..-53.7 with a 5.35 gutter east of it"
+   },
+   {
+    "name": "P22 A_W gallery deck",
+    "x": 163.6,
+    "y": -50,
+    "z_model": 5.65,
+    "evidence": "not re-measured (owner: 0.30 above the walkway); A230: door-bay door one granite step above the walkway, consistent"
+   },
+   {
+    "name": "P23 B-corner wide stair top (alley N end)",
+    "x": 155.7,
+    "y": -55.2,
+    "z_model": 6.57,
+    "z_photo": 6.6,
+    "delta": -0.03,
+    "evidence": "not measured on the stair itself (other agent); the alley/lower-level difference at this end follows P18 (1.25 +-0.05), so 6 risers x 0.166 = 1.00 (R1-13) cannot meet both levels"
+   },
+   {
+    "name": "P24 lower plaza at the B-corner stair foot / A_W square (segment 2 start)",
+    "x": 156.5,
+    "y": -49,
+    "z_model": 5.35,
+    "z_photo": 5.35,
+    "delta": 0,
+    "evidence": "same terrace as the walkway (owner screenshot 58)"
+   }
+  ],
+  "findings": [
+   {
+    "id": "L1-01",
+    "title": "Walkway along A_S west face has no paving for 11.7 m: a 0.35 m deep pit at the lower-zone pad level 5.0",
+    "spec": "Art/Blender/Specs/SITE_GateAlley.json elements (new roof_plane; Walkway_South / Walkway_North unchanged). Spec hand edit, not the generator (the generator would drop later hand edits).",
+    "current": "Walkway_South ends at y -81.96/-82.09, Walkway_North starts at y -70.30. Between them the strip from the Retain_Walkway_S E face (x ~159.6 at y -82 -> ~160.2 at y -70) to the A_S west wall (160.77 -> 161.34) is bare TER_Ground at 5.00 (top hit on probes at y -80, -77, -72). Its likely origin is the 10-03 swap of Curb_Walkway_S for Retain_Walkway_S.",
+    "proposed": "Add {type: roof_plane, name: Walkway_Mid, ring: [[159.43,-82.03],[160.765,-82.091],[161.341,-70.351],[160.212,-70.296]], z: [5.35,5.35,5.35,5.35], thk: 1.3, material: stone, confidence: medium, evidence: 'A231: continuous herringbone walkway along A_S between the plinth and the retaining wall; fills the gap left between Walkway_South and Walkway_North'}. The ring runs under the retaining wall on purpose, and its wall-side vertices are the existing corners of Walkway_South and Walkway_North.",
+    "dependencies": "None changes level. Retain_Walkway_S (base 4.70, top 6.06) stands on the slab unchanged; Bank_S stays behind the wall; the A_S plinth and walls already run down to 4.70. The lower-zone pad (z 5.0) stays as the hidden base under all walkway slabs. Rerun walk_qa / door_qa: the strip becomes walkable from the porch stair to the side stair.",
+    "photos": [
+     "A231",
+     "B049",
+     "B047",
+     "A143"
+    ],
+    "method": "Ray grid and point probes on build_levels.blend; spec ring geometry; photo A231 for continuity and flatness.",
+    "error": "ring edge +-0.1 m (it follows the existing neighbours)",
+    "confidence": "high"
+   },
+   {
+    "id": "L1-02",
+    "title": "Door sills 0.13-0.21 m above flush thresholds: A_S west door, A_S south storefront, B east storefront",
+    "spec": "BLD_A_S.json facades[edge 3].entrance and facades[edge 0].entrances[0]: add 'z0'. BLD_B.json facades[edge 1].entrance: add 'z0'. Also SITE_GateAlley.json: new terrain pad for the B porch floor. build_facades.py already supports a negative z0, relative to FFL (used for the Hall N doors).",
+    "current": "A_S FFL 5.47: both A_S door frames bottom at 5.49, walkway/landing 5.35 (0.14 step). B FFL ~6.77 (max ground - 0.05): storefront bottom 6.79-6.80, while the porch paving slopes 6.62 (y -80) -> 6.55 (y -77..-74.7) under it (0.17-0.25 step).",
+    "proposed": "A_S west entrance (edge 3): z0 -0.10, giving a sill at 5.37. A_S south storefront (edge 0, u 22.6-27.2): z0 -0.10, giving 5.37. B east entrance (edge 1, u 1.65-6.88): z0 -0.17 (local; x 1.0286 gives -0.175, so the sill is at 6.595). New SITE_GateAlley terrain pad {name: B_PorchFloor, ring: [[147.95,-81.45],[151.05,-81.6],[151.45,-73.55],[148.35,-73.4]], z: 6.58, blend: 1.0, evidence: 'A234/A244: porch paving flat to the storefront, threshold flush'}. Keep z1 / transom_z / door_mid_z (the openings grow downward by the step height).",
+    "dependencies": "No FFL changes: A_S/A_N/A_E keep the shared 5.47, and the B porch pad lies outside the B ring, so B's FFL rule (max ground under B - 0.05) is unaffected. Inside the doors the floor stays 0.10 (A_S) / 0.17 (B) higher, hidden because the interiors are not modelled (A239 also shows an internal stair behind the A_S door). The pad raises the porch paving by up to 0.03 at the N end and lowers it 0.04 at the S end, so check the porch post bases (BLD_B GalleryPosts start at 6.048, ground-following) and BLD_B_LightwellCover_E1_7 N of the porch (absolute, unaffected). The alley pads Alley_Fall/Alley_Flat_N (6.67->6.55) blend into the pad over 1 m. Rerun check_entrances.py / door_qa.py: the sills now sit 0.02 above the paving.",
+    "photos": [
+     "A239",
+     "A271",
+     "A234",
+     "A244",
+     "B051"
+    ],
+    "method": "Frontal photos: threshold vs paving. Model door bottoms from object bounds; ground from probes at x 148.3/149.0, y -80..-75.",
+    "error": "sill +-0.03; B porch paving level +-0.03",
+    "confidence": "medium-high"
+   },
+   {
+    "id": "L1-03",
+    "title": "Zebra crossing: model has a 0.14 m kerb step at the north mouth (and 0.18 at the south); video shows a flush, raised crossing",
+    "spec": "SITE_Gate.json: add terrain_pads (any spec's terrain_pads are collected by terrain_field.all_pads) + split Curb_South at the zebra. Terrain builder unchanged: the soft-pad entry fades the 0.15 curb reveal over CURB_FADE_M 3 m (greybox/common.py curb_depth).",
+    "current": "At the zebra x 151.8-156.6 the carriageway is cut 0.15 (curb_reveal_m): road 7.274 at y -111.0, forecourt 7.411 at y -110.6. Curb_North_Dropped (0.02) is hidden 0.13 under the terrain. S mouth: road 7.734 -> footway 7.915.",
+    "proposed": "SITE_Gate.json terrain_pads += {name: Zebra_RaisedTable, ring: [[152.05,-110.85],[156.35,-111.07],[156.35,-125.82],[152.05,-125.60]], z: 7.415, grad: [-0.005,-0.0318], ref: [154.2,-110.85], blend: 0.5, evidence: '061913764 f41 / 065856484 f_0020: forecourt meets the zebra flush; 065856484 f_0005/f_0014: stripes run over a hump'}. This puts the table flush with the N forecourt (7.415) and the S footway (~7.88), and the lanes ramp 0.15 up into it over 3 m on each side. Curb_South: cut out x 151.8-156.6 and add Curb_South_Dropped (height 0.02, thk 0.15), mirroring Curb_North_Dropped.",
+    "dependencies": "Zebra (path) follows the ground, so it rises with the table; Crossing_SouthLink, CrossingSign_N, StreetLamp_ZebraN/S, BikeRack_Pole, AFrameSign_*, TreeGuard_* are ground-relative (follow automatically). Curb_North_Dropped (0.02) then sits on the table surface as intended. Curb_South must be split, or it stands 0.15 proud across the table. No building or pad nearby depends on the road level. Check trolley poles / wheel stops: none within 3 m of the table.",
+    "photos": [
+     "061913764 f37-f42",
+     "065856484 f_0002, f_0005, f_0014, f_0020",
+     "012108212 f43"
+    ],
+    "method": "Video frames (qualitative: no kerb face, hump visible); model probes every 0.15 m across the N kerb at x 146-170.",
+    "error": "table plane +-0.05; hump length unmeasured (3 m builder fade used)",
+    "confidence": "medium-low (flush N mouth: medium; raised-table form: low)"
+   },
+   {
+    "id": "L1-04",
+    "title": "Ground under the gate booth slopes 0.14 m N-S; photos show it level (7 plinth courses on N and S faces)",
+    "spec": "SITE_Gate.json terrain_pads (new). BLD_GateBooth FFL follows its rule (max ground + plinth_m 0.1).",
+    "current": "Ground at the booth corners: SW 7.034, SE 7.037, NW 6.89, NE 6.93. FFL 7.13, plinth top 8.15, so the N face shows 1.26 of red plinth (S face 1.11).",
+    "proposed": "terrain_pads += {name: Booth_Level, ring: [[156.70,-101.05],[161.55,-101.30],[161.70,-96.55],[156.85,-96.30]], z: 6.97, blend: 1.5, evidence: 'A247 N face + A258/spec S face: 7 courses x 0.16 on both faces -> level ground'}. Booth FFL becomes 7.07 (rule) and the plinth shows 1.12 on all faces.",
+    "dependencies": "BLD_GateBooth: walls, plinth, windows, door (E face sill), plaque and TestCentrePlate (absolute z0 in SITE_Gate? they are z0 above ground, so they follow) all shift -0.06 with the FFL. The booth top drops from 10.43 to 10.37, now only 0.02 into the GateCanopy soffit (10.35) instead of 0.08. Ground-relative and following automatically: Turnstile_In, FaceTerminal_In_Pole, BagRest_Booth, CardReader, SlidingGate, GatePost_E, PathClover_S and PathParapet_S_00 start (verify PathParapet_S_00 still meets the path). SouthBed_Cheek / SouthBed_Inside (absolute z, 0.3 m N of the booth) are outside the ring; the 1.5 m blend touches only their S edge, so check for a sliver of ground showing there. The E-face door sill is then 0.10 above the path (was 0.19).",
+    "photos": [
+     "A247",
+     "A258",
+     "B053",
+     "A249"
+    ],
+    "method": "Plinth course count per face (A247 crop: ledge plus courses ~40 px of 0.16); model corner probes.",
+    "error": "level +-0.05 across the booth; absolute z +-0.15",
+    "confidence": "medium"
+   },
+   {
+    "id": "L1-05",
+    "title": "0.6 m bare terrain lump at the ramp foot between WS_Bed_E and Walkway_North",
+    "spec": "SITE_GateAlley.json terrain_pads (new; WS_FrontE / WS_UnderStair unchanged)",
+    "current": "x 160.0-160.7, y -55.68..-53.71: TER_Ground 5.94-5.99 with vertical faces, and a 5.35 gutter from x 160.7 to the Walkway_North edge (161.0). Not covered by any object.",
+    "proposed": "terrain_pads += {name: WS_RampFootWalk, ring: [[160.0,-55.70],[160.93,-55.70],[161.02,-53.66],[160.10,-53.66]], z: 5.35, blend: 0.0, evidence: 'A141/A143: walkway runs straight along one wall line from the ramp bay to the wide-stair cheek'}. The walkway edge is then the east face of WS_Bed_E (x 160.0), in line with RampBay_Wall.",
+    "dependencies": "Do not touch Steps_BCorner_* (another agent). WS_Bed_E / WS_Bed_E_Front / WS_BedWall_E: their east faces become the exposed walkway edge; check that WS_Bed_E's east face reads as a wall (stone) and not as bare soil. RampBay_Paving (5.35) and Walkway_North (5.36) meet the pad flush. GBS_Garden_FireBoard / SandBox are at x ~150, unaffected.",
+    "photos": [
+     "A141",
+     "A143",
+     "A225"
+    ],
+    "method": "0.25/0.4 m probe grid at the ramp foot; photos for the wall line.",
+    "error": "edge +-0.15 m",
+    "confidence": "medium-low"
+   },
+   {
+    "id": "L1-06",
+    "title": "Close the deferred 'alley-to-lower drop ~1.0 m' item (R1-13/R3-06/V2-02): drops measure 1.25 (side stair) and 1.37 (porch / gate plaza); the model levels stand",
+    "spec": "Art/Blender/Audit/photo_pass_2026-10-02/deferred.json item 'R1-13/R3-06/V2-02'. No spec geometry change: SITE_GateAlley SideStair (7 x 0.174, z_top 6.57), PavilionStair / SouthStair (8 x 0.175, z_top 6.75), walkway 5.35/5.36 and alley 6.69->6.57 stay.",
+    "current": "Deferred note: both stairs ~1.0 m (6-7 risers 0.145-0.166) vs model 1.22.",
+    "proposed": "Mark the deferred item resolved: no level change. Measured: SideStair = 6 granite risers 0.185 + concrete kerb 0.12-0.155 = 1.22-1.28 (model 1.21). PavilionStair = 7 x 0.179 + kerb 0.10-0.12 = 1.35-1.41 (model 1.40). SouthStair has the same 8-riser build (model 1.40). Keep equal risers in the builder (totals within +-0.05). Keep SideStair tread 0.42 (SfM): photo fits cannot fix the tread (0.33-0.42 across f 1300-2100). For the B-corner stair agent: the levels at its ends are 6.57 (top) and 5.35 (bottom), 1.22 apart. Equal risers would be about 7 x 0.174, or 6 granite + kerb like the side stair. The R1-13 '6 x 0.166 = 1.00' fit is degenerate the same way and cannot meet both levels.",
+    "dependencies": "None, since no geometry changes. If the owner ever wants the measured granite/kerb split, the stairs_run builder would need a separate top-riser height. That would touch SideStair_TopLanding / PavilionStair_TopLanding z and the ramp leg heights (Ramp_Leg_*), so it is not proposed.",
+    "photos": [
+     "A222",
+     "A223",
+     "A224",
+     "A235",
+     "A238",
+     "B046",
+     "B044"
+    ],
+    "method": "Own stair fit with the camera height and horizon taken independently from the herringbone paver module (200x100) vs image row; this removes the camera-height/pitch/riser degeneracy of the earlier fits. f swept 2720-2950 (24 mm) and 1300-2100 (12 mm); the total rise is robust (A222 1.240-1.282, A235 1.336-1.414). Cross-check: the SfM plane-sweep in the generator header gives 1.26.",
+    "error": "total rise +-0.05 (paver module +-2%, kerb/man ambiguity)",
+    "confidence": "medium-high"
+   },
+   {
+    "id": "L1-07",
+    "title": "OPEN: the forecourt between the street and the gate may be ~0.5 m lower than the model (DEM slope 3.9% up to the street not seen in photos)",
+    "spec": "Terrain (DEM, no pad) under SITE_Gate / SITE_StreetFront forecourt x 145-165, y -110.8..-97",
+    "current": "Forecourt rises 6.90 (gate line) -> 7.22 (y -105) -> 7.41 (N kerb). The 30 m DEM has rms ~1 m here, so the slope is not a measurement.",
+    "proposed": "No geometry change yet: take one measurement to decide. Request one tape or phone-level reading of the height between the booth S base and the zebra N mouth, plus one photo along the forecourt from the side (looking E or W along the gate line). If it confirms A247 (forecourt about level with the plaza), add a soft pad 'Forecourt_Gate' at the booth level (~6.97) from the gate line to y -108. The street level itself would then need a separate decision (it carries StreetFront sidewalk/parapet/B front strip).",
+    "dependencies": "If acted on later: Zebra_RaisedTable (L1-03) z, Booth_Level (L1-04), Curb_North*, StreetFront Sidewalk_Front_E / Parking_EastOfGate / wheel stops (ground-relative), Billboard_West posts, BikeRack_Gate, Fence_West plinth (ground-relative). B FFL is NOT affected (its rule uses ground under B only).",
+    "photos": [
+     "A247",
+     "B053",
+     "061913764 f19-f24",
+     "065856484 f_0014"
+    ],
+    "method": "A247: horizon and camera height from paver module rows; a person (1.75), an SUV (1.70) and the booth N base solved with the pitch-aware projection (scripts in levels_0/). B053 (12 mm) was too sensitive to its horizon to confirm.",
+    "error": "+-0.2 to 0.25 m",
+    "confidence": "low"
+   }
+  ]
+ },
+ {
+  "segment": "Segment 2: garden lower terrace and hall south walk, then the hall-C passage (upper path, granite stair and ramp, lawns, cheek walls), then the lower passage and lane to the clover-plaza kerb, the Block C plaza (W-wing front, basement entry, entrance stair, E ramp), the C east exit and C's north side. Read-only analysis of build_levels.blend (2026-10-04 04:47 build, after D1/Q2-21). Scratch with all scripts: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/levels_1/ (notes.txt, zgrid.py/hits.py ray-casts, grid_out.json, hole_out.json, tr_out.json, ce030_lv.py/ce030_c.py/ce030_d.py PnP, cc003_fit.py, a089_fit.py, f45.py). No renders were used.",
+  "profile": [
+   {
+    "name": "P01 garden hall-south walk (HallWalk_Diamond)",
+    "x": 152,
+    "y": -12,
+    "z_model": 5.368,
+    "evidence": "Continuity only: garden level is 5.35 per the owner's 2026-09-25 levels note; A008-A019 and 070410255 t13-t17 show flat paving and no step to the passage. No metric measurement."
+   },
+   {
+    "name": "P02 passage south entry (between LowerTerrace and PassageUpper)",
+    "x": 160,
+    "y": -1.5,
+    "z_model": 5.24,
+    "z_photo": 5.35,
+    "delta": -0.11,
+    "evidence": "A023, A024 and 070410255 t17-t25 show one flat paved area with no dip or step. The model has a shallow trough of 5.22-5.31 over x 153-166, y -1..-4.5 (tr_out.json). The 5.35 value is continuity, not a metric."
+   },
+   {
+    "name": "P03 upper passage at the HallEast E wall",
+    "x": 154.5,
+    "y": 8.6,
+    "z_model": 5.35,
+    "z_photo": 5.34,
+    "delta": 0.01,
+    "evidence": "A025: the owner (1.77 m) stands on the granite at the wall. The tile plinth top is 4 courses (0.40-0.42) above his feet: courses measure 72-77 px at 760 px/m, about 0.10 each. So upper level = plinth top 5.76 - 0.42 = 5.34."
+   },
+   {
+    "name": "P04 passage stair top nosing",
+    "x": 158.4,
+    "y": 7.46,
+    "z_model": 5.35,
+    "evidence": "A089: the top riser rises to the upper landing paving; the platform coping is at the same height."
+   },
+   {
+    "name": "P05 passage stair foot / lower passage",
+    "x": 158.4,
+    "y": 9.4,
+    "z_model": 4.475,
+    "z_photo": 4.57,
+    "delta": -0.095,
+    "evidence": "A089: 6 granite riser faces, not 5. Bottom riser is 93 px; paver short side (0.10) is 78 px at the foot, giving about 0.12. Upper risers about 0.14. Total drop 0.78 +-0.08. A088/A089: the platform retaining face is 7 tile courses plus coping (about 0.75-0.80). The earlier SfM gave 0.88, so the model 0.875 is inside the combined error."
+   },
+   {
+    "name": "P06 lower passage north / hall-wing NE porch",
+    "x": 156.5,
+    "y": 20.6,
+    "z_model": 4.475,
+    "z_photo": 4.6,
+    "delta": -0.125,
+    "evidence": "Earlier spec evidence for PassageLower (t=39 s PnP-free check: walkway + 1.2 = 4.6). Not re-measured; 070410255 t32-t41 show flat herringbone."
+   },
+   {
+    "name": "P07 lane end / clover-plaza kerb",
+    "x": 157,
+    "y": 24.4,
+    "z_model": 4.47,
+    "evidence": "070410255 t41.5-t43: yellow painted kerb row with a worn flush gap where the lane meets the clover plaza. The plaza is flush to about 0.1 above the lane, as in the model. The clover plaza then falls north (model 4.40 at y 25 to 4.0 at y 30)."
+   },
+   {
+    "name": "P08 C plaza at the W-wing light-well cover foot",
+    "x": 179.1,
+    "y": -2.6,
+    "z_model": 5.35,
+    "z_photo": 5.14,
+    "delta": 0.21,
+    "evidence": "CE030 C-frame PnP: 26 surround corners, free f 3142, rms 8.7 px, D2 rows. The paving line under the fascia reads 5.11-5.19 (manual picks) and 4.93-5.30, mean 5.13 (automatic) over C-local u 0-11. The cover/wall junction reads 6.27-6.31 against spec 6.30, a check. In the model this exact strip has NO ground (stale terrain hole). Where ground exists (y < -6.2) it is 5.35."
+   },
+   {
+    "name": "P09 C basement entry landing front / post0 foot",
+    "x": 172.1,
+    "y": -2.9,
+    "z_model": 5.4,
+    "z_photo": 5.26,
+    "delta": 0.14,
+    "evidence": "CE030 (same camera): the EntryRoof_Post0 foot and the landing front edge solve to 5.26. The spec post z0 is 5.27, consistent. Paving 0.4-1.0 m south of the landing reads 5.12-5.16, with a small lip. CE042 and CC021-CC023 show the landing one kerb above the paving."
+   },
+   {
+    "name": "P10 C entrance stair foot",
+    "x": 190.5,
+    "y": -2.5,
+    "z_model": 5.31,
+    "z_photo": 5.31,
+    "delta": 0,
+    "evidence": "CE030: paving at the cheek foot (u 11.8-12.2) reads 5.30-5.32 = FFL 6.40 - 7 x 0.154. CC003 telephoto column profile: 7 risers (14 edges) to a landing that runs level into the door."
+   },
+   {
+    "name": "P11 C FFL / entrance landing",
+    "x": 191,
+    "y": 0.8,
+    "z_model": 6.4,
+    "z_photo": 6.4,
+    "delta": 0,
+    "evidence": "Datum (BLD_C ffl_z 6.40). It is consistent with P10 and the CE030 cover junction."
+   },
+   {
+    "name": "P12 C E-ramp (Run) low end",
+    "x": 198.4,
+    "y": -3.1,
+    "z_model": 5.23,
+    "z_photo": 5.32,
+    "delta": -0.09,
+    "evidence": "Ray-cast: the ramp deck ends at 5.37-5.40 on ground at 5.228, a lip of 0.14-0.17. The earlier photo fit (070647586, 6 cameras) put the foot at FFL-1.02..-1.08 = 5.32-5.38 relative to C. Since D1 moved C 3.5 m north, the DEM-field ground under the foot is lower."
+   },
+   {
+    "name": "P13 C east exit stair foot",
+    "x": 206.7,
+    "y": 4.6,
+    "z_model": 4.63,
+    "evidence": "Ray-cast: TER 4.633-4.653 at the foot. CEast_Stair was generated for ground 4.90 (c_east_exit.py Z_GROUND, measured on the pre-D1 build), so the bottom step now stands 0.27 above the ground. No photo of this exit; the owner said 'about 9 steps'."
+   },
+   {
+    "name": "P14 C north parking at the NW corner",
+    "x": 180,
+    "y": 21,
+    "z_model": 4.24,
+    "evidence": "070410255 t45 PnP on C W-face surrounds (rms 3 px, but camera sd about 1.1 m and f +-79) gives the shed N-end foot and parking at 3.67-4.37, inconclusive. No change proposed. The model ground sits 2.0-2.4 m below C FFL on the north side."
+   },
+   {
+    "name": "P15 C plaza south side at the A_W deck N end",
+    "x": 169,
+    "y": -15,
+    "z_model": 5.35,
+    "z_photo": 5.29,
+    "delta": 0.06,
+    "evidence": "Existing spec evidence (AW_SquareN): the deck is 2 courses plus coping, 0.36 above the square, with deck/FFL 5.65; Q2-18 has 3 risers of 0.10-0.12. Within error of 5.35."
+   }
+  ],
+  "findings": [
+   {
+    "id": "L2-01",
+    "title": "Ground hole in front of C's west wing: INT_C_Basement terrain_holes were not moved with Block C (D1 +3.10/+3.50)",
+    "spec": "Art/Blender/Specs/INT_C_Basement.json terrain_holes (hand-edited spec; Scripts/Geo/zones/zone_c_basement.py already has the new C_ORIGIN but writes to TEMP unless --force, so edit the spec)",
+    "current": "4 rings in the old C frame: [[169.066,-5.524],[173.952,-5.719],[174.035,-3.36],[169.149,-3.19]]; [[173.835,-1.861],[202.213,-2.993],[202.806,11.895],[174.429,13.027]]; [[173.554,-5.913],[186.05,-6.411],[186.078,-2.3],[173.588,-1.801]]; [[167.642,-2.815],[168.991,-2.869],[168.981,-3.139],[173.377,-3.314],[174.147,15.99],[168.402,16.219]]. Build: no surface at all over x 169.5-186.5, y -6.2..-2.75 (and around x 168-171, y -0.3..0.5), so a player falls through the C plaza in front of the W wing and the basement stair head. The real stairwell/corridor (Stair_Upper x 172.2-176.1, y -1.93..0.15; Corridor_Floor y -2.65..-0.16) is not cut where it now is.",
+    "proposed": "Ring 1 (stairwell) [[172.166,-2.024],[177.052,-2.219],[177.135,0.14],[172.249,0.31]]. Ring 2 (inside C over the basement hall) [[176.935,1.639],[205.313,0.507],[205.906,15.395],[177.529,16.527]]. Ring 3 (corridor under the covers) [[176.654,-2.413],[189.15,-2.911],[189.178,1.2],[176.688,1.699]]. Ring 4 (Dance Hall hollow in the WestShed): fit it to the CURRENT shed, not a plain shift, because D1 kept the shed W front and N end in the world: [[167.75,0.45],[176.40,0.10],[177.10,18.45],[168.45,18.45]]. Update terrain_holes_note with '2026-10-04 levels pass: rings moved with D1'.",
+    "dependencies": "No level change; restores the ground. After rebuild, ray-cast (179,-4.5), (183,-5), (171,-4) to confirm ground exists, and (174,-1) and (180,-1.5) to confirm the stairwell/corridor stay open. Ring 4 must not cut ground outside the shed: check (168,19.2) and (172,19.3) have ground. Interacts with L2-02/L2-03, which set the level of the newly restored ground. Paving, planters and junipers on it are ground-relative and follow. walk_qa/scene_qa terrain_holes report should show no HOLE.",
+    "photos": [
+     "CE030",
+     "CE042",
+     "CC021",
+     "CC022"
+    ],
+    "method": "Ray-cast grid at 0.25 m in build_levels.blend (hole_out.json); comparison with INT basement object bboxes (objs.json) and the D1 shift recorded in resolve_results.json.",
+    "error": "Ring 4 N/W edges +-0.2 (from model shed bbox x 167.49-177.10, y 0.31-18.70)",
+    "confidence": "high"
+   },
+   {
+    "id": "L2-02",
+    "title": "INT_C_Basement terrain pad is still in the old C frame and forces 5.35 where the plaza is ~5.14",
+    "spec": "Art/Blender/Specs/INT_C_Basement.json terrain_pads[0]",
+    "current": "ring [[161.034,-9.157],[174.024,-9.675],[174.761,8.81],[161.772,9.328]], z 5.35, blend 1.0 (old frame; its stated job is to put the ground W/SW of C on the plaza level)",
+    "proposed": "Delete this pad. Its job is now done by SITE_Garden LowerTerrace, SITE_HallCPassage PassageUpper/Lower and the CPlaza pads in L2-03. Under the shed the ground is removed by terrain_holes ring 4. If a pad must stay here, shift it (+3.10,+3.50) and set z 5.14, but L2-03 already covers that area.",
+    "dependencies": "Currently PassageUpper/Lower and LowerTerrace (later files) override most of it, so only the strip under the shed (x 168.4-174.8, y 0.8..9.3) and the plaza x 169-174.8, y -9.7..-0.6 take its 5.35. After deletion, ground under the shed is cut (L2-01). Verify the WestShed front ledge Passage_ShedLedge (z0 4.175) and the shed front wall (wall_h_from_ground) still sit on the lower passage 4.475 at y 9-12.",
+    "photos": [
+     "CE030"
+    ],
+    "method": "Pad list and precedence in apply_terrain_pads / terrain_field.py (last containing pad wins; later soft-pad bands release earlier pads)",
+    "error": "-",
+    "confidence": "medium"
+   },
+   {
+    "id": "L2-03",
+    "title": "C plaza in front of the W wing and the basement forecourt is ~5.14, but the Q2-21 pad never takes effect (LowerTerrace/AW_SquareN override it)",
+    "spec": "SITE_CPlaza.json terrain_pads CPlaza_WWing; SITE_Garden.json terrain_pads LowerTerrace.ring and AW_SquareN.blend",
+    "current": "CPlaza_WWing z 5.05, grad [0.02108,-0.00084] about [176.244,-3.138], blend 0.6, ring x 175.6-189.2, y -7.6..-0.2. It is inside the later SITE_Garden LowerTerrace (5.35, north edge (205.3,-4.9)-(173.0,-4.4)) and within AW_SquareN's 6 m blend band, so the built plaza is 5.35 (ray-cast 5.33-5.35 at y -6.5..-7.5) and has no ground at all north of y -6.2 (L2-01).",
+    "proposed": "CPlaza_WWing: z 5.14, delete grad/ref (flat), ring [[169.4,-6.9],[186.6,-7.55],[186.85,-0.55],[169.65,0.0]], blend 0.6. The east edge stops at C-local u ~10.2 so the field ramps to the entrance-stair foot pad (L2-04). LowerTerrace ring: replace the vertices [205.3,-4.9],[173.0,-4.4] with [205.3,-4.9],[189.3,-4.3],[189.25,-7.75],[169.2,-7.05],[168.95,-3.25] (keep [168.5,-3.2] and the rest), so no later pad contains CPlaza_WWing. AW_SquareN: blend 6.0 -> 0.5 (same z 5.35 as LowerTerrace; its 6 m band only releases the neighbouring pads).",
+    "dependencies": "Ground-relative and following automatically: PlanterW_S0..S2, PlanterW_1..3 (curb_h 0.08) and their junipers/trees, the CPlaza herringbone ground surface, Shed_Apron/Shed_Apron_Kerb (S end), C plinth (walls to ground). Absolute z that must be checked: BLD_C lightwell edge 0 parapet z0 -1.25 (5.15) stays 1 cm over the paving, fine; over u 0.37-6.8 the gap under the cover is closed by INT_C_Basement Corridor_Wall_S (bottom 3.97), fine. Measured cover front top 5.56 vs model about 5.70: no change proposed, because lowering z_edge would cut basement corridor headroom (Corridor_Ceiling 5.67-6.24). Basement entry landing and stair head: see L2-05. EntryRoof posts z0 5.27 measured 5.26, OK. Lightwell_Railing_W and Stair_Railing_S/Return: check they still meet the landing/paving. Plaza south half (A_N side) stays 5.35 (A_W deck evidence 5.29-5.35), giving a cross-fall of 0.2 over about 6 m north of the pits. BenchAN/PlanterAN rows unchanged. Verify by ray-cast after rebuild: (176.4,-2.6), (179,-2.7), (183,-2.8), (172.5,-3.5) expect 5.10-5.20; (180,-12) expect 5.35.",
+    "photos": [
+     "CE030",
+     "CE031",
+     "CE032",
+     "CC015",
+     "CC016"
+    ],
+    "method": "CE030 C-frame PnP (old picks of pass2_part2 plus re-picked column-1 corners, rows +0.10 per D2, free f 3142, rms 8.7). Ray-plane intersection of the paving line under the cover fascia (local y -2.3, +-0.2 changes z by <0.03) and of the landing/post foot. Model by ray-cast.",
+    "error": "+-0.08 m (+-0.10 if the D2 sill rows are wrong; with the old rows all values are -0.10, but then the entrance-stair foot would read 5.21, against 7 x 0.154)",
+    "confidence": "medium"
+   },
+   {
+    "id": "L2-04",
+    "title": "Entrance-stair foot and E-ramp foot need one plaza pad at 5.31 (ramp end now floats 0.14-0.17 after D1)",
+    "spec": "SITE_CPlaza.json terrain_pads (new pad CPlaza_Entrance); BLD_C.json attachments ramp 'Run' (z_low/z_ground) unchanged",
+    "current": "No pad: the DEM field under the stair foot is 5.28-5.31 (OK) but under the ramp Run foot (x 198.4, y -3.1) is 5.228. Run z_low -1.02 (5.38) stands 0.14-0.17 above the ground.",
+    "proposed": "New pad {name 'CPlaza_Entrance', z 5.31, blend 1.0, ring [[187.0,-7.7],[199.0,-8.1],[199.15,-2.35],[187.25,-1.9]]}. Keep Run z_low -1.02 / z_ground -1.04 (they then meet 5.31-5.36 again, as fitted on 070647586).",
+    "dependencies": "Stairs edge 2: foot 5.322 meets 5.31 (1 cm lip), fine. EastCheek/W cheek z_out are relative to FFL, unchanged. PlanterE_Ramp/JuniperE_Ramp and the CPlaza_EastEdge red line (top 0.005, ground-relative) follow. The CEast_Lot gravel east of x 199 stays on the field. LowerTerrace notch from L2-03 leaves this area to this pad. Ray-cast check: (198.6,-3.1) 5.30-5.33; (190.5,-3.3) 5.30-5.32.",
+    "photos": [
+     "CE030",
+     "CC001",
+     "CC003"
+    ],
+    "method": "CE030 PnP (stair-foot paving 5.30-5.32); earlier 6-camera fit of 070647586 for the ramp foot (FFL-1.02..-1.08 relative to C); ray-cast of the current build",
+    "error": "+-0.05",
+    "confidence": "medium"
+   },
+   {
+    "id": "L2-05",
+    "title": "Basement entry landing and stair head are ~0.14 too high (5.40 vs 5.26)",
+    "spec": "Art/Blender/Specs/INT_C_Basement.json Entry_Landing (z0, z1), Stair_Upper (z_top, riser_h)",
+    "current": "Entry_Landing z0 5.15, z1 5.40; Stair_Upper z_top 5.35, 9 risers x 0.1227 to the mid landing 4.246 (V3-08 option a)",
+    "proposed": "Entry_Landing z0 5.01, z1 5.26. Stair_Upper z_top 5.26, riser_h 0.1127 (9 risers to the unchanged mid landing 4.246; corridor floor 3.97 unchanged).",
+    "dependencies": "Stair_Lower, Corridor_Floor and every basement room are unchanged; only the top flight gets flatter risers. EntryRoof_Post0/1 z0 5.27 are measured 5.26 (keep). Stair_Railing_S/Return (fence, ground-based?) and Stair_Wall_S top 5.43: check the railing base meets 5.26. EntryRoof heights unchanged. The plaza in front sits at 5.14 (L2-03), giving the 'one kerb' (0.12) seen in CE042/CC021. Alternative (not proposed, it moves the interior): keep riser 0.1227, giving a mid landing 0.09 lower.",
+    "photos": [
+     "CE030",
+     "CE042",
+     "CC021",
+     "CC022",
+     "CC023"
+    ],
+    "method": "CE030 PnP: the vertical line through the post0 axis (172.08,-2.87) was solved for the image row of the foot / landing front edge",
+    "error": "+-0.06",
+    "confidence": "medium-low"
+   },
+   {
+    "id": "L2-06",
+    "title": "Hall-C passage granite stair has 6 risers, not 5",
+    "spec": "SITE_HallCPassage.json elements Passage_Stair (risers, riser_h); generator Scripts/Geo/zones/zone_sports.py if it rewrites this element (hand edits are carried in the spec: edit the spec)",
+    "current": "steps pos (158.4,9.182) = foot, dir_deg -92.2 (climbing S), risers 5, riser_h 0.175, tread 0.33, top_landing 0.4 (top riser at y 7.86)",
+    "proposed": "risers 6, riser_h 0.146 (same 0.875 drop: 4.475 -> 5.35), tread 0.33, top_landing 0.4, pos unchanged. The top riser moves to y 7.53, inside the PassageLower soft area and next to the PassageUpper hard edge at y 7.40-7.49.",
+    "dependencies": "No level changes. Passage_Cheek_E (y 7.389-9.119, top 5.40) still covers the flight side. The ramp (Passage_Ramp/_Base/rails, 5.35 -> 4.475 over y 7.2-10.6) is unchanged. Check that the top landing 0.4 does not run under the PassageUpper hard step: the landing spans y 7.53-7.13 at z 5.35 over the pad edge at 7.40-7.49, the same level, so no step. Measured drop 0.78 +-0.08 (paver scale) vs SfM 0.88: the drop stays 0.875 until a tape or level reading. If the owner measures about 0.78, raise PassageLower z 4.475 -> 4.57. That would cascade to Passage_Cheek_E/Return/_Coping z0, Passage_ShedLedge z0, Passage_Lawn_Lower curbs, Passage_Ramp/_Base/rails low z, the HallWing porch and HallEast plinth exposure, Passage_Curb_North and the clover-plaza grade to the sports platform.",
+    "photos": [
+     "A089",
+     "A088",
+     "A025"
+    ],
+    "method": "A089 (camera at the foot looking S): column edge profile shows 6 riser faces between the lower paving (y 2690) and the landing paving (y ~1995). The earlier '5 nosings' count from the top (t=29.5 s) does not include the landing edge, so it agrees with 6. Riser size from the paver short side (0.10 = 78 px at the foot) and the platform's 7 tile courses.",
+    "error": "count exact; riser 0.146 kept from total drop (measured 0.12-0.14 +-0.02)",
+    "confidence": "high (count), low (riser height)"
+   },
+   {
+    "id": "L2-07",
+    "title": "Shallow trough (5.22-5.31) across the passage south entry from pad interaction",
+    "spec": "SITE_Garden.json terrain_pads AW_SquareN.blend (same change as L2-03)",
+    "current": "Ray-cast 5.22-5.31 over x 153-166, y -1..-4.5 inside/next to LowerTerrace (5.35), because AW_SquareN's 6 m blend band releases LowerTerrace nodes to the DEM-based harmonic field; PassageUpper hard edge at y -0.5..-1.2 makes a 0.11-0.13 mini-step at x 156-163, y -0.75..-1.0",
+    "proposed": "AW_SquareN blend 6.0 -> 0.5 (L2-03). After rebuild, expect 5.35 at (160,-1.5), (156,-3), (164,-2).",
+    "dependencies": "Hall bed kerb, HallWalk_Diamond (5.283-5.368) and the HallBed benches/trees are ground-relative and follow. Shed_Apron_Kerb (x 166.6) is fine. With L2-03 the plaza east of x 169.4 goes to 5.14, so the 0.21 fall happens over x 168.5-170 in front of the shed S end. CC018-CC020, CE009, CE041 show a sloped concrete apron there, which fits.",
+    "photos": [
+     "A023",
+     "A024",
+     "CE040",
+     "CE041"
+    ],
+    "method": "0.25 m ray-cast (tr_out.json) + terrain_field.py rules",
+    "error": "model fact; photo level by continuity only (no metric)",
+    "confidence": "medium"
+   },
+   {
+    "id": "L2-08",
+    "title": "C east exit stair foot floats 0.27 m after the D1 move",
+    "spec": "Generator Scripts/Geo/zones/c_east_exit.py (Z_GROUND, RISERS) -> SITE_CPlaza.json CEast_Landing / CEast_Stair / CEast_Rail",
+    "current": "Z_GROUND 4.90 (measured on the pre-D1 build), 9 risers x 0.1667 from 6.40; the foot at (206.7,4.88) now stands on TER 4.63-4.65",
+    "proposed": "Z_GROUND 4.63, RISERS 10 (riser 0.177, tread 0.30), re-run the generator. This regenerates CEast_Landing z0 4.43, CEast_Stair riser_h 0.177, and the CEast_Rail last point z 6.40-9 x 0.177 = 4.807, with the foot 0.30 further S (y about 4.58). Alternative if the owner insists on 9 steps: a terrain pad z 4.90 around the foot.",
+    "dependencies": "Check the foot stays clear of the east road kerb (owner: about 1.4 m from the wall) and of the GBS_Gate_EastBoundary_Fence_S line; the landing and door at FFL 6.40 are unchanged.",
+    "photos": [],
+    "method": "Ray-cast of the current build vs the generator constant",
+    "error": "ground value is the model's DEM field (no photo of this exit)",
+    "confidence": "low (real ground unknown); high that the current stair floats"
+   },
+   {
+    "id": "L2-09",
+    "title": "No change: C entrance stair, FFL 6.40 and upper passage/HallEast plinth relation verified",
+    "spec": "BLD_C.json ffl_z / attachments stairs edge 2; BLD_HallEast.json plinth; SITE_HallCPassage PassageUpper",
+    "current": "7 x 0.154 from 5.322 to 6.40; HallEast plinth top 5.76 = upper 5.35 + 0.41",
+    "proposed": "keep",
+    "dependencies": "-",
+    "photos": [
+     "CC003",
+     "CE030",
+     "A025"
+    ],
+    "method": "CC003 column edge profile (7 risers, landing level with the door); CE030 PnP stair foot 5.30-5.32 and cover junction 6.27-6.31 (spec 6.30); A025 man scale (course 0.10, 4 courses above the upper level)",
+    "error": "+-0.05",
+    "confidence": "medium-high"
+   },
+   {
+    "id": "L2-10",
+    "title": "C north side ground could not be measured; AC_North units still float (X1-06)",
+    "spec": "BLD_C.json attachments AC_North (deferred X1-06); ground = DEM field (no pad)",
+    "current": "Model ground at C north 4.0-4.45 (2.0-2.4 m below FFL); AC_North built at 6.0-7.1",
+    "proposed": "No value. A frontal photo of the north face from the parking, with the owner standing at the wall, would settle the ground vs the F1 sills (C F1 sill 7.55).",
+    "dependencies": "The basement hall floor 3.72-3.97 lies under the north wall, so any pad raising the north ground above about 4.0 must keep the Dance Hall/basement windows in mind",
+    "photos": [],
+    "method": "070410255 t45 PnP on 24 west-face surround corners: rms 3 px but camera position sd 1.1 m / f +-79 (ill-conditioned), ground 3.67-4.37",
+    "error": "+-0.5",
+    "confidence": "low"
+   }
+  ]
+ },
+ {
+  "segment": "L3: from the north end of the hall-C passage (y about 22) across the clover plaza, down the pitch/courts walkway, north path steps, lower-yard stair, strip and yard road to the NE guard booth and the end fence. Also checked the hall N side doors and the hall wing surroundings. Overall result: the yard and strip levels (2.325 / 2.175) are confirmed. The walkway's N end and the courts' N edge are about 0.2 m too high, so the stair risers and the courts' N wall are too tall. The model also has a 1.5 m trench at 3.45 along the pitch N side (a regression from the 10-03 courts shift). The lane S edge W of the stair is a kerb, not a 0.68 m wall. The chain along the route: passage lower 4.475 → walkway S end 3.45 (-1.03, smooth slope with no steps) → walkway N end 3.25 (-0.20) → strip 2.325 (-0.925, 5 risers of 0.185) → yard road 2.175 (-0.15 kerb). Total 2.30 m, the same as the model's total, so nothing downstream (booth, boundary wall, workout, waste point, sand pit) changes.",
+  "profile": [
+   {
+    "name": "PassageLower N end / clover plaza top (herringbone path end)",
+    "x": 157,
+    "y": 22,
+    "z_model": 4.475,
+    "z_photo": 4.55,
+    "delta": 0.075,
+    "evidence": "V19 070410255 f124 (people on courts ~45 px, horizon 690-710 from tower verticals with f 782): camera ~2.5 m above the courts/walkway people's feet; earlier PassageLower horizon solve gave walkway+1.2. Error +-0.25"
+   },
+   {
+    "name": "Clover plaza mid",
+    "x": 163,
+    "y": 32,
+    "z_model": 3.95,
+    "evidence": "V19 f121-f160, V20 070541257 f1-f12: continuous clover paving, no steps or kerb risers; the herringbone/clover joint is a flush painted kerb (f124, f127-f129). The model's smooth terrain slope matches"
+   },
+   {
+    "name": "Canteen W apron (by the W stair/ramp)",
+    "x": 178,
+    "y": 32,
+    "z_model": 3.83,
+    "z_photo": 3.8,
+    "delta": -0.03,
+    "evidence": "A070: horizon at the heads of 3 people on the walkway (y 2050-2054 at 170-229 px); people at the canteen W kerb stand +0.28..+0.48 above them. Error +-0.15"
+   },
+   {
+    "name": "Walkway S end at the pitch S gate (anchor)",
+    "x": 157.6,
+    "y": 43.15,
+    "z_model": 3.45,
+    "z_photo": 3.45,
+    "delta": 0,
+    "evidence": "pitch plinth 0.35 above the walkway = 2 timber steps (V19 t52/60 s, A034); turf 3.80 kept as the anchor"
+   },
+   {
+    "name": "Walkway mid",
+    "x": 162.5,
+    "y": 57,
+    "z_model": 3.45,
+    "z_photo": 3.35,
+    "delta": -0.1,
+    "evidence": "interpolated between the S anchor and the N end (A038, A042: plinth grows toward N)"
+   },
+   {
+    "name": "Walkway N end at the north-path steps foot",
+    "x": 159.5,
+    "y": 69.5,
+    "z_model": 3.45,
+    "z_photo": 3.26,
+    "delta": -0.19,
+    "evidence": "A038: pitch NE plinth corner 0.54 above the walkway at the step foot (camera pitch 8.1 deg from the teal post lean, f 2800, 1.0 m kerb scale; 0.54 for pitch 6-10 deg) -> 3.80-0.54. Error +-0.06"
+   },
+   {
+    "name": "North path top (pitch N side, v 25.4-27.0)",
+    "x": 157.6,
+    "y": 69.6,
+    "z_model": 3.45,
+    "z_photo": 3.78,
+    "delta": 0.33,
+    "evidence": "A038: 3 kerb risers 0.175/0.17/0.16 (sum 0.52) up from the walkway onto a path at the plinth-top level. The model has a 1.5 m wide trench at 3.45 here (ray grid x 120-158, y 70.5-71.0)"
+   },
+   {
+    "name": "Lower-yard stair top = courts NW corner",
+    "x": 163.95,
+    "y": 70.22,
+    "z_model": 3.45,
+    "z_photo": 3.25,
+    "delta": -0.2,
+    "evidence": "A064: the top kerb row is level with the walkway N end; the courts N concrete strip top is at the same image row although 1.3 m nearer (+0.06)"
+   },
+   {
+    "name": "Courts N edge / concrete strip on the N wall",
+    "x": 175,
+    "y": 70.6,
+    "z_model": 3.5,
+    "z_photo": 3.29,
+    "delta": -0.21,
+    "evidence": "A067, A066: block wall 0.90-0.92 above the strip paving (0.20 m courses = 126.5 px; man 1.77 m = 1305-1319 px; camera 1.5-1.7). A064 (strip top +0.06 over the stair top). Error +-0.06"
+   },
+   {
+    "name": "Lower-yard stair foot",
+    "x": 164.1,
+    "y": 73.4,
+    "z_model": 2.325,
+    "z_photo": 2.33,
+    "delta": 0.005,
+    "evidence": "5 kerb risers (A064, V59 102 f28/f33); riser ~0.175 for the same kerb type (A038); walkway N 3.25 - 0.925"
+   },
+   {
+    "name": "Strip at the wall bars (pull-up strip)",
+    "x": 176,
+    "y": 72.5,
+    "z_model": 2.325,
+    "z_photo": 2.37,
+    "delta": 0.045,
+    "evidence": "A067/A066: courts strip 3.29 - wall 0.90-0.92. Within error, keep"
+   },
+   {
+    "name": "Yard road N of the lane kerb",
+    "x": 176,
+    "y": 76.5,
+    "z_model": 2.175,
+    "z_photo": 2.2,
+    "delta": 0.025,
+    "evidence": "A064 lane kerb face 112 px over a 776 px (1.0 m) stone = 0.14-0.15; A065 kerb constant along the strip"
+   },
+   {
+    "name": "Lane S edge W of the stair (bank foot)",
+    "x": 140,
+    "y": 77.6,
+    "z_model": 2.855,
+    "z_photo": 2.33,
+    "delta": -0.525,
+    "evidence": "A050, V59 102 f7/f8/f25 (looking W along the lane): the lawn bank runs down to a flush painted kerb about 0.15 above the lane, with no wall face (agrees with R0-09). The model has the Retain_Bed box top"
+   },
+   {
+    "name": "NE guard booth front (yard road)",
+    "x": 211,
+    "y": 80,
+    "z_model": 2.175,
+    "evidence": "A053/A052 (about 50 m, booth on the yard level at the strip's E end): no measurable step. FFL 2.225 kept"
+   },
+   {
+    "name": "Lower-yard ramp E top",
+    "x": 213.5,
+    "y": 68.6,
+    "z_model": 3.43,
+    "evidence": "no photo of the E ramp; it should follow the courts' E-end platform (3.25 after L3-01)"
+   },
+   {
+    "name": "Hall N wall, E steel door threshold",
+    "x": 114,
+    "y": 12.5,
+    "z_model": 4.748,
+    "z_photo": 4.77,
+    "delta": 0.022,
+    "evidence": "Y3-02 (A081/A084): doors at grade on a thin threshold; model sills 4.89 / 4.79 against paving 4.75. Consistent, no change"
+   },
+   {
+    "name": "Hall wing NW corner ground",
+    "x": 133,
+    "y": 22,
+    "z_model": 4.296,
+    "evidence": "A076 (Y3-07): wing plinth top 0.87 above this ground; not re-measured here"
+   }
+  ],
+  "findings": [
+   {
+    "id": "L3-01",
+    "title": "The pitch/courts walkway falls about 0.20 m from S to N; the model has it flat at 3.45",
+    "spec": "Art/Blender/Specs/SITE_Sports.json terrain_pads[SportsPlatform]: add grad/ref (hand-edited spec; zone_sports.py is stale, port Z_PLAZA as a plane only if it is ever regenerated)",
+    "current": "SportsPlatform z 3.45, flat (blend 10)",
+    "proposed": "SportsPlatform: keep z 3.45 and blend 10.0; add \"grad\": [-0.000283, -0.00737], \"ref\": [161.964, 43.157] (v=0 line, sports frame). Gives 3.45 at the pitch S gate, 3.26 at the north-path step foot (159.47,69.47) and 3.250 at the stair top (163.95,70.22)",
+    "dependencies": "Must change with it: L3-02 (LowerYard_Stair z_top/riser and both cheeks), L3-03 (courts block and LowerYard_Retain_Courts), L3-04 (NorthPath_Steps riser_h), L3-06 (LowerYard_RampE top). terrain_pads LowerYard_WBed z 3.4 -> 3.25 (keep grad [0,-0.17] and ref). WestRedSquare (absolute slab on this pad, v 17.5-23.9, plane 3.32-3.27): z0 3.40 -> 3.22, z1 3.48 -> 3.33; or keep the pitch-W lane flat by cutting the pad at u 44.35 (no photo of the W end). Unchanged: Pitch_Plinth/Turf/Fence/floodlights/goals (absolute on the plinth; the plinth then shows 0.35 at S and 0.54 at N, as photographed); PitchGate_S_Steps (gz at v -0.18 = 3.451); the S edge and blend into the clover plaza (3.45 at v 0), so the passage, the canteen and the hall are untouched; LowerYard/Strip pads; GuardBoothNE. These follow the ground automatically: PitchBench_*, Bin_PitchGate, CourtsThujaPot_*/CourtsThuja_*, lamps and bins on the walkway",
+    "photos": [
+     "A038",
+     "A042",
+     "A034",
+     "A064"
+    ],
+    "method": "A038: camera pitch 8.1 deg from the lean of a vertical teal fence post (x 170->292 over y 200->2200, roll ~0 from the level kerb rows), f 2800. 1.0 m white kerb stones give the horizontal scale per row. Camera-frame back-projection: the pitch NE plinth corner is 0.54 above the walkway at the step foot (0.54 at pitch 6, 8.1 or 10 deg). The S gate plinth is 0.35 (2 timber steps 0.17, V19 t52/60; A034 lower timber step ~0.6 of the plinth's apparent height). The turf is a level field, so the walkway falls 0.19 over 26.7 m. A042 shows the same growth of the plinth toward N",
+    "error": "+-0.06 m at the N end; S anchor +-0.05",
+    "confidence": "medium"
+   },
+   {
+    "id": "L3-02",
+    "title": "Lower-yard stair is 5 x 0.185 m from 3.25 (walkway N end) to the strip 2.325, not 5 x 0.225 from 3.45",
+    "spec": "Art/Blender/Specs/SITE_Sports.json elements LowerYard_Stair, LowerYard_Stair_CheekE, LowerYard_Stair_CheekW (spec hand edits; zone_sports.py ST_* is older, do not regenerate)",
+    "current": "LowerYard_Stair z_top 3.45, risers 5, riser_h 0.225, tread 0.76, width 4.0, top [163.95,70.22]; CheekE/CheekW z [3.45,3.45,2.4,2.4]",
+    "proposed": "LowerYard_Stair z_top 3.25, riser_h 0.185 (5 risers, foot 2.325 unchanged), tread 0.76, width 4.0, top unchanged. CheekE z [3.25,3.25,2.4,2.4]; CheekW z [3.25,3.25,2.4,2.4]",
+    "dependencies": "Needs L3-01 (walkway 3.25 at the stair top). Unchanged: LowerYard_Strip pad 2.325 (stair foot y 73.26), LowerYard pad 2.175, workout bars (absolute on 2.325), dip bars, manholes, the LowerYard_WBed S end (set to 3.25 in L3-01). Retain_Terrace stays (3.8 on the terrace side; its face toward the W bed grows by 0.15)",
+    "photos": [
+     "A064",
+     "A067",
+     "A066",
+     "A038",
+     "A043",
+     "A062"
+    ],
+    "method": "A067/A066: the courts N block wall is 0.90-0.92 above the strip paving. Measured with 0.20 m block courses (dark joint lines 2439/2566/2701/2825 px in A067 and 2401/2526/2654/2780 in A066, i.e. 126.5 px) and checked with the man (1.77 m, 1305-1319 px), which gives a camera height of 1.5-1.7. A064: the courts' N concrete strip top and the stair's top kerb row are on the same image row; the strip edge is 1.3 m nearer, so it is ~0.06 higher. Walkway N end = strip + 0.90..0.93; 5 counted risers -> 0.18-0.19. Agrees with the kerb-riser height of the same kerb type in A038 (0.175). Contradicts the 09-29 owner estimate 'courts 1.15-1.20 above the strip'",
+    "error": "riser +-0.012 m (total drop +-0.06)",
+    "confidence": "medium"
+   },
+   {
+    "id": "L3-03",
+    "title": "Courts block: the N edge is about 3.29, not 3.50 (the courts fall N with the walkway), so the N retaining wall is 0.95-0.97 m high, not 1.175",
+    "spec": "Art/Blender/Specs/SITE_Sports.json: Courts_Slab, Court_Basket/Volley/Hard_Field, Court_*_Lines, Hoop_S/N_*, VolleyNetPost_0/1, VolleyNet, HardNetPost_0/1, HardNet, CourtsFence_Perimeter/Div1/Div2/S0/S1, CourtsGate_*(+_Head), LowerYard_Retain_Courts. Builder: Scripts/Blender/build_site.py b_slab and b_paint need an optional grad/ref (vertex z += grad.(p-ref)). Generator zone_sports.py Z_COURT is a constant",
+    "current": "Courts surface flat 3.50 (slab/fields z1 3.5, paint z 3.5, posts z0 3.5, fences z_base 3.5, gates z_base 3.5 / heads 5.65); LowerYard_Retain_Courts box z0 2.025, size z 1.475 (top 3.5)",
+    "proposed": "Courts top = walkway plane + 0.04: z(p) = 3.49 + grad.(p - [161.964,43.157]) with grad [-0.000283,-0.00737], i.e. 3.48 on the S edge (v 1.87) and 3.29 on the N edge (v 27.12). Courts_Slab and the 3 fields: z1 from that plane (z0 3.1 stays below). Lines: same grad. Hoops, net posts, nets and arms: z0 -= 0.00737*(v-1.87) at each element's v, i.e. Hoop_N_* -0.186, VolleyNet/HardNet -0.10..-0.11, S hoop -0.01. Fences: drop z_base so the posts follow gz, or give a per-post plane z. Gates: z_base 3.48 (S edge), heads 5.63. LowerYard_Retain_Courts: z0 2.025, size z 1.265 (top 3.29). Fallback with no builder change: flat Z_COURT 3.39 (error +-0.1 at both ends)",
+    "dependencies": "Needs L3-01 (the walkway plane). The N wall then stands 0.965 above the strip (photo 0.90-0.98). The workout wall bars on the strip are unchanged (absolute 2.325). LowerYard_Stair_CheekE S end top 3.25 (L3-02). The courts' E end gives the LowerYard_RampE top (L3-06). Courts fences: posts are BURY 0.3 deep, so following gz is safe",
+    "photos": [
+     "A064",
+     "A066",
+     "A067",
+     "A042",
+     "A034"
+    ],
+    "method": "A066/A067 block-course metrology (wall 0.90-0.92, court red edge 0.84-0.90 above the strip). A064 (strip top level with the walkway N end, +0.06). The S side stays flush/+0.05 to the walkway (spec 5 cm curb; A034/A042 show no step at the S gates)",
+    "error": "+-0.06 m at the N edge, +-0.05 at the S edge",
+    "confidence": "medium"
+   },
+   {
+    "id": "L3-04",
+    "title": "Regression: 1.5 m trench at 3.45 along the pitch N side; the north path should be at plinth-top level (~3.77), and the north-path steps are 3 x 0.165, not 3 x 0.10",
+    "spec": "Art/Blender/Specs/SITE_Sports.json terrain_pads SportsPlatform.ring, NorthTerrace.ring/blend; elements NorthPath_Steps.riser_h",
+    "current": "SportsPlatform ring ends [...,[159.35,70.178],[95.047,72.648]] (v 26.9, moved +1.72 with the courts on 10-03). NorthTerrace ring v 26.9-28.9 (overridden by NorthBedRaised for v>=27.15), so ground is 3.45 for v 25.4-26.9 between the pitch plinth top 3.79 and the bed (4.1): ray grid x 120-158, y 70.5-71.0 = 3.45. NorthPath_Steps riser_h 0.10 (3 risers)",
+    "proposed": "SportsPlatform ring last two points -> [159.292,68.679],[94.99,71.149] (pitch N edge, v 25.4). NorthTerrace ring -> [[94.99,71.149],[158.243,68.72],[158.377,72.218],[95.124,74.647]] (u -20..43.3, v 25.4..28.9), z 3.75 (photo 3.77-3.78, within error), blend 3.0 -> 0.5 (so it does not ramp the walkway or the steps). NorthPath_Steps riser_h 0.10 -> 0.165 (pos, dir 177.8, width 1.7, tread 0.6 unchanged: 3.257 -> 3.75)",
+    "dependencies": "Needs L3-01 for the step foot (3.257). The N path then meets the pitch plinth top (3.79) flush. Unchanged: NorthBedRaised (overrides v>=27.15 for x 115-159), NorthBed planter ring (path edge at v 27.0), Retain_Terrace. These follow the ground: NorthBedSpruce_*, NorthBedTree_Big, WestBigSpruce. Floodlights stay absolute 3.79 on the plinth",
+    "photos": [
+     "A038",
+     "A041",
+     "V59 102 f1-f2"
+    ],
+    "method": "Ray-cast grid of build_levels.blend (0.5 m): trench of 3.45 at v 25.4-26.9 behind the pitch. Ring analysis: only the pitch-side part of the pad edge was shifted with the courts. A038 metrology (L3-01 method): risers 0.175/0.17/0.16 sum 0.52, plinth corner 0.54, i.e. the top step lands at the plinth top. A038/V59 f1 show the path at plinth level alongside the fence",
+    "error": "trench exact (model). Path level +-0.05; riser +-0.015",
+    "confidence": "high"
+   },
+   {
+    "id": "L3-05",
+    "title": "Lane S edge W of the stair is a flush painted kerb (0.15 above the lane) with the lawn bank running down to it, not a 0.68 m wall; the bank planes must end at about 2.33",
+    "spec": "Art/Blender/Specs/SITE_Sports.json elements LowerYard_Retain_Bed, LowerYard_Retain_West, NorthBed (planter curb_h); terrain_pads NorthBedRaised.z, NorthTerrace_Bank.grad",
+    "current": "Retain_Bed / Retain_West boxes z0 1.875, size z 0.98 (top 2.855 = 0.68 above the lane 2.175). NorthBedRaised z 4.15 at its S edge, grad [-0.00944,-0.24564] (2.675 at the wall line). NorthTerrace_Bank 3.75 -> 2.675 (grad [-0.00938,-0.24416]). NorthBed curb_h 0.5",
+    "proposed": "Retain_Bed and Retain_West: size z 0.98 -> 0.45 (top 2.325; painted yellow/white 1.0 m kerb pattern like NorthLawn_BenchNiche_Kerb*). NorthBedRaised z 4.15 -> 3.80, keeping grad [-0.00944,-0.24564]: 3.80 at the path edge, 2.33 at the kerb line v 33.15. The 0.4 'raised bed' was an assumption, probably meaning 'higher than the lane'. NorthTerrace_Bank grad -> [-0.01239,-0.32247] (3.75 at v 28.9 -> 2.33 at v 33.3). NorthBed curb_h 0.5 -> 0.12",
+    "dependencies": "These follow the bank automatically: NorthBedSpruce_*, NorthBedTree_Big, WestBigSpruce. LowerYard_Retain_Terrace N end z 2.65 stays (0.3 above the kerb). NorthLane_Path_W, the LowerYard pad and the boundary wall/pillars are unchanged. The W part (x 95-125) is seen only far away in V59 f25 (lower confidence)",
+    "photos": [
+     "A050",
+     "A062",
+     "A043",
+     "V59 102 f7",
+     "V59 102 f8",
+     "V59 102 f25"
+    ],
+    "method": "Visual, full-res crops: the lawn surface meets the kerb top and the lane pavers lie directly beyond, with no wall face, along the lane W of the stair (A050; video looking W). Kerb face ~0.15 by the 1.0 m stone scale (as in A064). Confirms R0-09, which was never applied",
+    "error": "kerb +-0.05; bank top edge +-0.15 (no metric view of the bank)",
+    "confidence": "medium (x 125-159), low (x 95-125)"
+   },
+   {
+    "id": "L3-06",
+    "title": "Lower-yard E ramp top must follow the courts' E-end platform after L3-01 (3.25, not 3.45)",
+    "spec": "Art/Blender/Specs/SITE_Sports.json elements LowerYard_RampE.z",
+    "current": "z [3.45, 3.45, 2.175, 2.175], thk 1.225",
+    "proposed": "z [3.25, 3.25, 2.175, 2.175] (slope 1.075 over 10.2 m = 10.5%), thk 1.225 unchanged",
+    "dependencies": "Only valid together with L3-01/L3-03 (platform plane at (211.95,68.38) = 3.247). Yard end unchanged",
+    "photos": [],
+    "method": "Consistency with the proposed walkway plane; no photo of the E ramp",
+    "error": "+-0.1 (no direct evidence)",
+    "confidence": "low"
+   }
+  ]
+ }
+]

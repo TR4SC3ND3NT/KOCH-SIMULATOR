@@ -4,7 +4,7 @@
   {
    "id": "R1-13/R3-06/V2-02",
    "what": "alley-to-lower-level drop: both stairs measure ~1.0 m (6-7 risers 0.145-0.166) vs the model 1.22 (alley 6.57 / lower 5.35); needs one coordinated level solve over all stairs and pads",
-   "status": "open"
+   "status": "resolved 2026-10-04: alley/lower drops measured 1.25 (side stair) / 1.37 (porch, gate plaza) = model (levels pass L1-06)"
   },
   {
    "id": "V3-04/V3-05",
@@ -284,7 +284,7 @@
   {
    "id": "X3-03/Y3-04 (D1)",
    "what": "B-corner stair: one N-facing flight 7 x 0.174, tread 0.30, width 7.2, bottom riser (152.30,-47.90)-(159.50,-48.25), ~4.8 m N of the model, foot at the pergola walk end (Google + 3 PnP)",
-   "status": "NOT applied: contradicts the owner's 2026-09-28 instruction (moved back 3.05 m, top on the BBed_Conifer_01 line); needs the owner"
+   "status": "resolved 2026-10-04: owner approved; recheck dy +5.0 +-0.4 applied"
   },
   {
    "id": "Q2-21 (D1)",
@@ -305,6 +305,21 @@
    "id": "V3-04 (D2)",
    "what": "C W stair continues F3 -> F4 (video)",
    "status": "resolved by the owner 2026-10-04: the W stair ends at F3, F4 W end = teachers' room (model kept); the filmed stair going on up is the E one (to F4 and F5, as modelled)"
+  },
+  {
+   "id": "L1-07",
+   "what": "forecourt between the street and the gate may be ~0.5 lower than the model (A247 only)",
+   "status": "low, open"
+  },
+  {
+   "id": "L2-10",
+   "what": "C north side ground / AC_North units",
+   "status": "low, open"
+  },
+  {
+   "id": "L3-03b",
+   "what": "courts block falls N with the walkway (plane 3.48 S / 3.29 N); modelled flat 3.39 (+-0.1)",
+   "status": "applied as flat fallback"
   }
  ]
 }

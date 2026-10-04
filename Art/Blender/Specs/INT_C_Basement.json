@@ -5,110 +5,78 @@
  "terrain_holes": [
   [
    [
-    169.066,
-    -5.524
+    172.166,
+    -2.024
    ],
    [
-    173.952,
-    -5.719
+    177.052,
+    -2.219
    ],
    [
-    174.035,
-    -3.36
+    177.135,
+    0.14
    ],
    [
-    169.149,
-    -3.19
+    172.249,
+    0.31
    ]
   ],
   [
    [
-    173.835,
-    -1.861
+    176.935,
+    1.639
    ],
    [
-    202.213,
-    -2.993
+    205.313,
+    0.507
    ],
    [
-    202.806,
-    11.895
+    205.906,
+    15.395
    ],
    [
-    174.429,
-    13.027
+    177.529,
+    16.527
    ]
   ],
   [
    [
-    173.554,
-    -5.913
+    176.654,
+    -2.413
    ],
    [
-    186.05,
-    -6.411
+    189.15,
+    -2.911
    ],
    [
-    186.078,
-    -2.3
+    189.178,
+    1.2
    ],
    [
-    173.588,
-    -1.801
+    176.688,
+    1.699
    ]
   ],
   [
    [
-    167.642,
-    -2.815
+    167.75,
+    0.45
    ],
    [
-    168.991,
-    -2.869
+    176.4,
+    0.1
    ],
    [
-    168.981,
-    -3.139
+    177.1,
+    18.45
    ],
    [
-    173.377,
-    -3.314
-   ],
-   [
-    174.147,
-    15.99
-   ],
-   [
-    168.402,
-    16.219
+    168.45,
+    18.45
    ]
   ]
  ],
- "terrain_pads": [
-  {
-   "ring": [
-    [
-     161.034,
-     -9.157
-    ],
-    [
-     174.024,
-     -9.675
-    ],
-    [
-     174.761,
-     8.81
-    ],
-    [
-     161.772,
-     9.328
-    ]
-   ],
-   "z": 5.35,
-   "blend": 1.0,
-   "evidence": " | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py)"
-  }
- ],
+ "terrain_pads": [],
  "note": "Block C basement entry: sunken stair from the Dance Hall box, corridor along the south wall (zone reconstruction 2026-09-25, direction corrected by the map owner). | 2026-10-01 plan v6: back under C's west face (C returned to the 29.4 m facade anchor; the 2026-09-29 5.0 m west shift undone) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
  "elements": [
   {
@@ -121,11 +89,11 @@
    "dir_deg": -2.2838545045845304,
    "width": 1.93,
    "risers": 9,
-   "riser_h": 0.1227,
+   "riser_h": 0.1127,
    "tread": 0.32,
-   "z_top": 5.3500000000000005,
+   "z_top": 5.26,
    "run_out": 1.2,
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910) | 2026-10-02 walk QA: 8 cm wider to the north wall face (an 8 cm slot ran along it) | 2026-10-03 video pass V3-08: the upper flight has 9 risers, not 8. Taken option (a): same top 5.35 and mid landing 4.246 (riser 1.104/9 = 0.1227); tread 0.32 keeps the flight's run (2.88) so the landings stay. DISPUTED: V3-08 kept tread 0.36 and preferred riser 0.138 (top 5.488) if the plaza-to-landing kerb is ~0.14",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; 8 risers x 0.138 m, treads 0.36 m, width 1.85 m between the tile walls; granite treads (012543364); direction: stair descends east along C's south facade from the landing at the Dance Hall box (012507444/012511910) | 2026-10-02 walk QA: 8 cm wider to the north wall face (an 8 cm slot ran along it) | 2026-10-03 video pass V3-08: the upper flight has 9 risers, not 8. Taken option (a): same top 5.35 and mid landing 4.246 (riser 1.104/9 = 0.1227); tread 0.32 keeps the flight's run (2.88) so the landings stay. DISPUTED: V3-08 kept tread 0.36 and preferred riser 0.138 (top 5.488) if the plaza-to-landing kerb is ~0.14 | 2026-10-04 levels pass L2-05: head 5.26, 9 risers to the unchanged mid landing",
    "confidence": "medium"
   },
   {
@@ -403,9 +371,9 @@
      0.141
     ]
    ],
-   "z0": 5.15,
-   "z1": 5.4,
-   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head, one kerb above the plaza paving (012507444, frame a10 of 070629483)",
+   "z0": 5.01,
+   "z1": 5.26,
+   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head, one kerb above the plaza paving (012507444, frame a10 of 070629483) | 2026-10-04 levels pass L2-05 (CE042/CC021: one kerb 0.12 above the 5.14 plaza)",
    "confidence": "medium"
   },
   {
@@ -2862,5 +2830,5 @@
    "evidence": "2026-10-02 photo diff: short plain-bar return from the forged railing's stair-head end to the moved west post (166)"
   }
  ],
- "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35)"
+ "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35) | 2026-10-04 levels pass L2-01: rings moved with the Block C move (ring 4 fitted to the current shed)"
 }

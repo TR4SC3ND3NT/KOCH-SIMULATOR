@@ -29,33 +29,41 @@
      70.398
     ],
     [
-     159.35,
-     70.178
+     159.292,
+     68.679
     ],
     [
-     95.047,
-     72.648
+     94.99,
+     71.149
     ]
    ],
    "z": 3.45,
    "blend": 10.0,
-   "evidence": "bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone 2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives 3.3-3.6 along it, rms 1 m) so the 10 m blend into the alley/canteen stays within 0.1-0.4 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
-   "confidence": "low"
+   "evidence": "bench strip, walkway, courts and the lane north of the courts read level in 070410255 t=52/60 s and drone 2022 d_23; level anchored to the DEM value at the middle of the pitch south edge (3.44; the DEM gives 3.3-3.6 along it, rms 1 m) so the 10 m blend into the alley/canteen stays within 0.1-0.4 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-01/L3-04: the walkway falls ~0.20 S->N (3.45 at the pitch S gate, 3.25 at the lower-yard stair top); N edge at the pitch N side",
+   "confidence": "low",
+   "grad": [
+    -0.000283,
+    -0.00737
+   ],
+   "ref": [
+    161.964,
+    43.157
+   ]
   },
   {
    "name": "NorthTerrace",
    "ring": [
     [
-     95.047,
-     72.648
+     94.99,
+     71.149
     ],
     [
-     159.35,
-     70.178
+     158.243,
+     68.72
     ],
     [
-     159.427,
-     72.177
+     158.377,
+     72.218
     ],
     [
      95.124,
@@ -63,8 +71,8 @@
     ]
    ],
    "z": 3.75,
-   "blend": 3.0,
-   "evidence": "north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: flat 2.0 m path strip along the pitch, the rest is NorthTerrace_Bank",
+   "blend": 0.5,
+   "evidence": "north path/lawn flush with the pitch plinth top (drone 2022 d_07/d_19); the walkway rises to it at its north end (plinth tapers, step with pipe handrails in 070410255 t=60 s; modelled as the 3 m pad blend) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: flat 2.0 m path strip along the pitch, the rest is NorthTerrace_Bank | 2026-10-04 levels pass L3-04: the north path at plinth-top level (3.77) over the full width (was a 1.5 m trench at 3.45)",
    "confidence": "low"
   },
   {
@@ -92,8 +100,8 @@
    "evidence": "2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: lawn bank 3.75 -> 2.675 over 4.4 m",
    "z": 3.75,
    "grad": [
-    -0.00938,
-    -0.24416
+    -0.01239,
+    -0.32247
    ],
    "ref": [
     95.124,
@@ -210,7 +218,7 @@
      78.12
     ]
    ],
-   "z": 4.15,
+   "z": 3.8,
    "blend": 0.0,
    "evidence": "raised bed inside its curb (owner 2026-09-28) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: plane 4.15 at the pitch side -> 2.675 at the yard side over 6.0 m (25%)",
    "confidence": "low",
@@ -243,7 +251,7 @@
      72.65
     ]
    ],
-   "z": 3.4,
+   "z": 3.25,
    "blend": 0.0,
    "grad": [
     0.0,
@@ -905,9 +913,9 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.39,
    "material": "brick",
-   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 (Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) -> 46.1 x 26.3 m; 2026-09-28 owner: S and N fences flush with the pitch -> v 0.15..25.40 (46.1 x 25.25 m); red acrylic surface, flush with the walkway + 5 cm curb | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "Google z20 (2026, 0.1 m/px) georeferenced in the world frame; edges by luminance-step profiles in the rotated sports frame (origin 114,45, -2.2 deg), cross-checked on Bing 2021 (+1.2/+0.5 m registration): courts W u 50.9 (Google 50.87..50.89), E u 97.0 (Google 96.9..97.0, Bing 96.8..96.9), S v 1.7 (Google 1.4..1.7, Bing 1.75..1.86), N v 28.0 (visual; Google 28.6 incl. the N fence lean band, Bing 27.4..27.9) -> 46.1 x 26.3 m; 2026-09-28 owner: S and N fences flush with the pitch -> v 0.15..25.40 (46.1 x 25.25 m); red acrylic surface, flush with the walkway + 5 cm curb | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -932,9 +940,9 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.39,
    "material": "hedge",
-   "evidence": "green basketball field u 52.9..67.4, 23.76 m long (Google profiles v 3.04..26.8, rms 0.03-0.06 m; N edge 26.4..27.3 blurred); re-centred in the courts block made flush with the pitch (owner 2026-09-28) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "green basketball field u 52.9..67.4, 23.76 m long (Google profiles v 3.04..26.8, rms 0.03-0.06 m; N edge 26.4..27.3 blurred); re-centred in the courts block made flush with the pitch (owner 2026-09-28) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -959,9 +967,9 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.39,
    "material": "hedge",
-   "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06) | 2026-10-02 scale audit: standard 9 x 18 m (Google ~8.9 x 17.7 with lines); centre kept | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "green volleyball court u 72.4..81.1, v 5.75..23.4 = 8.7 x 17.65 (9 x 18 lines) (Google profiles, rms <= 0.06) | 2026-10-02 scale audit: standard 9 x 18 m (Google ~8.9 x 17.7 with lines); centre kept | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -986,9 +994,9 @@
     ]
    ],
    "z0": 3.1,
-   "z1": 3.5,
+   "z1": 3.39,
    "material": "brick",
-   "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "third court: red surface with white tennis lines, net (Google 2026, drone 2022 d_23; in 2022 its margin was green) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1152,8 +1160,8 @@
     }
    ],
    "width": 0.05,
-   "z": 3.5,
-   "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "z": 3.39,
+   "evidence": "Google 2026: centre circle ~r 1.8 at v 14.9, 3-pt arcs and keys at both N/S ends; FIBA dimensions fitted to the measured field | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1169,9 +1177,9 @@
     3.35
    ],
    "dir_deg": -2.2,
-   "z0": 3.5,
+   "z0": 3.39,
    "material": "metal",
-   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1187,9 +1195,9 @@
     0.1
    ],
    "dir_deg": 87.8,
-   "z0": 6.7,
+   "z0": 6.59,
    "material": "metal",
-   "evidence": "arm to the board | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "arm to the board | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1205,9 +1213,9 @@
     1.05
    ],
    "dir_deg": -2.2,
-   "z0": 6.4,
+   "z0": 6.29,
    "material": "white",
-   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1223,9 +1231,9 @@
     0.02
    ],
    "dir_deg": -2.2,
-   "z0": 6.54,
+   "z0": 6.43,
    "material": "metal",
-   "evidence": "rim 0.45 m at 3.05 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "rim 0.45 m at 3.05 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1241,9 +1249,9 @@
     3.35
    ],
    "dir_deg": -2.2,
-   "z0": 3.5,
+   "z0": 3.39,
    "material": "metal",
-   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "hoop stands behind both baselines (Google 2026 backboard images at v 4.4 / 25.8 incl. lean; drone 2022) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1259,9 +1267,9 @@
     0.1
    ],
    "dir_deg": 87.8,
-   "z0": 6.7,
+   "z0": 6.59,
    "material": "metal",
-   "evidence": "arm to the board | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "arm to the board | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1277,9 +1285,9 @@
     1.05
    ],
    "dir_deg": -2.2,
-   "z0": 6.4,
+   "z0": 6.29,
    "material": "white",
-   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "1.8 x 1.05 board, rim 3.05 m (standard) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1295,16 +1303,16 @@
     0.02
    ],
    "dir_deg": -2.2,
-   "z0": 6.54,
+   "z0": 6.43,
    "material": "metal",
-   "evidence": "rim 0.45 m at 3.05 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "rim 0.45 m at 3.05 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
    "type": "paint",
    "name": "Court_Volley_Lines",
    "width": 0.05,
-   "z": 3.5,
+   "z": 3.39,
    "lines": [
     [
      [
@@ -1359,7 +1367,7 @@
      ]
     ]
    ],
-   "evidence": "white lines on the green inner court; net line across the long axis (drone d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "white lines on the green inner court; net line across the long axis (drone d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1375,9 +1383,9 @@
     2.55
    ],
    "dir_deg": -2.2,
-   "z0": 3.5,
+   "z0": 3.39,
    "material": "white",
-   "evidence": "white net posts outside the sidelines (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "white net posts outside the sidelines (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1393,9 +1401,9 @@
     2.55
    ],
    "dir_deg": -2.2,
-   "z0": 3.5,
+   "z0": 3.39,
    "material": "white",
-   "evidence": "white net posts outside the sidelines (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "white net posts outside the sidelines (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium"
   },
   {
@@ -1411,9 +1419,9 @@
     1.0
    ],
    "dir_deg": -2.2,
-   "z0": 4.93,
+   "z0": 4.82,
    "material": "white",
-   "evidence": "net top 2.43 m (standard); drone d_23 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "net top 2.43 m (standard); drone d_23 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1494,8 +1502,8 @@
     ]
    ],
    "width": 0.05,
-   "z": 3.5,
-   "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "z": 3.39,
+   "evidence": "Google 2026: centre service line u ~90.1 (standard 90.68), service lines v ~7.8/21.8 (std 8.45/21.25): standard doubles court assumed centred | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1511,9 +1519,9 @@
     1.07
    ],
    "dir_deg": -2.2,
-   "z0": 3.5,
+   "z0": 3.39,
    "material": "metal",
-   "evidence": "net across the court (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "net across the court (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1529,9 +1537,9 @@
     1.07
    ],
    "dir_deg": -2.2,
-   "z0": 3.5,
+   "z0": 3.39,
    "material": "metal",
-   "evidence": "net across the court (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "net across the court (drone 2022 d_23) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1547,9 +1555,9 @@
     0.9
    ],
    "dir_deg": -2.2,
-   "z0": 3.55,
+   "z0": 3.44,
    "material": "white",
-   "evidence": "tennis net 0.91 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "tennis net 0.91 m | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -1581,7 +1589,7 @@
      43.563
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1592,7 +1600,7 @@
     2.1,
     4.875
    ],
-   "z_base": 3.5
+   "z_base": 3.39
   },
   {
    "type": "cage_fence",
@@ -1607,7 +1615,7 @@
      69.455
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 68.9 (Google profile rms 0.14-0.34) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 68.9 (Google profile rms 0.14-0.34) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1618,7 +1626,7 @@
     2.1,
     4.875
    ],
-   "z_base": 3.5
+   "z_base": 3.39
   },
   {
    "type": "cage_fence",
@@ -1633,7 +1641,7 @@
      68.862
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 84.35 (Google profile rms 0.14-0.34) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots); division fence at u 84.35 (Google profile rms 0.14-0.34) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1644,7 +1652,7 @@
     2.1,
     4.875
    ],
-   "z_base": 3.5
+   "z_base": 3.39
   },
   {
    "type": "cage_fence",
@@ -1659,7 +1667,7 @@
      44.155
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1670,7 +1678,7 @@
     2.1,
     4.875
    ],
-   "z_base": 3.5
+   "z_base": 3.39
   },
   {
    "type": "cage_fence",
@@ -1685,7 +1693,7 @@
      44.819
     ]
    ],
-   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "height 4.9 m: 070410255 t=52 s, post 250 px vs a 1.75 m person at the fence (90 px); same height on the division fences (drone 2022 d_23); mid rail at the 2.1 m gate top; posts ~3 m (Google post dots) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "medium",
    "height": 4.9,
    "post_spacing": 3.0,
@@ -1696,7 +1704,7 @@
     2.1,
     4.875
    ],
-   "z_base": 3.5
+   "z_base": 3.39
   },
   {
    "type": "box",
@@ -2429,12 +2437,12 @@
    "dir_deg": 177.8,
    "width": 1.7,
    "risers": 3,
-   "riser_h": 0.1,
+   "riser_h": 0.165,
    "tread": 0.6,
    "top_landing": 0.02,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): 3 painted-kerb risers from the pitch-courts walkway up to the north path at the pitch's NE corner (A038, A041); position +-0.7 m",
+   "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): 3 painted-kerb risers from the pitch-courts walkway up to the north path at the pitch's NE corner (A038, A041); position +-0.7 m | 2026-10-04 levels pass L3-04: 3.257 -> 3.75",
    "confidence": "low"
   },
   {
@@ -2653,8 +2661,8 @@
     ]
    ],
    "z": [
-    3.45,
-    3.45,
+    3.25,
+    3.25,
     2.175,
     2.175
    ],
@@ -3793,12 +3801,12 @@
    "size": [
     44.050000000000004,
     0.29999999999999716,
-    0.98
+    0.45
    ],
    "z0": 1.875,
    "material": "stone",
-   "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top 2.775 (0.60 above the yard)",
+   "slot": "M_Kerb_Painted_YW",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top 2.775 (0.60 above the yard) | 2026-10-04 levels pass L3-05: flush painted kerb 0.15 above the lane, the lawn bank runs down to it",
    "confidence": "low"
   },
   {
@@ -3812,12 +3820,12 @@
    "size": [
     20.0,
     0.29999999999999716,
-    0.98
+    0.45
    ],
    "z0": 1.875,
    "material": "stone",
-   "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top 2.775 (0.60 above the yard)",
+   "slot": "M_Kerb_Painted_YW",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top 2.775 (0.60 above the yard) | 2026-10-04 levels pass L3-05: flush painted kerb 0.15 above the lane, the lawn bank runs down to it",
    "confidence": "low"
   },
   {
@@ -3853,8 +3861,8 @@
    ],
    "height": 2.1,
    "panel": "bars",
-   "z_base": 3.5,
-   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "z_base": 3.39,
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -3870,7 +3878,7 @@
      44.822
     ]
    ],
-   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low",
    "height": 2.7500000000000004,
    "post_spacing": 3.0,
@@ -3880,7 +3888,7 @@
     0.03,
     2.7250000000000005
    ],
-   "z_base": 5.65
+   "z_base": 5.54
   },
   {
    "type": "gate_leaf",
@@ -3897,8 +3905,8 @@
    ],
    "height": 2.1,
    "panel": "bars",
-   "z_base": 3.5,
-   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "z_base": 3.39,
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -3914,7 +3922,7 @@
      44.158
     ]
    ],
-   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low",
    "height": 2.7500000000000004,
    "post_spacing": 3.0,
@@ -3924,7 +3932,7 @@
     0.03,
     2.7250000000000005
    ],
-   "z_base": 5.65
+   "z_base": 5.54
   },
   {
    "type": "gate_leaf",
@@ -3941,8 +3949,8 @@
    ],
    "height": 2.1,
    "panel": "bars",
-   "z_base": 3.5,
-   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "z_base": 3.39,
+   "evidence": "white barred door as filmed on the old W door (070410255 t=52/60 s); owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low"
   },
   {
@@ -3958,7 +3966,7 @@
      43.567
     ]
    ],
-   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "owner 2026-09-28 (screenshot notes): entrance to each court from the south side, W-fence door removed; door u by eye | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: courts 0.11 lower (flat 3.39; the courts fall N with the walkway, +-0.1 at the ends)",
    "confidence": "low",
    "height": 2.7500000000000004,
    "post_spacing": 3.0,
@@ -3968,7 +3976,7 @@
     0.03,
     2.7250000000000005
    ],
-   "z_base": 5.65
+   "z_base": 5.54
   },
   {
    "type": "stairs_run",
@@ -3980,12 +3988,12 @@
    "dir_deg": 87.8,
    "width": 4.0,
    "risers": 5,
-   "riser_h": 0.225,
+   "riser_h": 0.185,
    "tread": 0.76,
-   "z_top": 3.45,
+   "z_top": 3.25,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure) | 2026-10-04 re-verification X3-07: treads ~0.76 (run 3.0, foot y ~73.3)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure) | 2026-10-04 re-verification X3-07: treads ~0.76 (run 3.0, foot y ~73.3) | 2026-10-04 levels pass L3-02: 5 x 0.185 from 3.25 to the strip 2.325",
    "confidence": "low"
   },
   {
@@ -3999,12 +4007,12 @@
    "size": [
     46.1,
     1.3000000000000007,
-    1.475
+    1.365
    ],
    "z0": 2.025,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: top 3.39 with the courts",
    "confidence": "low"
   },
   {
@@ -4078,8 +4086,8 @@
     ]
    ],
    "z": [
-    3.45,
-    3.45,
+    3.25,
+    3.25,
     2.4,
     2.4
    ],
@@ -4111,8 +4119,8 @@
     ]
    ],
    "z": [
-    3.45,
-    3.45,
+    3.25,
+    3.25,
     2.4,
     2.4
    ],
@@ -6348,7 +6356,7 @@
     ]
    ],
    "curb_w": 0.15,
-   "curb_h": 0.5,
+   "curb_h": 0.12,
    "evidence": "Google 2026 lawn bed u 0..44.4, v 27.0..33.3 behind a 1.6 m paved path along the N fence (drone 2022 d_07/d_19: grey path, lawn with two rows of young blue spruces)",
    "confidence": "medium"
   },
@@ -6903,8 +6911,8 @@
      69.516
     ]
    ],
-   "z0": 3.4000000000000004,
-   "z1": 3.48,
+   "z0": 3.22,
+   "z1": 3.33,
    "material": "brick",
    "evidence": "Google 2026: mauve-red 11.0 x 6.4 m surface (not in Bing 2021/Esri 2020, which show a round bed at u ~-10, v 13); use unknown (rubber mat / stage?)",
    "confidence": "low"

@@ -1026,34 +1026,76 @@
    "name": "CPlaza_WWing",
    "ring": [
     [
-     175.58545,
-     -7.114475
+     169.4,
+     -6.9
     ],
     [
-     188.87481,
-     -7.64448
+     186.6,
+     -7.55
     ],
     [
-     189.151768,
-     -0.70004
+     186.85,
+     -0.55
     ],
     [
-     175.862408,
-     -0.170035
+     169.65,
+     0.0
     ]
    ],
-   "z": 5.05,
+   "z": 5.14,
    "blend": 0.6,
-   "grad": [
-    0.02108,
-    -0.00084
-   ],
-   "ref": [
-    176.24445,
-    -3.1376
-   ],
    "confidence": "medium",
-   "evidence": "2026-10-04 D1 Q2-21 (PnP on the C windows + cover edge / pits in CE030, CE024, CC002): the plaza in front of the C W wing is 0.27 lower at its W end, 5.05 at u 0-8 rising to 5.32 at the entrance-stair foot (u 12.8); C FFL and the entrance stair unchanged"
+   "evidence": "2026-10-04 levels pass L2-03 (Q2-21 re-measured: plaza in front of the C W wing / basement forecourt ~5.14; flat)"
+  },
+  {
+   "name": "CPlaza_Entrance",
+   "ring": [
+    [
+     187.0,
+     -7.7
+    ],
+    [
+     199.0,
+     -8.1
+    ],
+    [
+     199.15,
+     -2.35
+    ],
+    [
+     187.25,
+     -1.9
+    ]
+   ],
+   "z": 5.31,
+   "blend": 1.0,
+   "confidence": "medium",
+   "evidence": "2026-10-04 levels pass L2-04: entrance-stair foot and E-ramp foot at 5.31 (the ramp end floated after the C move)"
+  },
+  {
+   "name": "CEast_StairFoot",
+   "ring": [
+    [
+     205.85,
+     3.45
+    ],
+    [
+     207.65,
+     3.38
+    ],
+    [
+     207.72,
+     5.05
+    ],
+    [
+     205.92,
+     5.12
+    ]
+   ],
+   "z": 4.9,
+   "blend": 1.0,
+   "confidence": "low",
+   "evidence": "2026-10-04 levels pass L2-08: the east exit stair foot floated 0.27 after the C move; owner 'about 9 steps' kept, so the ground at the foot is held at 4.90"
   }
  ]
 }

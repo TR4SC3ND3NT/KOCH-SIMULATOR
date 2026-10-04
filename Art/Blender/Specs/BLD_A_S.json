@@ -405,8 +405,9 @@
      ]
     ],
     "door_mid_z": 0.95,
-    "evidence": "black aluminium double glazed door + glazed transom, recessed between two red brick-tile pilasters with beige tile infill beside/above it, opening onto the lower walkway under the pavilion. 012305655 (frontal, wall scale 116 px/m from the 0.45 m pilaster): F1 window edge u 12.53 | pilaster 0.45 | infill 0.43 | door 1.56 | infill 0.27 | pilaster 0.5 | S window from ~16.0 (spec 16.31); 012227815 (24 mm: window, narrow strip, pilaster, door); 012233382, 012251895",
-    "confidence": "medium"
+    "evidence": "black aluminium double glazed door + glazed transom, recessed between two red brick-tile pilasters with beige tile infill beside/above it, opening onto the lower walkway under the pavilion. 012305655 (frontal, wall scale 116 px/m from the 0.45 m pilaster): F1 window edge u 12.53 | pilaster 0.45 | infill 0.43 | door 1.56 | infill 0.27 | pilaster 0.5 | S window from ~16.0 (spec 16.31); 012227815 (24 mm: window, narrow strip, pilaster, door); 012233382, 012251895 | 2026-10-04 levels pass L1-02: threshold flush with the walkway (sill 5.37)",
+    "confidence": "medium",
+    "z0": -0.1
    },
    "evidence": "rectified pano intro.jpg (yaw 48, 120 deg view, f=808.3 px) + 082337 f0.5 (2026 frame colours/frames): 6 columns at 2.78 m pitch, heads 2.39/5.42/8.45, sills 0.92/3.98/6.98, wall top 9.93 above FFL; FFL = ground-floor sill - 0.92",
    "confidence": "medium"
@@ -544,8 +545,9 @@
        "fixed"
       ]
      ],
-     "evidence": "glazed anthracite aluminium storefront, threshold at the walkway (A271 frontal at 160 px/m: closed leaf 0.8 x 2.0; bays from the photo); u from the walk timing A260 -> A274 (+-4 m); the red-tile plinth stops at the frame",
-     "confidence": "medium (size), low (u)"
+     "evidence": "glazed anthracite aluminium storefront, threshold at the walkway (A271 frontal at 160 px/m: closed leaf 0.8 x 2.0; bays from the photo); u from the walk timing A260 -> A274 (+-4 m); the red-tile plinth stops at the frame | 2026-10-04 levels pass L1-02: threshold flush with the walkway (sill 5.37)",
+     "confidence": "medium (size), low (u)",
+     "z0": -0.1
     }
    ],
    "evidence": "2026-09-30/2GIS photos G056, G053, G067, A266, A268, A271, A272, A274, A278: the south and east faces have 4 window rows under the same eave as the 3-row west face (single-view transfer at the SW corner in G056, scale from the west face's own rows): heads ~2.2/5.05/7.4/9.25, top row short; sills +-0.35; 13 columns spaced symmetrically between the SW and SE corner pilasters (pitch 2.64; the old 2.78 grid ran its last window into the SE pilaster) | 2026-10-04 re-verification round 2 Y2-04: no F1/F2 windows E of the storefront; Y2-05: wide asymmetric maroon panel over the storefront E part"
