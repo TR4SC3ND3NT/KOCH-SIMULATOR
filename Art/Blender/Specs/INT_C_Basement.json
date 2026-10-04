@@ -1430,7 +1430,7 @@
      0.598
     ]
    ],
-   "z0": 2.85,
+   "z0": 2.9,
    "z1": 3.14,
    "material": "stone",
    "slot": "M_Terrazzo_Grey_Tile",
@@ -1455,7 +1455,8 @@
    "top_flush": true,
    "run_out": 0.05,
    "evidence": "2026-10-04 finish_B: 2 risers on the platform's south face (video PXL_20260925_012547860 (descent + corridor + piano room, 1080p t 0-53 s) t47.2: 2 nosings), riser 0.12 (+-0.05)",
-   "confidence": "medium"
+   "confidence": "medium",
+   "z_base": 2.9
   },
   {
    "type": "roof_plane",
