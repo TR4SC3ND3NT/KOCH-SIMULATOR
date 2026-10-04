@@ -63,11 +63,14 @@ def scale_spec(v, k, key=None):
 
 # part keyword (in the object name) -> default material slot; order matters (first match wins)
 PART_KEYS = ["Glass", "Win", "Sur", "Pilaster", "Cladding", "Plinth", "Slabs", "Roof", "Eave", "Gutter", "Downpipe", "Cornice",
-             "Entrance", "Door", "GalleryPosts", "Gallery", "Wall"]
+             "Entrance", "Door", "GalleryPosts", "GalleryCoping", "GalleryFloor", "GalleryDeck", "GallerySoffit", "Gallery",
+             "Wall"]
 PART_SLOT = {"Glass": "M_Glass", "Win": "M_PVC_White", "Sur": "M_Paint_Maroon", "Pilaster": "M_Paint_Maroon", "Cladding": "M_Render_Beige",
              "Plinth": "M_Tile_Brick_Red", "Slabs": "M_Concrete", "Roof": "M_Sheet_Red", "Eave": "M_PVC_Gutter_White",
              "Gutter": "M_PVC_Gutter_White", "Downpipe": "M_PVC_Gutter_White", "Cornice": "M_Paint_Maroon",
              "Entrance": "M_Alu_Black", "Door": "M_Alu_Black", "GalleryPosts": "M_Steel_Paint_Dark",
+             "GalleryCoping": "M_Granite_Red", "GalleryFloor": "M_Paving_Diamond_Tile_Pink", "GalleryDeck": "M_Tile_Brick_Red",
+             "GallerySoffit": "M_Wood_Stained",   # A_W deck (CE027/CE028): red granite coping, tiles, brick face, boards
              "Gallery": "M_Sheet_Brown", "Wall": "M_Render_Beige"}
 
 class Building:
@@ -186,6 +189,30 @@ class Building:
         self.obj_parts("Eave", {r.get("eave_material", "M_Sheet_Brown"): soffit}, r.get("evidence"), r.get("confidence"))
         self.obj_parts("Gutter", {r.get("gutter_material", "M_Steel_Galv"): gutter}, r.get("evidence"), r.get("confidence"))
 
+    def build_eave_edges(self, r):
+        """Soffit board under the roof slab from the wall face to the fascia, a fascia board on the roof edge and a
+        round gutter (tube) on it, per edge in roof.eave_edges {edge: {soffit_slot, gutter_slot}}; overhangs from
+        roof.overhang_edges / roof.overhang (the neighbouring edges' overhangs set where the boards end)."""
+        ze = self.s["eave_z"]
+        for key, ed in r["eave_edges"].items():
+            i = int(key)
+            e = self.edges[i]
+            fr = e["frame"]
+            n = len(self.ring)
+            ovs = lambda j: float(r.get("overhang_edges", {}).get(str(j % n), r.get("overhang", 0.4)))
+            ov, a0, a1 = ovs(i), ovs(i - 1), ovs(i + 1)        # this edge's overhang; the neighbours' set the ends
+            L = e["L"]
+            soffit, gutter = bmesh.new(), bmesh.new()
+            zs = ze - FASCIA_M - EAVE_BOARD                    # soffit board under the roof slab bottom
+            box(soffit, fr, -a0 + 0.005, L + a1 - 0.005, 0.0, ov, zs, ze - FASCIA_M - 0.002)
+            box(soffit, fr, -a0 + 0.005, L + a1 - 0.005, ov + 0.002, ov + 0.002 + EAVE_BOARD, zs, ze + 0.01)   # fascia
+            wg = ov + 0.002 + EAVE_BOARD + GUTTER_R
+            D.tube(gutter, [fr @ Vector((-a0, wg, ze - GUTTER_DROP - GUTTER_R)),
+                            fr @ Vector((L + a1, wg, ze - GUTTER_DROP - GUTTER_R))], GUTTER_R)
+            ev, cf = ed.get("evidence", r.get("evidence")), ed.get("confidence", r.get("confidence"))
+            self.obj_parts(f"EaveBox_E{i}", {ed.get("soffit_slot", "M_Render_White"): soffit}, ev, cf)
+            self.obj_parts(f"EaveGutter_E{i}", {ed.get("gutter_slot", "M_PVC_Gutter_White"): gutter}, ev, cf)
+
     def corner_cut(self, i, end):
         """Inner-face inset at the start (end=False) or end of edge i: +thk convex, -thk concave (90 deg)."""
         n = len(self.ring)
@@ -242,6 +269,15 @@ class Building:
             if bsm:  # walls continue down to the underside of the basement floor slab
                 z_bottom = min(z_bottom, bsm["floor_z"] - bsm["slab_t"])
             bands = [(z_bottom, levels[0])] + list(zip(levels[:-1], levels[1:]))
+            # an opening crossing a band level (a door at grade below the FFL, hall N face) is cut in no band: merge
+            # the bands it spans into one piece
+            merged = [list(bands[0])]
+            for z0_, z1_ in bands[1:]:
+                if any(o.z0 < z0_ - 1e-6 and o.z1 > z0_ + 1e-6 for o, _t, _w in ops):
+                    merged[-1][1] = z1_
+                else:
+                    merged.append([z0_, z1_])
+            bands = [tuple(b_) for b_ in merged]
             maroon_face = bool(fspec and fspec.get("name", "").startswith("south_tower"))
             for bi, (z0, z1) in enumerate(bands):
                 bo = [(o, wt) for o, _, wt in ops if o.z0 >= z0 - 1e-6 and o.z1 <= z1 + 1e-6]
@@ -287,7 +323,7 @@ class Building:
                 if c["edge"] != i:
                     continue
                 cu0, cu1, cz0, cz1, pj = c["u0"], c["u1"], c["z0"], c["z1"], c.get("proj", 0.02)
-                holes = []
+                rects = []
                 for o, _, wt in ops:
                     # a window surround prouder than the field goes through it: cut round the surround (else its faces
                     # lie on the hole faces)
@@ -295,12 +331,26 @@ class Building:
                                        wt.get("surround_proj", 0.0) >= pj) else (0, 0, 0, 0)
                     ou0, ou1, oz0, oz1 = o.u0 - sl, o.u1 + sr, o.z0 - sb, o.z1 + stp
                     if ou1 > cu0 + 0.05 and ou0 < cu1 - 0.05 and oz1 > cz0 + 0.05 and oz0 < cz1 - 0.05:
-                        holes.append(Opening(max(ou0, cu0) - cu0, min(ou1, cu1) - cu0, max(oz0, cz0), min(oz1, cz1)))
-                # an opening cut by the field edge would leave a sliver: keep holes strictly inside
-                holes = [h for h in holes if h.u0 > 0.02 and h.u1 < cu1 - cu0 - 0.02 and h.z0 > cz0 + 0.02 and h.z1 < cz1 - 0.02]
+                        rects.append((max(ou0, cu0), min(ou1, cu1), max(oz0, cz0), min(oz1, cz1)))
+                # an opening reaching the field edge (a door at grade through a full-height bay) cannot be a hole of one
+                # piece: the field is split round it (a door used to stay covered by the field)
+                inner_ = lambda r, a0, a1, z0_, z1_: r[0] > a0 + 0.02 and r[1] < a1 - 0.02 and r[2] > z0_ + 0.02 and r[3] < z1_ - 0.02
+                edge_r = [r for r in rects if not inner_(r, cu0, cu1, cz0, cz1)]
+                cuts_ = sorted({cu0, cu1} | {r[0] for r in edge_r} | {r[1] for r in edge_r})
                 bm = bmesh.new()
-                wall_piece(bm, e["frame"] @ Matrix.Translation((cu0, pj, 0)), cu1 - cu0, cz0, cz1, pj, holes,
-                           cut_start=0.0, cut_end=0.0)
+                for a0, a1 in zip(cuts_[:-1], cuts_[1:]):
+                    if a1 - a0 < 0.01:
+                        continue
+                    zr = [(cz0, cz1)]
+                    for r in edge_r:
+                        if r[0] <= a0 + 1e-6 and r[1] >= a1 - 1e-6:
+                            zr = [(za, zb) for za0, zb0 in zr for za, zb in ((za0, min(zb0, r[2])), (max(za0, r[3]), zb0))
+                                  if zb - za > 0.01]
+                    for za, zb in zr:
+                        hs = [Opening(r[0] - a0, r[1] - a0, r[2], r[3]) for r in rects
+                              if r not in edge_r and inner_(r, a0, a1, za, zb)]
+                        wall_piece(bm, e["frame"] @ Matrix.Translation((a0, pj, 0)), a1 - a0, za, zb, pj, hs,
+                                   cut_start=0.0, cut_end=0.0)
                 ob = self.obj(f"Cladding_E{i}_{ci:02d}", bm, COL["wall"], c.get("evidence"), c.get("confidence"))
                 ob.data.materials[0] = mat(c.get("slot", "M_Render_Beige"))
 
@@ -565,6 +615,16 @@ class Building:
                 self.s["roof"] = r
             self.build_eave_detail()
             return
+        if r.get("eave_edges") and not r.get("_edges_done"):
+            # boxed eave (soffit lining + fascia board) and a round gutter on chosen edges of a non-detail roof:
+            # {"edge": {"soffit_slot", "gutter_slot", "overhang"}} (A_N north end, CE011)
+            self.s["roof"] = dict(r, _edges_done=True)
+            try:
+                self.build_roof()
+            finally:
+                self.s["roof"] = r
+            self.build_eave_edges(r)
+            return
         if kind in ("gable", "shed"):
             return self.build_gable_or_shed(r, kind)
         if kind == "hip" and r.get("ridge_len") and len(self.ring) == 4:
@@ -736,7 +796,11 @@ class Building:
                 bm2.faces.new((lo[i], lo[j], up[j], up[i]))
             bm2.faces.new(list(reversed(lo)))
             bm2.faces.new(up)
-            self.obj("RoofInfill", bm2, COL["wall"], r.get("evidence"), r.get("confidence"))
+            ob = self.obj("RoofInfill", bm2, COL["wall"], r.get("evidence"), r.get("confidence"))
+            # wall continuation, not roofing: the "Roof" keyword gave it the roof sheet slot (pink high wall on the
+            # hall's east block in A004/A006, walkthrough 2026-10-04)
+            if len(ob.data.materials) == 1:
+                ob.data.materials[0] = mat(self.s.get("wall_material", self.s.get("slots", {}).get("Wall", PART_SLOT["Wall"])))
         self.obj("Roof", bm, COL["roof"], r.get("evidence"), r.get("confidence"))
 
     def build_raised_base(self, rs):
@@ -1171,7 +1235,9 @@ class Building:
                     for he in a.get("hollow_ends", []):
                         w0, w1 = he.get("w0", 0.0), he.get("w1", a["depth"])
                         ua = a["u0"] if he["end"] == "u0" else a["u1"] - wt
-                        prism_profile(bm, fr, [(w0, zb), (w0, deck(w0)), (w1, deck(w1)), (w1, zb)], ua, ua + wt)
+                        # "openings" [{face, w0, w1, z0, z1}] on this end: the wall is built round the holes
+                        hs = [(o["w0"], o["w1"], o["z0"], o["z1"]) for o in a.get("openings", []) if o["face"] == he["end"]]
+                        _prism_holes(bm, fr, w0, w1, zb, deck, hs, ua, ua + wt)
                 else:
                     prof = [(0.0, zg - BURY_M), (0.0, a["z_high"]), (a["depth"], a["z_low"]), (a["depth"], zg - BURY_M)]
                     prism_profile(bm, fr, prof, a["u0"], a["u1"])
@@ -1194,6 +1260,8 @@ class Building:
                             f.material_index = 1
                     self.obj_mat(a["name"], bm, [a.get("body_slot", "M_Tile_Brick_Red"), "M_Paint_White"], a.get("evidence"))
                     self.shed_cladding(a, fr)
+                    for k_, o in enumerate(a.get("openings", [])):
+                        self.shed_window(a, fr, o, k_)
                 elif not a.get("roof_only"):
                     ob = self.obj(a["name"], bm, COL["brick"], a.get("evidence"))
                     if a.get("body_slot"):
@@ -1251,11 +1319,41 @@ class Building:
                 top = [(w, min(z1, zr(w))) for w in (w0, d)]
                 prof = [(w0, top[0][1]), (d - 0.005, top[1][1]), (d - 0.005, z0), (w0, z0)]   # clockwise like shed/lightwell
                 if all(zt - z0 > 0.01 for _w, zt in top) and d - 0.005 - w0 > 0.05:
-                    prism_profile(bm, fr, prof, u_a, u_b)
+                    hs = [(o["w0"], o["w1"], o["z0"], o["z1"]) for o in a.get("openings", []) if o["face"] == end]
+                    if hs:   # cladding cut round the end-wall openings (top line linear between the two end points)
+                        (wa, ta), (wb, tb) = (w0, top[0][1]), (d - 0.005, top[1][1])
+                        _prism_holes(bm, fr, wa, wb, z0, lambda w, wa=wa, wb=wb, ta=ta, tb=tb: ta + (tb - ta) * (w - wa) / (wb - wa),
+                                     hs, u_a, u_b)
+                    else:
+                        prism_profile(bm, fr, prof, u_a, u_b)
         for slot, bm in parts.items():
             bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
             self.obj_parts(f"{a['name']}_Clad_{slot[2:]}", {slot: bm}, a.get("bands_evidence", a.get("evidence")),
                            a.get("confidence"))
+
+    def shed_window(self, a, fr, o, k):
+        """PVC window in a shed end-wall opening o {face "u0"|"u1", w0, w1 (m from the host wall), z0, z1 (rel FFL),
+        mullions, transoms, reveal, slot}. End-face frame: u' along the end wall, w' outward (same handedness as
+        facade_frame), origin on the cladding face."""
+        du, dw = fr.col[0].xyz.normalized(), fr.col[1].xyz.normalized()
+        clad = o["face"] in a.get("band_ends", ["u0", "u1"])   # this end carries the cladding bands
+        pj = max([b.get("proj", 0.02) for b in a.get("bands", [])] or [0.0]) if clad else 0.0
+        m = Matrix.Identity(4)
+        if o["face"] == "u0":
+            m.col[0].xyz, m.col[1].xyz = dw, -du
+            m.col[3].xyz = (fr @ Vector((a["u0"] - pj, 0.0, 0.0)))
+            lo, hi = o["w0"], o["w1"]
+        else:
+            m.col[0].xyz, m.col[1].xyz = -dw, du
+            m.col[3].xyz = (fr @ Vector((a["u1"] + pj, a["depth"], 0.0)))
+            lo, hi = a["depth"] - o["w1"], a["depth"] - o["w0"]
+        pv = D.PvcWindow(reveal=o.get("reveal", 0.12), mullions=o.get("mullions", []), transoms=o.get("transoms", []),
+                         sashes=o.get("sashes", []))
+        frm, glass, sill = bmesh.new(), bmesh.new(), bmesh.new()
+        D.pvc_window({"frame": frm, "sash": frm, "glass": glass, "sill": sill}, m, Opening(lo, hi, o["z0"], o["z1"]), pv)
+        self.obj_parts(f"{a['name']}_Win_{k:02d}", {o.get("slot", "M_PVC_Anthracite"): frm, "M_Glass": glass,
+                                                     "M_Steel_Galv": sill}, o.get("evidence", a.get("evidence")),
+                       o.get("confidence", a.get("confidence")))
 
     def shed_trim(self, a, fr):
         """Metal edge flashing round the shed roof sheet: front drip edge + both rakes (sheet: 0.15 m overhang)."""
@@ -1572,11 +1670,14 @@ class Building:
                     print(f"  {self.id}: storey {k + 1} floor plate skipped (cuts an opening)")
                     continue
                 slabs.append((z0, z1))
-        for z0, z1 in slabs:
-            lo = [bm.verts.new((x, y, z0)) for x, y in inner]
-            hi = [bm.verts.new((x, y, z1)) for x, y in inner]
-            for i in range(len(inner)):
-                j = (i + 1) % len(inner)
+        g_ring = self.s.get("ground_slab_ring")   # local CCW polygon for the ground slab only: a notch where a room
+        # sits at grade below the FFL (hall boiler room); other slabs keep the inner ring
+        for k_, (z0, z1) in enumerate(slabs):
+            ring_ = [tuple(p) for p in g_ring] if (g_ring and k_ == 0 and abs(z1) < 1e-6) else inner
+            lo = [bm.verts.new((x, y, z0)) for x, y in ring_]
+            hi = [bm.verts.new((x, y, z1)) for x, y in ring_]
+            for i in range(len(ring_)):
+                j = (i + 1) % len(ring_)
                 bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
             bm.faces.new(list(reversed(lo)))
             bm.faces.new(hi)
@@ -1633,6 +1734,31 @@ def _surround(bm, w, h, l, r, b, t, proj):
         box(bm, ident, -l, 0.0, 0.0, proj, 0.0, h)         # left
     if r > 0:
         box(bm, ident, w, w + r, 0.0, proj, 0.0, h)        # right
+
+
+def _prism_holes(bm, fr, w0, w1, zlo, ztop, holes, u0, u1):
+    """(w, z) wall panel w0..w1 x zlo..ztop(w) extruded over u0..u1 with rectangular through-holes
+    [(hw0, hw1, hz0, hz1)]: solid pieces round them (full-height columns between the holes, a sill piece under and a
+    head piece over each hole); ztop is linear in w (a roof slope). Profiles clockwise like shed/lightwell."""
+    hs = sorted((max(w0, a), min(w1, b), c, d) for a, b, c, d in holes if min(w1, b) - max(w0, a) > 0.01)
+    cuts = sorted({w0, w1} | {h[0] for h in hs} | {h[1] for h in hs})
+    for p, q in zip(cuts[:-1], cuts[1:]):
+        if q - p < 1e-4:
+            continue
+        zs = [zlo]
+        for _a, _b, c, d in sorted((h for h in hs if h[0] <= p + 1e-6 and h[1] >= q - 1e-6), key=lambda h: h[2]):
+            zs += [c, d]
+        zs.append(None)                                   # None = up to the top line
+        for za, zt in zip(zs[0::2], zs[1::2]):
+            if zt is None:
+                if min(ztop(p), ztop(q)) - za < 0.01:
+                    continue
+                prof = [(p, za), (p, ztop(p)), (q, ztop(q)), (q, za)]
+            else:
+                if zt - za < 0.01:
+                    continue
+                prof = [(p, za), (p, zt), (q, zt), (q, za)]
+            prism_profile(bm, fr, prof, u0, u1)
 
 
 def _prism_along_w(bm, fr, prof_uz, w0, w1):

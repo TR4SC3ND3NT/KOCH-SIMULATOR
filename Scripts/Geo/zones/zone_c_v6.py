@@ -1006,6 +1006,10 @@ def wc_fitout(k, zb):
         bx("Bin", T + 0.06, T + 0.40, bc - 0.16, bc + 0.16, WC_FLOOR_T, 0.50, "M_Plastic_Black", ue_asset="bin_bag_black", **wev("bin with a black bag between the pedestals (031/040)"))
         bx("Drain", T + 0.04, T + 0.19, bc + 0.12, bc + 0.27, WC_FLOOR_T, WC_FLOOR_T + 0.003, "M_Steel_Galv", **wev("floor drain grate by the right pedestal (040)"))
         bx("Socket", WC_W - T - 0.02, WC_W - T, bc - 0.04, bc + 0.04, 1.58, 1.66, "M_Plastic_White", **wev("socket above the tile band opposite the basins (031/033)"))
+        # double light switch on the tiles just under the 0.96 seam, in the inside corner by the socket (CW006, Q3-28):
+        # on the lock wall's north face 0.14 m from the outer wall (corner identity unsure, +-0.3 along the wall)
+        bx("LightSwitch", WC_W - T - 0.22, WC_W - T - 0.14, WC_ANTE + WC_PT + T, WC_ANTE + WC_PT + T + 0.015, 0.86, 0.94,
+           "M_Plastic_White", ue_asset="light_switch_double", **wev("double light switch at 0.90 in the corner by the socket (033)", "low"))
         # cubicles (video pass 2026-10-03 V2-05): white squat pan set flush in the floor tiles, outlet to the back (wet) wall,
         # high-level plastic cistern on the back wall with a flush pipe down to the pan, tiled pipe box in the back corner,
         # jumbo roll dispenser, bin in the back corner (clear of the door), light switch outside by the handle

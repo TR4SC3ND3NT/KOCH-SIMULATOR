@@ -19680,6 +19680,26 @@
   },
   {
    "type": "box",
+   "name": "F1_WCW_LightSwitch",
+   "center": [
+    189.582373,
+    14.111982
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.015,
+    0.08
+   ],
+   "z0": 7.26,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "light_switch_double",
+   "evidence": "2026-10-01 reference classroom plan v6: WC (2026-10-01_WC photos): double light switch at 0.90 in the corner by the socket (033)",
+   "confidence": "low"
+  },
+  {
+   "type": "box",
    "name": "F1_WCW_SquatPan_0",
    "center": [
     191.19317,
@@ -24617,6 +24637,26 @@
    "slot": "M_Plastic_White",
    "evidence": "2026-10-01 reference classroom plan v6: WC (2026-10-01_WC photos): socket above the tile band opposite the basins (031/033)",
    "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_WCE_LightSwitch",
+   "center": [
+    193.750882,
+    15.24676
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.015,
+    0.08
+   ],
+   "z0": 7.26,
+   "material": "white",
+   "slot": "M_Plastic_White",
+   "ue_asset": "light_switch_double",
+   "evidence": "2026-10-01 reference classroom plan v6: WC (2026-10-01_WC photos): double light switch at 0.90 in the corner by the socket (033)",
+   "confidence": "low"
   },
   {
    "type": "box",

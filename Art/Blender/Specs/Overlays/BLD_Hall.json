@@ -4,7 +4,18 @@
  "facades": [
   {
    "edge": 0,
-   "note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): the two S doors came from the 2022 'dinning' panorama, which shows the A_W gallery, not the sports hall; 2026 photos show only windows on the hall's S face (A016, A017)"
+   "note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): the two S doors came from the 2022 'dinning' panorama, which shows the A_W gallery, not the sports hall; 2026 photos show only windows on the hall's S face (A016, A017)",
+   "windows": [
+    {
+     "type": "HU",
+     "u": [
+      55.6
+     ],
+     "sills": [
+      2.6
+     ]
+    }
+   ]
   },
   {
    "edge": 2,
@@ -52,9 +63,10 @@
       ]
      ],
      "slot": "M_Steel_Paint_Dark",
-     "evidence": "2026-10-03 photo batch 2 Q1-03/R1-05: rusty 2-leaf steel door in the maroon tile bay | 2026-10-04 re-verification round 2 Y3-02: steel doors at grade (paving 0.63-0.65 below the FFL), no steps",
+     "evidence": "2026-10-03 photo batch 2 Q1-03/R1-05: rusty 2-leaf steel door in the maroon tile bay | 2026-10-04 re-verification round 2 Y3-02: steel doors at grade (paving 0.63-0.65 below the FFL), no steps | 2026-10-04 finish_E E-06: boiler-room door (owner), grade-level floor inside",
      "confidence": "low",
-     "z0": -0.51
+     "z0": -0.51,
+     "name": "BoilerRoom_DoorE"
     },
     {
      "u0": 49.6,
@@ -74,9 +86,10 @@
       ]
      ],
      "slot": "M_Steel_Paint_Dark",
-     "evidence": "2026-10-03 photo batch 2 Q1-03/R1-05: 2-leaf steel door near the W end | 2026-10-04 re-verification round 2 Y3-02: steel doors at grade (paving 0.63-0.65 below the FFL), no steps",
+     "evidence": "2026-10-03 photo batch 2 Q1-03/R1-05: 2-leaf steel door near the W end | 2026-10-04 re-verification round 2 Y3-02: steel doors at grade (paving 0.63-0.65 below the FFL), no steps | 2026-10-04 finish_E E-06: boiler-room door (owner), grade-level floor inside",
      "confidence": "low",
-     "z0": -0.61
+     "z0": -0.51,
+     "name": "BoilerRoom_DoorW"
     }
    ],
    "evidence": "2026-10-03 photo batch 2 Q1-03 (web photos + A081-A086): windows only at u 18.6-27.1 and 2 small high ones; 2 steel double doors; the evenly spaced 6 HN list was wrong"
@@ -88,21 +101,6 @@
    "edge": 0,
    "name": "Gym",
    "items": [
-    {
-     "group": "GymFloor",
-     "slot": "M_Sport_Floor",
-     "kind": "box",
-     "c": [
-      18.3,
-      5.63
-     ],
-     "size": [
-      35.8,
-      10.46,
-      0.04
-     ],
-     "z0": -0.02
-    },
     {
      "group": "Ceiling",
      "slot": "M_Wood_Stained",
@@ -391,7 +389,7 @@
      "kind": "box",
      "c": [
       9.0,
-      10.64
+      7.58
      ],
      "size": [
       2.0,
@@ -419,7 +417,7 @@
      "kind": "box",
      "c": [
       15.0,
-      10.64
+      7.58
      ],
      "size": [
       2.0,
@@ -447,7 +445,7 @@
      "kind": "box",
      "c": [
       21.5,
-      10.64
+      7.58
      ],
      "size": [
       2.0,
@@ -475,16 +473,151 @@
      "kind": "box",
      "c": [
       27.5,
-      10.64
+      7.58
      ],
      "size": [
       2.0,
       0.35,
       0.45
      ]
+    },
+    {
+     "group": "GymFloor",
+     "slot": "M_Sport_Floor",
+     "kind": "box",
+     "c": [
+      3.25,
+      5.63
+     ],
+     "size": [
+      5.7,
+      10.46,
+      0.04
+     ],
+     "z0": -0.02
+    },
+    {
+     "group": "GymFloor",
+     "slot": "M_Sport_Floor",
+     "kind": "box",
+     "c": [
+      17.6,
+      4.08
+     ],
+     "size": [
+      23.0,
+      7.36,
+      0.04
+     ],
+     "z0": -0.02
+    },
+    {
+     "group": "GymFloor",
+     "slot": "M_Sport_Floor",
+     "kind": "box",
+     "c": [
+      32.65,
+      5.63
+     ],
+     "size": [
+      7.1,
+      10.46,
+      0.04
+     ],
+     "z0": -0.02
+    },
+    {
+     "group": "BoilerRoom_Walls",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      17.6,
+      7.86
+     ],
+     "size": [
+      23.0,
+      0.2,
+      5.14
+     ],
+     "z0": -0.66
+    },
+    {
+     "group": "BoilerRoom_Walls",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      6.2,
+      9.41
+     ],
+     "size": [
+      0.2,
+      2.9,
+      5.14
+     ],
+     "z0": -0.66
+    },
+    {
+     "group": "BoilerRoom_Walls",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      29.0,
+      9.41
+     ],
+     "size": [
+      0.2,
+      2.9,
+      5.14
+     ],
+     "z0": -0.66
+    },
+    {
+     "group": "BoilerRoom_Floor",
+     "slot": "M_Concrete",
+     "kind": "box",
+     "c": [
+      17.6,
+      9.41
+     ],
+     "size": [
+      22.6,
+      2.9,
+      0.3
+     ],
+     "z0": -0.81
+    },
+    {
+     "group": "BoilerRoom_Ceiling",
+     "slot": "M_Render_White",
+     "kind": "box",
+     "c": [
+      17.6,
+      9.41
+     ],
+     "size": [
+      22.6,
+      2.9,
+      0.15
+     ],
+     "z0": 4.33
+    },
+    {
+     "group": "BoilerRoom_Boiler",
+     "slot": "M_Steel_Paint_Grey",
+     "kind": "box",
+     "c": [
+      16.8,
+      9.9
+     ],
+     "size": [
+      2.2,
+      1.3,
+      1.9
+     ],
+     "z0": -0.51
     }
    ],
-   "evidence": "2GIS 30258560058266093: gym with a painted basketball court, windows high on both long walls, concrete lattice trusses under a boarded wooden ceiling, backboards on blue steel frames at both ends, blue benches along the walls; W 36 m of the hall assumed to be the gym (court 28 m), the E part (lobby/changing rooms) not photographed: partition + door only",
+   "evidence": "2GIS 30258560058266093: gym with a painted basketball court, windows high on both long walls, concrete lattice trusses under a boarded wooden ceiling, backboards on blue steel frames at both ends, blue benches along the walls; W 36 m of the hall assumed to be the gym (court 28 m), the E part (lobby/changing rooms) not photographed: partition + door only | 2026-10-04 finish_E E-06: owner: the 2 N steel doors (A081/A082 rusty door with the flue over it, A084 near the W end) open to the BOILER ROOM at ground level, not the gym: plant room along the N wall x 6.1-29.1, floor at the door sills (FFL-0.51), 3.1 m deep (chimney Q0-10 at x 18.3 y 8.3 inside it; G044 bearing x 24.6-27.6 too); depth not photographed",
    "confidence": "low"
   },
   {
@@ -512,6 +645,19 @@
    "top": "free",
    "confidence": "low",
    "evidence": "2026-10-03 photo batch 2 Q1-03: white flue pipe d 0.2 from the eave down to ~2.5"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_S_E",
+   "edge": 0,
+   "u": [
+    59.75
+   ],
+   "z0": 0.5,
+   "z1": 5.8,
+   "d": 0.1,
+   "confidence": "medium",
+   "evidence": "2026-10-04 finish_E E-09: A091/V2-09: white downpipe at the E end of the S face onto the light-well cover"
   }
  ],
  "window_types": {
@@ -530,6 +676,24 @@
    "surround_proj": 0.0,
    "evidence": "2026-10-03 photo batch 2 Q1-03: small high windows W of the door bay",
    "confidence": "low"
+  },
+  "HU": {
+   "w": 1.0,
+   "h": 1.8,
+   "mullions": [],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-09: A091: tall upper window in the E end pink bay (V2-09: sill ~2 above the light-well cover)"
   }
  }
 }

@@ -1266,7 +1266,9 @@ class Site:
         if pad:
             box(bm, _frame2(P, fwd), -pad[0] / 2, pad[0] / 2, -pad[1] / 2, pad[1] / 2, z - 0.05, z + pad[2])
             zb = z + pad[2] - 0.01                            # plinth starts inside the pad: no shared bottom face
-        if bb:
+        if bb and len(bb) > 3:   # [w, d, h, top_w]: tapered pedestal (frustum) narrowing to top_w at the pole collar
+            _frustum(bm, _frame2(P, fwd), bb[0], bb[1], bb[3], bb[3] * bb[1] / bb[0], zb, z + bb[2])
+        elif bb:
             box(bm, _frame2(P, fwd), -bb[0] / 2, bb[0] / 2, -bb[1] / 2, bb[1] / 2, zb, z + bb[2])
         else:
             _cyl(bm, P, 0.11, z, z + 0.5, 10)                 # cast base
@@ -1442,6 +1444,13 @@ def _railing_unique(bm, points, height, post, rail, spacing, mid_rails):
             box(bm, m, u - post / 2, u + post / 2, -post / 2, post / 2, slope * u, slope * u + height)
         for zr in [height] + [height * (i + 1) / (mid_rails + 1) for i in range(mid_rails)]:
             _sloped_bar(bm, m, run, slope, zr, rail)
+
+
+def _frustum(bm, m, w0, d0, w1, d1, z0, z1):
+    """Closed square frustum in frame m: w0 x d0 at z0 narrowing to w1 x d1 at z1 (centred, sizes in m)."""
+    lo = [bm.verts.new(m @ Vector((sx * w0 / 2, sy * d0 / 2, z0))) for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
+    hi = [bm.verts.new(m @ Vector((sx * w1 / 2, sy * d1 / 2, z1))) for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
+    _close_loops(bm, [lo, hi])
 
 
 def _cyl(bm, p, r, z0, z1, seg):

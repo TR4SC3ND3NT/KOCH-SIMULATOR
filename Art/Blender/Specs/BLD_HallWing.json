@@ -46,9 +46,9 @@
   ]
  ],
  "plinth": {
-  "z_top": 0.6,
+  "z_top": 0.23,
   "proj": 0.04,
-  "evidence": "red brick-tile plinth (070410255 a_030-a_034)",
+  "evidence": "red brick-tile plinth (070410255 a_030-a_034) | 2026-10-04 finish_E E-07: Y3-07 (A076 pnpu, plinth top abs 5.18 +-0.08) applied",
   "confidence": "low"
  },
  "pilasters": [],
@@ -118,6 +118,59 @@
    "surround_proj": 0.0,
    "evidence": "2026-10-03 photo+video pass V1-03: one slit window in the white rendered E wall, sill ~1.9 above the paving",
    "confidence": "low"
+  },
+  "WW2": {
+   "w": 0.45,
+   "h": 1.42,
+   "mullions": [],
+   "transoms": [
+    0.5
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: A076: narrow 2-light window high on the W face (u +-1, z +-0.15)"
+  },
+  "E1": {
+   "w": 1.01,
+   "h": 1.04,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-04 finish_E E-07: moved from BLD_HallEast (R0-01 size)"
+  },
+  "EDW": {
+   "w": 1.4,
+   "h": 2.2,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.15,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: 2-leaf glazed door in the pink recess under the porch (A087, V1-03 1.4 x 2.2)"
   }
  },
  "rows": {
@@ -129,16 +182,34 @@
    "name": "east",
    "windows": [
     {
+     "type": "E1",
+     "u": [
+      0.605
+     ],
+     "sills": [
+      0.82
+     ]
+    },
+    {
+     "type": "EDW",
+     "u": [
+      2.78
+     ],
+     "sills": [
+      0.02
+     ]
+    },
+    {
      "type": "WSL",
      "u": [
-      3.55
+      7.18
      ],
      "sills": [
       1.6
      ]
     }
    ],
-   "evidence": "2026-10-03 photo+video pass V1-03: white rough-render E face with ONE slit window (the 3 x 1.2 x 1.3 windows were not seen); 2-leaf glazed door with a blue plate at its S end in the recessed pink bay (HallEast ED)",
+   "evidence": "2026-10-03 photo+video pass V1-03: white rough-render E face with ONE slit window (the 3 x 1.2 x 1.3 windows were not seen); 2-leaf glazed door with a blue plate at its S end in the recessed pink bay (HallEast ED) | 2026-10-04 finish_E E-07: order S->N from A025/A026 (R0-02): HallEast cover box, plate over the pit, pink band (HallEast N end), E1 at landing rail + 2.08 (y 10.0-11.0 -> wing u 0.1-1.1), then the porch with the door; V1-03's chain (door N jamb +2.92 from E1's N jamb, slit +3.7) re-anchored on that E1 (outer corner residual 1.8 vs 5.5 before)",
    "confidence": "low"
   },
   {
@@ -165,6 +236,23 @@
     }
    ],
    "evidence": "2026-10-03 photo batch 2 Q1-02 + R1-01/V3-10: N face windows (types existed, facade entry was missing)"
+  },
+  {
+   "edge": 3,
+   "name": "west",
+   "windows": [
+    {
+     "type": "WW2",
+     "u": [
+      8.5
+     ],
+     "sills": [
+      1.3
+     ]
+    }
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: A076 (perspective fit along the face, u +-1)"
   }
  ],
  "roof": {
@@ -179,7 +267,7 @@
    "type": "post_canopy",
    "name": "EastPorch",
    "edge": 1,
-   "u0": 0.0,
+   "u0": 1.3,
    "u1": 10.04,
    "depth": 1.5,
    "z0": 2.6,
@@ -194,7 +282,7 @@
    "soffit_slot": "M_Wood_Stained",
    "post_slot": "M_Paint_Maroon",
    "confidence": "low",
-   "evidence": "2026-10-03 photo+video pass R1-01 (A070-A076: 4 cues incl. the HallEast door bearing and Google: no porch roof at the canteen) + V1-03 + V3-10 (video f2): the timber-soffit lean-to on one maroon round post belongs to the hall wing's E side, post at the outer NE corner (~153.8, 20.5), soffit 2.9 +-0.3 above the paving, depth 1.0-2.0 (1.5 taken), running from the recessed door bay to the corner. DISPUTED: V1-03 put the outer corner at y ~15.0 from distances along the face; the wing outline (OSM/Bing/Google roof to y 21-22) wins"
+   "evidence": "2026-10-03 photo+video pass R1-01 (A070-A076: 4 cues incl. the HallEast door bearing and Google: no porch roof at the canteen) + V1-03 + V3-10 (video f2): the timber-soffit lean-to on one maroon round post belongs to the hall wing's E side, post at the outer NE corner (~153.8, 20.5), soffit 2.9 +-0.3 above the paving, depth 1.0-2.0 (1.5 taken), running from the recessed door bay to the corner. DISPUTED: V1-03 put the outer corner at y ~15.0 from distances along the face; the wing outline (OSM/Bing/Google roof to y 21-22) wins | 2026-10-04 finish_E E-07: starts N of window E1 (A072: the window is outside the porch)"
   },
   {
    "type": "wall_boxes",
@@ -225,6 +313,98 @@
    "d": 0.1,
    "confidence": "medium",
    "evidence": "2026-10-03 photo batch 2 Q1-02 | 2026-10-04 re-verification round 2 Y3-06: second downpipe at the NW corner"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "BaseBox_W",
+   "edge": 3,
+   "items": [
+    [
+     5.02,
+     -0.95,
+     10.04,
+     0.87,
+     0.15
+    ]
+   ],
+   "slot": "M_Render_Beige",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: R1-04/A078: rendered insulation base box along the whole W face, 0.59 above the paving at the N end, ~0.3 at the S end (top kept level at FFL-0.08), proj 0.15"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "BlindNiches_W",
+   "edge": 3,
+   "w0": -0.06,
+   "items": [
+    [
+     2.0,
+     1.31,
+     0.35,
+     1.14,
+     0.07
+    ],
+    [
+     5.0,
+     1.31,
+     0.35,
+     1.14,
+     0.07
+    ]
+   ],
+   "slot": "M_Paint_Greige",
+   "confidence": "low",
+   "ue_note": "tall blind niches: make them 0.08 recesses in UE",
+   "evidence": "2026-10-04 finish_E E-07: A076: 2 tall blind niches (z 1.95-3.09 above the paving; u +-1)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Vent_W",
+   "kind": "vent",
+   "edge": 3,
+   "items": [
+    [
+     2.3,
+     2.54,
+     0.25,
+     0.25,
+     0.05
+    ]
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: A076: round grey vent/dome near the NW corner, 3.3 above the paving"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_E_Pink",
+   "edge": 1,
+   "u": [
+    4.73
+   ],
+   "z0": -0.3,
+   "z1": 3.5,
+   "d": 0.1,
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: V1-03 downpipe at the pink -> white change (door jamb + 1.25)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "SignPlate_E",
+   "kind": "sign",
+   "edge": 1,
+   "items": [
+    [
+     2.78,
+     2.25,
+     0.35,
+     0.3,
+     0.02
+    ]
+   ],
+   "slot": "M_Sign_KOCH",
+   "content": "KOCH department plate",
+   "confidence": "medium",
+   "evidence": "2026-10-04 finish_E E-07: blue plate over the glazed door (A087, A006), moved with the door"
   }
  ],
  "storey_note": "2026-10-02 height audit (shadows calibrated on C in Bing/Google/Esri) + photos A070-A077 re-identified (gable end with timber soffit = canteen, C behind on the left): eave ~4.26 +-0.38 m above the N plaza (3 sources); one window row; the porch / low-wall photos belong to the canteen",
@@ -239,6 +419,17 @@
    "slot": "M_Render_Beige",
    "confidence": "low",
    "evidence": "2026-10-03 photo batch 2 Q1-02: beige band round the vent; pink E and W of it"
+  },
+  {
+   "edge": 1,
+   "u0": 1.5,
+   "u1": 4.73,
+   "z0": -0.1,
+   "z1": 2.6,
+   "slot": "M_Render_Pink",
+   "proj": 0.02,
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: pink recessed entrance bay round the door (A087, V1-03: pink -> white at door jamb + 1.25); recess depth not modelled"
   }
  ],
  "slots": {

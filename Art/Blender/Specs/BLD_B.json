@@ -643,23 +643,23 @@
    "u1": 7.65,
    "depth": 2.4,
    "posts_u": [
-    0.7,
-    7.4
+    0.77,
+    7.53
    ],
-   "post_w": 0.48,
-   "post_d": 0.48,
+   "post_w": 0.73,
+   "post_d": 0.73,
    "z_underside": 2.6,
    "roof_type": "flat",
    "roof_thk": 0.3,
    "roof_fall": 0.8,
    "beam_h": 0.0,
    "roof_overhang": 0.25,
-   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses) | 2026-10-04 re-verification round 2 Y2-03: soffit 2.82 above the porch paving (2.90 was measured from the paving, applied over the FFL) | 2026-10-04 walkthrough (A233/A234 vs render): piers are beige brick-tile over a red brick-tile base (~1.15 m above the paving), not dark steel posts",
+   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses) | 2026-10-04 re-verification round 2 Y2-03: soffit 2.82 above the porch paving (2.90 was measured from the paving, applied over the FFL) | 2026-10-04 walkthrough (A233/A234 vs render): piers are beige brick-tile over a red brick-tile base (~1.15 m above the paving), not dark steel posts | 2026-10-04 finish_E E-08: piers 0.73 (R3-12, A234 4.55 courses x 0.16), kept inside the measured roof u 0.4-7.9 (c-c 6.76; photo 7.2 +-0.5); red base top 0.98 above the porch paving 6.63 (Y2-03b, 6.1 courses) -> abs 7.61 = spec 0.64 (B is built at FFL 6.947: scale 1.0286 also scales ffl_z and post_base.z)",
    "confidence": "medium",
    "wedge": true,
    "post_slot": "M_Tile_Beige",
    "post_base": {
-    "z": 1.0,
+    "z": 0.64,
     "slot": "M_Tile_Brick_Red"
    }
   },

@@ -9,7 +9,7 @@
  ],
  "scale": 1.0,
  "status": "uncertain",
- "note": "Low annex in the corner between A_N (west, shared x=35.2) and A_S (south, shared y=22.75), projecting 3 m east of the A_S east facade. Seen only from above.",
+ "note": "Canteen kitchen service block on the east lane (owner 2026-10-04: the canteen's back service entrance for deliveries): white rendered 2-storey-high block flush with A_S's east face, maroon lean-to with a barred delivery cage in front of it (A274/A278).",
  "anchor": {
   "world_xy": [
    158.84,
@@ -23,20 +23,20 @@
  },
  "plinth_m": 0.806,
  "wall_thk": 0.4,
- "storey_m": 3.85,
- "storeys": 1,
- "eave_z": 3.85,
+ "storey_m": 3.1,
+ "storeys": 2,
+ "eave_z": 6.2,
  "ring": [
   [
    35.2,
    22.75
   ],
   [
-   41.2,
+   38.2,
    22.75
   ],
   [
-   41.2,
+   38.2,
    35.6
   ],
   [
@@ -44,12 +44,8 @@
    35.6
   ]
  ],
- "ring_notes": "Google z20 red roof x 35.6..41.6, y ~23..36; A_S shadow on it 2.5 m wide (height step ~5-6 m -> 1 storey); Bing shows it too",
- "cornice": {
-  "z0": 3.65,
-  "z1": 3.85,
-  "proj": 0.03
- },
+ "ring_notes": "2026-10-04 finish_E E-03: closed block x 35.2-38.2 (E face flush with A_S's E face: in A278 the white wall starts right at A_S's NE corner pier, which a face 3 m further east would hide); x 38.2-41.2 (Google red roof) is the maroon lean-to",
+ "cornice": null,
  "plinth": {
   "z_top": 0.5,
   "proj": 0.03,
@@ -63,7 +59,7 @@
    "0": [
     [
      -1.0,
-     3.0
+     4.0
     ]
    ]
   },
@@ -71,16 +67,11 @@
  },
  "pilasters": [],
  "window_types": {
-  "W": {
-   "w": 1.97,
-   "h": 1.47,
-   "mullions": [
-    0.33,
-    0.67
-   ],
-   "transoms": [
-    0.68
-   ],
+  "WH": {
+   "w": 0.45,
+   "h": 0.57,
+   "mullions": [],
+   "transoms": [],
    "reveal": 0.12,
    "surround": [
     0,
@@ -89,8 +80,8 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "A_S west 3rd-floor windows 86 x 64 px in the rectified pano (0.02289 m/px): 1.97 x 1.47 m; 3 lights + top transom (082337 f0.5, pano intro)",
-   "confidence": "medium"
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-03: A278 crop: 4 small high windows, 0.57 tall (scale: block eave 5.9 m above the lane = 0.61 x A_S eave at the same depth); width +-0.15"
   }
  },
  "rows": {
@@ -102,68 +93,91 @@
    "name": "east",
    "windows": [
     {
-     "type": "W",
+     "type": "WH",
      "u": [
-      3.2,
-      6.4,
-      9.6
+      2.0,
+      4.0,
+      6.1,
+      8.3
      ],
-     "rows": [
-      "F1"
+     "sills": [
+      3.8
      ]
     }
    ],
-   "status": "assumed",
-   "confidence": "low"
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-03: A278 (perspective fit of the eave line, u +-0.5); no windows under the lean-to"
   },
   {
    "edge": 2,
    "name": "north",
-   "windows": [
-    {
-     "type": "W",
-     "u": [
-      3.0
-     ],
-     "rows": [
-      "F1"
-     ]
-    }
-   ],
-   "status": "assumed",
-   "confidence": "low"
+   "windows": [],
+   "evidence": "2026-10-04 finish_E E-03: the assumed N window removed (no photo)"
   }
  ],
  "roof": {
-  "type": "hip",
-  "pitch": 15,
-  "overhang": 0.4,
-  "evidence": "Google z20 (plan only)",
-  "confidence": "low"
+  "type": "shed",
+  "high_edge": 3,
+  "pitch": 10,
+  "overhang": 0.3,
+  "confidence": "low",
+  "evidence": "2026-10-04 finish_E E-03: eave + white gutter along the E face (A278), roof red (Google z20); slope not visible: mono-pitch falling east against A_N"
  },
  "attachments": [
   {
-   "type": "post_canopy",
+   "type": "shed",
+   "name": "ServiceLeanTo",
    "edge": 1,
-   "u0": 0.3,
-   "u1": 7.5,
-   "depth": 2.4,
-   "z0": 2.3,
-   "z1": 2.45,
-   "fascia_h": 0.15,
-   "fascia_t": 0.04,
-   "post_w": 0.1,
-   "post_in": 0.1,
-   "posts_u": [
-    0.6,
-    3.9,
-    7.2
+   "u0": 0.0,
+   "u1": 11.6,
+   "depth": 3.0,
+   "z_high": 3.23,
+   "z_low": 3.03,
+   "roof_only": true,
+   "roof_slot": "M_Steel_Paint_Maroon",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-03: maroon profiled-sheet lean-to from A_S's NE corner along the block (A278: roof 2.95 above the lane at the wall, 2.75 at the front by the parked minivan, 1.6 m); depth 3.0 (A274: front 3 m E of A_S's face, +-0.7); length to the ducts +-1"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "KitchenDucts",
+   "edge": 1,
+   "items": [
+    [
+     12.0,
+     0.28,
+     0.35,
+     5.4,
+     0.35
+    ],
+    [
+     12.45,
+     0.28,
+     0.35,
+     5.4,
+     0.35
+    ]
    ],
-   "slot": "M_Paint_Maroon",
-   "soffit_slot": "M_Sheet_Brown",
-   "post_slot": "M_Steel_Paint_Dark",
-   "evidence": "lean-to storage canopy of maroon profiled sheet on black steel posts along the east face (A278, A274; by eye against A_S's rows and a parked car 1.52 m); wall top about at A_S's 2nd-row sill -> eave 3.85",
-   "confidence": "low-medium"
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-03: 2 galvanised kitchen exhaust ducts up the E face to the eave near its N end (A278)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "ServiceDoor_E",
+   "edge": 1,
+   "items": [
+    [
+     6.0,
+     0.43,
+     1.5,
+     2.3,
+     0.05
+    ]
+   ],
+   "slot": "M_Steel_Paint_Grey",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-03: delivery door inside the cage (owner: service entrance; hidden by the tarps/cage in A278: position assumed)"
   }
  ],
  "ffl_z": 5.47,
@@ -236,12 +250,12 @@
      -71.856
     ],
     [
-     201.058,
-     -72.003
+     198.061,
+     -71.856
     ],
     [
-     201.682,
-     -59.269
+     198.686,
+     -59.122
     ],
     [
      195.689,
@@ -274,12 +288,13 @@
    ],
    "z": 5.17,
    "blend": 0.0,
-   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows | 2026-09-28 terrain audit: grown 0.10 m across the walls shared with the other A blocks (clipped to the block outline inset 0.05) - the 0.1 m strip of free ground left between two inside pads rose to the DEM (6.1-6.3) above the plinths inside the shared walls",
+   "evidence": "2026-09-28 0c: ground inside the walls held 0.3 m under the ground-floor level (hard edge 5 cm inside the outer wall face, so the step is hidden in the wall) - the DEM ran 0.1-0.6 m above the slab inside the box and showed through doors/windows | 2026-09-28 terrain audit: grown 0.10 m across the walls shared with the other A blocks (clipped to the block outline inset 0.05) - the 0.1 m strip of free ground left between two inside pads rose to the DEM (6.1-6.3) above the plinths inside the shared walls | 2026-10-04 finish_E E-03: east edge moved to the new block face (x 38.15 local)",
    "confidence": "low"
   }
  ],
  "slots": {
-  "Wall": "M_Render_Shuba_Grey"
+  "Wall": "M_Render_White"
  },
- "slots_note": "2026-10-04 walkthrough (A259-A279): light grey textured (shuba) render with maroon bands, like the rest of A"
+ "slots_note": "2026-10-04 walkthrough (A259-A279): light grey textured (shuba) render with maroon bands, like the rest of A",
+ "wall_material": "M_Render_White"
 }

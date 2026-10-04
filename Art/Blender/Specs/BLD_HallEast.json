@@ -88,26 +88,7 @@
   {
    "edge": 1,
    "name": "east_passage",
-   "windows": [
-    {
-     "type": "E1",
-     "u": [
-      7.6
-     ],
-     "sills": [
-      0.37
-     ]
-    },
-    {
-     "type": "ED",
-     "u": [
-      9.7
-     ],
-     "sills": [
-      0.02
-     ]
-    }
-   ],
+   "windows": [],
    "evidence": "hall E end (070410255 frames a_052-a_055 from the upper landing, a_038..a_046, still 081834396 from C's steps): one continuous E face with the wing (map owner), flush at world x ~153.2 (f55 overlay + Google z20 roof end x ~152.7); tall pink/beige block whose roof falls north, stepping down to a 1-storey part with a window and a glazed door under a flat canopy next to the ramp head; window and door positions from a_052 (u +-0.5 m)",
    "confidence": "low"
   }
@@ -120,31 +101,18 @@
   "evidence": "hall E end (070410255 frames a_052-a_055 from the upper landing, a_038..a_046, still 081834396 from C's steps): one continuous E face with the wing (map owner), flush at world x ~153.2 (f55 overlay + Google z20 roof end x ~152.7); tall pink/beige block whose roof falls north, stepping down to a 1-storey part with a window and a glazed door under a flat canopy next to the ramp head; high side ~7.0 above FFL at the S (level with the hall ridge), low 3.3 at the N door",
   "confidence": "low"
  },
- "attachments": [
+ "attachments": [],
+ "cladding": [
   {
-   "type": "canopy",
    "edge": 1,
-   "u0": 9.0,
-   "u1": 10.6,
-   "depth": 1.3,
-   "z0": 2.95,
-   "z1": 3.1,
-   "evidence": "flat canopy over the E door (a_052, f55)",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall_sign",
-   "name": "NamePlate_E",
-   "edge": 1,
-   "u0": 9.525,
-   "u1": 9.875,
-   "z0": 2.45,
-   "z1": 2.85,
-   "t": 0.02,
-   "slot": "M_Sign_KOCH",
-   "content": "KOCH department plate (the real one carries the institution name)",
-   "evidence": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): blue name plate over the glazed E door (A006)",
-   "confidence": "medium"
+   "u0": 9.6,
+   "u1": 11.26,
+   "z0": 0.36,
+   "z1": 3.7,
+   "slot": "M_Render_Pink",
+   "proj": 0.02,
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-07: pink band at the high block's N end, N of the plate over the pit (A024/A025)"
   }
  ]
 }

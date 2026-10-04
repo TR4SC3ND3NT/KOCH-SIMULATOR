@@ -1749,10 +1749,10 @@
    "span": 1.01,
    "thk": 1.1,
    "depth": 1.0,
-   "height": 1.65,
+   "height": 1.82,
    "crown_thk": 0.73,
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m | 2026-10-04 finish_E E-12: owner: people taller than ~1.82 must duck -> clear height 1.82 (A147 2.0 / A217 1.49 bracket it)"
   },
   {
    "type": "hedge_arch",
@@ -3566,17 +3566,18 @@
    "globe_d": 0.38,
    "top_globe": true,
    "base_box": [
-    0.35,
-    0.35,
-    1.0
+    0.37,
+    0.37,
+    1.1,
+    0.15
    ],
    "pad": [
-    0.95,
-    0.95,
-    0.1
+    0.7,
+    0.7,
+    0.07
    ],
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes (top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a ~0.95 x 0.10 m pad (A108-A111)"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes (top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a ~0.95 x 0.10 m pad (A108-A111) | 2026-10-04 finish_E E-13: R1-12 (A108 vs 0.405 slab modules): tapered pedestal 0.37 -> 0.15 at the collar 1.1 m up, pad 0.70 x 0.07"
   },
   {
    "type": "slab",
@@ -4721,8 +4722,8 @@
    "name": "Pergola_South",
    "line": [
     [
-     99.934,
-     -45.532
+     100.458,
+     -45.559
     ],
     [
      150.192,
@@ -4734,7 +4735,7 @@
    "post_h": 2.3,
    "apex_h": 2.9,
    "tube": 0.05,
-   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay: 19 arches, 2.796 m apart",
+   "evidence": "Owner clip 081904575 t5.5-t8.5 (2026-09-24): thin maroon steel tube arches over the south walk, pointed top, legs at both walk edges (one against the rubble retaining wall, one at the lawn edging), arches ~2.5 m apart along the walk, longitudinal ties at the apex and the shoulders, vines on top; legs ~2.2 m, apex ~2.9 m from the bench/person scale. Extent assumed the full walk (x 100-152.5): arches seen at the east end by the stair (t7.5-8.5) and far along the walk to the west (t5.5). Legs between the boulder-wall face (wall line -0.25) and the south face of the north hedge/lawn edge (-0.05 clear), so they stand on the paving: line (100,-44.16)->(152.5,-46.76), 2.0 wide. | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | owner 2026-09-28 (screenshot 58): the green strip between B's light-well box and the boulder wall is wider, so the wall, walk, pergola, benches and bins moved 0.55 m north (garden paths follow via zone_garden.py) | 2026-09-28 stair move (owner 64/65) collision fix: east end stops at the stair's west bed | owner clip 081904575 t6.0-7.5 (2026-09-29 measure, garden_pergola.py): first arch 2.25 m west of the walk end; pitch 3.1 m from the 0.40 m tile rows (A152, A172, A190, 2026-10-02); benches in every 2nd bay: 19 arches, 2.796 m apart | 2026-10-04 finish_E E-04: first arch E of the new stair's bottom riser",
    "confidence": "medium",
    "gaps": []
   },
@@ -5387,92 +5388,13 @@
      0.719
     ]
    ],
-   "height": 0.85,
-   "thk": 0.3,
-   "cap_proj": 0.03,
+   "height": 1.6,
+   "thk": 0.2,
+   "cap_proj": 0.0,
    "material": "brick",
-   "slot": "M_Tile_Brick_Red",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "slab",
-   "name": "HallBed_BoxW_Soil",
-   "ring": [
-    [
-     88.787,
-     0.981
-    ],
-    [
-     97.849,
-     0.723
-    ],
-    [
-     97.729,
-     -3.475
-    ],
-    [
-     88.667,
-     -3.218
-    ]
-   ],
-   "z0": 5.25,
-   "z1": 6.1,
-   "material": "stone",
-   "slot": "M_Ground_Grass",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "HallBed_BoxW_Shrub_0",
-   "pos": [
-    90.117,
-    -1.868
-   ],
-   "z": 6.1,
-   "height": 1.0,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.1,
-   "shape": "round",
-   "species": "rose",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "HallBed_BoxW_Shrub_1",
-   "pos": [
-    93.275,
-    -0.638
-   ],
-   "z": 6.1,
-   "height": 1.0,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.1,
-   "shape": "round",
-   "species": "rose",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "HallBed_BoxW_Shrub_2",
-   "pos": [
-    96.358,
-    -2.046
-   ],
-   "z": 6.1,
-   "height": 1.0,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.1,
-   "shape": "round",
-   "species": "rose",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)",
-   "confidence": "low"
+   "slot": "M_Block_RockFace_Red",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-04 finish_E E-14: P0-03/A011: red concrete-block service enclosure, 8 courses of 0.20 = 1.6 m, no planter (pipes inside)",
+   "confidence": "medium"
   },
   {
    "type": "wall",
@@ -6020,6 +5942,314 @@
    "arm_span": 0.57,
    "confidence": "medium",
    "evidence": "2026-10-03 video pass V2-01: 2-globe black cast lamp (flared foot, no pad) on the garden east lawn ~0.35 m W of the edging; the 10-03 deletion of Lamp_EastWalk_0 (2.3 m away) stands"
+  },
+  {
+   "type": "boxes",
+   "name": "Pergola_WestStair",
+   "items": [
+    [
+     99.801,
+     -45.596,
+     -2.8,
+     1.0,
+     2.72,
+     0.445,
+     5.1
+    ],
+    [
+     99.667,
+     -45.764,
+     -2.8,
+     0.75,
+     2.37,
+     0.62,
+     5.1
+    ],
+    [
+     99.532,
+     -45.973,
+     -2.8,
+     0.5,
+     1.94,
+     0.795,
+     5.1
+    ],
+    [
+     99.397,
+     -46.182,
+     -2.8,
+     0.25,
+     1.51,
+     0.97,
+     5.1
+    ]
+   ],
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: corner (pyramid) stair, 4 risers 0.175 to a landing at walk +0.70 against the red wall; each lower step longer to the N (N ends 2.72/2.37/1.94/1.51 m from the boulder wall, 139 px/m) and deeper to the E (treads ~0.25: the wall foot is only 0.5-1.0 behind the bottom riser); connection from the landing to the W passage not visible"
+  },
+  {
+   "type": "box",
+   "name": "Pergola_WestWall",
+   "center": [
+    99.204,
+    -45.01
+   ],
+   "dir_deg": 87.2,
+   "size": [
+    4.4,
+    0.25,
+    1.46
+   ],
+   "z0": 5.1,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: red brick-effect tile wall across the walk end, top 1.19 above the walk (0.49 above the landing), N end ~1.4 m into the bed (A156)"
+  },
+  {
+   "type": "box",
+   "name": "Pergola_WestWall_Coping",
+   "center": [
+    99.239,
+    -45.012
+   ],
+   "dir_deg": 87.2,
+   "size": [
+    4.5,
+    0.33,
+    0.05
+   ],
+   "z0": 6.56,
+   "material": "metal",
+   "slot": "M_Sheet_Grey",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: grey corrugated sheet coping"
+  },
+  {
+   "type": "box",
+   "name": "Pergola_WestBlockWall",
+   "center": [
+    97.331,
+    -44.918
+   ],
+   "dir_deg": 87.2,
+   "size": [
+    4.6,
+    0.2,
+    2.4
+   ],
+   "z0": 5.1,
+   "material": "stone",
+   "slot": "M_Block_Grey",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: grey concrete-block wall (0.20 courses) behind and >= 0.8 m above the red wall; distance behind it not measurable (2 m assumed)"
+  },
+  {
+   "type": "box",
+   "name": "Pergola_WestBlockWall_Pier",
+   "center": [
+    97.422,
+    -46.124
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.4,
+    0.4,
+    2.5
+   ],
+   "z0": 5.1,
+   "material": "brick",
+   "slot": "M_Tile_Brick_Red",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: red brick pier in the block wall above the landing"
+  },
+  {
+   "type": "box",
+   "name": "Pergola_WestLedge",
+   "center": [
+    99.651,
+    -43.53
+   ],
+   "dir_deg": -2.8,
+   "size": [
+    0.5,
+    1.4,
+    0.32
+   ],
+   "z0": 5.17,
+   "material": "stone",
+   "slot": "M_Concrete",
+   "confidence": "low",
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: concrete strip at the red wall foot N of the stair, 0.12 above the walk (gas pipe on it)"
+  },
+  {
+   "type": "boxes",
+   "name": "Pergola_GasPipe",
+   "material": "metal",
+   "slot": "M_Paint_Yellow",
+   "confidence": "low",
+   "ue_note": "yellow gas pipe d 0.09 with an S-bend",
+   "items": [
+    [
+     99.754,
+     -43.485,
+     87.2,
+     1.3,
+     0.09,
+     0.09,
+     5.49
+    ],
+    [
+     99.894,
+     -44.193,
+     -2.8,
+     0.15,
+     0.09,
+     0.19,
+     5.39
+    ],
+    [
+     100.219,
+     -44.208,
+     -2.8,
+     0.6,
+     0.09,
+     0.09,
+     5.39
+    ],
+    [
+     100.478,
+     -45.047,
+     87.2,
+     1.65,
+     0.09,
+     0.09,
+     5.39
+    ]
+   ],
+   "evidence": "2026-10-04 finish_E E-04: A155/A189/A156 (3x crops, 0.175 risers from the 0.10 tile courses, R2-03): W end of the pergola walk: yellow gas pipe d 0.09 along the ledge, S-bend down onto the walk, then S in front of the bottom riser (15-16 px = 0.09)"
+  },
+  {
+   "type": "boxes",
+   "name": "HallBed_BoxW_Pipes",
+   "material": "metal",
+   "slot": "M_Steel_Paint_Maroon",
+   "confidence": "low",
+   "items": [
+    [
+     93.626,
+     0.543,
+     -1.63,
+     8.4,
+     0.25,
+     0.25,
+     7.1
+    ],
+    [
+     89.578,
+     0.658,
+     -1.63,
+     0.25,
+     0.25,
+     1.85,
+     5.25
+    ],
+    [
+     97.624,
+     0.429,
+     -1.63,
+     0.25,
+     0.25,
+     1.85,
+     5.25
+    ]
+   ],
+   "evidence": "2026-10-04 finish_E E-14: A011: maroon heating pipes d ~0.25 inside the enclosure, rising above its top (~2.0) along the hall S wall"
+  },
+  {
+   "type": "boxes",
+   "name": "PipeBridge_Steel",
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "low",
+   "items": [
+    [
+     98.306,
+     -7.243,
+     88.37,
+     15.8,
+     0.25,
+     0.25,
+     8.75
+    ],
+    [
+     98.403,
+     -3.845,
+     -1.63,
+     0.12,
+     0.12,
+     3.5,
+     5.25
+    ],
+    [
+     98.084,
+     -15.04,
+     -1.63,
+     0.12,
+     0.12,
+     3.5,
+     5.25
+    ]
+   ],
+   "evidence": "2026-10-04 finish_E E-14: P0-06/A011/A023: dark steel pipe d ~0.25, ~3.5 m up, from the hall S wall near its W end across the walk on posts (strut at the hall); x and S end +-2 m"
+  },
+  {
+   "type": "boxes",
+   "name": "PipeBridge_Insulated",
+   "material": "metal",
+   "slot": "M_Steel_Galv",
+   "confidence": "low",
+   "items": [
+    [
+     87.869,
+     -1.394,
+     88.37,
+     6.1,
+     0.3,
+     0.3,
+     7.95
+    ],
+    [
+     88.301,
+     1.495,
+     -1.63,
+     0.7,
+     0.3,
+     0.3,
+     7.95
+    ],
+    [
+     87.683,
+     -4.39,
+     -1.63,
+     0.16,
+     0.16,
+     2.85,
+     5.25
+    ],
+    [
+     87.883,
+     -4.396,
+     -1.63,
+     0.16,
+     0.16,
+     2.85,
+     5.25
+    ]
+   ],
+   "evidence": "2026-10-04 finish_E E-14: A011: aluminium-clad pipe d ~0.3 at ~2.7 m from the hall's W end S past the enclosure, dropping to the ground in two risers"
   }
  ],
  "ground": "pads",
