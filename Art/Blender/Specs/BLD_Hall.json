@@ -289,9 +289,10 @@
  ],
  "ffl_note": "2026-10-02 sports-zone photo diff, 2nd pass (scale: 1.77 m person, 0.099 m tile course): floor at the HallEast landing level (glazed E door at 5.35, A006); eave/ridge kept at their absolute height",
  "slots": {
-  "Plinth": "M_Tile_Brick_Maroon"
+  "Plinth": "M_Tile_Brick_Maroon",
+  "Wall": "M_Render_Shuba_Grey"
  },
- "slots_note": "2026-10-04 walkthrough (A016/A017 S, A079-A082 N): the hall plinth is crimson/magenta painted brick-tile, not the orange-red tile of A/C",
+ "slots_note": "2026-10-04 walkthrough (A016/A017 S, A079-A082 N): the hall plinth is crimson/magenta painted brick-tile, not the orange-red tile of A/C | 2026-10-04 walkthrough (A082 solved camera, A016): the base wall is light grey textured shuba render (pink fields stay claddings)",
  "ground_slab_ring": [
   [
    0.4,
