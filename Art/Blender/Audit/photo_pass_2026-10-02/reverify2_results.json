@@ -1,0 +1,1099 @@
+[
+ {
+  "zone": "Block C interior, round 2 (F1 halls/lobby/vestibule/E stair hall, rooms 102/204, WC alcove, F3 hall, F1 video). Checked against build_verify2.blend (856689c+9a4ca49), read-only. Scratch: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/verify2_0/ (notes.txt; pnp.py, bp2.py, proj.py, rect.py, prof.py, ray2.py, faces.py, verts.py, dump.py -> objs.json; r/ renders + sbs; c/ crops). Used 5 Cycles renders. Round-1 fixes re-checked and look right: no F1 plants, F3_Plant_0..2 present, split AC only in R105, N5/S5 hinges on the E jamb (CC010), WC window 0.50, E-stair CCTV within 20 px in CC010, black closet doors, terrazzo landing tops and pink treads, closet clear of the exit frame (about 0.15 m in CC010).",
+  "viewpoints": [
+   {
+    "name": "F1 hall E part looking E to the E stair hall (12 mm)",
+    "photos": [
+     "CC010"
+    ],
+    "camera": "PnP with 10 points (exit frame TL/TR/BR, N5 + S5 frame corners), f free 1565 (f0 1416), error 9.6 px. C-local (19.93,10.69,1.61), yaw 7.6, pitch -4.8",
+    "render": "r/CC010.png, r/CC010_sbs.jpg, r/CC010_z1.jpg, r/CC010_hi.png, r/CC010_door.jpg",
+    "verdict": "minor_differences",
+    "notes": "Doors, blue panels, fire cabinet, flight 1, landing guard and exit door all line up. The stair-front corner back-projects to x 26.13-26.16 (model 26.05), so the N5 frame is 1.55 +- 0.1 m from the corner (model 1.46). This does not support deferred Q3-24 (1.07). The cross beam is at x 22.68-23.27 with underside 2.72, while the model has it at 21.8-22.2 / 2.66 (Y0-b). Beyond the beam the ceiling is about 2.95 (LED square size check) and there is no downstand at the stair front, which settles X0-09. There is a SE-corner fin and a lintel over the exit bay (Y0-d), and a low white wall with a radiator in front of the N exit leaf (Y0-e). The flight-2 soffit edge is about 0.09 m above the model (Y0-n). No wall lamps at N5/S5 (Y0-k)."
+   },
+   {
+    "name": "F1 E stair hall from the W, exit door and flight 1",
+    "photos": [
+     "CI013",
+     "CI014"
+    ],
+    "camera": "PnP with 8 points (exit TL/TR/BR + 5 flight-1 step corners), f 2620, error 17 px. C-local (23.67,9.00,1.71). Biased: the S floor line back-projects to y 7.85-8.2, so the result is only qualitative",
+    "render": "r/CI013.png, r/CI013_z.jpg, r/CI013_z2.jpg",
+    "verdict": "minor_differences",
+    "notes": "Flight 1 matches: 0.07 half bottom riser, 0.33 treads, double balustrade. The flight-2 string is white (model side faces are M_Paint_White; the dark look in the render comes from the area light), but every flight soffit in the model is granite (Y0-c). The SE fin, the lintel over the exit bay (z ~2.70) and the low white wall with a radiator in front of the N exit leaf are visible, and also show in CI015."
+   },
+   {
+    "name": "F1 hall at the WC jog looking N (12 mm)",
+    "photos": [
+     "CC011"
+    ],
+    "camera": "PnP with 11 points (N4, WC5, WC4 frames), f 1593, error 8.7 px. C-local (16.32,9.22,1.43), yaw 98",
+    "render": "r/CC011.png, r/CC011_sbs.jpg, r/CC011_z.jpg",
+    "verdict": "minor_differences",
+    "notes": "WC4 sits on the white wall with blue above it. The jog face and the recessed wall are blue from the jog to N4. Jog corner within 0.08 m, N2 E jamb OK. The blue over WC4 is only as wide as the frame (model 0.10 past each jamb), and the blue E of the 104 frame ends 0.03-0.08 past it (model 0.22) (Y0-j). The model lamp N2 is not in the photo (Y0-k)."
+   },
+   {
+    "name": "Vestibule storefront from inside + lobby looking S",
+    "photos": [
+     "CC014",
+     "CI002"
+    ],
+    "camera": "CC014: single-view rectangle fit (rect.py, f 1540-1620, max error 66 px). CI002: frontal ratios",
+    "render": "none (single-view metrology)",
+    "verdict": "mismatch",
+    "notes": "The storefront fills the vestibule from side wall to side wall, and the lobby walls (radiator wall W, cooler wall E) run straight to it with no piers. Head/width is 0.678 (CC014) and 0.633 (CI002); transom underside/width is 0.50 in both. A cross bulkhead in front of the glazing has its underside about at the head. In the model the frame is 3.76 wide with the head at 3.29, and the lobby ceilings cut through it at 2.90 (Y0-f)."
+   },
+   {
+    "name": "Lobby W wall to the hall corner (12 mm)",
+    "photos": [
+     "CC012"
+    ],
+    "camera": "qualitative",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "Order radiator | vending | coffee | charge kiosk is OK. The photo shows a clean corner, but the model leaves a 0.2 x 0.2 full-height notch there (Y0-g)."
+   },
+   {
+    "name": "Room 102 E end wall (man 1.77 at the wall) + frontal",
+    "photos": [
+     "CI017",
+     "CI018",
+     "CI025",
+     "CI026"
+    ],
+    "camera": "man scale 671 px/m at his depth (~638 at the wall); CI025 frontal ratios",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "The end window has 3 lights (lining w/h 1.35, type W 1.32), as modelled. The man scale puts the lining at about 1.5 tall, sill 1.08-1.15, head 2.62-2.69 (+-0.07). That weakly supports deferred Q3-09 but does not settle it. The top bulkhead on the end wall is sage, while the model is white (Y0-h). There is a radiator under the end window that the model lacks (Y0-i). Curtains are drawn to the N side; that is movable state, so no finding."
+   },
+   {
+    "name": "Room 102 door wall frontal (looking N)",
+    "photos": [
+     "CI019",
+     "CI020"
+    ],
+    "camera": "PnP on the 4 door-frame corners, f fixed 2833, error 5.8 px. C-local (25.22,2.38,0.90)",
+    "render": "r/CI019.png, r/CI019_sbs.jpg",
+    "verdict": "minor_differences",
+    "notes": "The board-wall corner projects to x 711 against the photo edge at 704, so the board wall position is OK. A pilaster 0.10-0.17 wide with its front at y 7.6-7.8 (0.3-0.5 deep) sits in the board/door corner; the model has none (Y0-i). Door, switch, bin and pipe OK. The camera at 0.90 m sits inside the model's front desk; the desk layout follows the owner rule (Q3-13) and was not judged."
+   },
+   {
+    "name": "Lab 204 door wall frontal + end wall",
+    "photos": [
+     "CR013",
+     "CR011",
+     "CR004"
+    ],
+    "camera": "planar door-wall ratio (frame 0.99 = 1113 px)",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "The same corner pilaster face as in 102 (Y0-i). DoorBox OK. The end wall is sage with a 3-light window with blinds and a radiator under it; the model has no end-wall radiator (Y0-i). The top bulkhead is sage (Y0-h). CCTV at the SE corner OK."
+   },
+   {
+    "name": "F1 WC (E) sink alcove frontal",
+    "photos": [
+     "CW004",
+     "CW005"
+    ],
+    "camera": "planar: alcove clear width 1.20 = 617 px",
+    "render": "none",
+    "verdict": "matches",
+    "notes": "Mirror 1.09 x 0.60 at z 1.225-1.82 (model 1.10 x 0.60, 1.21-1.81), centred. Soap dispenser 0.98-1.22 (model 0.95-1.20). Two pedestal basins with taps about 0.61 apart (model 0.58), bin between them. All within 0.03."
+   },
+   {
+    "name": "F1 E stair to lobby walk (video, previously labelled F2)",
+    "photos": [
+     "080443026 k_001-k_008"
+    ],
+    "camera": "video, qualitative",
+    "render": "none",
+    "verdict": "matches",
+    "notes": "This is F1, not F2: the lobby kiosks are in view. S5 has blue only above the door and white wall to the stair; N5 has blue to the stair corner with the red fire cabinet; radiators and oak benches on the S wall. All as modelled."
+   },
+   {
+    "name": "F3 hall N wall (12 mm, camera ~0.8 m high)",
+    "photos": [
+     "B030",
+     "B029"
+    ],
+    "camera": "4-point planar PnP on the right door; it cannot tell N1 from N2",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "Blue above each door only; radiator with a white riser pipe between two doors. The left frame is not in the N-wall plane, so the camera is ambiguous and no metrology was used. No finding."
+   },
+   {
+    "name": "F3 W stair guard (video)",
+    "photos": [
+     "052716931 f43-f54"
+    ],
+    "camera": "video, qualitative",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "The guard with 3 floor plants matches the round-1 fix. The plants stand in the S (left) half of the guard; their y could not be measured. The flight above F3 is deferred V3-04/05 and was not re-proposed."
+   }
+  ],
+  "findings": [
+   {
+    "id": "Y0-a",
+    "title": "Closet side walls under flight 2 are sloped parallelograms; the E one cuts through the F1 slab into the basement hall",
+    "spec": "Scripts/Geo/zones/zone_c_v6.py build(): f1.append roof_plane Closet_{side}_Side (thk soff(y_c)+0.1) -> INT_C_F1 Closet_E_Side / Closet_W_Side",
+    "current": "Vertices (verts.py): bottom z -0.12 at y_c and -1.054 at y_l. E side x 27.6-27.72, y 10.92-12.94: below the BH ceiling (-0.21) for y 11.12-11.715, up to 0.28 m into the basement hall (BH_Ceiling y 5.475-11.715). W side x 1.68-1.80 is buried in slab/earth",
+    "proposed": "Replace each side with (1) an int_wall from (xo - sg*0.06, y_c) to (xo - sg*0.06, y_l), thk 0.12, z0 = zb-0.10, z1 = soff(y_l)-0.02 = 1.503; (2) a roof_plane wedge with the same ring and top z as now (2.437 at y_c, 1.503 at y_l) and thk 0.954 (= soff(y_c)-soff(y_l)+0.02), so its bottom is 1.483 at y_c and 0.549 at y_l, inside the wall. No builder change",
+    "photos": [
+     "CI013",
+     "CC010"
+    ],
+    "method": "Mesh vertices from build_verify2.blend (verts.py) and bbox overlap with INT_C_Basement BH_Ceiling/BH_Wall_N (objs.json)",
+    "error": "exact (geometry)",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-b",
+    "title": "F1 E hall cross beam sits at x 22.68-23.27 (over the P4 partition line) with underside 2.72; model 21.8-22.2 / 2.66. Settles deferred X0-09: no downstand at the stair front",
+    "spec": "zone_c_v6.py plan(): Hall_Bulkhead_E (xb = FRONT_E - 4.05, width 0.40, z COR_BEAM_Z 2.66) -> INT_C_F1 F1_Hall_Bulkhead_E (F2-F4 use the same rule; not photographed)",
+    "current": "F1_Hall_Bulkhead_E x 21.80-22.20, y 8.3-14.1, z 2.66-3.00",
+    "proposed": "E bulkhead x 22.68-23.27 (centre 22.98 = FRONT_E - 3.07, width 0.59), underside 2.72, top 3.00. W bulkhead unchanged (round 1 matched). Stair-front ceiling stays flat (2.95-3.00); X0-09 needs no new bulkhead",
+    "photos": [
+     "CC010"
+    ],
+    "method": "CC010 PnP (9.6 px). The beam ends on the N wall back-project onto y 14.1: front face x 22.68 (top 2.975, bottom 2.716), far bottom edge x 23.27 (z 2.73). Gradient edges at u 2700 checked against the projected lines: 985 vs 981 and 1298 vs 1285 px. Ceiling beyond: lit LED square 0.607 at z 3.0 vs 0.564 at z 2.9; stair-front corner top z 2.93-2.96",
+    "error": "x +-0.12, width +-0.1, z +-0.05",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-c",
+    "title": "Flight soffits (waist undersides) use the granite tread slot; photos show white painted soffits",
+    "spec": "Scripts/Blender/build_site.py b_stairs_run (side_slot handling); affects every stairs_run with soffit_thk + side_slot from zone_c_v6.py stair_storey (StairW/E_F#_Flight1/2)",
+    "current": "Only the two profile faces get side_slot (M_Paint_White). The underside face (normal (0,-0.44,-0.9), area 5.0 on StairE_F1_Flight2) and the bottom end face keep M_Granite_Pink",
+    "proposed": "When side_slot and soffit_thk are set, also set material_index 1 (side_slot) on the waist underside quad (the face from prof[-1] to prof[0], creation index k-1) and on the flat bottom end face (prof[-2] to prof[-1]). Treads and risers stay granite",
+    "photos": [
+     "CI013",
+     "CI014",
+     "CC010",
+     "CI015"
+    ],
+    "method": "faces.py per-face normal/material dump of GBS_INT_C_F1_StairE_F1_Flight2. ray2.py: an upward ray under flight 2 hits M_Granite_Pink. Photo soffits are white",
+    "error": "-",
+    "confidence": "high",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y0-d",
+    "title": "F1 E stair hall SE corner: a full-height white fin along the S wall, and a lintel downstand over the exit-door bay",
+    "spec": "zone_c_v6.py build() F1 E stair hall fittings (INT_C_F1), new elements",
+    "current": "Nothing: Hall_S_East runs to x 28.95; slab soffit 3.05 over the bay",
+    "proposed": "F1_StairE_SFin box x 28.10-28.95, y 8.30-8.51, z 0-3.05, white. F1_StairE_ExitLintel box x 28.70-28.95, y 8.51-10.80, z 2.70-3.05, white (lintel depth not measured)",
+    "photos": [
+     "CC010",
+     "CI013",
+     "CI015"
+    ],
+    "method": "Fin W-face width: 35 px at 170 px/m (CC010) and 104 px at 494 px/m (CI013), both 0.21. Fin depth from the N face's apparent width: 37 px at a 13.6 deg view (CC010) and 41 px at 5.3 deg (CI013) give 0.76-0.9. Lintel edge on the end wall back-projected (x=28.95): z 2.69-2.71 (CC010 v 1700-1705; CI015 v 773 -> 2.707)",
+    "error": "fin width +-0.05, depth +-0.15; lintel z +-0.05, depth unknown",
+    "confidence": "medium (fin, lintel z), low (lintel depth)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-e",
+    "title": "A low white wall with a radiator stands in front of the N leaf of the F1 E exit door",
+    "spec": "zone_c_v6.py build() F1 E stair hall fittings (INT_C_F1), new elements",
+    "current": "Nothing in front of the exit door; both leaves (y 8.97-10.73) clear",
+    "proposed": "F1_StairE_ExitParapet box x 28.70-28.95, y 10.01-10.73, z 0-1.11, white. F1_StairE_ExitRadiator box on its W face, x 28.62-28.70, y 10.05-10.70, z 0.36-0.85",
+    "photos": [
+     "CC010",
+     "CI013",
+     "CI015"
+    ],
+    "method": "CC010 back-projection onto x=28.95: top edge v 1995 gives z 1.11, ends y 10.01 and 10.73. CI013 door-height ratio gives a top of 1.04. Radiator from the edge spacing (0.00516 m/px)",
+    "error": "z +-0.06, y +-0.1, depth unknown (0.25 assumed)",
+    "confidence": "medium (presence and height), low (depth)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-f",
+    "title": "NEW evidence for deferred Q2-22/X0-13 (glazing width): the storefront spans the lobby wall to wall (4.50 m), so the head is about 2.95 and the transom 2.25; the lobby ceiling also cuts through the current frame",
+    "spec": "Art/Blender/Specs/BLD_C.json facades[2] (south_tower) entrance: u0/u1/z1/transom_z/bays; zone_c_v6.py ceilings() Ceiling_M2_S/M3_0_S (INT_C_F1)",
+    "current": "Entrance u0 0.02, u1 3.78 (x 12.82-16.58, 3.76 wide), z1 3.29, transom_z 2.65, bays [0.9,0.76,0.78,0.86]. Lobby ceilings z 2.90-2.92 cover y 1.75-6.8 and cut through the frame (y 2.2-2.3) at 2.90 (ray2.py: a view ray hits the ceiling at y 2.62)",
+    "proposed": "u0 -0.35, u1 4.15 (= lobby wall faces x 12.45-16.95; the exterior photogrammetry left edge -0.35 agrees), z1 2.95, transom_z 2.25, bays scaled x1.364 -> [1.23,1.04,1.06,1.17]. Lobby ceilings stop at y 2.30, with a bulkhead y 2.30-2.60 whose underside equals the head (2.95). The tower ring (12.8-16.6) is narrower than this opening and needs settling with C.5",
+    "photos": [
+     "CC014",
+     "CI002"
+    ],
+    "method": "CC014 rectangle fit with known f and width 4.5: head 3.05, transom-bar underside 2.22-2.31. CI002 ratios (round 1) at width 4.5: head 2.85, transom 2.25. Both photos show the jambs abutting the lobby side walls, with no piers",
+    "error": "width +-0.05, head +-0.12, transom +-0.06",
+    "confidence": "medium (width, transom, ceiling collision), low (head)",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y0-g",
+    "title": "0.20 x 0.20 m full-height notch at the corner of the lobby W wall and the hall S wall",
+    "spec": "zone_c_v6.py plan(): F1 Hall_S_West end / Room_S_12_35 (INT_C_F1)",
+    "current": "Room_S_12_35 x 12.25-12.45 ends at y 6.8 and Hall_S_West ends at x 12.25, leaving a void at x 12.25-12.45, y 6.8-7.0",
+    "proposed": "Run F1 Hall_S_West to x 12.45 (or Room_S_12_35 to y 7.0) so the corner is solid",
+    "photos": [
+     "CC012"
+    ],
+    "method": "ray2.py: a ray from the lobby at y 6.9 hits x 12.25 (not 12.45); a ray from the hall at x 12.35 hits y 6.8 (not 7.0). The photo shows a clean corner",
+    "error": "exact",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-h",
+    "title": "Room back-wall top bulkhead (BackBox) is sage where the back wall is sage; model white",
+    "spec": "zone_c_v6.py fitout(): bx(\"BackBox\", ..., slot=\"M_Paint_White\")",
+    "current": "M_Paint_White in every room",
+    "proposed": "slot M_Paint_Sage when BackWall_Paint is sage (not swap); M_Paint_White where swap applies",
+    "photos": [
+     "CI017",
+     "CI025",
+     "CR004"
+    ],
+    "method": "Visual: the bulkhead band at the top of the end wall has the same sage tone as the wall below",
+    "error": "-",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-i",
+    "title": "Classrooms/labs: missing radiator under the end-wall window of end rooms, and a missing pilaster in the board/door corner",
+    "spec": "zone_c_v6.py fitout(): new bx(\"Radiator_End\") (end rooms S1/N1/S5/N5, all floors) and new bx(\"Pilaster_BoardDoor\") (all rooms)",
+    "current": "End rooms have only the facade-wall radiator(s) (R102 Radiator_0 x 25.3-26.5 on the S wall). No pilaster at the board end of DoorBox (DoorBox u 0.15..L)",
+    "proposed": "Radiator_End: u 0.06-0.14 (off the back wall), v 3.02-3.82 (centre D/2 + 0.25, toward the window wall), z 0.30-0.87, M_Paint_White, ue_asset radiator_sectional. Pilaster_BoardDoor: bx(L-0.15, L, 0.0, 0.30, 0.0, C+0.01), M_Paint_White, mirroring Pilaster_BackDoor; DoorBox u 0.15..L-0.15",
+    "photos": [
+     "CI017",
+     "CI025",
+     "CR004",
+     "CI019",
+     "CR013"
+    ],
+    "method": "Radiator: CI017 man scale (677 px/m) gives y 4.29-5.08 in 102, top 0.23 below the lining bottom. Pilaster: CI019 PnP (5.8 px); the model board corner projects to 711 vs the photo edge at 704 (wall OK); an extra door-parallel face spans x 23.15-23.25/23.32 with its front at y 7.6-7.8 (bp2.py); the same face shows in CR013",
+    "error": "radiator v +-0.15, width +-0.1; pilaster width +-0.05, depth +-0.1",
+    "confidence": "medium (radiator in 102/204, pilaster in 102/204), low (other rooms assumed)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-j",
+    "title": "F1 blue accent widths: blue over WC4 is frame-wide; blue E of the 104 frame ends about 0.06 past it",
+    "spec": "zone_c_v6.py plan() F1 WC accents (Q2-10): F1_Accent_WC4_T, F1_Accent_N4_R (INT_C_F1)",
+    "current": "Accent_WC4_T x 12.975-14.075 (0.10 past each jamb); Accent_N4_R x 18.59-18.81",
+    "proposed": "Accent_WC4_T x 13.075-13.975, z unchanged. Accent_N4_R x 18.59-18.65",
+    "photos": [
+     "CC011"
+    ],
+    "method": "CC011 PnP (8.7 px). The blue edges at the WC4 head sit 0-12 px from the frame (361 px/m). Model N4_R edge projects to 2865 px vs the photo blue end at 2775 (325 px/m), 0.28 short of the model",
+    "error": "+-0.03",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-k",
+    "title": "F1 hall wall lamps are absent at S1, N2, N5 and S5 (only S4 is confirmed)",
+    "spec": "zone_c_v6.py plan(): F1 Hall_WallLamp_{key} loop (Q3-19, 'count unsure')",
+    "current": "8 lamps, one 1.12 m E of each classroom door frame, z 2.45-2.51",
+    "proposed": "Delete F1_Hall_WallLamp_S1, _N2, _N5, _S5. Keep _S4 (CI001). _N1, _S2, _N4 are unverified (N1 hidden by an open leaf in CI003; N4 out of frame in CC011)",
+    "photos": [
+     "CC011",
+     "CC010",
+     "CI003"
+    ],
+    "method": "Lamp boxes projected through the solved cameras: N2 (382-515, 1100) in CC011, N5 (947-992, 1692-1704) and S5 (2527, 1637) in CC010, S1 (611, 1308) in CI003. Every spot is bare wall in the full-resolution crops",
+    "error": "projection +-20 px (lamp 0.35 m = 70-120 px)",
+    "confidence": "medium-high (the 4 absent), low (unverified ones)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y0-n",
+    "title": "Residual: the F1 flight-2 soffit edge and closet top still read about 0.09 m above the model after the X0-01 fix",
+    "spec": "zone_c_v6.py stair_storey() / LANDING / RISERS (INT_C_F1 StairE_F1_Flight2, Closet_E_*)",
+    "current": "SOFFIT 0.08; W soffit edge 2.458 at y 10.92",
+    "proposed": "No value: a thinner slab alone cannot reach it. A flight-2 riser count or a tape measure of the half-landing height (model 1.612) would settle it",
+    "photos": [
+     "CC010",
+     "CI013"
+    ],
+    "method": "CC010 PnP: photo edge 15-17 px above the projected model line (1760,1729)-(2004,1610) at 186 px/m. CI013 gives 0.08-0.11",
+    "error": "+-0.04",
+    "confidence": "low-medium",
+    "needs_builder_change": false
+   }
+  ]
+ },
+ {
+  "zone": "Block C exterior, C plaza, A_N north end, Hall-C passage, D forecourt/west front, C east lot. Round 2 (verify2_1). Model: build_verify2.blend (read-only; bbox dump bb2.json). Scratch: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/verify2_1/ (notes.txt, geo.py, mkp.py, pnp1.py, pnpz.py, pnpC.py, grid028.py, stair003.py, fit_sign.py, sf_meas.py, ray.py, proj.py, ortho_ov.py, r/ = renders + side-by-sides). 12 viewpoints and 4 Cycles renders, all from photos or frames that round 1 did not use. Not covered: the C east face and east lot have no new usable photo. D has no new evidence and its items stay owner-deferred (Q1-D*).",
+  "viewpoints": [
+   {
+    "name": "C south entrance from S, 24 mm (storefront, sign box, tower, wings)",
+    "photos": [
+     "CE015"
+    ],
+    "camera": "PnP on 38 surround corners (W wing u 8.1/10.7 F3-F4, E wing u 2.1/4.7 F1-F4). Free f gives 2650, rms 16.8. A height sweep with fixed z (pnpz.py) gives z 6.5/6.9/7.3 at rms 21/19/18. With f fixed at 2850: C=(184.86,-15.21,7.34), heading 11.5, pitch 28.3.",
+    "render": "r/ce015.png, r/sbs_ce015.jpg",
+    "verdict": "mismatch",
+    "notes": "The wing and tower windows, downpipes at both tower corners, sign box x extent (1305-2500 vs model 1342-2539 px) and canopy all match. The storefront head, transom and cassette band sit about 190 px lower than the model, which gives Y1-01. Sign box fit (fit_sign.py): bottom 2.9-3.15 above the threshold (model 3.12), so the height is OK. The depth is ambiguous: the front comes out 3.7-4.0 m from the tower face against the model's 4.75, but confidence is low and it is not proposed. The model's dormer tips show above the S eave in the render; the photo shows sky there (low confidence, depends on camera z). The tree in front of the W wing is an ellipsoid proxy by spec choice and is not a finding."
+   },
+   {
+    "name": "C entrance frontal, 49 mm (storefront, stair, reveal)",
+    "photos": [
+     "CC003"
+    ],
+    "camera": "Fit of the 7 risers (0.15 each), with the horizon fixed because the verticals are parallel (downpipe x 2875 at y 500 vs 2878 at y 1800). Camera 1.35+-0.04 m above the plaza, 6.50 m to the bottom riser, tread 0.357+-0.08 (spec 0.34 OK), landing edge at 8.28 m (stair003.py).",
+    "render": "none (metric only)",
+    "verdict": "mismatch",
+    "notes": "Storefront ratios: head/width 1330/2000 = 0.665, transom/width 1040/2000 = 0.52. The reveal side strips are about 90 px each against 94 px predicted for a 0.9 m reveal, so the reveal is OK. Using the model's landing plus reveal (2.46 m), the width is 3.71, the head 2.47 and the transom 1.93. The C plate bottom is 0.09 m above the head and 0.28 m tall. The soffit dome lamp bottom is 0.40 m above the head, and the soffit meets the wall about 0.55 m above the head. These feed Y1-01."
+   },
+   {
+    "name": "C west face frontal over the shed",
+    "photos": [
+     "A031"
+    ],
+    "camera": "PnP on 47 edge-8 surround corners (u 3.625/8.5/11.25/16.175, F1-F4). Free f is degenerate (planar target). With f fixed at 2850 (Pixel 9: 6.9 mm, fl35 24): C=(155.98,6.69,6.79), heading 90.9, pitch 17.4, rms 18. This is 1.44 m above the passage ramp head.",
+    "render": "r/a031.png, r/sbs_a031.jpg",
+    "verdict": "mismatch",
+    "notes": "The column layout (8.5 at F3/F4 only), both corner strips, the gutter and the shed roof meeting the wall below the F1 surrounds all match. The model's Passage_Spruce_UpperNW (163.4,6.6) and UpperNE (166.0,6.8) project dead centre (x 1930-2050) over the shed. The photo shows the facade and shed clear there, and only UpperSW's crown edge (about x 3290) and Tree_Lower (x 360-703) match. A lamp is seen at x 3010-3035 (bearing 109.7). See Y1-02."
+   },
+   {
+    "name": "Lower passage yard looking ESE from the HallEast E door",
+    "photos": [
+     "A028"
+    ],
+    "camera": "Free PnP lands inside HallEast, as in round 1. A rotation-only grid search (grid028.py, f 2850, W-face corners) gives the best rms 15 at (153.6,9.0,6.3), on the HallEast E-door landing. Render camera: (153.8,9.0,6.6), heading 110.8, pitch -14.",
+    "render": "r/a028.png, r/sbs_a028.jpg",
+    "verdict": "mismatch",
+    "notes": "Retaining-wall coping rays (z 5.36): y 3.8-4.8 at x 157.5-165.9, bearing 96.5. The model's Cheek_Return is at y 8.47-9.15. The model render puts the upper lawn and two spruces straight ahead where the photo shows herringbone yard up to the shed. Camera position is uncertain by +-1 m; the bearings support Y1-02."
+   },
+   {
+    "name": "Video 070410255 t31: stair head looking E along the coping to the shed",
+    "photos": [
+     "PXL_20260924_070410255 t31 (1080p frame vf/n_31.jpg)",
+     "t24-t40 frames for context"
+    ],
+    "camera": "PnP on 44 W-face surround corners with f fixed at 782 (round-1 n455 focal of the same clip): rms 6.9, C=(156.47,4.45,7.12), heading 85. f 700 and f 900 give (158.15,4.84,6.80) and (154.11,3.76,7.57).",
+    "render": "none (rays)",
+    "verdict": "mismatch",
+    "notes": "The coping of the upper-lawn N retaining wall rays to y 4.6-4.8 (4.2-5.1 over the f range) for x 157.6-162.8. The lamp at the coping/shed junction stands in front of the u 11.25 F1/F2 window column, so the coping line meets the C W face near u 11.25 (C-local y about 8.55). The model coping meets it at u 7.4, where the u 8.5 column has no F1/F2 window. The manhole on the lower yard is at (159.6,6.0). The model has the coping at y 8.81 and Lamp_CheekE at y 8.4. Basis for Y1-02."
+   },
+   {
+    "name": "Round-1 t45.5 camera reused for the lamp and spruces",
+    "photos": [
+     "PXL_20260924_070410255 t45.5"
+    ],
+    "camera": "round-1 pnp_n455_cam.json (158.16,20.59,5.92), rms 3.7",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "The model lamp projects at the right frame edge behind the deciduous tree, so the frame cannot test the lamp. Shed N end with its 2 openings and the C N/W faces as in round 1."
+   },
+   {
+    "name": "A_N north wall E part (fire ladder, AHU, benches, pits)",
+    "photos": [
+     "CE013"
+    ],
+    "camera": "approx. (191,-14), looking SSW (no solve)",
+    "render": "none",
+    "verdict": "matches",
+    "notes": "Two maroon verticals at x 2500 and 2720 are the fire-ladder rails, just E of the AHU. Benches, pits, AHU and plinth match. DP_North is hidden by a tree here."
+   },
+   {
+    "name": "A_N north wall looking W along the bench row (1.77 m man)",
+    "photos": [
+     "CE014"
+    ],
+    "camera": "approx. (188.5,-14.5), looking W. Scale from the N1 window opening 715-1245 px (1.03 m): 515 px/m at about 8.35 m, and 614 px/m at the downpipe (7.0 m).",
+    "render": "none (metric)",
+    "verdict": "mismatch",
+    "notes": "DP_North: the white upper leg turns maroon at photo y about 1150, 0.29 m above the plinth top (1330) at the DP scale and about 0.16 m above the F1N sill line. That gives z 7.1+-0.2. The lateral offset at the change is 11 px, which is 0.05 m or less along the wall at 60 degrees obliquity. The model has the jog at 9.15 with du 0.285 (Y1-03). The AC outdoor unit under the barred window spans about 6.15-6.75 (model 6.03-6.83), which is OK. Forged bin, rose shrub, pits and benches all match."
+   },
+   {
+    "name": "Shed front looking N from its S end (lawn SE chamfer, spruces, lamp)",
+    "photos": [
+     "A094"
+    ],
+    "camera": "not solved; approx. (166,-6), heading about 0",
+    "render": "none",
+    "verdict": "minor_differences",
+    "notes": "Apron and drain channel, yellow-then-concrete chamfer kerb meeting the shed front, and 2 big blue spruces on the upper lawn in front of the shed. Their bearings are consistent with the model spruce positions relative to the shed and lawn. The A031 'no spruce' result therefore belongs to the frame offset in Y1-02, not to individual trees."
+   },
+   {
+    "name": "C SW: Dance Hall pier, canopy, shed S end, W face",
+    "photos": [
+     "CE010",
+     "CC018"
+    ],
+    "camera": "CE010 PnP on 20 W-face corners (u 16.175 F2-F3, u 11.25 F2-F4): f search 2825, f fixed 2850, rms 28, C=(164.31,-6.75,7.02), heading 31.9, pitch 8.7",
+    "render": "r/ce010.png, r/sbs_ce010.jpg",
+    "verdict": "minor_differences",
+    "notes": "Windows, the Dance Hall pier with its plate and the canopy align. Left of the pier, the shingle-band wall runs almost parallel to the image plane. Its rays place the W end near x 165 (2.5 m W of the model front 167.49), while the model's W front recedes steeply. Google shows the shed S part narrowing instead, so this is unresolved and not proposed. In CC018 the shed brass edge sits about at eye level above the apron. This is the same plaza/C datum issue as deferred Q2-21 and round-1 CC020; it is not re-proposed because the photographer's eye height is unknown."
+   },
+   {
+    "name": "Stair head looking S at the A_N W end and A_W N end",
+    "photos": [
+     "CE043",
+     "CE044"
+    ],
+    "camera": "not solved; scales from brick courses (autocorrelation 29-30 px, 0.10-0.11 m courses as in CE014): about 264-275 px/m at the wall",
+    "render": "none",
+    "verdict": "mismatch",
+    "notes": "The A_W north end wall (spec edge 2: 'not photographed', no windows) has 2 high horizontal 2-light windows in a recessed band, a brick-tile base with a seat ledge, a maroon mono-pitch fascia falling W, and a brick pier at its W end before the gallery posts (Y1-04). Benches (one plain, one wrought-iron), 2 shrub pits and the red-kerb pit corner match the BenchAN_W*/PlanterAN_W* layout qualitatively."
+   },
+   {
+    "name": "Ortho cross-check of the passage (Google z20, Bing z19)",
+    "photos": [
+     "ortho_google_z20 (o_pass_g20b.jpg)",
+     "ortho_bing_z19"
+    ],
+    "camera": "n/a",
+    "render": "ph/o_pass_g20b.jpg (overlay of model bboxes)",
+    "verdict": "minor_differences",
+    "notes": "Google has a light band at y 8.6-9.0 (x 160-167) with the lawn N edge at about 7.6, and spruce shadows at (160.5-166.5, 5-6.5). These agree with the model in absolute terms. The shed roof N end appears at about 19.2 (model 17.67 plus small lean). The anchor note records the C roof appearing 2.3-3.6 m further N in Google, which was explained as lean. This conflicts with the C-frame photo measurements: see Y1-02."
+   }
+  ],
+  "findings": [
+   {
+    "id": "Y1-01",
+    "title": "C main-entrance storefront head, transom, cassette band and soffit are about 0.6-0.75 m too high (new evidence that settles deferred Q2-22/X0-13)",
+    "spec": "Art/Blender/Specs/BLD_C.json: facades[edge 2].entrance (z1, transom_z); attachments wall_sign EntranceFascia (z0,z1), wall_sign CPlate (z0,z1), wall_boxes Lamp_EntranceSoffit, CCTV_S, CCTV_SW (item z); canopy (z_soffit_wall)",
+    "current": "head z1 3.29, transom_z 2.65, fascia 3.29-3.60, C plate 3.30-3.58, soffit lamp 3.50, CCTV_S/SW 3.25, canopy z_soffit_wall 3.6 (all relative to FFL 6.40), width 3.76",
+    "proposed": "entrance z1 2.55; transom_z 2.00 (door leaves 2.00 high); EntranceFascia z0 2.55, z1 3.07; CPlate z0 2.64, z1 2.92; Lamp_EntranceSoffit z 2.95; CCTV_S and CCTV_SW z 2.90; canopy z_soffit_wall 3.10 (sloping to the unchanged front underside 3.10, so about level). Keep width 3.76, reveal 0.9, sign box and canopy front.",
+    "photos": [
+     "CE015",
+     "CC003",
+     "CI002/CI010 (round 1, X0-13)"
+    ],
+    "method": "Three independent scales. (1) CE015: PnP on 38 facade-window corners (4 camera solutions, sf_meas.py), rays on the storefront plane y -1.98. Heights above the threshold: head 2.65-2.72, transom 2.07-2.13, soffit-wall line 3.14-3.22, width 3.87-3.90. (2) CC003, 49 mm frontal: camera from the 7 known risers (stair003.py). Ratios head/width 0.665 and transom/width 0.52 give head 2.47, transom 1.93 and width 3.71. Plate, lamp and soffit sit 0.09/0.40/0.55 above the head. (3) Round-1 interior ratios 0.633/0.50. Combined: head/width 0.63-0.70 and transom/width 0.50-0.54, applied to width 3.76-3.88.",
+    "error": "head +-0.12, transom +-0.08, soffit at the wall +-0.15. The CE015 absolute height depends on the camera z, which is weakly fixed; the ratios are camera-independent. The 2.00 transom matches the 2.05 classroom door height, a plausibility check.",
+    "confidence": "medium-high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y1-02",
+    "title": "Hall-C passage N retaining wall, lamp and upper-lawn spruces are about 4 m further S relative to C than modelled. Either C or the passage block is mis-registered; this links to deferred Q2-13 with new, independent evidence",
+    "spec": "SITE_HallCPassage.json: Passage_Cheek_Return (+_Coping), Passage_Cheek_E, Passage_Stair, Passage_Lamp_CheekE, Passage_Lawn_Upper ring N edge, Passage_Spruce_UpperNW/UpperNE, or alternatively BLD_C.json anchor.world_xy (and everything placed in C's frame)",
+    "current": "Cheek_Return/coping y 8.47-9.15 (x 159.8-167.84); Lamp_CheekE (167.1,8.4); upper lawn N edge y 8.5-8.8; UpperNW (163.4,6.6); UpperNE (166.0,6.8); C anchor (173.264,-3.64)",
+    "proposed": "Do not apply blind. The photos in C's frame give the coping line at y 4.6+-0.5 (t31 f782: 4.6-4.8; f 700-900: 4.2-5.1; A028: 3.8-4.8) and the lamp/junction at about (167.1,4.6) (t31), i.e. dy = -4.1+-0.6 for the coping, lamp, stair head and both upper spruces. Option A (C's frame correct): shift all passage items listed above by dy -4.1 (coping y 4.37-5.05, lamp (167.1,4.3), UpperNW (163.4,2.5), UpperNE (166.0,2.7), lawn N edge 4.4). Option B (passage/Google correct): move C (anchor and the C-relative items) about +4 m N (and possibly +2.5 E, per Q2-13 dx 3.5). This matches deferred Q2-13 (A_W deck end appears 2.9 S/3.5 W), the A_N anchor note (C-relative photos put the A_N wall 2.3 m S of Bing), round-1 cameras landing inside A_W/HallEast, and Google showing the C roof 2.3-3.6 m N. One tape settles it: along the shed front, distance from the shed N end (or C NW corner) to the coping/lamp junction. Model: 8.9 m from shed N end y 17.67; photos: about 13 m.",
+    "photos": [
+     "PXL_20260924_070410255 t31",
+     "A028",
+     "A031",
+     "A094",
+     "ortho_google_z20"
+    ],
+    "method": "W-face window PnP (44 corners, f fixed, 3 focal values) and rays of the coping and lamp base on z 5.40 and x 167.1. A028: rotation-only grid search plus coping rays. A031: frontal PnP (47 corners) plus lamp bearing, and absence of spruces on the central sightline (render r/sbs_a031.jpg). A094: bearings of the spruces relative to the shed (consistent with the model). Google z20 overlay (ortho_ov.py) agrees with the model's absolute coping.",
+    "error": "dy -4.1+-0.6 m in C's frame. Which object is wrong is unknown: Google (absolute) supports the passage, and C-relative photos systematically put W/SW neighbours 3-4 m S.",
+    "confidence": "medium (that the offset exists), low (which side to move)",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y1-03",
+    "title": "A_N DP_North: the colour change from white to maroon is at z 7.1, not 9.15, and there is no 0.285 m jog at that height (refines round-1 X1-04)",
+    "spec": "Art/Blender/Specs/BLD_A_N.json attachments downpipe DP_North (edge 2)",
+    "current": "u 12.585, z0 0.29, z1 9.3, jog {z 3.68, du 0.285}, slot M_PVC_Gutter_White, lower_slot M_Paint_Maroon (lower leg z 0.29-3.68 at u 12.87, abs 5.76-9.15)",
+    "proposed": "Spec-only split. DP_North: z0 1.63, keep the jog {z 3.68, du 0.285} for the upper offset (location unknown above 7.3 abs), and set lower_slot M_PVC_Gutter_White. Add downpipe DP_North_Base: edge 2, u [12.87], z0 0.29, z1 1.63, d 0.1, slot M_Paint_Maroon.",
+    "photos": [
+     "CE014",
+     "CE011 (round 1)"
+    ],
+    "method": "CE014 oblique view: the white upper leg turns maroon 180 px above the plinth top at photo y 1330. The scale at the downpipe is 614 px/m, from the N1 window opening (1.03 m = 530 px at 8.35 m) scaled to 7.0 m. That puts the change 0.29 m above the plinth top (6.65), cross-checked at 0.16 m above the F1N sill line (6.95). Lateral offset at the change: 11 px, 0.05 m or less along the wall.",
+    "error": "z +-0.2 m; the along-wall offset at the change is 0.05 m or less. Where the u 12.585 to 12.87 drift (round 1, rays rms 23 px) happens above 7.3 abs is hidden by the tree.",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y1-04",
+    "title": "A_W north end wall (A_W/A_N junction to the brick pier before the gallery) has 2 high 2-light windows; the spec has none ('not photographed')",
+    "spec": "Art/Blender/Specs/BLD_A_W.json facades[edge 2].windows (+ a new window type)",
+    "current": "edge 2 north_end: windows [], status 'not photographed'; face length 6.4 (local x 10.9 to 4.5)",
+    "proposed": "Add a window type 'NH': w 1.07, h 0.46, mullions [0.5], reveal 0.12, no surround, set in a shallow recessed band. Sill 1.87 above the ground at the wall (z 7.22, i.e. sill 1.57 rel FFL 5.65). Positions as fractions of the face from the A_N corner: centres 0.335 and 0.767 (u 2.15 and 4.91 on the 6.4 m spec face). If the face is really 4.5 m (see error), use u 1.51 and 3.45.",
+    "photos": [
+     "CE043",
+     "CE044"
+    ],
+    "method": "CE043 near-frontal view, 1:1 pixel picks: A_N corner x 1665, pier 2865-2950; windows 1925-2210 x 558-680 and 2445-2725 x 555-675; ground about 1175; fascia underside about 250. The scale is 264 px/m (ground-to-fascia = model wall 3.5 m), agreeing with 275 px/m from brick courses (autocorrelation 29-30 px at 0.10-0.11 m, as measured in CE014).",
+    "error": "Fractions +-0.02; sizes +-15%. The face measured 4.5+-0.4 m between the A_N corner and the pier against the spec's 6.4. Either the pier is not the A_W NW corner or the A_W N face is shorter. Not settled; one tape of the A_N corner to pier settles it.",
+    "confidence": "high (windows exist), medium-low (size and position)",
+    "needs_builder_change": false
+   }
+  ]
+ },
+ {
+  "zone": "Main gate + booth + turnstile, gate alley, street front / crossing / bus stop, Block B all sides incl. N gas-pipe cover, NE guard booth, A_E / A_S east side. Round 2 (prefix Y2-). Model: build_verify2.blend (read-only). Scratch: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/verify2_2/ (notes.txt, renders r/ with side-by-side composites r/m1..m6.jpg, scripts pnp.py, ray.py, ovl.py, shift2.py, period.py, gmap.py). 12 of 14 Cycles renders used. Notes: (1) the build predates spec commit 9a4ca49, so the NE booth still shows a maroon cornice and window accents (Sur). The spec is already fixed; it only needs a rebuild. (2) Bus stop: nothing measurable. A trolleybus is stopped just E of the zebra (065838589), and the spec says the stop is unconfirmed, so nothing is proposed. (3) Round-1 fixes checked: OK for X2-02 (manhole on the plaza, grate on the landing), X2-05 (A_S piers beige over red, seen in B049), X2-09 (flagpoles), X2-11 (concrete pole r 0.17) and X2-01 (porch soffit and pediment in B049, approximate camera). Incomplete: X2-06 (Y2-01), X2-12 (Y2-02), X2-13 (Y2-11), X2-08 (Y2-09).",
+  "viewpoints": [
+   {
+    "name": "A257/A258 booth S and W faces from the SW (man 1.77)",
+    "photos": [
+     "A257",
+     "A258",
+     "A256"
+    ],
+    "camera": "PnP 10 pts (S window, plaque, SE corner, W window), f 2833 fixed: (155.92,-104.40,8.32) yaw 24.8 pitch 3.1, rms 34 px",
+    "render": "r/A257.png (r/s_A257.jpg, r/m1.jpg)",
+    "verdict": "minor_differences",
+    "notes": "Match: plaque, S window cutting into the red band (photo window bottom 0.33 m below the band top = 7.82; model 7.81), red band about 7.5 courses at 86 px = 1.1 m (model 1.11), W window, sawtooth canopy fascia. Difference: MeterPost_Booth (grey box on a 1.6 m post) stands in front of the SW corner in the render; the photos show bare pavement there (Y2-06)."
+   },
+   {
+    "name": "A253 turnstile from inside, looking S",
+    "photos": [
+     "A253",
+     "A249"
+    ],
+    "camera": "approx (156.45,-94.9), eye 1.45, yaw 182, pitch -12",
+    "render": "r/A253.png (r/m2.jpg)",
+    "verdict": "mismatch",
+    "notes": "The photo shows one central stainless cabinet with green arrows on both sides, two rotors and a passage on each side. The terminal pole with two tablets sits on the cabinet. The model has two 0.25 x 0.8 housings around one 0.55 passage, with the E housing at the booth wall and the terminal pole by the wall (Y2-07). Bag rest, curved bar railing and gate leaf match."
+   },
+   {
+    "name": "A259 booth E door looking N along the parapet",
+    "photos": [
+     "A259",
+     "A260",
+     "A262"
+    ],
+    "camera": "approx (162.3,-101.3), eye 1.5, yaw 0, pitch -14 (2 tries)",
+    "render": "r/A259.png, r/A259b.png (r/m1.jpg, r/m6.jpg)",
+    "verdict": "mismatch",
+    "notes": "Booth E window and outward white door match, and so does the parapet start. The foreground renders as grass, but the photo shows clover pavers from the booth face to the parapet (Y2-01; the gmap.py material map confirms). Bench_InsideEast stands in front of the parapet in the model but not in the photos, and it overlaps PathBin (Y2-08)."
+   },
+   {
+    "name": "A268/A271 A_S south face storefront (frontal)",
+    "photos": [
+     "A268",
+     "A271",
+     "A266",
+     "A267"
+    ],
+    "camera": "A268 PnP 8 pts (storefront corners, Win_E0_07, Win_E0_17), f 2833: (186.87,-98.95,8.79) yaw 350.3 pitch -18.2, rms 42 px",
+    "render": "r/A268.png (r/m2.jpg)",
+    "verdict": "mismatch",
+    "notes": "Match: storefront, the ground window W of it (sill 6.34 vs 6.37), plinth top 6.28 vs 6.22, the row-2 window above the storefront's W part. Differences: the row-2 maroon surround over the storefront's E part is a wide asymmetric panel (Y2-05). The model's ground window Win_E0_08 and row-2 window Win_E0_18 E of the storefront do not exist (Y2-04). The photo windows over the storefront are wider than the 1.57 m WS (A271 width ratio 1 : 1.19 : 1.51 for columns c1, c2, c3). This is not proposed because there is no absolute scale."
+   },
+   {
+    "name": "A270/A273 A_S SE corner, S face E end",
+    "photos": [
+     "A270",
+     "A273",
+     "A267"
+    ],
+    "camera": "PnP 7 pts, rms 22-54 px (points almost coplanar; not used for positions)",
+    "render": "none",
+    "verdict": "mismatch",
+    "notes": "Ground floor and row 2 are blank between the storefront E edge and the SE pilaster, except for the wide surround (crop c12: wall x 840-1960 px, y 0-1600 px blank). There is a ledge across the pilaster at about storefront-head height. The model has 3 ground windows and 2 row-2 windows plus Sur_E0_23 there (Y2-04)."
+   },
+   {
+    "name": "A274 east lane looking N (A_S E face, A_E)",
+    "photos": [
+     "A274",
+     "A275"
+    ],
+    "camera": "approx (199.4,-97.2), eye 1.5, yaw 0, pitch 1 (first try was behind the lane gate)",
+    "render": "r/A274.png, r/A274b.png (r/m3.jpg, r/m6.jpg)",
+    "verdict": "mismatch",
+    "notes": "Match: A_S E face pilasters, windows, AC units, lane and boundary bar fence. A_E: the photo shows an open lean-to shed (dark roof, black bar cage, red brick pier), and far buildings are visible through the bars. The model has a closed 3.85 m beige block with 3 E windows plus a maroon post canopy to x 203.9 (Y2-10). The esri z19 ortho confirms the roof footprint."
+   },
+   {
+    "name": "A241/A243 B SE corner and B east porch looking N",
+    "photos": [
+     "A241",
+     "A243",
+     "A244"
+    ],
+    "camera": "approx (149.3,-86.0), eye 1.5, yaw 5, pitch 4",
+    "render": "r/A241.png (r/m3.jpg)",
+    "verdict": "mismatch",
+    "notes": "Course metrology (period.py): the front pier is 17.6 courses from paving to soffit (beige 89.9 px, red 87.7 px per course). The A243 man and ground-plane depth give a course of 0.160-0.161 m, so the soffit is 2.82 m above the paving vs 3.08-3.16 in the model. The model posts are dark steel; the photos show beige tile over a 6.1-course red base (Y2-03). Lean-to roof shape, B BLOCK plate, storefront and circle pavers match."
+   },
+   {
+    "name": "A193 B north gas-pipe cover over the boulder wall",
+    "photos": [
+     "A193",
+     "A177"
+    ],
+    "camera": "approx (116,-46.3) on the pergola walk, eye 1.6, yaw 180",
+    "render": "r/A193.png (r/m4.jpg)",
+    "verdict": "matches",
+    "notes": "Corrugated maroon skirt with a lid directly under the B ground-floor sills, pergola posts and beam. The photo camera was held higher, above the wall; this does not affect the comparison."
+   },
+   {
+    "name": "B049 A_S west walkway under the porch looking N",
+    "photos": [
+     "B049",
+     "B047"
+    ],
+    "camera": "approx (159.3,-89.6), eye 1.4, yaw 355, fl35 12",
+    "render": "r/B049.png (r/m4.jpg)",
+    "verdict": "minor_differences",
+    "notes": "Round-1 fixes look right: beige-over-red piers, flat timber soffit with the pediment on the pier tops. Match: pavilion stair, planter wall with coping, A_S W door. WheelieBin_Pavilion stands 0.3 m S of the door and is absent in the 2026-09-25 photo; it is a movable prop, so not proposed."
+   },
+   {
+    "name": "Street video 065653194 f_0009/f_0012/f_0013 B SW corner (B west end)",
+    "photos": [
+     "PXL_20260924_065653194 t3-5"
+    ],
+    "camera": "approx (96.5,-100.6), eye 1.5, yaw 16, fl35 25",
+    "render": "r/V653_f12.png (r/m5.jpg)",
+    "verdict": "mismatch",
+    "notes": "Match: SW pilaster, red plinth, mesh fence, parapet and lamp pole. Window boxes: in the model the boxed column is u 5.27 (both floors). The photo shows the box on the upper window of the first column, u 2.22, with its ground window plain, and the ground window of column u 5.27 plain (Y2-12). The W face shows a blue panel or door and a CCTV camera; the W face is spec 'assumed' and nothing is proposed."
+   },
+   {
+    "name": "Crossing video 065856484 f_0018, gate from the zebra",
+    "photos": [
+     "PXL_20260924_065856484 t6",
+     "PXL_20260924_065838589 t0.3"
+    ],
+    "camera": "approx (154.0,-114.5), eye 1.5, yaw 0, fl35 25",
+    "render": "r/V856_f18.png (r/m5.jpg)",
+    "verdict": "minor_differences",
+    "notes": "Canopy on one round column, sawtooth fascia, booth, sliding bar gate and fence order match. The render camera is about 3 m too far S, so the A-frame signs and tree guards are not compared."
+   },
+   {
+    "name": "B046/B053 SouthStair and gate plaza",
+    "photos": [
+     "B046",
+     "B053",
+     "B044"
+    ],
+    "camera": "not rendered (8 risers counted again; ultrawide)",
+    "render": "none",
+    "verdict": "mismatch",
+    "notes": "8 risers, clear across the full width. Round manhole at the NW top corner on the plaza (X2-02 OK). The elm trunk stands beyond the flight on the SE bed, but in the model BankTree_03's trunk stands in the flight (Y2-09). The blue wheelie bin is M_Plastic_Grey in the model (finish only)."
+   }
+  ],
+  "findings": [
+   {
+    "id": "Y2-01",
+    "title": "Grass strip still renders between PathClover_S and the new GateBoothClover ground (X2-06 incomplete)",
+    "spec": "SITE_Gate.json ground_surfaces GateBoothClover.ring",
+    "current": "Ring (157.2,-100.4),(188.0,-101.95),(188.0,-106.4),(160.0,-104.9),(157.2,-104.75). Only PathClover_S's N half shows; its S half is under the terrain, which rises toward the street. TER grass renders at y -98.5..-101.5 for x 161-185 and at y -97..-100 for x 186-198.",
+    "proposed": "Ring (157.2,-100.4),(160.95,-100.59),(160.95,-97.47),(188.0,-99.38),(188.0,-106.4),(160.0,-104.9),(157.2,-104.75). The N edge follows PathClover_S's centreline y = -97.472 - 0.07064*(x-161.012). Slot M_Paver_Clover_Grey.",
+    "photos": [
+     "A259",
+     "A260",
+     "A262"
+    ],
+    "method": "gmap.py 1 m ray material map of the build (x 140-212, y -112..-94); render A259/A259b shows a green foreground where the photo shows clover pavers from the booth E face to the parapet kerb",
+    "error": "edges +-0.5 m; E of x 188 still unknown (as in X2-06)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-02",
+    "title": "Billboard_West posts stand 0.45 m in front of and behind the panel, so the panel still floats (X2-12 incomplete)",
+    "spec": "SITE_Gate.json Billboard_West_Post_0 / _Post_1",
+    "current": "Panel (b_sign spans w along x) x 140.60-141.80, y -97.69..-97.51, z 7.90-9.60. Posts at (141.17,-97.15) and (141.23,-98.05), 0.85 tall, tops 7.89-7.91. BVH overlap with the panel is 0: the posts touch nothing.",
+    "proposed": "Post_0 center (140.75,-97.47), Post_1 center (141.65,-97.47), size [0.06,0.06,2.55], z_rel -0.05 (top = panel top 9.60, just behind the panel back face at y -97.51)",
+    "photos": [
+     "PXL_20260924_065653194 s_48",
+     "PXL_20260925_012136583"
+    ],
+    "method": "bbox dump of build_verify2 plus the b_sign / b_box code (sign panel spans w along the left axis of dir_deg; the posts were offset along the facing axis)",
+    "error": "+-0.05 m",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-03",
+    "title": "B east porch soffit 0.3 m too high (z_underside measured from the paving, applied over FFL); posts are dark steel, not tile piers",
+    "spec": "BLD_B.json attachments EntrancePorch (gallery): z_underside, post finish (build_facades.build_gallery uses COL['post'])",
+    "current": "FFL 6.85 (max ring ground + plinth_m). z_underside 2.90 builds the soffit at 9.75 (ray), which is 3.08-3.16 above the porch paving (TER 6.59-6.67). Posts 0.48 sq, M_Steel_Paint_Dark.",
+    "proposed": "z_underside 2.60 (soffit 9.45 = paving + 2.82). Posts M_Tile_Beige on a M_Tile_Brick_Red base 0.98 m above the paving; needs a post slot and base band in build_gallery, like the A_S porch pier_base. Post position and width (deferred R3-12) are not re-proposed.",
+    "photos": [
+     "A241",
+     "A243",
+     "A244"
+    ],
+    "method": "A241 front pier: 1570 px paving to soffit; course period by autocorrelation 89.9 px (beige) / 87.7 px (red) gives 17.6 courses, red base 540 px = 6.1 courses. Course size from the A243 man (1.77 m = 1285 px) and ground-plane depth (camera h 1.4-1.5) gives 620-627 px/m at the pier, so the course is 0.160 m. Model heights from ray probes.",
+    "error": "soffit +-0.2 m; base +-0.1 m",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y2-04",
+    "title": "A_S south face E part: no windows E of the storefront on the ground floor and row 2 (only the wide-surround window)",
+    "spec": "BLD_A_S.json facades edge 0 windows",
+    "current": "Row F1 (sill 0.9) WS u 29.03, 31.68, 34.32 (Win_E0_08/09/10). Row F2 (sill 3.75) WS u 29.03, 34.32 and WSF u 31.68 (Win_E0_18/23/19 + Sur_E0_23). The 13-column grid was assumed (pitch 2.64).",
+    "proposed": "Delete F1 u 29.03, 31.68, 34.32. Delete F2 u 29.03 and 34.32, and the WSF u 31.68. Rows F3/F4 E of u 28 are unverified and left unchanged.",
+    "photos": [
+     "A267",
+     "A268",
+     "A270",
+     "A273"
+    ],
+    "method": "Zoomed crops: A268 shows >=2.6 m of blank wall plus red plinth right of the storefront; A267 shows blank wall from the storefront to the downpipe at the SE pilaster; A270 c9/c12 show storefront E edge (x 70 px) to pilaster (x 1955 px) blank on rows 1-2; A273 is blank. The A270 PnP could not fix the storefront u (coplanar points, rms 22-54 px).",
+    "error": "presence only; storefront u unchanged (spec +-4 m)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-05",
+    "title": "Row-2 maroon surround over the storefront E part is a wide asymmetric panel, not a symmetric 2.4 x 2.0 box",
+    "spec": "BLD_A_S.json facades edge 0, WSF u 26.39 sill 3.75 (window_types WSF surround) -> GBF Sur_E0_22",
+    "current": "Sur_E0_22 x 185.43-187.83, z 8.92-10.92 (0.42 side margins, 0.30 top and bottom) around Win_E0_22 185.85-187.42",
+    "proposed": "New window type (WSF wide) for u 26.39 row F2 with surround [u- 0.21, u+ 1.52, bottom 0.23, top 0.12], i.e. about x 185.64-188.94, z 8.99-10.64 (same [u-,u+,bottom,top] convention as B WAP [0.7,1.9,0,0.35])",
+    "photos": [
+     "A268",
+     "A271",
+     "A270"
+    ],
+    "method": "A268 crop c11 (near-frontal): surround 1647 x 800 px, window 786 x 627 px; margins scaled by window width 1.57 (model WS). A271 shows the same panel extending right of its window; A270 shows its right edge followed by blank wall.",
+    "error": "margins +-0.1 m (scale tied to the 1.57 m window width)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-06",
+    "title": "MeterPost_Booth stands in front of the booth SW corner; the 2026 photos show bare pavement there",
+    "spec": "SITE_Gate.json MeterPost_Booth",
+    "current": "lamp at (156.9,-100.8), height 1.6, box head, M_Steel_Paint_Dark (evidence +-1 m, low). It is in the turnstile exit line.",
+    "proposed": "Delete MeterPost_Booth. If a meter post exists it is elsewhere and unlocated; relocation would need a view of the booth W side from the S.",
+    "photos": [
+     "A257",
+     "A258",
+     "A256"
+    ],
+    "method": "Render r/A257 (PnP camera) puts the post and box at the SW corner front; crops c1/c18 of A257/A258 show empty pavement between the turnstile and the booth corner",
+    "error": "n/a",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-07",
+    "title": "Turnstile is one central double-rotor cabinet with a passage on each side, not two housings around one passage",
+    "spec": "SITE_Gate.json Turnstile_In (+ FaceTerminal_In/Out, FaceTerminal_In_Pole)",
+    "current": "pos (156.875,-97.269), passage_w 0.55, two housings 0.25 x 0.8 (bbox x 156.33-157.42), E housing 0.05 m from the booth W face (157.45). Terminal pole at (157.275,-97.82) against the wall.",
+    "proposed": "A single cabinet 0.30 (across) x 0.80 (along) x 1.0 at about (156.25,-97.27) (lane 155.07..157.46), two passages of about 0.85, ue_logic turnstile_both. Move the pole and both terminals onto the cabinet: pole at (156.25,-97.27), terminals z_rel 1.35, back to back.",
+    "photos": [
+     "A253",
+     "A249",
+     "A258",
+     "PXL_20260924_070021774 t0.2-1.8"
+    ],
+    "method": "A253 crop and render r/A253: in the photo the arms and green arrows face both sides of one slim cabinet, and the walking gaps lie between the cabinet and the booth wall (bag-rest side) and between it and the curved railing",
+    "error": "cabinet x +-0.3 m (no PnP; approximate camera)",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y2-08",
+    "title": "Bench_InsideEast stands on the 2026 sidewalk (not in the photos) and collides with PathBin",
+    "spec": "SITE_Gate.json Bench_InsideEast",
+    "current": "bench at (163.828,-96.55), 1.8 m, from the 2022 pano 'inside the old gate-line fence'. BVH overlap with GateAlley PathBin is 12 face pairs.",
+    "proposed": "Delete Bench_InsideEast (the old fence it stood behind was removed; its current location is unknown)",
+    "photos": [
+     "A259",
+     "A260",
+     "A262"
+    ],
+    "method": "ovl.py BVH overlap; A259/A260/A262 show clear clover pavement and the bin at the parapet, with no bench",
+    "error": "n/a",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-09",
+    "title": "BankTree_03 trunk stands in the SouthStair flight",
+    "spec": "SITE_GateAlley.json BankTree_03.pos",
+    "current": "pos (157.943,-94.718); the down-ray at the trunk hits SouthStair at 5.875; BVH overlap with SouthStair is 20 face pairs. The trunk is 0.2 m N of the SouthBed_Cheek NW edge, i.e. on the treads.",
+    "proposed": "pos (158.3,-95.6), inside SouthBed_Cheek 0.85 m from its NW edge (crown_base 4.5 kept)",
+    "photos": [
+     "B046",
+     "B053",
+     "B044"
+    ],
+    "method": "ray.py and ovl.py on build_verify2; B046 shows the full stair width clear; B053 shows the elm trunk beyond the flight on the SE bed",
+    "error": "+-0.8 m (no PnP on the ultrawide B053)",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-10",
+    "title": "A_E (east lane annex) is an open lean-to shed with a bar cage, not a closed rendered block with windows",
+    "spec": "BLD_A_E.json (wall_material, facades edge 1 windows, PostCanopy attachment, eave_z 3.85)",
+    "current": "Closed M_Render_Beige walls 5.47-9.32, 3 E-face windows Win_E1_00..02 (6.39-7.86), N window, maroon PostCanopy x 201.12-203.87 at 7.77-7.92",
+    "proposed": "Keep the footprint (esri z19 red roof x 195-201.7, y -72..-59). E and S faces open: black steel bar panels (M_Steel_Paint_Dark) between brick-tile piers (M_Tile_Brick_Red; one at the SE corner), with a dark sheet lean-to roof falling E over the cage; no E/N windows. Drop the maroon post canopy unless it is the same lean-to. Needs open-sided wall support in the builder, or model as SITE fence + roof_plane.",
+    "photos": [
+     "A274",
+     "A275",
+     "A278"
+    ],
+    "method": "A274 crop c20: dark lean-to roof, black bar cage, red brick pier, tarp-covered goods; far buildings visible through the bars above about 2 m, so there is no closed wall behind. Render r/A274b shows the closed beige block across half the lane.",
+    "error": "shed height not measured (no scale at that depth); footprint from ortho +-0.5 m",
+    "confidence": "low",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y2-11",
+    "title": "B east bed shrubs still clip the lightwell cover after X2-13",
+    "spec": "SITE_GateAlley.json BBed_Shrub_00..03.pos",
+    "current": "x 150.196 / 150.328 / 150.465 / 150.598; BVH overlap with LightwellCover_E1_7 is 5 face pairs each",
+    "proposed": "x 150.30 / 150.43 / 150.57 / 150.70 (+0.10; y unchanged)",
+    "photos": [
+     "A233",
+     "A214"
+    ],
+    "method": "shift2.py: each shrub translated in +x until its BVH overlap with the cover is 0 (clear at +0.05), plus a 0.05 margin",
+    "error": "+-0.03 m",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y2-12",
+    "title": "B south face W end: the maroon box is on the upper window of column u 2.22, and the ground window of column u 5.27 is plain",
+    "spec": "BLD_B.json facades edge 0 windows (WU/WUB, WG/WGB lists)",
+    "current": "u 2.22: WG + WU (both plain); u 5.27: WGB + WUB (both boxed)",
+    "proposed": "Upper u 2.22 WU -> WUB (the box meets the SW pilaster; its left margin clips at the pilaster). Ground u 5.27 WGB -> WG. Upper u 5.27 unresolved (tree), unchanged.",
+    "photos": [
+     "PXL_20260924_065653194 f_0009, f_0013, f_0015 (t2.8-4.8)"
+    ],
+    "method": "Frame crops c16/c17/c19: the first upper window E of the SW pilaster has a maroon box, its ground window is plain on the plinth, and the second ground window (x 720-930 px) is plain. Render r/V653_f12 shows the model's boxes on column 2.",
+    "error": "column identity certain; box margins not measured",
+    "confidence": "medium",
+    "needs_builder_change": false
+   }
+  ]
+ },
+ {
+  "zone": "Garden + pergola + hedges, sports grounds (pitch, courts, lower yard, stair), sports hall + HallEast + hall wing + canteen, A_W / A_S west and south. Round 2 checked against build_verify2.blend. Scratch: /tmp/claude-0/-home-user-KOCH-SIMULATOR/4c46a856-9b83-58ac-a5d2-3a1adfa042aa/scratchpad/agent_scratch/verify2_3/ (notes.txt; tools pnpg.py, pnpu.py, ray.py, wov.py, render_v2.py; renders in r/, 10 used). Round-1 fixes confirmed in the current build: X3-02 G2_SE arch top 7.73, X3-04 BoxE wall top 7.11 in red block, X3-05 A_S porch beam soffit 8.82 (2.13 above the alley, ray), X3-07 lower-yard treads 0.76, X3-08 bed and coping cut at x<=160.02. Canteen was not re-checked: round 1 V11 covered it and its height is deferred as V1-08.",
+  "viewpoints": [
+   {
+    "name": "Lower-yard stair top / courts NW corner looking E",
+    "photos": [
+     "A051",
+     "A040",
+     "A042",
+     "A043"
+    ],
+    "camera": "approximate (163.6,71.0,4.6) yaw 72 pitch -24 fl35 24 (no PnP). The finding comes from ray profiles of the model, not from this camera.",
+    "render": "r/R_A051.png, r/sbs_A051.jpg",
+    "verdict": "mismatch",
+    "notes": "The dip bars and pull-up frames just E of the E cheek match (x 167.1-171.1). In the photos the stair's top kerb sits directly on the walkway paving at the courts NW corner, and the walkway is flush to it. In the model the walkway (3.45) stops at y 68.5 and leaves a pit 1.7 m long and 1.1 m deep (ground 2.325) across the whole walkway end, x 161.9-165.9. The first tread starts at y 70.4. The W bed sinks the walkway W part to 3.28 (Y3-01)."
+   },
+   {
+    "name": "Pitch NE corner, N-path kerb steps looking W",
+    "photos": [
+     "A038",
+     "A042"
+    ],
+    "camera": "none (topology plus ray probes)",
+    "render": "none",
+    "verdict": "mismatch",
+    "notes": "In the photo, 3 painted kerb risers rise W straight from the walkway paving at the plinth corner, with no wall. The bed kerb runs E from the steps' N end. In the model, NorthPath_Steps sit on the sunken W-bed pad: treads 3.369/3.469/3.569 are buried under terrain at 3.49-3.60, and LowerYard_Retain_Terrace (top 3.8, x 158.99-159.29) cuts N-S through the steps (Y3-01)."
+   },
+   {
+    "name": "Hall N wall E door bay looking W",
+    "photos": [
+     "A081",
+     "A079"
+    ],
+    "camera": "pnp2 on wall points only: (129.9,15.4,6.5) yaw 276. Degenerate, rms 21-60 px.",
+    "render": "r/R_A081.png (rough)",
+    "verdict": "mismatch",
+    "notes": "The maroon tile door bay and the rusty 2-leaf door are present. The door leaf bottom is about 0.12 m above the paving; the model door starts at FFL 5.4, 0.63 m above the paving at 4.77, with no step (Y3-02). Two white downpipes run to the ground at the bay's E edge; the model has a downpipe at u 43.5 and Flue_N at u 35.9 instead (noted, not filed). Near-window/bay height ratio 0.38 against the model's 0.27, unresolved. Thujas stand in pairs in some pits."
+   },
+   {
+    "name": "Hall N wall W door looking W",
+    "photos": [
+     "A084"
+    ],
+    "camera": "none",
+    "render": "none",
+    "verdict": "mismatch",
+    "notes": "The 2-leaf door (left leaf glazed) in the maroon panel stands at grade on a thin threshold. Model entrance E2_07 is 0.65 m above the paving at 4.75 (Y3-02). The barred window, louvred vent, flue pipe and W annex with red steps are visible."
+   },
+   {
+    "name": "Hall wing N face from the NW corner",
+    "photos": [
+     "A076",
+     "A075"
+    ],
+    "camera": "pnpu facade PnP (u/z unknown; eave 8.55 and ground 4.31/4.47 known): (139.38,27.15,5.62) yaw 145 rms 18.5",
+    "render": "r/R_A076.png, ov/A076.jpg",
+    "verdict": "mismatch",
+    "notes": "Window order from E is narrow 1-light, then vent, then 2-light, as in the model (A071 and G023 show the reverse order: unresolved). Sill 6.48 and top 7.78 match the model's 6.6/7.9. Plinth top 5.18 against the model's 5.55 (Y3-07). Downpipes at both ends; the model has only the E one (Y3-06). The W face has 2 blind niches, a window and a round vent, none modelled (Y3-06). N face length 13.4 (sd 1.4) against the model's 18.8 and about 16.6 from the Google z20 roof; this depends on the disputed eave height, so it is not filed."
+   },
+   {
+    "name": "Pergola walk E end looking E at the B-corner stair and the A_W gallery",
+    "photos": [
+     "A154",
+     "A145"
+    ],
+    "camera": "pnpg: A_W Sur_E3_04 corners plus hoop-1 feet, yaw prior 94.5+-1.2 from the walk tile-joint VP, z prior 6.85. Hypothesis f (hoops at the model): (146.39,-47.70,6.75) yaw 94.8 pitch -8.2 rms 3.6. Hypothesis d (window at the model): (147.03,-46.45,6.46) rms 5.9.",
+    "render": "r/R_A154f.png, r/R_A154.png, sbs_A154f.jpg",
+    "verdict": "mismatch",
+    "notes": "The hoops, bin and boulder wall line up. The photo shows the granite stair's lower flight facing W, directly at the walk end; the model has a flat landing there and a 1.55 m return block (Y3-04). The A_W window/pilaster pattern is offset: the surround comes out 1.2-1.3 m S of the model (Y3-05). Bin_Pergola_East is at (149.60,-48.76), model (149.34,-49.02), 0.37 m apart (minor)."
+   },
+   {
+    "name": "A_W gallery frontal",
+    "photos": [
+     "A137",
+     "A138"
+    ],
+    "camera": "pnpg on 2 posts top/foot, rms 3.1 (post pair ambiguous): (158.58,-44.70,7.02) yaw 85.8",
+    "render": "r/R_A137.png",
+    "verdict": "minor_differences",
+    "notes": "Posts, soffit, plinth, deck and the pilaster between 2 windows are as modelled. Relative to the bay's N post: window 1 matches, the pilaster is at -2.95 (model -3.04), window 2 is 1.2 m N of the model. Surround w/h 1.32-1.37 against the model's 1.10, but A154 gives 1.14. Inconsistent with A154/A212, so only the low-confidence Y3-05 is filed."
+   },
+   {
+    "name": "Garden centre square looking E (bench E1, E link, G2)",
+    "photos": [
+     "A099",
+     "A105"
+    ],
+    "camera": "approximate (127.6,-26.3,6.85) yaw 92 pitch -14, checked with an edge overlay",
+    "render": "r/R_A099.png, r/sbs_A099.jpg",
+    "verdict": "minor_differences",
+    "notes": "The diamond-slab square, scalloped edging, bench E1 in the hedge niche, E link and G2 gazebo match within the accuracy of the approximate camera. Nothing new filed."
+   },
+   {
+    "name": "Pergola walk mid (x 122) looking ENE",
+    "photos": [
+     "A169",
+     "A165",
+     "A166"
+    ],
+    "camera": "approximate (122.3,-46.3,6.75) yaw 68 pitch -6 (edge overlay)",
+    "render": "r/R_A169w.png, r/sbs_A169w.jpg",
+    "verdict": "mismatch",
+    "notes": "Hoops, walk edging and the G1 roof are present. A black lamp post with a white globe stands about 0.7 m N of the edging next to a hoop leg, at about (124.5,-44.9); it is not in the model (Y3-05b). The model has a 1.55 m hedge block right behind the edging, while the photo shows a low (~1 m) hedge behind a lawn strip. The camera is approximate, so this is not filed."
+   },
+   {
+    "name": "A_S west porch stair from the walkway foot",
+    "photos": [
+     "A235",
+     "A238"
+    ],
+    "camera": "pier PnP inconsistent (rms 45). The measurement uses camera-independent riser-height scaling.",
+    "render": "r/R_A235.png (approx, misaligned)",
+    "verdict": "mismatch",
+    "notes": "The porch beam fix (X3-05) is in place. The flight is a symmetric fan: each lower step is wider, with sloped cheek walls on both sides. The model has a straight 3.65 m flight (Y3-03)."
+   }
+  ],
+  "findings": [
+   {
+    "id": "Y3-01",
+    "title": "Walkway N end sunk into a 1.1 m pit in front of the lower-yard stair; W bed and N-path steps sunk/buried, retaining wall across the steps: LowerYard_Strip / LowerYard_WBed / Retain_Terrace S ends were not moved with the courts block (+1.72 m N, 10-03)",
+    "spec": "Art/Blender/Specs/SITE_Sports.json terrain_pads LowerYard_Strip.ring, LowerYard_WBed.ring/ref, elements LowerYard_Retain_Terrace.ring (NorthPath_Steps follows automatically: b_steps z0 = gz(pos))",
+    "current": "LowerYard_Strip ring starts [[159.292,68.679],[165.838,68.427],[165.887,69.726],[211.953,67.957],[211.904,66.658],[215.901,66.504],...]. Ground at x164 is 3.45 to y68.5, then 2.325 from y68.6 to 70.3, with the stair top at 70.22. LowerYard_WBed ring S points (159.3,68.75),(161.67,68.66), ref [160.5,68.7], so the walkway at x159.6-161.6, y69.4 sits at 3.28. NorthPath_Steps treads 3.369/3.469/3.569 lie under terrain at 3.49-3.60. Retain_Terrace (top 3.8) starts at y68.68 and crosses the steps at x158.99-159.29.",
+    "proposed": "LowerYard_Strip ring first 6 points = [[159.358,70.398],[165.904,70.146],[165.953,71.445],[212.019,69.675],[211.970,68.376],[215.967,68.223]] (the same +0.066/+1.719 shift already applied to the LowerYard pad); keep [216.12,71.997],[159.3,74.179]. LowerYard_WBed ring S points -> [159.366,70.469],[161.736,70.379], ref -> [160.566,70.419] (N points unchanged). LowerYard_Retain_Terrace ring points [158.992,68.682],[159.292,68.682] -> [159.058,70.401],[159.358,70.401]. With these, NorthPath_Steps rebuild on the walkway at 3.45 (treads 3.55/3.65/3.75, flush with NorthTerrace 3.75).",
+    "photos": [
+     "A040",
+     "A042",
+     "A051",
+     "A043",
+     "A038"
+    ],
+    "method": "Ray profiles of build_verify2 (ray.py rays2/3/4). The LowerYard ring shows the exact courts-move shift that the Strip ring is missing. Photos show the stair's top kerb directly on the walkway paving at the courts NW corner, and the 3 N-path kerb risers rising straight from the walkway at the pitch NE corner with no wall. A042: pitch NE plinth corner 1.6-2.2 m S of the top-kerb line (model 1.56), so the stair-top position is OK.",
+    "error": "The shift is exact (copied from the moved courts block). Photo flushness +-0.05 m. Stair-top y +-0.3.",
+    "confidence": "high",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y3-02",
+    "title": "Hall N steel doors float 0.63-0.65 m above the paving with no steps; photos show both doors at grade",
+    "spec": "Art/Blender/Specs/Overlays/BLD_Hall.json facades[edge 2].entrances (u0 33.9 and u0 49.6). Scripts/Blender/build_facades.py openings_for() hard-codes entrance z0 = 0.02 above FFL.",
+    "current": "Both entrances start at FFL 5.4. Paving outside (ray) is 4.77 at u33.9-36.3 and 4.75 at u49.6-52.4, so the sill sits 0.63/0.65 m above the paving.",
+    "proposed": "Add an entrance z0 option (relative to FFL, may be negative) and set E door (u33.9-36.3) z0 -0.51 (sill 4.89), top about 7.43 (z1 2.03). W door (u49.6-52.4) z0 -0.61 (sill 4.79), keep z1 2.7. Alternative without a builder change: a 0.6 m concrete stoop with steps, which the photos do not show.",
+    "photos": [
+     "A081",
+     "A079",
+     "A084"
+    ],
+    "method": "A081 full-res crop: E door leaf bottom v2262, paving at the door v2275-2300 (thin concrete threshold). Maroon tile course 0.165 m = 37 px gives about 0.12 m. A084: W door bottom v2095 on a thin threshold at the paving (v2100-2110). Door height 572 px = 2.54 m at 225 px/m.",
+    "error": "Sill +-0.05. Door top +-0.15 (depends on the 0.165 m course).",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y3-03",
+    "title": "A_S west porch stair is a symmetric fan stair (each lower step wider, sloped cheeks both sides), not a straight 3.65 m flight",
+    "spec": "Art/Blender/Specs/SITE_GateAlley.json PavilionStair (stairs_run) (+ cheek walls)",
+    "current": "stairs_run width 3.65 constant, 8 risers 0.175, top (155.632,-83.667), dir -2.808",
+    "proposed": "Per-step widths (centred on the current axis): top granite step 3.88, then +0.45 per step down (4.33, 4.78, 5.23, 5.68, 6.13, 6.58, 7.03 for steps 2-8; steps 4-8 extrapolated), with sloped concrete cheek walls with a pink coping on both sides. Needs a fan option in b_stairs_run (width_step) or 8 stacked box slabs.",
+    "photos": [
+     "A235",
+     "A238"
+    ],
+    "method": "A235 frontal from the walkway foot (g_A235_0_800). Step-end spans divided by riser height in px, scaled with riser 0.175: R1 2130/96 px = 3.88 m, R2 2667/105 = 4.45, R3 3270/120 = 4.77. Ends are symmetric (+-285 px per step on each side).",
+    "error": "+-0.2 m per width (riser-height scale). Lower steps extrapolated +-0.5.",
+    "confidence": "medium",
+    "needs_builder_change": true
+   },
+   {
+    "id": "Y3-04",
+    "title": "NEW evidence for deferred X3-03: the B-corner stair's lower flight faces W, its bottom riser right at the pergola-walk E end (x 152.3, y -47.9..-49.4); model has a flat landing there and only N-facing flights at y<=-52.9",
+    "spec": "Art/Blender/Specs/SITE_GateAlley.json Steps_BCorner_Lower/Upper; SITE_Garden.json PergolaEast_Landing_N/S, RetainingWall_South_Return",
+    "current": "Steps_BCorner_Lower x152.37-159.26 y-53.24..-52.90 and Upper to y-55.30, rising S. The area x152.5-159, y-46..-52.9 is flat diamond landing, plus a 1.55 m RetainingWall_South_Return block at x151.1-151.8, y-53.3..-49.6.",
+    "proposed": "Add a W-facing flight (stairs_run dir_deg 177.2 = downhill W): bottom riser foot line x 152.30 (+-0.2) from y -47.94 (N end) S to the boulder wall at y -49.38 and on behind it toward B's NE corner. 5 risers + landing (plaza 5.35 to about 6.4 = 5 x 0.21, or 6 x 0.175 per A134). The N ends of the steps step back E along a diagonal through about (153.1,-48.4), (155.3,-48.9), (158.0,-49.9). The tread depths are unmeasured (grazing view) and need A150/A134 or a tape. The N-facing part near the gallery stays (A141 bottom riser y -53.75 at x 158.4-159.7), so this stair is an L/corner stair. Do not move the walk.",
+    "photos": [
+     "A154",
+     "A145",
+     "A134"
+    ],
+    "method": "A154 PnP (pnpg): A_W surround corners plus hoop-1 feet, with yaw prior from the walk tile-joint VP. Riser feet back-projected on z 5.35 under 2 camera hypotheses (hoops at the model: rms 3.6; window at the model: rms 5.9). x agrees (152.0-152.4), so the flight's W face is right at the walk end. The render from that camera (R_A154f) shows the model's flat landing where the photo has the flight. This reconciles X3-03 (a) (stair at the walk axis, A147) and (b) (N-facing riser at y -53.75 near the gallery, A141).",
+    "error": "x +-0.2. y +-0.3 relative to the hoops (+-1.3 if instead the A_W window is the reference). Upper-step N ends +-1 m.",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y3-05",
+    "title": "A_W W-face window surrounds about 1.25 m S of the model relative to the gallery posts and the pergola walk (A154; agrees with round-1 V06/A212); A137 is inconsistent",
+    "spec": "Art/Blender/Specs/BLD_A_W.json facades[edge 3].windows u (Sur_E3_02..05) and pilasters",
+    "current": "Sur_E3_04 y -48.56..-46.51 (window centres -53.43, -47.54, -41.64, -35.75, i.e. one per post with an offset of about 0.1 m)",
+    "proposed": "Not ready to apply: A154 (hoops fixed) puts Sur_E3_04 at y -49.90..-47.68 (+1.25 m in u along edge 3). A137 (2 posts) gives a pattern of window at the N post, pilaster 2.95 m S, window 4.8 m S. Settle with one tape: post-to-surround edge distance in 2 bays.",
+    "photos": [
+     "A154",
+     "A137",
+     "A212"
+    ],
+    "method": "pnpg A154 hypothesis f (rms 3.6) and A137 2-post PnP (rms 3.1) with vplane back-projection",
+    "error": "+-0.15 in A154; the A137 post-pair identity is ambiguous",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y3-05b",
+    "title": "Third pergola-walk lamp post at about x 124.5 (black post, white globe, about 0.7 m N of the walk edging)",
+    "spec": "Art/Blender/Specs/SITE_Garden.json new lamp_orn PergolaWalk_Lamp_2 (copy of PergolaWalk_Lamp_0 params)",
+    "current": "PergolaWalk_Lamp_0 (140.5,-45.4) and Lamp_1 (112.5,-44.3) only",
+    "proposed": "PergolaWalk_Lamp_2 pos [124.5,-44.9], height 2.6, globes 1, top_globe true",
+    "photos": [
+     "A169",
+     "A165",
+     "A166"
+    ],
+    "method": "A169 (camera at the R2-04 spot (122.3,-46.0)): lamp foot px (1066,3182) back-projected on z 5.37 with an overlay-checked camera (yaw 68 +-4)",
+    "error": "+-0.6 m (approximate camera)",
+    "confidence": "low",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y3-06",
+    "title": "Hall wing: second downpipe at the NW corner and W-face openings missing",
+    "spec": "Art/Blender/Specs/BLD_HallWing.json attachments downpipe edge 2 u; facades edge 3 (none)",
+    "current": "downpipe u [1.9] only; W face blank (deferred R1-04 covers only the base box)",
+    "proposed": "downpipe edge 2 u [1.9, 18.4] (z0 -0.3, z1 3.5, d 0.1). W face (edge 3): 2 tall blind niches, 1 tall narrow 2-light window and a round vent d about 0.35 near the N end, high. Their u and sizes are not measured here.",
+    "photos": [
+     "A076"
+    ],
+    "method": "A076 full-res crops (g_A076_2900_0: downpipe x3180-3230, corner x3390; niches 3500-3530 and 3640-3680; window 3740-3790; vent 3540,500)",
+    "error": "downpipe u +-0.2; W-face items unmeasured",
+    "confidence": "medium",
+    "needs_builder_change": false
+   },
+   {
+    "id": "Y3-07",
+    "title": "Hall wing plinth top lower than modelled: 5.18 (0.87 above the N ground) vs 5.55",
+    "spec": "Art/Blender/Specs/BLD_HallWing.json plinth.z_top",
+    "current": "z_top 0.6 on FFL 4.95 = 5.55 (1.24 above the NW ground 4.31)",
+    "proposed": "z_top 0.23 (abs 5.18)",
+    "photos": [
+     "A076"
+    ],
+    "method": "pnpu facade PnP with ground (4.31/4.47) and eave (8.55) known, plinth z unknown: 5.18 sd 0.06. The plinth is 0.205 of ground-to-eave.",
+    "error": "+-0.08 (+-0.06 fit, plus the eave uncertainty of +-0.38 scaled by 0.2)",
+    "confidence": "low",
+    "needs_builder_change": false
+   }
+  ]
+ }
+]

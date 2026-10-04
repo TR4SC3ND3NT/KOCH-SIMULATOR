@@ -153,28 +153,28 @@
    "name": "LowerYard_Strip",
    "ring": [
     [
-     159.292,
-     68.679
+     159.358,
+     70.398
     ],
     [
-     165.838,
-     68.427
+     165.904,
+     70.146
     ],
     [
-     165.887,
-     69.726
+     165.953,
+     71.445
     ],
     [
-     211.953,
-     67.957
+     212.019,
+     69.675
     ],
     [
-     211.904,
-     66.658
+     211.97,
+     68.376
     ],
     [
-     215.901,
-     66.504
+     215.967,
+     68.223
     ],
     [
      216.12,
@@ -187,7 +187,7 @@
    ],
    "z": 2.325,
    "blend": 0.0,
-   "evidence": "2026-09-29 zone loop (sports): owner - the courts platform stands 1.15-1.20 m above the pull-up strip, the strip ends at the pull-up bars / sand pit and the yard road beyond it is ~0.15 m lower; the ground around the yard (DEM) is 1.7-2.3, so the yard (was 2.85, 0.6-1.1 m above its surroundings) is lowered, the courts stay: strip 2.325 (courts 3.5 - 1.175), curb 0.15 to the yard road",
+   "evidence": "2026-09-29 zone loop (sports): owner - the courts platform stands 1.15-1.20 m above the pull-up strip, the strip ends at the pull-up bars / sand pit and the yard road beyond it is ~0.15 m lower; the ground around the yard (DEM) is 1.7-2.3, so the yard (was 2.85, 0.6-1.1 m above its surroundings) is lowered, the courts stay: strip 2.325 (courts 3.5 - 1.175), curb 0.15 to the yard road | 2026-10-04 re-verification round 2 Y3-01: the walkway N end no longer sinks into the strip pad (same +0.066/+1.719 shift as the LowerYard pad)",
    "confidence": "medium"
   },
   {
@@ -227,12 +227,12 @@
    "name": "LowerYard_WBed",
    "ring": [
     [
-     159.3,
-     68.75
+     159.366,
+     70.469
     ],
     [
-     161.67,
-     68.66
+     161.736,
+     70.379
     ],
     [
      161.76,
@@ -250,11 +250,11 @@
     -0.17
    ],
    "ref": [
-    160.5,
-    68.7
+    160.566,
+    70.419
    ],
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): raised lawn bed (birch, roses) W of the stair at walkway level, falling N with the cheek top"
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): raised lawn bed (birch, roses) W of the stair at walkway level, falling N with the cheek top | 2026-10-04 re-verification round 2 Y3-01: the walkway N end no longer sinks into the strip pad (same +0.066/+1.719 shift as the LowerYard pad)"
   }
  ],
  "elements": [
@@ -4012,12 +4012,12 @@
    "name": "LowerYard_Retain_Terrace",
    "ring": [
     [
-     158.992,
-     68.682
+     159.058,
+     70.401
     ],
     [
-     159.292,
-     68.682
+     159.358,
+     70.401
     ],
     [
      159.427,
@@ -4048,7 +4048,7 @@
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "confidence": "medium",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top slopes 3.8 -> 2.775 with the bank | 2026-10-02 walk QA: on the terrain step line (rotated with the pads, was world-aligned and up to 0.15 m off it) and 5 cm over the terrace/bank top (the old linear top sat up to 0.4 m under the 3.75 terrace, terrain hung over the drop)",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: the bed / lawn north of the pitch fall evenly toward the lower yard (not a tall wall), ending in a low wall above the yard: top slopes 3.8 -> 2.775 with the bank | 2026-10-02 walk QA: on the terrain step line (rotated with the pads, was world-aligned and up to 0.15 m off it) and 5 cm over the terrace/bank top (the old linear top sat up to 0.4 m under the 3.75 terrace, terrain hung over the drop) | 2026-10-04 re-verification round 2 Y3-01: the walkway N end no longer sinks into the strip pad (same +0.066/+1.719 shift as the LowerYard pad)",
    "folds": [
     [
      2,

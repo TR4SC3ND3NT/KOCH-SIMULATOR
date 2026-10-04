@@ -145,18 +145,19 @@
    "type": "turnstile",
    "name": "Turnstile_In",
    "pos": [
-    156.875,
-    -97.269
+    156.25,
+    -97.27
    ],
    "dir_deg": 87.1,
-   "count": 1,
-   "passage_w": 0.55,
+   "count": 2,
+   "passage_w": 0.85,
    "height": 1.0,
-   "housing_w": 0.25,
+   "housing_w": 0.3,
    "housing_l": 0.8,
-   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; IN lane = the east one, next to the guard's service window (assumed, lane sides not seen) | 2026-10-03 photo pass R3-13 (A247-A258, 7 viewpoints): ONE stainless tripod with arrows both ways; the owner's '2 pass devices (in + out)' are the two readers (card + face tablet facing in and out) on a pole on its housing",
+   "evidence": "owner 2026-09-29: the main entrance (sidewalk side) has 2 face-control turnstiles, one for IN, one for OUT; frames 065910461 t4.8 / 070021774 t1.2 show the stainless tripod by the booth + 2 face terminals on poles (evidence of the old single unit). Units 1.05 m wide (2 x 0.25 housings + 0.55 passage) side by side between the gate post rail and the booth west face; IN lane = the east one, next to the guard's service window (assumed, lane sides not seen) | 2026-10-03 photo pass R3-13 (A247-A258, 7 viewpoints): ONE stainless tripod with arrows both ways; the owner's '2 pass devices (in + out)' are the two readers (card + face tablet facing in and out) on a pole on its housing | 2026-10-04 re-verification round 2 Y2-07: one central double-rotor cabinet with a passage on each side",
    "confidence": "medium",
-   "ue_logic": "turnstile_both"
+   "ue_logic": "turnstile_both",
+   "inner_only": true
   },
   {
    "type": "fence",
@@ -432,21 +433,6 @@
    "confidence": "low"
   },
   {
-   "type": "bench",
-   "name": "Bench_InsideEast",
-   "pos": [
-    163.828,
-    -96.55
-   ],
-   "dir_deg": 87.1,
-   "length": 1.8,
-   "depth": 0.6,
-   "seat_h": 0.45,
-   "back_h": 0.85,
-   "evidence": "brown wooden-slat bench on a steel frame just inside the fence east of the booth, facing the campus (pano 2022, 065934318 f0.3)",
-   "confidence": "low"
-  },
-  {
    "type": "wall",
    "name": "FencePlinth_West",
    "line": [
@@ -564,8 +550,8 @@
    "type": "box",
    "name": "FaceTerminal_In",
    "center": [
-    157.279,
-    -97.859
+    156.248,
+    -97.31
    ],
    "dir_deg": 267.1,
    "size": [
@@ -577,15 +563,15 @@
    "material": "metal",
    "slot": "M_Plastic_Black",
    "ue_asset": "face_recognition_terminal",
-   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir",
+   "evidence": "owner 2026-09-29: face-control check at the IN turnstile (terminal on a pole before the arm, faces the street) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir | 2026-10-04 re-verification round 2 Y2-07: back to back on the cabinet",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "FaceTerminal_Out",
    "center": [
-    157.271,
-    -97.779
+    156.252,
+    -97.23
    ],
    "dir_deg": 87.1,
    "size": [
@@ -597,7 +583,7 @@
    "material": "metal",
    "slot": "M_Plastic_Black",
    "ue_asset": "face_recognition_terminal",
-   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir | 2026-10-03 photo pass R3-13 (A247-A258, 7 viewpoints): ONE stainless tripod with arrows both ways; the owner's '2 pass devices (in + out)' are the two readers (card + face tablet facing in and out) on a pole on its housing; mounted back to back with the In terminal",
+   "evidence": "owner 2026-09-29: face-control check at the OUT turnstile (terminal on a pole before the arm, faces the campus) | 2026-10-01: was a copy of PipeBarrier_Booth (exact duplicate, scene_qa); now a pole + face terminal at its pos/dir | 2026-10-03 photo pass R3-13 (A247-A258, 7 viewpoints): ONE stainless tripod with arrows both ways; the owner's '2 pass devices (in + out)' are the two readers (card + face tablet facing in and out) on a pole on its housing; mounted back to back with the In terminal | 2026-10-04 re-verification round 2 Y2-07: back to back on the cabinet",
    "confidence": "medium"
   },
   {
@@ -836,21 +822,6 @@
    "ue_asset": "card_reader",
    "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): small grey card-reader box on the booth's west wall by the turnstile",
    "confidence": "medium"
-  },
-  {
-   "type": "lamp",
-   "name": "MeterPost_Booth",
-   "pos": [
-    156.9,
-    -100.8
-   ],
-   "height": 1.6,
-   "head": "box",
-   "pole_r": 0.04,
-   "slot": "M_Steel_Paint_Dark",
-   "ue_asset": "meter_post",
-   "evidence": "P1 by frames (booth close-ups 065910461 s1/s2, 070021774 s1; booth outline = BLD_GateBooth anchor): brown steel pipe post with an electric meter box and cable west of the booth (065934318 s1); +-1 m",
-   "confidence": "low"
   },
   {
    "type": "box",
@@ -1420,14 +1391,14 @@
    "type": "lamp",
    "name": "FaceTerminal_In_Pole",
    "pos": [
-    157.275,
-    -97.819
+    156.25,
+    -97.27
    ],
    "height": 1.2,
    "head": "none",
    "pole_r": 0.03,
    "slot": "M_Steel_Galv",
-   "evidence": "pole of FaceTerminal_In | 2026-10-03: one round pole carries both terminals (duplicate box pole removed)",
+   "evidence": "pole of FaceTerminal_In | 2026-10-03: one round pole carries both terminals (duplicate box pole removed) | 2026-10-04 re-verification round 2 Y2-07: on the cabinet",
    "confidence": "medium"
   },
   {
@@ -1683,39 +1654,39 @@
    "type": "box",
    "name": "Billboard_West_Post_0",
    "center": [
-    141.17,
-    -97.14999999999999
+    140.75,
+    -97.47
    ],
    "dir_deg": 0,
    "size": [
     0.06,
     0.06,
-    0.85
+    2.55
    ],
    "z_rel": -0.05,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "confidence": "low",
-   "evidence": "2026-10-04 re-verification X2-12: billboard post"
+   "evidence": "2026-10-04 re-verification X2-12: billboard post | 2026-10-04 re-verification round 2 Y2-02: posts behind the panel up to its top"
   },
   {
    "type": "box",
    "name": "Billboard_West_Post_1",
    "center": [
-    141.23,
-    -98.05
+    141.65,
+    -97.47
    ],
    "dir_deg": 0,
    "size": [
     0.06,
     0.06,
-    0.85
+    2.55
    ],
    "z_rel": -0.05,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "confidence": "low",
-   "evidence": "2026-10-04 re-verification X2-12: billboard post"
+   "evidence": "2026-10-04 re-verification X2-12: billboard post | 2026-10-04 re-verification round 2 Y2-02: posts behind the panel up to its top"
   }
  ],
  "ground_surfaces": [
@@ -1885,8 +1856,16 @@
      -100.4
     ],
     [
+     160.95,
+     -100.59
+    ],
+    [
+     160.95,
+     -97.47
+    ],
+    [
      188.0,
-     -101.95
+     -99.38
     ],
     [
      188.0,
@@ -1902,7 +1881,7 @@
     ]
    ],
    "slot": "M_Paver_Clover_Grey",
-   "evidence": "2026-10-04 re-verification X2-06: clover pavers S/E of the gate booth out to the parking (was grass)"
+   "evidence": "2026-10-04 re-verification X2-06: clover pavers S/E of the gate booth out to the parking (was grass) | 2026-10-04 re-verification round 2 Y2-01: N edge on the PathClover_S centreline (no grass strip)"
   }
  ]
 }

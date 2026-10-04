@@ -595,8 +595,8 @@
      3.136627
     ],
     [
-     185.77518,
-     2.666397
+     185.97502,
+     2.658427
     ]
    ],
    "z0": 6.3,
@@ -629,8 +629,8 @@
      3.136627
     ],
     [
-     185.77518,
-     2.666397
+     185.97502,
+     2.658427
     ]
    ],
    "u0": 4.36,
@@ -654,8 +654,8 @@
      3.136627
     ],
     [
-     185.77518,
-     2.666397
+     185.97502,
+     2.658427
     ]
    ],
    "u0": 10.36,
@@ -1247,23 +1247,23 @@
    "name": "F1_Hall_Bulkhead_E",
    "ring": [
     [
-     195.377315,
-     3.78463
+     196.261607,
+     3.749363
     ],
     [
-     195.776995,
-     3.76869
+     196.851135,
+     3.725851
     ],
     [
-     196.008125,
-     9.56405
+     197.082265,
+     9.521211
     ],
     [
-     195.608445,
-     9.57999
+     196.492737,
+     9.544723
     ]
    ],
-   "z0": 9.06,
+   "z0": 9.12,
    "z1": 9.4,
    "material": "white",
    "evidence": "2026-10-01 reference classroom plan v6: plasterboard bulkhead across the hall in front of the stair zone",
@@ -1615,8 +1615,8 @@
    "type": "box",
    "name": "F1_RoomPlate_N4",
    "center": [
-    192.519921,
-    9.678146
+    192.520718,
+    9.69813
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1651,26 +1651,6 @@
    "ue_asset": "room_plate",
    "content": "KOCH 103",
    "evidence": "2026-10-01 reference classroom plan v6: black room plate beside the classroom door at ~1.7 m (2026-10-03 Q0-06)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "F1_Hall_WallLamp_S1",
-   "center": [
-    180.633868,
-    3.111632
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.35,
-    0.08,
-    0.06
-   ],
-   "z0": 8.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "ue_asset": "wall_light_linear_black",
-   "evidence": "2026-10-01 reference classroom plan v6: black linear wall lamp at ~2.45 (2026-10-03 Q3-19)",
    "confidence": "low"
   },
   {
@@ -1715,50 +1695,10 @@
   },
   {
    "type": "box",
-   "name": "F1_Hall_WallLamp_S5",
-   "center": [
-    199.460641,
-    3.661811
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.35,
-    0.08,
-    0.06
-   ],
-   "z0": 8.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "ue_asset": "wall_light_linear_black",
-   "evidence": "2026-10-01 reference classroom plan v6: black linear wall lamp at ~2.45 (2026-10-03 Q3-19)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
    "name": "F1_Hall_WallLamp_N1",
    "center": [
     180.86181,
     8.827056
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.35,
-    0.08,
-    0.06
-   ],
-   "z0": 8.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "ue_asset": "wall_light_linear_black",
-   "evidence": "2026-10-01 reference classroom plan v6: black linear wall lamp at ~2.45 (2026-10-03 Q3-19)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
-   "name": "F1_Hall_WallLamp_N2",
-   "center": [
-    186.85701,
-    8.587956
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -1795,26 +1735,6 @@
   },
   {
    "type": "box",
-   "name": "F1_Hall_WallLamp_N5",
-   "center": [
-    199.687786,
-    9.357251
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.35,
-    0.08,
-    0.06
-   ],
-   "z0": 8.85,
-   "material": "metal",
-   "slot": "M_Steel_Paint_Dark",
-   "ue_asset": "wall_light_linear_black",
-   "evidence": "2026-10-01 reference classroom plan v6: black linear wall lamp at ~2.45 (2026-10-03 Q3-19)",
-   "confidence": "low"
-  },
-  {
-   "type": "box",
    "name": "F1_Accent_WC4_T",
    "center": [
     187.287862,
@@ -1822,7 +1742,7 @@
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    1.1,
+    0.9,
     0.02,
     0.83
    ],
@@ -1889,12 +1809,12 @@
    "type": "box",
    "name": "F1_Accent_N4_R",
    "center": [
-    192.510526,
-    9.693533
+    192.43059,
+    9.696721
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    0.22,
+    0.06,
     0.02,
     2.8
    ],
@@ -2233,10 +2153,10 @@
      6.48
     ],
     [
-     195.003809,
-     9.601102,
+     194.923873,
+     9.60429,
      -2.2838545045845304,
-     4.77,
+     4.93,
      0.006,
      2.02,
      6.48
@@ -2270,12 +2190,12 @@
    "type": "box",
    "name": "F1_R107_DoorBox",
    "center": [
-    176.951262,
-    2.868194
+    176.876322,
+    2.871182
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -2283,6 +2203,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R107_Pilaster_BoardDoor",
+   "center": [
+    179.699063,
+    2.758606
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -2300,7 +2239,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -2793,6 +2732,26 @@
    "confidence": "medium"
   },
   {
+   "type": "box",
+   "name": "F1_R107_Radiator_End",
+   "center": [
+    173.950046,
+    -0.239658
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.8,
+    0.57
+   ],
+   "z0": 6.7,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "ue_asset": "radiator_sectional",
+   "evidence": "2026-10-01 reference classroom plan v6: radiator under the end-wall window (CI017 / CR004, Y0-i)",
+   "confidence": "medium"
+  },
+  {
    "type": "boxes",
    "name": "F1_R107_WindowWall_Paint",
    "items": [
@@ -3018,10 +2977,28 @@
      6.41
     ],
     [
-     179.561915,
-     2.90819,
+     179.489973,
+     2.911059,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     179.617888,
+     2.755839,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     179.683853,
+     2.60309,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -3099,11 +3076,11 @@
      6.41
     ],
     [
-     179.653421,
-     0.033276,
+     179.647443,
+     -0.116604,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -3118,19 +3095,19 @@
    "name": "F1_R107_HeatPipe",
    "items": [
     [
-     179.603065,
-     0.000256,
+     179.598483,
+     -0.114652,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     179.539979,
-     2.860026,
+     179.48802,
+     2.862098,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -3145,8 +3122,8 @@
    "type": "disc",
    "name": "F1_R107_Bin",
    "pos": [
-    179.519421,
-    2.645676
+    179.532232,
+    2.465023
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -3162,8 +3139,8 @@
    "type": "box",
    "name": "F1_R107_LightSwitch",
    "center": [
-    179.599726,
-    2.902678
+    179.56975,
+    2.903874
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -3785,12 +3762,12 @@
    "type": "box",
    "name": "F1_R108_DoorBox",
    "center": [
-    182.946463,
-    2.629094
+    182.871523,
+    2.632082
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -3798,6 +3775,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R108_Pilaster_BoardDoor",
+   "center": [
+    185.694262,
+    2.519506
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -3815,7 +3811,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -4553,10 +4549,28 @@
      6.41
     ],
     [
-     185.557115,
-     2.66909,
+     185.485173,
+     2.671959,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     185.613088,
+     2.516739,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     185.679053,
+     2.36399,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -4634,11 +4648,11 @@
      6.41
     ],
     [
-     185.648621,
-     -0.205824,
+     185.642643,
+     -0.355704,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -4653,19 +4667,19 @@
    "name": "F1_R108_HeatPipe",
    "items": [
     [
-     185.598265,
-     -0.238844,
+     185.593683,
+     -0.353752,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     185.535179,
-     2.620926,
+     185.48322,
+     2.622998,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -4680,8 +4694,8 @@
    "type": "disc",
    "name": "F1_R108_Bin",
    "pos": [
-    185.51462,
-    2.406576
+    185.527432,
+    2.225923
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -4697,8 +4711,8 @@
    "type": "box",
    "name": "F1_R108_LightSwitch",
    "center": [
-    185.594926,
-    2.663578
+    185.56495,
+    2.664774
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -5320,12 +5334,12 @@
    "type": "box",
    "name": "F1_R101_DoorBox",
    "center": [
-    193.539828,
-    3.507636
+    193.614768,
+    3.504648
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -5333,6 +5347,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R101_Pilaster_BoardDoor",
+   "center": [
+    190.792028,
+    3.617224
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -5350,7 +5383,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -6088,10 +6121,28 @@
      6.41
     ],
     [
-     190.940652,
-     3.75541,
+     191.012594,
+     3.752541,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     190.872724,
+     3.608001,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     190.794804,
+     3.46099,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -6169,11 +6220,11 @@
      6.41
     ],
     [
-     190.620487,
-     0.896914,
+     190.614509,
+     0.747034,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -6188,19 +6239,19 @@
    "name": "F1_R101_HeatPipe",
    "items": [
     [
-     190.668053,
-     0.85999,
+     190.66347,
+     0.745082,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     190.958683,
-     3.705652,
+     191.010641,
+     3.70358,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -6215,8 +6266,8 @@
    "type": "disc",
    "name": "F1_R101_Bin",
    "pos": [
-    190.962106,
-    3.490346
+    190.934949,
+    3.311287
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -6232,8 +6283,8 @@
    "type": "box",
    "name": "F1_R101_LightSwitch",
    "center": [
-    190.902522,
-    3.752928
+    190.932498,
+    3.751732
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -6855,12 +6906,12 @@
    "type": "box",
    "name": "F1_R102_DoorBox",
    "center": [
-    199.535028,
-    3.268536
+    199.609968,
+    3.265548
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -6868,6 +6919,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R102_Pilaster_BoardDoor",
+   "center": [
+    196.787228,
+    3.378124
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -6885,7 +6955,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -7378,6 +7448,26 @@
    "confidence": "medium"
   },
   {
+   "type": "box",
+   "name": "F1_R102_Radiator_End",
+   "center": [
+    202.279211,
+    -0.068452
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.8,
+    0.57
+   ],
+   "z0": 6.7,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "ue_asset": "radiator_sectional",
+   "evidence": "2026-10-01 reference classroom plan v6: radiator under the end-wall window (CI017 / CR004, Y0-i)",
+   "confidence": "medium"
+  },
+  {
    "type": "boxes",
    "name": "F1_R102_WindowWall_Paint",
    "items": [
@@ -7603,10 +7693,28 @@
      6.41
     ],
     [
-     196.935852,
-     3.51631,
+     197.007794,
+     3.513441,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     196.867924,
+     3.368901,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     196.790004,
+     3.22189,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -7684,11 +7792,11 @@
      6.41
     ],
     [
-     196.615687,
-     0.657814,
+     196.609709,
+     0.507934,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -7703,19 +7811,19 @@
    "name": "F1_R102_HeatPipe",
    "items": [
     [
-     196.663253,
-     0.62089,
+     196.65867,
+     0.505982,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     196.953883,
-     3.466552,
+     197.005841,
+     3.46448,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -7730,8 +7838,8 @@
    "type": "disc",
    "name": "F1_R102_Bin",
    "pos": [
-    196.957306,
-    3.251246
+    196.930149,
+    3.072187
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -7747,8 +7855,8 @@
    "type": "box",
    "name": "F1_R102_LightSwitch",
    "center": [
-    196.897722,
-    3.513828
+    196.927698,
+    3.512632
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -8370,12 +8478,12 @@
    "type": "box",
    "name": "F1_R106_DoorBox",
    "center": [
-    177.210288,
-    9.362994
+    177.135348,
+    9.365983
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -8383,6 +8491,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R106_Pilaster_BoardDoor",
+   "center": [
+    179.958088,
+    9.253406
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -8400,7 +8527,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -8893,6 +9020,26 @@
    "confidence": "medium"
   },
   {
+   "type": "box",
+   "name": "F1_R106_Radiator_End",
+   "center": [
+    174.466104,
+    12.699982
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.8,
+    0.57
+   ],
+   "z0": 6.7,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "ue_asset": "radiator_sectional",
+   "evidence": "2026-10-01 reference classroom plan v6: radiator under the end-wall window (CI017 / CR004, Y0-i)",
+   "confidence": "medium"
+  },
+  {
    "type": "boxes",
    "name": "F1_R106_WindowWall_Paint",
    "items": [
@@ -9118,10 +9265,28 @@
      6.41
     ],
     [
-     179.809464,
-     9.11522,
+     179.737521,
+     9.118089,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     179.877391,
+     9.262629,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     179.955311,
+     9.40964,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -9199,11 +9364,11 @@
      6.41
     ],
     [
-     180.129628,
-     11.973716,
+     180.135606,
+     12.123596,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -9218,19 +9383,19 @@
    "name": "F1_R106_HeatPipe",
    "items": [
     [
-     180.082062,
-     12.01064,
+     180.086645,
+     12.125548,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     179.791432,
-     9.164978,
+     179.739474,
+     9.16705,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -9245,8 +9410,8 @@
    "type": "disc",
    "name": "F1_R106_Bin",
    "pos": [
-    179.78801,
-    9.380284
+    179.815166,
+    9.559343
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -9262,8 +9427,8 @@
    "type": "box",
    "name": "F1_R106_LightSwitch",
    "center": [
-    179.847593,
-    9.117702
+    179.817616,
+    9.118898
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -9885,12 +10050,12 @@
    "type": "box",
    "name": "F1_R105_DoorBox",
    "center": [
-    183.205488,
-    9.123894
+    183.130548,
+    9.126882
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -9898,6 +10063,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R105_Pilaster_BoardDoor",
+   "center": [
+    185.953288,
+    9.014306
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -9915,7 +10099,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -10673,10 +10857,28 @@
      6.41
     ],
     [
-     185.804664,
-     8.87612,
+     185.732721,
+     8.878989,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     185.872591,
+     9.023529,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     185.950511,
+     9.17054,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -10754,11 +10956,11 @@
      6.41
     ],
     [
-     186.124828,
-     11.734616,
+     186.130806,
+     11.884496,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -10773,19 +10975,19 @@
    "name": "F1_R105_HeatPipe",
    "items": [
     [
-     186.077262,
-     11.77154,
+     186.081845,
+     11.886448,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     185.786632,
-     8.925878,
+     185.734674,
+     8.92795,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -10800,8 +11002,8 @@
    "type": "disc",
    "name": "F1_R105_Bin",
    "pos": [
-    185.78321,
-    9.141184
+    185.810366,
+    9.320243
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -10817,8 +11019,8 @@
    "type": "box",
    "name": "F1_R105_LightSwitch",
    "center": [
-    185.842792,
-    8.878602
+    185.812817,
+    8.879798
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -11674,12 +11876,12 @@
    "type": "box",
    "name": "F1_R104_DoorBox",
    "center": [
-    193.798852,
-    10.002436
+    193.873792,
+    9.999447
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -11687,6 +11889,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R104_Pilaster_BoardDoor",
+   "center": [
+    191.051052,
+    10.112024
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -11704,7 +11925,7 @@
    ],
    "z0": 9.05,
    "material": "white",
-   "slot": "M_Paint_White",
+   "slot": "M_Paint_Sage",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
    "confidence": "medium"
   },
@@ -12442,10 +12663,28 @@
      6.41
     ],
     [
-     191.1882,
-     9.96244,
+     191.260142,
+     9.959571,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     191.132227,
+     10.114791,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     191.066262,
+     10.26754,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -12523,11 +12762,11 @@
      6.41
     ],
     [
-     191.096694,
-     12.837354,
+     191.102672,
+     12.987234,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -12542,19 +12781,19 @@
    "name": "F1_R104_HeatPipe",
    "items": [
     [
-     191.14705,
-     12.870374,
+     191.151632,
+     12.985282,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     191.210136,
-     10.010604,
+     191.262095,
+     10.008532,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -12569,8 +12808,8 @@
    "type": "disc",
    "name": "F1_R104_Bin",
    "pos": [
-    191.230694,
-    10.224954
+    191.217884,
+    10.405607
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -12586,8 +12825,8 @@
    "type": "box",
    "name": "F1_R104_LightSwitch",
    "center": [
-    191.15039,
-    9.967952
+    191.180366,
+    9.966756
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -13209,12 +13448,12 @@
    "type": "box",
    "name": "F1_R103_DoorBox",
    "center": [
-    199.794052,
-    9.763336
+    199.868992,
+    9.760348
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
-    5.65,
+    5.5,
     0.3,
     0.26
    ],
@@ -13222,6 +13461,25 @@
    "material": "white",
    "slot": "M_Paint_White",
    "evidence": "2026-10-01 reference classroom plan v6: reference classroom C105 (150-153, plan v6)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_R103_Pilaster_BoardDoor",
+   "center": [
+    197.046252,
+    9.872924
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.15,
+    0.3,
+    2.91
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: pilaster in the board/door corner (102 / 204, Y0-i)",
    "confidence": "medium"
   },
   {
@@ -13751,6 +14009,26 @@
    "confidence": "medium"
   },
   {
+   "type": "box",
+   "name": "F1_R103_Radiator_End",
+   "center": [
+    202.795269,
+    12.871188
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.8,
+    0.57
+   ],
+   "z0": 6.7,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "ue_asset": "radiator_sectional",
+   "evidence": "2026-10-01 reference classroom plan v6: radiator under the end-wall window (CI017 / CR004, Y0-i)",
+   "confidence": "medium"
+  },
+  {
    "type": "boxes",
    "name": "F1_R103_WindowWall_Paint",
    "items": [
@@ -13976,10 +14254,28 @@
      6.41
     ],
     [
-     197.1834,
-     9.72334,
+     197.255342,
+     9.720471,
      -2.2838545045845304,
-     0.424,
+     0.28,
+     0.012,
+     0.045,
+     6.41
+    ],
+    [
+     197.127427,
+     9.875691,
+     -2.2838545045845304,
+     0.012,
+     0.288,
+     0.045,
+     6.41
+    ],
+    [
+     197.061462,
+     10.02844,
+     -2.2838545045845304,
+     0.156,
      0.012,
      0.045,
      6.41
@@ -14057,11 +14353,11 @@
      6.41
     ],
     [
-     197.091894,
-     12.598254,
+     197.097872,
+     12.748134,
      -2.2838545045845304,
      0.012,
-     5.726,
+     5.426,
      0.045,
      6.41
     ]
@@ -14076,19 +14372,19 @@
    "name": "F1_R103_HeatPipe",
    "items": [
     [
-     197.14225,
-     12.631274,
+     197.146832,
+     12.746182,
      -2.2838545045845304,
      0.03,
-     5.68,
+     5.45,
      0.03,
      6.61
     ],
     [
-     197.205336,
-     9.771504,
+     197.257295,
+     9.769432,
      -2.2838545045845304,
-     0.384,
+     0.28,
      0.03,
      0.03,
      6.61
@@ -14103,8 +14399,8 @@
    "type": "disc",
    "name": "F1_R103_Bin",
    "pos": [
-    197.225894,
-    9.985854
+    197.213084,
+    10.166507
    ],
    "r": 0.14,
    "z0": 6.41,
@@ -14120,8 +14416,8 @@
    "type": "box",
    "name": "F1_R103_LightSwitch",
    "center": [
-    197.14559,
-    9.728852
+    197.175566,
+    9.727656
    ],
    "dir_deg": -2.2838545045845304,
    "size": [
@@ -24762,6 +25058,82 @@
   },
   {
    "type": "box",
+   "name": "F1_StairE_SFin",
+   "center": [
+    202.101119,
+    3.621555
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.85,
+    0.21,
+    3.05
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: F1 E stair hall: full-height fin on the S wall, lintel over the exit bay, low wall + radiator in front of the N exit leaf (CC010 / CI013-015, 2026-10-04 Y0-d/e)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_ExitLintel",
+   "center": [
+    202.450692,
+    4.8586
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.25,
+    2.29,
+    0.35
+   ],
+   "z0": 9.1,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: F1 E stair hall: full-height fin on the S wall, lintel over the exit bay, low wall + radiator in front of the N exit leaf (CC010 / CI013-015, 2026-10-04 Y0-d/e)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_ExitParapet",
+   "center": [
+    202.479184,
+    5.573028
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.25,
+    0.72,
+    1.11
+   ],
+   "z0": 6.4,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: F1 E stair hall: full-height fin on the S wall, lintel over the exit bay, low wall + radiator in front of the N exit leaf (CC010 / CI013-015, 2026-10-04 Y0-d/e)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "F1_StairE_ExitRadiator",
+   "center": [
+    202.314516,
+    5.584599
+   ],
+   "dir_deg": -2.2838545045845304,
+   "size": [
+    0.08,
+    0.65,
+    0.49
+   ],
+   "z0": 6.76,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "evidence": "2026-10-01 reference classroom plan v6: F1 E stair hall: full-height fin on the S wall, lintel over the exit bay, low wall + radiator in front of the N exit leaf (CC010 / CI013-015, 2026-10-04 Y0-d/e)",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
    "name": "F1_CCTV_StairE",
    "center": [
     201.275384,
@@ -25404,9 +25776,30 @@
    "confidence": "medium"
   },
   {
-   "type": "roof_plane",
+   "type": "int_wall",
    "name": "Closet_W_Side",
-   "thk": 2.557,
+   "line": [
+    [
+     175.445917,
+     5.900574
+    ],
+    [
+     175.526414,
+     7.918958
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 7.903,
+   "thk": 0.12,
+   "openings": [],
+   "material": "white",
+   "evidence": "2026-10-01 reference classroom plan v6: janitor's closet under flight 2, ordinary brown door (map owner)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Closet_W_SideTop",
+   "thk": 0.954,
    "material": "white",
    "ring": [
     [
@@ -25489,9 +25882,30 @@
    "confidence": "medium"
   },
   {
-   "type": "roof_plane",
+   "type": "int_wall",
    "name": "Closet_E_Side",
-   "thk": 2.557,
+   "line": [
+    [
+     201.396986,
+     6.166622
+    ],
+    [
+     201.477483,
+     8.185006
+    ]
+   ],
+   "z0": 6.3,
+   "z1": 7.903,
+   "thk": 0.12,
+   "openings": [],
+   "material": "white",
+   "evidence": "2026-10-01 reference classroom plan v6: janitor's closet under flight 2, ordinary brown door (map owner)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Closet_E_SideTop",
+   "thk": 0.954,
    "material": "white",
    "ring": [
     [

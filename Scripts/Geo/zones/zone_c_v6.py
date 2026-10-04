@@ -260,7 +260,7 @@ def plan(k, zb, lobby, west_stair):
     se = [(DOOR_S["S4"], "S4"), (DOOR_S["S5"], "S5")]
     # the jogs are centred on X_JS / X_JN: each straight part ends on the jog's face where it would run into the jog,
     # and runs over the jog's width where it closes the outer corner (no overlaps, no notch)
-    segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 - PART / 2) if lobby else X_JS - PART / 2, HW0 - PART), sw),
+    segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 + PART / 2) if lobby else X_JS - PART / 2, HW0 - PART), sw),   # F1: to the lobby wall face (no corner notch, Y0-g)
             ("Hall_S_East", (X_JS - PART / 2, HE0 - PART), (X_E, HE0 - PART), se)]
     for nm, a, b, dd in segs:
         els.append(wall(P + nm, a, b, zb, doors=[(x - a[0], DOOR_W) for x, _ in dd], h=CC + 0.03, **ev("south hall wall")))
@@ -301,8 +301,9 @@ def plan(k, zb, lobby, west_stair):
         if side == "W" and not west_stair:
             continue
         h0, h1 = hall(xf + sg * 4.0)
-        xb = xf + sg * 4.05
-        els.append(slab(f"{P}Hall_Bulkhead_{side}", xb - 0.2, xb + 0.2, h0, h1, zb + COR_BEAM_Z, zb + CC, "white",
+        # E: over the P4 line, 0.59 wide, underside 2.72 (CC010 PnP, 2026-10-04 Y0-b); W as measured in round 1 (CI003)
+        xb, hw, zu = (xf + 4.05, 0.2, COR_BEAM_Z) if side == "W" else (FRONT_E - 3.07, 0.295, 2.72)
+        els.append(slab(f"{P}Hall_Bulkhead_{side}", xb - hw, xb + hw, h0, h1, zb + zu, zb + CC, "white",
                         **ev("plasterboard bulkhead across the hall in front of the stair zone")))
     for x in (P2, X_JS):
         h0, h1 = hall(x + 0.01)
@@ -315,7 +316,7 @@ def plan(k, zb, lobby, west_stair):
                  [(key, DOOR_N[key], True) for key in ("N1", "N2", "N4", "N5")] + ([] if lobby else [("T", DOOR_TEACH, False)])
     blue = [(P2 + 0.1, P_WCM, True), (X_JN + PART / 2, P3 - 0.1, True)]   # full-height blue ranges (x0, x1, north) for skins
     if k == 1:                                                          # F1 WC zone as photographed (Q2-10, below)
-        blue = [(X_JN + PART / 2, DOOR_N["N4"] + DOOR_W / 2 + 0.22, True)]
+        blue = [(X_JN + PART / 2, DOOR_N["N4"] + DOOR_W / 2 + 0.06, True)]
     evq = ev("periwinkle-blue panel over the classroom door, head to ceiling (2026-10-03 Q3-17 / Q0-06)",
              "high" if k in (1, 3) else "low")
     zt = DOOR_H + 0.02
@@ -344,6 +345,8 @@ def plan(k, zb, lobby, west_stair):
     # F1: black linear wall lamps at 2.45, one per classroom door, 1.12 m east of the frame (Q3-19; count unsure)
     if k == 1:
         for key, x, north in hall_doors:
+            if key in ("S1", "N2", "N5", "S5"):        # photographed without a lamp (CC010/CC011/CI003, 2026-10-04 Y0-k)
+                continue
             xl = x + DOOR_W / 2 + 1.12 + 0.175
             off = 0.02 if on_blue(xl - 0.175, xl + 0.175, north) else 0.0
             yy = (hall(x)[1] - off - 0.04) if north else (hall(x)[0] + off + 0.04)
@@ -358,11 +361,11 @@ def plan(k, zb, lobby, west_stair):
         evw = ev("F1 WC zone blue as photographed (2026-10-03 Q2-10)", "medium")
         xd4, xd5, x4 = WC_DOORS[0][0], WC_DOORS[1][0], DOOR_N["N4"]
         o0, o1 = xd5 - WC_DOOR_W / 2 - 0.02, xd5 + WC_DOOR_W / 2 + 0.02
-        for nm, u0, u1, z0_, z1_, yy in (("WC4_T", xd4 - 0.55, xd4 + 0.55, zt, CC - 0.1, HW1 - 0.01),
+        for nm, u0, u1, z0_, z1_, yy in (("WC4_T", xd4 - 0.45, xd4 + 0.45, zt, CC - 0.1, HW1 - 0.01),
                                          ("WC5_L", X_JN + PART / 2, o0, 0.1, CC - 0.1, HE1 - 0.01),
                                          ("WC5_T", o0, o1, zt, CC - 0.1, HE1 - 0.01),
                                          ("WC5_R", o1, x4 - DOOR_W / 2, 0.1, CC - 0.1, HE1 - 0.01),
-                                         ("N4_R", x4 + DOOR_W / 2, x4 + DOOR_W / 2 + 0.22, 0.1, CC - 0.1, HE1 - 0.01)):
+                                         ("N4_R", x4 + DOOR_W / 2, x4 + DOOR_W / 2 + 0.06, 0.1, CC - 0.1, HE1 - 0.01)):
             els.append({"type": "box", "name": f"{P}Accent_{nm}", "center": c_to_w((u0 + u1) / 2, yy), "dir_deg": EAST,
                         "size": [round(u1 - u0, 3), 0.02, round(z1_ - z0_, 3)], "z0": z(zb + z0_), "material": "accent", **evw})
         els.append({"type": "box", "name": f"{P}Accent_Jog", "center": c_to_w(X_JN + PART / 2 + 0.01, (HW1 + HE1) / 2),
@@ -511,7 +514,10 @@ def fitout(k, zb, num):
         # bulkheads and pilasters meet face to face (no overlaps, no gap at the back-door corner): the window beam ends on
         # the board-side pilaster, the back-door pilaster is as deep as the door-wall box (0.30)
         bx("WindowBeam", 0.25, L - 0.10, D - 0.50, D - PK, C - 0.20, C + 0.01, slot="M_Paint_White", **ref)
-        bx("DoorBox", 0.15, L, 0.0, 0.30, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
+        bx("DoorBox", 0.15, L - 0.15, 0.0, 0.30, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
+        # pilaster in the board/door corner, mirroring the back-door one (CI019 / CR013, 2026-10-04 Y0-i)
+        bx("Pilaster_BoardDoor", L - 0.15, L, 0.0, 0.30, 0.0, C + 0.01, slot="M_Paint_White",
+           **ev("pilaster in the board/door corner (102 / 204, Y0-i)", "medium"))
         bx("BackBox", PK, 0.20, 0.30, D - 0.50, C - 0.25, C + 0.01, slot="M_Paint_White", **ref)
         r105 = k == 1 and key == "N2"
         kind = room_kind(k, key)
@@ -600,6 +606,13 @@ def fitout(k, zb, num):
         # the C105 reference (white window wall, sage back wall) holds for the other rooms
         # 2026-10-03 Q3-27: lab 204 (F2 SE) follows the C105 rule, so the swap stays only on the unidentified corner labs
         swap = kind == "lab" and end_room and not (k == 2 and key == "S5")
+        for e_ in reversed(els):            # the back-wall top box takes the back wall's paint (2026-10-04 Y0-h)
+            if e_["name"] == R + "BackBox":
+                e_["slot"] = "M_Paint_White" if swap else "M_Paint_Sage"
+                break
+        if end_room:   # radiator under the end-wall window, toward the window wall (102 / 204, Y0-i)
+            bx("Radiator_End", 0.06, 0.14, D / 2 + 0.20 - 0.40, D / 2 + 0.20 + 0.40, 0.30, 0.87, slot="M_Paint_White",
+               ue_asset="radiator_sectional", **ev("radiator under the end-wall window (CI017 / CR004, Y0-i)", "medium"))
         els.append({"type": "boxes", "name": R + "WindowWall_Paint", "items": p_w, "material": "white",
                     "slot": "M_Paint_Sage" if swap else "M_Paint_White", **ref})
         els.append({"type": "boxes", "name": R + "BackWall_Paint", "items": p_b, "material": "white",
@@ -613,23 +626,24 @@ def fitout(k, zb, num):
             els.append({"type": "boxes", "name": R + "BoardWall_Paint", "items": [itm(LB, L, 1.54, D - 0.60, SK, C - 0.012)],
                         "material": "white", "slot": "M_Paint_Sage",
                         **ev("board wall sage from v 1.54 to the window pilaster, white strip by the door (Q3-12)", "medium")})
-        sk_items = [itm(0.15, ud0, 0.0, ST, LAM, SK), itm(ud1, LB, 0.0, ST, LAM, SK),           # door wall
+        sk_items = [itm(0.15, ud0, 0.0, ST, LAM, SK), itm(ud1, L - 0.15, 0.0, ST, LAM, SK),    # door wall
+                    itm(L - 0.15 - ST, L - 0.15, ST, 0.30, LAM, SK), itm(L - 0.15 - ST, LB, 0.30, 0.30 + ST, LAM, SK),   # board pilaster
                     itm(0.15, 0.15 + ST, ST, 0.30, LAM, SK), itm(PK, 0.15 + ST, 0.30, 0.30 + ST, LAM, SK),   # back-door pilaster
                     itm(PK, PK + ST, 0.30 + ST, D - 0.50 - ST, LAM, SK),                       # back wall
                     itm(PK, 0.25 + ST, D - 0.50 - ST, D - 0.50, LAM, SK), itm(0.25, 0.25 + ST, D - 0.50, D - PK - ST, LAM, SK),
                     itm(0.25 + ST, L - 0.10 - ST, D - PK - ST, D - PK, LAM, SK),                # window wall
                     itm(L - 0.10 - ST, L - 0.10, D - 0.60 - ST, D - PK - ST, LAM, SK), itm(L - 0.10 - ST, LB, D - 0.60 - ST, D - 0.60, LAM, SK),
-                    itm(LB - ST, LB, ST, D - 0.60 - ST, LAM, SK)]                               # board wall
+                    itm(LB - ST, LB, 0.30 + ST, D - 0.60 - ST, LAM, SK)]                        # board wall
         els.append({"type": "boxes", "name": R + "Skirting", "items": sk_items, "material": "white", "slot": "M_Laminate_Oak_Grey",
                     **ev("laminate skirting 45 mm round the room, broken at the door (2026-10-03 Q3-08)", "medium")})
         # low white heating pipe along the board wall and the door wall's board end, 0.04 off the faces (Q3-15)
-        els.append({"type": "boxes", "name": R + "HeatPipe", "items": [itm(LB - 0.07, LB - 0.04, 0.07, D - 0.60, 0.21, 0.24),
-                                                                       itm(ud1, LB - 0.04, 0.04, 0.07, 0.21, 0.24)],
+        els.append({"type": "boxes", "name": R + "HeatPipe", "items": [itm(LB - 0.07, LB - 0.04, 0.30, D - 0.60, 0.21, 0.24),
+                                                                       itm(ud1, L - 0.15, 0.04, 0.07, 0.21, 0.24)],
                     "material": "white", "slot": "M_PVC_White", **ev("white heating pipe at ~0.21 (2026-10-03 Q3-15)", "medium")})
         evbin = ev("waste-paper basket in the board/door corner, light switch beside the door (2026-10-03 Q3-11)", "medium")
-        els.append({"type": "disc", "name": R + "Bin", "pos": c_to_w(*to_c(L - 0.25, 0.27)), "r": 0.14, "z0": z(zb + LAM),
+        els.append({"type": "disc", "name": R + "Bin", "pos": c_to_w(*to_c(L - 0.23, 0.45)), "r": 0.14, "z0": z(zb + LAM),
                     "z1": z(zb + LAM + 0.30), "seg": 16, "material": "white", "slot": "M_Plastic_Green", "ue_asset": "waste_bin_round", **evbin})
-        bx("LightSwitch", L - 0.22, L - 0.14, 0.0, 0.02, 0.83, 0.91, slot="M_Plastic_White", ue_asset="light_switch_double", **evbin)
+        bx("LightSwitch", L - 0.25, L - 0.17, 0.0, 0.02, 0.83, 0.91, slot="M_Plastic_White", ue_asset="light_switch_double", **evbin)
         door_left = su * sv < 0          # facing the board (+u) the door wall (v = 0) is on the left
         if kind == "class":
             # plain classroom (2026-09-30_C_interior 140-149; owner: 24 pupils + teacher): single desks 0.60 x 0.45 (orange
@@ -1142,6 +1156,15 @@ def build():
         f1.append({"type": "box", "name": f"F1_Lobby_{nm}", "center": c_to_w(P2 + PART / 2 + d_ / 2, (y0_ + y1_) / 2),
                    "dir_deg": NORTH, "size": [round(y1_ - y0_, 3), d_, round(z1_ - z0_, 3)], "z0": z(z0_), "material": "white",
                    "slot": sl, **evf})
+    evx = ev("F1 E stair hall: full-height fin on the S wall, lintel over the exit bay, low wall + radiator in front of the "
+             "N exit leaf (CC010 / CI013-015, 2026-10-04 Y0-d/e)", "medium")
+    for nm, x0_, x1_, y0_, y1_, z0_, z1_, sl in (("SFin", 28.10, X_E, HE0, HE0 + 0.21, 0.0, 3.05, "M_Paint_White"),
+                                                  ("ExitLintel", 28.70, X_E, HE0 + 0.21, 10.80, 2.70, 3.05, "M_Paint_White"),
+                                                  ("ExitParapet", 28.70, X_E, 10.01, 10.73, 0.0, 1.11, "M_Paint_White"),
+                                                  ("ExitRadiator", 28.62, 28.70, 10.05, 10.70, 0.36, 0.85, "M_Paint_White")):
+        f1.append({"type": "box", "name": f"F1_StairE_{nm}", "center": c_to_w((x0_ + x1_) / 2, (y0_ + y1_) / 2), "dir_deg": EAST,
+                   "size": [round(x1_ - x0_, 3), round(y1_ - y0_, 3), round(z1_ - z0_, 3)], "z0": z(z0_), "material": "white",
+                   "slot": sl, **evx})
     f1.append({"type": "box", "name": "F1_CCTV_StairE", "center": c_to_w(27.70, HE0 + 0.07), "dir_deg": EAST, "size": [0.12, 0.12, 0.10],
                "z0": z(2.95), "material": "white", "slot": "M_Plastic_White", "ue_asset": "cctv_dome",
                **ev("CCTV dome on the S hall wall by the E end wall (2026-10-03 Q3-26)", "medium")})
@@ -1177,7 +1200,11 @@ def build():
         xa, xb = (xw, xo) if sg > 0 else (xo, xw)
         f1.append(wall(f"Closet_{side}_Front", (xb, y_c), (xa, y_c), h=soff(y_c) - 0.02, thk=0.12, doors=[(FLIGHT_W / 2, 0.8)], **evc))
         f1.append(door(f"Closet_{side}_Door", (xb, y_c), (xa, y_c), FLIGHT_W / 2, width=0.8, leaf="solid", **dict(evc, wall_thk=0.12, material="metal")))   # black metal (X0-03)
-        f1.append({"type": "roof_plane", "name": f"Closet_{side}_Side", "thk": round(soff(y_c) + 0.1, 3), "material": "white",
+        # side wall: a straight wall up to the low end of the flight + a wedge on it following the soffit (a single sloped
+        # slab hung below the F1 slab into the basement hall, 2026-10-04 Y0-a)
+        xl_ = xo if sg > 0 else xo + 0.12                       # wall() thickness goes to the left of the line (-x)
+        f1.append(wall(f"Closet_{side}_Side", (xl_, y_c), (xl_, y_l), h=soff(y_l) - 0.02, thk=0.12, **evc))
+        f1.append({"type": "roof_plane", "name": f"Closet_{side}_SideTop", "thk": round(soff(y_c) - soff(y_l) + 0.02, 3), "material": "white",
                    "ring": [c_to_w(xo - sg * 0.12, y_c), c_to_w(xo, y_c), c_to_w(xo, y_l), c_to_w(xo - sg * 0.12, y_l)],
                    "z": [z(soff(y_c) - 0.02), z(soff(y_c) - 0.02), z(soff(y_l) - 0.02), z(soff(y_l) - 0.02)], **evc})
     up = []

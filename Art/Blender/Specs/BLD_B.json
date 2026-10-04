@@ -328,6 +328,7 @@
      "type": "WG",
      "u": [
       2.22,
+      5.27,
       8.17,
       10.87,
       14.04,
@@ -344,7 +345,6 @@
     {
      "type": "WGB",
      "u": [
-      5.27,
       17.09,
       19.99
      ],
@@ -355,7 +355,6 @@
     {
      "type": "WU",
      "u": [
-      2.22,
       10.87,
       14.04,
       19.99,
@@ -370,6 +369,7 @@
     {
      "type": "WUB",
      "u": [
+      2.22,
       5.27,
       8.17,
       17.09,
@@ -417,7 +417,7 @@
      ]
     }
    ],
-   "evidence": "pano intro 2020 metric elevation: 4 equal bays; window east edges (exact under reveal occlusion) at the same offsets in bays B, C, D; bay A has 2 windows per floor at 7.67/10.61 from the SE corner and a blank east part with the lettering (upper) / a maroon panel (ground, 2026). Box pattern from 2026 082606037 t0.1 (bays C/D at a grazing angle).",
+   "evidence": "pano intro 2020 metric elevation: 4 equal bays; window east edges (exact under reveal occlusion) at the same offsets in bays B, C, D; bay A has 2 windows per floor at 7.67/10.61 from the SE corner and a blank east part with the lettering (upper) / a maroon panel (ground, 2026). Box pattern from 2026 082606037 t0.1 (bays C/D at a grazing angle). | 2026-10-04 re-verification round 2 Y2-12: maroon box on the upper window at u 2.22, ground window at u 5.27 plain",
    "confidence": "medium (bays/pilasters high; window widths +-0.25; bay C/D box columns low)"
   },
   {
@@ -647,13 +647,13 @@
    ],
    "post_w": 0.48,
    "post_d": 0.48,
-   "z_underside": 2.9,
+   "z_underside": 2.6,
    "roof_type": "flat",
    "roof_thk": 0.3,
    "roof_fall": 0.8,
    "beam_h": 0.0,
    "roof_overhang": 0.25,
-   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses)",
+   "evidence": "entrance porch modelled with the gallery kit: flat canopy with a deep beige fascia on 2 square piers (beige tile over a red brick-tile base, ~0.6 m), floor at grade; underside ~3.0 m from people under it (070309303 t1.6); depth 2.0-2.4 from the pier bearings in pano intro (camera 3.5 m east of the wall).; roof: lean-to with brown shingles falling to the east eave, salmon end boards, flat boarded soffit at 3.0 (drone 2022 frames 36-39 s from above; aerial SfM roof points 3.0-4.2 m above the alley) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): porch roof u 0.4-7.9 incl. 0.25 overhang, two tile-clad posts ~0.48 m, underside 2.9 (18 courses) | 2026-10-04 re-verification round 2 Y2-03: soffit 2.82 above the porch paving (2.90 was measured from the paving, applied over the FFL)",
    "confidence": "medium",
    "wedge": true
   },

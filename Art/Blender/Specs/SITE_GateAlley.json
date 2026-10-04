@@ -308,11 +308,12 @@
    "risers": 8,
    "riser_h": 0.175,
    "tread": 0.34,
-   "width": 3.6500000000000004,
+   "width": 3.88,
    "z_top": 6.75,
-   "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.15 m past the north pier (lower treads run further north, staggered, modelled straight): 012227815 (7 treads + top), 012233382, 012305655; 070309303 f04/f09 (flight down to the east between the piers); piers moved with the pavilion (070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays))",
+   "evidence": "pink granite flight under the A entrance pavilion, from the south pier to ~1.15 m past the north pier (lower treads run further north, staggered, modelled straight): 012227815 (7 treads + top), 012233382, 012305655; 070309303 f04/f09 (flight down to the east between the piers); piers moved with the pavilion (070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)) | 2026-10-04 re-verification round 2 Y3-03: symmetric fan stair, each lower step 0.45 wider (steps 4-8 extrapolated); sloped cheeks not modelled",
    "confidence": "medium",
-   "top_flush": true
+   "top_flush": true,
+   "width_step": 0.45
   },
   {
    "type": "roof_plane",
@@ -2020,15 +2021,15 @@
    "type": "tree",
    "name": "BankTree_03",
    "pos": [
-    157.943,
-    -94.718
+    158.3,
+    -95.6
    ],
    "height": 10.0,
    "crown_d": 6.5,
    "shape": "round",
    "trunk_d": 0.35,
    "crown_base": 4.5,
-   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth) | 2026-10-04 re-verification X2-08: crown above the canopy ridge (it hid the booth)",
+   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth) | 2026-10-04 re-verification X2-08: crown above the canopy ridge (it hid the booth) | 2026-10-04 re-verification round 2 Y2-09: trunk in the SouthBed, not on the stair",
    "confidence": "low"
   },
   {
@@ -2292,7 +2293,7 @@
    "type": "tree",
    "name": "BBed_Shrub_00",
    "pos": [
-    150.196,
+    150.3,
     -70.989
    ],
    "height": 1.6,
@@ -2300,14 +2301,14 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_01",
    "pos": [
-    150.328,
+    150.43,
     -68.292
    ],
    "height": 1.6,
@@ -2315,14 +2316,14 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_02",
    "pos": [
-    150.465,
+    150.57,
     -65.495
    ],
    "height": 1.6,
@@ -2330,14 +2331,14 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BBed_Shrub_03",
    "pos": [
-    150.598,
+    150.7,
     -62.799
    ],
    "height": 1.6,
@@ -2345,7 +2346,7 @@
    "shape": "round",
    "trunk_d": 0.1,
    "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box",
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
    "confidence": "medium"
   },
   {

@@ -290,8 +290,8 @@
    "entrance": {
     "u0": 0.02,
     "u1": 3.78,
-    "z1": 3.29,
-    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera) | 2026-09-27: head +3.29, transom underside +2.65, sill on the landing (rays of 070647586 f00449 cut on the storefront plane of the photogrammetry mesh); the frame measured u -0.35..4.43 is wider than the tower of the ring (3.8): width limited to the tower until the tower width is settled (C.5)",
+    "z1": 2.55,
+    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera) | 2026-09-27: head +3.29, transom underside +2.65, sill on the landing (rays of 070647586 f00449 cut on the storefront plane of the photogrammetry mesh); the frame measured u -0.35..4.43 is wider than the tower of the ring (3.8): width limited to the tower until the tower width is settled (C.5) | 2026-10-04 re-verification round 2 Y1-01 (exterior PnP) + X0-13/Y0-f (interior ratios head/width 0.63-0.68 at the 3.76 width): head 2.55, transom 2.00 (settles Q2-22)",
     "bays": [
      [
       0.9,
@@ -310,7 +310,7 @@
       "fixed"
      ]
     ],
-    "transom_z": 2.65,
+    "transom_z": 2.0,
     "reveal": 0.9,
     "confidence": "medium"
    },
@@ -605,9 +605,9 @@
     "slot": "M_Sign_KOCH",
     "ue_note": "blue sign box: KOCH emblem + 'KOCH' lettering only (the real sign's text/logo never in game)"
    },
-   "evidence": "2026-09-27: sign-box front, top edge and side edges fitted on photo edges through 6 solved cameras of 070647586 (depth 5.55, bottom +3.10, top +4.60, u -0.2..4.0), agreeing with the photogrammetry mesh section on the flight axis (front 5.8 out, bottom +3.02, top +4.6-4.8, soffit rising to ~+3.8 at the wall); soffit of 0.6 m cassettes (f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront)",
+   "evidence": "2026-09-27: sign-box front, top edge and side edges fitted on photo edges through 6 solved cameras of 070647586 (depth 5.55, bottom +3.10, top +4.60, u -0.2..4.0), agreeing with the photogrammetry mesh section on the flight axis (front 5.8 out, bottom +3.02, top +4.6-4.8, soffit rising to ~+3.8 at the wall); soffit of 0.6 m cassettes (f00449) | 2026-09-27: distances now from the tower face (mesh: tower wall above the canopy 0.9 m in front of the storefront) | 2026-10-04 re-verification round 2 Y1-01: soffit at the wall 3.10 (about level with the front)",
    "confidence": "high",
-   "z_soffit_wall": 3.6,
+   "z_soffit_wall": 3.1,
    "panel": 0.6
   },
   {
@@ -808,11 +808,11 @@
    "edge": 2,
    "u0": 0.02,
    "u1": 3.78,
-   "z0": 3.29,
-   "z1": 3.6,
+   "z0": 2.55,
+   "z1": 3.07,
    "t": 0.03,
    "color": "canopy",
-   "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726) | 2026-09-27: between the frame head +3.29 and the soffit +3.6 at the wall (f00449 on the storefront plane)",
+   "evidence": "orange cladding panels between the glazing head and the canopy soffit, 'C' block plate on it (061631264, 061431726) | 2026-09-27: between the frame head +3.29 and the soffit +3.6 at the wall (f00449 on the storefront plane) | 2026-10-04 re-verification round 2 Y1-01: cassette band over the lower head",
    "confidence": "medium",
    "w0": -0.9
   },
@@ -867,11 +867,11 @@
    "edge": 2,
    "u0": 1.75,
    "u1": 1.98,
-   "z0": 3.3,
-   "z1": 3.58,
+   "z0": 2.64,
+   "z1": 2.92,
    "t": 0.02,
    "color": "sign",
-   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH | 2026-10-03 photo pass batch 2 Q2-01 (CC): small portrait plate 0.23 x 0.28 on the cassette band under the soffit",
+   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH | 2026-10-03 photo pass batch 2 Q2-01 (CC): small portrait plate 0.23 x 0.28 on the cassette band under the soffit | 2026-10-04 re-verification round 2 Y1-01",
    "confidence": "medium",
    "slot": "M_Sign_KOCH",
    "content": "KOCH C-block plate (letter C + block word)"
@@ -991,14 +991,14 @@
    "items": [
     [
      3.66,
-     3.25,
+     2.9,
      0.12,
      0.12,
      0.2
     ]
    ],
    "confidence": "low",
-   "evidence": "2026-10-02 photo diff: white bullet camera under the soffit at the east reveal of the entrance recess (061631264, 159)"
+   "evidence": "2026-10-02 photo diff: white bullet camera under the soffit at the east reveal of the entrance recess (061631264, 159) | 2026-10-04 re-verification round 2 Y1-01"
   },
   {
    "type": "wall_boxes",
@@ -1009,14 +1009,14 @@
    "items": [
     [
      1.93,
-     3.5,
+     2.95,
      0.3,
      0.1,
      0.3
     ]
    ],
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-02 (CC): round white dome lamp on the entrance soffit"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-02 (CC): round white dome lamp on the entrance soffit | 2026-10-04 re-verification round 2 Y1-01"
   },
   {
    "type": "wall_boxes",
@@ -1026,14 +1026,14 @@
    "items": [
     [
      0.12,
-     3.25,
+     2.9,
      0.12,
      0.12,
      0.2
     ]
    ],
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-02 (CC): CCTV at the W end of the entrance front (u +-0.3)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-02 (CC): CCTV at the W end of the entrance front (u +-0.3) | 2026-10-04 re-verification round 2 Y1-01"
   },
   {
    "type": "floodlight",

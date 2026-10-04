@@ -262,6 +262,24 @@
    "surround_proj": 0.0,
    "evidence": "glazed double door with transom ('Dining Hall' plate, 2GIS 2025-05 photo): dark open doorway with a chair beside it in the bay north of the brick pier (070309303 t21 and t28) | 2026-10-03 photo pass R3-08: 1.35 x 2.48 incl. the transom (leaves 1.96)",
    "confidence": "low"
+  },
+  "NH": {
+   "w": 1.07,
+   "h": 0.46,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "confidence": "medium",
+   "evidence": "2026-10-04 re-verification round 2 Y1-04: 2 high 2-light windows in a shallow band on the A_W north end wall"
   }
  },
  "rows": {
@@ -329,8 +347,19 @@
   {
    "edge": 2,
    "name": "north_end",
-   "windows": [],
-   "status": "not photographed",
+   "windows": [
+    {
+     "type": "NH",
+     "u": [
+      2.15,
+      4.91
+     ],
+     "sills": [
+      1.57
+     ]
+    }
+   ],
+   "status": "2026-10-04 re-verification round 2 Y1-04 photographed: 2 high windows (size/position medium-low)",
    "confidence": "low"
   },
   {

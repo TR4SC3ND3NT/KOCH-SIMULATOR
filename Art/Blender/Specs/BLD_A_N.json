@@ -562,7 +562,7 @@
    "u": [
     12.585
    ],
-   "z0": 0.29,
+   "z0": 1.63,
    "z1": 9.3,
    "d": 0.1,
    "jog": {
@@ -570,9 +570,9 @@
     "du": 0.285
    },
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree | 2026-10-04 re-verification X1-04: white upper leg u 12.585, maroon lower leg u 12.87; jog height hidden (mid of 6.8-11.5 abs)",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree | 2026-10-04 re-verification X1-04: white upper leg u 12.585, maroon lower leg u 12.87; jog height hidden (mid of 6.8-11.5 abs) | 2026-10-04 re-verification round 2 Y1-03: white down to abs 7.1; maroon base leg separate",
    "slot": "M_PVC_Gutter_White",
-   "lower_slot": "M_Paint_Maroon"
+   "lower_slot": "M_PVC_Gutter_White"
   },
   {
    "type": "wall_boxes",
@@ -590,6 +590,20 @@
    "slot": "M_Steel_Paint_Dark",
    "confidence": "low",
    "evidence": "2026-10-03 photo pass batch 2 Q2-20: dark roof-hatch opening in the fascia between the ladder rails"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_North_Base",
+   "edge": 2,
+   "u": [
+    12.87
+   ],
+   "z0": 0.29,
+   "z1": 1.63,
+   "d": 0.1,
+   "slot": "M_Paint_Maroon",
+   "confidence": "medium",
+   "evidence": "2026-10-04 re-verification round 2 Y1-03: maroon foot of DP_North below abs 7.1"
   }
  ],
  "ffl_z": 5.47,

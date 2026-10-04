@@ -606,8 +606,10 @@ class Site:
         m = _frame2(P, fwd)          # u along the walking direction, w to the left
         bm = bmesh.new()
         w = -total / 2
+        inner = el.get("inner_only", False)   # one central cabinet between the passages, no outer housings
         for k in range(cnt + 1):
-            box(bm, m, -length / 2, length / 2, w, w + hw, z, z + hh)
+            if not (inner and k in (0, cnt)):
+                box(bm, m, -length / 2, length / 2, w, w + hw, z, z + hh)
             if k < cnt:  # one tripod arm across the passage at 0.9 m
                 box(bm, m, -0.02, 0.02, w + hw, w + hw + pw, z + 0.88, z + 0.92)
             w += hw + pw
@@ -921,6 +923,17 @@ class Site:
         m = Matrix.Identity(4)
         m.col[0].xyz, m.col[1].xyz, m.col[2].xyz = left.to_3d(), fwd.to_3d(), Vector((0, 0, 1))
         m.col[3].xyz = Vector((P.x, P.y, 0))
+        ws = el.get("width_step")
+        if ws:
+            # fan stair: every step down is ws wider (centred); built as stacked slabs, step k from its nosing line to
+            # the foot, top at its tread, so each lower step shows ws/2 of tread on both sides (A_S west porch)
+            # tread k (k = 0 under the top nosing) at zt - (k + 1) * rh over y k*tr .. run (same profile as below)
+            bm = bmesh.new()
+            for k_ in range(n - 1):
+                wk = W + ws * k_
+                box(bm, m, -wk / 2, wk / 2, k_ * tr, max(run, (k_ + 1) * tr), zu, zt - (k_ + 1) * rh)
+            self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
+            return
         bm = bmesh.new()
         A = [bm.verts.new(m @ Vector((-W / 2, y, zz))) for y, zz in prof]
         Bv = [bm.verts.new(m @ Vector((W / 2, y, zz))) for y, zz in prof]
@@ -936,6 +949,9 @@ class Site:
             me.materials.append(mat(el["side_slot"]))
             for i in (len(me.polygons) - 2, len(me.polygons) - 1):
                 me.polygons[i].material_index = 1
+            if st:   # a hung flight's waist underside (last profile edge) and its bottom end are painted too (Y0-c)
+                for i in (k - 1, k - 2):
+                    me.polygons[i].material_index = 1
 
     def b_sink(self, el):
         """Pedestal wash basin (C WCs, photos 2026-10-01_WC 031/040): D-shaped basin (flat back on the wall, round

@@ -167,11 +167,6 @@
    "status": "resolved to Q3-01"
   },
   {
-   "id": "Q2-22/X0-13",
-   "what": "C storefront head/transom lower than 3.29/2.65: interior ratio gives head <= 2.85, transom <= 2.25 if the glazing spans the 4.5 m lobby (2.38/1.88 at the model's 3.76 width)",
-   "status": "disputed, not applied: one width measurement of the glazing settles it"
-  },
-  {
    "id": "X0-05",
    "what": "room 101 door 1.21 m from the S-wall jog corner (model 0.65): move the jog/lobby E wall to x 16.39 or the door 0.56 E",
    "status": "disputed, not applied"
@@ -225,6 +220,66 @@
    "id": "X2-07b",
    "what": "street curbs past x 190 to 240",
    "status": "not applied (asphalt extended)"
+  },
+  {
+   "id": "Q2-22",
+   "what": "C storefront head/transom",
+   "status": "resolved 2026-10-04 (Y1-01 + X0-13/Y0-f): head 2.55, transom 2.00 at the 3.76 width"
+  },
+  {
+   "id": "X0-09",
+   "what": "E stair-front edge",
+   "status": "resolved by Y0-b: E bulkhead moved over the P4 line (2.72), no stair-front downstand"
+  },
+  {
+   "id": "Y0-n",
+   "what": "F1 flight-2 soffit edge ~0.09 above the model after X0-01",
+   "status": "low-medium, needs a riser count / landing height"
+  },
+  {
+   "id": "Y1-02",
+   "what": "Hall-C passage N retaining wall, lamp, stair head and upper spruces ~4.1 m S relative to C in the photos (or C ~4 m N; ties to Q2-13 / A_N anchor / Google roof offset)",
+   "status": "disputed datum, not applied: one tape along the shed front settles it"
+  },
+  {
+   "id": "Y2-03b",
+   "what": "B east porch posts beige tile over a red brick base 0.98 (needs a post slot/base in build_gallery)",
+   "status": "not applied (soffit height applied)"
+  },
+  {
+   "id": "Y2-10",
+   "what": "A_E is an open lean-to shed with a bar cage, not a closed block with windows",
+   "status": "low, needs open-sided wall support; not applied"
+  },
+  {
+   "id": "Y3-03b",
+   "what": "A_S west porch fan stair: sloped concrete cheeks with a pink coping",
+   "status": "fan widths applied, cheeks not modelled"
+  },
+  {
+   "id": "Y3-04",
+   "what": "B-corner stair: a W-facing lower flight (bottom riser x 152.3, y -47.9..-49.4), L/corner stair; tread depths unmeasured",
+   "status": "medium, not applied (geometry incomplete) - new evidence for X3-03: do not move the walk"
+  },
+  {
+   "id": "Y3-05",
+   "what": "A_W W-face window surrounds ~1.25 m S relative to the gallery posts",
+   "status": "low, not applied"
+  },
+  {
+   "id": "Y3-05b",
+   "what": "third pergola-walk lamp post at x ~124.5",
+   "status": "low, not applied"
+  },
+  {
+   "id": "Y3-06b",
+   "what": "hall wing W face: 2 blind niches, a narrow 2-light window, a round vent (unmeasured)",
+   "status": "not applied (downpipe applied)"
+  },
+  {
+   "id": "Y3-07",
+   "what": "hall wing plinth top 5.18 vs 5.55",
+   "status": "low, not applied"
   }
  ]
 }

@@ -218,7 +218,8 @@ class Building:
                 for z in sills:
                     out.append((Opening(u - wt["w"] / 2, u + wt["w"] / 2, z, z + wt["h"]), grp["type"], wt))
         for ent in ([f["entrance"]] if f.get("entrance") else []) + list(f.get("entrances", [])):
-            out.append((Opening(ent["u0"], ent["u1"], 0.02, ent["z1"]), "entrance", ent))
+            # "z0" (m rel FFL, may be < 0): sill of a door at grade below the FFL (Hall N steel doors)
+            out.append((Opening(ent["u0"], ent["u1"], ent.get("z0", 0.02), ent["z1"]), "entrance", ent))
         return out, f
 
     def bands(self):
