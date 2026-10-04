@@ -89,17 +89,17 @@
   {
    "id": "Q2-13",
    "what": "A_W deck N end ~2.9 m S / 3.5 m W of the model per CC015+CC016 PnP vs the Google audit",
-   "status": "disputed, not applied: needs one tape measurement C SW corner -> deck-end bottom step"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed, not applied: needs one tape measurement C SW corner -> deck-end bottom step"
   },
   {
    "id": "Q2-21",
    "what": "paving in front of the C W wing ~0.45 m lower relative to C than modelled (PnP) vs 7 x 0.154 entrance risers",
-   "status": "disputed, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed, not applied"
   },
   {
    "id": "Q2-03",
    "what": "E ramp run end vs E-ramp juniper pit (pit likely misplaced)",
-   "status": "disputed, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed, not applied"
   },
   {
    "id": "Q2-18b",
@@ -129,12 +129,12 @@
   {
    "id": "Q3-09",
    "what": "window head 0.15 below the window beam (model 0.25): interior sill 1.15 or beam soffit 2.60",
-   "status": "disputed, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed, not applied"
   },
   {
    "id": "Q3-12b",
    "what": "bulkhead box along the top of the board wall (102, 204)",
-   "status": "low confidence box size, not applied (paint applied)"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): low confidence box size, not applied (paint applied)"
   },
   {
    "id": "Q3-13",
@@ -144,7 +144,7 @@
   {
    "id": "Q3-24",
    "what": "103 door E frame to the stair-front corner 1.07 (model 1.46): stair bay 3.29 wide or door 0.39 further E",
-   "status": "disputed, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed, not applied"
   },
   {
    "id": "Q3-28",
@@ -169,7 +169,7 @@
   {
    "id": "X0-05",
    "what": "room 101 door 1.21 m from the S-wall jog corner (model 0.65): move the jog/lobby E wall to x 16.39 or the door 0.56 E",
-   "status": "disputed, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed, not applied"
   },
   {
    "id": "X0-09",
@@ -179,7 +179,7 @@
   {
    "id": "X0-12",
    "what": "R105 DB panel 0.29 tall (vs 0.42, Q3-02)",
-   "status": "low, contradicts Q3-02, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): low, contradicts Q3-02, not applied"
   },
   {
    "id": "X1-03b",
@@ -214,7 +214,7 @@
   {
    "id": "X3-09",
    "what": "A_W south-bay ramp foot ~4 m further S",
-   "status": "low, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): low, not applied"
   },
   {
    "id": "X2-07b",
@@ -234,12 +234,12 @@
   {
    "id": "Y0-n",
    "what": "F1 flight-2 soffit edge ~0.09 above the model after X0-01",
-   "status": "low-medium, needs a riser count / landing height"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): low-medium, needs a riser count / landing height"
   },
   {
    "id": "Y1-02",
    "what": "Hall-C passage N retaining wall, lamp, stair head and upper spruces ~4.1 m S relative to C in the photos (or C ~4 m N; ties to Q2-13 / A_N anchor / Google roof offset)",
-   "status": "disputed datum, not applied: one tape along the shed front settles it"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): disputed datum, not applied: one tape along the shed front settles it"
   },
   {
    "id": "Y2-03b",
@@ -264,12 +264,12 @@
   {
    "id": "Y3-05",
    "what": "A_W W-face window surrounds ~1.25 m S relative to the gallery posts",
-   "status": "low, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): low, not applied"
   },
   {
    "id": "Y3-05b",
    "what": "third pergola-walk lamp post at x ~124.5",
-   "status": "low, not applied"
+   "status": "resolved 2026-10-04 by resolve_results.json (D1/D2): low, not applied"
   },
   {
    "id": "Y3-06b",
@@ -280,6 +280,31 @@
    "id": "Y3-07",
    "what": "hall wing plinth top 5.18 vs 5.55",
    "status": "low, not applied"
+  },
+  {
+   "id": "X3-03/Y3-04 (D1)",
+   "what": "B-corner stair: one N-facing flight 7 x 0.174, tread 0.30, width 7.2, bottom riser (152.30,-47.90)-(159.50,-48.25), ~4.8 m N of the model, foot at the pergola walk end (Google + 3 PnP)",
+   "status": "NOT applied: contradicts the owner's 2026-09-28 instruction (moved back 3.05 m, top on the BBed_Conifer_01 line); needs the owner"
+  },
+  {
+   "id": "Q2-21 (D1)",
+   "what": "plaza in front of the C W wing ~0.27 lower, falling W (5.05 at u 0-8 -> 5.32 at the stair foot)",
+   "status": "not applied yet (terrain pad edit after the C move)"
+  },
+  {
+   "id": "D1-01",
+   "what": "passage N coping/upper lawn/lamp/spruces residual dy -1.4",
+   "status": "low-medium, not applied"
+  },
+  {
+   "id": "D1-02",
+   "what": "A_W W-face window spacing 4.85 in the A137 bays (spec 5.89)",
+   "status": "low, not applied"
+  },
+  {
+   "id": "V3-04 (D2)",
+   "what": "C W stair continues F3 -> F4 (video)",
+   "status": "NOT applied: contradicts campus.md (owner: F4 offices where the W stair would be); needs the owner"
   }
  ]
 }

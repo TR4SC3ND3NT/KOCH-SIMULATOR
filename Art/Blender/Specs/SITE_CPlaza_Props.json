@@ -8,8 +8,8 @@
    "type": "bin",
    "name": "CP_Bin_AN_3",
    "pos": [
-    182.9,
-    -18.79
+    186.0,
+    -15.29
    ],
    "size": [
     0.45,
@@ -19,15 +19,15 @@
    "dir_deg": 87.2,
    "slot": "M_Steel_Paint_Dark",
    "ue_asset": "bin_wrought_iron",
-   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19) | 2026-10-02 photo diff (agent): the only bin of the row: a black bucket on a forged scroll stand beside the rose (157, 167)",
+   "evidence": "small black bins beside the tree planters on the bench row in front of A_N's N end (061707849 t10-t19) | 2026-10-02 photo diff (agent): the only bin of the row: a black bucket on a forged scroll stand beside the rose (157, 167) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Bollard_AN_0",
    "center": [
-    196.9,
-    -20.95
+    200.0,
+    -17.45
    ],
    "dir_deg": 0,
    "size": [
@@ -40,14 +40,14 @@
    "slot": "M_Paint_Yellow",
    "ue_asset": "bollard_banded",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-07 (CE): banded black/yellow bollards with a chain at the A_N NE corner / parking edge, one knocked over (+-0.6 m)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-07 (CE): banded black/yellow bollards with a chain at the A_N NE corner / parking edge, one knocked over (+-0.6 m) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   },
   {
    "type": "box",
    "name": "Bollard_AN_1",
    "center": [
-    195.9,
-    -19.0
+    199.0,
+    -15.5
    ],
    "dir_deg": 120,
    "size": [
@@ -61,14 +61,14 @@
    "ue_asset": "bollard_banded",
    "ue_note": "knocked over, lying",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-07 (CE): banded black/yellow bollards with a chain at the A_N NE corner / parking edge, one knocked over (+-0.6 m)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-07 (CE): banded black/yellow bollards with a chain at the A_N NE corner / parking edge, one knocked over (+-0.6 m) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   },
   {
    "type": "box",
    "name": "Bollard_AN_2",
    "center": [
-    195.9,
-    -17.1
+    199.0,
+    -13.6
    ],
    "dir_deg": 0,
    "size": [
@@ -82,7 +82,7 @@
    "ue_asset": "bollard_banded",
    "ue_note": "chain to Bollard_AN_0 (sag 0.3) in UE",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-07 (CE): banded black/yellow bollards with a chain at the A_N NE corner / parking edge, one knocked over (+-0.6 m)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-07 (CE): banded black/yellow bollards with a chain at the A_N NE corner / parking edge, one knocked over (+-0.6 m) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   }
  ]
 }

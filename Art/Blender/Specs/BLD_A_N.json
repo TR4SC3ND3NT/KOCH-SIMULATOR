@@ -19,7 +19,7 @@
    0.999,
    -0.049
   ],
-  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5"
+  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-04 D1: A_N/A_W north ends +4.3 m (eave gap to C in 3 orthos + CE024 bundle; reverts the 09-27 3.3 m move plus 1.0)"
  },
  "plinth_m": 0.729,
  "plinth_note": "same FFL as A_S; the terrain model falls 1.6 m to the north end, the photo shows ~0.9 m (north plinth 1.36 m brick band, sill 1.78 m above the ground) -> fix in the terrain carve",
@@ -38,11 +38,11 @@
   ],
   [
    35.2,
-   73.2
+   77.5
   ],
   [
    10.9,
-   73.2
+   77.5
   ]
  ],
  "ring_notes": "Google z20: main roof x 10.3..35.9 (ridge 23.1 = centred -> no E-W lean), north eave y 76.7..77.1; south end merges into the A_S roof",

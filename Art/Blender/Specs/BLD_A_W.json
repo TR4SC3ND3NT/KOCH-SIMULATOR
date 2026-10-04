@@ -19,7 +19,7 @@
    0.999,
    -0.049
   ],
-  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5"
+  "status": "common origin for all BLD_A_* parts (local (0,0) = OSM SW roof corner of A_S; rings are wall faces in this frame, so shared edges coincide exactly) | 2026-09-27: N end moved 3.3 m south: Bing z19 roof edge of A_N/A_W at y -19.6 (wall ~-20.2), photos 081158036 f00006/f00199 put the wall at -22.5+-1.5 | 2026-10-04 D1: A_N/A_W north ends +4.3 m (eave gap to C in 3 orthos + CE024 bundle; reverts the 09-27 3.3 m move plus 1.0)"
  },
  "plinth_m": 0.698,
  "wall_thk": 0.4,
@@ -37,11 +37,11 @@
   ],
   [
    10.9,
-   72.95
+   77.25
   ],
   [
    4.5,
-   72.95
+   77.25
   ]
  ],
  "ring_notes": "Google z20 strip roof x 1.55..2.03 (west eave) to the main wall; north eave y 76.7. West wall 0.9 m behind the A_S west face (070309303 f17-f20). Open question: Google shows a 3 m dark band between A_S and the strip roof (y 23.2-26.2) that a shadow alone does not explain (low roof section or light well at the south end?). | 2026-09-26 photo-match (070309303 SfM): the gallery is a LOGGIA under a single-storey strip, not a colonnade in front of a 2-storey wall: posts/fascia/door bay on the facade line x ~2.2-2.3 (Google west eave x 1.55-2.03), deck and window wall back to x ~4.5 (plane-sweep deck heights reach x 4.5); the blank lettered wall above the gallery roof is the A_N west wall (SfM tracks of 16-66 frames at x 10.9-11.4), not an A_W upper storey.",

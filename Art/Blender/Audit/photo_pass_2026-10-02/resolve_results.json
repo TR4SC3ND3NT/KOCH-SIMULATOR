@@ -1,0 +1,170 @@
+[
+ {
+  "items": [
+   {
+    "id": "Y1-02 / Q2-13 / A_N anchor",
+    "question": "Is Block C (BLD_C anchor plus every C-relative SITE/INT item) misplaced, or are the Hall-C passage, A_W and A_N items misplaced, and by how much (dx, dy)?",
+    "decision": "Block C and all of its C-relative items are misplaced. The passage and Hall are not. A_N/A_W north ends are also misplaced.\n(a) BLD_C.json anchor.world_xy [173.264,-3.64] -> [176.364,-0.14]; x_dir unchanged. New world corners: SW (176.364,-0.140), NW (177.153,19.644), SE (205.792,-0.013), NE (206.581,19.772). Rewrite the anchor.status note: the Google offset is not lean (low C items show it too).\n(b) Translate every C-relative world-coordinate item by (+3.10,+3.50):\n- SITE_CPlaza.json: all elements, including the TreeAN/PlanterAN/BenchAN rows, PlanterE_Ramp and JuniperE_Ramp.\n- SITE_CPlaza_Props.json: all 4 elements.\n- ground_surfaces CPlaza and CEast_Lot: move the north edge (C side) and the west edge x 172 by (+3.1,+3.5); move the south edge with A_N, see (d).\n- INT_C_Basement / INT_C_F1 / INT_C_Floors: regenerate with C_ORIGIN = [176.364,-0.14] in Scripts/Geo/zones/zone_c_v6.py, and the same constant in zone_c_basement.py and c_shell_v6.py. Do not hand-edit the generated files.\n(c) BLD_C.json attachments WestShed (edge 8): keep the shed's west front and north end where they are in the world. depth 5.8 -> 8.9; u0 -1.3 -> +1.3 (+-0.5); u1 19.35 unchanged. The Google navy strip x 173.6-176.3 is the shed's upper roof, not C's facade.\n(d) BLD_A_N.json ring: north vertices [35.2,73.2],[10.9,73.2] -> [35.2,77.5],[10.9,77.5]. BLD_A_W.json ring: [10.9,72.95],[4.5,72.95] -> [10.9,77.25],[4.5,77.25]. This reverts the 2026-09-27 3.3 m south move plus 1.0 m. New A_N NW corner (173.527,-15.872); A_W NW corner (167.121,-15.808). Edge-2 facade items follow automatically.\n(e) SITE_Garden.json AW_NorthRamp, AW_NorthRamp_Base, AW_NorthRampRail_W/E (and the AW_NorthSteps set) move by +4.3 along the A y-axis = (+0.21,+4.30).\n(f) SITE_HallCPassage items (ramp, landing rail, stair, Shed_Apron, Shed_Apron_Kerb, ShedLedge) do not move. For the coping, upper lawn and lamp see D1-01.",
+    "methods": "M1, Google z20 ortho (0.1 m/px), ground or low features, using passage items as the reference.\n- The passage ramp (156.2-157.3, 6.8-10.6) and landing rail (y 7.8) match the model within 0.2 m. The shed's west front is at x 168.0-168.3 (model 167.5).\n- Low C-attached items are offset from the model. SW basement-entry canopy (2.4 m high): east end x 176.4 (model 173.29), south edge -2.7 (-6.69), north edge 0.6 (-2.84). So dx +3.1, dy +3.4..+4.0.\n- Entrance canopy (5 m high): x 189.8-193.8 (model 185.7-190.1), front -4.6 (-7.7). So dx +3.9 raw, dy +3.1 raw.\n- C roof colour profiles: eaves at x 176.7-207.2 and y -2.5..18.1, roof centre offset (+3.6,+1.4) raw.\n- Low items versus roof give lean_x ~0 and lean_y ~-0.2 m/m. That puts C at ground at about (+3.1, +3.4..+4.2).\nM2, C-frame photo cameras (verify2_1: t31, A028, A031; Q2-13 CC015/016).\n- The passage appears (-2.5+-1, -4.1+-0.6) relative to C. Decomposed with the Google coping at -1.4 (D1-01), this gives C dy +2.7..+4.1 and dx +2.5.\n- After the shift, the A028 camera leaves the inside of HallEast and lands on the passage landing, and the A031 spruces move to the frame edge (verify2_1 note).\nM3, CE024 group bundle (gpnp.py, ce024.py).\n- 15 C surround corners and the pilaster edge, plus the A_N NW-corner vertical, the plinth-top line (z 6.65) and, optionally, F2-window lines. f 2780/2840/2900.\n- The 0.25 m A_N/A_W step is visible at px x 2920.\n- C relative to A_N: dx +2.7..+3.4 (+-0.3..1.5); dy -0.4 with the window lines (rms 9) or -1.6+-0.6 without them (rms 3.5).\nM4, eave gap between the C south eave and the A_N north eave at x 178-184, in all three orthos: Google 13.6, Bing 12.5, Esri 13.65, against 15.26 in the model. Corrected for lean, this is 1.0-2.0 narrower, which agrees with M3. The A_N north eave is +3.6 raw in Google/Esri, about +5.5 with the lean correction. Combined: A_N +4.3+-1.0.",
+    "error": "C: dx +3.1+-0.4, dy +3.5+-0.8 (methods spread from +2.7 to +4.2). A_N/A_W north ends: +4.3+-1.0. Passage ramp/rail: 0+-0.2.",
+    "confidence": "high that C is the misplaced block (4 methods); medium on the size of the shift; medium-low for the A_N/A_W north-end amount (Q2-13 alone would keep A_W's north end, but it is low weight: rms 11.7 and an implausible camera height)",
+    "settled": true,
+    "what_would_settle": "To refine the magnitudes: one tape from C's SW corner to A_N's NW corner (model after the change: 15.7 m N-S), plus one tape along the shed front from the shed's north end to the coping/lamp junction."
+   },
+   {
+    "id": "X3-03 / Y3-04",
+    "question": "B-corner wide stair versus the pergola-walk east end: where is the stair, and what is its geometry (an L-stair with a west-facing lower flight?)",
+    "decision": "The stair is about 4.8 m north of the model. Its foot is directly at the walk's east end. It is not an L-stair: it is one north-facing flight whose lower steps wrap round the west end. Do not move the walk.\nSITE_GateAlley.json: replace Steps_BCorner_Upper and Steps_BCorner_Lower with a single stairs_run 'Steps_BCorner':\n- top [155.90,-49.88], dir_deg 87.192 (downhill north)\n- risers 7 (6 granite plus the grey concrete top kerb), riser_h 0.1743, z_top 6.57 (total 1.22)\n- tread 0.30, width 7.2\n- bottom riser line from (152.30,-47.90) to (159.50,-48.25)\nWest end: steps 1-2 run on west past the return wall to x 152.30 / 152.60, with west-facing ends. Steps 3-7 die into RetainingWall_South_Return; its line starts at the stair: [[152.0,-48.6],[151.34,-53.25]].\nEast end: stepped back 0.30 per tread beside the red-tile planter cheek (A134), outer edge x ~159.5.\nSITE_Garden.json:\n- Cut PergolaEast_Landing_N/S/E so the lower (5.35) landing ends at the bottom riser (y > -48.1).\n- Raise the area from y -49.9 to -55.2 (x 152-159.6) to the alley level, 6.57.\n- Delete the old upper flight footprint.\nThis contradicts the owner's 2026-09-28 screenshot instruction ('moved back 3.05 m, top on the BBed_Conifer_01 line'); a human should confirm it.",
+    "methods": "M1, Google z20 luminance profiles: a granite band at y -47.5..-50.0 over x 152.5-159.6 (at y -48.5 the west edge dip is at 152.6-152.9), with paving north of it. The stair's top-kerb nosing is predicted at -49.88.\nM2, pergola-frame PnP (A147, A154): bottom riser y -47.9, west end x 152.3+-0.2.\nM3, A141 gallery-frame PnP: the bottom riser at -53.75 comes from a one-bay (5.89 m) misidentification of the gallery posts. Corrected: -53.75+5.89 = -47.86 (x 158.4-159.7). The same correction fixes X3-09.\nM4, A212 (gallery frame, consistent): flat upper plaza from the south to y ~-51, so the top edge is -50..-51.\nGeometry: A129 metrology (12 edge rows, pavers at 1200 px/m): 6 granite risers 0.166, tread 0.30. 012404116 and A150: plus the concrete kerb riser, 7 in all. A145: boulder wall meets the stair at step 3-4. A129 image: the bottom step runs on west past the wall.",
+    "error": "Bottom riser y +-0.3 (the 3 methods agree within 0.4); west end x +-0.2; treads +-0.03; end staggers +-0.3",
+    "confidence": "medium-high for position; medium for the end details",
+    "settled": true,
+    "what_would_settle": "Owner confirmation, because this conflicts with the 09-28 instruction. Optionally a tape from the first pergola hoop's south leg to the bottom riser's west end."
+   },
+   {
+    "id": "Y3-05",
+    "question": "Are the A_W west-face window surrounds about 1.25 m south of the gallery posts?",
+    "decision": "No change to BLD_A_W.json facades[edge 3] windows u or posts_u. There is no uniform 1.25 m shift. New observation (see D1-02): in the A137 bays, the window spacing is 4.85 m, not 5.89.",
+    "methods": "M1, A137 wall-plane PnP (a137.py): two window frames, 1.87 x 1.36 (A228-checked), rms 3.2 px, f 2780-2900. Post-foot rays onto the deck plane (frame bottom -0.97). The north post is +0.07 from window 1's centre; the south post is 0.62 south of window 2's centre; post depth 2.93. With the depth fixed at 2.2: -0.43 / +1.11.\nM2, A154 (pergola-hoop frame, rms 3.6) gives +1.25 for Sur_E3_04 only. That camera frame belongs to the stair dispute (X3-03), so it gets low weight. The offset may still be real in that one bay if the spacing is irregular.",
+    "error": "Post vs window centre: -0.4..+1.1 per bay (+-0.15 each)",
+    "confidence": "medium (that there is no uniform shift); low (per-bay offsets)",
+    "settled": false,
+    "what_would_settle": "A tape from each post centre to the nearest surround edge in 3 bays (north, middle, south), or one frontal walk-along video of the gallery."
+   },
+   {
+    "id": "X3-09",
+    "question": "Is the A_W south-bay ramp foot about 4 m further south than modelled?",
+    "decision": "Reject the 4 m south move. Optionally extend the foot 0.9 m north so it meets the RampBay_Wall north end.\nSITE_GateAlley.json:\n- Ramp_Run2 north vertices [161.163,-56.63],[160.064,-56.577] -> [161.21,-55.68],[160.11,-55.63]; z_low 5.37 unchanged.\n- RampRail_N last point -> [160.11,-55.63,5.377]; RampRail_S last point -> [161.21,-55.68,5.377].",
+    "methods": "M1: X3-09 came from the A141 camera, which has a one-bay post misidentification (see X3-03). Corrected foot: -60.8+5.89 = -54.9+-0.5.\nM2: Google z20 shows a dark line at x 160.35 from y -55.5 to -59.6 (the bed wall/rail beside run 2), ending at the model RampBay_Wall north end (-55.66). A151, A214 and A220 report the ramp as matching the model.",
+    "error": "Foot y -55.6+-0.5",
+    "confidence": "high (that 4 m is wrong); low-medium (the 0.9 m extension)",
+    "settled": true,
+    "what_would_settle": "For the 0.9 m: a tape from the bed-wall north end to the grating foot."
+   },
+   {
+    "id": "Q2-21",
+    "question": "What is the plaza paving level in front of the C west wing relative to C (PnP says ~0.45 lower; the entrance has 7 x 0.154 risers)?",
+    "decision": "The plaza in front of the C west wing is lower than modelled; there is no datum error in C. The plaza falls about 0.27 m westward.\nPlaza grade south of edge 0 (C-local u 0..8, v -1..-7): z 5.05 (FFL-1.35). Rising linearly to 5.32 (FFL-1.08) at the entrance-stair foot (u 12.8). Set this in the terrain pad / SITE_CPlaza ground under the CPlaza ring.\nLightwellCover_E0 outer bottom edge and the W-row planters (PlanterW_S0..W_3, curb_h 0.08) sit on 5.05.\nBLD_C ffl_z 6.4 and the entrance stair are unchanged.",
+    "methods": "M1, CE030 joint fit (ce030.py): C-frame surround corners plus 4 juniper pits as 1.2 m squares aligned with C, with unknown centres and kerb top = zp+0.08. Plaza 5.05+-0.05; rms 7.4; f-insensitive. The prior CE030 F3-bottom picks were about 50 px off and are re-picked. Column-1-only fit: 5.08; prior picks only: 5.01.\nM2, pit-size control: FFT of the rectified plaza gives a paver period of 10.5 c/m against 10.0 expected for 0.10 bricks, so the pit is 1.13-1.26. The spec evidence (pit = 6 paver lengths) gives 1.2. Sensitivity is -0.15 m of zp per +0.1 m of pit.\nM3: CC003's 7 risers x 0.15 hold at the entrance. The fitted camera is 1.8 above the plaza, which fits a photographer on the A_W deck-end step.",
+    "error": "+-0.10 m",
+    "confidence": "medium",
+    "settled": true,
+    "what_would_settle": "Confirm with one level reading or tape: plaza to the F1 sill at the west wing (expected 7.27-5.05 = 2.22 m) against the entrance (1.95)."
+   },
+   {
+    "id": "Q2-03",
+    "question": "Do the E ramp run end and the E-ramp juniper pit conflict?",
+    "decision": "No change. Ramp 'Run' (edge 2, u 3.3-9.5) and PlanterE_Ramp/JuniperE_Ramp are consistent; both move with C (Y1-02).",
+    "methods": "M1: CE003 (24 mm, from the east, looking west along the ramp) shows the ramp-foot rail posts nearer the camera than the pit. So the pit is west of the ramp end, as in the model.\nM2: CC001 is a 12 mm ultra-wide with uncorrected distortion, so its PnP overlay is unreliable. Geometrically, a NE-looking view puts the model pit (2.2 W and 2.5 S of the rail end) about 0.2 m to the right of the rail end and nearer the camera, which is the order the photo shows.",
+    "error": "+-0.6 m",
+    "confidence": "medium",
+    "settled": true,
+    "what_would_settle": ""
+   },
+   {
+    "id": "D1-01",
+    "question": "Hall-C passage upper lawn, its north retaining wall/coping, lamp and upper spruces: the residual offset once the C shift is removed",
+    "decision": "Best value (not applied): shift by dy -1.4 (+-0.5) in SITE_HallCPassage.json:\n- Passage_Cheek_Return and _Coping: y 8.47-9.15 -> 7.07-7.75\n- Passage_Lamp_CheekE: (167.1,8.4) -> (167.1,7.0)\n- Passage_Lawn_Upper ring: all vertices y -1.4\n- Passage_Spruce_UpperNW/NE/SW: y -1.4\nKeep the ramp, landing rail and stair; check Cheek_E and stair-head continuity.",
+    "methods": "M1, Google z20: retaining-wall shadow line at y 7.05-7.3 (model wall 8.47-9.15). Upper lawn at -1.4..7.0 (model 0.15..8.8), same size, so about -1.5. The ramp and landing rail match, so this is internal to the passage.\nM2, C-frame photos (t31/A028/A031) after removing the C shift: coping at 4.6+3.5 = 8.1 (7.6-8.5), i.e. -0.4..-1.1.",
+    "error": "+-0.5",
+    "confidence": "low-medium",
+    "settled": false,
+    "what_would_settle": "One tape along the shed front from the shed's north end to the coping/lamp junction. Model after the change: about 10.5 m; Google about 11.2 m."
+   },
+   {
+    "id": "D1-02",
+    "question": "A_W west-face window/pilaster spacing (found during Y3-05)",
+    "decision": "Not applied. A137 shows window centre to window centre 4.85 m, with the pilaster 2.89 from the north window and 1.96 from the south window. The posts in the same view are 5.40 apart. The spec's uniform 5.89 m period may be wrong in this part of the gallery (bays near y -33..-38).",
+    "methods": "a137.py wall-plane PnP (2 frames 1.87 x 1.36, rms 3.2) and post-foot rays to the deck. Scale-free ratio: post spacing / window spacing = 1.11.",
+    "error": "+-0.15 m (scale from the frame width)",
+    "confidence": "low",
+    "settled": false,
+    "what_would_settle": "A tape of the window-centre spacing in 2 bays, or a full frontal pass along the gallery."
+   }
+  ]
+ },
+ {
+  "items": [
+   {
+    "id": "X0-05",
+    "question": "Room 101 door frame is 1.21 m from the S-wall jog corner (model 0.65). Which one moves: the jog/lobby E wall (X_JS) or the S4 door? Is the lobby really 4.5 m wide?",
+    "decision": "The jog and the lobby walls move, and the door rule changes with them. The lobby is 3.76 m clear, not 4.5. In zone_c_v6.py: (a) Add LOBBY_X0, LOBBY_X1 = 12.82, 16.58. These are the clear faces, equal to the tower edges ±0.02 and to the storefront frame 12.82-16.58 already in BLD_C. P2 (12.35) and P3 (17.05) stay where they are, so rooms 108 and 101 are unchanged. The lobby side walls become 0.57 thick (x 12.25-12.82 and 16.58-17.15): on F1, make Room_S_12.35 and Room_S_17.05 (facade to HW0) thk 0.57, or add a 0.37 lining on the lobby side. Hall_S_West (F1) ends at x 12.82 (was 12.45). Hall_S_Jog becomes thk 0.57 with its W face at 16.58 (line at x 17.15, thickness to the west). Hall_S_East starts at 16.58. F1 lobby ceilings and fittings that reference P2±PART/2 or X_JS-PART/2 follow the new faces. F2+ room k09 uses the same faces (width 3.76; the tower windows at 13.72/15.66 are then centred). (b) DOOR_OFF = PART/2 + 0.60 + DOOR_W/2 = 1.195 (was 1.045). Every classroom door frame edge is then 0.60 from the board-wall plane, or 0.45 from the existing 0.15 Pilaster_BoardDoor. S4 frame = 17.75-18.74. World coordinates: lobby W face at the hall line (186.353, 2.844); lobby E face (190.110, 2.694); jog corner (190.161, 3.993); S4 frame W edge (191.331, 3.946).",
+    "methods": "M1, CI002 ceiling grid (0.6 lay-in module, Hough lines in h002.npy): column seams at the storefront-head edge are at x 779/989/1195/1405/1619 px (210 px per 0.6 m), and the walls are at 636 and about 1942 px. That gives a clear width of 6.22-6.26 tiles = 3.73-3.76 m, matching the 3.76 storefront and the 3.8 tower. A 4.5 m lobby would be 7.5 tiles. M2, CI001 S-wall homography (round 1): the corner is 1.21±0.15 m from the S4 frame W edge. M3, door-to-board-plane distance from 5 measurements. CI019 door-wall homography (h019.py, dark frame 0.99x2.05) puts the frame 0.476 m from the pilaster face, consistent at 4 heights; with a pilaster about 0.13 the frame is 0.61 m from the board-wall plane. CK018 (h18) gives 0.61-0.68, CR012 0.57, CR016 0.54, verify2 0.66. Mean 0.60±0.05 (model 0.45). Combined: S4 frame W edge 17.15+0.60 = 17.75, so the corner is at 17.75-1.21 = 16.54±0.16, which agrees with the tower edge and the storefront at 16.58 and with the 3.76 width from the symmetric W face at 12.82. Rejected option, moving the door 0.56 E: it gives a 1.0 m door-to-board distance (measured 0.54-0.68) and does not explain the 3.76 m lobby.",
+    "error": "lobby width ±0.06; lobby faces ±0.10 (W face position rests on the width plus tower symmetry); door offset ±0.05",
+    "confidence": "medium-high (width, door rule), medium (W face position)",
+    "settled": true,
+    "what_would_settle": "A tape from the 108 (S2) frame E edge to the lobby W corner would confirm the W wall at 12.82 (predicted 1.17 m)."
+   },
+   {
+    "id": "Q3-24",
+    "question": "103 door E frame edge to the E stair-front corner: 1.07 (round 1), 1.55 (round 2) or 1.46 (model). Settle STAIR_X / FRONT_E.",
+    "decision": "The relative distance is 1.46 m, as in the model. Because the door rule changes (X0-05, DOOR_OFF 1.195, N5 frame 23.75-24.74), keep 1.46 by moving the front: FRONT_E = 26.20, so STAIR_X = 2.75. Set FLIGHT_W = 1.275 and keep WELL 0.20 (2*1.275+0.20 = 2.75). Apply the same STAIR_X to the W stair (FRONT_W = 3.20, mirrored stairs per owner). World coordinates: N5 frame E edge (198.546, 9.463); stair-front/N-wall corner (200.005, 9.405). If DOOR_OFF is not changed, keep FRONT_E 26.05 and FLIGHT_W 1.35.",
+    "methods": "M1, CI012 N-wall homography (h012.py) from the 103 outer frame corners (490,995)/(1316,1062)/(1324,2640)/(590,2752) = 0.99x2.05. The blue/white corner at x 2262 maps to u 2.41, so the frame E edge is 1.42±0.07 from the corner. Self-checks: ceiling at 2.92 (expected 2.95-3.00), skirting at 0.078. The round-1 value 1.07 came from a single px/m on a strongly receding wall: the frame jambs measure 1757 vs 1578 px. M2, CC010 PnP (round 2, re-solved with cam.py): 1.55±0.10. Weighted mean 1.46±0.06. Shifting the N5/S5 control points by 0 to +0.25 m changes the CC010 residual only from 9.6 to 10.9 px, so CC010 gives the relative distance only. Its end-wall-referenced corner at 26.13-26.16 (STAIR_X 2.79-2.82) agrees with 26.20 within error.",
+    "error": "relative ±0.06; FRONT_E ±0.08 (includes the door-rule error)",
+    "confidence": "medium-high (relative distance); medium (absolute FRONT_E, tied to X0-05)",
+    "settled": true,
+    "what_would_settle": "-"
+   },
+   {
+    "id": "Y0-n/X0-01",
+    "question": "F1 flight-2 underside and half-landing height (model LANDING 1.16, landing top 1.612, 11+11 risers): count the risers and fit the stair.",
+    "decision": "zone_c_v6.py: RISER_H = STOREY/20.5 = 0.1610; BOTTOM_RISER = 0.5*RISER_H = 0.0805; TREAD = 0.31 (was 0.332). Flight 1 keeps RISERS = 11 (half bottom riser plus 10). Add RISERS2 = 10 for flight 2, and use it in stair_storey() flight 2 and in the closet soff() formula, which hard-codes RISERS. Landing top = 0.0805+10*0.161 = 1.690 (was 1.612). LANDING = 1.24, so y_b = h0+(COR-LANDING-10*TREAD) = h0+1.46: E stair foot y 9.76, landing edge 12.86, flight 2 top at y 10.07 (2.79 run). SOFFIT stays 0.08. The flight-2 underside at the exit-door N jamb (y 10.78) rises about +0.17, to about 2.69. Re-run the closet/exit-door clearance QA.",
+    "methods": "Riser count. CC010 side profile of E flight 1 (x = FRONT_E face): risers at x 1275, 1344, 1419, 1497, 1572, 1647, 1731, 1809, 1887, 1969, plus a half step at about 2050, i.e. 10 full + 1 half = 11. Video 070704360 f68 (W stair flight 1 from its foot, nosing profile at 591/644/696/756/833/918/1034/1180/1373/1641 plus a bottom half step at about 1910): also 11. Flight 2 in CI014: tread lines at y 1861, 1761, 1655, 1544, 1425, 1308, 1180, 1042, 900, then the top riser to the F2 landing edge at about 790 (radiator behind the guard). That is 9 treads, so 10 risers. CI015 flight-2 W face shows 9 treads; the top is hidden by the hall ceiling edge, so it cannot decide. Geometry: CC010 sawtooth back-projected through the PnP camera (cam.py) onto x 26.05/26.20 gives treads 0.306/0.313 and 10 risers summing 1.58-1.62 (0.158-0.162 each). The landing comes out at 1.74 with the floor at 0.05-0.085 (z bias), so the landing is about 1.66-1.69. Foot at y 9.75-9.77 and landing edge at 12.82-12.88 (model 9.62/12.94). CI015 frontal flight-2 face: riser/tread = 72.5/136 = 0.533 (0.165/0.31). Consistency: 3.30 - 1.69 = 1.61 = 10 x 0.161. The model's 11 x 0.1535 does not fit the measured riser height. The landing rise (+0.078) and the steeper flight-2 soffit explain the Y0-n +0.09 and X0-01 2.57-2.71 residuals.",
+    "error": "riser ±0.004, tread ±0.01, landing top ±0.03, flight-2 count ±0 above the bottom tread (the bottom one is only confirmed by the height balance)",
+    "confidence": "medium-high",
+    "settled": true,
+    "what_would_settle": "-"
+   },
+   {
+    "id": "Q3-09",
+    "question": "Window head vs window beam: is the interior sill 1.15 with head 2.55, or does the beam soffit drop to 2.60?",
+    "decision": "Keep the beam soffit at 2.70 (WindowBeam z C-0.20..C) and the 1.40 frame height. Raise the window 0.10. Art/Blender/Specs/BLD_C.json rows: F1 1.15, F2 4.45, F3 7.75, F4 11.05 (was 1.05/4.35/7.65/10.95). zone_c_v6.py WIN_SILL = 1.15 (WIN_H 1.40 unchanged), so the head is at 2.55, 0.15 below the beam. Any other generator that copies the row sills (c_shell_v6.py) must read the same values.",
+    "methods": "M1, CK020 frontal R105 window wall: lining top at y 717, sill board at 1477 (760 px tall, 1031 wide, h/w 0.737), beam soffit edge at about 638. Strip/lining = 79/760 = 0.104, i.e. 0.15 m for a 1.40-1.45 lining, matching round 1's 0.15. M2, CI017 (R102, man 1.77 at the end wall, 655 px/m at his depth, wall about 0.12 m behind him): sill 1.14 and lining top 2.67 (the lining includes trim). M3, the C105 reference sheet: sill 1.10, head 2.55, beam 2.70. The facade sill of 1.05 is an exterior fit relative to an estimated FFL, so it is the weaker datum.",
+    "error": "sill/head ±0.04; strip ±0.03",
+    "confidence": "medium",
+    "settled": true,
+    "what_would_settle": "-"
+   },
+   {
+    "id": "V3-04",
+    "question": "Does the C west stair continue above F3 (F3/F4 stair-hall video)?",
+    "decision": "Yes. The W stair continues F3 to F4. In zone_c_v6.py build(), F2-F4 loop: west = k <= 4 (was k <= 3). Generate StairW for k < 4 with top_floor=(k == 3) (was k < 3, top_floor k == 2). ceilings(): W band for k < 4. On F4, plan(west_stair=True) removes F4_Teach_W_Front / F4_Door_Teach_W, and the F4 W end becomes the stair floor landing. StairW_F2_TopGuard moves to StairW_F3_TopGuard. Flag for the lore/owner list: this contradicts docs/reference/campus.md ('W stair F1-F3 only; F4 offices where the W stair would be'). The video shows what is physically there.",
+    "methods": "Video 052716931. Door sign read at full 4K (t 7.5 s) as '302'. A continuous pan along one wall runs 302 door, bench, a second door (301), then the stair hall, which fixes F3 and the W end under the model numbering (S1 = k01). M1, f43-f54: two people walk down a flight from an upper landing and step off at the F3 floor. M2, f47-f48: a further sawtooth flight rises from that landing toward F4. Both show flights above F3.",
+    "error": "topology (no metric)",
+    "confidence": "high that flights exist above F3; low on the F4 arrival layout",
+    "settled": true,
+    "what_would_settle": "-"
+   },
+   {
+    "id": "V3-05",
+    "question": "Is the W stair dog-leg rotated 180 deg (mid-landings at the S, floor landing at the N) at F3?",
+    "decision": "Not applied. Keep the model orientation for every storey: flight 1 on the hall-side lane rising S to N, mid-landing at the N, flight 2 on the end-wall lane rising N to S. Use the new constants from Y0-n.",
+    "methods": "M1, F1 W stair: CI003 and video 070704360 f49-f72 show flight 1 on the hall-side lane rising S to N to a landing at the N, matching the model. E stair: CC010/CI015 show the same, and CI014 shows the F2 floor landing at the S end of flight 2. M2, video 052716931 at F3: the up-flight appears behind a floor-level guard and runs from the N floor up to an upper S landing, which suggests swapped lanes. A per-storey 180 deg swap cannot be built above a standard F1 to F2 dog-leg: the F2 floor over the F1 flight-1 N end would leave about 1.3 m headroom. So one of the two readings must be wrong.",
+    "error": "topology only",
+    "confidence": "medium for the F1-F2 orientation; low for F3 and above",
+    "settled": false,
+    "what_would_settle": "One photo or frame of the W stair at F2 or F3 looking N or S along the bay, showing at which end and on which lane the up-flight leaves the floor landing."
+   },
+   {
+    "id": "Q3-12b",
+    "question": "Size of the bulkhead box along the top of the board wall (102, 204).",
+    "decision": "zone_c_v6.py fitout(): add bx('BoardBox', L-0.20, L, 0.30, D-0.60, C-0.19, C+0.01), painted to match the board wall behind it (sage on the sage part, white near the door, following BoardWall_Paint). It runs the full board wall from the door-corner pilaster (v 0.30) to the window-side pilaster (v D-0.60), not 0.30..D-0.50. Use it in the class-room fit-out (102, 204 and the rooms on the same pattern), not in R105.",
+    "methods": "CI023 frontal board wall (R102). The box front face spans 506 to 610 px and the underside 610 to 632 px; the floor at the wall is at 2045 (skirting top 1998). Height, independent of scale: h/(C-h) = (104/1.035)/1413 with C = 2.90, so h = 0.19. With the wall span (5.75 m = 2941 px, 511 px/m) the box-wall junction is at 2.77, i.e. 0.13-0.20 below a 2.90-2.97 ceiling (2.5% scale error). Depth from the underside parallax (22 px, D 5.5 m, camera 1.4-1.7 m) is 0.18-0.24. The box ends against the window-side column in the left crop.",
+    "error": "height ±0.03, depth ±0.04, ends ±0.10",
+    "confidence": "medium",
+    "settled": true,
+    "what_would_settle": "-"
+   },
+   {
+    "id": "X0-12",
+    "question": "Height of the R105 DB panel: 0.29 (X0-12) or 0.42 (Q3-02)?",
+    "decision": "Keep the current spec: NetPanel z 1.18-1.60 (0.42 tall), NetConduit z 0.90-1.18, NetCabinet z 1.60-2.05. X0-12 is rejected: it measured the panel's inner grey door (about 150 px), not the white box.",
+    "methods": "M1, CK018 1:1 crop: cabinet 975-1185 px (210 px) and white DB box outer 1195-1395 (200 px, 155 wide), directly below it. With a 0.45 cabinet that gives 0.43; the inner door at 1215-1365 (150 px) explains X0-12's 0.29. M2, CK019 ratio: cabinet 227 px and panel 205 px give 0.41. M3, Q3-02 door-wall homography: 1.18-1.59 (0.41).",
+    "error": "±0.03",
+    "confidence": "high",
+    "settled": true,
+    "what_would_settle": "-"
+   }
+  ]
+ }
+]

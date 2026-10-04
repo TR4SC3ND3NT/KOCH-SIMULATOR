@@ -17,7 +17,7 @@ import numpy as np
 # --- frame: the BLD_C anchor (SW outer corner of the west wing, satellite/facade fit)
 C_X = np.array([0.99920, -0.03985])
 C_Y = np.array([-C_X[1], C_X[0]])
-C_ORIGIN = np.array([173.264, -3.640])
+C_ORIGIN = np.array([176.364, -0.140])   # BLD_C anchor (2026-10-04 D1: +3.10/+3.50)
 FFL = 6.40
 EAST = math.degrees(math.atan2(C_X[1], C_X[0]))
 NORTH = EAST + 90.0
@@ -34,6 +34,8 @@ P1 = X_W + STD_L + PART / 2                   # 107|108, 106|105
 P2 = P1 + PART / 2 + STD_L + PART / 2         # 108|lobby, 105|WC-W
 LOBBY_W = 4.5
 P3 = P2 + PART / 2 + LOBBY_W + PART / 2       # lobby|101 = south jog
+LOBBY_X0, LOBBY_X1 = 12.82, 16.58             # F1 lobby clear faces = storefront frame / tower edges: 3.76 clear, the side
+                                              # walls 0.57 thick (lined on the lobby side), rooms 108/101 unchanged (D2 X0-05)
 WC_W = 2.15
 P_WCM = P2 + PART / 2 + WC_W + PART / 2       # WC mid wall = north jog
 P4 = P3 + PART / 2 + STD_L + PART / 2         # 101|102, 104|103
@@ -51,11 +53,11 @@ SLAB = 0.25
 CEIL = 2.90          # F1 lay-in grid (C105 150/151/153); F2+ 2.80 (C204 014), see ceil_of()
 DOOR_H, DOOR_W, WC_DOOR_W = 2.05, 0.99, 0.90  # classroom door frame (outer): campus.md metrology 2.05 x 0.99, re-checked
                                                 # 2026-10-02 on C204 (1.87 m person in the doorway: 2.02-2.04 x ~1.0)
-RISERS = 11
-RISER_H = STOREY / 21.5                       # 21.5 risers per storey (half bottom riser), as before
-TREAD, BOTTOM_RISER = 0.332, 0.5 * STOREY / 21.5
-LANDING = 1.16
-FLIGHT_W, WELL = 1.35, 0.20
+RISERS, RISERS2 = 11, 10                       # flight 1 (half bottom riser + 10) / flight 2 (riser count, 2026-10-04 D2)
+RISER_H = STOREY / 20.5                       # 20.5 risers per storey
+TREAD, BOTTOM_RISER = 0.31, 0.5 * STOREY / 20.5
+LANDING = 1.24
+FLIGHT_W, WELL = 1.275, 0.20                  # stair bay 2.75: 103 frame 1.46 m off the stair-front corner (Q3-24 / D2)
 STAIR_X = 2 * FLIGHT_W + WELL
 FRONT_W, FRONT_E = X_W + STAIR_X, X_E - STAIR_X
 SOFFIT = 0.08          # flight soffit slab: 0.18 cut the F1 E exit-door frame / W window head (2026-10-04 X0-01)
@@ -211,8 +213,11 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
                     slot="M_Paint_White", **ev("half-landing against the north hall wall")))
     els.append(slab(f"{prefix}_LandingTop", xs[0], xs[1], y_land, h1, top1 - 0.03, top1, "granite", slot="M_Terrazzo_Grey_Tile",
                     **ev("terrazzo half-landing top, granite treads (video 080011086, 2026-10-04 X0-08)")))
+    # flight 2 has one riser less (10, D2): its foot is one tread short of the landing, which runs on under it
+    els.append(slab(f"{prefix}_LandingExt", *sorted([x_wall, x_in2]), y_land - TREAD, y_land, zb if solid else top1 - 0.2, top1,
+                    "granite", slot="M_Terrazzo_Grey_Tile", **ev("half-landing under the foot of flight 2 (10 risers, D2)")))
     els.append({"type": "stairs_run", "name": f"{prefix}_Flight2", "top": c_to_w(xb, y_bot), "dir_deg": NORTH,
-                "width": FLIGHT_W, "risers": RISERS, "riser_h": round(RISER_H, 4), "tread": TREAD,
+                "width": FLIGHT_W, "risers": RISERS2, "riser_h": round(RISER_H, 4), "tread": TREAD,
                 "z_top": z(zb + STOREY), "material": "granite", **STAIR_FINISH, "soffit_thk": SOFFIT, **ev("U-stair flight 2")})
     # white steel balustrade (138): 40 mm posts at the ends / joints, round-ish 40 mm handrail, a bottom rail 0.10 over
     # the nosing line and 20 mm bars at ~0.20 m standing on it
@@ -237,7 +242,7 @@ def stair_storey(prefix, x_wall, sgn, zb, solid, top_floor):
 # rooms: (south, north) numbers per floor, door x per room (owner 2026-09-29: 105/106 doors at their east end, 101 at
 # its west end by the lobby; end rooms next to the stairs as before)
 # door centre 0.45 + 0.45 m from the board-side partition face (C105: opening 0.45 m from the board-wall corner)
-DOOR_OFF = PART / 2 + 0.45 + DOOR_W / 2
+DOOR_OFF = PART / 2 + 0.60 + DOOR_W / 2         # frame 0.60 off the board wall = 0.45 off the 0.15 pilaster (2026-10-04 D2 X0-05)
 DOOR_S = {"S1": P1 - DOOR_OFF, "S2": P2 - DOOR_OFF, "S4": P3 + DOOR_OFF, "S5": P4 + DOOR_OFF}   # 107/108 east ends, 101/102 west ends
 DOOR_N = {"N1": P1 - DOOR_OFF, "N2": P2 - DOOR_OFF, "N4": P3 + DOOR_OFF, "N5": P4 + DOOR_OFF}   # 106/105 east ends, 104/103 west ends
 DOOR_TEACH = (P2 + P3) / 2
@@ -260,7 +265,7 @@ def plan(k, zb, lobby, west_stair):
     se = [(DOOR_S["S4"], "S4"), (DOOR_S["S5"], "S5")]
     # the jogs are centred on X_JS / X_JN: each straight part ends on the jog's face where it would run into the jog,
     # and runs over the jog's width where it closes the outer corner (no overlaps, no notch)
-    segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 + PART / 2) if lobby else X_JS - PART / 2, HW0 - PART), sw),   # F1: to the lobby wall face (no corner notch, Y0-g)
+    segs = [("Hall_S_West", (X_W, HW0 - PART), ((P2 + PART / 2) if lobby else X_JS - PART / 2, HW0 - PART), sw),   # F1: to the partition face (the lining closes the corner, Y0-g)
             ("Hall_S_East", (X_JS - PART / 2, HE0 - PART), (X_E, HE0 - PART), se)]
     for nm, a, b, dd in segs:
         els.append(wall(P + nm, a, b, zb, doors=[(x - a[0], DOOR_W) for x, _ in dd], h=CC + 0.03, **ev("south hall wall")))
@@ -269,6 +274,10 @@ def plan(k, zb, lobby, west_stair):
             els.append(door(f"{P}Door_{key}", a, b, x - a[0], zb, hinge=HINGE.get(key, "left"), **ev(f"door of {lab}")))
     # int_wall lines are a FACE with the thickness to their left: partitions/jogs are offset by PART / 2 so they sit
     # centred on their plan lines (the room / WC frames and the asserts assume centred walls)
+    if lobby:   # lobby side linings: lobby 3.76 clear between the storefront edges (D2 X0-05)
+        evl = ev("lobby side wall lining to the 3.76 m clear width (2026-10-04 D2 X0-05)", "medium")
+        els.append(wall(P + "Lobby_Lining_W", (LOBBY_X0, Y_SW), (LOBBY_X0, HW0), zb, thk=LOBBY_X0 - P2 - PART / 2, h=CC + 0.03, **evl))
+        els.append(wall(P + "Lobby_Lining_E", (P3 - PART / 2, Y_SE), (P3 - PART / 2, HE0), zb, thk=P3 - PART / 2 - LOBBY_X1, h=CC + 0.03, **evl))
     els.append(wall(P + "Hall_S_Jog", (X_JS + PART / 2, HW0 - PART), (X_JS + PART / 2, HE0 - PART), zb, thk=PART, h=CC + 0.03, **ev("south hall wall jog 1.3 m (mirrors the facade step)")))
     # north hall wall: west part to the WC mid wall, jog, east part (east->west so the thickness goes north)
     nw = [(DOOR_N["N1"], "N1", DOOR_W), (DOOR_N["N2"], "N2", DOOR_W), (WC_DOORS[0][0], WC_DOORS[0][1], WC_DOOR_W)]
@@ -406,7 +415,7 @@ def hall_finish(k, zb, west_stair, lobby, doors, blue):
     P, ev7 = f"F{k}_", ev("terrazzo tile floor + terrazzo skirting in the corridors (2026-10-03 Q0-07 / Q3-08)", "medium")
     fin = HALL_FIN if k > 1 else 0.0
     x0 = FRONT_W if west_stair else FRONT_W + 0.4
-    xs = [x0, X_JN + PART / 2, X_JS - PART / 2, FRONT_E]
+    xs = [x0, X_JN + PART / 2, LOBBY_X1 if lobby else X_JS - PART / 2, FRONT_E]
     ys = [(HW0, HW1), (HW0, HE1), (HE0, HE1)]
     floor, skirt, greige = [], [], []
 
@@ -428,7 +437,7 @@ def hall_finish(k, zb, west_stair, lobby, doors, blue):
         for yf, north in ((ya, False), (yb, True)):
             ops = [(x - w / 2 - 0.02, x + w / 2 + 0.02) for x, w, n in doors if n == north]
             if lobby and not north:
-                ops.append((P2 - PART / 2, X_JS - PART / 2))                # F1 lobby front: no wall
+                ops.append((LOBBY_X0, LOBBY_X1))                            # F1 lobby front: no wall
             sgn = -1 if north else 1
             for a, b in runs(xa, xb, ops):
                 skirt.append(it(a, b, *sorted((yf, yf + sgn * 0.012)), fin, fin + 0.08))
@@ -451,7 +460,7 @@ ROOM_X = {"1": (X_W, P1 - PART / 2), "2": (P1 + PART / 2, P2 - PART / 2), "4": (
 BOARD_EAST = {"1": True, "2": True, "4": False, "5": False}
 WIN_PAIR = (1.65, 4.25)        # window centres from the back wall (C105; facade pairs 2.59 m apart)
 WIN_PAIR_KEY = {"N2": (1.65, 4.11)}   # R105 (and the rooms over it): 0.60 m gap to the east pier, not 0.74 (Q0-04 TG005/TG011)
-WIN_W, WIN_SILL, WIN_H = 1.85, 1.05, 1.40   # facade window opening (BLD_C window type W, row F1 1.05 above the FFL)
+WIN_W, WIN_SILL, WIN_H = 1.85, 1.15, 1.40   # facade window opening (BLD_C window type W, row F1 1.05 above the FFL)
 LAM = 0.010      # laminate floor finish on the slab (m): wall skins and furniture stand on it, not in it
 # room use (owner 2026-10-01, the timetable room list): PC labs 103 105 201 204 205; 207 vice principal; 307 405 408
 # teachers' offices; 409 director (over the lobby); every other room is a plain classroom (24 pupils + teacher)
@@ -534,10 +543,11 @@ def fitout(k, zb, num):
         # lay-in ceiling (C105 tile metrology): T-grid on the measured seams - along u back box 0.20 + cut 0.28 + 8 x 0.60
         # + cut 0.52, along v door box 0.30 + cut 0.15 + 9 x 0.60 + window beam 0.50 - plus the wall angle on the box/beam
         # faces; 4 LED panels 600 x 600 in tiles u #1/#6 x v #2/#6 (153: front pair at u 4.08-4.68, v 1.65-2.25 / 4.05-4.65)
-        us = [0.48 + 0.60 * i for i in range(9)] + [0.20, L]
+        LG = L - 0.20 if board_sage else L                   # the board-wall top box (Q3-12b) ends the grid
+        us = [0.48 + 0.60 * i for i in range(9)] + [0.20, LG]
         vs = [0.45 + 0.60 * j for j in range(9)] + [0.30, D - 0.50]
         seg = [[c_to_w(*to_c(u, 0.30)), c_to_w(*to_c(u, D - 0.50))] for u in us] + \
-              [[c_to_w(*to_c(0.20, v)), c_to_w(*to_c(L, v))] for v in vs]
+              [[c_to_w(*to_c(0.20, v)), c_to_w(*to_c(LG, v))] for v in vs]
         els.append({"type": "rails", "name": R + "CeilingGrid", "segments": seg, "width": 0.024, "height": 0.012,
                     "z0": z(zb + C - 0.012), **ev("600 mm lay-in T-grid on the C105 seam layout")})
         for i, u0 in enumerate((1.08, 4.08)):
@@ -623,7 +633,10 @@ def fitout(k, zb, num):
         bx("Floor_Laminate", 0.0, L, 0.0, D, 0.0, LAM, slot="M_Laminate_Oak_Grey", **ref)
         SK, ST = LAM + 0.045, 0.012                         # laminate skirting top / depth (Q3-08)
         if board_sage:
-            els.append({"type": "boxes", "name": R + "BoardWall_Paint", "items": [itm(LB, L, 1.54, D - 0.60, SK, C - 0.012)],
+            evbb = ev("bulkhead box along the top of the board wall, painted like the wall behind (2026-10-04 D2 Q3-12b)", "medium")
+            bx("BoardBox_White", L - 0.20, L, 0.30, 1.54, C - 0.19, C + 0.01, slot="M_Paint_White", **evbb)
+            bx("BoardBox_Sage", L - 0.20, L, 1.54, D - 0.60, C - 0.19, C + 0.01, slot="M_Paint_Sage", **evbb)
+            els.append({"type": "boxes", "name": R + "BoardWall_Paint", "items": [itm(LB, L, 1.54, D - 0.60, SK, C - 0.19)],
                         "material": "white", "slot": "M_Paint_Sage",
                         **ev("board wall sage from v 1.54 to the window pilaster, white strip by the door (Q3-12)", "medium")})
         sk_items = [itm(0.15, ud0, 0.0, ST, LAM, SK), itm(ud1, L - 0.15, 0.0, ST, LAM, SK),    # door wall
@@ -754,7 +767,7 @@ def fitout(k, zb, num):
             bx("NetPanel", PK, 0.10, 0.50, 0.80, 1.18, 1.60, slot="M_Plastic_White", ue_asset="db_panel_meter", **evn)
             bx("NetConduit", PK, PK + 0.03, 0.60, 0.64, 0.90, 1.18, slot="M_PVC_White", **evn)
             # white PVC trunking along the door wall behind the wall row (Q3-06)
-            bx("Trunking_Door", 0.25, 4.25, PK + 0.004, PK + 0.054, 0.78, 0.88, slot="M_PVC_White",
+            bx("Trunking_Door", 0.20, 4.18, PK + 0.004, PK + 0.054, 0.78, 0.88, slot="M_PVC_White",
                **ev("PVC trunking at desk height behind the wall row (2026-10-03 Q3-06)", "low"))
             # 25 PCs (owner 2026-10-01, C105 150-153): one row of 5 against the door wall (users face the wall) + two
             # islands of 2 rows back to back (users on the outer sides); desks 0.80 x 0.60 from 0.40 m off the back wall.
@@ -764,13 +777,13 @@ def fitout(k, zb, num):
             for r, (vc, face) in enumerate(rows):
                 # the wall row starts 0.25 off the back wall (on the back-door pilaster): from 0.40 its 5th desk ran 0.14 m
                 # into the door opening (door_qa 2026-10-03; door 0.45 m off the board-wall corner, C105)
-                p = c_to_w(*to_c((0.25 if r == 0 else 0.40) + 5 * 0.40, vc))
+                p = c_to_w(*to_c((0.20 if r == 0 else 0.40) + 5 * 0.40, vc))
                 row = {"pos": p, "dir_deg": d_u, "n": 5, "pitch": 0.80, "face": face, "z": z(zb + LAM), **lab}
                 els.append({"type": "desk_row", "name": R + f"Desks_{r}", "depth": 0.60, **row})
                 els.append({"type": "monitor_row", "name": R + f"PCs_{r}", **dict(row, z=z(zb + LAM + 0.75))})
                 sv_off = 0.62 if face == f_v else -0.62
                 els.append({"type": "chair_row", "name": R + f"Chairs_{r}",
-                            **dict(row, pos=c_to_w(*to_c((0.25 if r == 0 else 0.40) + 2.0, vc + sv_off)))})
+                            **dict(row, pos=c_to_w(*to_c((0.20 if r == 0 else 0.40) + 2.0, vc + sv_off)))})
             # teacher's desk (owner 2026-10-01): longer (1.40 x 0.60), it continues the window-side row of the second island
             # up to the board wall (end against the wall); the teacher sits with his back to the windows, PC in front
             tv = 4.95 + 0.30
@@ -1137,23 +1150,23 @@ def build():
     f1 = floor_slabs(1, 0.0, {}) + ceilings(1, 0.0, {"W": True, "E": True}) + plan(1, 0.0, lobby=True, west_stair=True)
     f1 += fitout(1, 0.0, NUMBERS[1]) + wc_fitout(1, 0.0)
     # lobby: free-standing power-bank kiosk next to the coffee kiosk on the west wall (002; brand-neutral in game)
-    f1.append({"type": "box", "name": "F1_ChargeKiosk", "center": c_to_w(P2 + PART / 2 + 0.25, HW0 - 0.75), "dir_deg": EAST,
+    f1.append({"type": "box", "name": "F1_ChargeKiosk", "center": c_to_w(LOBBY_X0 + 0.25, HW0 - 0.75), "dir_deg": EAST,
                "size": [0.40, 0.40, 1.45], "z0": z(0.0), "material": "white", "slot": "M_Plastic_White", "ue_asset": "powerbank_kiosk",
                **ev("power-bank rental kiosk by the coffee kiosk (002)")})
     # lobby radiators on both side walls near the entrance + a wall terminal on the east wall (2026-10-03 Q3-22 CI)
     evl = ev("lobby radiators on both side walls by the entrance + wall terminal (2026-10-03 Q3-22; positions +-0.4)", "low")
-    for nm, xr in (("W", P2 + PART / 2 + 0.06), ("E", P3 - PART / 2 - 0.06)):
+    for nm, xr in (("W", LOBBY_X0 + 0.06), ("E", LOBBY_X1 - 0.06)):
         f1.append({"type": "box", "name": f"F1_Lobby_Radiator_{nm}", "center": c_to_w(xr, 2.70), "dir_deg": NORTH,
                    "size": [0.85, 0.08, 0.55], "z0": z(0.17), "material": "white", "slot": "M_Paint_White",
                    "ue_asset": "radiator_sectional", **evl})
-    f1.append({"type": "box", "name": "F1_Lobby_Terminal", "center": c_to_w(P3 - PART / 2 - 0.04, 4.30), "dir_deg": NORTH,
+    f1.append({"type": "box", "name": "F1_Lobby_Terminal", "center": c_to_w(LOBBY_X1 - 0.04, 4.30), "dir_deg": NORTH,
                "size": [0.15, 0.08, 0.25], "z0": z(1.55), "material": "white", "slot": "M_Plastic_Grey", "ue_asset": "wall_terminal", **evl})
     evf = ev("lobby W wall fittings: fire-alarm panel, breaker box, clear box, 4-gang socket (2026-10-03 Q2-12; wall unsure)", "low")
     for nm, y0_, y1_, d_, z0_, z1_, sl in (("FireAlarmPanel", 2.40, 2.80, 0.10, 1.50, 1.80, "M_Plastic_White"),
                                            ("BreakerBox", 2.85, 3.15, 0.10, 1.50, 1.90, "M_Plastic_Grey"),
                                            ("ClearBox", 2.15, 2.35, 0.08, 1.65, 1.90, "M_Plastic_White"),
                                            ("Socket4", 1.90, 2.20, 0.03, 0.30, 0.38, "M_Plastic_White")):
-        f1.append({"type": "box", "name": f"F1_Lobby_{nm}", "center": c_to_w(P2 + PART / 2 + d_ / 2, (y0_ + y1_) / 2),
+        f1.append({"type": "box", "name": f"F1_Lobby_{nm}", "center": c_to_w(LOBBY_X0 + d_ / 2, (y0_ + y1_) / 2),
                    "dir_deg": NORTH, "size": [round(y1_ - y0_, 3), d_, round(z1_ - z0_, 3)], "z0": z(z0_), "material": "white",
                    "slot": sl, **evf})
     evx = ev("F1 E stair hall: full-height fin on the S wall, lintel over the exit bay, low wall + radiator in front of the "

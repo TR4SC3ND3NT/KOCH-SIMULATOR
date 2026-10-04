@@ -9,25 +9,25 @@
    "name": "PlanterW_S0",
    "ring": [
     [
-     169.386,
-     -9.257
+     172.486,
+     -5.757
     ],
     [
-     170.585,
-     -9.304
+     173.685,
+     -5.804
     ],
     [
-     170.632,
-     -8.105
+     173.732,
+     -4.605
     ],
     [
-     169.433,
-     -8.058
+     172.533,
+     -4.558
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "low",
    "slot": "M_Tile_Brick_Red"
   },
@@ -35,15 +35,15 @@
    "type": "tree",
    "name": "JuniperW_S0",
    "pos": [
-    170.009,
-    -8.681
+    173.109,
+    -5.181
    ],
    "height": 6.5,
    "crown_d": 3.4,
    "trunk_d": 0.2,
    "crown_base": 2.6,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-30 photos 160/161/010: the tree in front of the basement-entry canopy has a ~2.6 m clear (slightly leaning) trunk to about the canopy roof and a loose ~3.4 m crown topping out near the F2 sills",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-30 photos 160/161/010: the tree in front of the basement-entry canopy has a ~2.6 m clear (slightly leaning) trunk to about the canopy roof and a loose ~3.4 m crown topping out near the F2 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
@@ -51,25 +51,25 @@
    "name": "PlanterW_S1",
    "ring": [
     [
-     172.184,
-     -9.369
+     175.284,
+     -5.869
     ],
     [
-     173.383,
-     -9.416
+     176.483,
+     -5.916
     ],
     [
-     173.43,
-     -8.217
+     176.53,
+     -4.717
     ],
     [
-     172.231,
-     -8.17
+     175.331,
+     -4.67
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "low",
    "slot": "M_Tile_Brick_Red"
   },
@@ -77,15 +77,15 @@
    "type": "tree",
    "name": "JuniperW_S1",
    "pos": [
-    172.807,
-    -8.793
+    175.907,
+    -5.293
    ],
    "height": 6.5,
    "crown_d": 3.2,
    "trunk_d": 0.18,
    "crown_base": 2.2,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "low"
   },
   {
@@ -93,25 +93,25 @@
    "name": "PlanterW_S2",
    "ring": [
     [
-     174.982,
-     -9.48
+     178.082,
+     -5.98
     ],
     [
-     176.181,
-     -9.527
+     179.281,
+     -6.027
     ],
     [
-     176.228,
-     -8.328
+     179.328,
+     -4.828
     ],
     [
-     175.029,
-     -8.281
+     178.129,
+     -4.781
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -119,15 +119,15 @@
    "type": "tree",
    "name": "JuniperW_S2",
    "pos": [
-    175.605,
-    -8.904
+    178.705,
+    -5.404
    ],
    "height": 6.5,
    "crown_d": 3.2,
    "trunk_d": 0.18,
    "crown_base": 2.2,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
@@ -135,25 +135,25 @@
    "name": "PlanterW_1",
    "ring": [
     [
-     177.474,
-     -9.672
+     180.574,
+     -6.172
     ],
     [
-     178.673,
-     -9.719
+     181.773,
+     -6.219
     ],
     [
-     178.72,
-     -8.52
+     181.82,
+     -5.02
     ],
     [
-     177.521,
-     -8.473
+     180.621,
+     -4.973
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -161,15 +161,15 @@
    "type": "tree",
    "name": "TreeW_1",
    "pos": [
-    178.097,
-    -9.096
+    181.197,
+    -5.596
    ],
    "height": 6.5,
    "crown_d": 3.2,
    "trunk_d": 0.18,
    "crown_base": 2.2,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
@@ -177,25 +177,25 @@
    "name": "PlanterW_2",
    "ring": [
     [
-     180.177,
-     -9.777
+     183.277,
+     -6.277
     ],
     [
-     181.376,
-     -9.824
+     184.476,
+     -6.324
     ],
     [
-     181.423,
-     -8.625
+     184.523,
+     -5.125
     ],
     [
-     180.224,
-     -8.578
+     183.324,
+     -5.078
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -203,15 +203,15 @@
    "type": "tree",
    "name": "TreeW_2",
    "pos": [
-    180.8,
-    -9.201
+    183.9,
+    -5.701
    ],
    "height": 6.5,
    "crown_d": 3.2,
    "trunk_d": 0.18,
    "crown_base": 2.2,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
@@ -219,25 +219,25 @@
    "name": "PlanterW_3",
    "ring": [
     [
-     183.28,
-     -9.377
+     186.38,
+     -5.877
     ],
     [
-     184.479,
-     -9.424
+     187.579,
+     -5.924
     ],
     [
-     184.526,
-     -8.225
+     187.626,
+     -4.725
     ],
     [
-     183.327,
-     -8.178
+     186.427,
+     -4.678
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). ray-cast of planter corners in photo 061624280 (12 mm, pose recovered from the facade rectification, eye 1.56 m above the plaza): row 4.2 m in front of the west-wing face, planter extents x 0.3-1.0, 4.6-6.0, 7.3-9.0, 10.2-11.6 (±0.4 m); red concrete edging with small trees | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -245,15 +245,15 @@
    "type": "tree",
    "name": "TreeW_3",
    "pos": [
-    183.903,
-    -8.801
+    187.003,
+    -5.301
    ],
    "height": 6.5,
    "crown_d": 3.2,
    "trunk_d": 0.18,
    "crown_base": 2.2,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
@@ -261,25 +261,25 @@
    "name": "PlanterE_Ramp",
    "ring": [
     [
-     192.678,
-     -9.68
+     195.778,
+     -6.18
     ],
     [
-     193.877,
-     -9.727
+     196.977,
+     -6.227
     ],
     [
-     193.924,
-     -8.528
+     197.024,
+     -5.028
     ],
     [
-     192.725,
-     -8.481
+     195.825,
+     -4.981
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers",
+   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -287,25 +287,25 @@
    "type": "tree",
    "name": "JuniperE_Ramp",
    "pos": [
-    193.301,
-    -9.104
+    196.401,
+    -5.604
    ],
    "height": 7.0,
    "crown_d": 2.6,
    "trunk_d": 0.25,
    "crown_base": 0.8,
    "shape": "cone",
-   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E)",
+   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "TreeAN_0",
    "pos": [
-    174.43,
-    -17.218
+    177.53,
+    -13.718
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -318,25 +318,25 @@
    "name": "PlanterAN_0",
    "ring": [
     [
-     175.0,
-     -17.847
+     178.1,
+     -14.347
     ],
     [
-     173.802,
-     -17.788
+     176.902,
+     -14.288
     ],
     [
-     173.86,
-     -16.59
+     176.96,
+     -13.09
     ],
     [
-     175.059,
-     -16.648
+     178.159,
+     -13.148
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -345,25 +345,25 @@
    "name": "PlanterAN_W0",
    "ring": [
     [
-     172.07,
-     -17.699
+     175.17,
+     -14.199
     ],
     [
-     170.872,
-     -17.64
+     173.972,
+     -14.14
     ],
     [
-     170.93,
-     -16.442
+     174.03,
+     -12.942
     ],
     [
-     172.129,
-     -16.5
+     175.229,
+     -13.0
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0 | 2026-10-03 photo pass batch 2 Q2-06: the pit is bare soil (shrub removed)",
+   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0 | 2026-10-03 photo pass batch 2 Q2-06: the pit is bare soil (shrub removed) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -371,15 +371,15 @@
    "type": "bench",
    "name": "BenchAN_W0",
    "pos": [
-    172.443,
-    -18.268
+    175.543,
+    -14.768
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -389,25 +389,25 @@
    "name": "PlanterAN_W1",
    "ring": [
     [
-     169.14,
-     -17.559
+     172.24,
+     -14.059
     ],
     [
-     167.942,
-     -17.5
+     171.042,
+     -14.0
     ],
     [
-     168.0,
-     -16.302
+     171.1,
+     -12.802
     ],
     [
-     169.199,
-     -16.36
+     172.299,
+     -12.86
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0",
+   "evidence": "2026-10-03 video pass V1-06: red-kerbed pit continuing the 2.93 m pitch W of TreeAN_0 | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -415,8 +415,8 @@
    "type": "tree",
    "name": "ShrubAN_W1",
    "pos": [
-    168.57,
-    -16.93
+    171.67,
+    -13.43
    ],
    "height": 0.8,
    "crown_d": 0.6,
@@ -424,21 +424,21 @@
    "crown_base": 0.1,
    "shape": "round",
    "confidence": "medium",
-   "evidence": "2026-10-03 video pass V1-06: young shrub in the pit"
+   "evidence": "2026-10-03 video pass V1-06: young shrub in the pit | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   },
   {
    "type": "bench",
    "name": "BenchAN_W1",
    "pos": [
-    169.513,
-    -18.128
+    172.613,
+    -14.628
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit",
+   "evidence": "2026-10-03 video pass V1-06: wrought-iron bench (scroll legs) on the wall side of the pit | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_wrought_iron"
   },
@@ -446,10 +446,10 @@
    "type": "tree",
    "name": "TreeAN_1",
    "pos": [
-    177.361,
-    -17.362
+    180.461,
+    -13.862
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -462,25 +462,25 @@
    "name": "PlanterAN_1",
    "ring": [
     [
-     177.931,
-     -17.991
+     181.031,
+     -14.491
     ],
     [
-     176.733,
-     -17.932
+     179.833,
+     -14.432
     ],
     [
-     176.791,
-     -16.734
+     179.891,
+     -13.234
     ],
     [
-     177.99,
-     -16.792
+     181.09,
+     -13.292
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -488,10 +488,10 @@
    "type": "tree",
    "name": "TreeAN_2",
    "pos": [
-    180.303,
-    -17.506
+    183.403,
+    -14.006
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -504,25 +504,25 @@
    "name": "PlanterAN_2",
    "ring": [
     [
-     180.873,
-     -18.135
+     183.973,
+     -14.635
     ],
     [
-     179.675,
-     -18.076
+     182.775,
+     -14.576
     ],
     [
-     179.733,
-     -16.878
+     182.833,
+     -13.378
     ],
     [
-     180.932,
-     -16.936
+     184.032,
+     -13.436
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -530,10 +530,10 @@
    "type": "tree",
    "name": "TreeAN_3",
    "pos": [
-    183.234,
-    -17.65
+    186.334,
+    -14.15
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): this pit holds a rose bush, not a tree | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): this pit holds a rose bush, not a tree | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 1.1,
    "crown_d": 0.9,
@@ -547,25 +547,25 @@
    "name": "PlanterAN_3",
    "ring": [
     [
-     183.804,
-     -18.279
+     186.904,
+     -14.779
     ],
     [
-     182.606,
-     -18.22
+     185.706,
+     -14.72
     ],
     [
-     182.664,
-     -17.022
+     185.764,
+     -13.522
     ],
     [
-     183.863,
-     -17.08
+     186.963,
+     -13.58
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -573,10 +573,10 @@
    "type": "tree",
    "name": "TreeAN_4",
    "pos": [
-    186.165,
-    -17.793
+    189.265,
+    -14.293
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -589,25 +589,25 @@
    "name": "PlanterAN_4",
    "ring": [
     [
-     186.735,
-     -18.422
+     189.835,
+     -14.922
     ],
     [
-     185.537,
-     -18.363
+     188.637,
+     -14.863
     ],
     [
-     185.595,
-     -17.165
+     188.695,
+     -13.665
     ],
     [
-     186.794,
-     -17.223
+     189.894,
+     -13.723
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -615,10 +615,10 @@
    "type": "tree",
    "name": "TreeAN_5",
    "pos": [
-    189.096,
-    -17.937
+    192.196,
+    -14.437
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -631,25 +631,25 @@
    "name": "PlanterAN_5",
    "ring": [
     [
-     189.666,
-     -18.566
+     192.766,
+     -15.066
     ],
     [
-     188.468,
-     -18.507
+     191.568,
+     -15.007
     ],
     [
-     188.526,
-     -17.309
+     191.626,
+     -13.809
     ],
     [
-     189.725,
-     -17.367
+     192.825,
+     -13.867
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -657,10 +657,10 @@
    "type": "tree",
    "name": "TreeAN_6",
    "pos": [
-    192.037,
-    -18.081
+    195.137,
+    -14.581
    ],
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): same juniper habit as the C south row: >=6 m, ~1.8 m bare trunks, ~3.2 m loose crowns | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 6.5,
    "crown_d": 3.2,
@@ -673,25 +673,25 @@
    "name": "PlanterAN_6",
    "ring": [
     [
-     192.607,
-     -18.71
+     195.707,
+     -15.21
     ],
     [
-     191.409,
-     -18.651
+     194.509,
+     -15.151
     ],
     [
-     191.467,
-     -17.453
+     194.567,
+     -13.953
     ],
     [
-     192.666,
-     -17.511
+     195.766,
+     -14.011
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -699,15 +699,15 @@
    "type": "bench",
    "name": "BenchAN_0",
    "pos": [
-    175.373,
-    -18.416
+    178.473,
+    -14.916
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -716,15 +716,15 @@
    "type": "bench",
    "name": "BenchAN_1",
    "pos": [
-    178.304,
-    -18.559
+    181.404,
+    -15.059
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -733,15 +733,15 @@
    "type": "bench",
    "name": "BenchAN_2",
    "pos": [
-    181.245,
-    -18.704
+    184.345,
+    -15.204
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -750,15 +750,15 @@
    "type": "bench",
    "name": "BenchAN_3",
    "pos": [
-    184.176,
-    -18.847
+    187.276,
+    -15.347
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -767,15 +767,15 @@
    "type": "bench",
    "name": "BenchAN_4",
    "pos": [
-    187.108,
-    -18.991
+    190.208,
+    -15.491
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -784,15 +784,15 @@
    "type": "bench",
    "name": "BenchAN_5",
    "pos": [
-    190.039,
-    -19.135
+    193.139,
+    -15.635
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": "P1: trunk bases projected from C_entr c2 frames 081158036 f00006 (4 trunks) and f00194 (3 trunks, one hidden by a person): trees every 2.93 m from x 174.4 to 192.0 on red-edged pits, a bench between every pair (was 4 trees every 5.9 m); line 0.35 m north of the old one (near projections), +-0.5 m; bench against the wall, ~1.8 m | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -801,10 +801,10 @@
    "type": "tree",
    "name": "TreeAN_7",
    "pos": [
-    194.964,
-    -18.225
+    198.064,
+    -14.725
    ],
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it; a young tree in the east-end pit (061643243: ~3.5-4 m, 1.6 m crown)",
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it; a young tree in the east-end pit (061643243: ~3.5-4 m, 1.6 m crown) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "height": 4.0,
    "crown_d": 1.8,
@@ -817,25 +817,25 @@
    "name": "PlanterAN_7",
    "ring": [
     [
-     195.534,
-     -18.854
+     198.634,
+     -15.354
     ],
     [
-     194.336,
-     -18.795
+     197.436,
+     -15.295
     ],
     [
-     194.394,
-     -17.597
+     197.494,
+     -14.097
     ],
     [
-     195.593,
-     -17.655
+     198.693,
+     -14.155
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it",
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -843,15 +843,15 @@
    "type": "bench",
    "name": "BenchAN_6",
    "pos": [
-    192.98,
-    -19.279
+    196.08,
+    -15.779
    ],
    "dir_deg": 87.2,
    "length": 2.0,
    "depth": 0.55,
    "seat_h": 0.45,
    "back_h": 0.85,
-   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests",
+   "evidence": " | 2026-10-02 photo diff (agent): 156 single-view solve (camera 1.32 m, checked on the F1 window): trunks ~3.0 m off the A_N wall, 1.2 m pits, bench fronts ~2.1 m off it | 2026-10-03 photo pass batch 2 Q2-06 (CC/CE): timber-slat bench on a dark steel angle frame, no armrests | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium",
    "ue_asset": "bench_timber_steelframe",
    "slot": "M_Wood_Stained"
@@ -861,12 +861,12 @@
    "name": "CPlaza_EastEdge",
    "line": [
     [
-     195.9,
-     -21.27
+     199.0,
+     -17.77
     ],
     [
-     195.9,
-     -5.9
+     199.0,
+     -2.4
     ]
    ],
    "width": 0.1,
@@ -874,42 +874,42 @@
    "thk": 0.06,
    "slot": "M_Tile_Brick_Red",
    "confidence": "medium",
-   "evidence": "2026-10-02 photo diff: flush red edge line between the herringbone and the gravel (061643243)"
+   "evidence": "2026-10-02 photo diff: flush red edge line between the herringbone and the gravel (061643243) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   },
   {
    "type": "slab",
    "name": "CEast_Landing",
    "ring": [
     [
-     202.935,
-     3.833
+     206.035,
+     7.333
     ],
     [
-     204.234,
-     3.782
+     207.334,
+     7.282
     ],
     [
-     204.33,
-     6.18
+     207.43,
+     9.68
     ],
     [
-     203.031,
-     6.232
+     206.131,
+     9.732
     ]
    ],
    "z0": 4.7,
    "z1": 6.4,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured",
+   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
    "type": "stairs_run",
    "name": "CEast_Stair",
    "top": [
-    203.61,
-    3.807
+    206.71,
+    7.307
    ],
    "dir_deg": -92.284,
    "width": 1.25,
@@ -920,7 +920,7 @@
    "top_flush": true,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured",
+   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   },
   {
@@ -933,27 +933,27 @@
    "material": "metal",
    "points": [
     [
-     203.129,
-     6.188,
+     206.229,
+     9.688,
      6.4
     ],
     [
-     204.288,
-     6.141,
+     207.388,
+     9.641,
      6.4
     ],
     [
-     204.194,
-     3.783,
+     207.294,
+     7.283,
      6.4
     ],
     [
-     204.099,
-     1.385,
+     207.199,
+     4.885,
      5.066
     ]
    ],
-   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight)",
+   "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
   }
  ],
@@ -962,43 +962,43 @@
    "name": "CPlaza",
    "ring": [
     [
-     172,
-     -4.2
+     175.1,
+     -0.7
     ],
     [
      195.9,
-     -5.21
+     -1.71
     ],
     [
      195.9,
-     -21.27
+     -16.97
     ],
     [
-     172,
-     -20.4
+     175.1,
+     -16.1
     ]
    ],
    "slot": "M_Paver_Herringbone_Grey",
-   "evidence": "plaza between C (south face y -4) and A_N (north face y -20.2), herringbone pavers (C_sw frames 061707849, 012436367; Google z20 paved light area); west edge x 172 (the Hall-C passage west of C is stream B) | 2026-10-02 photo diff (agent): herringbone ends at a flush red line at x ~195.9 (061643243, 061648727)"
+   "evidence": "plaza between C (south face y -4) and A_N (north face y -20.2), herringbone pavers (C_sw frames 061707849, 012436367; Google z20 paved light area); west edge x 172 (the Hall-C passage west of C is stream B) | 2026-10-02 photo diff (agent): herringbone ends at a flush red line at x ~195.9 (061643243, 061648727) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   },
   {
    "name": "CEast_Lot",
    "ring": [
     [
      195.9,
-     -5.21
+     -1.71
     ],
     [
      202.7,
-     -5.5
+     -2.0
     ],
     [
      202.7,
-     -3.5
+     0.0
     ],
     [
      212.7,
-     -3.5
+     0.0
     ],
     [
      212.1,
@@ -1014,11 +1014,11 @@
     ],
     [
      195.9,
-     -21.27
+     -16.97
     ]
    ],
    "slot": "M_Gravel_Compacted",
-   "evidence": "2026-10-02 photo diff: compacted grey-brown gravel parking east of the red line, cars up to C's SE pilaster (061643243, 061648727, 167); x of the line +-0.7 m"
+   "evidence": "2026-10-02 photo diff: compacted grey-brown gravel parking east of the red line, cars up to C's SE pilaster (061643243, 061648727, 167); x of the line +-0.7 m | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
   }
  ]
 }

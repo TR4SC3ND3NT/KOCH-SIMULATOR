@@ -14,7 +14,7 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")
 WORK = sys.argv[1] if len(sys.argv) > 1 else None
 
 # --- Block C local frame (Specs/BLD_C.json anchor) and levels -------------------------------------------------------
-C_ORIGIN = np.array([173.264, -3.640])
+C_ORIGIN = np.array([176.364, -0.140])   # BLD_C anchor (2026-10-04 D1: +3.10/+3.50)
 C_X = np.array([0.99920, -0.03985])
 C_Y = np.array([-C_X[1], C_X[0]])
 FFL = 6.40            # world z of the C ground floor (build_facades output, terrain-derived)
