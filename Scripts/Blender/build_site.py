@@ -944,6 +944,22 @@ class Site:
         bm.faces.new(list(reversed(A)))
         bm.faces.new(Bv)
         ob = self.emit(el, bm, (0.62, 0.45, 0.42, 1), (P.x, P.y, zt))
+        npt = el.get("nose_paint")
+        if npt:   # riser faces painted in alternating blocks (yellow/white kerb paint on yard stairs, A038/A064)
+            slots, seg = npt.get("slots", ["M_Paint_Yellow", "M_Paint_White"]), npt.get("seg", 0.8)
+            bms = {s_: bmesh.new() for s_ in slots}
+            ns = max(1, round(W / seg)); sw = W / ns
+            y, z = 0.0, zt
+            for k_ in range(n):
+                h = rb if k_ == n - 1 else rh
+                if not (k_ == 0 and el.get("top_flush")):
+                    for i in range(ns):   # 1-6 mm proud of the riser face so it never z-fights with it
+                        box(bms[slots[(i + k_) % len(slots)]], m, -W / 2 + i * sw, -W / 2 + (i + 1) * sw,
+                            y + 0.001, y + 0.006, z - h + 0.002, z)
+                z -= h
+                y += tr if k_ < n - 1 else 0.0
+            for s_, b_ in bms.items():
+                self.emit(dict(el, name=f"{el['name']}_Nose{s_[2:]}", slot=s_), b_, (0.9, 0.8, 0.2, 1), (P.x, P.y, zt))
         if el.get("side_slot"):     # painted strings: the two profile faces (created last) get their own slot
             me = ob.data
             me.materials.append(mat(el["side_slot"]))
