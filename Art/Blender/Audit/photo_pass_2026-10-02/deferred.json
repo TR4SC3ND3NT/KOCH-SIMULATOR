@@ -330,6 +330,16 @@
    "id": "AW-face-b",
    "what": "~3 LED floods + CCTV under the A_W gallery soffit at the north end",
    "status": "low, not applied"
+  },
+  {
+   "id": "Hall-N-doors",
+   "what": "hall N steel doors at grade (paving 0.5-0.6 below the gym floor 5.4): inside there must be steps or a lower vestibule (not photographed)",
+   "status": "open (walk_qa DOOR_NO_FLOOR), no interior photo"
+  },
+  {
+   "id": "BStair-W-side",
+   "what": "B-corner stair W end: flush 1.2 m side face next to the boulder wall / B bed (walk_qa STEEP at 152,-49)",
+   "status": "as measured (no return wall), kept"
   }
  ]
 }

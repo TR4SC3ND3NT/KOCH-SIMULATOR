@@ -59,20 +59,20 @@
   ],
   [
    [
-    167.75,
-    0.45
+    167.801,
+    0.952
    ],
    [
-    176.4,
-    0.1
+    176.394,
+    0.609
    ],
    [
-    177.1,
-    18.45
+    177.089,
+    18.045
    ],
    [
-    168.45,
-    18.45
+    168.496,
+    18.388
    ]
   ]
  ],
@@ -2830,5 +2830,5 @@
    "evidence": "2026-10-02 photo diff: short plain-bar return from the forged railing's stair-head end to the moved west post (166)"
   }
  ],
- "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35) | 2026-10-04 levels pass L2-01: rings moved with the Block C move (ring 4 fitted to the current shed)"
+ "terrain_holes_note": "2026-09-28 0c: terrain cut under the basement corridor (covered by C's light-well covers) and inside C's walls over the basement hall - the DEM surface ran through the corridor at 5.3 and 0.1-0.3 m above the hall floor | 2026-10-02: Dance Hall room in the hollow west shed (ground ran through it at 5.35) | 2026-10-04 levels pass L2-01: rings moved with the Block C move (ring 4 fitted to the current shed) | 2026-10-04 walk_qa: ring 4 = inside of the WestShed walls (C-local x -8.6..0, y 0.75..18.2), no ground cut outside the shed"
 }
