@@ -1761,6 +1761,26 @@
    "slot": "M_Steel_Paint_Dark",
    "confidence": "low",
    "evidence": "2026-10-04 re-verification X2-12: billboard post | 2026-10-04 re-verification round 2 Y2-02: posts behind the panel up to its top"
+  },
+  {
+   "type": "wall",
+   "name": "EastLane_NeighbourWall",
+   "line": [
+    [
+     209.712,
+     -97.0
+    ],
+    [
+     211.723,
+     -45.0
+    ]
+   ],
+   "height": 4.2,
+   "thk": 0.25,
+   "material": "stone",
+   "slot": "M_Concrete",
+   "confidence": "low",
+   "evidence": "2026-10-04 walkthrough (A274/A276/A278 looking N along the east lane): a ~4 m grey precast-concrete wall (neighbour's) stands right behind the lane's black bar fence from the gate north for ~50 m; height from the 1.95 m fence (x2.1), north end where the trees start (+-8 m)"
   }
  ],
  "ground_surfaces": [
