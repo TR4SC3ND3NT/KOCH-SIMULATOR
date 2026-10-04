@@ -510,7 +510,7 @@
     ],
     "confidence": "medium",
     "evidence": "glazed vestibule door between the SE corner pilaster and the first pier (070309303 t1.6; 061757320 t34 rect 1.8-3.35); dark aluminium glazed double door with side lights + transom (012249348, 012205046, drone 2022 36-39 s) | 2026-10-02 photo diff (A234 single-view metrology on 0.16 m pier tile courses, A233, A238, A239 check, Esri z19): full-width aluminium storefront between two tile piers (u 1.0-1.65, 6.88-7.5): fixed | door | door | fixed, transom at 2.25, head 2.73 | 2026-10-04 levels pass L1-02 (A234): storefront threshold flush with the porch paving | 2026-10-04 walkthrough (A234/A244): the storefront frame stands on the porch paving (no red sill); B is built at FFL 6.947 (ffl_z x scale), porch paving 6.57",
-    "z0": -0.36
+    "z0": -0.18
    },
    "evidence": "pano intro2 2020 elevation (eave fit psi -89.4; d 6.45 from matching the street-facade heights; the SE-corner pilaster then falls at 24.9 vs 24.46): window north edges exact under reveal occlusion (camera at the NE corner); widths 1.9-1.95 where seen frontally; columns 5.9/8.55/11.5/14.1/16.4, blank pier 17.4-20, one more column at 21.0 near the NE corner; blank wall with an AC unit above the porch (u 1-5). 2026 061757320 t34 rect: double maroon box around the upper pair 5.9/8.55, box around the ground window 16.4; ground windows under the upper ones.",
    "confidence": "medium-low (positions +-0.4)"
@@ -659,7 +659,7 @@
    "wedge": true,
    "post_slot": "M_Tile_Beige",
    "post_base": {
-    "z": 0.64,
+    "z": 0.8,
     "slot": "M_Tile_Brick_Red"
    }
   },
@@ -944,7 +944,7 @@
  ],
  "scale_note": "2026-10-02 audit: Google z20 eave 50.66 x 26.42 (lean-free, model 49.28 x 25.46); B-A gap from the alley SfM 12.6 vs 13.43 (B's east wall further east); photo wall top 8.51 +-0.21 vs 8.15. The pano metrics were scaled on the OSM length 48.28, so the whole block (plan, bays, heights) scales by 49.66 / 48.28",
  "ffl_z": 6.754,
- "ffl_note": " | 2026-10-04: pinned at the rule value (the street pads would lower it 0.08)",
+ "ffl_note": " | 2026-10-04: pinned at the rule value (the street pads would lower it 0.08) | 2026-10-04: ffl_z is no longer multiplied by scale (build_facades UNSCALED); storefront z0 -0.18 = porch paving 6.57, pier base top ~1.0 above it",
  "slots": {
   "Wall": "M_Render_Shuba_Grey"
  },

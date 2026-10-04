@@ -42,7 +42,7 @@ COL = {  # viewport object colours only (greybox review aid, not materials)
 
 # Spec keys whose numbers are not lengths (angles, counts, fractions, indices, world placement).
 UNSCALED = {"scale", "pitch", "lower_pitch", "upper_pitch", "risers", "storeys", "mullions", "transoms", "edge",
-            "anchor"}
+            "anchor", "ffl_z"}   # ffl_z is an absolute campus z, not a length (B was built 0.19 m high, finish_E 2026-10-04)
 
 
 def scale_spec(v, k, key=None):
