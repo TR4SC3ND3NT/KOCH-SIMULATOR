@@ -25,8 +25,7 @@
      "u": [
       18.2,
       21.3,
-      25.2,
-      28.2
+      25.2
      ],
      "sills": [
       1.25
@@ -42,6 +41,16 @@
      "sills": [
       2.2
      ]
+    },
+    {
+     "type": "HN2",
+     "u": [
+      28.2
+     ],
+     "sills": [
+      1.35
+     ],
+     "evidence": "2026-10-04 walkthrough (A082 hand-fitted camera at ~(130,15.5) looking W): the window next to the E door bay is a small 2-light one, not a 3-light HN"
     }
    ],
    "entrances": [
@@ -694,6 +703,23 @@
    "surround_proj": 0.0,
    "confidence": "low",
    "evidence": "2026-10-04 finish_E E-09: A091: tall upper window in the E end pink bay (V2-09: sill ~2 above the light-well cover)"
+  },
+  "HN2": {
+   "w": 1.0,
+   "h": 1.4,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [],
+   "reveal": 0.16,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "2026-10-04 walkthrough (A082): small 2-light white PVC window with a deep white reveal"
   }
  }
 }

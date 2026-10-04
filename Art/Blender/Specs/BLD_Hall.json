@@ -255,17 +255,6 @@
   },
   {
    "edge": 2,
-   "u0": 16.5,
-   "u1": 23.7,
-   "z0": 0.45,
-   "z1": 5.6,
-   "proj": 0.01,
-   "slot": "M_Render_Pink",
-   "confidence": "low",
-   "evidence": "2026-10-03 photo batch 2 Q1-03: pink render field"
-  },
-  {
-   "edge": 2,
    "u0": 46.9,
    "u1": 60.2,
    "z0": 0.45,
