@@ -5434,12 +5434,12 @@
      -1.506
     ],
     [
-     148.778,
-     -1.927
+     153.174,
+     -2.052
     ],
     [
-     148.62,
-     -7.475
+     153.016,
+     -7.6
     ],
     [
      133.807,
@@ -5449,7 +5449,7 @@
    "curb_h": 0.12,
    "curb_w": 0.12,
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02: wall side behind the hall's light-well covers (1.2 m)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02: wall side behind the hall's light-well covers (1.2 m) | 2026-10-04 walkthrough (A004/A006 vs render): the lawn bed and its kerb run on to the SE corner of the hall east block (x ~153.2), thujas in front of its south wall",
    "confidence": "medium"
   },
   {
@@ -6250,6 +6250,38 @@
     ]
    ],
    "evidence": "2026-10-04 finish_E E-14: A011: aluminium-clad pipe d ~0.3 at ~2.7 m from the hall's W end S past the enclosure, dropping to the ground in two risers"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_ThujaE_0",
+   "pos": [
+    150.6,
+    -2.62
+   ],
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.12,
+   "crown_base": 0.3,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "2026-10-04 walkthrough (A006): double columnar thuja in the lawn in front of the hall east block's south wall",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "HallBed_ThujaE_1",
+   "pos": [
+    151.25,
+    -2.64
+   ],
+   "height": 5.0,
+   "crown_d": 1.2,
+   "trunk_d": 0.12,
+   "crown_base": 0.3,
+   "shape": "cone",
+   "species": "thuja",
+   "evidence": "2026-10-04 walkthrough (A006): double columnar thuja in the lawn in front of the hall east block's south wall",
+   "confidence": "low"
   }
  ],
  "ground": "pads",
@@ -6416,12 +6448,12 @@
      -1.506
     ],
     [
-     148.778,
-     -1.927
+     153.174,
+     -2.052
     ],
     [
-     148.62,
-     -7.475
+     153.016,
+     -7.6
     ],
     [
      133.807,
@@ -6429,7 +6461,7 @@
     ]
    ],
    "slot": "M_Ground_Grass",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py)"
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-04 walkthrough (A004/A006 vs render): the lawn bed and its kerb run on to the SE corner of the hall east block (x ~153.2), thujas in front of its south wall"
   },
   {
    "name": "B_NorthTerrace_Grass",

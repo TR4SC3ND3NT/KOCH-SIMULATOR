@@ -69,16 +69,18 @@
    "mullions": [
     0.5
    ],
-   "transoms": [],
+   "transoms": [
+    0.68
+   ],
    "reveal": 0.15,
    "surround": [
-    0.14,
-    0.14,
-    0.14,
-    0.14
+    0,
+    0,
+    0,
+    0
    ],
-   "surround_proj": 0.03,
-   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; window incl. maroon surround 1.94 x 1.53 m, sill ~1.1 m above the deck",
+   "surround_proj": 0.0,
+   "evidence": "video 061757320 t=14-20 s, rectified frames A_16/A_18 (solved focal 14-15 mm-eq): one window per structural bay between maroon piers; bay length taken as the standard 6.0 m frame grid (10 bays = 60 m = OSM length) -> 65 px/m in the rectification; window incl. maroon surround 1.94 x 1.53 m, sill ~1.1 m above the deck | 2026-10-04 walkthrough (A016/A017 vs render): plain white PVC frames in the render with a mullion and a transom, no maroon surround",
    "confidence": "low"
   },
   "HN": {
