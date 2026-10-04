@@ -2102,6 +2102,161 @@
   },
   {
    "type": "boxes",
+   "name": "F1_Hall_HeatPipe",
+   "items": [
+    [
+     180.561209,
+     6.73316,
+     -2.2838545045845304,
+     1.44,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     184.792821,
+     6.564395,
+     -2.2838545045845304,
+     4.97,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     188.879549,
+     6.401409,
+     -2.2838545045845304,
+     1.15,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     180.789549,
+     12.458576,
+     -2.2838545045845304,
+     1.44,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     185.021161,
+     12.289811,
+     -2.2838545045845304,
+     4.97,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     189.225295,
+     12.122142,
+     -2.2838545045845304,
+     1.385,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     191.258667,
+     12.041048,
+     -2.2838545045845304,
+     0.805,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     192.014111,
+     13.291929,
+     -2.2838545045845304,
+     0.605,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     193.373023,
+     13.237733,
+     -2.2838545045845304,
+     0.235,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     193.837426,
+     7.504705,
+     -2.2838545045845304,
+     1.15,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     197.924154,
+     7.341719,
+     -2.2838545045845304,
+     4.97,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     202.155766,
+     7.172954,
+     -2.2838545045845304,
+     1.44,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     194.064969,
+     13.210137,
+     -2.2838545045845304,
+     1.15,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     198.172478,
+     13.066338,
+     -2.2838545045845304,
+     4.93,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     195.688669,
+     13.145381,
+     -2.2838545045845304,
+     0.04,
+     0.03,
+     0.03,
+     6.49
+    ],
+    [
+     202.383309,
+     12.878386,
+     -2.2838545045845304,
+     1.44,
+     0.03,
+     0.03,
+     6.49
+    ]
+   ],
+   "material": "white",
+   "slot": "M_PVC_White",
+   "ue_asset": "heating_pipe",
+   "evidence": "2026-10-01 reference classroom plan v6: white floor heating pipe along the hall walls, broken at the doors (stair-hall frames 070704360 / 080051708; regenerated with door gaps 2026-10-04)",
+   "confidence": "low"
+  },
+  {
+   "type": "boxes",
    "name": "F1_Hall_Dado_Paint",
    "items": [
     [
@@ -26091,16 +26246,16 @@
    "name": "Closet_W_Front",
    "line": [
     [
-     178.476556,
-     9.543451
+     178.471774,
+     9.423547
     ],
     [
-     177.202576,
-     9.59426
+     177.197794,
+     9.474356
     ]
    ],
    "z0": 6.3,
-   "z1": 8.754,
+   "z1": 8.816,
    "thk": 0.12,
    "openings": [
     {
@@ -26119,12 +26274,12 @@
    "name": "Closet_W_Door",
    "line": [
     [
-     178.476556,
-     9.543451
+     178.471774,
+     9.423547
     ],
     [
-     177.202576,
-     9.59426
+     177.197794,
+     9.474356
     ]
    ],
    "u0": 0.237,
@@ -26144,8 +26299,8 @@
    "name": "Closet_W_Side",
    "line": [
     [
-     178.476556,
-     9.543451
+     178.471774,
+     9.423547
     ],
     [
      178.548286,
@@ -26163,16 +26318,16 @@
   {
    "type": "roof_plane",
    "name": "Closet_W_SideTop",
-   "thk": 0.955,
+   "thk": 1.017,
    "material": "white",
    "ring": [
     [
-     178.356652,
-     9.548233
+     178.35187,
+     9.428329
     ],
     [
-     178.476556,
-     9.543451
+     178.471774,
+     9.423547
     ],
     [
      178.548286,
@@ -26184,8 +26339,8 @@
     ]
    ],
    "z": [
-    8.754,
-    8.754,
+    8.816,
+    8.816,
     7.819,
     7.819
    ],
@@ -26197,16 +26352,16 @@
    "name": "Closet_E_Front",
    "line": [
     [
-     205.731581,
-     9.757494
+     205.726799,
+     9.63759
     ],
     [
-     204.457601,
-     9.808303
+     204.452819,
+     9.688399
     ]
    ],
    "z0": 6.3,
-   "z1": 8.754,
+   "z1": 8.816,
    "thk": 0.12,
    "openings": [
     {
@@ -26225,12 +26380,12 @@
    "name": "Closet_E_Door",
    "line": [
     [
-     205.731581,
-     9.757494
+     205.726799,
+     9.63759
     ],
     [
-     204.457601,
-     9.808303
+     204.452819,
+     9.688399
     ]
    ],
    "u0": 0.362,
@@ -26250,8 +26405,8 @@
    "name": "Closet_E_Side",
    "line": [
     [
-     204.577505,
-     9.803521
+     204.572723,
+     9.683617
     ],
     [
      204.649235,
@@ -26269,16 +26424,16 @@
   {
    "type": "roof_plane",
    "name": "Closet_E_SideTop",
-   "thk": 0.955,
+   "thk": 1.017,
    "material": "white",
    "ring": [
     [
-     204.577505,
-     9.803521
+     204.572723,
+     9.683617
     ],
     [
-     204.457601,
-     9.808303
+     204.452819,
+     9.688399
     ],
     [
      204.529331,
@@ -26290,8 +26445,8 @@
     ]
    ],
    "z": [
-    8.754,
-    8.754,
+    8.816,
+    8.816,
     7.819,
     7.819
    ],
@@ -26899,266 +27054,6 @@
    "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
    "confidence": "low",
    "ue_asset": "wall_light_linear"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_0",
-   "center": [
-    179.718,
-    12.736
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    3.8044,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_1",
-   "center": [
-    185.234,
-    12.516
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    4.62,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_2",
-   "center": [
-    189.342,
-    12.353
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    1.015,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_3_r0",
-   "center": [
-    191.346,
-    12.273
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.8613,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_5_r1",
-   "center": [
-    198.13,
-    13.063
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    3.35,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_5_r2",
-   "center": [
-    200.271,
-    12.977
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.3282,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_N_6",
-   "center": [
-    203.451,
-    12.851
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    3.7751,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_SW_0",
-   "center": [
-    179.283,
-    6.678
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    4.1903,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_SW_1",
-   "center": [
-    184.975,
-    6.451
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    4.72,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_SW_2",
-   "center": [
-    188.66,
-    6.304
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.3186,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_SE_0",
-   "center": [
-    194.026,
-    7.392
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    0.3651,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_SE_1",
-   "center": [
-    197.804,
-    7.241
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    4.72,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
-  },
-  {
-   "type": "box",
-   "name": "F1_HeatPipe_SE_2",
-   "center": [
-    203.4,
-    7.018
-   ],
-   "dir_deg": -2.2838545045845304,
-   "size": [
-    4.1392,
-    0.04,
-    0.04
-   ],
-   "z0": 6.5,
-   "material": "white",
-   "slot": "M_PVC_White",
-   "evidence": "stair-hall frames 070704360_s2 f00815/f01177, 080051708_s1 (landing radiator under the window, black utility door, red fire box, linear LED wall light, floor heating pipes) | 2026-09-29 remapped onto the standard plan (remap_c_fittings.py) | 2026-10-01 remapped onto plan v6 (remap_c_v6.py) | 2026-10-03 door_qa: trimmed 7 cm clear of the door opening it crossed (pipes pass doors in the floor, not across the opening)",
-   "confidence": "low",
-   "ue_asset": "heating_pipe"
   }
  ]
 }

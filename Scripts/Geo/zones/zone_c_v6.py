@@ -417,7 +417,7 @@ def hall_finish(k, zb, west_stair, lobby, doors, blue):
     x0 = FRONT_W if west_stair else FRONT_W + 0.4
     xs = [x0, X_JN + PART / 2, LOBBY_X1 if lobby else X_JS - PART / 2, FRONT_E]
     ys = [(HW0, HW1), (HW0, HE1), (HE0, HE1)]
-    floor, skirt, greige = [], [], []
+    floor, skirt, greige, pipe = [], [], [], []
 
     def it(xa, xb, ya, yb, za, zb_):
         cx, cy = c_to_w((xa + xb) / 2, (ya + yb) / 2)
@@ -441,10 +441,20 @@ def hall_finish(k, zb, west_stair, lobby, doors, blue):
             sgn = -1 if north else 1
             for a, b in runs(xa, xb, ops):
                 skirt.append(it(a, b, *sorted((yf, yf + sgn * 0.012)), fin, fin + 0.08))
+            # floor heating pipe along the wall, broken at the openings; off the blue paint skins (0.02) where they run
+            for a, b in runs(xa, xb, ops):
+                for a2, b2 in runs(a, b, [(b0, b1) for b0, b1, n in blue if n == north]):
+                    pipe.append(it(a2, b2, *sorted((yf + sgn * 0.02, yf + sgn * 0.05)), fin + 0.09, fin + 0.12))
+                for b0, b1, n in blue:
+                    if n == north and min(b, b1) - max(a, b0) > 0.02:
+                        pipe.append(it(max(a, b0), min(b, b1), *sorted((yf + sgn * 0.04, yf + sgn * 0.07)), fin + 0.09, fin + 0.12))
             if k == 1:
                 for a, b in runs(xa, xb, ops + [(b0, b1) for b0, b1, n in blue if n == north]):
                     greige.append(it(a, b, *sorted((yf, yf + sgn * 0.006)), 0.08, 2.10))
-    out = [{"type": "boxes", "name": P + "Hall_Skirting", "items": skirt, "material": "white", "slot": "M_Terrazzo_Grey", **ev7}]
+    out = [{"type": "boxes", "name": P + "Hall_Skirting", "items": skirt, "material": "white", "slot": "M_Terrazzo_Grey", **ev7},
+           {"type": "boxes", "name": P + "Hall_HeatPipe", "items": pipe, "material": "white", "slot": "M_PVC_White", "ue_asset": "heating_pipe",
+            **ev("white floor heating pipe along the hall walls, broken at the doors (stair-hall frames 070704360 / 080051708; "
+                 "regenerated with door gaps 2026-10-04)", "low")}]
     if floor:
         out.append({"type": "boxes", "name": P + "Hall_Floor", "items": floor, "material": "white", "slot": "M_Terrazzo_Grey_Tile",
                     "ue_note": "tile module not measured (count tiles across the 5.8 m corridor)", **ev7})
@@ -1206,7 +1216,7 @@ def build():
     for side, xw, sg in (("W", X_W, +1), ("E", X_E, -1)):
         h0, h1 = hall(xw + sg * 1.0)
         y_b = h0 + (COR - LANDING - (RISERS - 1) * TREAD)
-        y_c = y_b + 1.30                          # closet front 1.3 m up the flight: clear of the exit-door frame (X0-11)
+        y_c = y_b + 1.18                          # closet front: clear of the exit-door frame (X0-11) and the door under the flight soffit
         y_l = y_b + (RISERS - 1) * TREAD
         soff = lambda y: STOREY - RISER_H - SOFFIT * (TREAD ** 2 + RISER_H ** 2) ** 0.5 / TREAD - (y - y_b) * RISER_H / TREAD
         xo = xw + sg * FLIGHT_W
