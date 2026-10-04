@@ -134,6 +134,17 @@
    "slot": "M_Render_Beige",
    "evidence": "light panel fields between maroon ends (web photos)",
    "confidence": "low"
+  },
+  {
+   "edge": 0,
+   "u0": 1.4,
+   "u1": 7.7,
+   "z0": 0.0,
+   "z1": 13.0,
+   "proj": 0.35,
+   "slot": "M_Glass",
+   "confidence": "low",
+   "evidence": "2026-10-04 walkthrough (web G024, street view from the crossing): full-height blue glass curtain-wall entrance bay on the street face next to D_W, school sign over its door; width/position from the photo (+-1.5 m)"
   }
  ],
  "window_types": {
