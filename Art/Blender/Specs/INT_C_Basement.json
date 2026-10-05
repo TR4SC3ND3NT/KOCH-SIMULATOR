@@ -3609,10 +3609,10 @@
    "tread": 0.3,
    "z_top": 3.14,
    "material": "brick",
-   "slot": "M_Tile_Brick_Red",
+   "slot": "M_Tile_Brown_Dark",
    "top_flush": true,
    "run_out": 0.3,
-   "evidence": "2026-10-04 finish_B: east (right) descent: brown porcelain steps with grooved nosings, 4 risers down (012714931 t20.5 top view: band + 3 nosings), riser 0.16 (+-0.02)",
+   "evidence": "2026-10-04 finish_B: east (right) descent: brown porcelain steps with grooved nosings, 4 risers down (012714931 t20.5 top view: band + 3 nosings), riser 0.16 (+-0.02) | 2026-10-05 video check (012714931/012744144/012800431): dark brown ceramic step tiles",
    "confidence": "medium"
   },
   {
@@ -4076,10 +4076,10 @@
    "tread": 0.3,
    "z_top": 3.14,
    "material": "brick",
-   "slot": "M_Tile_Brick_Red",
+   "slot": "M_Tile_Brown_Dark",
    "top_flush": true,
    "run_out": 0.3,
-   "evidence": "2026-10-04 finish_B: west (left) descent: brown porcelain steps with grooved nosings, 4 risers down (012714931 t20.5 top view: band + 3 nosings), riser 0.16 (+-0.02)",
+   "evidence": "2026-10-04 finish_B: west (left) descent: brown porcelain steps with grooved nosings, 4 risers down (012714931 t20.5 top view: band + 3 nosings), riser 0.16 (+-0.02) | 2026-10-05 video check (012714931/012744144/012800431): dark brown ceramic step tiles",
    "confidence": "medium"
   },
   {
