@@ -7,24 +7,20 @@
   {
    "ring": [
     [
-     154.894,
-     -91.565
+     155.05,
+     -90.07
     ],
     [
-     156.726,
-     -95.487
+     159.73,
+     -93.51
     ],
     [
-     158.929,
-     -94.533
+     161.62,
+     -93.68
     ],
     [
-     161.427,
-     -94.105
-    ],
-    [
-     161.438,
-     -93.889
+     161.65,
+     -93.9
     ],
     [
      197.145,
@@ -65,7 +61,7 @@
    ],
    "z": 5.0,
    "blend": 0.0,
-   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end"
+   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): edge follows the moved stair nosing and bed kerb"
   },
   {
    "name": "Alley_Flat_S",
@@ -151,64 +147,80 @@
    "name": "SouthBed_Inside",
    "ring": [
     [
-     157.478,
-     -96.548
+     159.78,
+     -93.48
     ],
     [
-     161.199,
-     -96.731
+     161.114,
+     -91.66
     ],
     [
-     161.327,
-     -94.112
+     161.44,
+     -91.83
     ],
     [
-     158.897,
-     -94.528
-    ],
-    [
-     156.799,
-     -95.508
+     161.57,
+     -93.63
     ]
    ],
-   "z": 6.221,
+   "z": 6.2,
    "grad": [
-    -0.1174,
-    -0.7015
+    -0.1213,
+    -0.6763
    ],
    "ref": [
-    159.137,
-    -95.48
+    160.976,
+    -92.65
    ],
    "blend": 0.0,
    "field": false,
-   "evidence": "2026-09-28 terrain audit: ground inside the solid SouthBed_Cheek planter held 0.10 m under its sloped top (plane under all 5 top corners); hard edge 5 cm inside its faces. The plaza plateau (6.95) showed 0.29 m above the warped top",
+   "evidence": "2026-09-28 terrain audit: ground inside the solid SouthBed_Cheek planter held 0.10 m under its sloped top (plane under all 5 top corners); hard edge 5 cm inside its faces. The plaza plateau (6.95) showed 0.29 m above the warped top | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): follows the new small bed",
    "confidence": "medium"
   },
   {
    "name": "SouthStair_Head",
    "ring": [
     [
-     154.441,
-     -91.777
+     154.44,
+     -90.4
     ],
     [
-     156.273,
-     -95.699
+     155.05,
+     -90.07
     ],
     [
-     154.823,
-     -96.376
+     159.73,
+     -93.51
     ],
     [
-     152.991,
-     -92.454
+     161.62,
+     -93.7
+    ],
+    [
+     161.62,
+     -96.3
+    ],
+    [
+     157.4,
+     -96.45
+    ],
+    [
+     152.99,
+     -92.45
     ]
    ],
    "z": 6.75,
-   "blend": 2.5,
-   "evidence": "2026-09-29 zone loop (alley): check_stairs.py: plaza at the south stair head held at the top nosing 6.75 (8 risers x 0.175 above the landing 5.35), blending 2.5 m into the plaza; the DEM plateau ran 0.16 m above it",
-   "confidence": "medium"
+   "blend": 1.5,
+   "evidence": "2026-09-29 zone loop (alley): check_stairs.py: plaza at the south stair head held at the top nosing 6.75 (8 risers x 0.175 above the landing 5.35), blending 2.5 m into the plaza; the DEM plateau ran 0.16 m above it | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): whole open plaza from the moved nosing to the booth: 6.75 at the nosing rising 0.047/m to ~6.95 at the booth N face",
+   "confidence": "medium",
+   "grad": [
+    -0.028,
+    -0.038
+   ],
+   "ref": [
+    155.05,
+    -90.07
+   ]
   },
   {
    "name": "B_PorchFloor",
@@ -264,16 +276,16 @@
    "type": "stairs_run",
    "name": "SouthStair",
    "top": [
-    155.81,
-    -93.526
+    157.39,
+    -91.79
    ],
-   "dir_deg": 25.039,
+   "dir_deg": 53.68,
    "risers": 8,
    "riser_h": 0.175,
    "tread": 0.34,
-   "width": 4.33,
+   "width": 5.808,
    "z_top": 6.75,
-   "evidence": "wide granite flight (grey treads, red-granite risers, concrete kerb as the top riser) from the gate plaza down NE to the landing at A's SW corner: 012218760 (8 risers), 012208814, 012258813; 070309303 f05 (lower treads beyond the bed coping, drain grate on the landing). Position: NW top corner at the manhole, 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays). NOTE: SfM heights of the landing (f03-f09, rotation-only frames, short tracks) read ~0.6 m below the door walkway - not adopted (photo request)",
+   "evidence": "wide granite flight (grey treads, red-granite risers, concrete kerb as the top riser) from the gate plaza down NE to the landing at A's SW corner: 012218760 (8 risers), 012208814, 012258813; 070309303 f05 (lower treads beyond the bed coping, drain grate on the landing). Position: NW top corner at the manhole, 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays). NOTE: SfM heights of the landing (f03-f09, rotation-only frames, short tracks) read ~0.6 m below the door walkway - not adopted (photo request) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): top nosing runs from the planter curb's S end (155.05,-90.07; A249 near-ground rays (154.77,-89.87)/(155.70,-90.57) + far corner) to the bed corner (159.70,-93.5), ~1.2 m W of the booth NE corner and 3.8 m N of it (was 4.2 m W / 1.8 m N: the flight and bed filled the open plaza in front of the booth); flight descends NE onto the landing at A_S's SW corner",
    "confidence": "medium"
   },
   {
@@ -281,18 +293,18 @@
    "name": "Plaza_StairTop",
    "line": [
     [
-     154.169,
-     -91.904
+     154.576,
+     -90.715
     ],
     [
-     156.001,
-     -95.826
+     159.256,
+     -94.155
     ]
    ],
    "width": 1.6,
    "thk": 0.08,
    "surface": "herringbone_200x100",
-   "evidence": "gate plaza paving up to the top nosing of the south stair (012258813)",
+   "evidence": "gate plaza paving up to the top nosing of the south stair (012258813) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): along the moved nosing",
    "confidence": "medium"
   },
   {
@@ -350,12 +362,12 @@
    "name": "Walkway_South",
    "ring": [
     [
-     157.49,
-     -90.691
+     156.454,
+     -88.16
     ],
     [
-     160.307,
-     -91.43
+     160.3,
+     -90.987
     ],
     [
      160.765,
@@ -372,9 +384,14 @@
     [
      157.74,
      -85.597
+    ],
+    [
+     157.614,
+     -88.175
     ]
    ],
    "z": [
+    5.35,
     5.35,
     5.35,
     5.35,
@@ -384,7 +401,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815) | 2026-09-29 zone loop (alley): check_stairs.py: west edge moved onto the pavilion stair foot (a 0.3-0.44 m slot ran down to the terrain 5.0)",
+   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815) | 2026-09-29 zone loop (alley): check_stairs.py: west edge moved onto the pavilion stair foot (a 0.3-0.44 m slot ran down to the terrain 5.0) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge = the moved stair foot",
    "confidence": "medium"
   },
   {
@@ -392,16 +409,12 @@
    "name": "Landing_SW",
    "ring": [
     [
-     157.05,
-     -90.558
+     160.3,
+     -90.987
     ],
     [
-     158.882,
-     -94.48
-    ],
-    [
-     161.38,
-     -94.052
+     161.134,
+     -91.6
     ],
     [
      161.496,
@@ -418,20 +431,9 @@
     [
      160.395,
      -89.632
-    ],
-    [
-     160.307,
-     -91.43
-    ],
-    [
-     157.49,
-     -90.691
     ]
    ],
    "z": [
-    5.35,
-    5.35,
-    5.35,
     5.35,
     5.35,
     5.35,
@@ -441,7 +443,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway; continues east as the 2.0 m paved walkway along the whole south face to the east lane (A266-A273: storefront threshold at walkway level, 4-5 rows of ~0.5 m slabs)",
+   "evidence": "landing at the foot of the south stair in front of A's SW corner, clover pavers + drain grate (012208814, 070309303 f05: grate at A-local (0.7, 2.85) just south of the corner), joins the walkway; continues east as the 2.0 m paved walkway along the whole south face to the east lane (A266-A273: storefront threshold at walkway level, 4-5 rows of ~0.5 m slabs) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): W edge = the moved stair foot",
    "confidence": "medium"
   },
   {
@@ -491,16 +493,16 @@
    "name": "Planter_South",
    "ring": [
     [
-     154.894,
-     -91.565
+     155.1,
+     -90.1
     ],
     [
-     157.05,
-     -90.558
+     156.454,
+     -88.16
     ],
     [
-     157.196,
-     -90.565
+     157.314,
+     -88.16
     ],
     [
      157.44,
@@ -509,10 +511,6 @@
     [
      155.342,
      -85.48
-    ],
-    [
-     155.044,
-     -91.573
     ]
    ],
    "z": [
@@ -520,12 +518,11 @@
     6.15,
     6.15,
     6.15,
-    6.5,
     6.5
    ],
    "thk": 1.95,
    "material": "hedge",
-   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09",
+   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09 | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge follows the moved stair's NW flank",
    "confidence": "medium"
   },
   {
@@ -549,12 +546,12 @@
    "name": "RetWall_South",
    "ring": [
     [
-     157.196,
-     -90.565
+     157.314,
+     -88.16
     ],
     [
-     157.495,
-     -90.58
+     157.614,
+     -88.175
     ],
     [
      157.74,
@@ -573,7 +570,7 @@
    ],
    "thk": 1.38,
    "material": "brick",
-   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping | 2026-10-03 photo batch 2 Q0-09: walkway-side wall ~0.9 m high",
+   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping | 2026-10-03 photo batch 2 Q0-09: walkway-side wall ~0.9 m high | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S end at the stair foot",
    "confidence": "medium"
   },
   {
@@ -581,12 +578,12 @@
    "name": "RetWall_South_Coping",
    "ring": [
     [
-     157.166,
-     -90.564
+     157.284,
+     -88.158
     ],
     [
-     157.525,
-     -90.582
+     157.644,
+     -88.176
     ],
     [
      157.77,
@@ -613,8 +610,8 @@
    "name": "Curb_PlanterSouth",
    "ring": [
     [
-     154.945,
-     -90.895
+     155.03,
+     -90.06
     ],
     [
      155.318,
@@ -625,8 +622,8 @@
      -85.987
     ],
     [
-     155.045,
-     -90.903
+     155.13,
+     -90.07
     ]
    ],
    "z": [
@@ -637,7 +634,7 @@
    ],
    "thk": 2.03,
    "material": "brick",
-   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole",
+   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole | 2026-10-05 owner msg 104: S end at the moved stair's NW top corner",
    "confidence": "medium"
   },
   {
@@ -1423,36 +1420,31 @@
    "name": "SouthBed_Cheek",
    "ring": [
     [
-     156.726,
-     -95.487
+     159.73,
+     -93.51
     ],
     [
-     158.882,
-     -94.48
+     161.134,
+     -91.6
     ],
     [
-     161.38,
-     -94.052
+     161.49,
+     -91.809
     ],
     [
-     161.246,
-     -96.783
-    ],
-    [
-     157.45,
-     -96.597
+     161.62,
+     -93.68
     ]
    ],
    "z": [
-    7.1,
+    7.0,
     5.65,
     5.65,
-    7.476,
-    7.487
+    6.9
    ],
-   "thk": 2.715,
+   "thk": 2.8,
    "material": "hedge",
-   "evidence": "raised bed with conifers SE of the south stair, red-granite cheek wall along the stair (top ~0.35 above the plaza at the top of the flight, 012258813; ~0.3 above the landing at the foot, 012208814) | 2026-09-29 zone loop (alley): check_stairs.py: top corner at the flight head = plaza 6.75 + 0.35 (was 7.46)",
+   "evidence": "raised bed with conifers SE of the south stair, red-granite cheek wall along the stair (top ~0.35 above the plaza at the top of the flight, 012258813; ~0.3 above the landing at the foot, 012208814) | 2026-09-29 zone loop (alley): check_stairs.py: top corner at the flight head = plaza 6.75 + 0.35 (was 7.46) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): small bed (saplings, roses) SE of the flight between its cheek and a low red-granite kerb at y -93.6; the plaza paving runs S of it to the booth and the bench",
    "confidence": "medium"
   },
   {
@@ -1460,8 +1452,8 @@
    "name": "SouthBank_W",
    "ring": [
     [
-     161.344,
-     -94.785
+     161.65,
+     -94.8
     ],
     [
      172.73,
@@ -1474,17 +1466,22 @@
     [
      161.49,
      -91.809
+    ],
+    [
+     161.62,
+     -93.68
     ]
    ],
    "z": [
     7.42,
     7.386,
     5.45,
-    5.45
+    5.45,
+    6.9
    ],
-   "thk": 2.72,
+   "thk": 2.9,
    "material": "hedge",
-   "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed",
+   "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): W edge behind the bench / bed",
    "confidence": "low"
   },
   {
@@ -1556,8 +1553,8 @@
    "name": "PathParapet_S_00",
    "line": [
     [
-     161.115,
-     -95.375
+     161.65,
+     -95.385
     ],
     [
      162.495,
@@ -1567,7 +1564,7 @@
    "height": 0.4,
    "thk": 0.15,
    "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): starts behind the bench",
    "confidence": "medium"
   },
   {
@@ -1936,8 +1933,8 @@
    "name": "Kerb_PathParapet_S",
    "line": [
     [
-     161.106,
-     -95.544
+     161.65,
+     -95.583
     ],
     [
      198.222,
@@ -1956,8 +1953,8 @@
    "name": "PathHedge_S",
    "line": [
     [
-     161.142,
-     -94.825
+     161.68,
+     -94.86
     ],
     [
      198.258,
@@ -1967,22 +1964,22 @@
    "width": 0.9,
    "height": 1.15,
    "top": "flat",
-   "evidence": "clipped hedge directly behind the parapet, top ~1.0-1.2 m above the path (065934318; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): A_S's ground floor seen straight over it, no fence)",
+   "evidence": "clipped hedge directly behind the parapet, top ~1.0-1.2 m above the path (065934318; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): A_S's ground floor seen straight over it, no fence) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): W end behind the bench (A249: clipped hedge right behind the bench back)",
    "confidence": "medium"
   },
   {
    "type": "tree",
    "name": "BankTree_00",
    "pos": [
-    162.362,
-    -94.435
+    162.45,
+    -94.25
    ],
-   "height": 9.0,
-   "crown_d": 4.5,
-   "shape": "cone",
-   "trunk_d": 0.35,
-   "crown_base": 2.2,
-   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth)",
+   "height": 13.0,
+   "crown_d": 9.0,
+   "shape": "round",
+   "trunk_d": 0.55,
+   "crown_base": 3.2,
+   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): the big whitewashed double-stem elm behind the bench (stems triangulated at (162.2,-94.0)/(162.9,-94.9)); its crown hangs over the booth (A250)",
    "confidence": "low"
   },
   {
@@ -2017,18 +2014,85 @@
   },
   {
    "type": "tree",
-   "name": "BankTree_03",
+   "name": "SouthBed_Sapling_0",
    "pos": [
-    158.3,
-    -95.6
+    160.65,
+    -92.85
    ],
-   "height": 10.0,
-   "crown_d": 6.5,
+   "height": 3.6,
+   "crown_d": 1.6,
    "shape": "round",
-   "trunk_d": 0.35,
-   "crown_base": 4.5,
-   "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth) | 2026-10-04 re-verification X2-08: crown above the canopy ridge (it hid the booth) | 2026-10-04 re-verification round 2 Y2-09: trunk in the SouthBed, not on the stair",
+   "trunk_d": 0.07,
+   "crown_base": 1.2,
+   "evidence": "2026-10-05 owner msg 104 (A249): staked young deciduous trees in the small bed SE of the stair; replaces BankTree_03 (no trunk stands on the plaza)",
    "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "SouthBed_Sapling_1",
+   "pos": [
+    161.25,
+    -93.15
+   ],
+   "height": 3.2,
+   "crown_d": 1.3,
+   "shape": "round",
+   "trunk_d": 0.06,
+   "crown_base": 1.0,
+   "evidence": "2026-10-05 owner msg 104 (A249): staked young deciduous trees in the small bed SE of the stair; replaces BankTree_03 (no trunk stands on the plaza)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "SouthBed_Rose_0",
+   "pos": [
+    160.3,
+    -93.25
+   ],
+   "height": 0.7,
+   "crown_d": 0.6,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 104 (A249): low rose bushes along the bed kerb",
+   "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_SouthBed",
+   "line": [
+    [
+     159.68,
+     -93.58
+    ],
+    [
+     161.62,
+     -93.76
+    ]
+   ],
+   "height": 0.13,
+   "thk": 0.14,
+   "material": "stone",
+   "slot": "M_Granite_Red",
+   "evidence": "2026-10-05 owner msg 104 (A249): low polished red-granite kerb between the bed and the plaza paving, from the stair cheek corner E to the hedge",
+   "confidence": "medium"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_BoothNE",
+   "pos": [
+    161.27,
+    -95.1
+   ],
+   "dir_deg": 177.1,
+   "length": 2.0,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_generic",
+   "evidence": "2026-10-05 owner msg 104 (A248/A249 two-view triangulation): dark-brown slatted wooden bench on the plaza right N of the gas-pipe hood at the booth NE corner, front legs on x ~161.0 from y -96.2 to -94.0, facing W onto the plaza, hedge + elm behind it",
+   "confidence": "medium"
   },
   {
    "type": "lamp",
@@ -2298,12 +2362,12 @@
     150.3,
     -70.989
    ],
-   "height": 1.6,
-   "crown_d": 1.6,
+   "height": 2.2,
+   "crown_d": 2.3,
    "shape": "round",
    "trunk_d": 0.1,
-   "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
+   "crown_base": 0.0,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover | 2026-10-05 owner msg 104 sweep (A214 overlay): the clipped junipers along B's east face are big rounded masses ~2.2 m high, ~2.3 m wide, nearly touching (were 1.6)",
    "confidence": "low"
   },
   {
@@ -2313,12 +2377,12 @@
     150.43,
     -68.292
    ],
-   "height": 1.6,
-   "crown_d": 1.6,
+   "height": 2.2,
+   "crown_d": 2.3,
    "shape": "round",
    "trunk_d": 0.1,
-   "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
+   "crown_base": 0.0,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover | 2026-10-05 owner msg 104 sweep (A214 overlay): the clipped junipers along B's east face are big rounded masses ~2.2 m high, ~2.3 m wide, nearly touching (were 1.6)",
    "confidence": "medium"
   },
   {
@@ -2328,12 +2392,12 @@
     150.57,
     -65.495
    ],
-   "height": 1.6,
-   "crown_d": 1.6,
+   "height": 2.2,
+   "crown_d": 2.3,
    "shape": "round",
    "trunk_d": 0.1,
-   "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
+   "crown_base": 0.0,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover | 2026-10-05 owner msg 104 sweep (A214 overlay): the clipped junipers along B's east face are big rounded masses ~2.2 m high, ~2.3 m wide, nearly touching (were 1.6)",
    "confidence": "medium"
   },
   {
@@ -2343,12 +2407,12 @@
     150.7,
     -62.799
    ],
-   "height": 1.6,
-   "crown_d": 1.6,
+   "height": 2.2,
+   "crown_d": 2.3,
    "shape": "round",
    "trunk_d": 0.1,
-   "crown_base": 0.05,
-   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover",
+   "crown_base": 0.0,
+   "evidence": "round clipped shrubs ~1.6 m in B's bed, fronts at x -7.8..-8.0 (SfM crescents y 23-30.5; 070309303 f45-f53 frontal views, ~2.7 m pitch) | owner 2026-09-28 (screenshot 56): shrubs and lamps much closer to B's light-well box (moved 1.5 m toward B) | 2026-10-04 re-verification X2-13: clear of the B lightwell cover box | 2026-10-04 re-verification round 2 Y2-11: +0.10 clear of the lightwell cover | 2026-10-05 owner msg 104 sweep (A214 overlay): the clipped junipers along B's east face are big rounded masses ~2.2 m high, ~2.3 m wide, nearly touching (were 1.6)",
    "confidence": "medium"
   },
   {
@@ -2557,27 +2621,10 @@
   },
   {
    "type": "tree",
-   "name": "SouthBed_Shrub_0",
-   "pos": [
-    155.9,
-    -89.6
-   ],
-   "height": 0.9,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.0,
-   "shape": "round",
-   "ue_asset": "shrub_clipped_round",
-   "evidence": "P1 by frames: round clipped shrubs in the south bed beside the thuja (070309303 s1 f00117, 061757320 s2, 082537786 s2); spacing by eye, +-0.5 m",
-   "confidence": "low",
-   "z": 6.247
-  },
-  {
-   "type": "tree",
    "name": "SouthBed_Shrub_1",
    "pos": [
-    156.1,
-    -88.4
+    156.95,
+    -87.2
    ],
    "height": 0.9,
    "crown_d": 0.9,
@@ -2585,9 +2632,9 @@
    "crown_base": 0.0,
    "shape": "round",
    "ue_asset": "shrub_clipped_round",
-   "evidence": "P1 by frames: round clipped shrubs in the south bed beside the thuja (070309303 s1 f00117, 061757320 s2, 082537786 s2); spacing by eye, +-0.5 m",
+   "evidence": "P1 by frames: round clipped shrubs in the south bed beside the thuja (070309303 s1 f00117, 061757320 s2, 082537786 s2); spacing by eye, +-0.5 m | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): re-laid inside the trimmed bed (Shrub_3 dropped: its spot is now the stair)",
    "confidence": "low",
-   "z": 6.2
+   "z": 6.18
   },
   {
    "type": "tree",
@@ -2735,8 +2782,8 @@
    "type": "box",
    "name": "Manhole_ASCorner",
    "center": [
-    155.0,
-    -91.3
+    154.3,
+    -90.05
    ],
    "dir_deg": 0,
    "size": [
@@ -2747,7 +2794,7 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "ue_asset": "manhole_cover",
-   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner | 2026-10-04 re-verification X2-02: the round manhole is on the plaza W of the planter, not on the lower landing",
+   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner | 2026-10-04 re-verification X2-02: the round manhole is on the plaza W of the planter, not on the lower landing | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): 0.42 m off the moved nosing W of its NW corner, below A249's frame (A249 shows plain paving 2 m in front of the camera)",
    "confidence": "medium",
    "z0": 6.78
   },
@@ -2787,23 +2834,6 @@
    "evidence": "082537786_s1: wheelie bin under the entrance pavilion",
    "confidence": "low",
    "z0": 5.35
-  },
-  {
-   "type": "tree",
-   "name": "SouthBed_Shrub_3",
-   "pos": [
-    155.6,
-    -90.6
-   ],
-   "height": 0.9,
-   "crown_d": 0.9,
-   "trunk_d": 0.05,
-   "crown_base": 0.0,
-   "shape": "round",
-   "ue_asset": "shrub_clipped_round",
-   "evidence": "070309303_s3, 061757320_s2, 082537786_s2, 012327726_s1: 3-4 round clipped shrubs in the bed along A_S",
-   "confidence": "low",
-   "z": 6.331
   },
   {
    "type": "box",

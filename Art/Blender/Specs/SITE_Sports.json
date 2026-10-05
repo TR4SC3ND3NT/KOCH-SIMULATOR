@@ -11565,6 +11565,58 @@
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
    "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)"
+  },
+  {
+   "type": "bench",
+   "name": "HallN_Bench_Wrought",
+   "pos": [
+    123.2,
+    11.716
+   ],
+   "dir_deg": 88.37,
+   "length": 1.6,
+   "depth": 0.6,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_wrought_iron",
+   "evidence": "2026-10-05 owner msg 104 sweep (A081/A082/A084/A086, hall N yard; A082 camera ~(130,15.5) looking W): black wrought-iron bench with timber slats, back to the hall N wall, ~1.5 m E of the scale man's spot; x +-1.5 m",
+   "confidence": "low",
+   "slot": "M_Steel_Paint_Dark"
+  },
+  {
+   "type": "bin",
+   "name": "HallN_WheelieBin_Yellow",
+   "pos": [
+    116.2,
+    12.015
+   ],
+   "dir_deg": 88.37,
+   "size": [
+    0.58,
+    0.72,
+    1.07
+   ],
+   "ue_asset": "wheelie_bin_240l_yellow",
+   "evidence": "2026-10-05 owner msg 104 sweep (A081/A082/A084/A086, hall N yard; A082 camera ~(130,15.5) looking W): yellow 240 l wheelie bin against the wall just E of the boiler-room door bay (bikes parked beside it are dynamic props); x +-1 m",
+   "confidence": "low",
+   "slot": "M_Paint_Yellow"
+  },
+  {
+   "type": "bench",
+   "name": "HallN_Bench_Pink",
+   "pos": [
+    93.0,
+    12.626
+   ],
+   "dir_deg": 88.37,
+   "length": 2.4,
+   "depth": 0.5,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_painted_pink",
+   "evidence": "2026-10-05 owner msg 104 sweep (A081/A082/A084/A086, hall N yard; A082 camera ~(130,15.5) looking W): long bright-pink painted bench against the wall at the hall's W end by the lower annex; x +-2 m",
+   "confidence": "low",
+   "slot": "M_Paint_RedPink"
   }
  ],
  "ground_surfaces": [

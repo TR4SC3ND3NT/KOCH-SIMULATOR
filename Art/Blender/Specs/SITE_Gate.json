@@ -587,6 +587,38 @@
    "confidence": "medium"
   },
   {
+   "type": "bench",
+   "name": "Bench_YardWest_0",
+   "pos": [
+    146.4,
+    -93.95
+   ],
+   "dir_deg": 87.1,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_timber_steelframe",
+   "evidence": "2026-10-05 owner msg 104 sweep (A251 from the gate plaza looking W; drone 2022 f30 'benches in front of' the fence bed): slatted benches with backrests on the walk against the yellow/white kerb of the fence bed, facing N, the blue wheelie bin beside the first one; x by eye +-1.5 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_YardWest_1",
+   "pos": [
+    142.6,
+    -93.75
+   ],
+   "dir_deg": 87.1,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_timber_steelframe",
+   "evidence": "2026-10-05 owner msg 104 sweep (A251 from the gate plaza looking W; drone 2022 f30 'benches in front of' the fence bed): slatted benches with backrests on the walk against the yellow/white kerb of the fence bed, facing N, the blue wheelie bin beside the first one; x by eye +-1.5 m",
+   "confidence": "low"
+  },
+  {
    "type": "tree",
    "name": "Pine_InsideWest",
    "pos": [
@@ -1066,11 +1098,11 @@
    "ring": [
     [
      141.0,
-     -94.4
+     -92.2
     ],
     [
      148.3,
-     -94.75
+     -92.55
     ],
     [
      148.1,
@@ -1088,7 +1120,7 @@
    "curb_h": 0.15,
    "curb_w": 0.12,
    "slot": "M_Concrete_Precast",
-   "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m",
+   "evidence": "P1 by frames: yard lawn bed north of the fence bed (Gate c8 070021774 f00386/f00407, projected with the rescaled c8: kerb corner (148.1,-90.4), board posts (147.2,-88.4); outline to the west from the Google z20 tree canopy x 136-148, y -95..-86); yellow/white painted concrete kerb; +-1.5 m | 2026-10-05 owner msg 104 sweep (A251, from the gate looking W): a ~2 m herringbone walk runs W between this bed and the fence bed (blue wheelie bin + benches on it at the fence-bed kerb); the S edge was laid on the fence bed (no walk)",
    "confidence": "low"
   },
   {
@@ -1781,6 +1813,123 @@
    "slot": "M_Concrete",
    "confidence": "low",
    "evidence": "2026-10-04 walkthrough (A274/A276/A278 looking N along the east lane): a ~4 m grey precast-concrete wall (neighbour's) stands right behind the lane's black bar fence from the gate north for ~50 m; height from the 1.95 m fence (x2.1), north end where the trees start (+-8 m)"
+  },
+  {
+   "type": "box",
+   "name": "GasHood_BoothNE",
+   "center": [
+    160.65,
+    -96.92
+   ],
+   "dir_deg": -2.9,
+   "size": [
+    1.1,
+    0.65,
+    0.36
+   ],
+   "material": "metal",
+   "slot": "M_Steel_Paint_Maroon",
+   "ue_asset": "corrugated_sheet_hood",
+   "evidence": "2026-10-05 owner msg 104 (A248/A249 two-view triangulation, +-0.25 m): low maroon corrugated-sheet hood (gas pipe) against the booth N plinth at the NE corner, x ~160.1-161.2, front ~0.65 m off the wall, 0.36 high",
+   "confidence": "medium"
+  },
+  {
+   "type": "disc",
+   "name": "GasRiser_BoothNE",
+   "pos": [
+    161.08,
+    -97.14
+   ],
+   "r": 0.055,
+   "z0": 6.9,
+   "z1": 9.35,
+   "material": "metal",
+   "slot": "M_Brass_Trim",
+   "evidence": "2026-10-05 owner msg 104 (A248/A249 two-view triangulation, +-0.25 m): brass-painted vertical gas riser ~0.15 m E of the booth NE corner, ~2.4 m",
+   "confidence": "medium"
+  },
+  {
+   "type": "box",
+   "name": "MeterBox_BoothNE",
+   "center": [
+    160.97,
+    -97.45
+   ],
+   "dir_deg": 87.1,
+   "size": [
+    0.14,
+    0.1,
+    1.4
+   ],
+   "z0": 7.3,
+   "material": "metal",
+   "slot": "M_Sheet_Grey",
+   "evidence": "2026-10-05 owner msg 104 (A248/A249 two-view triangulation, +-0.25 m): grey steel cable box on the booth E face at the NE corner, behind the gas riser",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_BFront_0",
+   "pos": [
+    122.0,
+    -92.261
+   ],
+   "dir_deg": 88.4,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_timber_steelframe",
+   "evidence": "2026-10-04 video pass V3-13/V3-14 (065653194 t32-40, over the parapet into the B front strip, E half): benches with backrests on the path's S edge facing N + round cast bins; not built until 2026-10-05 (owner msg 104: forgotten props). x by eye, +-3 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_BFront_1",
+   "pos": [
+    127.5,
+    -92.412
+   ],
+   "dir_deg": 88.4,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_timber_steelframe",
+   "evidence": "2026-10-04 video pass V3-13/V3-14 (065653194 t32-40, over the parapet into the B front strip, E half): benches with backrests on the path's S edge facing N + round cast bins; not built until 2026-10-05 (owner msg 104: forgotten props). x by eye, +-3 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_BFront_2",
+   "pos": [
+    133.0,
+    -92.564
+   ],
+   "dir_deg": 88.4,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "ue_asset": "bench_timber_steelframe",
+   "evidence": "2026-10-04 video pass V3-13/V3-14 (065653194 t32-40, over the parapet into the B front strip, E half): benches with backrests on the path's S edge facing N + round cast bins; not built until 2026-10-05 (owner msg 104: forgotten props). x by eye, +-3 m",
+   "confidence": "low"
+  },
+  {
+   "type": "bin",
+   "name": "Bin_BFront_0",
+   "pos": [
+    130.2,
+    -92.587
+   ],
+   "size": [
+    0.42,
+    0.42,
+    0.75
+   ],
+   "ue_asset": "bin_cast_round",
+   "evidence": "2026-10-04 video pass V3-13/V3-14 (065653194 t32-40, over the parapet into the B front strip, E half): benches with backrests on the path's S edge facing N + round cast bins; not built until 2026-10-05 (owner msg 104: forgotten props). x by eye, +-3 m",
+   "confidence": "low"
   }
  ],
  "ground_surfaces": [
