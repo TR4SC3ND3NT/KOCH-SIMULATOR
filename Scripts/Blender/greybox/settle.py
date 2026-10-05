@@ -112,6 +112,7 @@ def run():
     # 2. props onto the real surface. Multi-part elements (posts + bars + rungs as separate boxes) move as one
     # group by the dz of their lowest part, so bars stay on their posts; wall-mounted fittings never drop.
     ground = _bvh(sup + beds + ([ter] if ter is not None else []))
+    bedtop = _bvh(beds) if beds else None   # plants in a raised bed can sit 2 m+ under its top (sloped stair cheeks)
     cand = {}
     for o in bpy.data.objects:
         if o.type != "MESH" or o.hide_render or not o.name.startswith("GBS_") or o.parent is not None:
@@ -134,6 +135,10 @@ def run():
     for key, parts in cand.items():
         o0, a0 = min(parts, key=lambda t: t[1].z)        # the part standing on the ground
         zs = _down(ground, a0.x, a0.y, a0.z + 1.0, 3.5)
+        if bedtop is not None and o0.get("koch_type") == "tree":
+            zb = _down(bedtop, a0.x, a0.y, a0.z + 3.0, 6.5)
+            if zb is not None and (zs is None or zb > zs):
+                zs = zb
         if zs is None:
             continue
         dz = zs - a0.z
