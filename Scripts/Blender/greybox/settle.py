@@ -3,8 +3,8 @@
 #  1. terrain showing through walk surfaces: TER_Ground vertices under a path / paving / stair / deck top are put
 #     5 cm below that top (the slab sides hide the step);
 #  2. props floating or buried: outdoor site props (benches, bins, lamps, trees, posts...) are moved vertically so
-#     their anchor (object origin = the ground z the builder used, + z_rel for boxes) sits on the real top below
-#     them (paving, stair tread, deck, bank/bed solid or terrain).
+#     no foot floats over the real top below it (paving, stair tread, deck, bank/bed solid or terrain); trees use
+#     their origin (trunk foot) and also find a raised bed top above it.
 # Returns counts for the build log. Units: metres.
 import bmesh
 import bpy
@@ -110,7 +110,7 @@ def run():
         out["terrain_lowered"] = n_low
         out["terrain_faces"] = len(ter.data.polygons)
     # 2. props onto the real surface. Multi-part elements (posts + bars + rungs as separate boxes) move as one
-    # group by the dz of their lowest part, so bars stay on their posts; wall-mounted fittings never drop.
+    # group, so bars stay on their posts; wall-mounted fittings never drop.
     ground = _bvh(sup + beds + ([ter] if ter is not None else []))
     bedtop = _bvh(beds) if beds else None   # plants in a raised bed can sit 2 m+ under its top (sloped stair cheeks)
     cand = {}
@@ -126,28 +126,41 @@ def run():
         if o.get("koch_type") == "box" and not any(w in str(o.get("koch_id", "")) for w in BOX_PROPS):
             continue   # boxes are also walls, ramps, billboards, cladding: only free-standing props snap
         key = o.name.rsplit("_", 1)[0] if o.get("koch_type") == "box" else o.name
-        a = o.location.copy()
-        a.z -= float(o.get("koch_zrel", 0.0))
-        if o.get("koch_type") in ("bench", "bin", "box", "bike_rack"):   # no bury: the real foot is the lowest vertex
-            a.z = min((o.matrix_world @ v.co).z for v in o.data.vertices) + 0.01
-        cand.setdefault(key, []).append((o, a))
+        cand.setdefault(key, []).append(o)
     moved, far, log = 0, [], []
     for key, parts in cand.items():
-        o0, a0 = min(parts, key=lambda t: t[1].z)        # the part standing on the ground
-        zs = _down(ground, a0.x, a0.y, a0.z + 1.0, 3.5)
-        if bedtop is not None and o0.get("koch_type") == "tree":
-            zb = _down(bedtop, a0.x, a0.y, a0.z + 3.0, 6.5)
-            if zb is not None and (zs is None or zb > zs):
-                zs = zb
-        if zs is None:
-            continue
-        dz = zs - a0.z
-        if abs(dz) < 0.015:
+        if parts[0].get("koch_type") == "tree":   # trees: the origin is the trunk foot (crown verts are no feet)
+            a0 = parts[0].location
+            zs = _down(ground, a0.x, a0.y, a0.z + 1.0, 3.5)
+            if bedtop is not None:
+                zb = _down(bedtop, a0.x, a0.y, a0.z + 3.0, 6.5)
+                if zb is not None and (zs is None or zb > zs):
+                    zs = zb
+            dz = None if zs is None else zs - a0.z
+        else:   # every foot vertex (within 2 cm of its part's bottom; parts within 30 cm of the group bottom) gets the
+            # surface under it, and the group moves by the smallest lift so no foot floats (the others embed slightly)
+            feet = []
+            for o in parts:
+                vs = [o.matrix_world @ v.co for v in o.data.vertices]
+                zmin = min(v.z for v in vs)
+                feet.append((zmin, [v for v in vs if v.z < zmin + 0.02]))
+            gmin = min(f[0] for f in feet)
+            dz = None
+            for zmin, vs in feet:
+                if zmin > gmin + 0.3:
+                    continue   # bars, rungs, heads: carried by the posts
+                for v in vs:
+                    zs = _down(ground, v.x, v.y, zmin + 1.0, 3.5)
+                    if zs is not None and (dz is None or zs - zmin < dz):
+                        dz = zs - zmin
+            if dz is not None:
+                dz -= 0.01   # 1 cm into the surface: no hairline gap
+        if dz is None or abs(dz) < 0.015:
             continue
         if abs(dz) > 3.0:
             far.append((key, round(dz, 2)))
             continue
-        for o, _a in parts:
+        for o in parts:
             o.location.z += dz
             moved += 1
         log.append((key, round(dz, 3)))
