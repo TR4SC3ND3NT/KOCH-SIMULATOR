@@ -137,8 +137,9 @@ def run():
                 if zb is not None and (zs is None or zb > zs):
                     zs = zb
             dz = None if zs is None else zs - a0.z
-        else:   # every foot vertex (within 2 cm of its part's bottom; parts within 30 cm of the group bottom) gets the
-            # surface under it, and the group moves by the smallest lift so no foot floats (the others embed slightly)
+        else:   # each foot part (bottom within 10 cm of the group bottom) gets the surface under its bottom vertices;
+            # the group moves by the smallest part lift so no foot floats (the others embed slightly). A part whose
+            # bottom straddles a step (> 10 cm spread) stands on the median surface, not sunk to the lower one.
             feet = []
             for o in parts:
                 vs = [o.matrix_world @ v.co for v in o.data.vertices]
@@ -147,12 +148,14 @@ def run():
             gmin = min(f[0] for f in feet)
             dz = None
             for zmin, vs in feet:
-                if zmin > gmin + 0.3:
+                if zmin > gmin + 0.1:
                     continue   # bars, rungs, heads: carried by the posts
-                for v in vs:
-                    zs = _down(ground, v.x, v.y, zmin + 1.0, 3.5)
-                    if zs is not None and (dz is None or zs - zmin < dz):
-                        dz = zs - zmin
+                zs = sorted(z for z in (_down(ground, v.x, v.y, zmin + 1.0, 3.5) for v in vs) if z is not None)
+                if not zs:
+                    continue
+                lift = (zs[len(zs) // 2] if zs[-1] - zs[0] > 0.1 else zs[0]) - zmin
+                if dz is None or lift < dz:
+                    dz = lift
             if dz is not None:
                 dz -= 0.01   # 1 cm into the surface: no hairline gap
         if dz is None or abs(dz) < 0.015:
