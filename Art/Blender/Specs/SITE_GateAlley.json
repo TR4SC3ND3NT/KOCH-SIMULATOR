@@ -1473,16 +1473,17 @@
     ]
    ],
    "z": [
-    7.42,
-    7.386,
+    6.55,
+    6.55,
     5.45,
     5.45,
-    6.9
+    6.14
    ],
    "thk": 2.9,
    "material": "hedge",
-   "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): W edge behind the bench / bed",
-   "confidence": "low"
+   "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): W edge behind the bench / bed | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): a lawn (dry grass, dirt, fallen leaves) falling ~1.1 m from the hedge foot (~path level) to the walkway kerb, open to the facade: the lower-ground storefront, windows and plinth are fully visible over the hedge (A263/A266/A268/A271); it was a hedge-material mass rising 0.7 m above the path and hid them",
+   "confidence": "low",
+   "slot": "M_Ground_Grass"
   },
   {
    "type": "roof_plane",
@@ -1506,15 +1507,16 @@
     ]
    ],
    "z": [
-    7.386,
-    7.324,
+    6.55,
+    6.55,
     5.45,
     5.45
    ],
    "thk": 2.686,
    "material": "hedge",
-   "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed",
-   "confidence": "low"
+   "evidence": "planted bank (hedge, pines, elms) between the clover path along the gate fence and A_S's south face, falling from the path parapet to A's lower ground floor (065934318: fluted precast parapet segments stepped along the path, clipped hedge behind, trees, A's ground-floor windows just above the hedge); slope shape assumed | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): a lawn (dry grass, dirt, fallen leaves) falling ~1.1 m from the hedge foot (~path level) to the walkway kerb, open to the facade: the lower-ground storefront, windows and plinth are fully visible over the hedge (A263/A266/A268/A271); it was a hedge-material mass rising 0.7 m above the path and hid them",
+   "confidence": "low",
+   "slot": "M_Ground_Grass"
   },
   {
    "type": "roof_plane",
@@ -1736,6 +1738,196 @@
    "thk": 0.15,
    "material": "stone",
    "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_10",
+   "line": [
+    [
+     179.972,
+     -96.707
+    ],
+    [
+     180.952,
+     -96.776
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_11",
+   "line": [
+    [
+     181.352,
+     -96.804
+    ],
+    [
+     183.347,
+     -96.945
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_12",
+   "line": [
+    [
+     183.376,
+     -96.947
+    ],
+    [
+     185.371,
+     -97.088
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_13",
+   "line": [
+    [
+     185.4,
+     -97.09
+    ],
+    [
+     187.395,
+     -97.231
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_14",
+   "line": [
+    [
+     187.424,
+     -97.233
+    ],
+    [
+     189.419,
+     -97.374
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_15",
+   "line": [
+    [
+     189.448,
+     -97.376
+    ],
+    [
+     190.431,
+     -97.446
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_16",
+   "line": [
+    [
+     190.831,
+     -97.474
+    ],
+    [
+     192.826,
+     -97.615
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_17",
+   "line": [
+    [
+     192.855,
+     -97.617
+    ],
+    [
+     194.85,
+     -97.758
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_18",
+   "line": [
+    [
+     194.879,
+     -97.76
+    ],
+    [
+     196.874,
+     -97.901
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
+   "confidence": "medium"
+  },
+  {
+   "type": "wall",
+   "name": "PathParapet_S_19",
+   "line": [
+    [
+     196.903,
+     -97.903
+    ],
+    [
+     198.2,
+     -97.995
+    ]
+   ],
+   "height": 0.4,
+   "thk": 0.15,
+   "material": "stone",
+   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
    "confidence": "medium"
   },
   {
@@ -2010,6 +2202,433 @@
    "trunk_d": 0.35,
    "crown_base": 2.2,
    "evidence": "pines and elms on the bank / beside the booth (065934318, 012258813 left, drone 2022 booth frames: whitewashed elm trunk at the bench east of the booth)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankPine_0",
+   "pos": [
+    164.6,
+    -93.229
+   ],
+   "height": 11.0,
+   "crown_d": 4.4,
+   "shape": "cone",
+   "trunk_d": 0.4,
+   "crown_base": 4.2,
+   "ue_asset": "pine_black",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankPine_1",
+   "pos": [
+    176.4,
+    -93.936
+   ],
+   "height": 12.0,
+   "crown_d": 4.4,
+   "shape": "cone",
+   "trunk_d": 0.42,
+   "crown_base": 4.2,
+   "ue_asset": "pine_black",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankElm_0",
+   "pos": [
+    180.4,
+    -94.475
+   ],
+   "height": 13.0,
+   "crown_d": 6.0,
+   "shape": "round",
+   "trunk_d": 0.55,
+   "crown_base": 4.8,
+   "ue_asset": "elm_whitewashed",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankPine_2",
+   "pos": [
+    184.0,
+    -94.391
+   ],
+   "height": 11.0,
+   "crown_d": 4.4,
+   "shape": "cone",
+   "trunk_d": 0.4,
+   "crown_base": 4.2,
+   "ue_asset": "pine_black",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankYoung_0",
+   "pos": [
+    186.6,
+    -94.547
+   ],
+   "height": 5.0,
+   "crown_d": 2.6,
+   "shape": "round",
+   "trunk_d": 0.12,
+   "crown_base": 1.8,
+   "ue_asset": "tree_deciduous_young",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankPine_3",
+   "pos": [
+    189.4,
+    -94.714
+   ],
+   "height": 12.0,
+   "crown_d": 4.4,
+   "shape": "cone",
+   "trunk_d": 0.42,
+   "crown_base": 4.2,
+   "ue_asset": "pine_black",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankElm_1",
+   "pos": [
+    193.4,
+    -95.254
+   ],
+   "height": 13.0,
+   "crown_d": 6.0,
+   "shape": "round",
+   "trunk_d": 0.5,
+   "crown_base": 4.8,
+   "ue_asset": "elm_whitewashed",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankElm_2",
+   "pos": [
+    196.5,
+    -95.44
+   ],
+   "height": 12.0,
+   "crown_d": 6.0,
+   "shape": "round",
+   "trunk_d": 0.5,
+   "crown_base": 4.8,
+   "ue_asset": "elm_whitewashed",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): pines and big whitewashed-trunk elms stand on the lawn between the hedge and the A_S walkway all along the face (A263 pine+elm at ~166, A266/A272 elm + pines at ~178-181, A271 pine at ~189, A273/A275 elm behind the lane fence); x by eye +-2 m",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "BankFlood_0",
+   "pos": [
+    166.4,
+    -92.63
+   ],
+   "height": 0.75,
+   "head": "box",
+   "pole_r": 0.04,
+   "ue_asset": "flood_light_post",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): black floodlight box on a ~0.8 m post on the lawn near the walkway, aimed at the facade (A263); others assumed at the same pitch",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "BankFlood_1",
+   "pos": [
+    179.4,
+    -93.267
+   ],
+   "height": 0.75,
+   "head": "box",
+   "pole_r": 0.04,
+   "ue_asset": "flood_light_post",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): black floodlight box on a ~0.8 m post on the lawn near the walkway, aimed at the facade (A263); others assumed at the same pitch",
+   "confidence": "low"
+  },
+  {
+   "type": "lamp",
+   "name": "BankFlood_2",
+   "pos": [
+    191.4,
+    -93.856
+   ],
+   "height": 0.75,
+   "head": "box",
+   "pole_r": 0.04,
+   "ue_asset": "flood_light_post",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): black floodlight box on a ~0.8 m post on the lawn near the walkway, aimed at the facade (A263); others assumed at the same pitch",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_00",
+   "pos": [
+    172.0,
+    -92.554
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_01",
+   "pos": [
+    174.0,
+    -92.652
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_02",
+   "pos": [
+    175.3,
+    -92.716
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_03",
+   "pos": [
+    177.3,
+    -92.814
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_04",
+   "pos": [
+    178.6,
+    -92.878
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_05",
+   "pos": [
+    180.6,
+    -92.976
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_06",
+   "pos": [
+    181.9,
+    -93.04
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_07",
+   "pos": [
+    183.9,
+    -93.138
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_08",
+   "pos": [
+    185.2,
+    -93.202
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_09",
+   "pos": [
+    187.2,
+    -93.3
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_10",
+   "pos": [
+    188.5,
+    -93.364
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_11",
+   "pos": [
+    190.5,
+    -93.462
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_12",
+   "pos": [
+    191.8,
+    -93.526
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_13",
+   "pos": [
+    193.8,
+    -93.624
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BankRose_14",
+   "pos": [
+    195.1,
+    -93.688
+   ],
+   "height": 0.8,
+   "crown_d": 0.5,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
+   "confidence": "low"
+  },
+  {
+   "type": "bench",
+   "name": "Bench_ASWalk_3",
+   "pos": [
+    183.0,
+    -92.294
+   ],
+   "dir_deg": 87.2,
+   "length": 1.8,
+   "depth": 0.55,
+   "seat_h": 0.45,
+   "back_h": 0.85,
+   "z": 5.35,
+   "ue_asset": "bench_timber_steelframe",
+   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): bench on the walkway's S edge in front of the storefront, lawn behind (A271 bottom-left); x +-2 m",
    "confidence": "low"
   },
   {
@@ -2658,7 +3277,7 @@
    "name": "Bench_ASCorner_0",
    "pos": [
     162.6,
-    -90.1
+    -91.293
    ],
    "dir_deg": 87.2,
    "length": 1.8,
@@ -2666,7 +3285,7 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
+   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271) | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): benches stand on the walkway's S edge with the lawn behind them, facing the facade (A271); they stood against the wall facing it",
    "confidence": "low",
    "z": 5.35
   },
@@ -2675,7 +3294,7 @@
    "name": "Bench_ASCorner_1",
    "pos": [
     165.1,
-    -90.2
+    -91.416
    ],
    "dir_deg": 87.2,
    "length": 1.8,
@@ -2683,7 +3302,7 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
+   "evidence": "P1 by frames: black-frame slatted benches under the trees at the A_S SW corner on the south landing edge (070021774 s2); +-1 m | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271) | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): benches stand on the walkway's S edge with the lawn behind them, facing the facade (A271); they stood against the wall facing it",
    "confidence": "low",
    "z": 5.35
   },
@@ -2692,7 +3311,7 @@
    "name": "Bench_ASCorner_2",
    "pos": [
     167.6,
-    -90.3
+    -91.538
    ],
    "dir_deg": 87.2,
    "length": 1.8,
@@ -2700,7 +3319,7 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_generic",
-   "evidence": "082248481_s1 f00095-00188: 3 black benches under the trees along the path in front of A (2 were placed, the third by eye) | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271)",
+   "evidence": "082248481_s1 f00095-00188: 3 black benches under the trees along the path in front of A (2 were placed, the third by eye) | 2026-09-28 0c: set on the real surface (was on the 5.0 terrain pad, buried in the bank/paving/bed) | 2026-10-02: on the new walkway along A_S's south face (A271) | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): benches stand on the walkway's S edge with the lawn behind them, facing the facade (A271); they stood against the wall facing it",
    "confidence": "low",
    "z": 5.35
   },

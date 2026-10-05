@@ -99,8 +99,13 @@
     0
    ],
    "surround_proj": 0.0,
-   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): N facade windows (A082) | 2026-10-03 photo pass R1-07: 1.70 high, sills 1.98 above the N paving (1.25 rel FFL), heads 2.95",
-   "confidence": "low"
+   "evidence": "2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): N facade windows (A082) | 2026-10-03 photo pass R1-07: 1.70 high, sills 1.98 above the N paving (1.25 rel FFL), heads 2.95 | 2026-10-05 sweep (A077 'barred 3-light windows'): bar grilles on the N windows",
+   "confidence": "low",
+   "bars": {
+    "pitch": 0.12,
+    "d": 0.016,
+    "proj": 0.05
+   }
   }
  },
  "rows": {

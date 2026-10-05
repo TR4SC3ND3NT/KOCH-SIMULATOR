@@ -292,6 +292,31 @@
    "surround_proj": 0.06,
    "evidence": "2026-10-04 re-verification round 2 Y2-05: asymmetric wide maroon panel [u-0.21, u+1.52, bottom 0.23, top 0.12]",
    "confidence": "medium"
+  },
+  "WSB": {
+   "w": 1.5,
+   "h": 1.3,
+   "mullions": [
+    0.5
+   ],
+   "transoms": [
+    0.7
+   ],
+   "reveal": 0.12,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "south/east face windows 1.5 x 1.3, 2 lights + top light (A271 at 160 px/m from the 0.8 x 2.0 door leaf) | 2026-10-05 owner msg 105 (A263): the lower-ground windows W of the storefront carry dark steel bar grilles",
+   "confidence": "medium",
+   "bars": {
+    "pitch": 0.12,
+    "d": 0.016,
+    "proj": 0.05
+   }
   }
  },
  "rows": {
@@ -417,13 +442,21 @@
    "name": "south_street",
    "windows": [
     {
-     "type": "WS",
+     "type": "WSB",
      "u": [
       2.6,
       5.24,
       7.89,
       10.53,
-      13.17,
+      13.17
+     ],
+     "sills": [
+      0.9
+     ]
+    },
+    {
+     "type": "WS",
+     "u": [
       15.82,
       18.46,
       21.1

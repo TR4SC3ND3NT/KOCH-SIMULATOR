@@ -464,6 +464,14 @@ class Building:
                 if self.s.get("detail") and not me2.materials:
                     me2.materials.append(mat(wt.get("reveal_paint", "M_Paint_Maroon")))
                 self._link(f"Sur_E{i}_{k:02d}", me2, place, COL["maroon"])
+            bars = wt.get("bars") if tname != "entrance" else None
+            if bars:   # steel window grille on the wall face in front of the opening: {"pitch", "d", "proj", "slot"}
+                d_, pj = bars.get("d", 0.016), bars.get("proj", 0.05)
+                n = max(2, round(w / bars.get("pitch", 0.12)))
+                me3 = self.kit_mesh(f"Bars_{tname}_{w:.2f}x{h:.2f}_{n}", lambda bm: _bars(bm, w, h, n, d_, pj))
+                if self.s.get("detail") and not me3.materials:
+                    me3.materials.append(mat(bars.get("slot", "M_Steel_Paint_Dark")))
+                self._link(f"Bars_E{i}_{k:02d}", me3, place, COL["metal"])
 
     def build_stair_extras(self, a, fr, cf):
         """Optional stair side cheeks (solid blocks with a top sloping from the landing to the plaza) and handrails.
@@ -1723,6 +1731,17 @@ def _ring_band(bm, outer, inner, z0, z1):
         bm.faces.new((it[i], it[j], ib[j], ib[i]))
         bm.faces.new((ot[i], ot[j], it[j], it[i]))
         bm.faces.new((ib[i], ib[j], ob[j], ob[i]))
+
+
+def _bars(bm, w, h, n, d, proj):
+    """Window grille over the opening (u 0..w, z 0..h): n-1 vertical bars and 3 rails, d thick, standing proj
+    (m) in front of the wall plane so it clears a flush frame."""
+    ident = Matrix.Identity(4)
+    for j in range(1, n):
+        u = w * j / n
+        box(bm, ident, u - d / 2, u + d / 2, proj, proj + d, 0.0, h)
+    for z in (0.06, h / 2, h - 0.06):
+        box(bm, ident, 0.0, w, proj + d, proj + 2 * d, z - d / 2, z + d / 2)
 
 
 def _surround(bm, w, h, l, r, b, t, proj):
