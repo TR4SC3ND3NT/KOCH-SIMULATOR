@@ -1837,7 +1837,7 @@
    "type": "disc",
    "name": "GasRiser_BoothNE",
    "pos": [
-    161.08,
+    161.3,
     -97.14
    ],
    "r": 0.055,
@@ -1845,7 +1845,7 @@
    "z1": 9.35,
    "material": "metal",
    "slot": "M_Brass_Trim",
-   "evidence": "2026-10-05 owner msg 104 (A248/A249 two-view triangulation, +-0.25 m): brass-painted vertical gas riser ~0.15 m E of the booth NE corner, ~2.4 m",
+   "evidence": "2026-10-05 owner msg 104 (A248/A249 two-view triangulation, +-0.25 m): brass-painted vertical gas riser ~0.15 m E of the booth NE corner, ~2.4 m | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): ran through the gas hood; just E of it",
    "confidence": "medium"
   },
   {

@@ -400,7 +400,7 @@
    "name": "GT_23_spruce",
    "pos": [
     107.0,
-    -43.7
+    -43.1
    ],
    "height": 8.5,
    "crown_d": 3.2,
@@ -409,7 +409,7 @@
    "shape": "cone",
    "ue_asset": "tree",
    "species": "spruce",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
+   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013 | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): crown cut through the pergola tubes; 0.6 m N",
    "confidence": "medium"
   },
   {
@@ -417,7 +417,7 @@
    "name": "GT_24_spruce",
    "pos": [
     109.8,
-    -44.0
+    -43.4
    ],
    "height": 8.5,
    "crown_d": 3.2,
@@ -426,7 +426,7 @@
    "shape": "cone",
    "ue_asset": "tree",
    "species": "spruce",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
+   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013 | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): crown cut through the pergola tubes; 0.6 m N",
    "confidence": "medium"
   },
   {
@@ -1134,13 +1134,13 @@
     -14.8
    ],
    "height": 8.5,
-   "crown_d": 3.2,
+   "crown_d": 2.4,
    "trunk_d": 0.25,
    "crown_base": 0.8,
    "shape": "cone",
    "ue_asset": "tree",
    "species": "spruce",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
+   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013 | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): crown reached into bench HallBed_Bench_6",
    "confidence": "medium"
   },
   {

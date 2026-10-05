@@ -421,7 +421,7 @@
    "type": "box",
    "name": "Passage_Bench",
    "center": [
-    153.615,
+    153.95,
     4.442
    ],
    "dir_deg": 87.8,
@@ -432,7 +432,7 @@
    ],
    "z0": 5.35,
    "material": "metal",
-   "evidence": "low maroon bench/ledge along the hall's E wall on the upper landing, x 153.4-154.2 (070410255 f55 overlay, fixG/st/ortho_stair.jpg); length estimated | 2026-10-02 garden photo diff (GD-10): red sheet-metal sloped cover box, ~0.45 m at the wall (slope not modelled)",
+   "evidence": "low maroon bench/ledge along the hall's E wall on the upper landing, x 153.4-154.2 (070410255 f55 overlay, fixG/st/ortho_stair.jpg); length estimated | 2026-10-02 garden photo diff (GD-10): red sheet-metal sloped cover box, ~0.45 m at the wall (slope not modelled) | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): ran 0.4 m into the HallEast wall/plinth; set against the face",
    "confidence": "low",
    "slot": "M_Sheet_Red"
   },
@@ -564,14 +564,14 @@
    "type": "tree",
    "name": "Passage_Spruce_UpperNE",
    "pos": [
-    166.0,
-    5.7
+    165.6,
+    5.5
    ],
    "height": 6.0,
-   "crown_d": 3.5,
+   "crown_d": 2.4,
    "crown_base": 0.4,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1)",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): crown cut into the C west shed roof/cladding; narrower, 0.45 m off",
    "confidence": "medium"
   },
   {
