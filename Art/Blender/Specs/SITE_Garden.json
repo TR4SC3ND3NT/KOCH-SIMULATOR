@@ -3559,25 +3559,27 @@
     130.0,
     -27.55
    ],
-   "dir_deg": -3.0,
-   "height": 3.8,
+   "dir_deg": 87.0,
+   "height": 3.5,
    "globes": 2,
    "arm_span": 1.3,
    "globe_d": 0.38,
    "top_globe": true,
    "base_box": [
-    0.37,
-    0.37,
-    1.1,
-    0.15
+    0.42,
+    0.42,
+    1.0,
+    0.16
    ],
    "pad": [
-    0.7,
-    0.7,
-    0.07
+    0.85,
+    0.65,
+    0.08
    ],
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes (top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a ~0.95 x 0.10 m pad (A108-A111) | 2026-10-04 finish_E E-13: R1-12 (A108 vs 0.405 slab modules): tapered pedestal 0.37 -> 0.15 at the collar 1.1 m up, pad 0.70 x 0.07"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | owner: lamp post in the exact middle | 2026-10-02 garden photo diff (GD-7): 3 globes (top + 2 S-scroll arms 1.3 m apart), globe 0.38, pedestal 0.35x0.35x1.0 on a ~0.95 x 0.10 m pad (A108-A111) | 2026-10-04 finish_E E-13: R1-12 (A108 vs 0.405 slab modules): tapered pedestal 0.37 -> 0.15 at the collar 1.1 m up, pad 0.70 x 0.07 | 2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): A110 looking N up the N arm: the two side globes spread E-W (arms across the N-S path, were along it); A108/A109: pedestal ~0.42 at the foot tapering to ~0.16, ~1.0 high, bolted plate on a 0.85 x 0.65 x 0.08 concrete pad; side globes hang ~0.75 below the top globe (A110)",
+   "ue_note": "top globe with a spiky leaf crown, side globes hang under leaf cups at the scroll-arm ends; scroll collar on the pedestal top",
+   "top_rise": 0.55
   },
   {
    "type": "slab",
@@ -5169,22 +5171,22 @@
    "type": "sign",
    "name": "Signboard_Arch",
    "pos": [
-    154.984,
-    -43.292
+    157.184,
+    -41.692
    ],
    "dir_deg": 0.0,
    "w": 1.0,
    "h": 1.9,
    "t": 0.08,
-   "evidence": "white campus map signboard on two posts right of the hedge arch at the foot of the wide stair (012404116 f10-f12; 070309303 f73-f75); content = KOCH map in UE | 2026-10-03 video pass V1-04 (081235159 f13-f21): white wayfinding panel ~0.9 x 1.4, dark header, arrows to the blocks, 2 grey round posts (KOCH branding)",
+   "evidence": "white campus map signboard on two posts right of the hedge arch at the foot of the wide stair (012404116 f10-f12; 070309303 f73-f75); content = KOCH map in UE | 2026-10-03 video pass V1-04 (081235159 f13-f21): white wayfinding panel ~0.9 x 1.4, dark header, arrows to the blocks, 2 grey round posts (KOCH branding) | 2026-10-05 owner msg 106 (A217/A218, 2026-09-30): nothing stands on the plaza within ~3 m E of the hedge arch; moved ~2.7 m NE along the lawn edge (the 09-24 video has them near the arch; exact spot still unknown)",
    "confidence": "low"
   },
   {
    "type": "bin",
    "name": "WheelieBin_Yellow_SE",
    "pos": [
-    155.95,
-    -43.65
+    158.15,
+    -42.05
    ],
    "size": [
     0.58,
@@ -5195,14 +5197,14 @@
    "slot": "M_Paint_Yellow",
    "ue_asset": "wheelie_bin_240l",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V1-04: yellow wheelie bin on the plaza paving just E of the wayfinding board (offset unsure)"
+   "evidence": "2026-10-03 video pass V1-04: yellow wheelie bin on the plaza paving just E of the wayfinding board (offset unsure) | 2026-10-05 owner msg 106 (A217/A218, 2026-09-30): nothing stands on the plaza within ~3 m E of the hedge arch; moved ~2.7 m NE along the lawn edge (the 09-24 video has them near the arch; exact spot still unknown)"
   },
   {
    "type": "bin",
    "name": "LitterBin_SE",
    "pos": [
-    155.55,
-    -44.3
+    157.75,
+    -42.7
    ],
    "size": [
     0.45,
@@ -5212,7 +5214,7 @@
    "dir_deg": 0.0,
    "ue_asset": "bin_wrought_iron",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V1-04: wrought-iron litter bin SE of the board (offset unsure)"
+   "evidence": "2026-10-03 video pass V1-04: wrought-iron litter bin SE of the board (offset unsure) | 2026-10-05 owner msg 106 (A217/A218, 2026-09-30): nothing stands on the plaza within ~3 m E of the hedge arch; moved ~2.7 m NE along the lawn edge (the 09-24 video has them near the arch; exact spot still unknown)"
   },
   {
    "type": "tree",
@@ -5821,17 +5823,18 @@
     152.4,
     -50.2
    ],
-   "height": 2.9,
+   "height": 2.75,
    "globes": 2,
-   "globe_d": 0.3,
-   "arm_span": 0.7,
+   "globe_d": 0.26,
+   "arm_span": 0.75,
    "base_box": [
-    0.4,
-    0.4,
-    0.4
+    0.45,
+    0.45,
+    0.35
    ],
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass R2-06 (A202, A203, A145, A148): 2-lantern lamp post on a scroll T-arm, black cast post on a concrete base block, terrace corner W of the wide-stair top (pavers 0.2 m: post 2.9 +-0.4) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): moved with the stair top"
+   "evidence": "2026-10-03 photo pass R2-06 (A202, A203, A145, A148): 2-lantern lamp post on a scroll T-arm, black cast post on a concrete base block, terrace corner W of the wide-stair top (pavers 0.2 m: post 2.9 +-0.4) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): moved with the stair top | 2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): A203: two upright black lanterns (glass, square body ~0.26, cap) on scroll arms, not globes; cast pole on a ~0.45 concrete block at the corner where the yellow/white kerb meets the boulder wall",
+   "head": "lantern"
   },
   {
    "type": "box",
@@ -6461,22 +6464,6 @@
   },
   {
    "type": "tree",
-   "name": "BNorth_Sapling_5",
-   "pos": [
-    147.6,
-    -52.697
-   ],
-   "height": 7.0,
-   "crown_d": 3.0,
-   "shape": "round",
-   "trunk_d": 0.18,
-   "crown_base": 3.2,
-   "ue_asset": "tree_deciduous_whitewashed",
-   "evidence": "2026-10-05 owner msg 104 (A180-A200 pergola-walk photos looking S over the boulder wall to B's north face): the strip between the wall and B's maroon gas-pipe cover is planted - dry lawn with young spruces/junipers (2-3.5 m), thin whitewashed-trunk deciduous trees ~7 m and loose shrubs, not bare grass. Positions by eye along the strip, +-1 m",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
    "name": "BNorth_Shrub_0",
    "pos": [
     101.6,
@@ -6799,6 +6786,252 @@
    "slot": "M_Paint_RedPink",
    "ue_asset": "painted_art_box",
    "evidence": "2026-10-05 owner msg 104 sweep (A011/A016/A017/A023 from the garden N walk): two low boxes painted in the same stripes beside the column",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Spruce_Blue",
+   "pos": [
+    147.4,
+    -52.2
+   ],
+   "height": 6.5,
+   "crown_d": 3.4,
+   "shape": "cone",
+   "trunk_d": 0.2,
+   "crown_base": 0.3,
+   "ue_asset": "spruce_blue",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): blue spruce at the back of the terrace behind the junipers (A204/A205); replaces BNorth_Sapling_5 (no deciduous tree here)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Juniper_1",
+   "pos": [
+    150.6,
+    -53.3
+   ],
+   "height": 5.5,
+   "crown_d": 2.8,
+   "shape": "cone",
+   "trunk_d": 0.18,
+   "crown_base": 1.6,
+   "ue_asset": "juniper_tree_multistem",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): loose multi-stem juniper trees ~5-6 m with bare lower trunks on the dirt terrace 1-2 m behind the yellow/white kerb (A204/A205); x/y by eye +-0.7 m",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Juniper_2",
+   "pos": [
+    151.2,
+    -51.3
+   ],
+   "height": 6.0,
+   "crown_d": 3.0,
+   "shape": "cone",
+   "trunk_d": 0.2,
+   "crown_base": 1.8,
+   "ue_asset": "juniper_tree_multistem",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): juniper beside the stair-top lamp (A203)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Juniper_3",
+   "pos": [
+    148.7,
+    -54.1
+   ],
+   "height": 5.0,
+   "crown_d": 2.6,
+   "shape": "cone",
+   "trunk_d": 0.18,
+   "crown_base": 1.5,
+   "ue_asset": "juniper_tree_multistem",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): third juniper further W in front of the damaged box (A205)",
+   "confidence": "low"
+  },
+  {
+   "type": "disc",
+   "name": "BNE_Manhole",
+   "pos": [
+    149.6,
+    -52.0
+   ],
+   "r": 0.38,
+   "z0": 6.31,
+   "z1": 6.35,
+   "material": "stone",
+   "slot": "M_Concrete",
+   "ue_asset": "manhole_cover_concrete",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): round concrete manhole lid on the dirt N of the junipers (A204/A205)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Rose_0",
+   "pos": [
+    151.4,
+    -50.15
+   ],
+   "height": 1.1,
+   "crown_d": 0.7,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose_red",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): red roses on the terrace edge along the boulder-wall top next to the lamp (A203, A202)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Rose_1",
+   "pos": [
+    152.0,
+    -50.0
+   ],
+   "height": 1.1,
+   "crown_d": 0.7,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose_red",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): red roses on the terrace edge along the boulder-wall top next to the lamp (A203, A202)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Rose_2",
+   "pos": [
+    151.0,
+    -50.4
+   ],
+   "height": 1.1,
+   "crown_d": 0.7,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose_red",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): red roses on the terrace edge along the boulder-wall top next to the lamp (A203, A202)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "BNE_Rose_3",
+   "pos": [
+    150.4,
+    -50.2
+   ],
+   "height": 1.1,
+   "crown_d": 0.7,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.0,
+   "ue_asset": "shrub_rose_red",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): red roses on the terrace edge along the boulder-wall top next to the lamp (A203, A202)",
+   "confidence": "low"
+  },
+  {
+   "type": "boxes",
+   "name": "BNE_LooseSheets",
+   "material": "metal",
+   "slot": "M_Steel_Paint_Maroon",
+   "ue_asset": "corrugated_sheet_loose",
+   "items": [
+    [
+     149.7,
+     -57.6,
+     -12,
+     1.4,
+     0.8,
+     0.02,
+     7.29
+    ],
+    [
+     147.6,
+     -55.95,
+     25,
+     1.2,
+     0.6,
+     0.02,
+     7.3
+    ],
+    [
+     149.5,
+     -56.2,
+     4,
+     1.0,
+     0.6,
+     0.02,
+     7.31
+    ]
+   ],
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): torn maroon corrugated sheets lying loose on the box lid / leaning on it (A204/A205/A206); lid top 7.27 (w11 bbox)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "G2SE_Juniper",
+   "pos": [
+    150.9,
+    -45.1
+   ],
+   "height": 6.5,
+   "crown_d": 3.0,
+   "shape": "cone",
+   "trunk_d": 0.28,
+   "crown_base": 2.4,
+   "ue_asset": "juniper_tree_leaning",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): leaning juniper with a rope tied to its trunk on the lawn just SW (left) of the hedge arch (A217/A218)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "G2SE_Thuja_0",
+   "pos": [
+    154.7,
+    -42.9
+   ],
+   "height": 2.3,
+   "crown_d": 0.55,
+   "shape": "cone",
+   "trunk_d": 0.05,
+   "crown_base": 0.1,
+   "ue_asset": "thuja_columnar_young",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): two young columnar thujas on the lawn NE (right) of the arch (A217/A218)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "G2SE_Thuja_1",
+   "pos": [
+    156.2,
+    -41.6
+   ],
+   "height": 2.4,
+   "crown_d": 0.55,
+   "shape": "cone",
+   "trunk_d": 0.05,
+   "crown_base": 0.1,
+   "ue_asset": "thuja_columnar_young",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): two young columnar thujas on the lawn NE (right) of the arch (A217/A218)",
+   "confidence": "low"
+  },
+  {
+   "type": "tree",
+   "name": "G2SE_Sapling_0",
+   "pos": [
+    155.5,
+    -42.0
+   ],
+   "height": 1.4,
+   "crown_d": 0.6,
+   "shape": "round",
+   "trunk_d": 0.03,
+   "crown_base": 0.5,
+   "ue_asset": "shrub_rose",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): young saplings/roses between the thujas (A217)",
    "confidence": "low"
   }
  ],

@@ -312,6 +312,31 @@
    ],
    "surround_proj": 0.2,
    "evidence": "bay A upper west window, 2026 box"
+  },
+  "WGR": {
+   "w": 1.9,
+   "h": 1.55,
+   "mullions": [
+    0.33,
+    0.67
+   ],
+   "transoms": [
+    0.3
+   ],
+   "reveal": 0.15,
+   "surround": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "surround_proj": 0.0,
+   "evidence": "regular bays, ground: 4 per bay, pano east edges (offsets 0.85/3.1/6.05/9.1, identical in bays B-D); width 1.9-1.95 from the frontal east-facade pano view | 2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): B north ground-floor windows carry bar grilles (A205)",
+   "bars": {
+    "pitch": 0.12,
+    "d": 0.016,
+    "proj": 0.05
+   }
   }
  },
  "rows": {
@@ -520,7 +545,7 @@
    "name": "north_garden",
    "windows": [
     {
-     "type": "WG",
+     "type": "WGR",
      "u": [
       1.95,
       4.65,

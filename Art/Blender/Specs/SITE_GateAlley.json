@@ -3086,14 +3086,15 @@
     151.433,
     -54.952
    ],
-   "height": 8.0,
-   "crown_d": 3.2,
+   "height": 6.5,
+   "crown_d": 3.0,
    "shape": "cone",
-   "trunk_d": 0.3,
-   "crown_base": 1.0,
-   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb | 2026-09-28 stair move (owner 64/65) collision fix: planted in the stair's west raised bed (soil top 6.78)",
+   "trunk_d": 0.22,
+   "crown_base": 1.7,
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb | 2026-09-28 stair move (owner 64/65) collision fix: planted in the stair's west raised bed (soil top 6.78) | 2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): it is one of the loose multi-stem junipers of the B NE terrace (bare trunk to ~1.7 m, A204/A205), not a dense 8 m conifer",
    "confidence": "low",
-   "z": 6.78
+   "z": 6.78,
+   "ue_asset": "juniper_tree_multistem"
   },
   {
    "type": "tree",

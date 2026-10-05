@@ -1290,10 +1290,11 @@ class Site:
         else:
             _cyl(bm, P, 0.11, z, z + 0.5, 10)                 # cast base
         tg = el.get("top_globe")                              # globe on the pole top instead of the finial
-        _cyl(bm, P, 0.045, z + 0.5, z + h + (0.25 if tg else 0.35), 10)   # pole + finial
+        rise = el.get("top_rise", 0.25)                       # pole top above the arm globes (m)
+        _cyl(bm, P, 0.045, z + 0.5, z + h + (rise if tg else 0.35), 10)   # pole + finial
         if tg:
             bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=r,
-                                      matrix=Matrix.Translation((P.x, P.y, z + h + 0.25 + r - 0.02)))
+                                      matrix=Matrix.Translation((P.x, P.y, z + h + rise + r - 0.02)))
         m = _frame2(P, left)
         ends = []
         if span > 0:   # arm_span 0: single globe on the pole top only (top_globe), no arm
@@ -1302,8 +1303,15 @@ class Site:
         if el.get("cross"):   # second bar 1.5 cm lower so the crossing has no coplanar faces
             box(bm, _frame2(P, fwd), -span / 2, span / 2, -0.02, 0.02, z + h - 0.235, z + h - 0.195)
             ends = [left * (-span / 2), left * (span / 2), fwd * (-span / 2), fwd * (span / 2)]
+        lantern = el.get("head") == "lantern"   # upright square lantern standing on each arm end (park lamps)
         for e in ends:
             q = P + e
+            if lantern:   # body r wide, 2r tall on a short stem, pyramid-ish cap as a narrower box
+                fq = _frame2(q, fwd)
+                box(bm, fq, -0.025, 0.025, -0.025, 0.025, z + h - 0.18, z + h - 0.08)
+                box(bm, fq, -r / 2, r / 2, -r / 2, r / 2, z + h - 0.08, z + h - 0.08 + 1.6 * r)
+                box(bm, fq, -r * 0.65, r * 0.65, -r * 0.65, r * 0.65, z + h - 0.08 + 1.6 * r, z + h - 0.04 + 1.7 * r)
+                continue
             box(bm, _frame2(q, fwd), -0.02, 0.02, -0.02, 0.02, z + h - 0.22, z + h - r)     # drop to the globe
             bmesh.ops.create_uvsphere(bm, u_segments=12, v_segments=6, radius=r,
                                       matrix=Matrix.Translation((q.x, q.y, z + h)))
