@@ -43,8 +43,16 @@
      -55.595
     ],
     [
-     155.918,
-     -81.854
+     157.642,
+     -63.716
+    ],
+    [
+     157.15,
+     -63.72
+    ],
+    [
+     156.26,
+     -81.86
     ],
     [
      155.222,
@@ -61,7 +69,7 @@
    ],
    "z": 5.0,
    "blend": 0.0,
-   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): edge follows the moved stair nosing and bed kerb"
+   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): edge follows the moved stair nosing and bed kerb | 2026-10-05 owner msg 107: W edge follows the straightened lawn strip (the old tapering line left a 0.4 m hole down to 5.0 beside the alley)"
   },
   {
    "name": "Alley_Flat_S",
@@ -99,8 +107,12 @@
      -82.569
     ],
     [
-     156.32,
-     -77.618
+     156.27,
+     -81.86
+    ],
+    [
+     156.6,
+     -77.63
     ],
     [
      148.789,
@@ -821,8 +833,8 @@
    "name": "Lawn_S",
    "ring": [
     [
-     155.918,
-     -81.854
+     156.36,
+     -81.868
     ],
     [
      159.255,
@@ -833,8 +845,8 @@
      -63.8
     ],
     [
-     157.642,
-     -63.716
+     157.25,
+     -63.71
     ]
    ],
    "z": [
@@ -845,7 +857,7 @@
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10)",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m",
    "confidence": "medium"
   },
   {
@@ -885,20 +897,20 @@
    "name": "Curb_Path_S",
    "ring": [
     [
-     157.642,
-     -63.716
+     157.25,
+     -63.71
     ],
     [
-     155.918,
-     -81.854
+     156.36,
+     -81.868
     ],
     [
-     155.818,
-     -81.844
+     156.26000000000002,
+     -81.863
     ],
     [
-     157.542,
-     -63.707
+     157.15,
+     -63.705
     ]
    ],
    "z": [
@@ -909,7 +921,7 @@
    ],
    "thk": 1.942,
    "material": "brick",
-   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3)",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3) | 2026-10-05 owner msg 107 (viewport screenshots): follows the straightened lawn-strip edge",
    "confidence": "medium"
   },
   {
@@ -2379,23 +2391,7 @@
    "name": "BankRose_00",
    "pos": [
     172.0,
-    -92.554
-   ],
-   "height": 0.8,
-   "crown_d": 0.5,
-   "shape": "round",
-   "trunk_d": 0.03,
-   "crown_base": 0.0,
-   "ue_asset": "shrub_rose",
-   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "BankRose_01",
-   "pos": [
-    174.0,
-    -92.652
+    -93.154
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2411,7 +2407,7 @@
    "name": "BankRose_02",
    "pos": [
     175.3,
-    -92.716
+    -93.316
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2427,7 +2423,7 @@
    "name": "BankRose_03",
    "pos": [
     177.3,
-    -92.814
+    -93.414
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2443,7 +2439,7 @@
    "name": "BankRose_04",
    "pos": [
     178.6,
-    -92.878
+    -93.478
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2459,7 +2455,7 @@
    "name": "BankRose_05",
    "pos": [
     180.6,
-    -92.976
+    -93.576
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2475,7 +2471,7 @@
    "name": "BankRose_06",
    "pos": [
     181.9,
-    -93.04
+    -93.64
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2491,23 +2487,7 @@
    "name": "BankRose_07",
    "pos": [
     183.9,
-    -93.138
-   ],
-   "height": 0.8,
-   "crown_d": 0.5,
-   "shape": "round",
-   "trunk_d": 0.03,
-   "crown_base": 0.0,
-   "ue_asset": "shrub_rose",
-   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "BankRose_08",
-   "pos": [
-    185.2,
-    -93.202
+    -93.738
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2523,7 +2503,7 @@
    "name": "BankRose_09",
    "pos": [
     187.2,
-    -93.3
+    -93.9
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2539,7 +2519,7 @@
    "name": "BankRose_10",
    "pos": [
     188.5,
-    -93.364
+    -93.964
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2555,23 +2535,7 @@
    "name": "BankRose_11",
    "pos": [
     190.5,
-    -93.462
-   ],
-   "height": 0.8,
-   "crown_d": 0.5,
-   "shape": "round",
-   "trunk_d": 0.03,
-   "crown_base": 0.0,
-   "ue_asset": "shrub_rose",
-   "evidence": "2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): sparse leggy rose bushes in a row on the lawn edge along the walkway kerb (A268/A269/A271)",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "BankRose_12",
-   "pos": [
-    191.8,
-    -93.526
+    -94.062
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2587,7 +2551,7 @@
    "name": "BankRose_13",
    "pos": [
     193.8,
-    -93.624
+    -94.224
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2603,7 +2567,7 @@
    "name": "BankRose_14",
    "pos": [
     195.1,
-    -93.688
+    -94.288
    ],
    "height": 0.8,
    "crown_d": 0.5,
@@ -2888,12 +2852,12 @@
      -81.82
     ],
     [
-     155.818,
-     -81.849
+     156.27,
+     -81.86
     ],
     [
-     156.22,
-     -77.613
+     156.6,
+     -77.63
     ],
     [
      151.784,
@@ -2910,7 +2874,7 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep)",
+   "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep) | 2026-10-05 owner msg 107: E edge follows the straightened lawn-strip curb (a 0.4 m slot to the lower terrace was left open)",
    "confidence": "medium",
    "surface": "herringbone_200x100"
   },
@@ -2923,8 +2887,8 @@
      -77.396
     ],
     [
-     156.22,
-     -77.613
+     156.6,
+     -77.63
     ],
     [
      157.75,
@@ -2961,17 +2925,13 @@
     ],
     [
      152.45,
-     -55.3
-    ],
-    [
-     152.45,
      -49.9
     ]
    ],
    "height": 0.12,
    "thk": 0.12,
    "material": "stone",
-   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs) | owner 2026-09-28 (screenshot 56): bed slightly narrower: curb moved 0.95 m toward B | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): the B bed runs N past B's corner to the boulder wall (+-0.3)",
+   "evidence": "yellow/white painted concrete curb of the shrub bed along B's east face north of the porch (070309303 f47-f52 ground rays, SfM crescents of the shrubs) | owner 2026-09-28 (screenshot 56): bed slightly narrower: curb moved 0.95 m toward B | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): the B bed runs N past B's corner to the boulder wall (+-0.3) | 2026-10-05 owner msg 107 (viewport screenshots): one straight run (the 2.05 deg / 0 deg kink at y -55.3 read as a crooked road edge)",
    "confidence": "medium"
   },
   {
@@ -3505,6 +3465,31 @@
    "material": "stone",
    "confidence": "medium",
    "evidence": "2026-10-04 levels pass L1-01 (A231): continuous herringbone walkway along A_S between Walkway_South and Walkway_North (was a 0.35 pit)"
+  }
+ ],
+ "ground_surfaces": [
+  {
+   "name": "BBed_Lawn",
+   "ring": [
+    [
+     149.0,
+     -74.55
+    ],
+    [
+     151.76,
+     -74.55
+    ],
+    [
+     152.3,
+     -55.5
+    ],
+    [
+     149.9,
+     -55.5
+    ]
+   ],
+   "slot": "M_Ground_Grass",
+   "evidence": "2026-10-05 owner msg 107 + A214/A215: the big round junipers along B's east face stand in a lawn bed behind the alley curb; the ground there was paving (trees on the road)"
   }
  ]
 }

@@ -119,6 +119,8 @@ def main():
     from greybox.materials import assign_ground_surfaces, assign_name_slots
     print("material slots by name:", assign_name_slots(bpy.data.objects))
     print("ground surfaces:", assign_ground_surfaces(bpy.data.objects.get("TER_Ground"), SPECS))
+    from greybox.settle import run as settle   # terrain under walk tops, props onto the real surface
+    print("settle:", settle())
     from greybox.finalize import run as finalize
     before = _centres()
     print("finalize:", {k: (v if not isinstance(v, list) else (len(v), v[:4])) for k, v in finalize().items()})

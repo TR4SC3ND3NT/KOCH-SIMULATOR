@@ -5168,55 +5168,6 @@
    "confidence": "medium"
   },
   {
-   "type": "sign",
-   "name": "Signboard_Arch",
-   "pos": [
-    157.184,
-    -41.692
-   ],
-   "dir_deg": 0.0,
-   "w": 1.0,
-   "h": 1.9,
-   "t": 0.08,
-   "evidence": "white campus map signboard on two posts right of the hedge arch at the foot of the wide stair (012404116 f10-f12; 070309303 f73-f75); content = KOCH map in UE | 2026-10-03 video pass V1-04 (081235159 f13-f21): white wayfinding panel ~0.9 x 1.4, dark header, arrows to the blocks, 2 grey round posts (KOCH branding) | 2026-10-05 owner msg 106 (A217/A218, 2026-09-30): nothing stands on the plaza within ~3 m E of the hedge arch; moved ~2.7 m NE along the lawn edge (the 09-24 video has them near the arch; exact spot still unknown)",
-   "confidence": "low"
-  },
-  {
-   "type": "bin",
-   "name": "WheelieBin_Yellow_SE",
-   "pos": [
-    158.15,
-    -42.05
-   ],
-   "size": [
-    0.58,
-    0.73,
-    1.07
-   ],
-   "dir_deg": 0.0,
-   "slot": "M_Paint_Yellow",
-   "ue_asset": "wheelie_bin_240l",
-   "confidence": "low",
-   "evidence": "2026-10-03 video pass V1-04: yellow wheelie bin on the plaza paving just E of the wayfinding board (offset unsure) | 2026-10-05 owner msg 106 (A217/A218, 2026-09-30): nothing stands on the plaza within ~3 m E of the hedge arch; moved ~2.7 m NE along the lawn edge (the 09-24 video has them near the arch; exact spot still unknown)"
-  },
-  {
-   "type": "bin",
-   "name": "LitterBin_SE",
-   "pos": [
-    157.75,
-    -42.7
-   ],
-   "size": [
-    0.45,
-    0.45,
-    0.8
-   ],
-   "dir_deg": 0.0,
-   "ue_asset": "bin_wrought_iron",
-   "confidence": "low",
-   "evidence": "2026-10-03 video pass V1-04: wrought-iron litter bin SE of the board (offset unsure) | 2026-10-05 owner msg 106 (A217/A218, 2026-09-30): nothing stands on the plaza within ~3 m E of the hedge arch; moved ~2.7 m NE along the lawn edge (the 09-24 video has them near the arch; exact spot still unknown)"
-  },
-  {
    "type": "tree",
    "name": "AW_Juniper_0",
    "pos": [
@@ -5892,25 +5843,6 @@
    "slot": "M_Sheet_Red",
    "confidence": "low",
    "evidence": "2026-10-03 photo pass R2-05: red sand box at the board foot"
-  },
-  {
-   "type": "box",
-   "name": "StairTop_Post",
-   "center": [
-    152.0,
-    -48.6
-   ],
-   "dir_deg": -2.8,
-   "size": [
-    0.12,
-    0.12,
-    0.9
-   ],
-   "z0": 6.35,
-   "material": "metal",
-   "slot": "M_Wrought_Iron",
-   "confidence": "low",
-   "evidence": "2026-10-03 photo pass R3-01: short black cast post (lamp stub/bollard) ~0.9 m on a ~0.4 m concrete pad, raised lawn W of the stair top | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): moved with the stair top"
   },
   {
    "type": "path",
@@ -6824,8 +6756,8 @@
    "type": "tree",
    "name": "BNE_Juniper_2",
    "pos": [
-    151.2,
-    -51.3
+    150.7,
+    -51.7
    ],
    "height": 6.0,
    "crown_d": 3.0,
@@ -6990,8 +6922,8 @@
    "type": "tree",
    "name": "G2SE_Thuja_0",
    "pos": [
-    154.7,
-    -42.9
+    154.3,
+    -42.2
    ],
    "height": 2.3,
    "crown_d": 0.55,
@@ -6999,15 +6931,15 @@
    "trunk_d": 0.05,
    "crown_base": 0.1,
    "ue_asset": "thuja_columnar_young",
-   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): two young columnar thujas on the lawn NE (right) of the arch (A217/A218)",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): two young columnar thujas on the lawn NE (right) of the arch (A217/A218) | 2026-10-05 owner msg 107 (viewport screenshots): stood on the plaza paving; moved onto the lawn behind the edging",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "G2SE_Thuja_1",
    "pos": [
-    156.2,
-    -41.6
+    155.5,
+    -40.3
    ],
    "height": 2.4,
    "crown_d": 0.55,
@@ -7015,15 +6947,15 @@
    "trunk_d": 0.05,
    "crown_base": 0.1,
    "ue_asset": "thuja_columnar_young",
-   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): two young columnar thujas on the lawn NE (right) of the arch (A217/A218)",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): two young columnar thujas on the lawn NE (right) of the arch (A217/A218) | 2026-10-05 owner msg 107 (viewport screenshots): stood on the plaza paving; moved onto the lawn behind the edging",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "G2SE_Sapling_0",
    "pos": [
-    155.5,
-    -42.0
+    154.9,
+    -41.2
    ],
    "height": 1.4,
    "crown_d": 0.6,
@@ -7031,7 +6963,7 @@
    "trunk_d": 0.03,
    "crown_base": 0.5,
    "ue_asset": "shrub_rose",
-   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): young saplings/roses between the thujas (A217)",
+   "evidence": "2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): young saplings/roses between the thujas (A217) | 2026-10-05 owner msg 107 (viewport screenshots): stood on the plaza paving; moved onto the lawn behind the edging",
    "confidence": "low"
   }
  ],
@@ -7165,6 +7097,30 @@
    "z": 5.35,
    "blend": 0.5,
    "evidence": "north end of the A_W gallery: deck 2 brick courses + coping = 0.36 above the square (012429784 f01-f05, earlier gallery-zone PnP), 2 pink granite steps down north beside the wall and a small grey steel grating ramp outside them (012436367 f01-f07) | 2026-09-29 owner (screenshot 58: no steps on the paved yard): level unified to 5.35 with the touching pads (pad_steps.py)"
+  },
+  {
+   "name": "SE_StairFoot",
+   "ring": [
+    [
+     151.6,
+     -48.45
+    ],
+    [
+     159.9,
+     -48.85
+    ],
+    [
+     160.05,
+     -45.3
+    ],
+    [
+     151.75,
+     -44.9
+    ]
+   ],
+   "z": 5.35,
+   "blend": 0.8,
+   "evidence": "2026-10-05 owner msg 107 (screenshot of the B-corner wide stair): the lower flight's foot (5.35, y -48.3) met a 0.3 m terrain hump before the pergola-walk landing (5.37); the landing plaza between the stair foot and the walk is flat at the walk level"
   }
  ],
  "ground_surfaces": [

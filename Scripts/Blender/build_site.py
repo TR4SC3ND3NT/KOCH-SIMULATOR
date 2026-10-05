@@ -118,6 +118,11 @@ class Site:
               "evidence": [el.get("evidence", "")] if el.get("evidence") else []}
         ob = make_object(self.name(el), bm, self.col, origin, it, color, gen=self.gen)
         ob["koch_confidence"] = el.get("confidence", "")
+        ob["koch_type"] = el.get("type", "")       # greybox/settle.py: props snap onto the real surface below
+        if "z_rel" in el:
+            ob["koch_zrel"] = float(el["z_rel"])
+        if "z0" in el:
+            ob["koch_z0"] = 1                      # absolute height given by the spec: settle never moves it
         # P2 material slot (handoff 4a): one M_<Material>_<Finish> slot instead of the plain review colour; the
         # object colour keeps the confidence flag (orange = low)
         # generic props are placeholders that UE swaps for Fab/Megascans assets (handoff 4a "Leave to Unreal")
@@ -1191,11 +1196,14 @@ class Site:
             polys.append([c + Vector((math.cos(a0 + (a1 - a0) * k / n), math.sin(a0 + (a1 - a0) * k / n))) * r
                           for k in range(n + 1)])
         bm = bmesh.new()
+        k = 0
         for pl in polys:
             for A, B in zip(pl[:-1], pl[1:]):
                 L = (B - A).length
-                if L > 1e-4:   # segments overlap by w/2 at joints: each piece stays a closed box
-                    box(bm, _frame2(A, B - A), -w / 2, L + w / 2, -w / 2, w / 2, z + 0.002, z + 0.007)
+                if L > 1e-4:   # segments overlap by w/2 at joints: each piece stays a closed box; neighbours alternate
+                    dz = 0.0006 * (k % 2)   # top heights so the overlaps never z-fight (dashed look, walkthrough 10-05)
+                    box(bm, _frame2(A, B - A), -w / 2, L + w / 2, -w / 2, w / 2, z + 0.002 + dz, z + 0.007 + dz)
+                    k += 1
         p = polys[0][0]
         self.emit(el, bm, COL["paint"], (p.x, p.y, z))
 

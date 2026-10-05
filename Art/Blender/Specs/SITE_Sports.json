@@ -553,7 +553,7 @@
    "type": "box",
    "name": "Goal_E_Post0",
    "center": [
-    158.44,
+    158.29,
     54.576
    ],
    "size": [
@@ -564,14 +564,14 @@
    "dir_deg": -2.2,
    "z0": 3.8,
    "material": "white",
-   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022)",
+   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022) | 2026-10-05 settle QA: the E goal's N post stood just off the turf edge (0.45 m above the ground there); goal moved 0.15 m onto the turf",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Goal_E_Post1",
    "center": [
-    158.556,
+    158.406,
     57.574
    ],
    "size": [
@@ -582,14 +582,14 @@
    "dir_deg": -2.2,
    "z0": 3.8,
    "material": "white",
-   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022)",
+   "evidence": "white 3 x 2 m futsal goals centred on both ends (Google 2026: white frames at u 0.2 and 43.9, v 10.9..14.4; drone 2022) | 2026-10-05 settle QA: the E goal's N post stood just off the turf edge (0.45 m above the ground there); goal moved 0.15 m onto the turf",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Goal_E_Bar",
    "center": [
-    158.498,
+    158.348,
     56.075
    ],
    "size": [
@@ -600,14 +600,14 @@
    "dir_deg": -2.2,
    "z0": 5.8,
    "material": "white",
-   "evidence": "goal crossbar 2.0 m",
+   "evidence": "goal crossbar 2.0 m | 2026-10-05 settle QA: the E goal's N post stood just off the turf edge (0.45 m above the ground there); goal moved 0.15 m onto the turf",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Goal_E_Back",
    "center": [
-    159.457,
+    159.307,
     56.038
    ],
    "size": [
@@ -618,7 +618,7 @@
    "dir_deg": -2.2,
    "z0": 3.8,
    "material": "white",
-   "evidence": "goal ground frame ~1 m deep (drone 2022 d_19)",
+   "evidence": "goal ground frame ~1 m deep (drone 2022 d_19) | 2026-10-05 settle QA: the E goal's N post stood just off the turf edge (0.45 m above the ground there); goal moved 0.15 m onto the turf",
    "confidence": "low"
   },
   {
