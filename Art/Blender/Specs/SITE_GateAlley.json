@@ -301,23 +301,36 @@
    "confidence": "medium"
   },
   {
-   "type": "path",
+   "type": "roof_plane",
    "name": "Plaza_StairTop",
-   "line": [
+   "thk": 0.12,
+   "surface": "herringbone_200x100",
+   "evidence": "gate plaza paving up to the top nosing of the south stair (012258813) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): along the moved nosing | 2026-10-07 owner msg 122: a plane 7 mm over the top step at the stair edge (it followed the ground there, coplanar with the step = z-fight stripes) and flush with the plaza at the far edge (was a 2-6 cm step)",
+   "confidence": "medium",
+   "ring": [
     [
-     154.576,
-     -90.715
+     155.054,
+     -90.075
     ],
     [
-     159.256,
-     -94.155
+     159.734,
+     -93.515
+    ],
+    [
+     158.786,
+     -94.805
+    ],
+    [
+     154.106,
+     -91.365
     ]
    ],
-   "width": 1.6,
-   "thk": 0.08,
-   "surface": "herringbone_200x100",
-   "evidence": "gate plaza paving up to the top nosing of the south stair (012258813) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): along the moved nosing",
-   "confidence": "medium"
+   "z": [
+    6.757,
+    6.757,
+    6.826,
+    6.815
+   ]
   },
   {
    "type": "stairs_run",
