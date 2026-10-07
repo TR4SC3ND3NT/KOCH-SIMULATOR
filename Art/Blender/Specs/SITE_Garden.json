@@ -4755,8 +4755,9 @@
    "width": 1.3,
    "thk": 0.08,
    "surface": "diamond_tile_0.4_checker_red_grey",
-   "evidence": "Gazebo floor tiles (0.40 m diamond-relief concrete, red/grey checker) continue ~1.3 m outside the parapet to the edging (2020 pano pz_180; 2026 081924271 t12).",
-   "confidence": "medium"
+   "evidence": "Gazebo floor tiles (0.40 m diamond-relief concrete, red/grey checker) continue ~1.3 m outside the parapet to the edging (2020 pano pz_180; 2026 081924271 t12). | 2026-10-07 z-fight QA (coplanar tops flickered): 6 mm over the gazebo paths",
+   "confidence": "medium",
+   "top": 0.022
   },
   {
    "type": "path",
@@ -4799,8 +4800,9 @@
    "width": 1.3,
    "thk": 0.08,
    "surface": "diamond_tile_0.4_checker_red_grey",
-   "evidence": "Gazebo floor tiles (0.40 m diamond-relief concrete, red/grey checker) continue ~1.3 m outside the parapet to the edging (2020 pano pz_180; 2026 081924271 t12). | owner 2026-09-28 (screenshot 60): east gazebo 1.0 m further east",
-   "confidence": "medium"
+   "evidence": "Gazebo floor tiles (0.40 m diamond-relief concrete, red/grey checker) continue ~1.3 m outside the parapet to the edging (2020 pano pz_180; 2026 081924271 t12). | owner 2026-09-28 (screenshot 60): east gazebo 1.0 m further east | 2026-10-07 z-fight QA (coplanar tops flickered): 6 mm over the gazebo paths",
+   "confidence": "medium",
+   "top": 0.022
   },
   {
    "type": "path",
@@ -4818,8 +4820,9 @@
    "width": 2.04,
    "thk": 0.08,
    "surface": "herringbone_pavers",
-   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line); landing ends exactly at the top nosing (it used to cover 0.56 m of the top tread)",
-   "confidence": "medium"
+   "evidence": "081904575 t5, 081918134: herringbone-paved landing at the SE corner (same concrete pavers as the campus walkways) where the pergola walk and the G2 SSE path (topiary arch) start; joins the east walkway. | 012404116 t2-3.5 s: plain herringbone paving at the foot of the wide stair, same level as the garden path | [B] 2026-09-28 owner (videos 14-14-18 t5-t8.6, 14-14-00): the pergola walk + boulder wall sit 2.2 m closer to Block B; moved with benches, bins, stairs and the hedge row | [B] owner 2026-09-28: only 2.5-3 m of ground between Block B's north wall and the boulder wall, the pergola follows right after it; whole walk moved another 4.1 m toward B | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line); landing ends exactly at the top nosing (it used to cover 0.56 m of the top tread) | 2026-10-07 z-fight QA (coplanar tops flickered): 8 mm over the alley paving",
+   "confidence": "medium",
+   "top": 0.028
   },
   {
    "type": "path",
@@ -5878,12 +5881,12 @@
     ]
    ],
    "z": [
-    5.365,
-    5.365,
-    5.365,
-    5.365
+    5.356,
+    5.356,
+    5.356,
+    5.356
    ],
-   "evidence": "2026-10-07 owner msg 116 (viewport screenshot: grey ground strips and seams between the walk and the hall) + photos A008/A009/A012 (046/047/050_PXL_20260930_1039*): the diamond-slab paving runs on from the garden walk to the hall bed kerb / hall front (plain concrete at the far E end); was bare terrain 2-7 m wide | 2026-10-07 owner msg 121 + A011/A017/A023: plain smooth concrete in front of the hall (the diamond tiles are only the 3.24 m garden walk); top level with the walk",
+   "evidence": "2026-10-07 owner msg 116 (viewport screenshot: grey ground strips and seams between the walk and the hall) + photos A008/A009/A012 (046/047/050_PXL_20260930_1039*): the diamond-slab paving runs on from the garden walk to the hall bed kerb / hall front (plain concrete at the far E end); was bare terrain 2-7 m wide | 2026-10-07 owner msg 121 + A011/A017/A023: plain smooth concrete in front of the hall (the diamond tiles are only the 3.24 m garden walk); top level with the walk | 2026-10-07 z-fight QA (coplanar tops flickered): 1 cm under the walk top",
    "material": "stone",
    "slot": "M_Concrete"
   },
@@ -5902,10 +5905,10 @@
    ],
    "width": 0.405,
    "thk": 0.08,
-   "top": 0.02,
+   "top": 0.026,
    "slot": "M_Paving_Diamond_Tile_Pink",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass R1-10: first (south) slab row pink-tinted"
+   "evidence": "2026-10-03 photo pass R1-10: first (south) slab row pink-tinted | 2026-10-07 z-fight QA (coplanar tops flickered): 8 mm over the diamond walk"
   },
   {
    "type": "lamp_orn",

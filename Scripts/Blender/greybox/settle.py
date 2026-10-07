@@ -1,7 +1,7 @@
 # Ground settle pass, run by build_all.py after the site build and the ground-surface cut, before finalize (which
 # moves pivots). Fixes what the per-builder ground field cannot see (owner walkthrough 2026-10-05):
 #  1. terrain showing through walk surfaces: TER_Ground vertices under a path / paving / stair / deck top are put
-#     6 mm below that top: flush enough that a slab edge shows no lip (5 cm read as a separate "platform" around every
+#     12 mm below that top: flush enough that a slab edge shows no lip (5 cm read as a separate "platform" around every
 #     slab, owner 2026-10-07), still clear of z-fighting;
 #  2. props floating or buried: outdoor site props (benches, bins, lamps, trees, posts...) are moved vertically so
 #     no foot floats over the real top below it (paving, stair tread, deck, bank/bed solid or terrain); trees use
@@ -22,7 +22,7 @@ MOUNTED = ("Plaque", "CCTV", "Bulkhead", "Meter", "Reader", "Terminal", "Motor",
            "Lintel", "Hoop", "Cabinet", "Hood", "FaceID", "Camera", "board", "Goal")   # fittings on walls/posts: placed by z0, never snapped
 BOX_PROPS = ("Post", "Bollard", "Pole", "Workout", "Bin", "SandBox", "Pallet", "ArtBox", "ArtColumn", "Hydrant",
              "Cone", "Stand", "Crate", "Bench", "Table", "Planter_Pot")
-SINK = 0.006   # m: terrain under a walk top (see 1. above)
+SINK = 0.012   # m: terrain under a walk top (see 1. above); >= 1 cm keeps the z-fight QA clean
 BED_WORDS = ("Bed", "Bank", "Planter")   # raised soil solids: props stand on them, the terrain is not clamped to them
 
 
@@ -84,7 +84,7 @@ def run():
 
         def pokes(pt):
             zs = _down(walk, pt.x, pt.y, pt.z + 0.6, 1.1)    # a top within 0.6 above .. 0.5 below the point
-            return zs is not None and pt.z > zs - SINK / 2, zs
+            return zs is not None and pt.z > zs - SINK + 0.002, zs
 
         n_low = 0
         for it in range(6):

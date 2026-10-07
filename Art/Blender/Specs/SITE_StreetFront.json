@@ -1535,11 +1535,11 @@
     0.55,
     0.01
    ],
-   "z_rel": 0.019,
+   "z_rel": 0.016,
    "material": "metal",
    "slot": "M_Steel_Grating",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V3-15: flush drain grating at the parapet foot near its E end (+-1.5 m)"
+   "evidence": "2026-10-03 video pass V3-15: flush drain grating at the parapet foot near its E end (+-1.5 m) | 2026-10-07 z-fight QA (coplanar tops flickered): grate top 8 mm over the sidewalk"
   },
   {
    "type": "bin",
