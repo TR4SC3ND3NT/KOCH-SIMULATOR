@@ -2,7 +2,7 @@
 # 2026-09-29 "etalon" sketch drawn on Google Earth, registered on the georeferenced Google z20 ortho: 538 SIFT inliers,
 # rms 0.24 m; each path then refined on the ortho's light paving strips where the strip is visible). Boundary = the
 # owner's 7-sided outline (chamfered SW and SE corners) on the lawn/paving edge; paths: G1 N, W, SW, SSE + link; centre
-# square spine N/S + links; G2 E, SSW, SE (to the SE chamfer vertex) + link. All hedges are one kind (clipped box
+# square spine N/S + links; G2 N, E, SSW, SE (to the SE chamfer vertex) + link. All hedges are one kind (clipped box
 # hedge, same width/height as the arches): boundary = hedge - arch - hedge (topiary arch flush in the line at every
 # path exit, owner 2026-09-28), path hedges run unbroken from the gazebo ring / square hedge to the boundary hedge,
 # ring hedges open only at the paths. Gazebo centres stay where the owner put them (2026-09-28). Rewrites only OWN.
@@ -62,6 +62,8 @@ PATHS = [("G1_N", "G1", (117.199, -21.136), (117.599, -11.271), "bnd"),    # ort
          ("G1_W", "G1", (111.501, -25.686), (100.220, -23.886), "bnd"),    # sketch (under crowns on the ortho)
          ("G1_SW", "G1", (113.903, -32.341), (102.090, -42.218), "bnd"),   # ortho strip (2.3 m off-radial, clearly seen)
          ("G1_SSE", "G1", (119.585, -30.897), (122.440, -46.011), "bnd"),  # ortho strip
+         ("G2_N", "G2", None, (145.23, -12.87), "bnd"),                    # owner 2026-10-07 (msg 117): a N path like G1_N
+                                                                           # (radial, G1_N's 2.3 deg tilt) to the hall walk
          ("G2_E", "G2", None, (158.327, -29.374), "bnd"),                  # radial to the ortho/sketch mean end
          ("G2_SSW", "G2", (142.665, -33.251), (137.492, -46.009), "bnd"),  # ortho = sketch
          ("G2_SE", "G2", (147.173, -33.357), (154.098, -45.701), "bnd")]   # ortho strip; ends at the SE chamfer vertex

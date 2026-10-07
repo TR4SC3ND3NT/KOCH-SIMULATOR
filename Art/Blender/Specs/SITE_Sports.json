@@ -3994,14 +3994,79 @@
    "z": [
     3.25,
     3.25,
-    2.4,
-    2.4
+    2.7,
+    2.7
    ],
    "thk": 1.6,
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair | 2026-10-04 re-verification X3-07: follows the longer flight"
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair | 2026-10-04 re-verification X3-07: follows the longer flight | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: N end ~0.38 above the yard (was 0.08)"
+  },
+  {
+   "type": "roof_plane",
+   "name": "LowerYard_BedW_Lawn",
+   "ring": [
+    [
+     159.4,
+     70.4
+    ],
+    [
+     161.675,
+     70.18
+    ],
+    [
+     161.789,
+     73.31
+    ],
+    [
+     159.45,
+     73.31
+    ]
+   ],
+   "z": [
+    3.22,
+    3.22,
+    2.66,
+    2.66
+   ],
+   "thk": 1.2,
+   "material": "hedge",
+   "evidence": "video 102_PXL_20260930_105159573 t0.2-1.8 s: the W cheek turns west along the bed front as a low concrete wall with a sloped top (~0.35-0.4 above the yard), lawn with a birch, spruce and roses behind it rising to the pitch fence | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: replaces a 0.6 m terrain cliff",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "LowerYard_Stair_CheekWN",
+   "ring": [
+    [
+     159.45,
+     73.31
+    ],
+    [
+     161.789,
+     73.31
+    ],
+    [
+     161.799,
+     73.56
+    ],
+    [
+     159.46,
+     73.56
+    ]
+   ],
+   "z": [
+    2.7,
+    2.7,
+    2.68,
+    2.68
+   ],
+   "thk": 1.0,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "video 102_PXL_20260930_105159573 t0.2-1.8 s: the W cheek turns west along the bed front as a low concrete wall with a sloped top (~0.35-0.4 above the yard), lawn with a birch, spruce and roses behind it rising to the pitch fence | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: replaces a 0.6 m terrain cliff",
+   "confidence": "medium"
   },
   {
    "type": "bench",
@@ -11359,7 +11424,7 @@
    "type": "box",
    "name": "Workout_Dip_BarS",
    "center": [
-    166.489,
+    167.789,
     74.325
    ],
    "size": [
@@ -11372,13 +11437,13 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)"
+   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175) | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: 1.3 m east: the bars stand beyond the E cheek end, not in front of the stair foot (f13-f16)"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostSW",
    "center": [
-    165.14,
+    166.44,
     74.377
    ],
    "size": [
@@ -11391,14 +11456,14 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)",
+   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175) | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: 1.3 m east: the bars stand beyond the E cheek end, not in front of the stair foot (f13-f16)",
    "ue_asset": "workout_parallel_bars"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostSE",
    "center": [
-    167.838,
+    169.138,
     74.273
    ],
    "size": [
@@ -11411,13 +11476,13 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)"
+   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175) | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: 1.3 m east: the bars stand beyond the E cheek end, not in front of the stair foot (f13-f16)"
   },
   {
    "type": "box",
    "name": "Workout_Dip_BarN",
    "center": [
-    166.511,
+    167.811,
     74.875
    ],
    "size": [
@@ -11430,13 +11495,13 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)"
+   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175) | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: 1.3 m east: the bars stand beyond the E cheek end, not in front of the stair foot (f13-f16)"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostNW",
    "center": [
-    165.162,
+    166.462,
     74.927
    ],
    "size": [
@@ -11449,13 +11514,13 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)"
+   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175) | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: 1.3 m east: the bars stand beyond the E cheek end, not in front of the stair foot (f13-f16)"
   },
   {
    "type": "box",
    "name": "Workout_Dip_PostNE",
    "center": [
-    167.86,
+    169.16,
     74.823
    ],
    "size": [
@@ -11468,7 +11533,7 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Grey",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175)"
+   "evidence": "2026-10-04 walkthrough (A039/A051/A053 vs render): parallel bars ~3 m and a 3-post double pull-up bar stand in the middle of the lower yard, both running along the walkway (E-W); posts were 0.15 m above the lowered yard (ground 2.175) | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: 1.3 m east: the bars stand beyond the E cheek end, not in front of the stair foot (f13-f16)"
   },
   {
    "type": "box",

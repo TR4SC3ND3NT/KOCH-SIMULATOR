@@ -1062,8 +1062,8 @@
    "type": "tree",
    "name": "GT_62_spruce",
    "pos": [
-    144.6,
-    -14.2
+    143.26,
+    -14.15
    ],
    "height": 8.5,
    "crown_d": 3.2,
@@ -1072,7 +1072,7 @@
    "shape": "cone",
    "ue_asset": "tree",
    "species": "spruce",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
+   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013 | 2026-10-07 owner msg 117: off the new G2_N path (garden_trees.py push)",
    "confidence": "medium"
   },
   {

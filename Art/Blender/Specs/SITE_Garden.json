@@ -162,6 +162,25 @@
   },
   {
    "type": "path",
+   "name": "G2_N",
+   "line": [
+    [
+     144.816,
+     -23.055
+    ],
+    [
+     145.23,
+     -12.869
+    ]
+   ],
+   "width": 1.2,
+   "thk": 0.08,
+   "top": 0.016,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "path",
    "name": "G2_E",
    "line": [
     [
@@ -676,16 +695,20 @@
      -26.588
     ],
     [
-     138.329,
-     -25.99
+     138.292,
+     -26.093
     ],
     [
-     138.543,
-     -25.485
+     138.453,
+     -25.685
     ],
     [
-     138.798,
-     -25.0
+     138.64,
+     -25.289
+    ],
+    [
+     138.91,
+     -24.812
     ],
     [
      139.154,
@@ -696,204 +719,68 @@
      -24.015
     ],
     [
-     139.862,
-     -23.612
+     139.786,
+     -23.691
     ],
     [
-     140.35,
-     -23.171
+     140.101,
+     -23.386
+    ],
+    [
+     140.435,
+     -23.102
     ],
     [
      140.787,
      -22.841
     ],
     [
-     141.345,
-     -22.494
+     141.25,
+     -22.548
     ],
     [
-     141.835,
-     -22.247
+     141.637,
+     -22.341
     ],
     [
-     142.343,
-     -22.042
+     142.036,
+     -22.16
+    ],
+    [
+     142.55,
+     -21.971
     ],
     [
      142.972,
      -21.851
     ],
     [
-     143.509,
-     -21.739
+     143.468,
+     -21.747
     ],
     [
-     144.052,
-     -21.672
+     143.797,
+     -13.644
     ],
     [
-     144.71,
-     -21.651
+     144.496,
+     -13.691
     ],
     [
-     145.257,
-     -21.682
+     144.143,
+     -22.368
     ],
     [
-     145.799,
-     -21.758
-    ],
-    [
-     146.334,
-     -21.878
-    ],
-    [
-     146.96,
-     -22.079
-    ],
-    [
-     147.465,
-     -22.293
-    ],
-    [
-     147.95,
-     -22.548
-    ],
-    [
-     148.413,
-     -22.841
-    ],
-    [
-     148.85,
-     -23.171
-    ],
-    [
-     149.259,
-     -23.536
-    ],
-    [
-     149.637,
-     -23.932
-    ],
-    [
-     149.981,
-     -24.359
-    ],
-    [
-     150.29,
-     -24.812
-    ],
-    [
-     150.56,
-     -25.289
-    ],
-    [
-     150.79,
-     -25.786
-    ],
-    [
-     150.979,
-     -26.3
-    ],
-    [
-     151.125,
-     -26.829
-    ],
-    [
-     151.238,
-     -27.441
-    ],
-    [
-     156.646,
-     -27.845
-    ],
-    [
-     156.607,
-     -28.544
-    ],
-    [
-     150.594,
-     -28.095
-    ],
-    [
-     150.549,
-     -27.567
-    ],
-    [
-     150.443,
-     -26.988
-    ],
-    [
-     150.312,
-     -26.515
-    ],
-    [
-     150.105,
-     -25.964
-    ],
-    [
-     149.845,
-     -25.435
-    ],
-    [
-     149.589,
-     -25.017
-    ],
-    [
-     149.3,
-     -24.62
-    ],
-    [
-     148.911,
-     -24.177
-    ],
-    [
-     148.556,
-     -23.839
-    ],
-    [
-     148.095,
-     -23.473
-    ],
-    [
-     147.6,
-     -23.154
-    ],
-    [
-     147.076,
-     -22.885
-    ],
-    [
-     146.529,
-     -22.668
-    ],
-    [
-     146.058,
-     -22.53
-    ],
-    [
-     145.577,
+     143.623,
      -22.43
     ],
     [
-     144.992,
-     -22.363
+     143.142,
+     -22.53
     ],
     [
-     144.502,
-     -22.351
-    ],
-    [
-     143.914,
-     -22.389
-    ],
-    [
-     143.333,
-     -22.485
-    ],
-    [
-     142.765,
-     -22.638
+     142.671,
+     -22.668
     ],
     [
      142.214,
@@ -904,36 +791,40 @@
      -23.058
     ],
     [
-     141.267,
-     -23.361
+     141.349,
+     -23.307
     ],
     [
-     140.87,
-     -23.65
+     140.947,
+     -23.59
     ],
     [
-     140.498,
-     -23.971
+     140.571,
+     -23.904
     ],
     [
-     140.089,
-     -24.394
+     140.221,
+     -24.248
     ],
     [
-     139.781,
-     -24.776
+     139.9,
+     -24.62
     ],
     [
-     139.454,
-     -25.265
+     139.611,
+     -25.017
     ],
     [
-     139.176,
-     -25.785
+     139.355,
+     -25.435
     ],
     [
-     138.985,
-     -26.236
+     139.135,
+     -25.874
+    ],
+    [
+     138.951,
+     -26.329
     ],
     [
      138.804,
@@ -961,6 +852,169 @@
   {
    "type": "hedge",
    "name": "Hedge_Mass_3",
+   "ring": [
+    [
+     145.542,
+     -22.425
+    ],
+    [
+     145.893,
+     -13.786
+    ],
+    [
+     146.592,
+     -13.834
+    ],
+    [
+     146.265,
+     -21.86
+    ],
+    [
+     146.754,
+     -22.006
+    ],
+    [
+     147.265,
+     -22.203
+    ],
+    [
+     147.661,
+     -22.39
+    ],
+    [
+     148.138,
+     -22.66
+    ],
+    [
+     148.503,
+     -22.904
+    ],
+    [
+     148.935,
+     -23.241
+    ],
+    [
+     149.259,
+     -23.536
+    ],
+    [
+     149.637,
+     -23.932
+    ],
+    [
+     149.915,
+     -24.271
+    ],
+    [
+     150.231,
+     -24.719
+    ],
+    [
+     150.456,
+     -25.095
+    ],
+    [
+     150.703,
+     -25.585
+    ],
+    [
+     150.908,
+     -26.093
+    ],
+    [
+     151.042,
+     -26.51
+    ],
+    [
+     151.149,
+     -26.936
+    ],
+    [
+     151.238,
+     -27.441
+    ],
+    [
+     156.646,
+     -27.845
+    ],
+    [
+     156.607,
+     -28.544
+    ],
+    [
+     150.594,
+     -28.095
+    ],
+    [
+     150.549,
+     -27.567
+    ],
+    [
+     150.465,
+     -27.083
+    ],
+    [
+     150.342,
+     -26.608
+    ],
+    [
+     150.18,
+     -26.145
+    ],
+    [
+     149.981,
+     -25.696
+    ],
+    [
+     149.695,
+     -25.182
+    ],
+    [
+     149.419,
+     -24.776
+    ],
+    [
+     149.111,
+     -24.394
+    ],
+    [
+     148.773,
+     -24.039
+    ],
+    [
+     148.33,
+     -23.65
+    ],
+    [
+     147.933,
+     -23.361
+    ],
+    [
+     147.515,
+     -23.105
+    ],
+    [
+     146.986,
+     -22.845
+    ],
+    [
+     146.529,
+     -22.668
+    ],
+    [
+     146.058,
+     -22.53
+    ]
+   ],
+   "holes": [],
+   "height": 1.25,
+   "top": "flat",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "hedge",
+   "name": "Hedge_Mass_4",
    "ring": [
     [
      113.641,
@@ -1095,7 +1149,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_4",
+   "name": "Hedge_Mass_5",
    "ring": [
     [
      150.49,
@@ -1198,7 +1252,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_5",
+   "name": "Hedge_Mass_6",
    "ring": [
     [
      137.091,
@@ -1337,7 +1391,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_6",
+   "name": "Hedge_Mass_7",
    "ring": [
     [
      119.259,
@@ -1428,7 +1482,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_7",
+   "name": "Hedge_Mass_8",
    "ring": [
     [
      122.7,
@@ -1503,7 +1557,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_8",
+   "name": "Hedge_Mass_9",
    "ring": [
     [
      127.64,
@@ -1538,7 +1592,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_9",
+   "name": "Hedge_Mass_10",
    "ring": [
     [
      131.16,
@@ -1569,7 +1623,7 @@
   },
   {
    "type": "hedge",
-   "name": "Hedge_Mass_10",
+   "name": "Hedge_Mass_11",
    "ring": [
     [
      146.712,
@@ -1702,6 +1756,21 @@
    ],
    "dir_deg": -152.1,
    "span": 0.971,
+   "thk": 1.1,
+   "depth": 1.0,
+   "height": 2.05,
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-02 photo diff: free-standing; person-scaled (A019/A022): clear 0.95 x 2.05 m, outer ~3.2 x 3.1 m"
+  },
+  {
+   "type": "hedge_arch",
+   "name": "Arch_Bnd_G2_N",
+   "center": [
+    145.216,
+    -13.219
+   ],
+   "dir_deg": 86.1,
+   "span": 0.95,
    "thk": 1.1,
    "depth": 1.0,
    "height": 2.05,
@@ -1934,6 +2003,50 @@
     [
      121.606,
      -45.098
+    ]
+   ],
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.154,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_N_L",
+   "line": [
+    [
+     144.183,
+     -22.615
+    ],
+    [
+     144.575,
+     -12.975
+    ]
+   ],
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.154,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_N_R",
+   "line": [
+    [
+     145.482,
+     -22.668
+    ],
+    [
+     145.873,
+     -13.063
     ]
    ],
    "height": 0.2,
@@ -2776,16 +2889,26 @@
      -22.71
     ],
     [
-     145.351,
-     -22.649
-    ],
+     145.432,
+     -22.663
+    ]
+   ],
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.154,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_G2_Ring_1",
+   "line": [
     [
-     144.976,
+     144.233,
      -22.612
-    ],
-    [
-     144.6,
-     -22.6
     ],
     [
      144.224,
@@ -2887,7 +3010,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_G2_Ring_1",
+   "name": "Edging_G2_Ring_2",
    "line": [
     [
      138.859,
@@ -2973,7 +3096,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_G2_Ring_2",
+   "name": "Edging_G2_Ring_3",
    "line": [
     [
      143.055,
@@ -3035,7 +3158,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_G2_Ring_3",
+   "name": "Edging_G2_Ring_4",
    "line": [
     [
      147.75,
@@ -3160,6 +3283,28 @@
      -12.075
     ],
     [
+     143.663,
+     -12.843
+    ]
+   ],
+   "height": 0.2,
+   "thk": 0.08,
+   "pitch": 0.154,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "kind": "scalloped_edging",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+  },
+  {
+   "type": "wall",
+   "name": "Edging_Bnd_3",
+   "line": [
+    [
+     146.806,
+     -13.057
+    ],
+    [
      158.213,
      -13.833
     ],
@@ -3179,7 +3324,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_3",
+   "name": "Edging_Bnd_4",
    "line": [
     [
      157.27,
@@ -3205,7 +3350,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_4",
+   "name": "Edging_Bnd_5",
    "line": [
     [
      152.149,
@@ -3231,7 +3376,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_5",
+   "name": "Edging_Bnd_6",
    "line": [
     [
      136.011,
@@ -3253,7 +3398,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_6",
+   "name": "Edging_Bnd_7",
    "line": [
     [
      128.458,
@@ -3275,7 +3420,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_7",
+   "name": "Edging_Bnd_8",
    "line": [
     [
      121.671,
@@ -3301,7 +3446,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_8",
+   "name": "Edging_Bnd_9",
    "line": [
     [
      101.055,
@@ -3327,7 +3472,7 @@
   },
   {
    "type": "wall",
-   "name": "Edging_Bnd_9",
+   "name": "Edging_Bnd_10",
    "line": [
     [
      99.767,
@@ -4426,17 +4571,37 @@
      -22.562
     ],
     [
-     144.6,
-     -22.55
-    ],
-    [
-     144.979,
+     144.236,
      -22.562
     ],
     [
-     145.357,
-     -22.6
+     144.224,
+     -22.855
     ],
+    [
+     140.747,
+     -24.1
+    ],
+    [
+     139.165,
+     -27.447
+    ],
+    [
+     138.876,
+     -27.431
+    ]
+   ],
+   "holes": [],
+   "z0": 5.282,
+   "z1": 5.362,
+   "material": "stone",
+   "confidence": "medium",
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | paving between the apron and the ring edging"
+  },
+  {
+   "type": "slab",
+   "name": "Apron_Fill_G2_4",
+   "ring": [
     [
      145.732,
      -22.661
@@ -4534,20 +4699,12 @@
      -24.497
     ],
     [
-     144.88,
-     -22.62
+     145.424,
+     -22.877
     ],
     [
-     140.747,
-     -24.1
-    ],
-    [
-     139.165,
-     -27.447
-    ],
-    [
-     138.876,
-     -27.431
+     145.434,
+     -22.612
     ]
    ],
    "holes": [],
@@ -5696,6 +5853,39 @@
    "surface": "diamond_tile_0.4",
    "confidence": "medium",
    "evidence": "2026-10-03 photo pass R1-10: garden N walk = 3.24 m band of 0.40 diamond slabs (8 rows)"
+  },
+  {
+   "type": "roof_plane",
+   "thk": 0.12,
+   "surface": "diamond_tile_0.4",
+   "confidence": "medium",
+   "name": "HallApron_Paving",
+   "ring": [
+    [
+     100.74,
+     -6.7
+    ],
+    [
+     158.32,
+     -10.62
+    ],
+    [
+     158.32,
+     -1.6
+    ],
+    [
+     100.74,
+     0.5
+    ]
+   ],
+   "z": [
+    5.36,
+    5.36,
+    5.36,
+    5.36
+   ],
+   "evidence": "2026-10-07 owner msg 116 (viewport screenshot: grey ground strips and seams between the walk and the hall) + photos A008/A009/A012 (046/047/050_PXL_20260930_1039*): the diamond-slab paving runs on from the garden walk to the hall bed kerb / hall front (plain concrete at the far E end); was bare terrain 2-7 m wide",
+   "material": "stone"
   },
   {
    "type": "path",
