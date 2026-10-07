@@ -463,7 +463,7 @@
    "name": "Walkway_North",
    "ring": [
     [
-     160.212,
+     158.912,
      -70.296
     ],
     [
@@ -485,9 +485,19 @@
     [
      161.116,
      -51.872
+    ],
+    [
+     160.53,
+     -63.86
+    ],
+    [
+     159.228,
+     -63.86
     ]
    ],
    "z": [
+    5.36,
+    5.36,
     5.36,
     5.36,
     5.36,
@@ -497,7 +507,7 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "lower walkway: 1.0 m wide along A_S (curb x 0.15-0.27 .. wall 1.28), ~1.8 m along the A_W loggia up to its deck edge (x 2.05); sweep: walkway and deck at one level, 1.26 below the path; 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-01 QA: +1 cm, its top was coplanar with the terrain pad (z-fight 6.9 m2) | 2026-10-02: south end replaced by the circle-paver strip CirclePaving_AS_0 (same surface, was laid over it)",
+   "evidence": "lower walkway: 1.0 m wide along A_S (curb x 0.15-0.27 .. wall 1.28), ~1.8 m along the A_W loggia up to its deck edge (x 2.05); sweep: walkway and deck at one level, 1.26 below the path; 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-01 QA: +1 cm, its top was coplanar with the terrain pad (z-fight 6.9 m2) | 2026-10-02: south end replaced by the circle-paver strip CirclePaving_AS_0 (same surface, was laid over it) | 2026-10-07 owner msg 115 (2 viewport screenshots): S part W edge follows the moved retaining wall up to the side-stair S cheek",
    "confidence": "medium"
   },
   {
@@ -673,8 +683,8 @@
    "name": "SideStair_TopLanding",
    "ring": [
     [
-     157.575,
-     -63.363
+     157.167,
+     -63.36
     ],
     [
      158.008,
@@ -685,8 +695,8 @@
      -60.048
     ],
     [
-     157.892,
-     -60.034
+     157.33,
+     -60.03
     ]
    ],
    "z": [
@@ -697,7 +707,7 @@
    ],
    "thk": 1.77,
    "material": "stone",
-   "evidence": "grey concrete kerb strip between the path and the top nosing (070309303 f58, 012327726 t30.5)",
+   "evidence": "grey concrete kerb strip between the path and the top nosing (070309303 f58, 012327726 t30.5) | 2026-10-07 owner msg 115 (2 viewport screenshots): W edge on the curb line",
    "confidence": "medium"
   },
   {
@@ -705,8 +715,8 @@
    "name": "StairCoping_S",
    "ring": [
     [
-     157.642,
-     -63.716
+     157.149,
+     -63.72
     ],
     [
      159.659,
@@ -717,8 +727,8 @@
      -63.466
     ],
     [
-     157.675,
-     -63.368
+     157.166,
+     -63.37
     ]
    ],
    "z": [
@@ -729,7 +739,7 @@
    ],
    "thk": 1.87,
    "material": "stone",
-   "evidence": "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: (-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "evidence": "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: (-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp | 2026-10-07 owner msg 115 (2 viewport screenshots): W end on the curb line",
    "confidence": "medium"
   },
   {
@@ -769,8 +779,8 @@
    "name": "StairCoping_N",
    "ring": [
     [
-     157.991,
-     -60.039
+     157.329,
+     -60.04
     ],
     [
      159.84,
@@ -781,7 +791,7 @@
      -59.83
     ],
     [
-     158.02,
+     157.344,
      -59.74
     ]
    ],
@@ -793,7 +803,7 @@
    ],
    "thk": 1.87,
    "material": "stone",
-   "evidence": "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: (-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp",
+   "evidence": "pink granite coping of the lawn bed beside the side stair, top 0.05 above the lawn (corners triangulated: (-0.58, 29.03) z 6.14 / (-2.28, 32.73) z 6.54 / (-0.64, 32.64) z 6.29 cloud); 070309303 two-lens SfM (a1): plane-sweep tread heights + triangulated rail posts/coping corners on f55-f68, 012327726 t8-t31 views of the ramp | 2026-10-07 owner msg 115 (2 viewport screenshots): W end on the curb line",
    "confidence": "medium"
   },
   {
@@ -837,11 +847,11 @@
      -81.868
     ],
     [
-     159.255,
+     157.955,
      -81.98
     ],
     [
-     160.145,
+     158.845,
      -63.8
     ],
     [
@@ -857,7 +867,7 @@
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m | 2026-10-07 owner msg 115 (2 viewport screenshots): strip 1.3 m narrower on the A side (owner line), walkway along A_S wider",
    "confidence": "medium"
   },
   {
@@ -865,19 +875,19 @@
    "name": "LawnCoping_S",
    "ring": [
     [
-     158.468,
+     157.168,
      -81.979
     ],
     [
-     158.767,
+     157.467,
      -81.994
     ],
     [
-     159.659,
+     158.359,
      -63.815
     ],
     [
-     159.359,
+     158.059,
      -63.801
     ]
    ],
@@ -889,7 +899,7 @@
    ],
    "thk": 1.932,
    "material": "stone",
-   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23)",
+   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23) | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west with the lawn edge",
    "confidence": "medium"
   },
   {
@@ -929,7 +939,7 @@
    "name": "Lawn_N",
    "ring": [
     [
-     158.02,
+     157.444,
      -59.74
     ],
     [
@@ -941,7 +951,7 @@
      -55.66
     ],
     [
-     158.414,
+     157.647,
      -55.595
     ]
    ],
@@ -953,7 +963,7 @@
    ],
    "thk": 1.83,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-07 owner msg 115 (2 viewport screenshots): alley edge on the straight curb line",
    "confidence": "medium"
   },
   {
@@ -961,19 +971,19 @@
    "name": "Curb_Path_N",
    "ring": [
     [
-     158.414,
-     -55.595
+     157.647,
+     -55.59
     ],
     [
-     158.02,
+     157.444,
      -59.74
     ],
     [
-     157.92,
-     -59.731
+     157.345,
+     -59.73
     ],
     [
-     158.314,
+     157.547,
      -55.59
     ]
    ],
@@ -985,7 +995,7 @@
    ],
    "thk": 1.84,
    "material": "brick",
-   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line)",
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-07 owner msg 115 (2 viewport screenshots): on the straight curb line of Lawn_S",
    "confidence": "medium"
   },
   {
@@ -993,19 +1003,19 @@
    "name": "Bank_S",
    "ring": [
     [
-     158.767,
+     157.467,
      -81.994
     ],
     [
-     159.516,
+     158.216,
      -82.03
     ],
     [
-     160.408,
+     159.108,
      -63.852
     ],
     [
-     159.659,
+     158.359,
      -63.815
     ]
    ],
@@ -1017,7 +1027,7 @@
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44)",
+   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44) | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west with the lawn edge",
    "confidence": "medium"
   },
   {
@@ -1025,11 +1035,11 @@
    "name": "Retain_Walkway_S",
    "line": [
     [
-     159.43,
+     158.13,
      -82.03
     ],
     [
-     160.32,
+     159.02,
      -63.86
     ]
    ],
@@ -1039,7 +1049,7 @@
    "material": "brick",
    "slot": "M_Block_RockFace_Red",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass R3-07: the walkway's W side is a vertical retaining wall (red rock-face block, 4-5 courses + 1 red brick course at the foot, pink granite coping 0.40 x 0.05), 1.0 above the walkway, from the side-stair S bed wall to the A_S west-porch stair bed wall; replaces Curb_Walkway_S; line 0.15 W of the old curb so its E face stays on the walkway edge"
+   "evidence": "2026-10-03 photo pass R3-07: the walkway's W side is a vertical retaining wall (red rock-face block, 4-5 courses + 1 red brick course at the foot, pink granite coping 0.40 x 0.05), 1.0 above the walkway, from the side-stair S bed wall to the A_S west-porch stair bed wall; replaces Curb_Walkway_S; line 0.15 W of the old curb so its E face stays on the walkway edge | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west: walkway along A_S ~1.95 m clear (owner: the passage along A is wider)"
   },
   {
    "type": "roof_plane",
@@ -1400,7 +1410,7 @@
    "name": "LawnEnd_Coping",
    "ring": [
     [
-     158.414,
+     157.547,
      -55.594
     ],
     [
@@ -1412,7 +1422,7 @@
      -55.412
     ],
     [
-     158.442,
+     157.562,
      -55.295
     ]
    ],
@@ -1424,7 +1434,7 @@
    ],
    "thk": 1.83,
    "material": "stone",
-   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open)",
+   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-07 owner msg 115 (2 viewport screenshots): W end on the curb line",
    "confidence": "medium"
   },
   {
@@ -3159,15 +3169,48 @@
   },
   {
    "type": "roof_plane",
-   "name": "WS_Bed_E",
+   "name": "WS_BedWall_E_Front",
    "ring": [
     [
-     159.5,
+     157.804,
      -48.84
     ],
     [
      159.92,
-     -48.86
+     -48.84
+    ],
+    [
+     159.947,
+     -50.1
+    ],
+    [
+     157.742,
+     -50.1
+    ]
+   ],
+   "z": [
+    6.17,
+    6.17,
+    6.6,
+    6.6
+   ],
+   "thk": 2.0,
+   "material": "brick",
+   "slot": "M_Block_RockFace_Red",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_BedWall_E",
+   "ring": [
+    [
+     157.742,
+     -50.1
+    ],
+    [
+     159.947,
+     -50.1
     ],
     [
      160.06,
@@ -3178,12 +3221,8 @@
      -55.31
     ],
     [
-     157.9,
+     157.489,
      -55.27
-    ],
-    [
-     157.75,
-     -50.16
     ]
    ],
    "z": [
@@ -3191,12 +3230,177 @@
     6.6,
     6.6,
     6.6,
-    6.6,
     6.6
    ],
-   "thk": 1.98,
+   "thk": 2.0,
+   "material": "brick",
+   "slot": "M_Block_RockFace_Red",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_BedCoping_EW_Front",
+   "ring": [
+    [
+     157.742,
+     -50.1
+    ],
+    [
+     157.804,
+     -48.84
+    ],
+    [
+     158.104,
+     -48.84
+    ],
+    [
+     158.042,
+     -50.1
+    ]
+   ],
+   "z": [
+    6.65,
+    6.22,
+    6.22,
+    6.65
+   ],
+   "thk": 0.05,
+   "material": "stone",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_BedCoping_EW",
+   "ring": [
+    [
+     157.489,
+     -55.27
+    ],
+    [
+     157.742,
+     -50.1
+    ],
+    [
+     158.042,
+     -50.1
+    ],
+    [
+     157.789,
+     -55.27
+    ]
+   ],
+   "z": [
+    6.65,
+    6.65,
+    6.65,
+    6.65
+   ],
+   "thk": 0.05,
+   "material": "stone",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_BedCoping_EN",
+   "ring": [
+    [
+     158.104,
+     -48.84
+    ],
+    [
+     159.92,
+     -48.84
+    ],
+    [
+     159.926,
+     -49.14
+    ],
+    [
+     158.104,
+     -49.14
+    ]
+   ],
+   "z": [
+    6.22,
+    6.22,
+    6.322,
+    6.322
+   ],
+   "thk": 0.05,
+   "material": "stone",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_Bed_E_Front",
+   "ring": [
+    [
+     158.104,
+     -49.14
+    ],
+    [
+     159.926,
+     -49.14
+    ],
+    [
+     159.947,
+     -50.1
+    ],
+    [
+     158.042,
+     -50.1
+    ]
+   ],
+   "z": [
+    6.292,
+    6.292,
+    6.62,
+    6.62
+   ],
+   "thk": 0.02,
    "material": "hedge",
-   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
+   "confidence": "medium"
+  },
+  {
+   "type": "roof_plane",
+   "name": "WS_Bed_E",
+   "ring": [
+    [
+     158.042,
+     -50.1
+    ],
+    [
+     159.947,
+     -50.1
+    ],
+    [
+     160.06,
+     -55.41
+    ],
+    [
+     158.72,
+     -55.31
+    ],
+    [
+     157.789,
+     -55.27
+    ]
+   ],
+   "z": [
+    6.62,
+    6.62,
+    6.62,
+    6.62,
+    6.62
+   ],
+   "thk": 0.02,
+   "material": "hedge",
+   "evidence": "raised bed (lawn / roses) beside the upper flight, soil just below the coping (012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53)) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-28 stair move collision fix | 2026-10-03 video pass V2-03: coping/bed top slopes with the stair, ~6.65 at the landing end to ~6.22 at the front (red block body, pink granite coping) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): east bed strip with a red-tile front cheek ~1.0 high on step 2 | 2026-10-07 owner msg 115 (2 viewport screenshots): was one flat green block (6.6) with a diagonal NW edge: now a rectangle on the stair E edge, red block body, pink granite coping on the stair and front sides, soil just below the coping: flat 6.65 behind the flight, falling with the flight to 6.22 at the front (V2-03 levels)",
    "confidence": "medium"
   },
   {
@@ -3439,7 +3643,7 @@
    "name": "Walkway_Mid",
    "ring": [
     [
-     159.43,
+     158.13,
      -82.03
     ],
     [
@@ -3451,7 +3655,7 @@
      -70.351
     ],
     [
-     160.212,
+     158.912,
      -70.296
     ]
    ],
@@ -3464,7 +3668,7 @@
    "thk": 1.3,
    "material": "stone",
    "confidence": "medium",
-   "evidence": "2026-10-04 levels pass L1-01 (A231): continuous herringbone walkway along A_S between Walkway_South and Walkway_North (was a 0.35 pit)"
+   "evidence": "2026-10-04 levels pass L1-01 (A231): continuous herringbone walkway along A_S between Walkway_South and Walkway_North (was a 0.35 pit) | 2026-10-07 owner msg 115 (2 viewport screenshots): W edge follows the moved retaining wall"
   }
  ],
  "ground_surfaces": [
