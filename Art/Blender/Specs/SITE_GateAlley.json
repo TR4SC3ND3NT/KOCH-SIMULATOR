@@ -330,7 +330,8 @@
     6.757,
     6.826,
     6.815
-   ]
+   ],
+   "material": "stone"
   },
   {
    "type": "stairs_run",
