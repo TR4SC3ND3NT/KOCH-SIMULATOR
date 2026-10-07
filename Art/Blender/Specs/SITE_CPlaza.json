@@ -41,9 +41,9 @@
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.2,
-   "crown_base": 2.6,
+   "crown_base": 1.3,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-30 photos 160/161/010: the tree in front of the basement-entry canopy has a ~2.6 m clear (slightly leaning) trunk to about the canopy roof and a loose ~3.4 m crown topping out near the F2 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-30 photos 160/161/010: the tree in front of the basement-entry canopy has a ~2.6 m clear (slightly leaning) trunk to about the canopy roof and a loose ~3.4 m crown topping out near the F2 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m | 2026-10-07 CE031/CE013: crowns start ~1.3 m (dense young junipers)",
    "confidence": "medium"
   },
   {
@@ -83,9 +83,9 @@
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.18,
-   "crown_base": 2.2,
+   "crown_base": 1.3,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at the next planter (shift +0.06,-0.97 m) (outside the mosaic: same shift as S2). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m | 2026-10-07 CE031/CE013: crowns start ~1.3 m (dense young junipers)",
    "confidence": "low"
   },
   {
@@ -125,9 +125,9 @@
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.18,
-   "crown_base": 2.2,
+   "crown_base": 1.3,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (175.6, -8.9) (shift +0.06,-0.97 m). 2026-09-25 photo match of 070629483 (frames a05/a10, window-PnP cameras, pit centres ray-cast on the plaza) and stills 012536150/012526070: a regular row of ~6 square juniper pits 4.2 m in front of the west wing, spacing ~2.8 m (matches PlanterW_1-3), the first one in front of the basement stairwell (x -3.3..-2.9 measured); junipers (conifers with irregular crowns), height 4.6 m from the frame a09 overlay (crown top vs trunk base) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m | 2026-10-07 CE031/CE013: crowns start ~1.3 m (dense young junipers)",
    "confidence": "medium"
   },
   {
@@ -167,9 +167,9 @@
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.18,
-   "crown_base": 2.2,
+   "crown_base": 1.3,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (178.1, -9.1) (shift -0.25,-1.05 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m | 2026-10-07 CE031/CE013: crowns start ~1.3 m (dense young junipers)",
    "confidence": "medium"
   },
   {
@@ -209,9 +209,9 @@
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.18,
-   "crown_base": 2.2,
+   "crown_base": 1.3,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (180.8, -9.2) (shift -0.44,-1.04 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m | 2026-10-07 CE031/CE013: crowns start ~1.3 m (dense young junipers)",
    "confidence": "medium"
   },
   {
@@ -251,9 +251,9 @@
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.18,
-   "crown_base": 2.2,
+   "crown_base": 1.3,
    "shape": "ellipsoid",
-   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: ground mosaic of zone C_entr c2 (frames re-projected on the plaza, same frame as C.1-C.3): planter centre measured at (183.9, -8.8) (shift -0.08,+0.47 m). small-leaved trees in the west planters; crown tops at ~F2 sill/window level in 061624280 (posed photo match) -> ~5.5 m; crown width estimated | 2026-09-25 frames a05/a10 of 070629483, stills 012526070/012536150: the row trees are junipers -> cone proxy | 2026-09-27: moved -1.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-09-25 photo 012536150 (+012526070, 2026-09-30 173-175): the south-front row are the same juniper-type trees as the one at the canopy: ~2.2 m clear trunks, loose ~3.2 m crowns, tops near the F2/F3 sills | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m | 2026-10-07 CE031/CE013: crowns start ~1.3 m (dense young junipers)",
    "confidence": "medium"
   },
   {
@@ -262,24 +262,24 @@
    "ring": [
     [
      195.778,
-     -4.88
+     -6.18
     ],
     [
      196.977,
-     -4.927
+     -6.227
     ],
     [
      197.024,
-     -3.728
+     -5.028
     ],
     [
      195.825,
-     -3.681
+     -4.981
     ]
    ],
    "curb_h": 0.08,
    "curb_w": 0.08,
-   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. ray-cast of the planter corners in photo 061621646 (pose from the facade rectification): local (19.2-19.8, -3.2..-4.2) at the ramp's low end | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): 1.2 m square pits (6 herringbone paver lengths a side, 24 x 22-23 faux-brick units), edging ~0.08 m above the pavers | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07: young narrow tree ~5.5 m (stays clear of the ramp run rail)",
    "confidence": "medium",
    "slot": "M_Tile_Brick_Red"
   },
@@ -288,14 +288,14 @@
    "name": "JuniperE_Ramp",
    "pos": [
     196.401,
-    -4.304
+    -5.604
    ],
    "height": 5.5,
    "crown_d": 2.2,
    "trunk_d": 0.25,
    "crown_base": 0.8,
    "shape": "cone",
-   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07 owner msg 119 + photos CE013/CE014/CE017/CE031/CE032: the row stands ~1 m in front of the C light-well covers / basement canopy (1.3 m closer to C), young narrow trees ~5.5 m",
+   "evidence": "P1: trunk base projected from C_entr c2 f00180 (9 m, +-0.5): (193.3, -9.1), shift +0.7/+1.0 m; the same projection method puts f00132 on TreeAN_6 within 0.2 m. tall juniper in that planter (061621646, 061428331); height ~ 2nd-floor sill level x2, estimated | 2026-09-27: moved -2.0 m in y: trunk bases ray-cut on the plaza through solved cameras of 070647586 (f00023, f00090, f00128) put the trees at y -9.3 (W) / -10.2 (E) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-07: young narrow tree ~5.5 m (stays clear of the ramp run rail)",
    "confidence": "medium"
   },
   {
