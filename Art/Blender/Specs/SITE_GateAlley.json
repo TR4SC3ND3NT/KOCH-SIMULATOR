@@ -3592,9 +3592,9 @@
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "ue_asset": "manhole_cover",
-   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner | 2026-10-04 re-verification X2-02: the round manhole is on the plaza W of the planter, not on the lower landing | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): 0.42 m off the moved nosing W of its NW corner, below A249's frame (A249 shows plain paving 2 m in front of the camera)",
+   "evidence": "070021774_s2: round manhole cover beside the red-kerbed planter at the A_S corner | 2026-10-04 re-verification X2-02: the round manhole is on the plaza W of the planter, not on the lower landing | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): 0.42 m off the moved nosing W of its NW corner, below A249's frame (A249 shows plain paving 2 m in front of the camera) | 2026-10-07 z-fight QA: top 9 mm over the paving (2 mm flickered)",
    "confidence": "medium",
-   "z0": 6.735
+   "z0": 6.742
   },
   {
    "type": "tree",
