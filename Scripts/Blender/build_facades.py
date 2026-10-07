@@ -970,6 +970,8 @@ class Building:
                 top = [(w0, c["z_wall"])] + ([(wk, c["z_wall"])] if wk > w0 else []) + [(c["w1"], c["z_out"])]
                 prof = [(w0, zb)] + [(w, z - ct) for w, z in top] + [(c["w1"], zb)]
                 prism_profile(body, fr, prof, c["u0"], c["u1"])
+                if "end_down" in c:   # end face carried down to the plaza as a 6 cm skin over what bridges below it
+                    box(body, fr, c["u0"], c["u1"], c["w1"] - 0.06, c["w1"], c["end_down"], zb + 0.002)
                 capb = [(w, z - ct) for w, z in top[:-1]] + [(c["w1"] + ov, c["z_out"] - ct - ov * sl)]
                 capt = [(c["w1"] + ov, c["z_out"] - ov * sl)] + top[-2::-1]
                 prism_profile(cap, fr, capb + capt, c["u0"] - ov, c["u1"] + ov)
