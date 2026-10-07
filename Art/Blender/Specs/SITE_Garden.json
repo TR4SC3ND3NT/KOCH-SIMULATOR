@@ -5790,7 +5790,7 @@
    "type": "bench",
    "name": "HallBed_Bench_4",
    "pos": [
-    143.031,
+    141.731,
     -12.268
    ],
    "dir_deg": 86.1,
@@ -5799,7 +5799,7 @@
    "seat_h": 0.45,
    "back_h": 0.85,
    "ue_asset": "bench_slats_steel_frame",
-   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013)",
+   "evidence": "owner 2026-09-29 (screenshots 54/56/57/59-61) + Google z20 wall shadows / crowns + videos 081946180 t0-2.4, 082013462 t22 (hall_bed.py) | 2026-10-02 garden photo diff (GD-6): slatted benches on a black steel frame, ~2.2 m (front feet 1.91 m apart, A015/A013) | 2026-10-07: clear of the new G2_N arch",
    "confidence": "low"
   },
   {

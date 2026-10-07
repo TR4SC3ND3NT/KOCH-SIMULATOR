@@ -731,12 +731,12 @@
      "u0": 3.75,
      "u1": 4.25,
      "w0": 0.0,
-     "w_knee": 0.6,
+     "w_knee": 1.56,
      "w1": 2.5,
      "z_wall": 0.55,
      "z_out": 0.05,
      "confidence": "medium",
-     "evidence": "[B] owner 2026-09-28 + 070647586 t6.8/t7.4: brick-tile cheek with a granite cap on the stair's east side too, like the west one but from the tower/east-wing face (base 1.3 m longer at the wall, 0.3 m longer at the plaza); top kept 6 cm under the landing so the steel ramp deck starting over it (Top/Run) stays clear | [B] owner 2026-09-28 (photo 14-26-14 #1): top level with the west cheek (+0.55) at the wall, sloping out to 2.5 m where the ramp deck passes in front of it"
+     "evidence": "[B] owner 2026-09-28 + 070647586 t6.8/t7.4: brick-tile cheek with a granite cap on the stair's east side too, like the west one but from the tower/east-wing face (base 1.3 m longer at the wall, 0.3 m longer at the plaza); top kept 6 cm under the landing so the steel ramp deck starting over it (Top/Run) stays clear | [B] owner 2026-09-28 (photo 14-26-14 #1): top level with the west cheek (+0.55) at the wall, sloping out to 2.5 m where the ramp deck passes in front of it | 2026-10-07 owner msg 119 + CE001-CE003: the cap stays level along the whole top landing (1.56) and only then falls with the flight (was falling from 0.6 m, mid-landing)"
     }
    ],
    "nosing": 0.02,

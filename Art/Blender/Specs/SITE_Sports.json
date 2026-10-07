@@ -3979,11 +3979,11 @@
      70.18
     ],
     [
-     161.925,
+     161.985,
      70.17
     ],
     [
-     162.039,
+     162.1,
      73.3
     ],
     [
@@ -4001,7 +4001,7 @@
    "material": "stone",
    "slot": "M_Concrete_Precast",
    "confidence": "low",
-   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair | 2026-10-04 re-verification X3-07: follows the longer flight | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: N end ~0.38 above the yard (was 0.08)"
+   "evidence": "2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): W cheek: concrete wall thk 0.25 with a sloped top round the raised lawn bed W of the stair | 2026-10-04 re-verification X3-07: follows the longer flight | 2026-10-07 owner msg 118 (viewport screenshot of the stair) + video 102 t0.2-1.8 s / t4.2-5.2 s: N end ~0.38 above the yard (was 0.08) | 2026-10-07 seam QA: E face onto the stair edge (was a 3-5 cm slit to the ground)"
   },
   {
    "type": "roof_plane",
