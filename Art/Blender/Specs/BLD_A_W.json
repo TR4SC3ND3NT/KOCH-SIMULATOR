@@ -243,26 +243,6 @@
    "evidence": "A_W gallery zone 2026-09-25: northernmost west window (012429784 t1): plinth 7 courses (1.02 m) to the surround, glass ~1.15 high, 2 panes",
    "confidence": "low"
   },
-  "DD": {
-   "w": 1.35,
-   "h": 2.48,
-   "mullions": [
-    0.5
-   ],
-   "transoms": [
-    0.79
-   ],
-   "reveal": 0.12,
-   "surround": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "surround_proj": 0.0,
-   "evidence": "glazed double door with transom ('Dining Hall' plate, 2GIS 2025-05 photo): dark open doorway with a chair beside it in the bay north of the brick pier (070309303 t21 and t28) | 2026-10-03 photo pass R3-08: 1.35 x 2.48 incl. the transom (leaves 1.96)",
-   "confidence": "low"
-  },
   "NH": {
    "w": 1.07,
    "h": 0.46,
@@ -325,16 +305,6 @@
      "confidence": "high (topology), medium (u)"
     },
     {
-     "type": "DD",
-     "u": [
-      47.95
-     ],
-     "sills": [
-      0.02
-     ],
-     "evidence": "glazed grey double door between the last post and the brick pier: post | narrow window | double door | narrow window | narrow window | pier (012327726 t4-5 s)"
-    },
-    {
      "type": "GNE",
      "u": [
       1.6
@@ -384,7 +354,30 @@
     }
    ],
    "evidence": "rect of pano intro2.jpg (2020, yaw 80, known focal): from the south end windows at 8.68/15.3/20.2/25.8/29.9 m, door 2.45-3.65 m, gallery wall columns every 5.9 m from 5.97 m; 2026 frames 070309303 f17-f36 same layout, repainted beige | 2026-09-26: the south door moved to the door-bay front (attachment DoorBay_S); the small high 'UW' window is on the A_N wall above the strip roof (A_N owner) | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): north half is narrow windows + 2 doors, not one G per post",
-   "confidence": "medium"
+   "confidence": "medium",
+   "entrances": [
+    {
+     "u0": 47.275,
+     "u1": 48.625,
+     "z0": 0.02,
+     "z1": 2.5,
+     "bays": [
+      [
+       0.675,
+       "door"
+      ],
+      [
+       0.675,
+       "door"
+      ]
+     ],
+     "transom_z": 1.98,
+     "reveal": 0.12,
+     "slot": "M_Alu_Grey",
+     "evidence": "glazed grey double door between the last post and the brick pier: post | narrow window | double door | narrow window | narrow window | pier (012327726 t4-5 s) | window type DD: glazed double door with transom ('Dining Hall' plate, 2GIS 2025-05 photo): dark open doorway with a chair beside it in the bay north of the brick pier (070309303 t21 and t28) | 2026-10-03 photo pass R3-08: 1.35 x 2.48 incl. the transom (leaves 1.96) | 2026-10-08 owner msg 121/124 ('где дверь в столовку'): the canteen double door was built as a fixed glazed window unit and read as a blank white panel in the viewport; now an entrance with two grey aluminium glazed leaves under a transom (leaves 1.96, 1.35 x 2.48 overall)",
+     "confidence": "low"
+    }
+   ]
   },
   {
    "edge": 2,

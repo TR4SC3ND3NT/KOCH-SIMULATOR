@@ -161,7 +161,7 @@
      "type": "N1",
      "u": [
       3.48,
-      9.63
+      6.7
      ],
      "rows": [
       "F1N"
@@ -171,7 +171,7 @@
      "type": "N",
      "u": [
       3.48,
-      9.63
+      6.7
      ],
      "rows": [
       "F2"
@@ -200,7 +200,7 @@
      "status": "assumed mirror (west half not in the clip)"
     }
    ],
-   "evidence": "rect of 081158036 f0.3 (+ SfM plane from the Block C model): from the NE corner 1.14 and 3.2 storeys; sills 1.0 storey apart; 3rd floor blank; red fire ladder at u 8.8-9.5 to a roof hatch; storey 266 px | 2026-10-03 photo pass batch 2 Q2-19: F1 windows 1.03 high, sill FFL+1.48 (+-0.12)",
+   "evidence": "rect of 081158036 f0.3 (+ SfM plane from the Block C model): from the NE corner 1.14 and 3.2 storeys; sills 1.0 storey apart; 3rd floor blank; red fire ladder at u 8.8-9.5 to a roof hatch; storey 266 px | 2026-10-03 photo pass batch 2 Q2-19: F1 windows 1.03 high, sill FFL+1.48 (+-0.12) | 2026-10-08 audit: the window column under the fire ladder moved with it (u 9.63 -> 6.70; CE011 shows the ladder over that column)",
    "confidence": "medium"
   },
   {
@@ -277,14 +277,14 @@
    "edge": 2,
    "items": [
     [
-     10.34,
+     7.41,
      -0.06,
      2.0,
      1.04,
      0.8
     ],
     [
-     11.73,
+     8.8,
      -0.06,
      0.78,
      1.69,
@@ -292,7 +292,7 @@
     ]
    ],
    "slot": "M_Steel_Galv",
-   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): galvanised air-handling unit on the paving against the plinth + duct into the wall; position along the wall estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): AHU box at u 9.55-12.15 just west of the fire ladder, ~0.45 m up on legs (it overlapped BenchAN_1) | 2026-10-03 photo pass batch 2 Q2-20: AHU box u 9.34-11.34, vertical duct with elbow to FFL+1.63",
+   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): galvanised air-handling unit on the paving against the plinth + duct into the wall; position along the wall estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): AHU box at u 9.55-12.15 just west of the fire ladder, ~0.45 m up on legs (it overlapped BenchAN_1) | 2026-10-03 photo pass batch 2 Q2-20: AHU box u 9.34-11.34, vertical duct with elbow to FFL+1.63 | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)",
    "confidence": "medium"
   },
   {
@@ -301,224 +301,224 @@
    "edge": 2,
    "items": [
     [
-     8.85,
+     5.92,
      0.3,
      0.04,
      9.12,
      0.16
     ],
     [
-     9.45,
+     6.52,
      0.3,
      0.04,
      9.12,
      0.16
     ],
     [
-     9.15,
+     6.22,
      0.45,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      0.75,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      1.05,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      1.35,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      1.65,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      1.95,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      2.25,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      2.55,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      2.85,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      3.15,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      3.45,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      3.75,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      4.05,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      4.35,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      4.65,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      4.95,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      5.25,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      5.55,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      5.85,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      6.15,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      6.45,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      6.75,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      7.05,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      7.35,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      7.65,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      7.95,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      8.25,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      8.55,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      8.85,
      0.6,
      0.025,
      0.16
     ],
     [
-     9.15,
+     6.22,
      9.15,
      0.6,
      0.025,
@@ -526,7 +526,7 @@
     ]
    ],
    "slot": "M_Steel_Paint_Maroon",
-   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red steel roof-access ladder from ~1.0 m above the FFL to the eave, left of the AHU; position estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): ladder at u 8.85/9.45 (the facade note's 'u 8.8-9.5'), over the barred F1 window, starting ~0.6 m above the paving | 2026-10-03 photo pass batch 2 Q2-20: ladder from 0.30 above the FFL to over the gutter (9.42)",
+   "evidence": "2026-09-30_C_exterior 154-157 (north end of A across the C plaza): red steel roof-access ladder from ~1.0 m above the FFL to the eave, left of the AHU; position estimated | 2026-10-02 photo diff (agent; 156 single-view solve, 167, 157, 061641424, 061638726, 012526070): ladder at u 8.85/9.45 (the facade note's 'u 8.8-9.5'), over the barred F1 window, starting ~0.6 m above the paving | 2026-10-03 photo pass batch 2 Q2-20: ladder from 0.30 above the FFL to over the gutter (9.42) | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)",
    "confidence": "low"
   },
   {
@@ -536,7 +536,7 @@
    "edge": 2,
    "items": [
     [
-     13.7,
+     10.77,
      0.56,
      0.95,
      0.8,
@@ -545,7 +545,7 @@
    ],
    "slot": "M_Plastic_White",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-20: AC outdoor unit on the A_N north wall (x +-0.3)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: AC outdoor unit on the A_N north wall (x +-0.3) | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)"
   },
   {
    "type": "wall_boxes",
@@ -553,7 +553,7 @@
    "edge": 2,
    "items": [
     [
-     13.05,
+     10.12,
      0.9,
      0.2,
      0.3,
@@ -562,14 +562,14 @@
    ],
    "slot": "M_Plastic_Grey",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-20: isolator box by the AC unit"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: isolator box by the AC unit | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)"
   },
   {
    "type": "downpipe",
    "name": "DP_North",
    "edge": 2,
    "u": [
-    12.585
+    9.655
    ],
    "z0": 1.63,
    "z1": 9.3,
@@ -579,7 +579,7 @@
     "du": 0.285
    },
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree | 2026-10-04 re-verification X1-04: white upper leg u 12.585, maroon lower leg u 12.87; jog height hidden (mid of 6.8-11.5 abs) | 2026-10-04 re-verification round 2 Y1-03: white down to abs 7.1; maroon base leg separate",
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: downpipe, jog height hidden by a tree | 2026-10-04 re-verification X1-04: white upper leg u 12.585, maroon lower leg u 12.87; jog height hidden (mid of 6.8-11.5 abs) | 2026-10-04 re-verification round 2 Y1-03: white down to abs 7.1; maroon base leg separate | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)",
    "slot": "M_PVC_Gutter_White",
    "lower_slot": "M_PVC_Gutter_White"
   },
@@ -589,7 +589,7 @@
    "edge": 2,
    "items": [
     [
-     9.15,
+     6.22,
      9.0,
      0.6,
      0.4,
@@ -598,21 +598,21 @@
    ],
    "slot": "M_Steel_Paint_Dark",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-20: dark roof-hatch opening in the fascia between the ladder rails"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-20: dark roof-hatch opening in the fascia between the ladder rails | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)"
   },
   {
    "type": "downpipe",
    "name": "DP_North_Base",
    "edge": 2,
    "u": [
-    12.87
+    9.94
    ],
    "z0": 0.29,
    "z1": 1.63,
    "d": 0.1,
    "slot": "M_Paint_Maroon",
    "confidence": "medium",
-   "evidence": "2026-10-04 re-verification round 2 Y1-03: maroon foot of DP_North below abs 7.1"
+   "evidence": "2026-10-04 re-verification round 2 Y1-03: maroon foot of DP_North below abs 7.1 | 2026-10-08 owner msg 124 audit (CE011 frontal, CE013, CC005/CC006, CE014, video 061707849 t11): the ladder stands at the E end of the 3rd bench from the NE corner (bench in front of the AHU), the big juniper W of it, then a bench with the AC over it, the bin and the sapling pit; the row is corner-anchored (last bench 0.4 m off the corner, young tree beyond it), so ladder/hatch/AHU/AC/downpipe and the window column under the ladder move one pitch east (u -2.93)"
   }
  ],
  "ffl_z": 5.47,
