@@ -6218,8 +6218,11 @@
    ],
    "curb_w": 0.15,
    "curb_h": 0.12,
-   "evidence": "Google 2026 lawn bed u 0..44.4, v 27.0..33.3 behind a 1.6 m paved path along the N fence (drone 2022 d_07/d_19: grey path, lawn with two rows of young blue spruces)",
-   "confidence": "medium"
+   "evidence": "Google 2026 lawn bed u 0..44.4, v 27.0..33.3 behind a 1.6 m paved path along the N fence (drone 2022 d_07/d_19: grey path, lawn with two rows of young blue spruces) | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): bed ends at the steps (was 5 cm into the treads)",
+   "confidence": "medium",
+   "cut_by": [
+    "NorthPath_Steps"
+   ]
   },
   {
    "type": "tree",

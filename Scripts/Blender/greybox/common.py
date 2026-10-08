@@ -49,12 +49,19 @@ class Terrain:
     @property
     def field(self):
         """Solved once per process for the current specs (the pads change while zones are edited)."""
-        from .terrain_field import TerrainField, all_pads
-        pads = all_pads()
-        key = (json.dumps(pads, sort_keys=True), tuple(self.c), json.dumps(self.grid, sort_keys=True), self.influence)
+        from .terrain_field import TerrainField, all_pads, specs_stamp
+        stamp = specs_stamp()
+        hit = _FIELD_CACHE.get("stamp")
+        if hit is not None and hit[0] == stamp:   # specs unchanged on disk: no re-parse (was per ground query)
+            pads_key = hit[1]
+        else:
+            pads_key = json.dumps(all_pads(), sort_keys=True)
+            _FIELD_CACHE["stamp"] = (stamp, pads_key)
+        key = (pads_key, tuple(self.c), json.dumps(self.grid, sort_keys=True), self.influence)
         if key not in _FIELD_CACHE:
-            _FIELD_CACHE.clear()
-            _FIELD_CACHE[key] = TerrainField(self.dem, self.grid, pads, screen_m=self.influence)
+            for k in [k for k in _FIELD_CACHE if k != "stamp"]:
+                del _FIELD_CACHE[k]
+            _FIELD_CACHE[key] = TerrainField(self.dem, self.grid, json.loads(pads_key), screen_m=self.influence)
         return _FIELD_CACHE[key]
 
     def base(self, x, y, side=None):

@@ -19,6 +19,17 @@ import numpy as np
 SPECS = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", "Art", "Blender", "Specs"))
 
 
+def specs_stamp(specs=SPECS):
+    """(name, mtime, size) of every spec: a cheap cache key for all_pads (parsing the specs per ground query made a
+    full build spend most of its time in json.load)."""
+    out = []
+    for fn in sorted(os.listdir(specs)) if os.path.isdir(specs) else []:
+        if fn.endswith(".json"):
+            st = os.stat(os.path.join(specs, fn))
+            out.append((fn, st.st_mtime_ns, st.st_size))
+    return tuple(out)
+
+
 def all_pads(specs=SPECS):
     """terrain_pads of every spec in file-name order (the order they have always been applied in)."""
     pads = []

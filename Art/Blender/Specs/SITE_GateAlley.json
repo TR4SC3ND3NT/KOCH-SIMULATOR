@@ -558,8 +558,13 @@
    ],
    "thk": 1.95,
    "material": "hedge",
-   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09 | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge follows the moved stair's NW flank",
-   "confidence": "medium"
+   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09 | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge follows the moved stair's NW flank | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): bed ends at the flanks of both stairs and the top landing (was 5-40 cm into the treads)",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair",
+    "PavilionStair_TopLanding",
+    "SouthStair"
+   ]
   },
   {
    "type": "tree",
@@ -606,8 +611,11 @@
    ],
    "thk": 1.38,
    "material": "brick",
-   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping | 2026-10-03 photo batch 2 Q0-09: walkway-side wall ~0.9 m high | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S end at the stair foot",
-   "confidence": "medium"
+   "evidence": "red rock-face granite retaining wall of the south bed along the walkway, ~0.5 m (people's knee height, 070309303 f04-f06), pink polished coping | 2026-10-03 photo batch 2 Q0-09: walkway-side wall ~0.9 m high | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S end at the stair foot | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): bed wall ends at the fan stair flank (was 15 cm into the treads)",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "roof_plane",
@@ -638,8 +646,11 @@
    ],
    "thk": 0.06,
    "material": "stone",
-   "evidence": "polished pink granite coping (070309303 f04/f05)",
-   "confidence": "medium"
+   "evidence": "polished pink granite coping (070309303 f04/f05) | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): coping ends at the fan stair flank",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "roof_plane",
@@ -670,8 +681,11 @@
    ],
    "thk": 2.03,
    "material": "brick",
-   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole | 2026-10-05 owner msg 104: S end at the moved stair's NW top corner",
-   "confidence": "medium"
+   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole | 2026-10-05 owner msg 104: S end at the moved stair's NW top corner | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): curb ends at the south stair flank (was 5 cm into the treads)",
+   "confidence": "medium",
+   "cut_by": [
+    "SouthStair"
+   ]
   },
   {
    "type": "stairs_run",
@@ -881,8 +895,11 @@
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m | 2026-10-07 owner msg 115 (2 viewport screenshots): strip 1.3 m narrower on the A side (owner line), walkway along A_S wider",
-   "confidence": "medium"
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m | 2026-10-07 owner msg 115 (2 viewport screenshots): strip 1.3 m narrower on the A side (owner line), walkway along A_S wider | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): the fan stair's lower treads run past the lawn's S end (12-67 cm deep): the lawn ends at the stair flank",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "roof_plane",
@@ -913,8 +930,11 @@
    ],
    "thk": 1.932,
    "material": "stone",
-   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23) | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west with the lawn edge",
-   "confidence": "medium"
+   "evidence": "pink granite coping along the bank top (070309303 f55/f56, f71; 012327726 t22-23) | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west with the lawn edge | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): coping ends at the fan stair flank",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "roof_plane",
@@ -945,8 +965,11 @@
    ],
    "thk": 1.942,
    "material": "brick",
-   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3) | 2026-10-05 owner msg 107 (viewport screenshots): follows the straightened lawn-strip edge",
-   "confidence": "medium"
+   "evidence": "red concrete edging along the path side of the lawn strip (070309303 f19-f75; sweep path/lawn step at x -3.3) | 2026-10-05 owner msg 107 (viewport screenshots): follows the straightened lawn-strip edge | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): curb ends at the fan stair flank",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "roof_plane",
@@ -1041,8 +1064,11 @@
    ],
    "thk": 1.932,
    "material": "hedge",
-   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44) | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west with the lawn edge",
-   "confidence": "medium"
+   "evidence": "steep grass bank from the bank-top coping down to the walkway curb (sweep: ~0.85 m over 0.75 m; 070309303 f24-f44) | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west with the lawn edge | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): the bank ends at the fan stair flank (was 30 cm into the lower treads)",
+   "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "wall",
@@ -1063,7 +1089,10 @@
    "material": "brick",
    "slot": "M_Block_RockFace_Red",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass R3-07: the walkway's W side is a vertical retaining wall (red rock-face block, 4-5 courses + 1 red brick course at the foot, pink granite coping 0.40 x 0.05), 1.0 above the walkway, from the side-stair S bed wall to the A_S west-porch stair bed wall; replaces Curb_Walkway_S; line 0.15 W of the old curb so its E face stays on the walkway edge | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west: walkway along A_S ~1.95 m clear (owner: the passage along A is wider)"
+   "evidence": "2026-10-03 photo pass R3-07: the walkway's W side is a vertical retaining wall (red rock-face block, 4-5 courses + 1 red brick course at the foot, pink granite coping 0.40 x 0.05), 1.0 above the walkway, from the side-stair S bed wall to the A_S west-porch stair bed wall; replaces Curb_Walkway_S; line 0.15 W of the old curb so its E face stays on the walkway edge | 2026-10-07 owner msg 115 (2 viewport screenshots): shifted 1.3 m west: walkway along A_S ~1.95 m clear (owner: the passage along A is wider) | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): the walkway retaining wall ends at the fan stair flank (it stood 14 cm into the treads)",
+   "cut_by": [
+    "PavilionStair"
+   ]
   },
   {
    "type": "roof_plane",
@@ -1964,196 +1993,6 @@
    "thk": 0.15,
    "material": "stone",
    "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each | 2026-10-05 owner msg 105 (A259-A275 sent again: A_S south side from the street sidewalk; approximate-camera renders of w9): segments continue at the same pitch E to the lane fence (A271, A275: fluted parapet left of the lane gate); were missing E of x 180",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_10",
-   "line": [
-    [
-     179.973,
-     -96.707
-    ],
-    [
-     180.953,
-     -96.776
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_11",
-   "line": [
-    [
-     181.352,
-     -96.804
-    ],
-    [
-     183.347,
-     -96.945
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_12",
-   "line": [
-    [
-     183.376,
-     -96.947
-    ],
-    [
-     185.371,
-     -97.088
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_13",
-   "line": [
-    [
-     185.401,
-     -97.09
-    ],
-    [
-     187.396,
-     -97.231
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_14",
-   "line": [
-    [
-     187.426,
-     -97.233
-    ],
-    [
-     189.421,
-     -97.374
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_15",
-   "line": [
-    [
-     189.451,
-     -97.376
-    ],
-    [
-     190.431,
-     -97.445
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_16",
-   "line": [
-    [
-     190.83,
-     -97.473
-    ],
-    [
-     192.826,
-     -97.614
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_17",
-   "line": [
-    [
-     192.855,
-     -97.616
-    ],
-    [
-     194.85,
-     -97.757
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_18",
-   "line": [
-    [
-     194.88,
-     -97.759
-    ],
-    [
-     196.875,
-     -97.9
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
-   "confidence": "medium"
-  },
-  {
-   "type": "wall",
-   "name": "PathParapet_S_19",
-   "line": [
-    [
-     196.905,
-     -97.902
-    ],
-    [
-     198.231,
-     -97.996
-    ]
-   ],
-   "height": 0.4,
-   "thk": 0.15,
-   "material": "stone",
-   "evidence": "fluted precast concrete parapet segments (~2.0 m, stepped at joints) on the north edge of the public sidewalk from the booth's NE corner east to the lane (065934318 t2-t17; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): continuous up to the lane fence); line ~2.3 m north of the gate line, estimated | 2026-10-03 photo/video pass R3-14/V2-04: fluted ~2 m segments, 0.4 m gaps with a lamp pole in each",
    "confidence": "medium"
   },
   {

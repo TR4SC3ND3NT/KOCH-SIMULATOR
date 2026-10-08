@@ -119,6 +119,10 @@ def main():
     from greybox.materials import assign_ground_surfaces, assign_name_slots
     print("material slots by name:", assign_name_slots(bpy.data.objects))
     print("ground surfaces:", assign_ground_surfaces(bpy.data.objects.get("TER_Ground"), SPECS))
+    if os.environ.get("KOCH_PRE_SETTLE_OUT"):   # debug: a copy of the scene before the plan cuts and settle
+        bpy.ops.wm.save_as_mainfile(filepath=os.environ["KOCH_PRE_SETTLE_OUT"], copy=True, compress=True)
+    from greybox.conflicts import run as plan_cuts   # spec "cut_by": beds/lawns/walls end at the stair flanks
+    print("plan cuts:", plan_cuts(SPECS))
     from greybox.settle import run as settle   # terrain under walk tops, props onto the real surface
     print("settle:", settle())
     from greybox.finalize import run as finalize
