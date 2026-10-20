@@ -49,7 +49,7 @@ def support(x, y, z_top=90.0):
         hit, loc, n, _i, ob, _m = sc.ray_cast(dg, p, DOWN, distance=200.0)
         if not hit:
             return None
-        if not PASS.search(ob.name):
+        if not PASS.search(ob.name) or ("Pergola" in ob.name and WALK.search(ob.name.split("Pergola")[-1])):   # its landings/stairs are walked on
             return loc.z, ob.name, n.z
         p = loc + DOWN * 1e-4
     return None

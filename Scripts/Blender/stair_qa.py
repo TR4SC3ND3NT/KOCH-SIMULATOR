@@ -1,9 +1,11 @@
 # Outdoor stair conflict QA (R1, owner msg 127): every stair-family object (steps, flights, landings, cheeks, ramps, rails,
-# nosings) outside the interiors is tested against every other mesh whose bbox it touches. Designed contacts (a rail
+# nosings; with KOCH_QA_ALL=1 every outdoor site object, msg 135) outside the interiors is tested against every other
+# mesh whose bbox it touches. Designed contacts (a rail
 # post on a tread, a cheek against a wall) are ignored by shrinking both meshes 6 mm along the vertex normals first; what
 # still intersects is a real interpenetration. Read-only, never saves.
 # Run: blender -b FILE.blend -P Scripts/Blender/stair_qa.py -- OUT.json
 import json
+import os
 import re
 import sys
 
@@ -13,7 +15,8 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
 OUT = sys.argv[sys.argv.index("--") + 1] if "--" in sys.argv else None
-STAIR = re.compile(r"(Stair|Step|Landing|Cheek|Ramp|Rail|Nosing|Riser|Tread|Flight|Balustrade)", re.I)
+STAIR = re.compile(r"^GBS_" if os.environ.get("KOCH_QA_ALL") else
+                   r"(Stair|Step|Landing|Cheek|Ramp|Rail|Nosing|Riser|Tread|Flight|Balustrade)", re.I)
 SKIP = re.compile(r"(^TER_|^CTX_|^REF_|^CAM_|INT_C|_Int_|Interior)")
 SHRINK = 0.006   # m: contacts up to this deep are designed (posts on treads, cheeks on walls)
 DEEP = 0.03      # m: a vertex more than this inside another solid is a conflict to fix (embeds below are seams)

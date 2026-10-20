@@ -1079,8 +1079,8 @@
    "type": "tree",
    "name": "GT_63_spruce",
    "pos": [
-    147.2,
-    -14.8
+    147.47,
+    -15.02
    ],
    "height": 8.5,
    "crown_d": 3.2,
@@ -1089,7 +1089,7 @@
    "shape": "cone",
    "ue_asset": "tree",
    "species": "spruce",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
+   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013 | 2026-10-10 owner msg 135 (collision QA, stair_qa.py KOCH_QA_ALL): crown stood 0.31 m into the hedge arch G2_N: moved 0.35 m away from it",
    "confidence": "medium"
   },
   {

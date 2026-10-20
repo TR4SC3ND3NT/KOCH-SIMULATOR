@@ -77500,9 +77500,9 @@
     ]
    ],
    "z0": 22.0,
-   "z1": 22.03,
+   "z1": 22.1,
    "material": "white",
-   "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate",
+   "evidence": "2026-10-01 reference classroom plan v6: F5 offices inside the roof, layout estimate | 2026-10-20 owner msg 141 (thin_qa): 0.10 thick upward into the attic (seen underside unchanged at z0); Lumen leaks through sheets < 10 cm",
    "confidence": "low",
    "clip_roof": "BLD_C"
   },

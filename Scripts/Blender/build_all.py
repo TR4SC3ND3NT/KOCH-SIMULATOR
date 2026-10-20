@@ -1,5 +1,5 @@
 # Rebuilds the whole campus greybox in order: phase-1 terrain/massing, every building spec (Specs/BLD_*.json),
-# every site spec (Specs/SITE_*.json), the clean-up pass (greybox/finalize.py), then validates (unique dot-free names, closed manifold meshes). Used by R1.
+# every site spec (Specs/SITE_*.json), the clean-up pass (greybox/finalize.py), the z-fight pass (greybox/zfix.py), then validates (unique dot-free names, closed manifold meshes). Used by R1.
 # Run: blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/build_all.py   (saves the file)
 #  or, without the LFS .blend: blender -b -P Scripts/Blender/build_all.py   (builds from an empty scene and saves to
 #  Art/Blender/KOCH_Campus_Greybox.blend, or to $KOCH_BLEND_OUT). Everything comes from Specs/, Data/ and these scripts.
@@ -132,6 +132,8 @@ def main():
     moved = [n for n, c in before.items() if n in after and (after[n] - c).length > 0.01]
     if moved:   # finalize must never move geometry (pivots/mirror fixes keep the world shape)
         bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"finalize moved {len(moved)} objects: {moved[:5]}")
+    from greybox.zfix import run as zfix   # coplanar same-facing overlaps: the larger plane 2 mm back
+    print("zfix:", zfix())
     ok = validate()
     fails = bpy.app.driver_namespace.get("koch_build_failures", [])
     if fails:   # a failed building/element must not be saved silently (a missing Block C was committed once)

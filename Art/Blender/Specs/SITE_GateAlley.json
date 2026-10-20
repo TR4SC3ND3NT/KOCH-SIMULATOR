@@ -558,12 +558,13 @@
    ],
    "thk": 1.95,
    "material": "hedge",
-   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09 | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge follows the moved stair's NW flank | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): bed ends at the flanks of both stairs and the top landing (was 5-40 cm into the treads)",
+   "evidence": "raised bed between the south stair and the pavilion stair: lawn, one thuja, hydrangeas (070309303 f04-f06); soil slopes from the curb (~0.25 below the plaza) down to the pink coping ~0.5 above the walkway (f04/f05, sweep 5.6-6.4 across it); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo batch 2 Q0-09 | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge follows the moved stair's NW flank | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): bed ends at the flanks of both stairs and the top landing (was 5-40 cm into the treads) | 2026-10-10 owner msg 135 (collision QA, stair_qa.py KOCH_QA_ALL): ends at the porch pier base (was 26 cm into it)",
    "confidence": "medium",
    "cut_by": [
     "PavilionStair",
     "PavilionStair_TopLanding",
-    "SouthStair"
+    "SouthStair",
+    "GBF_BLD_A_S_PorchPierBase_E3_13"
    ]
   },
   {
@@ -681,10 +682,11 @@
    ],
    "thk": 2.03,
    "material": "brick",
-   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole | 2026-10-05 owner msg 104: S end at the moved stair's NW top corner | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): curb ends at the south stair flank (was 5 cm into the treads)",
+   "evidence": "red concrete edging of the south bed, straight from the manhole to the pavilion's south pier (070309303 f04) | 2026-10-04 re-verification X2-02: S end stops at the manhole | 2026-10-05 owner msg 104: S end at the moved stair's NW top corner | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): curb ends at the south stair flank (was 5 cm into the treads) | 2026-10-10 owner msg 135 (collision QA, stair_qa.py KOCH_QA_ALL): ends at the porch pier base (was 26 cm into it)",
    "confidence": "medium",
    "cut_by": [
-    "SouthStair"
+    "SouthStair",
+    "GBF_BLD_A_S_PorchPierBase_E3_13"
    ]
   },
   {
@@ -2913,8 +2915,8 @@
    "crown_d": 3.0,
    "shape": "cone",
    "trunk_d": 0.22,
-   "crown_base": 1.7,
-   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb | 2026-09-28 stair move (owner 64/65) collision fix: planted in the stair's west raised bed (soil top 6.78) | 2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): it is one of the loose multi-stem junipers of the B NE terrace (bare trunk to ~1.7 m, A204/A205), not a dense 8 m conifer",
+   "crown_base": 1.8,
+   "evidence": "tall conifers at B's NE end of the bed (070309303 f44-f53, trunk rays in f51) | owner 2026-09-28 (screenshot 56): bed narrowed 0.95 m, conifers follow the curb | 2026-09-28 stair move (owner 64/65) collision fix: planted in the stair's west raised bed (soil top 6.78) | 2026-10-05 owner msg 106 (A203-A206, A217/A218, A108-A110 sent again; model renders compared from the photo spots): it is one of the loose multi-stem junipers of the B NE terrace (bare trunk to ~1.7 m, A204/A205), not a dense 8 m conifer | 2026-10-10 owner msg 135 (collision QA, stair_qa.py KOCH_QA_ALL): crown base 1.7 -> 1.8: the fire board and its pole (top 8.5) stood in the crown",
    "confidence": "low",
    "z": 6.78,
    "ue_asset": "juniper_tree_multistem"

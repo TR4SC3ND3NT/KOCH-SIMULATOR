@@ -918,7 +918,8 @@
    },
    "status": "context",
    "evidence": [
-    "OSM {\"building\": \"yes\"}"
+    "OSM {\"building\": \"yes\"}",
+    "2026-10-10 owner msg 135 (collision QA: east-belt trees and the east boundary fence stood inside it): N edge 2.2 m S to the roof edge on the Bing ortho (y -81.3 at x 212); OSM outline was off"
    ],
    "notes": "Backdrop massing; storeys guessed where OSM has none.",
    "id": "CTX_169915330",
@@ -932,12 +933,12 @@
      -94.933
     ],
     [
-     258.663,
-     -81.946
+     258.528,
+     -84.146
     ],
     [
-     209.069,
-     -78.893
+     208.934,
+     -81.093
     ]
    ]
   },

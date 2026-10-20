@@ -59,6 +59,39 @@ def _bvh(objs):
     return t
 
 
+def _bvh_owned(objs):
+    """World BVH of objs plus, per BVH face, (object index, material name): who owns the top a ray hits."""
+    bm = bmesh.new()
+    owner, mats = [], []
+    dg = bpy.context.evaluated_depsgraph_get()
+    for k, o in enumerate(objs):
+        me = o.evaluated_get(dg).to_mesh()
+        b2 = bmesh.new()
+        b2.from_mesh(me)
+        b2.transform(o.matrix_world)
+        names = [m.name if m else "" for m in me.materials]
+        for f in b2.faces:
+            owner.append(k)
+            mats.append(names[f.material_index] if f.material_index < len(names) else "")
+        me2 = bpy.data.meshes.new("_tmp_settle")
+        b2.to_mesh(me2)
+        b2.free()
+        bm.from_mesh(me2)
+        bpy.data.meshes.remove(me2)
+        o.evaluated_get(dg).to_mesh_clear()
+    t = BVHTree.FromBMesh(bm)
+    bm.free()
+    return t, owner, mats
+
+
+def _bakeable(o):
+    """Ground-level paving that becomes part of TER_Ground (step 1): paths, plates, paint; never stairs, ramps,
+    landings, decks, floors, grates or soil."""
+    if any(w in o.name for w in FIXED_WORDS) or not o.name.startswith("GBS_"):
+        return False
+    return o.get("koch_type", "") in ("path", "roof_plane", "slab", "zebra", "paint", "box")
+
+
 def _is_support(o):
     if o.type != "MESH" or o.hide_render or o.name.startswith(("TER_", "CTX_", "REF_", "CAM_")):
         return False
@@ -362,7 +395,7 @@ def _top_outlines(sup):
     return segs
 
 
-def _seat_terrain(ter, sup, walk):
+def _seat_terrain(ter, sup, walk, owned):
     """Step 1 (see the file header). The terrain is re-triangulated in plan (mathutils.geometry.delaunay_2d_cdt, the
     same constrained Delaunay as build_greybox._conform_hard_edges) with the top outlines as constraint edges; each new
     face keeps the z of the face it came from (exact at old vertices, its plane elsewhere), so the existing hard steps
@@ -433,11 +466,27 @@ def _seat_terrain(ter, sup, walk):
             out.append(key[k])
         nf.append(out)
         nmat.append(fmat[s])
-    # classes from the top under each face centroid
+    # triangles only: a concave CDT polygon can hold its centroid under a slab while a corner sticks out (w30 hole)
+    from mathutils.geometry import tessellate_polygon
+    tri, tmat = [], []
+    for f, m in zip(nf, nmat):
+        if len(f) == 3:
+            tri.append(f)
+            tmat.append(m)
+            continue
+        for t in tessellate_polygon([[Vector((xyz[v].x, xyz[v].y, 0.0)) for v in f]]):
+            tri.append([f[t[0]], f[t[1]], f[t[2]]])
+            tmat.append(m)
+    nf, nmat = tri, tmat
+    # classes from the top under each face centroid; C faces remember which support covers them
+    otree, oown, omat = owned
     cen = [sum((xyz[v] for v in f), Vector()) / len(f) for f in nf]
-    cls = []
+    cls, fown, fmname = [], [], []
     for c in cen:
-        zs = _down(walk, c.x, c.y, c.z + 0.6, 1.1)    # a top within 0.6 above .. 0.5 below the face
+        loc, _n, idx, _d = otree.ray_cast(Vector((c.x, c.y, c.z + 0.6)), Vector((0, 0, -1)), 1.1)
+        zs = None if loc is None else loc.z   # a top within 0.6 above .. 0.5 below the face
+        fown.append(None if loc is None else oown[idx])
+        fmname.append("" if loc is None else omat[idx])
         if zs is None:
             cls.append("O")
         elif zs - c.z <= LIP:
@@ -445,6 +494,25 @@ def _seat_terrain(ter, sup, walk):
         else:   # H: the raised solid reaches down to this face (its bottom within 2 cm): hidden, removed like C
             zb = _down(walk, c.x, c.y, zs - 0.002, zs - c.z + 0.05)
             cls.append("H" if zb is not None and zb <= c.z + 0.02 and zb < zs - 0.01 else "U")
+    # B: C faces of ground-level paving become the paving itself (one continuous ground, owner msg 134) when the
+    # support lies on the ground over (almost) its whole top; the support object is then removed by run()
+    area = [0.0] * len(sup)
+    for i, f in enumerate(nf):
+        if cls[i] == "C":
+            a, b, c = (xyz[v] for v in f)
+            area[fown[i]] += abs((b - a).xy.cross((c - a).xy)) / 2
+    baked = set()
+    for k, o in enumerate(sup):
+        if area[k] > 0 and _bakeable(o):
+            bm_t = _tops(o)
+            top_area = sum(abs(f.normal.z) * f.calc_area() for f in bm_t.faces) if bm_t else 0.0
+            if bm_t:
+                bm_t.free()
+            if top_area > 0 and area[k] >= 0.85 * top_area:
+                baked.add(k)
+    for i in range(len(nf)):   # every face under a baked support is that paving (also where it rose > LIP above)
+        if fown[i] in baked and cls[i] in "CUH":
+            cls[i] = "B"
     adj = [[] for _ in xyz]
     for i, f in enumerate(nf):
         for v in f:
@@ -460,7 +528,9 @@ def _seat_terrain(ter, sup, walk):
         kinds = {cls[i] for i in fs_all}
         if kinds <= {"O"}:
             continue
-        inner = next((i for i in fs_all if cls[i] == "C"), None)
+        inner = next((i for i in fs_all if cls[i] == "B"), None)
+        if inner is None:
+            inner = next((i for i in fs_all if cls[i] == "C"), None)
         if inner is None:
             inner = next(i for i in fs_all if cls[i] in "UH")
         p = xyz[cv[0]]
@@ -472,7 +542,12 @@ def _seat_terrain(ter, sup, walk):
         for v in cv:
             k = {cls[i] for i in adj[v]}
             pv = xyz[v]
-            if "C" in kinds and "O" in k:
+            if "B" in k:   # baked paving: the vertex is the paving top
+                if "O" in k:
+                    rim_old[v] = pv.z
+                pv.z = zs
+                n_flush += 1
+            elif ("C" in kinds or "B" in kinds) and "O" in k:
                 if zs - pv.z <= LIP:   # ground up to LIP below the top (or above it) meets the top's edge
                     rim_old[v] = pv.z
                     pv.z = zs
@@ -497,6 +572,11 @@ def _seat_terrain(ter, sup, walk):
             if d < BAND:
                 xyz[v].z += rim[k][1] * (1.0 - d / BAND)
     # rebuild: kept faces, vertical faces where a shared plan edge has two z, small vertical corner openings closed
+    slot = {m.name: k for k, m in enumerate(ter.data.materials) if m}
+    for i in range(len(nf)):
+        if cls[i] == "B" and fmname[i] and fmname[i] not in slot and bpy.data.materials.get(fmname[i]):
+            ter.data.materials.append(bpy.data.materials[fmname[i]])
+            slot[fmname[i]] = len(ter.data.materials) - 1
     bm = bmesh.new()
     bv = [bm.verts.new(p) for p in xyz]
     emap = {}   # plan edge -> [(copy a, copy b) per kept face]
@@ -504,9 +584,11 @@ def _seat_terrain(ter, sup, walk):
         if cls[i] in "CH":
             continue
         try:
-            bm.faces.new([bv[v] for v in f]).material_index = nmat[i]
+            fc = bm.faces.new([bv[v] for v in f])
         except ValueError:
             continue
+        fc.material_index = slot.get(fmname[i], nmat[i]) if cls[i] == "B" else nmat[i]
+        fc.smooth = True   # one shading for paving and ground (flat paving beside smooth ground read as two surfaces)
         for a, b in zip(f, f[1:] + f[:1]):
             emap.setdefault((min(pid[a], pid[b]), max(pid[a], pid[b])), []).append((a, b))
     n_step = 0
@@ -529,9 +611,25 @@ def _seat_terrain(ter, sup, walk):
                 n_step += 1
             except ValueError:
                 pass
-    filled = bmesh.ops.holes_fill(bm, edges=[e for e in bm.edges if e.is_boundary], sides=16)["faces"]
-    big = [f for f in filled if (abs(f.normal.z) > 0.05 and f.calc_area() * abs(f.normal.z) > 1e-3)
-           or walk.find_nearest(f.calc_center_median(), 0.003)[0] is not None]   # holes and support-closed steps
+    # close every opening the rebuild left (step corners, CDT slivers) unless a support covers it from above (its
+    # footprint), a support side closes it (vertical, in a support plane) or it is a spec terrain hole (light wells)
+    import json
+    import os
+    from .terrain_field import SPECS, in_ring
+    holes = []
+    for fn in sorted(os.listdir(SPECS)):
+        if fn.endswith(".json"):
+            holes += json.load(open(os.path.join(SPECS, fn), encoding="utf-8")).get("terrain_holes", [])
+    filled = bmesh.ops.holes_fill(bm, edges=[e for e in bm.edges if e.is_boundary], sides=64)["faces"]
+
+    def keep_open(f):
+        c = f.calc_center_median()
+        if walk.find_nearest(c, 0.003)[0] is not None:
+            return True
+        if abs(f.normal.z) > 0.05 and _down(walk, c.x, c.y, c.z + 0.6, 1.2) is not None:
+            return True
+        return any(bool(in_ring(r, c.x, c.y)) for r in holes)
+    big = [f for f in filled if keep_open(f)]
     bmesh.ops.delete(bm, geom=big, context="FACES_ONLY")   # keep slab-footprint and terrain holes open
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)
     bm.normal_update()
@@ -539,10 +637,11 @@ def _seat_terrain(ter, sup, walk):
     bm.to_mesh(ter.data)
     bm.free()
     ter.data.update()
-    if smooth:
-        ter.data.shade_smooth()
+    if smooth:   # per-face smooth flags set above (paving flat); sharp edges at steps/curbs and paving borders
         ter.data.set_sharp_from_angle(angle=0.5236)   # 30 deg: steps/curbs crisp, gentle slopes smooth
-    return {"outline_segments": len(edges), "faces_removed": cls.count("C"), "faces_hidden": cls.count("H"), "faces_under_raised": cls.count("U"),
+    ter["koch_baked"] = [sup[k].name for k in baked]   # run() removes these objects
+    return {"baked_objects": sorted(sup[k].name[4:] for k in baked), "faces_baked": cls.count("B"),
+            "outline_segments": len(edges), "faces_removed": cls.count("C"), "faces_hidden": cls.count("H"), "faces_under_raised": cls.count("U"),
             "rim_flush": n_flush, "sunk": n_sink, "step_faces": n_step, "corner_fills": len(filled) - len(big),
             "terrain_faces": len(ter.data.polygons)}
 
@@ -556,7 +655,18 @@ def run():
     out["slabs"] = _flush_slabs(sup)   # 0. neighbouring walk tops on one level, butt-jointed
     walk = _bvh(sup)
     if ter is not None:   # 1. one continuous ground (see the file header)
-        out["terrain"] = _seat_terrain(ter, sup, walk)
+        out["terrain"] = _seat_terrain(ter, sup, walk, _bvh_owned(sup))
+        gone = set(ter.get("koch_baked", []))
+        names = [o.name for o in sup]
+        for n in gone:
+            ob = bpy.data.objects.get(n)
+            if ob is not None:
+                me = ob.data
+                bpy.data.objects.remove(ob, do_unlink=True)
+                if me.users == 0:
+                    bpy.data.meshes.remove(me)
+        del ter["koch_baked"]
+        sup = [bpy.data.objects[n] for n in names if n not in gone and n in bpy.data.objects]
     # 2. props onto the real surface. Multi-part elements (posts + bars + rungs as separate boxes) move as one
     # group, so bars stay on their posts; wall-mounted fittings never drop.
     ground = _bvh(sup + beds + ([ter] if ter is not None else []))

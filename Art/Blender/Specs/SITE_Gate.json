@@ -1490,8 +1490,11 @@
    "post": 0.06,
    "panel": "bars",
    "slot": "M_Steel_Paint_Dark",
-   "evidence": "owner 2026-09-28 (overview sketch): the black bar fence of the east edge runs on straight from the sports east fence (SITE_Sports EastBoundary_Fence, u 100.5) south past the A east lot to the street, then west along the street to the gate's east fence (Fence_East end); the OSM neighbour 169915330 moved 1.6 m east to clear it; height 2.0 as the sports part | 2026-10-02: the street leg now stops at the east-lane gate posts (x 205.3); west of the lane there is no fence along the sidewalk any more (A259-A275: parapet + hedge only)",
-   "confidence": "low"
+   "evidence": "owner 2026-09-28 (overview sketch): the black bar fence of the east edge runs on straight from the sports east fence (SITE_Sports EastBoundary_Fence, u 100.5) south past the A east lot to the street, then west along the street to the gate's east fence (Fence_East end); the OSM neighbour 169915330 moved 1.6 m east to clear it; height 2.0 as the sports part | 2026-10-02: the street leg now stops at the east-lane gate posts (x 205.3); west of the lane there is no fence along the sidewalk any more (A259-A275: parapet + hedge only) | 2026-10-10 owner msg 135 (collision QA, stair_qa.py KOCH_QA_ALL): the neighbour's wall is the boundary where it stands: no fence through it (Bing ortho)",
+   "confidence": "low",
+   "cut_by": [
+    "GB_CTX_169915330"
+   ]
   },
   {
    "type": "lamp",

@@ -64,14 +64,15 @@ def scale_spec(v, k, key=None):
 # part keyword (in the object name) -> default material slot; order matters (first match wins)
 PART_KEYS = ["Glass", "Win", "Sur", "Pilaster", "Cladding", "Plinth", "Slabs", "Roof", "Eave", "Gutter", "Downpipe", "Cornice",
              "Entrance", "Door", "GalleryPosts", "GalleryCoping", "GalleryFloor", "GalleryDeck", "GallerySoffit", "Gallery",
-             "Wall"]
+             "Bars", "LightwellParapet", "Wall"]
 PART_SLOT = {"Glass": "M_Glass", "Win": "M_PVC_White", "Sur": "M_Paint_Maroon", "Pilaster": "M_Paint_Maroon", "Cladding": "M_Render_Beige",
              "Plinth": "M_Tile_Brick_Red", "Slabs": "M_Concrete", "Roof": "M_Sheet_Red", "Eave": "M_PVC_Gutter_White",
              "Gutter": "M_PVC_Gutter_White", "Downpipe": "M_PVC_Gutter_White", "Cornice": "M_Paint_Maroon",
              "Entrance": "M_Alu_Black", "Door": "M_Alu_Black", "GalleryPosts": "M_Steel_Paint_Dark",
              "GalleryCoping": "M_Granite_Red", "GalleryFloor": "M_Paving_Diamond_Tile_Pink", "GalleryDeck": "M_Tile_Brick_Red",
              "GallerySoffit": "M_Wood_Stained",   # A_W deck (CE027/CE028): red granite coping, tiles, brick face, boards
-             "Gallery": "M_Sheet_Brown", "Wall": "M_Render_Beige"}
+             "Gallery": "M_Sheet_Brown", "Bars": "M_Steel_Paint_Dark", "LightwellParapet": "M_Tile_Brick_Red",
+             "Wall": "M_Render_Beige"}   # every slot an M_ name: UE material instances replace them by name
 
 class Building:
     def __init__(self, spec, ter):

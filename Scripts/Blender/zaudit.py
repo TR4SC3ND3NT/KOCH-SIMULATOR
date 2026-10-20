@@ -1,6 +1,7 @@
 # Z-fight audit (R1): coplanar (|offset| <= TOL) overlapping faces of different objects, exact triangle-clip overlap
 # area, same/opposite normal, and a visibility test (point just off the face inside another closed solid / under terrain).
-# "exact" (offset < 2 mm) = real flicker; "layered" (2-15 mm) = check at distance. Read-only.
+# "exact" (offset < 2 mm) = flicker in Blender's viewport; "coin" (< 0.3 mm) = flicker in UE 5.8 (reversed-Z float32
+# depth resolves ~0.3 mm at 500 m, see greybox/zfix.py); "layered" (2-15 mm) = check at distance. Read-only.
 # Run: blender -b file.blend -P Scripts/Blender/zaudit.py -- out.json   (prints the pairs sorted by visible area)
 import bpy, numpy as np, json, sys, math
 from collections import defaultdict
@@ -164,7 +165,7 @@ def under_ter(p):
     return h[0] is not None and h[0].z - p[2] > 0.005
 
 
-pairs = defaultdict(lambda: {'area': 0.0, 'exact': 0.0, 'layered': 0.0, 'touch': 0.0, 'hidden': 0.0, 'off': 9.0, 'pts': []})
+pairs = defaultdict(lambda: {'area': 0.0, 'exact': 0.0, 'coin': 0.0, 'layered': 0.0, 'touch': 0.0, 'hidden': 0.0, 'off': 9.0, 'pts': []})
 fobj = np.array([f[0] for f in F])
 for key in list(B.keys()):
     ids = np.array(B[key] + B.get((key[0], key[1], key[2], key[3] + 1), []))
@@ -204,18 +205,21 @@ for key in list(B.keys()):
                         last = 'hidden'
                     else:
                         last = 'exact' if abs(off) < 0.002 else 'layered'
+                        if abs(off) < 0.0003:
+                            r['coin'] += pa
                         if len(r['pts']) < 3:
                             r['pts'].append([round(float(x), 2) for x in p3])
                 r[last] += pa
 res = []
 for (a, b), r in pairs.items():
     res.append({'a': a, 'b': b, 'ga': gen.get(a, ''), 'gb': gen.get(b, ''), 'area': round(r['area'], 3),
-                'exact': round(r['exact'], 3), 'layered': round(r['layered'], 3), 'touch': round(r['touch'], 3),
+                'exact': round(r['exact'], 3), 'coin': round(r['coin'], 3), 'layered': round(r['layered'], 3), 'touch': round(r['touch'], 3),
                 'hidden': round(r['hidden'], 3), 'vis': round(r['exact'] + r['layered'], 3), 'off': round(r['off'], 4),
                 'pts': r['pts']})
 res.sort(key=lambda r: -r['vis'])
 json.dump(res, open(out, 'w'), indent=0)
 nv = sum(1 for r in res if r['vis'] > 0.01)
-print('pairs', len(res), 'visible', nv, 'vis_area', round(sum(r['vis'] for r in res), 1))
+print('pairs', len(res), 'visible', nv, 'vis_area', round(sum(r['vis'] for r in res), 1),
+      'UE-coincident pairs', sum(1 for r in res if r['coin'] > 0.005), 'area', round(sum(r['coin'] for r in res), 2))
 for r in res[:40]:
     print(r['exact'], r['layered'], r['area'], r['off'], r['a'], '|', r['b'], r['pts'][:1])

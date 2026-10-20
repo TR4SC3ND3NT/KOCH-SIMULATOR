@@ -447,7 +447,7 @@
    "post_round": true,
    "post_inset": 0.0,
    "soffit_z": 2.54,
-   "soffit_t": 0.03,
+   "soffit_t": 0.1,
    "coping": {
     "t": 0.05,
     "proj": 0.03,
@@ -463,7 +463,8 @@
    ],
    "deck_extra": 0.25,
    "end_boards": true,
-   "post_slot": "M_Steel_Paint_Maroon"
+   "post_slot": "M_Steel_Paint_Maroon",
+   "soffit_note": "2026-10-20 owner msg 141 (thin_qa): boards modelled 0.10 thick upward into the closed beam cavity (seen face unchanged at soffit_z); Lumen software tracing leaks through sheets < 10 cm"
   },
   {
    "type": "canopy",
