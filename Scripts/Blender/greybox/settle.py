@@ -101,8 +101,9 @@ def _is_support(o):
     if kt == "box":   # boxes are slabs/turf/platforms too: only the free-standing box props are no ground
         if any(w in str(o.get("koch_id", "")) for w in BOX_PROPS):
             return False
-    elif kt in SNAP_TYPES or kt in ("planter", "hedge", "hedge_arch", "wall", "fence", "gate_leaf", "pergola", "gazebo"):
-        return False
+    elif kt in SNAP_TYPES or kt in ("planter", "hedge", "hedge_arch", "wall", "fence", "gate_leaf", "pergola", "gazebo",
+                                    "cage_fence", "net_roof", "rail3d", "canopy", "barrier", "string_lights", "sign"):
+        return False   # cage_fence: "CourtsFence" matched "Court" and the ground was flushed to its post feet (25 cm ditch)
     n = str(o.get("koch_id") or o.name)   # element name only: "GBS_CPlaza_Bench" must not match "Plaza"
     if any(w in n for w in NOT_SUPPORT):
         return False
