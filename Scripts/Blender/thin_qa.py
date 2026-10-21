@@ -62,7 +62,7 @@ def side(ob, s, d):
         return None
     if h[0] < 0.014:
         return "backed"
-    ok, loc, _n, _i, hob, _m = sc.ray_cast(dg, s + d * (h[0] + 1e-4), d, distance=THIN_M)
+    ok, loc, _n, _i, hob, _m = sc.ray_cast(dg, s + d * (h[0] + 1e-4), d, distance=THIN_M - 0.002)   # 2 mm slack: a 10 cm part passes
     return "lining" if not ok or hob is not h[2] else None
 
 
