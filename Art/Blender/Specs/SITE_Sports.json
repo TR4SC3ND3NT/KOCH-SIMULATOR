@@ -3873,19 +3873,19 @@
    "type": "box",
    "name": "LowerYard_Retain_Courts",
    "center": [
-    188.962,
-    69.911
+    189.097,
+    69.906
    ],
    "dir_deg": -2.2,
    "size": [
-    46.1,
+    45.829,
     1.3000000000000007,
     1.365
    ],
    "z0": 2.025,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: top 3.39 with the courts",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-04 levels pass L3-03: top 3.39 with the courts | 2026-10-22 poke QA: the W end (x 165.93) lay over the stair's E edge and cheek (nose paint 15 cm under it); W end now at x 166.2, butting the cheek E",
    "confidence": "low"
   },
   {
@@ -5866,10 +5866,10 @@
     91.585,
     21.593
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 1.8,
+   "crown_d": 1.05,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: A084 small round bush: 110 x 65 px over its 75 px pit kerb -> 1.8 x 1.05 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5881,10 +5881,10 @@
     97.78,
     21.355
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 3.1,
+   "crown_d": 1.5,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: A084 pit tree: 260 x 125 px over its 100 px pit kerb -> 3.1 x 1.5 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5896,10 +5896,10 @@
     103.276,
     21.144
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 3.3,
+   "crown_d": 1.4,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: not measured: row median -> 3.3 x 1.4 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5911,10 +5911,10 @@
     108.872,
     20.929
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 3.3,
+   "crown_d": 1.4,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: not measured: row median -> 3.3 x 1.4 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5926,10 +5926,10 @@
     116.217,
     20.647
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 3.6,
+   "crown_d": 1.4,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: A079 far pair (rough) -> 3.6 x 1.4 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5941,10 +5941,10 @@
     121.863,
     20.43
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 3.6,
+   "crown_d": 1.4,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: A079 3rd crown, ~14 m (rough camera) -> 3.6 x 1.4 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5956,10 +5956,10 @@
     127.359,
     20.219
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 2.9,
+   "crown_d": 1.25,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: the dry brown one: A081 3.0 x 1.3 m and A079 2.8 x 1.2 m on the pit kerb -> 2.9 x 1.25 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12
@@ -5971,10 +5971,10 @@
     132.655,
     20.015
    ],
-   "height": 4.5,
-   "crown_d": 1.3,
-   "crown_base": 0.3,
-   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085)",
+   "height": 3.9,
+   "crown_d": 1.6,
+   "crown_base": 0.1,
+   "evidence": "Google 2026 dark crowns on a 5.5 m pitch at v -24 (lean-corrected -0.3/-0.2 m); spruces in front of the hall (drone 2022 row f 0:15-0:18) | 2026-10-02 sports-zone photo diff (A0xx metrology, 0.10 m tile courses, 1.75-1.77 m person): columnar thujas ~4.5 m in square kerbed pits (A081-A085) | 2026-10-22 owner msg 167-169 photo walk: A079 near tree: 360 x 870 px over its 1.2 m pit kerb -> 3.9 x 1.6 m, foliage to the pit (was 4.5 x 1.3 for all; Bing/Google row position kept)",
    "confidence": "low",
    "shape": "cone",
    "trunk_d": 0.12

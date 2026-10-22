@@ -182,6 +182,14 @@
      1.9
     ],
     [
+     167.9,
+     2.85
+    ],
+    [
+     170.3,
+     0.83
+    ],
+    [
      169.65,
      0.0
     ],
@@ -702,12 +710,12 @@
    "name": "Shed_Apron",
    "line": [
     [
-     167.2,
-     2.1
+     167.37,
+     2.32
     ],
     [
-     170.1,
-     -0.1
+     170.27,
+     0.12
     ]
    ],
    "width": 1.0,
@@ -716,19 +724,19 @@
    "material": "stone",
    "slot": "M_Concrete",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): smooth cast-concrete apron along the shed foot, sloping to the kerb (geometry +-0.4) | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): CE020/081834396: the concrete apron runs along the shed's chamfered SW wall from the lawn corner to the Dance Hall block, not south of it"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): smooth cast-concrete apron along the shed foot, sloping to the kerb (geometry +-0.4) | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): CE020/081834396: the concrete apron runs along the shed's chamfered SW wall from the lawn corner to the Dance Hall block, not south of it | 2026-10-22 081834396 crop: the apron lies against the wall; moved 0.28 m NE onto the chamfer face"
   },
   {
    "type": "wall",
    "name": "Shed_Apron_Kerb",
    "line": [
     [
-     166.9,
-     1.7
+     167.07,
+     1.92
     ],
     [
-     169.8,
-     -0.5
+     169.97,
+     -0.28
     ]
    ],
    "height": 0.12,
