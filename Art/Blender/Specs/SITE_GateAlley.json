@@ -427,8 +427,9 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815) | 2026-09-29 zone loop (alley): check_stairs.py: west edge moved onto the pavilion stair foot (a 0.3-0.44 m slot ran down to the terrain 5.0) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge = the moved stair foot",
-   "confidence": "medium"
+   "evidence": "walkway along A_S's west face from the south landing to the pavilion stair foot, A's west door opens onto it (070309303 f05/f06). levels: 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays): walkway/deck 1.26 below the path along the lawn strip, alley 0.12-0.2 higher at the pavilion/gate plaza; 8 risers on the south stair (012218760) and on the pavilion stair (012227815) | 2026-09-29 zone loop (alley): check_stairs.py: west edge moved onto the pavilion stair foot (a 0.3-0.44 m slot ran down to the terrain 5.0) | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): S edge = the moved stair foot | 2026-10-22 owner msg 162: grey herringbone like the alley (070309303 t22/t28/t31)",
+   "confidence": "medium",
+   "slot": "M_Paver_Herringbone_Grey"
   },
   {
    "type": "roof_plane",
@@ -521,8 +522,9 @@
    ],
    "thk": 1.3,
    "material": "stone",
-   "evidence": "lower walkway: 1.0 m wide along A_S (curb x 0.15-0.27 .. wall 1.28), ~1.8 m along the A_W loggia up to its deck edge (x 2.05); sweep: walkway and deck at one level, 1.26 below the path; 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-01 QA: +1 cm, its top was coplanar with the terrain pad (z-fight 6.9 m2) | 2026-10-02: south end replaced by the circle-paver strip CirclePaving_AS_0 (same surface, was laid over it) | 2026-10-07 owner msg 115 (2 viewport screenshots): S part W edge follows the moved retaining wall up to the side-stair S cheek",
-   "confidence": "medium"
+   "evidence": "lower walkway: 1.0 m wide along A_S (curb x 0.15-0.27 .. wall 1.28), ~1.8 m along the A_W loggia up to its deck edge (x 2.05); sweep: walkway and deck at one level, 1.26 below the path; 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-01 QA: +1 cm, its top was coplanar with the terrain pad (z-fight 6.9 m2) | 2026-10-02: south end replaced by the circle-paver strip CirclePaving_AS_0 (same surface, was laid over it) | 2026-10-07 owner msg 115 (2 viewport screenshots): S part W edge follows the moved retaining wall up to the side-stair S cheek | 2026-10-22 owner msg 162: grey herringbone like the alley (070309303 t22/t28/t31)",
+   "confidence": "medium",
+   "slot": "M_Paver_Herringbone_Grey"
   },
   {
    "type": "roof_plane",
@@ -896,9 +898,45 @@
     6.57
    ],
    "thk": 1.932,
-   "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m | 2026-10-07 owner msg 115 (2 viewport screenshots): strip 1.3 m narrower on the A side (owner line), walkway along A_S wider | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): the fan stair's lower treads run past the lawn's S end (12-67 cm deep): the lawn ends at the stair flank",
+   "material": "brick",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-03 photo pass R3-07: lawn flat to the wall coping (E edge 6.40); E edge on the wall's W face (the circle-paver strip it stopped at does not exist, R3-10) | 2026-10-05 owner msg 107 (viewport screenshots): the alley-side edge ran 5.4 deg off the A_W/B faces (strip 3.3 m wide at the S end, 2.5 m at the N end) and read as a crooked bed; now parallel to the facades at a constant 2.9 m | 2026-10-07 owner msg 115 (2 viewport screenshots): strip 1.3 m narrower on the A side (owner line), walkway along A_S wider | 2026-10-08 owner msg 127 (outdoor stairs collide with other elements; stair_qa.py): the fan stair's lower treads run past the lawn's S end (12-67 cm deep): the lawn ends at the stair flank | 2026-10-22 owner msg 162 (#8 'why is the bed so different'): A222/A224/A225 (from the lower walkway looking W): the beds on both sides of the side stair are one style: ~0.8 m red rock-face block wall to the walkway, pink granite coping on top, level lawn with boxwoods/thujas; north of the stair ONE straight wall (the model had a green bank 0.4 m behind the WS bed wall, a sloping lawn and a cross coping): body clad like the north bed (the bank face was lawn)",
    "confidence": "medium",
+   "cut_by": [
+    "PavilionStair"
+   ],
+   "slot": "M_Block_RockFace_Red"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Lawn_S_Top",
+   "ring": [
+    [
+     156.36,
+     -81.868
+    ],
+    [
+     157.168,
+     -81.925
+    ],
+    [
+     158.059,
+     -63.8
+    ],
+    [
+     157.25,
+     -63.71
+    ]
+   ],
+   "z": [
+    6.667,
+    6.555,
+    6.503,
+    6.616
+   ],
+   "thk": 0.02,
+   "material": "hedge",
+   "confidence": "medium",
+   "evidence": "2026-10-22 owner msg 162 (#8 'why is the bed so different'): A222/A224/A225 (from the lower walkway looking W): the beds on both sides of the side stair are one style: ~0.8 m red rock-face block wall to the walkway, pink granite coping on top, level lawn with boxwoods/thujas; north of the stair ONE straight wall (the model had a green bank 0.4 m behind the WS bed wall, a sloping lawn and a cross coping): lawn sheet 2 cm over the body, inside the coping",
    "cut_by": [
     "PavilionStair"
    ]
@@ -936,7 +974,8 @@
    "confidence": "medium",
    "cut_by": [
     "PavilionStair"
-   ]
+   ],
+   "slot": "M_Granite_Pink"
   },
   {
    "type": "roof_plane",
@@ -982,11 +1021,11 @@
      -59.74
     ],
     [
-     159.555,
+     160.154,
      -59.815
     ],
     [
-     159.759,
+     160.065,
      -55.66
     ],
     [
@@ -995,15 +1034,81 @@
     ]
    ],
    "z": [
-    6.57,
-    6.319,
-    6.33,
-    6.57
+    6.6,
+    6.6,
+    6.6,
+    6.6
    ],
    "thk": 1.83,
+   "material": "brick",
+   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-07 owner msg 115 (2 viewport screenshots): alley edge on the straight curb line | 2026-10-22 owner msg 162 (#8 'why is the bed so different'): A222/A224/A225 (from the lower walkway looking W): the beds on both sides of the side stair are one style: ~0.8 m red rock-face block wall to the walkway, pink granite coping on top, level lawn with boxwoods/thujas; north of the stair ONE straight wall (the model had a green bank 0.4 m behind the WS bed wall, a sloping lawn and a cross coping): now the wall body (top 6.60) on the WS bed's east-face line",
+   "confidence": "medium",
+   "slot": "M_Block_RockFace_Red"
+  },
+  {
+   "type": "roof_plane",
+   "name": "Lawn_N_Top",
+   "ring": [
+    [
+     157.444,
+     -59.74
+    ],
+    [
+     159.854,
+     -59.809
+    ],
+    [
+     159.769,
+     -55.41
+    ],
+    [
+     157.66,
+     -55.3
+    ]
+   ],
+   "z": [
+    6.62,
+    6.62,
+    6.62,
+    6.62
+   ],
+   "thk": 0.02,
    "material": "hedge",
-   "evidence": "lawn strip between the path and the lower walkway, falling ~0.3 from the path curb to the bank top (sweep/cloud 6.48 -> 6.17); thujas, saplings on stakes, hydrangeas (070309303 f19-f45, f64-f73); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-07 owner msg 115 (2 viewport screenshots): alley edge on the straight curb line",
-   "confidence": "medium"
+   "confidence": "medium",
+   "evidence": "2026-10-22 owner msg 162 (#8 'why is the bed so different'): A222/A224/A225 (from the lower walkway looking W): the beds on both sides of the side stair are one style: ~0.8 m red rock-face block wall to the walkway, pink granite coping on top, level lawn with boxwoods/thujas; north of the stair ONE straight wall (the model had a green bank 0.4 m behind the WS bed wall, a sloping lawn and a cross coping): lawn sheet on the wall body, level with the WS bed"
+  },
+  {
+   "type": "roof_plane",
+   "name": "BedN_Coping_E",
+   "ring": [
+    [
+     159.647,
+     -50.1
+    ],
+    [
+     159.947,
+     -50.1
+    ],
+    [
+     160.154,
+     -59.815
+    ],
+    [
+     159.854,
+     -59.815
+    ]
+   ],
+   "z": [
+    6.65,
+    6.65,
+    6.65,
+    6.65
+   ],
+   "thk": 0.05,
+   "material": "stone",
+   "slot": "M_Granite_Pink",
+   "confidence": "medium",
+   "evidence": "2026-10-22 owner msg 162 (#8 'why is the bed so different'): A222/A224/A225 (from the lower walkway looking W): the beds on both sides of the side stair are one style: ~0.8 m red rock-face block wall to the walkway, pink granite coping on top, level lawn with boxwoods/thujas; north of the stair ONE straight wall (the model had a green bank 0.4 m behind the WS bed wall, a sloping lawn and a cross coping): pink granite coping along the whole east wall top, stair flank to the B-corner bed front"
   },
   {
    "type": "roof_plane",
@@ -1448,38 +1553,6 @@
    "z0": 5.3,
    "material": "metal",
    "evidence": "grating frame leg (070309303 f55-f60)",
-   "confidence": "medium"
-  },
-  {
-   "type": "roof_plane",
-   "name": "LawnEnd_Coping",
-   "ring": [
-    [
-     157.547,
-     -55.594
-    ],
-    [
-     159.915,
-     -55.712
-    ],
-    [
-     159.93,
-     -55.412
-    ],
-    [
-     157.562,
-     -55.295
-    ]
-   ],
-   "z": [
-    6.68,
-    6.68,
-    6.68,
-    6.68
-   ],
-   "thk": 1.83,
-   "material": "stone",
-   "evidence": "pink granite coping closing the lawn strip at the wide stair (070309303 f73/f74) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 re-verification X3-08: E end cut at the measured bed E face (the ramp-bay walkway stays open) | 2026-10-07 owner msg 115 (2 viewport screenshots): W end on the curb line",
    "confidence": "medium"
   },
   {
@@ -2664,8 +2737,9 @@
    "width": 3.327,
    "thk": 0.08,
    "surface": "herringbone_200x100",
-   "evidence": "alley south of the pavilion, west of the south-bed curb (012205046, 012258813, 070309303 f00-f10)",
-   "confidence": "medium"
+   "evidence": "alley south of the pavilion, west of the south-bed curb (012205046, 012258813, 070309303 f00-f10) | 2026-10-22 owner msg 162 (#9 seam across the walkway): one grey herringbone paving along the whole alley (070309303 t22, A129-A133, A214/A215); the pieces had baked into the ground as clover vs herringbone",
+   "confidence": "medium",
+   "slot": "M_Paver_Herringbone_Grey"
   },
   {
    "type": "roof_plane",
@@ -2696,9 +2770,10 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley at the pavilion (flat, sweep 0.12-0.2 above the lawn-strip path); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays)",
+   "evidence": "alley at the pavilion (flat, sweep 0.12-0.2 above the lawn-strip path); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-10-22 owner msg 162 (#9 seam across the walkway): one grey herringbone paving along the whole alley (070309303 t22, A129-A133, A214/A215); the pieces had baked into the ground as clover vs herringbone",
    "confidence": "medium",
-   "surface": "herringbone_200x100"
+   "surface": "herringbone_200x100",
+   "slot": "M_Paver_Herringbone_Grey"
   },
   {
    "type": "roof_plane",
@@ -2739,9 +2814,10 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep) | 2026-10-05 owner msg 107: E edge follows the straightened lawn-strip curb (a 0.4 m slot to the lower terrace was left open)",
+   "evidence": "alley falls 0.12 m between A-local y 10 and 15 (sweep) | 2026-10-05 owner msg 107: E edge follows the straightened lawn-strip curb (a 0.4 m slot to the lower terrace was left open) | 2026-10-22 owner msg 162 (#9 seam across the walkway): one grey herringbone paving along the whole alley (070309303 t22, A129-A133, A214/A215); the pieces had baked into the ground as clover vs herringbone",
    "confidence": "medium",
-   "surface": "herringbone_200x100"
+   "surface": "herringbone_200x100",
+   "slot": "M_Paver_Herringbone_Grey"
   },
   {
    "type": "roof_plane",
@@ -2776,9 +2852,10 @@
    ],
    "thk": 0.12,
    "material": "stone",
-   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end) | 2026-09-28: west edge follows the moved B-bed curb | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): N edge at the stair top line",
+   "evidence": "alley from the pavilion to the wide stair between B's shrub bed curb (x -7.8) and the lawn-strip curb (x -3.35 at y 13 .. -2.25 at y 37), flat within +-0.05 (sweep); 070309303 photo-match 2026-09-26 (two-lens SfM aligned to the A walls, dense plane-sweep heights of all 76 frames, per-frame overlays) | 2026-09-28 zaudit: N edge trimmed to the S edge of stream B's garden SE_Landing (same paving, it was laid over this end) | 2026-09-28: west edge follows the moved B-bed curb | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): N edge at the stair top line | 2026-10-22 owner msg 162 (#9 seam across the walkway): one grey herringbone paving along the whole alley (070309303 t22, A129-A133, A214/A215); the pieces had baked into the ground as clover vs herringbone",
    "confidence": "medium",
-   "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)"
+   "surface": "herringbone_200x100 grey (2025 relay; clover pink 2022)",
+   "slot": "M_Paver_Herringbone_Grey"
   },
   {
    "type": "wall",
@@ -2999,9 +3076,9 @@
    "width": 5.4,
    "z_top": 6.57,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-03 video pass V2-02: 6 risers (5 granite + the grey concrete kerb at the top), no landing; riser kept 0.1743 pending the level decision (R1-13/R3-06: total ~1.0) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): 5 upper risers, 5.40 wide",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-03 video pass V2-02: 6 risers (5 granite + the grey concrete kerb at the top), no landing; riser kept 0.1743 pending the level decision (R1-13/R3-06: total ~1.0) | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): 5 upper risers, 5.40 wide | 2026-10-22 owner msg 162/#10 (terrain shards at the stair top): top_flush left the top tread one riser (0.17) under the alley (6.40 vs 6.57) and the alley ground hung over it; 012404116 t0-2 / A129-A133: the top step is flush with the alley (grey kerb as the last riser) -> top tread at z_top",
    "confidence": "medium",
-   "top_flush": true,
+   "top_flush": false,
    "run_out": 0.0
   },
   {
@@ -3503,7 +3580,8 @@
    "thk": 1.3,
    "material": "stone",
    "confidence": "medium",
-   "evidence": "2026-10-04 levels pass L1-01 (A231): continuous herringbone walkway along A_S between Walkway_South and Walkway_North (was a 0.35 pit) | 2026-10-07 owner msg 115 (2 viewport screenshots): W edge follows the moved retaining wall"
+   "evidence": "2026-10-04 levels pass L1-01 (A231): continuous herringbone walkway along A_S between Walkway_South and Walkway_North (was a 0.35 pit) | 2026-10-07 owner msg 115 (2 viewport screenshots): W edge follows the moved retaining wall | 2026-10-22 owner msg 162: grey herringbone like the alley (070309303 t22/t28/t31)",
+   "slot": "M_Paver_Herringbone_Grey"
   }
  ],
  "ground_surfaces": [

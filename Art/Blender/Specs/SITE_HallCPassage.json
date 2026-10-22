@@ -539,11 +539,11 @@
     161.2,
     0.1
    ],
-   "height": 11.0,
-   "crown_d": 6.0,
+   "height": 8.0,
+   "crown_d": 4.0,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1)",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): ~7-8 m tall, crown ~3.5-4 m (the Google crown 6 m included its shadow)",
    "confidence": "medium"
   },
   {
@@ -553,11 +553,11 @@
     163.4,
     5.5
    ],
-   "height": 8.0,
-   "crown_d": 4.0,
+   "height": 6.0,
+   "crown_d": 3.0,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1)",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): the second spruce ~2/3 of the first (~5.5-6 m)",
    "confidence": "medium"
   },
   {
@@ -694,8 +694,8 @@
    "type": "tree",
    "name": "Passage_Rose_Lower_0",
    "pos": [
-    160.9,
-    11.95
+    161.25,
+    12.2
    ],
    "height": 1.1,
    "crown_d": 0.9,
@@ -703,15 +703,15 @@
    "crown_base": 0.1,
    "shape": "round",
    "species": "rose",
-   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge",
+   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge | 2026-10-22 owner msg 160: crowns (0.9 m) inside the curb (were 0.1-0.2 m over the S/W curb); row along the yard-side edge kept (A028)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "Passage_Rose_Lower_1",
    "pos": [
-    161.8,
-    11.95
+    162.15,
+    12.2
    ],
    "height": 1.1,
    "crown_d": 0.9,
@@ -719,15 +719,15 @@
    "crown_base": 0.1,
    "shape": "round",
    "species": "rose",
-   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge",
+   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge | 2026-10-22 owner msg 160: crowns (0.9 m) inside the curb (were 0.1-0.2 m over the S/W curb); row along the yard-side edge kept (A028)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "Passage_Rose_Lower_2",
    "pos": [
-    162.7,
-    11.95
+    163.05,
+    12.2
    ],
    "height": 1.1,
    "crown_d": 0.9,
@@ -735,15 +735,15 @@
    "crown_base": 0.1,
    "shape": "round",
    "species": "rose",
-   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge",
+   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge | 2026-10-22 owner msg 160: crowns (0.9 m) inside the curb (were 0.1-0.2 m over the S/W curb); row along the yard-side edge kept (A028)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "Passage_Rose_Lower_3",
    "pos": [
-    163.6,
-    11.95
+    163.95,
+    12.2
    ],
    "height": 1.1,
    "crown_d": 0.9,
@@ -751,15 +751,15 @@
    "crown_base": 0.1,
    "shape": "round",
    "species": "rose",
-   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge",
+   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge | 2026-10-22 owner msg 160: crowns (0.9 m) inside the curb (were 0.1-0.2 m over the S/W curb); row along the yard-side edge kept (A028)",
    "confidence": "low"
   },
   {
    "type": "tree",
    "name": "Passage_Rose_Lower_4",
    "pos": [
-    164.5,
-    11.95
+    164.85,
+    12.2
    ],
    "height": 1.1,
    "crown_d": 0.9,
@@ -767,8 +767,86 @@
    "crown_base": 0.1,
    "shape": "round",
    "species": "rose",
-   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge",
+   "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge | 2026-10-22 owner msg 160: crowns (0.9 m) inside the curb (were 0.1-0.2 m over the S/W curb); row along the yard-side edge kept (A028)",
    "confidence": "low"
+  }
+ ],
+ "ground_surfaces": [
+  {
+   "name": "Passage_Herringbone",
+   "ring": [
+    [
+     156.224,
+     7.244
+    ],
+    [
+     157.223,
+     7.205
+    ],
+    [
+     157.234,
+     7.485
+    ],
+    [
+     159.432,
+     7.401
+    ],
+    [
+     159.498,
+     8.019
+    ],
+    [
+     168.242,
+     7.683
+    ],
+    [
+     169.129,
+     23.875
+    ],
+    [
+     152.899,
+     24.524
+    ],
+    [
+     149.321,
+     12.513
+    ],
+    [
+     149.206,
+     9.515
+    ],
+    [
+     156.301,
+     9.242
+    ]
+   ],
+   "slot": "M_Paver_Herringbone_Grey",
+   "evidence": "2026-10-22 owner msg 160 (screenshot: green ground outside the lower lawn's curb): A028-A030 show grey herringbone pavers from the cheek return to the shed ledge and N along the hall wing; the generated SITE_00_GroundCover Lawn_032/Lawn_033 (ortho excess-green, reads the spruce crowns as lawn) reached 3 m N of the curb and under the C shed; ring = the PassageLower pad (stair foot to the clover-plaza curb at y 24.5)",
+   "confidence": "medium"
+  },
+  {
+   "name": "Passage_Lawn_Lower_Ground",
+   "ring": [
+    [
+     160.594,
+     11.579
+    ],
+    [
+     166.95,
+     11.335
+    ],
+    [
+     166.95,
+     16.6
+    ],
+    [
+     160.79,
+     16.6
+    ]
+   ],
+   "slot": "M_Ground_Grass",
+   "evidence": "2026-10-22 owner msg 160 (screenshot: green ground outside the lower lawn's curb): A028-A030 show grey herringbone pavers from the cheek return to the shed ledge and N along the hall wing; the generated SITE_00_GroundCover Lawn_032/Lawn_033 (ortho excess-green, reads the spruce crowns as lawn) reached 3 m N of the curb and under the C shed; lawn only inside the bed's curb (ring = Passage_Lawn_Lower)",
+   "confidence": "medium"
   }
  ]
 }

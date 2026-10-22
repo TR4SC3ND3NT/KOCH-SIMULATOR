@@ -621,6 +621,17 @@ def _seat_terrain(ter, sup, walk, owned):
     for fn in sorted(os.listdir(SPECS)):
         if fn.endswith(".json"):
             holes += json.load(open(os.path.join(SPECS, fn), encoding="utf-8")).get("terrain_holes", [])
+    # spec terrain holes (basement, light wells, sunken stairs) stay open whatever the CDT produced inside them: the
+    # re-triangulation had closed the whole Block C footprint, a ground sheet 2.3 m over the basement floor (owner
+    # msg 165, 2026-10-22)
+    import numpy as np
+    if holes:
+        cen = np.array([f.calc_center_median().xy[:] for f in bm.faces])
+        inside = np.zeros(len(cen), bool)
+        for r in holes:
+            inside |= in_ring(r, cen[:, 0], cen[:, 1])
+        doomed = [f for f, k in zip(bm.faces, inside) if k]
+        bmesh.ops.delete(bm, geom=doomed, context="FACES")
     filled = bmesh.ops.holes_fill(bm, edges=[e for e in bm.edges if e.is_boundary], sides=64)["faces"]
 
     def keep_open(f):

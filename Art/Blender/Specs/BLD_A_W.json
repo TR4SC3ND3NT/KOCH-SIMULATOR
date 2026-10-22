@@ -564,18 +564,6 @@
    "confidence": "medium"
   },
   {
-   "type": "canopy",
-   "name": "Awning_DD",
-   "edge": 3,
-   "u0": 47.05,
-   "u1": 48.85,
-   "depth": 0.9,
-   "z0": 2.3,
-   "z1": 2.36,
-   "evidence": "P1 by frames (070309303 s2/s3 f01419-f02280, 012327726 s1 f00021-f00469): flat grey corrugated awning over the glazed double door under the gallery, just below the gallery beam; width = door + 0.3 m each side | 2026-10-04 A_W west-face registration (after the N-end move; aw_face agent: CE043/A212/A137/A141/A220/A228-A230 + Google ortho, post pitch 6.15): re-registered",
-   "confidence": "medium"
-  },
-  {
    "type": "wall_sign",
    "name": "YellowPlate_DoorS",
    "edge": 3,
@@ -774,5 +762,8 @@
  "slots": {
   "Wall": "M_Render_Shuba_Grey"
  },
- "slots_note": "2026-10-04 walkthrough (A151/A245 vs render): light grey textured (shuba) render like A_N and B, not beige (only C is beige)"
+ "slots_note": "2026-10-04 walkthrough (A151/A245 vs render): light grey textured (shuba) render like A_N and B, not beige (only C is beige)",
+ "removed_notes": [
+  "2026-10-22 owner msg 162 (#7 'what is this model, I never saw it'): Awning_DD (a 1.8 x 0.9 grey sheet over the canteen double door, read from video frames) removed: A228 shows the door's transom directly under the gallery's timber soffit, no awning"
+ ]
 }

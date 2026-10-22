@@ -1283,6 +1283,8 @@ class Building:
                     ob.data.materials[0] = mat(a["roof_slot"])
                 if a.get("trim_slot"):
                     self.shed_trim(a, fr)
+                if a.get("chamfer"):
+                    self.shed_chamfer(a, fr)
             elif t == "stair_box":
                 zg = a.get("z_base", e["zg"] - BURY_M) + BURY_M
                 box(bm, fr, a["u0"], a["u1"], a.get("w0", 0.0), a["depth"], zg - BURY_M, a["z_top"])
@@ -1365,6 +1367,90 @@ class Building:
         self.obj_parts(f"{a['name']}_Win_{k:02d}", {o.get("slot", "M_PVC_Anthracite"): frm, "M_Glass": glass,
                                                      "M_Steel_Galv": sill}, o.get("evidence", a.get("evidence")),
                        o.get("confidence", a.get("confidence")))
+
+    def shed_chamfer(self, a, fr):
+        """Cut one front corner of a shed on a diagonal (owner msg 161: the C west shed's SW corner on the Google z20
+        ortho and in 012459414/012514370, where the front wall kinks towards the Dance Hall block): "chamfer"
+        {end: "u0"|"u1", du, dw} = the cut runs from (end -+ du, front) to (end, front - dw) in the shed frame (m).
+        Every part of this shed (walls, deck, cladding, sheet, trim) loses what lies beyond the cut line (sheet and
+        trim keep their 0.15 m overhang), then a diagonal wall with the same cladding bands and trim closes it."""
+        ch = a["chamfer"]
+        d, zl, zh = a["depth"], a["z_low"], a["z_high"]
+        sg = 1.0 if ch["end"] == "u1" else -1.0
+        U = a["u1"] if ch["end"] == "u1" else a["u0"]
+        p1, p2 = Vector((U - sg * ch["du"], d)), Vector((U, d - ch["dw"]))
+        t = (p2 - p1).normalized()
+        n = Vector((-t.y, t.x))
+        if n.dot(Vector((U, d)) - p1) < 0:
+            n = -n                                         # out of the shed, towards the cut-off corner
+        zr = lambda q: zh + (zl - zh) * q.y / d - 0.02    # roof underside over a plan point (the front wall's top)
+        if a.get("hollow"):
+            zb = a.get("z_floor", self.edges[a["edge"]]["zg"] - BURY_M)
+        else:
+            zb = a.get("z_base", self.edges[a["edge"]]["zg"] - BURY_M)
+
+        def solid(ring, zlo, ztop):                       # prism over a plan quad; zlo/ztop: plan point -> z
+            bm = bmesh.new()
+            lo = [bm.verts.new(fr @ Vector((q.x, q.y, zlo(q)))) for q in ring]
+            hi = [bm.verts.new(fr @ Vector((q.x, q.y, ztop(q)))) for q in ring]
+            for i in range(len(ring)):
+                j = (i + 1) % len(ring)
+                bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
+            bm.faces.new(list(reversed(lo)))
+            bm.faces.new(hi)
+            bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+            return bm
+
+        def cutter(off):
+            q1, q2 = p1 + n * off - t * 3.0, p2 + n * off + t * 3.0
+            bm = solid([q1, q2, q2 + n * 6.0, q1 + n * 6.0], lambda q: zb - 2.0, lambda q: zh + 3.0)
+            return temp_object("_tmp_shed_chamfer", bm, self.M)
+        from greybox.conflicts import _boolean   # exact + self-intersection + MANIFOLD, rejects lossy results
+        pre = f"GBF_{self.id}_{a['name']}"
+        parts = [o for o in bpy.data.objects if o.type == "MESH" and (o.name == pre or o.name.startswith(pre + "_"))]
+        c0, c1 = cutter(0.0), cutter(0.15)
+        for o in parts:
+            c = c1 if o.name.endswith(("_Roof", "_Trim")) else c0
+            cw = [c.matrix_world @ v.co for v in c.data.vertices]
+            ow = [o.matrix_world @ v.co for v in o.data.vertices]
+            if any(max(v[i] for v in ow) < min(v[i] for v in cw) or min(v[i] for v in ow) > max(v[i] for v in cw)
+                   for i in range(3)):
+                continue   # far from the cut: an exact boolean would still re-mesh it (merged window faces)
+            me = _boolean(o, c)
+            if not me.polygons:
+                bpy.data.meshes.remove(me)
+                print(f"build_facades: chamfer cut failed on {o.name}")
+                bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(f"chamfer cut {o.name}")
+                continue
+            old = o.data
+            me.materials.clear()
+            for m_ in old.materials:
+                me.materials.append(m_)
+            o.data = me
+            if old.users == 0:
+                bpy.data.meshes.remove(old)
+        drop(c0)
+        drop(c1)
+        wt = a.get("wall_t", 0.3)
+        ob = self.obj(a["name"] + "_Chamfer", solid([p1, p2, p2 - n * wt, p1 - n * wt], lambda q: zb, zr),
+                      COL["brick"], a.get("evidence"))
+        ob.data.materials[0] = mat(a.get("body_slot", "M_Tile_Brick_Red"))
+        k_end = 1 if sg > 0 else 0
+        for k, b in enumerate(a.get("bands", [])):        # cladding bands run on round the kink
+            z0 = b["z0"][k_end] if isinstance(b["z0"], list) else b["z0"]
+            z1 = b["z1"][k_end] if isinstance(b["z1"], list) else b["z1"]
+            pj = b.get("proj", 0.02)
+            ob = self.obj(f"{a['name']}_ChamferClad{k}",
+                          solid([p1, p2, p2 + n * pj, p1 + n * pj], lambda q, z0=z0: z0, lambda q, z1=z1: min(z1, zr(q))),
+                          COL["brick"], a.get("bands_evidence"))
+            ob.data.materials[0] = mat(b["slot"])
+        if a.get("trim_slot"):                            # flashing on the cut sheet edge, 9 cm face, 2 cm proud
+            o = 0.15
+            ob = self.obj(a["name"] + "_ChamferTrim",
+                          solid([p1 + n * o - t * o, p2 + n * o + t * o, p2 + n * (o + 0.02) + t * o,
+                                 p1 + n * (o + 0.02) - t * o], lambda q: zr(q) - 0.01, lambda q: zr(q) + 0.08),
+                          COL["metal"], a.get("evidence"))
+            ob.data.materials[0] = mat(a["trim_slot"])
 
     def shed_trim(self, a, fr):
         """Metal edge flashing round the shed roof sheet: front drip edge + both rakes (sheet: 0.15 m overhang)."""

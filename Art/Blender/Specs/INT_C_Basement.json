@@ -571,10 +571,10 @@
     ]
    ],
    "z0": 2.8,
-   "z1": 5.718260869565218,
+   "z1": 5.36,
    "thk": 0.26,
    "material": "brick",
-   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile parapet under the sloped covers (map owner photo 10:55) | extended east to the tower at x 185.9 by basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697 | 2026-10-04 finish_B: foot at 2.90; ends at the corridor-end pilaster (x 12.35), the piano room has its own south wall",
+   "evidence": "SfM of video 012547860 (159 frames, global mapper, 0.60 m/unit), gravity frame from wall normals; plain wall with a grey tile dado inside (frames 100-150); outside it is the low red-tile parapet under the sloped covers (map owner photo 10:55) | extended east to the tower at x 185.9 by basement clip 012547860_s1/s2/s3 f00453/f01268/f01493/f01697 | 2026-10-04 finish_B: foot at 2.90; ends at the corridor-end pilaster (x 12.35), the piano room has its own south wall | 2026-10-22 owner msg 161: top under the lowered light-well cover edge (FFL-0.98 - 0.06)",
    "confidence": "medium"
   },
   {
@@ -4583,6 +4583,65 @@
    "slot": "M_Plastic_Grey",
    "evidence": "2026-10-04 finish_B: light grey dado 1.0 m (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012800431)",
    "confidence": "medium"
+  },
+  {
+   "type": "int_wall",
+   "name": "Hall_Lining_S",
+   "line": [
+    [
+     188.95,
+     1.147
+    ],
+    [
+     192.97,
+     0.987
+    ]
+   ],
+   "z0": 3.14,
+   "z1": 6.1,
+   "thk": 0.02,
+   "openings": [
+    {
+     "u0": 0.35,
+     "u1": 1.12,
+     "z0": 4.05,
+     "z1": 5.21
+    },
+    {
+     "u0": 0.38,
+     "u1": 1.1,
+     "z0": 5.45,
+     "z1": 6.01
+    },
+    {
+     "u0": 1.5,
+     "u1": 2.42,
+     "z0": 3.14,
+     "z1": 5.3
+    },
+    {
+     "u0": 1.44,
+     "u1": 2.47,
+     "z0": 5.45,
+     "z1": 6.01
+    },
+    {
+     "u0": 2.78,
+     "u1": 3.55,
+     "z0": 4.05,
+     "z1": 5.21
+    },
+    {
+     "u0": 2.81,
+     "u1": 3.53,
+     "z0": 5.45,
+     "z1": 6.01
+    }
+   ],
+   "material": "white",
+   "slot": "M_Paint_White",
+   "confidence": "medium",
+   "evidence": "2026-10-22 owner msg 165 (basement): video 012744144 t9.5-12.3: the hall's south wall (C's south foundation wall, exit door to the piano room + 2 grilled windows + 3 top lights, radiators) is white render over the grey dado; the model showed the facade's red plinth tile on its inner face: plaster lining with the facade openings"
   }
  ]
 }

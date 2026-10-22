@@ -1858,7 +1858,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_N",
+   "cut_by": [
+    "Arch_Bnd_G1_N"
+   ]
   },
   {
    "type": "wall",
@@ -1880,7 +1883,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_N",
+   "cut_by": [
+    "Arch_Bnd_G1_N"
+   ]
   },
   {
    "type": "wall",
@@ -1902,7 +1908,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_W",
+   "cut_by": [
+    "Arch_Bnd_G1_W"
+   ]
   },
   {
    "type": "wall",
@@ -1924,7 +1933,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_W",
+   "cut_by": [
+    "Arch_Bnd_G1_W"
+   ]
   },
   {
    "type": "wall",
@@ -1946,7 +1958,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_SW",
+   "cut_by": [
+    "Arch_Bnd_G1_SW"
+   ]
   },
   {
    "type": "wall",
@@ -1968,7 +1983,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_SW",
+   "cut_by": [
+    "Arch_Bnd_G1_SW"
+   ]
   },
   {
    "type": "wall",
@@ -2034,7 +2052,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_N",
+   "cut_by": [
+    "Arch_Bnd_G2_N"
+   ]
   },
   {
    "type": "wall",
@@ -2056,7 +2077,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_N",
+   "cut_by": [
+    "Arch_Bnd_G2_N"
+   ]
   },
   {
    "type": "wall",
@@ -2078,7 +2102,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_E",
+   "cut_by": [
+    "Arch_Bnd_G2_E"
+   ]
   },
   {
    "type": "wall",
@@ -2100,7 +2127,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_E",
+   "cut_by": [
+    "Arch_Bnd_G2_E"
+   ]
   },
   {
    "type": "wall",
@@ -2122,7 +2152,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_SSW",
+   "cut_by": [
+    "Arch_Bnd_G2_SSW"
+   ]
   },
   {
    "type": "wall",
@@ -2144,7 +2177,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_SSW",
+   "cut_by": [
+    "Arch_Bnd_G2_SSW"
+   ]
   },
   {
    "type": "wall",
@@ -2166,7 +2202,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_SE",
+   "cut_by": [
+    "Arch_Bnd_G2_SE"
+   ]
   },
   {
    "type": "wall",
@@ -2188,7 +2227,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G2_SE",
+   "cut_by": [
+    "Arch_Bnd_G2_SE"
+   ]
   },
   {
    "type": "wall",
@@ -2298,7 +2340,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_Centre_NS_N",
+   "cut_by": [
+    "Arch_Bnd_Centre_NS_N"
+   ]
   },
   {
    "type": "wall",
@@ -2320,7 +2365,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_Centre_NS_N",
+   "cut_by": [
+    "Arch_Bnd_Centre_NS_N"
+   ]
   },
   {
    "type": "wall",
@@ -3250,7 +3298,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_N",
+   "cut_by": [
+    "Arch_Bnd_G1_N"
+   ]
   },
   {
    "type": "wall",
@@ -3272,7 +3323,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_N",
+   "cut_by": [
+    "Arch_Bnd_G1_N"
+   ]
   },
   {
    "type": "wall",
@@ -3468,7 +3522,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_W",
+   "cut_by": [
+    "Arch_Bnd_G1_W"
+   ]
   },
   {
    "type": "wall",
@@ -3490,7 +3547,10 @@
    "material": "stone",
    "kind": "scalloped_edging",
    "confidence": "medium",
-   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging"
+   "evidence": "[B] zone_garden.py 2026-09-29 v2: owner etalon sketch (Google Earth 5/27/2024) registered on Google z20 (rms 0.24 m), paths refined on the ortho paving strips | 2026-10-02 v3 (2026-09-30 photos): no boundary hedge, free-standing arches, boundary edging | 2026-10-22 owner msg 163 (#10 edging through the hedge arch): A217-A219: the scalloped edging stops at the arch; cut by Arch_Bnd_G1_W",
+   "cut_by": [
+    "Arch_Bnd_G1_W"
+   ]
   },
   {
    "type": "wall",

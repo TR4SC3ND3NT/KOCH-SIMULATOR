@@ -841,9 +841,9 @@
    "u0": -0.37,
    "u1": 12.3,
    "depth": 2.3,
-   "z_wall": -0.1,
-   "z_edge": -0.7,
-   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated | 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band and fall to a low fascia ~0.35 m above the paving (012526070, 061624280); they roof the basement corridor, whose floor is now plaza-1.38 (INT_C_Basement) | [B] owner 2026-09-28: starts after the basement stair's foot (the stair descends east along this line; the cover began over its last steps) | [B] ends at the stair's west cheek (ribs ran into the cheek) | 2026-10-03 photo pass batch 2 Q2-05 (CE): the W cover runs west to the canopy E post",
+   "z_wall": -0.65,
+   "z_edge": -0.98,
+   "evidence": "red sloped metal covers = roof of the basement corridor along the south wall (012526070, 012520140); slope estimated | 2026-09-25 frame b12 of 070647586 (PnP 11 px): the covers start right under the maroon plinth band and fall to a low fascia ~0.35 m above the paving (012526070, 061624280); they roof the basement corridor, whose floor is now plaza-1.38 (INT_C_Basement) | [B] owner 2026-09-28: starts after the basement stair's foot (the stair descends east along this line; the cover began over its last steps) | [B] ends at the stair's west cheek (ribs ran into the cheek) | 2026-10-03 photo pass batch 2 Q2-05 (CE): the W cover runs west to the canopy E post | 2026-10-22 owner msg 161 (#6 'this part is higher than you have'): CE001 measured at the C wall plane (3072x4080): cheek cap -> landing ~410 px, landing -> cover ~600 px, cheek face over the cover ~1.35 m; the cover met the wall only 0.10 under the landing. Cover lowered: z_wall -0.65, z_edge -0.98 (outer edge on the 0.3 m tile parapet over the plaza at FFL-1.28, CE004/CE005)",
    "confidence": "medium",
    "parapet": {
     "spans": [
@@ -863,9 +863,9 @@
    "u0": 0.3,
    "u1": 12.5,
    "depth": 2.5,
-   "z_wall": -0.1,
-   "z_edge": -0.7,
-   "evidence": "red sloped covers along the east wing under the steel ramp, same profile as the south-west covers (frames b05/b07 of 070647586) | [B] owner 2026-09-28: covers reach the ramp (no lawn strip between)",
+   "z_wall": -0.65,
+   "z_edge": -0.98,
+   "evidence": "red sloped covers along the east wing under the steel ramp, same profile as the south-west covers (frames b05/b07 of 070647586) | [B] owner 2026-09-28: covers reach the ramp (no lawn strip between) | 2026-10-22 owner msg 161 (#6 'this part is higher than you have'): CE001 measured at the C wall plane (3072x4080): cheek cap -> landing ~410 px, landing -> cover ~600 px, cheek face over the cover ~1.35 m; the cover met the wall only 0.10 under the landing. Cover lowered: z_wall -0.65, z_edge -0.98 (outer edge on the 0.3 m tile parapet over the plaza at FFL-1.28, CE004/CE005)",
    "confidence": "low"
   },
   {
@@ -883,7 +883,6 @@
    "body_slot": "M_Tile_Brick_Red",
    "roof_slot": "M_Sheet_Grey",
    "trim_slot": "M_Brass_Trim",
-   "band_ends": [],
    "bands": [
     {
      "z0": -2.1,
@@ -915,7 +914,7 @@
     {
      "end": "u1",
      "w0": 4.27,
-     "w1": 5.8
+     "w1": 6.0
     }
    ],
    "evidence_floor": "2026-10-04 finish_B: hollow shed walls down to the Dance Hall floor 2.90 (2 risers below the mid landing 3.293)",
@@ -952,7 +951,15 @@
      "confidence": "medium",
      "evidence": "2026-10-04 finish_E E-01: see the first opening"
     }
-   ]
+   ],
+   "chamfer": {
+    "end": "u1",
+    "du": 2.2,
+    "dw": 2.9,
+    "confidence": "medium",
+    "evidence": "2026-10-22 owner msg 161 (#5 'holes'): Google z20 ortho (0.1 m/px): the grey roof's SW corner is cut on a diagonal from the front at world y ~2.5 to the Dance Hall block's W face (x 170.4, y 0.3); 012514370/012459414: the front wall (brick + hex shingle band) kinks there and runs on to the block. The square corner had left a 2.9 m opening into the hollow shed"
+   },
+   "band_ends": []
   },
   {
    "type": "downpipe",
@@ -960,10 +967,10 @@
    "u": [
     12.55
    ],
-   "z0": -0.1,
+   "z0": -0.65,
    "z1": 13.3,
    "d": 0.1,
-   "evidence": "white PVC downpipe at the west wing / tower junction (061621646, 061631264), ends on the light-well cover",
+   "evidence": "white PVC downpipe at the west wing / tower junction (061621646, 061631264), ends on the light-well cover | 2026-10-22: foot on the lowered light-well cover (CE001)",
    "jog": {
     "z": 0.72,
     "du": -0.3
