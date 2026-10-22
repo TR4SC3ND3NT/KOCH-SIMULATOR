@@ -691,7 +691,7 @@
   {
    "type": "lightwell",
    "edge": 1,
-   "u0": 7.2,
+   "u0": 8.4,
    "u1": 24.46,
    "depth": 1.0,
    "z_wall": 0.5,
@@ -701,7 +701,7 @@
     "edge": 2,
     "u1": 2.2
    },
-   "evidence": "maroon light-well cover, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36) | owner 2026-09-28 (screenshots 56-57): a box (vertical front, flat top), not a slope, and it runs round the NE corner along the whole north face with the same width and height | 2026-10-03 owner msg 62 + A204/A205: the box only turns the NE corner (~2.2 m along the north face, loose sheets on its lid); the long maroon run along the north face is a separate gas-pipe cover standing off the wall (GasPipeCover_North)",
+   "evidence": "maroon light-well cover, north 2/3 of the east facade (pano intro2 2020; still there 2026 061757320 t36) | owner 2026-09-28 (screenshots 56-57): a box (vertical front, flat top), not a slope, and it runs round the NE corner along the whole north face with the same width and height | 2026-10-03 owner msg 62 + A204/A205: the box only turns the NE corner (~2.2 m along the north face, loose sheets on its lid); the long maroon run along the north face is a separate gas-pipe cover standing off the wall (GasPipeCover_North) | 2026-10-22 photo bug hunt H1-012 (~/koch_work/hunt/H1/findings.jsonl)",
    "confidence": "medium"
   },
   {
@@ -804,16 +804,16 @@
    "type": "wall_sign",
    "name": "BlockPlate_B",
    "edge": 0,
-   "u0": 47.5,
-   "u1": 48.0,
-   "z0": 3.06,
-   "z1": 3.32,
+   "u0": 47.32,
+   "u1": 47.82,
+   "z0": 3.47,
+   "z1": 3.73,
    "t": 0.02,
    "w0": 0.14,
    "slot": "M_Sign_KOCH",
    "content": "KOCH block plate B",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo batch 2 Q1-01"
+   "evidence": "2026-10-03 photo batch 2 Q1-01 | 2026-10-22 photo bug hunt H1-007 (~/koch_work/hunt/H1/findings.jsonl): +0.41 m (A241/A242)"
   },
   {
    "type": "wall_boxes",
@@ -824,14 +824,14 @@
    "items": [
     [
      47.75,
-     3.69,
+     4.1,
      0.1,
      0.1,
      0.25
     ]
    ],
    "confidence": "medium",
-   "evidence": "2026-10-03 photo batch 2 Q1-01"
+   "evidence": "2026-10-03 photo batch 2 Q1-01 | 2026-10-22 photo bug hunt H1-007 (~/koch_work/hunt/H1/findings.jsonl): +0.41 m (A241/A242)"
   },
   {
    "type": "wall_boxes",
@@ -841,7 +841,7 @@
    "items": [
     [
      47.75,
-     3.55,
+     3.96,
      0.2,
      0.09,
      0.08
@@ -849,7 +849,7 @@
    ],
    "slot": "M_Plastic_White",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo batch 2 Q1-01"
+   "evidence": "2026-10-03 photo batch 2 Q1-01 | 2026-10-22 photo bug hunt H1-007 (~/koch_work/hunt/H1/findings.jsonl): +0.41 m (A241/A242)"
   },
   {
    "type": "downpipe",
@@ -878,6 +878,23 @@
    "d": 0.1,
    "confidence": "low",
    "evidence": "2026-10-03 photo batch 2 Q1-08"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "AC_East",
+   "kind": "ac",
+   "edge": 1,
+   "items": [
+    [
+     2.76,
+     4.72,
+     0.8,
+     0.6,
+     0.3
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "H1-013: one AC unit on brackets, upper storey (A245) | 2026-10-22 photo bug hunt H1-013 (~/koch_work/hunt/H1/findings.jsonl)"
   }
  ],
  "basement": {

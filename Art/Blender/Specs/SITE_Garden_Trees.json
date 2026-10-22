@@ -448,57 +448,6 @@
   },
   {
    "type": "tree",
-   "name": "GT_26_young",
-   "pos": [
-    112.6,
-    -36.6
-   ],
-   "height": 4.5,
-   "crown_d": 2.0,
-   "trunk_d": 0.08,
-   "crown_base": 1.8,
-   "shape": "round",
-   "ue_asset": "tree",
-   "species": "young",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
-   "confidence": "low"
-  },
-  {
-   "type": "tree",
-   "name": "GT_27_thuja",
-   "pos": [
-    114.2,
-    -39.2
-   ],
-   "height": 3.2,
-   "crown_d": 1.2,
-   "trunk_d": 0.1,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "ue_asset": "tree",
-   "species": "thuja",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
-   "name": "GT_28_thuja",
-   "pos": [
-    116.6,
-    -40.6
-   ],
-   "height": 3.2,
-   "crown_d": 1.2,
-   "trunk_d": 0.1,
-   "crown_base": 0.2,
-   "shape": "cone",
-   "ue_asset": "tree",
-   "species": "thuja",
-   "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
-   "confidence": "medium"
-  },
-  {
-   "type": "tree",
    "name": "GT_29_spruce",
    "pos": [
     118.2,
@@ -1517,5 +1466,8 @@
    "evidence": "hand-read crown/shadow on Google z20 (2026), 30 px/m, per bed (garden_trees.py); species class from garden videos 081856-082013",
    "confidence": "low"
   }
+ ],
+ "removed_notes": [
+  "2026-10-22 H2-008: GT_26_young, GT_27_thuja, GT_28_thuja: open lawn in A201 and the Google z20 ortho"
  ]
 }

@@ -271,8 +271,8 @@
    "u0": 1.3,
    "u1": 10.04,
    "depth": 1.5,
-   "z0": 2.6,
-   "z1": 2.9,
+   "z0": 3.45,
+   "z1": 3.6,
    "fascia_h": 0.2,
    "posts_u": [
     9.9
@@ -283,7 +283,7 @@
    "soffit_slot": "M_Wood_Stained",
    "post_slot": "M_Paint_Maroon",
    "confidence": "low",
-   "evidence": "2026-10-03 photo+video pass R1-01 (A070-A076: 4 cues incl. the HallEast door bearing and Google: no porch roof at the canteen) + V1-03 + V3-10 (video f2): the timber-soffit lean-to on one maroon round post belongs to the hall wing's E side, post at the outer NE corner (~153.8, 20.5), soffit 2.9 +-0.3 above the paving, depth 1.0-2.0 (1.5 taken), running from the recessed door bay to the corner. DISPUTED: V1-03 put the outer corner at y ~15.0 from distances along the face; the wing outline (OSM/Bing/Google roof to y 21-22) wins | 2026-10-04 finish_E E-07: starts N of window E1 (A072: the window is outside the porch)"
+   "evidence": "2026-10-03 photo+video pass R1-01 (A070-A076: 4 cues incl. the HallEast door bearing and Google: no porch roof at the canteen) + V1-03 + V3-10 (video f2): the timber-soffit lean-to on one maroon round post belongs to the hall wing's E side, post at the outer NE corner (~153.8, 20.5), soffit 2.9 +-0.3 above the paving, depth 1.0-2.0 (1.5 taken), running from the recessed door bay to the corner. DISPUTED: V1-03 put the outer corner at y ~15.0 from distances along the face; the wing outline (OSM/Bing/Google roof to y 21-22) wins | 2026-10-04 finish_E E-07: starts N of window E1 (A072: the window is outside the porch) | 2026-10-22 photo bug hunt H4-011 (~/koch_work/hunt/H4/findings.jsonl): post runs to the eave soffit (A071/A072)"
   },
   {
    "type": "wall_boxes",

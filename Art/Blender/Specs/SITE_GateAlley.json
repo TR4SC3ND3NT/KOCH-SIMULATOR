@@ -20,11 +20,11 @@
     ],
     [
      161.65,
-     -93.9
+     -94.82
     ],
     [
-     197.145,
-     -95.65
+     197.1,
+     -96.56
     ],
     [
      197.409,
@@ -69,7 +69,7 @@
    ],
    "z": 5.0,
    "blend": 0.0,
-   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): edge follows the moved stair nosing and bed kerb | 2026-10-05 owner msg 107: W edge follows the straightened lawn strip (the old tapering line left a 0.4 m hole down to 5.0 beside the alley)"
+   "evidence": "lower walkway zone at A_S's west/south side (see note) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line): zone ends at the new lawn-strip end | 2026-10-05 owner msg 104 (A248/A249 cameras fitted on the booth, rms <15 px; rays + two-view triangulation): edge follows the moved stair nosing and bed kerb | 2026-10-05 owner msg 107: W edge follows the straightened lawn strip (the old tapering line left a 0.4 m hole down to 5.0 beside the alley) | 2026-10-22 photo bug hunt H1-008 (~/koch_work/hunt/H1/findings.jsonl): pad S edge on the bank's S edge (terrain poked through the bank top, 24.5 m2)"
   },
   {
    "name": "Alley_Flat_S",
@@ -262,25 +262,25 @@
    "name": "WS_RampFootWalk",
    "ring": [
     [
-     160.0,
+     160.07,
      -55.7
     ],
     [
-     160.93,
+     161.2,
      -55.7
     ],
     [
-     161.02,
-     -53.66
+     161.2,
+     -49.95
     ],
     [
-     160.1,
-     -53.66
+     160.07,
+     -49.95
     ]
    ],
    "z": 5.35,
    "blend": 0.0,
-   "evidence": "2026-10-04 levels pass L1-05 (A141/A143): walkway runs straight along the bed wall from the ramp bay to the wide-stair cheek"
+   "evidence": "2026-10-04 levels pass L1-05 (A141/A143): walkway runs straight along the bed wall from the ramp bay to the wide-stair cheek | 2026-10-22 photo bug hunt H2-012 (~/koch_work/hunt/H2/findings.jsonl): flat walkway along the bed wall (A142)"
   }
  ],
  "elements": [
@@ -2687,14 +2687,14 @@
      -97.472
     ],
     [
-     198.128,
-     -100.094
+     201.3,
+     -100.32
     ]
    ],
    "width": 4.0,
    "thk": 0.08,
    "surface": "clover_paver_267x218",
-   "evidence": "public clover-paver sidewalk south of the parapet from the booth's east door to the east lane (065934318, 070021774 f7 bench; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): no fence: the old gate-line fence was removed); width to the street parking unmeasured",
+   "evidence": "public clover-paver sidewalk south of the parapet from the booth's east door to the east lane (065934318, 070021774 f7 bench; 2026-09-30 sidewalk walk A259-A275 (booth to the east lane): no fence: the old gate-line fence was removed); width to the street parking unmeasured | 2026-10-22 photo bug hunt H1-009 (~/koch_work/hunt/H1/findings.jsonl)",
    "confidence": "low"
   },
   {
@@ -3089,13 +3089,13 @@
     -48.673
    ],
    "dir_deg": 87.192,
-   "risers": 2,
+   "risers": 3,
    "riser_h": 0.1743,
    "tread": 0.35,
    "width": 7.55,
-   "z_top": 5.698,
+   "z_top": 5.873,
    "material": "granite",
-   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-01 QA: top_flush, it starts inside the upper run-out (their end faces were coplanar) | 2026-10-03 video pass V2-02: only the bottom step is wide (runs past the bed walls), directly under the upper base | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): 2 lower risers run E in front of the bed cheek to x 159.9",
+   "evidence": "012404116 t0-3.5 s (6 granite steps + grey kerb = 7 risers, bed walls on both sides, lower steps running past them), 070309303 f71-f75 (top nosing band y 40.35-40.53) | 2026-09-28 owner (screenshots 64/65): the whole wide stair moved back 3.05 m (top on the BBed_Conifer_01 line) | 2026-09-29 zone loop (alley): check_stairs.py: top on the alley paving 6.57 (was 6.63, a 6 cm lip), 7 x 0.1743 like the side stair; tread between the flights added (0.35 x 0.6 m gap) | 2026-10-01 QA: top_flush, it starts inside the upper run-out (their end faces were coplanar) | 2026-10-03 video pass V2-02: only the bottom step is wide (runs past the bed walls), directly under the upper base | 2026-10-04 levels pass 2026-10-04 B-corner stair recheck (owner approved; Google z20 + A154/A142 metrology, dy +5.0 +-0.4): 2 lower risers run E in front of the bed cheek to x 159.9 | 2026-10-22 photo bug hunt H2-002 (~/koch_work/hunt/H2/findings.jsonl): 7 equal risers, no double riser",
    "confidence": "medium",
    "top_flush": true
   },
@@ -3582,6 +3582,44 @@
    "confidence": "medium",
    "evidence": "2026-10-04 levels pass L1-01 (A231): continuous herringbone walkway along A_S between Walkway_South and Walkway_North (was a 0.35 pit) | 2026-10-07 owner msg 115 (2 viewport screenshots): W edge follows the moved retaining wall | 2026-10-22 owner msg 162: grey herringbone like the alley (070309303 t22/t28/t31)",
    "slot": "M_Paver_Herringbone_Grey"
+  },
+  {
+   "type": "box",
+   "name": "Grate_WalkwayMid",
+   "center": [
+    159.0,
+    -72.8
+   ],
+   "dir_deg": 87.2,
+   "size": [
+    0.8,
+    0.35,
+    0.02
+   ],
+   "z0": 5.35,
+   "material": "metal",
+   "slot": "M_Steel_Grating",
+   "confidence": "medium",
+   "evidence": "H1-006 | 2026-10-22 photo bug hunt H1-006 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "type": "box",
+   "name": "Manhole_ASWalk",
+   "center": [
+    182.6,
+    -91.7
+   ],
+   "dir_deg": 0,
+   "size": [
+    0.65,
+    0.65,
+    0.02
+   ],
+   "z0": 5.35,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "medium",
+   "evidence": "H1-011 | 2026-10-22 photo bug hunt H1-011 (~/koch_work/hunt/H1/findings.jsonl)"
   }
  ],
  "ground_surfaces": [

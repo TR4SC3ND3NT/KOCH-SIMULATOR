@@ -1033,13 +1033,12 @@
    "type": "downpipe",
    "edge": 8,
    "u": [
-    18.93,
-    19.68
+    18.93
    ],
    "z0": 1.2,
    "z1": 13.3,
    "d": 0.1,
-   "evidence": "two white downpipes on the west face at the SW corner, one splitting the maroon strip into the 'double strip', both ending on the entry roof (frame a06 of 070629483, ray-cast y 0.87 / 0.12)",
+   "evidence": "two white downpipes on the west face at the SW corner, one splitting the maroon strip into the 'double strip', both ending on the entry roof (frame a06 of 070629483, ray-cast y 0.87 / 0.12) | 2026-10-22 photo bug hunt H3-005 (~/koch_work/hunt/H3/findings.jsonl)",
    "confidence": "medium"
   },
   {
@@ -1112,15 +1111,15 @@
    "items": [
     [
      -5.56,
-     0.6,
-     0.47,
-     0.25,
+     0.92,
+     0.4,
+     0.16,
      0.02
     ]
    ],
    "slot": "M_Sign_KOCH",
    "confidence": "medium",
-   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): small navy plate 0.12 m from the corner above the landing; in game a KOCH plate only (the real text is never used) | 2026-10-03 photo pass batch 2 Q2-17 (CE): plate 0.47 x 0.25",
+   "evidence": "2026-10-02 photo diff (agent ray-casts in 166 on the Dance Hall wall plane, C-local y 0.13; scale from 160): small navy plate 0.12 m from the corner above the landing; in game a KOCH plate only (the real text is never used) | 2026-10-03 photo pass batch 2 Q2-17 (CE): plate 0.47 x 0.25 | 2026-10-22 photo bug hunt H3-003 (~/koch_work/hunt/H3/findings.jsonl): 0.25-0.3 m higher",
    "content": "KOCH training-hall plate"
   },
   {
@@ -1247,7 +1246,7 @@
    "items": [
     [
      -5.56,
-     -0.06,
+     0.23,
      0.22,
      0.31,
      0.003
@@ -1256,7 +1255,38 @@
    "slot": "M_Plastic_Red",
    "content": "TODO_LORE: KOCH event poster (A4)",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-17 (CE): the red item under the plate is an A4 event poster, not a fire box | 2026-10-22 owner msg 161/170: red A4 poster (CE020, 012507444), was the navy sign slot"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-17 (CE): the red item under the plate is an A4 event poster, not a fire box | 2026-10-22 owner msg 161/170: red A4 poster (CE020, 012507444), was the navy sign slot | 2026-10-22 photo bug hunt H3-003 (~/koch_work/hunt/H3/findings.jsonl): 0.25-0.3 m higher"
+  },
+  {
+   "type": "downpipe",
+   "name": "DP_S_SW",
+   "edge": 0,
+   "u": [
+    0.256
+   ],
+   "z0": 1.2,
+   "z1": 13.3,
+   "d": 0.1,
+   "confidence": "medium",
+   "evidence": "H3-005: the second SW-corner downpipe is on the S face at x 176.62 | 2026-10-22 photo bug hunt H3-005 (~/koch_work/hunt/H3/findings.jsonl)"
+  },
+  {
+   "type": "wall_boxes",
+   "name": "Sign_BlockPlate_SW",
+   "edge": 8,
+   "items": [
+    [
+     19.5,
+     3.55,
+     0.5,
+     0.3,
+     0.02
+    ]
+   ],
+   "slot": "M_Sign_KOCH",
+   "content": "KOCH block C plate",
+   "confidence": "medium",
+   "evidence": "H3-006: blue block plate on the SW corner pilaster's W face | 2026-10-22 photo bug hunt H3-006 (~/koch_work/hunt/H3/findings.jsonl)"
   }
  ],
  "basement": {

@@ -1614,6 +1614,26 @@
    "slot": "M_Paint_Blue",
    "confidence": "low",
    "evidence": "2026-10-03 video pass V3-12: blue valve body at ~0.6 m"
+  },
+  {
+   "type": "path",
+   "name": "Sidewalk_EastOfLane",
+   "line": [
+    [
+     206.0,
+     -102.75
+    ],
+    [
+     240.0,
+     -103.1
+    ]
+   ],
+   "width": 2.4,
+   "thk": 0.05,
+   "top": 0.05,
+   "surface": "asphalt",
+   "confidence": "medium",
+   "evidence": "H1-010: asphalt footpath with white edge lines E of the lane (A280/A279, Google z20) | 2026-10-22 photo bug hunt H1-010 (~/koch_work/hunt/H1/findings.jsonl)"
   }
  ],
  "ground": "pads"

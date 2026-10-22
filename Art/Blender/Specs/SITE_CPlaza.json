@@ -913,6 +913,21 @@
    ],
    "evidence": "owner 2026-09-29: landing + steps down at the C east exit door (door 1.86 m, u 7.37-9.23 of the east face); flight along the wall because the east road kerb is ~1.4 m from the wall; sizes by rule (riser 0.17, tread 0.30), not measured; rail on the open sides (north edge of the landing, road side of landing + flight) | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)",
    "confidence": "medium"
+  },
+  {
+   "type": "tree",
+   "name": "TreeAN_W0",
+   "pos": [
+    174.6,
+    -13.57
+   ],
+   "height": 7.0,
+   "crown_d": 3.0,
+   "trunk_d": 0.2,
+   "crown_base": 1.0,
+   "shape": "cone",
+   "confidence": "medium",
+   "evidence": "H2-017: tall conifer in the 2nd pit from the W end of the A_N row | 2026-10-22 photo bug hunt H2-017 (~/koch_work/hunt/H2/findings.jsonl)"
   }
  ],
  "ground_surfaces": [
@@ -960,11 +975,11 @@
     ],
     [
      212.1,
-     -19.0
+     -32.0
     ],
     [
      198.5,
-     -19.0
+     -32.0
     ],
     [
      198.5,
@@ -976,7 +991,7 @@
     ]
    ],
    "slot": "M_Gravel_Compacted",
-   "evidence": "2026-10-02 photo diff: compacted grey-brown gravel parking east of the red line, cars up to C's SE pilaster (061643243, 061648727, 167); x of the line +-0.7 m | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50)"
+   "evidence": "2026-10-02 photo diff: compacted grey-brown gravel parking east of the red line, cars up to C's SE pilaster (061643243, 061648727, 167); x of the line +-0.7 m | 2026-10-04 D1 (Y1-02/Q2-13 settled: Google ground features + C-frame photo cameras + CE024 bundle + eave gaps): Block C and its C-relative items moved (+3.10,+3.50) | 2026-10-22 photo bug hunt H2-016 (~/koch_work/hunt/H2/findings.jsonl): gravel E of A_N to y -32 (CC006/CC007)"
   }
  ],
  "terrain_pads": [
@@ -984,8 +999,8 @@
    "name": "CPlaza_WWing",
    "ring": [
     [
-     169.4,
-     -6.9
+     176.3,
+     -7.15
     ],
     [
      186.6,
@@ -996,14 +1011,14 @@
      -0.55
     ],
     [
-     169.65,
-     0.0
+     176.4,
+     -0.2
     ]
    ],
    "z": 5.14,
    "blend": 0.6,
    "confidence": "medium",
-   "evidence": "2026-10-04 levels pass L2-03 (Q2-21 re-measured: plaza in front of the C W wing / basement forecourt ~5.14; flat)"
+   "evidence": "2026-10-04 levels pass L2-03 (Q2-21 re-measured: plaza in front of the C W wing / basement forecourt ~5.14; flat) | 2026-10-22 photo bug hunt H3-001 (~/koch_work/hunt/H3/findings.jsonl): W part replaced by DanceHall_Forecourt (5.15) / CPlaza_SouthOfRiser (5.35)"
   },
   {
    "name": "CPlaza_Entrance",

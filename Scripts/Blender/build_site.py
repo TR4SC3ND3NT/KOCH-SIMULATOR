@@ -793,6 +793,10 @@ class Site:
         ring = _ccw(el["ring"])
         bm = bmesh.new()
         if el.get("holes"):  # cut-outs (inset fields/surfaces sit flush in them instead of overlapping the top)
+            out = [h for h in el["holes"] if not all(_in_ring(ring, x, y) for x, y in h)]
+            if out:   # a hole outside or across the ring breaks the cap tessellation (overlapping caps, w46 HallApron)
+                bpy.app.driver_namespace.setdefault("koch_build_failures", []).append(
+                    f"slab {el.get('name')}: {len(out)} hole(s) not inside its ring")
             _slab_with_holes(bm, ring, [_ccw(h)[::-1] for h in el["holes"]], el["z0"], el["z1"])
         else:
             lo = [bm.verts.new((x, y, el["z0"])) for x, y in ring]
@@ -1571,6 +1575,16 @@ def _dense(ring, step):
 def _ccw(r):
     a = 0.5 * sum(r[i - 1][0] * r[i][1] - r[i][0] * r[i - 1][1] for i in range(len(r)))
     return [list(p) for p in (r if a > 0 else r[::-1])]
+
+
+def _in_ring(r, x, y):
+    """Even-odd point-in-polygon test in plan."""
+    inside = False
+    for i in range(len(r)):
+        (x1, y1), (x2, y2) = r[i - 1][:2], r[i][:2]
+        if (y1 > y) != (y2 > y) and x < x1 + (y - y1) * (x2 - x1) / (y2 - y1):
+            inside = not inside
+    return inside
 
 
 def _offset(ring, d):

@@ -17,7 +17,7 @@ import torch
 from PIL import Image, ImageOps
 from transformers import AutoImageProcessor, Mask2FormerForUniversalSegmentation
 
-SHORT = 1024
+SHORT = int(os.environ.get("KOCH_SEG_SHORT", "1024"))   # 768: ~1.7x faster, kerbs still resolved
 # same names/colours as render_semantic.CLASSES, plus photo-only classes (masked out of the diff)
 CLASS_LIST = ["unknown", "grass", "soil", "paving", "road", "kerb", "stairs", "wall", "roof", "window", "door",
               "vegetation", "metal", "sign", "water", "other", "sky", "person", "vehicle"]
@@ -46,7 +46,7 @@ ADE_OVER = {  # ADE20K label -> our class, applied where it adds what Vistas can
 }
 ADE_WHERE = {"stairs": {"wall", "paving", "road", "kerb", "other"}, "metal": {"wall", "paving", "other", "vegetation"},
              "roof": {"wall", "other", "sky"}, "window": {"wall", "other"}, "door": {"wall", "other"},
-             "grass": {"soil", "paving", "other"}}   # ADE only overrides these Vistas classes (keeps curb/sidewalk)
+             "grass": {"soil", "paving", "other"}, "wall": {"other"}}   # ADE only overrides these Vistas classes (keeps curb/sidewalk)
 
 
 def load(ckpt):

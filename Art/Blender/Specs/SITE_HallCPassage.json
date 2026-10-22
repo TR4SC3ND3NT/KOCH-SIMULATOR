@@ -161,57 +161,78 @@
    "evidence": "2026-10-22 owner msg 170 (#11): an un-padded gap between PassageUpper, LowerTerrace and CPlaza_WWing fell back to the DEM (5.06, a 30 cm trough at the shed's SW corner); CE020/081834396 show one even paving from the spruce lawn to the Dance Hall canopy"
   },
   {
-   "name": "Plaza_ShedFall",
-   "z": 5.35,
-   "grad": [
-    -0.0946,
-    0.0
-   ],
-   "ref": [
-    167.38,
-    -1.2
-   ],
-   "blend": 0.5,
+   "name": "DanceHall_Forecourt",
+   "z": 5.15,
+   "blend": 0.0,
    "ring": [
     [
-     167.358,
-     -1.19
+     167.83,
+     0.8
     ],
     [
-     167.43,
-     1.9
+     168.56,
+     -0.23
     ],
     [
-     167.9,
-     2.85
+     169.32,
+     -1.15
     ],
     [
      170.3,
-     0.83
+     -2.4
     ],
     [
-     169.65,
-     0.0
+     170.6,
+     -3.8
+    ],
+    [
+     176.3,
+     -3.9
+    ],
+    [
+     176.4,
+     0.6
+    ],
+    [
+     170.39,
+     0.55
+    ],
+    [
+     168.9,
+     1.775
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "H3-001: three solved cameras (CC023, CE042, ...): the plaza steps down ~0.20 m with a 0.3 m concrete gutter to a flat forecourt in front of the Dance Hall entry and the shed chamfer; was an even fall (Plaza_ShedFall, 2026-10-22 morning) | 2026-10-22 photo bug hunt H3-001 (~/koch_work/hunt/H3/findings.jsonl)"
+  },
+  {
+   "name": "CPlaza_SouthOfRiser",
+   "z": 5.35,
+   "blend": 0.5,
+   "ring": [
+    [
+     170.6,
+     -3.8
+    ],
+    [
+     176.3,
+     -3.9
+    ],
+    [
+     176.3,
+     -7.15
+    ],
+    [
+     169.4,
+     -6.9
     ],
     [
      169.53,
      -3.3
-    ],
-    [
-     168.95,
-     -3.25
-    ],
-    [
-     168.5,
-     -3.2
-    ],
-    [
-     167.4,
-     -3.045
     ]
    ],
    "confidence": "medium",
-   "evidence": "2026-10-22 owner msg 170 (#11): an un-padded gap between PassageUpper, LowerTerrace and CPlaza_WWing fell back to the DEM (5.06, a 30 cm trough at the shed's SW corner); CE020/081834396 show one even paving from the spruce lawn to the Dance Hall canopy; even fall 5.35 -> 5.14 (CPlaza_WWing) over 2.2 m"
+   "evidence": "H3-001: three solved cameras (CC023, CE042, ...): the plaza steps down ~0.20 m with a 0.3 m concrete gutter to a flat forecourt in front of the Dance Hall entry and the shed chamfer; was an even fall (Plaza_ShedFall, 2026-10-22 morning) | 2026-10-22 photo bug hunt H3-001 (~/koch_work/hunt/H3/findings.jsonl)"
   }
  ],
  "elements": [
@@ -224,11 +245,11 @@
    ],
    "dir_deg": -92.2,
    "width": 2.2,
-   "risers": 6,
-   "riser_h": 0.146,
+   "risers": 5,
+   "riser_h": 0.175,
    "tread": 0.33,
    "top_landing": 0.4,
-   "evidence": "070410255 t=26-33 s (2 fps a_053..a_067 + 10 fps crops): herringbone path between the hall E end and the lawn ends in a full-width granite stair descending north; granite cheek on its E side turns E at the bottom as the coping of the lawn's retaining edge, lower paved strip N of it running to the C shed front (a_062). Plan from Google z20 (return-arm coping shadow y 9.0-9.2, lower lawn W edge x 160.5, strip y 9.2-10.8, dirt bed y 0-9). 5 risers counted from the top landing (4K frame t=29.5 s: nosings at 1640/1450/1335/1235/1170 px); drop 0.44 SfM units x 2.0 m/unit = 0.88 m (SfM of t=12-34 s, 80 frames, pavement-normal up; scale from 0.2 x 0.1 m pavers and 1.0 m curbs) -> 5 x 0.175 | 2026-10-04 levels pass L2-06: 6 risers counted (same 0.875 drop)",
+   "evidence": "070410255 t=26-33 s (2 fps a_053..a_067 + 10 fps crops): herringbone path between the hall E end and the lawn ends in a full-width granite stair descending north; granite cheek on its E side turns E at the bottom as the coping of the lawn's retaining edge, lower paved strip N of it running to the C shed front (a_062). Plan from Google z20 (return-arm coping shadow y 9.0-9.2, lower lawn W edge x 160.5, strip y 9.2-10.8, dirt bed y 0-9). 5 risers counted from the top landing (4K frame t=29.5 s: nosings at 1640/1450/1335/1235/1170 px); drop 0.44 SfM units x 2.0 m/unit = 0.88 m (SfM of t=12-34 s, 80 frames, pavement-normal up; scale from 0.2 x 0.1 m pavers and 1.0 m curbs) -> 5 x 0.175 | 2026-10-04 levels pass L2-06: 6 risers counted (same 0.875 drop) | 2026-10-22 photo bug hunt H3-004 (~/koch_work/hunt/H3/findings.jsonl): 5 risers x 0.175 (A089)",
    "confidence": "medium"
   },
   {
@@ -318,28 +339,28 @@
    "name": "Passage_ShedLedge",
    "ring": [
     [
-     166.97,
+     166.5,
      8.02
     ],
     [
-     167.47,
+     167.58,
      8.02
     ],
     [
-     167.47,
-     11.3
+     167.58,
+     19.4
     ],
     [
-     166.97,
-     11.3
+     166.5,
+     19.4
     ]
    ],
-   "z0": 3.9,
-   "z1": 4.38,
+   "z0": 4.3,
+   "z1": 4.65,
    "material": "concrete",
    "slot": "M_Concrete",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass R0-04 (A028-A030, A032): concrete ledge 0.12-0.15 high at the foot of the C west shed in the lower yard | 2026-10-04 walkthrough (A028-A031 vs render, agrees with finish_E t45.5: ground at the shed ~0.6 lower): the yard strip between the upper-lawn cheek wall and the lower lawn falls east to a drain (manhole mid-yard) and the shed front stands on a ~0.35 m concrete step"
+   "evidence": "2026-10-03 photo pass R0-04 (A028-A030, A032): concrete ledge 0.12-0.15 high at the foot of the C west shed in the lower yard | 2026-10-04 walkthrough (A028-A031 vs render, agrees with finish_E t45.5: ground at the shed ~0.6 lower): the yard strip between the upper-lawn cheek wall and the lower lawn falls east to a drain (manhole mid-yard) and the shed front stands on a ~0.35 m concrete step | 2026-10-22 photo bug hunt H3-014 (~/koch_work/hunt/H3/findings.jsonl): ledge ~1.05 m wide, 0.2 m over the yard"
   },
   {
    "type": "lamp_orn",
@@ -349,12 +370,12 @@
     7.3
    ],
    "z": 5.4,
-   "height": 1.8,
+   "height": 3.0,
    "globes": 2,
-   "globe_d": 0.13,
-   "arm_span": 0.65,
+   "globe_d": 0.28,
+   "arm_span": 0.9,
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass R0-06 (A028: 748 px at 400 px/m = 1.87 m; A030: 1.73 m): 2-globe lamp on the upper passage at the Cheek_Return E end | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1)"
+   "evidence": "2026-10-03 photo pass R0-06 (A028: 748 px at 400 px/m = 1.87 m; A030: 1.73 m): 2-globe lamp on the upper passage at the Cheek_Return E end | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 photo bug hunt H3-018 (~/koch_work/hunt/H3/findings.jsonl)"
   },
   {
    "type": "roof_plane",
@@ -531,12 +552,16 @@
      0.9
     ],
     [
-     167.0,
-     1.9
+     166.7,
+     2.1
     ],
     [
-     167.46,
-     2.9
+     166.6,
+     3.1
+    ],
+    [
+     167.55,
+     3.33
     ],
     [
      167.631,
@@ -557,7 +582,7 @@
    ],
    "curb_w": 0.12,
    "curb_h": 0.12,
-   "evidence": "upper lawn E of the path with yellow/white painted curbs and three blue spruces (a_038..a_061); Google z20 bed x 159.5..167.5, y 0..9 (dirt inside the cheek L at its N end) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44). | 2026-10-03 photo pass batch 2 Q2-14 (CE): the lawn's SE corner is cut on a diagonal (+-0.25) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1)",
+   "evidence": "upper lawn E of the path with yellow/white painted curbs and three blue spruces (a_038..a_061); Google z20 bed x 159.5..167.5, y 0..9 (dirt inside the cheek L at its N end) | [B] 2026-09-28: curbs painted yellow ~1.0 m / white ~0.5 m alternating (070410255 t20-t44). | 2026-10-03 photo pass batch 2 Q2-14 (CE): the lawn's SE corner is cut on a diagonal (+-0.25) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 photo bug hunt H3-013 (~/koch_work/hunt/H3/findings.jsonl)",
    "confidence": "medium",
    "paint": [
     [
@@ -727,27 +752,6 @@
    "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): smooth cast-concrete apron along the shed foot, sloping to the kerb (geometry +-0.4) | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): CE020/081834396: the concrete apron runs along the shed's chamfered SW wall from the lawn corner to the Dance Hall block, not south of it | 2026-10-22 081834396 crop: the apron lies against the wall; moved 0.28 m NE onto the chamfer face"
   },
   {
-   "type": "wall",
-   "name": "Shed_Apron_Kerb",
-   "line": [
-    [
-     167.07,
-     1.92
-    ],
-    [
-     169.97,
-     -0.28
-    ]
-   ],
-   "height": 0.12,
-   "thk": 0.2,
-   "material": "stone",
-   "slot": "M_Concrete",
-   "ue_note": "0.15 open gutter trough on its E side",
-   "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): concrete kerb with an open channel along the shed foot (+-0.4) | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): kerb on the apron's outer edge (was a 6 m bar out in the plaza at x 166.6, y -6.5..-0.15)"
-  },
-  {
    "type": "steps",
    "name": "HallWing_DoorSteps",
    "pos": [
@@ -843,6 +847,117 @@
    "species": "rose",
    "evidence": "2026-10-04 walkthrough (A028/A029): pink rose bushes along the lower lawn's yard-side edge | 2026-10-22 owner msg 160: crowns (0.9 m) inside the curb (were 0.1-0.2 m over the S/W curb); row along the yard-side edge kept (A028)",
    "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Forecourt_Riser",
+   "line": [
+    [
+     167.83,
+     0.8
+    ],
+    [
+     168.56,
+     -0.23
+    ],
+    [
+     169.32,
+     -1.15
+    ],
+    [
+     170.3,
+     -2.4
+    ],
+    [
+     170.6,
+     -3.8
+    ],
+    [
+     176.3,
+     -3.9
+    ]
+   ],
+   "height": 0.2,
+   "thk": 0.15,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "slot": "M_Concrete",
+   "confidence": "medium",
+   "evidence": "H3-001: three solved cameras (CC023, CE042, ...): the plaza steps down ~0.20 m with a 0.3 m concrete gutter to a flat forecourt in front of the Dance Hall entry and the shed chamfer; was an even fall (Plaza_ShedFall, 2026-10-22 morning) | 2026-10-22 photo bug hunt H3-001 (~/koch_work/hunt/H3/findings.jsonl)"
+  },
+  {
+   "type": "path",
+   "name": "Forecourt_Gutter",
+   "line": [
+    [
+     167.95,
+     0.95
+    ],
+    [
+     168.68,
+     -0.08
+    ],
+    [
+     169.44,
+     -1.0
+    ],
+    [
+     170.42,
+     -2.25
+    ],
+    [
+     170.75,
+     -3.65
+    ],
+    [
+     176.3,
+     -3.75
+    ]
+   ],
+   "width": 0.3,
+   "thk": 0.06,
+   "top": -0.05,
+   "slot": "M_Concrete",
+   "confidence": "medium",
+   "evidence": "H3-001: three solved cameras (CC023, CE042, ...): the plaza steps down ~0.20 m with a 0.3 m concrete gutter to a flat forecourt in front of the Dance Hall entry and the shed chamfer; was an even fall (Plaza_ShedFall, 2026-10-22 morning) | 2026-10-22 photo bug hunt H3-001 (~/koch_work/hunt/H3/findings.jsonl)"
+  },
+  {
+   "type": "box",
+   "name": "Passage_Manhole",
+   "center": [
+    162.2,
+    8.85
+   ],
+   "dir_deg": -2.2,
+   "size": [
+    0.7,
+    0.7,
+    0.02
+   ],
+   "z0": 4.475,
+   "material": "metal",
+   "slot": "M_Steel_Paint_Dark",
+   "confidence": "medium",
+   "evidence": "H3-011 | 2026-10-22 photo bug hunt H3-011 (~/koch_work/hunt/H3/findings.jsonl)"
+  },
+  {
+   "type": "box",
+   "name": "Sign_DanceHall_W",
+   "center": [
+    170.39,
+    0.45
+   ],
+   "dir_deg": 87.7,
+   "size": [
+    0.3,
+    0.02,
+    0.25
+   ],
+   "z0": 7.18,
+   "slot": "M_Sign_KOCH",
+   "content": "KOCH dance-hall plate",
+   "confidence": "medium",
+   "evidence": "H3-008: second plate on the pier's W face | 2026-10-22 photo bug hunt H3-008 (~/koch_work/hunt/H3/findings.jsonl)"
   }
  ],
  "ground_surfaces": [
@@ -943,15 +1058,31 @@
      -1.01
     ],
     [
-     165.517,
-     0.05
+     165.25,
+     -0.1
     ],
     [
-     167.4,
-     0.0
+     166.5,
+     0.9
     ],
     [
-     167.4,
+     166.7,
+     2.1
+    ],
+    [
+     166.6,
+     3.1
+    ],
+    [
+     167.55,
+     3.33
+    ],
+    [
+     167.6,
+     2.9
+    ],
+    [
+     167.6,
      1.6
     ],
     [
@@ -991,16 +1122,19 @@
      -13.4
     ],
     [
-     156.0,
-     -9.628
+     153.2,
+     -9.6
     ],
     [
-     156.0,
+     153.2,
      2.2
     ]
    ],
    "confidence": "high",
-   "evidence": "2026-10-22 owner msg 170 (#11): CE020, 081834396: rectangular grey pavers in herringbone from the A_W north steps to the spruce lawn kerb, the shed and the Dance Hall canopy (was the ortho-generated clover slot); ring = generated Paved_003 within x 156-175.1 (CPlaza herringbone edge), y -17.6..2.2, minus the lawn, grass and HallBed_Paving"
+   "evidence": "2026-10-22 owner msg 170 (#11): CE020, 081834396: rectangular grey pavers in herringbone from the A_W north steps to the spruce lawn kerb, the shed and the Dance Hall canopy (was the ortho-generated clover slot); ring = generated Paved_003 within x 156-175.1 (CPlaza herringbone edge), y -17.6..2.2, minus the lawn, grass and HallBed_Paving | 2026-10-22 photo bug hunt H3-009 (~/koch_work/hunt/H3/findings.jsonl) | 2026-10-22 photo bug hunt H3-017 (~/koch_work/hunt/H3/findings.jsonl): follows the upper-lawn kerb to the shed face; herringbone from the hall-bed E end"
   }
+ ],
+ "removed_notes": [
+  "2026-10-22 H3-001: Shed_Apron_Kerb (no raised kerb: the apron meets the strip flush; added in error the same morning)"
  ]
 }

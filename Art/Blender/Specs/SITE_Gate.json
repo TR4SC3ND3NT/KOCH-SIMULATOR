@@ -1806,8 +1806,8 @@
      -97.0
     ],
     [
-     211.723,
-     -45.0
+     210.38,
+     -79.5
     ]
    ],
    "height": 4.2,
@@ -1815,7 +1815,7 @@
    "material": "stone",
    "slot": "M_Concrete",
    "confidence": "low",
-   "evidence": "2026-10-04 walkthrough (A274/A276/A278 looking N along the east lane): a ~4 m grey precast-concrete wall (neighbour's) stands right behind the lane's black bar fence from the gate north for ~50 m; height from the 1.95 m fence (x2.1), north end where the trees start (+-8 m)"
+   "evidence": "2026-10-04 walkthrough (A274/A276/A278 looking N along the east lane): a ~4 m grey precast-concrete wall (neighbour's) stands right behind the lane's black bar fence from the gate north for ~50 m; height from the 1.95 m fence (x2.1), north end where the trees start (+-8 m) | 2026-10-22 photo bug hunt H1-014 (~/koch_work/hunt/H1/findings.jsonl): the wall ends at y -79.5 (A274/A278)"
   },
   {
    "type": "box",
@@ -1933,6 +1933,47 @@
    "ue_asset": "bin_cast_round",
    "evidence": "2026-10-04 video pass V3-13/V3-14 (065653194 t32-40, over the parapet into the B front strip, E half): benches with backrests on the path's S edge facing N + round cast bins; not built until 2026-10-05 (owner msg 104: forgotten props). x by eye, +-3 m",
    "confidence": "low"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_CircleWalk_E",
+   "line": [
+    [
+     147.93,
+     -81.74
+    ],
+    [
+     147.68,
+     -86.78
+    ]
+   ],
+   "height": 0.08,
+   "thk": 0.12,
+   "cap_proj": 0.0,
+   "material": "stone",
+   "slot": "M_Kerb_Painted_RW",
+   "confidence": "high",
+   "evidence": "H1-002: raised red/white painted edging kerb ~8 cm at the circle-paver walk's E edge | 2026-10-22 photo bug hunt H1-002 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "type": "wall",
+   "name": "Kerb_EastLane_W",
+   "line": [
+    [
+     201.3,
+     -99.6
+    ],
+    [
+     200.4,
+     -104.2
+    ]
+   ],
+   "height": 0.12,
+   "thk": 0.15,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "confidence": "high",
+   "evidence": "H1-009 | 2026-10-22 photo bug hunt H1-009 (~/koch_work/hunt/H1/findings.jsonl)"
   }
  ],
  "ground_surfaces": [
@@ -2128,6 +2169,166 @@
    ],
    "slot": "M_Paver_Clover_Grey",
    "evidence": "2026-10-04 re-verification X2-06: clover pavers S/E of the gate booth out to the parking (was grass) | 2026-10-04 re-verification round 2 Y2-01: N edge on the PathClover_S centreline (no grass strip)"
+  },
+  {
+   "name": "BoothSkirt_Clover",
+   "slot": "M_Paver_Clover_Grey",
+   "ring": [
+    [
+     156.7,
+     -101.05
+    ],
+    [
+     161.55,
+     -101.3
+    ],
+    [
+     161.6,
+     -98.5
+    ],
+    [
+     156.85,
+     -98.26
+    ]
+   ],
+   "confidence": "high",
+   "evidence": "H1-001: clover pavers up to the booth plinth on its W/S/E sides (A257-A259) | 2026-10-22 photo bug hunt H1-001 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "name": "Parking_West",
+   "slot": "M_Asphalt",
+   "ring": [
+    [
+     92.25,
+     -102.98
+    ],
+    [
+     117.87,
+     -104.33
+    ],
+    [
+     136.0,
+     -104.14
+    ],
+    [
+     136.0,
+     -109.939
+    ],
+    [
+     125.0,
+     -109.382
+    ],
+    [
+     92.25,
+     -109.58
+    ]
+   ],
+   "confidence": "high",
+   "evidence": "H1-004: parked cars nose-in in front of B (Google z20); was lawn behind the wheel stops | 2026-10-22 photo bug hunt H1-004 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "name": "Parking_EastGap",
+   "slot": "M_Asphalt",
+   "ring": [
+    [
+     176.0,
+     -110.7
+    ],
+    [
+     188.0,
+     -111.35
+    ],
+    [
+     188.0,
+     -112.58
+    ],
+    [
+     176.0,
+     -111.965
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "H1-005 | 2026-10-22 photo bug hunt H1-005 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "name": "EastLane_Apron",
+   "slot": "M_Asphalt",
+   "ring": [
+    [
+     201.3,
+     -99.47
+    ],
+    [
+     205.45,
+     -99.69
+    ],
+    [
+     206.0,
+     -113.38
+    ],
+    [
+     201.2,
+     -113.14
+    ]
+   ],
+   "confidence": "high",
+   "evidence": "H1-009: the east lane's apron from the gate to the street is asphalt (A276) | 2026-10-22 photo bug hunt H1-009 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "name": "EastLane_Asphalt",
+   "slot": "M_Asphalt",
+   "ring": [
+    [
+     201.5,
+     -99.5
+    ],
+    [
+     209.0,
+     -99.89
+    ],
+    [
+     216.0,
+     -92.0
+    ],
+    [
+     216.0,
+     -19.0
+    ],
+    [
+     201.5,
+     -19.0
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "H1-016: rough asphalt over the whole east lane (A274/A276/A278); the generated clover had won over A_EastLot's asphalt; a clover strip x 198.5-201.5 stays along the A_S/A_E east wall | 2026-10-22 photo bug hunt H1-016 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "name": "EastLane_Mouth",
+   "slot": "M_Asphalt",
+   "ring": [
+    [
+     198.5,
+     -99.29
+    ],
+    [
+     205.45,
+     -99.69
+    ],
+    [
+     209.0,
+     -99.89
+    ],
+    [
+     216.0,
+     -92.0
+    ],
+    [
+     198.5,
+     -92.0
+    ]
+   ],
+   "confidence": "high",
+   "evidence": "H1-015: a lawn band crossed the lane mouth inside the gate | 2026-10-22 photo bug hunt H1-015 (~/koch_work/hunt/H1/findings.jsonl)"
   }
  ],
  "terrain_pads": [

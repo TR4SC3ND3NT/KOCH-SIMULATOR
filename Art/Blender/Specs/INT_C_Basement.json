@@ -41,8 +41,8 @@
   ],
   [
    [
-    191.771,
-    18.561
+    191.05,
+    18.59
    ],
    [
     206.01,
@@ -53,8 +53,8 @@
     19.292
    ],
    [
-    191.823,
-    19.86
+    191.1,
+    19.89
    ]
   ],
   [
@@ -300,25 +300,37 @@
    "name": "Entry_Landing",
    "ring": [
     [
-     170.449,
-     -2.906
+     169.8,
+     0.9
     ],
     [
-     172.228,
-     -2.977
+     170.4,
+     0.63
     ],
     [
      172.349,
      0.07
     ],
     [
-     170.571,
-     0.141
+     172.228,
+     -2.977
+    ],
+    [
+     171.9,
+     -2.0
+    ],
+    [
+     171.1,
+     -1.2
+    ],
+    [
+     169.85,
+     -0.2
     ]
    ],
    "z0": 5.01,
    "z1": 5.26,
-   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head, one kerb above the plaza paving (012507444, frame a10 of 070629483) | 2026-10-04 levels pass L2-05 (CE042/CC021: one kerb 0.12 above the 5.14 plaza)",
+   "evidence": "pink granite landing in front of the Dance Hall box's south face, at the stair head, one kerb above the plaza paving (012507444, frame a10 of 070629483) | 2026-10-04 levels pass L2-05 (CE042/CC021: one kerb 0.12 above the 5.14 plaza) | 2026-10-22 photo bug hunt H3-002 (~/koch_work/hunt/H3/findings.jsonl): diagonal front edge, covers the pier's W foot",
    "confidence": "medium"
   },
   {
@@ -2021,27 +2033,27 @@
    "name": "Art_Alcove_Floor",
    "ring": [
     [
-     191.723,
-     18.613
+     191.1,
+     18.638
     ],
     [
-     193.672,
-     18.535
+     194.899,
+     18.486
     ],
     [
-     193.724,
-     19.834
+     194.951,
+     19.785
     ],
     [
-     191.775,
-     19.912
+     191.152,
+     19.937
     ]
    ],
    "z0": 2.89,
    "z1": 3.14,
    "material": "stone",
    "slot": "M_Tile_Beige",
-   "evidence": "2026-10-04 finish_B: window alcove of the art room in C's north step (BLD_C north_east wall)",
+   "evidence": "2026-10-04 finish_B: window alcove of the art room in C's north step (BLD_C north_east wall) | H4-002: the art room's window wall is one plane ~3.8 m wide (0.74 wall | 1.9 window | 1.15 wall), its E wall (mural) 1.3 m E of the hall E wall (video 012744144 t 6-7 s, hall SfM) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
@@ -2077,27 +2089,27 @@
    "name": "Art_Alcove_Ceiling",
    "ring": [
     [
-     191.723,
-     18.613
+     191.1,
+     18.638
     ],
     [
-     193.872,
-     18.527
+     194.899,
+     18.486
     ],
     [
-     193.924,
-     19.826
+     194.951,
+     19.785
     ],
     [
-     191.775,
-     19.912
+     191.152,
+     19.937
     ]
    ],
    "z0": 6.1,
    "z1": 6.13,
    "material": "white",
    "slot": "M_Paint_White",
-   "evidence": "2026-10-04 finish_B: alcove ceiling",
+   "evidence": "2026-10-04 finish_B: alcove ceiling | H4-002: the art room's window wall is one plane ~3.8 m wide (0.74 wall | 1.9 window | 1.15 wall), its E wall (mural) 1.3 m E of the hall E wall (video 012744144 t 6-7 s, hall SfM) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
@@ -2133,8 +2145,8 @@
    "name": "Hall_Wall_E",
    "line": [
     [
-     193.724,
-     19.834
+     193.445,
+     12.84
     ],
     [
      192.97,
@@ -2147,19 +2159,19 @@
    "material": "white",
    "openings": [
     {
-     "u0": 8.35,
-     "u1": 11.75,
+     "u0": 1.35,
+     "u1": 4.75,
      "z0": 3.05,
      "z1": 5.74
     },
     {
-     "u0": 14.05,
-     "u1": 14.65,
+     "u0": 7.05,
+     "u1": 7.65,
      "z0": 4.52,
      "z1": 5.42
     }
    ],
-   "evidence": "2026-10-04 finish_B: east hall wall: seating, electrical niche, arch to the east (right) descent (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012714931 t2.2-17.5)",
+   "evidence": "2026-10-04 finish_B: east hall wall: seating, electrical niche, arch to the east (right) descent (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012714931 t2.2-17.5) | S part only (N 7 m moved E, H4-002)",
    "confidence": "medium"
   },
   {
@@ -3144,8 +3156,8 @@
    "type": "box",
    "name": "Art_Dado_AlcoveW",
    "center": [
-    191.757,
-    19.262
+    191.134,
+    19.287
    ],
    "dir_deg": 87.716145,
    "size": [
@@ -3156,26 +3168,26 @@
    "z0": 3.14,
    "material": "white",
    "slot": "M_Plastic_Grey",
-   "evidence": "2026-10-04 finish_B: grey painted dado 0.95 m (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room))",
+   "evidence": "2026-10-04 finish_B: grey painted dado 0.95 m (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room)) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Art_Dado_AlcoveN",
    "center": [
-    192.749,
-    19.865
+    193.025,
+    19.854
    ],
    "dir_deg": -2.283855,
    "size": [
-    1.95,
+    3.85,
     0.015,
     0.95
    ],
    "z0": 3.14,
    "material": "white",
    "slot": "M_Plastic_Grey",
-   "evidence": "2026-10-04 finish_B: grey painted dado 0.95 m (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room))",
+   "evidence": "2026-10-04 finish_B: grey painted dado 0.95 m (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room)) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
@@ -3282,8 +3294,8 @@
    "type": "box",
    "name": "Art_Mural_E",
    "center": [
-    193.588,
-    16.587
+    194.887,
+    16.535
    ],
    "dir_deg": 87.716145,
    "size": [
@@ -3295,7 +3307,7 @@
    "material": "white",
    "slot": "M_Paint_Brown",
    "ue_asset": "decal_mural_lineart",
-   "evidence": "2026-10-04 finish_B: small line-art mural on the east wall (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5)",
+   "evidence": "2026-10-04 finish_B: small line-art mural on the east wall (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "low"
   },
   {
@@ -3362,12 +3374,12 @@
    "type": "box",
    "name": "Art_Sofa_N",
    "center": [
-    192.722,
-    19.173
+    193.0,
+    19.162
    ],
    "dir_deg": -2.283855,
    "size": [
-    1.9,
+    3.6,
     0.8,
     0.45
    ],
@@ -3375,19 +3387,19 @@
    "material": "wood",
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "sofa_pallet",
-   "evidence": "2026-10-04 finish_B: pallet sofa with navy seat cushions under the window (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5)",
+   "evidence": "2026-10-04 finish_B: pallet sofa with navy seat cushions under the window (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Art_Sofa_N_Back",
    "center": [
-    192.74,
-    19.648
+    193.018,
+    19.637
    ],
    "dir_deg": -2.283855,
    "size": [
-    1.9,
+    3.6,
     0.15,
     0.5
    ],
@@ -3395,15 +3407,15 @@
    "material": "white",
    "slot": "M_Paint_Yellow",
    "ue_asset": "sofa_pallet_back",
-   "evidence": "2026-10-04 finish_B: beige/yellow back cushions (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5)",
+   "evidence": "2026-10-04 finish_B: beige/yellow back cushions (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Art_Sofa_E",
    "center": [
-    193.22,
-    17.752
+    194.519,
+    17.7
    ],
    "dir_deg": 87.716145,
    "size": [
@@ -3415,15 +3427,15 @@
    "material": "wood",
    "slot": "M_Wood_Oak_Light",
    "ue_asset": "sofa_pallet",
-   "evidence": "2026-10-04 finish_B: pallet sofa returning along the east wall (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5)",
+   "evidence": "2026-10-04 finish_B: pallet sofa returning along the east wall (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
    "type": "box",
    "name": "Art_Sofa_E_Back",
    "center": [
-    193.545,
-    17.739
+    194.844,
+    17.687
    ],
    "dir_deg": 87.716145,
    "size": [
@@ -3435,7 +3447,7 @@
    "material": "white",
    "slot": "M_Paint_Yellow",
    "ue_asset": "sofa_pallet_back",
-   "evidence": "2026-10-04 finish_B: back cushions (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5)",
+   "evidence": "2026-10-04 finish_B: back cushions (videos PXL_20260925_012714931 / 012744144 / 012800431 (hall, bays, art room) 012744144 t2.5-9.5) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)",
    "confidence": "medium"
   },
   {
@@ -4646,6 +4658,280 @@
    "slot": "M_Paint_White",
    "confidence": "medium",
    "evidence": "2026-10-22 owner msg 165 (basement): video 012744144 t9.5-12.3: the hall's south wall (C's south foundation wall, exit door to the piano room + 2 grilled windows + 3 top lights, radiators) is white render over the grey dado; the model showed the facade's red plinth tile on its inner face: plaster lining with the facade openings"
+  },
+  {
+   "type": "slab",
+   "name": "WinRoom_Floor",
+   "ring": [
+    [
+     177.5,
+     0.3
+    ],
+    [
+     182.3,
+     0.1
+    ],
+    [
+     182.5,
+     5.2
+    ],
+    [
+     177.7,
+     5.4
+    ]
+   ],
+   "z0": 2.65,
+   "z1": 2.9,
+   "material": "stone",
+   "slot": "M_Terrazzo_Grey_Tile",
+   "confidence": "medium",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "slab",
+   "name": "WinRoom_Ceiling",
+   "ring": [
+    [
+     177.5,
+     0.3
+    ],
+    [
+     182.3,
+     0.1
+    ],
+    [
+     182.5,
+     5.2
+    ],
+    [
+     177.7,
+     5.4
+    ]
+   ],
+   "z0": 5.43,
+   "z1": 5.45,
+   "material": "white",
+   "slot": "M_Paint_White",
+   "confidence": "medium",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "int_wall",
+   "name": "WinRoom_Wall_W",
+   "line": [
+    [
+     177.5,
+     0.3
+    ],
+    [
+     177.7,
+     5.4
+    ]
+   ],
+   "z0": 2.8,
+   "z1": 5.45,
+   "thk": 0.2,
+   "slot": "M_Paint_White",
+   "confidence": "low",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "int_wall",
+   "name": "WinRoom_Wall_N",
+   "line": [
+    [
+     177.7,
+     5.4
+    ],
+    [
+     182.5,
+     5.2
+    ]
+   ],
+   "z0": 2.8,
+   "z1": 5.45,
+   "thk": 0.2,
+   "slot": "M_Paint_White",
+   "openings": [
+    {
+     "u0": 2.0,
+     "u1": 2.9,
+     "z0": 2.92,
+     "z1": 4.97
+    }
+   ],
+   "confidence": "low",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "int_wall",
+   "name": "WinRoom_Wall_E",
+   "line": [
+    [
+     182.5,
+     5.2
+    ],
+    [
+     182.3,
+     0.1
+    ]
+   ],
+   "z0": 2.8,
+   "z1": 5.45,
+   "thk": 0.2,
+   "slot": "M_Paint_White",
+   "confidence": "low",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "box",
+   "name": "WinRoom_Door",
+   "center": [
+    180.15,
+    5.29
+   ],
+   "dir_deg": -2.283855,
+   "size": [
+    0.9,
+    0.04,
+    2.05
+   ],
+   "z0": 2.9,
+   "slot": "M_Wood_Stained",
+   "confidence": "low",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "box",
+   "name": "WinRoom_Downlight_0",
+   "center": [
+    179.0,
+    2.6
+   ],
+   "dir_deg": -2.283855,
+   "size": [
+    0.16,
+    0.16,
+    0.03
+   ],
+   "z0": 5.4,
+   "slot": "M_LED_Panel_600",
+   "confidence": "low",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "box",
+   "name": "WinRoom_Downlight_1",
+   "center": [
+    181.0,
+    2.5
+   ],
+   "dir_deg": -2.283855,
+   "size": [
+    0.16,
+    0.16,
+    0.03
+   ],
+   "z0": 5.4,
+   "slot": "M_LED_Panel_600",
+   "confidence": "low",
+   "evidence": "H4-001: a lit room behind the barred corridor window (downlights, a wooden door frame on its far wall), video 012547860; the model showed a 19 m void. Size beyond the window not measurable: minimum box | 2026-10-22 photo bug hunt H4-001 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "int_wall",
+   "z0": 3.04,
+   "z1": 6.13,
+   "thk": 0.2,
+   "material": "white",
+   "confidence": "medium",
+   "name": "Hall_Wall_E_Art",
+   "line": [
+    [
+     195.023,
+     19.782
+    ],
+    [
+     194.744,
+     12.788
+    ]
+   ],
+   "evidence": "H4-002: the art room's window wall is one plane ~3.8 m wide (0.74 wall | 1.9 window | 1.15 wall), its E wall (mural) 1.3 m E of the hall E wall (video 012744144 t 6-7 s, hall SfM) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "int_wall",
+   "z0": 3.04,
+   "z1": 6.13,
+   "thk": 0.2,
+   "material": "white",
+   "confidence": "medium",
+   "name": "Hall_Wall_E_Jog",
+   "line": [
+    [
+     193.445,
+     12.84
+    ],
+    [
+     194.744,
+     12.788
+    ]
+   ],
+   "evidence": "H4-002: the art room's window wall is one plane ~3.8 m wide (0.74 wall | 1.9 window | 1.15 wall), its E wall (mural) 1.3 m E of the hall E wall (video 012744144 t 6-7 s, hall SfM) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "slab",
+   "name": "Art_Floor_EastStrip",
+   "ring": [
+    [
+     193.445,
+     12.84
+    ],
+    [
+     194.744,
+     12.788
+    ],
+    [
+     194.97,
+     18.49
+    ],
+    [
+     193.672,
+     18.535
+    ]
+   ],
+   "z0": 2.89,
+   "z1": 3.14,
+   "slot": "M_Tile_Beige",
+   "material": "stone",
+   "confidence": "medium",
+   "evidence": "H4-002: the art room's window wall is one plane ~3.8 m wide (0.74 wall | 1.9 window | 1.15 wall), its E wall (mural) 1.3 m E of the hall E wall (video 012744144 t 6-7 s, hall SfM) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "slab",
+   "name": "Art_Ceiling_EastStrip",
+   "ring": [
+    [
+     193.445,
+     12.84
+    ],
+    [
+     194.744,
+     12.788
+    ],
+    [
+     194.97,
+     18.49
+    ],
+    [
+     193.672,
+     18.535
+    ]
+   ],
+   "z0": 6.1,
+   "z1": 6.13,
+   "slot": "M_Paint_White",
+   "material": "white",
+   "confidence": "medium",
+   "evidence": "H4-002: the art room's window wall is one plane ~3.8 m wide (0.74 wall | 1.9 window | 1.15 wall), its E wall (mural) 1.3 m E of the hall E wall (video 012744144 t 6-7 s, hall SfM) | 2026-10-22 photo bug hunt H4-002 (~/koch_work/hunt/H4/findings.jsonl)"
   }
  ]
 }
