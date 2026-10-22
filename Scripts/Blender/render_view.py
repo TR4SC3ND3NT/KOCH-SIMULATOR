@@ -1,6 +1,7 @@
 # Headless Workbench review render of the greybox from an arbitrary camera (R1 photo comparisons). Does not save.
 # Run: blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/render_view.py -- \
 #        CAM_X CAM_Y CAM_Z TGT_X TGT_Y TGT_Z LENS_MM OUT.png [W H]     (world metres, campus frame)
+import os
 import sys
 
 import bpy
@@ -13,7 +14,7 @@ w, h = (int(argv[8]), int(argv[9])) if len(argv) > 9 else (1400, 1000)
 sc = bpy.context.scene
 sc.render.engine = "BLENDER_WORKBENCH"
 sh = sc.display.shading
-sh.light, sh.color_type, sh.show_shadows, sh.show_cavity = "STUDIO", "OBJECT", True, True
+sh.light, sh.color_type, sh.show_shadows, sh.show_cavity = "STUDIO", os.environ.get("KOCH_COLOR", "OBJECT"), True, True   # KOCH_COLOR=MATERIAL: slot colours
 cam = bpy.data.objects.new("TMP_ViewCam", bpy.data.cameras.new("TMP_ViewCam"))
 sc.collection.objects.link(cam)
 cam.data.lens, cam.data.clip_start, cam.data.clip_end = lens, 0.05, 3000

@@ -1253,10 +1253,10 @@
      0.003
     ]
    ],
-   "slot": "M_Sign_KOCH",
+   "slot": "M_Plastic_Red",
    "content": "TODO_LORE: KOCH event poster (A4)",
    "confidence": "medium",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-17 (CE): the red item under the plate is an A4 event poster, not a fire box"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-17 (CE): the red item under the plate is an A4 event poster, not a fire box | 2026-10-22 owner msg 161/170: red A4 poster (CE020, 012507444), was the navy sign slot"
   }
  ],
  "basement": {

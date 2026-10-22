@@ -138,6 +138,72 @@
    ],
    "evidence": "2026-10-04 walkthrough (A028-A031 vs render, agrees with finish_E t45.5: ground at the shed ~0.6 lower): the yard strip between the upper-lawn cheek wall and the lower lawn falls east to a drain (manhole mid-yard) and the shed front stands on a ~0.35 m concrete step",
    "confidence": "medium"
+  },
+  {
+   "name": "Plaza_GapFlat",
+   "z": 5.35,
+   "blend": 0.5,
+   "ring": [
+    [
+     150.0,
+     -0.6
+    ],
+    [
+     167.358,
+     -1.19
+    ],
+    [
+     167.4,
+     -3.045
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-22 owner msg 170 (#11): an un-padded gap between PassageUpper, LowerTerrace and CPlaza_WWing fell back to the DEM (5.06, a 30 cm trough at the shed's SW corner); CE020/081834396 show one even paving from the spruce lawn to the Dance Hall canopy"
+  },
+  {
+   "name": "Plaza_ShedFall",
+   "z": 5.35,
+   "grad": [
+    -0.0946,
+    0.0
+   ],
+   "ref": [
+    167.38,
+    -1.2
+   ],
+   "blend": 0.5,
+   "ring": [
+    [
+     167.358,
+     -1.19
+    ],
+    [
+     167.43,
+     1.9
+    ],
+    [
+     169.65,
+     0.0
+    ],
+    [
+     169.53,
+     -3.3
+    ],
+    [
+     168.95,
+     -3.25
+    ],
+    [
+     168.5,
+     -3.2
+    ],
+    [
+     167.4,
+     -3.045
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-22 owner msg 170 (#11): an un-padded gap between PassageUpper, LowerTerrace and CPlaza_WWing fell back to the DEM (5.06, a 30 cm trough at the shed's SW corner); CE020/081834396 show one even paving from the spruce lawn to the Dance Hall canopy; even fall 5.35 -> 5.14 (CPlaza_WWing) over 2.2 m"
   }
  ],
  "elements": [
@@ -539,11 +605,11 @@
     161.2,
     0.1
    ],
-   "height": 8.0,
-   "crown_d": 5.0,
+   "height": 6.0,
+   "crown_d": 4.5,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): ~7-8 m tall, crown ~3.5-4 m (the Google crown 6 m included its shadow) | 081834396 (from the A_W north steps, model render from the same spot): crown width ~0.65 x height -> 5.0 m",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): ~7-8 m tall, crown ~3.5-4 m (the Google crown 6 m included its shadow) | 081834396 (from the A_W north steps, model render from the same spot): crown width ~0.65 x height -> 5.0 m | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): scaled on the Dance Hall canopy (2.4 m over the plaza, 13.6 m from the camera, 54 px/m): left spruce 250 px at 17.7 m = 6.0 m tall, 4.5 m wide (the 8 m from 070410255 t19 was wrong)",
    "confidence": "medium"
   },
   {
@@ -553,11 +619,11 @@
     163.4,
     5.5
    ],
-   "height": 6.5,
-   "crown_d": 4.5,
+   "height": 5.5,
+   "crown_d": 3.0,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): the second spruce ~2/3 of the first (~5.5-6 m) | 081834396: ~6.5 m, crown ~4.5 m",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): the second spruce ~2/3 of the first (~5.5-6 m) | 081834396: ~6.5 m, crown ~4.5 m | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): right spruce 180 px at 22.5 m = 5.5 m, 4.2 m wide | 2026-10-22 msg 170 re-check: 081834396 (cam 166.6,-16.8) shows 2 crowns, SW and a broad right one (w/h 0.84, 190 px at 22 m vs SW 265 px at 17.7 m); CE020 shows the slim middle one behind SW -> NW slim, NE broad (were swapped)",
    "confidence": "medium"
   },
   {
@@ -567,11 +633,11 @@
     165.6,
     5.5
    ],
-   "height": 6.0,
-   "crown_d": 2.4,
+   "height": 5.4,
+   "crown_d": 4.5,
    "crown_base": 0.4,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): crown cut into the C west shed roof/cladding; narrower, 0.45 m off",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-05 owner msg 108 collision sweep (surface-intersection QA over every mesh pair): crown cut into the C west shed roof/cladding; narrower, 0.45 m off | 2026-10-22 msg 170 re-check: 081834396 (cam 166.6,-16.8) shows 2 crowns, SW and a broad right one (w/h 0.84, 190 px at 22 m vs SW 265 px at 17.7 m); CE020 shows the slim middle one behind SW -> NW slim, NE broad (were swapped)",
    "confidence": "medium"
   },
   {
@@ -636,33 +702,33 @@
    "name": "Shed_Apron",
    "line": [
     [
-     167.1,
-     -3.0
+     167.2,
+     2.1
     ],
     [
-     167.15,
-     -0.15
+     170.1,
+     -0.1
     ]
    ],
-   "width": 0.8,
+   "width": 1.0,
    "thk": 0.12,
    "top": 0.06,
    "material": "stone",
    "slot": "M_Concrete",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): smooth cast-concrete apron along the shed foot, sloping to the kerb (geometry +-0.4)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): smooth cast-concrete apron along the shed foot, sloping to the kerb (geometry +-0.4) | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): CE020/081834396: the concrete apron runs along the shed's chamfered SW wall from the lawn corner to the Dance Hall block, not south of it"
   },
   {
    "type": "wall",
    "name": "Shed_Apron_Kerb",
    "line": [
     [
-     166.6,
-     -6.5
+     166.9,
+     1.7
     ],
     [
-     166.6,
-     -0.15
+     169.8,
+     -0.5
     ]
    ],
    "height": 0.12,
@@ -671,7 +737,7 @@
    "slot": "M_Concrete",
    "ue_note": "0.15 open gutter trough on its E side",
    "confidence": "low",
-   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): concrete kerb with an open channel along the shed foot (+-0.4)"
+   "evidence": "2026-10-03 photo pass batch 2 Q2-14 (CE): concrete kerb with an open channel along the shed foot (+-0.4) | 2026-10-22 owner msg 170 (screenshot from the A_W north steps = the 081834396/CE020 viewpoint): kerb on the apron's outer edge (was a 6 m bar out in the plaza at x 166.6, y -6.5..-0.15)"
   },
   {
    "type": "steps",
@@ -847,6 +913,86 @@
    "slot": "M_Ground_Grass",
    "evidence": "2026-10-22 owner msg 160 (screenshot: green ground outside the lower lawn's curb): A028-A030 show grey herringbone pavers from the cheek return to the shed ledge and N along the hall wing; the generated SITE_00_GroundCover Lawn_032/Lawn_033 (ortho excess-green, reads the spruce crowns as lawn) reached 3 m N of the curb and under the C shed; lawn only inside the bed's curb (ring = Passage_Lawn_Lower)",
    "confidence": "medium"
+  },
+  {
+   "name": "Plaza_Herringbone",
+   "slot": "M_Paver_Herringbone_Grey",
+   "ring": [
+    [
+     159.21,
+     2.2
+    ],
+    [
+     159.111,
+     -0.772
+    ],
+    [
+     159.132,
+     -0.815
+    ],
+    [
+     163.998,
+     -1.01
+    ],
+    [
+     165.517,
+     0.05
+    ],
+    [
+     167.4,
+     0.0
+    ],
+    [
+     167.4,
+     1.6
+    ],
+    [
+     171.4,
+     1.6
+    ],
+    [
+     172.067,
+     2.2
+    ],
+    [
+     175.1,
+     2.2
+    ],
+    [
+     175.1,
+     -17.6
+    ],
+    [
+     158.181,
+     -17.6
+    ],
+    [
+     158.4,
+     -13.6
+    ],
+    [
+     156.0,
+     -13.459
+    ],
+    [
+     156.0,
+     -13.252
+    ],
+    [
+     158.2,
+     -13.4
+    ],
+    [
+     156.0,
+     -9.628
+    ],
+    [
+     156.0,
+     2.2
+    ]
+   ],
+   "confidence": "high",
+   "evidence": "2026-10-22 owner msg 170 (#11): CE020, 081834396: rectangular grey pavers in herringbone from the A_W north steps to the spruce lawn kerb, the shed and the Dance Hall canopy (was the ortho-generated clover slot); ring = generated Paved_003 within x 156-175.1 (CPlaza herringbone edge), y -17.6..2.2, minus the lawn, grass and HallBed_Paving"
   }
  ]
 }

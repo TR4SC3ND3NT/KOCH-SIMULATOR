@@ -1436,12 +1436,17 @@ class Building:
                       COL["brick"], a.get("evidence"))
         ob.data.materials[0] = mat(a.get("body_slot", "M_Tile_Brick_Red"))
         k_end = 1 if sg > 0 else 0
-        for k, b in enumerate(a.get("bands", [])):        # cladding bands run on round the kink
+        bands = a.get("bands", [])
+        top_k = max(range(len(bands)), key=lambda k: max(bands[k]["z1"]) if isinstance(bands[k]["z1"], list)
+                    else bands[k]["z1"]) if bands else -1
+        for k, b in enumerate(bands):                     # cladding bands run on round the kink
             z0 = b["z0"][k_end] if isinstance(b["z0"], list) else b["z0"]
             z1 = b["z1"][k_end] if isinstance(b["z1"], list) else b["z1"]
             pj = b.get("proj", 0.02)
+            # the top band rises with the roof edge along the cut (012514370: the hex band reaches the flashing)
+            top = zr if k == top_k else (lambda q, z1=z1: min(z1, zr(q)))
             ob = self.obj(f"{a['name']}_ChamferClad{k}",
-                          solid([p1, p2, p2 + n * pj, p1 + n * pj], lambda q, z0=z0: z0, lambda q, z1=z1: min(z1, zr(q))),
+                          solid([p1, p2, p2 + n * pj, p1 + n * pj], lambda q, z0=z0: z0, top),
                           COL["brick"], a.get("bands_evidence"))
             ob.data.materials[0] = mat(b["slot"])
         if a.get("trim_slot"):                            # flashing on the cut sheet edge, 9 cm face, 2 cm proud
