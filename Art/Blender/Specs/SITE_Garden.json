@@ -7242,32 +7242,65 @@
    "blend": 0.0,
    "ring": [
     [
-     100.23,
-     -54.86
+     100.2,
+     -54.9
     ],
     [
-     147.5,
-     -57.183
+     142.0,
+     -56.93
     ],
     [
-     149.264,
-     -57.264
+     142.0,
+     -49.11
     ],
     [
-     152.35,
-     -57.343
-    ],
-    [
-     152.35,
-     -49.624
-    ],
-    [
-     99.328,
-     -47.084
+     99.3,
+     -47.1
     ]
    ],
    "confidence": "medium",
-   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing). | 2026-09-28: N edge follows the boulder wall 0.55 m north (owner screenshot 58) | 2026-10-03: N edge on the moved wall centreline (+3.81 m grid-north, owner msg 62 + Google z20 + A183), E edge on the wall's east return (inner face u 21.225) round B's NE corner (A203/A204: terrace ground runs to the alley kerb) | 2026-10-03 photo pass R2-01: N edge on the moved wall centreline"
+   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing). | 2026-09-28: N edge follows the boulder wall 0.55 m north (owner screenshot 58) | 2026-10-03: N edge on the moved wall centreline (+3.81 m grid-north, owner msg 62 + Google z20 + A183), E edge on the wall's east return (inner face u 21.225) round B's NE corner (A203/A204: terrace ground runs to the alley kerb) | 2026-10-03 photo pass R2-01: N edge on the moved wall centreline | 2026-10-22 owner msg 162 (#9 'crooked strip on the right'): the flat 6.31 terrace met the 6.57 alley in a 2 m bank at x 150-152; A129-A133: the ground behind the boulder wall is level with the alley at the stair top -> east part (x 142-152.3) rises 6.31 -> 6.55 (2.3 %)"
+  },
+  {
+   "name": "UpperTerraceSouth_E",
+   "z": 6.31,
+   "blend": 0.0,
+   "ring": [
+    [
+     142.0,
+     -56.93
+    ],
+    [
+     147.5,
+     -57.2
+    ],
+    [
+     149.3,
+     -57.3
+    ],
+    [
+     152.3,
+     -57.3
+    ],
+    [
+     152.3,
+     -49.6
+    ],
+    [
+     142.0,
+     -49.11
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "[B] 2026-09-28: the boulder retaining wall (0.95 m) holds an UPPER terrace between the garden and Block B's north wall: 081904575 t7.5-t8.5 show planted ground at the wall top behind it, and the garden stairs through the wall gaps have 6 x 0.16 m risers (Steps_G1_SSE/G2_SSW) = 5.35 + 0.96 = 6.31. Before this the ground behind the wall was the lower 5.35 (the wall stood free like a fence and the stairs led nowhere). Hard edge along the wall centreline (the wall hides the step); S edge 0.3 m under B's north wall; E edge x 147.5 (the wide stair at B's NE corner and the alley are stream A). Notched around the two stair footprints (the treads start at the lower walk; the terrace begins at the top landing). | 2026-09-28: N edge follows the boulder wall 0.55 m north (owner screenshot 58) | 2026-10-03: N edge on the moved wall centreline (+3.81 m grid-north, owner msg 62 + Google z20 + A183), E edge on the wall's east return (inner face u 21.225) round B's NE corner (A203/A204: terrace ground runs to the alley kerb) | 2026-10-03 photo pass R2-01: N edge on the moved wall centreline | 2026-10-22 owner msg 162 (#9 'crooked strip on the right'): the flat 6.31 terrace met the 6.57 alley in a 2 m bank at x 150-152; A129-A133: the ground behind the boulder wall is level with the alley at the stair top -> east part (x 142-152.3) rises 6.31 -> 6.55 (2.3 %)",
+   "grad": [
+    0.0233,
+    0.0
+   ],
+   "ref": [
+    142.0,
+    -53.0
+   ]
   },
   {
    "name": "AW_SquareN",

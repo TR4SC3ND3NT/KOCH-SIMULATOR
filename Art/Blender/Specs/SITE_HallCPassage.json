@@ -540,10 +540,10 @@
     0.1
    ],
    "height": 8.0,
-   "crown_d": 4.0,
+   "crown_d": 5.0,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): ~7-8 m tall, crown ~3.5-4 m (the Google crown 6 m included its shadow)",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): ~7-8 m tall, crown ~3.5-4 m (the Google crown 6 m included its shadow) | 081834396 (from the A_W north steps, model render from the same spot): crown width ~0.65 x height -> 5.0 m",
    "confidence": "medium"
   },
   {
@@ -553,11 +553,11 @@
     163.4,
     5.5
    ],
-   "height": 6.0,
-   "crown_d": 3.0,
+   "height": 6.5,
+   "crown_d": 4.5,
    "crown_base": 0.3,
    "trunk_d": 0.3,
-   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): the second spruce ~2/3 of the first (~5.5-6 m)",
+   "evidence": "blue spruce: Google z20 dark crown, height vs the hall gable / C storeys (a_040, a_059, a_065) | 2026-10-04 finish_E E-15: D1-01 residual dy -1.1 (Google z20 -1.5, C-frame photos -0.4..-1.1) | 2026-10-22 owner msg 161 (#4 'the tree is not that big'): video 070410255 t19 scaled on the bed's ~8 m front curb (~43 px/m at the tree): the second spruce ~2/3 of the first (~5.5-6 m) | 081834396: ~6.5 m, crown ~4.5 m",
    "confidence": "medium"
   },
   {
@@ -681,14 +681,14 @@
     13.185
    ],
    "dir_deg": 178.37,
-   "risers": 3,
-   "riser_h": 0.158,
+   "risers": 1,
+   "riser_h": 0.28,
    "tread": 0.3,
-   "top_landing": 1.0,
-   "width": 2.0,
+   "top_landing": 1.2,
+   "width": 2.6,
    "slot": "M_Granite_Red",
-   "confidence": "low",
-   "evidence": "2026-10-04 finish_E E-07: granite steps + landing in front of the glazed door (A087), passage 4.475 -> sill 4.95"
+   "confidence": "medium",
+   "evidence": "2026-10-04 finish_E E-07: granite steps + landing in front of the glazed door (A087), passage 4.475 -> sill 4.95 | 2026-10-22 owner msg 167-169 photo walk: A087 (model render from the same spot): ONE pink granite platform ~0.28 high (red plinth ~0.85 m = 7 courses as scale), ~2.6 wide x 1.2 deep, the glazed double door stands on it"
   },
   {
    "type": "tree",
