@@ -1,0 +1,157 @@
+{
+ "id": "SITE_Context_SW",
+ "collection": "SITE_Sport",
+ "ground": "terrain",
+ "note": "Context: the fenced mini-football pitch and the two tennis courts in the block south-west of the campus (x -140..-106, y +4..-75), seen from the street. Surfaces and cage fences only; the white hall and the street fence of that block are not modelled.",
+ "ground_surfaces": [
+  {
+   "name": "PitchSW_Turf",
+   "slot": "M_Sport_Floor",
+   "ring": [
+    [
+     -139.5,
+     3.5
+    ],
+    [
+     -110.5,
+     3.5
+    ],
+    [
+     -110.5,
+     -39.5
+    ],
+    [
+     -139.5,
+     -39.5
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-22 photo bug hunt H1-019 (~/koch_work/hunt/H1/findings.jsonl; A2xx street views) + Google z20 (outlines read by the main session at 5 px/m): neighbouring sports block SW of the site, modelled as context only (surfaces + cages, no detail)"
+  },
+  {
+   "name": "CourtsSW_Hard",
+   "slot": "M_Court_Red",
+   "ring": [
+    [
+     -139.5,
+     -40.5
+    ],
+    [
+     -106.5,
+     -40.5
+    ],
+    [
+     -106.5,
+     -74.5
+    ],
+    [
+     -139.5,
+     -74.5
+    ]
+   ],
+   "confidence": "medium",
+   "evidence": "2026-10-22 photo bug hunt H1-019 (~/koch_work/hunt/H1/findings.jsonl; A2xx street views) + Google z20 (outlines read by the main session at 5 px/m): neighbouring sports block SW of the site, modelled as context only (surfaces + cages, no detail)"
+  }
+ ],
+ "elements": [
+  {
+   "type": "cage_fence",
+   "name": "PitchSW_Cage",
+   "line": [
+    [
+     -140,
+     4
+    ],
+    [
+     -110,
+     4
+    ],
+    [
+     -110,
+     -40
+    ],
+    [
+     -140,
+     -40
+    ],
+    [
+     -140,
+     4
+    ]
+   ],
+   "height": 6.0,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.1,
+    3.0,
+    5.95
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-22 photo bug hunt H1-019 (~/koch_work/hunt/H1/findings.jsonl; A2xx street views) + Google z20 (outlines read by the main session at 5 px/m): neighbouring sports block SW of the site, modelled as context only (surfaces + cages, no detail)"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsSW_Cage",
+   "line": [
+    [
+     -140,
+     -40
+    ],
+    [
+     -106,
+     -40
+    ],
+    [
+     -106,
+     -75
+    ],
+    [
+     -140,
+     -75
+    ],
+    [
+     -140,
+     -40
+    ]
+   ],
+   "height": 4.0,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.0,
+    3.95
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-22 photo bug hunt H1-019 (~/koch_work/hunt/H1/findings.jsonl; A2xx street views) + Google z20 (outlines read by the main session at 5 px/m): neighbouring sports block SW of the site, modelled as context only (surfaces + cages, no detail)"
+  },
+  {
+   "type": "cage_fence",
+   "name": "CourtsSW_Divider",
+   "line": [
+    [
+     -120.6,
+     -40
+    ],
+    [
+     -120.6,
+     -75
+    ]
+   ],
+   "height": 4.0,
+   "post_spacing": 3.0,
+   "post": 0.08,
+   "rail": 0.05,
+   "rails": [
+    0.08,
+    2.0,
+    3.95
+   ],
+   "confidence": "low",
+   "evidence": "2026-10-22 photo bug hunt H1-019 (~/koch_work/hunt/H1/findings.jsonl; A2xx street views) + Google z20 (outlines read by the main session at 5 px/m): neighbouring sports block SW of the site, modelled as context only (surfaces + cages, no detail)"
+  }
+ ]
+}

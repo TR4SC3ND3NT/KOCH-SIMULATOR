@@ -430,8 +430,8 @@
    "entrance": {
     "u0": 0.02,
     "u1": 3.78,
-    "z1": 2.55,
-    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera) | 2026-09-27: head +3.29, transom underside +2.65, sill on the landing (rays of 070647586 f00449 cut on the storefront plane of the photogrammetry mesh); the frame measured u -0.35..4.43 is wider than the tower of the ring (3.8): width limited to the tower until the tower width is settled (C.5) | 2026-10-04 re-verification round 2 Y1-01 (exterior PnP) + X0-13/Y0-f (interior ratios head/width 0.63-0.68 at the 3.76 width): head 2.55, transom 2.00 (settles Q2-22)",
+    "z1": 3.07,
+    "evidence": "glass vestibule front with transom, 061621646 rect; 061631264 (2x tele, near-frontal): 4 bays fixed|door|door|fixed = 0.272/0.229/0.237/0.262 of the width, transom underside at 0.81 of the height; width/height 3.3x2.8 confirmed by the 061621646 overlay (solved camera) | 2026-09-27: head +3.29, transom underside +2.65, sill on the landing (rays of 070647586 f00449 cut on the storefront plane of the photogrammetry mesh); the frame measured u -0.35..4.43 is wider than the tower of the ring (3.8): width limited to the tower until the tower width is settled (C.5) | 2026-10-04 re-verification round 2 Y1-01 (exterior PnP) + X0-13/Y0-f (interior ratios head/width 0.63-0.68 at the 3.76 width): head 2.55, transom 2.00 (settles Q2-22) | 2026-10-22 photo bug hunt H3-010: the wall opening runs up to the fascia top 3.07 (glazing head kept 2.55) so EntranceFascia (w0 -0.9) shows in the recess instead of inside the wall",
     "bays": [
      [
       0.9,
@@ -452,7 +452,8 @@
     ],
     "transom_z": 2.0,
     "reveal": 0.9,
-    "confidence": "medium"
+    "confidence": "medium",
+    "head_z": 2.55
    },
    "evidence": "maroon stair tower, 2 landing windows per half-level"
   },
@@ -1067,10 +1068,11 @@
    "z1": 2.92,
    "t": 0.02,
    "color": "sign",
-   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH | 2026-10-03 photo pass batch 2 Q2-01 (CC): small portrait plate 0.23 x 0.28 on the cassette band under the soffit | 2026-10-04 re-verification round 2 Y1-01",
+   "evidence": "P2: small white 'C' block plate centred on the entrance fascia (061631264, 061431726, 070647586 s2); size ~0.5 x 0.23 from the fascia height 0.31 m in the same frames; text = blank KOCH | 2026-10-03 photo pass batch 2 Q2-01 (CC): small portrait plate 0.23 x 0.28 on the cassette band under the soffit | 2026-10-04 re-verification round 2 Y1-01 | H3-010: in front of the fascia plane",
    "confidence": "medium",
    "slot": "M_Sign_KOCH",
-   "content": "KOCH C-block plate (letter C + block word)"
+   "content": "KOCH C-block plate (letter C + block word)",
+   "w0": -0.88
   },
   {
    "type": "downpipe",

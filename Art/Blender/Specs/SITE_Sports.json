@@ -2624,8 +2624,8 @@
    "type": "box",
    "name": "LowerYard_Manhole",
    "center": [
-    164.392,
-    80.942
+    165.5,
+    73.03
    ],
    "dir_deg": -2.2,
    "size": [
@@ -2633,11 +2633,11 @@
     0.7,
     0.03
    ],
-   "z0": 2.175,
+   "z0": 2.475,
    "material": "metal",
    "slot": "M_Steel_Paint_Dark",
    "ue_asset": "manhole_cover",
-   "evidence": "owner 2026-09-28 (overview): sewer manhole on the lane in front of the bench opposite the yard stair",
+   "evidence": "owner 2026-09-28 (overview): sewer manhole on the lane in front of the bench opposite the yard stair | 2026-10-22 photo bug hunt H4-004 (~/koch_work/hunt/H4/findings.jsonl): the manhole sits on a raised concrete pad at the E end of the yard stair (A047)",
    "confidence": "low"
   },
   {
@@ -3854,13 +3854,39 @@
    ],
    "dir_deg": 87.8,
    "width": 4.0,
-   "risers": 5,
+   "risers": 3,
    "riser_h": 0.185,
    "tread": 0.76,
    "z_top": 3.25,
    "material": "stone",
    "slot": "M_Concrete_Precast",
-   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure) | 2026-10-04 re-verification X3-07: treads ~0.76 (run 3.0, foot y ~73.3) | 2026-10-04 levels pass L3-02: 5 x 0.185 from 3.25 to the strip 2.325 | 2026-10-04 walkthrough (A038/A062/A064): risers painted in alternating yellow/white blocks",
+   "evidence": "owner 2026-09-28 (screenshots + sketch): the workout zone is lower than the courts, the drop is not abrupt, steps down from the walkway; toward the back fence the ground is lower, the tree bed behind the pitch is higher than the path; drop 0.6 m = 4 risers assumed (not measured) | 2026-09-29 owner: treads 1.5x deeper (0.50 -> 0.75), 7 risers x 0.161 down to the pull-up strip 2.325 | 2026-10-03 courts block +1.72 m north of the pitch (owner 2026-10-02: offset at both ends; photo pass R0-07/R1-02) | 2026-10-03 video pass V0-04 (102 t0-12 s: 5 kerb rows x 4 stones between two cheeks; settles P0-05): 5 kerb-stone risers, 4.0 m wide on the E part of the walkway mouth (same 1.125 drop, tread 0.45 unsure) | 2026-10-04 re-verification X3-07: treads ~0.76 (run 3.0, foot y ~73.3) | 2026-10-04 levels pass L3-02: 5 x 0.185 from 3.25 to the strip 2.325 | 2026-10-04 walkthrough (A038/A062/A064): risers painted in alternating yellow/white blocks | 2026-10-22 photo bug hunt H4-004 (~/koch_work/hunt/H4/findings.jsonl): the manhole sits on a raised concrete pad at the E end of the yard stair (A047): the lowest rows end at the pad | 2026-10-22 H4-004: the lowest 2 kerb rows end at x 164.8; a raised concrete pad with the manhole fills the stair's NE corner (A047). Split into two flights (a boolean notch failed on this mesh, w50)",
+   "confidence": "low",
+   "nose_paint": {
+    "slots": [
+     "M_Paint_Yellow",
+     "M_Paint_White"
+    ],
+    "seg": 0.8
+   },
+   "run_out": 0.76
+  },
+  {
+   "type": "stairs_run",
+   "name": "LowerYard_Stair_Lower",
+   "top": [
+    163.4185,
+    72.512
+   ],
+   "dir_deg": 87.8,
+   "width": 2.763,
+   "risers": 2,
+   "riser_h": 0.185,
+   "tread": 0.76,
+   "z_top": 2.695,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "evidence": "lowest 2 rows, W part | 2026-10-22 H4-004: the lowest 2 kerb rows end at x 164.8; a raised concrete pad with the manhole fills the stair's NE corner (A047). Split into two flights (a boolean notch failed on this mesh, w50)",
    "confidence": "low",
    "nose_paint": {
     "slots": [
@@ -11757,6 +11783,34 @@
    "ue_asset": "bin_wrought_iron",
    "confidence": "low",
    "evidence": "H4-012 | 2026-10-22 photo bug hunt H4-012 (~/koch_work/hunt/H4/findings.jsonl)"
+  },
+  {
+   "type": "slab",
+   "name": "LowerYard_ManholePad",
+   "ring": [
+    [
+     164.8,
+     72.46
+    ],
+    [
+     166.2,
+     72.406
+    ],
+    [
+     166.242,
+     73.575
+    ],
+    [
+     164.842,
+     73.629
+    ]
+   ],
+   "z0": 2.2,
+   "z1": 2.475,
+   "material": "stone",
+   "slot": "M_Concrete",
+   "confidence": "medium",
+   "evidence": "H4-004 | 2026-10-22 photo bug hunt H4-004 (~/koch_work/hunt/H4/findings.jsonl): the manhole sits on a raised concrete pad at the E end of the yard stair (A047) | E edge into the cheek: an 8 cm stair sliver left by the cut broke the boolean (w50)"
   }
  ],
  "ground_surfaces": [

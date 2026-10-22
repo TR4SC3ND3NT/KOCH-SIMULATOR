@@ -499,19 +499,21 @@ class Building:
     def build_entrance_doors(self, i, k, o, ent):
         """Aluminium glazed entrance: outer frame, bay mullions, transom, glass, and per door bay a leaf frame,
         optional mid rail and a pull bar (doors are separate objects so UE can swap in hinged actors).
-        Options as the detail path: "leaf": "solid" (opaque leaves), "transom_lights": n, "slot": frame/leaf material."""
+        Options as the detail path: "leaf": "solid" (opaque leaves), "transom_lights": n, "slot": frame/leaf material,
+        "head_z": glazing head below the wall opening top z1 (the recess above it shows a fascia, C south entrance)."""
         fr = self.edges[i]["frame"]  # obj() applies self.M
         rev = ent.get("reveal", 0.25)
         fw, fd = ent.get("frame_w", 0.06), ent.get("frame_d", 0.08)
         w1, w0 = -rev, -rev - fd
-        zt = ent.get("transom_z", o.z1 - 0.6)   # underside of the transom bar (m above FFL)
+        zh = min(ent.get("head_z", o.z1), o.z1)   # glazing head; the wall opening may run higher (fascia recess)
+        zt = ent.get("transom_z", zh - 0.6)   # underside of the transom bar (m above FFL)
         bm = bmesh.new()
-        ring_box(bm, fr, o.u0 + fw, o.u1 - fw, o.z0 + fw, o.z1 - fw, fw, w0, w1)
+        ring_box(bm, fr, o.u0 + fw, o.u1 - fw, o.z0 + fw, zh - fw, fw, w0, w1)
         box(bm, fr, o.u0 + fw, o.u1 - fw, w0, w1, zt, zt + fw)
         nt = int(ent.get("transom_lights", 0))
         for j in range(1, nt):   # transom mullions
             ut = o.u0 + (o.u1 - o.u0) * j / nt
-            box(bm, fr, ut - fw / 2, ut + fw / 2, w0, w1, zt + fw, o.z1 - fw)
+            box(bm, fr, ut - fw / 2, ut + fw / 2, w0, w1, zt + fw, zh - fw)
         solid = ent.get("leaf") == "solid"
         u = o.u0
         widths = [b[0] for b in ent["bays"]]
@@ -537,7 +539,7 @@ class Building:
             if not (solid and kind == "door"):
                 box(bm_g, fr, ua + fw / 2, ub - fw / 2, gm - 0.006, gm + 0.006, o.z0 + fw, zt)
             u = ub
-        box(bm_g, fr, o.u0 + fw, o.u1 - fw, (w0 + w1) / 2 - 0.006, (w0 + w1) / 2 + 0.006, zt + fw, o.z1 - fw)
+        box(bm_g, fr, o.u0 + fw, o.u1 - fw, (w0 + w1) / 2 - 0.006, (w0 + w1) / 2 + 0.006, zt + fw, zh - fw)
         for nm, b in (("Frame", bm), ("Doors", bm_d)):
             ob = self.obj(f"Entrance_E{i}_{k:02d}_{nm}", b, COL["frame"], ent.get("evidence"), ent.get("confidence"))
             if ent.get("slot"):

@@ -1974,12 +1974,125 @@
    "slot": "M_Concrete_Precast",
    "confidence": "high",
    "evidence": "H1-009 | 2026-10-22 photo bug hunt H1-009 (~/koch_work/hunt/H1/findings.jsonl)"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_North_WW",
+   "line": [
+    [
+     -160,
+     -98.8
+    ],
+    [
+     -90,
+     -98.5
+    ],
+    [
+     -30,
+     -99.8
+    ],
+    [
+     30,
+     -102.5
+    ],
+    [
+     75,
+     -106.5
+    ],
+    [
+     88.0,
+     -109.6
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.15,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "confidence": "medium",
+   "evidence": "street N kerb W of the gate | 2026-10-22 photo bug hunt H1-018 (~/koch_work/hunt/H1/findings.jsonl); edges re-measured by the main session on Google z20 gridded crops (the hunter's N edge sat 7 m north on the sandy shoulder at x -160)"
+  },
+  {
+   "type": "wall",
+   "name": "Curb_South_W",
+   "line": [
+    [
+     110.0,
+     -123.422
+    ],
+    [
+     88.0,
+     -122.308
+    ],
+    [
+     75,
+     -120.5
+    ],
+    [
+     30,
+     -119.8
+    ],
+    [
+     -30,
+     -114.5
+    ],
+    [
+     -90,
+     -110.5
+    ],
+    [
+     -160,
+     -110.0
+    ]
+   ],
+   "height": 0.15,
+   "thk": 0.15,
+   "material": "stone",
+   "slot": "M_Concrete_Precast",
+   "confidence": "medium",
+   "evidence": "street S kerb W of the gate | 2026-10-22 photo bug hunt H1-018 (~/koch_work/hunt/H1/findings.jsonl); edges re-measured by the main session on Google z20 gridded crops (the hunter's N edge sat 7 m north on the sandy shoulder at x -160)"
+  },
+  {
+   "type": "zebra",
+   "name": "Zebra_West",
+   "line": [
+    [
+     -57,
+     -99.2
+    ],
+    [
+     -57,
+     -112.6
+    ]
+   ],
+   "width": 4.0,
+   "confidence": "low",
+   "evidence": "second zebra visible on Google z20 at x ~-57 | 2026-10-22 photo bug hunt H1-018 (~/koch_work/hunt/H1/findings.jsonl); edges re-measured by the main session on Google z20 gridded crops (the hunter's N edge sat 7 m north on the sandy shoulder at x -160)"
   }
  ],
  "ground_surfaces": [
   {
    "name": "Carriageway",
    "ring": [
+    [
+     -160,
+     -98.8
+    ],
+    [
+     -90,
+     -98.5
+    ],
+    [
+     -30,
+     -99.8
+    ],
+    [
+     30,
+     -102.5
+    ],
+    [
+     75,
+     -106.5
+    ],
     [
      88,
      -109.6
@@ -2007,10 +2120,30 @@
     [
      88,
      -122.308
+    ],
+    [
+     75,
+     -120.5
+    ],
+    [
+     30,
+     -119.8
+    ],
+    [
+     -30,
+     -114.5
+    ],
+    [
+     -90,
+     -110.5
+    ],
+    [
+     -160,
+     -110.0
     ]
    ],
    "slot": "M_Asphalt",
-   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484; north edge west of x 125 flat at y -109.6 (Google z20: the road does not follow the Curb_North slope westward; trolley pole f00996 on the paved strip at the edge) | 2026-10-04 re-verification X2-07: asphalt runs on east past x 210 (was grass; low)"
+   "evidence": "between Curb_North and Curb_South (Google z20 asphalt), crossing clip 065856484; north edge west of x 125 flat at y -109.6 (Google z20: the road does not follow the Curb_North slope westward; trolley pole f00996 on the paved strip at the edge) | 2026-10-04 re-verification X2-07: asphalt runs on east past x 210 (was grass; low) | 2026-10-22 photo bug hunt H1-018 (~/koch_work/hunt/H1/findings.jsonl); edges re-measured by the main session on Google z20 gridded crops (the hunter's N edge sat 7 m north on the sandy shoulder at x -160)"
   },
   {
    "name": "Forecourt",
