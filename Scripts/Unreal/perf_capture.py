@@ -18,26 +18,29 @@ STEPS = [
     (WARMUP_S + CHART_S + 4, ["shot showui", "ProfileGPU"]),
     (WARMUP_S + CHART_S + 8, ["quit"]),
 ]
-state = {"t0": None, "i": 0, "handle": None}
-
-
-def player_controller():
-    return next((pc for pc in unreal.ObjectIterator(unreal.PlayerController) if pc.get_world()), None)
+state = {"t0": None, "i": 0, "handle": None, "pc": None}
 
 
 def tick(_dt):
-    pc = player_controller()
+    # ObjectIterator walks every UObject: do it until the controller exists, then cache (it cost game-thread ms per frame)
+    pc = state["pc"]
     if pc is None:
-        return
+        pc = next((p for p in unreal.ObjectIterator(unreal.PlayerController) if p.get_world()), None)
+        if pc is None:
+            return
+        state["pc"] = pc
     if state["t0"] is None:
         state["t0"] = time.monotonic()
+        pc.set_ignore_move_input(True)   # a mouse over the window must not move the measured view
+        pc.set_ignore_look_input(True)
         pc.set_control_rotation(unreal.Rotator(roll=0.0, pitch=-5.0, yaw=YAW))
         unreal.log(f"perf_capture: armed, yaw {YAW}")
     t = time.monotonic() - state["t0"]
     while state["i"] < len(STEPS) and t >= STEPS[state["i"]][0]:
         for cmd in STEPS[state["i"]][1]:
             unreal.log(f"perf_capture: {cmd}")
-            pc.console_command(cmd)
+            # APlayerController::ConsoleCommand is not script-exposed in 5.8; this routes through the same player
+            unreal.SystemLibrary.execute_console_command(pc.get_world(), cmd, pc)
         state["i"] += 1
     if state["i"] == len(STEPS) and state["handle"] is not None:
         unreal.unregister_slate_post_tick_callback(state["handle"])
