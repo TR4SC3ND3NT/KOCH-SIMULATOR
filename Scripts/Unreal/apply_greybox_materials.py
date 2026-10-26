@@ -107,6 +107,7 @@ def main():
             sm = unreal.EditorAssetLibrary.load_asset(m["ue_path"])
             if sm is None:
                 continue
+            sm.modify()   # set_material alone does not dirty the package, so save_directory would skip the mesh
             for i, sl in enumerate(sm.get_editor_property("static_materials")):
                 mi = mis.get(str(sl.get_editor_property("material_slot_name")))
                 if mi is not None:
