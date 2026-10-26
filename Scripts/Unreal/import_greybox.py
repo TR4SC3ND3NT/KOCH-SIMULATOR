@@ -51,11 +51,13 @@ def interchange_options(name, kind):
     _set(mp, "import_static_meshes", True)
     _set(mp, "import_skeletal_meshes", False)
     # UE-239640 (Interchange, 5.5+): with combining on, UCX nodes become render geometry. One mesh per file anyway.
-    _set(mp, "combine_static_meshes", False)
+    # 5.8: bCombineStaticMeshes is deprecated and not script-visible; the enum replaced it.
+    _set_enum(mp, "combine_static_meshes_behavior", "InterchangeCombineStaticMeshesBehavior", "DO_NOT_COMBINE")
     _set(mp, "collision", kind not in ("none", "complex_as_simple"))
     _set(mp, "import_collision_according_to_mesh_name", True)
     _set(mp, "one_convex_hull_per_ucx", True)
-    _set_enum(mp, "fallback_collision_type", "InterchangeMeshCollision", "NONE")   # never auto-generate
+    # No fallback override: EInterchangeMeshCollision has no "none" in 5.8, and every mesh with collision on ships
+    # its own UBX_/UCX_ nodes, so the fallback shape is never generated.
     _set(mp, "build_nanite", True)
     _set(mp, "generate_lightmap_u_vs", False)   # Lumen, no baked lighting
     cp = p.get_editor_property("common_meshes_properties")
