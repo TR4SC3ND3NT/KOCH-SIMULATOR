@@ -17,7 +17,13 @@ meta = {}
 
 for asset in ASSETS:
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    bpy.ops.import_scene.fbx(filepath=os.path.join(SRC, asset, f"{asset}_2k.fbx"))
+    # Poly Haven's fir_tree_01 FBX ships without UVs (0 LayerElementUV), so the needle mask sampled one texel; prefer
+    # the glTF download (<asset>_gltf/) when present
+    gltf = os.path.join(SRC, f"{asset}_gltf", f"{asset}_2k.gltf")
+    if os.path.exists(gltf):
+        bpy.ops.import_scene.gltf(filepath=gltf)
+    else:
+        bpy.ops.import_scene.fbx(filepath=os.path.join(SRC, asset, f"{asset}_2k.fbx"))
     base = "".join(p.capitalize() for p in asset.split("_"))   # fir_tree_01 -> FirTree01
     for ob in [o for o in bpy.data.objects if o.type == "MESH"]:
         variant = ob.name.split("_LOD")[0].rsplit("_", 1)[-1].upper()   # fir_tree_01_a_LOD0 -> A

@@ -3,7 +3,7 @@
 # their 2k textures and two materials (opaque bark, masked two-sided foliage), then puts one plant on every placeholder
 # whose ue_asset tag is in MAPPING: same base point, uniform scale to the placeholder's height, deterministic yaw.
 # Placeholders stay in the level (R1's data and collision proxy) but are hidden. Re-running replaces the plants.
-# Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/place_vegetation.py" [EXPORT_DIR] [SPLIT_DIR]
+# Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/place_vegetation.py" [EXPORT_DIR] [SPLIT_DIR] [--reimport]
 import hashlib
 import json
 import os
@@ -12,8 +12,9 @@ import sys
 import unreal
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
-EXPORT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(REPO, "Saved", "GreyboxExport")
-SPLIT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(REPO, "Saved", "ThirdParty", "PolyHaven", "_split")
+ARGS = [a for a in sys.argv[1:] if not a.startswith("--")]
+EXPORT = ARGS[0] if len(ARGS) > 0 else os.path.join(REPO, "Saved", "GreyboxExport")
+SPLIT = ARGS[1] if len(ARGS) > 1 else os.path.join(REPO, "Saved", "ThirdParty", "PolyHaven", "_split")
 PH = os.path.dirname(SPLIT)
 ROOT = "/Game/KochSimulator/Environment/Vegetation/PolyHaven"
 TAG = "KochVegetation"
@@ -69,6 +70,21 @@ def import_textures(tools, asset):
             tex.set_editor_property("srgb", False)
         out[stem] = tex
     return out
+
+
+def fix_sampler_defaults(mat, grey_default):
+    """Each TextureSampleParameter2D needs a default texture of its sampler type, or the material fails to compile
+    ("Sampler type is Normal, should be Color for DefaultTexture") and renders as the default grid."""
+    st = unreal.MaterialSamplerType
+    normal = unreal.EditorAssetLibrary.load_asset("/Engine/EngineMaterials/DefaultNormal")
+    for e in unreal.MaterialEditingLibrary.get_material_expressions(mat):
+        if isinstance(e, unreal.MaterialExpressionTextureSampleParameter2D):
+            kind = e.get_editor_property("sampler_type")
+            if kind == st.SAMPLERTYPE_NORMAL:
+                e.set_editor_property("texture", normal)
+            elif kind == st.SAMPLERTYPE_LINEAR_GRAYSCALE:
+                e.set_editor_property("texture", grey_default)
+    unreal.MaterialEditingLibrary.recompile_material(mat)
 
 
 def master(tools, name, masked):
@@ -129,8 +145,11 @@ def instance(tools, name, parent, texs, prefix, masked):
 
 
 def import_meshes(tools, split):
+    # 4M-tri firs: import once; --reimport forces a fresh import of every split FBX
+    out = {n: unreal.EditorAssetLibrary.load_asset(f"{ROOT}/Meshes/{n}") for n in split
+           if "--reimport" not in sys.argv and unreal.EditorAssetLibrary.does_asset_exist(f"{ROOT}/Meshes/{n}")}
     tasks = []
-    for name in split:
+    for name in (n for n in split if n not in out):
         p = unreal.InterchangeGenericAssetsPipeline()
         mp = p.get_editor_property("mesh_pipeline")
         mp.set_editor_property("build_nanite", True)
@@ -148,8 +167,13 @@ def import_meshes(tools, split):
         t.set_editor_property("save", False)
         t.set_editor_property("options", ov)
         tasks.append(t)
-    tools.import_asset_tasks(tasks)
-    return {n: next((o for o in t.get_objects() if isinstance(o, unreal.StaticMesh)), None) for n, t in zip(split, tasks)}
+    if tasks:
+        tools.import_asset_tasks(tasks)
+    for t in tasks:
+        out[t.get_editor_property("destination_name") or
+            os.path.splitext(os.path.basename(t.get_editor_property("filename")))[0]] = next(
+            (o for o in t.get_objects() if isinstance(o, unreal.StaticMesh)), None)
+    return out
 
 
 def main():
@@ -163,6 +187,10 @@ def main():
     meshes = import_meshes(tools, split)
     for asset, spec in MATERIALS.items():
         texs = import_textures(tools, asset)
+        grey = next((t for s, t in texs.items() if "_rough_" in s + "_"), None)
+        if grey is not None:
+            for m in (m_bark, m_leaf):
+                fix_sampler_defaults(m, grey)
         mis = {}
         for key, (prefix, masked) in ((k, v) for k, v in spec.items() if k != "foliage_slots"):
             mis[masked] = instance(tools, f"MI_PH_{''.join(p.capitalize() for p in asset.split('_'))}_{key}",
@@ -177,6 +205,12 @@ def main():
                 sm.set_material(i, mis.get(leafy) or mis.get(True))
     unreal.EditorAssetLibrary.save_directory(ROOT, False, True)
 
+    # World Partition: after a level (re)load the editor only holds actors in loaded regions; load every actor desc so
+    # all placeholders are reachable (DevelopmentOnly API, editor-side)
+    wpl = unreal.WorldPartitionBlueprintLibrary
+    res = wpl.get_actor_descs()
+    descs = res[1] if isinstance(res, tuple) else res
+    wpl.load_actors([d.get_editor_property("guid") for d in descs])
     eas = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
     actors = eas.get_all_level_actors()
     eas.destroy_actors([a for a in actors if a.actor_has_tag(TAG)])
