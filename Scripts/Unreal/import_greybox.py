@@ -144,7 +144,8 @@ def configure(man, meshes):
             bs.set_editor_property("collision_trace_flag", unreal.CollisionTraceFlag.CTF_USE_COMPLEX_AS_SIMPLE
                                    if c["kind"] == "complex_as_simple" else unreal.CollisionTraceFlag.CTF_USE_DEFAULT)
         want = c["ubx"] + c["ucx"]
-        got = sms.get_simple_collision_count(sm)
+        # GetSimpleCollisionCount counts only box/sphere/capsule elems (StaticMeshEditorSubsystem.cpp), not convex
+        got = sms.get_simple_collision_count(sm) + sms.get_convex_collision_count(sm)
         if got != want:
             bad += 1
             unreal.log_warning(f"import_greybox: {n}: {got} simple collision shapes, manifest {want} ({c['kind']})")
