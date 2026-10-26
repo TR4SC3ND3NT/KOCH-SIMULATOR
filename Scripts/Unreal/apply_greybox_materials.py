@@ -29,6 +29,7 @@ FAMILIES = [
     ("Grass", 0.9, 0.0, 0.0), ("Hedge", 0.85, 0.0, 0.0), ("Tree", 0.85, 0.0, 0.0), ("Soil", 0.95, 0.0, 0.0),
 ]
 DEFAULT = (0.8, 0.0, 0.0)   # render, concrete, pavers, brick, shingle, gravel, sand
+ALBEDO_MIN, ALBEDO_MAX = 0.03, 0.75
 
 
 def srgb_to_linear(c):
@@ -75,7 +76,9 @@ def build_instance(tools, master, slot, props):
                              unreal.MaterialInstanceConstantFactoryNew()))
     mel = unreal.MaterialEditingLibrary
     mel.set_material_instance_parent(mi, master)
-    r, g, b = (srgb_to_linear(c) for c in (props["base_color"] if props else (0.5, 0.5, 0.5)))
+    # physical albedo range: fresh white paint ~0.75 linear, charcoal ~0.03 (no pure black/white)
+    r, g, b = (min(max(srgb_to_linear(c), ALBEDO_MIN), ALBEDO_MAX)
+               for c in (props["base_color"] if props else (0.5, 0.5, 0.5)))
     rough, metal, emis = surface(slot)
     mel.set_material_instance_vector_parameter_value(mi, "BaseColor", unreal.LinearColor(r, g, b, 1.0))
     mel.set_material_instance_scalar_parameter_value(mi, "Roughness", rough)
