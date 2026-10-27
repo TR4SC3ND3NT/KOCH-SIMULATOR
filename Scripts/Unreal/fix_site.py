@@ -17,8 +17,10 @@ REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 LEVEL = "/Game/KochSimulator/Maps/L_GreyboxTest"
 TAG = "KochFix"
 CUBE = "/Engine/BasicShapes/Cube"          # 100 cm cube, pivot at the centre, simple box collision
-WALL_MAT = "/Game/KochSimulator/Greybox/Materials/MI_Concrete_Precast"
-STAIR_MAT = "/Game/KochSimulator/Greybox/Materials/MI_Granite_Red"
+# *_World variants (apply_surface_materials.py) project textures in world metres: the engine cube's UVs are 0..1 per face
+WALL_MAT = "/Game/KochSimulator/Greybox/Materials/MI_Concrete_Precast_World"
+STAIR_MAT = "/Game/KochSimulator/Greybox/Materials/MI_Granite_Red_World"
+PAVING_MAT = "/Game/KochSimulator/Greybox/Materials/MI_Paver_Clover_Grey_World"
 X0, X1, Y0, Y1 = -9000.0, 26000.0, -9000.0, 15000.0   # campus core, UE cm
 GRID = 50.0
 GROUND_PREFIX = "SM_Ground_"              # ground tile actor labels (ue_prep terrain tiles)
@@ -28,6 +30,9 @@ WALL_T = 12.0
 FLOAT_MIN, FLOAT_MAX = 2.0, 200.0
 SNAP_NO_ROOF_CM = 30.0
 # only free-standing street furniture is dropped; wall/fence/canopy-mounted items keep R1's height
+# name -> (x0, x1, y0, y1, z_top) UE cm, from a 40 cm height profile (2026-10-27): west of the hall passage ramp the
+# ground dips 5.35 -> 4.23 m over x 15530..15625, y -890..-610 while the plaza around is flat at 5.35
+SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15628.0, -905.0, -600.0, 535.0)}
 FREE_STANDING = ("bench", "bin", "bollard", "sign_aframe", "bike_rack", "waste_container", "planter", "face",
                  "turnstile", "lamp_bollard", "manhole")                    # props with a surface this close above are ceiling/canopy-mounted: leave them
 
@@ -141,10 +146,16 @@ def main():
     wpl.load_actors([d.get_editor_property("guid") for d in (res[1] if isinstance(res, tuple) else res)])
     world = ues.get_editor_world()
     eas = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
+    # collision of actors loaded by load_actors above only exists from the next editor tick: without a working probe
+    # every trace misses and the old fixes would be destroyed and not rebuilt, so bail out and ask for a rerun
+    if ground_z(world, 12296.0, 8302.0) is None:
+        unreal.log_error("fix_site: traces hit nothing yet (actors just loaded); run the script again")
+        return
     eas.destroy_actors([a for a in eas.get_all_level_actors() if a.actor_has_tag(TAG)])
     cube = unreal.EditorAssetLibrary.load_asset(CUBE)
     wall_mat = unreal.EditorAssetLibrary.load_asset(WALL_MAT)
     stair_mat = unreal.EditorAssetLibrary.load_asset(STAIR_MAT)
+    paving_mat = unreal.EditorAssetLibrary.load_asset(PAVING_MAT)
     with open(os.path.join(REPO, "Saved", "GreyboxExport", "manifest.json"), encoding="utf-8") as fh:
         man = {e["name"]: e for e in json.load(fh)["instances"]}
     report = {"risers": [], "floating": [], "stairs": []}
@@ -173,13 +184,16 @@ def main():
         kind = (e.get("ue_asset") or "").lower()
         if not (kind.startswith(FREE_STANDING) or "FaceTerminal" in label):
             if a.get_actor_location() != unreal.Vector(*e["loc"]):
+                a.modify()
                 a.set_actor_location(unreal.Vector(*e["loc"]), False, False)   # undo an earlier, wider pass
             continue
         comp = a.get_editor_property("static_mesh_component")
         if not comp.is_visible():
             continue
         loc0 = unreal.Vector(*e["loc"])
-        a.set_actor_location(loc0, False, False)          # back to R1's position before measuring
+        if a.get_actor_location() != loc0:
+            a.modify()
+            a.set_actor_location(loc0, False, False)      # back to R1's position before measuring
         origin, ext = a.get_actor_bounds(False)
         if max(ext.x, ext.y) > 125 or ext.z > 250:
             continue
@@ -199,6 +213,7 @@ def main():
             continue
         if gap <= 0.5:
             continue
+        a.modify()
         a.set_actor_location(unreal.Vector(loc0.x, loc0.y, loc0.z - gap), False, False)
         report["floating"].append({"name": label, "zone": e["zone"], "ue_asset": e.get("ue_asset") or "", "dropped_cm": round(gap, 1)})
 
@@ -218,6 +233,8 @@ def main():
             n = max(2, round((z_top - z_walk) / 17.5))
             rise = (z_top - z_walk) / n
             comp = st.get_editor_property("static_mesh_component")
+            st.modify()                                    # OFPA actor: without Modify the hide is not saved
+            comp.modify()
             comp.set_visibility(False, True)
             comp.set_collision_enabled(unreal.CollisionEnabled.NO_COLLISION)
             sy0, sy1 = mid_y - width / 2, mid_y + width / 2
@@ -241,6 +258,14 @@ def main():
                                      "why": "mesh steps run N/S (90 deg off spec dir_deg -2.808), 1.2 m wall faced the walkway"})
         else:
             unreal.log_warning("fix_site: PavilionStair heights not found, stair left as is")
+
+    # 4 sagging ground: R1's terrain sheet funnels down toward the hall passage pit next to its ramp (owner playtest:
+    #   "the ground came apart"); the plaza there is flat at the upper level, so a paving slab covers the sag up to the
+    #   pit edge. Box (UE cm) found by profiling: upper plaza z 535, pit edge y -950, ramp rail W at x 15632.
+    for name, (xa, xb, ya, yb, z_top) in SAG_PATCHES.items():
+        spawn_box(eas, cube, paving_mat, unreal.Vector((xa + xb) / 2, (ya + yb) / 2, z_top - 30),
+                  (xb - xa, yb - ya, 60.0), 0.0, name, "Fixes/Ground")
+        report.setdefault("ground_patches", []).append({"name": name, "box_cm": [xa, xb, ya, yb], "z_top_cm": z_top})
 
     out = os.path.join(REPO, "Saved", "QA")
     os.makedirs(out, exist_ok=True)

@@ -94,7 +94,41 @@ def build_master(tools):
         mel.connect_material_expressions(a, out, b, inp)
 
     S, V = unreal.MaterialExpressionScalarParameter, unreal.MaterialExpressionVectorParameter
-    uv0 = expr(unreal.MaterialExpressionTextureCoordinate, -1600, 300)
+    tex0 = expr(unreal.MaterialExpressionTextureCoordinate, -2400, 300)
+    # WorldUV (static switch, for level-side fix boxes built from the engine cube, whose UVs are 0..1 per face):
+    # box projection in metres from world position, axis picked by the dominant vertex normal, same rule as ue_prep
+    wpos = expr(unreal.MaterialExpressionWorldPosition, -3000, 600)
+    wm = expr(unreal.MaterialExpressionDivide, -2800, 600, const_b=100.0)
+    link(wpos, "", wm, "A")
+    planes = {}
+    for key, (r, g, b) in {"xy": (True, True, False), "yz": (False, True, True), "xz": (True, False, True)}.items():
+        planes[key] = expr(unreal.MaterialExpressionComponentMask, -2600, 500 + 80 * len(planes), r=r, g=g, b=b, a=False)
+        link(wm, "", planes[key], "")
+    nrm_ws = expr(unreal.MaterialExpressionVertexNormalWS, -3000, 900)
+    nabs = expr(unreal.MaterialExpressionAbs, -2800, 900)
+    link(nrm_ws, "", nabs, "")
+    nc = {}
+    for i, c in enumerate("xyz"):
+        nc[c] = expr(unreal.MaterialExpressionComponentMask, -2600, 850 + 60 * i, r=c == "x", g=c == "y", b=c == "z", a=False)
+        link(nabs, "", nc[c], "")
+    side = expr(unreal.MaterialExpressionIf, -2400, 700)              # |nx| >= |ny| -> YZ plane else XZ
+    link(nc["x"], "", side, "A")
+    link(nc["y"], "", side, "B")
+    link(planes["yz"], "", side, "A > B")
+    link(planes["yz"], "", side, "A == B")
+    link(planes["xz"], "", side, "A < B")
+    nmax = expr(unreal.MaterialExpressionMax, -2400, 900)
+    link(nc["x"], "", nmax, "A")
+    link(nc["y"], "", nmax, "B")
+    boxuv = expr(unreal.MaterialExpressionIf, -2200, 650)             # |nz| >= max(|nx|,|ny|) -> XY plane
+    link(nc["z"], "", boxuv, "A")
+    link(nmax, "", boxuv, "B")
+    link(planes["xy"], "", boxuv, "A > B")
+    link(planes["xy"], "", boxuv, "A == B")
+    link(side, "", boxuv, "A < B")
+    uv0 = expr(unreal.MaterialExpressionStaticSwitchParameter, -1900, 300, parameter_name="WorldUV", default_value=False)
+    link(boxuv, "", uv0, "True")
+    link(tex0, "", uv0, "False")
     tile = expr(S, -1600, 450, parameter_name="TileSizeM", default_value=2.0)
     uv = expr(unreal.MaterialExpressionDivide, -1400, 350)
     link(uv0, "", uv, "A")
@@ -202,6 +236,30 @@ def import_set(tools, tex_id):
     return src, out
 
 
+WORLD_UV_VARIANTS = ("M_Granite_Red", "M_Concrete_Precast", "M_Paver_Clover_Grey")   # used by fix_site.py's cube boxes
+
+
+def world_uv_variant(tools, slot):
+    """MI_<slot>_World: same look as MI_<slot> with the WorldUV switch on, for meshes without metre UVs."""
+    mel = unreal.MaterialEditingLibrary
+    src = unreal.EditorAssetLibrary.load_asset(f"{MAT_ROOT}/MI_{slot[2:]}")
+    name = f"MI_{slot[2:]}_World"
+    path = f"{MAT_ROOT}/{name}"
+    mi = (unreal.EditorAssetLibrary.load_asset(path) if unreal.EditorAssetLibrary.does_asset_exist(path) else
+          tools.create_asset(name, MAT_ROOT, unreal.MaterialInstanceConstant, unreal.MaterialInstanceConstantFactoryNew()))
+    mi.modify()
+    mel.set_material_instance_parent(mi, src.get_editor_property("parent"))
+    for p in src.get_editor_property("scalar_parameter_values"):
+        mel.set_material_instance_scalar_parameter_value(mi, p.get_editor_property("parameter_info").get_editor_property("name"), p.get_editor_property("parameter_value"))
+    for p in src.get_editor_property("vector_parameter_values"):
+        mel.set_material_instance_vector_parameter_value(mi, p.get_editor_property("parameter_info").get_editor_property("name"), p.get_editor_property("parameter_value"))
+    for p in src.get_editor_property("texture_parameter_values"):
+        mel.set_material_instance_texture_parameter_value(mi, p.get_editor_property("parameter_info").get_editor_property("name"), p.get_editor_property("parameter_value"))
+    mel.set_material_instance_static_switch_parameter_value(mi, "WorldUV", True)
+    mel.update_material_instance(mi)
+    return mi
+
+
 def main():
     with open(os.path.join(EXPORT, "materials.json"), encoding="utf-8") as fh:
         colours = json.load(fh)
@@ -239,6 +297,8 @@ def main():
                 mel.set_material_instance_texture_parameter_value(mi, param, texs[kind])
         mel.update_material_instance(mi)
         done.append(slot)
+    for slot in WORLD_UV_VARIANTS:
+        world_uv_variant(tools, slot)
     unreal.EditorAssetLibrary.save_directory(MAT_ROOT, False, True)
     unreal.EditorAssetLibrary.save_directory(TEX_ROOT, False, True)
     unreal.log(f"apply_surface_materials: {len(done)} slots on PBR, {len(sets)} texture sets")
