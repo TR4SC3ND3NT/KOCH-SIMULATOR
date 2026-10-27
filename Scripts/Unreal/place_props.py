@@ -150,6 +150,8 @@ def main():
     # See-through court fences are not obstacles (benches along them face the court).
     # Kit backrest = Blender +Y = UE local -Y (the FBX export mirrors Y), so in world: (sin yaw, -cos yaw).
     TIGHT, REACH = 60.0, 150.0
+    flips_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bench_flips.json")
+    flips = set(json.load(open(flips_path, encoding="utf-8"))) if os.path.exists(flips_path) else set()
     see_through = [a for a in actors if isinstance(a, unreal.StaticMeshActor) and any(
         m and "Fence_Mesh" in m.get_name() for m in a.get_editor_property("static_mesh_component").get_materials())]
     rows = {}
@@ -178,7 +180,8 @@ def main():
         else:
             flip = wall < 0
         for e, base, yaw, sx, sz, ph in row:
-            place(e, "SM_Prop_Bench_Park", base, yaw + (180.0 if flip else 0.0), sx, sz, ph)
+            manual = 180.0 if e["name"] in flips else 0.0       # owner review (bench_labels.py numbers)
+            place(e, "SM_Prop_Bench_Park", base, yaw + (180.0 if flip else 0.0) + manual, sx, sz, ph)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
     unreal.log(f"place_props: {len([m for m in meshes.values() if m])} props, {placed[0]} placed, {len(rows)} bench rows")
 

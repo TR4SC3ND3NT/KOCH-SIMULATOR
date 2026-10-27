@@ -13,6 +13,7 @@ public class KochSimulator : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"InputCore",
+			"Json",
 			"EnhancedInput",
 			"AIModule",
 			"StateTreeModule",
