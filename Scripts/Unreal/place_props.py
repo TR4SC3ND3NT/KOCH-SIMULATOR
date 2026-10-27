@@ -74,6 +74,22 @@ def trace_dist(world, a, b, ignore):
     return t[3] if t[0] else None
 
 
+GREEN = ("Grass", "Turf", "Pitch", "Sport_Floor", "Lawn")
+
+
+def is_green(world, p, z_min):
+    """True if the surface under p, between p.z and z_min, is lawn/turf/pitch (material slot of the hit face)."""
+    h = unreal.SystemLibrary.line_trace_single(world, p, unreal.Vector(p.x, p.y, z_min), unreal.TraceTypeQuery.TRACE_TYPE_QUERY1,
+                                               True, [], unreal.DrawDebugTrace.NONE, True)
+    if h is None or not h.to_tuple()[0]:
+        return False
+    t = h.to_tuple()
+    comp, face = t[10], t[15]
+    mat = comp.get_material_from_collision_face_index(face)[0] if comp is not None and face >= 0 else None
+    name = (mat.get_name() if mat else "") + (t[9].get_actor_label() if t[9] else "")
+    return any(k in name for k in GREEN)
+
+
 def main():
     les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
     ues = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem)
@@ -127,23 +143,42 @@ def main():
             benches.append((e, base, yaw, sx, sz, ph))
             continue
         place(e, prop, base, yaw, sx, sz, ph)
-    # benches: back to the wall/hedge, front to the open side; every bench of one row (same name stem) faces the same
-    # way, decided by the row's summed clearance so a single bench next to a lamp post cannot flip its row
+    # benches (owner playtest 2026-10-27), per row (same name stem, one vote) in this order:
+    #  1 a wall/hedge right behind or in front (< TIGHT): back to it
+    #  2 lawn/field/pitch on exactly one side at the bench's level: face it
+    #  3 else back to the side with the nearer obstacle within REACH
+    # See-through court fences are not obstacles (benches along them face the court).
+    # Kit backrest = Blender +Y = UE local -Y (the FBX export mirrors Y), so in world: (sin yaw, -cos yaw).
+    TIGHT, REACH = 60.0, 150.0
+    see_through = [a for a in actors if isinstance(a, unreal.StaticMeshActor) and any(
+        m and "Fence_Mesh" in m.get_name() for m in a.get_editor_property("static_mesh_component").get_materials())]
     rows = {}
     for b in benches:
         rows.setdefault(re.sub(r"_?\d+$", "", b[0]["name"]), []).append(b)
     for stem, row in rows.items():
-        score = 0.0
+        tight = wall = 0.0      # > 0: obstacles are behind the backrest already
+        green = 0               # > 0: lawn/field is in front already
         for e, base, yaw, sx, sz, ph in row:
             r = math.radians(yaw)
-            back = unreal.Vector(-math.sin(r), math.cos(r), 0.0)       # kit local +Y (the backrest side) in world
+            back = unreal.Vector(math.sin(r), -math.cos(r), 0.0)
             for zoff in (50.0, 110.0):
                 p0 = unreal.Vector(base.x, base.y, base.z + zoff)
-                d_back = trace_dist(world, p0, p0 + back * 400.0, [ph]) or 400.0
-                d_front = trace_dist(world, p0, p0 - back * 400.0, [ph]) or 400.0
-                score += d_front - d_back                              # > 0: the obstacle is behind already
+                d_back = trace_dist(world, p0, p0 + back * REACH, [ph] + see_through) or REACH
+                d_front = trace_dist(world, p0, p0 - back * REACH, [ph] + see_through) or REACH
+                wall += d_front - d_back
+                tight += (d_back < TIGHT) - (d_front < TIGHT)
+            for sign in (1, -1):                                # ground 2.5 m behind / in front, same level only
+                q = unreal.Vector(base.x + back.x * 250 * sign, base.y + back.y * 250 * sign, base.z + 40)
+                if is_green(world, q, base.z - 40):
+                    green += -sign
+        if tight != 0:
+            flip = tight < 0
+        elif green != 0:
+            flip = green < 0
+        else:
+            flip = wall < 0
         for e, base, yaw, sx, sz, ph in row:
-            place(e, "SM_Prop_Bench_Park", base, yaw + (0.0 if score >= 0 else 180.0), sx, sz, ph)
+            place(e, "SM_Prop_Bench_Park", base, yaw + (180.0 if flip else 0.0), sx, sz, ph)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
     unreal.log(f"place_props: {len([m for m in meshes.values() if m])} props, {placed[0]} placed, {len(rows)} bench rows")
 
