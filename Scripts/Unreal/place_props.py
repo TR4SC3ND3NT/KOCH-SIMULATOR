@@ -4,7 +4,9 @@
 # nearer wall/hedge. Placeholders are hidden but keep their collision (a clean box per prop). Re-running replaces props.
 # Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/place_props.py" [PROPS_DIR] [--reimport]
 import json
+import math
 import os
+import re
 import sys
 
 import unreal
@@ -90,7 +92,22 @@ def main():
     actors = eas.get_all_level_actors()
     eas.destroy_actors([a for a in actors if a.actor_has_tag(TAG)])
     by_label = {a.get_actor_label(): a for a in actors if a.actor_has_tag("KochGreybox")}
-    placed = 0
+    placed = [0]
+
+    def place(e, prop, base, yaw, sx, sz, ph):
+        a = eas.spawn_actor_from_object(meshes[prop], base, unreal.Rotator(roll=0, pitch=0, yaw=yaw))
+        a.set_actor_scale3d(unreal.Vector(sx, 1.0, sz))
+        a.set_actor_label(f"PROP_{e['name']}")
+        a.set_folder_path(f"Props/{e['zone']}")
+        a.set_editor_property("tags", [unreal.Name(TAG), unreal.Name(f"Replaces:{e['name']}")])
+        a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
+        ph.modify()
+        comp = ph.get_editor_property("static_mesh_component")
+        comp.modify()
+        comp.set_visibility(False, True)
+        ph.set_actor_hidden_in_game(True)
+        placed[0] += 1
+    benches = []
     for e in man["instances"]:
         kind = (e.get("ue_asset") or "").lower()
         prop = next((p for k, p in MAPPING if kind.startswith(k)), None)
@@ -107,29 +124,28 @@ def main():
         sx = min(max(length_m / size[0], LENGTH_SCALE[0]), LENGTH_SCALE[1])
         sz = min(max((z1 - z0) / size[2], 0.8), 1.25)
         if prop == "SM_Prop_Bench_Park":
-            # front faces local -Y: put the back (+Y) toward the nearer obstacle within 2 m at seat height
-            import math
+            benches.append((e, base, yaw, sx, sz, ph))
+            continue
+        place(e, prop, base, yaw, sx, sz, ph)
+    # benches: back to the wall/hedge, front to the open side; every bench of one row (same name stem) faces the same
+    # way, decided by the row's summed clearance so a single bench next to a lamp post cannot flip its row
+    rows = {}
+    for b in benches:
+        rows.setdefault(re.sub(r"_?\d+$", "", b[0]["name"]), []).append(b)
+    for stem, row in rows.items():
+        score = 0.0
+        for e, base, yaw, sx, sz, ph in row:
             r = math.radians(yaw)
-            fwd = unreal.Vector(-math.sin(r), math.cos(r), 0.0)   # local +Y in world
-            p0 = unreal.Vector(origin.x, origin.y, base.z + 50)
-            d_back = trace_dist(world, p0, p0 + fwd * 200.0, [ph])
-            d_front = trace_dist(world, p0, p0 - fwd * 200.0, [ph])
-            if d_front is not None and (d_back is None or d_front < d_back):
-                yaw += 180.0
-        a = eas.spawn_actor_from_object(meshes[prop], base, unreal.Rotator(roll=0, pitch=0, yaw=yaw))
-        a.set_actor_scale3d(unreal.Vector(sx, 1.0, sz))
-        a.set_actor_label(f"PROP_{e['name']}")
-        a.set_folder_path(f"Props/{e['zone']}")
-        a.set_editor_property("tags", [unreal.Name(TAG), unreal.Name(f"Replaces:{e['name']}")])
-        a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
-        ph.modify()
-        comp = ph.get_editor_property("static_mesh_component")
-        comp.modify()
-        comp.set_visibility(False, True)
-        ph.set_actor_hidden_in_game(True)
-        placed += 1
+            back = unreal.Vector(-math.sin(r), math.cos(r), 0.0)       # kit local +Y (the backrest side) in world
+            for zoff in (50.0, 110.0):
+                p0 = unreal.Vector(base.x, base.y, base.z + zoff)
+                d_back = trace_dist(world, p0, p0 + back * 400.0, [ph]) or 400.0
+                d_front = trace_dist(world, p0, p0 - back * 400.0, [ph]) or 400.0
+                score += d_front - d_back                              # > 0: the obstacle is behind already
+        for e, base, yaw, sx, sz, ph in row:
+            place(e, "SM_Prop_Bench_Park", base, yaw + (0.0 if score >= 0 else 180.0), sx, sz, ph)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
-    unreal.log(f"place_props: {len([m for m in meshes.values() if m])} props, {placed} placed")
+    unreal.log(f"place_props: {len([m for m in meshes.values() if m])} props, {placed[0]} placed, {len(rows)} bench rows")
 
 
 main()

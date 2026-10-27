@@ -11,7 +11,7 @@ SUN_LUX = 100000.0
 # Bishkek (42.8566 N, 74.679 E) 2026-09-25 15:00 UTC+6, NOAA solar position: elevation 37.8, azimuth 221.7 (SW).
 # UE: +X east, +Y south (decisions.md world frame), so light yaw = azimuth + 90 and pitch = -elevation.
 SUN_ROT = unreal.Rotator(roll=0.0, pitch=-37.8, yaw=311.7)
-EV100_MIN, EV100_MAX = 10.0, 15.0
+EV100_MIN, EV100_MAX = 7.0, 15.0     # 7: Block C interiors are walkable now (dim corridors ~EV 7-9)
 EXPOSURE_BIAS = -0.5   # A/B in PIE 2026-10-26: 8..15/0 washed out sunlit paving, 12..15/-1 crushed the shade
 
 

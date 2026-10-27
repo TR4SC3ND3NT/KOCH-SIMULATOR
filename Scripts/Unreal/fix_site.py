@@ -236,7 +236,7 @@ def main():
             st.modify()                                    # OFPA actor: without Modify the hide is not saved
             comp.modify()
             comp.set_visibility(False, True)
-            comp.set_collision_enabled(unreal.CollisionEnabled.NO_COLLISION)
+            comp.set_collision_profile_name("NoCollision")   # a profile is saved; set_collision_enabled is runtime-only
             sy0, sy1 = mid_y - width / 2, mid_y + width / 2
 
             def box(xa, xb, ya, yb, za, zb_, name):

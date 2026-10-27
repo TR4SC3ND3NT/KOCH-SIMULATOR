@@ -162,6 +162,7 @@ bm.verts.ensure_lookup_table()
 v = bm.verts
 for f in ((0, 1, 2, 3), (4, 7, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)):
     bm.faces.new([v[i] for i in f])
+bmesh.ops.recalc_face_normals(bm, faces=bm.faces)   # hand-built faces: outward normals or the body draws inside-out
 bmesh.ops.bevel(bm, geom=[e for e in bm.edges if abs(e.verts[0].co.z - e.verts[1].co.z) > 0.5], offset=0.05, segments=3, affect="EDGES")
 me = bpy.data.meshes.new("body")
 bm.to_mesh(me)
@@ -187,6 +188,7 @@ bm.verts.ensure_lookup_table()
 v = bm.verts
 for f in ((0, 1, 2, 3), (4, 7, 6, 5), (0, 4, 5, 1), (1, 5, 6, 2), (2, 6, 7, 3), (3, 7, 4, 0)):
     bm.faces.new([v[i] for i in f])
+bmesh.ops.recalc_face_normals(bm, faces=bm.faces)   # hand-built faces: outward normals or the body draws inside-out
 bmesh.ops.bevel(bm, geom=[e for e in bm.edges if abs(e.verts[0].co.z - e.verts[1].co.z) > 0.5], offset=0.08, segments=3, affect="EDGES")
 me = bpy.data.meshes.new("body")
 bm.to_mesh(me)
