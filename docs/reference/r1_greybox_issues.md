@@ -39,3 +39,9 @@ From below you look under the terrain and see sky (owner playtest: hall passage 
 - Zone names SITE_Sport (15) and SITE_Sports (605) look like a typo split.
 - SM_GB_BLD_C_Wall_2d884e77 has two slots both named M_Paint_White (UE merges them).
 - Review palette lives only in Material.diffuse_color; Principled BSDF stays default 0.8 grey (export_material_colors.py reads diffuse_color).
+
+## 5. Owner playtest 2026-10-27
+- TER_Ground step walls from settle.py are wound into the higher ground (8204 faces, e.g. east gate lane x 202.1 m); UE culls them and the sky shows through. ue_prep/terrain.py now turns them out and gives them the top's material; open rims get a 0.5 m skirt. Please fix the winding in settle.py.
+- GBS_Trees_WestStrip_OT_west_strip_00..09_conifer: not on the real site (owner). Hidden level-side via Scripts/Unreal/owner_removed.json.
+- GBS_Sports_NorthBoundary_Wall: one 360 m mesh with a straight bottom; over the uneven ground it hovers up to ~25 cm. fix_site.py adds a concrete footing strip; a wall that follows the ground (or a modelled footing) would retire it.
+- The ground tiles stop ~200 m out while the OSM context blocks reach ~800 m; place_far_ground.py adds a far ground under them.

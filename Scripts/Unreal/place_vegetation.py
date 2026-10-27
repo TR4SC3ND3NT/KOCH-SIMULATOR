@@ -237,10 +237,12 @@ def main():
         if sk is not None:
             b = sk.get_bounds()
             plants[key] = (sk, 2 * b.box_extent.z / 100.0, (b.origin.z - b.box_extent.z) / 100.0)
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "owner_removed.json"), encoding="utf-8") as fh:
+        removed = set(json.load(fh))   # not on the real site (owner review); apply_removals.py hides the placeholders
     placed = 0
     for e in man["instances"]:
         variants = MAPPING.get(e.get("ue_asset") or "")
-        if not variants:
+        if not variants or e["name"] in removed:
             continue
         name = variants[hashed(e["name"], len(variants))]
         ph = by_label.get(e["name"])

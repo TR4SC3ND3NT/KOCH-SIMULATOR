@@ -3,9 +3,13 @@
 # the source (.blend/specs) and this script can be retired. Idempotent: old KochFix actors are removed and moves are
 # applied relative to the manifest position, never accumulated.
 #  1 risers   - ground steps (>= RISER_MIN_CM) whose vertical face is missing: the upper terrain is a one-sided sheet, so
-#               from below you look under it and see sky. A concrete wall closes each open edge.
+#               from below you look under it and see sky. A concrete wall closes each open edge. Since ue_prep turns
+#               the terrain's own step walls outwards and skirts open rims (2026-10-27) most steps are closed in the
+#               ground itself; a riser is only built where a sideways trace still finds no ground face (covered()).
 #  2 floating - outdoor props hovering 2..200 cm over the surface below are dropped onto it; face terminals sit on their pole
 #  3 stairs   - GBS_GateAlley_PavilionStair: rebuilt to its spec (flight down east to the walkway); the mesh is 90 deg off
+#  4 footings - long site walls are one mesh with a straight bottom over sloping, uneven ground and hover up to ~25 cm
+#               (owner playtest 2026-10-27, north boundary wall): a concrete footing strip per FOOT_SEG closes the gap
 # Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/fix_site.py"
 import json
 import math
@@ -28,6 +32,8 @@ VERTICAL_SHARE = 0.8                      # a real step: >= 80 % of the height c
 RISER_MIN_CM, RISER_MAX_CM = 20.0, 300.0
 WALL_T = 12.0
 FLOAT_MIN, FLOAT_MAX = 2.0, 200.0
+FOOTING_WALLS = ("GBS_Sports_NorthBoundary_Wall",)
+FOOT_SEG, FOOT_MIN_GAP, FOOT_SINK = 300.0, 2.0, 10.0   # cm: segment length, smallest gap closed, depth into the ground
 SNAP_NO_ROOF_CM = 30.0
 # only free-standing street furniture is dropped; wall/fence/canopy-mounted items keep R1's height
 # name -> (x0, x1, y0, y1, z_top) UE cm, from a 40 cm height profile (2026-10-27): west of the hall passage ramp the
@@ -56,6 +62,93 @@ def ground_z(world, x, y, ground_only=False):
     if h is None or (ground_only and not (h[1] and h[1].get_actor_label().startswith(GROUND_PREFIX))):
         return None
     return h[0].z
+
+
+def covered(world, axis, side, across, along, z_lo, z_hi):
+    """True if the step is already closed here: a horizontal trace from the low side at mid height hits a face within
+    40 cm of the edge (the ground's own step wall or a slab side). side: +1/-1 = direction of the high side."""
+    z = (z_lo + z_hi) / 2
+    for a in along:
+        p = lambda d: unreal.Vector(across + side * d, a, z) if axis == "x" else unreal.Vector(a, across + side * d, z)
+        h = hit(trace(world, p(-60.0), p(40.0)))
+        if h is None:
+            return False
+    return True
+
+
+def wall_ends(world, a):
+    """Centreline end points (x, y) of a long thin wall: at each end of its bounds, the mean of the across positions
+    where a down trace hits the wall (2 cm steps)."""
+    o, e = a.get_actor_bounds(False)
+    long_x = e.x >= e.y
+    ends = []
+    for sgn in (-1, 1):
+        u = (o.x + sgn * (e.x - 30)) if long_x else (o.y + sgn * (e.y - 30))
+        lo, hi = (o.y - e.y, o.y + e.y) if long_x else (o.x - e.x, o.x + e.x)
+        on = []
+        v = lo
+        while v <= hi:
+            x, y = (u, v) if long_x else (v, u)
+            h = hit(trace(world, unreal.Vector(x, y, o.z + e.z + 50), unreal.Vector(x, y, o.z - e.z - 50)))
+            if h and h[1] == a:
+                on.append(v)
+            v += 2.0
+        if not on:
+            return None
+        m = sum(on) / len(on)
+        ends.append((u, m) if long_x else (m, u))
+    return ends
+
+
+def footings(world, eas, cube, mat, a, report):
+    """4: footing boxes under a long wall wherever its bottom hovers over the ground on either side."""
+    ends = wall_ends(world, a)
+    if ends is None:
+        return
+    (x0, y0), (x1, y1) = ends
+    length = math.hypot(x1 - x0, y1 - y0)
+    dx, dy = (x1 - x0) / length, (y1 - y0) / length
+    nx, ny = -dy, dx
+    yaw = math.degrees(math.atan2(dy, dx))
+    o, e = a.get_actor_bounds(False)
+    n = 0
+    s = FOOT_SEG / 2
+    while s < length:
+        cx, cy = x0 + dx * s, y0 + dy * s
+        top = hit(trace(world, unreal.Vector(cx, cy, o.z + e.z + 50), unreal.Vector(cx, cy, o.z - e.z - 300)))
+        if top is None or top[1] != a:
+            s += FOOT_SEG
+            continue
+        # thickness from both faces at 1 m below the top
+        zt = top[0].z - 100
+        f1 = hit(trace(world, unreal.Vector(cx + nx * 80, cy + ny * 80, zt), unreal.Vector(cx, cy, zt)))
+        f2 = hit(trace(world, unreal.Vector(cx - nx * 80, cy - ny * 80, zt), unreal.Vector(cx, cy, zt)))
+        if not (f1 and f2 and f1[1] == a and f2[1] == a):
+            s += FOOT_SEG
+            continue
+        thick = math.hypot(f1[0].x - f2[0].x, f1[0].y - f2[0].y)
+        grounds, bottoms = [], []
+        for t in (-0.45, 0.0, 0.45):
+            px, py = cx + dx * t * FOOT_SEG, cy + dy * t * FOOT_SEG
+            for side in (1, -1):
+                qx, qy = px + side * nx * (thick / 2 + 20), py + side * ny * (thick / 2 + 20)
+                g = hit(trace(world, unreal.Vector(qx, qy, zt), unreal.Vector(qx, qy, zt - 2000), [a]))
+                if g is None:
+                    continue
+                grounds.append(g[0].z)
+                for k in range(0, 120, 2):   # lowest height above this ground where the wall face is hit
+                    z = g[0].z + 1 + k
+                    w = hit(trace(world, unreal.Vector(qx, qy, z), unreal.Vector(px, py, z)))
+                    if w and w[1] == a:
+                        bottoms.append(z)
+                        break
+        if grounds and bottoms and max(b - g for b, g in zip(bottoms, grounds)) > FOOT_MIN_GAP:
+            z_lo, z_hi = min(grounds) - FOOT_SINK, max(bottoms) + 3.0
+            spawn_box(eas, cube, mat, unreal.Vector(cx, cy, (z_lo + z_hi) / 2), (FOOT_SEG + 2.0, thick + 4.0, z_hi - z_lo),
+                      yaw, f"FIX_Footing_{a.get_actor_label()}_{n:03d}", "Fixes/Footings")
+            n += 1
+        s += FOOT_SEG
+    report.setdefault("footings", []).append({"wall": a.get_actor_label(), "boxes": n})
 
 
 def spawn_box(eas, mesh, mat, centre, size, yaw, label, folder):
@@ -170,6 +263,10 @@ def main():
         length = max(along) - min(along) + GRID
         mid_along = (max(along) + min(along)) / 2
         cx, cy = (across, mid_along) if axis == "x" else (mid_along, across)
+        edge = across - side * WALL_T / 2
+        if covered(world, axis, side, edge, (min(along) + GRID / 2, mid_along, max(along) - GRID / 2), z_lo + 5, z_hi):
+            report["risers_covered"] = report.get("risers_covered", 0) + 1
+            continue
         size = (WALL_T, length, z_hi - z_lo) if axis == "x" else (length, WALL_T, z_hi - z_lo)
         spawn_box(eas, cube, wall_mat, unreal.Vector(cx, cy, (z_lo + z_hi) / 2), size, 0.0,
                   f"FIX_Riser_{len(report['risers']):03d}", "Fixes/Risers")
@@ -267,13 +364,18 @@ def main():
                   (xb - xa, yb - ya, 60.0), 0.0, name, "Fixes/Ground")
         report.setdefault("ground_patches", []).append({"name": name, "box_cm": [xa, xb, ya, yb], "z_top_cm": z_top})
 
+    # 4 footings under hovering site walls
+    for name in FOOTING_WALLS:
+        if name in actors:
+            footings(world, eas, cube, wall_mat, actors[name], report)
+
     out = os.path.join(REPO, "Saved", "QA")
     os.makedirs(out, exist_ok=True)
     with open(os.path.join(out, "fixes.json"), "w", encoding="utf-8") as fh:
         json.dump(report, fh, indent=1)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
-    unreal.log(f"fix_site: {len(report['risers'])} riser walls, {len(report['floating'])} props dropped, "
-               f"{len(report['stairs'])} stairs extended")
+    unreal.log(f"fix_site: {len(report['risers'])} riser walls ({report.get('risers_covered', 0)} steps already closed), {len(report['floating'])} props dropped, "
+               f"{len(report['stairs'])} stairs extended, footings {report.get('footings')}")
 
 
 main()

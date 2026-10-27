@@ -189,6 +189,7 @@ def place(man, meshes, only, limit):
             comp.set_mobility(unreal.ComponentMobility.STATIC)
             if e["role"] == "barrier":
                 a.set_actor_hidden_in_game(True)
+                comp.set_visibility(False)    # also in the editor: a 285 m blue box hides the skyline in reviews
                 comp.set_collision_profile_name("InvisibleWall")
             placed += 1
     return placed

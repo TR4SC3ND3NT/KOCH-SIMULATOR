@@ -11,6 +11,64 @@ from .common import TILE_M, box_uvs, tile_name
 from .geom import geo_from_mesh
 
 SNAP = 2e-4   # m; bisect tolerance band snapped onto the grid line
+SKIRT = 0.5   # m; every open terrain edge gets a vertical skirt this deep (see _add_skirts)
+
+
+def _add_skirts(bm, depth=SKIRT):
+    """Hang a vertical face below every boundary edge of the terrain. settle.py removes the ground under walk tops and
+    leaves level steps (lane vs verge, plaza vs lawn) as two open rims at different heights with nothing between;
+    in UE that gap shows the void, read as thin sky-coloured wedges (owner playtest 2026-10-27: 444 such steps, ~150 m,
+    measured on TER_Ground; not Nanite: same with r.Nanite 0). A skirt closes every such step with ground-material
+    wall, and is hidden under the paving where the rim only frames a covered hole. Winding follows the boundary
+    face, so the skirt faces the open side. Returns the number of skirt faces."""
+    bottom = {}
+    made = 0
+    for e in [e for e in bm.edges if e.is_boundary]:
+        f = e.link_faces[0]
+        loop = next(l for l in f.loops if l.edge == e)
+        a, b = loop.vert, loop.link_loop_next.vert
+        for v in (a, b):
+            if v not in bottom:
+                bottom[v] = bm.verts.new((v.co.x, v.co.y, v.co.z - depth))
+        try:
+            nf = bm.faces.new((b, a, bottom[a], bottom[b]))
+        except ValueError:   # face already exists (degenerate double rim)
+            continue
+        nf.material_index = f.material_index
+        made += 1
+    return made
+
+
+def _orient_steps(bm):
+    """Turn every near-vertical terrain face towards its lower side. settle.py's step walls (lane vs verge, 2-10 cm)
+    come out wound into the higher ground, so UE culls them from the side they are seen from and the void shows as a
+    sky-blue wedge (owner playtest 2026-10-27, east gate lane: normal -X on a step falling to +X). Vote per edge over
+    the up-facing neighbours: one on the top edge must be behind the face, one on the bottom edge in front of it.
+    The wall also takes the material of the top it belongs to (settle leaves slot 0, grass, on asphalt steps).
+    Returns the number of faces flipped."""
+    bm.normal_update()
+    flip = []
+    for f in bm.faces:
+        n = f.normal
+        if abs(n.z) > 0.3:
+            continue
+        c = f.calc_center_median()
+        score = 0.0
+        for e in f.edges:
+            top = (e.verts[0].co.z + e.verts[1].co.z) * 0.5 > c.z
+            for g in e.link_faces:
+                if g is f or g.normal.z < 0.5:
+                    continue
+                d = g.calc_center_median() - c
+                s = n.x * d.x + n.y * d.y
+                score += -s if top else s
+                if top:
+                    f.material_index = g.material_index
+        if score < 0:
+            flip.append(f)
+    bmesh.ops.reverse_faces(bm, faces=flip)
+    bm.normal_update()
+    return len(flip)
 
 
 def _lines(lo, hi):
@@ -41,6 +99,7 @@ def build_tiles(obj):
     bm = bmesh.new()
     bm.from_mesh(obj.data)
     bm.transform(Matrix(obj.matrix_world))
+    print(f"ue_prep terrain: {_orient_steps(bm)} step faces turned out, {_add_skirts(bm)} skirt faces")
     co = np.array([v.co[:] for v in bm.verts])
     lo, hi = co.min(0), co.max(0)
     for axis in (0, 1):
