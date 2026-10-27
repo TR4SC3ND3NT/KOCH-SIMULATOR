@@ -1,4 +1,5 @@
-# UE 5.8 editor script (R4 -> R1/everyone): real vegetation over the greybox placeholders. Imports the split Poly Haven
+# UE 5.8 editor script (R4 -> R1/everyone): real vegetation over the greybox placeholders: Epic PVE sample trees (see
+# PVE_ASSETS) and, as fallback, the split Poly Haven
 # plants (Scripts/Blender/split_polyhaven.py; CC0, see Saved/ThirdParty/PolyHaven/*/SOURCE.json) as Nanite meshes with
 # their 2k textures and two materials (opaque bark, masked two-sided foliage), then puts one plant on every placeholder
 # whose ue_asset tag is in MAPPING: same base point, uniform scale to the placeholder's height, deterministic yaw.
@@ -17,19 +18,29 @@ EXPORT = ARGS[0] if len(ARGS) > 0 else os.path.join(REPO, "Saved", "GreyboxExpor
 SPLIT = ARGS[1] if len(ARGS) > 1 else os.path.join(REPO, "Saved", "ThirdParty", "PolyHaven", "_split")
 PH = os.path.dirname(SPLIT)
 ROOT = "/Game/KochSimulator/Environment/Vegetation/PolyHaven"
+LEVEL = "/Game/KochSimulator/Maps/L_GreyboxTest"
 TAG = "KochVegetation"
 
+# Epic's Procedural Vegetation Editor samples shipped with UE 5.8 (Nanite assemblies, Dynamic Wind skeletal meshes;
+# need r.Nanite.Foliage). Denser and closer to the campus species than the Poly Haven forest fir, which stays as a
+# fallback (SM_PH_* keys) for when the plugin is off.
+PVE = "/ProceduralVegetationEditor/SampleAssets/StarterContent"
+PVE_ASSETS = {"PVE_Conifer": f"{PVE}/ConiferTree_01/PVE_Conifer_01",
+              "PVE_Tree": f"{PVE}/DeciduousTree_01/PVE_Deciduous_Tree_01",
+              "PVE_Shrub": f"{PVE}/Deciduous_Shrub_01/PVE_Deciduous_Shrub_01"}
 # placeholder ue_asset -> plant variants (picked by a hash of the placeholder name)
 MAPPING = {
-    "tree_cone": ["SM_PH_FirTree01_A", "SM_PH_FirTree01_B", "SM_PH_FirTree01_C"],
-    "conifer_small": ["SM_PH_FirTree01_C"],
-    "spruce_blue": ["SM_PH_FirTree01_B"],
-    "shrub_rose": ["SM_PH_Shrub02_A", "SM_PH_Shrub02_B", "SM_PH_Shrub02_C", "SM_PH_Shrub02_D"],
-    "shrub_rose_red": ["SM_PH_Shrub02_B", "SM_PH_Shrub02_D"],
-    "rose_bush": ["SM_PH_Shrub02_A"],
-    "shrub_loose": ["SM_PH_Shrub02_A", "SM_PH_Shrub02_C"],
+    "tree_cone": ["PVE_Conifer"], "conifer_small": ["PVE_Conifer"], "spruce_blue": ["PVE_Conifer"],
+    "tree_round": ["PVE_Tree"], "tree_ellipsoid": ["PVE_Tree"], "tree_deciduous_young": ["PVE_Tree"],
+    "tree_deciduous_whitewashed": ["PVE_Tree"],
+    "shrub_rose": ["PVE_Shrub"], "shrub_rose_red": ["PVE_Shrub"], "rose_bush": ["PVE_Shrub"], "shrub_loose": ["PVE_Shrub"],
+    # remaining R1 placeholder kinds (playtest 2026-10-27: still drawn as cones/icosahedra)
+    "juniper_tree_multistem": ["PVE_Conifer"], "juniper_tree_leaning": ["PVE_Conifer"], "pine_black": ["PVE_Conifer"],
+    "thuja_columnar_young": ["PVE_Conifer"], "conifer_clipped_small": ["PVE_Conifer"], "elm_whitewashed": ["PVE_Tree"],
+    "shrub_clipped_round": ["PVE_Shrub"],
 }
-SCALE_LIMITS = (0.3, 2.0)   # beyond this the plant reads wrong; keep the placeholder's footprint roughly right
+SCALE_LIMITS = (0.2, 2.0)   # beyond this the plant reads wrong; keep the placeholder's footprint roughly right
+SCALE_JITTER = 0.12         # +-12 % so identical samples don't read as clones
 
 # material per asset: (texture prefix, foliage slot name fragments) -> slots containing one of them use the foliage MI
 MATERIALS = {
@@ -205,6 +216,10 @@ def main():
                 sm.set_material(i, mis.get(leafy) or mis.get(True))
     unreal.EditorAssetLibrary.save_directory(ROOT, False, True)
 
+    # place into the campus level: after an editor restart the template's startup map is open
+    les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
+    if unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world().get_path_name().split(".")[0] != LEVEL:
+        les.load_level(LEVEL)
     # World Partition: after a level (re)load the editor only holds actors in loaded regions; load every actor desc so
     # all placeholders are reachable (DevelopmentOnly API, editor-side)
     wpl = unreal.WorldPartitionBlueprintLibrary
@@ -215,30 +230,42 @@ def main():
     actors = eas.get_all_level_actors()
     eas.destroy_actors([a for a in actors if a.actor_has_tag(TAG)])
     by_label = {a.get_actor_label(): a for a in actors if a.actor_has_tag("KochGreybox")}
+    # asset key -> (mesh, height m, base z offset m at scale 1)
+    plants = {n: (sm, split[n]["height_m"], 0.0) for n, sm in meshes.items() if sm is not None}
+    for key, path in PVE_ASSETS.items():
+        sk = unreal.EditorAssetLibrary.load_asset(path)
+        if sk is not None:
+            b = sk.get_bounds()
+            plants[key] = (sk, 2 * b.box_extent.z / 100.0, (b.origin.z - b.box_extent.z) / 100.0)
     placed = 0
     for e in man["instances"]:
         variants = MAPPING.get(e.get("ue_asset") or "")
         if not variants:
             continue
         name = variants[hashed(e["name"], len(variants))]
-        sm = meshes.get(name)
         ph = by_label.get(e["name"])
-        if sm is None or ph is None:
+        if name not in plants or ph is None:
             continue
+        mesh, height, base = plants[name]
         (x0, y0, z0), (x1, y1, z1) = man["meshes"][e["mesh"]]["bounds_m"]
-        scale = min(max((z1 - z0) / split[name]["height_m"], SCALE_LIMITS[0]), SCALE_LIMITS[1])
-        loc = unreal.Vector(e["loc"][0], e["loc"][1], e["loc"][2] + z0 * 100.0)   # placeholder base, UE cm
-        a = eas.spawn_actor_from_object(sm, loc, unreal.Rotator(roll=0, pitch=0, yaw=hashed(e["name"] + "yaw", 360)))
+        jitter = 1.0 + SCALE_JITTER * (hashed(e["name"] + "s", 2001) / 1000.0 - 1.0)
+        scale = min(max((z1 - z0) / height * jitter, SCALE_LIMITS[0]), SCALE_LIMITS[1])
+        # placeholder base, UE cm; lift by the mesh's own below-pivot depth so the trunk base lands on it
+        loc = unreal.Vector(e["loc"][0], e["loc"][1], e["loc"][2] + (z0 - base * scale) * 100.0)
+        a = eas.spawn_actor_from_object(mesh, loc, unreal.Rotator(roll=0, pitch=0, yaw=hashed(e["name"] + "yaw", 360)))
         a.set_actor_scale3d(unreal.Vector(scale, scale, scale))
         a.set_actor_label(f"VEG_{e['name']}")
         a.set_folder_path(f"Vegetation/{e['zone']}")
         a.set_editor_property("tags", [unreal.Name(TAG), unreal.Name(f"Replaces:{e['name']}")])
-        a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
+        if isinstance(a, unreal.StaticMeshActor):
+            a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
+        ph.modify()   # external (OFPA) actor: without Modify its package is not dirtied and the hide is lost on save
         comp = ph.get_editor_property("static_mesh_component")
+        comp.modify()
         comp.set_visibility(False, True)
         ph.set_actor_hidden_in_game(True)
         placed += 1
-    unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).save_all_dirty_levels()
+    unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
     unreal.log(f"place_vegetation: {len([m for m in meshes.values() if m])} meshes, {placed} plants placed")
 
 

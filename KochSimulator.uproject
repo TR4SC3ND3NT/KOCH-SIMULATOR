@@ -58,6 +58,10 @@
 		{
 			"Name": "Inkpot",
 			"Enabled": true
+		},
+		{
+			"Name": "ProceduralVegetationEditor",
+			"Enabled": true
 		}
 	]
 }
