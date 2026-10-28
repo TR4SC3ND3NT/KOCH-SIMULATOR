@@ -11,6 +11,9 @@
 #include "Animation/AnimInstance.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/Pawn.h"
+#include "GameFramework/Controller.h"
+#include "Engine/StaticMeshActor.h"
+#include "Components/StaticMeshComponent.h"
 
 AShooterWeapon::AShooterWeapon()
 {
@@ -58,8 +61,9 @@ void AShooterWeapon::EndPlay(EEndPlayReason::Type EndPlayReason)
 {
 	Super::EndPlay(EndPlayReason);
 
-	// clear the refire timer
+	// clear the refire and reload timers
 	GetWorld()->GetTimerManager().ClearTimer(RefireTimer);
+	GetWorld()->GetTimerManager().ClearTimer(ReloadTimer);
 }
 
 void AShooterWeapon::OnOwnerDestroyed(AActor* DestroyedActor)
@@ -82,8 +86,10 @@ void AShooterWeapon::ActivateWeapon(const FName& OwnerTag)
 
 void AShooterWeapon::DeactivateWeapon()
 {
-	// ensure we're no longer firing this weapon while deactivated
+	// ensure we're no longer firing this weapon while deactivated; a holstered weapon drops its reload
 	StopFiring();
+	GetWorld()->GetTimerManager().ClearTimer(ReloadTimer);
+	bReloading = false;
 
 	// hide the weapon
 	SetActorHiddenInGame(true);
@@ -129,8 +135,15 @@ void AShooterWeapon::StopFiring()
 void AShooterWeapon::Fire()
 {
 	// ensure the player still wants to fire. They may have let go of the trigger
-	if (!bIsFiring)
+	if (!bIsFiring || bReloading)
 	{
+		return;
+	}
+
+	// empty magazine (a reload was cancelled by holstering): reload instead of firing
+	if (CurrentBullets <= 0)
+	{
+		StartReload();
 		return;
 	}
 	
@@ -188,17 +201,84 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 	// add recoil
 	WeaponOwner->AddWeaponRecoil(FiringRecoil);
 
+	// eject the spent case
+	EjectShell();
+
 	// consume bullets
 	--CurrentBullets;
 
-	// if the clip is depleted, reload it
-	if (CurrentBullets <= 0)
-	{
-		CurrentBullets = MagazineSize;
-	}
-
 	// update the weapon HUD
 	WeaponOwner->UpdateWeaponHUD(CurrentBullets, MagazineSize);
+
+	// if the magazine is empty, stop the burst and reload
+	if (CurrentBullets <= 0)
+	{
+		StartReload();
+	}
+}
+
+void AShooterWeapon::StartReload()
+{
+	if (bReloading || CurrentBullets >= MagazineSize)
+	{
+		return;
+	}
+	bReloading = true;
+
+	// a burst in progress ends; the trigger has to be pulled again after the reload
+	bIsFiring = false;
+	GetWorld()->GetTimerManager().ClearTimer(RefireTimer);
+
+	WeaponOwner->PlayFiringMontage(ReloadMontage);
+	GetWorld()->GetTimerManager().SetTimer(ReloadTimer, this, &AShooterWeapon::FinishReload, ReloadTime, false);
+}
+
+void AShooterWeapon::FinishReload()
+{
+	bReloading = false;
+	CurrentBullets = MagazineSize;
+	WeaponOwner->UpdateWeaponHUD(CurrentBullets, MagazineSize);
+}
+
+void AShooterWeapon::EjectShell()
+{
+	if (!ShellMesh || !PawnOwner)
+	{
+		return;
+	}
+
+	// eject in view space so it reads right whatever the weapon mesh orientation: out to the right, a little up
+	const FRotator ViewRot = PawnOwner->GetController() ? PawnOwner->GetController()->GetControlRotation() : PawnOwner->GetActorRotation();
+	const FRotationMatrix View(ViewRot);
+	const FVector Forward = View.GetUnitAxis(EAxis::X);
+	const FVector Right = View.GetUnitAxis(EAxis::Y);
+	const FVector Up = View.GetUnitAxis(EAxis::Z);
+	const FVector Muzzle = FirstPersonMesh->GetSocketLocation(MuzzleSocketName);
+	const FVector Loc = Muzzle + Forward * ShellEjectOffset.X + Right * ShellEjectOffset.Y + Up * ShellEjectOffset.Z;
+
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	AStaticMeshActor* Shell = GetWorld()->SpawnActor<AStaticMeshActor>(Loc, ViewRot + FRotator(0.0f, 90.0f, 90.0f), SpawnParams);
+	if (!Shell)
+	{
+		return;
+	}
+	Shell->SetLifeSpan(ShellLifeSpan);
+	UStaticMeshComponent* Mesh = Shell->GetStaticMeshComponent();
+	Mesh->SetMobility(EComponentMobility::Movable);
+	Mesh->SetStaticMesh(ShellMesh);
+	Mesh->SetWorldScale3D(ShellScale);
+	Mesh->SetCollisionProfileName(FName("PhysicsActor"));
+	Mesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Ignore);        // never trips the player
+	Mesh->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
+	Mesh->SetCastShadow(false);
+	Mesh->SetSimulatePhysics(true);
+	Mesh->SetMassOverrideInKg(NAME_None, 0.01f, true);
+	const FVector Velocity = Right * FMath::FRandRange(0.8f, 1.2f) * ShellEjectSpeed.X
+		+ Up * FMath::FRandRange(0.8f, 1.2f) * ShellEjectSpeed.Y
+		- Forward * FMath::FRandRange(0.0f, 60.0f) + PawnOwner->GetVelocity();
+	Mesh->SetPhysicsLinearVelocity(Velocity);
+	Mesh->SetPhysicsAngularVelocityInDegrees(FMath::VRand() * FMath::FRandRange(400.0f, 1200.0f));
 }
 
 FTransform AShooterWeapon::CalculateProjectileSpawnTransform(const FVector& TargetLocation) const

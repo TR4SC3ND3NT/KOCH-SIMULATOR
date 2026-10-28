@@ -13,6 +13,7 @@
 #include "Camera/CameraComponent.h"
 #include "TimerManager.h"
 #include "ShooterGameMode.h"
+#include "Animation/AnimInstance.h"
 
 AShooterCharacter::AShooterCharacter()
 {
@@ -29,6 +30,10 @@ void AShooterCharacter::BeginPlay()
 
 	// reset HP to max
 	CurrentHP = MaxHP;
+
+	// remember the unarmed anim classes for holstering
+	UnarmedFirstPersonAnimClass = GetFirstPersonMesh()->GetAnimClass();
+	UnarmedThirdPersonAnimClass = GetMesh()->GetAnimClass();
 
 	// update the HUD
 	OnDamaged.Broadcast(1.0f);
@@ -56,6 +61,10 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 		// Switch weapon
 		EnhancedInputComponent->BindAction(SwitchWeaponAction, ETriggerEvent::Triggered, this, &AShooterCharacter::DoSwitchWeapon);
+
+		// Draw / holster and reload
+		EnhancedInputComponent->BindAction(DrawWeaponAction, ETriggerEvent::Started, this, &AShooterCharacter::DoToggleWeapon);
+		EnhancedInputComponent->BindAction(ReloadAction, ETriggerEvent::Started, this, &AShooterCharacter::DoReload);
 	}
 
 }
@@ -122,7 +131,7 @@ void AShooterCharacter::DoJumpEnd()
 void AShooterCharacter::DoStartFiring()
 {
 	// fire the current weapon
-	if (CurrentWeapon && !IsDead())
+	if (CurrentWeapon && !bWeaponHolstered && !IsDead())
 	{
 		CurrentWeapon->StartFiring();
 	}
@@ -140,7 +149,7 @@ void AShooterCharacter::DoStopFiring()
 void AShooterCharacter::DoSwitchWeapon()
 {
 	// ensure we have at least two weapons two switch between
-	if (OwnedWeapons.Num() > 1 && !IsDead())
+	if (OwnedWeapons.Num() > 1 && !bWeaponHolstered && !IsDead())
 	{
 		// deactivate the old weapon
 		CurrentWeapon->DeactivateWeapon();
@@ -167,6 +176,40 @@ void AShooterCharacter::DoSwitchWeapon()
 	}
 }
 
+void AShooterCharacter::DoToggleWeapon()
+{
+	if (IsDead())
+	{
+		return;
+	}
+	if (!CurrentWeapon)
+	{
+		if (StarterWeaponClass)
+		{
+			bWeaponHolstered = false;
+			AddWeaponClass(StarterWeaponClass);
+		}
+		return;
+	}
+	bWeaponHolstered = !bWeaponHolstered;
+	if (bWeaponHolstered)
+	{
+		CurrentWeapon->DeactivateWeapon();
+	}
+	else
+	{
+		CurrentWeapon->ActivateWeapon(PlayerTag);
+	}
+}
+
+void AShooterCharacter::DoReload()
+{
+	if (CurrentWeapon && !bWeaponHolstered && !IsDead())
+	{
+		CurrentWeapon->StartReload();
+	}
+}
+
 void AShooterCharacter::AttachWeaponMeshes(AShooterWeapon* Weapon)
 {
 	const FAttachmentTransformRules AttachmentRule(EAttachmentRule::SnapToTarget, false);
@@ -182,7 +225,19 @@ void AShooterCharacter::AttachWeaponMeshes(AShooterWeapon* Weapon)
 
 void AShooterCharacter::PlayFiringMontage(UAnimMontage* Montage)
 {
-	// stub
+	// fire and reload montages on both perspectives (the weapon anim BPs carry the montage slot)
+	if (!Montage)
+	{
+		return;
+	}
+	if (UAnimInstance* FirstPersonAnim = GetFirstPersonMesh()->GetAnimInstance())
+	{
+		FirstPersonAnim->Montage_Play(Montage);
+	}
+	if (UAnimInstance* ThirdPersonAnim = GetMesh()->GetAnimInstance())
+	{
+		ThirdPersonAnim->Montage_Play(Montage);
+	}
 }
 
 void AShooterCharacter::AddWeaponRecoil(float Recoil)
@@ -249,6 +304,9 @@ void AShooterCharacter::AddWeaponClass(const TSubclassOf<AShooterWeapon>& Weapon
 
 void AShooterCharacter::OnWeaponActivated(AShooterWeapon* Weapon)
 {
+	// any activation (draw, pickup, switch) puts the weapon in hand
+	bWeaponHolstered = false;
+
 	// update the bullet counter
 	OnBulletCountUpdated.Broadcast(Weapon->GetMagazineSize(), Weapon->GetBulletCount());
 
@@ -259,7 +317,13 @@ void AShooterCharacter::OnWeaponActivated(AShooterWeapon* Weapon)
 
 void AShooterCharacter::OnWeaponDeactivated(AShooterWeapon* Weapon)
 {
-	// unused
+	// holstered: back to the unarmed poses and an empty ammo counter
+	if (bWeaponHolstered)
+	{
+		GetFirstPersonMesh()->SetAnimInstanceClass(UnarmedFirstPersonAnimClass);
+		GetMesh()->SetAnimInstanceClass(UnarmedThirdPersonAnimClass);
+		OnBulletCountUpdated.Broadcast(0, 0);
+	}
 }
 
 void AShooterCharacter::OnSemiWeaponRefire()

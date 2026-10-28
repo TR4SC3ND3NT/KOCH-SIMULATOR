@@ -8,6 +8,7 @@
 
 class UInputMappingContext;
 class UUserWidget;
+class UKochReviewMarksComponent;
 
 /**
  *  Simple first person Player Controller
@@ -55,26 +56,7 @@ protected:
 	/** Returns true if the player should use UMG touch controls */
 	bool ShouldUseTouchControls() const;
 
-	// --- Review marks (playtest aid): LMB drops a mark where the crosshair hits, RMB removes the last one. Marks are
-	// saved to Saved/QA/review_marks.json (location, normal, hit actor) after every change and reloaded on start, so
-	// fixes can be made later in the editor. Drawn as persistent debug shapes (Development builds only).
-
-	/** Max distance of the mark trace (cm). */
-	UPROPERTY(EditAnywhere, Category="Review")
-	float ReviewTraceDistance = 5000.0f;
-
-	struct FReviewMark
-	{
-		FVector Location;
-		FVector Normal;
-		FString Actor;
-	};
-	TArray<FReviewMark> ReviewMarks;
-
-	void AddReviewMark();
-	void RemoveLastReviewMark();
-	void SaveReviewMarks() const;
-	void LoadReviewMarks();
-	void RedrawReviewMarks() const;
-	FString ReviewMarksPath() const;
+	/** Review marks (playtest aid): LMB drops a mark, RMB removes the last one */
+	UPROPERTY(VisibleAnywhere, Category="Review")
+	TObjectPtr<UKochReviewMarksComponent> ReviewMarks;
 };

@@ -8,6 +8,7 @@
 #include "ShooterCharacter.generated.h"
 
 class AShooterWeapon;
+class UAnimInstance;
 class UInputAction;
 class UInputComponent;
 class UPawnNoiseEmitterComponent;
@@ -38,6 +39,18 @@ protected:
 	/** Switch weapon input action */
 	UPROPERTY(EditAnywhere, Category ="Input")
 	UInputAction* SwitchWeaponAction;
+
+	/** Draws / holsters the weapon; with none owned, grants StarterWeaponClass (Q) */
+	UPROPERTY(EditAnywhere, Category ="Input")
+	UInputAction* DrawWeaponAction;
+
+	/** Reloads the current weapon (R) */
+	UPROPERTY(EditAnywhere, Category ="Input")
+	UInputAction* ReloadAction;
+
+	/** Weapon granted by the first DrawWeaponAction press */
+	UPROPERTY(EditAnywhere, Category ="Weapons")
+	TSubclassOf<AShooterWeapon> StarterWeaponClass;
 
 	/** Name of the first person mesh weapon socket */
 	UPROPERTY(EditAnywhere, Category ="Weapons")
@@ -75,6 +88,13 @@ protected:
 
 	/** Weapon currently equipped and ready to shoot with */
 	TObjectPtr<AShooterWeapon> CurrentWeapon;
+
+	/** True while the current weapon is put away (hidden, cannot fire) */
+	bool bWeaponHolstered = false;
+
+	/** Mesh anim classes before any weapon was drawn, restored on holster */
+	TSubclassOf<UAnimInstance> UnarmedFirstPersonAnimClass;
+	TSubclassOf<UAnimInstance> UnarmedThirdPersonAnimClass;
 
 	UPROPERTY(EditAnywhere, Category ="Destruction", meta = (ClampMin = 0, ClampMax = 10, Units = "s"))
 	float RespawnTime = 5.0f;
@@ -136,6 +156,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	void DoSwitchWeapon();
 
+	/** Draws or holsters the weapon */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoToggleWeapon();
+
+	/** Reloads the current weapon */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoReload();
+
 public:
 
 	//~Begin IShooterWeaponHolder interface
@@ -188,6 +216,9 @@ public:
 
 	/** Returns true if the character is dead */
 	bool IsDead() const;
+
+	/** True if a weapon is in hand (LMB fires instead of dropping a review mark) */
+	bool HasWeaponDrawn() const { return CurrentWeapon != nullptr && !bWeaponHolstered; }
 
 	/** Sets the team ID for this character */
 	void SetTeam(uint8 Team);

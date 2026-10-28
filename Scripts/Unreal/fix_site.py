@@ -13,6 +13,8 @@
 #  5 moves    - OWNER_MOVES: actors the owner says stand in the wrong place, shifted from R1's position
 #  6 trees    - vegetation/props hovering over lowered ground (ue_prep OWNER_FLATTEN) are dropped onto the ground tiles
 #  7 railings - FENCE_REPLACE: a wall the owner removed becomes a railing of a nearby fence mesh
+#  8 walls    - OWNER_WALLS: walls the owner extended (a box in the source wall's material)
+#  9 posts    - OWNER_POSTS: two posts under boards that hung in the air
 # Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/fix_site.py"
 import json
 import math
@@ -55,7 +57,14 @@ SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15628.0, -905.0, -600.0, 5
 # proud of the neighbour wall line (x 20959) into the lane
 OWNER_MOVES = {"GB_CTX_169915330": (375.0, 0.0, 0.0)}   # 2026-10-28: 2.5 m behind the fence, room for a footpath
 # hidden wall (owner_removed.json) -> railing of this fence mesh along its long axis (owner: "fence, then the building")
-FENCE_REPLACE = {"GBS_Gate_EastLane_NeighbourWall": "GBS_Gate_EastLane_Fence"}
+# (2026-10-28 later: none needed - GBS_Gate_EastBoundary_Fence_S already runs 0.8 m inside the removed
+# NeighbourWall, the railing made a double fence)
+FENCE_REPLACE = {}
+# owner 2026-10-28: walls to continue -> (source wall for material/thickness, x0, x1, y0, y1 cm, top z cm)
+OWNER_WALLS = {"FIX_Wall_PergolaWestBlock_Ext": ("GBS_Garden_Pergola_WestBlockWall", 9220.0, 9712.0, 4680.0, 4722.0, 750.0)}
+# boards hanging in the air -> two posts from the ground to the board bottom at its ends (cm: post size, inset)
+OWNER_POSTS = {"GBS_Gate_InfoBoard_Yard": (6.0, 12.0)}
+POST_MAT = "/Game/KochSimulator/Greybox/Materials/MI_Steel_Paint_Dark"
 FREE_STANDING = ("bench", "bin", "bollard", "sign_aframe", "bike_rack", "waste_container", "planter", "face",
                  "turnstile", "lamp_bollard", "manhole")                    # props with a surface this close above are ceiling/canopy-mounted: leave them
 
@@ -434,6 +443,36 @@ def main():
             a.set_editor_property("tags", [unreal.Name(TAG)])
             a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
         report.setdefault("railings", []).append({"wall": wall_name, "segments": n})
+
+    # 8 walls the owner extended
+    for name, (src, x0, x1, y0, y1, ztop) in OWNER_WALLS.items():
+        a = actors.get(src)
+        if a is None:
+            continue
+        mat = a.get_editor_property("static_mesh_component").get_material(0)
+        gz = min(z for z in (ground_z(world, x0 + 5, (y0 + y1) / 2), ground_z(world, x1 - 5, (y0 + y1) / 2)) if z is not None)
+        spawn_box(eas, cube, mat, unreal.Vector((x0 + x1) / 2, (y0 + y1) / 2, (gz - 10 + ztop) / 2),
+                  (x1 - x0, y1 - y0, ztop - gz + 10), 0.0, name, "Fixes/Walls")
+        report.setdefault("walls", []).append(name)
+
+    # 9 posts under floating boards
+    post_mat = unreal.EditorAssetLibrary.load_asset(POST_MAT)
+    for label, (size, inset) in OWNER_POSTS.items():
+        a = actors.get(label)
+        if a is None:
+            continue
+        o, e = a.get_actor_bounds(False)
+        long_x = e.x >= e.y
+        for k, sgn in enumerate((-1, 1)):
+            px = o.x + (sgn * (e.x - inset) if long_x else 0.0)
+            py = o.y + (0.0 if long_x else sgn * (e.y - inset))
+            g = hit(trace(world, unreal.Vector(px, py, o.z - e.z - 1), unreal.Vector(px, py, o.z - e.z - 400), [a]))
+            if g is None:
+                continue
+            zb, zt = g[0].z - 5.0, o.z - e.z + 5.0
+            spawn_box(eas, cube, post_mat, unreal.Vector(px, py, (zb + zt) / 2), (size, size, zt - zb), 0.0,
+                      f"FIX_Post_{label}_{k}", "Fixes/Posts")
+        report.setdefault("posts", []).append(label)
 
     # 4 footings under hovering site walls, and a block under each hovering pillar of them
     for name in FOOTING_WALLS:

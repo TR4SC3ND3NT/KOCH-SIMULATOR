@@ -21,7 +21,9 @@ TAG = "KochProp"
 # ue_asset prefix -> prop; first match wins
 MAPPING = [("bench", "SM_Prop_Bench_Park"), ("bin_wrought_iron", "SM_Prop_Bin_WroughtIron"),
            ("bin_container", "SM_Prop_Container1100"), ("waste_container", "SM_Prop_Container1100"),
-           ("bin_generic", "SM_Prop_Bin_Wheelie240")]
+           ("bin_generic", "SM_Prop_Bin_Wheelie240"), ("pallet_stack", "SM_Prop_PalletSlabs")]
+MULTI = {"SM_Prop_PalletSlabs"}   # one placeholder mesh holds many stacks: one prop per stack (see stacks())
+STACK_GRID = 10.0                 # cm, trace grid that finds the stacks
 LENGTH_SCALE = (0.75, 1.35)      # a 2.2 m slat bench is the 1.8 m kit stretched; beyond this it reads wrong
 BACK_GAP = 4.0                   # cm free behind a bench's backrest
 
@@ -91,6 +93,65 @@ def is_green(world, p, z_min):
     return any(k in name for k in GREEN)
 
 
+def stacks(world, ph):
+    """Footprints of the separate blocks inside one placeholder mesh: down traces on a STACK_GRID grid that hit the
+    placeholder, grouped into 4-connected components -> [(x0, x1, y0, y1, top_z)] in cm."""
+    o, e = ph.get_actor_bounds(False)
+    nx, ny = int(2 * e.x / STACK_GRID) + 1, int(2 * e.y / STACK_GRID) + 1
+    top = {}
+    for i in range(nx):
+        for j in range(ny):
+            x, y = o.x - e.x + (i + 0.5) * STACK_GRID, o.y - e.y + (j + 0.5) * STACK_GRID
+            h = unreal.SystemLibrary.line_trace_single(world, unreal.Vector(x, y, o.z + e.z + 50),
+                                                       unreal.Vector(x, y, o.z - e.z - 10),
+                                                       unreal.TraceTypeQuery.TRACE_TYPE_QUERY1, True, [],
+                                                       unreal.DrawDebugTrace.NONE, True)
+            t = h.to_tuple() if h is not None else None
+            if t and t[0] and t[9] == ph and t[4].z > o.z - e.z + 5:
+                top[(i, j)] = t[4].z
+    out, seen = [], set()
+    for start in top:
+        if start in seen:
+            continue
+        comp, todo = [], [start]
+        seen.add(start)
+        while todo:
+            c = todo.pop()
+            comp.append(c)
+            for d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                n = (c[0] + d[0], c[1] + d[1])
+                if n in top and n not in seen and abs(top[n] - top[c]) < 15:
+                    seen.add(n)
+                    todo.append(n)
+        if len(comp) < 4:
+            continue
+        xs, ys = [c[0] for c in comp], [c[1] for c in comp]
+        out.append((o.x - e.x + min(xs) * STACK_GRID, o.x - e.x + (max(xs) + 1) * STACK_GRID,
+                    o.y - e.y + min(ys) * STACK_GRID, o.y - e.y + (max(ys) + 1) * STACK_GRID,
+                    max(top[c] for c in comp)))
+    return out
+
+
+def clear_bins_off_benches(props):
+    """Bins whose placeholder sat over a bench end (owner playtest 2026-10-28: a pergola bin hung above the backrest)
+    move along the bench past its end and down to the bench's base."""
+    benches = [a for a in props if "Bench" in a.get_editor_property("static_mesh_component").get_editor_property("static_mesh").get_name()]
+    for b in [a for a in props if "Bin" in a.get_editor_property("static_mesh_component").get_editor_property("static_mesh").get_name()]:
+        bo, be = b.get_actor_bounds(False)
+        for k in benches:
+            ko, ke = k.get_actor_bounds(False)
+            if abs(bo.x - ko.x) > be.x + ke.x or abs(bo.y - ko.y) > be.y + ke.y or bo.z - be.z < ko.z - ke.z - 5:
+                continue
+            r = math.radians(k.get_actor_rotation().yaw)
+            ax = unreal.Vector(math.cos(r), math.sin(r), 0.0)            # bench length axis
+            half = ke.x * abs(ax.x) + ke.y * abs(ax.y)
+            side = 1.0 if (bo.x - ko.x) * ax.x + (bo.y - ko.y) * ax.y >= 0 else -1.0
+            reach = half + max(be.x, be.y) + 10.0
+            base = unreal.Vector(ko.x + ax.x * reach * side, ko.y + ax.y * reach * side, ko.z - ke.z)
+            b.set_actor_location(base, False, False)
+            break
+
+
 def main():
     les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
     ues = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem)
@@ -126,6 +187,7 @@ def main():
         comp.set_visibility(False, True)
         ph.set_actor_hidden_in_game(True)
         placed[0] += 1
+        return a
     benches = []
     for e in man["instances"]:
         kind = (e.get("ue_asset") or "").lower()
@@ -144,6 +206,16 @@ def main():
         sz = min(max((z1 - z0) / size[2], 0.8), 1.25)
         if prop == "SM_Prop_Bench_Park":
             benches.append((e, base, yaw, sx, sz, ph))
+            continue
+        if prop in MULTI:
+            for k, (x0, x1, y0, y1, ztop) in enumerate(stacks(world, ph)):
+                along_y = (y1 - y0) > (x1 - x0)
+                ln, wd = max(x1 - x0, y1 - y0), min(x1 - x0, y1 - y0)
+                sub = dict(e, name=f"{e['name']}_{k:02d}")
+                a = place(sub, prop, unreal.Vector((x0 + x1) / 2, (y0 + y1) / 2, base.z), 90.0 if along_y else 0.0,
+                          min(max(ln / (size[0] * 100), 0.6), 1.3), min(max((ztop - base.z) / (size[2] * 100), 0.6), 1.5), ph)
+                a.set_actor_scale3d(unreal.Vector(a.get_actor_scale3d().x, min(max(wd / (size[1] * 100), 0.6), 1.3),
+                                                  a.get_actor_scale3d().z))
             continue
         place(e, prop, base, yaw, sx, sz, ph)
     # benches (owner playtest 2026-10-27), per row (same name stem, one vote) in this order:
@@ -200,6 +272,7 @@ def main():
             manual = 180.0 if e["name"] in flips else 0.0       # owner review (bench_labels.py numbers)
             yaw_f = yaw + (180.0 if flip else 0.0) + manual
             place(e, "SM_Prop_Bench_Park", clear_back(base, yaw_f, ph), yaw_f, sx, sz, ph)
+    clear_bins_off_benches(props)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
     unreal.log(f"place_props: {len([m for m in meshes.values() if m])} props, {placed[0]} placed, {len(rows)} bench rows")
 

@@ -9,6 +9,7 @@
 class UInputMappingContext;
 class AShooterCharacter;
 class UShooterBulletCounterUI;
+class UKochReviewMarksComponent;
 
 /**
  *  Simple PlayerController for a first person shooter game
@@ -58,12 +59,20 @@ protected:
 	UPROPERTY()
 	TObjectPtr<UShooterBulletCounterUI> BulletCounterUI;
 
+	/** Review marks (playtest aid): LMB with no weapon drawn drops a mark, RMB removes the last one */
+	UPROPERTY(VisibleAnywhere, Category="Review")
+	TObjectPtr<UKochReviewMarksComponent> ReviewMarks;
+
 	/** Team ID for this player */
 	uint8 TeamByte = 0;
 
 	/** Tags that identify each team for PlayerStart selection upon respawning */
 	UPROPERTY(EditAnywhere, Category="Shooter|Team")
 	TArray<FName> TeamTags;
+
+public:
+
+	AShooterPlayerController();
 
 protected:
 
@@ -90,6 +99,9 @@ protected:
 
 	/** Returns true if the player should use UMG touch controls */
 	bool ShouldUseTouchControls() const;
+
+	/** LMB: a review mark, unless the pawn has a weapon drawn (then LMB fires) */
+	void OnReviewClick();
 
 public:
 

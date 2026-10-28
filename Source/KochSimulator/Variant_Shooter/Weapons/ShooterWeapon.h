@@ -13,6 +13,7 @@ class AShooterProjectile;
 class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimInstance;
+class UStaticMesh;
 
 /**
  *  Base class for a simple first person shooter weapon
@@ -48,6 +49,40 @@ protected:
 
 	/** Number of bullets in the current magazine */
 	int32 CurrentBullets = 0;
+
+	/** Montage played on the owner while reloading (optional) */
+	UPROPERTY(EditAnywhere, Category="Ammo")
+	UAnimMontage* ReloadMontage;
+
+	/** Time to swap the magazine; firing is blocked until it ends */
+	UPROPERTY(EditAnywhere, Category="Ammo", meta = (ClampMin = 0, ClampMax = 10, Units = "s"))
+	float ReloadTime = 2.0f;
+
+	/** True while a reload is in progress */
+	bool bReloading = false;
+
+	/** Timer that completes the reload */
+	FTimerHandle ReloadTimer;
+
+	/** Spent case ejected per shot (none: no ejection). Simulated physics, destroyed after ShellLifeSpan. */
+	UPROPERTY(EditAnywhere, Category="Shells")
+	UStaticMesh* ShellMesh;
+
+	/** Scale of ShellMesh (the engine cylinder is 100 cm; a 7.62x39 case is ~1.1 x 3.9 cm) */
+	UPROPERTY(EditAnywhere, Category="Shells")
+	FVector ShellScale = FVector(0.011f, 0.011f, 0.039f);
+
+	/** Ejection point relative to the muzzle, in view space: X forward, Y right, Z up (cm) */
+	UPROPERTY(EditAnywhere, Category="Shells")
+	FVector ShellEjectOffset = FVector(-35.0f, 4.0f, 2.0f);
+
+	/** Ejection speed to the right / up (cm/s); each shot varies it by +-20 % */
+	UPROPERTY(EditAnywhere, Category="Shells")
+	FVector2D ShellEjectSpeed = FVector2D(320.0f, 160.0f);
+
+	/** Seconds a spent case stays in the world */
+	UPROPERTY(EditAnywhere, Category="Shells", meta = (ClampMin = 0.5, ClampMax = 30, Units = "s"))
+	float ShellLifeSpan = 5.0f;
 	
 	/** Animation montage to play when firing this weapon */
 	UPROPERTY(EditAnywhere, Category="Animation")
@@ -142,6 +177,12 @@ public:
 	/** Stop firing this weapon */
 	void StopFiring();
 
+	/** Starts a reload unless one is running or the magazine is full */
+	void StartReload();
+
+	/** True while reloading */
+	bool IsReloading() const { return bReloading; }
+
 protected:
 
 	/** Fire the weapon */
@@ -152,6 +193,12 @@ protected:
 
 	/** Fire a projectile towards the target location */
 	virtual void FireProjectile(const FVector& TargetLocation);
+
+	/** Refills the magazine at the end of a reload */
+	void FinishReload();
+
+	/** Ejects one spent case from the side of the weapon */
+	void EjectShell();
 
 	/** Calculates the spawn transform for projectiles shot by this weapon */
 	FTransform CalculateProjectileSpawnTransform(const FVector& TargetLocation) const;

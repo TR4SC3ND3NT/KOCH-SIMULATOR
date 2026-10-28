@@ -1,4 +1,5 @@
-# Street furniture kit (R4): park bench, wrought-iron bin, 240 L wheelie bin, 1100 L euro container, built at real size
+# Street furniture kit (R4): park bench, wrought-iron bin, 240 L wheelie bin, 1100 L euro container, pallet of paving
+# slabs, built at real size
 # from the owner's garden photos (black wrought-iron scroll frame + red-brown timber slats; dark iron basket bins) and
 # common EN 840 dimensions. One FBX per prop (pivot at the base centre, length along +X, the bench's front faces -Y),
 # material slots named like the greybox palette (M_Wood_Stained, M_Steel_Paint_Dark, ...) so UE reuses the MI_* set,
@@ -207,6 +208,32 @@ for sx, sy in ((-0.52, -0.38), (0.52, -0.38), (0.52, 0.38), (-0.52, 0.38)):
     cyl("castor_wheel", 0.08, 0.05, (sx, sy, 0.08), RUBBER, verts=20, rot=Matrix.Rotation(math.pi / 2, 4, "Y"))
 box("front_handle", (0.9, 0.03, 0.03), (0, -0.56, 1.05), GALV)
 finish("SM_Prop_Container1100", meta)
+
+# --- EUR pallet (EN 13698-1, 1.20 x 0.80 x 0.144 m) with a strapped stack of 40 x 40 x 5 cm paving slabs -----------
+# (R1's ue_asset pallet_stack_paving_slabs by the hall; owner playtest 2026-10-28: the grey blocks read as junk boxes)
+reset()
+PALLET, SLAB, STRAP = "M_Wood_Oak_Light", "M_Paver_Clover_Grey", "M_Plastic_Black"
+for sx in (-0.5625, 0.0, 0.5625):                              # 3 bottom boards, 9 blocks, 3 stringer boards
+    box("bottom_board", (0.10, 0.80, 0.022), (sx, 0, 0.011), PALLET, bevel=0.002)
+    for sy in (-0.33, 0.0, 0.33):
+        box("block", (0.10, 0.145 if sy else 0.10, 0.078), (sx, sy, 0.061), PALLET, bevel=0.003)
+for sy in (-0.33, 0.0, 0.33):
+    box("stringer", (1.20, 0.145 if sy else 0.10, 0.022), (0, sy, 0.111), PALLET, bevel=0.002)
+for k in range(5):                                             # top deck: 5 boards over the full length
+    box("top_board", (1.20, 0.10 if k % 2 else 0.145, 0.022), (0, -0.3275 + k * 0.16375, 0.133), PALLET, bevel=0.002)
+LAYERS, base = 10, 0.144
+for layer in range(LAYERS):                                   # 3 x 2 slabs per layer, 2 mm joints, alternate offset
+    z = base + 0.025 + layer * 0.05
+    off = 0.005 if layer % 2 else -0.005
+    for ix in range(3):
+        for iy in range(2):
+            box("slab", (0.398, 0.398, 0.048), (-0.40 + ix * 0.40 + off, -0.20 + iy * 0.40, z), SLAB, bevel=0.004)
+top = base + LAYERS * 0.05
+for sx in (-0.30, 0.30):                                       # two flat PP straps (boxes: a curve tube bulged)
+    box("strap_top", (0.016, 0.81, 0.002), (sx, 0, top + 0.001), STRAP)
+    for sy in (-0.404, 0.404):
+        box("strap_side", (0.016, 0.002, top - base + 0.01), (sx, sy, (top + base) / 2 - 0.004), STRAP)
+finish("SM_Prop_PalletSlabs", meta)
 
 with open(os.path.join(OUT, "props.json"), "w", encoding="utf-8") as fh:
     json.dump(meta, fh, indent=1)
