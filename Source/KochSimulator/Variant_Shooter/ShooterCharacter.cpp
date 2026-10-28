@@ -65,6 +65,7 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 		// Draw / holster and reload
 		EnhancedInputComponent->BindAction(DrawWeaponAction, ETriggerEvent::Started, this, &AShooterCharacter::DoToggleWeapon);
 		EnhancedInputComponent->BindAction(ReloadAction, ETriggerEvent::Started, this, &AShooterCharacter::DoReload);
+		EnhancedInputComponent->BindAction(SpawnCompanionAction, ETriggerEvent::Started, this, &AShooterCharacter::DoSpawnCompanion);
 	}
 
 }
@@ -207,6 +208,35 @@ void AShooterCharacter::DoReload()
 	if (CurrentWeapon && !bWeaponHolstered && !IsDead())
 	{
 		CurrentWeapon->StartReload();
+	}
+}
+
+void AShooterCharacter::DoSpawnCompanion()
+{
+	if (!CompanionClass || IsDead())
+	{
+		return;
+	}
+
+	// 2.5 m ahead on the ground, facing the player
+	const FVector Fwd = FVector(GetActorForwardVector().X, GetActorForwardVector().Y, 0.0f).GetSafeNormal();
+	const FVector Ahead = GetActorLocation() + Fwd * 250.0f;
+	FHitResult Hit;
+	FCollisionQueryParams Params(SCENE_QUERY_STAT(CompanionSpawn), false, this);
+	const bool bGround = GetWorld()->LineTraceSingleByChannel(Hit, Ahead + FVector(0, 0, 200), Ahead - FVector(0, 0, 500), ECC_Visibility, Params);
+	const FVector Loc = (bGround ? Hit.ImpactPoint : Ahead) + FVector(0, 0, 92.0f);   // capsule half height + skin
+
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+	if (APawn* Companion = GetWorld()->SpawnActor<APawn>(CompanionClass, Loc, (-Fwd).Rotation(), SpawnParams))
+	{
+		Companions.RemoveAll([](const TWeakObjectPtr<APawn>& C) { return !C.IsValid(); });
+		Companions.Add(Companion);
+		while (Companions.Num() > MaxCompanions)
+		{
+			Companions[0]->Destroy();
+			Companions.RemoveAt(0);
+		}
 	}
 }
 

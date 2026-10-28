@@ -52,6 +52,21 @@ protected:
 	UPROPERTY(EditAnywhere, Category ="Weapons")
 	TSubclassOf<AShooterWeapon> StarterWeaponClass;
 
+	/** Spawns a companion in front of the player (T) */
+	UPROPERTY(EditAnywhere, Category ="Input")
+	UInputAction* SpawnCompanionAction;
+
+	/** Companion spawned by SpawnCompanionAction (AKochCompanion Blueprint) */
+	UPROPERTY(EditAnywhere, Category ="Companion")
+	TSubclassOf<APawn> CompanionClass;
+
+	/** Older companions are removed past this count */
+	UPROPERTY(EditAnywhere, Category ="Companion", meta = (ClampMin = 1, ClampMax = 20))
+	int32 MaxCompanions = 8;
+
+	/** Live companions, oldest first */
+	TArray<TWeakObjectPtr<APawn>> Companions;
+
 	/** Name of the first person mesh weapon socket */
 	UPROPERTY(EditAnywhere, Category ="Weapons")
 	FName FirstPersonWeaponSocket = FName("HandGrip_R");
@@ -163,6 +178,10 @@ public:
 	/** Reloads the current weapon */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	void DoReload();
+
+	/** Spawns a companion 2.5 m in front, on the ground */
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoSpawnCompanion();
 
 public:
 
