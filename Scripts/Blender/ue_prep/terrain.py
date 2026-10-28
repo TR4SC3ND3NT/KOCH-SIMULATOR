@@ -26,14 +26,27 @@ OWNER_FLATTEN = [
     # the plaza (x 95.5 m) with a concrete step across the path
     # (rect past the wall, so the cut does not fade out along it; east edge = end of LowerYard_Retain_West)
     {"rect_cm": (5000.0, 11600.0, -9700.0, -7000.0), "floor_cm": 218.0, "grade": 0.04, "fade_m": 5.0},
+    # 2026-10-28 (2): footpath north along the lower-yard terraces east of the booth (x 217 m): the 0.17 m terrace
+    # step at y -81 m becomes a 5 % slope down to the 1.72 m end
+    {"rect_cm": (21620.0, 21900.0, -8420.0, -7700.0), "floor_cm": 172.0, "grade": 0.05, "fade_m": 0.6},
+    # 2026-10-28 (2): two terrain vertices spiked to 3.2 m behind the north-bed kerb (x 139.3..140.0 m, y -77.2 m;
+    # ground 2.33 m) stood as a dark 0.9 m "box" in the lawn: cut to their neighbours
+    {"rect_cm": (13890.0, 14020.0, -7730.0, -7705.0), "floor_cm": 233.0, "grade": 0.6, "fade_m": 0.05},
 ]
 FLOOR_TOL = 0.03   # m
 # non-terrain meshes lying on the cut ground that follow it (carry_flatten, called by run.py before export)
 OWNER_FLATTEN_CARRY = ("GBS_Sports_NorthTreeLawn",)
 # stairs the ground pokes through (owner playtest 2026-10-28: pale paving triangles in the red treads)
 OWNER_SINK = ("GBS_GateAlley_Steps_BCorner_Upper", "GBS_GateAlley_Steps_BCorner_Lower")
-# UE cm rects (x0, x1, y0, y1): grass that juts into a walkway (owner marks 2026-10-28)
-OWNER_REPAINT = [(13895.0, 13990.0, -8120.0, -7930.0)]
+SINK_R, SINK_EDGE = 0.35, 0.3   # m
+# UE cm rects (x0, x1, y0, y1[, slot]): grass that juts into a walkway takes the paving it borders, or the slot given
+# (owner marks 2026-10-28)
+OWNER_REPAINT = [(13895.0, 13990.0, -8120.0, -7930.0),
+                 # 2026-10-28 (2): lawn notch by the north-lawn bench, strip between the bin yard paving and the tree
+                 # bed, the lawn island east of the pavilion, the pavilion plaza lawns, the path to the back wicket
+                 (13450.0, 14060.0, -8235.0, -8065.0), (19950.0, 21350.0, -7975.0, -7850.0),
+                 (9180.0, 10600.0, -8150.0, -6880.0), (7050.0, 9300.0, -6600.0, -1300.0),
+                 (21680.0, 21840.0, -8400.0, -7760.0, "M_Paver_Clover_Grey")]
 
 
 def _fields(verts):
@@ -110,31 +123,73 @@ def carry_flatten(terrain, objs):
 
 
 def _sink(bm):
-    """OWNER_SINK: ground under these stairs drops below their lowest point, so no slope pokes through the treads.
-    -> number of vertices moved."""
+    """OWNER_SINK: ground under these stairs drops 3 cm below the stair surface right above it (ray cast on the stair
+    mesh), so no slope pokes through the treads; ground beside the stair is untouched (a bound-box cut left a pit
+    next to it, owner playtest 2026-10-28). -> number of vertices moved."""
     moved = 0
     for name in OWNER_SINK:
         ob = bpy.data.objects.get(name)
         if ob is None:
             continue
-        bb = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
-        x0, x1 = min(c.x for c in bb) + 0.02, max(c.x for c in bb) - 0.02
-        y0, y1 = min(c.y for c in bb) + 0.02, max(c.y for c in bb) - 0.02
-        zmin = min(c.z for c in bb) - 0.02
+        sb = bmesh.new()
+        sb.from_mesh(ob.data)
+        sb.transform(Matrix(ob.matrix_world))
+        tree = BVHTree.FromBMesh(sb)
+        xs = [v.co.x for v in sb.verts]
+        ys = [v.co.y for v in sb.verts]
+        zmin = min(v.co.z for v in sb.verts)
+        x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
+        sb.free()
+
+        def near():
+            return [f for f in bm.faces if any(x0 - 1 <= v.co.x <= x1 + 1 and y0 - 1 <= v.co.y <= y1 + 1 for v in f.verts)]
+        # cut the ground along the stair outline and densify it underneath: big triangles reaching past the stair
+        # otherwise keep vertices outside and their middle pokes through the treads (the second owner mark)
+        for co, no in (((x0, 0, 0), (1, 0, 0)), ((x1, 0, 0), (1, 0, 0)), ((0, y0, 0), (0, 1, 0)), ((0, y1, 0), (0, 1, 0))):
+            fs = near()
+            geom = list({v for f in fs for v in f.verts}) + list({e for f in fs for e in f.edges}) + fs
+            bmesh.ops.bisect_plane(bm, geom=geom, plane_co=co, plane_no=no, dist=1e-4)
+        for _ in range(8):   # split long edges under the stair until none is over SINK_EDGE (uniform cuts exploded)
+            long = [e for e in bm.edges if e.calc_length() > SINK_EDGE and all(
+                x0 - 1e-3 <= v.co.x <= x1 + 1e-3 and y0 - 1e-3 <= v.co.y <= y1 + 1e-3 for v in e.verts)]
+            if not long:
+                break
+            bmesh.ops.subdivide_edges(bm, edges=long, cuts=1)
+            bmesh.ops.triangulate(bm, faces=[f for f in near() if len(f.verts) > 3])
         for v in bm.verts:
-            if x0 <= v.co.x <= x1 and y0 <= v.co.y <= y1 and v.co.z > zmin:
-                v.co.z = zmin
+            if not (x0 - 1e-3 <= v.co.x <= x1 + 1e-3 and y0 - 1e-3 <= v.co.y <= y1 + 1e-3) or v.co.z < zmin:
+                continue
+            # lowest stair surface within SINK_R: a straight ground edge between two such points stays under the
+            # treads it spans (a riser is ~15 cm, tread ~30 cm)
+            low = None
+            for dx, dy in ((0, 0), (SINK_R, 0), (-SINK_R, 0), (0, SINK_R), (0, -SINK_R)):
+                hit = tree.ray_cast(Vector((v.co.x + dx, v.co.y + dy, v.co.z + 5.0)), Vector((0.0, 0.0, -1.0)))
+                if hit[0] is None and dx == dy == 0:
+                    break   # not under the stair itself (its bound box is wider than its steps)
+                if hit[0] is not None:
+                    low = hit[0].z if low is None else min(low, hit[0].z)
+            if low is not None and v.co.z > low - 0.03:
+                v.co.z = low - 0.03
                 moved += 1
     bm.normal_update()
     return moved
 
 
-def _repaint(bm, grass):
+def _repaint(bm, grass, names):
     """OWNER_REPAINT: grass up faces with their centre in the rect take the paving they border (majority by edge
     length). -> number of faces repainted."""
     done = 0
-    for x0, x1, y0, y1 in OWNER_REPAINT:
+    for x0, x1, y0, y1, *target in OWNER_REPAINT:
         bx0, bx1, by0, by1 = x0 / 100.0, x1 / 100.0, -y1 / 100.0, -y0 / 100.0
+        if target:   # a laid path: cut the ground along its edges first, or big triangles leave saw-tooth borders
+            for co, no in (((bx0, 0, 0), (1, 0, 0)), ((bx1, 0, 0), (1, 0, 0)), ((0, by0, 0), (0, 1, 0)),
+                           ((0, by1, 0), (0, 1, 0))):
+                fs = [f for f in bm.faces if any(bx0 - 1 <= v.co.x <= bx1 + 1 and by0 - 1 <= v.co.y <= by1 + 1
+                                                 for v in f.verts)]
+                geom = list({v for f in fs for v in f.verts}) + list({e for f in fs for e in f.edges}) + fs
+                bmesh.ops.bisect_plane(bm, geom=geom, plane_co=co, plane_no=no, dist=1e-4)
+            bmesh.ops.triangulate(bm, faces=[f for f in bm.faces if len(f.verts) > 4])
+            bm.normal_update()
         sel = [f for f in bm.faces if f.normal.z > 0.7 and f.material_index in grass
                and bx0 <= f.calc_center_median().x <= bx1 and by0 <= f.calc_center_median().y <= by1]
         cs, votes = set(sel), {}
@@ -143,6 +198,8 @@ def _repaint(bm, grass):
                 for g in e.link_faces:
                     if g not in cs and g.normal.z > 0.7 and g.material_index not in grass:
                         votes[g.material_index] = votes.get(g.material_index, 0.0) + e.calc_length()
+        if target:   # explicit slot (a path laid across a lawn borders no paving to vote)
+            votes = {names.index(target[0]): 1.0} if target[0] in names else {}
         if votes:
             slot = max(votes, key=votes.get)
             for f in sel:
@@ -220,7 +277,7 @@ def _add_skirts(bm, depth=SKIRT):
     return made
 
 
-def _orient_steps(bm, kerb):
+def _orient_steps(bm, kerb, grass):
     """Turn every near-vertical terrain face towards its lower side. settle.py's step walls (lane vs verge, 2-10 cm)
     come out wound into the higher ground, so UE culls them from the side they are seen from and the void shows as a
     sky-blue wedge (owner playtest 2026-10-27, east gate lane: normal -X on a step falling to +X). Vote per edge over
@@ -235,6 +292,7 @@ def _orient_steps(bm, kerb):
             continue
         c = f.calc_center_median()
         score = 0.0
+        low_grass = False
         for e in f.edges:
             top = (e.verts[0].co.z + e.verts[1].co.z) * 0.5 > c.z
             for g in e.link_faces:
@@ -245,9 +303,11 @@ def _orient_steps(bm, kerb):
                 score += -s if top else s
                 if top:
                     f.material_index = g.material_index
+                elif g.material_index in grass:
+                    low_grass = True
         zs = [v.co.z for v in f.verts]
-        if max(zs) - min(zs) >= KERB_MIN:
-            f.material_index = kerb
+        if max(zs) - min(zs) >= KERB_MIN and not (low_grass and f.material_index in grass):
+            f.material_index = kerb   # a step inside a lawn stays lawn (a concrete patch in a bank read as a box)
         if score < 0:
             flip.append(f)
     bmesh.ops.reverse_faces(bm, faces=flip)
@@ -289,8 +349,8 @@ def build_tiles(obj):
         names.append(KERB_SLOT)
     grass = {i for i, n in enumerate(names) if any(k in n for k in GRASS)}
     print(f"ue_prep terrain: {_flatten(bm)} vertices lowered (owner flatten), {_sink(bm)} sunk under stairs")
-    print(f"ue_prep terrain: {_orient_steps(bm, names.index(KERB_SLOT))} step faces turned out, "
-          f"{_fill_slivers(bm, grass)} grass sliver faces repainted, {_repaint(bm, grass)} owner repaints, "
+    print(f"ue_prep terrain: {_orient_steps(bm, names.index(KERB_SLOT), grass)} step faces turned out, "
+          f"{_fill_slivers(bm, grass)} grass sliver faces repainted, {_repaint(bm, grass, names)} owner repaints, "
           f"{_add_skirts(bm)} skirt faces")
     co = np.array([v.co[:] for v in bm.verts])
     lo, hi = co.min(0), co.max(0)

@@ -12,6 +12,7 @@
 #               (owner playtest 2026-10-27, north boundary wall): a concrete footing strip per FOOT_SEG closes the gap
 #  5 moves    - OWNER_MOVES: actors the owner says stand in the wrong place, shifted from R1's position
 #  6 trees    - vegetation/props hovering over lowered ground (ue_prep OWNER_FLATTEN) are dropped onto the ground tiles
+#  7 railings - FENCE_REPLACE: a wall the owner removed becomes a railing of a nearby fence mesh
 # Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/fix_site.py"
 import json
 import math
@@ -47,10 +48,14 @@ SNAP_NO_ROOF_CM = 30.0
 SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15628.0, -905.0, -600.0, 535.0),
                # between the concrete stair top (y -769) and the plaza: not further south, the stair goes down there
                "FIX_Ground_StairTopSag": (15629.0, 15945.0, -765.0, -600.0, 535.0),
-               "FIX_Ground_SandPitWallTrench": (19650.0, 21250.0, -7110.0, -6955.0, 232.0)}
+               "FIX_Ground_SandPitWallTrench": (19650.0, 21250.0, -7110.0, -6955.0, 232.0),
+               # paving dips 0.26 m along the concrete ramp at the court corner (owner 2026-10-28)
+               "FIX_Ground_CourtCornerDip": (21182.0, 21500.0, -6830.0, -6735.0, 326.0)}
 # label -> offset (cm) from R1's position, owner review: the context block at the east gate lane stands 1.25 m
 # proud of the neighbour wall line (x 20959) into the lane
-OWNER_MOVES = {"GB_CTX_169915330": (125.0, 0.0, 0.0)}
+OWNER_MOVES = {"GB_CTX_169915330": (375.0, 0.0, 0.0)}   # 2026-10-28: 2.5 m behind the fence, room for a footpath
+# hidden wall (owner_removed.json) -> railing of this fence mesh along its long axis (owner: "fence, then the building")
+FENCE_REPLACE = {"GBS_Gate_EastLane_NeighbourWall": "GBS_Gate_EastLane_Fence"}
 FREE_STANDING = ("bench", "bin", "bollard", "sign_aframe", "bike_rack", "waste_container", "planter", "face",
                  "turnstile", "lamp_bollard", "manhole")                    # props with a surface this close above are ceiling/canopy-mounted: leave them
 
@@ -401,6 +406,34 @@ def main():
             a.modify()
             a.set_actor_location(unreal.Vector(loc.x, loc.y, g[0].z), False, False)
             report.setdefault("trees_dropped", []).append(a.get_actor_label())
+
+    # 7 railing in place of walls the owner removed: copies of a nearby fence, its long axis along the wall's
+    for wall_name, fence_name in FENCE_REPLACE.items():
+        wall, fence = actors.get(wall_name), actors.get(fence_name)
+        if wall is None or fence is None:
+            continue
+        sm = fence.get_editor_property("static_mesh_component").get_editor_property("static_mesh")
+        fb = sm.get_bounding_box()
+        seg = max(fb.max.x - fb.min.x, fb.max.y - fb.min.y)      # mesh's long side, cm
+        along_x = (fb.max.x - fb.min.x) >= (fb.max.y - fb.min.y)
+        o, e = wall.get_actor_bounds(False)
+        wall_x = e.x >= e.y
+        length = 2 * max(e.x, e.y)
+        n = max(1, round(length / seg))
+        yaw = (0.0 if along_x else 90.0) - (0.0 if wall_x else 90.0)
+        for k in range(n):
+            t = -length / 2 + (k + 0.5) * length / n
+            cx, cy = (o.x + t, o.y) if wall_x else (o.x, o.y + t)
+            g = ground_z(world, cx, cy)
+            a = eas.spawn_actor_from_object(sm, unreal.Vector(cx, cy, (g if g is not None else o.z - e.z) - fb.min.z),
+                                            unreal.Rotator(roll=0, pitch=0, yaw=yaw))
+            sc = (length / n) / seg
+            a.set_actor_scale3d(unreal.Vector(sc, 1.0, 1.0) if along_x else unreal.Vector(1.0, sc, 1.0))
+            a.set_actor_label(f"FIX_Railing_{wall_name}_{k:02d}")
+            a.set_folder_path("Fixes/Railings")
+            a.set_editor_property("tags", [unreal.Name(TAG)])
+            a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
+        report.setdefault("railings", []).append({"wall": wall_name, "segments": n})
 
     # 4 footings under hovering site walls, and a block under each hovering pillar of them
     for name in FOOTING_WALLS:

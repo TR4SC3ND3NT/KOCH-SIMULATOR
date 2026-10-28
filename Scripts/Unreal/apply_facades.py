@@ -250,6 +250,8 @@ def main():
     res = wpl.get_actor_descs()
     wpl.load_actors([d.get_editor_property("guid") for d in (res[1] if isinstance(res, tuple) else res)])
     done = slots = 0
+    sms = unreal.get_editor_subsystem(unreal.StaticMeshEditorSubsystem)
+    flat_done = set()
     for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors():
         if not isinstance(a, unreal.StaticMeshActor) or not a.get_actor_label().startswith(PREFIXES):
             continue
@@ -264,6 +266,12 @@ def main():
             idx = [i for i, m in enumerate(comp.get_materials()) if m and m.get_name() in ("M_FacadeApartment", "MI_FacadeOffice")]
         if not idx:
             continue
+        if sm not in flat_done:   # the facade reads the wall direction from the normal: keep the export's flat normals
+            bs = sms.get_lod_build_settings(sm, 0)
+            if bs.get_editor_property("recompute_normals"):
+                bs.set_editor_property("recompute_normals", False)   # UE's recompute smoothed corners -> sheared windows
+                sms.set_lod_build_settings(sm, 0, bs)
+            flat_done.add(sm)
         a.modify()
         comp.modify()
         for i in idx:
