@@ -12,6 +12,54 @@ from .geom import geo_from_mesh
 
 SNAP = 2e-4   # m; bisect tolerance band snapped onto the grid line
 SKIRT = 0.5   # m; every open terrain edge gets a vertical skirt this deep (see _add_skirts)
+KERB_MIN = 0.04   # m; step walls at least this tall are concrete kerbs (owner playtest 2026-10-28: grass/paint walls)
+KERB_SLOT = "M_Concrete_Precast"
+GRASS = ("Grass",)
+SLIVER_HALF_W, SLIVER_MAX_AREA, SLIVER_DZ = 0.3, 15.0, 0.03   # m, m2, m: see _fill_slivers
+
+
+def _fill_slivers(bm, grass):
+    """Narrow grass leftovers inside paving (owner playtest 2026-10-28: a 0.5 m lawn strip across a plaza, level with
+    it) take the paving around them. A grass region (up faces, slots in grass) qualifies if area / boundary length is
+    under SLIVER_HALF_W (a strip under ~2x that wide), it is under SLIVER_MAX_AREA, and most of its boundary borders
+    non-grass up faces within SLIVER_DZ in height. Returns the number of faces repainted."""
+    up = {f for f in bm.faces if f.normal.z > 0.7 and f.material_index in grass}
+    seen, done = set(), 0
+    for f0 in up:
+        if f0 in seen:
+            continue
+        comp, stack = [], [f0]
+        seen.add(f0)
+        while stack:
+            f = stack.pop()
+            comp.append(f)
+            for e in f.edges:
+                for g in e.link_faces:
+                    if g in up and g not in seen:
+                        seen.add(g)
+                        stack.append(g)
+        area = sum(f.calc_area() for f in comp)
+        if area > SLIVER_MAX_AREA:
+            continue
+        cs = set(comp)
+        perim, flat, votes = 0.0, 0.0, {}
+        for f in comp:
+            for e in f.edges:
+                others = [g for g in e.link_faces if g not in cs]
+                if len(e.link_faces) == 1 or others:
+                    ln = e.calc_length()
+                    perim += ln
+                    g = others[0] if others else None
+                    if g is not None and g.normal.z > 0.7 and g.material_index not in grass and                             abs(g.calc_center_median().z - f.calc_center_median().z) < SLIVER_DZ:
+                        flat += ln
+                        votes[g.material_index] = votes.get(g.material_index, 0.0) + ln
+        if perim == 0.0 or area / perim > SLIVER_HALF_W or flat < 0.6 * perim:
+            continue
+        slot = max(votes, key=votes.get)
+        for f in comp:
+            f.material_index = slot
+        done += len(comp)
+    return done
 
 
 def _add_skirts(bm, depth=SKIRT):
@@ -39,13 +87,13 @@ def _add_skirts(bm, depth=SKIRT):
     return made
 
 
-def _orient_steps(bm):
+def _orient_steps(bm, kerb):
     """Turn every near-vertical terrain face towards its lower side. settle.py's step walls (lane vs verge, 2-10 cm)
     come out wound into the higher ground, so UE culls them from the side they are seen from and the void shows as a
     sky-blue wedge (owner playtest 2026-10-27, east gate lane: normal -X on a step falling to +X). Vote per edge over
     the up-facing neighbours: one on the top edge must be behind the face, one on the bottom edge in front of it.
-    The wall also takes the material of the top it belongs to (settle leaves slot 0, grass, on asphalt steps).
-    Returns the number of faces flipped."""
+    A wall at least KERB_MIN tall becomes a concrete kerb (slot index kerb), a lower one takes the material of the
+    top it belongs to (settle leaves slot 0, grass, on them). Returns the number of faces flipped."""
     bm.normal_update()
     flip = []
     for f in bm.faces:
@@ -64,6 +112,9 @@ def _orient_steps(bm):
                 score += -s if top else s
                 if top:
                     f.material_index = g.material_index
+        zs = [v.co.z for v in f.verts]
+        if max(zs) - min(zs) >= KERB_MIN:
+            f.material_index = kerb
         if score < 0:
             flip.append(f)
     bmesh.ops.reverse_faces(bm, faces=flip)
@@ -99,7 +150,13 @@ def build_tiles(obj):
     bm = bmesh.new()
     bm.from_mesh(obj.data)
     bm.transform(Matrix(obj.matrix_world))
-    print(f"ue_prep terrain: {_orient_steps(bm)} step faces turned out, {_add_skirts(bm)} skirt faces")
+    names = [m.name if m else "" for m in obj.data.materials]
+    if KERB_SLOT not in names:   # in-memory only: run.py never saves the .blend
+        obj.data.materials.append(bpy.data.materials.get(KERB_SLOT) or bpy.data.materials.new(KERB_SLOT))
+        names.append(KERB_SLOT)
+    grass = {i for i, n in enumerate(names) if any(k in n for k in GRASS)}
+    print(f"ue_prep terrain: {_orient_steps(bm, names.index(KERB_SLOT))} step faces turned out, "
+          f"{_fill_slivers(bm, grass)} grass sliver faces repainted, {_add_skirts(bm)} skirt faces")
     co = np.array([v.co[:] for v in bm.verts])
     lo, hi = co.min(0), co.max(0)
     for axis in (0, 1):

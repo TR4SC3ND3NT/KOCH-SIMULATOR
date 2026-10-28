@@ -10,6 +10,7 @@
 #  3 stairs   - GBS_GateAlley_PavilionStair: rebuilt to its spec (flight down east to the walkway); the mesh is 90 deg off
 #  4 footings - long site walls are one mesh with a straight bottom over sloping, uneven ground and hover up to ~25 cm
 #               (owner playtest 2026-10-27, north boundary wall): a concrete footing strip per FOOT_SEG closes the gap
+#  5 moves    - OWNER_MOVES: actors the owner says stand in the wrong place, shifted from R1's position
 # Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/fix_site.py"
 import json
 import math
@@ -38,7 +39,13 @@ SNAP_NO_ROOF_CM = 30.0
 # only free-standing street furniture is dropped; wall/fence/canopy-mounted items keep R1's height
 # name -> (x0, x1, y0, y1, z_top) UE cm, from a 40 cm height profile (2026-10-27): west of the hall passage ramp the
 # ground dips 5.35 -> 4.23 m over x 15530..15625, y -890..-610 while the plaza around is flat at 5.35
-SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15628.0, -905.0, -600.0, 535.0)}
+# owner playtest 2026-10-28: the sag runs on east under the steel stair (V trough down to 4.15 m, x 15629..15929,
+# y -744..-619); along the sand-pit retaining wall the ground drops 2.33 -> 2.03 m in a 1 m strip (x 19700..21200)
+SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15945.0, -905.0, -600.0, 535.0),
+               "FIX_Ground_SandPitWallTrench": (19650.0, 21250.0, -7110.0, -6955.0, 232.0)}
+# label -> offset (cm) from R1's position, owner review: the context block at the east gate lane stands 1.25 m
+# proud of the neighbour wall line (x 20959) into the lane
+OWNER_MOVES = {"GB_CTX_169915330": (125.0, 0.0, 0.0)}
 FREE_STANDING = ("bench", "bin", "bollard", "sign_aframe", "bike_rack", "waste_container", "planter", "face",
                  "turnstile", "lamp_bollard", "manhole")                    # props with a surface this close above are ceiling/canopy-mounted: leave them
 
@@ -363,6 +370,14 @@ def main():
         spawn_box(eas, cube, paving_mat, unreal.Vector((xa + xb) / 2, (ya + yb) / 2, z_top - 30),
                   (xb - xa, yb - ya, 60.0), 0.0, name, "Fixes/Ground")
         report.setdefault("ground_patches", []).append({"name": name, "box_cm": [xa, xb, ya, yb], "z_top_cm": z_top})
+
+    # 5 owner moves (relative to the manifest, so re-runs never accumulate)
+    for label, (dx, dy, dz) in OWNER_MOVES.items():
+        a, e = actors.get(label), man.get(label)
+        if a is not None and e is not None:
+            a.modify()
+            a.set_actor_location(unreal.Vector(e["loc"][0] + dx, e["loc"][1] + dy, e["loc"][2] + dz), False, False)
+            report.setdefault("moved", []).append(label)
 
     # 4 footings under hovering site walls
     for name in FOOTING_WALLS:
