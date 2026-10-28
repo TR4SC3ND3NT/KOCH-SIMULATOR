@@ -52,13 +52,16 @@ protected:
 	UPROPERTY(EditAnywhere, Category ="Weapons")
 	TSubclassOf<AShooterWeapon> StarterWeaponClass;
 
-	/** Spawns a companion in front of the player (T) */
+	/** Spawns the next companion in front of the player (T) */
 	UPROPERTY(EditAnywhere, Category ="Input")
 	UInputAction* SpawnCompanionAction;
 
-	/** Companion spawned by SpawnCompanionAction (AKochCompanion Blueprint) */
+	/** Companions spawned by SpawnCompanionAction in turn: 1st press the first, 2nd the second, ... then again */
 	UPROPERTY(EditAnywhere, Category ="Companion")
-	TSubclassOf<APawn> CompanionClass;
+	TArray<TSubclassOf<APawn>> CompanionClasses;
+
+	/** Index into CompanionClasses of the next spawn */
+	int32 NextCompanion = 0;
 
 	/** Older companions are removed past this count */
 	UPROPERTY(EditAnywhere, Category ="Companion", meta = (ClampMin = 1, ClampMax = 20))
@@ -179,7 +182,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	void DoReload();
 
-	/** Spawns a companion 2.5 m in front, on the ground */
+	/** Spawns the next companion of CompanionClasses 2.5 m in front, on the ground */
 	UFUNCTION(BlueprintCallable, Category="Input")
 	void DoSpawnCompanion();
 

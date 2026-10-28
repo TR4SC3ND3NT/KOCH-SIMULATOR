@@ -4,7 +4,8 @@
 # With a mannequin-rigged FBX (Scripts/Blender/rig_to_mannequin.py) it is imported on SK_Mannequin and animated by
 # the template's ABP_Unarmed; the static mesh stays as the procedural fallback.
 # Run (Output Log, Cmd = Python):
-#   py "<repo>/Scripts/Unreal/setup_companion.py" <dir with character.fbx + character_texture.png> [user] [rigged.fbx]
+#   py "<repo>/Scripts/Unreal/setup_companion.py" <dir with character.fbx + character_texture.png> [user] [rigged.fbx] [slot]
+# slot (1-based, default 1) = place in BP_KochPlayer.CompanionClasses: T spawns slot 1, 2, 3, ... in turn.
 import os
 import sys
 
@@ -13,9 +14,11 @@ import unreal
 SRC = sys.argv[1]
 USER = sys.argv[2] if len(sys.argv) > 2 else "eldiiar"
 RIGGED = sys.argv[3] if len(sys.argv) > 3 else ""
+SLOT = int(sys.argv[4]) if len(sys.argv) > 4 else 1
+SFX = "" if SLOT == 1 else f"_{SLOT}"
 SKELETON = "/Game/Characters/Mannequins/Meshes/SK_Mannequin"
 ANIM_BP = "/Game/Characters/Mannequins/Anims/Unarmed/ABP_Unarmed"
-ROOT = f"/Game/Developers/{USER}/Companion"
+ROOT = f"/Game/Developers/{USER}/Companion{SFX}"
 WEAPONS = "/Game/KochSimulator/Weapons"
 L = unreal.EditorAssetLibrary.load_asset
 tools = unreal.AssetToolsHelpers.get_asset_tools()
@@ -33,7 +36,7 @@ def import_file(path, name, options=None):
 
 
 def main():
-    tex = next(o for o in import_file(os.path.join(SRC, "character_texture.png"), "T_Companion") if isinstance(o, unreal.Texture2D))
+    tex = next(o for o in import_file(os.path.join(SRC, "character_texture.png"), f"T_Companion{SFX}") if isinstance(o, unreal.Texture2D))
     p = unreal.InterchangeGenericAssetsPipeline()
     mp = p.get_editor_property("mesh_pipeline")
     mp.set_editor_property("build_nanite", True)
@@ -41,17 +44,17 @@ def main():
     p.get_editor_property("common_meshes_properties").set_editor_property(
         "force_all_mesh_as_type", unreal.InterchangeForceMeshType.IFMT_STATIC_MESH)
     p.get_editor_property("material_pipeline").set_editor_property("import_materials", False)
-    p.set_editor_property("asset_name", "SM_Companion")
+    p.set_editor_property("asset_name", f"SM_Companion{SFX}")
     ov = unreal.InterchangePipelineStackOverride()
     ov.add_pipeline(p)
-    mesh = next(o for o in import_file(os.path.join(SRC, "character.fbx"), "SM_Companion", ov) if isinstance(o, unreal.StaticMesh))
+    mesh = next(o for o in import_file(os.path.join(SRC, "character.fbx"), f"SM_Companion{SFX}", ov) if isinstance(o, unreal.StaticMesh))
 
-    mpath = f"{ROOT}/M_Companion"
+    mpath = f"{ROOT}/M_Companion{SFX}"
     if unreal.EditorAssetLibrary.does_asset_exist(mpath):
         mat = L(mpath)
     else:
         mel = unreal.MaterialEditingLibrary
-        mat = tools.create_asset("M_Companion", ROOT, unreal.Material, unreal.MaterialFactoryNew())
+        mat = tools.create_asset(f"M_Companion{SFX}", ROOT, unreal.Material, unreal.MaterialFactoryNew())
         ts = mel.create_material_expression(mat, unreal.MaterialExpressionTextureSample, -400, 0)
         ts.set_editor_property("texture", tex)
         mel.connect_material_property(ts, "RGB", unreal.MaterialProperty.MP_BASE_COLOR)
@@ -64,13 +67,13 @@ def main():
     mesh.set_material(0, mat)
     unreal.EditorAssetLibrary.save_loaded_asset(mesh, False)
 
-    bp_path = f"{ROOT}/BP_KochCompanion"
+    bp_path = f"{ROOT}/BP_KochCompanion{SFX}"
     if unreal.EditorAssetLibrary.does_asset_exist(bp_path):
         bp = L(bp_path)
     else:
         f = unreal.BlueprintFactory()
         f.set_editor_property("parent_class", unreal.KochCompanion)
-        bp = tools.create_asset("BP_KochCompanion", ROOT, unreal.Blueprint, f)
+        bp = tools.create_asset(f"BP_KochCompanion{SFX}", ROOT, unreal.Blueprint, f)
     cdo = unreal.get_default_object(bp.generated_class())
     cdo.get_editor_property("body_mesh").set_editor_property("static_mesh", mesh)
     cdo.set_editor_property("explosion_class",
@@ -88,10 +91,10 @@ def main():
             "force_all_mesh_as_type", unreal.InterchangeForceMeshType.IFMT_SKELETAL_MESH)
         sp.get_editor_property("animation_pipeline").set_editor_property("import_animations", False)
         sp.get_editor_property("material_pipeline").set_editor_property("import_materials", False)
-        sp.set_editor_property("asset_name", "SKM_Companion")
+        sp.set_editor_property("asset_name", f"SKM_Companion{SFX}")
         sov = unreal.InterchangePipelineStackOverride()
         sov.add_pipeline(sp)
-        skm = next((o for o in import_file(RIGGED, "SKM_Companion", sov) if isinstance(o, unreal.SkeletalMesh)), None)
+        skm = next((o for o in import_file(RIGGED, f"SKM_Companion{SFX}", sov) if isinstance(o, unreal.SkeletalMesh)), None)
         if skm is None:
             raise RuntimeError("setup_companion: rigged import failed (skeleton mismatch?)")
         mat.set_editor_property("used_with_skeletal_mesh", True)   # cooked/-game builds cannot add usages later
@@ -126,9 +129,13 @@ def main():
     player = L(f"{WEAPONS}/BP_KochPlayer")
     pc = unreal.get_default_object(player.generated_class())
     pc.set_editor_property("spawn_companion_action", ia)
-    pc.set_editor_property("companion_class", bp.generated_class())
+    classes = list(pc.get_editor_property("companion_classes"))
+    while len(classes) < SLOT:
+        classes.append(None)
+    classes[SLOT - 1] = bp.generated_class()
+    pc.set_editor_property("companion_classes", classes)
     unreal.EditorAssetLibrary.save_loaded_asset(player, False)
-    unreal.log(f"setup_companion: {mesh.get_path_name()} -> {bp.get_path_name()}, T bound")
+    unreal.log(f"setup_companion: {mesh.get_path_name()} -> {bp.get_path_name()}, T slot {SLOT}")
 
 
 main()

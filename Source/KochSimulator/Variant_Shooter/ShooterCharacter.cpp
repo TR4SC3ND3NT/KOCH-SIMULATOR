@@ -213,10 +213,13 @@ void AShooterCharacter::DoReload()
 
 void AShooterCharacter::DoSpawnCompanion()
 {
-	if (!CompanionClass || IsDead())
+	CompanionClasses.Remove(nullptr);
+	if (CompanionClasses.Num() == 0 || IsDead())
 	{
 		return;
 	}
+	const TSubclassOf<APawn> CompanionClass = CompanionClasses[NextCompanion % CompanionClasses.Num()];
+	NextCompanion = (NextCompanion + 1) % CompanionClasses.Num();
 
 	// 2.5 m ahead on the ground, facing the player
 	const FVector Fwd = FVector(GetActorForwardVector().X, GetActorForwardVector().Y, 0.0f).GetSafeNormal();
