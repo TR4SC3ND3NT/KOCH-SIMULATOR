@@ -23,6 +23,7 @@ MAPPING = [("bench", "SM_Prop_Bench_Park"), ("bin_wrought_iron", "SM_Prop_Bin_Wr
            ("bin_container", "SM_Prop_Container1100"), ("waste_container", "SM_Prop_Container1100"),
            ("bin_generic", "SM_Prop_Bin_Wheelie240")]
 LENGTH_SCALE = (0.75, 1.35)      # a 2.2 m slat bench is the 1.8 m kit stretched; beyond this it reads wrong
+BACK_GAP = 4.0                   # cm free behind a bench's backrest
 
 
 def import_props(names):
@@ -109,6 +110,7 @@ def main():
     eas.destroy_actors([a for a in actors if a.actor_has_tag(TAG)])
     by_label = {a.get_actor_label(): a for a in actors if a.actor_has_tag("KochGreybox")}
     placed = [0]
+    props = []
 
     def place(e, prop, base, yaw, sx, sz, ph):
         a = eas.spawn_actor_from_object(meshes[prop], base, unreal.Rotator(roll=0, pitch=0, yaw=yaw))
@@ -117,6 +119,7 @@ def main():
         a.set_folder_path(f"Props/{e['zone']}")
         a.set_editor_property("tags", [unreal.Name(TAG), unreal.Name(f"Replaces:{e['name']}")])
         a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
+        props.append(a)
         ph.modify()
         comp = ph.get_editor_property("static_mesh_component")
         comp.modify()
@@ -150,6 +153,20 @@ def main():
     # See-through court fences are not obstacles (benches along them face the court).
     # Kit backrest = Blender +Y = UE local -Y (the FBX export mirrors Y), so in world: (sin yaw, -cos yaw).
     TIGHT, REACH = 60.0, 150.0
+    half_depth = kit["SM_Prop_Bench_Park"]["size_m"][1] * 50.0
+
+    def clear_back(base, yaw, ph):
+        """Placeholders hug walls, so the backrest sank into some (owner playtest 2026-10-28, garden pergola wall):
+        move the bench forward until BACK_GAP cm is free behind it at seat and backrest height."""
+        r = math.radians(yaw)
+        back = unreal.Vector(math.sin(r), -math.cos(r), 0.0)
+        need = 0.0
+        for zoff in (45.0, 80.0):
+            p0 = unreal.Vector(base.x - back.x * 80, base.y - back.y * 80, base.z + zoff)
+            d = trace_dist(world, p0, p0 + back * 200, [ph] + see_through + props)
+            if d is not None:
+                need = max(need, half_depth + BACK_GAP - (d - 80.0))
+        return unreal.Vector(base.x - back.x * need, base.y - back.y * need, base.z) if need > 0 else base
     flips_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bench_flips.json")
     flips = set(json.load(open(flips_path, encoding="utf-8"))) if os.path.exists(flips_path) else set()
     see_through = [a for a in actors if isinstance(a, unreal.StaticMeshActor) and any(
@@ -181,7 +198,8 @@ def main():
             flip = wall < 0
         for e, base, yaw, sx, sz, ph in row:
             manual = 180.0 if e["name"] in flips else 0.0       # owner review (bench_labels.py numbers)
-            place(e, "SM_Prop_Bench_Park", base, yaw + (180.0 if flip else 0.0) + manual, sx, sz, ph)
+            yaw_f = yaw + (180.0 if flip else 0.0) + manual
+            place(e, "SM_Prop_Bench_Park", clear_back(base, yaw_f, ph), yaw_f, sx, sz, ph)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
     unreal.log(f"place_props: {len([m for m in meshes.values() if m])} props, {placed[0]} placed, {len(rows)} bench rows")
 

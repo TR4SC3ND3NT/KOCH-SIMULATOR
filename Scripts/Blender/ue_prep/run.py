@@ -26,7 +26,7 @@ from ue_prep.common import (BARRIER_PREFIX, SKIP_COLLECTIONS, SKIP_PREFIX, TERRA
                             UE_ROOT, ascii_name, blender_to_ue, box_uvs, has_banned, role_of, rot_z90)
 from ue_prep.export import Writer                                       # noqa: E402
 from ue_prep.geom import canonical, decompose, geo_from_mesh            # noqa: E402
-from ue_prep.terrain import build_tiles                                 # noqa: E402
+from ue_prep.terrain import build_tiles, carry_flatten                  # noqa: E402
 
 VERSION = 1
 DECOR_TYPES = {"paint", "zebra", "string_lights", "net_roof", "tree"}
@@ -169,6 +169,9 @@ def main():
     bpy.context.view_layer.update()   # objects placed via ob.location keep a stale matrix_world until this
     dg = bpy.context.evaluated_depsgraph_get()
     obs, terrain = collect()
+    if terrain:   # owner ground corrections carried by the lawn strips on that ground (ue_prep/terrain.py)
+        print(f"ue_prep: {carry_flatten(terrain, [o for o, _, _ in obs])} carried vertices lowered", flush=True)
+        dg = bpy.context.evaluated_depsgraph_get()   # re-evaluate the edited meshes
     print(f"ue_prep: {len(obs)} objects, terrain={'yes' if terrain else 'no'}", flush=True)
 
     # 1. per object: bake scale/mirror into the mesh, canonicalise, hash

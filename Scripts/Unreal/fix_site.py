@@ -42,9 +42,11 @@ SNAP_NO_ROOF_CM = 30.0
 # only free-standing street furniture is dropped; wall/fence/canopy-mounted items keep R1's height
 # name -> (x0, x1, y0, y1, z_top) UE cm, from a 40 cm height profile (2026-10-27): west of the hall passage ramp the
 # ground dips 5.35 -> 4.23 m over x 15530..15625, y -890..-610 while the plaza around is flat at 5.35
-# owner playtest 2026-10-28: the sag runs on east under the steel stair (V trough down to 4.15 m, x 15629..15929,
-# y -744..-619); along the sand-pit retaining wall the ground drops 2.33 -> 2.03 m in a 1 m strip (x 19700..21200)
-SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15945.0, -905.0, -600.0, 535.0),
+# owner playtest 2026-10-28: the sag runs on east above the concrete stair down to the 4.47 m plaza (V trough to
+# 4.15 m, x 15629..15929, y -744..-619); along the sand-pit retaining wall the ground drops 2.33 -> 2.03 m in a 1 m strip (x 19700..21200)
+SAG_PATCHES = {"FIX_Ground_HallPassageSag": (15525.0, 15628.0, -905.0, -600.0, 535.0),
+               # between the concrete stair top (y -769) and the plaza: not further south, the stair goes down there
+               "FIX_Ground_StairTopSag": (15629.0, 15945.0, -765.0, -600.0, 535.0),
                "FIX_Ground_SandPitWallTrench": (19650.0, 21250.0, -7110.0, -6955.0, 232.0)}
 # label -> offset (cm) from R1's position, owner review: the context block at the east gate lane stands 1.25 m
 # proud of the neighbour wall line (x 20959) into the lane

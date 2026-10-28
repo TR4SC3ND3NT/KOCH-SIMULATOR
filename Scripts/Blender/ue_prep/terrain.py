@@ -5,7 +5,8 @@
 import bmesh
 import bpy
 import numpy as np
-from mathutils import Matrix
+from mathutils import Matrix, Vector
+from mathutils.bvhtree import BVHTree
 from mathutils.kdtree import KDTree
 
 from .common import TILE_M, box_uvs, tile_name
@@ -27,36 +28,127 @@ OWNER_FLATTEN = [
     {"rect_cm": (5000.0, 11600.0, -9700.0, -7000.0), "floor_cm": 218.0, "grade": 0.04, "fade_m": 5.0},
 ]
 FLOOR_TOL = 0.03   # m
+# non-terrain meshes lying on the cut ground that follow it (carry_flatten, called by run.py before export)
+OWNER_FLATTEN_CARRY = ("GBS_Sports_NorthTreeLawn",)
+# stairs the ground pokes through (owner playtest 2026-10-28: pale paving triangles in the red treads)
+OWNER_SINK = ("GBS_GateAlley_Steps_BCorner_Upper", "GBS_GateAlley_Steps_BCorner_Lower")
+# UE cm rects (x0, x1, y0, y1): grass that juts into a walkway (owner marks 2026-10-28)
+OWNER_REPAINT = [(13895.0, 13990.0, -8120.0, -7930.0)]
 
 
-def _flatten(bm):
-    """OWNER_FLATTEN: inside each rect, z = min(z, floor + grade * distance to the plaza), blended to the original
-    over fade_m at the rect edge. Runs before the step pass, so cut steps collapse to flat or sloped ground.
-    Blender coords: x = UE x / 100, y = -UE y / 100. Returns the number of vertices moved."""
-    moved = 0
+def _fields(verts):
+    """Per OWNER_FLATTEN entry: (rect in Blender m, KD-tree of the plaza vertices, entry) from world (x, y, z) m."""
+    out = []
     for fl in OWNER_FLATTEN:
         x0, x1, y0, y1 = (v / 100.0 for v in fl["rect_cm"])
-        by0, by1 = -y1, -y0
+        rect = (x0, x1, -y1, -y0)
         floor = fl["floor_cm"] / 100.0
-        inside = [v for v in bm.verts if x0 <= v.co.x <= x1 and by0 <= v.co.y <= by1]
-        plaza = [v for v in inside if abs(v.co.z - floor) <= FLOOR_TOL]
+        plaza = [c for c in verts if rect[0] <= c[0] <= rect[1] and rect[2] <= c[1] <= rect[3]
+                 and abs(c[2] - floor) <= FLOOR_TOL]
         if not plaza:
             continue
         kd = KDTree(len(plaza))
-        for i, v in enumerate(plaza):
-            kd.insert((v.co.x, v.co.y, 0.0), i)
+        for i, c in enumerate(plaza):
+            kd.insert((c[0], c[1], 0.0), i)
         kd.balance()
-        for v in inside:
-            d = kd.find((v.co.x, v.co.y, 0.0))[2]
-            target = floor + fl["grade"] * d
-            if v.co.z <= target:
-                continue
-            edge = min(v.co.x - x0, x1 - v.co.x, v.co.y - by0, by1 - v.co.y)
-            w = min(1.0, edge / fl["fade_m"])
-            v.co.z -= w * (v.co.z - target)
+        out.append((rect, kd, fl))
+    return out
+
+
+def _cut(fields, x, y, z):
+    """z after OWNER_FLATTEN: min(z, floor + grade * distance to the plaza), blended to z over fade_m inside the rect
+    edge. Blender coords (x = UE x / 100, y = -UE y / 100), metres."""
+    for (x0, x1, y0, y1), kd, fl in fields:
+        if not (x0 <= x <= x1 and y0 <= y <= y1):
+            continue
+        target = fl["floor_cm"] / 100.0 + fl["grade"] * kd.find((x, y, 0.0))[2]
+        if z > target:
+            w = min(1.0, min(x - x0, x1 - x, y - y0, y1 - y) / fl["fade_m"])
+            z -= w * (z - target)
+    return z
+
+
+def _flatten(bm):
+    """OWNER_FLATTEN on the terrain: cut steps collapse to flat or sloped ground (runs before the step pass).
+    Returns the number of vertices moved."""
+    fields = _fields([v.co[:] for v in bm.verts])
+    moved = 0
+    for v in bm.verts:
+        z = _cut(fields, v.co.x, v.co.y, v.co.z)
+        if z < v.co.z:
+            v.co.z = z
             moved += 1
     bm.normal_update()
     return moved
+
+
+def carry_flatten(terrain, objs):
+    """Objects in OWNER_FLATTEN_CARRY (kerbed lawn strips lying on the cut ground) follow it: each vertex drops by
+    the cut of the original ground under it. Edits the in-memory mesh before run.py hashes/exports it. -> count."""
+    bm = bmesh.new()
+    bm.from_mesh(terrain.data)
+    bm.transform(Matrix(terrain.matrix_world))
+    fields = _fields([v.co[:] for v in bm.verts])
+    tree = BVHTree.FromBMesh(bm)
+    n = 0
+    for ob in objs:
+        if ob.name not in OWNER_FLATTEN_CARRY:
+            continue
+        inv = ob.matrix_world.inverted()
+        for v in ob.data.vertices:
+            w = ob.matrix_world @ v.co
+            hit = tree.ray_cast(Vector((w.x, w.y, 1000.0)), Vector((0.0, 0.0, -1.0)))
+            if hit[0] is None:
+                continue
+            dz = hit[0].z - _cut(fields, w.x, w.y, hit[0].z)
+            if dz > 0.0:
+                v.co = inv @ Vector((w.x, w.y, w.z - dz))
+                n += 1
+        ob.data.update()
+    bm.free()
+    return n
+
+
+def _sink(bm):
+    """OWNER_SINK: ground under these stairs drops below their lowest point, so no slope pokes through the treads.
+    -> number of vertices moved."""
+    moved = 0
+    for name in OWNER_SINK:
+        ob = bpy.data.objects.get(name)
+        if ob is None:
+            continue
+        bb = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
+        x0, x1 = min(c.x for c in bb) + 0.02, max(c.x for c in bb) - 0.02
+        y0, y1 = min(c.y for c in bb) + 0.02, max(c.y for c in bb) - 0.02
+        zmin = min(c.z for c in bb) - 0.02
+        for v in bm.verts:
+            if x0 <= v.co.x <= x1 and y0 <= v.co.y <= y1 and v.co.z > zmin:
+                v.co.z = zmin
+                moved += 1
+    bm.normal_update()
+    return moved
+
+
+def _repaint(bm, grass):
+    """OWNER_REPAINT: grass up faces with their centre in the rect take the paving they border (majority by edge
+    length). -> number of faces repainted."""
+    done = 0
+    for x0, x1, y0, y1 in OWNER_REPAINT:
+        bx0, bx1, by0, by1 = x0 / 100.0, x1 / 100.0, -y1 / 100.0, -y0 / 100.0
+        sel = [f for f in bm.faces if f.normal.z > 0.7 and f.material_index in grass
+               and bx0 <= f.calc_center_median().x <= bx1 and by0 <= f.calc_center_median().y <= by1]
+        cs, votes = set(sel), {}
+        for f in sel:
+            for e in f.edges:
+                for g in e.link_faces:
+                    if g not in cs and g.normal.z > 0.7 and g.material_index not in grass:
+                        votes[g.material_index] = votes.get(g.material_index, 0.0) + e.calc_length()
+        if votes:
+            slot = max(votes, key=votes.get)
+            for f in sel:
+                f.material_index = slot
+            done += len(sel)
+    return done
 
 
 def _fill_slivers(bm, grass):
@@ -196,9 +288,10 @@ def build_tiles(obj):
         obj.data.materials.append(bpy.data.materials.get(KERB_SLOT) or bpy.data.materials.new(KERB_SLOT))
         names.append(KERB_SLOT)
     grass = {i for i, n in enumerate(names) if any(k in n for k in GRASS)}
-    print(f"ue_prep terrain: {_flatten(bm)} vertices lowered (owner flatten)")
+    print(f"ue_prep terrain: {_flatten(bm)} vertices lowered (owner flatten), {_sink(bm)} sunk under stairs")
     print(f"ue_prep terrain: {_orient_steps(bm, names.index(KERB_SLOT))} step faces turned out, "
-          f"{_fill_slivers(bm, grass)} grass sliver faces repainted, {_add_skirts(bm)} skirt faces")
+          f"{_fill_slivers(bm, grass)} grass sliver faces repainted, {_repaint(bm, grass)} owner repaints, "
+          f"{_add_skirts(bm)} skirt faces")
     co = np.array([v.co[:] for v in bm.verts])
     lo, hi = co.min(0), co.max(0)
     for axis in (0, 1):
