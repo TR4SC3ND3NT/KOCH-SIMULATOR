@@ -49,6 +49,16 @@ MATERIALS = {
 }
 
 
+def tune_wind_tick(a):
+    """PVE trees are skeletal (Dynamic Wind bones). Default ALWAYS_TICK_POSE animated all ~385 every frame, seen or
+    not; tick only when rendered, and let update-rate optimisation thin out the far ones (UE's URO: fewer pose
+    updates with screen size). Saves game + render thread ms (perf capture 2026-10-28: RT-bound at 17.7 ms)."""
+    comp = a.get_editor_property("skeletal_mesh_component")
+    comp.set_editor_property("visibility_based_anim_tick_option",
+                             unreal.VisibilityBasedAnimTickOption.ONLY_TICK_POSE_WHEN_RENDERED)
+    comp.set_editor_property("enable_update_rate_optimizations", True)
+
+
 def hashed(name, n):
     return int(hashlib.md5(name.encode()).hexdigest(), 16) % n
 
@@ -261,6 +271,8 @@ def main():
         a.set_editor_property("tags", [unreal.Name(TAG), unreal.Name(f"Replaces:{e['name']}")])
         if isinstance(a, unreal.StaticMeshActor):
             a.get_editor_property("static_mesh_component").set_mobility(unreal.ComponentMobility.STATIC)
+        elif isinstance(a, unreal.SkeletalMeshActor):
+            tune_wind_tick(a)
         ph.modify()   # external (OFPA) actor: without Modify its package is not dirtied and the hide is lost on save
         comp = ph.get_editor_property("static_mesh_component")
         comp.modify()
