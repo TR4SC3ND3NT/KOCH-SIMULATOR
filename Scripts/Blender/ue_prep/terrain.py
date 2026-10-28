@@ -6,6 +6,7 @@ import bmesh
 import bpy
 import numpy as np
 from mathutils import Matrix
+from mathutils.kdtree import KDTree
 
 from .common import TILE_M, box_uvs, tile_name
 from .geom import geo_from_mesh
@@ -16,6 +17,46 @@ KERB_MIN = 0.04   # m; step walls at least this tall are concrete kerbs (owner p
 KERB_SLOT = "M_Concrete_Precast"
 GRASS = ("Grass",)
 SLIVER_HALF_W, SLIVER_MAX_AREA, SLIVER_DZ = 0.3, 15.0, 0.03   # m, m2, m: see _fill_slivers
+# Owner corrections to the ground ("it is flat there, no step, no ramp"), see _flatten. UE cm rect (x0, x1, y0, y1),
+# floor z (cm): ground within FLOOR_TOL of it is the reference plaza; grade: max rise per metre away from it;
+# fade (m): the cut fades out over this distance inside the rect edge so no new step appears there.
+OWNER_FLATTEN = [
+    # 2026-10-28: herringbone path / lawn terrace west and south of the hex plaza by the north wall stood 0.6 m above
+    # the plaza (x 95.5 m) with a concrete step across the path
+    # (rect past the wall, so the cut does not fade out along it; east edge = end of LowerYard_Retain_West)
+    {"rect_cm": (5000.0, 11600.0, -9700.0, -7000.0), "floor_cm": 218.0, "grade": 0.04, "fade_m": 5.0},
+]
+FLOOR_TOL = 0.03   # m
+
+
+def _flatten(bm):
+    """OWNER_FLATTEN: inside each rect, z = min(z, floor + grade * distance to the plaza), blended to the original
+    over fade_m at the rect edge. Runs before the step pass, so cut steps collapse to flat or sloped ground.
+    Blender coords: x = UE x / 100, y = -UE y / 100. Returns the number of vertices moved."""
+    moved = 0
+    for fl in OWNER_FLATTEN:
+        x0, x1, y0, y1 = (v / 100.0 for v in fl["rect_cm"])
+        by0, by1 = -y1, -y0
+        floor = fl["floor_cm"] / 100.0
+        inside = [v for v in bm.verts if x0 <= v.co.x <= x1 and by0 <= v.co.y <= by1]
+        plaza = [v for v in inside if abs(v.co.z - floor) <= FLOOR_TOL]
+        if not plaza:
+            continue
+        kd = KDTree(len(plaza))
+        for i, v in enumerate(plaza):
+            kd.insert((v.co.x, v.co.y, 0.0), i)
+        kd.balance()
+        for v in inside:
+            d = kd.find((v.co.x, v.co.y, 0.0))[2]
+            target = floor + fl["grade"] * d
+            if v.co.z <= target:
+                continue
+            edge = min(v.co.x - x0, x1 - v.co.x, v.co.y - by0, by1 - v.co.y)
+            w = min(1.0, edge / fl["fade_m"])
+            v.co.z -= w * (v.co.z - target)
+            moved += 1
+    bm.normal_update()
+    return moved
 
 
 def _fill_slivers(bm, grass):
@@ -155,6 +196,7 @@ def build_tiles(obj):
         obj.data.materials.append(bpy.data.materials.get(KERB_SLOT) or bpy.data.materials.new(KERB_SLOT))
         names.append(KERB_SLOT)
     grass = {i for i, n in enumerate(names) if any(k in n for k in GRASS)}
+    print(f"ue_prep terrain: {_flatten(bm)} vertices lowered (owner flatten)")
     print(f"ue_prep terrain: {_orient_steps(bm, names.index(KERB_SLOT))} step faces turned out, "
           f"{_fill_slivers(bm, grass)} grass sliver faces repainted, {_add_skirts(bm)} skirt faces")
     co = np.array([v.co[:] for v in bm.verts])

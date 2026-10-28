@@ -11,6 +11,7 @@
 #  4 footings - long site walls are one mesh with a straight bottom over sloping, uneven ground and hover up to ~25 cm
 #               (owner playtest 2026-10-27, north boundary wall): a concrete footing strip per FOOT_SEG closes the gap
 #  5 moves    - OWNER_MOVES: actors the owner says stand in the wrong place, shifted from R1's position
+#  6 trees    - vegetation/props hovering over lowered ground (ue_prep OWNER_FLATTEN) are dropped onto the ground tiles
 # Run (Output Log, Cmd = Python): py "<repo>/Scripts/Unreal/fix_site.py"
 import json
 import math
@@ -35,6 +36,8 @@ WALL_T = 12.0
 FLOAT_MIN, FLOAT_MAX = 2.0, 200.0
 FOOTING_WALLS = ("GBS_Sports_NorthBoundary_Wall",)
 FOOT_SEG, FOOT_MIN_GAP, FOOT_SINK = 300.0, 2.0, 10.0   # cm: segment length, smallest gap closed, depth into the ground
+FOOT_MIN_W = 52.0                         # cm: footing at least as wide as the 46 cm brick pillars, so they stand on it
+VEG_SNAP = (2.0, 120.0)                   # cm: trees whose trunk base hovers this much over the ground are dropped
 SNAP_NO_ROOF_CM = 30.0
 # only free-standing street furniture is dropped; wall/fence/canopy-mounted items keep R1's height
 # name -> (x0, x1, y0, y1, z_top) UE cm, from a 40 cm height profile (2026-10-27): west of the hall passage ramp the
@@ -151,7 +154,8 @@ def footings(world, eas, cube, mat, a, report):
                         break
         if grounds and bottoms and max(b - g for b, g in zip(bottoms, grounds)) > FOOT_MIN_GAP:
             z_lo, z_hi = min(grounds) - FOOT_SINK, max(bottoms) + 3.0
-            spawn_box(eas, cube, mat, unreal.Vector(cx, cy, (z_lo + z_hi) / 2), (FOOT_SEG + 2.0, thick + 4.0, z_hi - z_lo),
+            spawn_box(eas, cube, mat, unreal.Vector(cx, cy, (z_lo + z_hi) / 2),
+                      (FOOT_SEG + 2.0, max(thick + 4.0, FOOT_MIN_W), z_hi - z_lo),
                       yaw, f"FIX_Footing_{a.get_actor_label()}_{n:03d}", "Fixes/Footings")
             n += 1
         s += FOOT_SEG
@@ -379,10 +383,37 @@ def main():
             a.set_actor_location(unreal.Vector(e["loc"][0] + dx, e["loc"][1] + dy, e["loc"][2] + dz), False, False)
             report.setdefault("moved", []).append(label)
 
-    # 4 footings under hovering site walls
+    # 6 trees and street furniture (pivot = base) on lowered ground (OWNER_FLATTEN in ue_prep/terrain.py): dropped
+    # onto the ground tiles; their hidden placeholder keeps collision, so it is ignored by the trace
+    placeholders = {str(t).split(":", 1)[1]: actors.get(str(t).split(":", 1)[1]) for a in actors.values()
+                    for t in a.tags if str(t).startswith("Replaces:")}
+    for a in [a for a in actors.values() if a.actor_has_tag("KochVegetation") or a.actor_has_tag("KochProp")]:
+        loc = a.get_actor_location()
+        ph = next((placeholders.get(str(t).split(":", 1)[1]) for t in a.tags if str(t).startswith("Replaces:")), None)
+        g = hit(trace(world, unreal.Vector(loc.x, loc.y, loc.z + 50), unreal.Vector(loc.x, loc.y, loc.z - 300),
+                      [a] + ([ph] if ph else [])))
+        if g is None or not (g[1] and g[1].get_actor_label().startswith(GROUND_PREFIX)):
+            continue
+        gap = loc.z - g[0].z
+        if VEG_SNAP[0] < gap < VEG_SNAP[1]:
+            a.modify()
+            a.set_actor_location(unreal.Vector(loc.x, loc.y, g[0].z), False, False)
+            report.setdefault("trees_dropped", []).append(a.get_actor_label())
+
+    # 4 footings under hovering site walls, and a block under each hovering pillar of them
     for name in FOOTING_WALLS:
         if name in actors:
             footings(world, eas, cube, wall_mat, actors[name], report)
+        for label, a in actors.items():
+            if not label.startswith(name.replace("_Wall", "_Pillar_")):
+                continue
+            o, e = a.get_actor_bounds(False)
+            g = hit(trace(world, unreal.Vector(o.x, o.y, o.z - e.z + 1), unreal.Vector(o.x, o.y, o.z - e.z - 200), [a]))
+            if g is None or (o.z - e.z) - g[0].z <= FOOT_MIN_GAP:
+                continue
+            z_lo, z_hi = g[0].z - FOOT_SINK, o.z - e.z + 3.0
+            spawn_box(eas, cube, wall_mat, unreal.Vector(o.x, o.y, (z_lo + z_hi) / 2),
+                      (2 * e.x + 6.0, 2 * e.y + 6.0, z_hi - z_lo), 0.0, f"FIX_Footing_{label}", "Fixes/Footings")
 
     out = os.path.join(REPO, "Saved", "QA")
     os.makedirs(out, exist_ok=True)
@@ -390,7 +421,8 @@ def main():
         json.dump(report, fh, indent=1)
     unreal.EditorLoadingAndSavingUtils.save_dirty_packages(True, True)
     unreal.log(f"fix_site: {len(report['risers'])} riser walls ({report.get('risers_covered', 0)} steps already closed), {len(report['floating'])} props dropped, "
-               f"{len(report['stairs'])} stairs extended, footings {report.get('footings')}")
+               f"{len(report['stairs'])} stairs extended, footings {report.get('footings')}, "
+               f"{len(report.get('trees_dropped', []))} trees dropped")
 
 
 main()
