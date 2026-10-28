@@ -3,7 +3,8 @@
 # Saved/Screenshots (shot with the stat overlay), Saved/Profiling/FPSChartStats.
 # Run: UnrealEditor.exe KochSimulator.uproject /Game/KochSimulator/Maps/L_GreyboxTest -game -dx12 -windowed
 #        -ResX=1920 -ResY=1080 -ExecCmds="py Scripts/Unreal/perf_capture.py" [-dpcvars=r.Lumen.HardwareRayTracing=1]
-# Env: KOCH_PERF_YAW (deg, camera heading; default 20 = gate plaza towards the trees and block A).
+# Env: KOCH_PERF_YAW (deg, camera heading; default 20 = gate plaza towards the trees and block A);
+#      KOCH_PERF_CMDS (";"-separated console commands run before warm-up, for A/B tests, e.g. "ShowFlag.SkeletalMeshes 0").
 import os
 import time
 
@@ -13,6 +14,7 @@ WARMUP_S, CHART_S = 20.0, 30.0
 YAW = float(os.environ.get("KOCH_PERF_YAW", "20"))
 # (seconds after start, console commands); FPS chart runs with no stat overlay so the overlay's cost is excluded
 STEPS = [
+    (0.5, [c.strip() for c in os.environ.get("KOCH_PERF_CMDS", "").split(";") if c.strip()]),
     (WARMUP_S, ["r.VSync 0", "t.MaxFPS 0", "r.ProfileGPU.ShowUI 0", "startfpschart"]),
     (WARMUP_S + CHART_S, ["stopfpschart", "stat unit", "stat gpu"]),
     (WARMUP_S + CHART_S + 4, ["shot showui", "ProfileGPU"]),
