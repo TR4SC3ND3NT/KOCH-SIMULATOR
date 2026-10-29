@@ -49,7 +49,6 @@ Story-driven first-person **shooter / action sandbox** (GTA-like) in **Unreal En
 ## Lore
 - **IMPORTANT: no real names in the game.** Use only KOCH (or other fictional) branding everywhere in the game: text, signage, logos, textures, decals, asset/file names, builds.
   - Never use "Ala-Too", "AIU", "IAAU", real logos, slogans or street names.
-  - Never use the likeness or names of real people.
   - The real name may appear only in `docs/reference/`.
 - **Human-only canon.** `docs/lore/canon/` is written by humans only. Never edit it and never invent canon.
 - **Missing lore:** use `TODO_LORE:` placeholders and add a question to `docs/lore/open_questions.md`.
