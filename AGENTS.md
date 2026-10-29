@@ -100,6 +100,9 @@ Story-driven first-person **shooter / action sandbox** (GTA-like) in **Unreal En
   - lock the file (UEGitPlugin "Check Out" or `git lfs lock`)
   - push and unlock the same day.
 - **Branches.** One task = one short branch, `feat/<role>/<slug>`. PR to `main` daily; keep PRs small.
+- **No AI attribution, ever.** Commits, PRs, docs and code carry no `Co-Authored-By`, `Claude-Session`, "Generated with …" or any other Claude/AI credit, from anyone.
+  - `.claude/settings.json` turns Claude Code's attribution off (`attribution` empty, `sessionUrl` false); keep it that way.
+  - Check `git log -1` before every push and strip any such line.
 - **Never commit:** `Binaries/ Intermediate/ Saved/ DerivedDataCache/`, or raw site captures (they contain people).
 - **Editors.** One editor per person; never run two agents against one editor.
 
