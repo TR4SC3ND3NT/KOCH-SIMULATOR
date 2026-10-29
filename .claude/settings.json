@@ -17,5 +17,11 @@
   },
   "enabledPlugins": {
     "unreal-engine-skills-for-claude-code@claude-plugins-official": true
-  }
+  },
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
+  "includeCoAuthoredBy": false
 }
