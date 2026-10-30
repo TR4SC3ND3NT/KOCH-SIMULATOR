@@ -1,10 +1,10 @@
 # Plan check of the greybox against the satellite orthophoto (R1 pass P0/P1 plan test): renders a top-down orthographic
 # Workbench view of a world box (object colours, transparent background) and blends it over the matching crop of the
-# local ortho (alatoo-capture/data/ortho/*.png + .json: extent_local, m_per_px), with the model's silhouette edges in
+# local ortho (_local/geo/ortho/*.png + .json: extent_local, m_per_px), with the model's silhouette edges in
 # magenta and a 5 m grid. Read-only (never saves the .blend). Ortho imagery is a local tracing reference: never commit
 # the output images.
 # Usage: blender -b Art/Blender/KOCH_Campus_Greybox.blend -P Scripts/Blender/plan_overlay.py -- \
-#          --box x0,y0,x1,y1 --ortho ~/alatoo-capture/data/ortho/ortho_google_z20 --out plan.png [--px 0.05]
+#          --box x0,y0,x1,y1 --ortho _local/geo/ortho/ortho_google_z20 --out plan.png [--px 0.05]
 #          [--zmax 30] [--hide REF_,CTX_,TER_]
 import argparse
 import json

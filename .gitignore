@@ -71,3 +71,6 @@ OWNER_LOG.md
 
 # terrain audit outputs (Scripts/Blender/terrain_audit.py)
 Art/Blender/Audit/
+
+# Local-only project data: photos, geo sources, incoming docs, backups (never committed)
+/_local/

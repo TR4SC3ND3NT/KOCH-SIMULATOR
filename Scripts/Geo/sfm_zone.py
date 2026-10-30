@@ -15,7 +15,7 @@ import numpy as np
 import pycolmap
 from PIL import Image, ImageOps
 
-RAW = os.path.expanduser(os.environ.get("KOCH_CAPTURE_DIR", "~/site-capture")) + "/raw"
+RAW = os.path.join(os.path.expanduser(os.environ.get("KOCH_CAPTURE_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "_local", "geo"))), "raw")
 DIAG_35MM = 43.27  # 35 mm-equivalent focal is defined on the 36x24 mm diagonal
 
 

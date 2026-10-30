@@ -15,7 +15,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 DATA = os.path.join(REPO, "Art", "Blender", "Data")
-CAPTURE_DIR = os.environ.get("KOCH_CAPTURE_DIR", os.path.expanduser("~/site-capture"))  # same as Scripts/Geo/campus_frame.py
+CAPTURE_DIR = os.environ.get("KOCH_CAPTURE_DIR", os.path.join(REPO, "_local", "geo"))  # same as Scripts/Geo/campus_frame.py
 ORTHO = os.path.join(CAPTURE_DIR, "ortho", "ortho_bing_z19.png")  # local tracing ref, never packed
 sys.path.insert(0, HERE)
 from greybox.common import (FASCIA_M, Terrain, add_box, add_prism, add_roof, ccw, clear_generated, drop_collinear,  # noqa: E402

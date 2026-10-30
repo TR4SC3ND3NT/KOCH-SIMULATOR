@@ -4,8 +4,8 @@ import os
 
 from pyproj import Transformer
 
-# Local site data (never committed: licensed imagery, captures with people). Expected: osm.json, cop.tif, ortho/.
-CAPTURE_DIR = os.environ.get("KOCH_CAPTURE_DIR", os.path.expanduser("~/site-capture"))
+# Local site data in <repo>/_local/geo (gitignored: licensed imagery, captures with people). Expected: osm.json, cop.tif, ortho/, raw/.
+CAPTURE_DIR = os.environ.get("KOCH_CAPTURE_DIR", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "_local", "geo"))
 
 ORIGIN_LAT = 42.8566  # site origin near the campus bbox centre; UE world (0,0) maps here
 ORIGIN_LON = 74.6790

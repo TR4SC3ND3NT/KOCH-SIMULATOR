@@ -18,7 +18,7 @@ from shapely.geometry import Polygon, shape
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SPECS = os.path.join(REPO, "Art", "Blender", "Specs")
-ORTHO = os.path.expanduser("~/site-capture/ortho/ortho_google_z20")
+ORTHO = os.path.join(REPO, "_local", "geo", "ortho", "ortho_google_z20")
 OUT = os.path.join(SPECS, "SITE_00_GroundCover.json")
 RES = 0.2                  # working resolution, m/px
 EXG_T, DARK_T = 5.0, 70.0  # excess-green threshold (0..255 units), shadow brightness threshold

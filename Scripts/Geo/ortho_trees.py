@@ -19,7 +19,7 @@ from shapely.ops import unary_union
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SPECS = os.path.join(REPO, "Art", "Blender", "Specs")
-ORTHO = os.path.expanduser("~/site-capture/ortho/ortho_google_z20")
+ORTHO = os.path.join(REPO, "_local", "geo", "ortho", "ortho_google_z20")
 RES = 0.1                                  # native ortho resolution, m/px
 CLEAR = 0.9                                # m: trunk clearance from path/hedge/wall centre lines
 EV = ("crown on the Google z20 ortho 2026 (dark canopy/shadow mass, r %.1f m); species class by crown size; "
