@@ -1,0 +1,38 @@
+PROPOSAL — not canon. A human lore author must approve and move it into docs/lore/canon/. (Delete this line before DataTable import.)
+Id,DisplayName,Kind,Faction,Location,FirstMission,Archetype,MeshSource,PlaceholderAsset,PlaceholderFabId,AnimSet,PerfTier,Notes
+CHR_Dan,Dan,Hero,Independent,Apartment;Bus;Gate;Campus,M00,Hero,MetaHumanCreator,MetaHuman Creator (NoEdge Free Rigged Male greybox),4f540229-7bdf-44d0-b486-8af9fbb3d82d,AS_Hero_GAS,T0,First Person Rendering full body; head/groom/mask owner-no-see; ponytail from M02
+CHR_Aibek,Aibek,Main,TalentProgram,BlockA_Clinic,M07,Rescue,MetaHumanCreator,MetaHuman Creator (NoEdge Free Rigged Male greybox),4f540229-7bdf-44d0-b486-8af9fbb3d82d,AS_Injured_Follow,T0,Patient gown; sedated walk; follow in M07
+CHR_Nurai,Nurai,Main,Independent,BlockB_BrewPoint,M02,Companion,MetaHumanCreator,MetaHuman Creator (NoEdge Free Rigged Female greybox),4f84cde6-f6b7-4bae-963b-50b417e77ebb,AS_Companion_GAS,T0,Companion via AKochCompanion skeletal path; needs non-lethal downed state
+CHR_Kuban,Kuban,Main,KOCHSecure,Gate_Booth,M01,GuardCheckpoint,MetaHumanCreator,Urban Security Officer,4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Guard_Checkpoint;AS_Takedown_Victim,T0,Pepper-spray + knife paired montage; fate TODO_LORE
+CHR_Temirov,Ruslan Temirov,Main,KOCHSecure,BlockA;AssemblyHall,M01,Boss,MetaHumanCreator,Urban Security Officer (black re-tint),4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Enemy_Rifle;AS_Boss_Temirov,T0,Final boss 900 HP 3 phases; radio voice from M03
+CHR_Ermekova,Dr. Saltanat Ermekova,Main,KOCH,BlockC_F5;BlockC_ServerRoom,M05,Executive,MetaHumanCreator,MetaHuman Creator (NoEdge Free Rigged Female greybox),4f84cde6-f6b7-4bae-963b-50b417e77ebb,AS_Office;AS_Conversation,T0,Talent Program Director and SIGHT lead
+CHR_Lind,Viktor Lind,Main,KOCH,BlockA_CEOFloor;AssemblyHall,M08,Executive,MetaHumanCreator,Office Worker 3 or 4 (suited male; check),007f9793-e57c-47dd-9ee0-0829a57bf1e4,AS_Speech;AS_Conversation,T0,Broadcast on hall screens is pre-rendered video
+CHR_Talgat,Talgat,Minor,Civilian,Bus,M00,BusDriver,MetaHumanCreator,Office Worker 3 or 4 (re-dressed),1f38e404-0322-42d6-897d-5cec85c06175,AS_Bus_Driver,T1,Bus driver; knows Dan
+CHR_Erlan,Erlan,Minor,KOCHSecure,Gate_Booth,M01,GuardCheckpoint,MetaHumanCreator,Urban Security Officer,4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Guard_Checkpoint;AS_Cower,T1,Booth operator; triggers alarm
+CHR_Aizada,Aizada,Minor,KOCH,BlockB_VisitorCenter,M02,OfficeStaff,MetaHumanCreator,Office Worker 3 or 4,007f9793-e57c-47dd-9ee0-0829a57bf1e4,AS_Conversation;AS_Cower,T1,PR host; SIGHT public demo VO
+CHR_Meerim,Meerim,Minor,TalentProgram,BlockC_Room203,M04,Intern,MetaHumanCreator,NoEdge Free Rigged Female,4f84cde6-f6b7-4bae-963b-50b417e77ebb,AS_Typing;AS_Cower,T1,Aibek's seatmate
+CHR_Zina,Zina-apa,Minor,Civilian,BlockC,M04,Cleaner,MetaHumanCreator,City Sample Crowds body,903037e9-e1ac-4f41-96e8-1683c6fa7ad4,AS_Cleaning;AS_Cower,T1,Optional hint giver
+CHR_Timur,Timur,Minor,KOCH,BlockC_F5,M05,Analyst,MetaHumanCreator,NoEdge Free Rigged Male,4f540229-7bdf-44d0-b486-8af9fbb3d82d,AS_Typing;AS_Cower,T1,SIGHT analyst; server-room access
+CHR_Gulzat,Gulzat,Minor,KOCH,BlockA_HR,M07,OfficeStaff,MetaHumanCreator,Office Worker 3 or 4,1f38e404-0322-42d6-897d-5cec85c06175,AS_Office;AS_HandsUp,T1,Holds Aibek's forged withdrawal form
+CHR_Raisa,Raisa,Minor,KOCH,BlockA_Archive,M07,OfficeStaff,MetaHumanCreator,City Sample Crowds body,903037e9-e1ac-4f41-96e8-1683c6fa7ad4,AS_Office,T1,Archivist; library wing
+CHR_Elmira,Elmira,Minor,KOCH,BlockA_Clinic,M07,MedicalStaff,MetaHumanCreator,NoEdge Free Rigged Female,4f84cde6-f6b7-4bae-963b-50b417e77ebb,AS_Medical;AS_HandsUp,T1,Clinic nurse; can give isolation key
+CHR_Kamila,Kamila,Minor,KOCH,BlockA_CEOFloor;AssemblyHall,M08,Executive,MetaHumanCreator,Office Worker 3 or 4,007f9793-e57c-47dd-9ee0-0829a57bf1e4,AS_Phone;AS_Cower,T1,Lind's assistant; runs broadcast
+CHR_Bolot,Bolot,Minor,KOCHSecure,BlockA_Clinic,M07,Elite,MetaHumanCreator,Urban Security Officer (black re-tint),4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Enemy_Heavy,T1,Mini-boss 600 HP
+ENM_GuardCheckpoint,Checkpoint Guard,Enemy,KOCHSecure,Gate;BlockB_Entrance,M01,GuardCheckpoint,MetaHumanCreator,Urban Security Officer,4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Guard_Checkpoint;AS_Enemy_Melee,T1,Baton; 100 HP; no armour; max 3
+ENM_GuardPatrol,Patrol Guard,Enemy,KOCHSecure,Alley;Garden;Canteen;Lobbies,M01,GuardPatrol,MetaHumanCreator,Urban Security Officer,4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Enemy_Pistol,T1,Pistol; 100 HP; max 6
+ENM_Tactical,Tactical Response,Enemy,KOCHSecure,DrillGround;Gate;Garden;BlockC;BlockA,M04,Tactical,MetaHumanCreator,Urban Security Officer + helmet,4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Enemy_Rifle,T1,Rifle; 150 HP; torso x0.6; head x1.5; max 6
+ENM_Elite,Temirov Elite,Enemy,KOCHSecure,BlockA;AssemblyHall;Street,M08,Elite,MetaHumanCreator,Urban Security Officer (black re-tint),4e63f4d8-eabe-45d0-91d2-a6d7a7d44494,AS_Enemy_Rifle,T1,Rifle/SMG; 200 HP; torso x0.5; head x1.25; max 4
+CIV_Pedestrian,Pedestrian,Civilian,Civilian,Street;Crossing;BusStop,M00,Crowd,MetaHumanCollection,MetaHuman Crowd Sample,5f481d73-afb1-4d94-ba6e-7cabf5d296fa,AS_Crowd_Street,T2,20-40 visible via Mass
+CIV_BusPassenger,Bus Passenger,Civilian,Civilian,Bus,M00,Crowd,MetaHumanCollection,City Sample Crowds,903037e9-e1ac-4f41-96e8-1683c6fa7ad4,AS_Bus_Passenger,T2,8-12; nearest 4 as T1
+CIV_StaffQueue,Staff in Queue,Civilian,KOCH,Gate,M01,OfficeStaff,MetaHumanCollection,Office Worker 3,007f9793-e57c-47dd-9ee0-0829a57bf1e4,AS_Queue;AS_Flee,T2,4-8 before alarm
+CIV_Visitor,Visitor,Civilian,Civilian,BlockB_VisitorCenter,M02,Crowd,MetaHumanCollection,City Sample Crowds,903037e9-e1ac-4f41-96e8-1683c6fa7ad4,AS_Visitor;AS_Cower,T2,6-10
+CIV_Barista,Barista,Civilian,KOCH,BlockB_BrewPoint,M02,Service,MetaHumanCreator,NoEdge Free Rigged Female,4f84cde6-f6b7-4bae-963b-50b417e77ebb,AS_Coffee_Serve,T1,1-2 besides Nurai
+CIV_OfficeStaff,Office Staff,Civilian,KOCH,BlockA;BlockB;BlockC,M02,OfficeStaff,MetaHumanCollection,Office Worker 4,1f38e404-0322-42d6-897d-5cec85c06175,AS_Office;AS_Cower,T2,A 8-12; B 4-6; C 4-6
+CIV_Executive,Executive,Civilian,KOCH,BlockA_CEOFloor;Finance;Legal,M07,Executive,MetaHumanCollection,Office Worker 3,007f9793-e57c-47dd-9ee0-0829a57bf1e4,AS_Phone;AS_HandsUp,T2,3-5
+CIV_Intern,Intern,Civilian,TalentProgram,BlockC;Canteen;Garden,M04,Intern,MetaHumanCollection,MetaHuman Crowd Sample,5f481d73-afb1-4d94-ba6e-7cabf5d296fa,AS_Typing;AS_Cower,T2,C 12-20
+CIV_Analyst,Analyst,Civilian,KOCH,BlockC_F5,M05,Analyst,MetaHumanCollection,NoEdge Free Rigged Male,4f540229-7bdf-44d0-b486-8af9fbb3d82d,AS_Typing;AS_Cower,T2,3-5
+CIV_Cleaner,Cleaner,Civilian,KOCH,BlockA;BlockB;BlockC,M02,Service,MetaHumanCreator,NoEdge Free Rigged Female,4f84cde6-f6b7-4bae-963b-50b417e77ebb,AS_Cleaning;AS_Cower,T1,1-2 per building
+CIV_Cook,Cook,Civilian,KOCH,Canteen,S03,Service,MetaHumanCreator,NoEdge Free Rigged Male,4f540229-7bdf-44d0-b486-8af9fbb3d82d,AS_Cook;AS_Cower,T1,2-4
+CIV_Diner,Diner,Civilian,KOCH,Canteen,S03,Crowd,MetaHumanCollection,MetaHuman Crowd Sample,5f481d73-afb1-4d94-ba6e-7cabf5d296fa,AS_Sit_Eat;AS_Flee,T2,15-25
+CIV_GardenWalker,Garden Walker,Civilian,KOCH,Garden;Maze;Gazebos,M03,Crowd,MetaHumanCollection,MetaHuman Crowd Sample,5f481d73-afb1-4d94-ba6e-7cabf5d296fa,AS_Bench;AS_Talk;AS_Flee,T2,6-10
+CIV_MedicalStaff,Medical Staff,Civilian,KOCH,BlockA_Clinic,M07,MedicalStaff,MetaHumanCreator,NoEdge Free Rigged Male,4f540229-7bdf-44d0-b486-8af9fbb3d82d,AS_Medical;AS_Cower,T1,2-3
