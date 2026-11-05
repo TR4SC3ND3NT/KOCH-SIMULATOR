@@ -8,7 +8,7 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
 ## Overview
 | Location | Spec | Status | KOCH function | Missions |
 |---|---|---|---|---|
-| Dan's apartment | – | NEEDS BUILD | Home (city) | M00 |
+| Arsen's apartment | – | NEEDS BUILD | Home (city) | M00 |
 | Bus stop + bus interior | – | NEEDS BUILD | City transit | M00, ending B |
 | Street sidewalk | SITE_StreetFront | EXISTS | Avenue in front of HQ | M00 |
 | Crossing | SITE_Gate (Crossing, Zebra) | EXISTS | Pedestrian crossing | M00, ending A |
@@ -32,11 +32,11 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
 
 ---
 
-## Dan's apartment — NEEDS BUILD
+## Arsen's apartment — NEEDS BUILD
 - **Function:** 2-room flat in a 9-storey Soviet block (match the context-city facades).
-- **Who:** Dan alone (Aibek's things untouched).
+- **Who:** Arsen alone (Isa's things untouched).
 - **Events:** M00 wake, pack, voicemail.
-- **Props:** guitar case open on the floor; rifle wrapped in a blanket under the bed; Aibek's mattress, keyboard, Talent Program welcome mug; missing-person flyers (photo of Aibek, phone number); KOCH HR letter (C01); calendar with "Day 21" circled; window view of the KOCH rooftop ad.
+- **Props:** guitar case open on the floor; rifle wrapped in a blanket under the bed; Isa's mattress, keyboard, Talent Program welcome mug; missing-person flyers (photo of Isa, phone number); KOCH HR letter (C01); calendar with "Day 21" circled; window view of the KOCH rooftop ad.
 - **Audio:** fridge hum, neighbours through the wall, trolleybus outside, kettle.
 
 ## Bus stop + bus interior — NEEDS BUILD
@@ -56,13 +56,13 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
 
 ## SITE_Gate + BLD_GateBooth — EXISTS ("Post One")
 - **Function:** KOCH Secure checkpoint. Turnstile_In / Turnstile_Out with FaceTerminal_In (faces street) and FaceTerminal_Out; booth with service window, BagRest_Booth, CardReader_Booth, CCTV; SlidingGate for vehicles.
-- **Who:** Kuban (Day 0 morning, alone). After M01: patrol pairs. Lockdown: gate fail-locked. Ending A: police, press, Nurai.
-- **Events:** M01 refusal, Kuban scene, takedown; ending A walk-out.
+- **Who:** Azamat (Day 0 morning, alone). After M01: patrol pairs. Lockdown: gate fail-locked. Ending A: police, press, Nurai.
+- **Events:** M01 refusal, Azamat scene, takedown; ending A walk-out.
 - **Props / story text:**
-  - FaceTerminal screen states: "LOOK AT THE CAMERA" / "WELCOME, <NAME>" / "FACE NOT VISIBLE. REMOVE FACE COVERING." / ending A "IDENTIFIED: DANIYAR".
+  - FaceTerminal screen states: "LOOK AT THE CAMERA" / "WELCOME, <NAME>" / "FACE NOT VISIBLE. REMOVE FACE COVERING." / ending A "IDENTIFIED: ARSEN".
   - BoothPlaque: "KOCH SECURE – POST ONE". TestCentrePlate: "FACEGATE PILOT SITE 01" (proposal).
   - Billboard_West: SIGHT ad (TODO_LORE slogan).
-  - Inside the booth: kettle, family photo taped to the monitor (Kuban's kids), shift log (C04), FaceGate monitor (C05), panic button, coat hook.
+  - Inside the booth: kettle, family photo taped to the monitor (Azamat's kids), shift log (C04), FaceGate monitor (C05), panic button, coat hook.
   - InfoBoard_Yard: visitor rules ("Faces must be visible at all times").
 - **Audio:** turnstile beeps, FaceGate chime / refusal buzz, radio static, street noise through the fence.
 
@@ -83,8 +83,8 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
 ## SITE_Garden — EXISTS
 - **Function:** formal staff garden: 2 gazebos, hedge maze + 8 hedge arches, centre square, pergola walk, HallWalk along the sports hall gallery.
 - **Who:** smokers, a gardener (morning); M03 patrols.
-- **Events:** M03 companion route with Nurai; Aibek's voice note at the west gazebo.
-- **Props:** FireBoard_* (security drill memo, C10); bench plaque "In honour of our Talent cohort 5"; cigarette butts in the gazebo; Aibek's initials scratched into the gazebo parapet.
+- **Events:** M03 companion route with Nurai; Isa's voice note at the west gazebo.
+- **Props:** FireBoard_* (security drill memo, C10); bench plaque "In honour of our Talent cohort 5"; cigarette butts in the gazebo; Isa's initials scratched into the gazebo parapet.
 - **Audio:** wind in hedges, sparrows, sprinklers, distant drill whistles from the courts.
 
 ## SITE_CPlaza — EXISTS
@@ -105,7 +105,7 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
 - **Function:** F2–F3 Annotation Cells (rooms with PC rows, CCTV in every room = baseline recording); F2 R207, F3 R307 meeting rooms; F4 management review rooms R405, R408, R409.
 - **Who:** 6–8 interns per active cell; instructors; M04 tactical team.
 - **Events:** M04 room 203 search + fight; M05 climb.
-- **Props:** room 203: 8 screens with face grids and tag buttons ("Calm / Nervous / Hostile"), Aibek's cleared desk (C11), instructor PC (C12, C13), whiteboard corner with the music bar + "B-0"; R207 retention minutes (C14); R409 wall screen "Contract signing 12:00 – Assembly Hall"; per-room CCTV with a red rec light.
+- **Props:** room 203: 8 screens with face grids and tag buttons ("Calm / Nervous / Hostile"), Isa's cleared desk (C11), instructor PC (C12, C13), whiteboard corner with the music bar + "B-0"; R207 retention minutes (C14); R409 wall screen "Contract signing 12:00 – Assembly Hall"; per-room CCTV with a red rec light.
 - **Audio:** mouse clicks, keyboard rattle, a quiet "next" tone every 9 seconds per tagged face.
 
 ## Block C F5 attic — PARTIAL
@@ -126,7 +126,7 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
 - **Door plates (proposal, TODO_LORE):** BayE A "STUDIO STORE", B "WARDROBE", C "CLEANERS"; BayW C001 "C-001 NODE – AUTHORISED ONLY", black door "PLANT ROOM", wood door "STORAGE".
 - **Who:** M06 patrol 2, then tactical.
 - **Events:** M06 drive pickup, contract copy, SIGHT shutdown.
-- **Props:** Piano_Notice = rehearsal rota with Aibek's name pencilled (C17); piano 2 loose lower panel; node room: 4 racks, cable trays, admin terminal, red "NODE ONLINE" lights, temperature log; BayW_Sign_KOCH emblem.
+- **Props:** Piano_Notice = rehearsal rota with Isa's name pencilled (C17); piano 2 loose lower panel; node room: 4 racks, cable trays, admin terminal, red "NODE ONLINE" lights, temperature log; BayW_Sign_KOCH emblem.
 - **Audio:** piano (the theme), rack fans, after shutdown: dead silence then alarms.
 
 ## Block A — exteriors EXIST, interiors NEEDS BUILD
@@ -136,7 +136,7 @@ All in-game text is KOCH-branded. Items marked TODO_LORE need a human-approved t
   - **A_W south part: Assembly Hall** – double-height auditorium, stage, lectern, big screen, rear gallery with the AV booth; delegates enter from the A_S entrance pavilion.
   - **A_S F3: CEO floor** – Lind's office (seen from the square; ending cutscene shots), boardroom.
   - **A_S/A_N F1–F2: HR, Finance, Legal** – corridors for M07 routing; HR has the "resignation" letter template.
-- **Who:** M07: Elmira, Aibek, tactical team. M08: Lind, Temirov, elite, delegates, press camera crew.
+- **Who:** M07: Elmira, Isa, tactical team. M08: Lind, Temirov, elite, delegates, press camera crew.
 - **Props:** Clinic: room 4 chart (C19), restraints, sedative trolley, "Security hold – T." sticker on the door; Archive: AV contract binder (C20), old Talent cohort yearbooks; Assembly Hall: banner "SAFE CITY – SIGNING CEREMONY" (proposal), lectern with KOCH emblem, live camera with red tally light, AV desk + patch bay, Lind's speech draft (part of C20 set).
 - **Audio:** Clinic: monitor beeps, ventilation; Archive: hush, paper; Assembly Hall: room tone of 60 people, mic feedback, applause tracks.
 
