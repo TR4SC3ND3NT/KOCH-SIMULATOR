@@ -40,7 +40,14 @@ Measured 2026-11-25 on reference machine B (Radeon RX 6750 GRE 12 GB, Ryzen 5 55
 | Yard | 72.2 | 1.5 ms | 13.8 ms | 12.5 ms | 0.0 % | 5.19 GB |
 | Block C hall | 80.3 | 1.6 ms | 12.5 ms | 11.2 ms | 0.0 % | 5.18 GB |
 
-**Packaged build** (Win64 Development, no editor, 1920×1080 windowed, Epic, CSV profiler over 1500 frames at the street start): 98.1 fps average, frame time 10.2 ms (95th percentile 11.4 ms, worst 15.1 ms, 0 % over 16.7 ms); game thread 2.1 ms, render thread 10.2 ms, RHI thread 2.7 ms, GPU 8.7 ms.
+**Packaged build** (Win64 Development, no editor, 1920×1080 windowed, Epic, CSV profiler over the last 1500 of 2400 frames, `BugItGo` to each point):
+
+| Point | fps | Game thread | Render thread | GPU | Frames over 16.7 ms | VRAM |
+|---|---|---|---|---|---|---|
+| Street (bus stop side) | 101.6 | 1.7 ms | 9.8 ms | 8.6 ms | 0.1 % | 4.67 GB |
+| Checkpoint | 88.3 | 1.5 ms | 11.3 ms | 9.8 ms | 0.0 % | 4.82 GB |
+| Alley | 91.6 | 1.4 ms | 10.9 ms | 9.6 ms | 0.0 % | 4.81 GB |
+| Block C hall | 117.1 | 1.4 ms | 8.5 ms | 7.4 ms | 0.0 % | 4.75 GB |
 
 Target: 60 fps at 1080p and at most 7 GB VRAM. Met at every point. The limit is now the render thread at the checkpoint and in the alley (15.5 ms, mostly waiting on the RHI thread and visibility tasks); it is the next target for CP2. Not measured yet: reference machine A (RTX 3070 Ti Laptop).
 

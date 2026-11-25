@@ -95,7 +95,7 @@ Palette, sampled from the engine and site photos (check against the Art Bible): 
 **Performance target:** stable 60 fps at 1080p, at most 7 GB VRAM, on an RTX 3070 Ti Laptop and an RX 6750 GRE.
 - **Upscaling:** TSR by default. DLSS Super Resolution (NVIDIA) and FSR (AMD) are options. No frame generation.
 - **Measured (2026-10-28, RTX 3070 Laptop, whole campus):** 54.5 fps. With the skinned wind trees hidden: 60.6 fps. The trees cost about 2 ms on the render thread.
-- **Measured (2026-11-25, RX 6750 GRE, the slice route, 1080p Epic):** 63.8–80.3 fps at five points, VRAM 5.1–5.3 GB, after the wind trees stopped their unused CPU pose update (before: 32.6–71.3 fps). Table: [docs/checkpoints/cp1/README.md](docs/checkpoints/cp1/README.md#performance).
+- **Measured (2026-11-25, RX 6750 GRE, the slice route, 1080p Epic):** 63.8–80.3 fps at five points, VRAM 5.1–5.3 GB, after the wind trees stopped their unused CPU pose update (before: 32.6–71.3 fps). Packaged build: 88–117 fps, VRAM 4.7–4.8 GB. Table: [docs/checkpoints/cp1/README.md](docs/checkpoints/cp1/README.md#performance).
 
 | GPU pass | Budget, ms |
 |---|---|
