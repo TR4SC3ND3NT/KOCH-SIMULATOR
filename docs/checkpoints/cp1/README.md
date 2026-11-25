@@ -15,7 +15,7 @@
 - The game starts on `L_GreyboxTest` at the street start (`PlayerStart_Prologue`, bus stop side), facing the zebra crossing and the gate.
 - Placeholder hero: the first-person player mannequin. Placeholder guard: an idle mannequin in front of the turnstile (`Guard_Placeholder_Gate`).
 - The route street → crossing → gate is walkable; the turnstile and the sliding gate are shut (the refusal beat). Behind the gate, alley → yard → Block C hall is walkable too (checked with capsule sweeps along the whole route).
-- Packaged Win64 build of the slice: `KochSimulator.exe` (Development), cooked from `L_GreyboxTest` only.
+- Packaged Win64 build of the slice: `KochSimulator.exe` (Development), cooked from `L_GreyboxTest` only (2.4 GB, kept out of Git). It starts at the street with no editor running. Command: `RunUAT BuildCookRun -platform=Win64 -clientconfig=Development -build -cook -map=/Game/KochSimulator/Maps/L_GreyboxTest -stage -pak -iostore -archive`.
 
 ## Performance
 Measured 2026-11-25 on reference machine B (Radeon RX 6750 GRE 12 GB, Ryzen 5 5500X3D, 16 GB RAM): `-game` from the editor binary, 1920×1080, Epic scalability, TSR, VSync off, `Scripts/Unreal/perf_capture.py` (30 s FPS chart after 20 s warm-up) at five points along the slice. VRAM is the game process's dedicated GPU memory (Windows counter, median of the run).
@@ -39,6 +39,8 @@ Measured 2026-11-25 on reference machine B (Radeon RX 6750 GRE 12 GB, Ryzen 5 55
 | Alley | 64.5 | 1.6 ms | 15.5 ms | 14.2 ms | 0.0 % | 5.25 GB |
 | Yard | 72.2 | 1.5 ms | 13.8 ms | 12.5 ms | 0.0 % | 5.19 GB |
 | Block C hall | 80.3 | 1.6 ms | 12.5 ms | 11.2 ms | 0.0 % | 5.18 GB |
+
+**Packaged build** (Win64 Development, no editor, 1920×1080 windowed, Epic, CSV profiler over 1500 frames at the street start): 98.1 fps average, frame time 10.2 ms (95th percentile 11.4 ms, worst 15.1 ms, 0 % over 16.7 ms); game thread 2.1 ms, render thread 10.2 ms, RHI thread 2.7 ms, GPU 8.7 ms.
 
 Target: 60 fps at 1080p and at most 7 GB VRAM. Met at every point. The limit is now the render thread at the checkpoint and in the alley (15.5 ms, mostly waiting on the RHI thread and visibility tasks); it is the next target for CP2. Not measured yet: reference machine A (RTX 3070 Ti Laptop).
 
