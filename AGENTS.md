@@ -82,13 +82,13 @@ Story-driven first-person **shooter / action sandbox** (GTA-like) in **Unreal En
   - Everything under `Content/KochSimulator/`; sandboxes in `Content/Developers/<name>/`.
   - Never rename by changing case only (Linux is case-sensitive).
 
-## Roles (owners TBD, each person states theirs in CLAUDE.local.md)
-| Role | Owns |
-|---|---|
-| R1 World/Map | Environment, Maps, landscape, PCG, foliage, lighting, `Source/*/World` |
-| R2 Characters & Animation | Characters, MetaHumans, AnimBPs, mocap, retargeting |
-| R3 Gameplay & Combat | `Source/*/{Player,Combat,AI,Interaction}`: weapons, enemy AI, damage, physics interaction |
-| R4 Narrative, UI & Integration | `Narrative/`, UI, Audio, `Source/*/{Narrative,UI}`, settings menu, packaging |
+## Roles (decided 2026-11-25, see docs/decisions.md)
+| Role | Owner | Owns |
+|---|---|---|
+| R1 World/Map | Transcendentalism | Environment, Maps, landscape, PCG, foliage, lighting, `Source/*/World` |
+| R2 Characters & Animation | Azamat | Characters, MetaHumans, AnimBPs, mocap, retargeting |
+| R3 Gameplay & Combat | Ulukbek | `Source/*/{Player,Combat,AI,Interaction}`: weapons, enemy AI, damage, physics interaction |
+| R4 Narrative, UI & Integration | Eldiyar | `Narrative/`, UI, Audio, `Source/*/{Narrative,UI}`, settings menu, packaging |
 
 - Stay in your role's folders.
 - Shared files need approval from 2 people: `Source/*/Core`, `Config/`, `.uproject`, `AGENTS.md`, `CLAUDE.md`.

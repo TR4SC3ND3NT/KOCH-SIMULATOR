@@ -6,11 +6,36 @@ Rules: [AGENTS.md](AGENTS.md) · Plan: [docs/STRATEGY.md](docs/STRATEGY.md) · R
 
 ![Key art: the KOCH yard in UE 5.8](docs/checkpoints/cp4/keyart.jpg)
 
-## Status (2026-10-29)
-- **World (R1):** the whole campus is a 1:1 greybox in Blender (`Art/Blender/KOCH_Campus_Greybox.blend`), built from JSON specs, and imported into UE as `Content/KochSimulator/Maps/L_GreyboxTest` (2324 Nanite meshes, 7474 actors).
-- **UE project (R4):** `KochSimulator.uproject` from the C++ First Person template, with a first pass of materials, vegetation and lighting.
-- **Gameplay (prototype):** rifle with reload and ejected cases (Q), companion that follows the player (T), in-game review marks (LMB/RMB).
-- **Characters:** not started. Pipeline chosen: phone scan → RealityScan → Mesh to MetaHuman.
+## Status (2026-11-25)
+- **Slice (frozen for Checkpoint 1):** a 5-minute prologue on one route: street (bus stop side) → zebra crossing → gate checkpoint → alley between B and A → yard in front of Block C → Block C hall. Script: [docs/checkpoints/cp1/slice_script.md](docs/checkpoints/cp1/slice_script.md). Decisions: [docs/decisions.md](docs/decisions.md).
+- **World (R1, Transcendentalism):** the whole campus is a 1:1 greybox in Blender (`Art/Blender/KOCH_Campus_Greybox.blend`), built from JSON specs, and imported into UE as `Content/KochSimulator/Maps/L_GreyboxTest` (8121 actors with World Partition + One File Per Actor). The whole slice route is walkable.
+- **Gameplay (R3, Ulukbek):** the game starts on the street at the prologue start; rifle with reload and ejected cases (Q); in-game review marks (LMB/RMB). A combat prototype (simulated bullets, hit zones, hit reactions, recoil, aiming, sprint, crouch) is on a local branch for CP2.
+- **Characters (R2, Azamat):** placeholders in the build (first-person mannequin, an idle mannequin guard at the gate). MetaHuman pipeline started (MetaHumanCharacter plugin enabled, first test character in `Content/Developers/Azamat`).
+- **Narrative, UI, integration (R4, Eldiyar):** HUD ammo counter and mockups; packaged Win64 build of the slice made for CP1.
+
+### Slice assets (one owner each)
+| Asset | Now | Status | Owner |
+|---|---|---|---|
+| Campus 1:1, blocks A–D, ground, street furniture | Blender greybox in UE | Done | Transcendentalism |
+| Street and zebra crossing (bus stop side) | greybox, walkable; no bus stop model yet | In progress | Transcendentalism |
+| Gate checkpoint: booth, canopy, turnstile, sliding gate | greybox, walkable up to the turnstile | In progress | Transcendentalism |
+| Alley between B and A, yard in front of Block C | greybox, walkable | In progress | Transcendentalism |
+| Block C hall (ground floor) | greybox interior, walkable | In progress | Transcendentalism |
+| PBR materials for facades and paving | first pass | In progress | Transcendentalism |
+| Lighting and post-process | first pass | In progress | Transcendentalism |
+| Trees and shrubs along the route | PVE trees with GPU wind | In progress | Transcendentalism |
+| Hero (long hair, mask) | first-person mannequin | In progress (MetaHuman from scans) | Azamat |
+| Checkpoint guard | idle mannequin at the gate | In progress | Azamat |
+| KOCH staff NPCs | — | Not started | Azamat |
+| Rifle in the guitar case: draw, fire, reload | rifle prototype; no case yet | In progress | Ulukbek |
+| Pepper spray and knife | — | Not started | Ulukbek |
+| Turnstile refusal and the guard encounter (win/fail) | turnstile blocks the way | Not started | Ulukbek |
+| Game start on the street (`PlayerStart_Prologue`) | in the build | Done | Ulukbek |
+| HUD: health, ammo, interaction prompt | ammo counter + mockup | In progress | Eldiyar |
+| Main menu and settings | mockup | Not started | Eldiyar |
+| Intro card and guard dialogue (Ink) | waits for the canon text | Not started | Eldiyar |
+| Audio: street ambience, weapon sounds | — | Not started | Eldiyar |
+| Packaged build | Win64 Development, CP1 | Done (CP1) | Eldiyar |
 
 ## Checkpoint 4
 
@@ -70,6 +95,7 @@ Palette, sampled from the engine and site photos (check against the Art Bible): 
 **Performance target:** stable 60 fps at 1080p, at most 7 GB VRAM, on an RTX 3070 Ti Laptop and an RX 6750 GRE.
 - **Upscaling:** TSR by default. DLSS Super Resolution (NVIDIA) and FSR (AMD) are options. No frame generation.
 - **Measured (2026-10-28, RTX 3070 Laptop, whole campus):** 54.5 fps. With the skinned wind trees hidden: 60.6 fps. The trees cost about 2 ms on the render thread.
+- **Measured (2026-11-25, RX 6750 GRE, the slice route, 1080p Epic):** 63.8–80.3 fps at five points, VRAM 5.1–5.3 GB, after the wind trees stopped their unused CPU pose update (before: 32.6–71.3 fps). Table: [docs/checkpoints/cp1/README.md](docs/checkpoints/cp1/README.md#performance).
 
 | GPU pass | Budget, ms |
 |---|---|
