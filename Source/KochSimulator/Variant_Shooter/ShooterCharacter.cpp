@@ -14,11 +14,19 @@
 #include "TimerManager.h"
 #include "ShooterGameMode.h"
 #include "Animation/AnimInstance.h"
+#include "Player/KochRecoilComponent.h"
+#include "Player/KochStanceComponent.h"
+#include "Player/KochViewMotionComponent.h"
 
 AShooterCharacter::AShooterCharacter()
 {
 	// create the noise emitter component
 	PawnNoiseEmitter = CreateDefaultSubobject<UPawnNoiseEmitterComponent>(TEXT("Pawn Noise Emitter"));
+
+	// weapon handling and stance (Source/KochSimulator/Player)
+	RecoilComponent = CreateDefaultSubobject<UKochRecoilComponent>(TEXT("Recoil"));
+	StanceComponent = CreateDefaultSubobject<UKochStanceComponent>(TEXT("Stance"));
+	ViewMotionComponent = CreateDefaultSubobject<UKochViewMotionComponent>(TEXT("View Motion"));
 
 	// configure movement
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 600.0f, 0.0f);
@@ -66,6 +74,9 @@ void AShooterCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 		EnhancedInputComponent->BindAction(DrawWeaponAction, ETriggerEvent::Started, this, &AShooterCharacter::DoToggleWeapon);
 		EnhancedInputComponent->BindAction(ReloadAction, ETriggerEvent::Started, this, &AShooterCharacter::DoReload);
 		EnhancedInputComponent->BindAction(SpawnCompanionAction, ETriggerEvent::Started, this, &AShooterCharacter::DoSpawnCompanion);
+
+		// aim, sprint, crouch
+		StanceComponent->SetupInput(EnhancedInputComponent);
 	}
 
 }
@@ -98,7 +109,9 @@ void AShooterCharacter::DoAim(float Yaw, float Pitch)
 	// only route inputs if the character is not dead
 	if (!IsDead())
 	{
-		Super::DoAim(Yaw, Pitch);
+		// slower while zoomed in, so the on-screen turn speed stays the same
+		const float LookScale = StanceComponent->GetLookScale();
+		Super::DoAim(Yaw * LookScale, Pitch * LookScale);
 	}
 }
 
@@ -201,6 +214,7 @@ void AShooterCharacter::DoToggleWeapon()
 	{
 		CurrentWeapon->ActivateWeapon(PlayerTag);
 	}
+	StanceComponent->SetWeaponReady(HasWeaponDrawn());
 }
 
 void AShooterCharacter::DoReload()
@@ -279,6 +293,18 @@ void AShooterCharacter::AddWeaponRecoil(float Recoil)
 	AddControllerPitchInput(Recoil);
 }
 
+void AShooterCharacter::AddWeaponKick(const FKochRecoilSpec& RecoilSpec)
+{
+	RecoilComponent->AddKick(RecoilSpec);
+	StanceComponent->NotifyFired();
+	ViewMotionComponent->NotifyFired();
+}
+
+float AShooterCharacter::GetWeaponSpreadScale() const
+{
+	return StanceComponent->GetSpreadScale();
+}
+
 void AShooterCharacter::UpdateWeaponHUD(int32 CurrentAmmo, int32 MagazineSize)
 {
 	OnBulletCountUpdated.Broadcast(MagazineSize, CurrentAmmo);
@@ -339,6 +365,8 @@ void AShooterCharacter::OnWeaponActivated(AShooterWeapon* Weapon)
 {
 	// any activation (draw, pickup, switch) puts the weapon in hand
 	bWeaponHolstered = false;
+	StanceComponent->SetWeaponReady(true);
+	ViewMotionComponent->SetWeapon(Weapon);
 
 	// update the bullet counter
 	OnBulletCountUpdated.Broadcast(Weapon->GetMagazineSize(), Weapon->GetBulletCount());
@@ -353,6 +381,7 @@ void AShooterCharacter::OnWeaponDeactivated(AShooterWeapon* Weapon)
 	// holstered: back to the unarmed poses and an empty ammo counter
 	if (bWeaponHolstered)
 	{
+		ViewMotionComponent->SetWeapon(nullptr);
 		GetFirstPersonMesh()->SetAnimInstanceClass(UnarmedFirstPersonAnimClass);
 		GetMesh()->SetAnimInstanceClass(UnarmedThirdPersonAnimClass);
 		OnBulletCountUpdated.Broadcast(0, 0);
@@ -387,6 +416,8 @@ void AShooterCharacter::Die()
 	{
 		CurrentWeapon->DeactivateWeapon();
 	}
+	StanceComponent->SetWeaponReady(false);
+	ViewMotionComponent->SetWeapon(nullptr);
 
 	// increment the team score
 	if (AShooterGameMode* GM = Cast<AShooterGameMode>(GetWorld()->GetAuthGameMode()))

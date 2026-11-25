@@ -178,13 +178,21 @@ void AShooterNPC::Die()
 	GetCharacterMovement()->StopMovementImmediately();
 	GetCharacterMovement()->StopActiveMovement();
 
+	StartDeathPhysics();
+
+	// schedule actor destruction
+	if (DeferredDestructionTime > 0.0f)
+	{
+		GetWorld()->GetTimerManager().SetTimer(DeathTimer, this, &AShooterNPC::DeferredDestruction, DeferredDestructionTime, false);
+	}
+}
+
+void AShooterNPC::StartDeathPhysics()
+{
 	// enable ragdoll physics on the third person mesh
 	GetMesh()->SetCollisionProfileName(RagdollCollisionProfile);
 	GetMesh()->SetSimulatePhysics(true);
 	GetMesh()->SetPhysicsBlendWeight(1.0f);
-
-	// schedule actor destruction
-	GetWorld()->GetTimerManager().SetTimer(DeathTimer, this, &AShooterNPC::DeferredDestruction, DeferredDestructionTime, false);
 }
 
 void AShooterNPC::DeferredDestruction()

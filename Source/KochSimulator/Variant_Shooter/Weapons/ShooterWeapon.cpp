@@ -14,6 +14,10 @@
 #include "GameFramework/Controller.h"
 #include "Engine/StaticMeshActor.h"
 #include "Components/StaticMeshComponent.h"
+#include "Combat/KochBallisticsSubsystem.h"
+#include "Kismet/GameplayStatics.h"
+#include "Sound/SoundBase.h"
+#include "Components/PointLightComponent.h"
 
 AShooterWeapon::AShooterWeapon()
 {
@@ -37,6 +41,16 @@ AShooterWeapon::AShooterWeapon()
 	ThirdPersonMesh->SetCollisionProfileName(FName("NoCollision"));
 	ThirdPersonMesh->SetFirstPersonPrimitiveType(EFirstPersonPrimitiveType::WorldSpaceRepresentation);
 	ThirdPersonMesh->bOwnerNoSee = true;
+
+	// muzzle flash light: off until a shot, no shadows (it lives for a few frames)
+	MuzzleLight = CreateDefaultSubobject<UPointLightComponent>(TEXT("Muzzle Light"));
+	MuzzleLight->SetupAttachment(FirstPersonMesh);
+	MuzzleLight->SetIntensityUnits(ELightUnits::Candelas);
+	MuzzleLight->SetIntensity(700.0f);
+	MuzzleLight->SetAttenuationRadius(900.0f);
+	MuzzleLight->SetLightColor(FLinearColor(1.0f, 0.72f, 0.42f));
+	MuzzleLight->SetCastShadows(false);
+	MuzzleLight->SetVisibility(false);
 }
 
 void AShooterWeapon::BeginPlay()
@@ -55,6 +69,9 @@ void AShooterWeapon::BeginPlay()
 
 	// attach the meshes to the owner
 	WeaponOwner->AttachWeaponMeshes(this);
+
+	// the muzzle socket name is Blueprint data, so the light can only be placed now
+	MuzzleLight->AttachToComponent(FirstPersonMesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, MuzzleSocketName);
 }
 
 void AShooterWeapon::EndPlay(EEndPlayReason::Type EndPlayReason)
@@ -64,6 +81,7 @@ void AShooterWeapon::EndPlay(EEndPlayReason::Type EndPlayReason)
 	// clear the refire and reload timers
 	GetWorld()->GetTimerManager().ClearTimer(RefireTimer);
 	GetWorld()->GetTimerManager().ClearTimer(ReloadTimer);
+	GetWorld()->GetTimerManager().ClearTimer(MuzzleFlashTimer);
 }
 
 void AShooterWeapon::OnOwnerDestroyed(AActor* DestroyedActor)
@@ -177,29 +195,54 @@ void AShooterWeapon::FireCooldownExpired()
 
 void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 {
-	// get the projectile transform
-	FTransform ProjectileTransform = CalculateProjectileSpawnTransform(TargetLocation);
-	
-	// spawn the projectile
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	SpawnParams.TransformScaleMethod = ESpawnActorScaleMethod::OverrideRootScale;
-	SpawnParams.Owner = GetOwner();
-	SpawnParams.Instigator = PawnOwner;
-
-	AShooterProjectile* Projectile = GetWorld()->SpawnActor<AShooterProjectile>(ProjectileClass, ProjectileTransform, SpawnParams);
-
-	// set the noise tag on the projectile
-	if (Projectile)
+	if (bUseBallistics)
 	{
-		Projectile->SetNoiseTag(NoiseOwnerTag);
+		FireBullet(TargetLocation);
+	}
+	else
+	{
+		// get the projectile transform
+		FTransform ProjectileTransform = CalculateProjectileSpawnTransform(TargetLocation);
+	
+		// spawn the projectile
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		SpawnParams.TransformScaleMethod = ESpawnActorScaleMethod::OverrideRootScale;
+		SpawnParams.Owner = GetOwner();
+		SpawnParams.Instigator = PawnOwner;
+
+		AShooterProjectile* Projectile = GetWorld()->SpawnActor<AShooterProjectile>(ProjectileClass, ProjectileTransform, SpawnParams);
+
+		// set the noise tag on the projectile
+		if (Projectile)
+		{
+			Projectile->SetNoiseTag(NoiseOwnerTag);
+		}
+	}
+
+	if (FireSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, FirstPersonMesh->GetSocketLocation(MuzzleSocketName), FRotator::ZeroRotator);
 	}
 
 	// play the firing montage
 	WeaponOwner->PlayFiringMontage(FiringMontage);
 
+	if (MuzzleFlashTime > 0.0f)
+	{
+		MuzzleLight->SetVisibility(true);
+		GetWorld()->GetTimerManager().SetTimer(MuzzleFlashTimer, this, &AShooterWeapon::EndMuzzleFlash, MuzzleFlashTime, false);
+	}
+
 	// add recoil
-	WeaponOwner->AddWeaponRecoil(FiringRecoil);
+	if (bUseBallistics)
+	{
+		WeaponOwner->AddWeaponKick(Recoil);
+	}
+	else
+	{
+		WeaponOwner->AddWeaponRecoil(FiringRecoil);
+	}
 
 	// eject the spent case
 	EjectShell();
@@ -215,6 +258,53 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 	{
 		StartReload();
 	}
+}
+
+void AShooterWeapon::FireBullet(const FVector& TargetLocation)
+{
+	UKochBallisticsSubsystem* Ballistics = GetWorld()->GetSubsystem<UKochBallisticsSubsystem>();
+	if (!Ballistics || !PawnOwner)
+	{
+		return;
+	}
+
+	FVector Start = FirstPersonMesh->GetSocketLocation(MuzzleSocketName);
+
+	// a muzzle pushed through a wall must not shoot past it: fire from the eyes instead
+	FVector EyeLocation;
+	FRotator EyeRotation;
+	PawnOwner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
+
+	FHitResult Blocked;
+	const FCollisionQueryParams Params(SCENE_QUERY_STAT(KochMuzzleCheck), true, PawnOwner);
+	if (GetWorld()->LineTraceSingleByChannel(Blocked, EyeLocation, Start, Koch::BulletChannel, Params))
+	{
+		Start = EyeLocation;
+	}
+
+	// spread = (resting spread + heat from recent shots) x the holder's stance; heat cools between shots
+	const float SinceLastShot = GetWorld()->GetTimeSeconds() - TimeOfLastShot;
+	SpreadHeat = FMath::Max(0.0f, SpreadHeat - Recoil.SpreadCoolRate * SinceLastShot);
+	const float Spread = (AimVariance + SpreadHeat) * WeaponOwner->GetWeaponSpreadScale();
+	SpreadHeat = FMath::Min(Recoil.MaxSpreadHeat, SpreadHeat + Recoil.SpreadPerShot);
+
+	FVector Direction = (TargetLocation - Start).GetSafeNormal();
+	if (Spread > 0.0f)
+	{
+		Direction = FMath::VRandCone(Direction, FMath::DegreesToRadians(Spread));
+	}
+
+	Ballistics->FireBullet(BulletSpec, Start, Direction, PawnOwner, NoiseOwnerTag);
+}
+
+FVector AShooterWeapon::GetSightLocation() const
+{
+	return FirstPersonMesh->GetSocketTransform(MuzzleSocketName).TransformPosition(SightOffset);
+}
+
+void AShooterWeapon::EndMuzzleFlash()
+{
+	MuzzleLight->SetVisibility(false);
 }
 
 void AShooterWeapon::StartReload()

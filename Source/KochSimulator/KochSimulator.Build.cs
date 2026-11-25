@@ -19,7 +19,10 @@ public class KochSimulator : ModuleRules
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
-			"Slate"
+			"Slate",
+			"PhysicsCore",
+			"Niagara",
+			"EngineCameras"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });

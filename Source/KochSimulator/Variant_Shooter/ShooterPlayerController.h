@@ -103,6 +103,9 @@ protected:
 	/** LMB: a review mark, unless the pawn has a weapon drawn (then LMB fires) */
 	void OnReviewClick();
 
+	/** Right mouse: removes the last review mark unless a weapon is drawn (then it aims) */
+	void OnReviewRightClick();
+
 public:
 
 	/** Assigns a team ID to this player */

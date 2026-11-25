@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "ShooterWeaponHolder.h"
 #include "Animation/AnimInstance.h"
+#include "Combat/KochCombatTypes.h"
 #include "ShooterWeapon.generated.h"
 
 class IShooterWeaponHolder;
@@ -14,6 +15,8 @@ class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimInstance;
 class UStaticMesh;
+class USoundBase;
+class UPointLightComponent;
 
 /**
  *  Base class for a simple first person shooter weapon
@@ -34,6 +37,10 @@ class KOCHSIMULATOR_API AShooterWeapon : public AActor
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
 	USkeletalMeshComponent* ThirdPersonMesh;
 
+	/** One-frame-or-two light at the muzzle per shot; lights the room the way a real flash does */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
+	UPointLightComponent* MuzzleLight;
+
 protected:
 
 	/** Cast pointer to the weapon owner */
@@ -42,6 +49,28 @@ protected:
 	/** Type of projectiles this weapon will shoot */
 	UPROPERTY(EditAnywhere, Category="Ammo")
 	TSubclassOf<AShooterProjectile> ProjectileClass;
+
+	/** Fire simulated bullets (UKochBallisticsSubsystem: real speed, drop, hit zones, penetration) instead of spawning ProjectileClass */
+	UPROPERTY(EditAnywhere, Category="Ammo")
+	bool bUseBallistics = false;
+
+	/** The round this weapon fires when bUseBallistics is set */
+	UPROPERTY(EditAnywhere, Category="Ammo", meta = (EditCondition = "bUseBallistics"))
+	FKochBulletSpec BulletSpec;
+
+	/** Recoil and spread when bUseBallistics is set. AimVariance is then the resting spread from the hip (cone half-angle, degrees). */
+	UPROPERTY(EditAnywhere, Category="Ammo", meta = (EditCondition = "bUseBallistics"))
+	FKochRecoilSpec Recoil;
+
+	/** Spread added by recent shots (degrees); cools down between shots */
+	float SpreadHeat = 0.0f;
+
+	/** Seconds the muzzle light stays on per shot (0: no flash) */
+	UPROPERTY(EditAnywhere, Category="Muzzle Flash", meta = (ClampMin = 0, ClampMax = 0.5, Units = "s"))
+	float MuzzleFlashTime = 0.05f;
+
+	/** Timer that switches the muzzle light off */
+	FTimerHandle MuzzleFlashTimer;
 
 	/** Number of bullets in a magazine */
 	UPROPERTY(EditAnywhere, Category="Ammo", meta = (ClampMin = 0, ClampMax = 100))
@@ -84,6 +113,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Shells", meta = (ClampMin = 0.5, ClampMax = 30, Units = "s"))
 	float ShellLifeSpan = 5.0f;
 	
+	/** Shot sound, played at the muzzle (none: silent). Distance falloff comes from the asset's attenuation. */
+	UPROPERTY(EditAnywhere, Category="Audio")
+	TObjectPtr<USoundBase> FireSound;
+
 	/** Animation montage to play when firing this weapon */
 	UPROPERTY(EditAnywhere, Category="Animation")
 	UAnimMontage* FiringMontage;
@@ -107,6 +140,10 @@ protected:
 	/** Name of the first person muzzle socket where projectiles will spawn */
 	UPROPERTY(EditAnywhere, Category="Aim")
 	FName MuzzleSocketName;
+
+	/** Point the eye lines up with when aiming, in muzzle-socket space: X along the barrel, Z up (cm). Template rifle: the optic window. */
+	UPROPERTY(EditAnywhere, Category="Aim")
+	FVector SightOffset = FVector(-38.0, 0.0, 6.3);
 
 	/** Distance ahead of the muzzle that bullets will spawn at */
 	UPROPERTY(EditAnywhere, Category="Aim", meta = (ClampMin = 0, ClampMax = 1000, Units = "cm"))
@@ -194,6 +231,12 @@ protected:
 	/** Fire a projectile towards the target location */
 	virtual void FireProjectile(const FVector& TargetLocation);
 
+	/** Fire one simulated bullet towards the target location (bUseBallistics) */
+	void FireBullet(const FVector& TargetLocation);
+
+	/** Switches the muzzle light off again */
+	void EndMuzzleFlash();
+
 	/** Refills the magazine at the end of a reload */
 	void FinishReload();
 
@@ -204,6 +247,9 @@ protected:
 	FTransform CalculateProjectileSpawnTransform(const FVector& TargetLocation) const;
 
 public:
+
+	/** World location of the sight point on the first person mesh (see SightOffset) */
+	FVector GetSightLocation() const;
 
 	/** Returns the first person mesh */
 	UFUNCTION(BlueprintPure, Category="Weapon")

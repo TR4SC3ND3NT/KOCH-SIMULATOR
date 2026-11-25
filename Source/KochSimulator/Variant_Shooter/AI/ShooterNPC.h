@@ -33,7 +33,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Damage")
 	FName RagdollCollisionProfile = FName("Ragdoll");
 
-	/** Time to wait after death before destroying this actor */
+	/** Time to wait after death before destroying this actor. 0 keeps the body. */
 	UPROPERTY(EditAnywhere, Category="Damage")
 	float DeferredDestructionTime = 5.0f;
 
@@ -143,6 +143,9 @@ protected:
 
 	/** Called when HP is depleted and the character should die */
 	void Die();
+
+	/** Last step of Die(): switches the body to physics. Default: instant ragdoll. AKochGuard overrides it. */
+	virtual void StartDeathPhysics();
 
 	/** Called after death to destroy the actor */
 	void DeferredDestruction();

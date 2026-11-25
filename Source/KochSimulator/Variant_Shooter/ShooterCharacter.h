@@ -12,6 +12,10 @@ class UAnimInstance;
 class UInputAction;
 class UInputComponent;
 class UPawnNoiseEmitterComponent;
+class UKochRecoilComponent;
+class UKochStanceComponent;
+class UKochViewMotionComponent;
+struct FKochRecoilSpec;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FBulletCountUpdatedDelegate, int32, MagazineSize, int32, Bullets);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDamagedDelegate, float, LifePercent);
@@ -29,6 +33,18 @@ class KOCHSIMULATOR_API AShooterCharacter : public AKochSimulatorCharacter, publ
 	/** AI Noise emitter component */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
 	UPawnNoiseEmitterComponent* PawnNoiseEmitter;
+
+	/** View recoil and fire shake */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UKochRecoilComponent> RecoilComponent;
+
+	/** Aim down sights, sprint with stamina, crouch */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UKochStanceComponent> StanceComponent;
+
+	/** Sight alignment, weapon sway, bob, landing dip, shot jolt */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<UKochViewMotionComponent> ViewMotionComponent;
 
 protected:
 
@@ -198,6 +214,12 @@ public:
 
 	/** Applies weapon recoil to the owner */
 	virtual void AddWeaponRecoil(float Recoil) override;
+
+	/** Recoil of one simulated-bullet shot: view kick, shake, and the sprint breaks */
+	virtual void AddWeaponKick(const FKochRecoilSpec& RecoilSpec) override;
+
+	/** Bullet spread scale for the current stance */
+	virtual float GetWeaponSpreadScale() const override;
 
 	/** Updates the weapon's HUD with the current ammo count */
 	virtual void UpdateWeaponHUD(int32 CurrentAmmo, int32 MagazineSize) override;

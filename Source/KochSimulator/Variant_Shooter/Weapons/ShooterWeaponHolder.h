@@ -8,6 +8,7 @@
 
 class AShooterWeapon;
 class UAnimMontage;
+struct FKochRecoilSpec;
 
 
 // This class does not need to be modified.
@@ -34,6 +35,12 @@ public:
 
 	/** Applies weapon recoil to the owner */
 	virtual void AddWeaponRecoil(float Recoil) = 0;
+
+	/** Recoil of one simulated-bullet shot (bUseBallistics weapons call this instead of AddWeaponRecoil). Default: none. */
+	virtual void AddWeaponKick(const FKochRecoilSpec& Recoil) {}
+
+	/** Scales bullet spread for the holder's stance (aiming, moving, crouched, airborne). */
+	virtual float GetWeaponSpreadScale() const { return 1.0f; }
 
 	/** Updates the weapon's HUD with the current ammo count */
 	virtual void UpdateWeaponHUD(int32 CurrentAmmo, int32 MagazineSize) = 0;

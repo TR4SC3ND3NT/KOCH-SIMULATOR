@@ -67,7 +67,7 @@ void AShooterPlayerController::SetupInputComponent()
 
 		// review marks: raw keys that do not consume the press, so LMB still reaches the pawn's IA_Shoot
 		InputComponent->BindKey(EKeys::LeftMouseButton, IE_Pressed, this, &AShooterPlayerController::OnReviewClick).bConsumeInput = false;
-		InputComponent->BindKey(EKeys::RightMouseButton, IE_Pressed, ReviewMarks.Get(), &UKochReviewMarksComponent::RemoveLastMark).bConsumeInput = false;
+		InputComponent->BindKey(EKeys::RightMouseButton, IE_Pressed, this, &AShooterPlayerController::OnReviewRightClick).bConsumeInput = false;
 
 		// create the bullet counter widget and add it to the screen
 		BulletCounterUI = CreateWidget<UShooterBulletCounterUI>(this, BulletCounterUIClass);
@@ -154,6 +154,15 @@ void AShooterPlayerController::OnPawnDamaged(float LifePercent)
 	if (IsValid(BulletCounterUI))
 	{
 		BulletCounterUI->BP_Damaged(LifePercent);
+	}
+}
+
+void AShooterPlayerController::OnReviewRightClick()
+{
+	const AShooterCharacter* ShooterCharacter = Cast<AShooterCharacter>(GetPawn());
+	if (!ShooterCharacter || !ShooterCharacter->HasWeaponDrawn())
+	{
+		ReviewMarks->RemoveLastMark();
 	}
 }
 
