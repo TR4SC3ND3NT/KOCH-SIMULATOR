@@ -1,0 +1,9 @@
+[mcp_servers.blender]
+command = "uvx"
+args = ["mcp-for-blender"]
+
+[mcp_servers.blender.env]
+DISABLE_TELEMETRY = "true"
+
+[mcp_servers.unreal-mcp]
+url = "http://127.0.0.1:8000/mcp"
