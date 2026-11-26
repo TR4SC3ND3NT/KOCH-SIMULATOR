@@ -9,9 +9,13 @@
 #include "GameFramework/PlayerStart.h"
 #include "ShooterCharacter.h"
 #include "ShooterBulletCounterUI.h"
+#include "KochKillFeedWidget.h"
 #include "KochSimulator.h"
 #include "Widgets/Input/SVirtualJoystick.h"
 #include "KochReviewMarksComponent.h"
+#include "GameFramework/GameModeBase.h"
+#include "GameFramework/PlayerState.h"
+#include "HAL/PlatformProcess.h"
 
 AShooterPlayerController::AShooterPlayerController()
 {
@@ -21,6 +25,17 @@ AShooterPlayerController::AShooterPlayerController()
 void AShooterPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Name shown in the kill feed. Without an online login the engine names the player after the machine/IP,
+	// so use PlayerDisplayName (config, later the settings menu) or the OS login name.
+	if (IsLocalPlayerController() && HasAuthority())
+	{
+		const FString Name = PlayerDisplayName.IsEmpty() ? FString(FPlatformProcess::UserName()) : PlayerDisplayName;
+		if (AGameModeBase* GameMode = GetWorld()->GetAuthGameMode(); GameMode && !Name.IsEmpty())
+		{
+			GameMode->ChangeName(this, Name.Left(24), false);
+		}
+	}
 }
 
 void AShooterPlayerController::SetupInputComponent()
@@ -68,6 +83,16 @@ void AShooterPlayerController::SetupInputComponent()
 		// review marks: raw keys that do not consume the press, so LMB still reaches the pawn's IA_Shoot
 		InputComponent->BindKey(EKeys::LeftMouseButton, IE_Pressed, this, &AShooterPlayerController::OnReviewClick).bConsumeInput = false;
 		InputComponent->BindKey(EKeys::RightMouseButton, IE_Pressed, ReviewMarks.Get(), &UKochReviewMarksComponent::RemoveLastMark).bConsumeInput = false;
+
+		// kill feed: survives pawn respawns, so it is created once per local controller
+		if (!KillFeed)
+		{
+			KillFeed = CreateWidget<UKochKillFeedWidget>(this, KillFeedClass ? KillFeedClass.Get() : UKochKillFeedWidget::StaticClass());
+			if (KillFeed)
+			{
+				KillFeed->AddToPlayerScreen(1);
+			}
+		}
 
 		// create the bullet counter widget and add it to the screen
 		BulletCounterUI = CreateWidget<UShooterBulletCounterUI>(this, BulletCounterUIClass);

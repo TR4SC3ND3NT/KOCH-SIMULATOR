@@ -9,6 +9,7 @@
 class UInputMappingContext;
 class AShooterCharacter;
 class UShooterBulletCounterUI;
+class UKochKillFeedWidget;
 class UKochReviewMarksComponent;
 
 /**
@@ -54,6 +55,17 @@ protected:
 	/** Tag to grant the possessed pawn to flag it as the player */
 	UPROPERTY(EditAnywhere, Category="Shooter|Player")
 	FName PlayerPawnTag = FName("Player");
+
+	/** Player name for the kill feed; empty = OS login name. Config so the settings menu can save it. */
+	UPROPERTY(EditAnywhere, Config, Category="Shooter|Player")
+	FString PlayerDisplayName;
+
+	/** CS-style kill feed (top right); defaults to the plain C++ widget when unset */
+	UPROPERTY(EditAnywhere, Category="Shooter|UI")
+	TSubclassOf<UKochKillFeedWidget> KillFeedClass;
+
+	UPROPERTY()
+	TObjectPtr<UKochKillFeedWidget> KillFeed;
 
 	/** Pointer to the bullet counter UI widget */
 	UPROPERTY()
