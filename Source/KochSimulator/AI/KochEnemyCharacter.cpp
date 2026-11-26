@@ -81,10 +81,12 @@ void AKochEnemyCharacter::BeginPlay()
 	}
 	AnchorLocation = GetActorLocation();
 
-	// Face and outfit copy the body's animated pose (no own anim instance: cheap for NPCs).
-	for (USkeletalMeshComponent* Part : { FaceMesh.Get(), OutfitMesh.Get() })
+	// Face, outfit and any clothing piece the BP attaches to the body (top, pants, shoes) copy the body's
+	// animated pose: no own anim instance, cheap for NPCs. Parts with their own anim class are left alone.
+	TInlineComponentArray<USkeletalMeshComponent*> Parts(this);
+	for (USkeletalMeshComponent* Part : Parts)
 	{
-		if (Part && Part->GetSkeletalMeshAsset())
+		if (Part != GetMesh() && Part->GetAttachParent() == GetMesh() && Part->GetSkeletalMeshAsset() && !Part->GetAnimClass())
 		{
 			Part->SetLeaderPoseComponent(GetMesh());
 		}
