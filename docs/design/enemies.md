@@ -109,7 +109,7 @@ CS2-*like* look and sound from licensed packs (no files extracted from Valve gam
 - Locomotion, fire, reload, hit react: **Lyra Starter Game** clips (Epic content, UE EULA: free in UE projects) copied to the same `/Game` paths and played on MetaHuman skeletons via compatible skeletons. **Game Animation Sample** stays an option for motion matching. Tune play rate / root-motion speed so Donk's run, stop and strafe timings match §4.
 - Animations needed: rifle idle/walk/run/strafe, crouch idle/walk, crouch-fire, quick stop, lean peek L/R, jump, fire, reload, hit react, death.
 - SFX: Sonniss GDC bundles (commercial, no attribution) + CC0 (Kenney, Free Firearm Sound Library): AK close/distant shot, reload, dry fire, impacts, bullet whizz, footsteps per surface, jump/land, short pain/death vocal (record our own if none fits).
-- Kill-feed / HUD icons: our own.
+- Kill feed: done, CS style (`UKochKillFeedSubsystem` + `UKochKillFeedWidget`, `WBP_KochKillFeed`): "Killer [weapon] [headshot] Victim", red outline on the player's lines. Icons are our own white silhouettes drawn by `Scripts/UI/make_killfeed_icons.py` (AK-47, headshot). A hit at or above the victim's `head` bone counts as a headshot. Player name: `AShooterPlayerController::PlayerDisplayName` (config), else the OS login name.
 
 ## 7. Tech
 - **StateTree** per enemy (already used by `Variant_Shooter`), squad brain = `UKochSquadSubsystem` (world subsystem): role targets, phase timer, Elroy, shooter tokens.
