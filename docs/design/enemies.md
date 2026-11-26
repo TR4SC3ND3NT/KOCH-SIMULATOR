@@ -98,6 +98,11 @@ Peek techniques (state "Peek" in the StateTree):
 | Acceleration / braking | 2048 / 1350 | 3400 / 1350 | 3400 / 1350 |
 | Health | 80 | 100 | 125 |
 | Peeks | wide swing only | jiggle + shoulder + wide swing | all + crouch-spray + pre-fire |
+| Damage scale (×25 per AK hit vs 500 player HP) | 4 (5 hits) | 5 (4 hits) | 10 (2 hits) |
+| Aim cone still | 4° | 2.5° | 1.2° |
+| **Measured time-to-kill** (player standing in the open, 17 m, PIE, 2–3 runs) | ~50–58 s | ~12–24 s | ~8–13 s |
+
+Player: run 600 cm/s, hold Shift = walk 52 % (silent), hold Ctrl/C = crouch 34 % (silent).
 
 ## 6. Assets (to source)
 CS2-*like* look and sound from licensed packs (no files extracted from Valve games):
