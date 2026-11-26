@@ -114,9 +114,11 @@ CS2-*like* look and sound from licensed packs (no files extracted from Valve gam
 - Budget: ≤ 10 enemies, AI cost ≪ 1 ms game thread; MetaHuman Optimized/Medium, groom cards, LODSync.
 
 ## 8. Status
-- [x] Donk MetaHuman (face fitted from friend's head mesh, male, slim) — v2 being built.
+- [x] Donk MetaHuman v2 (face fitted from the de-haired head mesh, male, slim, 160 cm built, 120 cm in game).
 - [x] C++: difficulty subsystem, squad subsystem + role targeting, enemy character (accuracy gate, scale, tuning), StateTree nodes (awareness condition, move-to-goal, shoot burst, CS peek); unit tests for targeting.
 - [x] C++: awareness layer (perception, memory, callouts, 5 states, fighting-spot picker, player footstep noise).
-- [ ] StateTree asset + BP children per enemy type.
-- [ ] Animations + SFX import and retarget.
+- [x] Donk playable: `BP_Enemy_Donk` + `BP_KochAIController` + `ST_KochEnemy`, tested in PIE on `Content/Developers/Azamat/Maps/L_EnemyTest` (notices, engages from a fighting spot, peeks, kills the player in ~10 s on Medium).
+- [ ] BPs for Guard / Interceptor / Flanker / Heavy; Engage branch with Koch Shoot Burst for non-peekers.
+- [ ] Balance: Medium Donk is very lethal; tune after real playtests (player HP, burst length, reaction).
+- [ ] Animations + SFX: Donk uses the template rifle anim BP for now (Manny clips on the MetaHuman skeleton via compatible skeletons). Game Animation Sample + Lyra are in the Fab library; download blocked by Launcher crashes.
 - [ ] Other 4 enemy models (MetaHuman presets).
