@@ -16,6 +16,7 @@ public class KochSimulator : ModuleRules
 			"Json",
 			"EnhancedInput",
 			"AIModule",
+			"NavigationSystem",
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
@@ -26,6 +27,7 @@ public class KochSimulator : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] {
 			"KochSimulator",
+			"KochSimulator/AI",
 			"KochSimulator/Variant_Horror",
 			"KochSimulator/Variant_Horror/UI",
 			"KochSimulator/Variant_Shooter",
