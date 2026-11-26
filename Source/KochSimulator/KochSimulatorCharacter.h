@@ -11,6 +11,7 @@ class UInputComponent;
 class USkeletalMeshComponent;
 class UCameraComponent;
 class UInputAction;
+class UInputMappingContext;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -48,6 +49,26 @@ protected:
 	/** Mouse Look Input Action */
 	UPROPERTY(EditAnywhere, Category ="Input")
 	class UInputAction* MouseLookAction;
+
+	/** Walk (hold): slower and silent to AI hearing, like CS Shift-walk */
+	UPROPERTY(EditAnywhere, Category ="Input")
+	UInputAction* WalkAction;
+
+	/** Crouch (hold): slowest, silent, more accurate */
+	UPROPERTY(EditAnywhere, Category ="Input")
+	UInputAction* CrouchAction;
+
+	/** Mapping context for walk/crouch, added when a local player possesses this pawn (template contexts stay untouched) */
+	UPROPERTY(EditAnywhere, Category ="Input")
+	UInputMappingContext* MovementMappingContext;
+
+	/** Walk speed as a fraction of run speed (CS2 ~0.52) */
+	UPROPERTY(EditAnywhere, Category ="Movement", meta = (ClampMin = 0.1, ClampMax = 1))
+	float WalkSpeedScale = 0.52f;
+
+	/** Crouch speed as a fraction of run speed (CS2 ~0.34) */
+	UPROPERTY(EditAnywhere, Category ="Movement", meta = (ClampMin = 0.1, ClampMax = 1))
+	float CrouchSpeedScale = 0.34f;
 	
 public:
 	AKochSimulatorCharacter();
@@ -76,6 +97,21 @@ protected:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	virtual void DoJumpEnd();
 
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoWalkStart();
+
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoWalkEnd();
+
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoCrouchStart();
+
+	UFUNCTION(BlueprintCallable, Category="Input")
+	void DoCrouchEnd();
+
+	/** Adds MovementMappingContext and sets walk/crouch speeds for local players */
+	virtual void NotifyControllerChanged() override;
+
 protected:
 
 	/** Set up input action bindings */
@@ -87,8 +123,15 @@ public:
 	/** Returns the first person mesh **/
 	USkeletalMeshComponent* GetFirstPersonMesh() const { return FirstPersonMesh; }
 
+	/** True while the walk key is held (AI treats walking as silent) */
+	bool IsWalking() const { return bWalking; }
+
 	/** Returns first person camera component **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
-};
 
+private:
+	/** Run speed captured when a local player takes control (cm/s) */
+	float RunSpeed = 0.0f;
+	bool bWalking = false;
+};

@@ -9,6 +9,10 @@
 #include "InputActionValue.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "KochSimulator.h"
+#include "EnhancedInputSubsystems.h"
+#include "InputMappingContext.h"
+#include "Engine/LocalPlayer.h"
+#include "GameFramework/PlayerController.h"
 
 AKochSimulatorCharacter::AKochSimulatorCharacter()
 {
@@ -55,6 +59,18 @@ void AKochSimulatorCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AKochSimulatorCharacter::MoveInput);
+
+		// Walking / crouching (hold)
+		if (WalkAction)
+		{
+			EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Started, this, &AKochSimulatorCharacter::DoWalkStart);
+			EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Completed, this, &AKochSimulatorCharacter::DoWalkEnd);
+		}
+		if (CrouchAction)
+		{
+			EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Started, this, &AKochSimulatorCharacter::DoCrouchStart);
+			EnhancedInputComponent->BindAction(CrouchAction, ETriggerEvent::Completed, this, &AKochSimulatorCharacter::DoCrouchEnd);
+		}
 
 		// Looking/Aiming
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AKochSimulatorCharacter::LookInput);
@@ -117,4 +133,59 @@ void AKochSimulatorCharacter::DoJumpEnd()
 {
 	// pass StopJumping to the character
 	StopJumping();
+}
+
+void AKochSimulatorCharacter::NotifyControllerChanged()
+{
+	Super::NotifyControllerChanged();
+
+	const APlayerController* PC = Cast<APlayerController>(Controller);
+	if (!PC || !PC->IsLocalController())
+	{
+		return; // AI pawns keep their own movement tuning
+	}
+
+	UCharacterMovementComponent* Move = GetCharacterMovement();
+	if (RunSpeed <= 0.0f)
+	{
+		RunSpeed = Move->MaxWalkSpeed;
+	}
+	Move->MaxWalkSpeedCrouched = RunSpeed * CrouchSpeedScale;
+	Move->GetNavAgentPropertiesRef().bCanCrouch = true;
+
+	if (MovementMappingContext)
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PC->GetLocalPlayer()))
+		{
+			Subsystem->AddMappingContext(MovementMappingContext, 1);
+		}
+	}
+}
+
+void AKochSimulatorCharacter::DoWalkStart()
+{
+	if (RunSpeed > 0.0f)
+	{
+		bWalking = true;
+		GetCharacterMovement()->MaxWalkSpeed = RunSpeed * WalkSpeedScale;
+	}
+}
+
+void AKochSimulatorCharacter::DoWalkEnd()
+{
+	if (RunSpeed > 0.0f)
+	{
+		bWalking = false;
+		GetCharacterMovement()->MaxWalkSpeed = RunSpeed;
+	}
+}
+
+void AKochSimulatorCharacter::DoCrouchStart()
+{
+	Crouch();
+}
+
+void AKochSimulatorCharacter::DoCrouchEnd()
+{
+	UnCrouch();
 }

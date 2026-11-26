@@ -9,6 +9,7 @@
 #include "GameFramework/Pawn.h"
 #include "TimerManager.h"
 #include "KochAwarenessComponent.h"
+#include "KochSimulatorCharacter.h"
 #include "Perception/AISense_Hearing.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -315,6 +316,10 @@ void UKochSquadSubsystem::EmitPlayerFootsteps()
 	if (!Move || !Move->IsMovingOnGround() || Player->bIsCrouched)
 	{
 		return;
+	}
+	if (const AKochSimulatorCharacter* KochPlayer = Cast<AKochSimulatorCharacter>(Player); KochPlayer && KochPlayer->IsWalking())
+	{
+		return; // CS rule: walking is silent
 	}
 	const float Speed = Player->GetVelocity().Size2D();
 	if (Speed < FootstepSpeedRatio * Move->MaxWalkSpeed)
