@@ -12,6 +12,9 @@
 #include "Engine/OverlapResult.h"
 #include "Engine/World.h"
 #include "TimerManager.h"
+#include "KochKillFeedSubsystem.h"
+#include "ShooterWeapon.h"
+#include "Components/SkeletalMeshComponent.h"
 
 AShooterProjectile::AShooterProjectile()
 {
@@ -147,8 +150,21 @@ void AShooterProjectile::ProcessHit(AActor* HitActor, UPrimitiveComponent* HitCo
 		// ignore the owner of this projectile
 		if (HitCharacter != GetOwner() || bDamageOwner)
 		{
-			// apply damage to the character
-			UGameplayStatics::ApplyDamage(HitCharacter, HitDamage, GetInstigator()->GetController(), this, HitDamageType);
+			// point damage so the victim (and the kill feed) knows about head hits; capsule hits carry no bone,
+			// so a hit at or above the head bone counts as a headshot
+			FHitResult HitInfo;
+			HitInfo.ImpactPoint = HitLocation;
+			HitInfo.Location = HitLocation;
+			HitInfo.ImpactNormal = -HitDirection;
+			HitInfo.Component = HitComp;
+			const USkeletalMeshComponent* VictimMesh = HitCharacter->GetMesh();
+			if (VictimMesh && VictimMesh->DoesSocketExist(UKochKillFeedSubsystem::HeadshotBone)
+				&& HitLocation.Z >= VictimMesh->GetSocketLocation(UKochKillFeedSubsystem::HeadshotBone).Z - HeadshotMargin * HitCharacter->GetActorScale3D().Z)
+			{
+				HitInfo.BoneName = UKochKillFeedSubsystem::HeadshotBone;
+			}
+			AController* InstigatorController = GetInstigator() ? GetInstigator()->GetController() : nullptr;
+			UGameplayStatics::ApplyPointDamage(HitCharacter, HitDamage, HitDirection, HitInfo, InstigatorController, this, HitDamageType);
 		}
 	}
 
@@ -169,4 +185,14 @@ void AShooterProjectile::OnDeferredDestruction()
 void AShooterProjectile::SetNoiseTag(const FName& Tag)
 {
 	NoiseTag = Tag;
+}
+
+void AShooterProjectile::SetSourceWeapon(AShooterWeapon* Weapon)
+{
+	SourceWeapon = Weapon;
+}
+
+AShooterWeapon* AShooterProjectile::GetSourceWeapon() const
+{
+	return SourceWeapon.Get();
 }

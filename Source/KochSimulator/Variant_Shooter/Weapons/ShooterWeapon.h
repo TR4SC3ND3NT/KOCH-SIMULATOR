@@ -15,6 +15,7 @@ class UAnimMontage;
 class UAnimInstance;
 class UStaticMesh;
 class USoundBase;
+class UTexture2D;
 
 /**
  *  Base class for a simple first person shooter weapon
@@ -88,6 +89,10 @@ protected:
 	/** Shot sound, played at the third-person muzzle for every shot (KOCH: Lyra MSS_Weapons_Rifle_Fire on the AK). */
 	UPROPERTY(EditAnywhere, Category="Sound")
 	TObjectPtr<USoundBase> FireSound;
+
+	/** White silhouette shown in the kill feed between killer and victim (CS style, our own art). */
+	UPROPERTY(EditAnywhere, Category="UI")
+	TObjectPtr<UTexture2D> KillFeedIcon;
 
 	/** Animation montage to play when firing this weapon */
 	UPROPERTY(EditAnywhere, Category="Animation")
@@ -217,6 +222,8 @@ public:
 	/** Returns the third person mesh */
 	UFUNCTION(BlueprintPure, Category="Weapon")
 	USkeletalMeshComponent* GetThirdPersonMesh() const { return ThirdPersonMesh; };
+
+	UTexture2D* GetKillFeedIcon() const { return KillFeedIcon; }
 
 	/** Returns the first person anim instance class */
 	const TSubclassOf<UAnimInstance>& GetFirstPersonAnimInstanceClass() const;

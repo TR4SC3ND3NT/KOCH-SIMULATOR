@@ -194,6 +194,7 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 	if (Projectile)
 	{
 		Projectile->SetNoiseTag(NoiseOwnerTag);
+		Projectile->SetSourceWeapon(this);
 	}
 
 	// shot sound at the world-space muzzle; the owner drives per-shooter concurrency (one voice per gun)

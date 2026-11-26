@@ -10,6 +10,7 @@ class USphereComponent;
 class UProjectileMovementComponent;
 class ACharacter;
 class UPrimitiveComponent;
+class AShooterWeapon;
 
 /**
  *  Simple projectile class for a first person shooter game
@@ -65,6 +66,13 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Projectile|Explosion", meta = (ClampMin = 0, ClampMax = 5000, Units = "cm"))
 	float ExplosionRadius = 500.0f;	
 
+	/** Hits at or above the victim's HeadshotBone minus this margin count as headshots (capsule hits carry no bone). */
+	UPROPERTY(EditAnywhere, Category="Projectile|Hit", meta = (ClampMin = 0, ClampMax = 30, Units = "cm"))
+	float HeadshotMargin = 4.0f;
+
+	/** Weapon that fired this projectile (kill-feed icon). */
+	TWeakObjectPtr<AShooterWeapon> SourceWeapon;
+
 	/** If true, this projectile has already hit another surface */
 	bool bHit = false;
 
@@ -110,5 +118,8 @@ public:
 
 	/** Sets the noise tag to use when generating AI perception noise on impact */
 	void SetNoiseTag(const FName& Tag);
+
+	void SetSourceWeapon(AShooterWeapon* Weapon);
+	AShooterWeapon* GetSourceWeapon() const;
 
 };
