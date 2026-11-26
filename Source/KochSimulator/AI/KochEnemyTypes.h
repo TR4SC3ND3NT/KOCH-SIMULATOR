@@ -88,6 +88,10 @@ struct FKochEnemyTuning
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (ClampMin = 1))
 	float MaxHealth = 100.0f;
 
+	/** Multiplies this enemy's hit damage on the player (balance knob per difficulty). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (ClampMin = 0))
+	float DamageScale = 1.0f;
+
 	/** False = this enemy does not spawn on this difficulty (spawners check it). */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool bEnabled = true;

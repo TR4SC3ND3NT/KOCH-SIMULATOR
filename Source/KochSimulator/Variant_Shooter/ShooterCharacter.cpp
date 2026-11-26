@@ -2,6 +2,7 @@
 
 
 #include "ShooterCharacter.h"
+#include "KochEnemyCharacter.h"
 #include "ShooterWeapon.h"
 #include "EnhancedInputComponent.h"
 #include "Components/InputComponent.h"
@@ -76,6 +77,12 @@ float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dam
 	if (CurrentHP <= 0.0f)
 	{
 		return 0.0f;
+	}
+
+	// KOCH enemies scale their damage per difficulty (see FKochEnemyTuning::DamageScale)
+	if (const AKochEnemyCharacter* Enemy = Cast<AKochEnemyCharacter>(DamageCauser ? DamageCauser->GetInstigator() : nullptr))
+	{
+		Damage *= Enemy->GetActiveTuning().DamageScale;
 	}
 
 	// Reduce HP
