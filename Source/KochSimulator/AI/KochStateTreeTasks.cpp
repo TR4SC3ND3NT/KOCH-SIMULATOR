@@ -58,7 +58,7 @@ bool FStateTreeKochAwarenessCondition::TestCondition(FStateTreeExecutionContext&
 {
 	const FInstanceDataType& Data = Context.GetInstanceData(*this);
 	const UKochAwarenessComponent* Awareness = Data.Character ? Data.Character->GetAwareness() : nullptr;
-	return Awareness && Awareness->GetState() == Data.State;
+	return Awareness && ((Awareness->GetState() == Data.State) != Data.bInvert);
 }
 
 #if WITH_EDITOR
@@ -66,7 +66,8 @@ FText FStateTreeKochAwarenessCondition::GetDescription(const FGuid& ID, FStateTr
 {
 	const FInstanceDataType* Data = InstanceDataView.GetPtr<FInstanceDataType>();
 	const FText StateName = Data ? StaticEnum<EKochAwareness>()->GetDisplayValueAsText(Data->State) : FText::GetEmpty();
-	return FText::Format(FText::FromString("<b>Awareness is</b> {0}"), StateName);
+	const bool bInvert = Data && Data->bInvert;
+	return FText::Format(FText::FromString(bInvert ? "<b>Awareness is not</b> {0}" : "<b>Awareness is</b> {0}"), StateName);
 }
 #endif
 

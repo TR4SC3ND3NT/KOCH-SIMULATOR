@@ -25,9 +25,13 @@ struct FStateTreeKochAwarenessConditionInstanceData
 
 	UPROPERTY(EditAnywhere, Category = Parameter)
 	EKochAwareness State = EKochAwareness::Engage;
+
+	/** True = passes when the state is NOT State (leave-state transitions). */
+	UPROPERTY(EditAnywhere, Category = Parameter)
+	bool bInvert = false;
 };
 
-/** Passes when the enemy's awareness state equals State (use Invert in the editor for "not"). */
+/** Passes when the enemy's awareness state equals State (or differs, with bInvert). */
 USTRUCT(DisplayName = "Koch Awareness Is", Category = "Koch")
 struct FStateTreeKochAwarenessCondition : public FStateTreeConditionCommonBase
 {
