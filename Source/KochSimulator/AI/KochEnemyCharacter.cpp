@@ -6,11 +6,20 @@
 #include "KochAwarenessComponent.h"
 #include "AIController.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Engine/World.h"
 
 AKochEnemyCharacter::AKochEnemyCharacter()
 {
 	Awareness = CreateDefaultSubobject<UKochAwarenessComponent>(TEXT("Awareness"));
+
+	// MetaHuman parts on the third-person body; empty by default (plain Manny enemies leave them unset).
+	FaceMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FaceMesh"));
+	FaceMesh->SetupAttachment(GetMesh());
+	FaceMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	OutfitMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("OutfitMesh"));
+	OutfitMesh->SetupAttachment(GetMesh());
+	OutfitMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	// Generic defaults from docs/design/enemies.md §3a/§5 (Medium = struct defaults for awareness); BP children override per type.
 	FKochEnemyTuning Easy;
@@ -58,6 +67,15 @@ void AKochEnemyCharacter::BeginPlay()
 		SetActorScale3D(FVector(BodyScale));
 	}
 	AnchorLocation = GetActorLocation();
+
+	// Face and outfit copy the body's animated pose (no own anim instance: cheap for NPCs).
+	for (USkeletalMeshComponent* Part : { FaceMesh.Get(), OutfitMesh.Get() })
+	{
+		if (Part && Part->GetSkeletalMeshAsset())
+		{
+			Part->SetLeaderPoseComponent(GetMesh());
+		}
+	}
 
 	Super::BeginPlay();
 

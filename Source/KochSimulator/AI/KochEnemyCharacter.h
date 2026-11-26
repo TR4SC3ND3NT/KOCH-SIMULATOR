@@ -68,6 +68,14 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Squad", meta = (ClampMin = 0, ClampMax = 1))
 	float ElroySpeedBonus = 0.1f;
 
+	/** MetaHuman face: follows the body (leader pose). Grooms (hair, brows) attach to it in the BP. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Koch|Body")
+	TObjectPtr<USkeletalMeshComponent> FaceMesh;
+
+	/** MetaHuman outfit: follows the body (leader pose). */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Koch|Body")
+	TObjectPtr<USkeletalMeshComponent> OutfitMesh;
+
 	/** Senses, memory and awareness state (Unaware/Suspicious/Hunt/Engage/Search). */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Koch|Awareness")
 	TObjectPtr<UKochAwarenessComponent> Awareness;
