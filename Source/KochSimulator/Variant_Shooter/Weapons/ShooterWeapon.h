@@ -90,6 +90,14 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Sound")
 	TObjectPtr<USoundBase> FireSound;
 
+	/** Projectiles per trigger pull (shotgun pellets); each one deals the projectile's full HitDamage. */
+	UPROPERTY(EditAnywhere, Category="Aim", meta = (ClampMin = 1, ClampMax = 16))
+	int32 ProjectilesPerShot = 1;
+
+	/** Cone half-angle the pellets spread in (only with ProjectilesPerShot > 1). */
+	UPROPERTY(EditAnywhere, Category="Aim", meta = (ClampMin = 0, ClampMax = 30, Units = "Degrees"))
+	float PelletSpread = 4.0f;
+
 	/** White silhouette shown in the kill feed between killer and victim (CS style, our own art). */
 	UPROPERTY(EditAnywhere, Category="UI")
 	TObjectPtr<UTexture2D> KillFeedIcon;

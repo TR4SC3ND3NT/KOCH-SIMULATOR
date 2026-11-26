@@ -179,22 +179,28 @@ void AShooterWeapon::FireCooldownExpired()
 void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 {
 	// get the projectile transform
-	FTransform ProjectileTransform = CalculateProjectileSpawnTransform(TargetLocation);
+	const FTransform ProjectileTransform = CalculateProjectileSpawnTransform(TargetLocation);
 	
-	// spawn the projectile
+	// spawn the projectile(s): shotguns fire several pellets spread in a cone around the aim direction
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	SpawnParams.TransformScaleMethod = ESpawnActorScaleMethod::OverrideRootScale;
 	SpawnParams.Owner = GetOwner();
 	SpawnParams.Instigator = PawnOwner;
 
-	AShooterProjectile* Projectile = GetWorld()->SpawnActor<AShooterProjectile>(ProjectileClass, ProjectileTransform, SpawnParams);
-
-	// set the noise tag on the projectile
-	if (Projectile)
+	const FVector AimDir = ProjectileTransform.GetRotation().GetForwardVector();
+	for (int32 Pellet = 0; Pellet < ProjectilesPerShot; ++Pellet)
 	{
-		Projectile->SetNoiseTag(NoiseOwnerTag);
-		Projectile->SetSourceWeapon(this);
+		FTransform PelletTransform = ProjectileTransform;
+		if (ProjectilesPerShot > 1 && PelletSpread > 0.0f)
+		{
+			PelletTransform.SetRotation(FMath::VRandCone(AimDir, FMath::DegreesToRadians(PelletSpread)).ToOrientationQuat());
+		}
+		if (AShooterProjectile* Projectile = GetWorld()->SpawnActor<AShooterProjectile>(ProjectileClass, PelletTransform, SpawnParams))
+		{
+			Projectile->SetNoiseTag(NoiseOwnerTag);
+			Projectile->SetSourceWeapon(this);
+		}
 	}
 
 	// shot sound at the world-space muzzle; the owner drives per-shooter concurrency (one voice per gun)
