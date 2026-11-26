@@ -106,7 +106,7 @@ Player: run 600 cm/s, hold Shift = walk 52 % (silent), hold Ctrl/C = crouch 34 %
 
 ## 6. Assets (to source)
 CS2-*like* look and sound from licensed packs (no files extracted from Valve games):
-- Locomotion: Epic **Game Animation Sample** (free, usable in own projects) retargeted to MetaHuman; rifle/pistol layers, fire, reload, death from **Lyra** (license TBC) or **Mixamo** (royalty-free). Tune play rate / root-motion speed so Donk's run, stop and strafe timings match §4.
+- Locomotion, fire, reload, hit react: **Lyra Starter Game** clips (Epic content, UE EULA: free in UE projects) copied to the same `/Game` paths and played on MetaHuman skeletons via compatible skeletons. **Game Animation Sample** stays an option for motion matching. Tune play rate / root-motion speed so Donk's run, stop and strafe timings match §4.
 - Animations needed: rifle idle/walk/run/strafe, crouch idle/walk, crouch-fire, quick stop, lean peek L/R, jump, fire, reload, hit react, death.
 - SFX: Sonniss GDC bundles (commercial, no attribution) + CC0 (Kenney, Free Firearm Sound Library): AK close/distant shot, reload, dry fire, impacts, bullet whizz, footsteps per surface, jump/land, short pain/death vocal (record our own if none fits).
 - Kill-feed / HUD icons: our own.
@@ -114,7 +114,7 @@ CS2-*like* look and sound from licensed packs (no files extracted from Valve gam
 ## 7. Tech
 - **StateTree** per enemy (already used by `Variant_Shooter`), squad brain = `UKochSquadSubsystem` (world subsystem): role targets, phase timer, Elroy, shooter tokens.
 - **Fighting spots:** C++ sampler in `UKochAwarenessComponent` (17 nav points, line-of-sight + low-cover traces, 1×/s while engaged). EQS (`FStateTreeRunEnvQueryTask`) only if designers need to author queries.
-- **AI Perception**: sight + hearing. Gunfire `MakeNoise` exists (`ShooterWeapon`); raise `ShotNoiseRange` 300 → 5000 cm; add a footstep `MakeNoise` anim notify.
+- **AI Perception**: sight + hearing. Gunfire `MakeNoise` exists (`ShooterWeapon`); raise `ShotNoiseRange` 300 → 5000 cm; player footstep noise comes from `UKochSquadSubsystem`; enemy footstep sounds from `AKochEnemyCharacter::UpdateFootsteps`.
 - **Avoidance** (todo): Detour crowd (`UCrowdFollowingComponent`), RVO off.
 - Budget: ≤ 10 enemies, AI cost ≪ 1 ms game thread; MetaHuman Optimized/Medium, groom cards, LODSync.
 
@@ -125,5 +125,7 @@ CS2-*like* look and sound from licensed packs (no files extracted from Valve gam
 - [x] Donk playable: `BP_Enemy_Donk` + `BP_KochAIController` + `ST_KochEnemy`, tested in PIE on `Content/Developers/Azamat/Maps/L_EnemyTest` (notices, engages from a fighting spot, peeks, kills the player in ~10 s on Medium).
 - [ ] BPs for Guard / Interceptor / Flanker / Heavy; Engage branch with Koch Shoot Burst for non-peekers.
 - [ ] Balance: Medium Donk is very lethal; tune after real playtests (player HP, burst length, reaction).
-- [ ] Animations + SFX: Donk uses the template rifle anim BP for now (Manny clips on the MetaHuman skeleton via compatible skeletons). Game Animation Sample + Lyra are in the Fab library; download blocked by Launcher crashes.
+- [x] Animations: `ABP_KochEnemy_Rifle` (parent `UKochEnemyAnimInstance`) on Lyra rifle clips via compatible skeletons: stand/crouch blend spaces (direction × speed), hip-fire aim offset, slots `UpperBody` (reload), `FullBodyAdditivePreAim` (shot kick), `AdditiveHitReact` (flinch by hit side). Speed is divided by the actor scale and clips speed up past the top sample, so 120 cm Donk does not slide.
+- [x] SFX: Lyra `MSS_Weapons_Rifle_Fire` on the AK (`AShooterWeapon::FireSound`), reload sounds from the Lyra montage, enemy footsteps (timer per stride, silent when walking or crouched).
+- [ ] Animations still missing: lean peek L/R, quick stop, jump/land, death clip (ragdoll for now); death/pain vocal.
 - [ ] Other 4 enemy models (MetaHuman presets).
