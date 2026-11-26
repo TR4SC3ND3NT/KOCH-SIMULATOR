@@ -27,6 +27,7 @@ public:
 	bool IsElroy() const { return bElroy; }
 	UKochAwarenessComponent* GetAwareness() const { return Awareness; }
 	const FText& GetDisplayName() const { return DisplayName; }
+	float GetBurstDuration() const { return BurstDuration; }
 
 	/** Temporary speed multiplier (StateTree: walk while suspicious/searching = quiet). 1 = run. */
 	void SetMoveSpeedScale(float Scale);
@@ -65,6 +66,10 @@ protected:
 
 	void ApplyTuning(EKochDifficulty Difficulty);
 	void ApplyMoveSpeed();
+
+	/** Trigger time of one "Koch Shoot Burst" (s); weapon-specific (pistol taps, LMG long bursts). 0 = the task's value. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Combat", meta = (ClampMin = 0, Units = "s"))
+	float BurstDuration = 0.0f;
 
 	/** Name in the kill feed (e.g. "Donk"). */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|UI")
