@@ -9,6 +9,8 @@
 #include "KochEnemyCharacter.generated.h"
 
 class UKochAwarenessComponent;
+class UAnimMontage;
+class USoundBase;
 
 UCLASS(abstract)
 class KOCHSIMULATOR_API AKochEnemyCharacter : public AShooterNPC
@@ -41,13 +43,21 @@ public:
 
 	/** Like the template, but falls back to WeaponFallbackBone when the body lacks the grip socket (MetaHuman bodies). */
 	virtual void AttachWeaponMeshes(AShooterWeapon* WeaponToAttach) override;
+
+	/** The weapon calls this per shot and at reload start; plays FireMontage or ReloadMontage on the body. */
+	virtual void PlayFiringMontage(UAnimMontage* Montage) override;
 	//~End IShooterWeaponHolder
+
+	virtual float TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser) override;
 
 protected:
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	virtual void PossessedBy(AController* NewController) override;
 	virtual void UnPossessed() override;
+
+	/** Plays a footstep when the stride is covered; silent when walking or crouched (CS rule). Timer, not Tick. */
+	void UpdateFootsteps();
 
 	UFUNCTION()
 	void HandleDifficultyChanged(EKochDifficulty NewDifficulty);
@@ -87,6 +97,39 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Koch|Body")
 	TObjectPtr<USkeletalMeshComponent> OutfitMesh;
 
+	/** Third-person shot kick, additive (Lyra AM_MM_Rifle_Fire, slot FullBodyAdditivePreAim). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Animation")
+	TObjectPtr<UAnimMontage> FireMontage;
+
+	/** Third-person reload (Lyra AM_MM_Rifle_Reload, slot UpperBody; carries the mag sounds). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Animation")
+	TObjectPtr<UAnimMontage> ReloadMontage;
+
+	/** Additive flinches by hit side (slot AdditiveHitReact); an empty side plays nothing. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Animation")
+	TObjectPtr<UAnimMontage> HitReactFront;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Animation")
+	TObjectPtr<UAnimMontage> HitReactBack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Animation")
+	TObjectPtr<UAnimMontage> HitReactLeft;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Animation")
+	TObjectPtr<UAnimMontage> HitReactRight;
+
+	/** Footstep sounds, picked at random (attenuation comes from the sound asset). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Sound")
+	TArray<TObjectPtr<USoundBase>> FootstepSounds;
+
+	/** Distance per footstep at BodyScale 1 (a jog stride is ~1.5 m); scaled by BodyScale. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Sound", meta = (ClampMin = 20, Units = "cm"))
+	float FootstepStride = 150.0f;
+
+	/** Steps are audible only above this fraction of RunSpeed (CS: shift-walk is silent). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Sound", meta = (ClampMin = 0, ClampMax = 1))
+	float FootstepSpeedRatio = 0.6f;
+
 	/** Senses, memory and awareness state (Unaware/Suspicious/Hunt/Engage/Search). */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Koch|Awareness")
 	TObjectPtr<UKochAwarenessComponent> Awareness;
@@ -97,4 +140,6 @@ private:
 	FVector AnchorLocation = FVector::ZeroVector;
 	bool bElroy = false;
 	bool bTuningApplied = false;
+	FTimerHandle FootstepTimer;
+	float FootstepDistance = 0.0f;
 };

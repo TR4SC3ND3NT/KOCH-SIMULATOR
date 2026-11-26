@@ -9,6 +9,17 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "ShooterWeapon.h"
 #include "Engine/World.h"
+#include "Animation/AnimInstance.h"
+#include "Animation/AnimMontage.h"
+#include "Components/CapsuleComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Sound/SoundBase.h"
+#include "TimerManager.h"
+
+namespace
+{
+	constexpr float FootstepTickInterval = 0.05f; // s; at most 50 ms late at ~3 steps/s
+}
 
 AKochEnemyCharacter::AKochEnemyCharacter()
 {
@@ -92,6 +103,10 @@ void AKochEnemyCharacter::BeginPlay()
 	{
 		Squad->RegisterEnemy(this);
 	}
+	if (!FootstepSounds.IsEmpty())
+	{
+		GetWorldTimerManager().SetTimer(FootstepTimer, this, &AKochEnemyCharacter::UpdateFootsteps, FootstepTickInterval, true);
+	}
 }
 
 void AKochEnemyCharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -107,6 +122,7 @@ void AKochEnemyCharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
 			Squad->UnregisterEnemy(this);
 		}
 	}
+	GetWorldTimerManager().ClearTimer(FootstepTimer);
 	Super::EndPlay(EndPlayReason);
 }
 
@@ -220,4 +236,77 @@ void AKochEnemyCharacter::AttachWeaponMeshes(AShooterWeapon* WeaponToAttach)
 	}
 	// A small enemy still carries a full-size rifle.
 	WeaponMesh->SetWorldScale3D(FVector::OneVector);
+
+	// Nobody sees an NPC's first-person rifle, but projectiles spawn at its muzzle: keep it on the visible one.
+	if (USkeletalMeshComponent* FirstPersonWeapon = WeaponToAttach->GetFirstPersonMesh())
+	{
+		FirstPersonWeapon->AttachToComponent(WeaponMesh, FAttachmentTransformRules::SnapToTargetIncludingScale);
+		FirstPersonWeapon->SetVisibility(false);
+	}
+}
+
+void AKochEnemyCharacter::PlayFiringMontage(UAnimMontage* Montage)
+{
+	// The weapon passes its own first-person montages; the body plays this enemy's third-person ones instead.
+	UAnimInstance* AnimInstance = GetMesh() ? GetMesh()->GetAnimInstance() : nullptr;
+	if (!AnimInstance || bIsDead)
+	{
+		return;
+	}
+	UAnimMontage* BodyMontage = (Weapon && Weapon->IsReloading()) ? ReloadMontage.Get() : FireMontage.Get();
+	if (BodyMontage)
+	{
+		AnimInstance->Montage_Play(BodyMontage);
+	}
+}
+
+float AKochEnemyCharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	const float Applied = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	if (bIsDead || Applied <= 0.0f)
+	{
+		return Applied;
+	}
+
+	// Flinch away from the shooter (the projectile may already be past us, so prefer the instigator).
+	const AActor* Source = EventInstigator && EventInstigator->GetPawn() ? EventInstigator->GetPawn() : DamageCauser;
+	UAnimInstance* AnimInstance = GetMesh() ? GetMesh()->GetAnimInstance() : nullptr;
+	if (!Source || !AnimInstance)
+	{
+		return Applied;
+	}
+	const FVector LocalDir = GetActorRotation().UnrotateVector(Source->GetActorLocation() - GetActorLocation());
+	const float Angle = FMath::RadiansToDegrees(FMath::Atan2(LocalDir.Y, LocalDir.X)); // 0 = front, +90 = right
+	UAnimMontage* HitReact = FMath::Abs(Angle) <= 45.0f ? HitReactFront.Get()
+		: FMath::Abs(Angle) >= 135.0f ? HitReactBack.Get()
+		: Angle > 0.0f ? HitReactRight.Get() : HitReactLeft.Get();
+	if (HitReact)
+	{
+		AnimInstance->Montage_Play(HitReact);
+	}
+	return Applied;
+}
+
+void AKochEnemyCharacter::UpdateFootsteps()
+{
+	const UCharacterMovementComponent* Move = GetCharacterMovement();
+	const float Speed = GetVelocity().Size2D();
+	if (bIsDead || bIsCrouched || !Move || !Move->IsMovingOnGround() || Speed < FootstepSpeedRatio * ActiveTuning.RunSpeed)
+	{
+		FootstepDistance = 0.0f;
+		return;
+	}
+
+	FootstepDistance += Speed * FootstepTickInterval;
+	const float Stride = FootstepStride * BodyScale;
+	if (FootstepDistance < Stride)
+	{
+		return;
+	}
+	FootstepDistance = FMath::Fmod(FootstepDistance, Stride);
+	if (USoundBase* Sound = FootstepSounds[FMath::RandHelper(FootstepSounds.Num())])
+	{
+		const FVector Feet = GetActorLocation() - FVector(0.0f, 0.0f, GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+		UGameplayStatics::PlaySoundAtLocation(this, Sound, Feet);
+	}
 }
