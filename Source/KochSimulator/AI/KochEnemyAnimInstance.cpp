@@ -22,7 +22,7 @@ void UKochEnemyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	}
 
 	const FVector Velocity = Owner->GetVelocity();
-	GroundSpeed = Velocity.Size2D();
+	GroundSpeed = Velocity.Size2D() / FMath::Max(Owner->GetActorScale3D().Z, UE_KINDA_SMALL_NUMBER);
 
 	const FRotator ActorRotation = Owner->GetActorRotation();
 	Direction = (GroundSpeed > 1.0f)
@@ -34,6 +34,9 @@ void UKochEnemyAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		bIsCrouching = Move->IsCrouching();
 		bIsInAir = Move->IsFalling();
 	}
+
+	const float TopSampleSpeed = bIsCrouching ? CrouchTopSampleSpeed : StandTopSampleSpeed;
+	LocomotionPlayRate = FMath::Max(1.0f, GroundSpeed / TopSampleSpeed);
 
 	// Base aim rotation = controller view (AI: towards the focus actor), so this is where the gun should point.
 	const FRotator AimDelta = (Owner->GetBaseAimRotation() - ActorRotation).GetNormalized();
