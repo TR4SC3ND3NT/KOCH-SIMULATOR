@@ -399,8 +399,13 @@ void FStateTreeKochPeekTask::ExitState(FStateTreeExecutionContext& Context, cons
 	{
 		Data.Character->UnCrouch();
 	}
-	if (Data.Controller && (Data.Step == EKochPeekStep::MoveOut || Data.Step == EKochPeekStep::MoveBack))
+	if (Data.Controller)
 	{
-		Data.Controller->StopMovement();
+		if (Data.Step == EKochPeekStep::MoveOut || Data.Step == EKochPeekStep::MoveBack)
+		{
+			Data.Controller->StopMovement();
+		}
+		// Otherwise he keeps tracking the player's true position through walls after Engage ends.
+		Data.Controller->ClearFocus(EAIFocusPriority::Gameplay);
 	}
 }
