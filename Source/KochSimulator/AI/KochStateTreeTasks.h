@@ -48,6 +48,40 @@ struct FStateTreeKochAwarenessCondition : public FStateTreeConditionCommonBase
 };
 
 ////////////////////////////////////////////////////////////////////
+// Role condition
+
+USTRUCT()
+struct FStateTreeKochRoleConditionInstanceData
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, Category = Context)
+	TObjectPtr<AKochEnemyCharacter> Character;
+
+	UPROPERTY(EditAnywhere, Category = Parameter)
+	EKochGhostRole Role = EKochGhostRole::Peeker;
+
+	UPROPERTY(EditAnywhere, Category = Parameter)
+	bool bInvert = false;
+};
+
+/** Passes when the enemy's Pac-Man role equals Role (or differs, with bInvert). Picks Donk's peeks vs. plain bursts. */
+USTRUCT(DisplayName = "Koch Role Is", Category = "Koch")
+struct FStateTreeKochRoleCondition : public FStateTreeConditionCommonBase
+{
+	GENERATED_BODY()
+
+	using FInstanceDataType = FStateTreeKochRoleConditionInstanceData;
+	virtual const UStruct* GetInstanceDataType() const override { return FInstanceDataType::StaticStruct(); }
+
+	virtual bool TestCondition(FStateTreeExecutionContext& Context) const override;
+
+#if WITH_EDITOR
+	virtual FText GetDescription(const FGuid& ID, FStateTreeDataView InstanceDataView, const IStateTreeBindingLookup& BindingLookup, EStateTreeNodeFormatting Formatting = EStateTreeNodeFormatting::Text) const override;
+#endif
+};
+
+////////////////////////////////////////////////////////////////////
 // Move to awareness goal
 
 USTRUCT()

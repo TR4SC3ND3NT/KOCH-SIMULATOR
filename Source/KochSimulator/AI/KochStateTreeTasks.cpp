@@ -72,6 +72,25 @@ FText FStateTreeKochAwarenessCondition::GetDescription(const FGuid& ID, FStateTr
 #endif
 
 ////////////////////////////////////////////////////////////////////
+// Role condition
+
+bool FStateTreeKochRoleCondition::TestCondition(FStateTreeExecutionContext& Context) const
+{
+	const FInstanceDataType& Data = Context.GetInstanceData(*this);
+	return Data.Character && ((Data.Character->GetRole() == Data.Role) != Data.bInvert);
+}
+
+#if WITH_EDITOR
+FText FStateTreeKochRoleCondition::GetDescription(const FGuid& ID, FStateTreeDataView InstanceDataView, const IStateTreeBindingLookup& BindingLookup, EStateTreeNodeFormatting Formatting /*= EStateTreeNodeFormatting::Text*/) const
+{
+	const FInstanceDataType* Data = InstanceDataView.GetPtr<FInstanceDataType>();
+	const FText RoleName = Data ? StaticEnum<EKochGhostRole>()->GetDisplayValueAsText(Data->Role) : FText::GetEmpty();
+	const bool bInvert = Data && Data->bInvert;
+	return FText::Format(FText::FromString(bInvert ? "<b>Role is not</b> {0}" : "<b>Role is</b> {0}"), RoleName);
+}
+#endif
+
+////////////////////////////////////////////////////////////////////
 // Move to awareness goal
 
 namespace
@@ -188,7 +207,8 @@ EStateTreeRunStatus FStateTreeKochShootBurstTask::Tick(FStateTreeExecutionContex
 		return EStateTreeRunStatus::Running;
 	}
 
-	return (Data.Elapsed >= ReactionTime + Data.BurstDuration) ? EStateTreeRunStatus::Succeeded : EStateTreeRunStatus::Running;
+	const float Burst = Data.Character->GetBurstDuration() > 0.0f ? Data.Character->GetBurstDuration() : Data.BurstDuration;
+	return (Data.Elapsed >= ReactionTime + Burst) ? EStateTreeRunStatus::Succeeded : EStateTreeRunStatus::Running;
 }
 
 void FStateTreeKochShootBurstTask::ExitState(FStateTreeExecutionContext& Context, const FStateTreeTransitionResult& Transition) const
