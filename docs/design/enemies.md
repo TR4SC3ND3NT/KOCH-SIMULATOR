@@ -123,7 +123,9 @@ CS2-*like* look and sound from licensed packs (no files extracted from Valve gam
 - [x] C++: difficulty subsystem, squad subsystem + role targeting, enemy character (accuracy gate, scale, tuning), StateTree nodes (awareness condition, move-to-goal, shoot burst, CS peek); unit tests for targeting.
 - [x] C++: awareness layer (perception, memory, callouts, 5 states, fighting-spot picker, player footstep noise).
 - [x] Donk playable: `BP_Enemy_Donk` + `BP_KochAIController` + `ST_KochEnemy`, tested in PIE on `Content/Developers/Azamat/Maps/L_EnemyTest` (notices, engages from a fighting spot, peeks, kills the player in ~10 s on Medium).
-- [ ] BPs for Guard / Interceptor / Flanker / Heavy; Engage branch with Koch Shoot Burst for non-peekers.
+- [x] Engage branch: Reposition → Attack (Donk: CS peeks via `Koch Role Is`; other roles: `Koch Shoot Burst`, burst length per enemy).
+- [x] Weapons: `BP_Pistol_Koch`, `BP_Shotgun_Koch` (8 pellets, 5° cone), `BP_SMG_Koch`, `BP_LMG_Koch` with Lyra sounds and own kill icons; pistol anim set `ABP_KochEnemy_Pistol`.
+- [ ] Guard / Interceptor / Flanker / Heavy: MetaHuman sources made from presets (Victor, Mateo, Jorge, Bruce) in `Content/Developers/Azamat/Enemies/`; Guard rigged + textured. Still to do: cloud rig/textures for the other 3, Optimized builds (need the screen unlocked: the build waits on rendering), enemy BPs (mesh, grooms, outfit colours, weapon, grip offset, montages, tuning), test in PIE.
 - [ ] Balance: Medium Donk is very lethal; tune after real playtests (player HP, burst length, reaction).
 - [x] Animations: `ABP_KochEnemy_Rifle` (parent `UKochEnemyAnimInstance`) on Lyra rifle clips via compatible skeletons: stand/crouch blend spaces (direction × speed), hip-fire aim offset, slots `UpperBody` (reload), `FullBodyAdditivePreAim` (shot kick), `AdditiveHitReact` (flinch by hit side). Speed is divided by the actor scale and clips speed up past the top sample, so 120 cm Donk does not slide.
 - [x] SFX: Lyra `MSS_Weapons_Rifle_Fire` on the AK (`AShooterWeapon::FireSound`), reload sounds from the Lyra montage, enemy footsteps (timer per stride, silent when walking or crouched).
