@@ -14,6 +14,7 @@
 #include "GameFramework/Controller.h"
 #include "Engine/StaticMeshActor.h"
 #include "Components/StaticMeshComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 AShooterWeapon::AShooterWeapon()
 {
@@ -193,6 +194,13 @@ void AShooterWeapon::FireProjectile(const FVector& TargetLocation)
 	if (Projectile)
 	{
 		Projectile->SetNoiseTag(NoiseOwnerTag);
+	}
+
+	// shot sound at the world-space muzzle; the owner drives per-shooter concurrency (one voice per gun)
+	if (FireSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, ThirdPersonMesh->GetSocketLocation(MuzzleSocketName), FRotator::ZeroRotator,
+			1.0f, 1.0f, 0.0f, nullptr, nullptr, PawnOwner);
 	}
 
 	// play the firing montage

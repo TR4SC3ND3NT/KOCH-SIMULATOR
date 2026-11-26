@@ -14,6 +14,7 @@ class USkeletalMeshComponent;
 class UAnimMontage;
 class UAnimInstance;
 class UStaticMesh;
+class USoundBase;
 
 /**
  *  Base class for a simple first person shooter weapon
@@ -84,6 +85,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category="Shells", meta = (ClampMin = 0.5, ClampMax = 30, Units = "s"))
 	float ShellLifeSpan = 5.0f;
 	
+	/** Shot sound, played at the third-person muzzle for every shot (KOCH: Lyra MSS_Weapons_Rifle_Fire on the AK). */
+	UPROPERTY(EditAnywhere, Category="Sound")
+	TObjectPtr<USoundBase> FireSound;
+
 	/** Animation montage to play when firing this weapon */
 	UPROPERTY(EditAnywhere, Category="Animation")
 	UAnimMontage* FiringMontage;
