@@ -7,6 +7,7 @@
 #include "AIController.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "ShooterWeapon.h"
 #include "Engine/World.h"
 
 AKochEnemyCharacter::AKochEnemyCharacter()
@@ -200,4 +201,23 @@ FVector AKochEnemyCharacter::GetWeaponTargetLocation()
 
 	AimVarianceHalfAngle = Cone; // consumed by AShooterNPC's cone sampling
 	return Super::GetWeaponTargetLocation();
+}
+
+void AKochEnemyCharacter::AttachWeaponMeshes(AShooterWeapon* WeaponToAttach)
+{
+	Super::AttachWeaponMeshes(WeaponToAttach);
+
+	USkeletalMeshComponent* Body = GetMesh();
+	USkeletalMeshComponent* WeaponMesh = WeaponToAttach ? WeaponToAttach->GetThirdPersonMesh() : nullptr;
+	if (!Body || !WeaponMesh)
+	{
+		return;
+	}
+	if (!Body->DoesSocketExist(ThirdPersonWeaponSocket) && Body->DoesSocketExist(WeaponFallbackBone))
+	{
+		WeaponMesh->AttachToComponent(Body, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, false), WeaponFallbackBone);
+		WeaponMesh->SetRelativeTransform(WeaponFallbackOffset);
+	}
+	// A small enemy still carries a full-size rifle.
+	WeaponMesh->SetWorldScale3D(FVector::OneVector);
 }
