@@ -3,6 +3,7 @@
 
 #include "ShooterCharacter.h"
 #include "KochEnemyCharacter.h"
+#include "KochKillFeedSubsystem.h"
 #include "ShooterWeapon.h"
 #include "EnhancedInputComponent.h"
 #include "Components/InputComponent.h"
@@ -91,6 +92,7 @@ float AShooterCharacter::TakeDamage(float Damage, struct FDamageEvent const& Dam
 	// Have we depleted HP?
 	if (CurrentHP <= 0.0f)
 	{
+		UKochKillFeedSubsystem::ReportDeath(this, DamageEvent, EventInstigator, DamageCauser); // before Die(): still possessed, so named as the player
 		Die();
 	}
 

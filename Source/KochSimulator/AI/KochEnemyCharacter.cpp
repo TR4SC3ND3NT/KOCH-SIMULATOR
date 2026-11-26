@@ -4,6 +4,7 @@
 #include "KochDifficultySubsystem.h"
 #include "KochSquadSubsystem.h"
 #include "KochAwarenessComponent.h"
+#include "KochKillFeedSubsystem.h"
 #include "AIController.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/SkeletalMeshComponent.h"
@@ -262,7 +263,12 @@ void AKochEnemyCharacter::PlayFiringMontage(UAnimMontage* Montage)
 
 float AKochEnemyCharacter::TakeDamage(float Damage, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
+	const bool bWasDead = bIsDead;
 	const float Applied = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	if (bIsDead && !bWasDead)
+	{
+		UKochKillFeedSubsystem::ReportDeath(this, DamageEvent, EventInstigator, DamageCauser);
+	}
 	if (bIsDead || Applied <= 0.0f)
 	{
 		return Applied;

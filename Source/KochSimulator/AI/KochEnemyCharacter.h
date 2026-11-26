@@ -26,6 +26,7 @@ public:
 	bool IsAlive() const { return !bIsDead; }
 	bool IsElroy() const { return bElroy; }
 	UKochAwarenessComponent* GetAwareness() const { return Awareness; }
+	const FText& GetDisplayName() const { return DisplayName; }
 
 	/** Temporary speed multiplier (StateTree: walk while suspicious/searching = quiet). 1 = run. */
 	void SetMoveSpeedScale(float Scale);
@@ -64,6 +65,10 @@ protected:
 
 	void ApplyTuning(EKochDifficulty Difficulty);
 	void ApplyMoveSpeed();
+
+	/** Name in the kill feed (e.g. "Donk"). */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|UI")
+	FText DisplayName = NSLOCTEXT("KochEnemy", "DefaultName", "Enemy");
 
 	/** Pac-Man role that decides where this enemy moves. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Koch|Squad")
