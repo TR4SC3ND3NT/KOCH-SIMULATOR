@@ -20,7 +20,8 @@ public class KochSimulator : ModuleRules
 			"StateTreeModule",
 			"GameplayStateTreeModule",
 			"UMG",
-			"Slate"
+			"Slate",
+			"SlateCore"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
@@ -28,6 +29,8 @@ public class KochSimulator : ModuleRules
 		PublicIncludePaths.AddRange(new string[] {
 			"KochSimulator",
 			"KochSimulator/AI",
+			"KochSimulator/Combat",
+			"KochSimulator/UI",
 			"KochSimulator/Variant_Horror",
 			"KochSimulator/Variant_Horror/UI",
 			"KochSimulator/Variant_Shooter",
