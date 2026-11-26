@@ -321,8 +321,8 @@ void UKochSquadSubsystem::EmitPlayerFootsteps()
 	{
 		return;
 	}
-	static const FName FootstepTag(TEXT("Footstep"));
-	UAISense_Hearing::ReportNoiseEvent(this, Player->GetActorLocation(), 1.0f, Player, FootstepRange, FootstepTag);
+	static const FName FootstepNoiseTag(TEXT("Footstep")); // must match UKochAwarenessComponent
+	UAISense_Hearing::ReportNoiseEvent(this, Player->GetActorLocation(), 1.0f, Player, FootstepRange, FootstepNoiseTag);
 }
 
 bool UKochSquadSubsystem::TryAcquireFireToken(const AKochEnemyCharacter* Enemy)
