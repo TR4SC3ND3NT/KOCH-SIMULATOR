@@ -16,6 +16,7 @@ Source of the ghost rules: Pittman, *The Pac-Man Dossier* — https://pacman.hol
 | Flanker | Inky — **Flanker** | 172 cm | Shotgun | Target = 2·(player + forward·4 m) − Guard position → always on the opposite side of the player from the Guard (pincer). |
 | Heavy | Clyde — **Shy** | 195 cm, heavy build | LMG (later: riot shield) | Rushes when farther than 12 m; inside 12 m falls back to cover and suppresses. Slow. |
 | **Donk** | Blinky + "Cruise Elroy" — **Peeker** | **120 cm** (MetaHuman at 160 cm × 0.75 scale) | **AK-47** | Hardest enemy. Direct chaser that fights like a CS2 pro (§4). Gets faster when the squad is almost dead (Elroy). All difficulties (only enemy built so far). |
+| Blade (working name, `TODO_LORE`) | **Duelist** (new, not a Pac-Man ghost) | 185 cm | Sword (one-handed, own model) | Melee enemy with souls-like mechanics (§4b): guards against gunfire from the front, telegraphed attacks, combos, lunges, dodges. Forces the player to flank or bait an attack. Original KOCH character; no character, art or animation from other games. |
 
 Scale: MetaHuman parametric height minimum is ~135 cm, so Donk is built at 160 cm with adult proportions and the actor is scaled 0.75 (capsule scales with it). He must read as a small adult, not a child.
 
@@ -76,6 +77,16 @@ Peek techniques (state "Peek" in the StateTree):
 - **Pre-fire** — when the player was last heard/seen around a corner, start firing as he swings.
 - **Crouch-spray** — at < 10 m: crouch (−25 % spread) and spray 6–10 rounds.
 - Always **stop before shooting** (accuracy gate), strafe between bursts.
+
+## 4b. Blade — souls-like melee in a shooter
+Mechanics only (copied mechanics are fine; looks, names and assets are our own). Animations: Mixamo sword packs (free, royalty-free in games) retargeted to the MetaHuman skeleton.
+- **Guard:** walks in with the blade up; frontal shots are blocked (×0.2 damage, spark + clang) and drain **poise**; shots from the side or back hit fully. Poise 0 → **stagger** 1.5 s (free hits).
+- **Telegraphs:** every attack has a wind-up (0.4–0.8 s, readable pose + glint); the hit window is short (0.15 s). Wind-up length per difficulty (Easy long, Hard short).
+- **Attacks:** 3-hit combo, overhead heavy (breaks player cover-camping), **lunge** from 4–6 m with Motion Warping to the player, sweep when the player is close and moving sideways.
+- **Dodge:** when the player aims at him and fires, he side-steps / rolls (cooldown) instead of blocking 30–60 % of the time.
+- **Stamina:** attacks and dodges cost stamina; at 0 he backs off and guards to recover (the punish window).
+- **Squad role:** Duelist targets the player's position like the Chaser but holds 6–8 m while gunners have fire tokens, then closes in when the player reloads or is suppressed.
+- Code: `UKochMeleeComponent` (C++, attack data assets: wind-up, active, recovery, damage, reach, warp distance), StateTree tasks Koch Melee Attack / Guard / Dodge; hit detection = sword socket sweep during the active window. Damage events reuse the kill feed (sword icon).
 
 ## 5. Difficulty tuning (per enemy type, DataTable later)
 | | Easy | Medium | Hard |
